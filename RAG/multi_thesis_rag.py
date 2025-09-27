@@ -5,20 +5,31 @@ def prompt_chain(top_chunks, prompts, api_key):
     for idx, prompt_text in enumerate(prompts):
         # For first prompt, build context from top_chunks
         if idx == 0:
-            # Build metadata summary
+            # Build metadata summary with numbering
             doc_infos = []
             seen_pdfs = set()
-            for c in top_chunks:
+            for i, c in enumerate(top_chunks):
                 meta = c['meta']
                 pdf_id = meta['pdf']
                 if pdf_id not in seen_pdfs:
-                    doc_infos.append(f"- Title: {meta.get('title','') or '[Unknown]'}\n  Author: {meta.get('author','') or '[Unknown]'}\n  Year: {meta.get('publication_year','') or '[Unknown]'}\n  File: {pdf_id}")
+                    doc_infos.append(f"[{i+1}] Title: {meta.get('title','') or '[Unknown]'}\n    Author: {meta.get('author','') or '[Unknown]'}\n    Year: {meta.get('publication_year','') or '[Unknown]'}\n    File: {pdf_id}")
                     seen_pdfs.add(pdf_id)
                 if len(doc_infos) >= 10:
                     break
-            doc_info_str = "Top 10 relevant documents found:\n" + "\n".join(doc_infos) + "\n\n"
-            chunk_context = "\n\n".join([f"From {c['meta']['pdf']} (chunk {c['meta']['chunk_idx']}): {c['chunk']}" for c in top_chunks])
-            context = f"{doc_info_str}Context: {chunk_context}\n\n"
+            doc_info_str = "Top 10 relevant documents found (numbered for reference):\n" + "\n".join(doc_infos) + "\n\n"
+            chunk_context = "\n\n".join([f"[{i+1}] From {c['meta']['pdf']} (chunk {c['meta']['chunk_idx']}): {c['chunk']}" for i, c in enumerate(top_chunks)])
+            # Add instruction for referencing numbers and formatting
+            context = f"{doc_info_str}Context: {chunk_context}\n\nWhen answering, please reference the relevant thesis by its number in square brackets, e.g., [1], [2], etc., to indicate the source of each point.\n\n"
+            context += (
+                "Synthesize the findings from the top relevant theses in response to the following question. "
+                "Group your answer by key themes or outcomes relevant to the question. "
+                "Write in plain text, paragraph style, without bullet points, asterisks, or markdown formatting. "
+                "Only place thesis references in square brackets immediately after the period at the end of each paragraph, never inside sentences or after other punctuation. "
+                "If multiple theses support a paragraph, concatenate their numbers in square brackets at the end of the paragraph, after the period, with no space before the bracket. "
+                "Do not place references anywhere else. "
+                "Conclude with a summary paragraph that synthesizes the findings. After the summary, concatenate all referenced thesis numbers in square brackets (e.g., [2][5][6][8][9]), with no explanatory sentence or line break. "
+                "Highlight relationships, causal links, and actionable insights. "
+            )
         # Build prompt for Gemini
         full_prompt = f"{context}Question: {prompt_text}\nAnswer: "
         url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
@@ -36,13 +47,54 @@ def prompt_chain(top_chunks, prompts, api_key):
             ],
             "generationConfig": {
                 "temperature": 0.3,
-                "maxOutputTokens": 1500
+                "maxOutputTokens": 2000
             }
         }
         response = requests.post(url, headers=headers, json=data)
         response.raise_for_status()
         result = response.json()
-        answer = result['candidates'][0]['content']['parts'][0]['text'].strip()
+        raw_answer = result['candidates'][0]['content']['parts'][0]['text'].strip()
+        # Post-process: move all references to end of each paragraph
+        import re
+        def process_paragraphs(text):
+            # Split paragraphs and detect trailing reference line
+            paragraphs = re.split(r'\n\s*\n', text)
+            ref_pattern = re.compile(r'\[(\d+)\]')
+            processed = []
+            all_refs = []
+            trailing_refs = []
+            # Check if last paragraph is only references
+            if paragraphs and ref_pattern.findall(paragraphs[-1]) and not re.search(r'[a-zA-Z]', paragraphs[-1]):
+                trailing_refs = ref_pattern.findall(paragraphs[-1])
+                paragraphs = paragraphs[:-1]
+            for i, para in enumerate(paragraphs):
+                refs = ref_pattern.findall(para)
+                all_refs.extend(refs)
+                # Remove all references from paragraph
+                para_clean = ref_pattern.sub('', para).strip()
+                # Remove space before period
+                para_clean = re.sub(r'\s+\.$', '.', para_clean)
+                # Only add references at end if any found
+                if refs:
+                    refs_str = ''.join([f'[{r}]' for r in sorted(set(refs), key=refs.index)])
+                    para_clean = re.sub(r'\.$', f'.{refs_str}', para_clean)
+                processed.append(para_clean)
+            # For the last paragraph (summary), always append all unique refs from the whole answer and trailing refs after the period or at the end
+            if processed:
+                unique_refs = []
+                for r in all_refs + trailing_refs:
+                    if r not in unique_refs:
+                        unique_refs.append(r)
+                refs_str = ''.join([f'[{r}]' for r in unique_refs])
+                # Remove space before period
+                processed[-1] = re.sub(r'\s+\.$', '.', processed[-1])
+                # If ends with period, append refs after period
+                if processed[-1].endswith('.'):
+                    processed[-1] = processed[-1] + refs_str
+                else:
+                    processed[-1] = processed[-1] + '.' + refs_str
+            return '\n\n'.join(processed)
+        answer = process_paragraphs(raw_answer)
         # Update context for next step
         context = f"{context}{answer}\n\n"
     return answer
