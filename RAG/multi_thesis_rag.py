@@ -248,53 +248,139 @@ def gemini_overview(top_chunks, question, api_key):
     result = response.json()
     return result['candidates'][0]['content']['parts'][0]['text'].strip()
 
-if __name__ == "__main__":
-        pdf_folder = "theses"  # Change to your folder name
-        api_key = os.getenv("GEMINI_API_KEY")
-        print("Extracting and chunking PDFs...")
-        all_chunks, metadata = extract_and_chunk_pdfs(pdf_folder)
-        print(f"Total chunks: {len(all_chunks)}")
-        if len(all_chunks) == 0:
-            print("No text extracted from any PDFs. Exiting without calling LLM.")
-            exit(1)
-        print("Loading embedding model...")
-        embedder = SentenceTransformer('all-MiniLM-L6-v2')
-        print("Embedding chunks...")
-        chunk_embeddings = embed_chunks(all_chunks, embedder)
-        print("Building FAISS index...")
-        index = build_faiss_index(np.array(chunk_embeddings))
+import http.server
+import socketserver
+import json
 
-        # Prompt chaining workflow
-        prompts = []
-        while True:
-            if len(prompts) == 0:
-                prompt_text = input("Enter your research question: ").strip()
-                if not prompt_text:
-                    print("No research question entered. Exiting.")
-                    exit(1)
-            else:
-                prompt_text = input("Enter another research question or type 'END' to finish: ").strip()
-                if prompt_text.upper() == 'END':
-                    print("Prompt chaining ended.")
-                    break
-                if not prompt_text:
-                    continue
-            prompts.append(prompt_text)
-            print("Retrieving top relevant chunks...")
-            top_chunks = retrieve_top_chunks(prompt_text, embedder, index, all_chunks, metadata, top_n=10)
-            # Print top 10 relevant documents metadata
-            doc_infos = []
+class MultiThesisRAGHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
+    def _send_cors_headers(self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+
+    def _send_json_response(self, data, status_code=200):
+        response_json = json.dumps(data, indent=2)
+        self.send_response(status_code)
+        self.send_header('Content-Type', 'application/json')
+        self._send_cors_headers()
+        self.end_headers()
+        self.wfile.write(response_json.encode('utf-8'))
+
+    def _send_error_response(self, message, status_code=500):
+        self._send_json_response({"error": message}, status_code)
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self._send_cors_headers()
+        self.end_headers()
+
+    def do_GET(self):
+        if self.path == '/health':
+            self.handle_health_check()
+        else:
+            self._send_error_response("Not found", 404)
+
+    def do_POST(self):
+        if self.path == '/search':
+            self.handle_search()
+        else:
+            self._send_error_response("Not found", 404)
+
+    def handle_health_check(self):
+        try:
+            total_docs = len(set([m['pdf'] for m in metadata])) if metadata else 0
+            response = {
+                "status": "healthy",
+                "initialized": True,
+                "total_documents": total_docs,
+                "total_chunks": len(all_chunks)
+            }
+            self._send_json_response(response)
+        except Exception as e:
+            self._send_error_response(f"Health check failed: {str(e)}")
+
+    def handle_search(self):
+        try:
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            try:
+                data = json.loads(post_data.decode('utf-8'))
+            except json.JSONDecodeError:
+                self._send_error_response("Invalid JSON", 400)
+                return
+            question = data.get('question', '').strip()
+            if not question:
+                self._send_error_response("No question provided", 400)
+                return
+            print(f"Processing search for: {question}")
+            top_chunks = retrieve_top_chunks(question, embedder, index, all_chunks, metadata, top_n=10)
+            if not top_chunks:
+                response = {
+                    "overview": "No relevant documents found for your query.",
+                    "documents": [],
+                    "related_questions": []
+                }
+                self._send_json_response(response)
+                return
+            answer = prompt_chain(top_chunks, [question], api_key)
+            documents = []
             seen_pdfs = set()
-            for c in top_chunks:
+            for i, c in enumerate(top_chunks):
                 meta = c['meta']
                 pdf_id = meta['pdf']
                 if pdf_id not in seen_pdfs:
-                    doc_infos.append(f"- Title: {meta.get('title','') or '[Unknown]'}\n  Author: {meta.get('author','') or '[Unknown]'}\n  Year: {meta.get('publication_year','') or '[Unknown]'}\n  File: {pdf_id}")
+                    documents.append({
+                        "title": meta.get('title', '[Unknown]'),
+                        "author": meta.get('author', '[Unknown]'),
+                        "publication_year": meta.get('publication_year', '[Unknown]'),
+                        "abstract": c['chunk'][:500] + "...",
+                        "file": '',
+                        "degree": 'Thesis',
+                        "call_no": f"CALL-{i+1:03d}",
+                        "disciplines": ['Research']
+                    })
                     seen_pdfs.add(pdf_id)
-                if len(doc_infos) >= 10:
-                    break
-            print("\nTop 10 relevant documents found:")
-            print("\n".join(doc_infos))
-            print("\nGenerating overview with Gemini...")
-            answer = prompt_chain(top_chunks, prompts, api_key)
-            print(f"\n---\nAnswer to Prompt {len(prompts)}:\n{answer}\n")
+            # Generate related questions (simple examples)
+            related_questions = [
+                f"What are the limitations of studies on {question.lower()}?",
+                f"What methodology is commonly used to study {question.lower()}?",
+                f"What are recent developments in research about {question.lower()}?",
+                f"How do different studies compare regarding {question.lower()}?"
+            ]
+            response = {
+                "overview": answer,
+                "documents": documents,
+                "related_questions": related_questions
+            }
+            self._send_json_response(response)
+        except Exception as e:
+            print(f"Error in search endpoint: {e}")
+            self._send_error_response(f"Internal server error: {str(e)}")
+
+# --- Initialization ---
+if __name__ == "__main__":
+    pdf_folder = os.path.join("RAG", "theses")
+    api_key = os.getenv("GEMINI_API_KEY")
+    print("Extracting and chunking PDFs...")
+    all_chunks, metadata = extract_and_chunk_pdfs(pdf_folder)
+    print(f"Total chunks: {len(all_chunks)}")
+    if len(all_chunks) == 0:
+        print("No text extracted from any PDFs. Exiting without calling LLM.")
+        exit(1)
+    print("Loading embedding model...")
+    embedder = SentenceTransformer('all-MiniLM-L6-v2')
+    print("Embedding chunks...")
+    chunk_embeddings = embed_chunks(all_chunks, embedder)
+    print("Building FAISS index...")
+    index = build_faiss_index(np.array(chunk_embeddings))
+
+    # Start HTTP server
+    port = 5000
+    print(f"Starting Multi-Thesis RAG HTTP server on port {port}...")
+    with socketserver.TCPServer(("", port), MultiThesisRAGHTTPRequestHandler) as httpd:
+        print(f"Server started at http://localhost:{port}")
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            print("\nShutting down server...")
+            httpd.shutdown()
