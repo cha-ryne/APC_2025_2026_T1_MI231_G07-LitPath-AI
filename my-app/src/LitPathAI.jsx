@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight } from 'lucide-react';
 
-// Backend API URL - Update this to match your Flask server
+// Backend API URL - Update this to match your server
 const API_BASE_URL = 'http://localhost:5000';
 
 const LitPathAI = () => {
@@ -71,7 +71,7 @@ const LitPathAI = () => {
 
     // Check if backend is available
     if (!backendStatus || backendStatus.status === 'error') {
-      setError("Backend service is not available. Please check if the Flask server is running.");
+      setError("Backend service is not available. Please check if the server is running.");
       return;
     }
 
@@ -354,7 +354,7 @@ const LitPathAI = () => {
                   {error}
                   {backendStatus?.status === 'error' && (
                     <div className="mt-2 text-sm">
-                      Make sure your Flask backend is running on {API_BASE_URL}
+                      Make sure your backend is running on {API_BASE_URL}
                     </div>
                   )}
                 </div>
