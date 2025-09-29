@@ -209,7 +209,7 @@ const LitPathAI = () => {
       <div className="bg-[#1F1F1F] text-white p-4 shadow-md">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center space-x-4">
-            <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-8" />
+            <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-12 w-50" />
             <div className="text-xl font-bold">DOST UNION CATALOG</div>
             <div className="text-sm border-l border-white pl-4 ml-4">The Science and Technology <br/> Information Network of the Philippines</div>
           </div>
@@ -610,7 +610,7 @@ const LitPathAI = () => {
                 </div>
               </div>
 
-              <div className="text-xl font-bold text-[#1E74BC]">
+              <div className="bg-[#1E74BC] text-white p-6 rounded-md shadow-md">
                 <h3 className="font-semibold text-lg mb-3">Full text available at DOST-STII Library from 8am - 5pm:</h3>
                 <div className="text-base leading-relaxed">
                   <div className="font-semibold">STII Bldg., Gen. Santos Ave., Upper Bicutan,</div>

@@ -1,4 +1,6 @@
-# Prompt chaining for multi-step reasoning with Gemini
+import dotenv
+dotenv.load_dotenv()
+
 def prompt_chain(top_chunks, prompts, api_key):
     context = ""
     answer = ""
@@ -35,9 +37,10 @@ def prompt_chain(top_chunks, prompts, api_key):
         url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
         headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}"
         }
-        data = {
+        url = f"{url}?key={api_key}"
+
+        data = {  # <-- Define data before requests.post
             "contents": [
                 {
                     "parts": [
@@ -280,9 +283,10 @@ def gemini_overview(top_chunks, question, api_key):
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
     headers = {
         "Content-Type": "application/json",
-        "X-goog-api-key": api_key
     }
-    data = {
+    url = f"{url}?key={api_key}"
+
+    data = {  # <-- Define data before requests.post
         "contents": [
             {
                 "parts": [
