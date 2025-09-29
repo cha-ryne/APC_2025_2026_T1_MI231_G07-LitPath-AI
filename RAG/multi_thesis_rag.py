@@ -79,16 +79,20 @@ def prompt_chain(top_chunks, prompts, api_key):
                     refs_str = ''.join([f'[{r}]' for r in sorted(set(refs), key=refs.index)])
                     para_clean = re.sub(r'\.$', f'.{refs_str}', para_clean)
                 processed.append(para_clean)
-            # For the last paragraph (summary), always append all unique refs from the whole answer and trailing refs after the period or at the end
+            # For the last paragraph (summary), append only unique refs not already present at the end
             if processed:
                 unique_refs = []
                 for r in all_refs + trailing_refs:
                     if r not in unique_refs:
                         unique_refs.append(r)
-                refs_str = ''.join([f'[{r}]' for r in unique_refs])
                 # Remove space before period
                 processed[-1] = re.sub(r'\s+\.$', '.', processed[-1])
-                # If ends with period, append refs after period
+                # Find refs already present at end of summary
+                end_refs = re.findall(r'(\[\d+\])', processed[-1].split('.')[-1])
+                end_refs_set = set([ref.strip('[]') for ref in end_refs])
+                # Only append refs not already present
+                missing_refs = [r for r in unique_refs if r not in end_refs_set]
+                refs_str = ''.join([f'[{r}]' for r in missing_refs])
                 if processed[-1].endswith('.'):
                     processed[-1] = processed[-1] + refs_str
                 else:
@@ -105,6 +109,8 @@ from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
 import requests
+from rank_bm25 import BM25Okapi
+import chromadb
 
 # 1. Extract and chunk text from all PDFs in a folder
 def extract_and_chunk_pdfs(pdf_folder, chunk_size=500):
@@ -192,6 +198,52 @@ def extract_and_chunk_pdfs(pdf_folder, chunk_size=500):
 # 2. Embed all chunks
 def embed_chunks(chunks, embedder):
     return embedder.encode(chunks)
+
+# Build ChromaDB vector store
+def build_chromadb_index(chunks, embeddings):
+    client = chromadb.Client()
+    collection = client.create_collection("thesis_chunks")
+    for i, (chunk, emb) in enumerate(zip(chunks, embeddings)):
+        collection.add(
+            documents=[chunk],
+            embeddings=[emb.tolist()],
+            ids=[str(i)]
+        )
+    return collection
+
+# Hybrid search: BM25 + semantic (embedding) search + ChromaDB
+def retrieve_top_chunks_hybrid(query, embedder, index, all_chunks, metadata, top_n=10, bm25=None, chroma_collection=None):
+    # Semantic search (L2 distance)
+    query_emb = embedder.encode([query])
+    D, I = index.search(np.array(query_emb), top_n)
+    semantic_results = set(I[0])
+
+    # BM25 keyword search
+    if bm25 is None:
+        tokenized_chunks = [chunk.split() for chunk in all_chunks]
+        bm25 = BM25Okapi(tokenized_chunks)
+    bm25_scores = bm25.get_scores(query.split())
+    bm25_top = sorted(range(len(bm25_scores)), key=lambda i: bm25_scores[i], reverse=True)[:top_n]
+    bm25_results = set(bm25_top)
+
+    # ChromaDB vector search (optional)
+    chroma_results = set()
+    if chroma_collection is not None:
+        chroma_query = chroma_collection.query(
+            query_embeddings=query_emb.tolist(),
+            n_results=top_n
+        )
+        chroma_results = set([int(i) for i in chroma_query['ids'][0]])
+
+    # Merge results
+    merged = list(semantic_results | bm25_results | chroma_results)
+    # Re-rank by sum of BM25 and L2 distance (lower is better for L2)
+    merged_scores = [bm25_scores[i] - (D[0][list(I[0]).index(i)] if i in semantic_results else 0) for i in merged]
+    top_indices = [x for _, x in sorted(zip(merged_scores, merged), reverse=True)][:top_n]
+    results = []
+    for idx in top_indices:
+        results.append({'chunk': all_chunks[idx], 'meta': metadata[idx]})
+    return results
 
 # 3. Build FAISS index
 def build_faiss_index(embeddings):
@@ -313,7 +365,7 @@ class MultiThesisRAGHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
                 self._send_error_response("No question provided", 400)
                 return
             print(f"Processing search for: {question}")
-            top_chunks = retrieve_top_chunks(question, embedder, index, all_chunks, metadata, top_n=10)
+            top_chunks = retrieve_top_chunks_hybrid(question, embedder, index, all_chunks, metadata, top_n=10, bm25=bm25, chroma_collection=chroma_collection)
             if not top_chunks:
                 response = {
                     "overview": "No relevant documents found for your query.",
@@ -373,6 +425,11 @@ if __name__ == "__main__":
     chunk_embeddings = embed_chunks(all_chunks, embedder)
     print("Building FAISS index...")
     index = build_faiss_index(np.array(chunk_embeddings))
+    print("Building ChromaDB index...")
+    chroma_collection = build_chromadb_index(all_chunks, chunk_embeddings)
+    print("Building BM25 index...")
+    tokenized_chunks = [chunk.split() for chunk in all_chunks]
+    bm25 = BM25Okapi(tokenized_chunks)
 
     # Start HTTP server
     port = 5000
