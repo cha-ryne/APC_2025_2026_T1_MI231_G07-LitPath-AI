@@ -35,7 +35,7 @@ def prompt_chain(top_chunks, prompts, api_key):
         url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
         headers = {
             "Content-Type": "application/json",
-            "X-goog-api-key": api_key
+            "Authorization": f"Bearer {api_key}"
         }
         data = {
             "contents": [

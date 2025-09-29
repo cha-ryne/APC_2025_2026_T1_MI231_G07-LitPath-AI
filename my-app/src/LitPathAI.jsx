@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight } from 'lucide-react';
+import dostLogo from "./components/images/dost-logo.png";
+
+
 
 // Backend API URL - Update this to match your server
 const API_BASE_URL = 'http://localhost:5000';
@@ -20,7 +23,38 @@ const LitPathAI = () => {
   const [error, setError] = useState(null);
   const [backendStatus, setBackendStatus] = useState(null);
 
-  const disciplines = ['All disciplines', 'Agriculture', 'Business', 'Chemistry', 'Engineering', 'Medicine', 'Computer Science'];
+  const disciplines = [
+    "All disciplines",
+    "Agriculture",
+    "Anthropology",
+    "Applied Sciences",
+    "Architecture",
+    "Arts and Humanities",
+    "Biological Sciences",
+    "Business",
+    "Chemistry",
+    "Communication and Media",
+    "Computer Science",
+    "Cultural Studies",
+    "Economics",
+    "Education",
+    "Engineering",
+    "Environmental Science",
+    "Geography",
+    "History",
+    "Law",
+    "Library and Information Science",
+    "Linguistics",
+    "Literature",
+    "Mathematics",
+    "Medicine and Health Sciences",
+    "Philosophy",
+    "Physics",
+    "Political Science",
+    "Psychology",
+    "Social Sciences",
+    "Sociology",
+  ];
   const dateOptions = ['All dates', 'Last year', 'Last 3 years', 'Custom date range'];
 
   // Refs for dropdowns to close when clicking outside
@@ -172,11 +206,11 @@ const LitPathAI = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-700 to-blue-900 text-white p-4 shadow-md">
+      <div className="bg-[#1F1F1F] text-white p-4 shadow-md">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center space-x-4">
-            <img src="https://www.dost.gov.ph/images/dostv2/DOST-logo.png" alt="DOST SciNet-Phil Logo" className="h-8" />
-            <div className="text-xl font-bold">DOST SCI-NET PHIL</div>
+            <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-8" />
+            <div className="text-xl font-bold">DOST UNION CATALOG</div>
             <div className="text-sm border-l border-white pl-4 ml-4">The Science and Technology <br/> Information Network of the Philippines</div>
           </div>
           <nav className="flex space-x-6">
@@ -210,12 +244,12 @@ const LitPathAI = () => {
         {/* Left Container (Sidebar) */}
         <div className="w-80 bg-white bg-opacity-95 rounded-xl shadow-2xl p-6 mr-6 flex-shrink-0 h-auto">
           <div className="flex items-center space-x-2 mb-6 text-gray-800">
-            <BookOpen className="text-blue-600" size={24} />
+            <BookOpen className="text-[#1E74BC]" size={24} />
             <span className="font-bold text-xl">LitPath AI</span>
           </div>
           <button
             onClick={handleNewChat}
-            className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg mb-8 hover:bg-blue-700 transition-colors font-semibold shadow-md"
+            className="w-full bg-[#1E74BC] text-white py-3 px-4 rounded-lg mb-8 hover:bg-[#155a8f] transition-colors font-semibold shadow-md"
           >
             Start a new chat
           </button>
@@ -236,8 +270,11 @@ const LitPathAI = () => {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
                 <div className="flex items-center justify-center space-x-3 mb-4">
-                  <BookOpen className="text-blue-600" size={40} />
-                  <h1 className="text-4xl font-extrabold text-blue-700">LitPath AI</h1>
+                  <BookOpen className="text-[#1E74BC]" size={40} />
+                  <h1 className="text-4xl font-extrabold">
+                    <span className="text-[#1E74BC]">LitPath</span>{" "}
+                    <span className="text-[#b83a3a]">AI</span>
+                  </h1>
                 </div>
                 <p className="text-gray-700 text-lg">Discover more and faster.</p>
               </div>
@@ -256,7 +293,7 @@ const LitPathAI = () => {
                   />
                   <button
                     onClick={() => handleSearch()}
-                    className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors"
+                    className="bg-[#1E74BC] text-white p-3 rounded-lg hover:bg-[#155a8f] transition-colors"
                     disabled={loading}
                   >
                     <ArrowRight size={20} />
@@ -369,28 +406,28 @@ const LitPathAI = () => {
                     className="flex items-center justify-between text-left p-5 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-gray-800 hover:bg-blue-50"
                   >
                     <span>How does plastic pollution affect plant growth in farmland?</span>
-                    <ArrowRight size={20} className="text-blue-500" />
+                    <ArrowRight size={20} className="text-[#1E74BC]" />
                   </button>
                   <button
                     onClick={() => handleExampleQuestionClick("Find research about sleep quality among teenagers")}
                     className="flex items-center justify-between text-left p-5 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-gray-800 hover:bg-blue-50"
                   >
                     <span>Find research about sleep quality among teenagers</span>
-                    <ArrowRight size={20} className="text-blue-500" />
+                    <ArrowRight size={20} className="text-[#1E74BC]" />
                   </button>
                   <button
                     onClick={() => handleExampleQuestionClick("How does remote work impact employee productivity?")}
                     className="flex items-center justify-between text-left p-5 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-gray-800 hover:bg-blue-50"
                   >
                     <span>How does remote work impact employee productivity?</span>
-                    <ArrowRight size={20} className="text-blue-500" />
+                    <ArrowRight size={20} className="text-[#1E74BC]" />
                   </button>
                   <button
                     onClick={() => handleExampleQuestionClick("Find recent research about how vitamin D deficiency impact overall health")}
                     className="flex items-center justify-between text-left p-5 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-gray-800 hover:bg-blue-50"
                   >
                     <span>Find recent research about how vitamin D deficiency impact overall health</span>
-                    <ArrowRight size={20} className="text-blue-500" />
+                    <ArrowRight size={20} className="text-[#1E74BC]" />
                   </button>
                 </div>
               </div>
@@ -426,7 +463,7 @@ const LitPathAI = () => {
               {/* Sources Carousel */}
               <div className="mb-6">
                 <h3 className="text-xl font-semibold mb-4 flex items-center space-x-3 text-gray-800">
-                  <BookOpen size={24} className="text-blue-600" />
+                  <BookOpen size={24} className="text-[#1E74BC]" />
                   <span>Sources</span>
                 </h3>
                 <div className="flex space-x-5 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
@@ -450,7 +487,7 @@ const LitPathAI = () => {
               {selectedSource && (
                 <div className="bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-6 mb-6 shadow-md">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold text-blue-800">{selectedSource.title}</h3>
+                    <h3 className="text-xl font-bold text-[#1E74BC]">{selectedSource.title}</h3>
                     <button
                       onClick={() => setSelectedSource(null)}
                       className="text-gray-500 hover:text-gray-700 transition-colors text-xl"
@@ -520,7 +557,7 @@ const LitPathAI = () => {
       {showOverlay && selectedSource && (
         <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-end">
           <div className="w-full sm:w-1/2 lg:w-2/5 xl:w-1/3 bg-white h-full overflow-y-auto shadow-2xl">
-            <div className="bg-blue-700 text-white p-6 shadow-md">
+            <div className="text-white p-6 shadow-md" style={{ backgroundColor: '#1E74BC' }}>
               <div className="flex items-center justify-between mb-4">
                 <button
                   onClick={() => setShowOverlay(false)}
@@ -573,7 +610,7 @@ const LitPathAI = () => {
                 </div>
               </div>
 
-              <div className="bg-blue-600 text-white p-5 rounded-lg mb-8 shadow-md">
+              <div className="text-xl font-bold text-[#1E74BC]">
                 <h3 className="font-semibold text-lg mb-3">Full text available at DOST-STII Library from 8am - 5pm:</h3>
                 <div className="text-base leading-relaxed">
                   <div className="font-semibold">STII Bldg., Gen. Santos Ave., Upper Bicutan,</div>
