@@ -1,0 +1,1509 @@
+ee | > LATTICE BOLTZMANN SIMULATION
+; ., OF THE ADVECTION OF OIL IN WATER
+
+NATIONAL INSTITUTE OF PHYSICS
+% College of Science
+
+ie University of the Philippines
+
+~~ Diliman, Quezon City
+
+JUNE 2015
+
+
+UNIVERSITY OF THE PHILIPPINES
+
+LATTICE BOLTZMANN SIMULATION
+OF THE ADVECTION OF OIL IN WATER
+
+by
+
+ELMER R. ARAPOC
+
+A Master’s Thesis Submitted to the
+National Institute of Physics
+College of Science
+University of the Philippines
+Diliman, Quezon City
+
+‘STI-18-1770
+
+In Partial Fulfillment of the Requirements
+for the Degree of
+M.S. PHYSICS
+
+June 2015
+
+CERTIFICATION
+
+This is to certify that this master's thesis entitled “Lattice Boltzmann simulation of the
+advection of oil in water” submitted by Elmer R. Arapoc to fulfill part of the
+requirements for the degree of Master of Science in Physics was successfully defended
+and approved ou 21 May 2015.
+
+Pianien a 9m a
+MARICOR N/SORIANO, Ph.D. LUIS MARIAT. BO“OT, Ph.D.
+Thesis Adviser Thesis Reader
+Professor Associate Professor
+National Institute of Physics National Institute of Physics
+C.S. U.P. Diliman, Quezon City C.S. U.P. Diliman, Quezon City
+
+The National ‘iistitute of Physics endorses acceptance of this master's thesis as
+partial fulfillment of the requirements for the degree of Master of Science in Physics.
+
+Nationdl Institure of Physics
+C.S. U.P. Diliman, Quezon City
+
+This master’s thesis is hereby officially accepted as partial fullfilment of the
+requirements of Master of Science in Physics.
+
+rosa BALMACEDA, Ph.D.
+
+Dean
+College of Science
+U.P. Diliman, Quezon City
+
+PLEASE POST NATIONAL INSTITUTE OF PHYSICS PLEASE POST
+College of Science
+University of the Philippines
+Diliman, Quezon City
+ANNOUNCEMENT OF THE MASTER’S EXAMINATION
+of
+ELMER R. ARAPOC
+
+in defense of his Master's Thesis
+
+LATTICE BOLTZMANN MODELING
+OF THE ADVECTION OF OIL IN WATER
+
+for the degree of M.S. Physics
+
+8:30 A.M., THURSDAY, 21 MAY 2015,
+
+NIP F210
+THESIS ADVISER THESIS READER
+MARICOR N. SORIANO, Ph.D. LUIS MARIA T. BO-OT. Ph.D.
+Professor Associate Professor
+National Institute of Physics National Institute of Physics
+CSS., U.P. Diliman, Quezon City C.S., U.P. Diliman, Quezon City
+THESIS EXAMINER THESIS EXAMINER
+MAY T. LIM, Ph.D. HENRY J. RAMOS, Ph.D.
+Professor Professor
+National Institute of Physics National Institute of Physics
+C.S., U.P. Diliman, Quezon City CS., U.P. Diliman, Quezon City
+AUTHORIZED BY:
+JOSE val P, BALMACEDA. Ph.D.
+Dean
+ational Institute of Physics College of Science Y
+
+‘CS., U.P. Diliman, Quezon City UP. Diliman, Quezon City
+
+Lattice Boltzmann Simulation of the Advection of Oil in Water
+by Elmer R. Arapoc
+
+MS Thesis, National Institute of Physics
+
+University of the Philippines Diliman
+
+June 2015
+
+Classification* : P
+* I — invention or creation, P - publication, C - confidential information
+
+Available to the general public Yes
+
+Available only after consultation with author/adviser for thesis/dissertiation No
+
+Available only to those bound by nondisclosure or confidentiality agreement No
+
+“Dr. Maricor N. Soriano
+Thesis Adviser
+
+List of Figures
+
+Acknowledgements
+
+My sincere gratitute goes out to
+
+Dr. Maricor Soriano. Thank you for taking me in to the VIP family and
+accepting the huge responsibility of having me as one of your advisee, Thank you
+for sharing your knowledge and expertise. Thank you for the trust, the constant
+guidance and the encouragement. Your passion and dedication towards your
+work is very inspiring. Thank you very much for the great learning experience.
+
+VIP. Thank you for the warm welcome. Alfred, Badet, Julia, Gino, Meryl, Gege,
+Alix, Mabel, Ate Lau, Ate Che, Kuya Francis, Ate Rose, Aaron, Mich, The
+Underachievers - Elexis, Ritz and Phoebe. It was really a pleasure to have a
+family to belong to. I am specially thankful to Alfred for working with me in the
+construction of the experimental setup.
+
+my professors and classmates. Dr. Tapang and VISSER. Kuya Atchong. Michael
+for the advice and heads up. April, Donne, Rhona, Aura, Joseph, Debby, Aimee.
+Dr. Bo-ot and the students in Phys 210.1. Dr. Lim and Dr. Ramos. Maam
+
+Carina,
+
+0s,
+
+the Division of Physical Sciences and Mathematics at the University of the
+Philippines in the Visayas as well as the DOST through ASTHRDP for all the
+support.
+
+all those I have met along this journey. Ate Rhoda, Nanay Maria and rest of the
+Three Marias, Jericho, Victor and Armand. Nanay Alice and Kuya, Mang Mac
+and the carpentry shop gang. Ate Emily and the rest. Ate Lina. Maam Arlene,
+To the acquaintances and even to the strangers who extended a hand , said a
+greeting or beamed a smile - thank you.
+
+my friends RC, Peter and all the extended friends. Maam Saldafia. Jonas.
+ny family. Papa, Mama, Emily, Elwie, Raymund, Mama Paying, Shire, Ronan,
+Yoyo, Auntie Estring. ‘Thank you for all the support and understanding. Pa,
+sorry I was away.
+
+Glory and praises be to God who made all things possible.
+
+you!
+
+Abstract
+
+We show a simple simulation of the transport of oil on the surface of flowing
+water using a program implementation of the Shan-Chen lattice Boltzmann
+method. The oil advection path of the lattice Boltzmann simulation showed fair
+agreement with the actual trajectory observed in a simple oil advection
+experiment performed on a tabletop setup, supporting the functionality of the
+implementation. The implementation is then extended to simulate the trajectory
+of of an actual oil spilling accident.
+
+PACS: 47.11.-j [Computational techniques in fluid dynamics], 47.85.Dh [Applied
+fluid mechanics], 95.55.-n47.11.Qr [Lattice Gas], 47.11.Fg [Finite element method]
+
+Contents
+
+1. Introduction
+
+1.1 Oil Spill Trajectory Modeling .1
+1.2 Lattice Boltzmann Method . . 2
+2. Theoretical Background
+2.1 Lattice gas automata. 4
+2.2. Lattice Boltzmann equation 6
+2.3 Equilibrium distribution function ............0 000. e eevee 7
+2.4 Macroscopic Variables ......... 0.60 e cece scence eee e eens 8
+2.5 Bounceback boundary condition .........0.0e eee eeeeunes 8
+2.6 Shan-Chen lattice Boltzmann .......... 00.06 cee eee e eee 9
+3. Tabletop Oil Advection Experiments
+3,1 Oil advection on achannel.. 1.1... 6. eee eee eee eee ee 10
+3.2 Oil advection with Panay Gulf outline boundaries............. 13
+4. Simulation Results and Discussions
+4.1 Implementation ........ 15
+4,2 Oil advection on a channel Gapoppadcd .16
+4.3 Oil advection with Panay Gulf outline boundaries ............ 20
+4.4 Shan-Chen interparticle potential G. 1... 6... 0s erence eee 23
+4.5 Relaxation time T 6... 1... eee eee eee eee 24
+4.6 1991 Persian Gulf oil spill. 6.6... eee eee eee ee 25
+4.7 2005 Goa, India oil spill ©... 6... e eee ee eee ee eee 29
+4.8 2006 Guimaras oil spill... 6... ee eee 33
+4.9 Spread of simulated track with wind forcing.......... 0.00005 36
+
+5. Summary and Conclusions. .......-- 000s ee eee eee eee 39
+
+List of Figures
+
+Figure 2.1 Lattice gas automata typical hexagonal lattice ............. 4
+Figure 2.2 Lattice Boltzmann streaming and collision process . . . 5
+Figure 2.3 Lattice dimensions... 0.0.0.0 ccc eeeeeeeeueeeeuuees 6
+Figure 2.4 Bounce-back boundary... 2.0... se 00 ee eee ueeeeeneee ens 9
+Figure 3.1 Oil advection experiment setup diagram.................55 10
+
+Figure 3.2 Video snapshots of actual oil advection for case of one baffle... 11
+Figure 3.3 Actual advection for case of two baffles......
+Figure 3.4 Oil advection setup for a larger oil advection .
+
+Figure 3.5 Oil advection around Panay gulf outline boundaries
+
+Figure 4.1 LBM simulation for advection in a channel with one baffle..... . 16
+Figure 4.2 LBM simulation for advection in a channel with two baffles... . 17
+Figure 4.3 Actual and LBM simulated advection at corresponding times
+
+for a case of one baffle... 1.11. ee eee eee 18
+Figure 4.4 Actual and LBM simulated advection at corresponding times
+
+for a case of two baffles .
+
+Figure 4.5 LBM simulation for advection around Panay gulf outline....... 20
+Figure 4,6 Actual oil advection around Panay gulf outline.............: 21
+Figure 4.7 Actual and LBM simulated advection around Panay gulf
+
+at corresponding times... .0 6.0 ese ete eee e eee ences 22
+Figure 4.8 LBM simulation oil advection pattern at different values of G . . . 23
+Figure 4.9 Trajectory of Al Abmadi oil spill........ 2.000. eeeee ee es 25
+Figure 4.10 LBM simulation for the for Al Ahmadi oil spill............. 26
+Figure 4.11 Track of the LBM simulated advection ......... 000000005 27
+
+Figure 4.12 Trajectory of the LBM simulated advection
+
+using monthly-averaged wind data
+
+Figure 4.13 Track of Goa oil spill.......-. 00.005
+Figure 4.14 Lattice Boltzmann simulation for Goa oil spill .
+
+. 30
+Figure 4.15 LBM simulation for Goa oil spill using prevalent wind forcing... 31
+
+Figure 4.16 LBM simulation for Goa oil spill using wind data
+from P. Vethamony et al.
+Figure 4. 17 ASAR images of the actual Guimaras oil spill
+
+Figure 4.18 Lattice Boltzmann simulation for the Guimaras oil spill .
+
+Figure 4.19 Trajectory of the LBM simulation for Guimaras oil spill . . . 35
+Figure 4.20 Spread of LBM simulation of the Guimaras oil spill
+
+for a spread of wind forcing... ... 6... c ccc e en eee erences 36
+Figure 4.21 Spread of the LBM simulation of the Al Ahmadi oil spill ...... 37
+Figure 4.22 Spread of the LBM simulation of the Goa, India oil spill ...... 38
+
+Chapter 1
+Introduction
+
+1.1 Oil spill trajectory modeling
+
+Oil spilling is a global concern. In the Philippines, the shipping of oil and
+other petroleum products across the archipelago has made it very vulnerable to
+oil spilling accidents.
+
+Inorder to mitigate the environmental damage that may result from an oil
+spill, containment measures are formulated and contigency response mechanism
+are put in place. Contingency planners, response officials, government agencies,
+and oil transporters share a keen interest in being able to anticipate oil spill
+trajectories for the effective planning and deployment of response personnel and
+equipments in order to contain the spill and to protect environmentally sensitive
+areas.
+
+However, sufficient lead time is needed before contingency measures can be
+effectively implemented. Hence, a timely prediction of an oil slick is necessary for
+appropriate action. Also, because oil spill occur in different locations under
+different circumstances, each oil spill incident is a unique event in terms of
+impact, damages and response challenges. Thus, oil spill modelling tools are being
+developed to predict the possible trajectory an oil spill might follow on a body of
+water.
+
+Numerical models used to simulate fluid flows are now widely employed
+internationally as an important component of contingency planning and coastal
+management. Currently available fluid modeling tools include GNOME (General
+NOAA Operational Modelling Environment) of the US National Oceanic and
+Atmospheric Administration, MIKE of the Danish Hydrodynamic Institute,
+GULFSLIK, MEDSLIK and among others mostly using the conventional
+computational fluid dynamics.
+
+In a related study in 2012 by J. Santillan and E, Paringit, the
+Eulerian/Lagrangian spill-trajectory model GNOME was employed to model the
+oil spill trajectory of the actual Guimaras oil spill accident in 2006, The GNOME,
+simulation was validated using satellite data images, but the model showed poor
+performance and the results of the actual versus-simulated oil spill patterns
+showed that improvement is needed [21].
+
+With the same motivation, this study initally attempts to use a simple
+implementation of the lattice Boltzmann method to simulate the advection of oil
+on the surface of water. Advection is the transport of a substance, which is the oil
+for this particular case, by a fluid due to its bulk motion. The fluid being water.
+
+The study starts with the simulation of actual simple oil advections
+performed on a table-top setup. The simulation is evaluated by comparing the
+actual and simulated oil advections. The implementation is then extended to
+simulate a large scale oil advections, that of an actual oil spilling incident. The
+simulations are implemented using an emerging fluid simulation model called
+Lattice Boltzmann Method.
+
+1.2 Lattice-Boltzmann Method
+
+Fluid flows can be described at three levels: macroscopic, mesoscopic and
+microscopic. In microscopic level, the motion of each molecule is tracked so that
+its position and momentum can be obtained and where the molecular dynamics is
+described by Newton’s second law. At the macroscopic level, the physical
+conservation laws of mass, momentum and energy are applied to a control
+volume to establish a set of partial differential equations for governing the fluid
+flow, like the Navier-Stokes equations. The conventional computational fluid
+dynamics (CFD) is to solve these governing equations by using various numerical
+methods.
+
+In contrast, the lattice Boltzmann method (LBM) is an approach at
+mesoscopic level. The LBM closes the gap between macro-scale and micro-scale.
+The LBM is based on solving the discrete-velocity Boltzmann equation in
+statistical physics as opposed to conventional numerical schemes based on the
+discretization of partial differential © equations describing macroscopic
+conservation laws [2]. LBM considers the behavior of a collection of particles as a
+unit and studies the microdynamics of fictitious particles by using simplified
+Kinetic models {9].
+
+The fundamental idea of the LBM is to construct simplified kinetic models
+that incorporate the essential physics of microscopic processes so that the
+macroscopic averaged properties obey the desired macroscopic equations. The
+
+2
+
+essential idea of the approach lies in the recovery of the macroscopic governing
+equations, e.g., the Navier-Stokes equation, the shallow water equation, the
+diffusion equation, the advection-diffusion equation, etc., from the
+microscopic flow behavior of the particle movement as described by
+kinetic theory [8]. The discrete kinetic equations are designed in such that they
+reproduce the Navier-Stokes equation in the hydrodynamic limit [16]. Chapter 2
+of this thesis discusses further the development as well as the theoritical and
+mathematical details of LBM.
+
+The kinetic nature of LBM brings many distinctive features such as the
+clear picture of streaming and collision processes of simulated fluid particles, the
+simple algorithm structure, the easy implementation of boundary conditions, and
+the natural parallelism. The versatility and relative ease of implementation
+makes lattice-Boltzmann methods particularly attractive for a wide range of
+applications in both science and engineering [7]. LBM finds its applications in
+simulation of laminar and turbulent flows, interfacial dynamics of multiphase
+flows, flows in porous media, particulate and suspension systems, bio-fluid
+mechanics, electro-kinetic flows, magneto-hydrodynamics, quantum and
+relativistic flows, nano/micro fluidics, and multiscale flows [8].
+
+In this study, the lattice Boltzmann method is used to simulate the
+advection of oil on water. Table-top oil advection experiments are carried out
+and are then simulated by a simple LBM implementation. Chapter 3 describes
+the methdology of the different table-top oil advection experiments that were
+performed.
+
+Chapter 4 describes the simulation implementation and discusses the oil
+advection simulations results.
+
+While oil spilling is a complex process, the study also attempts a
+simulation of an actual oil spilling incident using the same LBM implementation.
+Of particular interest are the 1991 Al-Ahmadi oil spillage on the Persian Gulf and
+the 2006 Guimaras oil spill accident which are described in Sections 4.4 and 4.5.
+The sections also describes the simulation of the spilling incidents including the
+limitation of the implementation. Chapter 4 also further discusses the simulation
+results followed by a summary and conclusions in Chapter 5.
+
+Chapter 2
+Theoretical Background
+
+2.1 Lattice-Gas Automata
+
+The Lattice-Boltzmann Method evolved out of Lattice-Gas Automata
+(LGA) [4]. In LGA, the fluid is treated as a set of simulated particles residing
+on a regular lattice shown in Fig. 2.1 with certain symmetry properties, where
+they collide and stream following some prescribed rules that satisfy some
+necessary physical laws. The philosophy behind LGA is that fluid behaviors at
+macroscale are nothing but statistical collective results of the micro-dynamics of
+fluid molecules, and are insensitive to the detailed information of the individual
+molecules [6].
+
+The lattice gas automata is constructed as simple particle dynamics in
+discretized space and time. Consequently, all particle velocities are also discrete.
+Particles can move around, but only within lattice nodes with discrete velocities
+as in a frequently used hexagonal lattice in Figure 2.1.
+
+- @— @-
+NN Bowe 5/:
+@ to
+7 aN. Nee
+e-e-
+
+\ PA
+
+Kigure 2.1. ‘l'ypical hexagonal lattice used in lattice gas automata.
+Particles are confined to move in discrete velocities @-
+
+A set of boolean (true or false) variables n,(x,t) is introduced to describe
+occupation of a particle.
+
+nj(x,t),i
+
+.M (2.1)
+
+where M is the number of directions of particle velocities at each node so that i =
+0, 1,..., 6 for a hexagonal lattice.
+
+The boolean variable can be either 0 or 1 particle at a lattice node, i. e.
+
+n(x,0)}=0 no particlesat sitex andt
+
+n(x,t)=1 — aparticleis present at sitex andtimet (2.2)
+‘The evolution of the LGA is described by
+n(x+e;6t,t+1) = n(x,t) + Q(n(x,t)),  i=0,...M, (2.3)
+
+where ¢,are local particle velocities, (2, is the collision operator, Ot is time step.
+There are scattering rules that bring proper dynamics to the system where (2
+changes occupation number due to collision at site i.
+
+Configuration of particles at each time step evolves in two sequential sub-
+steps: streaming and collision illustrated in Fig. 2.2. During streaming, each
+particle moves to the nearest node in the direction of its velocity. During the
+collision, particles arrive at a node and interact by changing their velocity
+directions according to scattering rules. The key requirement of the LGA model is
+that the mass, momentum and energy must be conserved during the particle
+collision and streaming process (2]. The resulting system exhibited fluid-like
+behaviour.
+
+Collision
+
+Figure 2.2. The evolution of the particle configuration is governed by the sequential
+streaming/propagation and collision process.
+
+5
+
+2.2 Lattice Boltzmann Equation
+
+The transition from LGA to LBM was done by replacing particle
+occupation variables n; with single particle distribution functions
+
+f,=() (2.4)
+
+4(x,e,t) represents the number of particles with mass m at time t
+positioned between x + dx which have velocities between e+de.
+
+The evolution of the particle distribution function is governed by the
+Boltzmann equation. Although the LBE evolved from LGA method, it has been
+shown [1] that the LBE can be obtained from the continuum Boltzmann equation
+for discrete velocities. The LBM simplifies Boltzmann's original idea of gas
+dynamics by reducing the number of particles and confining them to the nodes of
+a lattice.
+
+There are choices for the dimensionality of the underlying lattice as in Fig.
+2.3. These are usually classified using the DaQf-notation, where @ denotes the
+space dimensionality and # corresponds to the number of discrete velocities
+within the momentum discretization. For a two dimensional lattice with 9
+velocity directions @ including zero velocity, a D2Q9 lattice model is used where
+the lattice and the velocity discretization is shown.
+
+es ; s
++ ©. ‘ ~
+
+eS? 2
+
+hes
+
+e, Ve,
+
+D2Q9 D3QI5
+Figure 2.3. Lattice dimensionality.
+
+The exchange of momentum and energy is achieved through particle
+streaming and particle collision. This process can be modelled by the Boltzmann
+transport equation,
+
+of 4 e -Vf=alf) (2.8)
+ot
+where f(x, t) is the particle distribution function, e is the particle velocity, and 2
+is the collision operator. The kinetic form stays the same as in LGA. The particle
+
+distribution function is given by
+
+Filxtegdt,t+At) = fix(xt) + Q(F(x,t)), i
+
+0,...M (2.6)
+
+where At is a time increment, f is the particle velocity distribution along the kth
+direction. (2, is often replaced by the so-called BGK (Bhatnagar, Gross, Krook,
+1954) collision operator given by
+
+1 “EC .
+& = —h-f) @n
+
+where Tis the rate of relaxation towards local equilibrium, which is related to the
+fluid viscosity. The limit T— 0.5 corresponds to the inviscid flow, while the T>
+© limit represents the Stokes (creeping) flow [12][5].
+
+After introducing the BGK approximation, the Boltzmann equation can be
+written as
+
+Le vp =f). 28)
+
+The form of the discritized Boltzmann equation in a specific velocity
+directions with the time step At and space step Ax, = 6,At is
+
+falmrerQesteae) = filet) AE -f) =)
+
+which is the central equation of LBM, governing the evolution of the particle
+distribution function involving the two-step process of streaming and collision,
+
+collision step: Fi(xa.t#0) = flat) —28(f- f°)
+
+a (2.10)
+streaming step: f,(x,+e,At,t+Ac) = fi, (x,,¢+At)
+
+2.3 Equilibrium distribution function
+
+Equilibrium distribution function fzg, which appears in the BGK collision
+operator, is basically an expansion of the Maxwell's distribution function for low
+Mach number M [5][12]. The equilibrium distribution function is of the form
+
+PP = pwlt+3(ey « u) —S(u - ule Sley uf] (2.11)
+
+where k runs from 0 to M and represents the available directions in the lattice,
+is the fluid density and w, are weighting factors, where for a D2QQ lattice, the
+weights w; are (1]
+
+We = 4
+9
+1
+Weta = 9 (2.12)
+-~J1
+Wists.e) = 36
+
+In the presence of body forces F, the LBGK equation (2.7) will have to add this
+force to the collision process [4]
+
+faleate,dt tet) ~faltat) = 2 fulrst)-8%(r,0)) — Fede (2.13)
+
+in three dimensions r.
+
+2.4 Macroscopic Variables
+
+In the Lattice Boltzmann Method, macroscopic quantities are obtained by
+evaluating the hydrodynamic moments of the distribution function f [6].
+Connections of the distribution function to macroscopic quantities for the density
+and momentum flux are defined as follows
+
+7 7
+p= dhe = he
+& fe (2.14)
+pu = Deh, = Defi?
+fd a
+
+where the macroscopic fluid density is defined as the sum of the distribution
+functions. Macroscopic velocity is an average of the microscopic velocities e
+weighted by the directional densities 4.
+
+2.5 Bounceback Boundary Conditions
+
+Bounceback is suitable in complicated geometries, for example it is used to
+model solid stationary or moving boundary condition, non-slip condition, or flow
+over obstacles [9]. Bounceback implies that a particle coming towards the solid
+boundary bounces back into the flow domain.
+
+For example, we focus on the boundary shown in Figure 4. There is no
+streaming from a solid, so we have three unknown distribution functions 5, £2
+and £6.
+
+° eo
+_ FLUID
+
+SOLID
+° ° ° °
+Figure 2.4. Bounceback on a fluid-solid wall boundary.
+
+Bounce-back is simply performed with next equations
+fs=fs h=fo fe = fo (2.15)
+
+Particles bounce back to the node from which they were originally
+streamed. It is important, that streaming process is executed before applying
+boundary conditions.
+
+2.6 Shan-Chen Lattice Boltzmann Method
+
+Shan-Chen model is commonly used to simulate multicomponent fluid
+flows [3]. The Shan-Chen multiphase method introduces an interparticle potential
+to induce phase separation [16]. Shan-Chen LBM is based on the concept of
+pairwise intermolecular interactions among fluid particles where the effective force
+on the Oth component is defined as
+
+F,(r) = -G¥,(r,t VX wes (r+e,,t)e, (2.16)
+
+where G and G are the two components of the fluid system (oil and water in this
+case) and Wo(r,t) is the reference density. The magnitude of G determines the
+magnitude of the interaction between components whether attractive (positive)
+or repulsive (negative). For phase separation to occur a suitable G must be
+chosen, and must be negative and below a certain critical value [16]. For the case
+of nearest-neighbor interactions on the D2Q9 lattice, the weights w;? are w(1) =
+1/3 and w(2) = 1/2 [17]. The Shan-Chen model defines separate distribution
+functions fig for each of the component fluids 0 where the individual fluid
+component is modeled separately through its lattice Boltzmann equation.
+
+Chapter 3
+Tabletop Oil Advection
+Experiments
+
+3.1 Oil advection on a channel
+
+An actual oil advection experiment is performed on a tabletop ripple tank
+setup shown in Figure 3.1. An acrylic ripple tank with length and width of 29 cm
+and height of 12 cm was filled with water up to a depth of about 0.3 cm. The
+wave generator was constructed from a speaker to which a metal strip was
+connected to the speaker's diaphragm. The whole wave generator system was
+held in a wooden stand so that the metal strip just touches the water surface on
+the tank, generating plane surface waves as it vibrates.
+
+Speaker
+
+| Acolic Tank
+
+Signal Generator
+Overhead Projector
+
+Figure 3,1. Oil advection experimental setup diagram. A driven speaker serves as a wave
+ccuerator for the water on the tank. ‘The tank is placed on an overhead projector so that the oil
+low experiment onthe tank is projected to a screen for convenient video recording.
+
+10
+
+A surface flow is generated by a 32.50 Hz frequency wave generator on a
+6.5 cm wide channel. A baffle/barrier of around 2.5-cm was placed
+perpendicularly on one side of the channel. Canola oil was allowed to spread and
+thin out first to around 2.5 cm in diameter before powering the wave generator to
+allow the water to flow.
+
+Figure 3.2 shows the snapshots at corresponding times of the video taken
+of the actual tabletop oil advection experiment. The experiment was done
+repeatedly and showed consistent advection pattern throughout.
+
+66s 738
+
+Figure 3.2. Video snapshots of the actual oil advection experiment at corresponding times.
+
+11
+
+Figure 3.3 shows a similar advection on the channel with two baffles
+introduced into the channel.
+
+99s 11.0
+
+Figure 3.3. Video snapshots of the actual oil advection experiment at corresponding times for
+iwo baffles.
+
+12
+
+3.2 Tabletop oil advection using Panay Gulf outline
+boundaries
+
+An experiment approximating oil advection around land masses was performed on
+a larger 0.6 m by 1.2 m tank shown in Figure 3.4 using the similar wave
+generator setup as in Section 3.1. The tank setup is illuminated from below using
+LED strips with a diffuser placed in between. The oil was dyed using an oil based
+food color to obtain better contrast. A Panasonic HDC-HS900 HD videocamera
+placed directly overhead the tank setup was used to capture the video.
+
+Figure 3.4. Tabletop Setup. A 0.6 m by 1.2 m aquarium illuminated from below using a
+diffused ‘LED light. A plunger constructed and connected to a speaker which in tum is
+driven by’a signal generator serves as the wave generator. A videocamera is placed over the
+setup.
+
+An outline of the vicinity of the Panay gulf was cut out from a styropor
+board. The Styropor cutouts which will serve to provide the land mass
+boundaries were then weighted to keep them fixed. The actual oil advection is
+shown in Fig 3.5.
+
+OOO
+
+a c
+
+OAC AY
+
+Figure, 3.5, The advection of a drop of oil around Panay gui outline boundaries. The oil
+
+‘was allowed to thin out before powering on the wave generator.
+
+14
+
+Chapter 4
+Simulation Results and Discussions
+
+4.1 Implementation
+
+The simulations were implemented in GNU Octave version 3.8.1 on an Intel®
+Core™ i3 1.8 GHz CPU running on Ubuntu 14.04 LTS Operating System. Octave
+is high-level programming language intended primarily for numerical
+computations and is an open-source alternative and highly compatible to MatLab.
+
+‘We employed a Shan-Chen Lattice Boltzmann BGK to simulate the two-
+dimensional fluid surface flow using a D2Q9 lattice model and the Shan-Chen
+multicomponent model to simulate the advection of oil in water. The outline of
+the simulation is as follows:
+
+1. Initialize the density distribution function f for each of the component fluid.
+2. Obtain the macroscopic variables (Eqn 2.14)
+3. Calculate the equilibrium distribution function (Eqn. 2.11).
+
+4. Obtain a new density distribution function after the collision process and
+apply forcing.
+
+5. Consider the interaction between the fluid components described by Shan-
+Chen.
+
+6. Stream/propagate the particle distribution function to the neighboring node.
+7. Apply boundary the necessary boundary condition.
+
+8. Iterate the steps.
+
+15
+
+4.2 Simulation of the oil advection on a channel
+
+For the advection of oil on a channel, we used a 100 by 250 lattice grid to
+cover the area. A continous boundary was imposed on the channel inlet and
+outlet sides while a bounceback condition was imposed on the channel boundary
+and baffles. We vary the value of G (Eq. 16), ie varying the magnitude of the
+interaction between ojl and water. We also set the relaxation parameter t (Eq.
+27) at 1.0 at to keep the simulation stable. The snapshots of the simulation at
+the corresponding times of the actual oil advection in Figure 3.2 is shown in
+Figure 4.1.
+
+0.0s
+
+49s
+
+3.38
+58s
+
+66s
+
+Simulation for the oil advection in a channel with a bale. Red indicates a
+prabablbey Semslty ior Od while blac indicates no probabiliy for ot in the nego.
+
+The oil advection simulation is shown in Figure 4.1. The color indicates
+the normalized probability for oil. Red indicates a high probability for oil in the
+region while blue indicates a zero probability.
+
+16
+
+The simulated oil advection shows a fair agreement with the actual oil
+advection pattern observed on the tabtop experiment in Figure 3.2. This
+simulation was obtained using a value of G = -0.60. The actual oil pattern in
+Figure 3.3 f and simulated pattern in 4.1f shows sigificant similarity. Our
+simulation however showed relatively more drag after the obstacle towards the
+end of the simulation as compared with the actual experiment. The simulation
+also showed some oil diffusing out as the oil moves along. Nonetheless, the overall
+path of the simulated oil advection agrees well with the actual oil advection.
+
+Using the same parameter values, we simulate another oil advection
+through a different obstacle. The actual oil advection experiment through this
+new obstacle is shown in Figure 4.2.
+
+Figure 4.2. Lattice Boltzmann simulation for the oil advection in a channel with two baffles.
+
+The simulation yield a similar oil movement consistent with the observed
+oil advection in the experiment.
+
+A comparison of the trajectory of the actual and the LBM simulated
+advection is obtained by comparing the location of the centroid of the actual oil
+pattern and the center of the oil concentration of the LBM simulated advection
+at corresponding times. The location of the centroid and the outline of the oil
+patterns for the case of a single baffle is shown in Figure 4.3.
+
+66s 7.36
+
+Figure 4.3. The outline and centroid of the oil pattern for the actual (blue) and LBM
+simulation (yellow) at corresponding time. q
+
+Computing for the root mean square error between the corresponding
+centroids of the actual oil pattern and the location of the LBM simulation’s
+central oil concentration yield a value of 6.45 which corresponds to an absolute
+error of 0.43 cm.
+
+18
+
+Similarly, a comparison of the trajectory of the actual and the LBM
+simulated advection for the case where two baffles were introduced is also
+obtained. The centroid and the outline of the oil patterns for this case is shown
+in Figure 4.4.
+
+4.08
+
+995 110s
+
+Figure 4.4. The outline and centroid of the actual oil pattern for the (blue), and the
+central oil concetntration of the LBM simulation )) al corresponding’ time for
+the case of two baffles.
+
+The RMS error yields 5.85 corresponding to an absolute error of 0.39 cm.
+Overall, the movement of the concentration of oil in the simulation agrees with
+that of the actual oil advection
+
+19
+
+4.3 Simulation of the oil advection around coastline
+The oil advection experiment with Panay gulf coastline boundary was
+simulated in a 200 x 300 grid. The parameters G was set at -1.2 and the
+
+relaxation parameter T was set at 0.9. Snapshots of the oil advection simulation is
+shown in Figure 4.5.
+
+i
+
+Figure 4.5, Lattice Boltzmann simulation for the oil advection around the Panay gulf
+coast boundaries.
+
+Figure 4.5 shows that the concentration of the oil drop moves in a path
+similar to the path followed by the drop of oil in the actual experiment as shown
+in Figure 3.5 where most of the oil moves around the eastern side of Guimaras.
+
+20
+
+‘The simulation also showed the oil diffusing out as it moves. Figure 4.5 h-l
+suggest that there is indeed a probability for some oil to move around the western
+side of Guimaras. This was observed for the actual oil advection experiment
+where oil was allowed to first thin out as shown from Figure 3.6 f, Figure 3.6 h-l
+showed some oil moving back along the coast of Negros. The LBM simulation
+shown in Figure 4.5 } follows this where an oil probability is seen along the
+Negros coast.
+
+Figure 4.6 shows the actual oil advection pattern at specific times.
+
+“eS
+AALS
+(y iy iy
+
+Figure 4.6. Actual oil advection pattern at corresponding times.
+
+21
+
+Figure 4.7 shows the outline and the centroid of the actual oil advection
+patterns in Figure 4.6 (in blue) together with the central oil concentration of the
+LBM simulation (in yellow) at corresponding times.
+
+10.0s
+
+50.08 60.0s 70.0s
+
+Figure 4.7, Outline and centroid of the actual oil tern ), and the itral oil
+eae er oats DBM inalation (jelow) at oourefoonding taney, cont
+
+Comparison of the centroid of the actual oil advection pattern and the
+central concentration of the oil in the LBM simulation yields an RMS error
+equivalent to an absolute error of 3.2 cm.
+
+22
+
+4.4 Shan-Chen inter-particle potential G
+
+The Shan-Chen interparticle potential parameter G controls the strength
+of the inter-particle force between fluid components, which relates to the
+miscibility or immiscbibility of the fluids involved. In the simulation, the value of
+G was choosen to closely approximate how the oil spreads out in the actual
+tabletop experiment.
+
+Figure 4.8 shows the behaviour of the LBM simulated oil advection pattern
+at different values of G against the actual oil advection pattern at corresponding
+times.
+
+mulation oil advection pattern at different values of G. The actual
+CE ae ee saliern at coresponding Unmes is shown in black outline.
+
+23
+
+Figure 4.8 shows how the LBM simulated oil pattern can easily spread out
+at G = - 0.2 while the oil becomes more cohesive at G = -1.0, for which the oil
+pattern tends to be more rigid throught the whole advection. Using G = - 0.6, the
+LBM simulated oil pattern closely approximates the actual oil advection pattern.
+
+Less negative values of G results to a less cohesive oil in the simulation
+which can easily spread out to show detailed oil advection pattern or even
+breaking up of the oil. A more negative value for G results to a more cohesive oil
+in the simulation which tend to keep the oil together.
+
+While G affects the spread and the pattern of the oil throughout the
+advection process, it does not have considerable influence on the movement of the
+centroid of the LBM oil simulation pattern. Simulating and tracking the oil
+central concentration at much larger scales without much regard for actual oil
+advection pattern could use a more negative value for G. Such was used for the
+simulation of the advection of oil with Panay gulf outline where G = -1.2. The
+simulation of of large scale oil spill incidents in the next sections to primarily
+model the trajectory of the oil concentration uses G = -1.0 to limit the spread of
+the oil throught the advection.
+
+4.5 Relaxation time T
+
+The relaxation time T determines how quickly the distribution function
+relaxes to equilibrium during the collision phase in the LBM algorithm. The
+
+relaxation parameter has to satisfy the condition T > 0.5 to maintain the
+numerical stability of the LBM simulation, where T = 0.5 corresponds to a flow
+of fluid with zero viscosity [5,12]. The relaxation parameter of T = 1.0 in all LBM
+simulation is the safest value in terms of stability (6, 26]. As suggested by Sukop
+[6], a relaxation time of T = 1.0 has been used in the simulation.
+
+24
+
+4.6 Simulation of the 1991 Al Ahmadi oil spill
+
+We extend our simulation to actual large scale oil spilling accidents. The
+Al-Abmadi oil spillage in January - May 1991 at the Persian Gulf at the height
+of the Gulf war is a well documented incident. Oil was released at or near Mina
+Al-Ahmadi, some 25 km south of Kuwait City. The actual trajectory of the oil
+spill has been extensively documented and several authors have described and
+modeled the incident. Al Rabeh et. al used the trajectory model GULFSLIK II
+[35] while El Shorbagey et. al used MIKE 3 to model the oil spill incident [33].
+The actual trajectory of the oil’s leading edge, as well as the simulation by Al
+Rabeh and El Shorbagy is shown in Figure 4.9.
+
+Nc msi
+
+a b c
+
+Figure 4.9, The (a) actual observed trajectory of the oil during the 1991 Al-Ahmadi
+oil spill and the (6) simulated trajectory done on GULFSLIK by Al Rabeh, ct all and
+(@) by El Shorbagy using MIKE.
+
+25
+
+At the Persian Gulf, the dominating wind condition is the northwesterly
+wind field called Shamal. Such wind pushes the current towards the south.
+Considering a prevalent wind condition of 5.0 m/s blowing from the northwest
+[33], 2 LBM simulation on a 200 x 300 lattice was implemented with G = -0.9
+and T = 1.0 as shown in Figure 4.10.
+
+a :
+1
+I [ss a
+|
+|
+b i
+f |
+:
+} |
+" ‘ 4
+q | q
+da | h 1 |
+
+Figure 4.10. Lattice Boltzmann simulation for th Al-Abmadi oil spill.
+
+The track of the movement of the oil’s central concentration for the
+simulated oil advection is shown in Figure 4.11.
+
+4
+
+(0 day) Jan 19,
+
+/
+
+jon 25 fh —— (7-1 days) jan 26
+fy
+
+fan29 *—— (10.9 days) Jan 29:
+.
+.
+\ $21.4 days) cab 9
+\"
+
+PMs
+\
+
+\ 4
+March a8 => | 3 635d
+
+@ Actual Oil Sighting ©) LBM simulation
+@ MIKE simulation
+
+(a) (b)
+Rien 41, (0) Thack of the ols centzal concentration forthe simuiatd oil advectoin forthe
+“Ahmadi of {he mulation (yelow), ie shown together with the
+
+Al
+Safer ata ah ta pe me a A
+
+Figure 4.11.2 showed that the LBM simulation oil’s central concentration
+(in yellow) moves south. This is consistent with the path of the actual oil sighting
+shown in pink. A comparison of the different tracks is shown in Figure 4.11.b for
+the actual oil sighting, the simulation by El Shorbaggy and the LBM simulation.
+
+At the start of the LBM simulation, the oil moves south along the coast
+but drifts more westward as it moves south as the simulation proceeds deviating
+from the track of the actual oil sighting. The same is observed for the the track
+by Elshorbaggy using MIKE.
+
+El Shorbaggy, et. Al [36] attributed this to the limitation of using a monthly
+averaged wind data for their simulatoin. The LBM simulation on the other hand
+uses a constant prevalent wind of 5.0 m/s NW.
+
+27
+
+To determine the limitation of using a constant wind data, an LBM
+simulation was implemented using the monthly averaged wind data used by El
+Shorbaggy et al. The trajectory for this simulation is shown in Figure 4.12.
+
+Jan 19
+
+‘Actual Oil Sighting
+
+(MIKE3 Simulation
+(A. Elhakeem, et.al (2007)
+RMSE = 6.5 (20,0 km)
+
+LBM simulation
+
+(3.0 m/s and 306"
+
+NNW prevalent wind)
+RMSE = 13,9 (42,9 km)
+
+(El Hakeem, et.
+RMSE = 8.1 (25.0 km)
+
+Figure 4.12 shows that when using the monthly averaged wind data, the
+track of the LBM simulation shifted westward towards the latter part of the
+simulation. The RMS error associated with each of the simulated trajectory
+relative to the trajectory of the actual oil sighting is calculated. The simulation
+by El Shorbaggy et. al. has an RMSE of 6.5 corresponding to an absolute error of
+20.0 km. The RMS absolute error for the trajectory of the LBM simulation using
+a montly averaged wind data improved to 25.0 km from 42.9 km when only a
+constant prevailing wind is used.
+
+4.6 Simulation of the 2005 Goa, India oil spill
+
+An oil spill occurred off Goa, west coast of India, on 23 March 2005 due to
+collision of two vessels. Wind analysis indicated that winds were variable: NNE
+direction with and WNW direction in the evening and predominantly in the
+northwest direction [35].
+
+Figure 4.13 shows the actual sighting of the oil as well as the trajectory oil
+the oil using MIKE21 spill analysis model in the previous work by P. Vetamony,
+et al [35].
+
+85 15°30"
+
+75 {15°26
+
+15°18
+
+rN
+
+1BrEN
+
+1S'ON
+
+(kilometer)
+BS && 8 F&F HSB
+
+204 14" 54
+
+TAGE
+Lae
+
+60
+
+(kilometer)
+
+Figure 4.13. Track of the Goa oil spill. Points indicate the actual sighting location
+PAE Sate bea time, Soll tack {Som the Smmulaion using MINT wiih micated
+date and time [35].
+
+29
+
+The prevalent wind condition is 3.5 m/s NNW [35]. The lattice Boltzmann
+simulation is shown in Figure 4.14 using a 300 x 300 lattice with G = -1.0 and T
+=10.
+
+Figure 4.14. Lattice Boltzmann simulation for the Goa oil spill
+
+The trajectory of the movement of the oil’s central concentration for the
+simulated oil advection is shown in Figure 4.15.
+
+M23, 1340) —
+
+M24, 0640
+
+1315)
+
+2d 715
+@ Actual Oi Sighting
+
+° MIKE Simulation
+(. Vethamony,
+RMSE = 16,2 ras 6 im
+
+BM Simulation
+(3.5 m/s NNE
+
+revailing wind)
+RMSE = 63.1 (17,9 km)
+
+Figure, 4.15. Lattice Boltzmann simulation for
+Pani indicted the ac actual ol sightings. The bue
+BM simulation is in yellow.
+
+The LBM simulation shows that the oil started out moving south along
+the coast similar to the the actual observation as well as the simulation done by
+P. Vethamony [35]. However, at the later part of the LBM simulation, the overall
+track drifted considerably westward away from the coast deviating far from the
+actual and simulated track by P. Vethamony.
+
+It is interesting to note however, that the LBM simulation produced the
+similar zigzag track observed in the MIKE21 simulation. The considerable drift
+on the overall track of the LBM simulation can be attributed to the use of a
+constant forcing while the actual wind data shows that is is largely variable
+around the prevailing northwest direction.
+
+31
+
+Another LBM simulation is implemented now using a wind data obtained
+from Vethamony et. al. The trajectory of the LBM simulation using this wind
+data is shown in Figure 4.16.
+
+(M24) 0640,
+
+M24)1315
+@ Actual Oil Sighting
+
+© MIKE21 simulation
+4 etal
+RMSE = 16.2 (4.6 km)
+
+© LBM simulation
+G.5 m/s NNE
+prevailing wind)
+RMSE = 22.2 (6,3 km)
+
+The use of the wind data obtained from P. Vethamony et. al. instead of
+usng a constant prevalent wind significantly improved the resulting trajectory of
+the LBM simulation. The absolute RMSE for the trajectory obtained by P.
+Vethamony et. al. using MIKE21 is 4.6 km. The LBM simulation trajectory using
+a constant prevalent wind has an absolute RMSE of 17.9 km which significantly
+improved to 6.3 km when the wind data from P. Vethamony was used.
+
+4.8 Simulation of the 2006 Guimaras oil spill
+
+The Guimaras oil spill accident in August 11, 2006 in Panay Gulf
+southwest of Guimaras Island (N 10 15.31’ E122 29.09’, 13.3 nautical miles south
+of Lusacan Point, Guimaras) [20] was considered as the worst oil spill accident in
+the Philippines. The oil spillage was a result of the sinking of oil the tanker M/T
+Solar I.
+
+Figure 4.17 shows the oil spill detected from ENVISAT ASAR images by
+J. Santillan and Paringit. (20]
+
+Figure 4.17. Actual oil spill during the 2006 Guimaral oil spill from ASAR images (20]
+
+33
+
+The prevalent wind condition is Habagat at 7.0 km/br SW. The lattice
+Boltzmann simulation is shown in Figure 4.18 using a 300 x 300 lattice using the
+same parameter values with G = -1.0 and t = 1.0.
+
+‘Figure 4.18. Lattice Boltzmann simulation for the Guimaras oil spill
+
+The track of the movement of the oil’s central concentration for the
+simulated oi] advection is shown in Figure 4.19.
+
+ems 5 km
+
+Figure 4:19, Track of the LBM simulation for the Guimaras oil spill (yellow).
+‘The actual oll spill traced from satelite image is shown in sky blue. B
+
+The simulation showed that the oil moved northeast on the southeast
+shore of Guimaras, consistent with the actual movement of the oil shown in
+Figure 4.17 a. The simulation also showed a small probability extending towards
+the strait in betweedn Guimaras and Negros to suggest the posibility of oil
+drifting in this direction. Figure 4.17 a and b indeed showed that a small portion
+of the actual oil flowed through the strait between Guimaras and Negros.
+
+The simulation showed that the oil’s concentration moved slowly northeast
+until it diffuses out. This is fairly consistent with the actual oil spill shown in
+Figure 4.17 which showed that the actual oil spill moved around this vicinity
+while only a small part goes throgh the Negros-Guimaras strait.
+
+The prevalent wind condition in Guimaras is stable unlike in the case of
+the Al Ahmadi oil spill and Goa oil spill. Using a constant prevalent wind gives a
+good approximate of the actual trajectory.
+
+35
+
+4.9 Spread of the simulated track with wind forcing
+
+4.9.1 2006 Guimaras oil spill
+
+For the LBM simulation of the Guimaras oil spill, a prevalent wind
+condition of 7.0 km/hr SW was used. The wind however can vary between 5
+km/hr to 10 km/hr around SW to WSW direction [38]. Varying the wind forcing
+condition within these values shows the spread of the location of the oil’s central
+concentration after a simulation equivalent to 12 hours as shown in Figure 4.20.
+
+-
+
+Figure 4.20. The spread of the location of the LBM simulations central
+oil concentration for different wind forcing is shown in blue. The actual
+oil spill from ENVISAR ASAR image is shown in red.
+
+The location of the oil’s central concentration using the prevalent wind of
+7.0 km/hr SW is shown in dark blue. Varying the wind forcing shows a spread of
+an equivalent of 1.1 km to the right towards east and 0.7 km along north-south
+direction in which the actual oil spill fall within much of the region of spread.
+
+36
+
+4.9.2 1991 Al Ahmadi oil spill
+
+A monthly-averaged wind data was used for the simulation of the Al
+Abmadi oil spill. An average of 5.3 m/s at 141.7° (measured from east) for
+January and 5.5 m/s at 132‘for February was used [36]. Considering the
+averaged wind data for previous and succeding months, a range of wind speed
+and direction values centered around the monthly-averaged data were obtained
+by considering the maximum difference in the data between the previous and
+succeding month. Hence a range of wind data of 4.8 m/s - 5.8 m/s along 132°-
+152° was used for January while a range of 5.0 m/s - 5.5 m/s along 121°-
+141" was used for February. The minimum, maximum and average values for
+both speed and direction gives nine combinations for possible wind forcing. Figure
+4.21 shows the spread of the track using the given range of wind data.
+
+é _ Pou
+a
+
+Figure 4.21. The spread of the location of the LBM simulation’s central oil concentration for
+dilferent wind forcing is shown in blue with a circular envelope to include all spread points
+The actual oil spill’ sighting location is represented in red while the MIKE simulation
+prediction is shown in green.
+
+The average radius of the circular envelope gives a range of 21 km for the
+spread of the track around the track using a monthly-averaged data. While most
+of the actual track shown in red lie outside the range, all of the MIKE simulation
+predicted track falls within the range of the LBM simulated track.
+
+37
+
+4.6.3 2005 Goa, India oil spill
+
+The simulation for Goa, India oil spill used the wind data from the work of
+P. Vethamony et al. [35] obtaining the wind speed and direction every 6 hours
+from March 23 - 25. A range of wind speed and direction was obtained by taking
+the minimum and maximum values within the time interval. The range of values
+were then used to obtain the spread of the track of the simulation shown in
+Figure 4.22,
+
+M23, 0100
+
+M23, 1000
+
+M23, 1340
+
+M24, 0640
+
+‘M24, 1315
+
+M24, 1715
+
+M25, 0635
+
+M25, 1700 ®
+
+Figure 4.22. The spread of the location of the LBM simulation’s central oil
+concentration for different wind forcing is shown in blue with a circular envelope to
+include all spread points. The actual oil spill sighting location is represented in red while
+the MIKE2I simulation prediction is shown in green.
+
+The tracks has an average spread of 1.6 km. Only two out of seven tracks
+
+of the actual oil sightings fall within the range of the LBM simulated tracks. Four
+of the MIKE21 simulated tracks however fall within the LBM simulation’s range.
+
+For the case of Goa oil spill, the LBM simulation does not fair well in
+approximating the track of the oil at specific times. The simulated track deviates
+significantly at the later end of the simulation where the actual oil sighting is
+very far outside the range of the simulated track, which is also true for the
+MIKE21 prediction.
+
+38
+
+Chapter 5
+Summary and Conclusion
+
+We have shown a Lattice Boltzmann implementation for the simulation of
+the advection of oil on water. We performed simple oil advection experiment on a
+tabletop setup and simulated the advection using LBM.
+
+The simulation is consistent with the observed movement of the actual oil
+in the advection experiment.
+
+While oil spill simulation is complicated, we extended our LBM simulation
+to actual oil spill accidents: 1991 Al-Ahmadi oil spill, 2005 Goa, India oil spill
+and the 2006 Guimaras oil spill incidents taking only into primary considerations
+the landmass boundary and the wind forcing. Our simulation deviates with the
+observed oil spill movement particularly at the later part of the simulation which
+can be contributed to the compounded effect of the limitation the forcing used in
+our simulation, specially for the case of Goa oil spill. For the Guimaras oil spill
+however, our simulation showed a movement of the oil consistent with the
+observed movement of the actual oil spill.
+
+39
+
+Bibliography
+
+1
+
+10.
+
+11.
+
+12,
+
+13.
+
+14,
+
+15.
+
+16.
+
+Xiaoye He, Li-Shi Luo. Lattice Boltzmann model for the incompressible
+Navier-Stokes Equation. Journal of Statistical Physics 38, 314 (1997)
+
+Sauro Succi. “The Lattice Boltzmann equation for fluid dynamics and
+beyond”, Clarendon Press, Oxford (2001)
+
+S. Succi, E. Foti and F. Higuera. “Three-Dimensional Flows in Complex
+Geometries with the Lattice Boltzmann Method". Europhysics Letters 10,
+433 (1989)
+
+Shiyi Chen, Garry Doolen. Lattice Boltzmann Method for Fluid Flows.
+Annual Reviews in Fluid Mechechanics 30. 329-64. (1997)
+
+Z. Guo, B. Shi, N. Wang. Lattice BGK Model for Incompressible Navier-
+Stokes Equaation. Journal of Computational Physics 165, 228-306 (2001)
+
+M. Sukop, D. Thorne. Lattice Boltzmann Modelling - An Introduction for
+Geoscientists and Engineers. 2 Ed. (2007)
+
+C. Shu, Y. Chew, et. al. Progress in the Developement and Application of
+Lattice Boltzmann Method, Proceedings of the 12 Asian Congress on
+Fluid Mechanics. Daejeon, Korea (August 2008)
+
+Kevin Tubbs, “Lattice Boltzmann Modelling for Shallow Water Equations
+Using High Performance Computing”. Dissertation. Louisiana State
+University (2010)
+
+Mele, Igor. Lattice Boltzmann method. Seminar (2013)
+
+Z. Ghuo, C. Shu. “Avances in Computational Fluid Dynamics (Vol 3) -
+Lattice Boltzmann and its applications in Engineering”. (2013)
+
+X. He and L. Lou, “Theory of the Lattice Boltzmann method: From the
+Boltzmann equation to the latticeBoltzmann equation”, Physical Review E
+56, 6811 (1997)
+
+Z. Guo, B. Shi, N Wang, “Lattice BGK model for Incompressible Navier-
+Stokes Equation” Journal ofComputational Physics 165, pp. 288-306, 2000
+
+X. Shan and H. Chen, “Lattice Boltzmann model for simulating
+flows with multiple phases and components”, Physical Review E 47,
+1815 (2013)
+
+Dagmar Schmidt Etkin. “Worldwide Analysis of Marine Oil Spill Cleanup
+Cost Factor”. Arctic and Marine Oilspill Program Technical Seminar
+(June 2000)
+
+J. Delas Alas, I. Bentillo, Simulation of Oil Slick Movement in Brunei
+Darussalam. Proceedings of the ASEAN/US Coastal Resource
+Management Program Workshop on Coastal Resource Management in
+Brunei Darussalam. (1991)
+
+D. Lycett-Brown, K. Luo, “Three-Dimensional Micro-Droplet Collision
+Simulation using the Lattice Boltzmann Method”, 3rd Micro and Nano
+Flows Conference, (Thessaloniki, Greece, 2011), pp 22-24.
+
+40
+
+17.Q. Li, K. Luo, X. Li, “Forcing scheme in pseudopotential lattice
+
+Boltzmann model for multiphase flows ",
+
+18.H. Huang, M. Krafezyk, X. Lu, "Forcing term in single-phase and Shan-
+Chen-type multiphase lattice Boltzmann models”, Physical Review E 84,
+046710 (2011).
+
+19.H. Huang, Z. Li, S. Liu, X. Lu, "Shan-and-Chen-type multiphase lattice
+Boltzmann study of viscous coupling effects for two-phase flow in porous
+media”, International Journal for Numerical Methods (2008).
+
+20. J. Santillan, E. Paringit, "Hydrodynamic and Trajectory Modeling of the
+August 11, 2006 M/T Solar 1 oil spill in Guimaras, Central Philippines
+with validation using ENVISAT ASAR data”, 33rd Asian Conference in
+Remote Sensing, (Pattaya, Thailand, 2012) pp. 418-428.
+
+. J, Santillan, E. Paringit, “Oil spill detection in ENVISAT ASAR images
+using radar backscatter thresholding and logistic regression analhysis”,
+Proceeding of the 32nd Asian Conference in Remote Sensing, (Taipei,
+Taiwan 2011)
+
+2
+
+22..A. Abella, M. Soriano, “Visualization of wave phenomena and liquid
+transport on surface flow”, 32™ Physics Congress of the Samahang Pisika
+ng Pilipinas, (Quezon City, Philippines, 2014), (to be published).
+
+23. J. Lizada, “Direct use value of environmental damages due to oil spill in
+the coastal areas: The case of Semirara and Guimaras Islands,
+Philippines”, 11th National Convention on Statistics, (Makati, 2010)
+
+24.8. Ha, N. Ku, “Lattice Boltzmann simulation for the prediction of oil slick
+movement and spread in ocean environment”,International Offshore and
+Polar Engineering Conference, (Rhodes, Greece,2012),pp.784-788
+
+25.K. Lagman, “Tracking and modeling of oceanographic features”
+Undergraduate Thesis, National Institute of Physics, University of the
+Philippines-Diliman (2007)
+
+26.M. Dabbaghitehrani. “Lattice Boltzmann method for two immiscible
+components” Master’s Thesis. Royal Institute of Technology, Stockholm,
+Sweden (2012)
+
+27.V. Sunio. “Indoor temperature modeling and control of the Kawilihan
+gallery of Vargas Museum” Master’s Thesis. National Institute of Physics,
+University of the Philippines-Diliman (2010)
+
+28. Philippines: Guimaras Oil Spill OCHA Situation Report No. 2.
+http: //reliefweb.int /report/philippines/philippines-guimaras-oil-spill-ocha-
+situation-report-no-:
+
+29..A. Maslo, J. Panjan, D. Zagar, “Large-scale oil spill simulation using
+lattice Boltzmann method, validation on Lebanon oil spill", Marine
+Pollution Bulletin 84(1-2), pp. 225-235, 2014
+
+30.M. Nagheeby, M. Kolahdoozan, "Numerical modeling of two-phase fluid
+flow and oil slick transport in estuarine water”, International Journal of
+Environmental Science and Technology 7(4), pp. 771-774, 2010
+
+41
+
+31.
+
+32.
+
+33.
+
+34,
+
+35.
+
+36.
+
+37.
+
+38.
+
+39.
+
+H. Chen, S. Chen, W. Matthaeus. “Recovery of the Navier-Stokes
+equations using a lattice-gas Boltzmann method” Physics Review A 45.
+(1992)
+
+A. Gunstensen, D, Ruthman, et. al. “Lattice Boltzmann model for
+immiscible fluids” Physics Review A 43. (1991)
+
+D. Zeigler, “Boundary conditions for Lattice Boltzmann simulations”,
+Journal of Statistical Physics Vol. 71, (1993)
+
+T. Inamuro, M. Yoshino, F. Ugino, "A non-slip boundary condition for
+lattice Boltzmann simulations", Physics of Fluids 7 (1995)
+
+J. Beegle-Krause. “General NOAA Oil Modeling Environment (GNOME):
+A New Spill Trajectory Model”, International Oil Spill Conference (2001).
+
+A. El Hakeem, W. Elshorbagy, R. Chebbi. "Oil spill simulation and
+validation in the Arabian (Persian) Gulf with special reference to the UAE
+Coast” Water, Air and Soil Pollution Journal. 184:243-254 (May 2007)
+
+K. Aghajanloo, M. Pirooz and M. Namin. “Numerical Simulation of Oil
+Spill Behavior in the Persian Gulf "Int. J. Environ. Res., 7(1):81-96,
+Winter 2013
+
+Al Rabee, et. al. “Modeling the fate and transport of Al-Abmadi oil spill”,
+Water, Air and Soil Pollution (November 1992).
+
+P. Vethamony, K. Sudheesh, et. Al “Trajectory of an oil spill off Goa,
+eastern Arabian Sea: Field observations and simulations” Environmental
+Pollution (2007)
+
+42
+

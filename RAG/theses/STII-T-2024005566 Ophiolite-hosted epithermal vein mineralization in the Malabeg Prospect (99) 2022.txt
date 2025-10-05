@@ -1,0 +1,3419 @@
+aya ie ope Ly a
+
+oie pea < ae
+
+echo ne eh eee DO eee Oe
+
+
+UNIVERSITY OF THE PHILIPPINES
+Master of Science in Geology
+John Emmanuel Sevilla Fungo
+
+Ophiolite-Hosted Epithermal Vein Mineralization in the Malabeg Prospect, Cabangan Massif,
+Zambales, Philippines
+
+Thesis Adviser:
+Jillian Aira S. Gabo-Ratio, D.Eng.
+National Institute of Geological Sciences
+
+University of the Philippines
+
+Date of Submission
+September 2022
+Thesis Classification
+
+P
+
+National Institute of Geological Sciences
+College of Science
+University of the Philippines
+Diliman, Quezon City
+
+ENDORSEMENT
+
+This is to certify that this master’s thesis entitled Ophiolite-Hosted Epithermal Vein Mineralization in
+the Malabeg Prospect, Cabangan, Zambales, Philippines, prepared and submitted by John Emmanuel
+S. Fungo in partial fulfillment of the requirements for the degree of Master of Science in Geology, is hereby
+
+accepted.
+Jillian Aira S. Beprrto Deng.
+
+Thesis Adviser
+
+Graciano P. Yumul gy, Ph.D.
+Thesis Reader
+
+The National Institute of Geological Sciences endorses acceptance of this master’s thesis as partial
+fulfillment of the requirements for the degree of Master of Science in Geology.
+
+-
+NOELYNNA T! RAMOS, D.Sc.
+OIC-Director
+National Institute of Geological Sciences
+
+The master’s thesis is hereby officially accepted as partial fulfillment of the requirements for the Degree
+
+of Master of Science in Geology
+
+GIOVANNI A. TAPANG, Ph.D.
+Dean, College of Science
+
+Ophiolite-Hosted Epithermal Vein Mineralization in the Malabeg
+Prospect, Cabangan, Zambales, Philippines
+MSc Thesis, National Institute of Geological Sciences
+
+University of the Philippines Diliman
+September 2020
+
+Classification*: P
+*] — invention or creation, P — publication, C — confidential information
+
+Available to the general public | Yes |
+
+Available only after consultation with author/adviser for thesis/dissertation _| No
+Available only to those bound by nondisclosure or confidentiality agreement__| No
+
+Jillian Aira Gabo-Ratio, D. Eng.
+Thesis Proponent Thesis Adviser
+
+ACKNOWLEDGMENTS
+
+This study is funded by the Department of Science and Technology—Science Education
+Institute (DOST-SEI) under the Accelerated Science and Technology Human Resource
+Development Program (ASTHRDP). Part of the research analyses were also funded by the Japan
+Student Services Organization (JASSO), Society of Economic Geology Foundation Inc. (SEGF)
+and NIGS 2020 Research Grant of Dr. Jillian Gabo-Ratio, D.Eng.
+
+I thank the following:
+
+Dr. Jillian Gabo-Ratio, for always going the extra mile for your advisees, for sharing your
+patriotism, altruism, and empathy for students, and for encouraging our non-scientific endeavors
+that molded us into holistic human beings.
+
+Dr. Betchaida Payot, for the much needed ‘tough love’, for always reminding us to be kind, and
+for the camaraderie outside of laboratory life.
+
+Dr. Americus Perez, for being the asymptote of my path to research. Your level of science is
+something that always inspires me despite my current inability to achieve it.
+
+Deo and Bryan, for the moral support during ‘dark times’, fundamental scientific discussions, and
+for the good influence when it comes to science and life.
+
+Boy A, Jerson and Markee, for expediting the sample and data collection and technical discussions
+about the NEWMINCO tenement. Without you, this study would simply not exist.
+
+Dr. Graciano P. Yumul Jr. and Dr. Carla Dimalanta, for accepting me into your research group,
+providing wisdom from your experiences and sharing your love of science. Rushurgent Working
+Group certainly has the biggest impact on my perspective and enthusiasm for science.
+
+RWG Ninth Gen: Julius, Jesley, Rurik, and Nat, for your support and long-time company during
+classes, conferences, and laboratory life, and for the scientific discussions.
+
+Economic Geology Group senpais: Jess, for being the standard of sample retrieval and preparation;
+Acer, for being the standard of scientific aesthetics; Omar, for being the standard of scientific
+thinking; and Karl, for being the standard of dramatic moments.
+
+‘Room 124 Slapsoils’ 2021-2022, Chelsi, Macky, Alex, Yn’s, Kenny, Josh and Alan for being
+dependable kohais, for making it easier for me to achieve my thesis defense requirements, and for
+the camaradcrie.
+
+RWG members, senpais, notably Theophi, Val, Annette and Sarena, and kohais, namely Noel, Eli,
+Maddie, Karla, Kate, Jacky, Ara, Mike, Vann, Christian, Cass, Mariz, Keanne, Normie, Raymond,
+Pat, Mia, Nikko and Vincent, for the scientific discussions, camaraderie and support.
+
+Dr. Allan Gil S. Fernando, for accommodating our batch of graduate students during your time as
+DDAA, even risking your own health on the line.
+
+iv
+
+Yonezu-sensei, Naoto, Fukuda, Bogi, Sayfudin, Aden, Jacob and Sokha for welcoming us to the
+Department of Earth Resource Engineering at Kyushu University and support for the laboratory
+analyses.
+
+Takahashi-sensei, Ate Pearlyn, Kuya Hertz and Manuel for welcoming me to the Graduate School
+of International Resource Sciences at Akita University and support for the laboratory analyses.
+
+Unconformity band, notably Dr. Mario Juan A. Aurelio, Dr. Carlo A. Arcilla, Jagu, Vandear,
+Lawrence, Chance and Martha; beyond music, there were generous amounts of scientific
+discussions and camaraderie.
+
+Former professors, Dr. Leo T. Armada, Dr. Jojo Foronda, Dr. Rosanna Balangue-Tarriela
+(requiescat in pace), Dr. Noelynna T. Ramos, Dr. Mahar Lagmay, and Dr. CP David, regardless
+of the subject, ] have learned very much from you.
+
+Former classmates and graduate students in NIGS, for the scientific discussions and support.
+
+My parents and youngest sister, for acknowledging this phase of my life where I finally put my
+self-interest first.
+
+God, for keeping me alive until I have realized my ikigai. Ad Deum, ad patriam, ad scientiam.
+
+ABSTRACT
+
+The Malabeg prospect is one of the few reported peridotite-hosted gold and base metal
+vein-type mineralization within the Cabangan Massif, Zambales Ophiolite Complex.
+Mineralization is associated with NW-trending quartz-adularia veins along contacts between the
+middle Eocene serpentinized harzburgites and Late Oligocene to Late Eocene diabases of the
+Cabangan Massif and in open spaces within host rocks, wherein veins and floats have gold
+
+concentrations up to 74.5 ppm.
+
+Four stages of alteration and mineralization were determined for the Malabeg prospect.
+Stage | consists of talc-carbonate alteration of the serpentinized peridotites. Stage 2 consists of
+dolomite veins found adjacent to host rocks. Stage 3 consists of quartz-carbonate veins, where
+thombic boundaries are observed between quartz and calcite. Arsenopyrite is present in Stages 2-
+3. Stage 4 consists of quartz-adularia exhibiting massive, comb and brecciated textures. Ore
+mineralogy consists of chalcopyrite + galena + sphalerite + pyrite + pyrrhotite + electrum.
+Supergene alteration is represented by iron oxides ranging from limonite to hematite, pyrolusite
+and secondary chalcocite, aside from the thin laterite capping the ultramafic regolith. Six electrum
+grains in Stage 4 quartz-adularia reveal an average composition of 74.33% Au and 21.55% Ag.
+Mean iron-sulfide mole percent for nine sphalerite points coexisting with pyrite or pyrrhotite is
+14.91. Two-phase fluid inclusions in Stage 4 quartz-adularia reveal bimodal homogenization
+temperatures range from 170 to 180 °C and 190 to 200 °C while salinity values range from 1.4 to
+10.23 wt.% NaCl. From these, depths of 67-144 meters below the paleo-water table was estimated
+
+while the trend of values plotted on the homogenization temperature versus salinity graph is
+
+vi
+
+inconclusive. An intermediate sulfidation state is recognized for the Malabeg prospect, which is
+
+supported by ore assemblage, sphalerite mineral chemistry and fluid inclusion properties.
+
+The results suggest initial pulses intermediate sulfidation (IS) fluids from a nearby
+magmatic source related to the Bataan Volcanic Arc. Fluid-rock reaction with the serpentinized
+harzburgites, together with evolved fluids, produced listwanitization (Stages 1-3), while the high
+buffering capacity of the host rocks lowered the sulfidation state of the system and precipitated
+arsenopyrite along with the initial quartz-carbonate veins. Faulting and reaction-induced self-
+cracking within listwanites promoted growth of open spaces in structurally weak planes that served
+as loci for the precipitation of the succeeding IS fluids into Stage 4 quartz-adularia veins. Shift
+towards an oxidizing environment produced supergene alteration minerals such as hematite,
+
+pyrolusite and secondary chalcocite.
+
+Ore content along the various lithologies also suggest different affinities for transport and
+precipitation. As, Zn, Co, Cr and Ni peak in Stages 1-3 which may have been precipitated favorably
+with the carbonates while Au, Cu and Pb peak in Stages 3-4 which may have precipitated favorably
+
+with silica.
+
+Overall, the results suggest shallow hydrothermal activity in the area as a part of a larger
+porphyry-epithermal system associated to the Bataan Volcanic Arc. The results can also serve as
+a guide for the exploration of other peridotite-hosted epithermal deposits with similar tectonics
+
+settings.
+
+vii
+
+TABLE OF CONTENTS
+
+Acknowledgments 0.0... ccc cece cee cees cee cesseesseesscnetsessessensceseessesssesssessesieetnsisseeeesenaases iv
+ADS ACE cece rene ctecenecssesetesesseecsesseneseessassesessesscessssseesesaesessesnenessesiesseesetaeeaseeentees vi
+List of Tables oo... ccc cccsecscscenesscseesscscsesesssecesscessesscseseessesesesssscsesscsesesesseseeseseeesecnes x
+List of Figures... cc cccecccsceceeseessceseeneeeeessecseeeceeeesessecneesseceeceseceeeeeesaeceeeaeceeeeesteseeseneentenee xi
+Chapter 1: Introduction... ccc cere cnecescsecseseceaeeesesseeessessesesessessseeseeseeeaee 1
+Lo Introduction oo... cccesscseescsscssssesscnessesscecseeessesaseessesscesesesaesaceecsesaeeeseeseecsesaseessesseseeea 2
+1.2 Statement of the Problem ..........ccccccesesesces erences eters neers csseseneesessceceseesaseseneeseseeeeed 3
+1.3 Significance of the Study oo... ccc cccenssseeecsesserscssssesseeetaessessesesaeeassessesatsesaeeneneen 4
+1.4 Objectives of the Study... ccc cscs essere cscssctecsesscsesscesesessesseecsersseesestesserastesseseeseeed 4
+1.5 Scope and Limitations... ccs esseeesessesseeestessesseseeeesaesecseeseeeseeessesseeessesseeesaeeeeeeeeeseeaee 5
+1.6 Thesis Organization oo... ccc cece cesses cetececsesscsecsescsssscsescessesscesssesssesaseessesneaesaesaeeeees 5
+Chapter 2: Review of Related Literature... cee ccesesseeseceeessesaeenececnsesseesesteeeaeeeeeaees 6
+2.1 Epithermal Mineralization... ccc ce ecescssesseeseenseneeeseeeesecesecseeessaeeeesesssesseseeseeeaeeereneees 7
+2.2 Ophiolite-Hosted Vein-Type Mineralization .......ccc ccc cece sseescssceeecseesessesesseesesaee 10
+2.3 Ore and Gangue Interpretation 00.0... csesesesseeecsscsecseesenessesscssesesseeecsecseseeeesesaseessesaee 19
+2.4 Mineral Chemistry and Fluid Inclusion Analysis ..........cccccceeeseseeesseeseessenecrereeeeanes 22
+2.5 Regional Geology oo... cecssessscnesseseneeeseteesesscsseseneceeseesesetsessessesessesssesssesseeeseessesaeneeeeeate 25
+
+2.6 Metallogenesis in Western Luzon .
+
+Chapter 3: Methodology ................... 34
+BmlehicldwOrkdtand| samp Qteememmetsneseenesteteastsnereatttrerammtansmeeretaraseentarserer ree 35
+3.2 Petrography and Ore Microscopy .......ccccscsssessessessesessesssseesesecsessesseesesssessessesaeeesneeneeaeaes 35
+3.3 Mineral Chemistry Analysis..............0000 ceceaesesecaeeaesaessesesseeecsaenesaesaesaeeeeneees 35
+3.4 X-Ray Diffractometry (XRD). 37
+3.5 Fluid Inclusion Analysis ..... 37
+3.6 Fire Assay and ICP-OES..... ccc cccccccsescecscsscsecsecsesecsecsesseeececsassesessessesaeeecsecsasaeeaseeeaeeas 37
+
+Chapter 4: Results and Discussion .........0...cccccccc ccc scesccsccecsesecseseeeeseetseseesseeeneeseseseeeaeees 39
+4.1 Mineralization in the Malabeg prospect..........ccceccssessessscsecsseceseesecssesseeesesseceeseassateneserenes 40
+
+4.1.1 Host Rocks cece ceseereeeeeees .40
+4.1.2 Alteration and Mineralization .........ccccccssessscsescsssssescssesecscaescseseseneseseaessseeeseaeecseersvenseeeneneaes 43
+
+4.1.3 Mineral Chemistry 00.0... ccccceccesccsescesssecseeecseceeseeecseceeeeceecsessecsesaceeceesnesaeeeeeeseessesaeeseeseaesenes 51
+
+4.1.4 Fluid Inclusion Petrography and Microthermometry ..0........csscceeseeeseesesseeseeeeseeseteeeeseeeeseaee 53
+4.2 DISCUSSION occ ses eseeseseseseescsssesecsesesesecscsesessescsesscsesescsesesscersesssseseseseessesescsseeaseeees 54
+4.2.1 Mineralization Style... ee scesesesceeetesseneeneeseescnecseescnesesseeeceecessnesseeseeeceesaeeseeeesesesssaseeseees 54
+
+4.2.2 Hydrothermal Fluid Evolution in the Malabeg prospect
+4.2.3 Metal Endowment
+4.2.4 Tectonic Setting
+
+Chapter 5: Summary and Conclusions ..............cccccccce cece sserseneesessesessessessessssecsseesseneeees 69
+References..........scccsrsersssescsscsrseresseececssrsacencssescsnceseacscessescenensesesccseseessessceeseasssscsarsasencecsarsarsees 71
+APPeNdix ........sscsssrssssscsressesseccercsseacencssesseecssessenceseacenceseseecesssseeseenensensscesseaseasenseseasecssesaceesecenees 82
+
+AL Drill core photos ....... ccc cececstscsreesens cess cneceesecsesesecenesssssssecessssssceesinecasesnenneege 83
+
+LIST OF TABLES
+
+2.1 Compilation of listwanite occurrences and their characteristiCs.......0.cccccssseseeseeeeseeeees 14
+4.1 Composition of electrum grains... cece cecce recess csecseseeseseesesssssecsseseeessecsesseseesaseeeee 52
+4.2 Composition of sphalerite grains coexisting with pyrite and pyrrhotite ....0. teers 52
+
+4.3 Mineralization characteristics observed in the Malabeg prospect versus other ophiolite-hosted
+
+epithermal vein deposits... ccc cseessseseescscsesenenecscseesessscssescscensescsseeesssesseesessessesseaeeeeetaes 51
+
+4.4 Mineralization characteristics observed in the Malabeg prospect versus other epithermal
+
+CePOSIts oe eee eeceecccscsecseeseeececsesscsssesecsessesscssasessssssseessessdeessessesensssessceeeaeeessesaeeasiesateessaees 61
+
+4.5 Average ore content per lithology... ccceeeccssesseetesseceseesecteeeeeesessesecesesseseeeesessesseeaeeeeeeaees 66
+
+LIST OF FIGURES
+
+2.1 Schematic diagram of a volcanotectonic Setting... eeceeseeeeseeeesseeteneeeeseeeseeseneseeteetieseeees 8
+2.2 Schematic diagram of a rift setting 0.0... ceesessenseneesetsenecseeseeseeateesessseeseeecserseeseesentenee 9
+2.3 Map view of the Doriri lode oo... cies ecceseneeseesetersereeeeeseesenecessensessceseesaessseesaecaeseseeseeseeaeeaee 10
+2.4 Quart textures indicating primary QTOWtD ...... ccc ce ssceeceeetetseeseecseesenscsecseceeseeseesenaeeese 20
+2.5 Schematic diagram of hydrothermal breccia classification 00.0.0... ccc eesesseseneeseeeeseeseeneeeeees 21
+2.6 Sulfidation state parameter (log fS2) vs temperature oo... eeseeeeseeseneeerseeeseteeesneeseneesees 22
+
+2.7 Fluid inclusion assemblages (FIA) observed in Veta Madre at Guanajato, Mexico ..
+
+2.8 Summary of homogenization temperature versus salinity of fluid inclusions..
+
+2.9 Effervescence vs depth plot for brine... cece eee ene teeters 24
+2.10 Epithermal deposit map of the Philippines... ccc cece cerns rers cece cesessereeaeeee 26
+2.11 Total alkali silica classification of post-obduction dikes in the Coto Block ....... cee 28
+2.12 Chondrite-normalized multi-element diagrams of the Coto dikes. 0.0... cceseeeseeseeeeeee 28
+2.13 Outcrop and sample photos within the NEWMINCO property EP-001-2015-II] 0... 32
+3.1 SEM-EDX analySIs .....0.ccccccccscescesscceseescsesessssscsessesesesesesssssessessssassesssssssssessessscsscsseenenss 36
+3.2 EPMA analySis......ccccceeeseeeessseeeeseeessessesessesseeececsecsessssssscnsssessesssesssescesssessecsseasseseesenege 36
+4.1 Geologic map of NEWMINCO property EP-001-2015-TID oc ceccceesseseseeessereeeeeeeenes 41
+4.2 Host rock outcrops and photos in the Malabeg prospect ..........ccscccssesseeereeseeseeeessesseeeeees 42
+4.3 Representative drill core photos.........cccscccesscseseesessesscsecsscsesscssessceesecsesssssssessesseessecsesecees 44
+4.4 Vein occurrences and textures ......c.ccccscccsessecseessccessesseceseesssseeesssesssseecsesessssseeeseeeneeseeees 47
+4.5 Hand specimen and photomicrographs of Stages 1-3 ........cccesscsesseseseseseessseseeesseseeseseeeneeaes 48
+4.6 XRD diffractograms .........ccccesesesesssesesseeneeesscseessscssssescsessscsesenscesacsessescsesesscsasessenasesaeets 49
+4.7 Photomicrographs of sulfides under reflected light ...........ccccccescsesescsseecsesesseesetseeneeaeees 50
+4.8 Alteration and ore paragenesis.......cccccccceesscecscceeesssssessesessesecessecseceseesesesaesesaseeeneena 51
+4.9 Images from EPMA.........ccccccessccssessesscsesscsessecsscsseesesescssecssessscssessscssssesessesssesseseseeesseneeentes 53
+4.10 Fluid inclusion analySis ........cccccccscsssseceecsccsesecsscsesecsessscscsseescsesseceesaesasecsesseesetaeeaeeeees 56
+4.11 Temperature-depth plot 0.0... ccccccccccssseecsesesecsesesesscsscsssesscsssssscsseecsseesssseeecsesesesasaeenes 57
+4.12 Temperature vs sulfur fugacity graph... ccc sseesseseeesseeecseseeessssesesseesssesseseesenenees 58
+4.13 Listwanitization and epithermal mineralization model ............cccseesseseseseeseeeeteeeeneneneeeeees 64
+
+xi
+
+CHAPTER 1
+
+INTRODUCTION
+
+1.1 INTRODUCTION
+
+Epithermal deposits are shallow metallic deposits that form at depths between 50 meters to
+1 kilometer (White & Hedenquist, 1990; White & Hedenquist, 1990; Cooke and Simmons, 2000;
+Richards, 2009; Hedenquist & Arribas, 2017). Their economic importance lies in being significant
+sources of gold, silver and base metals globally (Singer, 1995; Frimmel, 2008). Epithermal
+deposits are usually associated with volcanic arcs hosted by acidic to intermediate subaerial
+volcanic rocks (Hedenquist, 1986; Hedenquist & Lowenstern, 1994; Hedenquist et al., 1996;
+Sillitoe & Hedenquist, 2003; Sillitoe, 2010). For example, epithermal deposits in the Philippines
+are mostly hosted by andesitic to dacitic domes with plutons ranging from granodiorites to gabbros
+
+(e.g. Mitchell & Leach, 1991; Chang et al., 2011; Cooke et al., 2011).
+
+However, there are very limited occurrences of epithermal mineralization hosted in
+peridotites. In Papua New Guinea, the first epithermal PGE (platinum group of elements) deposit
+known as the Doriri lode is hosted in carbonatized peridotite and norite (Lindley, 2016). Although
+its temperature of formation (100-220 °C) from chlorite thermometry, depth of mineralization, and
+other hydrothermal characteristics express its epithermal nature, its main ore are platinum,
+
+palladium and nickel unlike typical Au-Ag or Au-Cu epithermal deposits.
+
+Aside from this, a few similar occurrences have been found among orogenic gold deposits.
+In contrast to epithermal deposits, these are formed in orogenic belts along continental settings and
+are usually hosted in intrusive rocks that experienced regional metamorphism (Groves et al., 1998;
+Tomkins, 2013). These are also geologically older, ranging from Archean to Triassic, and have
+different cnvironment of formation and hydrothermal activity that result in distinct mineral
+
+assemblage, deposited metals and alteration patterns (Goldfarb et al., 2015; Tomkins, 2013).
+
+Reported orogenic gold deposits associated to ophiolites are the mesothermal deposits in British
+Columbia (Ash, 2001) and listwanite-hosted gold deposits in the Tavsan and Kaymaz prospects in
+Turkey (Yigit, 2006), although the latter pertains to silicate-carbonate veins rather than
+
+hydrothermal quartz veins.
+
+Compared to the sheer number of gold-bearing quartz veins in other lithologies (Goldfarb
+et al., 2015; Wang et al., 2019), the occurrences of ophiolite-hosted mineralized quartz veins are
+limited. Nonetheless, Cordillera Exploration Company Inc. (CEXCI) discovered precious- and
+base-metal-bearing quartz veins hosted on the peridotite suite of the NEWMINCO Pacific Mining
+Corp. property EXPA000062-III. This tenement lies in the Cabangan Massif, one of the three
+tectonic blocks that comprise the Zambales Ophiolite Complex (Rossman et al., 1989). Among the
+various prospects in the tenement, ocular inspection revealed mineral assemblage and alteration
+textures that are possibly related to epithermal mineralization in the Malabeg Prospect. It is
+therefore the objective of this study to describe the mineralization characteristics of the Malabeg
+Prospect and elucidate the processes behind the unusual ophiolite-hosted epithermal vein
+
+mineralization.
+
+1.2 STATEMENT OF THE PROBLEM
+
+Ophiolite-hosted epithermal vein mineralization is one of the least studied occurrences of
+precious- and base-metal deposition. Additionally, the Malabeg Prospect has very limited
+published information. Hence, its mineralization characteristics and metallogenic potential is not
+well-comprehended. It is necessary to investigate the mineralization characteristics of the Malabeg
+
+Prospect to further elucidate the process of epithermal mineralization in ultramafic host rocks.
+
+1.3 SIGNIFICANCE OF THE STUDY
+
+The available information on the mineralization characteristics and underlying processes
+in ophiolite-hosted epithermal deposits, such as wall-rock interaction and fluid evolution, are
+limited to only a few studies. Furthermore, associated mineralization may be deduced if the
+mineralization style is determined, which could add potential target deposits in the vicinity of the
+area. Lastly, determination of the mineralization style of the deposit may serve as guide for mineral
+
+exploration and prospecting of other ophiolite-hosted epithermal deposits.
+
+1.4 OBJECTIVES OF THE STUDY
+
+This research aims to investigate the mineralization characteristics of the Malabeg
+
+Prospect. The following are its specific objectives:
+
+e Describe the vein occurrence and textures,
+
+e Identify the ore and gangue mineral assemblage,
+
+e Determine the ore-forming conditions using fluid inclusion petrography and
+microthermometry, and
+
+e Classify the sulfidation state of the deposit.
+
+1.5 SCOPE AND LIMITATIONS
+
+Geologic mapping was limited to the area of the Malabeg Prospect. The study was
+constrained by the availability of exposed outcrops and drill core samples. Temporal relationships
+of veins and host rocks were limited to field and microscopic evidence of cross-cutting and
+
+depositional relationships.
+
+The Malabeg Prospect is currently in the exploration stage under Cordillera Exploration
+Company Inc. Due to limitations on drill hole depth and locations, the study of other associated
+
+deposits was not included in this study.
+
+1.6 THESIS ORGANIZATION
+
+This thesis is organized as follows:
+
+Chapter 2 (Review of Related Literature) presents a review of epithermal deposits and
+types, as well as literature on ophiolite-hosted vein-type mineralization. Then it describes the
+regional geology and mineralization in Western Luzon where the study area is located. It ends with
+the discussion on relevant studies regarding mineral chemistry and fluid inclusion analysis that
+
+were used in the study.
+
+Chapter 3 (Methodology) discusses the methods done in this study to address the research
+objectives. This includes field survey, petrography and ore microscopy, X-Ray diffraction (XRD),
+fire assay, Inductively Coupled Plasma-Optical Emission Spectroscopy (ICP-OES), electron probe
+
+microanalysis (EPMA) and fluid inclusion analysis.
+
+Chapter 4 (Results and Discussion) presents the results of each methodology, particularly
+the alteration and mineralogical paragenesis of the Malabeg prospect related to the mineralization
+of gold and other base metals. It also presents the interpretation of the results to ultimately
+determine the ore-forming conditions of the Malabeg prospect. A genetic model of the alteration
+
+and mineralization is also presented.
+
+Chapter 5 (Summary and Conclusions) goes back to the research problem and objectives
+
+and how the results have answered these.
+
+CHAPTER 2
+
+REVIEW OF RELATED LITERATURE
+
+2.1 EPITHERMAL MINERALIZATION
+
+The word ‘epithermal’ was first used for shallow metallic deposits that indicate
+hydrothermal! mineral precipitation and alteration at low temperature as opposed to common ore
+deposits proximal to magmatic centers (Lindgren, 1922). Their economic importance lies in being
+significant sources of gold, silver and base metals globally (Frimmel, 2008; Singer, 1995). In
+succeeding studies, this term evolved to specify the following definition: a low temperature (100-
+350 °C) shallow (50 to 1000 m) precious- or base-metal deposit with temporal and spatial-relation
+to volcanic centers (White & Hedenquist, 1990; Cooke and Simmons, 2000; Richards, 2009;
+Hedenquist & Arribas, 2017). The magmatic source from the volcanic center drives the circulation
+of hydrothermal fluids that carry metal-bearing ligands (i. e. bisulfide and sulfide complexes).
+These fluids leach ore minerals into altered host rocks or precipitate them into open spaces through
+processes such as boiling (Robb, 2005). Although most epithermal deposits are associated with
+magmatic environments, a few has been reported to be hosted in sedimentary units (Arehart, 1996;
+Kirwin & Royle, 2018). Majority of epithermal deposits are also dated within Cenozoic (Wang et
+
+al., 2019), and older deposits are assumed to have been eroded (Sidorov et al., 2015).
+
+Epithermal deposits were initially classified into two major types based on sulfidation state.
+This parameter refers to the valence state of the aqueous and gaseous sulfur species (Hedenquist,
+1987) and is correlated to sulfur fugacity and oxidation state (Einaudi et al., 2003; Wones, 1981).
+
+These differences produce contrasting mineralization styles.
+
+Following the mentioned classification, high sulfidation deposits are characterized by
+oxidized sulfur species such as sulfate (SO.”’) and sulfur dioxide (SO2). These deposits are situated
+in subduction zone settings with calc-alkaline magmatism and proximal to volcanic vents where
+saline fluids are derived from the magma (refer to Fig. 2.1). The high temperature and pressure
+results to boiling of fluids, incorporating SO2 and CO? into gas while the remaining liquid is left
+with a surplus of H™ (acidic). The components of high sulfidation deposits rise to the surface with
+minor water-rock interaction at depth and are neutralized later by shallower host rocks (White &
+Hedenquist, 1995). These also results to advanced argillic alteration with varying lithocaps
+
+outward the hydrothermal conduit (Arribas, 1995). The high fugacity of sulfur also produces
+
+copper-rich minerals such as enargite, luzonite and famatinite (Barton & Skinner, 1979). Gangue
+
+minerals are usually composed of sulfate minerals with a definitive lack of carbonates.
+
+Disseminated Au
+(HS)
+
+lL Advanced argillic
+lithocap
+
+Andesite-dacite
+volcanic edifice
+
+Paleosurface
+
+° /
+\ ogkMy / Au-Ag base-metal
+\ outa ¢ (7 Veins (\S)
+o#To °
+Porphyry Cu + Au ° aes i a <-.. Early, shallow acidic
+mineralization — = 8+ ~ condensates
+Granodioritic A es $ Early, deep acidic
+porphyry af magmatic gases
+stock XX XX 4 XX f HS fluids, evolved in
+xx xXx lithocap
+me a : IS fluid
+fe) 5
+km
+
+Fig. 2.1 Schematic diagram of a volcanotectonic setting (modified from Sillitoe & Hedenquist,
+2003). Groundwater absorbs early magmatic volatiles within the volcanic vent. This reaction
+produces acidic fluids that form the lithocap over the magmatic source. After some time,
+intermediate sulfidation fluids rise and circulate outside the advanced argillic lithocap. When these
+fluids flow through the lithocap, they evolve to high sulfidation fluids.
+
+On the other end of the spectrum are low sulfidation deposits which are characterized by
+reduced sulfur species such as bisulfide (HS°) and hydrogen sulfide (H2S). These are usually
+situated within rift settings with bimodal volcanism (refer to Fig. 2.2). The fluids that govern low
+sulfidation deposits are usually meteoric. These are also generally neutral since they have already
+equilibrated with the host rocks at depth unlike fluids in high sulfidation deposits. The mineral
+assemblage that forms from these conditions is composed of arsenopyrite, pyrrhotite and high-iron
+sphalerite (Barton and Skinner, 1979; Einaudi et al., 2003). Common gangue minerals that form
+in this type of deposit are quartz, carbonate and adularia while sericite and interstratified clays are
+
+the typical alteration minerals (White & Hedenquist, 1995).
+
+Disseminated
+Rhyolitedome = ay
+
+Paleosurface complex
+Lake Basalt flows
+
+Sinter terrace
+
+Listric
+faults
+
+Granitic
+magma
+chamber xXx
+
+Pe) Meteoric water
+
+$ Magmatic volatiles
+
+xXx xx xx t LS fluids
+0 5
+km
+
+Fig. 2.2 Schematic diagram of a rift setting (modified from Sillitoe & Hedenquist, 2003).
+Magmatic volatiles are neutralized at great depths, resulting in low sulfidation fluids.
+
+A transitional sulfidation state was recognized when an epithermal deposit in northern
+Nevada, with characteristics between high-sulfidation and low-sulfidation deposits, was
+discovered (John et al., 1999). This deposit formed from moderate temperature and low to
+moderate salinity fluids with high oxygen and sulfur fugacity. Furthermore, it has higher base
+metal and silver content than its low-sulfidation counterpart in the vicinity. Later on, this has been
+identified to be governed by fluids that are more evolved than their precursor deposit types (high
+or low sulfidation) (Sillitoe & Hedenquist, 2003). Acknowledging the need for distinction of such
+deposits, Hedenquist et al. (2000) classified them as ‘intermediate sulfidation’ deposits. These
+have typical mineral assemblage composed of low Fe-sphalerite, chalcopyrite, galena, pyrite and
+
+tetrahedrite (Einaudi et al., 2003). Common gangue minerals are sulfates, manganiferous carbonate
+
+and quartz while alteration assemblage consists of illite, adularia, chlorite, epidote and muscovite
+(Sillitoe & Hedenquist, 2003).
+
+2.2 OPHIOLITE-HOSTED VEIN-TYPE MINERALIZATION
+
+Much of studies on epithermal deposits revolved around volcanic-arc terranes hosted by
+volcanic, volcano-sedimentary, sedimentary, pyroclastic and diatreme units, or in rift settings
+(Sillitoe and Hedenquist, 2003). An extremely few has been reported to be hosted by ultramafic
+units, especially within ophiolites. One example lies in Papua New Guinea wherein the first
+epithermal PGE (platinum group of elements) deposit known as the Doriri lode is hosted in
+carbonatized peridotite and norite (Lindley, 2016). Although its temperature of formation (100-
+220 °C) from chlorite thermometry, depth of mineralization, and other hydrothermal
+characteristics express its epithermal nature, its main ore minerals are PGE’s that have
+
+concentrations greater than 1000 ppb. Another rare example is the Crnac prospect in the Central
+
+Balkan Peninsula, which exhibits Pb-Zn-Ag epithermal veins hosted by listwanite breccias
+(Sostaric et al., 2011; Sostaric et al., 2013).
+
+\ 7 0 TH |
+
+a NSO
+
+es. Si f
+
+—2 i 1 1 3 i
+Fig. 2.3 Map view of the Doriri lode, a northwest-striking epithermal PGE deposit hosted by
+peridotites and norite of the late Cretaceous to Eocene Awariobo Range Complex. High amounts
+
+10
+
+of PGE’s are concentrated within the massive chlorite-magnetite-sulfide zone shown in red.
+Figures taken from Lindley (2016).
+
+Outside of epithermal deposits, ophiolite-hosted vein-type mineralization has been more
+commonly reported among orogenic gold deposits, which are formed in orogenic belts along
+continental settings and are usually hosted in intrusive rocks that experienced regional
+metamorphism (Groves et al., 1998; Tomkins, 2013; Goldfarb et al., 2015). Gold-bearing quartz
+veins associated with ophiolites are usually hosted within listwanites, a term coined by Rose (1837)
+to describe quartz-carbonate-fuchsite bearing veins found in the Ural Mountains. Early proponents
+of the term followed this exact alteration mineralogy (Halls & Zhao, 1995); however, the term has
+already expanded beyond its original meaning. Ash (2001) cited how geologists in British
+Columbia (Nixon, 1989; Ash & Arskey, 1989) have used ‘listwanite’ as a descriptive term, rather
+than a genetic term, of gold-bearing quartz veins associated with ophiolites due to the deposit’s
+importance in the exploration standpoint. Aside from British Columbia, there are other areas with
+economic listwanites such as the Tavsan and Kaymaz prospects, Sugecer-Van and Mihaltccik
+region in Turkey (Ucurum, 2000; Akbulut et al., 2006; Yigit, 2006; Uner, 2020), Quebec
+Appalachians (Auclair et al., 1993), Egypt (Helmy et al., 2004; Zoheir, 2011; Azer, 2013; Emam
+& Zoheir, 2013), West Junggar region in NW China (Buckman, 2000; Robinson et al., 2005) and
+Tuva and Urals in Russia (Khuzuget et al., 2015; Sazonov et al., 2001) (Table 2.1).
+
+Meanwhile, petrological studies focused more on the alteration mineralogy rather than the
+ore content. In this case, the termed ‘listwanite’ is used to denote the alteration suite of
+hydrothermally altered peridotites ranging from talc-carbonates to carbonates and then finally to
+silica as end members (Ploshko, 1965; Power et al., 2013; Falk & Kelemen, 2015; Menzel et al.,
+2018), as opposed to carbonate-only alteration of peridotites known as ophicalcite (Kelemen et al.,
+2011). Talc-carbonate is the collective term for metamorphosed ultramafic units that contain
+significant amounts of talc (i. e. muscovite, pyrophyllite) and carbonates such as magnesite
+(Naldrett, 1964; Power & Scott, 1995). Listwanites are also not to be confused with rodingites
+(Bell et al., 1911; Sivell & Waterhouse, 1986; Schandl et al., 1990) which are characterized by a
+mineral association that is rich in calcium due to the liberation of its ions from pyroxene. This is
+
+reflected by an assemblage of Ca-Mg and Ca-Al silicates such as andradite, diopside, grossular,
+
+11
+
+hydrogrossular, prehnite and vesuvianite resulting from the alteration of pyroxene-rich lithologies
+
+such as gabbros.
+
+For listwanitization to commence, the presence of CO2-bearing fluids is required to react
+with serpentine, forming talc and magnesite. These fluids can be sourced from carbonate
+dissolution from subducted sediments (Falk & Kelemen, 2015; Menzel et al., 2018), adjacent
+sedimentary host rocks before ophiolite emplacement (Auclair, 1993), intrusive rocks (Buckman,
+2001) or from mixture of meteoric waters with magmatic waters (Robinson et al., 2005) or
+metamorphic fluids (Barnes, 1973; Studemeister, 1984). Furthermore, due to the advancement of
+ophiolite studies, it has been shown that the occurrence of listwanites is ubiquitous in various
+settings (e. g. intrusion-related/mineralized vs slab-derived/non-mineralized) and that their
+commonality is in being products of hydrothermal alteration. Therefore, current studies already
+support the genetic connotation of listwanites to hydrothermal fluid reaction of serpentinized
+
+ultramafic protoliths, and that the term be used as such.
+
+A model proposed by Buisson and Leblanc (1987) postulates that the ultramafic rocks
+(containing at least 8 ppb Au) surrounding the hydrothermal veins could have been the main source
+of gold, which is contained within the accessory opaque minerals (sulfides, chromite, and
+magnetite). Large-scale hydrothermal systems operating during the late stages of tectonic
+emplacement leach gold from the opaque minerals and transport it in a CO2-S-As-Cl-Na-K-B-rich
+solution as thio-arsenic complexes. The hydrothermal fluids are focused along tectonic contacts.
+As the system evolves, the acid gold-bearing solutions precipitate silica-pyrite arsenides and gold
+when entering the reducing and alkaline carbonatized rocks. Leaching of other ore elements such
+as PGEs (Lindley, 2016) and mercury (Studemeister et al., 1984) from the serpentinized protoliths
+
+has also been proposed in other intrusion-related ophiolite-hosted deposits.
+
+A more recent study by Plyusnina (2007) found out that gold transporting and
+concentration can be controlled not only by the host rocks but also by hydrothermal solutions that
+are genetically related to intrusion, which is possibly the case in some listwanite deposits such as
+
+the New England Orogen (Buckman & Ashley, 2010) or even the Doriri lode (Lindley, 2016).
+
+Several ophiolite-hosted epithermal veins were also reported within the Philippine island
+arc, which is supported by the number of ophiolites along its margins and the presence of
+
+magmatism along subduction fronts. In Camarines Norte, the highest-grade gold-bearing quartz
+
+12
+
+veins exhibiting comb and crustiform textures were observed within northeast-trending tensional
+joints and faults constrained along the Early Miocene Paracale granodiorite and the Late
+Cretaceous Camarines Norte Ophiolite Complex (CNOC) peridotites (Miranda & Caleon, 1977;
+Encarnacion, 2004). Crystallization sequence observed on the residual mantle and shallow crust
+units, mineral chemistry of the gabbros, diabases and basalts and geochemical plots suggest a mid-
+oceanic ridge origin for the CNOC (Tamayo et al., 1996; Tamayo, 1997). In terms of ore
+
+mineralogy, native gold, galena, sphalerite and chalcopyrite were observed.
+
+In Puerto Princesa, Palawan, mercury deposits were found to be hosted within the Ulugan
+Bay Ultramafic Complex, which is a part of the Eocene Central Palawan Ophiolite that exhibits
+BAB/MORB.-like affinity (Gibaga et al., 2020; Dycoco et al., 2021). The listwanites are related to
+geothermal springs similar to the western California Coast mercury deposits and consist of
+magnesite, dolomite, chalcedony, tridymite, opal and quartz that also bear cinnabar, metacinnabar,
+
+pyrite and marcasite (Sabaria, 2021).
+
+Lastly, lode-type gold-bearing listwanites between contacts of quartz diorite and the
+ultramafic units of the Cretaceous Surigao Ophiolite were reported within the Agata Property
+owned by Minimax and MRL in Agusan del Norte located in northeast Mindanao (Bailey, 2003).
+The Pliocene Mabuhay monzodiorite is believed to be the source of the magmatic-hydrothermal
+
+fluids, although further studies are needed to confirm this.
+
+13
+
+Table 2.1 Compilation of listwanite occurrences and their characteristics
+
+Doriri lode, Papua New
+
+CHARACTERISTIC = Guinea (Lindley, 2016)
+
+Mineralization style epithermal shear-zone
+
+Main ore PGEs, mercury
+Tectonic setting island arc
+Age of ultramafic belt Eocene
+Type of intrusion monzonite
+
+Gangue minerals chlorite-magnesite-calcite
+
+hydrothermal breccias,
+
+ngue textures
+Gany ure stockwork
+
+pyrite, pentlandite,
+
+eso de pyrrhotite, marcasite
+
+Supergene alteration nickel laterite
+
+Fluid inclusion type n/a
+
+magmatic-hydrothermal
+
+Source of fluids
+
+a (2)
+Homogenization 100-200 °C
+temperature
+Salinity n/a
+Mechanism leaching
+
+Atlin gold camp, British Columbia
+(Ash, 2001; Yiefei et al., 2003; Hansen et al.,
+2005)
+
+orogenic gold
+Au
+
+acrreted terranes in a continental margin
+
+Paleozoic-Mesozoic
+granite, granodiorite
+
+Cr muscovite, ferroan magnesite, quartz,
+mariposite
+
+massive
+
+pyrite, galena, gersdorffite, bismuthimite,
+tetradymite, sphalerite, chalcopyrite, pyrrhotite,
+millerite, hessite, rammelsbergite, acanthite
+
+n/a
+
+n/a
+
+metamorphic fluids from dehydration at deep
+crustal levels
+
+n/a
+n/a
+
+n/a
+
+14
+
+New England Orogen, Australia
+(Barnes et al., 1988; Buckman &
+Ashley, 2010; Holcroft et al., 2010)
+
+epithermal
+
+Au, Cu, Hg
+serpentinite belt within a fault
+system
+Permian (?)
+granite
+talc, magnesite, dolomite,
+chalcedony, quartz, sericite,
+fuchsite
+
+massive
+
+pyrite, cinnabar
+
+copper carbonates, oxides,
+silicates
+
+n/a
+carbon-dioxide-bearing
+
+minimum 165-200 °C
+low salinity
+
+n/a
+
+Table 2.1 Compilation of listwanite occurrences and their characteristics (cont'd)
+
+CHARACTERISTIC
+
+Kaymaz gold mine, NW Turkey
+
+Sartohay ophiolite, NW China
+
+Sayi gold deposit, NW China
+
+(Yasuv et al., 2022) (Robinson et al., 2005) (Qiu & Zhu, 2015)
+Mineralization style Intrusion-related Intrusion-related Ducts Prine dotoaaney)
+shearing
+Main ore Au Au Au
+
+Tectonic setting
+
+Age of ultramafic belt
+Type of intrusion
+
+Gangue minerals
+
+Gangue textures
+
+Ore assemblage
+
+Supergene alteration
+
+Fluid inclusion type
+
+Source of fluids
+
+Homogenization
+temperature
+Salinity
+
+Mechanism
+
+continental thrust
+zone/metamorphic belt
+Mesozoic
+granitoids
+
+quartz, calcite, chalcedony,
+magnesite
+
+cockade, colloform, stockwork,
+polymictic breccia
+
+millerite, magnetite, pentlandite,
+asp, nickeline, marcasite, pyrite,
+gold, silver, chalcopyrite
+
+hematite, goethite, limonite,
+chalcedony, magnesite
+
+two-phase, liquid-rich and vapor-
+rich
+
+magmatic-hydrothermal
+230-390 °C
+
+1.4-14.2
+boiling
+
+collisional orogen
+
+Early Devonian
+monzogranite
+
+quartz, magnesite, dolomite
+
+boxwork, comb, cockade
+
+pyrite, arsenopyrite, gersdorffite,
+chalcopyrite, gold
+
+calcite pseudomorph and black
+chalcedony
+
+n/a
+magmatic-hydrothermal
+
+340-410 °C
+
+n/a
+mixing (magmatic fluids and
+meteoric from oxygen isotope)
+
+15
+
+collisional orogen
+Late Silurian to Devonian
+granite
+
+quartz, mgs, mariposite,
+carbonate, dolomite, muscovite
+
+angular hydrothermal breccia
+(crackle)
+
+gold, chalcopyrite, gersdorffite,
+galena, polydemite, millerite,
+pentlandite, violarite
+
+iron oxide
+
+n/a
+
+hydrothermal fluid through shear
+zone
+
+n/a
+
+n/a
+hydrothermal fluid through shear
+zone
+
+Table 2.1 Compilation of listwanite occurrences and their characteristics (cont’d)
+
+CHARACTERISTIC
+
+Mineralization style
+Main ore
+
+Tectonic setting
+
+Age of ultramafic belt
+Type of intrusion
+
+Gangue minerals
+
+Gangue textures
+
+Ore assemblage
+
+Supergene alteration
+
+Fluid inclusion type
+
+Source of fluids
+
+Homogenization
+temperature
+Salinity
+
+Mechanism
+
+Wadi Allaqi, Egypt
+
+(Azer, 2013)
+
+Intrusion-related
+
+Au
+
+shield
+
+Neoproterozoic
+
+granodiorite
+
+magnesite, dolomite,
+ankerite, calcite, quartz,
+fuchsite, talc, kaolinite
+
+hydrothermal breccia
+
+pyrite, chalcopyrite,
+cobaltite, magnetite, gold
+
+covellite, goethite, malachite,
+
+magnetite
+
+n/a
+
+magmatic-hydrothermal
+
+n/a
+n/a
+
+n/a
+
+Dorn gold deposit, Antarctica
+
+(Crispini et al., 2009)
+
+Orogenic gold
+
+Au
+
+continental transtensional
+
+Cambrian-Ordovician
+
+granodiorite, minor tonalite, granite
+
+ankerite, muscovite, chlorite,
+
+tourmaline
+
+comb and vuggy quartz, breccia
+
+pyrite, arsenopyrite
+
+iron oxide and iron hydroxide
+
+n/a
+
+n/a
+
+n/a
+n/a
+
+n/a
+
+16
+
+Point Rousse Project, Newfoundland
+(Escayola et al., 2009; Pitman et al., 2020)
+
+Orogenic gold
+Au
+
+thrust belt within a continental margin
+
+early Ordovician
+granite (?)
+
+ankerite, magnesite, dolomite, quartz
+
+hydrothermal breccia
+
+chalcopyrite, pyrite, mercury-gold alloy
+
+limonite
+
+n/a
+
+hydrothermal fluid through shear zone
+
+350-400 °C for the carbonates, 200 °C for
+quartz and sulfides
+n/a
+
+n/a
+
+Table 2.1 Compilation of listwanite occurrences and their characteristics (cont’d)
+
+CHARACTERISTIC
+
+Mineralization style
+Main ore
+
+Tectonic setting
+
+Age of ultramafic belt
+Type of intrusion
+
+Gangue minerals
+
+Gangue textures
+
+Ore assemblage
+
+Supergene alteration
+
+Fluid inclusion type
+
+Source of fluids
+
+Homogenization
+temperature
+Salinity
+
+Mechanism
+
+Ahmed et al. 2009; Tourneur et al., 2021)
+
+Bou Azzer, Morocco (En-Naciri et al., 1997;
+
+Crnac deposit, Kosovo
+(Sostaric et al., 2013)
+
+serpentinite-hosted massive arsenide
+(SHMA)
+
+Bi, Co, Ni, Ag, U
+orogenic zone
+
+Proterozoic
+Quartz diorite
+
+quartz-carbonate, erythrite, magnetite,
+rodingite
+
+pull-apart breccias, laminated textures,
+comb, massive
+
+arsenides, arsenopyrite, gersdorffite,
+bornite, chalcocite, chalcopyrite, pyrite,
+pyrrhotite, sphalerite, tetrahedrite
+
+erythrine
+liquid + vapor + halite
+magmatic-hydrothermal
+
+190 °C eastern; 230 °C western (mean)
+16-22 wt. % NaCl
+
+leaching
+
+17
+
+Hydrothermal breccia
+Pb-Zn-Ag
+
+collision
+
+Jurassic
+Quartz latite
+
+qz, kao, carbonate
+
+angular to sub-rounded breccia
+
+ccp, galena, sphalerite, py,
+tetrahedrite
+
+kaolinite
+
+liquid-rich, halite, vapor-rich
+magmatic fluid and meteoric
+
+115-375 °C
+0-35%
+
+boiling, mixing
+
+California Coast Ranges, USA
+(Barnes et al., 1973,
+Studemeister, 1984)
+
+epithermal
+
+Hg
+metamorphosed thrust belt
+proximal to geothermal sinter
+Mesozoic
+granite
+
+quartz, opal, chalcedony,
+calcite, ankerite, dolomite
+
+massive
+
+cinnabar, metacinnabar, native
+mercury, stibnite, native sulfur,
+pyrite, chalcopyrite, galena,
+
+bituminous matter
+
+n/a
+
+meteoric and metamorphic
+fluids
+
+<250 °C
+n/a
+
+cooling, mixing
+
+Table 2.1 Compilation of listwanite occurrences and their characteristics (cont'd)
+
+CHARACTERISTIC Tavreh mercury deposit, NW Iran Samail ophiolite, Oman (Nasir et Advocate ophiolite complex,
+(Imamalipoor et al., 2020) al., 2007; Falk & Kelemen, 2015) Newfoundland (Menzel et al., 2018)
+Mineralization style contact type none none
+Main ore Hg none none
+Tectonic setting ophiolite belt with Neogene magmatism Wiust fault Peanne: epelty continental margin
+Age of ultramafic belt Mesozoic Cretaceous early Ordovician
+Type of intrusion granitoid intrusives none none
+: ; 5 talc, magnesite, calcite, dolomite, _ talc, magnesite, chlorite, dolomite
+Gangue minerals opal, chalcedony, quartz, cristobalite : ;
+fuchsite, quartz fuchiste, quartz
+Gangue textures massive massive, fracture fills zoned rhombic magnesite
+Ore assemblage cinnabar chromite pyrite, NS Byron.
+heazlewoodite, chromite
+Supergene alteration secondary iron hydroxides hematite Mg-bearing Fe-Ni hydroxides
+Fluid inclusion type n/a n/a n/a
+meteoric water, CO2-saturated pore
+Source of fluids geothermal water from compaction of subducted slab-derived
+sediments, seawater
+Homogenization ae 80-130 °C 300-420 °C for carbonation; 200 °C for
+temperature silicification
+Salinity n/a n/a n/a
+; bonate dis i
+Mechanism related to geothermal systems a te dis soluvon torn fluid flux
+
+metasediments
+
+18
+
+2.3 ORE AND GANGUE INTERPRETATION
+
+In mineral deposit studies, the characterization of ore and gangue mineral assemblage,
+paragenetic sequence and alteration assemblages have been used to define the various
+mineralization episodes and determine the genetic model for the deposit (White, 1990; Craig &
+Vaughn, 1994; Taylor, 2009). Since quartz is a common component of hydrothermal vein,
+classification of quartz veins, as well as carbonate and adularia veins, can be used to infer the mode
+of precipitation such as boiling, cooling and flashing (Dong & Morrison, 1995; Dong et al., 1995)
+(Fig. 2.4). Fluid-rock reaction also causes brecciation of the host rocks depending on the stage of
+fluid activity and pressure; hence, classification of breccias is also standard in most hydrothermal
+vein studies (Jebrak, 1997) (Fig. 2.5). In terms of ore minerals, Craig & Vaughan (1994) compiled
+several examples of ore textures with their interpreted associated process, such as replacement,
+exsolution and magmatic differentiation. In terms of identification of mineral constituents of host
+rocks, alteration minerals and vein compositions, X-Ray diffractometry (XRD) has been used
+
+extensively in mineral exploration (Hedenquist et al., 2000; Bunaciu et al., 2015).
+
+19
+
+Texture
+
+———_ —
+
+T
+Morphology of
+
+Grain Internal F f |
+: Grain Form | irauacyetr |. crystal References
+I
+Texture Size individual Crystal | Aggregate
+e Smirnov (1962)
+Massive variable anhedral n/a homogenous Bates & Jackson
+(1987)
+| successive erentasony
+i ; 1 Shaub (1934)
+Crustiform variable variable n/a banding Lindgren (1933)
+Buchanan (1981)
+; , concentric | Adams (1920)
+Cockade variable variable ‘
+wa banding | Spurr (1926)
+la
+semi-spherical,
+Colloform fibrous / reniform, Rogers (1917)
+anhedral na Adams (1920)
+mammillary
+variable n/a spherical | Adams (1920)
++
+lel Adams (1920)
+variable prismatic n/a at d aoved
+orlentate’ Boyle (1979)
+variable prismatic zonal n/a Smirnov (1962)
+
+Fig. 2.4 Quartz textures indicating primary growth (Dong et al., 1995). Classification parameters
+include habit, grain size, form, internal structure and crystal morphology.
+
+20
+
+
+TECTONIC FLUID-ASSOCIATED VOLUME VOLUME
+COMMINUTION BRECCIATION REDUCTION EXPANSION
+
+CORROSIVE
+
+WEAR
+ABRASION IMPACT COLLAPSE WEAR
+
+Fig. 2.5 Schematic chart of hydrothermal breccia classification and mechanisms for brecciation
+(Jebrak, 1997)
+
+21
+
+2.4 MINERAL CHEMISTRY AND FLUID INCLUSION ANALYSIS
+
+Additionally, the mineral chemistry of ore assemblages has been studied as a way of
+looking into the physicochemical properties, such as sulfidation state. The Fe-Zn-S system has
+proven that the iron content of sphalerite coexisting with pyrite or pyrrhotite is associated to
+temperature and sulfur fugacity (Barton & Toulmin, 1966). Using this parameter with initial
+temperature of formation, one can plot the sulfidation state for a given mineralization stage
+(Einaudi et al., 2003) (Fig. 2.6).
+
+0
+[0 High sulfidation
+
+2 Intermediate sulfidation
+° Low sulfidation
+
+FeS mol%
+
+-4
+
+log fS. ——>
+
+200 300 400 500 600 700
+Temperature (°C)
+Fig. 2.6 Sulfidation state parameter (log fS2) vs temperature. The former can be obtained from iron-sulfide
+mole percentage (mole % FeS) of sphalerite coexisting with pyrite or pyrrhotite. Temperature can be
+derived from geothermometry methods such as microthermometry of fluid inclusions. Abbreviations for
+sulfide minerals in the graph: cv-covellite, dg-digenite, bn-bornite, py-pyrite, po-pyrrhotite, asp-
+arsenopyrite, lo-loellingite
+
+22
+
+Additionally, analysis of fluid inclusions has been prominently employed in the study of
+ore-forming processes. Fluid inclusions are tiny fluids trapped during crystal growth (Sorby,
+1858). Petrography is the most fundamental step in fluid inclusion studies, as this enables
+rescarchers to identify the appropriate samples for a certain analysis. Studies related to epithermal
+vein systems require primary fluid inclusions (fluid inclusions that are along the growth zones of
+the entrapping crystal) comprising a fluid inclusion assemblage so that the temperature and salinity
+derived from analysis will truly reflect the chemical and physical conditions of formation of the
+mineralized phase (Goldstein & Reynolds, 1994). The composition of the fluid inclusions can also
+indicate the type of fluid associated with the mineralized phase and ore-forming conditions (See
+
+Fig. 2.7).
+
+Wvivivy
+
+Consistent Coexisting liquid-rich Only vapor-rich inclusions
+phase ratios and vapor-rich inclusions (no liquid-rich)
+“non-boiling” “Boiling” “Flashing”
+
+Fig. 2.7 Fluid inclusion assemblages (FIA) observed in Veta Madre at Guanajato, Mexico (Moncada et al.,
+2012). The Fig.s on the top indicate schematic diagrams that emphasize phase ratios of the inclusions. FIAs
+with consistent liquid-vapor phase ratios indicate non-boiling conditions (left); FLAs with both liquid-rich
+and vapor-rich inclusions indicate boiling conditions (middle), FIAs consisting of only vapor-rich
+inclusions indicate flashing (right).
+
+Additionally, fluid inclusions have also been used for geobarometry (Roedder & Bodnar,
+1980), and, using salinity and homogenization temperatures obtained from microthermometry, can
+
+be used to determine fluid evolution processes and paleo-water depth (Haas, 1971; Wilkinson,
+
+2001).
+
+23
+
+Homogenization temperature (°C)
+
+0 20 40 6 80
+Salinity (wt% NaCl equivalent)
+
+Fig. 2.8 Summary of homogenization temperature versus salinity of fluid inclusions among different
+deposit types (Wilkinson, 2001).
+
+Temperature (°C)
+(b) i} 50 100 150 200 250 300 350
+0 an Eee an ee
+100
+200
+300
+— 400
+E
+at 500 2.0m NaCl
+i 600 —*- xC02-0.0
+700 ~* xC02=0.01
+800 —® xC02=0.025
+900 eo xC02=0.05
+1000
+
+Fig. 2.9 Effervescence vs depth plot for brine containing 0-5 mol% CO2 and 2.0 m NaCl (Wilkinson,
+2001).
+
+24
+
+2.5 REGIONAL GEOLOGY
+
+The Philippine Mobile Belt is a tectonically bounded deforming zone flanked by the
+subduction of the South China Sea Plate to the west and Philippine Sea Plate to the east (Rangin,
+1991; Aurelio, 2000) (Fig. 2.10). The oblique convergence of the Philippine Sea Plate to the
+Philippine Trench also produced the 1200-km northwest-trending sinistral strike-slip Philippine
+Fault 5 Ma ago (Fitch, 1972). This complex tectonic setting resulted in several gold districts along
+the length of the fault since pathways for hydrothermal fluids were provided (Yumul et al., 2008;
+Yumul et al., 2016). On the other hand, subduction along the western margin of Luzon generated
+volcanism in the Bataan Volcanic Arc from Miocene to Quaternary, creating three parallel
+volcanic arcs with varying composition from tholeiitic to calc-alkaline to shoshonitic eastward
+from the Manila Trench (De boer et al., 1979). The collision of the Scarborough Seamount Chain
+with the Manila Trench resulted to slowing down of the subduction, prompting a hiatus in
+magmatism (Yang et al., 1996). This also caused the uplift of the forearc basin, eastward shift of
+succeeding magmatism due to the shallow subduction angle, and generation of highly fertile
+Pliocene-Pleistocene andesite and dacite intrusions in Northern Luzon such as the Mankayan and
+Baguio Mineral Districts (Yumul et al., 2003; Manalo et al., 2018; Jabagat et al., 2020; Soberano
+ct al., 2021).
+
+Looking at the basement of western Luzon, the east-dipping Zambales Ophiolite Complex
+(Schweller et al., 1983) is divided into two blocks based on crustal section thickness, petrological
+differences and geochemistry (Fig. 2.10). The Acoje Block is composed of upper mantle lherzolite
+to harzburgite, with ultramafic cumulate sequence of transitional dunite, websterite, wehrlite,
+clinopyroxenite and mafic cumulate sequence of gabbronorite, norite, norite-gabbro with gabbro
+and anorthosite (Hawkins & Evans, 1983). Crystallization order in the cumulate layer is olivine +
+spinel -> pyroxene -> plagioclase (Yumul, 1989). The geochemistry of the upper mantle suite,
+ultramafic and mafic cumulates, volcanic rocks and PGEs suggest an island arc tholeiitic origin
+for the Acoje Block (Hawkins & Evans, 1983; Yumul, 1989; Zhou et al., 2000; Yumul, 2001). U-
+Pb dating of zircons from tonalites in the Acoje Block yielded 44.2 + 0.9 Ma (Encarnacion &
+Mukasa, 1993). Chert olistoliths in the Cabaluan Formation, which are associated with ophiolite-
+derived pebble- to cobble-size angular clastic rocks, contain radiolarian fauna that suggest an age
+
+range from Late Jurassic to Early Cretaceous (Queaifio et al., 2016).
+
+25
+
+MINERALIZATION
+16°00'N @ Volcanogenic
+Massive Sulfide
+East Luzon Trough N . |
+: ID) Chromitite
+Boy A. Copper Sulfide
+
+Y Porphyry Cu
+PHILIPPINE SEA PLATE SARS © Epithermal Au-Ag
+
+Manila Trench
+
+15°30'N
+
+‘SOUTH CHINA SEA BASIN Philippine Trench
+
+10°N FORMATIONS
+15°00'N
+Bataan
+Volcanic Arc
+Candelaria
+Limestone
+7
+HOST ROCK . ace
+Sedimentary Cabatuan
+Volcanic-derived Zambales Ophiolite
+Complex
+Mafic intrusive ? 14°30'N Coto Block
+5°N Alkaline intrusive Be Acoje Block
+| Ultramafic é 4 |
+
+120°E 125°E
+Fig. 2.10 (/eft) Epithermal deposit map of the Philippines classified according to host rock (modified from
+Mitchell and Leach, 1991; Yumul et al., 2003; Ruelo, 2018). Boxed in red is the Zambales Ophiolite
+Complex. (right) Geologic map of the Zambales Ophiolite Complex and location of mineral deposits
+
+(modified from Dimalanta et al., 2015; Alonso et al., unpublished; Perez et al., 2018).
+
+Hydration of the Acoje Block basal cumulates during regional uplift of the Zambales
+Ophiolite Complex resulted to serpentinization and produced an assemblage of lizardite +
+chrysotile + magnesite + brucite with an upper limit of 350 °C in terms of temperature (Abrajano,
+1984). The shallow condition during hydration resulted to reducing conditions due to the
+involvement of olivine during rock buffering, high Fe:Mg ratio in the ultramafic minerals, and
+
+minimal silica activity.
+
+On the other hand, the Coto Block is composed of upper mantle harzburgite, thin transition
+
+zone dunite, clinopyroxene-rich mafic cumulates of gabbro, troctolite and olivine gabbro with
+
+26
+
+anorthosite (Hawkins & Evans, 1983). Crystallization order in the cumulate layer is olivine +
+spinel -> plagioclase -> pyroxene (Yumul, 1989). Aside from lack of ultramafic cumulate phase,
+the Coto Block differs from the Acoje Block in terms of origin. Geochemistry of the upper mantle,
+mafic cumulates and volcanic suite showed transitional MOR-IAT signatures (Hawkins & Evans,
+1983; Geary et al., 1989; Yumul, 1989). Chromite deposits hosted by dunite envelopes are of
+refractory type (Hock et al., 1986). U-Pb dating of zircons from plagiogranite and diorite yielded
+an age of 45.1 + 0.6 Ma (Encarnacion & Mukasa, 1993).
+
+Oligocene post-obduction gabbroic to dioritic dikes cut the peridotites of the two blocks
+(Fig. 2.11) (Hawkins & Evans, 1983; Fuller et al., 1988; Rossman et al., 1989; Lagmay, 1993;
+Yumul et al. 1998). Including the undergraduate thesis of Megino (2022), who worked on the
+geochemistry of the peridotite-hosted diabase dikes in Malabeg, Cabangan, the dikes in Cabangan
+Massif show mixed island arc-mid-oceanic ridge signatures based on REE behavior in trace
+
+element spidergram (Fig. 2.12).
+
+15
+
+Nepheline
+/\_ syenite
+
+pe /syenite
+rey yo ~ py
+x
+
+O 10
+& { Granite NG
++ Syenpite a, TaN Gatkc
+[e) or 4 A
+s f J Neranodtorit/ Legend
+/Gabbro og sf jorite | ;
+L 4 diabase dikes (this study)
+
+A ak B-
+ge {Art Se © diabase dikes (Yumul et al., 1998b)
+
+aa
+Mech A diabase/microdiorite dikes (Lagmay, 1993)
+
+SiO,
+
+27
+
+Fig. 2.11 Total alkali silica classification of post-obduction dikes in the Coto Block (Megino, 2022).
+
+8
+
+Sample/N-MORB
+
+od Ara ottaaaaatzas
+
+Legend
+Q- se
+
+Legend
+
+Fig. 2.12 (a) Chondrite-normalized multi-element diagrams of the Coto dikes. (6) MORB-normalized
+multi-element diagrams of the Coto dikes. Both Fig.s are from Megino (2022).
+
+The distinction between Acoje and Coto Blocks are geochemical in nature. In terms of
+tectonics, the Zambales Ophiolite Complex is divided into three massifs: the Masinloc Massif,
+which comprises the Acoje Block and northern Coto Block (separated by a northeast-trending
+Lawis Fault), the Cabangan Massif and the San Antonio Massif (Fig. 2.10). These three blocks are
+separated by northwest-trending grabens (Rossman et al., 1989). The geochemical similarity of the
+San Antonio Massif to the rest of Acoje Block, as well as clinopyroxenite hills on the western
+portion of Cabangan Massif, suggests the southward translation of the said massif from the Acoje
+
+Block (Yumul et al., 1997).
+2.6 METALLOGENESIS OF WESTERN LUZON
+
+Western Luzon consists of several hydrothermal systems. One example of an active
+geothermal system in the area is Mount Pinatubo, which is part of the Bataan Volcanic Arc.
+Geothermal studies on Mount Pinatubo reveal active hydrothermal systems represented by
+solfatara pools and neutral pH waters with varying abundance of Cl, HCO; and SOs (Delfin et al.,
+1996). Furthermore, drilling intercepted hornfels, microdiorite, micro-quartz monzodiorite,
+diabase and gabbroic dikes, wherein the latter two are presumed to be part of the Zambales
+Ophiolite Complex. Microthermometry of fluid inclusions in anhydrite revealed a bimodal
+distribution of values at 290 °C and 320 °C, where the latter is closer to the current measured
+temperature within the geothermal system. Aside from the overlapping of some clay zones, the
+
+bimodal distribution implies the occurrence of more than one hydrothermal event, and the
+
+28
+
+existence of cooler fluids in the past. A temperature gradient of 200 °C for the shallowest portions
+of Mount Pinatubo (900 masl) up to 320 °C for the deepest portions (-1100 masl) is also inferred
+from the fluid inclusion readings. Majority of the stable isotope data from thermal springs plot
+near the meteoric water line, although significant few samples plot near the primary magmatic
+water field, indicating the presence of magmatic input (Delfin et al., 1996). High sulfur contents
+of melt inclusions and groundmass glass of dacite samples suggest injections of highly oxidized
+and hydrous mafic magmas that siphoned high amounts of sulfur from the mantle to the crustal
+
+level felsic magma chambers (Luhr & Melson, 1996; Hattori & Keith, 2001).
+
+Another well-studied porphyry-epithermal system within the Bataan Volcanic Arc is the
+Dizon mine in San Marcelino, Zambales, which is underlain by fine-grained diorite porphyry
+hosted by Neogene subaerial volcaniclastic units (Malihan, 1987). K-Ar age dating from a
+hydrothermal sericite sample yielded an age of 2.7 Ma (Malihan, 1987) while hydrothermal biotite
+from the potasically-altered diorite porphyry yielded an age of 2.5 + 0.2 Ma (Imai, 2000). Similar
+to Mount Pinatubo, petrological characteristics and geobarometric and oxidation state plots of the
+diorite porphyries in Dizon suggest multiple intrusions of mafic magmas, aside from the parental
+
+magmas being oxidized and water-rich (Midea et al., 2021).
+
+Aside from the porphyry copper deposit, the telescoping epithermal system was studied by
+
+Imai (2005). The author has identified four stages, which is summarized as follows:
+
+1) Quartz veinlets with chalcopyrite, bornite, magnetite and native gold. They exhibit
+stockwork texture and are associated to chlorite and biotite alteration. Gas-rich and
+polyphase (including halite, opaque minerals, vapor and hematite) inclusions yielded a
+minimum temperature at 500 °C and maximum pressure at 460 bars.
+
+2) Quartz veinlets with chalcopyrite, pyrite and gold having chalcopyrite and pyrite
+stringers. These also exhibit stockwork and drusy textures and are associated to sericite
+alteration. Minimum temperature is around 245 °C while minimum pressure is around
+25 bars.
+
+3) Quartz veinlets with molybdenite. These usually appear as stringers in sericite
+alteration. Gas-rich and minor liquid-rich inclusions yielded homogenization
+
+temperatures between 350-490 °C.
+
+29
+
+4) Quartz veins with sphalerite and galena at deeper portions and enargite and stibnite at
+shallower portions. These were observed to exhibit drusy texture with crustiform
+banding and botryoidal habit in some portions. Liquid-rich two-phase inclusions
+yielded homogenization temperature between 190-300 °C, pressure around 15 bars
+
+salinity values between 1.0-3.4 wt.% NaCl.
+
+The closeness of sulfur isotope values (+0 to +5%o) across the paragenetic stages suggests
+a single hydrothermal system for the mineralization and a homogenous source, while the
+decreasing pressure is thought to be associated to the collapse of the Pua diatreme while the
+magmatic-hydrothermal system was still active. Afterward the collapse, the unroofing of the debris
+
+would have resulted in the decrease of pressure and temperature.
+
+South of Dizon lies the late Pleistocene to Pliocene Mount Natib, which is an andesitic
+stratovolcano within the Bataan Peninsula (Salvania, 1995). Compositionally similar to Mount
+Pinatubo, active thermal springs are of the SO4-HCO3-Cl and Cl -HCO3 types which signify
+contributions from condensates and meteoric waters (Ruaya & Panem, 1990). Quartz equilibrium
+and Na-K-Ca suggest subsurface temperatures between 160 to 232 °C while plots in Na-K-Mg
+diagram suggests subsurface dilution with primary geothermal waters. Recurrence of parasitic
+cones suggests an active heat source to generate the convection of hydrothermal system in Mount
+
+Natib.
+
+South of Mount Natib is the Pantingan Gold System, aged at 0.88 + 0.13 to 1.13 + 0.17 Ma
+and located at the southernmost tip of the Bataan Volcanic Arc (Fig. 2.10) (Payot et al., 2005).
+and exhibits silica-sinter low sulfidation epithermal deposit hosting gold, silver and minor copper
+(Payot et al., 2005). Aside from Dizon and Pantingan, other porphyry-epithermal systems along
+the Bataan Volcanic Arc are only reported through government or company reports such as
+
+Pisumpan (Singer et al., 2008) and Burgos in Tarlac (Mines and Geosciences Bureau, 2004).
+
+Ore-grade concentrations of platinum group of elements (PGE’s) were found in
+metallurgical chromites from transitional dunites up to cumulate peridotites (Hock et al., 1986;
+Orberger et al., 1988; Bacuta et al., 1990). Ni sulfides were also found in the basal cumulates of
+the Acoje Block, including pentlandite, troilite, pyrrhotite, mackinawite, chalcopyrite, cubanite,
+digenite, bornite, idaite, heazlewoodite, godlevskite, millerite, valleriite, native copper, native iron,
+
+djerfisherite, cobalt pentlandite, tochilinite, pyrite, laurite, moncheite, copper-palladium alloy and
+
+30
+
+graphite (Abrajano, 1984). The interstitial and amoeboid surrounding of these sulfides (aside from
+being inclusions in silicates and chromites), as well as the dominance of troilite and pyrrhotite,
+
+signify their nature as magmatic sulfides.
+
+The Mines and Geosciences Bureau, formerly known as Bureau of Mines, had investigated
+Cabangan and nearby municipalities since 1964. Most reports pointed out talc (as hydrothermal
+product of serpentine), chrysotile and chromite mineralization in Cabangan (Belandres, 1964;
+Palaganas, 1966; Gorriceta and Llave, 1970; Magpantay et al., 1979), but none mentioned
+epithermal mineralization. With proximity to Cabangan, possible related deposits are copper
+mineralization in Botolan (Fig. 2.10) that lies 15 kilometers north of Cabangan. This was reported
+
+by Magpantay et al. (1979) on the following sites:
+
+a. Southern slope of Mount Botolan under Mindanao Mother Lode Copper Mines Inc. The
+NE-striking NW-dipping veins were deposited via filling and replacement along shear zones with
+serpentinized peridotite and gabbro hosts. Chlorite and serpentine are the dominant alteration
+minerals. Sulfides observed in the quartz veins were pyrite, pyrrhotite and chalcopyrite. Reported
+
+average copper content is 4%.
+
+b. Bukao, Binuklutan under Binuklutan Copper Prospect project (immediately west of Mt.
+Botolan; see Fig. 2.10). Veins were found along NE-trending shears and faults and in contact
+between gabbroic host rocks intruded by andesite dikes. Sulfides observed in quartz veins were
+
+chalcopyrite, pyrrhotite and rare sphalerite. Reported copper average is around 2%.
+
+c. Western slope of Mount Pera under Malumboy Copper Prospect in Biangul, Malumboy.
+Gabbro is the dominant lithology in the area which is cut by fine-grained dark gray to black ‘basic
+igneous dikes.’ The source of copper are quartz veins transecting gabbro, trending N 30° W with
+40° SW dip. Magnetite, pyrite, chalcopyrite and minor pyrrhotite were the observed sulfides.
+
+Epidote and chlorite were the main alteration minerals.
+
+Lastly, the Coto Block has also been explored and mined for chromite and nickel since the
+last century (MGB, 2004). In 2014, the Cordillera Exploration Corp. Inc. (CEXCI) investigated
+and explored the property of NEWMINCO Pacific Mining Corp. Inc. denominated as EP-001-
+
+2015-III after exploration permit was granted. A quartz vein float along Malabeg River with 5.2
+
+31
+
+g/t Au and malachite staining from Takipan with 2.2 g/t Au encouraged further exploration on the
+
+tenement (Alonso et al., unpublished).
+
+The NEWMINCO property EP-001-2015-III is dominated by moderately jointed dark-
+colored harzburgites exposed in Takipan Ridge, Malabeg River, Mabibituin, Loong, Angeles and
+Tanguay River (Fig. 2.13). In terms of topography, the highest elevations reach 900 masl and are
+interconnected along east to northeast trends while local tributaries drain southward towards the
+Maloma River, except for Tanguay River that runs towards southwest. Gabbros were observed in
+the northwest (Quimalogong area) and upper portions of Bacsil (Fig. 2.13A). Diabase dike
+complexes were observed in the southeastern portion of the tenement covering Bacsil to Antongen-
+Hiloen (Fig. 2.13B). Gabbro-hosted, partly oxidized hydrothermal breccia with disseminated
+malachite and pyrite + bornite + chalcopyrite was found in Bacsil. Two trends of mineralized
+quartz-carbonate veins were found along contacts of harzburgites and diabases. NW-striking veins
+were found in Malabeg, Takipan, Mabibituin NW, Angeles, Lower Loong and Bulikawa (Fig.
+2.13C, D). Most of them dip towards northeast except for Bulikawa, which dips southwest. NE-
+striking veins were found in Takipan, Mabibituin, and Upper Loong (Fig. 2.13E, F). Sulfide
+association includes chalcopyrite, pyrite, sphalerite, galena, covellite and bornite. Alteration
+
+minerals consist of light green malachite, emerald-green chrome mica and orange-brown hematite.
+
+32
+
+Fig. 2.13 Outcrop and sample photos of prospects within the NEWMINCO property EP-001-2015-
+III. A.) Layered gabbro in Tanguay River. B.) Diabase dikes (with gabbro phases) intruding harzburgite in
+Tanguay River. C.) NW-trending, clast-supported crackle breccia with angular cobble-sized monomictic
+diabase clasts and infill quartz in Mabibituin-NW. Light green malachite staining and up to 2%
+disseminated chalcopyrite were observed. Assay results yielded <0.005 ppm Au and 0.551% Cu. D.)
+Quartz vein with up to 3% disseminated pyrite-chalcopyrite-bornite specks and emerald-green chrome mica
+from a NW-trending vein in Angeles. Assay results yielded 0.02 ppm Au and 0.3% Cu. E.) NE-trending
+quartz veins with sub-angular to sub-rounded matrix-supported mosaic breccia consisting of cobble-size
+monomictic diabase clasts. Light green malachite stains were also observed. Assay results yielded 0.006
+ppm Au and 0.121% Cu. F.) Quartz sample with up to 3% chalcopyrite-pyrite-bornite from a NE-trending
+extension vein in Lower Loong. Assay results yielded 0.012 ppm Au and 0.135% Cu. Photos provided by
+R. Alonso.
+
+33
+
+CHAPTER 3
+
+METHODOLOGY
+
+3.1 FIELDWORK AND SAMPLING
+
+Field survey was conducted in the study area to investigate the occurrence of mineralization
+on surface exposures. Description of veins, structures and host rocks were recorded. Available drill
+cores were observed. The characteristics of mineralized veins were recorded with specific attention
+to host rock, alteration and ore and gangue mineralogy and textures. Representative samples of the
+
+host rock and veins were collected for succeeding analyses.
+3.2 PETROGRAPHY AND ORE MICROSCOPY
+
+Doubly polished thin sections of 30-mm thickness were prepared at the National Institute
+of Geological Sciences, University of the Philippines. Petrographic observation and classification
+of host rocks were conducted using Olympus BX53-P polarizing microscope housed at the
+institute. Thin sections for gangue minerals were also prepared to determine mineralogy, textures
+and intermineral relationships. For the petrography of peridotites, the textural definition of Mercier
+
+& Nicolas (1974) was followed.
+
+Polished slabs of mineralized samples were produced for the mineragraphic analyses of
+
+ore-related minerals.
+3.3 MINERAL CHEMISTRY ANALYSIS
+
+Ore minerals were subjected to mineral chemistry analysis to determine atomic percentage
+and mineral composition. Qualitative analysis was done using SEM JSM-6610V Energy
+Dispersive X-Ray Spectroscopy at the Department of Earth Resources Engineering, Kyushu
+University. Operating conditions were set to load voltage of 15 kilovolts and load current of 2
+amperes. For quantitative analysis, the JEOL JXA-8230 Electron Probe Microanalyzer (EPMA)
+at the UP-NIGS was used. Operation conditions were set to 15 kV acceleration with probe current
+of 10 nA and probe diameter of 3-5 jm. Output was calculated using the ZAF correction matrix
+
+from the JEOL software.
+
+35
+
+Fig. 3.1 Operating the SEM JSM-6610V Energy Dispersive X-Ray Spectroscopy (SEM-EDX) housed at
+the Department of Earth Resources Engineering, Kyushu University
+
+Fig. 3.2 Operating the JEOL JXA-8230 Electron Probe Microanalyzer (EPMA) housed at UP-NIGS.
+
+36
+
+3.4 X-RAY DIFFRACTOMETRY
+
+Alteration minerals were powdered to <10 jm using agate mortar and pestle. These were
+subjected to X-ray diffraction (XRD) analysis using Olympus Terra XRD analyzer owned by
+Cordillera Exploration Company Inc. (CEXCI). Results were interpreted using SwiftMin
+
+automated quantitative XRD software and XPowder software.
+3.5 FLUID INCLUSION ANALYSIS
+
+Doubly polished silica wafers with thickness of 150-200 ym were prepared at Kyushu
+University, Japan. Petrography of observable fluid inclusions were employed using the Olympus
+BXS53 polarizing microscope. Homogenization temperature and final ice melting temperature were
+measured using the LINKAM 10002L heating and cooling stage mounted in a Nikon Eclipse
+LV100N POL microscope at the Department of Earth Resources Engineering, Kyushu University,
+
+Japan.
+
+Salinity values were calculated from Bodnar’s equation (1993) where 6 is the final-ice
+
+melting temperature:
+Salinity (wt. % NaCl equiv.) = 0.00 + 1.786 — 0.044267 + 0.0005576°
+
+3.6 FIRE ASSAY AND ICP-OES
+
+Mineralized samples were analyzed by Intertek Testing Services Philippines. Fire assay
+with atomic absorption spectrophotometry (AAS) finish was employed to determine gold content
+with lower detection limit of 0.005 ppm while multi-element determination by ICP-OES following
+aqua regia digestion (HCI/HNO3) with test tube clement was employed to determine concentration
+
+of 37 elements. The detection limit (in ppm unless stated otherwise) of the analyzed elements are
+
+37
+
+as follows: Cu (1/10000), Pb (3/5000), Zn (1/5000), Ag (0.5/100), Mo (1/5000), As (5/10000), Co
+
+(1/5000), Cr (2/1000), Ni (1/20000), Sc (1/500).
+
+38
+
+CHAPTER 4
+
+Results and Discussion
+
+4.1 MINERALIZATION IN THE MALABEG PROSPECT
+4.1.1 Host Rocks
+
+The Malabeg prospect lies along the 200-400-mas! northeastern flank of a NW-trending
+ridge between two NE-trending tributaries (Fig. 4.1). It is also adjacent to the NE-trending
+extensional Mabibituin Fault mapped by previous workers (Alonso et al., unpublished). Massive
+and jointed serpentinized harzburgites (Fig. 4.2A) are the dominant lithologic units. They are
+highly fractured and, in weathered outcrops, covered by pale to moderately yellowish iron oxide
+rims. In some portions, thin (1-10 meters) reddish-brown lateritic profiles overlie them.
+Microscopic inspection of the harzburgite reveals anastomosing meshwork serpentine around
+orthopyroxene and olivine grains with curvilinear grain boundaries (Fig. 4.2B). In some instances,
+the latter seemingly appear as closely oriented aggregates of a preexisting larger grain. Dark brown
+spinel appears with vermicular habit (Fig. 4.2C) or as exsolution lamellae along orthopyroxene
+cleavage planes. Aside from these, the absence of elongation in unaltered grains suggests general
+
+protogranular texture, although some orthopyroxenes exhibit porphyroclastic texture.
+
+Grayish diabase dikes usually cut through harzburgites along NW-trending contacts (Fig.
+4.2D, 4.4A). These are highly jointed, and sometimes with trends perpendicular to the contact
+plane. Microscopic inspection reveals fine-grained euhedral to subhedral orthopyroxene grains
+with perpendicular two-directional cleavage. Fine-grained subhedral clinopyroxene grains were
+observed, with occasional glomeroporphyritic clustering (Fig. 4.2E-F). Some grains also exhibit
+simple twinning (Fig. 4.2D). Fine-grained plagioclase feldspars are the most dominant mineral.
+Their crystal growth appears to be obstructed by pyroxene grains, deforming the plagioclase laths.
+Some laths are partly to fully chloritized and appear pale green under plane-polarized light (Fig.
+
+4.2E, G). Medium-grained phenocrysts of clinopyroxene and plagioclase feldspar were also
+
+40
+
+120° 10° 120° 15'
+
+15° 10
+
+Legend
+Peridotites
+Gabbros
+
+Tenement
+boundary
+
+Fault
+
+Stream |
+Metalliferous Prospects
+Cu +Au+Ag Oo
+Cu+Pb+Ag
+
+S a
+] z
+Bag Mabibituin} ©) sasies Aut+basemetals @ |
+y. |
+[o}
+
+wh B /
+
+~ | Au
+
+5°05’
+
+Fig. 4.1 Geologic map of the NEWMINCO property EP-001-2015-III. It is underlain by peridotites and gabbros of the Cabangan Massif. Most
+prospects are targeted for Cu, Au and Ag Base map for both Fig.s are from Shuttle Radar Topography Mission (SRTM) 15 digital elevation model.
+
+41
+
+
+Fig. 4.2 A.) Harzburgite exposure cut by a normal fault (N 80 E dipping 40° SE) in Maloma River
+(15° 6' 48.5244" N 120° 11' 19.9752" E). The weathered harzburgite exhibits yellowish-brown
+color due to weathering of iron oxides. Raised edges of striations indicate downward movement
+for the opposite block. B.) Photomicrograph of serpentinized harzburgite from MLDH 002 41.8 m
+under cross-polarized light. Meshwork serpentine surrounds orthopyroxene and olivine
+aggregates. C.) Section from MLDH 002 41.8 m showing vermicular spinel exsolution with
+orthopyroxene. D.) NW-trending diabase dike cutting through grayish harzburgite, with most
+joints perpendicular to the plane of contact in Malabeg River (15° 7' 20.0784" N 120° 11' 18.946").
+Secondary quartz stringers are found along the contact. E.) Photomicrograph of BAC_01 under
+plane-polarized light showing subhedral medium-grained clinopyroxene grains and fine-grained
+pale green chlorite grains surrounding a reaction rim composed of sericite surrounded by yellowish
+green hornblende. Among the surrounding groundmass are fine-grained plagioclase feldspar and
+clinopyroxene grains. F.) Cross-polarized photomicrograph of previous section. G.)
+Photomicrograph of BAC_01 showing medium-grained euhedral orthopyroxene grains
+surrounded by pale green chlorite and fine-grained plagioclase laths. H.) Cross-polarized
+photomicrograph of previous section. Abbreviations: chl-chlorite, cpx-clinopyroxene, db-
+diabase, hbl-hornblende, hz-harzburgite, pl-plagioclase, ol-olivine, opx-orthopyroxene, ser-
+sericite.
+
+observed, with the latter generally being deformed (Fig. 4.2E-H). Sericitization is observed
+ranging from small specks in plagioclase phenocrysts to anhedral grains with hornblende rims
+(Fig. 4.2E-F). Subhedral to anhedral amphibole are yellowish brown under plane-polarized light
+and appear as alteration of clinopyroxenes (Fig. 4.2E-F). The crystallization sequence observed is
+
+orthopyroxene > clinopyroxene > plagioclase.
+4.1.2 Alteration and Mineralization
+
+Since the observed alteration in the Malabeg prospect is unique compared to the alteration
+in typical epithermal gold mineralization in the Philippines, the alteration stages were carefully
+characterized through the observed consistent zonation throughout the drill cores and outcrops. As
+discussed in Chapter 2, the typical listwanite alteration suite was also observed in the Malabeg
+
+prospect. First, the serpentinized harzburgites were observed to be altered to talc-carbonates, which
+
+43
+
+A tale-carbonate ——* carbonate ————————+ __ quartz
+
+E
+2 S
+3 o
+— Assay values for the quartz vein (ppm)
+Au Cu a) Zn As Co
+0.075 107 169 110 199 30 434 684 2
+B talc-carbonate ——+ carbonate «———_ talc-carbonate
+. awh a L
+E
+©
+a
+o
+Assay values for MLDH 008 39.8-40.8 m (ppm)
+Pb cr
+0.007 8 n/d 26 34 60 §29 1223 If
+Cc. talc-carbonate quartz diabase
+A A A
+
+Assay values for the quartz vein (ppm)
+
+Fig. 4.3 A.) Drill core photo of MLDH 008 30.8-31.2 m showing the listwanite alteration suite
+from talc-carbonates to carbonate and then finally to quartz vein with brecciated fragments.
+Composition of talc-carbonates was verified through XRD analysis. Cream-colored carbonate
+veins are overprinted by reddish brown hematite. B.) Drill core photo of MLDH 008 39.8-40.8
+showing an incomplete sequence of listwanite from talc-carbonate to carbonate. C.) Drill core
+photo of MLDH 008 53-53.7 m showing mineralized quartz veins between talc-carbonates and
+quartz. Gray specks of galena and yellowish chalcopyrite are observed on hand sample. The
+lowermost portion of the quartz vein contain silicified diabase.
+
+44
+
+generally has pale greenish gray groundmass that are revealed to be fine-grained talc and
+pyrophyllite cut by white magnesite veinlets (Fig. 4.3). Black grains are also shown to be talcitized
+under the microscope and exhibit relict foliation (Fig. 4.5A). The identification of these minerals
+was further confirmed through XRD (Fig. 4.6). The sulfides observed were euhedral gersdorffite
+and anhedral pentlandite-pyrrhotite exsolution that occurs in island-like disseminations (Fig. 4.7A-
+B). Similar to the nickel sulfides found by Abrajano (1984) in the basal cumulate sequence of the
+Acoje Block, the textures and occurrence as inclusions within the silicates signify the magmatic
+
+origin of these sulfides.
+
+Meanwhile, cream-colored ferromagnesian carbonates consisting of dolomite crosscut the
+talc-carbonates in most portions (Fig. 4.3A). The dolomite veins are usually accompanied by
+reddish-brown hematite staining. Under the microscope, the dolomite grains exhibit feathery habit,
+with the hematite stains bordering their cleavage, fractures and rims (Fig. 4.5B). Fragments of
+serpentine with ribbon texture were also observed, which were derived from the adjacent talc-
+carbonate. In terms of sulfide mineralogy, rare arsenopyrite has been observed in hand samples
+
+and detected through XRD (Fig. 4.6).
+
+A transition between the carbonate phases and silica phases was also observed in some
+veins, where white euhedral calcite and light gray quartz grains exhibit rhombic boundaries and
+signify the partial replacement of the former by the latter (Fig. 4.5C). Euhedral arsenopyrite grains,
+
+which appear as dark gray specks in hand samples, were observe in both gangue minerals.
+
+Lastly, massive quartz veins with minor adularia crosscut the carbonates. Their thickness
+can vary from millimeter-wide stringers to meter-wide veins. Along host-vein borders, varying
+degrees of brecciation were observed, ranging from intensely silicified breccias that appear as
+
+grayish mottles (Fig. 4.4C) to unaltered angular mosaic breccias following preexisting planes of
+
+45
+
+discontinuity (Fig. 4.4D). Vuggy, comb and dogtooth textures were observed especially along the
+cores of the veins (Fig. 4.4E-F). Minor adularia occurs as pale-orange grains that were confirmed
+
+by petrographic observation (Fig. 4.4H).
+
+The dominant sulfides in the quartz-adularia veins are anhedral chalcopyrite and galena
+(Figure 4.7C-F). Both minerals coexist with sphalerite that exhibits chalcopyrite disease (Figure
+4.7F). Anhedral electrum grains occur as inclusions in chalcopyrite and galena, or as isolated
+
+grains (Figure 4.7E).
+
+Supergene alteration is represented by pyrolusite, limonite and hematite. These form the
+thin layer of gossanous limonite cap, which is also enriched in nickel due to leaching from the
+ultramafic regolith. Among the sulfides, secondary covellite was subsequently produced from the
+
+alteration of chalcopyrite (Fig. 4.7D).
+
+In summary, there were five stages of alteration and mineralization observed within the
+Malabeg prospect. Stage | is represented by talc-carbonates, Stage 2 is represented by carbonates
+in the form of the dolomite veins, Stage 3 represents the transition between the carbonate phases
+and silica phases, Stage 4 is represented by the quartz-adularia veins and lastly, supergene
+alteration is represented by the iron and manganese oxides. This paragenetic sequence is shown
+
+in Fig. 4.8, which includes the gangue minerals and sulfide for each stage.
+
+46
+
+Fig. 4.4 Vein occurrence and textures of quartz-adularia veins. A.) Quartz vein (10-centimeter width) between pale yellowish-brown
+harzburgite and bluish-gray diabase. Vein attitude: N 79 W, 33° NE dip. B.) Quartz vein (58-centimeter width) between gray diabase
+and bluish gray harzburgite. Vein attitude: N 16 W, 58° SW dip. C.) MLB-DMS-07 sample consisting of massive quartz and minor
+pale-orange adularia. Comb texture is emphasized in red inset photo. Bluish black patches of pyrolusite were observed, as well as reddish
+brown iron oxides. Brecciated wall rock fragments appear as grayish mottles with indiscernible boundaries partially consumed by intense
+silicification. Assay results yielded 1.162 g/t Au, 0.358% Cu and 0.748% Zn. D.) Drill core sample from MLDH 001 42.2 m showing
+unaltered matrix-supported angular mosaic breccia composed of gray diabase fragments and cemented by quartz. E.) Zoomed inset
+photo of quartz vein (see Fig. 4.5B) emphasizing elongated comb (dogtooth) texture with minor greenish fuchsite. Black sphalerite and
+brass yellow sphalerite disseminations were observed at close inspection. F.) Zoomed inset photo of MLB-DMS-07 (see Fig. 4.5C)
+emphasizing comb texture inside a cavity. G.) Photomicrograph of MLB-DMS-07 showing dusty rhombic adularia grains. H.)
+Photomicrograph of a quartz vein sample from MLDH 008 53.5 m exhibiting macrocrystalline to microcrystalline quartz grains. Opaque
+minerals are sulfides (see Fig. 4.8C and E).
+
+47
+
+SEL AN
+
+Fig. 4.5 Hand specimen and photomicrographs of Stages 1-3. Alteration minerals were confirmed
+through XRD analysis. A.) Stage | talc-carbonate sample from MLDH 008 47-47.3 m. Talc grains
+exhibit relict foliation and are cut by magnesite. Second photo shows the boundary between fine-
+grained magnesite from the talc-carbonate and coarse-grained magnesite from the adjacent veinlet.
+B.) Stage 2 carbonate sample from MLDH 008 30.8-31.2 m. Fragments of serpentine with ribbon
+texture were derived from the wall rock. Orange-brown hematite overprints dolomite grains along
+cleavage planes and grain boundaries. C.) Stage 3 quartz-carbonate sample from MLDH 002 34.3
+m. Rhombic boundaries were observed between calcite and quartz.
+
+48
+
+(MLDH 008 53.0-53. a
+53.0-53.5m jee
+
+°
+Ss)
+
+tle
+pri/tic
+
+a
+-
+°
+
+* pri
+pi
+e. ~« dol
+p
+NIC asp
+i. m pri/tic
+
+Fig. 4.6 XRD diffractograms for the representative samples for talc-carbonate (MLDH 008 53.0-
+53.3 m) and carbonate (MLDH 008 30.8-31.2 m). The presence of lizardite, talc and pyrophyllite
+in the lower diagram represents the fragments from the adjacent talc-carbonate. Abbreviations:
+asp-arsenopyrite, chr-chromite, dol-dolomite, !z-lizardite, mgs-magnesite, prl-pyrophyllite, tlc-
+talc.
+
+49
+
+Fig. 4.7 Photomicrographs of sulfides under reflected light. Sulfide compositions were confirmed
+through SEM-EDX. A.) Talc-carbonate sample from MLDH 008 53.3 m showing disseminated
+islands of coexisting pyrrhotite and pentlandite. B.) Peridotite breccia from MLB-DMS-07 with
+deformed pyrrhotite laths and subhedral gersdorffite with pentlandite inclusion. Chromian spinel
+was also observed. C.) Quartz sample from MLDH 008 53.5 m showing dominant anhedral
+chalcopyrite coexisting with subhedral pyrrhotite lath, anhedral sphalcrite and anhedral to
+subhedral galena. D.) Quartz sample from MLB-DMS-06 showing secondary covellite around
+chalcopyrite. E.) Quartz sample from MLDH 008 53.5 m showing dominant anhedral galena with
+inclusions of anhedral chalcopyrite and electrum. F.) Quartz sample from MLDH 001 40.5 m
+showing chalcopyrite disease with sphalerite. Specks of galena were also observed.
+
+50
+
+——
+
+| ALTERATION
+
+STAGE 1 STAGE 2 STAGE 3 STAGE 4
+a SUPERGENE
+
+Talc-carbonate Carbonate Quartz-carbonate
+
+\Lizardite
+
+nas
+|Tale
+
+Pyrophyllite
+
+|Chlorite
+Sericite
+
+je
+
+Magnesite
+
+[Dolomite
+[Calcite
+|Quartz
+
+|Adularia :
+
+|Hematite
+
+|Pyrolusite _
+
+| SULFIDE
+
+|
+|
+|
+
+al
+
+lArsenopyrite eastern
+
+a
+Chalcopyrite ———————
+ns
+
+\Galena
+
+Pyrrhotite
+Sphalerite
+[Electrum _|
+
+[Chalcocite
+
+Fig. 4.8 Alteration and ore paragenesis of the Malabeg prospect. Line thickness signify relative
+abundance. Gold in the form of electrum is emphasized in red.
+
+4.1.3 Mineral Chemistry
+
+Elemental compositions of six electrum grains from Stage 4 quartz-adularia veins are
+
+shown in Table 4.1. A representative compositional map resulting from the EPMA analyses reveal
+
+the electrum’s abundance in Au and Ag (Fig. 4.9A). Mean composition obtained from the analyzed
+
+grains (Fig. 4.9C) is 73.6% Au and 21.51% Ag.
+
+$1
+
+Nine sphalerite grains coexisting with either pyrite or pyrrhotite were also analyzed to
+determine the Fe, Zn, and S compositions (Table 4.2 and Fig. 4.9D). Iron-sulfide (FeS) mole
+
+percentage ranges from 13.8 to 15.89, with an average value of 14.91.
+
+Table 4.1 Composition of electrum grains analyzed through EPMA
+
+Au-bearing Elemental Composition (Wt. %)
+minera! t
+AS Cu Fe Zn Pb Ni Ag
+
+PS06-02-Au 1 0.01 bdl 0.01 bdl
+PS06-02-Au2 | bdl 0.04 0.03 0.16
+PS06-02-Au3 | 0.02 amo bdl
+PS06-02-Au4 | 0.00 | 0.01 0.01 0.12
+
+PS06-02-AuS | 0.05 0.03 bdl bdl
+PS06-02-Au6 | 0.01 bdl 0.03 bdl
+
+Table 4.2 Composition of sphalerite grains coexisting with pyrite and pyrrhotite analyzed
+through EPMA
+
+Wt. %
+
+FeS mol%
+| Fe | zn | Ss
+
+10.38 | 57.23 | 31.63 15.23
+PS07-sp2 9.35 | 55.59 | 30.96 13.80
+PSO7-sp3
+PS07-sp4
+PS07-sp5
+PS07-sp6
+PS07-sp7 55.58 | 32.79
+PS07-sp8
+PS07-sp9
+
+10.08 | 56.31 31.79 14.91
+
+52
+
+63 #15 F138 8 126
+an 7 63 63
+Pg Bs Oi 0
+
+4 a 31
+
+atin
+i
+
+6
+0
+5 4
+
+a
+
+0
+Project : compo maps_0002
+Mar 12.17.03 2021
+
+Acc V 200kV
+Prob C 5.01 76-0084
+
+Fig. 4.9 Images from EPMA. A.) Photomicrograph of mineralized quartz from MLDH 008 53.5
+m showing electrum grains in galena and chalcopyrite. Red box indicates a targeted area for EPMA
+(see Fig. 4.10B). B.) Compositional map showing electrum grains coexisting with galena and
+chalcopyrite. Warm colors signify abundance of clement. C.) Scanning clectron microscope
+(SEM) image of electrum grains existing cither as isolated grains or inclusions within chalcopyrite.
+Red circles indicate points that were targeted for EPMA. D.) SEM image of sphalerite coexisting
+with pyrite. The sphalerite grain was analyzed using EPMA.
+
+4.1.4 Fluid inclusion petrography and microthermometry
+
+Three sets of fluid inclusions from Stage 4 quartz-adularia veins were analyzed. These
+
+dominantly consist of liquid and vapor (10 to 30% volume) with almost consistent phase ratios
+
+53
+
+(Fig. 4.10A). Most inclusions have small sizes between 2-10 uum while the larger ones that reach
+
+to 25 um are less common.
+
+Two modes were recognized for the homogenization temperature: 170-180 and 190-200
+°C (Fig. 4.10B) while salinity ranges from 1.40 to 10.23 wt% NaCl. Salinity values were plotted
+versus homogenization temperature values (Fig. 4.10C). The low R?-squared value, as well as the
+scattered nature of the plots, signify that there may not be a single dominant mechanism in the
+deposition of the Stage 4 veins. On the other hand, the massive and comb texture suggest cooling
+of hydrothermal fluids, especially that the veins occur on the shallower part of an epithermal-
+
+porphyry system.
+4.2 DISCUSSION
+4.2.1 Mineralization style
+
+Gold mineralization in the Malabeg prospect is associated with veins consisting of
+carbonate, quartz and adularia. The occurrence of veins between harzburgite and diabase contacts
+can be explained by rheology contrasts between the two lithologies (Vearncombe & Holyland,
+1995). The massive and brecciated textures of veins indicate hydrothermal activity, with the latter
+indicating hydraulic fracturing (Jebrak, 1997; Figueroa & Gabo-Ratio, 2022) with varying degrees
+of silicification. On the other hand, comb and dogtooth textures indicate slow crystallization of
+crystals in open spaces and fractures promoted by brittle deformation, especially in the shallow
+
+crustal portions (Dong et al., 1995).
+
+The fluid inclusions from the quartz-adularia veins also reveal the nature of the
+hydrothermal fluids responsible for gold mineralization in Malabeg. Aside from the nature of the
+
+fluid inclusions as two-phased and fluid-rich, the homogenization temperatures between 170-200
+
+54
+
+°C, and salinity between 1.40-10.24 wt. % NaCl indicate epithermal conditions of formation.
+Based on the fluid inclusion data, a depth of 67-144 meters below the paleo-water table was
+calculated using Haas’s (1971) equation (Fig. 4.11) which puts the Malabeg prospect within the
+
+shallow/epithermal zone (Lindgren, 1933; Cooke, 2000; Hedenquist & Arribas, 2017).
+
+Furthermore, as stated in Chapter 2, it is discovered that cooler fluids might have circulated
+within Mount Pinatubo. The lower homogenization temperatures found within the Malabeg
+prospect suggest a farther distance and shallower depth relative to the source of magmatism—
+temperatures of at least 200 °C were inferred for the shallowest portions of Mount Pinatubo (Delfin
+et al., 1996). Additionally, similar liquid-rich fluid inclusions in quartz veinlets with similar sulfide
+mineralogy (galena and sphalerite) in Dizon mine yielded homogenization temperatures ranging
+from 190 °C to 300 °C and salinity ranges from 1.0 to 3.4 wt% NaCl, which are within the values
+
+observed for the Stage 4 veins.
+
+Ore mineralogy also provides constraints on the mineralization style in the area. The
+presence of arsenopyrite in Stages 2-3 indicate low sulfidation state during listwanitization of
+peridotite host rocks (Einadi et al., 2003; Sillitoe & Hedenquist, 2003; John et al., 2018). As stated
+in Chapter 2, hydration of ultramafic minerals results to reducing conditions (Abrajano, 1984) and
+thus lead to low sulfidation states. The listwanitization process might have yielded the same effect
+
+in the system.
+
+55
+
+ry
+
+Frequency
+
+n=60
+
+@ MLB103
+» MLB104
+@ MLB202
+
+= il thie
+
+180 190 200 210 220 230 240 250
+
+Homogenization Temperature (°C)
+
+260
+
+240
+
+8
+8
+
+8
+
+g
+
+Homogenization Temperature (°C)
+rs 8
+
+8
+
+R?=0.1349
+
+8
+Salinity (wt% NaCl eq)
+
+n=29
+MLB103
+
+© MLB104
+MLB202
+
+10 12
+
+Fig. 4.10 A) Fluid inclusion photomicrograph from MLB103. B.) Histogram of homogenization temperature derived from fluid inclusion
+microthermometry. Bimodal distribution with closeness of peak values suggests multiple pulses from the same IS fluid in different
+instances. C.) Graph showing homogenization temperature versus salinity. Mechanism diagram is from Wilkinson (2001).
+
+56
+
+Temperature (°C)
+
+150 200 250 300
+
+100 | MLB202
+
+4 MLB103
+
+Depth from paleowater table (m)
+
+Fig. 4.11 Temperature-depth plot using Haas’s (1971) equation. The depth below paleowater table
+lies between 67 to 144 meters which is within the epithermal zone (Lindgren, 1933; Cooke, 2000;
+Hedenquist & Arribas, 2017).
+
+However, in the Stage 4 quartz-adularia veins, the sulfides identified are chalcopyrite,
+galena, sphalerite, pyrite, and pyrrhotite, which imply intermediate sulfidation state. According to
+the diagram by Einaudi and others (2003), chalcopyrite serves as the upper limit of the intermediate
+sulfidation state while pyrite and pyrrhotite serve as the lower limit. In the same diagram, the
+sphalerite iron-sulfide mole percent was plotted together with the homogenization temperature
+obtained from fluid inclusion microthermometry and the resulting values lay within the
+intermediate sulfidation region (Fig. 4.12). The difference in sulfidation state between
+listwanitization and precipitation of Stage 4 veins is attributed to initial fluid-rock interaction of
+the hydrothermal fluid with the serpentinized peridotites, which have high buffering capacity
+dictated by the dominance of ferromagnesian minerals. Mineral carbonation systems involving
+olivine, serpentine and talc go as high as 410 °C and decreases up to around 370 °C as the amount
+of CQ: in the system increases (Kelemen et al., 2011). At these temperatures, fluid-reaction
+
+processes such as hydration lead to reducing conditions, and therefore low sulfidation state, due to
+
+57
+
+the rock buffering of olivine (Abrajano, 1984). Subsequent intermediate sulfidation fluids were
+
+weakly buffered since the harzburgites have already been altered to listwanites.
+
+Victoria (Sajona et al., 2002)
+Acupan (Cooke et al., 1996)
+Suyoc (Soberano et al., 2020)
+
+This study
+
+FeS mol%
+
+log fS, ——
+
+200 300 400 500 600 700
+Temperature (°C)
+
+Fig. 4.12 Temperature versus sulfur fugacity graph based on Einaudi et al. (2003). Based on
+sphalerite iron-sulfide mole percent and homogenization temperature derived from fluid inclusion
+microthermometry, the Stage 4 quartz-adularia veins exhibit intermediate sulfidation state. The
+sulfidation state is complemented by the proximity of the plot to the pyrite-pyrrhotite boundary,
+which are part of the ore assemblage of the mentioned vein, and by the presence of other indicator
+sulfides such as chalcopyrite.
+
+58
+
+Due to the nature of volcanic arc terranes, epithermal veins are usually hosted by the
+resulting volcano-sedimentary strata, if not younger intrusive units (Sillitoe, 1973; Cooke &
+Simmons, 2000; Corbett, 2002; Sillitoe & Hedenquist, 2003; Sillitoe, 2010; Hedenquist & Arribas,
+2017). For example, intermediate sulfidation epithermal deposits in Luzon such as Victoria,
+Acupan, and Suyoc are hosted in volcanic, plutonic and sedimentary host rocks, respectively. In
+case of the Malabeg prospect is not typical, since the epithermal veins are hosted by the basement
+ultramafic units, producing a listwanite alteration suite due to reaction with evolved fluids. It is
+also important to take note that the listwanites in the Malabeg prospect is unique in terms of
+mappable extent and degree of alteration compared to existing listwanites, such as the gold-bearing
+listwanites in grecnstone belts associated with metamorphic fluids (Buckman & Ash, 2010) and
+listwanites produced from the devolatilization of sediments along the leading edge of the mantle
+wedge such as the Oman Listwanites (Falk & Kelemen, 2015) and the listwanites of the Advocate
+ophiolite complex in Newfoundland, Canada (Menzel et al., 2018). The listwanites in the Malabeg
+prospect appear more prominently in the drill cores than in surface exposures possibly because the
+source of the fluids is deeper. Still, the Malabeg prospect shares many similarities with other
+ophiolite-hosted intrusion-related epithermal veins in terms of spatial proximity to intrusions,
+
+gangue textures and mineralogy and sulfide mineralogy (Table 4.3).
+
+The ore mineralogy and elemental compositions, coupled with temperature data, textural
+characteristics and fluid inclusion properties imply an intermediate sulfidation epithermal (ISE)
+mineralization style is strongly implied for the Malabeg prospect. A summary of the mineralization
+
+characteristics of the Malabeg prospect is shown in Table 4.4.
+
+$9
+
+Table 4.3 Mineralization characteristics observed in the Malabeg prospect versus other ophiolite-
+hosted epithermal veins. Data was derived from Robinson et al. (2005), Qiu & Zhu (2015) and
+
+Yazuv et al. (2022).
+
+Kaymaz Gold Mine
+
+Tectonic setting
+
+Sartohay Ophiolite
+
+Sayi Gold Deposit
+
+Malabeg Prospect
+
+Continental thrust zone |
+
+Collision
+
+Collision
+
+Subduction
+
+Distinct Gangue
+
+T
+magnesite, chalcedony,
+quartz
+
+talc, chlorite, magnesite,
+dolomite, fuchsite, quartz
+
+chlorite, mariposite,
+magnesite
+
+talc, magnesite, dolomite,
+fuchsite, quartz, chlorite,
+sericite
+
+Alteration
+
+listwanite
+
+|
+
+listwanite
+
+listwanite
+
+propylitic, listwanite
+
+Gangue textures
+
+Sulfide mineralogy
+
+T
+
+Cockade, colloform, |
+
+stockwork, polymictic
+breccia
+
+Boxwork, comb, cockade
+
+Angular hydrothermal
+breccia (crackle)
+
+T
+|
+Millerite, magnetite,
+
+pentlandite, arsenopyrite,
+nickeline, marcasite,
+
+Pyrite, arsenopyrite,
+
+| gersdorffite, chalcopyrite,
+
+Gold, chalcopyrite,
+gersdorffite, galena,
+polydemite, millerite,
+
+Massive-comb, crackle to
+mosaic monomictic breccia
+
+Chalcopyrite, sphalerite,
+pyrrhotite, galena, electrum
+
+60
+
+| |
+Pyrite, gold, silver, | gold | pentlandite, violarite
+
+chalcopyrite |
+| |
+|
+|
+| j
+
+Soluea of fdas Magmatic-hydrothermal | Magmatic and meteoric Hydrothermal fluid Magmatic-hydrothermal
+fluids | through shear zone fluids (?)
+T t
+Type of intrusion (if present) Granitoids | Monzogranite Monzogranite Diorite-quartz diorite(?)
+
+|
+
+
+Table 4.4 Mineralization characteristics observed in the Malabeg prospect versus other
+intermediate sulfidation epithermal (ISE) mineralization. Data was derived from Arribas (1995),
+Einaudi et al. (2003), Sillitoe & Hedenquist (2003) and Bodnar et al. (2014).
+
+CRITERIA INTERMEDIATE MALABEG PROSPECT
+
+Chalcopyrite + galena +
+sphalerite + pyrite +
+electrum
+
+Tectonic setting Subduction Subduction/rift Rift
+
+Pyrite + enargite +
+luzonite
+
+Chalcopyrite +
+pyrite + tennantite
+
+Arsenopyrite +
+
+Sulfide assemblage ‘
+pyrrhotite
+
+Homogenization
+Temperature
+
+90-480 °C 140-310 °C <220 °C
+
+4-46 wt.% NaCl 3-20% wt.% NaCl <1 wt.% NaCl
+
+<1
+
+Mode: 180-200 °C
+
+2-11 wt.% NaCl
+13.8-15.89
+
+Carbonate, quartz,
+adularia
+
+Salinity
+
+Sphalerite FeS
+
+21 to 40
+mole percent
+
+Sulfate,
+manganese,
+carbonate, silicate
+
+Distinct gangue Sulfate Carbonate, fluorite
+
+Pyroclastic and
+
+sedimentaryunits Diatremes, Pyroclastic,
+Typical host rock y ‘| pyroclastic and | volcanosedimentary Peridotites, diabase
+porphyry, volcanic f . ;
+sedimentary units units
+
+units
+
+4.2.2 Hydrothermal fluid evolution in the Malabeg Prospect
+
+Ore and gangue composition and textures serve as evidence for hydrothermal activity
+throughout the Malabeg prospect. The sequence from Stages | to 3 represents listwanitization of
+the serpentinized ultramafic host rocks probably brought about by mixing of meteoric waters and
+the initial magmatic-hydrothermal fluids related to the Bataan Volcanic In an alkaline and high-
+temperature environment, the reaction of serpentine with carbon dioxide from fluids produces talc,
+magnesite and water. This explains the presence of talc in the early phase of listwanitization which
+
+usually exists at temperatures higher than 300 °C (Evans & Guggenheim, 1988).
+
+61
+
+serpentine carbon dioxide talc magnesite water
+2M g3Si205(0H), + 3COz > Mg,Siz0,.(0H),+ 3MgCO; + 4H,0
+
+Consequently, the reaction of olivine with carbon dioxide also produces magnesite. This
+explains the abundance of magnesite during temperature decrease while promoting the
+
+consumption of serpentine (Buckman & Ashley, 2010).
+olivine carbon dioxide magnesite silica
+Mg2Si0, + 2CO, > 2MgCO, + SiO,
+
+The presence of CO? also controls the pH of the system when it reacts with water and yields
+
+H+ ions and bicarbonate.
+carbon dioxide water carbonic acid
+CO, + H,0 > Ht + HCO;
+
+Naturally, excess in H+ ions influence the acidity of a system. However, the reaction with
+
+serpentine breaks the latter down into Mg?’ ions, silicic acid and water.
+MgFe-carbonate _ silicic acid carbon dioxide water
+MgFe(CO3). + 4H* + SiO{- > SiO, + 2CO, + 4H,0 + Mg?* + Fe?*
+
+Together with ferrous ions and bicarbonate, Mg?” ions are used to form ferromagnesian
+
+carbonates.
+nM g2* +mFe?* + 4HCO; > [n/(n+ m)]Mg[m/(n + m)]Fe(C03)2 + 2H,0 + 2C0,
+
+The excess CO? in this reaction also provides a feedback mechanism for the reaction
+
+(Buckman & Ashley, 2010). The progression from magnesium-rich carbonates (magnesite in Stage
+
+62
+
+| talc-carbonates) to calcium-magnesium-bearing carbonates (dolomite in Stage 2 carbonate veins)
+and then finally towards magnesium-free carbonates (calcite in Stage 3 quartz-carbonate veins)
+also support the aforementioned chemical reactions regarding listwanitization in the Malabeg
+prospect. Additionally, during the formation of Stage | talc-carbonates, zinc ions were most likely
+
+derived from the ultramafic host rocks, producing minor smithsonite.
+
+The turning point for Phase I listwanitization starts when serpentine is fully consumed.
+There will no longer be a supply of Mg?” ions, halting the formation of magnesite. Additionally,
+the excess H+ ions will make the system acidic, which inhibits the precipitation of carbonates
+(Buckman & Ashley, 2010). By this point, Phase II listwanitization would commence. Alongside
+the decrease in pH, decrease in temperature will also favor the precipitation of silica. This is also
+safe to assume since most hydrothermal and metamorphic systems follow a progression from
+higher to lower temperatures (Buckman, 2010). Thus, the precipitation of silica-rich veins is often
+seen as the end phase in most listwanite deposits. The rhombic boundaries in Stage 3 quartz-
+
+carbonate veins signify the partial replacement of calcite by quartz.
+
+After Stages 1-3 listwanitization, processes such as fault reactivation and reaction-induced
+self-cracking (Power et al., 2013) could have propagated open spaces such as fractures, which
+served as loci for the precipitation of Stage 4 quartz-adularia veins from the subsequent evolved
+fluids. Slow cooling of fluids is evidenced by the precipitation of sub-rhombic adularia and comb
+quartz (Dong & Morrison, 1995) in open spaces. Bimodal distribution of the homogenization
+
+temperature from the fluid inclusions, albeit having close values and similar petrography, suggests
+
+63
+
+[)) Hydrothermal fluids
+
+WC Listwanites
+
+RR Brittle deformation
+~~~ (e.g. reactivated faults)
+
+HB orebody
+
+Fig. 4.13 Listwanitization and epithermal mineralization model for the Malabeg prospect. Intermediate sulfidation (IS) fluids from a
+magmatic source react with the serpentinized peridotites (A), producing the Stages 1-3 listwanites (B). Due to its shallow depth, the
+listwanite zone in the Malabeg prospect becomes susceptible to brittle deformation processes such as faulting and fracturing, aside from
+its tendency to self-cracking (C). Subsequent IS fluids infiltrate the altered zone (D) and precipitate the mineralized Stage 4 quartz-
+adularia veins (E).
+
+64
+
+different pulses of fluids from the same source. Fig. 4.13 shows a generalized model for the
+
+listwanitization and epithermal mineralization in the area.
+
+Supergene alteration, resulting from a shift towards an oxidizing environment, is also
+documented consistently throughout the prospect. Iron oxides were observed as reddish-brown
+overprints over the lighter colored carbonate and quartz veins. Bluish black patches of manganese
+oxides, which were identified as pyrolusite via XRD, were also observed in contacts between host
+rocks and quartz veins. These two types of oxides were also observed forming the thin layer of
+gossanous limonite cap, which were also enriched in nickel due to leaching from the ultramafic
+
+regolith.
+4.2.3 Metal endowment
+
+Fluid-rock interaction with the serpentinized peridotites could have contributed to ore
+deposition. In orogenic listwanites, it has been postulated that gold content in serpentinized
+ultramafic bodies, with at least 8 ppb Au, can also be leached into veins (Buisson and Leblanc,
+1985); the serpentinized harzburgite samples have an average Au content of 15.5 ppb (Table 4.5).
+However, this requires large-scale hydrothermal activity across voluminous ultramafic units,
+precipitating ore into structures such as tectonic contacts and faults. Succeeding studies have
+validated the effect of listwanitization to gold transport (Plyusnina et al., 2007; Emam and Zoheir,
+2013). Going back to the Malabeg prospect, an increasing trend in average Au content is observed
+from the host rocks across the various stages. This is also observed for Pb content. Aside from
+these, there are other similarities in ore trend observed in the Malabeg prospect and by Buckman
+
+& Ashley (2010):
+
+65
+
+A. There is an increase in Ni, Co, Cu and As concentrations from host rocks to Phase I
+listwanites. In the Malabeg Prospect, As peaks at Stage 3 quartz-carbonates while Ni
+and Co peak at Stage 2 carbonates. In addition to this, Power & Scott (1995) mentions
+that carbonatization in ultrabasic rocks is related to As enrichment.
+
+B. Co and Ni content decrease in Phase II listwanites compared to host rocks (Tuysuz &
+Erler, 1993), which is similar to the trends observed in the Malabeg prospect. Further
+
+studies may be elucidate the specific sources of these ore minerals.
+
+Table 4.5 Average ore content per lithology based on assayed samples from MLDH-001, MLDH-
+002, MLDH-003, MLDH-008 and field samples. Sample count for each lithology is as follows:
+harzburgite=10; diabase=4; talc-carbonates=6; carbonates=4; quartz-carbonates=3; quartz-
+adularia=7.
+
+AVERAGE ORE CONTENT PER LITHOLOGY
+
+HOST STAGE1 STAGE 2 STAGE 3 STAGE 4
+Harzburgite pjabase (GES) Talc-carbonates Carbonates §Quartz-carbonates Quartz-adularia
+(n=6) (n=4) (n=3)
+
+[Cu (ppm) eae 5 27 51 289 699
+Pb (ppm) 3.00 15 29 19 613 1421
+Zn (ppm) 25 53 35 42 82 | 141
+Ag (ppm) <0.5 <0.5 0.1 <0.5 A 4.3
+
+[Mo (ppm) <1 0.3 <1 0.3 <1 0.3
+As (ppm) 72 4 60.7 120 443 419
+
+| Co (ppm’ 65 36 57 68 a 42 44
+Cr (ppm) 566 282 539 517 257 331
+Ni (ppm) 1363 471.8 1157 1516 532 898
+Sc (ppm) 6 16 5 6 18 5
+
+Cr content is almost the same from host rocks to Stage 2 carbonates and then decreases in
+the succeeding stages, which is almost the same trend observed for Ni and Co. Mo content is very
+low, although most porphyry deposits in island arcs are enriched with Cu-Au rather than Cu-Mo
+(Mitchell & Bell, 1973; Kesler et al., 1977; Solomon, 1990; Yumul et al., 2003). Lastly, except
+for Sc, the gencrally low ore content in the diabases suggests their minimal contribution as metal
+
+source.
+
+66
+
+With these observations, the following processes can be postulated for the metal source
+
+and transport in the Malabeg prospect:
+
+A. The high Au, Cu, Zn and Pb content are both a factor of IS mineralization and leaching
+from the serpentinized peridotites to a certain extent. Their precipitation is highly
+favored in silica (Stages 3 and 4).
+
+B. As is leached out from the serpentinized peridotites and precipitated during the waning
+stages of listwanitization (Stage 3). Interestingly, the same trend is observed for Cu.
+
+C. Co, Cr and Ni behave almost similarly. They are transported and precipitated during
+the earlier stages of listwanitization (Stages | and 2). From the previous observation, it
+is suggested that As, Co, Cr and Ni are dissolved during the talcitization and
+carbonatization of the serpentinized ultramafic units and are most likely precipitated in
+carbonate-rich phases.
+
+D. The contribution of the diabase in ore deposition is minimal.
+4.2.4 Tectonic setting
+
+The ISE mineralization characteristics of the Malabeg prospect is further supported by its
+spatial proximity with intrusions related to porphyry copper deposits in a magmatic arc (Sillitoe &
+Hedenquist, 2003; Yumul et al., 2003). This is reflected by the ridge subduction in the Manila
+Trench (Hayes & Lewis, 1984; Yang et al, 1996) and has been associated with other porphyry-
+epithermal mineral systems in Luzon, such as the Balatoc diatreme (Cooke & McPhail, 2001;
+Figueroa et al., 2022) and the Baguio-Mankayan Mineral District (Yumul et al., 2008; Chang et
+al., 2011, Manalo et al., 2018; Jabagat et al., 2020; Soberano et al., 2020). Metals and sulfur are
+usually sourced from magmas via hydrothermal fluids which can be precipitated through various
+
+fluid evolution processes such as boiling and cooling (Fontbote et al., 2017).
+
+67
+
+The proximity of north-south trending porphyry copper deposits and active volcanos
+comprising the Bataan Volcanic Arc further strengthen the possibility of the Malabeg Prospect as
+a part of a larger porphyry-epithermal system. Aside from the slew of copper sulfide deposits near
+the Cabangan Massif, the Dizon deposit readily exemplifies a linkage between porphyry copper
+mineralization and telescoping epithermal system in the area (Imai, 2002; Imai, 2005), with metal
+content averaging 0.355% Cu, 0.746 gpt Au and 2.0 gpt Ag. The diorite and andesite porphyries,
+which served as hosts, originated from oxidized and water-rich (>5 wt%) fertile parental magmas
+(Midea et al., 2021). Similarly, Mount Pinatubo, which lies to the east of Malabeg prospect, is
+associated with intermediate to silicic highly oxidized magmas with high sulfur content (Hattori,
+1993; Hattori & Keith, 2001). Geophysical survey, followed by detailed drilling, is necessary to
+
+confirm the existence of a causative pluton eastward of the Malabeg prospect.
+
+68
+
+CHAPTER 5
+
+SUMMARY AND CONCLUSIONS
+
+The results of the study gave insights to the processes that resulted in the intermediate
+
+sulfidation epithermal (ISE) mineralization in the Malabeg prospect.
+
+1)
+
+2)
+
+3)
+
+4)
+
+The listwanite alteration, vein occurrence, and textures indicate that the peridotites of the
+Malabeg Prospect were influenced by hydrothermal fluid activity. Furthermore, fluid
+inclusion composition, homogenization temperature, salinity, and paleo-water depth
+calculations serve as evidence for the precipitation of gold-bearing quartz-adularia veins
+along the shallow epithermal zone.
+
+Ore assemblage and mineral chemistry reflect changing sulfidation states from Stages 1-4.
+The presence of arsenopyrite during the listwanitization stages represent low sulfidation
+state due to the strong buffering capacity of the serpentinized harzburgites during fluid-
+rock reaction with the evolved magmatic fluids. Succeeding fluid pulses that interact with
+the listwanites were weakly buffered due to the alteration of the existing ferromagnesian
+minerals comprising the ultramafic protolith, thus precipitating Stage 4 quartz-adularia
+veins. Ore assemblage and mineral chemistry of sphalerite coexisting with pyrite/pyrrhotite
+serve as evidence for the intermediate sulfidation state for this gold-bearing phase.
+
+The ultramafic character of the host rocks yielded a listwanite alteration sequence that is
+unique to the Malabeg prospect. In spite of this, the Malabeg prospect still exhibits
+similarities with other areas associated with ISE mineralization, especially when other
+characteristics such as gangue mineralogy and regional setting are considered.
+
+Together with the results of this study, the tectonic configuration of Western Luzon implies
+that the epithermal veins in the Malabeg prospect are a part of a larger porphyry-epithermal
+
+system associated with the Bataan Volcanic Arc east of the Zambales Ophiolite Complex.
+
+70
+
+REFERENCES
+
+Abrajano, T. A. (1984). The Petrology and Low-Temperature Geochemistry of the Sulfide-
+Bearing Mafic-Ultramafic Units of the Acoje Massif, Zambales Ophiolite, Philippines:
+Characterization of Mineral And Fluid Equilibria. (doctoral dissertation, Washington
+University).
+
+Ahmed, H. A., Arai, S., & Ikenne, M. (2009). Mineralogy and Paragenesis of the Co-Ni
+Arsenide Ores of Bou Azzer, Anti-Atlas, Morocco. Economic Geology, 249-266.
+
+Alonso, R. A., Panol, A. P., & Perez, A. D. (2015). Mineral Property Assessment of
+NEWMINCO Pacific Mining Corp. Mineral Claims.
+
+Angeles, C. A. (1988). Geology and alteration-mineralization characteristics of the Nalesbitan
+gold deposit, Camarines Norte, Philippines. Philippine Mining and Engineering Journal.
+
+Ash, C. H. (2001). Relationship Between Ophiolites And Gold-Quartz Veins in the North
+American Cordillera. Ministry of Energy and Mines, British Columbia.
+
+Ash, C. H., & Arksey, R. L. (1990). The Listwanite-Lode Gold Association in British Columbia.
+British Columbia Geological Survey 1989, 359-364.
+
+Aurelio, M. A. (2000). Tectonics of the Philippines Revisited. Journal of the Geological Society
+of the Philippines, Vol. 55, 119-183.
+
+Aurelio, M. A., Angeles, C. A., Hernando, J., Elviiia, J. C., Lasconia, J. J., Lobino, F., & TVIRD
+Balabag Exploration Team. (2009). Tilting of the Balabag Epithermal Gold Vein System,
+Zamboanga Del Sur: Arguments for a Regional Tectonic Event. Geological Society of the
+Philippines.
+
+Azer, M. K. (2013). Evolution and economic siginificance of listwaenites associated with
+Neoproterozoic ophiolites in South Eastern Desert, Egypt. Geologica Acta, 113-128.
+
+Bacuta, G. J. (1989). The Zambales Ophiolite Complex, Philippines: Chromite and Platinum-
+Group Element Mineralization. (doctoral dissertation, Cornell University).
+
+Barnes, I., O' Neil, J. R., Rapp, J. B., & White, D. E. (1973). Silica-Carbonate Alteration of
+Serpentine: Wall Rock Alteration in Mercury Deposits of the California Coast Ranges.
+Economic Geology, 68, 388-398.
+
+Barnes, R. G., Brown, R. E., Brownlow, J. W., Gilligan, L. B., Krynen, J., & Willis, I. L. (1988).
+A Review of the mineral deposits of the New England Orogen in New South Wales. In J.
+D. Kleeman, New England Orogen - Tectonics and Metallogenesis (pp. 216-217).
+Department of Geology and Geophysics.
+
+Barton, P. B., & Toulmin, P. I. (1966). Phase Relations Involving Sphalerite In The Fe-Zn-S
+System. Economic Geology, 815-819.
+
+71
+
+Belandres, C. (1964). Talc and Chrysotile Asbestos in Cabangan, Zambales. Manila: Bureau of
+Mines.
+
+Bjerga, A., Konopasek, J., & Pedersen, R. B. (2015). Talc-carbonate alteration of ultramafic
+rocks within the Leka Ophiolite Complex, Central Norway. Lithos, 21-36.
+
+Bodnar, R. J. (1993). Revised equation and table for determining the freezing point depression of
+H20-NaCl solutions. Geochimica et Cosmochimica, 57, 683-684.
+
+Buckman, S. (2000). Tectonics and Mineralization of West Junggar, NW China . (Doctoral
+dissertation, University of Hong Kong).
+
+Buckman, S., & Ashley, P. M. (2010). Silica-carbonate (listwanites) related gold mineralisation
+associated with epithermal alteration of serpentinite bodies. NEO 20/0.
+
+Bunaciu, A. A., Udristioiu, E. G., & Aboul-Enein, H. Y. (2015). X-Ray Diffraction:
+Instrumentation and Applications. Critical Reviews in Analytical Chemistry, 289-299.
+
+Claveria, R. J. (2008). Mineral Paragenesis of the Lepanto Copper and Gold and the Victoria
+Gold Deposits, Mankayan Mineral District, Philippines. Resource Geology, 97-106.
+
+Comsti, M. E., Villones, R. I., De Jesus, C. V., Natividad, A. R., Rollan, L. A., & Duroy, A. C.
+(1990). Mineralization at the Kelly Gold Mine, Baguio District, Philippines: fluid-
+inclusion and wall-rock alteration studies. Journal of Geochemical Exploration, 341-362.
+
+Cooke, D. R. (2000). Characteristics and Genesis of Epithermal Gold Deposits. SEG Reviews,
+pp. 221-244.
+
+Cooke, D. R., & McPhail, D. C. (2001). Epithermal Au-Ag-Te Mineralization, Acupan, Baguio
+District, Philippines: Numerical Simulations of Mineral Deposition. Economic Geology,
+109-131.
+
+Cooke, D. R., & McPhail., D. C. (2001). Epithermal Au-Ag-Te Mineralization, Acupan, Baguio
+Districts, Philippines: Numerical Simulations of Mineral Deposition. Economic Geology,
+109-131.
+
+Cooke, D., McPhail, D., & Bloom, M. (1996). Epithermal gold mineralization, Acupan, Baguio
+District, Philippines: geology, mineralization, alteration and the thermochemical
+environment of ore deposition. Economic Geology, 243-272.
+
+Cooper, I. S. (2002). Independent Technical Report Prepared For: Sur American Gold
+Corporation. Brookfield, Queensland: Cooper Geological Services, Pty. Ltd.
+
+Corbett, G. (2002). Epithermal Gold for Explorationists. AJG Journal, 1-26.
+
+De Boer, J., Odom, L. A., Ragland, P. C., Snider, F. G., & Tilford, N. R. (1980). The Bataan
+Orogene: Eastward subduction, tetconic rotations, and volcanism in the western Pacific
+(Philippines). Tectonophysics, 67, 251-282.
+
+72
+
+Delfin, F. G., Villarosa, H. G., Layugan, D. B., Clemente, V. C., Candelaria, M. C., & Ruaya, J.
+R. (1996). Geothermal Exploration of the pre-1991 Mount Pinatubo Hydrothermal
+System. In C. Newhall, & R. Punongbayan, Fire & Mud: Eruptions and lahars of Mount
+Pinatubo, Philippines. University of Washington Press.
+
+Dong, G., & Morrison, G. W. (1995). Adularia in epithermal veins, Queensland: morphology,
+structural state and origin. Mineralium Deposita, 11-19.
+
+Dycoco, J. M., Payot, B. D., Valera, G. T., Labis, F. A., Pasco, J. A., Perez, A. D., & Tani, K.
+(2021). Juxtaposition of Cenozoic and Mesozoic ophiolites in Palawan island,
+Philippines: New insights on the evolution of the Proto-South China Sea. Tectonophysics.
+
+Emam, A., & Zoheir, B. (2012). Au and Cr mobilization through metasomatism: Microchemical
+evidence from ore-bearing listvenite, South Eastern Desert of Egypt. Journal of
+Geochemical Exploration, 34-45.
+
+Encarnacion, J., & Mukasa, S. B. (1993). Zircon U-Pb Geochronology of the Zambales and
+Angat Ophiolites, Luzon, Philippines: Evidence for an Eocene Arc-Back Arc Pair.
+Journal of Geophysical Research, 19,991-20,004.
+
+Fernandez, H. E., & Damasco, F. V. (1979). Gold Deposition in the Baguio Gold District and Its
+Relationship to Regional Geology. Economic Geology, 1852-1868.
+
+Fernandez, H. E., Damasco, F. V., & Sangalang. (1979). Gold Ore Shoot Development in the
+Antamok Mines, Philippines. Economic Geology, 606-627.
+
+Figueroa, A. J., & Gabo-Ratio, J. A. (2021). Breccia characteristics and classification of the GW
+orebodies, Balatoc Diatreme, Philippines: Insights to breccia facies and distribution
+across diatremes. Resource Geology, 1-9.
+
+Figueroa, A. J., Gabo-Ratio, J. A., Manalo, P. C., Takahashi, R., Sato, H., & Ramos, A. B.
+(2022). Breccia and vein mineralization of the Balatoc Diatreme, Acupan gold deposit,
+Baguio Mineral District: An example of a diatreme-hosted epithermal deposit in the
+Philippines. Ore Geology Reviews.
+
+Fischer, W., Amosse, J., & Leblanc, M. (1987). PGE distribution in some ultramafic rocks and
+minerals from the Bou-Azzer ophiolite complex (Morocco). Geo-Platinum, 199-210.
+
+Fitch, T. J. (1972). Plate Convergence, Transcurrent Faults and Internal Deformation Adjacent to
+Southeast Asia and the Western Pacific. Journal of Geophysical Research, 4432-4460.
+
+Frias, S. M., Imai, A., Takahashi, R., Balangue-Tarriela, M. I., Arcilla, C., & Blamey, N. (2019).
+Geology, Alteration, and Mineralization of the Kay Tanda Epithermal Gold Deposit,
+Lobo, Batangas, Philippines. Resource Geology , 351-384.
+
+Geary, E. E., Kay, R. W., Reynolds, J. C., & Kay, S. M. (1989). Geochemistry of mafic rocks
+from the Coto Block, Zambales Ophiolite, Philippines: trace element evidence for two
+stages of crustal growth. Tectonophysics, 43-63.
+
+73
+
+Gibaga, C. R., Arcilla, C. A., & Hoang, N. (2020). Volcanic rocks from the Central and Southern
+Palawan Ophiolites, Philippines: Tectonic and mantle heterogeneity constraints. Journal
+of Asian Earth Sciences.
+
+Goldstein, R. H., & Reynolds, T. J. (1994). Systematics of Fluid Inclusions in Diagenetic
+Minerals. Tulsa, Oklahoma: Society for Sedimentary Geology.
+
+Gorriceta, A. J., & Llave, C. A. (1970). Memorandum Report On Geological Verification of Talc
+Deposit In Sition Nibalanga, Barrio Santa Rita, Cabangan, Zambales. Manila: Bureau of
+Mines.
+
+Haas, J. L. (1971). The Effect of Salinity on the Maximum Thermal Gradient of a Hydrothermal
+System at Hydrostatic Pressure. Economic Geology, 940-946.
+
+Hammarstrom, J. M., Bookstrom, A. A., DeMarr, M. W., Dicken, C. L., Ludington, S.,
+Robinson, G. R., & Zientek, M. L. (2014). Porphyry Copper Assessment of East and
+Southeast Asia--Philippines, Taiwan (Republic of China), Republic of Korea (South
+Korea), and Japan. Reston, Virginia: United States Geological Survey.
+
+Hansen, L. D., Dipple, G. M., Gordon, T. M., & Kellett, D. A. (2005). Carbonated Serpentinite
+(Listwanite) At Atlin, British Columbia: A Geological Analogue to Carbon Dioxide
+Sequestration. The Canadian Mineralogist, 225-239.
+
+Hattori, K. (1993). High-sulfur magma, a product of fluid discharge from underlying mafic
+magma: Evidence from Mount Pinatubo, Philippines. Geology, 1083-1086.
+
+Hattori, K. H., & Keith, J. D. (2001). Contribution of mafic melt to porphyry copper
+mineralization: evidence from Mount Pinatubo, Philippines and Bingham Canyon, Utah,
+USA. Mineralium Deposita, 36: 799-806.
+
+Hawkins, J. W., & Evans, C. A. (1983). Geology of the Zambales Range, Luzon, Philippine
+Islands: Ophiolite Derived from an Island Arc-Back Arc Basin Pair. "The Tectonic and
+Geologic Evolution of Southeast Asian Seas and Islands, Part 2", 95-123.
+
+Hedenquist, J. W., Arribas, A. R., & Gonzalez-Urien, E. (2000). Exploration for Epithermal
+Gold Deposits. Society of Economic Geology Reviews, 245-277.
+
+Helmy, H. M., Elshafei, S., & Elwan, W. (2018). Mineralogy and geochemistry of
+metasomatized mantle peridotites from the Eastern Desert of Egypt: The role of granite-
+related hydrothermal fluids in gold mineralizations. Journal of African Earth Sciences,
+136-150.
+
+Helmy, H. M., Kaindly, R., & Fritz, H. (2004). The Sukari Gold Mine, Eastern Desert--Egypt:
+structural setting, mineralogy and fluid inclusion study. Mineralium Deposita, 495-511.
+
+Hermo, M. I., Balangue-Tarriela, M. I., Takahashi, R., Gabo-Ratio, J. A., & Frias, S. M. (2022).
+Mineralization styles and ore-forming conditions of the quartz-fragment-rich breccia
+(QBX) at the Didipio alkalic porphyry Cu-Au deposit, Nueva Vizcaya, Philippines. Ore
+Geology Reviews.
+
+74
+
+Holcroft, E., Buckman, S., & Neuss, I. (2010). A petrological, mineralogical and geochemical
+analysis of listwaenite alteration at Spring Creek Bingara in the Great Serpentinite Belt,
+New England, NSW. New England Orogen 2010 (pp. 177-183). University of New
+England.
+
+Imai, A. (2002). Metallogenesis of Porphyry Cu Deposits of the Western Luzon Arc, Philippines:
+K-AR ages, SO3 Contents of Microphenocrystic Apatite and Significance of Intrusive
+Rocks. Resource Geology, 147-161.
+
+Imai, A. (2005). Evolution of Hydrothermal System at the Dizon Porphyry Cu-Au Deposit,
+Zambales, Philippines. Resource Geology, 73-90.
+
+Imai, A., Listanco, E. L., & Fujii, T. (1996). Highly Oxidized and Sulfur-Rich Dacitic Magma of
+Mount Pinatubo: Implications for Metallogenesis of Porphyry Copper Mineralization in
+the Western Luzon Arc. In C. Newhall, & R. Punongbayan, Fire & Mud: Eruptions and
+lahars of Mount Pinatubo, Philippines. University of Washington Press.
+
+Imamalipoor, A., Barak, S., & Khalifani, F. M. (2020). Quantifying mass changes during
+hydrothermal alteration in listwaenite-type mercury mineralization, Tavreh area,
+northwestern Iran. Geochemistry: Exploration, Environment, Analysis, 425-439.
+
+James, L. P., & Fuchs, W. A. (1990). Exploration of the Exciban gold-copper-tellurium vein
+system, Camarines Norte, Philippines. Journal of Geochemical Exploration, 363-385.
+
+Jebrak, M. (1997). Hydrothermal breccias in vein-type ore deposits: A review of mechanisms,
+morphology and size distribution. Ore Geology Reviews, 111-134.
+
+Jia, Y., Kerrich, R., & Goldfarb, R. (2003). Metamorphic Origin of Ore-Forming Fluids for
+Orogenic Gold-bearing Quartz Vein Systems in the North American Cordillera:
+Constraints from a Reconnaissance Study of 515N, 5D, and 8180. Economic Geology,
+109-123.
+
+Jimenez, F. A., Ruelo, H. B., Angeles, C. A., Galet, G. P., Boticario, M. D., & Declaro, S. F.
+(2009). Geology and Mineralization of the Bananghilig Gold Deposit, Tambis Mineral
+District, Barobo, Surigao del Sur, Philippines. Geological Society of the Philippines.
+
+John, D. A., Vikre, P. G., du Bray, E. A., Blakely, R. J., Fey, D. L., Rockwell, B. W.,...
+Graybeal, F. T. (2018). Descriptive Models for Epithermal Gold-Silver Deposits. Reston:
+U. S. Geological Survey.
+
+Kesler, S. E., Sutter, J. F., Issigonis, M. J., Jones, L. M., & Walker, R. L. (1977). Evolution of
+porphyry copper mineralization in an oceanic island arc: Panama. Economic Geology,
+1142-1153.
+
+Kinkel, A. R., & Samaniego, S. (1956). Geology of the Botolan Copper Mine, Botolan,
+Zambales. Manila: Philippine Bureau of Mines.
+
+Kirwin, D. J., & Royle, D. Z. (2018). Sediment-Hosted Gold Deposits in Southeast Asia.
+Resource Geology, 1-23.
+
+75
+
+Knittel, U. (1989). Composition and Association of Arsenian Goldfieldite from the Marian Gold
+Deposit, Northern Luzon, Philippines. Mineralogy and Petrology, 145-154.
+
+Kolb, J., & Hagemann, S. (2009). Structural control of low-sulfidation epithermal gold
+mineralization in the Rosario-Bunawan district, East Mindanao Ridge, Philippines.
+Mineralium Deposita, 795-815.
+
+Lagmay, A. M. (n.d.). Geochemistry of the hypabyssal dike intrusions and mafic cumulates in
+the San Antonio Massif: Constraints in Rock Series Classification and Tectonic Setting.
+Philippines: (master's thesis, University of the Philippines).
+
+Lahti, H. R. (2012). Technical Report on T'Boli Gold and Silver Project, South Cotabato,
+Mindanao, Philippines. Cadan Resources Corporation.
+
+Leblanc, M., & Billaud, P. (1982). Cobalt arsenide orebodies related to an upper Proterozoic
+ophiolite: Bou Azzer (Morocco). Economic Geology, 162-175.
+
+Lee, S. L., & Hattori, K. (2018). Cold magmas and explosive eruptions: The story of zircon from
+Mount Pinatubo, Philippines. American Geophysical Union, Fall Meeting 2018.
+
+Lindgren, W. (1933). Mineral Deposits, 4th Ed. New York: McGraw-Hill.
+
+Luhr, J. F., & Melson, W. G. (1996). Mineral and Glass Compositions in June 15, 1991,
+Pumices: Evidence for Dynamic Disequilibrium in the Dacite of Mount Pinatubo. In C.
+N. Punongbayan, Fire and Mud: Eruptions and Lahar of Mount Pinatubo, Philippines.
+University of Washington Press.
+
+Maglambayan, V. B., Ishiyama, D., Mizuta, T., Imai, A., & Ishikawa, Y. (1998). Geology,
+Mineralogy, and Formation Environment of the Disseminated Gold-Silver Telluride
+Bulawan Deposit, Negros Occidental, Philippines. Resource Geology, 87-104.
+
+Magpantay, A. L., Palaganas, U. M., de Luna, E. A., Perez, J. L., & del Rosario, E. C. (1979).
+Report of Investigation No. 95-A, Geology and Mineral Resources of Zambales Province.
+Manila: Bureau of Mines.
+
+Malihan, T. D. (1987). The gold-rich Dizon porphyry copper mine in the western Central Luzon
+island. Pacific Rim Congress '87, (pp. 303-307).
+
+Manalo, P. C., Imai, A., Subang, L. L., delos Santos, M., Yanagi, K., Takahashi, R., & Blamey,
+N. J. (2018). Mineralization of the Northwest Quart-Pyrite-Gold Veins: Implications for
+Multiple Mineralization Events at Lepanto, Mankayan Mineral District, Northern Luzon,
+Philippines. Economic Geology, 1609-1626.
+
+Manalo, P., Imai, A., Subang, L. S., delos Santos, M. C., Yanagi, K., Takahashi, R., & Blamey,
+N. J. (2018). Mineralization of the Northwest Quartz-Pyrite-Gold Veins: Implications For
+Multiple Mineralization Events at Lepanto, Mankayan Mineral District, Northern Luzon,
+Philippines. Economic Geology, 1609-1626.
+
+76
+
+Menzel, M. D., Urai, J. L., de Obeso, J. C., Kotowski, A., Manning, C., Kelemen, P. B.,...
+Team, O. D. (2020). Brittle Deformation of Carbonated Peridotite—Insights From
+Listvenites of the Samail Ophiolite (Oman Drilling Project Hole BT1B). Journal of
+Geophysical Research: Solid Earth, 1-19.
+
+Mercier, J. C., & Nicolas, A. (1974). Textures and Fabrics of Upper-Mantle Peridotites as
+Illustrated by Xenoliths from Basalts. Laboratoire de Geologie Structurale.
+
+MGB. (2004). Mineral Resources Information Series No. 2: Nickel. Quezon Clty: Mines and
+Geosciences Bureau.
+
+MGB. (2004). Mineral Resources Map of Tarlac - MGB Region 3. Retrieved from Mineral
+Resources Map of Tarlac Province:
+https://region3.mgb.gov.ph/mgb_rolll_files/pdf/Mineral_Resources_Map/Mineral_Resou
+rces_Map_of_Tarlac.pdf
+
+Middleton, C. (2001). The Manat Epithermal Gold-Silver-Lead-Zinc Project in SE Mindanao.
+Geological Society of the Philippines.
+
+Midea, W. P., Hattori, K., & Valera, G. T. (2021). Igneous rocks related to porphyry Cu-Au
+mineralization at the Dizon mine, Philippines. Resource Geology, 1-17.
+
+Miranda, F. E., & Caleon, P. C. (1977). Geology and Mineral Resources of Camarines Norte and
+Parts of Quezon Province. Manila City: Bureau of Mines.
+
+Mitchell, A. H., & Bell, J. D. (1973). Island-Arc Evolution and Related Mineral Deposits. The
+Journal of Geology, 381-405.
+
+Naldrett, A. J. (1966). Talc-carbonate Alteration of some Serpentinized Ultramafic Rocks south
+of Timmins, Ontario. Journal of Petrology , 489-99.
+
+Nixon, G. T. (1989). Geology and Precious Metal Potential of Mafic-Ultramafic Rocks in British
+Columbia: Current Progress. British Columbia Geological Survey, 353-358.
+
+Olsen, S. (2018). NI 43-101 Technical Report: T'Boli Gold-Silver Project, South Cotabato,
+Mindanao, Philippines. Vancouver, British Columbia, Canada: Rizal Resources
+Corporation.
+
+Orberger, B., Friedrich, G., & Woermann, E. (1988). Platinum-Group Element Mineralization in
+the Ultramafic Sequence of the Acoje Ophiolite Block, Zambales, Philippines. Geo-
+Platinum 87 (pp. 361-380). Elsevier Science Publishers Ltd.
+
+Palaganas, U. M. (1966). Geologic and Mineral Verification of Chromite Prospects Being
+Applied For An Exploration Permit By Golden River Mining Corporation In Barrio San
+Juan, Cabangan, Zambales. Manila: Bureau of Mines.
+
+Payot, B. D., Maglambayan, V. B., Dimalanta, C. B., Yumul, G. P., Tamayo, R. A., Matsuda, T.,
+... Bellon, H. (2005). Geology and Hydrothermal Alteration of the Low Sulfidation
+
+77
+
+Pantingan Gold System, Mount Mariveles, Bataan (Luzon), Philippines. Resource
+Geology, 155-162.
+
+Perez, A., Umino, S., Yumul, G. P., & Ishizuka, O. (2018). Boninite and boninite-series
+volcanics in northern Zambales ophiolite: doubly vergent subduction initiation along
+Philippine Sea plate margins. Solid Earth, 9. 713-718.
+
+Ploshko, V. V. (1965). Listvenitization and carbonatization at terminal stages of Urushten
+igneous complex, North Caucasus. /nternational Geology Review, 7:3, 446-463.
+
+Power, I. M., Wilson, S. A., & Dipple, G. A. (2013, April). Serpentinite Carbonation For CO2
+Sequestration. Elements, pp. 115-121.
+
+Powcr, M. R., & Scott, P. W. (1995). Talc-Carbonate Alteration of Some Basic and Ultrabasic
+Intrusions in Cornwall. Proceedings of the Ussher Society, 392-397.
+
+Queano, K. Q., Dimalanta, C. B., Yumul, G. P., Marquez, E. J., Faustino-Eslava, D. V., Suzuki,
+S., & Ishida, K. (2016). Stratigraphic units overlying the Zambales Ophiolite Complex
+(ZOC) in Luzon, Philippines: Tectonostratigraphic significance and regional
+implications. Journal of Asian Earth Sciences.
+
+Rae, A. J., Cooke, D. R., & Brown, K. L. (2011). The Trace Metal Chemistry of Deep
+Geothermal Water, Palinpinon Geothermal Field, Negros Island, Philippines:
+Implications for Precious Metal Deposition in Epithermal Gold Deposits. Economic
+Geology, 1425-1446.
+
+Rangin, C. (1991). The Philippine Mobile Belt: a complex plate boundary. Journal of Southeast
+Asian Earth Sciences, 209-220.
+
+Richards, J. P. (2011). High Sr/Y arc magmas and porphyry Cu + Mo + Au deposits: just add
+water. Economic Geology, 1075-1081.
+
+Roedder, E., & Bodnar, R. J. (1980). Geologic Pressure Determinations From Fluid Inclusion
+Studies. Annual Reviews: Earth Planetary Science, 8, 263-301.
+
+Rohrlach, B. D. (2002). Tectonic Evolution, Petrochemistry, Geochronology and Paleohydrology
+of the Tampakan Porphyry and High Sulfidation Epithermal Cu-Au Deposit, Mindanao,
+Philippines. Canberra, Australia: (Doctoral dissertation, Australian National University).
+
+Rose, G. (1837). Mineralogisch-geognostische reise nach dem Ural, dem Altai und dem
+Kaspischen Meere. Berlin: Verlag der Sanderschen Buchhandlung.
+
+Ruaya, J. R., & Panem, C. C. (1991). Mt. Natib, Philippines: a geochemical model of a caldera-
+hosted geothermal system. Journal of Volcanology and Geothermal Research, 255-265.
+
+Ruolo, H. B. (2018). Copper & Gold Discoveries and Mines in the Philippines:
+Historical/Geological Perspective. Quezon City: (Microsoft Powerpoint Presentation).
+
+Sabaria, L. G. (2021, May). Tagburos Mercury Deposit: Deposit Characterization and
+Categorization. (bachelor's thesis, Mapua Institute of Technology).
+
+78
+
+Salapare, R. C., Dimalanta, C. B., Ramos, N. T., Manalo, P. C., Faustino-Eslava, D. V., Queano,
+K. L., & Yumul, G. P. (2015). Upper crustal structure beneath the Zambales Ophiolite
+Complex, Luzon, Philippines inferred from integrated gravity, magnetic and geologic
+data. Geophysics Journal International, 201, 1522-1533.
+
+Salvania, N. V. (1995). Development of a geothermal database and resource assessment of Mt.
+Natib Geothermal Prospect, Philippines. The United Nations University.
+
+Sazonov, V.N., Van Herk, A. H., & de Boorder, H. (2001). Spatial and Temporal Distribution of
+Gold Deposits in the Urals. Economic Geology, 685-703.
+
+Schweller, W. J., Karig, D. E., & Bachman, S. B. (1983). Original Setting and Emplacement
+History of the Zambales Ophiolite, Luzon, Philippines, From Stratigraphic Evidence.
+Geophysical Monograph Series, 124-138.
+
+Sillitoe, R. H. (1973). The Tops and Bottoms of Porphyry Copper Deposits. Economic Geology,
+799-815.
+
+Sillitoe, R. H., & Hedenquist, J. W. (2005). Linkages between volcanotectonic settings, ore-fluid
+compositions, and epithermal precious-metal deposits. In S. F. Simmons, & G. Ian,
+Volcanic, Geothermal, and Ore-Forming Fluids: Rulers and Witnesses of Processes
+within the Earth.
+
+Sillitoe, R. H., Angeles, C. A., Comia, G. M., Antioquia, E. C., & Abeya, R. B. (1990). An acid-
+sulphate-type lode gold deposit at Nalesbitan, Luzon, Philippines. Journal of
+Geochemical Exploration, 387-411.
+
+Singer, D. A., Berger, V. I., & Moring, B. C. (2008). Porphyry Copper Deposits of the world:
+Database and grade and tonnage models. U. S. Geological Survey Open-File Report.
+
+Soberano, O. B., Gabo-Ratio, J. S., Queano, K. L., Dimalanta, C. B., Yumul, G. P., Andal, E. S.,
+... Boyce, A. J. (2020). Mineral chemistry, fluid inclusion and stable isotope studies of
+the Suyoc epithermal veins: Insights to Au-Cu mineralization in southern Mankayan
+Mineral District, Philippines. Ore Geology Reviews, 1-16.
+
+Sorby, H. C. (1858). On the microscopic structure of crystals, indicating the origin of minerals
+and rocks. Geological Society of London, 1, 453-500.
+
+Sostaric, S. B., Palinkas, L. A., Neubauer, F., Hurai, V., Cvetkovic, V., Roller-Lutz, Z.,...
+Genser, J. (2013). Silver-base metal epithermal vein and listwanite hosted deposit Crnac,
+Rogozna Mts., Kosovo, Part II: A link between magmatic rocks and epithermal
+mineralization. Ore Geology Reviews, 98-117.
+
+Sostaric, S. B., Palinkas, L. A., Topa, D., Spangenberg, J., & Prochaska, W. (2011). Silver-base
+metal epithermal vein and listwaenite types of deposit Crnac, Rogozna Mts., Kosovo.
+Part I: Ore mineral geochemistry and sulfur isotop study. Ore Geology Reviews, 65-80.
+
+Subang, L. L., Buenavista, A. G., Gonzales, J. M., Moreno, G. P., Baratang, V. T., Sebua, M. C.,
+& Santos, N. A. (2004). Geology and Mineralization of the Porphyry-High-Sulfidation
+
+79
+
+Epithermal Cu-Au Deposit at Tampakan, Southern Mindanao, Philippines. Geological
+Society of the Philippines.
+
+Tamayo, R. A. (1997). Petrological and Geochemical Characterization of the Camarines Norte
+Ophiolite Complex. (master's thesis at the University of the Philippines).
+
+Tamayo, R. A., Yumul, G. P., & Jumawan, F. (1996). Geology and geochemistry of the mafic
+rock series of the Camarines Norte Ophiolite Complex. Journal of the Geological Society
+of the Philippines, 131-152.
+
+Taylor, R. (2009). Ore Textures: Recognition and Interpretation. Queensland: Springer.
+
+Vearncombe, J. R., & Holyland, P. W. (1995). Rheology, stress-mapping, and hydrothermal
+mineralization--the example of structurally-controlled gold-antimony deposits in South
+Africa. South African Journal of Geology, 415-429.
+
+Villaplaza, B. R., Buena, A. E., Pacle, N. A., Payot, B. D., Gabo-Ratio, J. A., Ramos, N.T.,...
+Yumul, G. P. (2017). Alteration and lithogeochemistry in the Masara gold district,
+Eastern Mindanao, Philippines, as tools for exploration targeting. Ore Geology Reviews ,
+530-540.
+
+Wilkinson, J. J. (2001). Fluid inclusions in hydrothermal ore deposits. Lithos, 229-272.
+
+Wolfe, R. C. (2001). Geology of the Didipio Region and Paragenesis of the Dinkidi Cu-Au
+Porphyry Deposit. (Doctoral dissertation, University of Tasmania).
+
+Yang, T. F., Lee, T., Chen, C.-H., Cheng, S.-N., Knittel, U., Punongbayan, R. S., & Rasdas, A.
+R. (1996). A double island arc between Taiwan and Luzon: consequence of ridge
+subduction. Tectonophysics, 258; 85-101.
+
+Yumul, G. P. (1989). Petrological characterization of the residual-cumulate sequences of the
+Zambales Ophiolite Complex, Luzon, Philippines. Ofioliti, 14, 253-291.
+
+Yumul, G. P., Brown, W. W., Dimalanta, C. B., Ausa, C. A., Faustino-Eslava, D. V., Payot, B.
+D.,... Pacle, N. D. (2017). Adakitic rocks in the Masara gold-silver mine, Compostela
+Valley, Mindanao, Philippines: Different places, varying mechanisms? Journal of Asian
+Earth Sciences, 45-55.
+
+Yumul, G. P., Brown, W. W., Dimalanta, C. B., Ausa, C. A., Faustino-Eslava, D. V., Payot, B.
+P.,... Pacle, N. A. (2016). Adakitic rocks in the Masara gold-silver mine, Compostella
+Valley, Mindanao, Philippines: Different places, varying mechanisms? Journal of Asian
+Earth Sciences.
+
+Yumul, G. P., Datuin, R. T., & Manipon, J. C. (1990). Geology and geochemistry of the
+Cabangan-San Antonio massifs, Zambales ophiolite complex, Philippines: Tectonically
+juxtaposed marginal basin-island arc terranes. Journal of Geological Society of the
+Philippines, 69-100.
+
+80
+
+Yumul, G. P., Dimalanta, C. B., Faustino, D. V., & De Jesus, J. V. (1998). Translation and
+docking of an arc terrane: geological and geochemical evidence from the southern
+Zambales Ophiolite Complex, Philippines. Tectonophysics, 293, 255-272.
+
+Yumul, G. P., Dimalanta, C. B., Faustino, D. V., & de Jesus, J. V. (1998). Upper mantle-lower
+crust dikes of the Zambales Ophiolite Complex: distinct short-lived, subduction-related
+magmatism. Journal of volcanology and geothermal research, 287-309.
+
+Yumul, G. P., Dimalanta, C. B., Maglambayan, V. B., & Tamayo, R. A. (2003). Mineralization
+Controls in Island Arc Settings: Insights from Philippine Metallic Deposits. Gondwana
+Research, 767-776.
+
+Yumul, G. P., Dimalanta, C. B., Tam, T. A., & Ramos, E. G. (2008). Baguio Mineral District:
+An oceanic arc witness to the geological evolution of northern Luzon, Philippines. /s/ang
+Arc, 432-442.
+
+Yumul, G., Dimalanta, C., Salapare, R., Queano, K., Faustino-Eslava, D., Marquez, E.,.. .
+Suzuki, S. (2019). Slab rollback and microcontinent subduction in the evolution of the
+Zambales Ophiolite Complex (Philippines): A review. Geoscience Frontiers.
+
+Zafra, J. C. (2021). NI 43-101 Exploration Results And Mineral Resource Update Report On The
+Balabag Gold-Silver Project. Zamboanga del Sur, Mindanao, Philippines: TVI Resource
+Development Inc.
+
+Zoheir, B. (2011). Transpressional zones in ophiolitic melange terranes: Potential exploration
+targets for gold in the South Eastern Desert, Egypt. Journal of Geochemical Exploration,
+23-38.
+
+Zoheir, B., & Lehmann, B. (2011). Listvenite-lode association at the Barramiya gold mine,
+Eastern Desert, Egypt. Ore Geology Reviews, 101-115.
+
+81
+
+Appendix
+
+Appendix 1: Representative drill core photos
+
+MLDH 001
+
+MLPH ao?
+
+37.30-40.20 m: highly fractured and brecciated grayish talc-carbonate with quartz veinlets (1-5
+mm)
+
+40.20-40.60 m: highly fractured quartz vein with intensely silicified light gray talc-carbonate
+breccias. Minor brass yellowish specks of chalcopyrite were observed from hand specimens.
+
+40.60-41.22 m: talc-carbonate consisting of greenish to greenish-gray talcitized groundmass, dark
+brown chromite and black talcitized ultramafic grains. Minor disseminated golden yellow specks
+of pentlandite were observed from hand specimens.
+
+83
+
+MLDH 008
+
+30.30-30.70 m: black harzburgite with orange-brown hematite staining
+
+30.80-31.40 m: quartz veins with black fragments of harzburgite
+
+31.4-32.4 m: black talcitized and serpentinized harzburgite with cream-colored dolomite stringers
+and 20-centimeter vein at 31.4-31.6 m. Reddish brown patches of hematite were also observed.
+
+32.4-33 m: massive quartz veins with minor comb texture in some portions and black fragments
+of harzburgite. Rare chalcopyrite was observed.
+
+84
+
+MLDH 008
+
+38.75-41.1 m: grayish talc-carbonate with white carbonate veins and pervasive orange-brown
+hematite staining
+
+41.2-41.6 m: light bluish fractured diabase fragments
+
+85
+
+MLpHoos
+
+52-52.5-53.5 m: talc-carbonate consisting of greenish to greenish-gray talcitized groundmass, dark
+brown chromite and black talcitized ultramafic grains. Minor disseminated golden yellow specks
+of pentlandite were observed from hand specimens.
+
+53.5-53.7 m: quartz veins with bluish-gray specks of galena and minor brass-yellow disseminated
+chalcopyrite.
+
+53.7-55 m: dark gray diabase dike with quartz veinlets
+
+86
+

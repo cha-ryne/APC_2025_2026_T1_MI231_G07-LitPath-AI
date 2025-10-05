@@ -1,0 +1,2241 @@
+«han Sy stOhR
+
+
+Network Intrusion Detection System
+
+of DOST-Bicutan Network
+
+MARLON DAVE S. REGOSO
+
+SUBMITTED TO THE FACULTY OF GRADUATE SCHOOL
+UNIVERSITY OF THE PHILIPPINES LOS BANOS
+IN PARTIAL FULLFILLMENT OF THE
+REQUIREMENTS FOR THE DEGREE OF
+
+MASTER IN INFORMATION TECHNOLOGY
+
+April 2013
+
+Disclaimer
+
+“This project is submitted to the Institute of Computer Science in partial
+fulfillment of the requirements for the degree of Master in Information Technology at the
+University of the Philippines Los Bafios. It is the product of my own work except where
+indicated in the text. The project report or any portion thereof including the source code
+or any section may be freely copied or distributed provided that the source is
+
+acknowledged.”
+
+The special problem hereto, entitled “NETWORK INTRUSION DETECTION
+SYSTEM OF DOST-BICUTAN NETWORK,” prepared and submitted by MARLON
+DAVE S. REGOSO in partial fulfillment of the requirements for the degree of MASTER
+IN INFORMATION TECHNOLOGY is hereby accepted.
+
+same cranco nti Ebianteco
+
+Member, Guidance Committee Member, Guidance Committee
+APR 27 203 APR? 7 280
+Date Signed Date Signed
+
+. A
+CONCEPCIQN L. KHAN
+Chair, Guidadce Committee
+APR 27 2013
+Date Signed
+
+Accepted as partial fulfillment of the requirements for the degree of MASTER IN
+INFORMATION TECHNOLOGY.
+
+(Dobe Grn:
+VLADIMIR Y. MARIANO,
+Director, Institute of Computer Science
+
+APR 27 2013
+Date Signed
+
+iii
+
+Acknowledgement
+
+I would like to acknowledge the support and guidance of my adviser, Prof.
+Concepcion L. Khan. I also thank the members of the panel committee Prof. Jaderick P.
+Pabico and Prof, Jaime M. Samaniego for their guidance and suggestions in preparing a
+more user-friendly system.
+
+I would like to thank DOST-SEI for the opportunity to leam more with this
+scholarship program and UPLB for the excellence in education.
+
+I would also like to thank our Chief of the Information Technology Division of
+DOST Ms. Donna-Ruth V. Montalban for being lenient in giving me the opportunity to
+study our Masters Degree in Information Technology. This thesis would not have been
+possible without the support and idea of my superior, Mr. Rogelio N. Roasa who lent me
+his spare server so I can install and make this thesis possible.
+
+I share the credit of my work with my colleague Mr. Louie Carl R. Mandapat who
+supported me in designing and encoding the system.
+
+I would like to thank my family for giving me joy that gives me strength and
+inspiration, especially to my wife, Nitia C. Regoso for supporting and encouraging me to
+finish this degree. Without my wife’s encouragement and support, I would not have
+finished the degree. And most of all, I would like to thank the Lord our God for all the
+lessings, strength, knowledge and guidance that He has given me while working with this
+
+thesis.
+
+Abstract
+
+This project focused on open source tools to implement network intrusion
+detection system for DOST. Open source network intrusion detection systems like Snort,
+OSSEC, Suricata and Prelude were tested and evaluated using open source network
+intrusion detection testing tools like Pytbull, Scapy, Netcat, Hping, Nmap, Tepdump,
+Hydra and Apachebench. Installation procedures were presented for the readers to be
+guided accordingly for future use. Test simulations were done to evaluate the system for
+its usage, functionality and ability to detect network intruder. Using the selected open
+source network intrusion detection system’s ability to detect intruder, functionality, rules
+and database, a system was developed that shows a graphical representations of network
+intruders. Developed network intrusion detection system for DOST-Bicutan was tested
+using apachebench for its functionality. As a result, the experience gained from this
+endeavor can also be used to help other government agencies to review and assess their
+
+own network security.
+
+Table of Contents
+
+Title Page
+
+Disclaimer...
+
+Acceptance Sheet...
+
+Acknowledgement .
+
+Abstract...
+
+Table of Contents...
+
+List of Figures..
+
+I. The Problem Domain..
+
+A. Statement of the Problem...
+
+B, Background and Objectives of the Project...
+
+C. Significance and Scope of the Project..
+
+D. Documentation of Existence and Seriousness of the Problem......
+
+Il. Review of Existing Alternatives ....
+
+III. Approach taken in this subject...
+
+A. Theoretical Framework
+B. Rationale for the framework...
+
+C. Technologies used.....
+
+IV. Project Methodology .
+
+A. Concept...
+
+B. Methods .
+
+vi
+
+1. Selecting Open Source NIDS for Developing DOST-NIDS....
+
+2. Evaluating Developed DOST-NIDS...
+
+C. User testing and project assessment .
+
+V. Results and Discussions...
+
+A. Selecting Open Source NIDS for Developing DOST-NIDS..
+
+B. Evaluating Developed DOST-NIDS...
+
+VI. Conclusion:
+
+VII. Recommendations ..
+
+VIII. References:
+
+IX. Appendices ..
+
+A. Qualifications...
+
+B. Contributors / Collaborators.....
+
+C. Resources...
+
+D. Complete program listing.
+
+E. Technical reference...
+
+F. Installation Manual ...
+
+Installation Manuals of Open Source Network Intrusion Detection System...
+Installation Manuals of Open Source Network Intrusion Detection Testing Tools.. 41
+
+G. User Manual...
+
+vii
+
+Figure
+
+10
+
+List of Figures
+Description Page
+
+Screenshot of a Chinese government website defaced by 4
+Anonymous Philippines
+
+Screenshot of a Philippine government website that belongs 4
+to DOST-PAGASA that is defaced by team Team X-Fuck
+
+Screenshot of a Philippine website that belongs to Colegio 4
+San Agustin that is defaced by Chinese
+
+Screenshot of a Philippine government and private website 5
+that belongs to Bangko Sentral ng Pilipinas (BSP), Metropolitan
+Waterworks and Sewerage System (MWSS) and American
+
+Chamber of Commerce in the Philippines that was defaced
+
+by Anonymous Philippines
+
+Screenshot of Senator Tito Sotto’s website defaced by 6
+‘Anonymous Philippines
+
+Typical network safeguarded by a firewall 14
+
+Typical network safeguarded by a firewall with network intrusion 15
+detection system passively monitoring allowed traffic
+
+Process on how the open source network intrusion detection 16
+system was selected
+
+Locations of the two attack generators, target host and network 17
+intrusion detection system during the tests
+
+Process on how the DOST-NIDS was developed and tested 18
+
+Locations of the six target hosts, two attack generators and 19
+DOST-NIDS during the test
+
+viii
+
+Number of registered attacks detected by open source NIDS 2
+using two attack generators attacking one host and NIDS
+server using Nmap
+
+Number of registered attacks detected by open source NIDS 23
+using two attack generators attacking one host and NIDS.
+server using ApacheBench
+
+Number of registered attacks detected by DOST-NIDS using 24
+two attack generators attacking six hosts using ApacheBench
+
+I. The Problem Domain
+
+A, Statement of the Problem
+
+As information systems have become more comprehensive and become a higher
+value asset of organizations, network intrusion detection systems have been available to
+the market. Although there are many vendors in the field, each with its own strategy for
+detecting network intruders, they are too focused on the equipment and appliance they
+sell. Thus, not all government agencies have enough budgets to purchase that equipment.
+
+Monitoring of a network intruder is rarely practiced in the local industry
+especially in the government sector. Department of Science and Technology (DOST) as.
+one of the leading agencies in the field of technology has never implemented network
+intrusion system in its infrastructure in Bicutan area. With the recent events and the rise
+of government web sites being defaced by unscrupulous intruders, it is time that the
+department reviews its own policies, strategies and security implementation in its own
+infrastructure.
+
+Intrusion detection involves determining that some entity, an intruder, has
+attempted to gain, or worse, has gained unauthorized access to the system. Intruders are
+classified into two groups. External intruders who do not have any authorized access to
+the system they attack. Internal intruders who have at least some authorized access to the
+
+system. Internal intruders are further subdivided into the following three categories "),
+
+1|Page
+
+1
+
+Masqueraders - mere external intruders who have succeeded in gaining access
+
+to the system and are acting as an authorized entity.
+
+. Legitimate intruders (misfeasor) - have access to both the system and the data
+
+but misuse this access.
+
+. Clandestine intruders - have or have obtained supervisory (root) control of the
+
+system and as such can either operate below the level of auditing or can use
+the privileges to avoid being audited by stopping, modifying, or erasing the
+
+audit records.
+
+B. Background and Objectives of the Project
+
+The general objective of this project is to develop network intrusion detection
+
+system using open source tools that are available in the market. The said project will act
+
+as a monitoring tool to alert the network and system administrators of DOST-Bicutan and
+
+can also be a help to other government agencies to monitor their own network
+
+infrastructure. The following are the specific objectives of the project to:
+
+1.
+
+design and develop network intrusion detection system using open source
+
+tools available in the market;
+
+. develop a system that displays real-time network traffic of network intruders;
+
+and
+
+. inform the administrator regularly the summary of recorded malicious activity
+
+using open source tool.
+
+2| Page
+
+C. Significance and Scope of the Project
+
+The internet is a medium for fast, efficient communication and interchange of
+ideas. However, the limitless opportunities of the internet comes hand-in-hand with the
+risks of people who take malicious advantage of the openness of the internet. Enterprise
+networked systems are inevitably exposed to the increasing threats posed by hackers as
+well as malicious internal users in the network. With DOST-Bicutan network comprising,
+of twelve (12) autonomous local area networks interconnected together using fiber and
+wireless technology, it is very vulnerable with attacks from the outside and inside of its
+network. This project offers a new way to keep the infrastructure safeguarded from
+
+network intruders.
+
+D. Documentation of Existence and Seriousness of the Problem
+Many reports show defacing of government websites in the Philippines is on the
+tise, adding to the conflict between China and Philippines over Panatag shoal, Recto bank
+and Spratly islands adds to the problem. Intruding a network to have access over its
+network resources is the key in defacing those websites. According to ABS-CBN online
+news, government websites in the Philippines and China were defaced by hackers "!!218_
+Figure 1 shows a screenshot of a Chinese government website defaced by Anonymous
+Butuan "!_ Figure 2 shows a screenshot of a Philippine government website that belongs
+
+to DOST-PAGASA that is defaced by Team X-Fuck "!, Figure 3 shows a screenshot of a
+
+Philippine website that belongs to Colegio San Agustin that is defaced by Chinese ",
+
+3| Page
+
+Figure 1. Screenshot of a Chinese government website defaced by Anonymous Butuan.
+
+Ser Meer Genet Ie BO
+altars
+Dewmetticcindbemied ——Mamupsndaarrely
+
+ached Net wet Team fick Es GHVTE6@aa cen!
+
+Figure 2. Screenshot of a Philippine government website that belongs to DOST-PAGASA that
+is defaced by Team X-Fuck.
+
+Figure 3. Screenshot of a Philippine website that belongs to Colegio San Agustin that is
+defaced by Chinese.
+4|Pa
+
+
+With the Cybercrime law being implemented, many Filipinos use social
+networking sites like Twitter and Facebook to show their protest against the said law. But
+hackers have their own way of expressing their protest. They hacked and defaced several
+Philippine government websites to show that they are against the said law, thinking that
+in that way, their online voices can be heard. According to ABS-CBN online news,
+government and private websites in the Philippines were defaced by hackers as part of
+their protest to the anti-cybercrime law "ll. Figure 4 shows a screenshot of Philippine
+government and private websites that belongs to Bangko Sentral ng Pilipinas (BSP),
+Metropolitan Waterworks and Sewerage System (MWSS) and American Chamber of
+Commerce in the Philippines that were defaced by Anonymous Philippines “!. Figure 5
+
+shows a screenshot of Senator Tito Sotto’s website defaced by Anonymous Philippines
+
+15}
+
+Figure 4. Screenshot of Philippine government and private websites that belongs to Bangko
+‘Sentral ng Pilipinas (BSP), Metropolitan Waterworks and Sewerage System (MWSS) and
+American Chamber of Commerce in the Philippines that were defaced by Anonymous
+Philippines.
+5|Page
+
+Figure 5. Screenshot of Senator Tito Sotto’s website defaced by Anonymous Philippines.
+
+ll. Review of Existing Alternatives
+
+Firewall technology has not been able to successfully safeguard private data.
+Firewalls do a great job to filter or mask ports on a host system. However, most
+companies must open ports on their firewalls to provide web, email, FTP, domain name
+(DNS) and other services. As soon as an administrator opens ports on their firewall then
+those ports are no longer protected. A good analogy would be to lock every window in
+your house with the back door, the basement door, the sliding family room door; even the
+pet door locked, but leaves the front door open. Everything is very secure except the front
+door. An attacker would have little problem compromising your home. Leaving the front
+door open does not mean you cannot safeguard your house. You can monitor the people
+who enter and exit your door by logging their every move in your house while looking
+
+for any malicious activity.
+
+6|Page
+
+In the network side, implementing network intrusion detection system gives
+additional security to the network as it safeguards your network. Monitoring network
+intruders can be monitored through the use of network intrusion detection system. There
+are many ways to acquire network intrusion detection system. One way is to procure, as
+network intrusion detection system has many vendors, each with its own strategy for
+detecting network intruders and features but with the price on its side. Selecting an
+Intrusion Prevention System (IPS) can be a daunting task. While an independent
+assessment of available solutions is strongly recommended as a best practice before
+procurement and deployment, a good place to start a research effort is to look at the
+market leaders and to compare their offerings. According to Infonetics Research ""!,
+Cisco ranked highest among six top selling IPS solution providers -- the other five
+suppliers being McAfee, Juniper, IBM, Sourcefire and TippingPoint - based on
+assessments performed by large organizations on eight selection criteria, ranging from
+value and pricing to technology and the product's roadmap for the future. These same six
+providers also rank highest in terms of their effectiveness on the latest Gartner report,
+although Cisco and IBM are considered to be challengers to the market led by the other
+
+four vendors.
+
+7|Page
+
+Ill. Approach taken in this subject
+
+A. Theoretical Framework
+
+Intrusion attacks usually follow a logical sequence of events. The intruder will try
+first to discover as much public information (such as domain name, DNS tables, machine
+names, and FTP sites) about a network as possible without risking detection. Next, the
+intruder will attempt to scan for more information, run utilities, look for CGI scripts, ping
+to get machine status, etc. By the end of this stage, the intruder will know the operating
+system and applications running on the victim’s network. Once an intruder gets access to
+a user account or a machine, he/she tries to exploit possible vulnerabilities of the system
+by sending commands to CGI scripts, or malicious data to buffer-overrun holes. At this
+stage, the hacker may be able to gain control of the machine, and even crash the system.
+On gaining a foothold on a network, the intruder will cover tracks of the attack to delay
+discovery and install tools that displace the normal functioning of the system or vandalize
+the site, before moving to other connected networks. Enterprises are increasingly looking
+at tools that detect network security breaches to alert and protect networks from intrusion
+attacks. Detection is possible through Intrusion Detection System right from the time the
+intruder probes and tries to scan for information. Intrusion detection systems successfully
+detect and trap attacks at a premature stage and help enterprises avoid disruption in their
+
+systems and costs associated with the likely damage of successful attempts.
+
+8|Page
+
+B. Rationale for the framework
+
+Implementing an open source based Network Intrusion Detection System (NIDS)
+provides the DOST-Bicutan network the advantage of having a low cost system that can
+also provide the same ability and usage compared to other equipment-based NIDS in the
+
+market.
+
+C. Technologies used
+
+Implementing network intrusion detection system for DOST-Bicutan network was
+developed through the use of available open source operating system, open source
+network intrusion detection system and open source network intrusion detection tools in
+the market.
+
+Open source operating system Ubuntu 12.04 LTS server was used. Ubuntu is an
+ancient African word meaning ‘humanity to others’. It also means 'I am what I am because
+of who we all are’. The Ubuntu operating system brings the spirit of Ubuntu to the world
+of computers. Ubuntu is a computer operating system based on the Debian Linux
+distribution and distributed as free and open source software, using its own desktop
+environment. Ubuntu is hugely popular on Amazon's EC2 and Rackspace's Cloud, and is
+pre-installed on computers from Dell, Lenovo and other global vendors "71,
+
+Open source network intrusion detection systems like Snort, Suricata, OSSEC and
+
+Prelude was tested and evaluated for the development of DOST-NIDS.
+
+9|Page
+
+1. Snort is an open source network intrusion prevention and detection system
+(IDS/IPS) developed by Sourcefire. Combining the benefits of signature,
+protocol, and anomaly-based inspection, Snort is the most widely
+deployed IDS/IPS technology worldwide 9),
+
+2. Suricata is an open source Next Generation Intrusion Detection and
+Prevention Engine. This engine is not intended to just replace or emulate
+the existing tools in the industry, but will bring new ideas and
+technologies to the field #"!.
+
+3. OSSEC is anOpen Source Host-based Intrusion Detection System. It
+performs log analysis, integrity checking, Windows registry monitoring,
+rootkit detection, real-time alerting and active response. It runs on most
+operating systems, including Linux, OpenBSD, FreeBSD, Mac OS X,
+Solaris and Windows ™,
+
+4, Prelude is a Universal "Security Information & Event Management"
+(SIEM) system. Prelude collects, normalizes, sorts, aggregates, correlates
+and reports all security-related events independently of the product brand
+
+or license giving rise to such events; Prelude is "agentless" !"8),
+
+Open source network intrusion detection systems were tested using network
+intrusion detection testing tools such as; pytbull, scapy, netcat, hping, nmap, tcpdump,
+
+hydra and apachebench to test the detection capabilities of the NIDS.
+
+10|Page
+
+1. Pytbull is an Intrusion D etection/Prevention System (IDS/IPS) Testing
+Framework for Snort, Suricata and any IDS/IPS that generates an alert
+file. It can be used to test the detection and blocking capabilities of an
+IDS/IPS and to validate config "*!,
+
+2. Scapy is a powerful interactive packet manipulation program. It is able to
+forge or decode packets of a wide number of protocols, send them on the
+wire, capture them, match requests and replies, and much more. It can
+easily handle most classical tasks like scanning, tracerouting, probing, unit
+tests, attacks or network discovery (it can replace hping, 85% of nmap,
+arpspoof, arp-sk, arping, tcpdump, tethereal, pOf, etc.) '2),
+
+3. Netcat is a feature-packed networking utility which reads and writes data
+across networks from the command line. It uses both TCP and UDP for
+communication and is designed to be a reliable back-end tool to instantly
+provide network connectivity to other applications and users. Neat will not
+only work with IPv4 and IPv6 but provides the user with a virtually
+limitless number of potential uses '“),
+
+4. Hping is a command-line oriented TCP/IP packet assembler/analyzer. The
+interface is inspired to the ping(8) unix command, but hping isn't only able
+to send ICMP echo requests. It supports TCP, UDP, ICMP and RAW-IP
+protocols, has a traceroute mode, the ability to send files between a
+
+covered channel, and many other features ""!,
+
+11|Page
+
+5. Nmap is an open source tool for network exploration and security
+auditing. It was designed to rapidly scan large networks, although it works
+fine against single hosts. Nmap uses raw IP packets in novel ways to
+determine what hosts are available on the network, what services
+(application name and version) those hosts are offering, what operating
+systems (and OS versions) they are running, what type of packet
+filters/firewalls are in use, and dozens of other characteristics"),
+
+6. Tepdump a powerful command-line packet analyzer; and libpcap, a
+portable C/C++ library for network traffic capture 61,
+
+7. Hydra is a very fast network logon cracker which supports many different
+services. It is a paralyzed login cracker which supports numerous
+protocols to attack. New modules are easy to add, beside that, it is flexible
+and very fast 8),
+
+8. ApacheBench is a tool for benchmarking your Apache Hypertext Transfer
+Protocol (HTTP) server. It is designed to give you an impression of how
+your current Apache installation performs. This especially shows you how
+
+many requests per second your Apache installation is capable of serving
+
+16),
+
+12|Page
+
+IV. Project Methodology
+
+A. Concept
+
+The landscape of securing network infrastructure is different from the landscape
+of just five years ago. Companies are more connected than ever, with the promise that
+network expansion will only continue. As a result, companies have to keep up with how
+to keep their network safe, without sacrificing growth, productivity and services offered.
+
+Virtually, the first step of an organization takes to be protected from the internet is
+to install a firewall with good reasons. A firewall is used to help keep a network secure.
+Its primary objective is to control the incoming and outgoing network traffic by analyzing
+the data packets and determining whether it should be allowed through or not, based on a
+predetermined rule set.
+
+A network's firewall builds a bridge between an internal network that is assumed
+to be secured and trusted, and another network, usually an external network, such as the
+Internet, that is assumed not secured and trusted. It acts as a perimeter guard for a
+network, determining what traffic to allow or deny in and out. A firewall does this by
+applying a policy, comprised of “accept” and “deny” rules, and based on various criteria,
+such as a source, destination and protocols. By providing access control, firewalls do a
+good job of providing the first layer of defense. Most firewall polices allow protocols that
+
+enable organizations to do business on the Internet, such as SMTP, FTP, HTTP, SMTP.
+
+13|Page
+
+and DNS, and keep out traffic that may pose a threat to the internal systems. Figure 6
+
+shows a typical network safeguarded by firewall.
+
+Figure 6. Typical network safeguarded by a firewall.
+
+The second layer of defense is to detect the presence of attacks within the traffic
+
+allowed to flow within the network and to protect the network from those attacks. The
+
+14|Page
+
+most common belief today is that a Network Intrusion Detection System (NIDS) can
+protect an organization from these attacks. Unfortunately, the current DOST-Bicutan
+network does not have this system as an additional layer of defense from intruders.
+Figure 7 shows a typical network safeguarded by firewall with network intrusion
+
+detection system passively monitoring allowed traffic.
+
+Figure 7. Typical network safeguarded by firewall with network intrusion detection system
+passively monitoring allowed traffic.
+
+15|Page
+
+B. Methods
+
+In implementing the Network Intrusion Detection System (NIDS) for DOST,
+
+Ubuntu 12,04 LTS server as the operating system was used.
+
+1. Selecting Open Source NIDS for Developing DOST-NIDS
+
+In selecting what network intrusion detection system to be used, open source
+network intrusion detection systems available in the market were tested. Network
+intrusion detection systems like Snort, Suricata, OSSEC and Prelude were tested
+individually using open source network intrusion detection testing tools such as; Pytbull,
+Scapy, Netcat, Hping, Nmap, Tepdump, Hydra and Apachebench to test their ability to
+detect intruders. Figure 8 shows the process on how the open source network intrusion
+
+detection system was selected.
+
+(Gathering of open Installation of
+source network ‘open source
+
+Intrusion networkintrusion ‘Opensource
+detection systems || detection systems Network
+
+Testing open peat
+
+Snort, Suricata, Snort, Suricata, source Detection
+‘OSSECand OSSECand Prelude network
+Intrusion
+
+detection
+Tnstallation oF systems
+
+opensource usingopen
+intrusion networkintrusion ‘source
+detection testing detection testing. network
+tools tools intrusion
+detection
+Pytbull Scapy, Pytbull, Seapy, testing tools
+Neteat, Hing,
+Nmap, Ieadump,
+Hydra,
+ApacheBench
+
+DOST-NIDS
+
+Figure 8. Process on how the open source network intrusion detection system was selected.
+16|Page
+
+In evaluating open source NIDS, it was deployed passively monitoring the DMZ
+network of DOST-Central office. Attack generator-1 and attack generator-2 were placed
+on different sides of the firewall to attack the target host in the DMZ network. While the
+NIDS was placed in the DMZ network, its ethO was passively monitoring the mirrored
+port of the target host. The performance of the open source NIDS was tested according to
+its ability to identify as many attacks as possible. Figure 9 shows where the two attack
+generators, target host and network intrusion detection system were deployed during the
+
+tests.
+
+Bicutan Router
+Gi 10 Mbps
+a
+(—<7 jICom
+
+10 Mbps
+
+‘Attack
+Generator (1)
+
+Attack
+Generator (2)
+
+Figure 9. Locations of the two attack generators, target host and network intrusion detection
+system during the tests.
+
+17|Page
+
+2. Evaluating Developed DOST-NIDS
+
+After selecting which open source NIDS to be used, its ability to detect intruder,
+functionality, rules and database was used to create a system that shows a graphical
+representations of network intruders. Figure 10 shows that process on how DOST-NIDS
+
+was developed and tested.
+
+Using its ability
+todetect
+
+Selected open
+source
+
+Developed
+
+network intruders, funct DOST-NIDS
+intrusion ionsand data wastested
+detection base, adash using open ee
+system was [f board was source
+installed and developedto F network
+deployedto display the intrusion
+where itwill overview of its detection
+serveas network testing tools
+
+DOST-NIDS intruders
+
+Figure 10. Process on how the DOST-NIDS was developed and tested.
+
+In evaluating selected open source NIDS, it was deployed passively monitoring
+the DMZ network of DOST - Central Office. Attack generator-1 and attack generator-2
+were placed on different sides of the firewall to attack the target host in the DMZ
+network. The management port is placed facing the local area network of DOST-CO as to
+lessen the possibility of the system being compromised by intruders. One port monitors
+the DMZ network and the other one monitors ports connected to other agencies as to
+
+monitor the mirrored ports on both switches.
+
+18|Page
+
+Testing the ability of DOST-NIDS to detect intruder was tested using open source
+network intrusion detection tool. ApacheBench was used to test as it was successful in
+intruding and in the same way was detected by Snort while evaluating which open source
+NIDS to be used. Six target host were intruded which includes: one (1) from DMZ switch
+of DOST-ITD, one (1) from TAPI, one (1) from FNRI, one (1) from PTRI, one (1) from
+MIRDC and one (1) from STI. They were intruded by two (2) Attack generators. Figure
+11 shows the location of the six target hosts, two attack generators and DOST-NIDS
+
+during the test.
+
+DOST-Bicutan Network
+
+CE >— Bicutan Router DOSTTO CENTRAL OFFICE
+PLOT
+
+10 Mbps —
+10 Mbps
+snerator-1 =
+lal MIRDC
+C <
+fS SSost
+E = Res Rae
+coer WS sm
+eae
+ote a
+Bio cRo &
+pis a
+vonrsS f=
+vor coe owe @
+QMersore
+
+Figure 11. Locations of the six target hosts, two attack generators and DOST-NIDS during the
+tests.
+
+19|Page
+
+C. User testing and project assessment
+
+In assessing the DOST-NIDS developed, the management port of the network
+intrusion detection system is placed facing the LAN of DOST-CO. One port monitors the
+DMZ network and the other port monitors ports connected to other agencies as to monitor
+the mirrored ports on both switches. Testing its ability to detect network intruders in
+DMZ network and local area network of attached agencies, attack generators 1 and 2
+were placed on different sides of the firewall to attack the target hosts in DMZ, TAPI,
+
+FNRI, PTRI, MIRDC and STII (see Figure 11).
+
+V. Results and Discussions
+
+A. Selecting Open Source NIDS for Developing DOST-NIDS
+
+Pytbull
+
+Running Pytbull to test the ability of an open source NIDS to detect an intruder
+was a fail. After so many researches over the internet and using various installations
+process and configuration ended up only giving error on my side. The error message was:
+
+Error: FTP error, 550 failed to open file.
+
+20|Page
+
+Scapy
+
+Testing open source NIDS using scapy is not an easy task. If creating a rule to
+inspect intrusion from Scapy is easy, configuring Scapy is another story. After so many
+hours figuring what are the errors in lines on given files, I only ended up receiving error.
+
+The error message was: AttributeError: 'str’ object has no attribute ‘route!
+
+Netcat
+In using Netcat to test the ability of open source NIDS to detect intruder, Netcat
+successfully used its applications without even being detected by any of the NIDS. Netcat
+
+applications used are: http client, remote terminal, port scanning and file transfer.
+
+Hping
+
+Attacking open source NIDS using Hping did not record any intrusion. But with
+so many attempts to have a decent registered attack detected, I ended up hanging up the
+server every time I run the command either I was using the attack generator-1 or attack
+
+generator-2 attacking the NIDS server or the target host.
+
+Nmap
+
+In testing NIDS using Nmap, only Snort detected intrusion. Both Suricata and
+OSSEC did not record any intruder alert. Prelude is not included in the chart because of
+failure to install. Test result shows that using attack generator 2 produces more alert
+
+compared to attack generator 1. And attacking target host detects more intrusion alert
+
+21|Page
+
+compared when directly targeting the NIDS server. Figure 12 shows the number of
+registered attacks detected by open source NIDS using two attack generators attacking
+
+one host and NIDS server using Nmap.
+
+Attack Geni (NIDS)
+
+q 3000, ‘Attack Geni (Host) |
+1500 ‘Attack Gen’ (NIDS)
+
+= Attack Gent (NIDS)
+Snort Suricata ossec Attack Geni (Host) |
+
+= Attack Gen? (NIDS) |
+Attack Gen? (Host)
+
+Network intrusion Detection System
+
+Figure 12. Number of registered attacks detected by open source NIDS using two attack
+generators attacking one host and NIDS server using Nmap.
+
+Tepdump
+Sending hundreds of thousands of packets every test using attack generator-1 and
+
+attack generator-2 attacking NIDS and the target host generated no attacks detected. But
+running on attack generator-1 and attack generator-2 at the same time, the server hangs
+
+up for a while.
+
+Hydra
+There are many installation manuals of Hydra available in the internet, but
+unfortunately every manual that I have used to install Hydra did not work. Either the
+
+repository is not available or the tar file is not available.
+22|Page
+
+ApacheBench
+
+In testing NIDS using ApacheBench or Apache Benchmarking, Snort and OSSEC
+detected intrusions, but comparing registered number of alerts, Snort have higher number
+of alerts recorded. And in all of the tests done, OSSEC did not detect any intrusion when
+intruding the target host. Prelude is not included in the chart because of failure to install.
+Test results shows that attacking NIDS server and target host using attack generator 2
+shows more registered attacks compared to attack generator 1. And attacking target host
+detects more intrusion alert compared when directly targeting the NIDS server. Figure 13
+shows the number of registered attacks detected by open source NIDS using two attack
+
+generators attacking one host and NIDS server using ApacheBench.
+
+mAttackGen2 (NIDs) |
+‘@ Attack Geni (Host)
+1@ Attack Gen? (NIDS)
+m Attack Gen? (Host)
+= Attack Gent (NIDS)
+Attack Gent (Host)
+Attack Gen2 (NIDS)
+Attack Gen2 (Host)
+Attack Gend (NIDS)
+m Attack Geni (Host)
+Network intrusion Detection System 1 Attack Gen2 (NIDS)
+Attack Gen2 (Host)
+
+‘Number ofregisteredattacks
+
+Snort Suricata ossec
+
+Figure 13. Number of registered attacks detected by open source NIDS using two attack
+generators attaching one host and NIDS server using ApacheBench.
+
+23|Page
+
+B. Evaluating Developed DOST-NIDS
+
+In evaluating developed DOST-NIDS, test results shows that unlike other target
+hosts, only tests on target host in DOST-CO DMZ were detected by DOST-NIDS. I
+assume it is because of the location of the other target hosts. Although ports connected to
+agencies where the target hosts were located are monitored, the monitoring port of the
+NIDS is not directly monitoring their switches where the target hosts were directly
+terminated. Figure 14 shows the number of registered attacks detected by DOST- NIDS
+
+using two attack generators attacking six hosts using ApacheBench.
+
+10000 Attack Generator -1
+
+Attack Generator -2
+= Attack Generator -1
+Attack Generator ~
+Attack Generator
+1m Attack Generator ~
+
+Number of registered
+attacks
+
+Network ntrusion Detection System
+
+Figure 14. Number of registered attacks detected by DOST- NIDS using two attack generators
+attacking six hosts using ApacheBench.
+
+VI. Conclusions
+While there were plenty of Network Intrusion Detection Systems available in the
+
+market, we still have the option of implementing from an open source.
+
+24|Page
+
+Primarily, setting-up open source network intrusion detection system is not an
+easy task. On the other hand, installing and configuring the testing tools for NIDS is even
+more complicated. Even though only a few from open source NIDS and testing tools
+worked, we can still recommend for an open source NIDS solution that can be used in
+DOST-Bicutan network.
+
+By using open source NIDS available, it makes the implementation easy. You can
+also enhance their functions and abilities that they offer as you can edit the codes to suit
+your needs and likes, unlike other equipment-based NIDS that you are only limited to
+
+what they offer.
+
+Vil. Recommendations
+
+I would like to recommend that agencies in DOST-Bicutan area with spare servers
+and with minimum of two (2) Lan cards would implement an open source NIDS for their
+network as it can be a help to monitor their network and online resources from network
+intruders. Combination of open source NIDSs working together in monitoring network
+
+intruders as to enhance the functions and capabilities of DOST-NIDS.
+
+Vill. References:
+
+[1] ABS-CBN News: Hackers continue attacks on China websites. As retrieved from
+http://www.abs-cbnnews.com/-depth/04/30/12/hackers-continue-attacks-china-
+websites 11 September 2012
+
+[2] ABS-CBN News: PAGASA website hacked. As retrieved from http://www.abs-
+cbnnews.com/nation/05/09/12/pagasa-website-hacked 11 September 2012
+25|Page
+
+
+(3)
+
+ABS-CBN News: Chinese hackers attack more Philippine websites. As retrieved
+from http://www.abs-cbnnews.com/nation/05/12/12/chinese-hackers-attack-more-
+philippine-websites 11 September 2012
+
+[4] ABS-CBN News: Anti-cybercrime law protesters hack websites. As retrieved from
+http://www.abs-cbnnews.com/business/09/26/12/hackers-deface-bsp-website-
+
+protest-cybercrime-law 27 September 2012
+
+[5] ABS-CBN News: Sotto's website hacked as cybercrime law debate resumes. As
+retrieved from http://www.abs-cbnnews.com/nation/01/07/13/sottos-website-hacked-
+
+cybercrime-law-debate-resumes 15 January 2013
+
+[6
+
+Apache HTTP server benchmarking tool. As retrieved from
+http:/Mnttpd.apache.org/docs/2.2/programs/ab.html 2 October 2012
+
+(7
+
+Apache HTTP server benchmarking tool for apache stress test. As retrieved from
+hitp://www.debianhelp.co.uk/apacheab.htm 1 October 2012
+
+[8
+
+How to install Nmap into Ubuntu. As retrieved from
+http://namhuy.org/blog/32/how-to-install-nmap-into-ubuntu/ 2 October 2012
+
+9)
+
+How to install Scapy on Ubuntu 12.04. As retrieved from
+http://samiux. blogspot.com/2012/05/howto-scapy-220-on-ubuntu-1204-Its.htm! 1
+October 2012
+
+[10] Hping: Home. As retrieved from http://Awww.hping.org/ 2 October 2012
+
+[11] Hping3 on Ubuntu 9.04. As retrieved from
+http://w ww.compuhowto.com/linux/ubuntu/hping3-on-ubuntu-9-04/ 2 October 2012
+
+[12] Install THC-Hydra 6.4 in Ubuntu 11.04. As retrieved from
+http://ubuntuforums.org/showthread.php?t=1800683 2 October 2012
+
+[13] Intrusion Detection: Snort (IDS), OSSEC (HbIDS) And Prelude (HIDS) On Ubuntu
+Gutsy Gibbon. As retrieved from from http://www.howtoforge.com/snort-ossec-
+prelude-on-ubuntu-gutsy-gibbon 8 October 2012
+
+[14] Netcat — Netcat for the 21* Century. As retrieved from http://nmap.org/ncat/ 2
+October 2012
+
+[15] Netcat tutorial for beginners. As retrieved from http://www. binarytides.com/netcat-
+tutorial-for-beginners/ 2 October 2012
+26|Page
+
+[16] Nmap Network Scanning. As retrieved from http://nmap.org/book/man.html#man-
+description 2 October 2012
+
+17] OSSEC HIDS Manager/Agent Installation. As retrieved from
+http://www.ossec.net/doc/manual/installation/index.html 24 September 2012
+
+[18] Welcome to Prelude Universal Open-Source SIEM project. As retrieved from
+
+https://www.prelude-ids.org/ 22 October 2012
+
+19] Pytbull Installation Manual. As retrieved from
+http://pytbull sourceforge. net/index. php?page=documentation&version=2.0 1
+October 2012
+
+[20] Pytbull Wiki. As retrieved from http://sourceforge.net/p/pytbull/wiki/Home/ 2
+October 2012
+
+[21] Scapy installation. As retrieved from
+http://www. secdev.org/projects/scapy/doc/installation.htm! 1 October 2012
+
+[22] Scapy: About Scapy. As retrieved from http://www, secdev.org/projects/scapy/ 2
+October 2012
+
+[23] Snort: Home Page. As retrieved from http://www.snort.org/ 1 October 2012
+
+[24] Snort 2.9.3 and Snort Report 1.3.3 Installation Guide for Ubuntu. As retrieved from
+http://wiki.aanval.com/wiki/Community:Snort_2.9.3_and_Snort_Report_1.3.3_Instal
+lation Guide for Ubuntu 12.04 LTS 1 October 2012
+
+[25] Suricata — Ubuntu Installation. As retrieved from
+https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Basic_Setup 8
+October 2012
+
+[26] Tepdump: Home Page. As retrieved from http:/www.tepdump.org/ 2 October 2012
+
+[27] Tepdump Manual. As retrieved from
+http://manpages.ubuntu.com/manpages/lucid/man8/tepdump.8.html 2 October 2012
+
+[28] THC-Hydra: Home Page. As retrieved from http://www.the.org/the-hydra/ 2 October
+2012
+
+[29] Welcome to OSSEC’s documentation. As retrieved from http://www.ossec.net/doc/
+2 October 2012
+
+27|Page
+
+(30] What are the top selling IDS/IPS and what differentiates them from each other. As
+
+October 2012
+
+[31] What is Suricata - Suricata. As retrieved from
+https://redmine.openinfosecfoundation.org/projects/suricata/wiki/What_is Suricata 2
+October 2012
+
+[32] What is Ubuntu — The Ubuntu story As retrieved from
+http://www ubuntu.com/project/about-ubuntu 2 October 2012
+
+[33] Windows Security — Network Intrusion Detection Systems. As retrieved from
+http://www.windowsecurity.com/whitepapers/intrusion_detection/FAQ Network In
+trusion_ Detection Systems_.html 2 October 2012
+
+IX. Appendices
+
+A. Qualifications
+
+The author is the system administrator of the DOST-ITD who also handles the
+administration of the network infrastructure. He is also involved in administering network
+connection of the DOST-Bicutan network.
+
+Massive research, test and gathering of open source tools have been made to
+prove the feasibility of the said project as a result, the author advanced his knowledge in
+
+securing network infrastructure from network intruders.
+
+28|Page
+
+Educational background
+
+Bachelor of Science in Computer Engineering
+
+AMA Computer College — Quezon City Campus 2001
+Master in Information and Technology - Graduating
+University of the Philippines ~ Los Bafios, Laguna 2013
+
+Scholar - DOST ASTHRDP
+
+B. Contributors / Collaborators
+
+Mr. Louie Carl L. Mandapat who guided and assisted me in designing and
+encoding the NIDS for DOST-Bicutan.
+
+Prof. Concepcion L. Khan who acts as the project consultant.
+
+C. Resources
+Since the project wastested and implemented in the network of DOST-CO,
+access and use of its network facilities including network equipments and peripherals was
+
+used.
+
+D. Complete program listing
+
+Available at the Institute of Computer Science Library
+
+(Directory: dost-nids)
+
+29|Page
+
+E. Technical reference
+
+Server Specification (DOST-NIDS)
+
+°
+
+°
+
+°
+
+°
+
+Model: Acer Veriton M4 Series (M490G)
+
+Operating System: Ubuntu 12.04 LTS
+
+Processor: 4x Intel® Core ™ i5 CPU 661@3.33GHz
+
+Memory: 4.00GB
+
+System type: Linux 3.2.0-29-generic-pae (i686)
+
+Network
+
+Adapter 1: Realtek RTL-8139 Fast Ethemet driver
+
+Adapter 2: Realtek RTL-8139C+ series 10/100 PCI Ethemnet driver
+Adapter 3: Intel® PRO/1000 Fast Ethernet Network Driver
+
+Hard disk: ITB HDD
+
+Storage: ATA ST31000528AS
+
+Attack generator-1 specifications
+
+°
+
+°
+
+°
+
+°
+
+Model: TravelMate 6292
+Operating System: Ubuntu 10.04 LTS
+
+Processor: 2x Inter® Core ™ 2 Duo CPU T5870@2.00GHz
+Installed memory (RAM): 2052 MB
+
+System type: 64-bit Operating System
+
+Hard disk: 250Gb HDD
+
+Attack generator-2 specifications
+
+°
+
+°
+
+Model: HP Proliant 400
+
+Operating System: Ubuntu 10.04 LTS
+
+30| Page
+
+© Processor: 2x Inter® Core ™ 2 Duo CPU T5870@2.00GHz
+© Installed memory (RAM): 2052 MB
+© System type: 64-bit Operating System
+© Hard disk: 250Gb HDD
+
+Target host specifications
+o Model: HP Proliant ML350 G6
+o Operating System: Ubuntu 10.04 LTS
+© Processor: 8x Inter® Xeon® CPU E5520@2.27GHz
+o Memory: 8.00 GB
+© System type: Linux 2.6.32-21-generic-pae (i686)
+o Hard disk: 160Gb HDD
+o Storage: ATAPI iHAS124
+o Network: Broadcom Tigon3 Ethernet Drive
+
+Switch specifications:
+© Model: 3Com Baseline Switch 2250-SFP Plus — 3CBLSF50H
+© Physical dimensions (HxWxD): 44mm x 440mm x 238mm
+© Weight: 2.9 kg
+o Console port: 1
+o Ethernet port: 48
+© Gigabit combo port: 2
+o Current rating: 2Amp max
+
+© Power consumption (full load): 26W
+
+31|Page
+
+Operating System
+
+© Open source operating system Ubuntu 12.04 LTS server
+
+F. Installation Manual
+
+Installation Manuals of Open Source Network Intrusion
+Detection System
+
+Installation manuals of Snort, Suricata, OSSEC and Prelude were presented for
+
+reference.
+
+Snort Installation Manual "|
+© Installing the required packages
+apt-get install nmap nbiscan apache2 phpS php5-mysql php5-gd libpcap0.8-dev
+libpere3-dev g++ bison flex libpcap-ruby make autoconf libtool mysql-server
+libmysqiclient-dev
+© Updating and upgrading the server
+
+apt-get update
+apt-get upgrade
+
+© Download and install JpGraph (Optional)
+
+weet hitp://hem. bredband.net/ipgraph/jpgraph-1.27.1.tar. gz
+mkdir /var/www/ipgraph
+
+tar -xvzf jpgraph-1.27. ].tar.gz
+
+¢p-r jpgraph-1.27.1/sre Warhwwwijpgraph/
+
+© Download and setup Snort report
+
+Download the snortreport at http://www.symmetrixtech.com under the downloads
+section. Download snortreport-1.3.3.tar.gz to the IDS server.
+
+32| Page
+
+tar -xvzf snortreport-1.3.3.tar.gz -C /var/www/
+nano /var/www/snortreport-1.3.3/srconf php
+Change the following line from:
+
+Spass = "YOURPASS";
+
+To the value of your mysql password
+$pass = "YOURPASSWORD";
+Save the file and exit
+Download and install the Data Acquisition API
+
+Download the Data Acquisition API at http://www.snort.org/downloads/1806.
+Download dag-1.1.1.tar.gz to the IDS server.
+
+tar -xvef dag-1.1.1.tar.gz
+
+cd dag-1.1.1
+
+sudo ./configure
+
+sudo make
+
+sudo make install
+
+Download and install libdnet
+
+Download libdnet at http://libdnet.googlecode.conv/files/libdnet-1.12.tgz and istall
+it using these commands:
+
+tar ~xvef libdnet-1.12.1g2
+
+ed libdnet-1.12/
+
+make
+
+make install
+
+In-s /usrfocal/lib/libdnet.1.0.1 /usr/ibftibdnet.1
+
+Download and install Snort
+
+While we can install Snort packages from Ubuntu repositories, that doesn’t
+guarantee that the latest version is available in that repository. Open
+http://www.snort.org/snort-downloads with your browser and download the latest
+stable version. After downloading, install snort using these commands:
+
+tar -xv2f snort-2.9.3.tar.gz
+
+ed snort-2.9.3
+
+configure ~prefix=/usr/local/snort -enable-sourcefire
+
+make
+
+make install
+
+mkdir /var/log/snort/
+
+mkdir /var/snort
+
+groupadd snort
+
+useradd -g snort snort
+
+chown snort:snort /var/log/snort
+
+33|Page
+
+© Download latest Snort rules
+
+Download the latest rules from http://www.snort.org/snort-rules
+
+tar -xv2f snort-rules-snapshot-2930.tar.gz ~C /usr/local/snort
+
+mkdir /usr/local/snort/lib/snort_dynamicrules
+
+op /usr/local/snort/so_rules/precompiled/Ubuntu-10-4/i386/2.9.3.0/*
+/usrNocal/snort/lib/snort_dynamicrules
+
+touch /usr/local/snort/rules/white_list.rules
+
+touch /usr/ocal/snort/rules/black_list.rules
+
+ldconfig
+
+nano /usr/local/snort/etc/snort.conf
+
+Change these lines from:
+
+var WHITE_LIST_PATH ../rules
+
+var BLACK_LIST_PATH ../rules
+
+To this:
+
+var WHITE_LIST_PATH /usr/local/snort/rules
+
+var BLACK_LIST_PATH /usr/local/snort/rules.
+
+Change these lines from:
+
+dynamicpreprocessor directory /usr/local/lib/snort_dynamicpreprocessor/
+dynamicengine /usr/local/lib/snort_dynamicengine/libsf_engine.so
+dynamicdetection directory /usr/local/lib/snort_dynamicrules
+
+To thi
+dynamicpreprocessor directory /usr/local/snort/lib/snort_dynamicpreprocessor/
+dynamicengine /usr/local/snort/lib/snort_dynamicengine/libsf_engine.so
+dynamicdetection directory /usr/local/snort/lib/snort_dynamicrules
+
+Below this line:
+
+Houtput unified2: filename merged.log, limit 128, nostamp, \
+mpls_event_types, vlan_event_types
+
+Add this line
+output unified2: filename snort.u2, limit 128
+
+© Download and install Barnyard2
+
+weet https://nodeload. github.com/firnsy/barnyard2/tarball/master \
+
+-O barnyard2-2.10.tar. gz
+
+tar -xvzf barnyard2-2.10.tar.gz
+
+firnsy-barnyard2*
+
+autoreconf -fvi -I./m4
+
+Jconfigure ~-with-mysql -with-mysql-libraries=/usr/lib/i386-linux-gnu
+make
+
+make install
+
+cp etc/barnyard2.conf /usr/local/snort/ete
+
+mkdir /varlog/barnyard2
+
+34|Page
+
+chmod 666 /var/log/barnyard2
+
+touch /var/log/snort/barnyard2.waldo
+
+chown snort.snort /var/log/snort/barnyard2.waldo
+
+echo "create database snort;" | mysql -u root -p
+
+mysql -u root -p -D snort < ./schemas/create_mysql
+
+echo "grant create, insert, select, delete, update on snort.* to snort@localhost \
+identified by 'YOURPASSWORD" | mysql -u root =p
+
+nano /usr/local/snort/etc/barnyard2.conf
+
+Change the following lines from:
+
+config reference_file: /etc/snort/reference.config
+
+config classification_file: /etc/snort/classification.config
+
+config gen_file: /etc/snort/gen-msg.map_
+
+config sid_file: /etc/snort/sid-msg.map
+
+#config hostname: thor
+
+#config interface: ethO
+
+#output database: log, mysql, user=root password=test dbname=db host=localhost
+To this:
+
+config reference_file: /usr/local/snort/etc/reference.config,
+
+config classification_file: /usr/local/snort/etc/classification.config
+
+config gen_file: /usr/local/snorvetc/gen-msg.map
+
+config sid_file: /usr/local/snort/etc/sid-msg.map
+
+config hostname: localhost
+
+config interface: eth]
+
+output database: log, mysql, user=snort password=YOURPASSWORD
+dbname=snort \
+
+host=localhost
+
+Setup network cards
+
+nano /etc/networH/interfaces
+
+Change the following lines from:
+auto ethO
+iface eth0 inet dhep
+
+To this:
+auto ethO
+iface eth0 inet static
+address 192.168.1.1
+netmask 255.255.255.0
+network 192.168.1.0
+broadcast 192.168.1.255
+gateway 192.168.1.1
+
+‘Add the following lines at the end:
+auto eth!
+
+35|Page
+
+iface eth] inet manual
+ifconfig eth] up
+/etc/init.d/networking restart
+
+© Testing Snort
+
+sudo /usr/local/snort/bin/snort -u snort -g snort \
+-¢ /usrNocal/snort/etc/snort.conf -i eth]
+© Set Snort to start automatically
+
+nano /etc/rc.local
+Add the following lines before “exit 0”:
+ifconfig eth] up
+/asr/local/snort/bin/snort -D -u snort -g snort \
+~c /usr/local/snort/ete/snort.conf -i eth!
+/asr/local/bin/bamyard2 -c /usr/local/snort/etc/bamyard2.conf \
+-G /usr/local/snort/ete/gen-msg.map \
+-S /usr/local/snorvete/sid-msg.map \
+-d /var/log/snort \
+-f snort.u2\
+-w /var/log/snort/bamyard2.waldo \
+Zetc/init.d/rc.local start
+
+© Monitoring your System
+
+We can monitor the Snort Report main page by browsing to:
+http://192.168. 1. 1/snort-report-1.3.3/alerts.php
+
+Suricata Installation Manual |
+© Update and upgrade the server
+
+apt-get update
+apt-get upgrade
+
+© Installing the require packages
+
+36|Page
+
+apt-get install libpcre3 libpcre3-dbg libpcre3-dev build-essential autoconf
+automake libtool libpcap-dev libnet-dev libyaml-0-2 libyaml-dev zliblg zliblg-
+dev libeap-ng-dev libcap-ng0 make libmagic-dev
+
+Suricata as IDS and IPS (Optional)
+By default, Suricata works as an IDS. If you want to use it as IDS and IPS, enter:
+
+sudo apt-get -y install libnetfilter-queue-dev libnetfilter-queuel libnfnetlink-dev
+libnfnetlinko
+
+Download and install Suricata
+
+weet hitp://www.openinfosecfoundation.org/download/suricata-I.3.1.tar.gz
+tar -xv2f suricata-I.3.].tar.gz
+ed suricata-1.3.1
+
+Compile and install the engine
+
+Ifyou plan to build Suricata with IPS capabilities, enter:
+
+/configure --enable-nfqueue --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+instead of
+
+configure --prefix=/usr ~-sysconfdir=/etc --localstatedir=/var
+
+Continue with the next commands:
+
+configure --prefix=/usr ~-sysconfdir=/etc -localstatedir=/var
+make
+
+make install
+
+ldconfig
+
+Auto Setup (Options)
+
+You can also use the available auto setup features of Suricata:
+
+ex:
+
+Jconfigure && make &é& make install-conf
+make install-conf
+
+37|Page
+
+would do the regular "make install" and then it would automatically create/setup
+all the necessary directories and suricata.yaml for you.
+
+Jeonfigure && make && make install-rules
+make install-rules
+
+would do the regular "make install" and then it would automatically download
+and set up the latest ruleset from Emerging Threats available for Suricata
+
+configure && make && make install-full
+
+make install-full
+
+would combine everything mentioned above (install-conf and install-rules) - and
+will present you with a ready to run (configured and set up) Suricata
+
+Suricata Installation
+
+mkdir /varflog/suricata
+
+mkdir /etc/suricata
+
+ep classification.config /etc/suricata
+ep reference.config /etc/suricata
+
+ep suricata.yaml /etc/suricata
+
+Enabling Suricata
+
+nano /etc/default/suricata
+*Change RUN=”"no” to RUN="yes”
+RUN="yes”
+
+Start Suricata
+
+suricata -D -c /etc/suricata/suricata.yaml -s /etc/suricata/classification.config -i
+ethO
+
+Monitoring your system
+
+cd /var/log/suricata
+tail http.log
+tail -n 50 stats.log
+To make sure the information displayed is up-dated in real time, use the -f option
+before http.log and stats.log:
+38|Page
+
+tail f http.log stats.log
+
+OSSEC Installation Manual ""!
+© Download the latest version and verify its checksum
+
+weet http.//www.ossec.net/files/ossec-hids-2.6.tar.gz
+wget http://www.ossec.net/files/ossec-hids-2.6_checksum.txt
+cat ossec-hids-2.6_checksum.txt
+MDS (ossec-hids-2.6.tar.gz) = £4140ecf25724b8e6bdcaceaf735138a
+SHA (ossec-hids-2.6.tar.gz) = 258b9a24936e6b6 1 e0478b638e8a3bfd3882d91e
+MDS (ossec-agent-win32-2.6.exe) = 7d2392459aeab7490f28a1 0bba07d8b5
+SHAI (ossec-agent-win32-2.6.exe) =
+fdb5225acOef63 1d10e5110c1cla8aa473e62ab4
+mdSsum ossec-hids-2.6.tar.gz
+MDS (ossec-hids-2.6.tar.gz) = £4140ecf25724b8e6bdcaceaf735138a
+shalsum ossec-hids-2.6.tar.gz
+SHA! (ossec-hids-2.6.tar.gz) = 258b9a24936e6b6 1 e0478b638e8a3 bfd3882d9 le
+
+© Extract the compressed package and run the “/install.sh”
+
+tar -zxvf ossec-hids-*.tar.gz (or gunzip -d; tar -xvf)
+cd ossec-hids-*
+Jinstall.sh
+
+o Start OSSEC HIDS
+
+/var/ossec/bin/ossec-control start
+
+Prelude Installation Manual"!
+© Update and upgrade the server
+
+apt-get update
+apt-get upgrade
+
+39|Page
+
+Install the required packages
+
+apt-get install ntpdate
+apt-get install dbconfig-common
+Installing and configuring Prelude
+
+apt-get install prelude-manager
+nano /etc/prelude-manager/prelude-manager.conf
+listen = xxx.xxx.xxx.xxx
+
+Enabling Prelude
+
+nano /etc/default/prelude-manager
+*Change RUN=”no” to RUN="yes”
+RUN="yes”
+
+Start/Stop Prelude-manager
+
+/etc/init.d/prelude-manager stop
+Zetc/init.d/prelude-manager start
+
+Monitoring your system
+
+ps ax | grep manager
+netstat ~pantu | grep prelude
+
+Installing Prelude-Iml on host system
+
+apt-get install prelude-Iml
+
+Configuring the address of the prelude-manager
+
+nano /etc/prelude/default/client.conf
+[prelude]
+server-addr = 127.0.0.1
+
+Registering the client to the server
+
+***On the client, run:
+
+40|Page
+
+prelude-adduser register prelude-Iml “idmef:w” <manager address> --uid 0-gid
+0
+
+***On the manager, run:
+
+prelude-adduser registration-server prelude-manager
+© Stop/start Prelude-Iml
+
+/etc/init.d/prelude-Iml stop
+/etc/init.d/prelude-Iml start
+
+Installation Manuals of Open Source Network Intrusion
+Detection Testing Tools
+
+Installation manuals of Pytbull, Scapy, Netcat, Hping, Nmap, Tepdump, Hydra
+
+and ApacheBench were presented for reference.
+
+Pytbull Installation Manual ")
+Pytbull installation on client
+© Update and upgrade the server
+apt-get update
+apt-get upgrade
+© Install required packages
+
+apt-get install python python-scapy python-feedparser python-cherrypy3 nmap
+hping3 nikto tcpreplay apache2-utils
+
+© Install Nerack to test bruteforce module
+
+weet http://nmap.org/ncrack/dist/ncrack-0.4ALPHA.tar.gz
+tar -xzf ncrack-0.4ALPHA.tar.gz
+
+ed ncrack-0.4ALPHA
+
+/configure
+
+41|Page
+
+make
+make install
+
+o Download and install Pytbull
+
+cd /usr/local/src/
+
+weet https://downloads.sourceforge.net/project/pytbull/pytbull-2.0.tar.bz2
+bzip2 -cd pytbull-2.0.tar.bz2 | tar xf -
+
+my pytbull/ /opt/
+
+cd /opt/python/
+
+o Install from mercurial
+
+apt-get install mercurial
+cd /opt/
+sudo hg clone http://pytbull.hg. sourceforge.net:8000/hgroot/pytbull/pytbull
+
+o To start pytbull on client
+
+python pytbull.py -t {IP of server}
+
+Pytbull installation on server
+
+© Update and upgrade the server
+
+apt-get update
+apt-get upgrade
+
+© Install required packages
+
+apt-get install python vsftpd apache2 openssh-server
+
+© Allow anonymous login on FTP
+
+nano /etc/vsfipd.conf
+# Allow anonymous FTP? (Disabled by default)
+anonymous_enable=NO-
+# Uncomment this to allow local users to log in.
+local_enable=YES
+
+42|Page
+
+© To start pytbull on server
+
+python pytbull-server.py --port 34567
+
+‘Scapy Installation Manual !"*41
+© Update and upgrade the server
+
+apt-get update
+apt-get upgrade
+
+© Install Scapy and required packages
+
+apt-get install python-scapy python-pyx python-gnuplot tcpdump graphviz
+imagemagick
+
+© Tostart Scapy
+
+sudo scapy
+
+Netcat Installation Manual "*!
+
+© Update and upgrade the server
+
+apt-get update
+apt-get upgrade
+
+o Installing netcat and required packages
+
+apt-get install netcat netcat-traditional netcat-openbsd nmap
+
+Hping Installation Manual"!
+
+© Update and upgrade the server
+
+43|Page
+
+apt-get update
+apt-get upgrade
+
+© Installing Hping
+
+apt-get install hping3
+
+Nmap Installation Manual ®!
+© Update and upgrade the server
+
+apt-get update
+apt-get upgrade
+
+© Nmap installation
+
+apt-get install nmap
+
+Tcpdump Installation Manual?”
+© Update and upgrade the server
+
+apt-get update
+apt-get upgrade
+
+© Update and upgrade the server
+
+apt-get install tepdump
+
+Hydra Installation Manual '?!
+
+© Update and upgrade the server
+
+apt-get update
+
+44|Page
+
+apt-get upgrade
+
+© Installing required packages
+
+apt-get install libssh-dev libidn! I-dev libpcre3-dev libsyn-dev libfbclient2
+libgtk2.0-dev cmake
+
+emake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=debug ..
+make
+
+sudo make install
+
+ed../.
+weet -c http://the.org/thc-hydra/releases/hydra-6.4-src.tar. gz
+weet -c http://www.libssh.org/files/0.S/libssh-0.5.0.tar. gz
+
+tar -xvef libssh-0.5.0.tar.gz
+
+cd libssh-0.5.0
+
+mkdir build
+
+ed build
+
+© Installing hydra
+
+tar -xvaf hydra-6.4-sre.tar. gz
+cd hydra-6.4-sre
+
+/configure
+
+make
+
+make install
+
+cd hydra-gtk
+
+Sconfigure
+
+make
+
+sudo make install
+
+©. Start hydra
+
+hydra or xhydra
+
+ApacheBench Installation Manual"!
+
+© Update and upgrade the server
+
+45|Page
+
+apt-get update
+apt-get upgrade
+
+© Update and upgrade the server
+
+apt-get install apache2-utils
+
+G. User Manual
+
+1. Introduction
+
+DOST-Network Intrusion Detection System is an open source web-based system that is
+designed to aid the Information Technology Division in monitoring network traffic for
+
+any malicious activities that are allowed in the firewall.
+
+1.1 Functions
+© — Monitor network traffic for any malicious activities.
+
+© Performs real-time traffic analysis and packet logging on IP networks.
+
+© Provides overview of the systems traffic analysis through graphical
+
+representations.
+
+1.2 System Requirements
+
+DOST-NIDS is a web-based monitoring tool that can be accessed on major
+browsers. It has been tested and viewed best on Internet Explorer version 7 or
+
+later, Firefox 3 or later and Chrome version 4 or later.
+
+46|Page
+
+1.3 Objectives of the Manual
+
+This User Manual serves as a guide for network and system administrators
+on how to use the DOST-NIDS. It shall provide detailed instructions on what
+
+the system displays.
+
+1.4 Definition of Terms
+
+DOST (Department of Science and Technology) — refers to the executive
+office under the Office of the Secretary (OSEC) who has the overall
+administration and supervision of the Department.
+
+NIDS (Network Intrusion Detection System) — an intrusion detection system
+that attempts to discover unauthorized access to a computer network by
+
+analyzing traffic on the network for signs of any malicious activity.
+
+2. Accessing the System
+
+To access the system, a user is not required to enter valid username and password.
+
+The users just have to know the URL of the system. (See Figure 2)
+
+{3 DOST-NIDS Report x \
+€ ~ © [5 101010222
+
+Figure 2 Screenshot of DOST-NIDS URL
+
+47|Page
+
+3. Default Screen
+Upon accessing the system, an overview of the systems traffic analysis of the
+network is displayed through graphical representations. (See Figure 3)
+
+Figure 3 Screenshot of DOST-NIDS default screen
+
+48|Page
+
+4, Components
+
+DOST Network Intrusion Detection System is divided into several parts. (See
+
+Figure 4)
+
+Figure 4 DOST-NIDS Components
+
+These are the components of the Default Screen:
+
+1 | DOST-NIDS logo 5 | Detail by signatures
+
+2 | Timeframe 6 _| Sources and destinations triggering the attacks
+3 _ | Alerts by severity 7 _| Weekly and yearly protocol alerts
+
+4 _| Alerts by protocol 8 | Weekly and yearly severity alerts
+
+49|Page
+
+
+4.1 DOST-NIDS Logo
+DOST-NIDS logo is composed of an image of the DOST’s mascot, title of the
+system and a recognition to credit Snort’s ability to detect network intruder. (See Figure
+
+4-1)
+
+( we NETWORK INSTRUSION DETECTION
+Sa Be.
+
+SYSTEM
+
+Powered by Snon
+
+Figure 4-1 Screenshot of DOST-NIDS logo
+
+4.2 Timeframe
+
+This section allows user to select what timeframe they want to display on the
+screen. The selected timeframe’s result is displayed in the pie chart, column bar chart,
+signature details and the IP of sources/destinations — attack signatures. The current time
+of the system and numbers of TCP alerts are also displayed in this area. Pie chart, column
+bar chart, signature details and the IP of sources/destinations — attack signatures are the
+
+only affected areas in the timeframe display. (See Figure 4-2)
+
+(Timeframe: 2013-09-17 14 1656 to 2013-00-18 14.10.54
+\Current Time: 2013-03-18 14:18:54
+[Number of TCP Alerts: 3881
+
+Tiare]
+
+ic}
+
+Day.
+
+Figure 4-2 Screenshot of DOST-NIDS timeframe
+
+50|Page
+
+4.2.1 Dropdown - Timeframe
+
+This section allows user to select what timeframe they want to display
+using the dropdown list where the user can choose what to display from the
+span of 1 hour, 3 hours, 6 hours, 12 hours, 24 hours, 48 hours, 72 hours, 7 days,
+
+14 days and 30 days. (See Figure 4-2-1)
+
+Timeframe: |
+
+Last 1 hour
+Last 3 hours
+
+Last 6 hours
+
+Last 12 hours
+Last 24 hours
+Last 48 hours
+Last 72 hours
+Last 7 days
+
+| Last 14 days
+| Last 30 days
+[All
+
+Figure 4-2-1 Screenshot of DOST-NIDS dropdown — Timeframe
+
+4.2.2 Dropdown - Day
+This section allows user to select what date they want to display using
+
+the dropdown list. The user can choose on a day basis up to a maximum of 31
+
+days from the present day. (See Figure 4-2-2)
+
+S1|Page
+
+2013-03-15 |
+| 2013-03-14)
+| 2013-03-13
+| 2013-03-12
+| 2013-03-11 |
+2013-03-10 |
+| 2013-03-09
+
+| 2013-03-08
+
+| 2013-03-07
+
+| 2013-03
+
+|
+
+|
+
+| 2013-03-04 |
+| 2013-03-03 |
+j 2013-03-02
+| 2013-03-01
+2013-02-28
+201
+
+Figure 4-2-1 Screenshot of DOST-NIDS dropdown - Day
+
+4.3. Alerts by severity
+
+This section shows the alerts by severity on the selected timeframe. It displays
+how many attacks of Priority 1, Priority 2 and Priority 3 alerts were detected by the
+
+system as part of the pie chart. (See Figure 4-3)
+
+|ALERTS BY SEVERITY
+
+Figure 4-3 Screenshot of DOST-NIDS Alerts by severity
+
+52|Page
+
+4.4 Alerts by protocol
+This section shows the alerts by protocol on the selected timeframe. It displays
+how many attacks of TCP, UDP and Portscan alerts were detected by the system in a
+
+column bar chart. (See Figure 4-4)
+
+ALERTS BY PROTOCOL
+sk 3681
+
+1108
+
+o (J
+
+TcP = -UDP_—Portsean
+
+[__Tyaes of alerts |
+
+Figure 4-4 Screenshot of DOST-NIDS Alerts by protocol
+
+4.5 Detail by signatures
+This section shows the detail by signatures on the selected timeframe. It displays
+
+the summarized details of the attack signatures detected. Number of alerts and how many
+sources of that attack came from and its destination is also displayed. A summarized
+detail can also be viewed by clicking the “summary” and it will be displayed in the
+
+sources and destinations triggering the attacks table below. (See Figure 4-5)
+
+53|Page
+
+Signature L
+
+[1 [WEB-PHP Wordpress timthumb php theme remete fle include alack atlempt —|s0 o i summa |
+2 —[y [FLE.OENTFY Ponable Executable binary fle mage detected f i Fr na
+[1 _|SPECIFIC-THREATS nelsky p sip propagation detection i ft i Fsunmay
+[yy PHETSIOS DCERPC HICACHIP-TCP seve HetpPathCanoncaize ph 1 i i =
+
+canonicaizaton stack ovefow ater
+IE] NETOIOS DCERPG NICACHP-TOP snsve NeuPaiCenonicalze oflow alemplll i i a
+(_]1_[SPECRIC-THREATS mstast tempt B i mm
+fp fetegs ocenec ncacieterisytenaciatrRenancaine rn ae
+(¢__ |v Fve ENFY downoad of execute content kaso ISnmay
+
+Figure 4-5 Screenshot of DOST-NIDS Detail by signatures
+
+4.6 Sources and destinations triggering the attacks
+
+This section shows the sources and destinations triggering the attacks on the
+selected timeframe. It displays the source IP triggering the attack signature and the
+destination IP receiving the attack signature detected. A fully qualified domain name
+(FQDN) is displayed if there is any or just the IP address, number of alert signatures, total
+number of alerts, total source IP’s and destination IP’s are also displayed in the table.
+
+(See Figure 4-6)
+
+Sources Ti ij This Attack Signature
+[Source IP Jroow ‘Alerts (sig) =
+02.90.141.22 _[pub-141-22 mis. dost gov ph a fet
+
+Destinations Receiving This Attack Si
+
+gnature
+B02 90 141.18 _[pvb-s3 18 mis dost gov gh a Bt q a
+
+Figure 4-6 Screenshot of DOST-NIDS Sources and destinations triggering the attacks
+
+4.7 Weekly and yearly protocol alerts
+
+This section shows the weekly and yearly protocol alerts in tabular form.
+
+54|Page
+
+4.7.1 Weekly protocol alerts
+This section shows the total number of TCP, UDP and Portscan attacks
+
+detected for the past week. (See Figure 4-7-1)
+
+[PROTOCOL ALERTS
+
+Weekly | Yearly
+
+Daily Alerts
+
+*
+
+Monaay Tuesday Wednesday Thursday Friday Saturday Sunday
+
+Figure 4-7-1 Screenshot of DOST-NIDS weekly protocol alerts
+
+4.7.2 Yearly protocol alerts
+This section shows the total number of TCP, UDP and Portscan attacks
+detected from the past months up to the current month’s previous day. (See
+
+Figure 4-7-2)
+
+[PROTOCOL ALERTS
+
+weekly Yearly
+
+Monthly Alerts
+
+‘Apr May Jun Jul Aug Sep Oct Nov Dec Jan Feb Mar
+
+Figure 4-7-2 Screenshot of DOST-NIDS yearly protocol alerts
+
+55|Page
+
+4.8 Weekly and yearly severity alerts
+
+This section shows the weekly and yearly severity alerts in tabular form.
+
+4.8.1 Weekly severity alerts
+This section shows the total number of Priority 1, Priority 2 and Priority
+
+3 attacks detected for the past week. (See Figure 4-8-1)
+
+‘SEVERITY ALERTS
+
+Weekly Yearly
+
+Daily Alerts
+
+© stonday Tuesday Weanesday Thursday Friday Satureay Sunday
+
+Figure 4-8-1 Screenshot of DOST-NIDS weekly severity alerts
+
+4.8.2 Yearly severity alerts
+This section shows the total number of Priority 1, Priority 2 and Priority
+3 attacks detected from the past months up to the current month’s previous day.
+
+(See Figure 4-8-2)
+
+56|Page
+
+Weekly | Yearly
+
+i Monthly Alerts
+
+Paorty
+
+Apr May jun Jul Aug Sep Oct Nov Ose Jan
+
+SEVERITY ALERTS: |
+|
+J
+
+Figure 4-8-2 Screenshot of DOST-NIDS yearly severity alerts
+
+5, Email Report
+DOST Network Intrusion Detection System provides daily email report to the
+DOST-NIDS’s system administrator. The email includes the total number of TCP, UDP,
+
+Portscan, Priority 1, Priority 2, and Priority 3 alerts detected of the previous day. (See
+
+Figure 5)
+
+Figure 5 Screenshot of DOST-NIDS Email report
+
+57|Page
+

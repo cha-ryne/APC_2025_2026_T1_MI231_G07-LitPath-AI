@@ -1,0 +1,1705 @@
+i
+in
+\
+th: oe
+4
+
+—
+ie:
+OURMIT IED YS PAR RACULY, +
+
+il '
+
+ant frre CoMmPirin sem c:
+
+J REVTY OE HE Pu IPPiNKs
+
+IN PARC Ey
+
+BECURTY NTS FOR TE!
+
+STOR WIN VOR AT
+
+The DOST Courseware Project 2.0
+“Breaking Language Barrier Through Localized-Text Translation and
+Annotation”
+
+LOUIE CARL R. MANDAPAT
+
+SUBMITTED TO THE FACULTY OF
+INSTITUTE OF COMPUTER SCIENCE
+UNIVERSITY OF THE PHILIPPINES - LOS BANOS
+IN PARTIAL FULFILLMENT OF THE
+REQUIREMENTS FOR THE DEGREE OF
+
+MASTER IN INFORMATION TECHNOLOGY
+
+APRIL 2013
+
+Disclaimer
+“This project is submitted to the Institute of Computer Science in partial
+fulfillment of the requirements for the degree Master in Information Technology at the
+University of the Philippines Los Bafios. It is the product of my own work except where
+indicated in the text. The project report or any portion thereof including the source code
+or any section may be freely copied and distributed provided that the source code is
+
+acknowledged.”
+
+Acceptance Sheet
+
+The special problem hereto, entitled “BREAKING LANGUAGE BARRIER
+THROUGH LOCALIZED-TEXT TRANSLATION AND ANNOTATION,” prepared
+and submitted by LOUIE CARL R. MANDAPAT in partial fulfillment of the
+requirements for the degree of MASTER IN INFORMATION TECHNOLOGY is hereby
+
+accepted.
+
+snort souco sare ‘(Acuasteco
+
+Member, Guidance Committee Member, Guidance Committee
+APR27 2013 APR 2.7 2013
+Date Signed Date Signed
+
+CONCEP% L. KHAN
+‘idance Committee
+
+27203
+Date Signed
+
+Accepted as partial fulfillment of the requirements for the degree of
+MASTER IN INFORMATION TECHNOLOGY
+
+VLADI Y. MARIANO
+Director, Institute of Computer Science:
+
+APR 27 2013
+Date Signed
+
+Acknowledgement
+
+This research project would not have been possible without the support of many
+people. I would like to extend my sincere gratitude to the following persons:
+
+To God the father of all for the strength that keeps us standing and for the hopes
+that make me believes that this project would be possible.
+
+To Prof. Concepcion L. Khan who persistently assisted and advised us to finish
+this project. Thank you for the knowledge and guidance you have given us. You have
+opened a great opportunity for assisting me and my partner in the First International
+Conference on Open and Distance E-Learning (ICODEL). Thank you also for providing
+us snacks even it is not your duty. You have enriched not only our mind but also our
+stomach. Thank you for the ICODEL mug you gave us that I often use on those nights
+P'm finishing my project.
+
+To my project partner, Josephine Feliciano for the guidance, encouragement,
+enthusiasm and bright ideas making this project a magnificent experience
+
+To Prof. Arian Jacildo, Prof. Jaderick Pabico and Prof. Danny Mercado for
+sharing their knowledge and discipline to us. Thank you for all the mind boggling
+problems you have given making us enthusiast to solve more perplexing problems.
+
+To my batchmates in Master in Information Technology (MIT), for all the
+struggles, stressfulness, enjoyment, success and collaborative ideas we had that I will
+never forget.
+
+To my family for understanding and supporting me in my studies. Thank you for
+temporarily not letting me do household chores allowing me more time to do my project.
+
+To SEI Scholarship Division for processing our financial assistance and for
+keeping our records intact as well as for having this wonderful kind of scholarship.
+
+To my division, Information and Technology Division as well as my officemates
+for understanding and allowing us to be absent from work on days of school. Thank you
+for fulfilling our task when we are not available from office.
+
+To my agency, Department of Science and Technology Central Office, for
+allowing us to be part of the Accelerated Science and Technology Human Resource
+Development Program (ASTHRDP) of SEI-DOST, making us more competent and
+knowledgeable in this field of study.
+
+To my officemates/batchmates Sir Jie, Dave, Kiko and George for the
+collaborative and sharing ideas we shared throughout the course. Thank you for always
+sharing jokes making our experiences filled with joy and happiness.
+
+‘And to my girlfriend, Ariza Muriel P. Bautista, for being understandable on times
+I can’t take her home because I’m busy doing my project, for giving me encouragement
+to finish this project, and for being such an inspiration.
+
+Title Page
+
+Table of Contents
+
+Disclaimer ii
+Acceptance Sheet iii
+
+‘Acknowledgement
+
+Table
+
+List of Tables
+
+of Contents v
+
+List of Figures viii
+List of Appendices ix
+Abstract x
+
+L
+A.
+B.
+Cc.
+D.
+I.
+A.
+
+1.
+2.
+
+B.
+Cc.
+
+il.
+
+VII.
+
+PpODD
+
+The Problem Domain.
+
+Statement of the Problem..
+Background and Objectives of the Project.
+Significance and Scope of the Project....
+Documentation of Existence and Seriousness of the Problem.
+Approach Taken in this Project.
+Theoretical Framework
+Information System Theory ..
+System Design Principl
+
+Rationale for the Framework
+Technologies Used
+
+Project Design...
+
+Concept
+Methods
+Design Studics.....
+Process Model
+Entity Relationship Diagram
+Functional and Non-Functional Requirements
+
+Results and Discussions
+Conclusion:
+Recommendation
+References
+Appendices.
+
+Qualifications.
+Contributors / Collaborators.
+Resources.....
+Complete Program Listing
+Technical Reference...
+
+an
+
+yaeyr
+
+Final System Specification.
+a. Hardware...
+
+b. Operating Systems. .
+
+c. Programming Language...
+d, Server Applications Use
+Maintenance Plan for the Software System
+
+User Manual.. 44
+Tables and Figure: 44
+Google Analytics Report. 44
+
+User Acceptance Test (UAT) filled-up questionnaires..
+Ontology structure...
+Localization documents ..
+Courseware Project 2.0 Actual Report:
+
+vi
+
+List of Tables
+Table Page
+
+1 Number of Lessons by Subject and Grade n
+
+vil
+
+Figure
+1
+2
+
+List of Figures
+
+Technology Acceptance Model
+Prototyping process flow
+
+Uploading localization materials interface
+Module localization interface
+
+Downloading localization materials icon
+
+The Courseware Project prototype
+
+Data Flow Diagram
+
+Entity Relationship Diagram
+
+Adobe Audition interface
+
+Actual pdf file that can download in the project
+Localization module
+
+Sothink SWF Decompiler interface
+
+Adobe Flash CS4 interface
+
+‘Adobe Flash CS4 Font Mapping Dialog
+Registered user localization module
+Courseware social media module
+
+Courseware CAPTCHA interface
+
+Google Analytics Courseware dashboard
+
+viii
+
+Page
+
+24
+27
+30
+31
+33
+34
+
+Appendix
+D
+
+E
+
+F
+
+Gl
+
+G2
+
+G3
+
+G4
+
+G5
+
+List of Appendices
+
+Complete Program Listing
+
+Ubuntu Installation Manual
+
+User Manual
+
+Google Analytics Report
+
+User Acceptance Test (UAT) filled-up questionnaires
+Ontology Structure
+
+Localization documents
+
+Courseware Project 2.0 Actual Reports
+
+Page
+45
+46
+47
+48
+49
+50
+51
+
+52
+
+Abstract
+
+The Courseware Project 2,0 is an enhancement of the current website
+“Courseware in Science and Mathematics” that will cater new major functionality which
+is the localized-text translation and annotation of courseware modules that complies with
+the requirement of Department of Education’s Mother Tongue-Based Multi-Lingual
+Education (MTB-MLE) policy.
+
+The project localized four modules: for Science Grade 3 and three for
+Mathematics Grades 1-3 for four major dialects of Ioko, Cebuano, Maranao and
+Tagalog.
+
+Testing of the prototype was done by the project proponents using DOST network
+facilities and of their respective offices. Development of the prototype was done by using
+PHP, JQuery, MySQL, Adobe Dreamweaver, Sothink SWF Decompiler and Adobe Flash
+
+CS4 to address the requirements of the project.
+
+I. The Problem Domain
+
+A. Statement of the Problem
+
+Since the 2009 launch of the courseware website by Science Education Institute
+(SEI) and Advanced Science and Technology Institute (ASTI) of the Department of
+Science and Technology (DOST), it served as a repository of the one hundred and one
+(101) elementary level modules. The current courseware website only caters modules in
+English contexts which does not conform to the Department of Education (DepEd) policy
+on the use of local dialect or language in teaching elementary from Grades | to 3.The
+project addressed this limitation through localization of the courseware modules to major
+dialects which hopefully would aid the pupils understand better and easier the modules in
+
+science and mathematics.
+B. Background and Objectives of the Project
+
+In 2004, SEI and ASTI collaborated to develop an educational tool for elementary
+science and mathematics. SEI provided the content and development of the lessons while
+ASTI took charge of the digitization. This project is a major enhancement of the existing
+DOST Courseware project proposal which already been presented in International
+Conference for Open-Distance e-Learning (ICODEL) last February 22-24, 2012 with
+working title “Hamessing the Use of Open Leaming Exchange to Support Basic
+Education in Science and Mathematics in the Philippines”. A major issue discussed
+during the open forum was the alignment of the DOST modules to the Department of
+
+Education’s (DepEd) Order No. 74, s. 2009 ? dated July 2009, “Institutionalizing Mother
+
+1
+
+Tongue-Based Multilingual Education (MTB-MLE)”. MTB-MLE prescribes the use of
+the language learners speak at home in delivering lessons and in classroom discussions
+and now being implemented from pre-school up to Grade 3 and in the altemative learning
+system. After some brainstorming and collaborative ideas, it came up with the proposed
+additional feature of the courseware which is the localization of English context to major
+dialects by means of localization functionality where the user can do the uploading of
+
+localized audio and localized text materials in the courseware.
+The following are the project’s objectives:
+
+1. align the website to the MIB-MLE requirement of DepEd; and
+2. assist in the development of the Courseware Project 2.0.
+
+C. Significance and Scope of the Project
+
+Aligned the website to MTB-MLE requirement of DepEd - The project addressed
+the Mother Tongue-Based Multilingual Education (MTB-MLE) policy requirement of
+DepEd on the current limitation of the DOST Courseware by providing localized
+
+modules available online only.
+
+The network of language experts for this project was organized by SEI and sent
+audio versions of the modules and collaborated with the users on the context of the
+
+translated modules.
+
+For the localization of modules, only one module from science and two from
+
+mathematics for each grade level for four major dialects of Iloko, Cebuano, Maranao and
+
+Tagalog were translated. User Acceptance Test (UAT) involved six (6) students from
+each grade level. Overall, ten (10) teachers from different regions, five (5) parents, five
+(5) children, two (2) members of the courseware development group of ASTI and one (1)
+
+college student tested the courseware project with a registered sixty-nine (69) users.
+
+Testing of the prototype was be done by the project proponents using the DOST
+
+network facilities and of their respective offices.
+
+Assist in the development of the Courseware Project 2.0 — Developed the project
+version using PHP®, JQuery®, and MySQL’ running on Ubuntw’ server addressing the
+
+requirements of the courseware.
+
+D. Documentation of Existence and Seriousness of the
+
+Problem
+
+In 2004, the Science Education Institute (SEI) seek for assistance from the
+Advanced Science and Technology Institute for their idea of using Information
+Technology (IT) in conducting classroom lectures with the plan to optimize,
+streamline and standardize lesson presentation through the use of cost-effective and
+high-quality solutions, which would help students to be more competitive, maximize
+
+and enhance learning tools through the use of this technology.
+
+On November 16, 2006, the project “Development of Computer-Aided-
+Instructions for Science and Mathematics — Modules in Science and Mathematics for
+
+Elementary Schools” was formally launched at Discovery Suites, Ortigas Center,
+
+Pasig City. The event was participated by officials and staff from the Department of
+Education, Department of Science and Technology, the Media, Teachers and Students
+
+as well.
+
+As of today, about 7,000 copies of courseware modules have been distributed to
+various public elementary schools, public offices, some foreign guests, science
+
+centrums and lawmakers.'
+
+With the existing system’s feature of providing modules in English language, the
+translation of modules to the major dialects prescribed in the MTB-MLE
+implementation would require high budgetary requirement if no other solutions or
+alternatives will be considered apart from reproduction of the existing packaged
+
+modules for elementary level.
+
+Since the Courseware in elementary science and mathematics are in English
+language, reproduction in CD-ROM of the 101 modules to translate each lesson to the
+dialects prescribed in the MTB-MLE would require the following budget allocation
+
+from the government. To compute:
+
+a. Total production cost of 101 modules = P3,242,828.00
+b. To translate 101 modules in 12 dialects:
+
+Digitization in CD-ROM
+
+@ P3,242,828.00 x 12 dialects = P38,913,936.00
+c. Consultancy Fees for Language Experts
+
+12 consultants @ 1,500/module x 101 =P 1,818,000.00
+
+4
+
+Sub-total for translation project =P49,818,000.00
+Replication @ 765,500.00(10,000 copies) x 12 =P 9,186,000.00
+TOTAL REPRODUCTION COST* =P59,004,000.00
+
+* Based on the 2008 actual development, production and replication costs/rates
+
+I. Approach Taken in this Project
+A. Theoretical Framework
+
+1. Information System Theory
+
+Perceived
+
+Extemal |/
+
+Attitude -eward Behevieral Actual system
+variables \\ i
+
+using intention touse P|] Use
+
+Figure 1. Technology Acceptance Model from http://jeme.indiana.edu/vol13/issue /park.htm (Accessed
+‘November 2012)
+
+The author considered the use of Technology Acceptance Model (TAM) shown in
+Figure 1 that is based on the theory of action by Davis (1986) which deals more
+specifically with the prediction of the acceptability of an information system. The
+purpose of this model is to predict the acceptability of a tool and to identify the
+
+modifications which must be brought to the system in order to make it acceptable to
+
+users. This model suggests that the acceptability of an information system is
+
+determined by two main factors: perceived usefulness and perceived ease of use.
+
+Perceived usefulness is defined as being the degree to which a person believes
+that the use of a system will improve his/her performance. Perceived ease of use refers
+
+to the degree to which a person believes that the use of a system will be effortless.
+
+2. Systems Design Principles
+
+Systems development
+initiated
+
+¥
+
+Investigate and analyze
+
+problem sufficiently to
+
+develop workable solution
+
+¥
+
+Develop prototype {e-
+
+_——__¥
+
+ut prototype into operation
+
+Refine and modify prototype
+
+Complete component
+or system
+
+Figure 2. Prototyping process flow
+
+This project was developed using prototyping Systems Development Life Cycle
+(SDLC) shown in Figure 2 which will it was initially built to produce a model then
+after thorough analyzing and investigation of the specified requirement to develop a
+
+workable solution, the project was constantly refined and modified.
+
+This prototype model was eventually enhanced iteratively and the system was
+developed based on the identified new requirements/features based on the testing and
+
+development period.
+
+This SDLC reduced time and costs to develop an information system because
+changes cost exponentially more to implement as they are detected later in
+development, the early determination of what the user really wants resulted in faster
+development and less expensive information system. It also required user involvement
+and allowed them to see and interact with a prototype model providing them better and
+more complete feedback and specifications which prevented many misunderstandings
+
+and miscommunications regarding the requirements.
+B. Rationale for the Framework
+
+There is no perfect system. Therefore, there are always rooms for improvement to
+every system available. The DOST Courseware will always have future additional
+requirements that will improve its functionalities. With prototyping, future additional
+
+requirements can be catered by the system.
+
+C. Technologies Used
+
+In addressing the limitation of the system, the project used Sothink SWF
+Decompiler’, Adobe Flash CS4 and Adobe Audition to accommodate the localization
+of modules. HTMLS, CSS3 and JQuery were used in order to perform the required
+functionality for the Courseware modules. The use of these technologies provided
+effective results for this project because of their capability to accommodate
+localization of modules. Sothink SWF provided the decompiling of the SWF files to
+their raw FLA files. Adobe Flash CS4 provided environment for manipulating lines of
+codes to make this localization made possible. Adobe Audition provided manipulation
+of audio transition of the localized audio materials. This project used JQuery and its
+plugins as its JavaScript library since it is already been used in the version 1.0 of the
+system, The programming language used in the project was object-oriented PHP so
+that the classes/scripts used in the program can be reused for other applications/system
+in the future. The project used Adobe Dreamweaver CS5.5 for development
+
+environment.
+Ill. Project Design
+A. Concept
+The Courseware Project 2.0 (Breaking Language Barrier through Localized-text
+Translation and Annotation) is an enhancement of the current proposed system which
+
+primarily will cover the limitation of the current website that contains modules in
+
+English context only.
+
+Upon accessing the website of the courseware, the user can view details regarding
+the modules. If the user wants to view the localization module, he/she must
+
+register/login first.
+
+1. Uploading of localized materials
+
+Figure 3. Uploading localization materials interface
+
+For the uploading of localized materials in Figure 3, the administrator
+added a Language Expert User (LEU) that can upload localized materials like
+audio, text and module assessment. Each listing was categorized based on
+localization material type. When adding localization material, localization form
+contains the module and dialect to be assigned and the input form for locating the
+directory of the localization material to be uploaded. The LEU can also delete
+
+localization materials just by clicking the DELETE link.
+
+2. Localization of module
+
+‘THE Days it THE WEEK
+
+Figure 4. Module localization interface
+
+For localizing the modules in Figure 4, the original audio of the SWF file
+was muted in order to accommodate the localized audio. Localization is available
+only to the modules that contain localization materials uploaded by LEU. A drop
+down list box is provided that contains different dialects if the user wants to
+switch for other equivalent localization.
+
+For the requirements of MTB-MLE localization feature, only modules
+from Grades 1 to 3 were localized to conform to the requirements of MTB-MLE’s
+policy of using the following twelve (12) languages in teaching and production of
+visual and supplementary educational aids: Tagalog, Kapampangan,
+Pangasinense, loko, Bikol, Cebuano, Hiligaynon, Waray, Tausug,
+Maguindanaoan, Maranao, Chabacano and Ivatan. Initially, in designing the
+prototype, only three major languages will be used for each lesson in Science
+Grade 3 and Mathematics Grades 1-3. However, only one lesson per subject per
+
+Grade was selected to apply the four localized languages of Iloko, Cebuano and
+
+10
+
+Maranao and Tagalog and that will compose the initial three (3) localized
+
+modules for both subjects. These are:
+
+1 For Science
+
+© Grade 3 - Habitat
+
+2. For Mathematics
+
+o Grade 1 — The Days in a Week
+
+© Grade 2~ Telling Time
+
+© Grade 3 — Interpreting Pictographs
+
+Table 1. Number of Lessons by Subject and Grade
+
+Total Grade/No. of Lessons
+
+Subject One Two Three
+Science 7 7 z
+Mathematics 10 11 ll
+
+3. Downloading of localized materials
+
+DOWNLOAD TEST
+
+P))
+LUO |
+
+yen EA
+
+Figure 5. Downloading localization materials icon
+
+In Figure 5, registered users can download the localization materials
+
+specifically the audio, text and module assessment. The audio localization is
+
+limited only to mp3 format, the text localization is of pdf format while the module
+
+11
+
+
+assessment is of doc format. Localization materials can be accessed and
+
+downloaded in the detail section of the modules.
+
+B. Methods
+
+1. Design studies
+
+Several open learning technologies particularly through web portals became
+popular to stakeholders because of the free massive resources in the form of videos,
+lessons, quizzes, tests and curriculum. These include Massachusetts Institute of
+Technology Open Courseware (MIT-OCW), Khan Academy, Me-Graw Hill
+Publishing, Prentice-Hall and Camegie Open Learning among others. The content,
+design and organization of the open learning resources from these websites are
+
+considered during the design of the enhancements for the courseware portal.
+
+The prototype is designed such that it follows the basic web 3.0 standards in terms
+
+of interactivity, layout and functionality.
+
+12
+
+Learn. Explore. Have Fun,
+
+Figure 6, The Courseware Project prototype
+
+The Courseware Project prototype beta version 1.0 was presented during
+
+ICODEL of which it was designed as it appeared on Figure 6.
+
+It was tested with various actual users such as students, teachers, parents,
+
+professionals and courseware development group.
+
+A user acceptance test (UAT) evaluation form was developed to gather feedback
+
+on content, navigation, functionality, graphics and the like.
+
+The data was processed to gather significant results to assist in the improvement
+of the prototype to consider the principles of Technology Acceptance Model (TAM)
+
+theory.
+
+‘The revision of prototype was based after the result of the iteration process and
+implemented after consultation with the courseware development group of SEI and
+
+ASTI.
+
+13
+
+C. Process Model
+
+The Courseware 2.0 enabled users to localize courseware modules online and
+download audio and text localization. In figure 7, we can see the flow on
+
+localization.
+
+Figure 7. Data Flow Diagram
+
+14
+
+D. Entity Relationship Diagram
+
+The Courseware Project 2.0 contains 16 tables. In figure 8 below,
+
+relationships between tables are represented by arrows. Primary keys were
+
+depicted by PK.
+‘Blogs wiaccount
+P ‘eile
+PK Jig Px [ie
+pix ]a ‘Diiows
+og_user |_p] [username Px
+og_sat password module_jd e
+1og.date tseriype cea | Lpl late
+iog_imo tie ato
+ogi escrpion th
+stn
+isbn date
+fie
+assessment Wiad ‘Biannotaion io_size
+PK [ass id Px [is PK Jann i aa
+user user user Fives
+L} |fie-is L} fies L} fies ee
+F| oiler ia cioiect id iaect jd
+assessment audio annotation
+sownioad doweload download
+‘binembers ‘icomments ‘Biopes
+p> [Px [emia Px [id irk [ie
+ype \. ser id
+ce tseriype
+ender topic dose
+femal éate_addea
+password 0
+Eey vow
+province
+tpieesback ety
+SchooiName
+PK Jia schoolType
+oradoLovel Gos
+LL ®  |osicenome Px Tie
+fad oser
+eolyertyp0 | usectvoe) topic 8
+date registoro aate
+—|...| eee alo, added es
+ip
+ae samauaan ‘Wbuikdownioad
+D/PK [dialect id fe rar Px Tid
+ialect name =F Samoa
+
+Figure 8. Entity Relationship Diagram
+
+15
+
+E. Functional and Non-Functional Requirements
+1. Functional Requirements
+
+a. In module localization, after the user selects a dialect, the system checks in
+the database if it has available localization, otherwise, it displays the
+original English audio module.
+
+b. Before the user can preview the localization, the browser must have adobe
+flash player installed.
+
+c. In uploading audio localization, the file format of the audio must be mp3
+format.
+
+d. In uploading text localization, the file format of the text must be in pdf
+format.
+
+e. Inuploading assessment test, the file format must be in doc format.
+2. Non-Functional Requirements
+
+a. Sufficient network bandwidth is needed to synchronously play the module
+together with the audio localization.
+
+b. The project is capable of being used anytime, assuming that the user has
+internet connection.
+
+c. The project complied with the DepEd’s MTB-MLE policy of prescribing
+the use of the local language in delivering lessons at home and in
+
+classroom.
+
+16
+
+. Failure rate is expected when the web server of the project is unavailable.
+Backup of the project can be performed either monthly or quarterly
+depending on the future implementation and maintenance of the project.
+Unauthorized access to the system and its data is prohibited. The password
+is secured by mdS5 encryption.
+
+. User manual is available for ease of use of the system.
+
+7
+
+Results and Discussions
+To align the website to MTB-MLE requirements of DepEd, the project
+provided functionality for uploading of localization materials by creating a
+
+Language Expert User module that manages the uploading of localization
+
+materials,
+
+. This functionality is one of the features by which either the Language Expert User (LEU)
+
+who will be assigned by SEI or the courseware administrator could do the uploading of
+localization materials. In this case, for the prototype of Courseware Project 2.0, this
+author acted as the localization administrator by which localized audio, text and tests
+were managed.
+
+Localization materials is either audio or text type. Localization audio material can be
+created by digital voice recording devices such as computers, laptops or voice recorders.
+After texts localization and voice recording, the localization administrator uploaded the
+digital audio file in the courseware and allowing only mp3 format as file type.
+
+In recording the voice audio, the file type it generated was wav format that the
+localization administrator needed to convert first the audio file to mp3 format before it
+can be uploaded to the courseware site. The localization administrator used the
+
+application Adobe Audition to convert the wav format to mp3 format.
+
+18
+
+0:001000)
+
+Figure 9. Adobe Audition Interface
+
+In figure 9, Adobe Audition can convert the audio from wav format to mp3
+format. In converting the audio, the author followed these simple steps:
+a. Open the audio file by browsing the file location (ctrl + O)
+
+b. Save as mp3 format (ctrl + shift + s)
+
+Figure 10. Actual pdf file that can downloaded in the project
+
+|. Localization text material is in PDF format. In the PDF that you can see in figure
+10, the user can see the original English content/text of the module as well as the
+equivalent localized text of the module. The localization administrator also
+
+uploaded a test/assessment file for each dialect per module to further assess the
+
+19
+
+comprehension or learning of the students for the localized module. After
+answering the test, the registered user can email the file to the courseware
+administrator or this test can be an additional material or reference for teachers to
+assess learning of their student.
+
+File type limitation is depending on the server’s configuration. But for this
+project’s case, the server’s configuration was set to 20MB because there was a
+time when the localization administrator repeatedly failed uploading a specific
+localized audio material. The localization administrator found out that the file size
+of the audio was more than 18MB. When the server’s configuration for the max
+file upload size to 20MB, the localization administrator successfully uploaded the
+audio with 18MB file size. The author changed the server’s configuration for max
+file upload size by updating the php.ini value of upload_max_filesize to 20MB.
+The server’s apache’ server needs to be restarted to take effect the changes made
+
+to php.ini.
+
+Result:
+
+lL.
+
+Provided playback of localized modules within the website.
+
+2. Some localization materials were not accurately synchronized but understandable
+
+and comprehensible.
+Initial upload of localization materials yielded to permission error in server. It is
+fixed by changing the folder permission of the destination folder for the audio and
+
+text localization materials.
+
+20
+
+4. Uploading of localization materials was easy because after selecting module and
+dialect, the localization administrator can just browse for the directory
+localization material that were uploaded.
+
+5. Localization materials listing were categorized such that it can be sorted and set
+number of records per page for easy viewing.
+
+6. Localization materials listing pagination makes the interface clean and organized.
+
+To align the website to MTB-MLE requirements of DepEd, the project provided
+functionality for online module localization by muting embedded audio of the swf file
+
+and then simultaneously plays the audio localization of the selected dialect.
+
+1. In viewing details for each module, the registered users of the system not only can
+access the localized version for each module, but also can download the localization
+materials and module assessment for each module.
+
+2. In localization of modules, only selected modules from Grades 1 to 3 were localized.
+In designing the prototype, four major languages were used for each lesson in Science
+Grade 3 and Mathematics Grades 1-3.
+
+3. Only one lesson per subject per Grade was selected to apply the four localized
+languages of Iloko, Cebuano, Maranao and Tagalog. The initial four (4) modules for
+both subjects are:
+
+o For Science
+= Grade 3 — Habitat
+
+© For Mathematics
+
+21
+
+= Grade 1 - The Days in a Week
+= Grade 2 — Telling Time
+
+"Grade 3 — Interpreting Pictographs
+
+agtrar
+
+Figure 11. Localization module.
+
+. From the modules page, the user has an option to choose dialect/language to listen to.
+In figure 11, upon selection of a language, the available modules with localization
+shall be listed. Upon play the same video as the original with English text will play
+but without the English audio. Instead, an audio of the localized language is
+synchronized with the video.
+
+. Before the modules can be localized, the selected modules were decompiled using
+Sothink SWF Decompiler. The decompiler produced the raw Flash file (FLA format)
+
+of the SWF file of modules.
+
+22
+
+Figure 12. Sothink SWF Decompiler Interface
+
+In figure 12, we can see the interface of the decompiler the author used. In
+decompiling the sw file, the author followed these steps:
+i. Browse for the swf file using the explorer section of the decompiler
+ii, In the export section, tick the checkbox and then click Export FLA/FLEX
+6. After the decompiling process, the raw FLA file was edited using Adobe Flash CS4.
+
+The flash file was edited to accommodate audio localization material.
+
+23
+
+10.
+
+rte Ling. can we
+‘pout fora pene
+oy?
+
+Figure 13. Adobe Flash CS4 Interface
+
+In figure 13, we can see the interface of the flash editor the author used.
+
+”. The author inserted a script that the courseware can pass Flashvars? to the module to
+
+control the volume of the module. Flashvars are variables which can be passed from a
+web page to a Flash (SWF) file. This means that a web page can define any variables
+
+in the HTML page and these variables can be used by the Flash file.
+
+3. Uses flashvars name "varvol" to mute and unmute the volume of the module.
+
+). Actual script for muting and unmuting:
+
+var myobj=new Sound()?
+myob3 .setVolume (vazvol) 7
+myob3.start()7
+
+The variable was used in the flash file to determine whether to mute or unmute the
+volume of the module. If the module is selected together with a dialect, the volume of
+the flash file was set to zero (0) to accommodate the localized audio material.If no
+dialect was selected, the volume is unmuted and played with the original English
+
+embedded audio of the module. .
+
+24
+
+11. The author tried embedding the localized audio in “The Days in a Week” module.
+Before embedding it in the module, the author repeatedly checked if the localized
+audio is synced with the actual display of equivalent English text. In the flash code of
+the module, the original English audio was embedded separately making it laborious
+to syne the localized audio for every scene. Adobe Audition was used to sync the
+localized audio. The author has chosen Adobe Audition because of his familiarity
+with the software. Unnecessary noises were deleted in the localized audio, reduced
+and added long pauses and making the audio faster and sometimes slower. English
+audios like “Excellent” and “Try Again” were not localized due to lack of available
+voices. As of now, it is not available in the beta version of the project for it is not yet
+programmed to accommodate embedded localized audio. The author tried this
+experimentation to explore future implementation of the project.
+
+12. In viewing embedded module, the browser of the user must have an adobe flash
+player installed in order to preview the module. Otherwise, the user cannot preview
+the module.
+
+13. In localizing the modules, the following persons were contracted to translate the
+modules at P500 each module (except for Tagalog modules).
+
+o _Iloko—Ms. Dinah Dumlao, Elementary Grades Teacher, Science Paoay ES,
+Paoay, Ilocos Norte
+
+o Cebuano - Ms. Jessamine Rosal, Registered Nurse, Cebu City
+
+© Maranao — Ms. Sheila Marie Lazaro, Biology Teacher, Philippine Science
+
+HS, Central Mindanao Campus, Iligan City, Lanao del Norte
+
+25
+
+° Tagalog - Ms. Josephine Feliciano, SRS II, SEI- DOST
+14. The English texts of the original four modules were captured by Ms. Josephine
+Feliciano and emailed to the resource persons for localization or equivalent context-
+meaning in local dialect. The translation was coordinated and retrieved starting
+November 2012 until January 2013. Only the Iloko language has the recorded
+
+localized loko voice over, while the rest provided only the localized texts.
+
+a
+
+. loko voice recording was done in a non-recording studio using only a headset with
+microphone by the original translator and Windows Recorder application. Cebuano
+and Maranao voice recording was done by Ms. Feliciano and Tagalog by Ms. Jobelle
+Gayas, officemate of Ms. Feliciano. The recording for the three languages were done
+also in a non-recording studio using a laptop, a headset and Windows recorder
+application strictly following the script of localized modules.
+
+16. Editing/Tweaking of voice to fit the characters was done using Cyberlink Wave v10.
+
+In editing the audio, since different languages have different lengths in words,
+
+synchronizing the localized audio especially Iloko was set to different phases of
+
+speed, sometimes a little faster.
+
+Result:
+
+1. Localized the modules by muting the English audio and playing the localized audio
+simultaneously. Muting the English audio was done by passing flashvar from the web
+page to the swf file signaling the module whether to set the volume to zero (0) or one
+hundred (100). Playing the localized audio was done by embedding the localized
+
+audio with the file type limitation of mp3.
+
+26
+
+2. After decompiling the swf files to its raw format, some fonts of the original file were
+not recognized by Adobe Flash CS4 that resulted to changing the fonts to the default
+
+type face of the software.
+
+Stoners ero |
+
+Figure 14. Adobe Flash CS4 Font Mapping Dialog
+In figure 14, we can see the font mapping dialog provided by Adobe Flash CS4. Some
+fonts used by the swf file were not recognized by the flash editor version used in this
+project.
+
+3. Successfully embedded the localized audio in the swf file for “The Days in a Week”
+module. The module was accurately synced equivalent to its original English audio
+using Tagalog as its dialect. Not all audio was localized to Tagalog like the word
+“Excellent” and “Try Again”.
+
+4. Retrieval of localized texts from resource persons took 5 to 10 days or more probably
+because they were assigned a non-official task but were compensated just the same,
+
+5. Recording of Iloko audio/voice over by Ms.Dumlao who also localized the texts,
+
+needed major cleaning because of noise background. A registered user commented
+
+that it seems the Iloko audio was recorded by a person who is not fluent in Iloko. The
+
+27
+
+original translator is attributing this observation to the below standard recording of
+the audio.
+
+. Recording of other localized languages however, which was done at SEI multimedia
+room was generally within acceptable standards.
+
+. Voice recording of Cebuano and Maranao was done by Ms. Feliciano who is not
+native to those dialects that pronunciation, intonation and diction were observed to be
+not accurately executed.
+
+. In the three approaches used for the synchronization of localized audio only two
+methods were tested: the Recorded downloadable audio and the non-embedded
+synchronized audio.
+
+|. In the first method where the audio will just be downloaded and listened to, the Grade
+1 pupil who listened to the Mathematics lesson “The Days in a Week” Tagalog audio
+scored only 3 points in the Tagalog test compared to a score of nine in the English
+test.But the other student who took the same test for the same module scored higher
+in Tagalog than English at 8 and 9 respectively. The second pupil do not know the
+equivalent Tagalog term for Wednesday and Thursday. For Grade 2 lesson in
+Mathematics “Telling Time” the first pupil who viewed both English and Tagalog
+modules preferred and took the English test only where the pupil got a perfect score
+of 10. The second pupil who took the same test scored one point higher in Tagalog
+than in English at 9 and 8 respectively. The third pupil however, had the same score
+
+of 7 both for English and Tagalog tests. The pupil who took the test for Grade 3
+
+28
+
+Science lesson “Habitat” scored higher by one point in English than Tagalog with 9
+and 8 respectively.
+
+10. During the interview, out of the six pupils tested, one expressed preference to English
+than Tagalog, four preferred English first but after short thinking also expressed
+preference to Tagalog then eventually liking both languages. One pupil did not state
+his preference.
+
+11. The internet speed affects the synchronization of the localized modules. Sometimes
+the localized audio was loaded first than the embedded module.
+
+12. User needs to download adobe flash player for browser first before they can preview
+
+embedded modules making it more tiring for the users.
+
+To align the website to MTB-MLE requirements of DepEd, the project provided
+functionality for downloading localization materials by creating download link/icon of
+
+localization materials in each module.
+
+1. In this feature, registered users can download the localization materials they want. Upon
+viewing of the detail of the selected module, he/she can download the localization materials
+located at the bottom portion of the Dialect drop down list box. The audio icon represents as
+the audio localization material while the pdf icon represents the text localization material.
+They can also download module assessment per module that contains test questionnaire they
+
+can answer.
+
+29
+
+(es) (seas (oesatea
+
+Figure 15. Registered user localization module. Localization materials were encircled.
+
+In figure 15, we can see the localization icons that are available for download.
+2. Inthe module localization page the following materials can be downloaded:
+© the recorded audio of the localized text represented by |);
+
+* apdffile of the localized text represented by “J. ; and
+
+© an assessment test about the modules represented by y¥ which are
+different from the evaluation questions embedded in the module but
+
+available for Tagalog and Cebuano only.
+Result:
+
+1. Users can download localization materials as much as they want, resulting to
+excessive usage of bandwidth.
+
+2. The downloadable audio material is available in mp3 format only.
+
+3. Users who do not have Adobe Acrobat Reader installed cannot view the pdf file of
+
+the localized text.
+
+30
+
+To assist in the development of the Courseware Project 2.0, the author provided
+
+the overall designing and programming to cover the following functionalities:
+
+1. Assisted in the over-all coding and programming of the Courseware Project 2.0 to
+cover the following functionalities:
+o User Registration
+© Modules search, playback and download
+© Development of user feedback mechanisms
+o Development of reports generation mechanism
+o Development of administrator module
+o Linking of menus to different functionalities
+© Localization of Modules
+2. Development of a Web 3.0 ready website where users could collaborate and be highly
+interactive and dynamic in sharing the website through various social media e.g.
+
+Facebook and Twitter.
+
+Figure 16. Courseware social media module
+
+31
+
+In figure 16, we can see the social media plugin of the project. After clicking the
+social media available, the website will open a new tab or page redirecting to the
+Social Media page. There are three options:
+
+1) Facebook
+2) Twitter
+3) Google +
+
+3. The author used PHP and JQuery as the programming language and MySQL as the
+backend for the project. The project was designed using object-oriented programming
+(OOP) so that it can be reused in the future for its future enhancements and
+implementations. Most functionalities of the project were plugins already available in
+the internet. Functions that used JQuery plugins were the Social media feature,
+Ontology feature, listing pagination, CAPTCHA and simultaneous playing of
+embedded swf file and localized audio.
+
+4. In bulk downloading, the author used a Completely Automated Public Turing Test to
+Tell Computers and Humans Apart (CAPTCHA) to prevent unwanted scripts to
+automatically download the bulk modules in rar file type. The user needs a winrar'' to
+
+extract the downloaded bulk module file.
+
+32
+
+YOU ARE DOWNLOADING ALL MODULES
+
+| °
+
+Move mouse through the bar
+
+YOU ARE DOWNLOADING ALL MODULES
+
+am 6°
+
+here
+
+YOU ARE DOWNLOADING ALL MODULES
+
+ees
+
+Figure 17. Courseware CAPTCHA interface
+
+In figure 17, we can see the CAPTCHA used in the project. As we can see, there are
+three (3) phases in the figure. The first phase is the initial phase which displays the
+information on how to proceed in downloading bulk module. The second phase is the
+phase which displays the progress. The third and the last phase is the phase which is
+the user proves that he/she is a human. If the user failed to mouse over throughout the
+bar provided, it brings back the process to first phase.
+
+.. The project used CSS3 for styling overall components. Manipulating font size, font
+color, text positioning, text alignment, body backgrounds and many more. The
+images in the website are being cropped and resized using Paint.Net software.
+
+}.. The project is powered by Google Analytics (GA) located at the bottom part of the
+
+page for monitoring website activity for the period of testing.
+
+33
+
+Google
+
+Pangkalahatang-deya ng Magia Mar? 2013-Abr 1.2019
+
+‘51 (ra) tong bumiata eae na to
+
+Figure 18. Google Analytics Courseware dashboard
+
+As we can see in figure 18, using Google Analytics, the administrator can monitor
+and produce reports like Page Visits, Bounce Rate, Geographical Access, Type of
+
+Browser used, Operating System used, Average time for page visits and many more.
+
+Results:
+
+. Generally, the Courseware Project 2.0 functionalities were acceptable to the user.
+The users experienced dynamic interactivity, user-friendly interface and manipulation
+
+of elements in the website.
+
+34
+
+V. Conclusions
+
+1. Localization feature makes it easier for some of the users to understand the module
+content although not conclusive for other languages.
+
+2. For some of the uploaded prototypes, audio localization are not perfectly
+synchronized to the SWF file because of two different elements that are playing in
+different phasing but manually synchronized to assume length of time by which the
+user will manipulate the module.
+
+3. Localization is only available online. When the user downloads the module, the audio
+present in the SWF file is the original English audio.
+
+4. Currently the localized audio is using the original English video with muted audio
+that when downloaded no audio will be heard as to neither the English and localized
+audio.
+
+5. For this prototype, the localization administrator was the author that it is easy for him
+to upload and manipulate the functionality. If this will be deployed to Language
+Expert User (LEU), standard technical specifications should be set to standardized the
+quality of audio as well as the formatting of assessment tests.
+
+6. The interface of the Courseware Project 2.0 should be adopted because of its new and
+major functionalities flexible enough to accommodate user requests and adhere to the
+
+mechanics of Web 3.0.
+
+35
+
+Vi. Recommendations
+
+1.
+
+Modules should be edited to accommodate external audio source in order to make the
+localization accurately synced to the swf file as what was did in the module “The
+Days in a Week” where the audio was first segmented then embedded into the SWF
+
+file to perfectly synchronize.
+
+. There should be a separate SWF file system for the original English Modules and the
+
+localized modules such that the ideal embedded localized audio in the English Video
+would have a separate localized file for the program to call each time it is being
+played. It shall also be available for download as a complete localized package of a
+
+module with the video and localized audio.
+
+. Modules may not necessarily be re-digitized to align the lessons to the DepEd’s
+
+requirement for Mother Tongue-Based Multi-Language Education Policy (MTB-
+MLE). With the introduction of evolving technologies to insert or embed audios to
+SWF files (playback files), it is now more feasible to localize modules in different
+dialects without a high budgetary re-production requirement since many other
+
+educational materials are also produced with the same concept of dual language.
+
+. If Language Experts User (LEU) will be allowed to upload audio and test assessment
+
+for the localization, there should be a training to guide them on the recording of audio
+
+to acceptable standards as well as the design of standard test assessment instrument.
+
+36
+
+Vil.
+
+References
+
+[1] ASTI Courseware Development Group, Science Education Institute (SEI) —
+Department of Science and Technology (DOST)
+
+[2] Mother Tongue Based website, Accessed November, 2012, http://mothertongue-
+based blogspot.com
+
+[3] Media College, Flashvars, Accessed March 23, 2013,
+
+http://www mediacollege.com/adobe/lash/actionscript/flashvars.html
+
+[4] Sothink SWF Decomiler, Accessed January 31, 2013,
+
+http://www sothink.com/product/flashdecompiler/
+
+[5] PHP, Accessed March 23, 2013, http://php.net
+
+[6] Jquery, What is JQuery, Accessed March 23, 2013, http://iquery.com/
+
+[7] MySQL, Accessed March 23, 2012,
+
+http://dev.mysql.com/doc/refman/5.0/en/what-is-mysql.html
+
+[8] Apache, Accessed March 23, 2013,
+http://nttpd.apache.org/ABOUT_APACHE.htm!
+[9] Ubuntu, Accessed March 23, 2013, https://help.ubuntu.com/11.10/installation-
+
+guide/i386/index.html
+
+[10] Completely Automated Public Turing Test To Tell Computers and Humans
+Apart (CAPTCHA), Accessed March 23, 2013, http://www.captcha.net
+
+[11] Winrar, Accessed March 23, 2013, http://www.rarlab.com
+
+37
+
+Vill. Appendices
+
+A. Qualifications
+
+1. Knowledge, skill, and experience you bring to this project.
+
+The author is part of Systems Development Group of the Department of
+Science and Technology Central Office since 2008 who maintains and develops
+existing and new information systems of the agency. He performs the following
+
+functions:
+
+a) Analyzes, evaluates and modifies existing or proposed systems and
+related devices;
+
+b)
+
+Design and debug programs or user defined modifications;
+c) Designs, encodes, tests, implements, analyzes, and modifies systems
+for various applications;
+
+d)
+
+Works with users to define system requirements and resolve problems;
+e) Revises and updates programs and documentation as required; and
+Perform other technical tasks that may be assigned from time to time.
+2. Brief summary of accomplishments that shows your preparation for
+
+undertaking this project.
+
+Initial demonstration of the prototype beta version 1.0 was presented to ASTI
+CWDG July 2011 and gained support and approval from the courseware division
+chief, project leader and quality control staff. Massive research has been done to come
+up with solutions to the problems identified.
+
+38
+
+3. Learning agenda: Knowledge, skill, and experience you plan to gain during
+
+your work on this project.
+
+The proponent expects to advance his knowledge on systems analysis and design
+and gain confidence in producing information systems and solutions for the more
+
+efficient use of government funds and resources.
+
+4, Educational background
+© Master in Information Technology - Graduating 2013
+University of the Philippines — Los Bafios, Laguna
+Scholar DOST ASTHRDP
+© Bachelor of Science in Information Technology - 2007
+Polytechnic University of the Philippines Taguig Campus
+
+B. Contributors / Collaborators
+
+The systems analysis and designing was implemented by Ms. Feliciano, my
+partner in this project and the programming side of the courseware project 1.0 and
+2.0 website’s interface was implemented by this author.
+
+Prof. Concepcion L. Khan acted as the project consultant. Language experts
+from the network education specialists shall be formed to manage the localization
+
+of the modules for the full-blown implementation of the localization functionality.
+
+39
+
+C. Resources
+
+The project uses temporarily the DOST network facilities and web server. The
+domain www.dostcourseware.tk was created using a free dot tk account from
+
+www.dot.tk using the authors account.
+D. Complete Program Listing
+
+See Appendix D for the complete program listing. The source codes of the
+project do not need to be compiled. Copy the coursewarev2 folder to the root
+directory of the web server to see the fully functional computerized system. See
+
+page 42 of this paper for the detailed installing and configuring guide.
+
+E. Technical Reference
+
+1. Final System Specification
+a. Hardware
+Model: IBM System X3250 M4
+Processor: Intel(R) Xeon(R) CPU E31220@3.10GHz
+Memory: 4,00GB
+Operating System: Ubuntu 11.04 LTS
+System type: Linux 3.2.0-29-generic-pae (i686)
+Storage: ATA STS00NMO011
+Network: Intel(R) PRO/1000 Network Driver
+
+Hard Disk: 500GB HDD
+
+40.
+
+b. Operating Systems
+
+The project used Ubuntu 11.04 for operating system that can be able to
+install PHP version 5. This project preferred open source operating system because
+of lack of budget and resources. See Appendix E for complete Ubuntu Installation
+
+Guide.
+
+¢. Programming Language
+
+query - is a fast, small, and feature-rich JavaScript library. It makes
+things like HTML document traversal and manipulation, event handling,
+animation, and Ajax much simpler with an easy-to-use API that works
+across a multitude of browsers. With a combination of versatility and
+extensibility, jQuery has changed the way that millions of people write
+JavaScript.
+PHPS- is a widely-used general-purpose scripting language that is
+especially suited for Web development and can be embedded into HTML.
+MySQL - the most popular Open Source SQL database management
+system, is developed, distributed, and supported by Oracle Corporation.
+Key features are:
+
+- MySQL is a database management system.
+
+-MySQL databases are relational.
+
+-MySQL software is OpenSource.
+
+a
+
+-The MySQL Database Server is very fast, reliable, scalable, and
+easy to use.
+
+-MySQL Server works in client/server or embedded systems.
+
+- A large amount of contributed MySQL software is available.
+
+PHP, MySQL and PHPMyAdmin Installation Guide
+From Ubuntu terminal, type these commands:
+
+#apt-get install apache2 apache2.2-common apache2-mpm-prefork
+apache2-utils
+#apt-get install php libapache2-mod-phpS php5-cli php5-common php5-
+cgi php-ed
+#apt-get installmysql-server mysql-client libmysqlclient15-dev
+#apt-get install phpS-mysql phpmyadmin
+
+d. Server Applications Used
+
+Apache
+
+The Apache HTTP Server Project is a collaborative software
+development effort aimed at creating a robust, commercial-grade,
+
+featureful, and freely-available source code implementation of an HTTP
+
+(Web) server
+
+2. Maintenance plan for the software system
+
+If the project proceeds to the implementation, ASTI-DOST shall be
+
+the one to host and maintain the website.
+
+42
+
+a. List of the location and content of all relevant files and instructions for
+
+installing, compiling, and configuring the software
+
+1.
+
+Copy the folder coursewarev2 to the root directory of the web
+server. For this project’s case, the root directory was
+
+var/www!
+
+. Open browser to setup the database for the courseware. Type in
+
+the address bar http://server-ip/phpmyadmin. The URL of the
+mysql console depends on the case/version of phpmyadmin and
+location of accessing the web server. If using the actual web
+seryer, the “server-ip” shall be “localhost”, otherwise the ip
+address of the web server of the courseware. Create new
+database and name it dbcourseware. After successfully creating
+the database name, import the mysql dump of the courseware
+database. The mysql dump can be found in the root directory of
+coursewarev2 with the filename dbcourseware.sql. Finally go
+to http://server-ip/coursewarev2.
+
+Set the MySQL database name, username, password, server
+and url in the configuration file which can be found in
+/inc/configuration.php in the root directory of coursewarev2
+
+folder. *
+
+|. Make sure to set the directory permission of the courseware is
+
+set to 777 to be able to function the upload feature.
+
+43
+
+b. Dependencies on hardware and software systems should be described
+
+F.
+
+1: The project’s coding is dependent on php version 5. Installing
+it with old version of php like version 4 may result to
+malfunction some features because of deprecated functions.
+
+2. The project is best viewed in browsers having HTMLS and
+CSs3.
+
+3. The browser should have javascript enabled because the project
+is composed of javascript functions. Disabling javascript may
+result to disable many functionalities of the project.
+
+User Manual
+
+See Appendix F for Courseware Project 2.0 User Manual
+
+G. Tables And Figures
+
+1.
+
+4.
+
+Google Analytics Report
+Contains Google Analytics generated reports (See Appendix G1)
+User Acceptance Test (UAT) filled-up questionnaires
+
+Contains the actual testing of the project (See Appendix G2)
+
+. Ontology structure
+
+Contains Context-based searching of the project (See Appendix G3)
+Localization documents
+
+Contains actual translation texts and assessment tests (See Appendix G4)
+Courseware Project 2.0 Actual Reports
+
+Contains Courseware Project 2.0 generated reports (See Appendix G5)
+
+44
+
+APPENDIX D:
+Complete Program Listing
+(Available at the Institute of Computer Science Library)
+
+directory: coursewarev2
+
+45
+
+APPENDIX E:
+Ubuntu Installation Manual
+(Available at the Institute of Computer Science Library)
+
+file name: Ubuntu Installation Manual.docx
+
+46
+
+APPENDIX F:
+User Manual
+(Available at the Institute of Computer Science Library)
+
+file name: User Manual - Coursewarev2.docx
+
+47
+
+APPENDIX G1:
+Google Analytics Reports
+(Available at the Institute of Computer Science Library)
+directory: Google Analytics
+
+48
+
+APPENDIX G2:
+User Acceptance Test (UAT) filled-up questionnaires
+(Available at the Institute of Computer Science Library)
+directory: UAT
+
+49
+
+APPENDIX G3:
+Ontology Structure
+(Available at the Institute of Computer Science Library)
+
+directory: ontology
+
+50
+
+APPENDIX G4:
+Localization Documents
+(Available at the Institute of Computer Science Library)
+
+directory: localization raw files
+
+51
+
+APPENDIX G5:
+Courseware Project 2.0 Actual Reports
+(Available at the Institute of Computer Science Library)
+
+directory: courseware reports
+
+52
+

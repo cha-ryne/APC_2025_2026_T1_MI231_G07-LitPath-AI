@@ -1,0 +1,1718 @@
+)
+1
+i
+1
+'
+
+
+UNIVERSITY OF THE PHILIPPINES
+Master of Science in Mathematics
+Kouichi T. Tamura
+
+On the Isomorphism Problem for Uniserial Modules over a Ring
+
+Thesis Adviser:
+Jose Maria P. Balmaceda, Ph.D.
+Institute of Mathematics
+
+University of the Philippines Diliman
+
+Date of Submission
+5 July 2023
+Thesis Classification:
+
+F
+
+This thesis is available to the public.
+
+Institute of Mathematics
+College of Science
+University of the Philippines
+Diliman, Quezon City
+
+ENDORSEMENT
+
+This is to certify that this master’s thesis entitled On the Isomorphism Prob-
+lem for Uniserial Modules over a Ring prepared and submitted by Kouichi
+T. Tamura in partial fulfillment of the requirements for the degree of Master of
+
+Science in Mathematics, is hereby accepted.
+
+aN n
+JOSE MARIA P. BALMACEDA, Ph.D.
+Thesis Adviser
+
+JPAME D.L. CARO, Ph.D.
+Thesis Reader
+
+The Institute of Mathematics endorses the acceptance of this master’s thesis as
+partial fulfillment of the requirements for the degree of Master of Science in Math-
+
+ematics.
+
+JOSE ER: C. LOPE, Ph.D.
+j Director
+
+Institute of Mathematics
+
+This master’s thesis is hereby officially accepted as partial fulfillment of the re-
+
+quirements for the degree of Master of Science in Mathematics.
+
+GIOVANNI A. TAPANG, Ph.D.
+Dean
+College of Science
+
+Honor Code
+
+By submitting this thesis, I affirm that I uphold the core values of Honor and Ex-
+cellence as codified in the University of the Philippines Code of Student Conduct.
+This work adheres to the highest standards of academic integrity wherein scholarly
+sources have been attributed accurately; data has been collected and analyzed in
+accordance with established academic and scientific practices; and results have
+
+been reported in a scholarly and transparent manner.
+
+Name and Signature of Student: Kfuichi T. Tamura
+
+iii
+
+Abstract
+
+On the Isomorphism Problem for Uniserial Modules over a
+Ring
+
+Kouichi T. Tamura Thesis Adviser:
+University of the Philippines Diliman Jose Maria P. Balmaceda, Ph.D.
+2023
+
+Determining whether two uniserial modules over an Artin algebra are isomor-
+phic is an open problem in representation theory. However, isomorphism is a
+very strong condition. If the interest is to translate a first-order theorem in one
+module to another, it suffices to consider weaker notions such as elementary equiv-
+alence. The thesis investigates a particular class of uniserial modules over a ring.
+In particular, it will be shown that if the ring is infinite, simple and von Neu-
+mann regular, then the theory of modules over this ring has elementary equivalent
+models. An application of this result is given. Conversely, it is shown that with
+the assumption that every ideal of the ring is an elementary substructure of the
+ring as a module over itself, we have that the ring must be infinite, simple and
+von Neumann regular. It is also shown that the prescribed conditions are strictly
+insufficient for isomorphism. The thesis will include a discussion of preliminary
+
+concepts and known theorems that leads to the main results.
+
+Table of Contents
+
+Abstract
+
+Acknowledgments. . . Tae ea
+
+Chapter 1. Introduction
+
+Chapter 2. Model theory
+
+2.1 First-order theories and structures...........
+
+2.2 The morphisms in model theory ..........
+
+2.3 Afundamental theorem .................
+
+Chapter 3. Elimination of quantifiers
+
+3.1 Positive primitive formulas. ..............
+
+3.2 Model completeness i 2.0.04) .:e woe aw eee ss
+
+Chapter 4. Main results
+
+4.1 On syntactic completeness... .
+
+4.2 Anapplication ..................0..
+
+4.3 Possible research directions. ..............
+
+List of References... 2... 0.0.0.0 0000 005.
+
+11
+12
+18
+
+29
+29
+33
+34
+
+35
+
+Acknowledgments
+
+I would like to acknowledge first and foremost my thesis adviser, Dr. Jose Maria
+P. Balmaceda. This thesis would not have been possible without his guidance. Dr.
+Balmaceda steered me in the correct direction and provided valuable insights that
+helped me focus on a problem that can be accomplished given the limited time.
+He provided and suggested helpful resources and is also very open when I find
+difficulties in writing the paper. He helped greatly in revising my proposal and
+thesis. Furthermore, he also helped in my scholarship requirements by providing
+assistance and revisions to the required paperworks. For these, I am gratefully
+
+indebted to him.
+
+I would also like to thank the thesis examiners Dr. Agnes T. Paras and Dr.
+Julius M. Basilla for providing valuable insights, comments, resources and sug-
+gestions. They were also my professors in my core subjects and their insights
+on mathematics helped not only in making this thesis, but also in understanding
+
+mathematics and learning how to understand mathematics in general.
+
+I would also like to thank and acknowledge Dr. Jaime D.L. Caro as the thesis
+reader and I am grateful for his valuable suggestions, questions and advice about
+the thesis. I would also like to express my gratitude to Dr. Manuel Joseph C.
+
+Loquias for helping me obtain resources such as papers related to my thesis.
+
+Finally, I would like to thank the Filipino people and DOST-SE] ASTHRDP
+
+for placing their trust in completing my studies and this research.
+
+Chapter 1
+
+Introduction
+
+Twentieth century foundational mathematics was concerned with pinning down a
+structure uniquely by a set of axioms. One of the known attempts was Peano’s
+axioms for natural numbers. The first-order Peano axioms turned out to have
+nonstandard models i.e. models that are not isomorphic to the standard natural
+numbers. To uniquely capture the natural numbers up to isomorphism, we need
+
+second-order logic.
+
+The theory of modules, unlike theories like Peano’s, was intended to capture
+a large class of structures. Thus it is expected for certain modules to be non-
+isomorphic. Nevertheless, determining when two structures are isomorphic is a
+natural and often useful result. For isomorphic structures, most theorems that
+hold in one structure hold in the other. Indeed, there is an agreement among
+mathematicians that isomorphic structures are essentially the same. Properties
+of one structure that are not invariant under isomorphism are often referred to as
+evil by category theorists. This leads to the question of how fine or coarse our
+condition must be for isomorphism, that is, the question of which properties are
+irrelevant in some sense. To give an example, the von Neumann ordinal definition
+of natural numbers and Zermelo’s definition satisfy the same universal property of
+being a natural numbers object [17, p.269]. But in the von Neumann definition,
+5 € 10 while 5 ¢ 10 in Zermelo ordinals.
+
+To formalize the idea that isomorphic structures are the same, Makkai [5] pro-
+posed the following principle of isomorphism: all grammatically correct properties
+of an objects of a fixed category are invariant under categorical isomorphism. By
+categorical isomorphism we mean the following: Objects A and B in a category are
+isomorphic if there exist f : A B and g: B > A such that go f is the identity
+arrow in A and f og is the identity arrow in B. It is clear that the above princi-
+ple is referencing all categorical properties and so is not itself a statement within
+the object language of category theory. Foundational mathematicians formalize
+this idea (in general) as the univalence axiom in homotopy type theory to have a
+
+foundation that is more consistent with how mathematicians do mathematics.
+
+Finding a method for deciding whether two uniserial modules over an Artin
+algebra are isomorphic is an open problem posed in [2]. A uniserial module is a
+module whose submodules are totally ordered by inclusion. An Artin algebra is
+an algebra over a commutative Artinian ring R that is finitely generated as an
+R-module. There are partial results that tackle this problem. In [3], it was shown
+by D’Este, Kaynara and Tiitiincii that for uniserial modules 1 and A/ of finite
+
+length over any ring R, the following are equivalent:
+1L2M
+
+2. There are morphisms f : L — M and g: M — L and nonzero x € L such
+
+that z is a fixed point of go f.
+
+3. There are morphisms f),..., f, with f; : LM, fo: ML, fg: Lo M.,...
+such that f,o...0 f; #0.
+
+By uniform module we mean a module such that the intersection of any two
+nonzero submodules is nonzero. Every uniserial module is uniform, for given
+nonzero submodules U and V of a uniserial module A/, either U C V or V CU
+and so their intersection is either U or V. The result above gives an approach to
+
+decide when two uniserial modules are isomorphic.
+
+In 2006, Prihoda showed that uniserial modules U and V over any ring R are
+isomorphic if and only if there is a monomorphism f : U > V and an epimorphism
+g:U—-V [6]. There are also results that borrow methods from algebraic geom-
+etry. In particular, Huisgen-Zimmerman in 1998 [8] considered finite dimensional
+algebras over algebraically closed fields [8]. Bongartz and Zimmerman continued
+
+in this direction in 2001 [9].
+
+The above open problem gives a motivation to consider a weaker form of equiv-
+alence. One of the main implications of isomorphism is first-order logic invariance.
+However, isomorphism is still a very strong condition. If a working mathematician
+seeks to translate a first-order statement in one module to another, it suffices to
+consider a weaker form of equivalence which precisely describes what we mean by
+
+first-order logic invariance.
+
+The objectives of the thesis are the following:
+
+2
+
+1. Provide a clear exposition of the model-completeness of the theory of mod-
+
+ules over an infinite, simple, von Neumann regular ring.
+
+2. Prove that uniserial modules over an infinite, simple, von Neumann regular
+ring are unique up to elementary equivalence and show that the converse is
+
+true for a particular case.
+
+3. Provide an application of the above result (2) when the ring R is a matrix
+
+ring over a division ring.
+
+Chapter 2 gives an overview of model theory. Chapter 3 covers the first. ob-
+jective and is composed of known results mainly but not exclusively found in [1]
+with some proofs provided to elucidate the ideas and techniques. Chapter 4 in-
+cludes the main results (objectives 2 and 3) and we also show why the prescribed
+
+assumptions are insufficient for isomorphism.
+
+Chapter 2
+
+Model theory
+
+In [4], Weiss stated that model theory is the part of mathematics which shows how
+to apply logic to the study of structures in pure mathematics. Furthermore, he
+claimed that the fundamental tenet of model theory is that mathematical truth,
+like all truth, is relative. By this he means that truth is relative to a model,
+which is a structure satisfying a set of axioms. In this chapter, we introduce the
+preliminary notions of model theory and how it can play a role in the study of
+
+abstract algebra.
+
+2.1 First-order theories and structures
+
+We adopt the conventions in [7, p.14]. A (first-order) language a has the following
+
+as its symbols:
+1. Variables x, y, z,... (of some type)
+2. The symbols 7, 3 and V
+
+3. Function and predicate symbols { fx}xex and {P;}ie7 respectively, each of
+
+which has a corresponding natural number called its arity.
+
+We consider constants in a as a 0-ary function symbol. Any function symbol and
+predicate symbol (other than =) are considered nonlogical symbols. We recursively
+
+define the formulas in a as follows:
+
+1. x = y is a formula for some <x and y in S (not necessarily distinct).
+
+2. P(x1,...,tn) where P is a predicate in a of arity n and 2), ..., are variables
+
+in S (not necessarily distinct).
+3. The disjunction of any two formulas is a formula.
+4. The negation of a formula is a formula.
+
+5. Expressions of form 3z ¢(x) where ¢ is a formula constructed from (1) to
+
+(4) above.
+
+A sentence is a formula with no free variables. We call formulas of form (1) and
+(2) atomic. The reason why they are called atomic is that any other formulas are
+built upon them as we see from the above recursive definition. It is thus natural
+in the field of mathematical logic to prove things about all formulas by induction
+on the recursive definition. A first-order language is a formal language in which
+
+the symbols and formulas are as described above.
+
+Given a language a, an a-structure A/ is a nonempty set M (called the universe
+of AJ) with a subset M|P,] C M™ for every predicate symbol P, (except the logical
+symbol =) and an n-ary function f : M — M for each n-ary function symbol f.
+When the context is clear, we may write M instead of M.
+
+Suppose M is an a-structure and ¢, w are formulas in language a with free
+variables x1,...,%,. Given aj,...,@, € M we can recursively define the relation
+
+M F ¢(a),..., Qn) (reads as M models ¢(aj,...,@n)) by induction on ¢:
+1. If ¢ is the formula x; = x; then M F $(a;,a;) if and only if a; = a;.
+2. If ¢ = P(xj,,...,2;,) then M F (a,...,@,) if and only if the n-tuple
+(aj,,-.-,@;,) € M[P].
+3. ME (dV W)(ay,..., Qn) if and only if MF (a,...,@n) or MF (ay, ..., An).
+
+4. ME -7¢(aj,...,@n) if and only if it is not the case that MF ¢(a),....an).
+
+5. If ¢ is of form (Sy) where ~ has free variables 2,...,2n,y, then Af F
+(a1, ...,@n) if and only if there is a b € M such that M F (aj, ...,@n.b).
+
+A first-order theory T is a formal system such that the language of T is first-
+order, the axioms of T are the logical axioms (which are intrinsic to all theories)
+and the nonlogical axioms.
+
+The theorems of T are recursively defined as follows:
+1. Axioms of T are theorems of T.
+2. Logical consequences of axioms of T are theorems of T.
+
+We write T + ¢ to mean that ¢ is a theorem of T (or ¢ is provable in T). In-
+deed, a first-order theory is completely determined by its nonlogical symbols and
+nonlogical axioms. The rules of inference, axioms and symbols are already given
+
+once we have chosen a language for our (classical) theory. The rules of inference
+
+may differ if we want theorems to be constructively valid. But for our purposes,
+we assume the background logic is classical.
+
+A set-model or simply a model of a theory T is an a—structure M such that M
+models the axioms of T. Indeed, a model is functorial (see [5]) and we can gen-
+eralize the definition of models to models in a suitable category. The theory and
+results that arise out of the category-theoretic study of model theory is interesting
+but is not of great relevance in our discussion of modules as modules are models
+
+valued in sets.
+
+To give examples, the theory T,4g of abelian groups has only one nonlogical
+symbol ¥ which is a binary function symbol. The nonlogical axioms of T4g are
+the following:
+
+e ABI VrVyV2(z *y) *z = 2¥*(y*2z)
+
+e AB2 3x((Vy(x * y = y)) AVysd2(z *y =2))
+
+© AB3 VaVy(z * y = y * 2).
+
+Models of the theory Tp are precisely the abelian groups.
+The theory Tacr, of algebraically closed fields of characteristic p is in the language
+of fields. The nonlogical axioms of ACF, are the following:
+
+e ACF1 The ficld axioms
+
+e ACF2 lp=p
+
+e ACF3 (Vapo, ..., dndt)(Qnz” + ... + ax + ag = 0) (One axiom for each
+
+natural number 7).
+The third axiom ACF$3 is an axiom schema expressing algebraic closure.
+The theory T of right R-modules is written in the language of abelian groups
+together with a unary operation r for each element of R (elements of R are treated
+as endomorphisms of the module). For a structure Mf to be an R-module, we
+require that the ring R is unital, (Af, +) to be a model of T,4z, and the following
+axioms must be satisfied:
+
+e M1 (a+b)r =ar+br
+
+e M2 a(r+s) =ar+as
+
+e M8 a(rs) = (ar)s
+
+e M4al=a.
+
+That is, we also assume modules are unital. Given a theory T, write TF ¢ to
+
+mean that every model of T models ¢ (semantic consequence).
+
+We note that a theory is not uniquely presented. For instance, the theory
+Tag of abelian groups can be presented with an additional constant symbol 1 and
+axiom AB2 replaced by the sentence Vy(1 * y = y) A Wzdz'(z' * z = 1). We call
+this new theory T4g’. The theories T4g and T4,) are equivalent in the sense that
+the axioms of T4g are theorems of Tg vice versa. This is the same as claiming
+their class of models are the same (or their syntactic categories are equivalent
+categories. See [5, Lecture 1 p.5]). Indeed, instead of considering an element of a
+ring R to be an endomorphism of an R-module, the theory of modules T can also
+be presented as a multisorted theory by treating an element of R to be a variable
+of another type. However, the former presentation is more convenient for model
+theory.
+
+We also define the theory associated to a particular structure M as
+Th(M) = {¢: M F 4}
+
+which is the collection of all sentences in the language of A/ that are true in M.
+
+A theory T is called syntactically complete if for every sentence ¢ in T, either
+Tt gor Ti -7¢. The theory Th(M) is syntactically complete for any particular
+M but the theory of a large class of structures is not always so. For instance,
+the theory of groups Tg is not syntactically complete. To see this, we just make
+the observation that some groups are abelian and some are not. Hence both the
+
+statement ab = ba and its negation are not theorems of Tg.
+
+2.2 The morphisms in model theory
+
+In modern algebra, we say that homomorphisms are structure-preserving. Indeed,
+structure-preserving is a model-theoretic concept. Thus the model-theoretic def-
+inition of homomorphism covers all such cases. Let (7 denote the universe of a
+structure M. A function h.: Mf > N is a homomorphism if for all ¢ such that ¢
+
+is atomic (that is, of the form x = y or P(x,...,,) for P a predicate),
+ME @(qj,...,@n) => NE O(h(ay),..., h(@n)).
+
+where aj,...,@, € M.
+In particular, a homomorphism of groups corresponds to a homomorphism of
+
+models A and B where A and B are groups (models of the theory of groups).
+
+To illustrate this, suppose that in .4, ¢(a,b,c) defined as a + 6 = c holds ie.
+AFa+b=c. If f is a group homomorphism f : A > B, then f(a +b) =
+f(a) + f(b) = f(c) in B that is, BE f(¢(a,b,c)).
+
+If M and N are models of theory T and M C N then we say there is an
+embedding from 7 to N. We call N a supermodel of M. An embedding is
+called elementary if [(M) is an elementary substructure of N. By saying is an
+elementary substructure of N (equivalently N is an elementary extension of M)
+
+we mean that for any n-ary formula ¢ in the formal language,
+
+Vay, -;0n € M, MF d(ay,...,an) <=> NE $(a},..., dn).
+
+A theory is called model complete if all its embeddings are elementary.
+
+The following example of the usefulness of model completeness is known in
+classical algebraic geometry as discussed in [4, p.39]. It is known that the theory
+of algebraically closed fields Tacr (Tacr, without the axiom ACF2) is model
+complete. We also assume a weaker version of the axiom of choice so that every
+
+field has an algebraic closure. From these, we get a fundamental result:
+
+Theorem 2.1. (Hilbert Nullstellensatz.) If K is an algebraically closed field
+and / a proper ideal of K[z,..., tn], then
+
+V(1) = {we A'(K) : (WF € T)(f (4) = 0)} 40.
+That is, da;,...,@, € K such that Vf E 7 , f(ai,...,an) = 0.
+
+Proof. If K is a field (hence noetherian) then by Hilbert Basis Theorem, the ring
+K[xy, ..., Zn] is noetherian and every ideal of K (1, ..., Zn] is finitely generated. Let
+fi, +) fm generate I. If M is a maximal ideal containing J then K[x1, ...,tn]/M isa
+field with K C K[x),...,2n]/M. Let F be the algebraic closure of K[2,...,.tn]/M
+so we have a tower of fields K C K[x,...,2n]/M C F where F F ACF and
+KF ACF. So K C Fis an embedding of models. Now for p = (11+ M,...,.tn +M)
+€ {K[z,...,2n]/M}" © F", we have that fi(u) = ... = fa(u) =0. Let c,...,c) €
+F be the coefficients defining f),..., fm then
+
+Si(ue) = 0).
+
+>3
+
+PE (er, ---5 Cp) = (Se)(
+
+>
+I
+
+1
+
+Since the theory of algebraically closed fields is model complete, the embedding
+
+K C F of models is elementary. Thus we have
+
+KE B(e4 509) = GH) A\ False) = 0).
+k=1
+
+So there is w € K” such that fi(u) =... = fn(u) = 0 but f)..... fm generates J so
+Vf € J, f(u) =0. Therefore the vanishing set of J contains y (That is, V(J) is
+nonempty). Oo
+
+We now discuss the notion of sameness with respect to first-order logic. Struc-
+tures Af and N are elementary equivalent (denoted Mf = N) if for all sentences ¢
+in the language,
+
+ME¢o => NF¢®.
+
+An isomorphism of models implies elementary equivalence. Elementary equiv-
+alence, while weaker, is also desirable as it allows the translation of first-order
+statements in one structure to the other. For instance, any two real closed fields
+are elementary equivalent. This allows us to extend the field of real numbers to
+
+any hyperreal field with infinitesimals while preserivng all first-order logic.
+
+2.3. A fundamental theorem
+
+The relation T + ¢ speaks of formal provability, while the relation T F ¢ is about
+semantics. It is natural to ask if they are related. If a sentence is provable then it
+holds for all models (this is called soundness). The proof is just the verification that
+the derivation rules in the theory indeed preserves truth. An infamous theorem of
+Gédel (his doctoral dissertation) tells us that as long as we restrict our models to
+the category of sets, the converse holds. That is, if a sentence holds in all models
+of the theory then it must be a theorem. Therefore the notions + and - are the
+
+same in first-order logic.
+
+Theorem 2.2. (Godel Completeness Theorem.) Let T be a first-order theory.
+ThenTE@ => Te.
+
+We note that a theory T is syntactically complete if and only if any two models
+
+of T are elementary equivalent. To see this, suppose all models of T are elementary
+
+9
+
+equivalent. Then for any sentence ¢, either M — ¢ or M |: -¢ for any model M
+of T and so by the Completeness Theorem either M+ ¢ or M+ 7¢. The converse
+
+is clear since if a sentence is provable, it must hold for all models.
+
+10
+
+Chapter 3
+
+Elimination of quantifiers
+
+As we have discussed, the model completeness of theory of algebraically closed
+fields T4cr gives a simpler proof of Hilbert’s Nullstellensatz. This property comes
+from the fact that the theory T4cr has elimination of quantifiers. Now a formula
+is a boolean combination of formulas in a set S if ¢ can be obtained by disjunction,
+conjunction and negation of formulas in S. By elimination of quantifiers we mean
+that for every formula $(21,...,2,) of a theory T there corresponds a boolean
+
+combination of atomic formulas A(x), ..., Zn) such that
+TH (Vay,...,2n)(O(21,...,2n) A(T, ...,2n)).
+
+Note that every quantifier-free formula is just a boolean combination of atomic
+
+formulas.
+
+It is well-known that model theory is heavily utilized in the study of algebraic
+geometry. The model theory of modules turns out to be more complicated because
+we do not have a full climination of quantifiers, but only elimination restricted to
+
+a particular class of formulas. We will discuss these formulas later in this chapter.
+
+We note that the property of having quantifier elimination of a theory T is inde-
+pendent of the syntactic completeness of T. Consider the structure M = (N, S)
+which models the Peano axioms where S is the unary successor function. Let
+Th(M) denote the associated theory to M i.e. the collection of all first-order
+statements in the language of M that hold in M. By definition, Th(M) is syntac-
+
+tically complete. But the elementary formulas of Th(M) are just of form
+S*(x) = S'(z)
+
+for some k,l € No. Since the successor function is injective, the above equation
+can be rewritten as
+
+S"(a) =2 (*)
+for some n € No. But z is a fixed point of S” if and only if n = 0 since the
+
+successor of any natural number is not 0. And so the above relation reduces
+
+11
+
+to x = x which tells us that the given quantifier-free formula defines the entire
+universe N. If n > 1 then no natural numbers satisfies the relation (*). Thus every
+atomic formula defines either the empty set or the entire universe. Therefore, any
+quantifier free formula defines either the empty set or the entire universe. Notice
+however that the set {0,1} is definable by the formula Vz S?(r) # z. So it cannot
+be the case that
+
+Th(M) + Vy(Wa(S?() ¢ y) © A(y))
+
+where A(x) is any boolean combination of atomic formulas. Thus Th(M) is a
+
+complete theory without quantifier elimination.
+
+Now by the Gédel Completeness Theorem, the theory of algebraically closed fields
+ACF cannot be complete since there arc ficlds of different characteristic. Yet it is
+
+well known to have elimination of quantifiers.
+
+3.1 Positive primitive formulas
+
+We now define what we mean by a positive primitive formula. The definition we
+
+will use is due to Prest (1, Chapter 2].
+
+A formula $(v,..., Un) is positive primitive if it is equivalent modulo the theory T
+
+of modules over R to a formula of form
+
+mon N
+Jw, Wn OS vir + So weskj = 0)
+k=1
+
+j=l i=l
+
+where r;; and s,; are in ring R. That is,
+
+m n N
+TF (v1, ..-;Un) @ Jw, Wn KO iris + So wes = 0).
+
+j=l i=1 k=1
+
+In terms of matrices we can write the RHS of the material equivalence as
+
+Th Tim
+Trl Tram
+Jw), ..., Wn [V1...UnW1...wy] =0 (3.1)
+$11 Sim
+SN1 SNm
+
+12
+
+where 0 is the zero matrix of correct size.
+
+If we consider the block decomposition of the matrix above, we can rewrite
+
+(3.1) as
+
+dwy, ..., wy ([01..-¥n] P = —[wy...-wy]Q).
+
+We have discussed modules as a model in the previous chapter. By definition, the
+atomic formulas of the theory of modules over R must be of form 0 = 0 (since 0
+
+is the only constant symbol) or (if in n free variables)
+
+n
+) UiT ig =0
+i=1
+
+where the v; are free variables. Hence a positive primitive formula is really just a
+
+formula of the form
+
+dw), wn ((\ Ai)
+i=l
+
+where the A; are atomic formulas.
+
+Let M be a module over R. An example of a positive primitive formula is the
+divisibility condition. Let r € R and ¢(v) := dx(v = zr). The formula ¢(v) is
+positive primitive and MF ¢(a) <=> a is divisible by r in M.
+
+The following theorems can be found in [1, Chapter 2.1]. For simplicity, we write
+
+U1, +++) Un AS V.
+
+Lemma 3.1. (Linearity of positive primitive formulas.) Given @ and b in M
+for some module M and a positive primitive formula $(v) the followng hold: a
+
+positive-primitive formula (0) the following hold:
+1. ¢(0)
+2. o(@) and 6(b) => 6(a— b)
+3. Suppose r is in the center of R. Then $(@) => ¢(a@r) where (Gr) is
+$(a1T, ..., nt)
+Proof. Since ¢ is positive primitive, ¢(0) is equivalent to
+mi on N
+du, B00%) w AQ? Ori; + So wes = 0)
+j=l i=] k=1
+
+13
+
+where rj; and s,; are in the ring R. And so is of form
+
+m N
+du, On [\ (D> weseg oS 0).
+
+j=l k=1
+It is an axiom of the theory of modules that the zero element exists for any module
+M over R. So for any R-module M, we have M - (0) for any positive primitive
+
+formula ¢.
+
+Suppose $(@) and ¢(b). Then
+
+m n N
+dw, wn \(d> ari + So wesk; =0)
+
+j=l i=l k=1
+
+and
+
+3n,..av /\( Soin + Ysy =0).
+
+j=l i=1
+But since this is so,
+
+mon N
+du), ..., uv [\O 2 (a: — bi) rij + S- UkSkj = 0).
+j=l i=l k=1
+
+where uz = we — gz. Hence ¢(a — 8).
+Suppose that r is in the center of Ri.e. Vy € R(rg = gr) and suppose ¢(a).
+
+We want to show that
+duy,..., uv A(X ayr)rij + Yuen = = 0).
+j=l i=1
+
+but since r is in the center of R, the above formula is equivalent to
+
+Fu, ..., uv AT ajriz)t + Yvusy = = 0).
+
+j=l i=l
+Since $(a@), we have
+
+Fw1,--.; THINODE Tis + Yay = = 0).
+
+j=l i=1
+Applying the operation r € R in both sides news
+
+dwy,... ov AT ajrig)T + i (wisej)r = 0).
+
+j=l i=1
+
+Since r is in the center of R,
+
+N
+Jw), ... sun \( 5 a;ri)T + So (wer) se; = 0).
+k=1
+
+j=l i=1
+
+Hence we can choose the uz to be wzr. oO
+
+14
+
+Corollary 3.2. Let ¢ be a positive primitive formula with free variables 0 and let
+
+| be the length of the free variables 0. Let M be a module over R.
+
+1. @(M) = {a € M': M F ¢(@)} is @ subgroup of M!' called the positive-
+primitive definable subgroup of AI.
+
+2. For fixed @, substitute @ to the last |—k-free variables inv. The set ¢(M,@) =
+{ce M*: M - ¢(2,a)} is either empty or is a coset of the subgroup ¢(M,0)
+of M*.
+
+Proof. The set ¢(M) contains 0 by Lemma 3.1. By-the subgroup test, it remains
+to check if @ — b is in ¢(M). Suppose that @ and 6 are in ¢(M) that is, M  ¢(a)
+and M | ¢(b) then by Lemma 3.1, M | ¢(@ — b) and so @— bis in ¢(M)
+
+By Lemma 3.1, ¢(M,0) is a subgroup of M*. Suppose ¢(/,@) is nonempty
+and suppose Zc’ € ¢(M,a). Thus M § ¢(¢,a@) and M - ¢(¢,a). By Lemma 3.1,
+we have M — ¢(¢-¢,,0). Hence C € €+ 4(M,0) ie. o(M,a) C + ¢(M,0).
+Conversely, suppose po € ¢(A/,0). So we have M — $(@,0) and M § 4(Z,a).
+Since $(A/,0) is a group, —@ € ¢(M,0). Hence by Lemma 3.1 M § ¢(é + %, a)
+ie. €+ 6(M,0) C A(A/,2). oO
+
+In model theory, a type is a set of first-order formulas in the language with
+n-free variables that holds for a set of n-tuples in the universe of the structure.
+
+Formally, the type of a tuple @ in a model M is the set of formulas
+tp™ (a) = {(@) : M — 6(@)}.
+For definition with parameters from BC M we have
+tp” (G/B) = {9(0,) : be B,M F 4(@,6)}.
+
+We can restrict this definition to positive primitve formulas. The following
+definitions are due to Prest [1, p.22-34].
+
+If € M and if S C M, we define the positive primitive type of ¢ in M over S
+to be the filter consisting of those cosets ( positive primitive-definable over S ) to
+
+which the tuple ¢ belongs. We denote this by
+pp™ (6/S) = {¢(5,3) : 3 € S,MF o(Z,5)}
+
+where ¢ is a positive primitive formula. If S = @ , we write pp™ (c).
+
+Given a homomorphism f : 1f > N and @ in M, if M §& ¢(@) where @ is
+positive primitive, then N F ¢(fa). Thus the positive primitive-type of @ in M is
+
+contained in the positive primitive-type of fa in N. That is,
+
+pp™ (a) pp (fa).
+
+So if Af C N, where M and N are modules over R, and if @ is in M, choosing f
+
+to be the inclusion mapping yields
+pp™ (a) C pp™ (a).
+
+The above embedding M C N of models is called a pure embedding if for every
+a € M, we have equality
+pp (@) = pp" (a).
+We write M <«< N to mean there is a pure embedding of M to N (M is a pure
+submodule of NV). Indeed M < N if and only if for all positive primitive-formula
+¢ and tuples a in M,
+MF ¢(a) <> NE ¢@).
+
+That is to say, a pure embedding is a positive primitive elementary embedding (¢
+is restricted to positive primitive formulas). In a more concrete sense, what we
+mean is that every finite system of linear equations with coefficients from the ring
+R and parameters from the module M that has solutions in N in fact already has
+
+solutions in M.
+
+The idea of a pure embedding leads to the notion of a von Neumann regular
+ring. A ring F is called von Neumann regular if every embedding of R-modules
+is a pure embedding. There are many characterizations of von Neumann regular
+
+rings, one of which is given in [12]: R is von Neumann regular if and only if
+Vraz :rar=r
+
+where r,z € R.
+
+We now introduce invariant statements. The following definition is due to
+Prest [1, p.34]. Let M be an R-module and 4, A be positive primitive with the
+
+same free variables such that ¢ implies A. Define
+Inv(M, ¢,) = |6(M)/A(M)|
+
+16
+
+to be the order of the factor group ¢(M/)/A(M). If it is not the case that ¢ implies
+
+A then we define:
+Inv(M. 6,2) = |6(M)/(o(M) 9 X(M))|.
+
+Note that Inv(M, ¢, A) = Inv(M, ¢, {6 A A}). Indeed for k a positive integer,
+k
+Inv(M,9.r) >k => ME Vj,...,%30(6(0) A \ >A - HH). (3.2)
+i=]
+
+Note that =A(v —%) if and only if 0 — 7%; is not in A(M) and this is so if and only if
+the equivalence classes are not equal i.e. [vu] # [v;] for i < k and since the formula
+in RHS of (3.2) requires that ¢(v) holds for some 0, the factor module would have
+more than k elements.
+
+For k a positive integer, we also define
+Inv(-, ¢,A) =k := Inv(-,¢,A) > kA7Inv(-,¢,A) >k+1
+
+Invariants of direct sum or product of modules are the products of its components.
+See [1, Lemma 2.10]. In particular, Inu(M@N, ¢, W) = Inv(M, ¢, v)Inv(N, ¢, v).
+
+If T is a syntactically complete theory of modules over R, then every two
+models of T are elementary equivalent. Thus Inu(M, ¢, A) = Inv(N, ¢, A) for any
+model M and N of T. Therefore if T is complete, we can write Inv(T, ¢, A) to
+mean Inu(M,¢, ) where M is an arbitrary model of T.
+
+The notion of invariants gives rise to a standard partial ordering of syntactically
+complete theories of modules. Let T and T’ be syntactically complete theories of
+modules, we write T < T’ if each model of T is purely embedded into some model
+of T’. Indeed by Proposition 2.30 in [1, p.60], the above condition is equivalent to
+saying Inv(T,¢,A) < Inv(T’,¢, A) for all positive primitive formulas ¢ and A in
+
+one free variable. Define
+
+T* = Th(Q Mr)
+where T is a syntactically complete theory of modules and Mr a representative
+model of T. That is to say, T* is the syntactically complete theory of the direct sum
+of all representative models of every syntactically complete theory T of modules.
+With respect to the above partial ordering we defined, this is by definition the
+
+largest syntactically complete theory of modules.
+
+17
+
+A module M models T™ if for every positive primitive formulas ¢ and w with
+y — 4, the invariant Inv(M, ¢. V) is infinite i.e. 6(M)/w(M) is infinite. See [11,
+p.17]. Thus if M is not a model of T*, Inv(M,¢, V) is finite for every pair of
+
+positive primitive formulas ¢ and w.
+
+It will turn out that every sentence in the language of modules is equivalent
+(modulo the theory of modules) to a boolean combination of conditions on positive
+primitive formulas and invariants i.e. those statements of form Inv(T, ¢, A) being
+
+equal, less, or greater than some positive integer k.
+
+3.2 Model completeness
+
+In this section, our main goal is to show that the theory of R-modules is model
+
+complete if and only if A is an infinite, simple, von Neumann regular ring
+
+The proof of the following lemma is found in [13, p140-141]. This lemma general-
+izes a result of B.H. Neumann that will be used to prove the relative elimination
+
+of quantifiers for module theory.
+
+Lemma 3.3. Let G be a group, and let Ho, ..., Hn, be subgroups of G, ao, ...,; An—1 €
+G, and M = {Hoao,..., Hn-1@n-1} Suppose that
+
+n-1
+G= U Hya;
+i=0
+
+but G is not the union of any proper subset of M. Then [G : ();., Hi] < n! and
+so by Lagrange’s theorem each H; is of finite index in G and one may omit from
+
+any covering of cosets of G cosets of the form Ha if |G: H] > nl.
+Proof. Let H =();<, Hi. We will show that for each j <n
+[H;: H]<(n-1)!
+
+For if this is the case, each coset Hja; is the union of at most (n — 1)! cosets of H
+and so G is a union of at most n! cosets which is what we want. This claim follows
+from the case m = 1 of the following statement: If 1 < m < nand Ko,..., Km-1 are
+Ho), »--» Him—1) for some i(0) < ... < i(m—1), then [KoN...AKm-—1: H] < (n—m)!.
+We prove the above statement by (downward) induction on m. If m = n we
+
+are done. Thus suppose that the above statement holds for m + 1 and suppose
+
+18
+
+Ko,..-, Km-1 are groups in the hypothesis of the statement. Let K = Nem Ki.
+Since G is not the union of any proper subset of M (i.e. M is a minimal cover)
+there is an element g € G not in U;<_ Hicjaig) and so for each j < m, Hij)aiV3)
+is disjoint from the coset Hj;)g and hence disjoint from Kg so that Hijyax;)97?
+
+is disjoint from K.
+
+Consider any i < n. The set KM (Ij;a;:g~!) is either empty (if i = i(j) for
+some j) or a coset (K M H;)y; since if K M (H,a;g~') # 0, then the elements
+of K in the intersection are of the form hja;g~! where h; € H;. So we have
+KM (Hiaig~') = (KN H;)aig7! where aig! € G. Thus K is the union of at most
+n—m cosets (KM H;)y; each of which is, by inductive hypothesis, the union of at
+
+most (n —_m — 1)! cosets of H. This proves our claim and the lemma. Oo
+The following corollary is immediate:
+
+Corollary 3.4. (B.H. Neumann’s Lemma) Given the assumptions of Lemma 3.3,
+any coset of a subgroup of infinite index may be omitted. That is, if Ho, ...,H, are
+
+subgroups of G and
+k
+G=|JHia
+i=0
+
+with Ho,....Hm (m < k) subgroups with indices in G greater than n! then
+
+k
+
+i=m+1
+We now discuss the usual techniques for quantifier elimination. A formula ¢
+
+is called primitive existential if
+=a /\ po (3.3)
+I
+
+where each p; are basic formulas. By basic formulas we mean an atomic formula
+
+or a negation of atomic formula.
+
+To show that T has elimination of quantifiers, it suffices to show that we can
+eliminate the existential quantifier in (3.3). The same holds if we change the con-
+dition on p; to be a formula of certain form. That is, if each p; is positive primitive
+or a negation of a positive primitive formula, then to show that every formula is
+a boolean combination of positive primitive formulas and invariant sentences, it
+
+suffices to show that every formula of form (3.3) where each p; is positive primitive
+
+19
+
+is equivalent to a boolean combination of positive primitive formulas and invariant
+
+sentences. See (15, Lemma 3.2.4].
+
+We also note that a formula ¢(v) can be identified with the set of all tuples a
+in a module M such that M - ¢(@) since the sets:
+
+{ae M: Mi ¢(a)}
+
+{aeM: ME y(a)}
+are equal if and only if M — Vu(¢(v) © y()).
+
+The following results up to Theorem 3.12 are known. See [1, Chapter 2 and
+16]. We provide the details of the proof.
+
+Theorem 3.5. The theory T of R-modules has positive primitive and invariant
+sentences (in one free variable) elimination of quantifiers. That is, every formula
+in the language of modules is equivalent modulo T to a boolean combination of
+
+invariant sentences (in one free variable) and positive primitive formulas.
+
+Proof. By the Godel Completeness Theorem for first-order logic, it suffices to work
+in an arbitrary module M. Suppose that the length of W is n and suppose that
+w(v,W) is a boolean combination of positive primitive-formulas. Then 7(v,@) can
+be expressed in disjunctive normal form (see [13, p.42]):
+
+U(4;(0,) N( >i (v, 7)
+
+j i
+where $; and 7; are positive primitive since intersection of positive primitive-
+formulas are positive primitive. To see this, we consider the prenex normal form
+of the conjunction of two positive primitive formulas. Suppose we have two positive
+
+primitive formulas:
+
+N
+Fwy, ..., ww AC y UiTig + ) WeSkj = 0)
+
+j=l i=1 k=1
+
+dn, -. cau \( Sac + Yon = =0)
+
+j=l i=1
+
+Then their conjunction is equivalent to the formula
+
+M
+dwy,... sry WN5Q1,- sau \D ViTig + Yay = = 0) A IN y TiC + So ade; = 0).
+
+j=l i=1 j=l i=1 k=1
+
+20
+
+By renaming the variables this is just the formula
+
+n+m nt+tm N+M
+
+dw). vy WN4M \ (> Vili + > WkSkj = 0)
+j=l i=l k=l
+
+which is positive primitive. Therefore,
+T + Bup(v,@) 4 Bv\/(9;(v,@) A \ Wis (v, B))
+j i
+
+and the RHS of the equivalence is equivalent to
+
+V Ju(¢;(v, B) A \\ >Wij(v, 3).
+
+j i
+Thus it suffices to eliminate 3 from a formula of form
+
+du(d(v, W) A \ aij (v, W))
+
+where the 7; and ¢ are positive primitive-formulas.
+
+Suppose that we are working in an arbitrary module M and v;(v,@) > $(v,@)
+for each i. Then Vb € M, the formula (v,b) A A; 7¥i(v,b) defines the set
+¢(M,6) ~ U,¥vi(M,6). Thus to eliminate the existential quantifier, we need to
+express the condition ¢(M,b) ~ U, ¥i(M,b) 4 @ as a boolean combination of
+positive primitive-formulas and invariants. Equivalently, we can express
+o(M,b) ~ (J ¥i(AI, 6) (3.4)
+i<n
+
+as a boolean combination of positive primitive formulas and invariants. We note
+that (3.4) is equivalent to the condition
+
+o(M,b) ¢ (J di(M, 6). (3.5)
+
+i<n
+By Corollary 3.2, the set ¢(M,b) is empty or is a coset of (M,0) and ¥;(M,b)
+is empty or a coset of y,(M/,0). If 6(M,b) = @ then (3.5) is true. If y,(M,6) = 0
+then we will just remove it in the union. Thus we may assume that ¢(M/,b) and
+
+all the y;(M,b) are nonempty.
+
+Choose elements c, do, ...,dp—1 € M such that (M,b) = $;(M,0)c and y,(M, b) =
+wi(M,0)d;. Let u; = dhe We can write condition (3.5) equivalently as
+
+21
+
+o(M,0) UJ wi(M, 0)ui. (3.6)
+i<n
+By Lemma 3.3, we may drop from the union cosets 7;(A/,0)u; whenever [@(A/, 0) :
+¥,(M,0)] > n!. The statement [¢(A/,0) : ¥;(M.0)] < n! can be written as an in-
+variant sentence. Suppose [$(M/, 0) : ~;(M,0)] < n! for each subgroup 7;(M,0).
+
+We will show that the truth valuation of (3.6) is completely determined by the
+
+following:
+
+1. Invariants Inv(M, \(v, 0), u(v,0)) where A = ¢ or is a conjunction of some
+
+y; and pz a conjunction of some yj.
+2. Formulas of form 3u A; ¥i(v, 6).
+
+Consider (); ¥i(A7,0). If S is a union of right cosets of (); ¥i(A/,0), define N(S)
+to be the number of distinct cosets of (); 7):(7,0) lying in S. We have:
+
+$(M,0) C Jdi(M,Dur <=> N(4(M.0)) < N(LJvi(M,Du). (3.7)
+
+i<n i<n
+By the inclusion-exclusion formula in combinatorics, the RHS of (3.7) is equivalent
+
+to:
+
+N(O(M,0)) < DO-IT DN) iM, O)wi)}. (3.8)
+
+l<k<n JC{1,....n} ied
+The set (),<) ¥i(M, 0)u; is either empty or a union of cosets of (), i(M,0). In the
+
+latter case,
+
+N(() ¥i(M, Dus) = [1 i(M,0) = () vien(M,0)].
+ied ieJ i<n
+By (3.8), we can write condition (3.6) as boolean combination of statements of
+
+following forms:
+
+L. [Mies PilM,D) : Nren Picn(M,0)] < p for some positive integer p. That is,
+invariants Inv(M, A(v,0), (v,0)) in one free variable v where \ is a con-
+
+junction of some 7); and py a conjunction of some yj.
+
+2. Ney Vi(M, O)ui # 0.
+
+22
+
+The 2nd condition is equivalent to dv A, ¥;(v,b). But a conjunction of positive
+
+primitive formulas is positive primitive. So Ju A, ¢i(v, 6) is positive primitive.
+
+Therefore, there exists a formula o(@) (boolean combination of invariant state-
+ments in one free variable and boolean combination of positive primitive formulas)
+
+such that for any R-module J/,
+M - Wo(30(4(v, 0) A A\ >¥i(v,B)) @ o(B)).
+
+By the Gédel completeness theorem, we know that the above formula is indeed
+
+provable in the theory T of modules over R. That is,
+
+T + Vo(sv(d(v, @) A \ ayi(v,@)) & o(@)).
+
+t
+
+i)
+
+It follows from Theorem 3.5. that every sentence in the language of modules is
+a boolean combination of invariant sentences. This is because a positive primitive
+sentence is satisfied by the zero element for any module M.
+
+From the above result, if @,b € M for some module M, then
+tp (a) = tp (b) <=> pp (a) = pp™(b).
+That is, there is a positive primitive climination of quantifiers.
+Corollary 3.6. The module M is elementary equivalent to N if and only if
+Inv(M, ¢,¥) = Inv(N, ¢, ¥)
+for all positive primitive formulas ¢ and w in one free variable where ¢ > w.
+
+Proof. If M = N then Inv(M, ¢, ) = Inv(N, ¢,) since invariants are sentences
+
+in the language of modules. The converse follows from Theorem 3.5. Oo
+
+Lemma 3.7. Let Af,N be R-modules. If M « N, then
+inv(N, ¢, ¥) = Inv(M], ¢, w) * Inv(N/M, ¢,¥)
+for all ¢,w. So N is elementary equivalent to M ®(N/M). In particular,
+
+Inv(M, ¢,¥) < Inv(N, ¢, ).
+
+23
+
+Proof. Suppose ¢ and wy are positive primitive formulas in n free variables. Since
+M <«_N, we have ¢(M) = M"1M @(N). So we can form the quotient group
+9(N)/¢(M). It suffices to show that
+
+0(N)/O(M) = (N/M) (3.9)
+
+for any positive primitive formula ¢. To see this, suppose we have (3.9). By
+
+Lagrange’s theorem, we have
+
+Inv(N, $b) _ (GN) ¥O)] _ ANDI ODI _ 16M)
+
+Invo(M, 46.4) — (o(M): ¥(M)) |e) IIY(N)| N/M)
+= [9(N)/O(M) : W(N)/¥(M)]
+= [9(N)/O(M) : W(N)/¥(M1)]
+= Inv(N/M,¢,%).
+
+We proceed with the proof of (3.9). Elements of ¢(N)/¢(M) have the form a +
+¢(M) where N — $(a). If @+ ¢(M1) € 6(N)/¢(M), then N — (a) and
+
+N/M F $(na) = (4+ 6(M))
+where 7 is the canonical epimorphism (projection):
+m: O(N) > o(N)/o(M).
+Hence ¢(N)/¢(M) < ¢(N/M). Now suppose that N/M  ¢(73) with
+$(7a@) = JWA(D, 72)
+
+where A is a conjunction of atomic formulas. Let b € N such that N/M —
+(xb, 7G). Regard the zero element of each equation of \ as separate parameter,
+that is, replace A(w,0) by Ao(w,v,0). Then N/M — o(w,v,0). Since Apo is a
+conjunction of equations, by definition of factor module N/A/ there exists a ¢
+in Kern = M such that N/M - 2o(b,a,¢). Thus N — 3W30\9(W, 7,2). Since
+M «N and@eé M, M — 3w0)0(W, 7B, 7). Say a’ and U are in M with do(a’, V,2)
+holds in N and M. Then by linearity of positive primitive formulas, from Ao(b, a, 2)
+and Ag(b’,a’,e) we get Ao(b — b’,a — a’,0). In particular, N / 3wAo(w, a — a’, 0)
+hence N  3wA(w,a— a’). That is to say, N — ¢(@—a’) but (a — a’)= 7 since
+a’ € M = Kern. Therefore 7a € ¢(N)/¢(M/) as required.
+
+That N is elementary equivalent to M @ (N/M) follows from Corollary 3.6. This
+
+proves the lemma.
+a)
+
+24
+
+Theorem 3.8. If M< N « M’ and M is elementary equivalent to M', then M
+
+is an elementary substructure of N and N is an elementary substructure of M’
+
+Proof. By Lemma 3.7, Inv(M, ¢,) < Inv(N,¢,) < Inv(M', 6, v) = Inv(M, ¢, Vv)
+for any positive primitive-formulas ¢ and w thus M is elementary equivalent to N
+(By Corollary 3.6).
+
+Let a € AY. Since M <« N, pp™ (a) = pp (a). Hence tp” (a) = tp’ (@) and M
+
+is an elementary substructure of N. O
+The following corollary follows from Theorem 3.8. See [1, Corollary 2.26].
+
+Corollary 3.9. Let M and N be R-modules. If A{ and N models the largest
+theory T* and M « N then every embedding of M to N is elementary.
+
+We now proceed to the results that give a sufficient and necessary condition
+
+on aring R for a theory of modules over R to be model complete.
+
+As mentioned earlier, there are many characterizations of von Neumann regular
+rings. The definition we used is that a ring is von Neumann regular if every
+embedding is a pure embedding. A particular characterization based on positive
+
+primitive formulas is given in [14].
+Theorem 3.10. Let R be a ring. The following are equivalent:
+1. R is von Neumann regular.
+
+2. If d is positive-primitive in n free variables, then there ezists ann x n idem-
+potent matriz A with entries from R such that for any module M over R, the
+pp-definable subgroup ¢(M) of M is the solution set to the matrix equation
+vA =0 (i.e. the nullspace of A).
+
+3. If If d is positive-primitive in n free variables, then there exists ann x n
+idempotent matrix A with entries from ring R such that for any module M
+
+over R, the subgroup ¢(M) is the solution set to matriz equation VA = ¥.
+
+Thus by considering formulas in one free variable (class signs), we know that
+for any module M over a von Neumann regular ring F, all positive primitive de-
+
+finable subgroup of M is of the form Me for an idempotent e of R.
+
+Using the characterization of von Neumann regular rings in Theorem 3.10, we
+
+prove the following theorem:
+
+25
+
+Theorem 3.11. Suppose R is von Neumann regular and ¢, W positive primitive
+
+formulas in one free variable. Then every Inv(—,¢,W) is equivalent to
+Inv(-,v = vi,v = 0)
+
+and alternatively to one of form Inv(—, vi = 0,uv = 0) where i is an idempotent of
+R.
+
+Proof. By the above characterization, every invariant is equivalent to one of form
+Invu(—,v = ve,v = vf) where f and e are idempotents of R. Without loss of
+
+generality suppose Re > Rf. We can decompose Re as:
+Re = Rf © Re(1 — f).
+
+We claim that e(1 — f) is an idempotent of R. Since R is not necessarily com-
+mutative, it does not immediately follow that e(1 — f) is an idempotent. From
+Re > Rf we have that f € Re. Hence, f = re for some r € R and so we have
+
+fe=ree=re = f. Since fe= f,
+
+e(1 — f)e(1 — f) = (e — fe)(e — fe) =(e- fy(e- f) =e — fe—fet+f
+
+=e’ — fe=e—fe=e(1-—f).
+
+Hence e(1 — f) is an idempotent of R.
+
+Let Af be an R-module. The function © : Me —> Me(1—/f) defined by mapping
+me € Me to the element me(1 — f) € Me(1 — f) is a group homomorphism since
+
+for any me,ne € Me,
+O(me + ne) = O((m+ n)e) = ((m+ n)e)(1 — f) = (me + ne)(1 — f)
+
+=me—mef +ne—nef = me(1 — f) + ne(1 — f) = O(me) + O(ne).
+By definition of ©, Im(©) = Me(1—/f). We claim that KerO=Mf. Ifmf € Mf,
+then 0(mf) = mf(1—- f) = mf—mff = mf —mf = 0. So Mf C KerO.
+Conversely, we want to show that if me € Ker®, then me € Mf. If me € KerO
+(ie. if me(1— f) = 0), then me — mef = 0 and so me = mef. But since e € R,
+it is an endomorphism of M. Thus we have me = mef € Mf and KerOC Mf.
+Hence, we have KerO = Mf as desired.
+
+By first isomorphism theorem for groups, we have:
+Me/Mf = Me/KerO = ImO = Me(1 — f).
+
+26
+
+It follows that
+
+|Me/M f| =|Me(1 — s)| =|Ae(1 — f)/{0}| = Inv(M, v = ve(1 — f). v = 0)
+
+= Inv(M,v = vi, v = 0)
+
+for some idempotent 7 of R. Therefore, the first form holds.
+
+For every me € Me, me(1 — e) = me — me = 0. If m(1 — ec) = 0, then
+
+m — me = 0 hence m = me. This shows that Me = anny(1 — e) and so the
+second form follows.
+
+i)
+
+We now discuss the main theorem of this chapter. This theorem is known, and
+
+we will use it to prove uniqueness up to elementary equivalence of certain modules.
+
+Theorem 3.12. The theory of T of R-modules is model complete if and only if
+
+the ring R is infinite, simple and von Neumann regular.
+
+Proof. Suppose that the theory of modules over R is model complete. Then every
+embedding between two nonzero R-module is elementary. We require the condition
+nonzero” since otherwise by the universal property of the zero module (zero
+object), the zero module would be elementary equivalent to a nonzero module,
+which is absurd. Suppose that R is finite. Then R” is also finite for any positive
+integer n. Since R embeds into R" for n > 2 such an embedding would be
+elementary, so R = R”. We claim that elementary equivalent finite structures
+have the same cardinality. Suppose M = N such that M and N finite and
+|| =k. Since M has k elements,
+
+MI k Ju, wey Uk NG # v;)
+ifj
+where i, 7 < k. So by elementary equivalence
+N 3, ..., 0x [\(u; # 2)
+tA
+where i, 7 < k so |N| is at least k. Now suppose that
+NE 3u,..., Up (ui # vj)
+ifj
+where p > k. Then by elementary equivalence
+MF 3u, os Up [\(vi # vj)
+ifj
+
+27
+
+This contradicts that |M| = k and thus |M| = |N|. Hence we have |R| = k = |R"|
+for n > 2 where k is a positive integer; which is a contradiction.
+
+Now suppose that J is a nonzero ideal of R. Then
+R/T — Vo(ur = 0)
+
+where r € J is nonzero. Since the above sentence is false in R, we have J = R,
+hence R is a simple ring. Since the theory of R-modules is model complete, every
+embedding is elementary and thus a pure embedding, so R must be von Neumann
+
+regular.
+
+Conversely, suppose R is infinite, simple and von Neumann regular. We claim
+that M is a model of T*. If M is not a model of T*, then Inv(M, ¢, w) is finite for
+every positive primitive formulas ¢ and w. Consider ¢ and w in one free variable.
+Since R is von Neumann regular, Theorem 3.11 implies that there is a nonzero
+
+idempotent e of R such that
+Inv(M, ¢,) = Inv(M,v = ve, v = 0) = |Me/{0}| = | Me].
+
+So there is a nonzero idempotent e of R such that Me is finite. Since M is nonzero,
+ann(M) = {0} ie. M is faithful. That M is faithful is equivalent to the condition:
+Va,b € R such that a # b, there is an m € M such that ma 4 mb. Now suppose
+that Re is infinite. Since M is faithful, ifre 4 r’e for re, r’e € R, then mre # mr'e.
+Hence, it follows that the set
+
+{mre :re € Re} C Me
+
+is infinite. This contradicts that A/e is finite. So Re must be finite. The submod-
+ules of Rp are precisely the ideals of R. In particular, Re is a nonzero ideal of R
+since e is a nonzero idempotent of R (we have considered rings to be unital). But
+R is simple so Re = R. It follows that R is finite, contradicting that RF is infinite.
+We conclude that M is a model of T*. Hence, if Mf and M’' are modules over an
+infinite, simple, and von Neumann regular ring R, every embedding of M to M’
+
+is elementary, that is, T is model complete.
+i)
+
+28
+
+Chapter 4
+
+Main results
+
+In this chapter, we present the main results of the thesis. Let us define the category
+of models of a theory T. By a category we adopt Mac Lane’s definition that
+a metacategory is any model of the category-theoretic axioms while a category
+is valued in sets [CWM, p.7-9]. Now the class of models of a theory T forms
+a category denoted M(T) whose objects are the models of the theory (in our
+case, these are modules over a fixed ring R) and whose morphisms are elementary
+embeddings. There category M(T) where T is the theory of R-modules is different
+from the category of R-modules because elementary embeddings must preserve any
+first-order statement (with parameters) but a usual module homomorphism need
+not have this property [5, Lecture 2]. So an arrow may not exist in M(T) yet exists
+in the category of R-modules. This is where the notion of model completeness
+
+becomes crucial.
+
+4.1 On syntactic completeness
+
+We will show that any module over an infinite, simple, von Neumann regular ring
+is first-order logic invariant.
+Theorem 4.1. A module over a simple, von Neumann regular and infinite ring
+
+is unique up to elementary equivalence.
+
+Proof. Let T be the theory of modules over a simple, infinite and von Neumann
+regular ring R and let M(T) be the category of models of T. If M, and M2
+are modules over R, then their direct sum M, M2. = M, x Mb is another
+module over R. Furthermore, there are canonical embeddings i, : MJ) > MM, @ Me
+and ig : Mz + M, ® Mp by the universal property of products/coproducts. By
+model completeness of T, these embeddings are elementary and thus 7; and 72 are
+
+morphisms in M(T). But if this is so, then for any first-order ¢
+MF (1, -.en) <=> M @ ™, EF $(41(c1), .-,41(Cn))
+
+and
+
+Mz F (di, .-.dn) <=> Mi BD M2 F (i2(di), --, t2(dn))
+
+29
+
+for all n, and all cy, ...,¢n € Mi, dy,...,dn € Aly. By setting n = 0 we see that M,,
+Mz and M, @ M; all satisfy the same first-order sentences (without parameters)
+
+i.e. for any sentence ¢
+
+MES = MES MOYMES
+
+But these models M, and M» are chosen arbitrarily and we have shown M, = AJ,
+thus the theory T has one model up to elementary equivalence. And so T is
+
+syntactically-complete. O
+
+The above theorem thus shows that the theory of modules over a simple, infi-
+
+nite and von Neumann regular ring is syntactically complete.
+
+In the case where F is also an Artin algebra (e.g. if it is an Artin ring), then
+we are able to determine R-modules up to a weaker form of equivalence. For what
+has been shown is that a choice of von Neumann regular, simple and infinite ring
+
+R completely determines a uniserial module over R up to elementary equivalence.
+
+This theorem generalizes the well-known result that infinite vector spaces over
+infinite fields are unique up to elementary equivalence, since any field is simple
+and von Neumann regular. Also, as a consequence of syntactic completeness, the
+theory of modules over an infinite, simple, von Neumann regular ring is decidable.
+By decidable we mean that there is an effective method to determine (in a finite
+
+amount of time) if a sentence is a theorem or not.
+
+A natural question arises: if a module over a ring R is unique up to elementary
+equivalence, what can be said of R? Is R necessarily von Neumann regular? In-
+deed in [1, p.325], it was stated that it is not known whether the theory of nonzero
+R-modules being syntactically complete is sufficient to imply that R is infinite,
+simple and von Neumann regular. We claim that if, in addition, every right ideal
+of R is an elementary substructure of R as a module over itself, then R must be
+
+infinite, simple and von Neumann regular.
+
+Theorem 4.2. /f the theory of right R-modules is syntactically-complete and every
+right ideal of R is an elementary substructure of R as a module over R then R is
+
+an infinite, simple and von Neumann regular.
+Proof. Suppose otherwise that R is finite. That is, |R| is finite and R is a finite
+
+30
+
+module over itself. By syntactic completeness, any two modules over R are ele-
+mentary equivalent. Consider the module R” over R where n > 1. Since |R| is
+finite, |R”| is finite for any n > 1. Since elementary equivalence and isomorphism
+coincides for finite structures, |R| = |R”| for some n > 1. This is a contradiction
+
+because R is nonzero. Hence R must be an infinite ring.
+
+Let / be an ideal of R, such that J # R and consider the factor module R/I.
+Then
+R/I — Vx(ar = 0)
+
+for any r € J. Note that this is a closed formula in the ianguage of right R-modules
+since r € R. By syntactic completeness, R/J and R are elementary equivalent as
+modules over R and so
+
+RE V2(zr = 0)
+
+Thus J must be the trivial ideal of R. So R has no proper nonzero ideal i.e. R is
+
+a simple ring.
+We note that right ideais of R are right R-modules. Now consider the class sign
+(formula with 1-free variable)
+
+B(x) = Jy(yr = «)
+
+where r € R. We know that. R as an R-module models f(r) since lr = r follows
+from an axiom of the theory of R-modules. By the assumption that every right
+ideal of R is an elementary substructure of R as a module over itself, the (principal)
+
+right ideal rt as module over R models f(r). That is
+rR E dy(yr =r).
+But if this is so, there must be a u € rR such that
+rREur=r
+and so for any r € R there is a v € R such that
+RE ror =r.
+Since r is arbitrary, R is a von Neumann regular ring. oO
+
+31
+
+We note that the conditions on ring R in Theorem 4.1 are sufficient for ele-
+mentary equivalence but not for isomorphism. To show insufficiency, we make use
+
+of the Lowenheim-Skolem Theorem, which is a well-known result in model theory.
+
+Theorem 4.3. Léwenheim-Skolem. If T is a theory with infinite model M,
+
+then T has a model of every infinite cardinality.
+
+Theorem 4.4. Let T be the syntactically-complete theory of modules over an
+
+infinite, simple, von Neumann regular ring R. Then, there are nonisomorphic
+models of T.
+
+Proof. Let T be the theory of R-modules above. If R is infinite, then the module
+R over R is also infinite. By Lowenheim-Skolem Theorem and Theorem 4.1, there
+are nonisomorphic yet elementary equivalent models of T.
+
+0
+
+32
+
+4.2 An application
+
+We give an application of Theorem 4.1. and Theorem 3.12.
+
+Theorem 4.5. Let D be an infinite division ring. If M and N are modules over
+the matriz ring M,(D), then M = N. Furthermore, if M embeds into N, then
+an arbitrary finite system of equations has a solution in M if and only if it has a
+
+solution in N.
+
+Proof. Suppose DP is an infinite division ring and M, N are M,(D)-modules. By
+the Artin Wedderburn theorem (8, p.50], the matrix ring M,() is simple, von:
+Neumann regular and Artinian. Hence, by Theorem 4.1, every two modules over
+M,(D) are elementary equivalent. So M is elementary equivalent to N as M,,(D)-
+modules.
+
+Now suppose that a},...,a, € M and suppose there is an embedding from M
+to N. By Theorem 3.12, every embedding of two M,,(D)-modules are elementary.
+So if kon
+
+NE 32, str /\O> Lily = a;)
+j=l i=l
+where rj; € A7,(D), then
+
+k n
+M §- 3a, stn f\O> “iN iz = az).
+
+j=l i=l
+That is, if the system of equations
+
+LM +... LrTn = A
+
+Zyrjo +... + UnTn2 = AQ
+
+TT 1b +--+ InTak =
+
+has a solution in N, then it must have a solution in M!.
+O
+
+Indeed, if we further suppose that M and N are nonzero and have no nonzero
+proper submodules (i.e. that M and N are simple modules), then they are clearly
+uniserial and we have not only elementary equivalence but also M = N = D”. To
+see this, we note that D and M,(D) are Morita equivalent rings (Two rings are
+Morita equivalent if their category of right modules are equivalent as categories).
+
+Since D is the only simple right D-module, the only simple M,(D)-module is D”.
+
+33
+
+4.3. Possible research directions
+
+We note possible research directions:
+
+1. Prove or disprove the converse of Theorem 4.1. That is, given that the theory
+of modules over a ring R is syntactically complete, does it imply that R is
+
+von Neumann regular?
+
+2. A class C' of modules is axiomatizable if C’ is the class of models of a set of
+first-order sentences in the language of modules. It is known that a syntacti-
+cally complete theory of modules is axiomatizable by sentences with no more
+than one change of quantifiers. By Theorem 4.1, the theory of modules T
+over an infinite, von Neumann regular and simple ring is syntactically com-
+plete so it can be axiomatized by sentences of form Inu(—,¢,w) < k where
+¢ and ~ are positive primitive in one free variable. We posit a problem: pro-
+vide an explicit set S of boolean combination of conditions Inu(—,¢,~) < k
+
+axiomatizing T.
+
+34
+
+[1]
+
+(2
+
+[3]
+
+[4]
+
+[5]
+
+[6]
+
+[7
+
+[8]
+
+(9
+
+[10]
+
+List of References
+
+M. Prest, Model Theory for Modules, London Mathematical Society
+Lecture Notes Series Vol. 130, Cambridge University Press (1988).
+https: / /doi.org/10.1017/CBO978051 1600562.
+
+M. Auslander, I. Reiten and S. Smalo, Representation Theory of Artin Alge-
+bras, Cambridge Studies in Advanced Mathematics 36, Cambridge University
+Press, (1995). https: //doi.org/10.1017/CBO9780511623608.
+
+G. D’Este, F. Kaynara, and D.K. Tiitiincii, The isomorphism problem for
+uniserial modules over an arbitrary ring, Communications in Algebra, Vol 48
+(9) (2020) https: //doi.org/10.1080/00927872.2020.1754842.
+
+W.Weiss and CC.  D’Mello, Fundamentals of model _ theory,
+Department of Mathematics University of Toronto (1997).
+https: //www.math.toronto.edu/weiss/model_theory.pdf.
+
+J. Lurie, Categorical Logic (Math 278x Lecture Notes).
+https: //www.math.ias.edu/ lurie/278x.html (last accessed: 07 Dec 2022).
+
+M. Makkai, Towards a Categorical Foundation of Mathematics, Lecture Notes
+in Logic, Vol. 11, published: Logic Colloquium 95. (1998) 153-190.
+
+J. Shoenficld, Mathematical Logic, Association for Symbolic Logic, (1967) 1st
+
+edition.
+
+U. Velasco, Simple and Semisimple Artinian Rings, California State
+University-San Bernardino Electronic Theses, Projects and Dissertations,
+
+533. https: //scholarworks.lib.csusb.edu/.
+
+B. Huisgen-Zimmermann, The geometry of uniserial representations of finite
+dimensional algebras I., Journal of Pure and Applied Algebra, Vol. 127 (1998)
+39-72.
+
+K. Bongartz and B. Huisgen-Zimmermann, Varieties of uniserial represen-
+tations IV. Kinship to geometric quotients, Transactions of the American
+Mathematical Society, Vol. 353 (5) (2001) 2091-2113.
+
+35
+
+[11]
+
+[12
+
+[13
+
+[14
+
+[15
+
+[17]
+
+M. Prest, Model Theory of Modules, Department of Math-
+ematics, University of | Manchester, UK = (2020). __ personal-
+pages.manchester.ac.uk/staff/mike.prest /ModThModsArticle.pdf.
+
+K.R. Goodearl, Von Neumann Regular rings, Pitman, London-San Francisco-
+Melbourne (1979).
+
+W. Hodges, Model Theory, Cambridge University Press (2009).
+
+P. Rothmaler, Some model theory of modules II, Journal of symbolic logic
+(1983) p.970-985.
+
+Kent and Ziegler, A Course in Model Theory, Lecture Notes in Logic, Cam-
+bridge University Press.
+
+D. Marker, Model Theory: an Introduction, Graduate Texts in Mathematics,
+Vol. 217, Springer (2002) 2nd edition.
+
+S. Mac Lane and I. Moerdijk, Sheaves in Geometry and Logic: A First Intro-
+duction to Topos Theory, Springer (1994).
+
+36
+

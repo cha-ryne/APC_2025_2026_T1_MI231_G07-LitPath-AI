@@ -1,0 +1,3940 @@
+_ BAYESIAN AUTOREGRESSIVE DISTRIBUTED LAC ViA-
+sroczastic GRADIENT HAMILTONIAN MONTE CARLO 2
+
+ALABMADGAD BAHAUDDIN ASAAD
+
+Waster of Seience in Statistics
+
+
+UNIVERSITY OF THE PHILIPPINES
+
+Master of Science (Statistics)
+
+Al-Ahmadgaid B. Asaad
+
+Bayesian Autoregressive Distributed Lag via Stochastic Gradient Hamiltonian
+Monte Carlo
+
+JOSELITO C. MAGADIA,Ph.D.
+School of Statistics
+University of the Philippines Diliman
+
+Thesis Reader:
+
+REYNALDO ROMUALDO M. REY,Ph.D.
+School of Statistics
+University of the Philippines Diliman
+
+JOSEFINA V. ALMEDA,Ph.D.
+School of Statistics
+University of the Philippines Diliman
+
+Date of Submission
+May 2017
+
+Permission is given for the following people to have access to this thesis:
+
+Available to the general public a Yes
+Available only after consultation with author/thesis adviser N/A
+Available only to those bound by confidentiality agreement N/A
+
+Student's signature: BE
+Signature of thesis adviSer: yn oan
+U
+
+
+I hereby grant the University of the Philippines non-exclusive worldwide, royalty-free
+license to reproduce, publish and publicly distribute copies of this thesis or dissertation in
+whatever form subject to the provisions of applicable laws, the provisions of the UP IPR
+policy and any contractual obligations, as well as more specific permission marking on the
+Title Page.
+
+Specifically I grant the following rights to the University:
+a) to upload a copy of the work in the theses database of the college/ school/ institute/
+department and in any other databases available on the public internet;
+b) to publish the work in the college/ school/ institute/ department journal, both in print and
+electronic or digital format and online; and
+c) to give open access to above-mentioned work, thus allowing “fair use” of the work in
+accordance with the provisions of the Intellectual Property Code of the Philippines (Republic
+Act No. 8293), especially for teaching, scholarly and research purposes.
+
+Student's signature;
+Date: 06 08/t7
+
+SCHOOL OF STATISTICS
+UNIVERSITY OF THE PHILIPPINES DILIMAN
+
+The Dean
+
+School of Statistics
+University of the Philippines
+Diliman, Quezon City
+
+Sir:
+
+We have the honor to inform you that the undersigned served in the oral examination of
+Mr. Al-Ahmadgaid B. Asaad a Master of Science (Statistics) candidate, who defended his
+masteral thesis entitled “Bayesian Autoregressive Distributed Lag via Stochastic Gradient Hamiltonian
+Monte Carlo” on May 22, 2017 and voted as follows:
+
+For Approval For Disapproval
+
+Dr. Reynaldo Romualdo M. Rey
+Chairman
+
+Dr. Joselito C. Magadia LM ng rol a
+Adviser
+
+Dr. Reynaldo Romualdo M. Rey oxy _
+Reader
+
+Dr. Josefina V. Almeda
+
+Member
+Committee's Decision: (Check One) assed {] Failed
+
+Additional Remarks:
+
+Very truly yours,
+
+REYN. YY, Ph.D.
+Chairman
+
+Noted:
+
+Director, Graduate Studies/Adviser
+
+Quirino Ave. cor T.M. Kalaw St., U.P. Diliman, Quezon City
+Trunkline: 9818500 loc. 3503 or Telefax (632)928-0881
+Email: stat@up.edu.ph Website: www.stat.upd.edu.ph
+
+Bayesian Autoregressive Distributed Lag via Stochastic
+Gradient Hamiltonian Monte Carlo
+
+by
+
+Al-Ahmadgaid Bahauddin Asaad
+
+Submitted to the School of Statistics
+in partial fulfillment of the requirements for the degree of
+
+Master of Science (M.Sc.) in Statistics
+
+UNIVERSITY OF THE PHILIPPINES DILIMAN
+Diliman, Quezon City
+
+May 2017
+
+Abstract
+
+The main objective of the study is the integration of the Stochastic Gradient
+Hamiltonian Monte Carlo (SGHMC) in estimating the parameters of the Bayesian
+Autoregressive Distributed Lag (BADL) model. In particular, thea priori set
+for the weights of the BADL is assumed to have fixed hyperparameters, and
+that is the standard Gaussian distribution. The main theoretical results derived
+for the proposed model (BADL-SGHMC) are given by: Proposition 5.1.1:
+the a posteriori; and Proposition 5.1.2: the stochastic gradient of the potential
+energy (the negative log a posteriori). The results of the proposed model were
+applied to forecasting the Philippine’s economic growth. In this application, three
+cases were considered for preliminary evaluation on the behavior of the SGHMC
+in comparison to other Markov Chain Monte Carlo (MCMC) algorithms, namely:
+Metropolis-Hasting (MH) and Hamiltonian Monte Carlo (HMC). The markov
+chains in these three scenarios were assessed using Heidelberger-Welch’s stationary
+test and Gelman-Rubin’s convergence test. The results favored BADL-SGHMC
+over the contenders in the out-of-sample dataset. Lastly, the paper developed
+statistical packages for SGHMC algorithm both for R and Julia programming
+languages.
+
+Keywords: Big Data, Gelman-Rubin, Gross Domestic Product, Growth Rate,
+Gibbs Sampling, Heidelberger-Welch, Julia, Langevin Dynamics, Laplace's
+Approximation, Markov Chain Monte Carlo, Metropolis-Hasting, R
+
+To
+
+Dedication
+
+Papa and Mama;
+Neng Mirra, Jeh-Jeh and Ikka;
+Toh Amil and NG;
+
+and my grandparents:
+Mbo’ Hija. Tudjuhura and Mbo’ Hija. Roswana;
+Late Mbo’ Hji. Musa and Mbo’ Hji. Hussin;
+
+to those who supported my Father’s medication;
+and to the people of Tawi-Tawi, lahat ku kalasahan
+ni entom minsan ma kalawakan.
+
+Lastly, this work is also dedicated to the leaders
+who chose peace over war.
+
+“It is better for a leader to make a mistake in forgiving
+than to make a mistake in punishing.”
+PRopHET MuHAMMaD (S.A.w.)
+
+“Peace cannot be kept by force. It can only be achieved
+through understanding.”
+Apert EINSTEIN
+
+Acknowledgement
+
+2
+Y, :
+Ga aGLGAYKE an
+
+(In the name of Allah, the Entirely Merciful, the Especially Merciful)
+
+The author would like to acknowledge: the Department of Science and Technology
+(DOST) for the financial support; his thesis adviser, Dr. Joselito C. Magadia for
+the guidance; his thesis panels: Dr. Reynaldo R. Rey and Dr. Josefina V. Almeda,
+for their comments and suggestions; his uncle, Dr. Abubakar S. Asaad, his boss,
+Dr. Divina Gracia L. del Prado, and his officemates: Aaron, Ate Mae, Jay, Jhoanne, Ma’am
+Sarah and Ma’am Thelma for their moral support.
+
+Lastly, the author would like to acknowledge, Ms. Minnette Lois R. Morales for
+her encouragement and trust.
+
+Thank you po! - AL
+
+Contents
+
+Title Page i
+Abstract ii
+Dedication iii
+Acknowledgement iv
+List of Notations ix
+1 INTRODUCTION 1
+1.1 Background and Motivation... .......-00 00000 e eee 1
+1.2 Objectives of theStudy ............ 6
+1.2.1 General Objectives .......... 6
+
+1.2.2 Specific Objectives .......... 6
+
+1.3 Scope of theStudy .............- 8
+
+14 Contribution of the Study .......... O00 9
+1.5 Thesis Organization... . 2... 6. ee eee 9
+
+2 LITERATURE REVIEW 10
+3 BASIC DEFINITIONS AND RESULTS 14
+3.1 Gradient Descent... 1.6... ee ees 14
+3.2 Stochastic Gradient Descent .... 2... 1... eee eee ee eee 16
+3.3. Laplace’s Approximation 17
+3.4 Markov Chain Monte Carlo(MCMC) ................-- 21
+3.4.1 Metropolis-Hasting... 2... ee eee 22
+
+3.4.2 Gibbs Sampling 24
+
+3.5 Bayesian Linear Regression .... 22-1... eee ee ee eee 25
+3.6 Markov Chain Diagnostics... 1.6... ee ee eee 30
+3.6.1 Convergence to the Stationary Distribution . . . 30
+Heidelberger-Welch .. 1... 2.60. eee eee eee eee 31
+
+3.6.2 Convergence of Average 31
+Gelman-Rubin ....... oo 000 32
+
+3.6.3 Approximating ID Samples... .. . aoaoonoo0o00 32
+
+3.7. Economic Indicators ... 6... 16. eee 32
+
+4 METHODOLOGY 34
+4.1 Stochastic Gradient Hamiltonian Monte Carlo ............. 34
+41.1 Hamiltonian Dynamics 35
+
+4.1.2 LeapfrogMethod ............ 0.000.000. e ee 38
+
+Hamiltonian/Hybrid Monte Carlo ................ 40
+4.1.3 Langevin Dynamics
+4.1.4 Stochastic Gradient HMC nog
+SGHMC in Practice... 2. ee eee 45
+
+
+vi
+
+4.2 Autoregressive Distributed Lag Model 46
+4.2.1 The Model: ADL(p,q).......-- eee 47
+4.2.2 Identification ..........-.. see 48
+42.3 Estimation... 6... ee eee 48
+5 MAIN RESULTS 49
+5.1 Theoretical Results 2.2... ee eee 49
+5.2 Forecasting Philippine’s Economic Growth 52
+5.2.1 BADL(1, 1)-SGHMC Posterior Inference... .......--- 55
+Posterior Summaries 56
+Convergence Tests ... . B00 paoc 65
+Forecasting 2.6... ee ee 69
+6 SUMMARY, CONCLUSION AND RECOMMENDATION 77
+Chl Riinintts75 ooo ooo codouuaooobeoooo oop ooo oo doo nD 77
+6.2 Conclusion 78
+6.3 Recommendation ......... 00.0.0 ee eee 79
+References 80
+Appendix A: Statistical Figures 82
+Appendix B: Statistical Tables 104
+Appendix C: R and Julia Packages for SGHMC 107
+C1 StochMCMC.r wee
+C11 Installation... 0.2... 0. ee ee
+C.1.2 Documentations .............. 0.000.000.0402
+C.1.3 SGHMC Source Code 500
+C.2 StochMCMCjl.. 2. ee eee
+C.2.1 Installation... ... 0.0.0... 0... eee eee ee eee
+
+C.2.2 Documentations q00 500
+C.2.3. SGHMC Source Code ..... 2.0... 0.00000 000 111
+
+
+List of Figures
+
+3.1 Gradient Descent on Equation (3.1)... 6.0... 0 eee ee eee 15
+3.2 Batch Gradient Descent on SLR Loss Function 17
+3.3 Stochastic Gradient Descent on SLR Loss Function. .......--- 18
+3.4 A Closer Look at SGD Gradient Vectors ............--55:5 19
+3.5 Laplace’s Approximation on x?-Distribution 21
+3.6 Metropolis-Hasting on Target Density after Burn-in ........-.- 23
+3.7 Gibbs Sampling on Target Density after Burn-in... .......-- 26
+3.8 Sequential Bayesian Learning of Fitting a Straight Line ........ 29
+4.1 Conversion of Energies in Physical Pendulum and Phase Space ... 36
+4.2 Contour Lines of H(w, p) and Gradient of [w() p(f)].....-..-- 38
+4.3 MCMC Hamiltonian on Target Density ........-..--.--4- 42
+5.1 Economic Indicators used in the Study... 6.6... 0-22-00 0005 54
+5.2 KDE of the Unfiltered Chains using SGHMC Case 1 . . 59
+5.3. KDE of the Unfiltered Chains using SGHMC Case 2 . . 60
+5.4 KDE of the Unfiltered Chains using SGHMC Case3 . . 61
+5.5 Unfiltered Traces of the Chains using SGHMC Case 1 . 62
+5.6 Unfiltered Traces of the Chains using SGHMC Case 2 . 63
+5.7 Unfiltered Traces of the Chains using SGHMC Case3 .........- 64
+5.8 Forecasts of BADL(1, 1) under the Training Dataset Case] ...... 71
+5.9 Forecasts of BADL(1, 1) under the Training Dataset Case2 ...... 72
+5.10 Forecasts of BADL(1, 1) under the Training Dataset Case3 ...... 73
+5.11 Forecasts of BADL(1, 1) under the Testing Dataset Casel ....... 74
+5.12 Forecasts of BADL(1, 1) under the Testing Dataset Case2 ....... 75
+5.13 Forecasts of BADL(1, 1) under the Testing Dataset Case3 ....... 76
+A.1 KDE of the Unfiltered Chains using MH Casel............. 83
+A.2_ KDE of the Unfiltered Chains using MH Case2..... . sa. 84
+A.3 KDE of the Unfiltered Chains using MH Case3............- 85
+A KDE of the Unfiltered Chains using HMC Case 1 86
+A5 KDE of the Unfiltered Chains using HMC Case 2 87
+A.6 KDE of the Unfiltered Chains using HMC Case 3 88
+A.7 Unfiltered Traces of the Chains using MH Case 1 89
+A.8 Unfiltered Traces of the Chains using MH Case 2 90
+A9 Unfiltered Traces of the Chains using MH Case 3 91
+A.10 Unfiltered Traces of the Chains using HMC Case 1 92
+A.11 Unfiltered Traces of the Chains using HMC Case 2 93
+A.12 Unfiltered Traces of the Chains using HMC Case 3 94
+A.13 Filtered Mean Chain Autocorrelation using MH Case1 . . 95
+
+A.14 Filtered Mean Chain Autocorrelation using MH Case2 ........ 96
+
+A.15 Filtered Mean Chain Autocorrelation using MH Case 3 97
+A.16 Filtered Mean Chain Autocorrelation using HMC Case 1 oo 9
+A.17 Filtered Mean Chain Autocorrelation using HMC Case2 ....... 99
+A.18 Filtered Mean Chain Autocorrelation using HMC Case3 ....... 100
+A.19 Filtered Mean Chain Autocorrelation using SGHMC Casel ..... 101
+
+viii
+
+A.20 Filtered Mean Chain Autocorrelation using SGHMC Case2 ..... 102
+A.21 Filtered Mean Chain Autocorrelation using SGHMC Case3 ..... 103
+
+Notation
+
+ABE >:
+
+List of Notations
+
+Description
+
+proportional to
+
+probability function
+
+expected value under the probability distribution p,
+likelihood function
+
+log-likelihood function
+
+hypothesis function
+
+set of positive integers from 1 to N
+
+“in-sample error”, error in the training dataset
+set of parameters
+
+uppercase math scripts for sets
+
+equal to by definition
+
+end of example
+
+end of proof
+
+CHAPTER 1
+
+INTRODUCTION
+
+The discussion in this chapter proceeds with the background and motivation
+of the study given in Section 1.1, followed by the objectives enumerated in Section
+1.2, the scope of the study given in Section 1.3, and the contribution of the study
+
+presented in Section 1.4.
+
+1.1 Background and Motivation
+
+In classical statistics, the parameters or weights of interest are assumed to
+be fixed but unknown. The modeling proceeds by partitioning the dataset into
+training and testing datasets. The weights are learned in the training dataset,
+and the evaluation of these weights is done in the testing dataset. The reason
+for partitioning the data follows from the fact that the weights and the complexity
+of the model must be carefully tuned in the training dataset, this is because
+the classical procedure can suffer from the problem of overfitting — a situation
+in which the model tends to memorize the sample and fails to do generalization on
+the testing dataset.
+
+In Bayesian statistics, there is no problem of overfitting since the parameter
+of interest are treated as random variable. That is, not only the characteristics
+of the datasets are being modeled but also thecomplexity of the model.
+The complexity of the model often refer to its order, for example the order p for
+Autoregressive (AR) models, the number of hidden states in Hidden Markov
+
+Models (HMM), the number of hidden layers in Artificial Neural Networks
+
+§11 2
+
+(ANN), and so on. Moreover, inference in Bayesian statistics is based on
+Bayes’ theorem which computes the posterior distribution or the a posteriori of
+the parameters. However, the normalizing constant in Bayes’ theorem is often
+difficult to obtain due to high dimensional integration involve in the computation.
+This is evident when the number of parameters or weights is huge. To address
+this limitation, approximation is used in inferring the posterior distribution.
+The approximation is done through the Markov Chain Monte Carlo (MCMC)
+algorithms, where the popular MCMC is called the Metropolis-Hasting or MH
+algorithm. MH depends on a proposal distribution which serves as the random
+walk in the domain of the posterior distribution. However, like any algorithm, MH
+has drawbacks. This particular MCMC becomes inefficient when the dimension of
+the posterior distribution is high. The second algorithm used in this study is called
+the Hamiltonian Monte Carlo (HMC). HMC is based on Hamiltonian dynamics and
+addresses the limitation of the MH MCMC. This is possible by using the gradient of
+the negative log a posteriori also known as the potential energy of the Hamiltonian
+dynamics. The HMC, like MH, uses proposal distribution through an auxiliary
+variable also referred to as the Kinetic energy, and for most studies (see Neal, 2011)
+the proposal distribution is assumed to be standard Gaussian. Theoretically,
+the proposed samples from this distribution is accepted with certainty. In practice,
+however, the fact that the Hamiltonian dynamics is simulated over continuous time
+variable on phase space, discretization is required to proceed with the numerical
+computations. This adjustment is the reason why HMC uses MH acceptance
+criterion for sampling.
+
+The estimation procedure in frequentist’s approach is done either using
+
+§1.1 3
+
+Maximum Likelihood Estimation (MLE) or Mathematical Programming also
+known as Optimization. For optimization in particular, the popular method is
+the Gradient Descent (GD) algorithm which uses batch data (thatis, all observations)
+in updating the parameters at each iteration. This updating can be computationally
+expensive especially for large datasets. In order to address the limitation,
+the algorithm must only use 1 or sample of observations (also knownas minibatch) in
+updating the parameters. This approach is the motivation of the Stochastic Gradient
+Descent (SGD). In particular, one feature of this procedure is the stochasticity, which
+allows the gradient vector to jump randomly from possible local minima. In
+Machine and Deep Learning, this method is often (if not always) the choice for
+efficient estimation of models with nonlinear loss functions such as the popular
+Artificial Neural Networks (ANN).
+
+To take advantage of the features of SGD, Chen, Fox, and Guestrin (2014)
+combined SGD and HMC in their article entitled Stochastic Gradient Hamiltonian
+Monte Carlo (SGHMC). Their work has been inspired by Welling and Teh (2011);
+and Ahn, Korattikara, and Welling (2012). Although Chen et al. (2014) formulated
+the theory of the SGHMC, there is no discussion as to how well is the mixing
+of thesamples, and empirically analyze the convergence of the algorithm to
+the posterior distribution. Further, the fact that the SGHMC was published only a
+couple of years ago, there is no theoretical results yet for simple models estimated
+using the said algorithm, for example for the case of linear regression models.
+In this thesis, the objective model is the Autoregressive Distributed Lag (ADL)
+which is a time series model and specialized type of dynamic linear models
+
+(Welty, Peng, Zeger, & Dominici, 2009). In particular, the response variable of this
+
+§11 4
+
+model is dependent on predictors which includes the autoregressive term, which
+is the lag values of the response; and the distributed lag term, which composed
+of other explanatory variables known (or tested) to have effect on the response
+variable. This popular model have been used on different field of discipline,
+from econometrics, epidemiology to agriculture. Further, to the best knowledge
+of the author, none has yet integrated the SGHMC to Bayesian ADL (BADL). Thus
+in this paper, the proposed model is abbreviated as BADL-SGHMC.
+
+The ADL model can be estimated using the “unrestricted” approach, where
+the coefficients are not constrained to some values, hence maximum likelihood
+estimation can be employed straightforward in this case. However, if the values
+of the predictors are highly correlated over time, then this will entail difficulty
+in estimation. According to Welty et al. (2009), a general solution is to constrain
+the coefficient as a function of lag, and common constraints include polynomial
+or spline. This practice of constraining the coefficients is already an application of
+prior knowledge to model specification (Welty et al., 2009). For this thesis, the goal
+is to demonstrate the integration of the SGHMC on BADL estimation. Specifically,
+the study considers constraining through specification of thea priori, which is
+uninformative since the parameters are assumed to be governed by a standard
+Gaussian distribution. Further, as emphasized by Kumar and Maity (2008),
+the basic assumption of time series models in classical approach is the temporal
+persistence of the statistical properties. Thus, once the parameters are determined,
+they are assumed to remain constant over time. This is not a valid assumption,
+since there are other factors influencing the dynamics which may cause changes
+
+in the statistical properties of the time series. In general, uncertainty associated
+
+§11 5
+
+with observations is considered in traditional modeling. However, uncertainty in
+model parameter values and model structure, which is another important source
+of uncertainty is ignored in the frequentist’s approaches.
+
+Finally, the effort of scaling the algorithms to large datasets or even
+to Big data, computationally speaking, the tools for executing this problem
+rely heavily on the choice of a programming language. Although low-level
+programming language is always the best choice to achieve performance, scripting
+or the development stage can be very slow. An example of low-level programming,
+language is C and C++. For most researchers and practitioners, however,
+the practical solution is to use high-level programming language, sacrificing
+performance but speeding up the development stage. An example of a popular
+high-level programming language is R and Python. To address the limitation
+of both worlds (low-level and high-level programming languages), Bezanson,
+Edelman, Karpinski, and Shah (2017) proposed Julia as the solution for numerical
+computation. The first announcement of the language contains the following
+reason as to why Julia (Bezanson et al., 2017) was created by the team:
+
+“We want a language that's open source, with a liberal license. We
+
+want the speed of C with the dynamism of Ruby. We want a language
+that's homoiconic, with true macros like Lisp, but with obvious, familiar
+mathematical notation like Matlab. We want something as usable for general
+programming as Python, as easy for statistics as R, as natural for string
+processing as Perl, as powerful for linear algebra as Matlab, as good at gluing
+
+programs together as the shell. Something that is dirt simple to learn, yet keeps
+the most serious hackers happy. We want it interactive and we want it compiled.
+
+(Did we mention it should be as fast as C?)”
+~Why We Created Julia by Julia Creators (February 14, 2012).
+Therefore, implied in the objective, this thesis is also expected to give a brief
+
+discussion on the use of Julia in comparison to R in scripting the necessary
+
+§ 1.2 6
+algorithms presented in this paper.
+1.2 Objectives of the Study
+
+1.2.1 General Objectives
+
+In view of the above discussions, this paper aims for the following general
+
+objectives:
+1. derive the necessary theoretical results;
+
+2. compare the performance of the proposed model, BADL-SGHMC, for three
+
+cases:
+
+(a) leapfrog step size y = .09 for 1,000 iterations;
+(b) leapfrog step size y = .009 for 10,000 iterations;
+
+(c) leapfrog step size y = .0009 for 100,000 iterations.
+3. apply the proposed model to forecasting Philippine’s economic growth; and
+4. create software packages for SGHMC for Rand Julia programming languages.
+
+1.2.2 Specific Objectives
+
+Specifically, the study is expected to deliver the following:
+1. the derivation of the theoretical results:
+
+(a) given thea priori on the parameters of the BADL model, derive
+
+the posterior distribution; and
+
+(b) given the a posteriori from the preceding objective, derive the stochastic
+
+gradient of the potential energy;
+
+§12
+
+7,
+
+the comparison on the performance of the proposed model, BADL-SGHMC,
+against the performance of the BADL-MH and BADL-HMC. This is done
+by considering four markov chains for each parameter of the BADL with
+dispersed random initial values from uniform distribution. The following
+are the statistical methodologies used for assessing the performance of
+
+the models:
+(a) Heidelberger-Welch, for stationarity test on the Markov chains;
+
+(b) Gelman-Rubin, for convergence test of averages of the Markov chains;
+
+(c) Autocorrelations, for assessing the assumption of the independent and
+
+identically distributed (11D) samples from the a posteriori; and
+
+(d) Root Mean Squared Error (RMSE), for assessing the in-sample and
+
+out-of-sample forecast performance of the three models.
+
+The above procedures are performed across three cases of the leapfrog step
+
+size mentioned in the General Objectives;
+
+. apply the derived theoretical results to forecasting Philippine’s year-over-year
+
+economic growth rate. In particular, the comparison of the models detailed
+in the preceding objective is performed using this data. The following are
+the time series involved in modeling:
+(a) The Response Variable
+¢ Growth Rate of Gross Domestic Product
+(b) The Predictors
+
+¢ Growth Rate of Peso/US Dollar Exchange Rate;
+
+§14 8
+
+e Growth Rate of Stock Price Index;
+e Growth Rate of Gross International Reserves; and
+
+e Growth Rate of Balance of Payments;
+
+4. create software packages for SGHMC for R and Julia programming languages
+using Github.com as the repository. That is, the package can be installed from
+
+this website.
+
+1.3. Scope of the Study
+
+The study is limited to Bayesian Autoregressive Distributed Lag (BADL)
+model. In particular, thea priori set to the parameters of the model is assumed
+to have fixed hyperparameters, and that distribution is the standard Gaussian.
+As part of introducing Bayesian inference, Laplace’s approximation and Gibbs
+sampling will be discussed in the basic definitions and basic results of this thesis, but
+will not be used for modeling BADL. Variational methods and other approximate
+Bayesian inference are excluded in this study. Further, for purpose of introducing
+BADL-SGHMC, the application is limited to BADL(p = 1,q = 1)-SGHMC with
+SGHMC’s parameter © (part of the frictional force term) and % (part of
+the variability of the random force term) set to identity matrix. Other orders
+of p and q, and other possible specification of the SGHMC’s parameter, €
+and %, are part of the recommendation. Finally, in line with other literatures
+(for example Neal, 2011) for Hamiltonian Monte Carlo, the kinetic energy is based
+on the assumed distribution of the momentum variable, which in this case is
+
+the standard Gaussian density.
+
+§15 9
+
+14 Contribution of the Study
+
+The main contribution of this study is the integration of the Stochastic
+Gradient Hamiltonian Monte Carlo (SGHMC) on Bayesian Autoregressive
+Distributed Lag (BADL) parameter estimation. The use of SGHMC is known
+to be efficient at handling huge datasets compared to Metropolis-Hasting
+(MH) and Hamiltonian Monte Carlo (HMC) algorithms. Further, the provision
+of the statistical packages as supplement for this thesis, for executing
+the theoretical results, is useful for reproducibility and for extended application
+of the BADL-SGHMC model. Finally, the package is not limited to BADL model
+
+but is generalized to account for other interesting models.
+
+1.5 Thesis Organization
+
+The paper is organized as follows: in Chapter 2, the review of literature is
+presented; Chapter 3, introduces optimization with the aim of tackling Stochastic
+Gradient Descent (SGD); in Chapter 4, the theory of SGHMC is discussed starting
+with HMC and Langevin dynamics, and then the theory of the ADL model.
+Chapter 5 presents the main results which contain the necessary propositions and
+the application of the proposed model, and Chapter 6 contains the conclusion and
+recommendations. Lastly, other supplemental results like tables and graphs are
+
+provided in the appendices.
+
+CHAPTER 2
+
+LITERATURE REVIEW
+
+In this chapter, different Bayesian methods for estimating the parameters of
+the model are reviewed, starting with the Bayes’ theorem, which is the foundation
+of Bayesian modeling, to the modern advances of the subject.
+
+In Bayesian statistics, Reverend Thomas Bayes (see Bayes, 1763) is known to
+be the first to formulate the Bayes’ theorem, but the comprehensive mathematical
+formulation of this result is credited to the works of Laplace (1986). The Bayes’
+theorem has the following form:
+
+P(w)P(ylw)
+
+POM = PO)’
+
+(2.1)
+
+where w is the weight vector and y is the data. This simple formula is
+the main foundation of Bayesian modeling. Any model estimated using Maximum
+Likelihood can be estimated using the above conditional probability. As mentioned
+in the preceding chapter, the Bayes’ theorem considers uncertainty not only on
+the observations but also uncertainty on the weights or the objective parameters.
+Although Equation (2.1) has simplicity in its form, this expression can be
+challenging to solve, especially when the dimension of the parameter w is high,
+or when the problem involves complex models. Specifically, the main concern lies
+in the computation of the P(y), which involve hierarchical summation for discrete
+variable or high-dimensional integration for continuous variable. This difficulty is
+far more challenging than the optimization approach of frequentists for problems
+with no closed-form solution. In order to address the limitation, Hastings (1970)
+
+worked on the generalization of the Metropolis, Rosenbluth, Rosenbluth, Teller,
+
+§2.0 1
+
+and Teller (1953) algorithm. The idea of the proposed algorithm is to compute
+the a posteriori by approximation through the use of sampling, and this is called
+Markov Chain Monte Carlo (MCMC). The problem with MCMC, however, is
+the practical aspect of it since it requires fast processor computers which back
+then were not yet available. Hence, with the advances in machines, more MCMC
+algorithms were proposed for efficient sampling. As mentioned in Chapter 1,
+the Metropolis-Hasting (MH) algorithm has limitations. First, the specification of
+the proposal distribution is difficult for high-dimensional posterior distribution;
+and second, the assumption of independent samples is also difficult to achieve
+since the markov chains often have high autocorrelations.
+
+The limitation of the MH MCMC was addressed by Duane, Kennedy,
+Pendleton, and Roweth (1987), on their paper entitled “Hybrid Monte Carlo”.
+The idea of this algorithm is based on Hamiltonian dynamics using the concept
+of Gibbs sampling and MH, hence the name Hybrid (hybrid of Gibbs and MH) or
+Hamiltonian Monte Carlo (HMC). The algorithm uses auxilliary distribution, which
+contains the so called kinetic energy, along with the target distribution, also called
+the potential energy. However, HMC uses batch gradient descent in its algorithm
+which can be computationally expensive for large datasets. Thus, the ideal solution
+is to use samples or only one observation for computing the gradient, and this
+approach is called stochastic gradient descent or the minibatch-gradient descent.
+For example, Welling and Teh (2011) worked on combining the stochastic gradient
+with the Langevin dynamics. The paper is based on Langevin Monte Carlo,
+which uses gradient steps with injected Gaussian noise into the parameter updates.
+
+The gradient step sizes and the variances of the injected noise are balanced so that
+
+§ 2.0 12
+
+the variance of the samples matches that of the posterior. Further, like Hamiltonian
+dynamics, the Langevin dynamics is motivated and originally derived as a
+discretization of a stochastic differential equation whose equilibrium distribution
+is the posterior distribution. However, the problem with the Stochastic Gradient
+Langevin Dynamics (SGLD) is that the mixing rate of the markov chain is slow.
+According to Ahn et al. (2012), SGLD takes large steps in directions of small variance
+and reversely, small steps in directions of large variance which hinders convergence
+of the Markov chain. Hence, the work of Ahn et al. (2012) is an extension of
+SGLD, this is done by leveraging the “Bayesian Central Limit Theorem” which
+states that when N is large (and under certain conditions) the posterior will be
+well approximated by a Gaussian distribution. The proposed algorithm which
+is based on Stochastic Gradient Fisher Scoring is designed so that for large step
+sizes (and thus at high mixing rates) it will sample from this approximate Gaussian
+distribution, while at smaller step sizes (and thus at slower mixing rates) it will
+generate samples from an increasingly accurate (non-Gaussian) approximation of
+the posterior. Similar to SGLD, another MCMC algorithm proposed is also based on
+stochastic gradient noise but using Hamiltonian dynamics instead of the Langevin.
+The algorithm builds on top of Hamiltonian Monte Carlo in the work of Chen et al.
+(2014) entitled “Stochastic Gradient Hamiltonian Monte Carlo” (SGHMC). The idea
+of this algorithm is to consider a frictional force other than the injected Gaussian
+noise. This force will align the algorithm to the stationary distribution, which is
+the a posteriori. In the article, Chen et al. (2014) demonstrated SGHMC on problems
+involving classification and probabilistic matrix factorization. The findings suggest
+
+that the SGHMC performed well compared to SGLD. However, the lack on
+
+§ 2.0 13
+
+the empirical convergence diagnostics on the experiment done by Chen et al.
+(2014), and the comparison of the SGHMC to the non-stochastic gradient MCMC
+are the main objective of this thesis, and this is done using Bayesian Autoregressive
+Distributed Lag (BADL) model. In literature, there are already studies on Bayesian
+ADL (BADL), see for example Ravines, Schmidt, and Migon (2006); their worked
+on ADL is based on Gibbs sampling; Welty et al. (2009) also worked on Distributed
+Lag (DL) models by comparing Bayesian DL (BDL) through Gibbs sampling with
+the frequentist’s approach to estimation; and Buss (2010) used BADL on optimal
+prior for economic forecast. Finally, to the best knowledge of the author, there is
+
+no research yet on the use of SGHMC for BADL estimation.
+
+CHAPTER 3
+
+BASIC DEFINITIONS AND RESULTS
+
+The main subjects of this chapter are the basic concepts and results for
+Bayesian inference and mathematical optimization. These include an overview of
+Markov Chain Monte Carlo (MCMC) algorithms such as the Metropolis-Hasting
+(MH) and the Gibbs sampling. Inference on posterior summaries through
+convergence analysis of the markov chains are also provided, and some insights
+to the general applicability of these tools are illustrated using Bayesian linear
+
+regression model.
+
+3.1 Gradient Descent
+
+There are several ways to numerically estimate the parameters of the model
+using mathematical programming. The popular algorithm that is very common
+in Machine Learning is the gradient descent (GD) given in Algorithm 1. Suppose
+VEin(w") is the gradient of the cost function at the rth iteration. Ein is defined as
+the in-sample error or the error in the training dataset, y is the learning-rate parameter
+of the algorithm and v is the precision parameter. As an illustration, consider
+
+Example 3.1.1.
+Example 3.1.1. Suppose the loss function is given by
+E(w) * wt -— 3w? +2. (3.1)
+
+The first derivative of the above equation with respect to w is given by
+&;,(w) = 4w? - 9w*. Let the initial guess be @ = .1 and let y = .01 with v = .00001.
+
+Then VEin(d) = E,(@) = —0.086, so that d” + H — .01(-0.086) = 0.10086,
+
+§3.2 15
+
+Algorithm 1 Gradient Descent
+
+1: Initialize W,7 = 0
+
+2: while |W") — w|| > v do
+WH £ WO VE, (WH)
+4 rtrt+l
+
+5: end while
+
+6:
+
+; return Ww” and r.
+
+and |@ — @| = 0.00086 > v. It turns out that 173 iterations are needed to satisfy
+
+the inequality, |@"* — | 4 v. The plot is given in Figure 3.1. -
+
+Loss Function (LF) - - -
+
+LF 1st Derivative
+
+Gradient Segments
+
+Figure 3.1: Gradient Descent on Equation (3.1).
+
+In practice, however, there are hundreds to millions of data points that
+need to be summarized, so that at each iteration, the parameters are updated
+after the presentation of all the training examples that constitute an epoch — one
+complete presentation of the entire training dataset during the learning process
+
+(Haykin, 1998). In this setting, GD is sometimes called batch gradient descent (BGD).
+
+§3.2 16
+
+3.2 Stochastic Gradient Descent
+
+An alternative to BGD is SGD or stochastic gradient descent. SGD updates
+the parameter using only one observation for every iteration, which is a lot faster.
+Further, BGD is prone to local minimum since GD does so. This is guaranteed
+for misspecified initial value especially for high dimensional nonlinear error
+surface function. The stochasticity of the SGD follows from the randomization
+of the dataset at each epoch, and contrary to BGD, the SGD is not expected
+to converge to the global minimum, instead it will only stay around the global
+solution (see Algorithm 2). Example 3.2.1 illustrates the application of mathematical
+
+programming in estimating the parameters of a simple linear regression model.
+
+Algorithm 2 Stochastic Gradient Descent
+
+1: Initialize W,r = 0
+
+2: while |W — w°*)|| > v do
+
+3: Randomize the data set (x;, yi) with respect to i.
+4: fori € {1,--- ,n} do
+
+5: Update the parameters
+
+wo 4 wo — ye(h(x;, w), yi)
+
+al
+= Ww? — ye [Ein WO) ~ y.2
+=w Vee {5 lh, 0) iF}
+
+6: end for
+7% WED £ wr
+8: end while
+
+9: return W’ and r.
+
+Example 3.2.1, Suppose the explanatory variable is simulated from a Gaussian
+distribution with p * 15 and o + 2 for 100 samples. Let the true parameter be
+Wo * 3.4 (intercept) and w + .75, the precision parameter of the BGD be v + .0001
+
+with learning rate y * .002 and initial guess w® * -3 and w0) * -3. The batch
+
+§33 17
+
+gradient descent algorithm returns the following estimates: ate) = 0.2200854
+and ow?) = 0,9549819 at 19,544th iteration, see Figure 3.2.
+
+In comparison, the stochastic gradient descent algorithm takes only 4,614
+iterations to converge with the following final estimates: ane) = 2.732653 and
+@%°!) — 0.814412. Thus SGD performs well compared to BGD in terms of speed
+in convergence. Further, the ordinary least square (OLS) estimates, ars) = 2.7130
+and aos) = 0.7973, are a lot closer to the SGD’s solution compared to BGD. This
+is evident in the last 500 steps of the SGD which shows random fluctuations of
+
+the gradient vectors as seen in Figure 3.4. -
+
+3.3 Laplace’s Approximation
+
+The simplest approximation to the posterior distribution of the parameter
+of interest is the Laplace’s approximation. The idea behind this procedure is to use
+
+a Gaussian approximator, G(x), such that it is centered on the mode of the target
+
+000 10000
+No.of iterations
+
+(a) BGD on Loss Function Surface. (b) Loss Function under BGD.
+
+Figure 3.2: Batch Gradient Descent on SLR Loss Function.
+
+§3.3 18
+
+distribution, P(x). To illustrate, suppose
+
+a f@)
+
+P(x) = a where Z + f feras. (3.2)
+
+Using basic calculus, the mode! of the posterior distribution, say at x = xmap, is
+achieved by taking the derivative of the objective function with respect to the x-axis,
+
+such that the gradient of the function is 0 at x = xmap. That is,
+
+d f(x)
+
+A =0. (3.3)
+
+IX=XMAP-
+The Gaussian distribution has the property that its logarithm is a quadratic function
+of the variables (Bishop, 2006). Hence, the following is an approximation of the log
+
+of the objective function using second-order Taylor series expansion centered on
+
+lobtained using maximum a posteriori (MAP)
+
+2000 30004000
+No.of terations
+
+(a) SGD on Loss Function Surface. (b) Loss Function under SGD.
+
+Figure 3.3: Stochastic Gradient Descent on SLR Loss Function.
+
+§3.3 19
+
+(a) SGD on Loss Function Surface. (b) SGD on Loss Function Contour.
+
+Figure 3.4: A Closer Look at SGD Gradient Vectors.
+
+the mode xmap,
+di
+log f(x) = log f(xmap) + sa A _ (> xMar) (3.4)
+@? log f(x) (x = xmar)?
++ Oe) (5)
+7 - 2
+~log fitwar) + BLO wef o ; eaaeaiaeie wae) (3.6)
+
+Exponentiating both sides of the above equations becomes
+
+d? log f(x - 2
+F(x) = f(xmap) exp [ee answer , (3.7)
+X=XMAP
+so that the normalized estimator G(x) is given by
+1 Plog fi} [dlog f@)) (x — zaman)?
+ee ~ (x dx? ue) ois d x X=XMAP 2 . a
+
+Example 3.3.1. Suppose the posterior distribution is a chi-square of the form:
+
+at exp(-7)
+
+P(x) = —-z—, with k degrees of freedom where Z * 2ir(s), x > 0. Using
+
+Laplace, the approximator to the posterior distribution is obtained as follows:
+
+§3.4 20
+The log-likelihood of the density function is given by
+x
+€(x) * log P(x) = (k - 1) log x -— z +C, (3.9)
+where C is the constant. The mode of this posterior is given by
+
+a k-1 set
+— =—- = nl
+on log P(x) aS Xmap = 0 (3.10)
+
+xmap = Vk—1. (3.11)
+
+The second partial derivative of the log-likelihood with respect to x evaluated at
+
+Xap is
+
+a
+—- Slog P(x) =1-5=2. (3.12)
+
+2
+ox Evo nate
+
+Thus the estimate of the posterior is given by a Gaussian distribution with mean
+= Vk-1 and variance o? = }. Figure 3.5 visualizes the Gaussian distribution as
+
+an approximator to the posterior distribution. -
+
+Now consider the case where x € IR*, such that P(x) + a Analogous to
+the univariate case, the Laplace’s approximation for P(x) is obtained by aligning
+the mean of the multivariate Gaussian distribution to the mode of the posterior
+
+density, denoted by xmap. As before, the log-likelihood of f(z) is given by
+
+the following equation
+
+log f(x) = log f(xmap) — 30x — xmap)" (x — xmap), (3.13)
+
+where § is the Hessian matrix defined by
+
+a
+H+ “a log f(x) ae (3.14)
+
+Exponentiating Equation (3.13) leads to the normalized approximator,
+
+G(x) = Na(xxmar, 971).
+
+§34 21
+
+3.4 Markov Chain Monte Carlo (MCMC)
+
+Laplace has the advantage of being simple and easy to use. However,
+like any approximator, it has limitations especially on multimodal densities since
+it uses Gaussian as estimate to the posterior distribution. Most interesting high
+dimensional Bayesian models have multimodal a posteriori, which can’t be captured
+through Laplace’s method. To address this problem, sampling methods are instead
+used for approximating the a posteriori. These family of sampling methods are called
+
+Markov Chain Monte Carlos (MCMC) with Metropolis-Hasting (MH) and Gibbs
+
+Posterior
+Laplace
+
+s
+3
+—
+x
+g
+5
+&
+2
++
+
+gs
+g
+3
+3
+é
+
+Figure 3.5: Laplace’s Approximation on x?-Distribution.
+
+§3.4 22
+
+Algorithm 3 Metropolis-Hasting MCMC
+
+1: Initialize w, ~ G(w),r = 0
+2: forr € {1,--- , max} do
+
+3: Propose: Wnew ~ G(WnewlWr-1)
+
+4: Acceptance: a(WyevlW,-1) * min {1, Ftsstcvetnta tts}
+
+5: Draw x ~ Unif(0,1)
+
+6 if x < a(WrewlW,-1) then
+7: Wr = Whew
+
+8: else
+
+9: wy = Wri
+
+10: end if
+
+11: end for
+
+sampling as the popular MCMCs. Further, for sophisticated MCMCs, the algorithms
+available are not limited to Hamiltonian Monte Carlo (HMC) and Stochastic Gradient
+
+HMC.
+
+3.4.1 Metropolis-Hasting
+
+The idea of the MH algorithm is to randomly walk in the support of the target
+density such that the random step is governed by the proposal distribution G(.).
+The assumption is that the posterior distribution has no closed-form solution, but
+the kernel, which is the unnormalized form of the target density is easy to evaluate.
+This is the advantage of the Metropolis-Hasting algorithm where the a posteriori
+is not necessarily be normalized — often the difficulty in simplifying the model
+evidence of the Bayes’ rule. Let P(-) be the a posteriori, then the Metropolis-Hasting
+
+algorithm is given in Algorithm 3.
+Example 3.4.1. Consider the bivariate Gaussian distribution defined below:
+
+4 Try
+Fla 2) * exp [ Fw Ew G5)
+
+§34 23
+
+(a) Random Samples. (b) Kernel Density Estimate.
+
+ST SOUTETTTTT PETE
+
+2 ° » o
+ug Lag
+
+(c) Autocorrelation of w}. (d) Autocorrelation of w2.
+
+Figure 3.6: Metropolis-Hasting on Target Density after Burn-in.
+Suppose it has the following parameters:
+
+15 p(1.5)(1.35)
+p(1.5)(1.35) 1.35?
+
+p*[10 -10]" and £4
+where p + .5; in order to draw samples from this model, let the proposal distribution
+defined to be the current step of the random walk plus an increment from a uniform
+
+distribution with parameters min = -5 and max = 5.
+
+The random samples drawn by MH are not independent, this is due to
+
+§3.4 24
+
+the design of the algorithm where the distribution of the candidate sample depends
+solely on the current sample”. To address this problem, diagnostics are applied
+using methods such as thinning, where every ith sample is taken and the rest are
+discarded; or using burn-in where first n* samples are discarded. So that the plot of
+the random samples and its kernel density are depicted in Figure 3.6 using 10,000
+
+iterations. Figures 3.6c and 3.6d depict the autocorrelations. -
+
+3.4.2 Gibbs Sampling
+
+MH is by far one of the easiest MCMC algorithm for drawing samples from
+a posteriori where direct sampling is not possible. It uses proposal distribution
+as drivers of the random walk in the support of the target density, which for
+high dimensional data, the choice of appropriate proposal function is sometimes
+difficult to specify. As an alternative, Gibbs sampler can be used for taking
+samples from the posterior distribution. The only requirement is that the joint
+distribution of the parameters (the a posteriori) can be decomposed into conditional
+distributions of each variable conditioned on other variables. Mathematically,
+suppose the multivariate distribution is given by f(w|9), where w * [w; w2---wx]',
+
+then the Gibbs sampling algorithm is given in Algorithm 4.
+
+Example 3.4.2. Using the same posterior distribution as in Example 3.4.1,
+the conditional distributions of the parameters conditioned on other parameters
+are also Gaussian with mean p = py + (2) p(x — Hz) and standard deviation
+o * ,/(1—p?)o}. Thus the Gibbs sampler for 10,000 iterations generates random
+samples shown in Figure 3.7. Analogous to MH, samples obtained using Gibbs are
+
+not independent but with lower autocorrelation compared to the former. As before,
+
+2this is the property of the Markov Chain, hence the name MCMC.
+
+§3.5 25
+
+the same diagnostics can be done. The autocorrelation is shown in Figures 3.7c and
+
+3.7d, which suggest good mixing of the random samples. -
+
+3.5 Bayesian Linear Regression
+
+As an illustration of Bayesian inference to basic modeling, this section
+attempts to discuss the Bayesian approach to linear regression. Let
+= {(x1,¥1),-++ , ns Yn)} Where x; € IR4, y; € IR be the pairwised dataset. Suppose
+the response values, yi,:-- , Yn, are independent given the parameter w, and is
+distributed as y; ~ N(w"x;,a71), where a7 is referred to as the precision parameter
+— useful for later derivation. In Bayesian perspective, the weights are assumed
+to be random and are governed by some a priori distribution. The choice of
+this distribution is subjective, but choosing arbitrary a priori can sometimes or
+often result to an intractable integration, especially for interesting models. For
+simplicity, a conjugate prior is used for the latent weights. Specifically, assume that
+
+w ~ N(0,B"1I) such that B > 0 is the hyperparameter supposed in this experiment
+
+Algorithm 4 Gibbs Sampling MCMC
+
+1: Initialize w,,r = 0
+
+2: for € {1,-++ , Tmax} do
+
+(new)
+
+3: wy’ ~ f (wile, +++ , wk)
+
+4 wl) ~ F(wolw™,--- we)
+
+5 wi ~ Fevsho"™, ao, wwe)
+
+6: I
+
+A wr ~ f(wx tu, (new) . ween)
+8: 4[wr,. a wo
+
+9: end for
+
+
+535 26
+
+as known value. The posterior distribution based on the Bayes’ rule is given by
+
+P(w)P(ylw)
+
+3.16)
+Py)” (3.16)
+
+P(wly) =
+
+wy = P(walwa)
+
+(a) Random Samples. (b) Kernel Density Estimate.
+
+(c) Autocorrelation of w}. (d) Autocorrelation of w2.
+
+Figure 3.7: Gibbs Sampling on Target Density after Burn-in.
+
+§35 7
+
+where P(w) is the a priori distribution of the parameter, P(y|w) is the likelihood,
+
+and P(y) is the normalizing factor. The likelihood is given by
+
+_a(yi et) @.17)
+
+1
+P(ylw) = U Vit exp
+
+= (g)" exp - Y atyi = Wixi)” se) 5 (3.18)
+
+isl
+
+In matrix form, this can be written as
+a
+P(ylw) « exp [-So — Uw)" (y - atw)| (3.19)
+
+where & = [oy], ie. & € (IR" xR’), this matrix is known as the design matrix. Given
+
+that w has the following prior distribution
+
+P(w) = -5w'plw], (3.20)
+
+1
+Venera p|-3
+
+implies that the posterior has the following form:
+
+P(wly) « exp [-S0 = Aw)" (y - atw)| exp [-5 “plw]| (3.21)
+
+= exp {-5 [arty — 2tw)"(y — aw) + w'alw)} . (3.22)
+Expanding the terms in the exponent, becomes
+ayTy — 2aw"aTy + w"(aU + Bl)w. (3.23)
+
+The next step is to complete the square of the above equation such that it resembles
+the inner terms of the exponential factor of the Gaussian distribution. The quadratic
+
+form of the exponential term of a N(w|y, £71) is given by
+
+(w ~ p)TE"(w — p) = (w— p)"(E tw - Ep) (3.24)
+
+=wtlw-2wetty+ woty, (3.25)
+
+§3.5 28
+
+The terms in Equation (3.23) are matched up with that in (3.25), so that
+
+Zr = oA" + BI (3.26)
+and
+wtp = away (3.27)
+Do p=adl’y (3.28)
+p= addy. (3.29)
+
+Thus the a posteriori is a Gaussian distribution with location parameter in
+Equation (3.29) and scale parameter given by the inverse of Equation (3.26).
+The derivation above is not fully mathematical since the process of completing
+
+the square is similar to the proof of Theorem 5.1.1.
+
+Example 3.5.1 (Sequential Bayesian Learning by Simulation). This example based from
+Bishop (2006) illustrates the sequential Bayesian learning to fitting a straight line
+to a simulated data. Consider the input variable x and a target variable y such
+that the true function is the simple linear regression with parameters wp * —.3 and
+w, = —.5. Suppose the random values of x are taken from a uniform distribution
+having domain [-1, 1]; then the target variable y = h(x, w)+€ = wo+wix+¢€, where €
+is a Gaussian noise having mean 0 and standard deviation 5. The goal is to recover
+the true value of wo and w, from the data. Using the a priori in Equation (3.20),
+the plot of this density is given in the first row, second column of Figure 3.8. This
+is the case in which no data point yet is observed. The white diamond point in
+the contour plot of the prior density is the true value of the parameters that needs
+to be estimated. The corresponding 20 samples of straight lines with weights
+
+sampled from the a priori are plotted in the far right hand side of the first row of
+
+§3.5 29
+
+Prior/Posterior Data Space
+
+Figure 3.8: Sequential Bayesian Learning of Fitting a Straight Line.
+
+§ 3.6 30
+
+the figure. The second row depicts the case where first observation is observed.
+The likelihood of this data point is shown in the left hand side of the row. Using
+this likelihood multiplied with the a priori in the previous row, and further multiply
+it with the normalizing constant, gives the a posteriori in the middle column of
+the second row. The corresponding fitted lines are placed in the right hand side
+of the row. Following the same procedure for the third row, with likelihood of
+the first five observations shown in the left hand side of the row, and 4 priori given by
+the a posteriori of the second row, returns a more concentrated posterior distribution
+of the weights with 20 sampled fitted lines in the third column of the third row.
+
+The process is repeated until the fourth row consisting of 20 observations. >
+
+3.6 Markov Chain Diagnostics
+
+The different techniques for a posteriori convergence analysis will be
+
+discussed in this section.
+
+3.6.1 Convergence to the Stationary Distribution
+
+In order to have a good estimate of the parameters, the chain must converge
+to the stationary distribution, in this case the target a posteriori. The samples taken
+from a single realization will likely not give assurance on the convergence unless,
+according to Robert and Casella (2010), there is some information about the support
+of the target density. Further, the authors emphasized that when looking ata single
+chain, this means acting as if the chain is already in its stationary regime at the start,
+meaning in practice that the initial sample at the start belongs to an area of likely
+(enough) values for the posterior. This assumption is harder to maintain in higher
+
+dimensions, however, when the support of P(wly) is generally unknown.
+
+§ 3.6 31
+
+The recommendation of Robert and Casella (2010), which is implemented in
+most Bayesian software such as Stan, is to use several chains in parallel in order
+to compare the performance. For Stan, in particular, the default number of parallel
+chains is set to 4. To diagnose the stationarity, one can use cumulative plot to draw
+a smooth line on the trace of the samples. Or alternatively, do a nonparametric tests
+like Kolmogorov-Smirnov and Cramer-von Mises on two halves of the sample, that
+is, test whether the first half of the sample has the same distribution as the second
+
+half of the sample. The following are the tests on the stationarity of the chains.
+
+Heidelberger-Welch
+This non-parametric test makes use of Cramer-von Mises procedure by
+comparing two distributions through their approximate L2 distance. If F is
+
+the reference cumulative distribution function (CDF) and F,, is the emprirical CDE,
+
+then the Cramer-von Mises statistic is
+C= f (F(w) - F,(w))? d F(w). (3.30)
+The null hypothesis is that the empirical CDF is equal to the reference CDF.
+
+The Heidelberger-Welch test can only be applied to single chain and is based on
+
+Brownian bridge theory and spectral analysis (see Cowles & Carlin, 1996).
+
+3.6.2 Convergence of Average
+
+Once the issue of stationarity is fixed, the next diagnostics is the convergence
+of the empirical average to the true value of the parameter, which is the expected
+
+value of the empirical average. That is,
+
+i
+7 LM) > Ergot eoiO)] (31)
+t=1
+
+Shttp://me-stan.org/
+
+§3.7 32
+
+where h is any arbitrary function. One way to test this is through the Gelman-Rubin
+
+method discussed below:
+
+Gelman-Rubin
+
+This test assesses the convergence based on multiple realization
+of themarkov chain, by comparing the estimated between-variances and
+within-variances of the chains. In particular, the between-variances is the variance
+of the averages of the independent chains. While the within-variances is the average
+of the variances of the independent chains. Hence, if the markov chains converged,
+then the two statistics mentioned must approximately equate to each other.
+Otherwise, if there is large differences between these variances, then that is an
+
+indication of nonconvergence.
+
+3.6.3 Approximating IID Samples
+
+Using the fact that the MCMC approximates the a posteriori, then ideally,
+samples taken by MCMC should extend to the (approximate) production of IID
+samples from P(wly). As already illustrated on Examples 3.4.1 and 3.4.2, this
+requirement can be addressed by applying burn-in and thinning on the samples,
+
+that way the autocorrelation of the chain decreases over time.
+
+3.7. Economic Indicators
+
+As mentioned in the objective of this paper, the application of the proposed
+model (BADL-SGHMC) is on forecasting the Philippine’s economic growth. Hence,
+
+the following are the descriptions of the indicators used in modeling:
+
+1. Peso/US Dollar Exchange Rate (ERATE)
+
+§ 3.7 33
+Monthly average of Philippine Peso-US Dollar exchange rate.
+
+2. Stock Price Index (SPI)
+Philippine stock price index (SPI) serves as a measure of the changes in, and
+the movements of, the average prices of company shares of stock traded in
+
+the Philippine Stock Exchange (PSE).
+
+3. Gross International Reserves (GIR)
+Foreign assets that are readily available to and controlled by the BSP for direct
+financing of payments imbalances and for managing the magnitude of such
+
+imbalances.
+
+4. Balance of Payments - Current Account (BOP)
+Consists of the aggregate balance of goods, services, income and current
+transfers. This account measures the net transfer of real resources between
+
+the domestic economy and the rest of the world.
+
+These indicators are freely available from the Bangko Sentral ng Pilipinas website,
+
+accessible through the following link:
+http://www.bsp.gov.ph/statistics/statistics.metadata.asp
+
+The time points of these quarterly economic series starts from 1999 first quarter to
+
+2016 third quarter.
+
+CHAPTER 4
+
+METHODOLOGY
+
+The theory of the algorithm and the model used in the main results
+are the main subject of this chapter. Specifically, Section 4.1 will discuss
+the Stochastic Gradient Hamiltonian Monte Carlo (SGHMC), proposed in
+this study as the Markov Chain Monte Carlo for estimating the Bayesian
+Autoregressive Distributed Lag (BADL) model — the objective model of this thesis.
+The presentation of the SGHMC proceeds with the introduction of the Hamiltonian
+dynamics, its extension to MCMC (known as Hamiltonian Monte Carlo), and
+
+the Langevin dynamics. Finally, the theory of the BADL is given in Section 4.2.
+
+4.1 Stochastic Gradient Hamiltonian Monte Carlo
+
+Classical or frequentist approach to modeling assumes the parameters #
+to be nonrandom and unknown, and inference is done using maximum likelihood
+estimation (MLE). In Bayesian statistics, these parameters are assumed to exhibit
+randomness that can be described by a probability distribution called the posterior
+distribution. This distribution is proportional to the likelihood of the data and the prior
+knowledge of the parameters governed by the a priori. From Casella and Berger
+(2002), this is a subjective distribution based on the experimenter’s belief, and is
+formulated before the data are seen. A sample is then taken from a population
+indexed by # and the prior distribution is updated with this sample information.
+
+The updated prior becomes the posterior distribution. This updating is done with
+
+§ 41 35
+
+the use of Bayes’ Rule given below
+
+P(A FP)P(F)
+
+PAID) = EG
+
+(4.1)
+
+The only factor that is often difficult to derive, especially for interesting models, is
+the normalizing factor P(Y) = f P(Q, #)d F. This probability is often intractable
+due to high dimensional integration. As a result, different approximation
+
+techniques were proposed for characterizing the a posteriori, P( P|).
+
+4.1.1 Hamiltonian Dynamics
+
+One limitation of the Metropolis-Hasting algorithm is that, the samples
+drawn are based on the rejection criterion where the decision to accept depends on
+the proposal distribution. The simplest proposal is the random walk, and it works
+by sampling the next step from the Uniform distribution. The problem with this
+nature of computation is that the distance traversed through the state space grows
+only as the square root of the number of steps (Bishop, 2006). However, if the step
+size is increased by expanding the min and max parameters in the case of Uniform
+proposal function, this will shorten the distance traversed but will lead to high
+rejection rate.
+
+The Hamiltonian Monte Carlo originally known as Hybrid Monte Carlo in
+the paper by Duane et al. (1987), addresses the issue of the Metropolis-Hasting
+by considering auxiliary variable for describing the physical system in drawing
+samples from the target distribution. To understand the process, a brief review
+in Physics is provided for Hamiltonian dynamics. Dynamic in Physics deals with
+the study of the causes of motion, that is, the physical factors that can affect
+
+the object’s motion in the system, which is the event or phenomenon being studied.
+
+§ 41 36
+
+In particular, Hamiltonian dynamics describe the system using location parameter
+notated as w and momentum parameter p. As an example, consider a ball attached
+to a frictionless pendulum swinging on a vertical plane (see Figure 4.1a). For each
+location of the ball given by w, there is a corresponding potential energy (PE),
+denoted by U(w), and for each momentum p, there is an associated kinetic energy
+(KE) K(p). So that at the extreme trajectory of the pendulum, the PE is maximum
+and KE is minimum; and at the equilibrium point, the KE is maximum and PE
+is minimum. The system is a function of time, hence the Hamiltonian dynamics
+evolve in a continuous space called phase space (see Figure 4.1b). Another example
+which is being used in many literature (see Chen et al., 2014; Neal, 2011) is described
+as follows: imagine a hockey puck sliding over a frictionless ice surface of varying
+height. The PE term is based on the height of the surface at the current puck
+position, w, while the KE is based on the momentum of the puck, p, and its mass,
+
+x. If the surface is flat, the puck moves at a constant velocity. For positive slopes,
+
+Max KE
+Min PE
+
+Max PE Max PE
+Min KE Min KE
+
+Max KE
+Min PE
+
+min PB
+max KE
+
+(a) Energies in Physical Pendulum. (b) Energies in Phase Space.
+
+Figure 4.1: Conversion of Energies in Physical Pendulum and Phase Space.
+
+g41 37
+
+the KE decreases as the PE increases until the KE is at its minimum. The puck then
+slides back down the hill increasing its KE and decreasing its PE.
+
+The total energy of the system is characterized by the Hamiltonian
+H(w, p) = U(w) + K(p), and therefore describes the conversion of the two energies
+as the object moves throughout a system in time. So that the following are
+
+the Hamiltonian equations:
+
+dw_ dH(w,p) _ dK(p)
+
+dt op dp (4.2)
+dp __aH(w,p)__dU(w)
+dt “Ow dw
+
+The succeeding discussion will prove the above equations by illustration.
+The Hamiltonian energy isa scalar function, so the levels of the contour in Figure 4.2
+corresponds to the values of H(w, p). The change in the total energy is given by
+
+the following equation:
+
+= dH(w,p) ] [dw
+Hw, p) = si aw) xc | ls dp . (43)
+dt
+
+The reason for the above inequality is because the trajectories of the gradient of H is
+perpendicular to the contour lines. The final turn therefore, is to rotate the gradient
+of H 90° clockwise, so that the vector field of VIH(w, p) is now tangent to the contour
+
+dw iT
+of H, which is parallel to the field lines of the vector , see Figure 4.2b.
+
+dp
+‘dt dt
+This in effect is equivalent to simply rotating the axes 90° clockwise, so that p
+becomes w, and w becomes —p, and their corresponding placeholder in the vector
+
+will also interchange. Thus Equation (4.3) becomes
+aH(w, p)
+
+rot™ VH(w, p) = (4.4)
+
+op
+oH(w, p)
+Ow
+
+Therefore Equation (4.4) is equivalent to Equation (4.2).
+
+§41 38
+
+(a) Contour Lines of H(w, p). (b) V[w(t) p(#)] over H(w, p).
+
+Figure 4.2: Contour Lines of IH(w, p) and Gradient of [w(t) p(#)].
+
+There are three properties that makes Hamiltonian dynamics good for
+sampling. The first one is the conservation of the energy, that is, a change in time for
+both position and momentum won't affect the Hamiltonian total energy. This can
+
+be seen from the following equation
+
+dH _[aHdw , dHdp
+a7 Fea ie) (45)
+OHOH dOHIH
+= py [ee = ae =0. (4.6)
+
+The second property follows from the Liouville’s theorem, which claims that
+the system preserves the volume of the phase space. The last property is reversibility,
+
+all details can be found in Neal (1996); Bishop (2006); Neal (2011).
+
+4.1.2 Leapfrog Method
+
+Since the phase space changes over time which is a continuous variable, then
+in order to simulate the Hamiltonian dynamics under numerical computations,
+
+the time has to be discretized. There are several ways to do this, one such solution
+
+§41 39
+Algorithm 5 Hamiltonian MCMC
+1: Initialize Leapfrog parameters: y and 7;
+2: Set initial location w(t = 0);
+3: forr € (0,--- ,7max} do
+4: Draw initial momentum, p(t = 0) ~ col-Ko]
+5: Compute H(w(0), p(0)) £ U(w(0)) + K(p(0));
+6 Simulate Hamiltonian dynamics using Leapfrog:
+7: fort € {0,--- ,t} do
+p(t + 7/2) * pW) — oa (47)
+)
+w(t + y) = wt) + ae (4.8)
+r
+poUt#y) whe +712) ~ 1M (49)
+8: end for
+9: if AH <0 then
+10: wh(Q) £ wr + y)
+11: else
+12: if a < exp (AH),a ~ Unif(0, 1) then
+13: wd) £ wr +)
+14: else
+15: w'*DQ) = wi(0)
+16: end if
+17: end if
+
+18: end for
+
+
+g41 40
+
+is to consider the leapfrog method, which works as follows:
+
+pit 7/2) = ptt) = 2) eee (4.10)
+= OK (p(t)
+w(t +y) = w(t) +7 apa)” (4.11)
+aU
+p(t + y) = p(t + y/2) - oa (4.12)
+
+where y > 0.
+
+Hamiltonian/Hybrid Monte Carlo
+
+The Hamiltonian dynamics is related to MCMC using the fact that the total
+energy is related to the probability distribution of the parameter of interest using
+
+the concept of canonical distribution from the Statistical Mechanics. That is,
+1
+PP) = zor [-E(P)], (4.13)
+
+where E is the total energy. Therefore, E in this case, is H(w, p). Further, the three
+properties of the Hamiltonian dynamics mentioned above will make the canonical
+
+distribution invariant. So that the equation becomes
+
+P(w, p) « exp [-H(w, p)] (4.14)
+= exp [-U(w) — K(p)] (4.15)
+= exp [-U(w)] exp [-K(p)] (4.16)
+x P(w)P(p). (4.17)
+
+Therefore the joint canonical distribution of the location parameter w and
+the momentum parameter p factors into the products of its marginal density,
+implying independence. In this case, the momentum parameter serves as
+
+the auxiliary variable for the parameter of interest, w, and because p is used
+
+g41 41
+
+for simulating Hamiltonian dynamics in phase space, making it random plus
+the gradient of its distribution leads to the exploration of high probability
+
+»
+region, and thus it is also considered as the proposal distribution with certainty
+of acceptance on the proposed samples. However due to the discretization
+of the phase space, the true samples proposed from the joint distribution of
+the location and momentum parameters are accepted using some adjustment. This
+adjustment is the introduction of the Metropolis-Hasting criterion as the decision
+
+rule for accepting the sample. Finally, the kinetic energy is often assumed to be
+
+standard Gaussian distributed, and thus
+
+_ Tyo! _ T,
+Kip ptoren=P2- = ew - P Bree (4.18)
+
+where pand Z are the mean vector and the variance-covariance matrix, respectively.
+The E of the kinetic energy can be assigned to any positive definite matrix if
+additional information about the target density is available.
+
+Hence to summarize the parameter of interest w, the following is the target
+
+distribution,
+
+U(w) = — log P(wly) (4.19)
+
+= —log[P(w)L(wly)] - C, (4.20)
+where C * log P(y), which will be cancelled out at line 9 of Algorithm 5.
+
+Example 4.1.1. The samples drawn from the bivariate Gaussian distribution
+defined in Example 3.4.1 using Hamiltonian MCMC are depicted in Figure 4.3.
+The corresponding autocorrelations for both parameters using “burn-in” method
+
+are depicted in Figures 4.3c and 4.3d. ~
+
+§41 42
+
+4.1.3 Langevin Dynamics
+
+The Stochastic Gradient HMC works by considering Langevin dynamics
+on its momentum. The dynamics extend the idea of the Newton's second law of
+motion, which orignially proceeds as follows: let f be the force, p be the momentum,
+
+m be the mass, v be the veclocity, and a be the acceleration, then
+
+ea 9P _ deny) _ dv _
+
+Sen arly: ap 7m (4.21)
+
+(a) Random Samples. (b) Kernel Density Estimate.
+
+° 0 Ed » ° 10 Ed » o
+Leg Log
+
+ree
+
+(c) Autocorrelation of w. (d) Autocorrelation of w2.
+
+Figure 4.3: MCMC Hamiltonian on Target Density.
+
+§41 43
+
+The idea of Langevin dynamics is to take into account or at least approximate
+the effect of neglected degrees of freedom, and this is achieved by adding two force
+terms: one represents the frictional force, nv*; and the other represents the random
+
+force, e. So that the Langevin equation is given below:
+
+d
+a -nvt +e=ma, (4.22)
+
+where the random force is assumed to have zero mean and is uncorrelated, i.e.
+
+e~ N(0, El).
+4.1.4 Stochastic Gradient HMC
+
+The discussion in this section is based on Chen et al. (2014). The idea is to
+apply the common practice in machine learning for speeding up the numerical
+computations in optimization problems. For very large dataset, especially in
+the era of Big data, the use of batch gradient descent can be very slow even for 100
+observations only, the convergence can take time as illustrated in Example 3.2.1.
+The solution as presented in § 3.2, is to consider stochastic gradient or minibatch
+stochastic gradient approach. That instead of taking single observation for updating
+the differential equation in the case of pure stochastic gradient approach or using
+all observations in the case of batch gradient, why not use only samples of
+the full dataset? The computational advantage of minibatch gradient over the two
+approaches is vectorization. Vectorization is computationally fast if it is possible
+for the algorithm. Let 9 be the minibatch or sample of the full dataset J, then
+
+QC GQ, implies that
+
+vi(w) = i Y, Vlog P(xtw) - Vlog P(w). (4.23)
+xeD
+
+§41 44
+
+The minibatch above is uniformly sampled from Q, so that the weight ey makes
+VU(w) an estimate to VU(w). The error of this estimate is known as the stochastic
+
+gradient noise, and is given by
+VU(w) - VU(W) = &. (4.24)
+Implying E[VU(w)] = VU(w), and hence
+E{VU(w) - VU(w)] = Eg] = 0. (4.25)
+
+Let Var[&] = %(w) be the variance-covariance matrix of the stochastic gradient
+noise, then by central limit theorem (CLT), & ~ N(0,%(w)). Therefore W(w) is
+
+approximated as follows:
+VU(w) = VU(w) +é,  & ~ N(0, A(w)). (4.26)
+
+The equality in Equation (4.24) is replaced with approximation in Equation (4.26)
+since § is now taken as a sample from a defined distribution, the Gaussian. In effect,
+the momentum update of the HMC algorithm now has a noise term added to it.
+Thatis, Ap = —yVU(w), so that Var[—y&] = y?2(w) or 28(w) where 8(w) = 4y2(w)
+is the diffusion matrix. y? is redefined as y, since it is a constant. Thus if the batch
+size, |9|, becomes small, then the variability of € becomes large. The resulting
+discrete time system can be viewed as a y-discretization of the following continuous
+stochastic differential equation:
+
+dw 4 dp _ |.
+Grp and SE x -VU(w)+é, (4.27)
+
+where &* ~ N(0,28). For brevity, 8(w) is now notated as B for the rest of
+the chapter. To gain some intuition, consider again the hockey puck analogy of
+
+§ 4.1.1. The dynamics is still the same but this time there is a presence of some
+
+§41 45
+
+random wind blowing. The wind may blow the puck further away than expected.
+This contribution of the randomness is one of the degrees of freedom mentioned
+in Langevin dynamics (see § 4.1.3), which affects the preservation of the entropy
+under the Hamiltonian dynamics, and is shown in one of the results of Chen et
+al. (2014), refer to the article for the theoretical results of the entropy of the target
+density.
+
+To address the problem presented above, a frictional force is added to
+the equation. This introduces a correction step even before considering errors
+introduced by the discretization of the dynamical system. So that Equation (4.27)
+becomes
+
+dw
+
+d
+Ge =E"p and - = ~VU(w) - BE"!p + &*, (4.28)
+
+where &* ~ N(0,28). According to Chen et al. (2014), the posterior distribution
+described by the dynamics in the above equation is the unique stationary
+distribution. Equation (4.28) is also referred to us the second-order Langevin dynamics,
+
+see § 4.1.3.
+
+SGHMC in Practice
+
+The parameter % up to this point is assumed to be known. However, this is
+not the case in practice. A remedy is to consider an estimate of 8 instead, denoted
+as 8, and define a user-specified frictional term € > 8. That is © — 8 > 0 suggests
+
+that the matrix € — 8 is positive-semidefinite. So that the dynamics becomes
+
+d -
+SWor'p and + = -VU(w) - CE p + &*, (4.29)
+
+where &* ~ N(0,2(€—®)). The result is known as the Stochastic Gradient Hamiltonian
+
+Monte Carlo (SGHMC) algorithm defined in Algorithm 6.
+
+§ 4.2 46
+
+Algorithm 6 Stochastic Hamiltonian MCMC
+
+1: Initialize Leapfrog parameters: y and 7;
+
+2: Initialize estimate for B(w) = 241(w), and specify the matrix ©;
+3: Set initial location w°-(t = 0);
+
+4: forr € {0,--+ , Tmax} do
+
+5: Draw initial momentum, p(t = 0) ~ col Ko
+
+6 Simulate Hamiltonian dynamics using Leapfrog:
+
+7: fort € {0,---,t} do
+
+Aw (t+ y) 2yVenunK(pet +1)), (4.30)
+Apt + y) £— yV yn (wf) — E(w'())E"p + &* (4.31)
+where &* ~ N(0,2y(6 - 8)) (4.32)
+8: end for
+9 wht & win
+
+10: end for
+
+As mentioned above, 8 is an estimate for 8 since the latter is not known
+in practice. The recommendation of Chen et al. (2014), is to set B to Onxn as its
+simplest estimate, and in effect, Equation (4.29) will still preserve the entropy since
+the expression is now governed by a controllable matrix ©. Further, using the fact
+that B = 4% then $ = 1y{1. Finally, as y > 0, 8 = Ojx,. The other option is to
+
+estimate % using empirical Fisher information as in Ahn et al. (2012).
+
+4.2 Autoregressive Distributed Lag Model
+
+The popular time series models often used in econometrics is the
+Autoregressive (AR) expectation function, where the response variable y(t) is
+dependent on its lagged values. Further, if the distributed lag term, which
+is composed of other explanatory variables and including its lags, are to be
+
+added to the model, then this leads to Autoregressive Distributed Lag (ADL). In
+
+§ 4.2 47
+
+this paper, the ADL as emphasized in the first chapter will be the objective
+model. The Stochastic Gradient Hamiltonian Monte Carlo (GGHMC) discussed
+in the preceding section will be integrated into the estimation of the parameters of
+
+the ADL which will be discussed in the next section.
+
+4.2.1 The Model: ADL(p, q)
+
+The simplest ADL model is of order p = 1 and q = 0, denoted by ADL(1,0)
+
+and is given by
+y(t) = Wo + wiy(t — 1) + wex(t) + et), € ~ N(0,0). (4.33)
+
+If there are m other explanatory variables, then the updated model is
+m
+Y(t) = wy + wiyt-1) +) want) +e), €~ N@,0). (4.34)
+i=l
+
+Thus for ADL(1, 1), the following is the form
+
+m 1
+
+y(t) = wo + wylt-1)+ YY wesmatit-D +e), €~NO,0). (4.35)
+i=1 1=0
+
+For general ADL(p, 4), the model can be written as
+P m 4
+y(t) = wo + Ys wiylt- K+ YY weoimaxt-D +e, €~NO,o). (436)
+k=1 i=1 I=0
+where x(p,l,m,i) = [@ +1) +1-m]+i. The first summation, pa wry(t — k),
+denotes the autoregressive term, while the second double-summation,
+21 Lico Mxipimaxi(t 1), denotes the distributed lag term, and wo and é(t) are
+the constant and the error term, respectively. If the error term is centered on 0, then
+m 4
+
+7
+Ely(t)] = wo + )my(t-K) + YY) Wepamaxilt - 1. (437)
+k=1
+
+i=1 1=0
+
+§ 4.2 48
+
+4.2.2 Identification
+
+The identification of the ADL model is done using Vector Autoregressive
+(VAR) for lag order p and q. The theory of this subject will not be discussed since
+it is beyond the scope of this paper. In Bayesian perspective, on the other hand,
+
+the order can be modeled by specifying a priori on these parameters.
+
+4.2.3. Estimation
+
+Estimation in frequentist’s approach is done using either of the two
+procedures. The first method is through ordinary least squares which does not
+assume any constraints on the parameters, and that the error term of the model is
+Gaussian distributed with mean 0 and with constant variance. The other approach
+follows from constraining the values of the parameters, these procedures include
+polynomial constraints and spline constraints (Welty et al., 2009).
+
+In this thesis, the Bayesian approach to modeling is done by setting a priori on
+the parameters of the model. The Bayesian principle of setting a priori is analogous
+to constraining the estimate in the classical statistics, and this specification is based
+
+on expert knowledge of the researcher.
+
+CuHarter 5
+
+MAIN RESULTS
+
+The theoretical results and application of this thesis are the main subject
+of this chapter. In particular, Section 5.1 presents the main propositions used
+for modeling BADL(1,1), where Proposition 5.1.1 aims to derive the posterior
+distribution of the parameter, Proposition 5.1.2 is the gradient of the potential
+energy needed in the SGHMC algorithm, and Proposition 5.1.3 is an immediate
+result from the preceding proposition and is needed in the HMC algorithm. Further,
+Section 5.2 is the application of this thesis, which aims to forecast the Philippines’
+
+economic growth using BADL(1, 1).
+
+5.1 Theoretical Results
+
+Proposition 5.1.1. Let D = {[x(t), y(t)], Wt € Z}} be the data such that y(t) is modeled
+by a Gaussian function with mean given in Equation (4.37) and constant variance
+a eR,. If w is the vector of coefficients of ADL(p,q) such that w ~ N4(0,B-l),
+where B-) € IR,, then the posterior is a multivariate Gaussian distribution with covariance
+
+matrix Z = (a6"G + BI)" and mean vector p = aLG'y, where G is the design matrix.
+
+Proof. Let w * [wo wi -** Wxtpqmmly x(p,l,m,m) * [(p + 1) +1-m] + m and let
+
+z(t) = [1 y(t—1) +++ Xn(t- q)I", then the ADL(p, 9) can be written as
+y(t) = w'z(t) + e(t),  e(t) ~ N(O,a71). (5.1)
+
+The likelihood is therefore given by
+
+1/2 a —wl 2
+L(wly) # (=) exp | y. soo aur ; (2)
+
+t=1
+
+§5.1 50
+
+Let y * [y(1) y(2) «+» y(z)]" and let G * [(z()")], ie. G € Rt x R4. Thus in matrix
+
+form
+L(wly) 0 exp [-$u - 6w)"y - 6w)] . (6.3)
+
+The prior is given by
+
+P(w) = ari ex |- 5wiatw], (4)
+
+so that the posterior would be
+
+P(wly) « exp [-$u - 6w)"(y - 6w)| exp [-5w"pIw]| (5.5)
+= exp {-5 [acy — Gw)"(y — Gw) + w'ptw}} 5 (5.6)
+
+Expanding the terms in the exponential factor becomes
+ay'y - 2aw' Gly +w'(a6"G + Bl)w. (5.7)
+
+Hence
+P(wly) « Cexp {-5 [w(a6"G + pw - 2aw"6"y]} . (5.8)
+
+The terms in the exponential factor is now of the form ax? — 2bx. This suggest a
+quadratic equation and therefore can be factored by completing the square. To do
+
+so, let D * a6" + fl and b * aG'y, then
+
+P(wly) « Cexp {-5 [w'Dw - 2w"e]} 6.9)
+
+= Cexp {5 [w’Dw -w'b- b'w]} . (5.10)
+
+Next is to add a term that is not a function of w which can be assumed to be part of
+
+the constant C. Let this term be b™D~'b, then
+
+P(wly) « Cexp {-3 [w'Dw - w'b - b™w + b'p“p]} . (6.11)
+
+§5.1 51
+
+In order to proceed, the matrix D must be symmetric and invertible since later
+this will be the covariance matrix of the posterior which requires such property. If
+satisfied, then I = DD=! = D='D, so that
+
+P(wly) & Cexp {-3 [w'Dw - w'DD™b - b'D"'Dw + bpp“ »]} .
+
+Finally, let £ * D™! and p * D~'b, then
+
+P(wly) « Cexp {-3 [witw - wih" - pTE Tw + wx"y)} (5.12)
+=Cexp {-5 [(w - p)"="(w - Pa . (6.13)
+
+Thus C = ra where C is the constant of the Guassian kernel in Equation (5.13).
+
+Therefore,
+
+P(wly) = Na(wly, 2), (5.14)
+where E = (a6"G + BI)” and p = aLG'y. o
+Proposition 5.1.2. Let the posterior of the parameters be P(wly) given in Proposition
+
+5.1.1, with y = [y(1) y(2) --- y(t)]". Further, let w ~ Na(0, 6711), then the gradient noise
+
+of — log P(wly), needed for SGHMC’s computation is given below:
+aS —w2(t))2(t) + Bw+E, E~ N(0,2(w)). (5.15)
+
+Proof. Again, let w * [wo wi «++ Wepqmm)", «(p,1,m,m) * [(p +1) +1-m) +m and
+
+let 2(#) £ [1 y(t—1) »+» xm(t—4)]", then
+
+at log P(wly)] = -< [é(wly) + log P(w) — log P(y)] (5.16)
+
+d d
+=— [55 e0wly) + 5 log Pow)| (5.17)
+
+§5.2 52
+
+where analogous to Equation (3.18)
+
+d _d a \2 = a(y(t) — w'z(t))?
+Fu llwiy) = slog ((z) exp - Y ; (6.18)
+7 ie ;
+= = oy) wey =a) (yt)—wielt)z®, 6.19)
+t=1
+
+d ~ ba ne
+aw log P(w) = Jaw” w= Bw. (5.20)
+Equation (5.15) then follows from Equation (4.26). o
+
+Proposition 5.1.3. The gradient of the potential energy needed for Hamiltonian Monte
+
+Carlo is given by
+
+1
+-a Yow —w"2(t))z(t) + Bw. (5.21)
+
+t=1
+Proof. The proof follows from the previous result. o
+
+5.2 Forecasting Philippine’s Economic Growth
+
+As already mentioned in the first chapter of this paper, the Autoregressive
+Distributed Lag (ADL) model has been applied to different time series problems
+across disciplines. Most of these, however, are non-Bayesians. Hence, this thesis
+attempts to contribute to the application of the Bayesian ADL (BADL) using
+Stochastic Gradient Hamiltonian Monte Carlo (SGHMC). In particular, the model
+is applied to forecasting the Philippine’s economic growth, or the year-over-year
+GDP’s growth rate. The following are the economic indicators used for forecasting
+
+the GDP’s growth rate:
+1. Peso/US Dollar Exchange Rate (ERATE)
+
+2. Stock Price Index (SPI)
+
+§ 5.2 53
+3. Gross International Reserves (GIR)
+4. Balance of Payments - Current Account (BOP)
+
+The indicators are known to have correlation with the gross domestic product of
+the Philippines, for example the first three indicators above were tested by Mapa,
+Del Prado, Poliquit, and Asaad (2016). The Balance of Payments, on the other
+hand, is also an important predictor since according to the International Monetary
+Fund (2005) that, the flows reflected in the Balance of Payments affect, in important
+ways, the total economy’s activities associated with production, generation and
+distribution of income, consumption, and accumulation activities. For instance,
+credit and debit entries for goods and services in balance of payments accounts are
+equivalent to flows of exports and imports of goods and services. These flows are
+refected in the economy’s account for goods and services and consequently affect
+the measurement of gross domestic product (GDP) and its composition in terms of
+final demand components.
+
+The Philippines’ economic growth rate is quarterly released by the Philippine
+Statistics Authority (PSA), which uses a year-over-year growth rate computation.
+Thus in order to relate to the publication of the PSA, the time series used in this
+paper are also in terms of year-over-year growth rate. In particular, the rates
+are extracted from the deseasonalized time series. However, it should be noted
+that the study can also proceed without deseasonalizing since the year-over-year
+growth rate is not affected by the seasonality. The plot of these rates are given in
+Figure 5.1.
+
+Analogous to classical statistics, the stationarity of the time series must
+
+be assessed before proceeding to modeling. The Augmented-Dickey Fuller
+
+§ 5.2 54
+
+L 1
+Gross Domestic Product
+
+a
+1
+
+2
+L
+
+Peso/US Dollar Exchange Rate
+
+Stock Price Index
+
+Gross International Reserves
+
+Year-over-Year Standardized Percentage Change
+°
+L
+
+Balance of Payments (Current Account)
+
+Figure 5.1: Time Series of the Economic Indicators used in the Study.
+
+§5.2 55
+
+(ADF) stationary test suggests that all indicators are nonstationary. Hence first
+differentiation on the time series must be applied. However, the ADL is a
+specialized type of a dynamic regression (Welty et al., 2009), thus the assumption
+of stationarity can be relaxed according to Kumar and Maity (2008), and because of
+that, this thesis will proceed with the nonstationary series.
+
+To test the performance of the proposed model, the data are partitioned into
+training and testing datasets. Specifically, 70% of the data points are allocated to
+
+the training dataset and the remaining 30% are reserved for the testing dataset.
+
+5.2.1 BADL(1, 1)-SGHMC Posterior Inference
+
+The ADL(1, 1) model derived from Equation (4.36) has the following form:
+
+4 1
+yt) = wo + wry(t-1)+ YY wesrayeitilt) +e), ef) ~ NO, 1/2,
+
+i=1 1=0
+
+where y is the dependent variable, which is the growth rate of the GDP (the reference
+series); the xjs, on the other hand, correspond to the economic indicators listed in
+Figure 5.1; the weights, w;,i € {0,1,--- , 10) are assumed to have the following prior
+
+distribution: let w * [wp w, «++ Wyo)", then
+w ~ Nio(0, BI). (5.22)
+From Proposition 5.1.2, the gradient noise of the posterior distribution is given by
+1
+- CO) —w'z(t))z(t)+Bw+é, &~N(0,2(w)). (5.23)
+t=1
+
+Other parameters of the SGHMC which include € and 2 are set to identity matrix,
+while the kinetic energy given in Equation (4.18), which is another parameter of
+the SGHMC, has gradient §. As discussed in Chapter 4, p is the momentum
+
+parameter sampled from the kinetic energy as indicated in Algorithm 6.
+
+§5.2 56
+Posterior Summaries
+
+The parameters of the model are estimated through Markov Chain Monte
+Carlo simulation, and for this paper, four markov chains were considered. Each
+of these chains has overdispersed starting position, which can be set to any value.
+However for this thesis, the initial positions are constrained to [0.001, 1] interval.
+This interval is divided into partitions to make the starting values overdispersed.
+That is, the first markov chain takes random starts for 8 parameters (see Table 5.1)
+from the first-quartile of the said interval using uniform distribution, so that
+in general Wehain ~ U(0.001 + (chain - 1)/4,chain/4). That is, if chain = 1, then
+w, ~ U(0.001, 1/4); and so on. The MCMC simulation is done for three different
+
+cases, and these are the following:
+© Case 1 Leapfrog step size y = .09 for 1,000 iterations;
+© Case 2 Leapfrog step size y = .009 for 10,000 iterations;
+Case 3 Leapfrog step size y = .0009 for 100,000 iterations.
+
+These scenarios are useful for preliminary evaluation on the behavior of the MCMC
+algorithms used in this paper, especially for the SGHMC since no paper yet has
+studied its optimal leapfrog parameter. It should be emphasized, however, that
+these cases explains a small perspective on the overall behavior of the SGHMC.
+The estimate of the parameters for the three cases are provided in Table 5.1.
+The estimates were obtained by averaging the four markov chains simulated. That
+is, the output of the simulation is four matrices (corresponding to the four markov
+chains), each with dimension 1,000 by 8 (e.g. for the first case). The columns
+
+are the corresponding parameters and the rows are the sampled estimate from
+
+57
+
+§5.2
+
+‘SaS¥D SSOlIY SIND Iasaffiq Suisn (1 ‘T) TAWA ay) fo siuatoyfaoD paywuunysy -T's a1qeL
+
+160°0 ¥80'0 2100 790'0 €60'0 180°0 (I -4)dOa
+190°0 sv0'0 €£0°0 1Z0°0 OL1'0 840'0 (1-)uID
+€60'0 9970 1#0'0 ShE'0 €I1'0 €Z1'0 (L-aIdS
+8cT'0 ¥2L0- 9S0°0 98¢°0- 6910 78'0- (I - )aLVaa
+820'0 990°0 0z0°0 ¥00°0- 6700 8100 ()dO8 |e
+PrL'0 Z07'0- 8e0'0 Sze'0- 961'0 €vE0- @aID a
+€60'0 8hT'0 S00 ZZ1':0 060°0 SbEO (dS |p
+680°0 g0l'0 €F0'0 €7S°0 1810 €69'0 (@aLvua |*
+6£0°0 90v0 220'0 v0E'0 roam) €27'0 (1-1)dq5
+860°0 70'0- 700 ¥60°0- 4600 60°0- om
+8€0'0 S¥0'0 €20°0 8€0'0 10l'0 900°0- (1-7)dOa
+ZS0°0 6700 €20°0 860°0 1010 €€0°0- (1-auID
+7200 0zz'0 020°0 61¥'0 ¥ST0 6sr'0 (L-)lds
+¥20'0 907'0- 2200 8hS'0- 9910 897'0- (1 -d)aLVaa
+70'0 0v0'0 1200 610°0- SILO 0€0'0 ()dO8 |
+1400 ¥67'0- 6€0°0 Sse"0- ZOO 092°0- @)AID | 2
+s90°0 aa) ss0'0 FILO @Zr'0 640°0- @)las Ss
+890°0 080'0 gg0'0 00s"0 160°0 660°0 @aLvua |*
+6€0°0 oro 9600 POE'0 SOL‘O 767'0 (1-7)da5
+St0'0 990'0- 7200 9£0°0- OEL'0 780°0- °m
+S60°0 0+0'0 €€0'0 790°0 ¢80°0 z9t'0 (I-7)doa
+991'0 ¥90'0 4800 €10°0 Ter'0 €€l'0 (1-)aID
+Z61'0 S270 760'0 6se0 S€z'0 Lve0 (L-a)IdS
+981'0 $07'0- vel 66€°0- €27'0 €ze'0 (L- )aLVaa
+€60'0 6£0°0 TE0'0 000°0 8010 ¥60'0 ()dO8 |
+OL1'0 Z1€0- 180°0 887'0- 861'0 621-0- (AID |
+S9r‘0 260°0 980'0 ssT‘0 $970 6ST'0 @)lds |
+661'0 7200 yST'0 €€e'0 280°0 ZOL'0- (@)aLvaa |°
+OrL'0 vero zs0'0 1970 wLO 6er'0 (I-)add
+€01'0 890°0- 6£0°0 990°0- €Z1'0 L£ZU0- om
+JOM “pig jUesMyjeoy) Jo1yZ “pas qusDyje0y) 1011y “PIS = JUEDYJe0 soqqenep,
+
+DWHDS-(1T)I1ava |
+
+OWH~(1‘T)1aGva
+
+| HAA-(I1)Iava
+
+
+§5.2 58
+
+the posterior distribution. These four matrices are averaged to obtain single mean
+matrix with the same dimension as the four matrices. Then, the first ten rows are
+discarded since the burn-in is set to 10, so that the current dimension of the matrix
+is 990 by 8. Thinning is then applied, by taking every 10th row of the matrix. Thus,
+the final dimension of the matrix after burn-in and thinning is 99 by 8. From this
+matrix, the column means are computed to arrive at 1 by 8 vector. This vector is
+the estimate of the w and is given in Table 5.1.
+
+The standard error of the coefficients serve as insight on the stability of
+the sampled estimates. A quick investigation suggest that the SGHMC has, for
+some instance, smaller standard error compared to MH and HMC. The kernel
+density estimate (KDE) of the SGHMC’s chains are given in Figures 5.2, 5.3, and
+5.4; and the corresponding traces of these chains are given in Figures 5.5, 5.6 and 5.7.
+These figures are “unfiltered” since these are the raw samples, that is, no burn-in
+and thinning were applied yet. Hence subjectively, the markov chains simulated
+using SGHMC seems to have converged since the KDEs exhibit the same scale and
+location, especially for the first two cases. The third case seems to have shifting on
+its KDE, that is, not all chains have the same or very close location parameter. And
+with regards to the traces, by observation, as the step size (the leapfrog parameter)
+y decreases, the fluctuation of chains gets concentrated and moves very slowly
+to the stationarity. This is evident especially on the third case, where the four
+non-overlapping starting values of the markov chains are clearly exposed.
+
+In comparison to the two MCMCs, the MH and HMC, the plot of the KDEs
+and traces are available in Appendix A, specifically refer to Figures A.1 to A.12.
+
+From these figures, the samples obtained by MH seems to be unstable across cases
+
+§5.2 59
+
+~ o
+4 1
+
+GIR(H1) BOP(t-1)
+
+vate
+
+ERATE(t4) SPi(t-1)
+
+wines
+
+GIR()
+
+GDP(t-1)
+
+Ak:
+
+Figure 5.2: Kernel Density Estimate of the Unfiltered Chains using Stochastic Gradient
+Hamiltonian Monte Carlo for Case 1 (y = .09 for 1000 Iterations).
+
+Chain Values
+
+
+§ 5.2 60
+
+0
+n 1 1
+
+L
+GIR(t+1) BOP(t-1)
+
+rate
+
+ERATE(t-1) ‘SPI(t-1)
+
+vA
+
+GIR(t) BOP(t)
+
+os
+
+ERATE(t) SPI(t)
+
+er stearate
+
+Chain Values
+
+Figure 5.3: Kernel Density Estimate of the Unfiltered Chains using Stochastic Gradient
+Hamiltonian Monte Carlo for Case 2 (y = .009 for 10000 Iterations).
+
+§52 61
+
+ERATE(t-1) SPI(t-1)
+
+Figure 5.4: Kernel Density Estimate of the Unfiltered Chains using Stochastic Gradient
+Hamiltonian Monte Carlo for Case 3 (y = 0009 for 100000 Iterations).
+
+§52 62
+
+i
+
+Figure 5.5: Linfiltered Traces of the Chains using Stochastic Gradient Hamiltonian Monte
+Carlo for Case 1 (y = .09 for 1000 Iterations).
+
+§52 63
+
+GIR(tH1)
+
+ERATE(t-1) ‘SPI(t-1)
+
+GIR(t)
+
+8
+2
+$
+=
+3
+2
+6
+
+GDP(t-1)
+
+Figure 5.6: Unfiltered Traces of the Chains using Stochastic Gradient Hamiltonian Monte
+Carlo for Case 2 (y = .009 for 10000 Iterations).
+
+§52
+
+20000 40000 60000 80000 100000
+1 L 1 L
+
+GIR(E1) BOP(t-4)
+
+SPI(t-1)
+
+8
+8
+3
+s
+=
+3
+2
+&
+
+SPi(t)
+
+Figure 5.7: Unfiltered Traces of the Chains.using Stochastic Gradient Hamiltonian Monte
+Carlo for Case 3 (y = .0009 for 100000 Iterations).
+
+§5.2 65
+
+since the KDE of the four chains have different scales and locations. Further,
+the traces of the samples under MH shows that most of the proposed samples
+were rejected. These findings are aligned with the discussion made in § 3.4.2, that
+the specification of the proposal distribution of the MH is difficult to tune under
+high dimensional parameter estimation. For this study, the proposal distribution
+used is a standard Gaussian centered on the samples drawn from the a posteriori. On
+the other hand, for the traces of the HMC, the first two cases seem to characterize
+the trace of the MH. That is, the rejection rate is also high. This follows from the fact
+that the HMC uses MH acceptance criterion due to y discretization of the phase
+space. For the third case of the HMC’s chains, the mixing seems fair since most of
+the proposed samples were accepted. Hence subjectively, the SGHMC is still on
+
+top of these contenders relative to all cases considered.
+
+Convergence Tests
+
+As discussed in the preceding section, the standard error in Table 5.1 gives
+an explanation on the stability of the estimates. Further, the discussion centered
+on this topic by inspecting subjectively the KDE and trace plots of the chains.
+In this section, however, the chains will be assessed objectively using statistical
+test. To test the stationarity of the chain, the Heidelberger-Welch test is used,
+refer to Table 5.2 for the stationarity of the SGHMC’s mean chain. Again,
+the mean chain refers to the average of the four markov chains. From the table,
+the estimates are all stationary as indicated by the V in the third column, for
+all cases except for the GIR(f — 1) variable in the third scenario. The fourth
+column corresponds to the starting point of the stationary series in the iteration.
+
+For example, the chain of the estimate of BOP(t) follows stationarity starting at
+
+§5.2 66
+
+the 1001st iteration under Case 2. Hence, this column can be used for burn-in.
+The fifth column is the corresponding p-value. From the R documentation of
+the heidel.diag function, the half-width test, calculates a 95% confidence interval
+for the mean, using the portion of the chain which have passed the stationarity
+test. Half the width of this interval is compared with the estimate of the mean. If
+the ratio between the half-width and the mean is lower than e, the halfwidth test is
+passed. Otherwise the length of the sample is deemed not long enough to estimate
+the mean with sufficient accuracy. From Table 5.2, the trace of the markov chain
+did not pass the latter test. The Heidelberger-Welch test for the mean chains of
+the MH and HMC are given in Appendix B, refer to Tables B.1 and B.2. The NAs
+(Not Applicable) in Table B.1 is due to the computation of the spectral density
+at frequency A = 0, which is a fraction, where the numerator is the variance of
+the half-width of the time series. If the variance of this half-width series is zero,
+then the succeeding computation of the half-width test is affected leading to NAs.
+
+The next test to consider is the convergence of the four markov chains, and
+is done using the Gelman-Rubin’s convergence test which returns the potential
+scale reduction factor (PSRF) or shrink factor statistics. Specifically, if the PSRF
+is close to 1, then the four markov chains have converged to the stationarity.
+The results are given in Table 5.3, where the UCI stands for Upper Confidence
+Interval, and the point estimate is the corresponding PSRF statistic. From this
+table, the SGHMC’s markov chains have converged since all of its PSRFs are close
+to 1, which is also comparable to HMC’s shrink factors. It should be noted
+that the result for MH is not available due to complications in the computation
+
+of the Gelman-Rubin statistic, and this is also the reason for the test statistic of
+
+§5.2
+
+67
+
+Variables Stationarity Test Halfwidth Test
+Status Start p-value [ Status Mean Halfwidth
+Wo v 101 0.457 x -0.072 0.008
+GDP(t - 1) v 1 0.963 v 0.434 0.017
+v| ERATE(#) v 1 0.363 x 0.072 0.033
+& SPI(t) v 1 0.530 x 0.097 0.026
+| GIR@) v 1 0.336 | Vv -0.317 0.025
+™! BOP(£) v 1 0.130 x 0.039 0.007
+ERATE(t — 1) v 1 0.224 x -0.204 0.034
+SPI(t — 1) v 1 0.946 x 0.225 0.031
+GIR(t — 1) v 1 0.056 x 0.064 0.023
+BOP(t — 1) v 1 0.516 x 0.040 0.007
+Wo v 1 0.180 x -0.066 0.010
+GDP(t — 1) v 1 0.660 v 0.430 0.011
+y| ERATE(t) v 1 0.200 x 0.080 0.025
+| SPI) v 1 0.410 x 0.110 0.027
+3 GIR(t) v 1001 0.670 v -0.304 0.013
+jj BOP(t) v 1001 0.760 x 0.036 0.006
+ERATE(t - 1) 4 1 0.130] x — -0.206 0.025
+SPI(t — 1) v 1 0.220 x 0.220 0.038
+GIR(¢t - 1) v 1 0.640 x 0.049 0.017
+BOP(t — 1) v 1001 0.410 x 0.041 0.007
+Wo v 1 0.063 x -0.042 0.062
+GDP(t - 1) ¥ 20001 0.146 v 0.429 0.006
+| ERATE(t) v 10001 0.105 x 0.082 0.023
+| SPH) v 1 0.176 x 0.148 0.089
+-3| GIR(E) ¥ 40001 0.052 x -0.285 0.039
+&] BOP(t) v 1 0.178} x 0.066 0.053
+ERATE(t - 1) ¥ 40001 0.079 x -0.210 0.030
+SPI(t - 1) ¥ 30001 0.052 v 0.221 0.014
+GIR(t - 1) x NA 0.047 | NA NA NA
+BOP(t — 1) ¥ — 20001 0.122 x 0.050 0.012
+
+Table 5.2: Heidelberger-Welch’s Stationarity and Halfwidth Tests of the Stochastic
+
+Gradient Hamiltonian Monte Carlos’s Mean Chain Across Cases.
+
+The/
+
+indicates stationarity, X indicates nonstationarity, and NA means Not
+
+Applicable.
+
+§5.2 68
+
+a BADL(1, 1)-HMC BADL(1, 1)-SGHMC
+Point Estimate 95% UCI | Point Estimate 95% UCI
+Wo NA NA 0.999 0.999
+GDP(t - 1) NA NA 0.999 0.999
+y| ERATE(t) NA NA 0.999 0.999
+| SPI) NA NA 0.999 0.999
+3 GIR(t) NA NA 0.999 0.999
+A] BOP(t) NA NA 0.999 0.999
+ERATE(t ~ 1) NA NA 0.999 0.999
+SPI(t - 1) NA NA 0.999 0.999
+GIR(t-1) NA NA 0.999 0.999
+BOP(t — 1) NA NA 0.999 0.999
+Wo 1,001 1.002 1.013 1.039
+GDP(t — 1) 1.004 1.012 1.510 2.177
+| ERATE(t) 1.008 1.020 1.209 1.524
+5 SPI(t) 1.002 1.006 1.901 3.043
+z GIR(t) 1.004 1.010 1.020 1.061
+©) BOP(t) 1.000 1.001 1.004 1.012
+ERATE(t - 1) 1.009 1.021 1.017 1.052
+SPI(t — 1) 1.001 1.003 1.979 3.168
+BOP(t — 1) 1.000 1.001 1.008 1.024
+
+Table 5.3: Gelman-Rubin's Estimated Potential Scale Reduction or Shrink Factor of
+the Four Markov Chains. The NA means Not Applicable.
+
+the three methods under the first case and the second case result of the HMC.
+The problem in the algorithm of the Gelman-Rubin can be traced back to its
+Cholesky’s decomposition where the input variance-covariance from the four
+chains are not positive definite. Thus objectively, the SGHMC’s and HMC’s
+estimates have converged to stationarity.
+
+The final test to check is the ITD assumption of the samples from the markov
+chains, and this is done by checking the autocorrelation. The results are available
+in Appendix A, see Figures A.13 to A.21. For the first case, comparing Figures A.13,
+A.16 and A.19, the SGHMC has by far the ideal autocorrelation compared to MH
+and HMC. It has the lowest magnitude even at earlier lags. However, for the second
+
+and third cases, the results are far from the characteristics of the IID samples. Note
+
+§ 5.2 69
+
+that the mean chains used in here are already filtered, that is, burn-in and thinning
+were applied. Therefore, for IID samples, the SGHMC has the best chains for
+
+y = .09 and for minimum iteration of 1,000 runs only.
+Forecasting
+
+The forecasts in the training sample for all cases are shown in Figures 5.8,
+5.9 and 5.10. In these figures, the sampled forecast values of the BADL(1,1)-MH
+are aligned with the rejection rate of its estimates, which is evident on the wide
+gaps between its sampled forecasts in comparison to BADL(1,1)-HMC and
+BADL(1,1)-SGHMC. Another observation is that, as the value of y decreases,
+the sampled forecasts for HMC and SGHMC become unstable (refer to Case 2
+and 3) compared to the higher values of this parameter. The root mean squared
+error (RMSE) of the estimates are given in Table 5.4. In particular, the error
+mentioned here is the in-sample error, or the RMSE under the training dataset.
+From this table, the in-sample error of the proposed model is not far from
+the two contenders. Further, it should be emphasized that, the forecast plots
+provided are point estimates varying through the a posteriori of the parameters.
+The interval estimates of future observations are not shown in the plots but can
+
+be derived by marginalizing on the parameters. This is because, in Bayesian,
+
+Models Root Mean Squared Error
+
+Error Type IstCase 2nd Case 3rd Case
+BADLILI-MH | Quesample 0952 088 0985
+BADLOT-HMC | Qursample 0979 O64 O81
+BADL(1-SGHMC | Quesompte 0906 Ost 083s
+
+Table 5.4: Root Mean Squared Error of the Mean Forecasts of Bayesian ADL.
+
+§5.2 70
+
+there are two sources of uncertainty: first is the uncertainty associated with
+the observation (the response variable), and second is the uncertainty associated
+with the parameters. Therefore, to obtain the prediction interval of future
+observation, the variability on the parameters must be marginalized, and this topic
+is part of the recommendation.
+
+The true performance of the models considered in this aplication is not based
+on the training dataset, but rather on the testing dataset. The forecast plots under
+the testing dataset are given in Figures 5.11, 5.12 and 5.13. The out-sample errors
+
+of the BADL(1, 1)-SGHMC in Table 5.4 are the lowest for all cases.
+
+§ 5.2 71
+
+L fl 1 1 fl
+Metropolis-Hasting
+
+Hamiltonian Monte Carlo
+
+Stochastic Gradient Hamiltonian Monte Carlo
+
+Year-over-Year Standardized Percentage Change
+
+2a L
+14 L
+O75 5
+a4 L
+24 Sampled Forecast f
+--- Mean Forecast
+34 —— GDP Growth Rate L
+T 1 T 1 T r
+2000 2002 2004 2006 2008 2010
+
+Time
+
+Figure 5.8: Forecasts of BADL(1, 1) using different MCMCs under the Training Dataset
+Case 1 (y = .09 for 1000 Iterations).
+
+§5.2 72
+
+1 f 1
+Metropolis-Hasting
+34
+2
+Ae L
+o4 is
+a4 g
+o 77 r
+&
+5 34
+£
+e Hamiltonian Monte Carlo
+- 4 3
+8
+€
+by 4 rz
+5
+a 4 ri
+g
+Ss 4 fo
+5
+2 4 rt
+Hi
+a 4 + 2
+5
+> | t-3
+3 Stochastic Gradient Hamiltonian Monte Carlo
+5°] r
+3
+> 24
+14
+o4 L
+as
+2 Sampled Forecast E
+--- Mean Forecast
+34 —— _GDP Growth Rate [
+
+T T T T T T
+2000 2002 2004 2006 2008 2010
+
+Time
+
+Figure 5.9: Forecasts of BADL(1, 1) using different MCMCs under the Training Dataset
+Case 2 (y = .009 for 10000 Iterations).
+
+§5.2 73
+
+L
+Metropolis-Hasting
+
+Hamiltonian Monte Carlo
+
+Stochastic Gradient Hamiltonian Monte Carlo.
+
+Year-over-Year Standardized Percentage Change
+
+Sampled Forecast
+Mean Forecast
+GDP Growth Rate
+
+T
+2006
+Time
+
+Figure 5.10: Forecasts of BADL(1, 1) using different MCMCs under the Training Dataset
+Case 3 (y = .0009 for 100000 Iterations).
+
+§5.2 74
+
+fl
+Metropolis-Hasting
+
+Hamiltonian Monte Carlo
+
+Stochastic Gradient Hamiltonian Monte Carlo
+
+°
+eS
+2
+A
+FI
+Oo
+fe
+3
+8
+z
+5
+2
+Ff
+a
+3g
+a
+8
+4
+a
+2
+és
+&
+5
+=
+fe
+$
+3
+4
+fs
+eS
+
+Sampled Forecast
+--- Mean Forecast
+— _ GDP Growth Rate
+
+T
+2005
+
+Figure 5.11: Forecasts of BADL(1, 1) using different MCMCs under the Testing Dataset
+Case 1 (y = .09 for 1000 Iterations).
+
+§5.2 75
+
+fl
+Metropolis-Hasting
+
+Hamiltonian Monte Carlo
+
+Me
+3
+E
+5
+Fs
+Oo
+4
+A
+8
+e
+2
+a
+a
+4
+8
+iJ
+4
+Hy
+e
+5s
+8
+5
+ha
+g
+3
+3
+$
+
+Sampled Forecast
+--- Mean Forecast
+— _ GDP Growth Rate
+
+T
+2005
+
+Figure 5.12: Forecasts of BADL(1, 1) using different MCMCs under the Testing Dataset
+Case 2 (y = .009 for 10000 Iterations).
+
+§5.2 7
+
+1
+Metropolis-Hasting
+
+Hamiltonian Monte Carlo
+
+2
+&
+€
+S
+£
+i)
+°
+&
+s
+<
+Fo
+2
+oS
+a
+ot
+3
+N
+2
+S
+3
+&
+&
+a
+5
+o
+=
+S
+g
+2
+8
+o
+>
+
+Sampled Forecast
+--- Mean Forecast
+— GDP Growth Rate
+
+T
+2005
+
+Figure 5.13: Forecasts of BADL(1, 1) using different MCMCs under the Testing Dataset
+Case 3 (y = .0009 for 100000 Iterations).
+
+CHAPTER 6
+
+SUMMARY, CONCLUSION AND RECOMMENDATION
+
+The findings of the study discussed in the previous chapter are
+summarized in Section 6.1. The conclusions are presented in Section 6.2, and
+
+the recommendations are provided in Section 6.3.
+
+6.1 Summary
+
+The main objective of this paper is the integration of the Stochastic
+Gradient Hamiltonian Monte Carlo (SGHMC) in estimating the parameters of
+the Bayesian Autoregressive Distributed Lag (BADL) model. In particular,
+two main propositions were derived for the theory of the proposed model,
+BADL-SGHMC, and these are: the posterior distribution of the weight vector
+of the model using standard Gaussian a priori, and the stochastic gradient
+of the potential energy. Further, to illustrate the application of the proposed
+model, the theoretical results were applied to forecasting the economic growth of
+the Philippines. The study considered a simple model of the BADL with order
+p = q = 1, and hence the following are the candidate Bayesian models fitted
+to the data: BADL(1,1)-MH, BADL(1,1)-HMC and BADL(1,1)-SGHMC, where
+the first two models are estimated using Metropolis-Hasting and Hamiltonian
+Monte Carlo, respectively. The samples from the the markov chains were assessed
+using different statistical tests. The first test is the stationarity of the markov chains
+obtained by the three MCMCs (MH, HMC and SGHMC). The result suggests
+
+that the BADL(1,1)-SGHMC performs well compared to BADL(1,1)-MH and
+
+§6.2 78
+
+BADL(1, 1)-HMC. The second test conducted assesses the convergence of the four
+markov chains using Gelman-Rubin, the statistics supported the initial findings
+from the trace plots that the chains converged to stationarity.
+
+The discussions in thepreceding chapter exclude theusage of
+the programming languages utilized for the MCMC simulation. As mentioned
+in the objective of the study, this paper uses two programming languages and
+these are R and Julia. In particular, the simulation of the MCMCs in forecasting
+the Philippine economic growth was done entirely in Julia, while the convergence
+tests were programmed in R. Moreover, Julia is introduced in this thesis as an
+alternative to R, since the former is a lot faster than the latter. Specifically, the 1.5
+hour MH MCMC simulation in R is only 10.7 seconds in Julia, and since Julia has
+the advantage of using multiple processor, this elapsed time is expected to decrease
+if multiple processors were initialized. Finally, the author developed the first R
+and Julia packages for SGHMC, which is useful for exploring the proposed model
+using different datasets, and use SGHMC for other interesting models. The details
+
+are provided in Appendix C.
+
+6.2 Conclusion
+
+The proposed model, BADL(1,1)-SGHMC, using multivariate standard
+Gaussian a priori, is a good alternative to BADL(1,1)-MH and BADL(1,1)-HMC.
+In particular, lower leapfrog step size is ideal for the proposed model even under
+1,000 iterations only. Further, the training dataset used in modeling the economic
+growth of the Philippines uses 70% of the entire dataset. The unpartitioned dataset
+contains 67 total data points, and the first 46 observations accounts for the training
+
+dataset. Hence the remaining 21 observations are reserved for the testing dataset.
+
+§63 79
+
+According to Chen et al. (2014), the central limit theorem (CLT) for the stochastic
+gradient noise of the potential energy is satisfied for at least 100 observations,
+which is far from the number of data points considered in the training dataset of
+this study. Interestingly, the SGHMC algorithm works well even for 46 observations
+only, this is evident on the performance of the BADL-SGHMC discussed in
+the precedings chapter compared to BADL-MH and BADL-HMC. The limitation
+of the data points to 67 observations depends heavily on the historical data of
+the indicators. Therefore, if at least 100 observations were used in the training
+dataset, the proposed BADL-SGHMC might perform even better compared to
+
+the contenders, and that would be part of the recommendation.
+
+6.3 Recommendation
+
+The main contribution of this paper is dedicated to the foundation of
+the BADL-SGHMC, hence the following are recommended for further study:
+explore higher orders of the BADL-SGHMC using at least 100 observations;
+set priors on the precision parameters of the model likelihood, which in this
+study is assumed to be known, fixed to constant a; explore complicated
+BADL-SGHMC by setting priors on all hyperparameters; explore different values
+on the parameters of the SGHMC, especially for © and %& which were considered
+as identity matrix for this study; consider other Stochastic Gradient MCMC
+algorithms, like Stochastic Gradient Langevin Monte Carlo (SGLMC) or Langevin
+Dynamics (SGLD) (see Welling & Teh, 2011), and Stochastic Gradient Fisher
+Scoring (see Ahn et al., 2012); and, obtain the prediction interval of the forecast by
+
+computing the predictive distribution for each items mentioned above.
+
+References
+
+Ahn, S., Korattikara, A., & Welling, M. (2012). Bayesian posterior sampling
+via stochastic gradient fisher scoring. In Proceedings of the 29th international
+conference on machine learning.
+
+Bayes, T. (1763). An essay towards solving a problem in the doctrine of chances.
+Philosophical Transactions, 53, 370-418. Retrieved from http://www. jstor
+-org/stable/105741
+
+Bezanson, J., Edelman, A., Karpinski, S., & Shah, V. B. (2017). Julia: A fresh
+approach to numerical computing. SIAM Review, 59(1), 65-98. Retrieved from
+http://dx.doi.org/10.1137/141000671 doi: 10.1137/141000671
+
+Bishop, C. M. (2006). Pattern recognition and machine learning (information science and
+statistics). Secaucus, NJ, USA: Springer-Verlag New York, Inc.
+
+Buss, G. (2010). Economic forecasts with bayesian autoregressive distributed lag
+model: Choosing optimal prior in economic downturn. Scientific Journal of
+Riga Technical University, 42(2), 100 - 105.
+
+Casella, G., & Berger, R. L. (2002). Statistical inference. Pacific Grove (Calif.): Brooks
+Cole.
+
+Chen, T., Fox, E., & Guestrin, C. (2014). Stochastic gradient hamiltonian monte carlo.
+In Proceedings of the 31st international conference on machine learning (Vol. 32).
+Beijing, China.
+
+Cowles, M. K., & Carlin, B. P. (1996). Markov chain monte carlo convergence
+diagnostics: A comparative review. Journal of the American Statistical
+Association, 91(434), 883-904. Retrieved from http://www. jstor.org/
+stable/2291683
+
+Duane, S., Kennedy, A., Pendleton, B. J., & Roweth, D. (1987). Hybrid monte carlo.
+Physics Letters B, 195(2), 216 - 222.
+
+Hastings, W. K. (1970). Monte carlo sampling methods using markov chains
+and their applications. Biometrika, 57(1), 97-109. Retrieved from http://
+www. jstor.org/stable/2334940
+
+Haykin, S. (1998). Neural networks: A comprehensive foundation (2nd ed.). Upper
+Saddle River, NJ, USA: Prentice Hall PTR.
+
+International Monetary Fund. (2005). Balance of payments manual (Sthed.). Retrieved
+May 26, 2017, from International Monetary Fund Web site: http: //www. imf
+.org/external/pubs/cat/longres.aspx?sk=157.0.
+
+Kumar, D. N., & Maity, R. (2008). Bayesian dynamic modelling for nonstationary
+hydroclimatic time series forecasting along with uncertainty quantification.
+Hydrological Processes, 22(17), 3488-3499. Retrieved from http://dx.doi
+.org/10.1002/hyp.6951 doi: 10.1002/hyp.6951
+
+Laplace, P. S. (1986, 08). Memoir on the probability of the causes of events.
+Statist. Sci., 1(3), 364-378. Retrieved from http: //dx.doi.org/10.1214/ss/
+1177013621 doi: 10.1214/ss/1177013621
+
+Mapa, C. D.S., Del Prado, D. G., Poliquit, I. A., & Asaad, A. B. (2016). Enhancement
+of the composite leading economic indicator system of the philippines. In 13th
+national convention on statistics.
+
+Metropolis, N., Rosenbluth, A. W., Rosenbluth, M. N., Teller, A. H., & Teller, E.
+(1953). Equation of state calculations by fast computing machines. The Journal
+
+81
+
+of Chemical Physics, 21(6), 1087-1092. Retrieved from http://dx.doi.org/
+10.1063/1.1699114 doi: 10.1063/1.1699114
+
+Neal, R. M. (1996). Bayesian learning for neural networks. Secaucus, NJ, USA:
+Springer-Verlag New York, Inc.
+
+Neal, R. M. (2011). Meme using hamiltonian dynamics. In G. L. J. Steve Brooks
+Andrew Gelman & X.-L. Meng (Eds.), Handbook of markov chain monte carlo
+(p. 113-162). Chapman and Hall/CRC.
+
+Ravines, R. R., Schmidt, A. M., & Migon, H. S. (2006). Revisiting distributed lag
+models through a bayesian perspective. Applied Stochastic Models in Business
+and Industry, 22(2), 193-210. Retrieved from http: //dx.doi.org/10.1002/
+asmb.628 doi: 10.1002/asmb.628
+
+Robert, C., & Casella, G. (2010). Introducing monte carlo methods with r.
+Springer-Verlag New York.
+
+Welling, M., & Teh, Y. W. (2011). Bayesian learning via stochastic langevin
+dynamics. In Proceedings of the 28th international conference on machine learning.
+
+Welty, L. J., Peng, R. D., Zeger, S. L., & Dominici, F. (2009). Bayesian distributed
+lag models: Estimating effects of particulate matter air pollution on daily
+mortality. Biometrics, 65(1).
+
+Appendix A
+
+Statistical Figures
+
+BOP(t-1)
+
+DN
+
+‘SPI(t-1)
+
+Je
+
+La
+
+BOP(t)
+
+0s 4
+
+00 -|
+
+iN
+
+=
+
+SPI(t)
+
+|
+
+DN
+
+DA
+
+Intercept | GDP(t-41) |
+
++ oo
+
+Figure A.1: Kernel Density Estimate of the Unfiltered Chains using MH Case 1 (y = .09
+
+‘for 1000 Iterations).
+
+
+GIR(+1)
+
+Ne
+
+ERATE(t-1) | ‘SPI(t-1)
+
+BING
+
+IN
+
+ERATE(t)
+
+ING
+
+Figure A.2: Kernel Density Estimate of the Unfiltered Chains using MH Case 2 (y = .009
+{for 10000 Iterations).
+
+1
+
+ni L
+GIR(t-1)
+
+pin
+
+ERATE(t-1) SPI(t-1)
+
+iu
+
+GIR()
+
+ERATE(t)
+
+Figure A.3: Kernel Density Estimate of the Unfiltered Chains using MH Case 3(y = .0009
+for 100000 Iterations).
+
+86
+
+ERATE(t-1)
+
+Figure A.4: Kernel Density Estimate of the Unfiltered Chains using HMC Case 1 (y = .09
+for 1000 Iterations).
+
+87
+
+BOP(t4)
+
+vats
+
+SPI(t-1)
+
+ava
+
+BOP(t)
+
+Figure A.5: Kernel Density Estimate of the Unfiltered Chains using HMC Case 2 (y = .009
+for 10000 Iterations).
+
+1 1
+
+JA
+
+ERATE(t-1)
+
+‘SPI(t-1)
+
+pace
+
+7aee
+
+ERATE(t)
+
+> aa
+
+Intercept
+
+2
+‘Chain Values
+
+88
+
+Figure A.6: Kernel Density Estimate of the Unfiltered Chains using HMC Case 3
+
+(y = 0009 for 100000 Iterations).
+
+89
+
+GIR(H1)
+
+ERATE(+1)
+
+BOP(t)
+
+SS —=—
+
+ERATE(t) ‘SPI(t)
++ 2
+
+3
+2
+s
+=
+3
+FS
+is)
+
+Figure A.7: Unfiltered Traces of the Chains using MH Case 1 (y = .09 for 1000 Iterations).
+
+ERATE(t-1)
+
+GIR(t) BOP(t)
+
+FY
+Fy
+2
+gj
+>
+s
+FS
+6
+
+Figure A.8: Linfiltered Traces of the Chains using MH Case 2 (y = .009 for 10000
+Iterations).
+
+91
+
+n
+
+GIR(t-1)
+
+=
+
+ERATE(t-1) SPI(t1)
+
+SS
+
+pe
+
+GIR(t)
+
+2
+3
+$s
+=
+
+S
+2
+6
+
+Figure A.9: Unfiltered Traces of the Chains using MH Case 3 (y = .0009 for 100000
+Iterations).
+
+92
+
+ERATE(t-1)
+
+GIR(t)
+
+2
+
+Hy
+3
+s
+=
+
+=
+2
+6
+
+Figure A.10: Unfiltered Traces of the Chains using HMC Case 1 (y = .09 for 1000
+Iterations).
+
+93
+
+2000 4000 ©6000 6000 10000
+i RC a
+
+BOP(t41)
+
+Ie ean a
+
+ERATE(t+1)
+
+GIR(t) i
+
+Semen ee
+
+SPI(t)
+
+2
+8
+2
+$
+<
+3
+2
+6
+
+Figure A.11: Unfiltered Traces of the Chains using HMC Case 2 (y = .009 for 10000
+Iterations).
+
+Figure A.12: Unfiltered Traces of the Chains using HMC Case 3 (y = .0009 for 100000
+Iterations).
+
+95
+
+oO 10 20 30 40
+GIR(H1) BOP(t1)
+1.0 4 L
+Stl |
+oo 4 Hy tutin, Sr aerc ee ‘HL
+“ ERATE(t-1) SPI(t=-1) |
+ja 1.0
+mY ly i.
+| eet litt, ils Wife t on
+| GR) BOP(t) ; °°
+c 1.0 4 a
+§
+S 054 oe
+8 oo Witney Wty) b
+ii Hts
+Z 0.5 + ia
+ERATE(t) SPI(t),
+Ba | F 1.0
+4 + 0s
+[Ils gmmmn| Mlttin...,
+| Intercept GDP(H) ; °°
+1.0 4 L
+~ lili Wl
+aot Mom ltt eal
+ao T T T r T T T v T r
+0 10 20 30 40
+
+Lag
+
+Figure A.13: Filtered Mean Chain Autocorrelation using MH Case 1 (y = .09 for 1000
+Iterations).
+
+20
+
+30
+1
+
+40
+
+fl
+GIR(H)
+
+f
+BOP(t+1)
+
+96
+
+1.0 4 L
+08 io
+06 4 F
+“ A I
+ERATE(t-1) SPi(t1)
+4 F 1.0
+4 r 0.8
+Fa | P 0.6
+GIR(t) BOP(t)
+1.04 a
+§
+® os 4 b
+°
+i=
+= | | |
+2
+5
+bo i, Iu
+ERATE(t) SPI(t)
+F 1.0
+F 08
+b 0.6
+ll ll
+y GDP(t1)
+30 40
+Lag
+rl
+
+Figure A.14: Filtered Mean Chain Autocorrelation using MH Case 2 (y = .009 for 10000
+
+Iterations).
+
+97
+
+° 10 20 30 40
+1 n fl yori n n f 1
+GIR(H1) BOP(t1)
+1.00 4 L
+095 - -
+0.90 + b
+085 4 L
+0.80 + lL (iui Hin +
+ERATE(t1) SPI(-1)
+4 L 4.00
+4 + 0.95
+4 + 0.90
+4 + 0.85
+4 a M + 0.80
+GIR()
+1.00 4
+©
+§
+= os 4
+o
+— 090 4
+4
+2 08s 4
+<
+
+20 30
+
+Figure A.15: Filtered Mean Chain Autocorrelation using MH Case 3 (y = .0009 for
+100000 Iterations).
+
+98
+
+° 10 20 30 40
+fl esas n n h fi
+ERE 1) BOP(t-1)
+1.04 in
+05 + -
+Pye " eH “at ttm ae 1b
+ERATE(t+1) SPi(t-1)
+4 b 1.0
+‘ii I i
+J gy | Pome sum] F 8°
+GIR(t) BOP(t)
+1.0 4 r
+s
+i 05 4 | -
+e
+3 0.0 Msg eee ir
+ERATE(t) SPI(t)
+bs | r 1.0
+Ml. lh in
+i ‘intercept — bene GDP(t1)
+1.0 4 r
+05 4 -
+aor ‘=m aie dll Tha ies sume
+1 T T T 1 T T T T
+i) 10 20 30 40
+
+Lag
+
+Figure A.16: Filtered Mean Chain Autocorrelation using HMC Case 1 (y = .09 for 1000
+Iterations).
+
+20
+fi
+
+1
+GIR(E1)
+
+BOPIE)
+
+0
+
+SPI(e1)
+
+QL
+
+BOP(t)
+
+5
+s
+8
+o
+e
+8
+2
+3
+<
+
+I
+
+LL
+
+(ut.
+
++ 1.0
++ 08
+
++ 0.6
+
+IT
+
+Intercept
+
+i
+
+GDP(H1)
+
+| [
+
+99
+
+Figure A.17: Filtered Mean Chain Autocorrelation using HMC Case 2 (y = .009 for 10000
+
+Iterations).
+
+100
+
+oO 10 20 30 40
+fl \ \ roe fi 1 ni f
+GIR(H1) BOP(t+1)
+10 4 F
+08 = ia
+06 r
+os 4 L
+
+to litte Whim. Rec leeeccre i
+
+ERATE(t-1) SPI(t-1)
+
+ll
+
+10
+08
+06
+04
+02
+0.0
+
+ii —
+
+GIR() BOP(t)
+
+Autocorrelation
+g
+1
+
+tt | | U1 hrissaserelsoeeesnsed [L
+
+ERATE(t) SPI(t)
+
+li
+
+| [ltt
+
+GDP(H)
+
+[tui | |
+
+Intercept
+
+ae anes lium
+
+Figure A.18: Filtered Mean Chain Autocorrelation using HMC Case 3 (y = .0009 for
+100000 Iterations).
+
+101
+
+20
+
+BOP(H)
+
+sprolennseetypertlyeepteatlyens Peptch bt anpglet ypu
+
+ERATE(H) SPI(E1)
+
+slater tpn tythaectant rayealees Hapeettbetbeany
+
+GIR() BOP(t)
+
+an
+
+aptly
+
+s
+s
+8
+@
+=
+8
+g
+5
+<
+
+ERATE(t), SPI(t)
+
+leet ab latll Heoupenpulestatpthontey
+
+Intercept GDP(H1)
+
+sypeepeear appt eteog tote rye leper testy
+
+T T ieseoat T T T
+10 20 30 40
+
+Lag
+
+Figure A.19: Filtered Mean Chain Autocorrelation using SGHMC Case 1 (y = .09 for
+1000 Iterations).
+
+102
+
+fl hi
+GIR(H1) BOP(t+1)
+
+ttn es
+
+ERATE(H1) SPI(t-41)
+
+GIR(t), BOP(t)
+
+Autocorrelation
+
+Ltt Wt tial
+
+ERATE(t) SPI(t)
+
+i |
+
+intercept GDP(H)
+
+{in t
+
+Figure A.20: Filtered Mean Chain Autocorrelation using SGHMC Case 2 (y = .009 for
+10000 Iterations).
+
+103
+
+0 10 20 30 40
+L mt L n L n n ni n
+GIR(t-1) BOP(t-1)
+1.00 4 Ye
+0.98 -| e
+0.96 -| is
+0.94 + | | E
+0827 Lin i
+ERATE(t-1) SPi(t-1)
+4 + 1.00
+4 f 0.98
+| } 0.96
+7 + 0.94
+LMI I Ht | 0.92
+GIR(t) BOP(t)
+1.00 4 is
+<
+s
+% 098 + L
+£
+5 096 5 iE
+8
+3 0.94 + fi
+0.92 + LHL HA
+ERATE(t) SPI(t)
+al + 1.00
+4 + 0.98
+Al + 0.96
+ll + 0.94
+1 JU + 0.92
+Intercept 4 GDP(t-1)
+1.00 4 L
+0.98 + L
+0.96 + L
+0.94 | L
+on MMI L
+0 10 20 30 40
+
+Lag
+
+Figure A.21: Filtered Mean Chain Autocorrelation using SGHMC Case 3 (y
+100000 Iterations).
+
+.0009 for
+
+Appendix B
+
+Statistical Tables
+
+105
+
+Parameters Stationarity Test Halfwidth Test
+Status Start p-value | Status Mean Halfwidth
+Wo v 1 0.370 x -0.127 0.123
+GDP(t - 1) v 201 0.354 x 0.385 0.085
+| ERATE(£) v 1 0.832 x -0.102 0.051
+& SPI(t) v 301 0.106 x 0.008 0.249
++] GIR} v 301 0.082 x -0.238 0.180
+™) BOP(t) v 301 0.052 x 0.045 0.102
+ERATE(t — 1) v 201 0.248 x 0.228 0.101
+SPI(t — 1) v 401 0.114 x 0.393 0.178
+GIR(t - 1) v 1 0.433 x 0.133 0.127
+BOP(t — 1) v 1 0.102 x 0.162 0.056
+Wo NA NA NA| NA NA NA
+GDP(t - 1) NA NA NA| NA NA NA
+y| ERATE(#) NA NA NA| NA NA NA
+| SPI) NA NA NA| NA NA NA
+~3| GIR(t) NA NA NA| NA NA NA
+&| BOP(t) NA NA NA} NA NA NA
+ERATE(t — 1) NA NA NA} NA NA NA
+SPI(t - 1) NA NA NA| NA NA NA
+GIR(t - 1) NA NA NA| NA NA NA
+BOP(t — 1) NA NA NA | NA NA NA
+Wo v 1 0.475 x -0.095 0.043
+GDP(t - 1) v 1 0.100| x 0.273 0.069
+y ERATE(t) v 1 0.299 x 0.693 0.138
+5 SPI(t) v 20001 0.051 x 0.377 0.070
+3 GIR(t) v 40001 0.425 x -0.211 0.042
+©! BOP(t) v 1 0.156 x 0.018 0.019
+ERATE(t — 1) v 1 0.390 v -0.822 0.061
+SPI(t — 1) v 10001 0.117 x 0.158 0.086
+GIR(t - 1) v 30001 0.051 x -0.042 0.122
+BOP(t - 1) v 1 0.133} Xx 0.081 0.018
+
+Table B.1: Heidelberger-Welch’s  Stationarity and  Halfwidth Tests _— of.
+the Metropolis-Hasting’s Mean Chain Across Cases. The ¥ indicates
+stationarity, X indicates nonstationarity, and NA means Not Applicable.
+
+106
+
+Pareenetere Stationarity Test Halfwidth Test
+Status Start p-value | Status Mean Halfwidth
+Wo v 101 0.10 x -0.083 0.0521
+GDP(t - 1) v 1 0.650} Vv 0.261 0.025
+»| ERATE(t) v 1 0.670 x 0.333 0.141
+& SPI(t) v 1 0.390 x 0.155 0.063
+=| GIR(#) v 1 0.900 x -0.288 0.030
+| BOP(t) v 1 0.550 x 0.001 0.010
+ERATE(t - 1) v 1 0.180 x -0.399 0.130
+SPI(t — 1) v 1 0.620 x 0.359 0.091
+GIR(t - 1) v 401 0.170 x 0.041 0.055
+BOP(t — 1) v 401 0.210 x 0.044 0.016
+Wo v 1 0.863] Y  -0.076 0.0047
+GDP(t - 1) v 3001 0.335 v 0.312 0.009
+y| ERATE(t) v 1001 0.289 v 0.513 0.018
+| SPI) v 1 0.083 x 0.114 0.030
+-3| GIR(t) v 1 0.612} Y = -0.355 0.010
+&| BOP(t) v 1001 0.225 x -0.022 0.009
+ERATE(t - 1) v 1 0.414) Y = -0.548 0.038
+SPI(t — 1) v 2001 0.113) Vv 0.406 0.023
+GIR(t - 1) v 2001 0.054 x 0.102 0.014
+BOP(t — 1) v 2001 0.059 x 0.035 0.015
+Wo ¥ 30001 0.084/ Y = -0.095 0.001
+GDP(t - 1) v 1 0.110 v 0.304 0.002
+y| ERATE(t) v 1 0.189 v 0.523 0.005
+5 SPI(t) v 1 0.420) v 0.172 0.003
+3 GIR(t) ¥ ~~: 30001 0.661 ¥ — -0.329 0.003
+5) BOP(t) ¥ 10001 0.437 x -0.005 0.001
+ERATE(t — 1) ¥ 10001 0.652 ¥ — -0.591 0.004
+SPI(t — 1) v 1 0.520) v 0.345 0.004
+GIR(t - 1) ¥ 30001 0.636 v 0.073 0.003
+BOP(t — 1) ¥ 10001 0.126 v 0.062 0.001
+
+Table B.2: Heidelberger-Welch’s Stationarity and Halfwidth Tests of the Hamiltonian
+Monte Carlo’s Mean Chain Across Cases. The / indicates stationarity and
+
+X indicates nonstationarity.
+
+Appendix C
+R and Julia Packages for SGHMC
+
+108
+Cl StochMCMC.r
+
+The SGHMC R package developed for this thesis is hosted on Github.com
+
+and can be accessed through the following link:
+https://github.com/alstat/StochMCMC.r
+
+C.1.1 Installation
+
+To install the package, run the following codes:
+
+library(devtools)
+install_github("alstat/StochMCMC.r")
+
+and to load the package, simply run the following:
+library (StochMCMC)
+
+C.1.2_ Documentations
+
+For documentation of this package, please refer to the following link:
+http://stochmemcr. readthedocs.io/en/latest/
+
+If there are concerns or problems regarding the package, please file an issue on
+
+the following link
+https: //github.com/alstat/StochMCMC. r/issues
+
+C.1.3 SGHMC Source Code
+
+The following is the implementation of the Algorithm 6 in R.
+
+setClass("SGHMC",
+representation(
+dU "function",
+dK "function",
+dKSigma = "array",
+
+
+109
+
+C_mat "array",
+V_mat "array",
+init_est = "array",
+d = “numeric”
+
+)
+)
+
+SGHMC <- function(dU, dK, dKSigma, C_mat, V_mat, init_est, d) {
+new("SGHMC", dU = dU, dK = dK, dKSigma = dKSigma,
+C_mat = C_mat, V_mat = V_mat, init_est = init_est, d = d)
+
+}
+
+setGeneric("mcmc", function(object, ...) {
+standardGeneric("mcmc")
+
+})
+
+setMethod("mcmc", signature(object = "SGHMC"), function(object,
+leapfrog_params = c(eps = .05, tau = 20),
+set_seed = 123,
+r = let3) {
+
+dU <- object@dU;
+
+dK <- object@dK;
+
+dKSigma <- object@dKSigma
+
+C <- object@C_mat;
+
+V <- object@V_mat;
+
+w <- object@init_est;
+
+d <- objected
+
+eps <- leapfrog_params["eps"];
+tau <- leapfrog_params["tau"]
+
+if (is.null(w)) {
+
+w = matrix(0, d, 1)
+} else {
+
+wew
+
+}
+
+x <- matrix(0, r, d)
+
+x{1, ] <- w
+
+B<- .5 * V * eps
+
+D <- sqrt(2 * (C - B) * eps)
+
+Af ((dim(B)[1] != dim(C)[1]) & (dim(B)(2] != dim(c)[2])) {
+error("C and V should have the same dimension.")
+} else {
+if (sum(dim(B)) > 1) {
+if (det(B) > det(C)) {
+error("eps is too big. Consider decreasing it.")
+
++
+} else {
+if (B>C) {
+error("eps is too big. Consider decreasing it.")
+}
+}
+
+}
+
+for (i in lir) {
+p <- matrix(rnorm(d))
+
+110
+
+for (j in 1:tau) {
+p <- p - dU(w) * eps - C %*% solve(dKSigma) %*%
+
+p + D %*% matrix(rnorm(d))
+w<- w+ dK(p) * eps
+
+}
+
+x{i, ] <- w
+
+}
+
+return(x)
+
+111
+
+C.2 StochMCMC,jl
+
+The Julia package developed for this thesis is hosted on Github.com and can
+
+be accessed through the following link:
+https://github.com/alstat/StochMCMC. jl
+
+C.2.1_ Installation
+
+To install the package, simply run the following codes:
+Pkg.clone("https://github.com/alstat/StochMCMC. jl");
+and to load the package, run the following:
+using StochMCMC
+C.2.2. Documentations
+For documentation of this package, please refer to the following link:
+http://stochmcmcjl. readthedocs.io/en/latest/
+
+If there are concerns or problems regarding the package, please file an issue on
+
+the following link
+https: //github.com/alstat/StochMCMC. jl/issues
+
+C.2.3  SGHMC Source Code
+
+The following is the implementation of the Algorithm 6 in Julia.
+
+immutable SGHMC
+
+du ::Function
+dk ::Function
+dkSigma ::Array{Float64}
+Cc ::Array{Float64}
+Vv rtArray{Float64}
+
+init_est: :Array{Float64}
+
+112
+
+d :rInt64d
+end
+
+function mcmc(object: :SGHMC;
+leapfrog_params::Dict{Symbol, Real} = Dict([:eps => .05, :tau => 20]),
+set_seed::Int64 = 123,
+r:iInt64 = 1000)
+
+dU, dK, dKSigma = object.dU, object.dK, object.dkSigma
+Cc, V, w, d = object.C, object.V, object.init_est, object.d
+eps, tau = leapfrog_params[:eps], leapfrog_params[: tau]
+
+if typeof(set_seed) == Int64
+srand(set_seed)
+end
+
+chain = zeros(r, d);
+chain[1, :] =w
+
+B= .5* V * eps
+
+D = sqrt(2 * (C - B) * eps)
+
+if size(B) != size(C)
+error("C and V should have the same dimension.")
+else
+
+if sum(size(B)) > 1
+if det(B) > det(C)
+error("eps is too big. Consider decreasing it.")
+end
+else
+if det(B[1]) > det(C[1]})
+error("eps is too big. Consider decreasing it.")
+end
+end
+end
+
+for iin lr
+p = randn(d, 1)
+
+for j in 1l:tau
+p =p - dU(w) * eps - C * inv(dKSigma) * p + D * randn(d, 1);
+w=w + dK(p) * eps;
+
+end
+
+chain{i, :] =w
+end
+
+return chain
+end
+

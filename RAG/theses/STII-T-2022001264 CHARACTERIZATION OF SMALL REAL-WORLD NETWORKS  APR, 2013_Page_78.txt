@@ -1,0 +1,2169 @@
+
+UNIVERSITY OF THE PHILIPPINES
+
+CHARACTERIZATION OF SMALL REAL-WORLD NETWORKS
+
+by
+
+NICOLE C. VALDEZ
+
+A Master’s Thesis Submitted to the
+National Institute of Physics
+College of Science
+University of the Philippines
+
+Diliman, Quezon City
+
+As Partial Fulfillment of the Requirements
+for the Degree of
+
+Master of Science in Physics
+
+April 2013
+
+mune
+STI-17-1160
+
+
+Characterization of Small Real-World Networks
+
+by Nicole C. Valdez
+
+Masters Thesis, National Iustitute of Physics
+University of the Philippines Diliman
+
+April 2013
+
+Classification’: 2.
+* T- invention or creation. P + publication, C - confidential information.
+
+Available to the general public Yes
+Available only alter consultation with author/adviser for thesis Xo
+Available only to those bound by nondisclosure or confidentiality agreement | No
+
+Nicole C. Val
+Student
+
+siovanni A. Tapang. Ph. D.
+Thesis Adviser
+
+CERTIFICATION
+
+This is to certify that this graduate thesis entitled. “Characterization of
+Small Real-World Networks” and submitted by Nicole C. Valdez to fulfill
+part of the requirements for the degree of Master of Science in Physics was
+successfully defended and approved on 6 April 2013
+
+ot LO sc PhD.
+
+Thesis Adviser
+
+RANZIVELLE MARIANNE
+
+ROXAS-VILLANUEVA. Ph.D.
+Dissertation Reader
+
+The National Institute of Physics endorses acceptance of this graduate
+thesis as partial fulfillment of the requirements for the degree of Master of
+Science in Physics.
+
+National Institute of Physics
+
+The graduate thesis is hereby officially accepted as partial fulfillment of
+the requirements for the degree of Master of Science in Physics.
+
+JOSE } en P. BALMACEDA.
+
+Ph.D.
+Dean. College of Science
+
+»The sea’s only gifts are harsh blows, and occasionally the chance to feel strong.
+Now I don’t know much about the sea, but I do know that that’s the way it is
+here. And I also know how important it is in life not necessarily to be strong but
+to fccl strong. To mcasurc yoursclf at least once. To find yoursclf at least once in
+the most ancient of human conditions. Facing the blind death stone alone, with
+nothing to help you but your hands and your own head.” -Into the Wild (2007)
+
+Acknowledgments
+
+The success of any accomplishment depends largely on the encouragement and
+guidelines of many others. I take this opportunity to express my gratitude to the
+people who have been instrumental in the successful completion of this MS thesis.
+I would like to acknowledge the help of the following...
+
+Mama, Papa and Kuya who provided a carefree environment for me, so that
+I can concentrate on my study. Although they hardly understand what
+writing thesis is and what I research on, my family are willing to support
+any decision J make.
+
+Instrumentation Physics Laboratory for being mv home for five years in the
+National Institute of Physics. This research laboratory, specifically the peo-
+ple in it, has never failed to amaze and inspire me in my own work. The
+expericnccs that I have gained in my stay in this “home” has defined how I
+conduct myself in my work. I owe what I am today and what I will be in
+the future to this laboratory and I am forever grateful for everything it has
+given to me.
+
+DOST - ASTHRDP Accelerated Science and Technology Human Resource De-
+velopment Program for the financial support and without which my whole
+MS career would not be possible. Thank you for giving every student the op-
+portunity of pursuing graduate studies in science. I believe that research has
+a very important role in this world and your institution have been helping
+many students become scientists.
+
+VISSER. Versatile Instrumentation System for Science Education and Research
+for the support.
+
+SyncBioPhotonics specially Krista, MP, Shar, Gab, and Ate Jill who also de-
+serve my sincerest thanks for their assistance that helped me in ways I could
+never imagine without. They have all extended thcir support in a very spe-
+cial way, and I gained a lot from them, through their personal and scholarly
+interactions, their suggestions at various points of my research programme.
+
+Jose Magpantay, Ph.D. and Felix Muga II, Ph.D. - my thesis panels, for
+the useful and sometimes daunting comments, remarks and engagement you
+gave through the learning process of this master thesis. I will never forget
+having two of the country’s greatest Ph.D.’s as my audience for my thesis.
+
+Ranzivelle Marianne Roxas-Villanueva, Ph.D. who was kind enough to un-
+dertake the editing work and I acknowledge the meticulous work she has
+
+iii
+
+done. I would also like to thank Ma’am Ianne for her unwavering and tremen-
+dous support and help. I feel motivated and encouraged every time I have
+meetings with her. Without her encouragement and guidance this thesis
+would not have materialized.
+
+Giovanni Tapang, Ph.D. my research adviser whom I must offer my profound-
+est gratitude. He paticntly provided the vision, encouragement and advise
+necessary for me to proceed through the masters program and complete my
+thesis. From finding an appropriate subject in the beginning to the process
+of writing thesis and presenting my thesis defense, Sir Tapang offers his un-
+reserved help and guidance and lead me to finish my thesis step by step.
+His words can always push and inspire me and bring me to a higher level of
+thinking. Without his motivating and patient instruction, it is impossible
+for me to finish this thesis.
+
+Batchmates - 2006 Kaye, Ren, Mabi, Jr, Jonats, Joseph, and Aivin and all
+my other friends who encourage and support me during the days in the
+graduate school. The simple phrasc, thank you, cannot present how much
+their friendship means to me.
+
+Eugenio Leynes whosc love and encouragement allowed me to finish this jour-
+ney. He squeezed time from his schedule to help me finish my thesis and
+despite being busy with law school, he is very much willing to give his help-
+ing hands as soon as I am in need. Writing a thesis is like running a long
+and lonely marathon and thanks to my awesome boyfriend Gino, I know I
+still have someone to turn to and I am not all alone. He already has my
+heart so I will just give him a heartfelt thanks.
+
+Complcting my Mastcrs degree is probably the most challenging activity I have
+accomplished in the 23 years of my life. The best and worst moments of my masters
+journey have been shared with these people whom I will be forever grateful for
+being a part of my life.
+
+iv
+
+ABSTRACT
+
+CHARACTERIZATION OF SMALL REAL-WORLD NETWORKS
+
+Nicole C. Valdez Adviser:
+University of the Philippines, 2013 Giovanni A. Tapang, Ph.D.
+
+We describe and model the structure of small-sized network systems involving
+real-world data sets. Large systems, like the Internet and the World Wide Web,
+often involving millions of nodes and cdges, has becn the most dominant data
+sets in complex networks research. The finite size and sparse edge distributions
+of small networks pose difficultics on extracting uscful cxpcrimental data because
+of insufficient statistics. Several data sets of small real-world network systems -
+influence and friendship networks; House of Representatives co-authorship net-
+works; and MIDI music networks - are collected and analyzed. Known models for
+each of the networks are simulated and network parameters for both small-sized
+real-world networks and simulated model networks are compared.
+
+PACS: 89.75.He (Networks and gencalogical trecs), 89.75.Fb (Structurcs and or-
+ganization in complex systems)
+
+Table of Contents
+
+Acknowledgments iii
+Abstract v
+1 Introduction 1
+
+1.1 Networks as Graphs 1
+1.2 Network Parameters saae er teas - 3
+1-2") Degree) ki yeysy yy yey eye yy yeas 3
+12.2 RadiusR 2.2... . ee eee 4
+1.2.3 Betwenness Centrality BC... 4
+1.2.4 Clustering Coefficient CC 5
+1.3 Research on Complex Networks ................-0-- 6
+Influence and Social Networks 10
+2.1 Introduction... 2... 20.0.0... ee eee 10
+2.2 Network Construction .........-...-0-0000 0000008 10
+2.3 Network Characterization eb ne aes teas . 13
+2.3.1 Degree... 22... eee 13
+2.3.2 Betweenness Centrality. ............2..020005 15
+2.3.3 Clustering Coefficient... ...........-.---0-- 17
+House of Representatives Co-Authorship Networks 20
+
+3.1 Introduction... 2.2.2.0... 0.2.22 ee
+
+3.2 Network Construction
+
+3.3 Network Characterization
+3.3.1 Degree . wae
+3.3.2 Betweenness Centrality eae ea seaaae
+3.3.3 Clustering Coefficient... 2... ....-2222...00..
+
+MIDI Music Networks
+4.1 Introduction. ............2 020000000000 0000-
+4.2. Network Construction .........
+4.3 Characterization of Music Networks . .
+
+4.3.1 Billboards Top 100 .......
+
+4.3.2 Classical, Jazz and Rock Genres. ............... 30
+Application of Network Models 32
+5.1 Network Models... 2... 2... eee ee ee eee 32
+
+5.1.1 Erdos-Renyi Model: Random Networks............ 32
+
+5.1.2 Watts-Strogatz Model: Small-World Networks ........ 33
+
+5.1.3 Barabasi-Albert Model: Scale-Free Networks ......... 34
+
+5.2 Application of Network Models to Real Small Networks ...... . 35
+
+5.2.1 Watts-Strogatz Modcl to Influcnce and Friendship Networks 35
+
+5.2.2 Erdos-Renyi Model to House Co-authorship Networks... . 48
+5.2.3 Erdos-Renvi Model, Barabasi-Albert, and Watts-Strogatz to
+
+MIDI Music Networks ......-.0.0.0.0...0-200005 59
+
+Summary and Conclusions 62
+
+6.1 Influence and Friendship Networks .................. 62
+
+6.2 House of Representatives Co-Authorship Networks.......... 63
+
+6.3 MIDI Music Networks ............0 0000002 ee eee 63
+
+Chapter 1
+
+Introduction
+
+1.1 Networks as Graphs
+
+The study on complex networks dates back to the problem of the Konigs-
+berg bridge, shown in Figure 1.1, which asks ”can the seven bridges of the city
+Konigsberg can all be traversed in a single trip without doubling back, given the
+requirement that the trip ends in the same place it started”?
+
+Figure 1.1: The seven bridges crossing the river Pregel in Konigsberg [1].
+
+This problem was first addressed in graph theory and true enough, networks are
+mathematically known as graphs. In its simplest form, a graph is a collection of
+vertices that can be connected to each other by means of edges. In particular,
+each edge of a graph joins exactly two vertices. Using a formal notation, a graph
+
+is defined as follows.
+
+Figure 1.2: An re of a formally-defined graph
+[2]. The graph on = 1,..,10 with cdge sct E =
+{{1, 2}, {2, 3}, {3, 4}, {3, 5}, {3, o {4,5}, {5, 6}. {6,7}, {6, 8}, {6, 9}, {6, 10}, {9, 10}}
+
+A graph G consists of a collection of vertices V and a collection of edges
+E, for which we write G = (V, E). Each edge e € E is said to join two vertices,
+which are called its end points. If e joins u, v € V, we write e = u, v. Vertex
+u and v in this case are said to be adjacent. Edge e is said to be incident with
+vertices u and v, respectively.
+
+Another way to represent graphs is through an adjacency matrix. This
+matrix, for a graph G with n vertices and m edges, comprises of n number of
+rows and n number of columns with an entry Ali, j] denoting the number of edges
+joining vertex v; and v,. To illustrate, an adjacency matrix for the graph in Figure
+1.2 is shown in Equation (1.1).
+
+AdjacencyMatriz = (1.1)
+
+cooooocoore
+eceoocooooror
+COCO RHK ORO
+coooororocse
+cooporoKHOS
+Heer ororoe
+coooreccooe
+cooorceocooSo
+cooorecocSe
+orooroooos
+
+The adjacency matrix shown above is symmctric and contains 1 and 0 valucs.
+
+This is representative of an undirected and unweighted graph. The symmetry of
+the adjacency matrix tells the directionality of the graph and the values tell the
+weights of the cdgcs of the graph.
+
+1.2 Network Parameters
+
+Early researches in network science involve the structural analysis of real-world
+systems which often entails the computation of properties that describes their
+architecture. However. most of these systems are often very large that asymptotic
+regularities cannot be observed by performing node-centric or local measurements
+that are usually used in small networks. For these large systems, there is a need to
+look into statistical measures that will show the global behavior of these network
+properties [3].
+
+1.2.1 Degree k
+
+A network parameter commonly studied would be the number of edges con-
+nected to a particular node. This is called the degree k; of a node i and one can
+compute this locally or globally. For a network, the degree k; of an individual
+node i is described as the number of edges incident on the node i. In terms of a
+
+network’s adjacency matrix,
+
+k= Do a5 (1.2)
+
+where z is the weight of an edge and j runs over all the nodes j connected to
+node i. This weight can have a value of z = 1 for unweighted networks and z > 1
+depending on the weight conditions given to a weighted edge network.
+
+This topological mcasurc has becn much cxamincd when it comes to char-
+acterizing a network, particularly how the degree values are distributed over it.
+The formula presented in Equation (1.2) is a local computation of the degrec.
+However, a global value of 4: that describes the whole network may be obtained by
+simply computing the average degree over all the nodes cxisting in the nctwork.
+
+An example of a graph with node label as its degree is shown in Figure 1.4.
+
+Figure 1.3: Graph with nodc labels as degrcc.
+
+1.2.2 Radius R
+
+There are other measures of interest which are related to the characterization
+of the linear size of a network. We start by defining the shortest path length
+0; as the minimum number of steps needed to reach node j from node i. The
+eccentricity of a node i is defined by ec(i) = mazj;4i0;;, and the radius of a graph
+G by radg = minjec(i).
+
+1.2.8 Betwenness Centrality BC
+
+One nctwork paramctcr that reveals nodcs that arc important in connccting
+different parts of a network by acting as bridges is the measure of betweenness
+centrality. This has been defined as the number of shortest path that passes on a
+certain node i.
+
+&= yo wl (1.3)
+
+foretads
+Equation (1.3) gives a formal mathematical definition of betweenness cen-
+trality where o,; is the total number of shortest paths from h to j and op,;(i)
+is the total number of shortest paths from h to j that pass through the node i.
+An example of a graph with node label as its betweenness centrality is shown in
+Figure 3.4.
+
+Figure 1.4: Graph with node labels as betweenness centrality.
+
+The computation for the betweenness centrality used in this study is based
+on the algorithm proposed by Brandes in 2001 [? ].
+
+1.2.4 Clustering Coefficient CC
+
+The concept of clustering, first introduced in sociology [19], deals with the
+characterization of nodes based on the structure of their local neighborhood. It is
+
+defined as the degree to which nodes tend to cluster together.
+
+__ 3x number of fully connected triples
+~ number of triples
+The clustering coefficient is defined in a variety of ways. One is by getting
+
+cc
+
+(14)
+
+its global value given by equation (1.4) where a triplet consists of three nodes that
+are connected by either two (open triplet) or three (closed triplet) undirected ties,
+shown in Figure 1.5. A triangle consists of three closed triplets, one centered on
+each of the nodes. The global clustering coefficient is the number of closed triplets
+(or 3 x triangles) over the total number of triplets (both open and closed). An
+example of a graph with node labels its clustering coefficient is shown in Figure
+3.5.
+
+VV we
+
+Figure 1.5: Examples of an open triplet(Icft) and a closed triplct(right).
+
+Figure 1.6: Graph with node labels as clustering coefficient.
+
+The computation for the clustering coefficient used in this study is based
+on the algorithm proposed by Saramki et. al. in 2007 [? ].
+
+1.3. Research on Complex Networks
+
+Our world is a collection of various systems that can be represented by networks
+and, with this, the interest in the structure and evolution of networks [4, 5] has
+madc its mark on the study of complex systems. Easily available data scts have
+made this study widespread in the last few years.
+
+Large real-world systems such as intcrnct topology, world-wide web, scicnce
+collaboration networks, biological networks, and linguistic networks have been ex-
+tensively studicd from a structural point of view [6-10]. Typically, these studics
+address properties of the graph including its size, density, degree distributions,
+
+average distance, small-world phenomenon, clustering coefficient, connected com-
+ponents, community structures, etc. Large systems, like the Internet [6] and the
+World Wide Web [11, 12], often involving millions of nodes and cdges have been
+the most dominant data sets in complex networks research because small networks
+often posc important concerns to be addressed. The finitencss of small networks
+sets serious restrictions on extracting useful experimental data because of strong
+size cffects and, often, insufficicnt statistics. Small networks were traditionally
+studied from a node centric point of view where researchers wanted to answer
+questions about behavior and properties of particular nodcs in the network. Al-
+though such models are very expressive, they often fail to scale to large networks
+with millions of nodes and edges. Moreover, a large network is needed for a struc-
+tural property to emerge. In actuality, in the beggining of the 20th century. most
+of the prominently studied networks have nodes and edges of at least the order of
+
+10°, as seen in Table 1.1.
+
+Table 1.1: Extensively Studied Networks in Complex Network Research
+Number of | Number of | Reg.
+
+Network of Subgraph
+
+Vertices Edges
+
+Complete map of the nd.edu 13)
+domain of the Web 325,729 1,469,680
+
+Pages of the World Wide Web 11,
+scanned by Altavista in Octo- | 2.711210° 2.130210° 12
+ber of 1999
+
+ii V,
+Domain level of the World 2.602108 14
+
+Wide Web in spring 1997
+Inter-domain level of the Inter- 6]
+net in December 1998 4,389 8,256 t
+
+Net of operating ” autonomous
+
+15
+systems” in Internet th 13,641
+Router level of the Internet in 3,888 5,012 {6
+1995
+Router level of the Internet in 150,000 200,000 16)
+Citation of the ISI databasc 783,339 6,716,198 17]
+
+1981 - June 1997
+
+Citation of the Phys. Rev. D
+11-50 (1975-1994)
+Collaboration network of 212,250 61,085,555 18)
+movie actors
+
+Collaboration network of
+MEDLINE
+
+Collaboration net collected
+from mathemtical journals
+Collaboration net collected
+from neuro-scicnce journals
+
+24,296 351,872 17]
+
+1,388,989 | 1.028z10° | [8]
+
+70,975 0.132x10° | [19
+
+209,293 1.214z10° | [19]
+
+Word web 470,000 17,000,000 | [10
+Digital clectronic circuits 2r104 4r104 20)
+Telephone call graph 47r10° 8107 21
+Web of human sexual contacts 2810 - 22
+
+The ability to understand small real-world networks is inevitable because of
+the numerous real-world systems that only involve a small number of components.
+Studies on small systems can also help in further knowing the basic structures
+of larger systems. These small systems are of interest in this study and we will
+address them as ”small” networks.
+
+This thesis is structured as follows. In Chapters II, III and IV, the three
+small networks used in this research are - influence and friendship networks; House
+
+of Representatives co-authorship networks; and MIDI music networks. The net-
+
+8
+
+works are constucted and the network parameters are computed for each them.
+Chapter V discusses famous models of large complex networks that are imple-
+mented to our small networks. Network parameters for both simulated and rcal
+small networks are compared and analyzed.
+
+Chapter 2
+
+Influence and Social Networks
+
+2.1 Introduction
+
+Relationships are associations among people. These associations may be based
+on different factors such as love, influence, authority, kinship and friendship. More-
+over, relationships among can be modeled people as a network. People can be rep-
+resented by nodes while the relations between people would act as the network's
+edges, be it directed or undirected lines. One can further modify the network
+by applying weights to the edges which would now correspond to the degree of
+relationship between two persons. Such systems are known as social networks and
+its study has an unquestionable place in in the field of complex networks [23, 24).
+This part of the study focuses on relationships among college students; influence
+and friendship relations in particular.
+
+2.2 Network Construction
+
+Four sets of surveys were conducted on a small group of students. The survey
+was conducted from years 2008 to 2011 among male and female physics majors
+belonging to the same year at the University of the Philippines in Diliman. The
+surveys determine the most influential and friendliest people in the group. The
+students were asked to rank (1-highest) 10 of their batch mates who has the most
+influence on them and 10 of their batch mates who they consider their immediate
+friends.
+
+An undirected unweighted social network was made for each year. Nodes
+represent students while edges represent the influence or friendship one student
+has to the other. The number of nodes and the number of edges of each network
+are shown in Table 2.1. The weight of the edges represent the degree of influence
+
+10
+
+or friendship one student has to another which have values that are inverse of the
+value written in the survey (written in the survey: 1, 2, 3, ...:weight in network:
++, 3, 3), ...). This means that the higher the rank of influence and friendship to
+a person, the stronger their edge weight. The resulting influence and friendship
+networks are scen in Figure 2.1 and 2.2.
+
+Table 2.1: Size of Influence and Friendship Networks
+
+Network Number of Vertices | Number of Edges
+2008 Influence Network 72 354
+2009 Influence Network 57 301
+2010 Influence Network 48 299
+2011 Influence Network 48 262
+2008 Friendship Network 72 369
+2009 Friendship Network 56 316
+2010 Fricndship Network 48 274
+2011 Friendship Network 48 259
+
+ll
+
+Figure 2.1: Influence Networks for 2008, 2009, 2010 and 2011 where the nodes
+represent the students and the edges represent their summed weights of influence
+with each other. The nodes and edges are colored and sized according to their
+betweenness centrality, degree and weights as shown in the legend located at the
+top of the figure.
+
+12
+
+a
+Node color Low BC High BC
+Node size Low K High K
+Edge color Low Weight High Weight
+Edge thicknes: Low Weight High Weight
+2008 2009
+i ®@
+@
+
+2010 2011
+
+S
+
+Figure 2.2: Friendship Networks for 2008, 2009, 2010 and 2011 where the nodes
+represent the students and the edges represent their summed weights of friendship
+with each other. The nodes and edges are colored and sized according to their
+betweenness centrality, degree and weights as shown in the legend located at the
+top of the figure.
+
+2.3. Network Characterization
+
+2.3.1 Degree
+
+The average degree for each influence and friendship network are also computed
+as shown in Table 2.2 and 2.3 while the degree distribution of the networks were
+computed and plotted in Figure 2.3 and 2.4. All networks for the influence and
+friendship systems are observed to have a degree distribution that spreads over a
+particular value of k, which appears to be near the average degree for the network.
+
+13
+
+This means that in all networks, there is a common value for the degree of each
+
+node and that its neighboring nodes can have a degree near to the most common
+
+valuc for k.
+
+Table 2.2: Average Degree of Influence Networks
+Influence Network | Average Degree
+
+2008 9.833
+
+2009 10.561
+2010 12.458
+2011 10.917
+
+Frequency
+
+— 2910
+
+2008 =
+ene
+aertuen!
+
+2008
+
+Figure 2.3: Degrce distribution for influence networks for 2008, 2009, 2010 and
+2011.
+
+Table 2.3: Average Degree of Friendship Networks
+Friendship Network | Average Degree
+
+2008 10.25
+2009 11.286
+2010 11.417
+
+2011 10.792
+
+4
+
+Frequency
+
+Figure 2.4: Degree distribution for friendship networks for 2008, 2009, 2010 and
+2011.
+
+The degree distribution for each of the network follows a binomial distribu-
+tion with shifting peaks around each network’s average degree for different years.
+The average k of the influence and friendship networks both increase for the first
+three years and a decrease is found in the fourth year. This is observed decrease is
+attributed to the laboratory specialization acquired by the students during their
+fourth years and also due to the decreasing number of nodes in the influence and
+friendship networks.
+
+2.3.2 Betweenness Centrality
+
+Table 2.4 and 2.5 shows the average betweenness centrality for each influence
+and fricndship netwoks. In Figure 2.5 and 2.6, the BC disrtribution is observed
+for all influence and friendship networks. Betweenness centrality is the ability of
+nodes to act as important bridges that connect components of a graph. It has been
+found out that for the influece and friendship networks, a great number of nodes
+have low betweenness centrality and that as the betweenness centrality increases,
+
+there are lesser nodes in the network having that value.
+
+15
+
+Table 2.4: Average Betweenness Centrality of Influence Networks
+Influence Network | Average Betweenncss Centrality
+
+2008 34.875
+2009 28.701
+2010 19.062
+2011 18.104
+
+Frequency
+
+—~" 2010
+
+arse
+
+Figure 2.5: Betweenness centrality distribution for influence networks for 2008,
+2009, 2010 and 2011.
+
+Table 2.5: Average Betweenness Centrality of Friendship Networks
+Friendship Network | Average Betweenness Centrality
+
+2008 40.347
+2009 26.250
+2010 21.895
+2011 18.104
+
+16
+
+=
+
+Figure 2.6: Betweenness centrality distribution for friendship networks for 2008,
+2009, 2010 and 2011.
+
+This behavior of the values of BC for the nodes in the networks indicate
+that the networks does not have a significant number of ” bridges” in the network
+and that the networks does not have a significant number of isolated components.
+Moreover, the average BC for the network decreases through time. This is due to
+the decreasing number of students and their increasing interactions through time
+give rise to this network structure. Despite students starting to have laboratory
+
+affiliations on 2011, the networks does not show cliques or groups forming.
+
+2.3.3 Clustering Coefficient
+
+The averages of the clustering coefficient in each network are shown in Table
+2.6 and 2.7. Moreover, the clustering coefficient dsitribution of a node for all the
+influence and friendship networks are obtained and compared in Figure 2.7 and
+2.8.
+
+Table 2.6: Average Clustering Coefficient of Influence Networks
+Influence Network | Average Clustering Coefficient
+
+2008 0.371
+2009 0.33
+2010 0.497
+2011 0.485
+
+17
+
+Figure 2.7: Clustering coefficient distribution for influence networks for 2008, 2009,
+2010 and 2011.
+
+Table 2.7: Average Clustering Coefficient of Friendship Networks
+Friendship Network | Average Degree
+
+2008 0.383
+2009 0.324
+2010 0.472
+2011 0.455
+
+Figure 2.8: Clustering coefficient distribution for friendship networks for 2008,
+2009, 2010 and 2011.
+
+18
+
+The CC distribution for all the networks follow a binomial distribution with
+shifting peaks around the average clustering coefficient. Moreover, the average
+clustering coefficient of the influence and friendship networks increased for the
+first three years and this is due to the network structure having more edges as the
+
+students in the system ercatc morc conncctions as time pass by.
+
+19
+
+Chapter 3
+
+House of Representatives
+Co-Authorship Networks
+
+3.1 Introduction
+
+The availability and acccss to extensive databascs have made modclling prac-
+tically all systems to complex networks possible. An example would be a co-
+authorship or collaboration nctwork. Scvcral studics have been madc that have
+used these types of networks. One of which is the network of scientific collabo-
+ration which mapped the electronic database containing all relevant journals in
+
+mathematics and neuro-science collaborations (8, 16, 18}.
+
+3.2 Network Construction
+
+Bills from the 8" to 14** Congress were downloaded from an on-line Philippine
+legislative information system called LEGISontheweb (http://www.congress.gov.ph/legis/index
+These were parsed and analyzed to construct co-authorship networks composed of
+congressmen as nodes and co-authored bills as edges.
+A bipartite graph is created with the first set of nodes corresponding to
+the congressmen while the second set of nodes correspond to the bills written for
+each congress. A connection is created from the bill to the congressman for every
+authorship made. The bipartite graph is then converted into a network where the
+set of nodes for the bills is removed and one is left with a network with nodes
+as congressmen and cdges as co-authorship. An cxample of converting bipartite
+
+graphs to networks is shown in Figure 3.1.
+
+20
+
+Figure 3.1: Converting bipartite graphs into networks.
+
+Undirected edge-weighted versions of the network were made. Weights
+
+represent the number of times two congressmen co-authored a bill. The network
+
+sizes are shown in Table 3.1 and the house networks constructed are shown in
+
+Figure 3.2.
+
+Table 3.1: Size of Housc of Representatives Co-Authorship Networks
+
+House Number | Number
+Co-Authorship Year of of
+Network Vertices | Edges
+8** Congress 1986-1992 | 213 21682
+9% Congress 1992-1995 | 214 22824
+10° Congress 1995-1998 | 206 21708
+11* Congress 1998-2001 | 222 22520
+12** Congress 2001-2004 | 237 21293
+13** Congress 2004-2007 | 213 26494
+14** Congress 2007-2010} 267 34024
+
+21
+
+Figure 3.2: House of Representatives co-authorship network for the 8th to 14th
+Congress where nodes represent congressmen and edges represent co-authorship of
+a bill. The nodes and edges are colored and sized according to thcir betwecnncss
+centrality, degree and weights as shown in the legend located at the top of the
+
+figure.
+
+3.3. Network Characterization
+3.3.1 Degree
+
+The degree distribution for all the co-authorship networks for the House of
+Representatives arc obtained and compared as shown in Figure 3.3 and the average
+degree for each network is shown in Table 3.2. It is observed to have an increasing
+
+22
+
+degree distribution for higher values of k. This is a reflection of the co-authorship
+network being a highly and fully-connected network with average k ranging from
+185.157 tO 254.861.
+
+Table 3.2: Average Degree of House of Representatives Co-Authorship Networks
+House Co-Authorship Network | Average Degree
+
+8 Congress 203.587
+9* Congress 210.359
+10 Congress 196.452
+11 Congress 204.727
+12" Congress 185.157
+13 Congress 224.542
+14% Congress 254.861
+
+Frequency
+
+Figure 3.3: Computed degree distribution for the House of Representatives co-
+authorship network for 8th to 14th Congress.
+
+3.3.2 Betweenness Centrality
+
+Figure 3.4 shows the betweenness centrality distribution of the co-authorship
+networks and Table 3.3 shows the computed avcrage BC for cach Congress. Most
+of the nodes in the network appear to have very low betweenness centrality with
+values ranging from 0-0.20. This distribution reflects the property of the co-
+authorship network of being highly-connected. The tendency of nodes to act as
+
+23
+
+“bridges” that connects components of the network are very low because even if
+
+random nodes in the network are taken out, it will still remain connected.
+
+Table 3.3: Average Betwecnness Centrality of House of Representatives Co-
+
+Authorship Networks
+
+Housc Co-Authorship Network | Avcrage Betwecnness Centrality
+
+8% Congress 4.206
+9** Congress 2.820
+10" Congress 11.814
+11* Congress 7.136
+12* Congress 20.1
+
+13** Congress 5.228
+14** Congress 5.573
+
+Frequency
+
+Figure 3.4: Computed betweenness centrality distribution for the House of Rep-
+resentatives co-authorship network for 8th to 14th Congress.
+
+The distribution for betweenness centrality values for the 8°", 9**, 13", and
+14‘ Congress is seen to have the most number of nodes to have the lowest values
+for BC as seen with the presence of a peak in their BC plots. On the other hand,
+the BC distribution for the 10%, 11%, and 12 Congress is seen to have equal
+number of nodes having different BC values.
+
+24
+
+3.3.3 Clustering Coefficient
+
+The clustering coefficient of the nodes in the network are also computed and
+are compared for each congress, the CC distribution is shown in Figure 3.5 while
+the average CC for each congress is shown in Table 3.4. It is observed that
+all distributions appear to have high clustering coefficients with values ranging
+from 0.75-1.00. This is inherent of their structure being densely connected. A
+notable deviation would be in the 10“, 11, and 12 House of Representatives
+co-authorship network because these networks do not have pronounced peaks and
+most CC values observed for each Congress have equal number of nodes in the
+network.
+
+Table 3.4: Average Clustering Coefficient of House of Representatives Co-
+Authorship Networks
+
+House Co-Authorship Network | Average Clustering Coefficient
+
+8™ Congress 0.985
+9* Congress 0.986
+10 Congress 0.955
+11 Congress 0.952
+12" Congress 0.925
+13** Congress 0.976
+14** Congress 0.987
+
+fovendas
+
+st
+coe
+cot!
+
+custo
+
+Figure 3.5: Computed clustcring coefficicnt distribution for the House of Repre-
+sentatives co-authorship network for 8th to 14th Congress.
+
+25
+
+Chapter 4
+MIDI Music Networks
+
+4.1 Introduction
+
+With music companies now offering mp3 files on-line (e.g. iTunes with more
+than 800,000 song tracks available) the rise of the amount of digital music readily
+available in the Web has attracted many researchers to use this collectable data
+for studies.
+
+One area of this research would be on music style recognition with the
+general idea of extracting features from songs. For the past several years, many
+researchers have contributed work (25-27] in this field using different approaches.
+One study described each piece as a graph, where the nodes are chords and the
+directed edges connect chords which occur consecutively in the piece. Network
+motif analysis is then applied to find recurring patterns in a piece (28). Another
+study involved constructing networks where nodes and edges corresponding to mu-
+sical notes and their co-occurring connections respectively. They analyzed works
+from several composers by computing its network parameters and then tried to
+replicate appcaling music [29].
+
+Musical data is generally stored digitally and Musical Instrument Digital
+Interface or MIDI, is one of the most common representations of music. MIDI
+contains commands that allow communication between electronic musical instru-
+ments, performance controllers, computers and other related devices [30]. The
+MIDI protocol includes messages that relay events that instruct what should hap-
+pen in a MIDI song. These events include NotcOn/NotcOff events, TimcClock,
+Tuning Standard, Sample Dump Standard, File Dump, and many others [31]. For
+example, when a sound ends, a NoteOff message is sent and executed. An example
+of a simplified form of a MIDI file is seen in Table 4.1.
+
+26
+
+Table 4.1: Simplified sample of the contents of a MIDI file.
+
+MIDI Event Time ak or ' wet. pe
+NOTE ON t=45 | Track=0 | Picth=120 | Velocity = 4
+NOTE OFF t=58 | Track=1 | Picth=12 | Velocity = 4
+TIME SIGNATURE | t = 100 | Track = 0 - -
+
+SET TEMPO t=130| Track =0 - -
+
+4.2 Network Construction
+
+MIDI songs were obtained from several websites from the intcrnct. Four data
+sets have been prepared for this study. The first set are MIDI files from different
+genres - Rock, Jazz and Classical music. They were choscn such that ten songs
+belong to one musical composer. The collection included ten composers per genre.
+The sccond data sct included songs from different genres - Country, Pop and Jazz
+in a span of ten years. Most of the songs were chosen from the Billboards decade
+end hit songs - 2000-2009. They were collected such that five songs bclong to onc
+year.
+
+A python program was created in order to convert the MIDI file to a text
+file containing a series of MIDI events. The time events were converted to their
+corresponding seconds equivalent.
+
+An undirected and edge-weighted co-occurrence network for each track of
+the MIDI file was constructed where the nodes of the network correspond to the
+notes in the song. Simultaneous playing of two or more notes like a chord is
+considered as one node. Edges are defined as connections from one note to another
+chronologically and their weights correspond to the inverse of time the nodes were
+played. This means that if two notes are played in a longer time apart, they will
+have lower edge weights compared to two notes played with smaller times apart.
+Suppose, in a piece of music, note i and note j start at time ¢; and ¢,, respectively,
+where t; > t;. Then note j is said to co-occur with note i and a co-occurring edge
+is defined from note i to note j with the value t; — t;. To make the undirected
+network, an adjacency matrix was used, a matrix with rows and columns labeled
+by graph vertices containing edge-weight value in position according to whether
+nodes are adjacent or not. A flowchart of the construction of the music network
+
+is found in Figure 4.1.
+
+27
+
+Figure 4.1: Flowchart of the MIDI analysis and an example of co-occurence net-
+work construction.
+
+Co-occurence networks are made for each instrument in a MIDI song. As
+seen in Figure 4.2, different tracks used in the MIDI song Mean Mister Mustard
+of The Beatles have different networks. Variations per instrument can be seen
+because of the differences in the notes played of each instrument in a song and the
+differences in the chronology the notes are played.
+
+Figure 4.2: Sample of music networks for different tracks of the MIDI song
+MeanMister Mustard of TheBeatles.
+
+28
+
+4.3. Characterization of Music Networks
+
+4.3.1 Billboards Top 100
+
+For the first data sct, a comparison was made over scvcral midi song from
+Rock, Pop and Country music over a period of ten years 2000 to 2009. Figure
+4.3 shows the diffcrent propertics observed from different music nctworks from
+different genres. Although the network properties of Rock and Pop music does
+not appcar to follow a trend over time, the radius of Country music was observed
+to be higher than that of Rock and Pop music. This suggests that the network
+structure of Country music is bigger and more complex than that of Rock and
+
+Pop music.
+
+29
+
+1999 2000 2001 2002 200.
+
+1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010
+
+Figure 4.3: Betweenness centrality BC, degree K, clustering coefficient CC and
+radius R of Rock, Pop and Country music networks.
+
+4.3.2 Classical, Jazz and Rock Genres
+
+The network parameters computed for the second data set are shown in Ta-
+ble 4.2. The betweenness centrality of each music network for each genre was
+computed. It was observed that Classical music networks arc found to have the
+lowest betweenness centrality with a mean BC of 0.012+0.040. This was fol-
+lowed by Jazz music networks with 0.027+0.063 and Rock music networks with
+
+30
+
+0.06340.114. Graphs with high betweenness centrality suggests that it contains
+more nodes that acts as bridge that usually connect communities. This means
+that Classical music networks have the densest music nctwork having more nodcs
+and connections in its graph. This decreases the number of important bridges in
+the network because the nodes are denscly connected to cach other. The mcan
+radius is also computed and is found to be lowest in music networks under the
+Rock genre with 3.387+0.712. This is followed with songs under the Jazz genre
+with 5.718+2.164 and songs under the Classical genre 7.33143.146. These gives
+information on the structural difference of the networks or songs belonging to
+Rock, Jazz and Classical genre. Classical songs have large mean radius because
+they make use of more unique notes and complex chords in greater variety and
+are more complicated (as it may involve more than one theme and may appear in
+
+more complex forms) than that of Jazz and Rock songs.
+
+Table 4.2: Network Properties of Music Networks per Genre
+Propertics [Genre ‘Values
+Rock | 3.342+0.519
+Jazz 3.647+0.560
+
+Classical | 3.761+0.490
+Rock 0.063+0.114
+Jazz | 0.027+0.063
+
+Classical | 0.012+0.040
+Rock 0.310+0.067
+
+Mean Clustering Coefficient Jazz 0.302+0.094
+
+Classical | 0.23640.127
+
+Mean Degree
+
+Mcan Betweenness Centrality
+
+Rock 3.342+0.519
+Mean Radius Jazz | 3.647+0.560
+Classical | 3.761+0.490
+
+On the other hand, music networks under the Rock genre have higher
+clustcring cocfficicnts, 0.310+0.067, comparcd to that of networks from Jazz,
+0.302+0.0934 and Classical, 0.236+0.127, genres. This is in agreement with the
+previous results for BC and R. Since Classical music networks have a larger set of
+nodes and edges than Jazz and Rock networks, its CC, or the measure telling how
+well clustered a network is, is expected to be smaller because of the disability to
+cluster to farther nodes. For Rock genre, the high clustering may be due to the
+fewer notes, fewer set of chords involved and more repeating chords in the chord
+
+progressions.
+
+31
+
+Chapter 5
+
+Application of Network Models
+
+5.1 Network Models
+5.1.1 Erdos-Renyi Model: Random Networks
+
+The systematic study of random graphs was initiated by Erds and Rnyi in 1959.
+The term random graph refers to the disordered nature of the arrangement of
+links between different nodes. In their article, Erds and Rnyi proposed a model to
+generate random graphs with N nodes and K links. Starting with N disconnected
+nodcs, random graphs are gencrated by connecting pairs of randomly sclectcd
+nodes without edges yet. This process is done until the number of edges equals
+K.
+
+Characteristic to random networks is the appearance of a giant component
+after reaching a certain threshold. When K small, the graph is likely to be frag-
+mented into many small clusters of nodes and as K increases, the components
+grow, at first by linking to isolated nodcs and later by coalescing with othcr com-
+ponents. A transition occurs at K = N/2, where these small clusters form a single
+
+giant component.
+
+32
+
+Figure 5.1: An example of a Erdos-Renyi graph with a giant component repre-
+sented by red nodes|http://linbaba. files. wordpress.com/2010/10/erdos-renyi.png].
+
+5.1.2 Watts-Strogatz Model: Small-World Networks
+
+The famous notion ”six-degrees of separation” means that everyone can be
+connected to any other person on the planet through a chain of acquaintances with
+no more than five intermediaries. This was first proposed by Frigyes Karinthy
+in 1929 in his play ”Chains”. This phenomenon is further cmprirically studicd
+by Stanley Milgram in 1967. He called this the small-world phenomenon and
+addressed the question: "Starting with any two pcoplc in the world, what is the
+probability that they will know one another?”
+
+Small-world networks arc systems that cxhibit the small-world bchavior.
+For this configurations, the distances between the nodes of the network are small
+and the diamcter scalcs as the logarithm of the nctwork size N. They also have
+unusually high clustering coefficients compared to random graphs. One of the first
+successful and interesting attempt in modelling small-world networks is proposed
+by Watts and Strogatz [32] which makes use of a construction that allows con-
+tinuous interpolation from a one-dimensional lattice topology, as seen in Figure
+5.2.
+
+Regular Smali-worid
+
+p=0 erence > p=1
+Increasing randomness
+
+Figure 5.2: The random rewiring procedure of the WS model which interpolates
+between a regular ring lattice and a random network without altering the number
+of nodes or edges.
+
+The model proposed by Watts and Strogatz start with a regular ring lattice
+with N nodes. Each of the nodes in this lattice is connected to its immediate
+neighbor. This will give a clustcring coefficient of zcro to the latticc. The edges
+shall then be randomly rewired, with probability p, to randomly chosen nodes in
+the lattice. Varving the probability of rewiring p is proportional to the randomncss
+of the network. With values of p close to 0, the resulting network will be closer
+to the original regular lattice while valucs closcr to 1 will yicld networks that arc
+more similar to classic random graphs.
+
+Most social networks are classified as small-world networks [33] and the
+Watts-Strogatz model reflects social systems where most people are friends with
+their immediate neighbors - neighbors on the same street, colleagues, people that
+their friends introduce them to. Moreover, a common property of social networks
+is that cliques form, representing circles of friends or acquaintances in which every
+
+member knows every other member.
+
+5.1.3 Barabasi-Albert Model: Scale-Free Networks
+
+Several important large growing systems in Nature are observed to have degree
+distributions that arc power-law in form in very large K. These networks arc
+called scale-free networks because power-laws have the property of having the
+same functional form at all scales comparcd to regular latticcs or random graphs
+
+that have degree distributions that follows a binomial or Poisson.
+
+34
+
+Figure 5.3: An example of a scale-free network generated by the Barabasi-Albert
+model through preferential attachment.
+
+Barabasi and Albert [34] explained the power-law degree distribution in
+complex real-world networks by introducing the idea of preferential attachment,
+such that the likelihood of connecting to a node depends on the nodes degree.
+Networks governed by preferential linking were found to have new edges that
+preferentially attached to vertices with the high number of connections - ”the
+rich gets richer” phenomenon. In the Barabasi-Albert model, a network shall be
+constructed by starting with a small number of nodes. At every timestep, a ned
+node mo is added with m( m0) edges that link to older nodes in the system.
+By preferential attachment, the resulting probabilility that a new node willl be
+
+connected to node i is
+
+Tle)= 55 (62)
+
+in which it depends on the degree k; of node i.
+
+5.2 Application of Network Models to Real Small
+Networks
+
+5.2.1 Watts-Strogatz Model to Influence and Friendship
+Networks
+
+The Watts-Strogatz model was applied with varying rewiring probabilities to
+our influence and friendship nctworks and the nctwork propcrtics observed were
+
+compared in all cases. Simulations were done up to 50 trials with different rewiring
+
+35
+
+probability from p=0.1 to p=1. The distributions of the simulated network with
+the highest correlation were obtained and plotted.
+
+The degree distribution of the influence networks and the WS netwokrs for
+different years are shown in Figure 5.4, 5.5, 5.6 and 5.7.
+
+03
+
+@ 2008 Influence
+| Watts-Strogatz (p = 0.26)
+
+Correlation = 0.7142
+
+Frequency
+
+Figure 5.4: Degree distributions for the influence network for 2008 and Watts-
+Strogatz network with a rewiring probability of p=0.26.
+
+03
+
+2009 Influence
+Watts-Strogatz (p 23)
+
+Correlation = 0.6980
+
+02
+
+Frequency
+°
+&
+
+on
+
+agua
+Degree
+
+Figure 5.5: Degree distributions for the influence network for 2009 and Watts-
+Strogatz network with a rewiring probability of p=0.23.
+
+36
+
+@ 2010 Influence
+|] Watts-Strogatz (p = 0.30)
+
+Correlation = 0.7737
+
+Frequency
+
+Figure 5.6: Degree distributions for the influence network for 2010 and Watts-
+Strogatz network with a rewiring probability of p=0.30.
+
+(@ 2011 Influence
+Watts-Strogatz (p .29)
+
+oa Correlation = 0.7552
+
+Frequency
+5
+
+ae” a6" ne” 20" 22
+
+Degree
+
+Figure 5.7: Degree distribution for the influence network for 2011 and Watts-
+Strogatz nctwork with a rewiring probability of p=0.29.
+
+Observations were made for the degree distribution of the friendship net-
+works and the WS netwokrs for different years - these are shown in Figure 5.8,
+5.9, 5.18 and 5.19.
+
+37
+
+cry
+
+2008 Friendship
+] Watts-Strogatz (
+
+Correlation = 0.6732
+
+03
+
+Frequency
+°
+
+Figure 5.8: Degree distribution for the friendship network for 2008 and Watts-
+Strogatz network with a rewiring probability of p=0.20.
+
+@ 2009 Friendship
+Watts-Strogatz (p |.28)
+
+Correlation = 0.7504
+
+Figure 5.9: Degree distribution for the friendship network for 2009and Watts-
+Strogatz network with a rewiring probability of p=0.28.
+
+38
+
+Cry
+
+@ 2010 Friendship
+| Watts-Strogatz (p = 0.20).
+
+03
+
+Correlation = 0.8348
+
+Frequency
+°
+
+0.1
+
+2 Wali geyeia: 10 |) 12° x6 jae, 916,120 piiaa za ealae Arab eo Aaa as
+Degree
+
+Figure 5.10: Degree distribution for the friendship network for 2010 and Watts-
+Strogatz network with a rewiring probability of p=0.20.
+
+{@ 2011 Friendship
+02s |] Watts-Strogatz (p = 0.25)
+
+Correlation = 0.7567
+
+Frequency
+5
+
+10" 12" 16 16" 18° 20° 22° 24 26 28° 30° 32 36
+Degree
+
+Figure 5.11: Degree distribution for the friendship network for 2011 and Watts-
+Strogatz network with a rewiring probability of p=0.25.
+
+The degree distributions obtained from the simulations agree with the real
+networks with correlation values ranging from 0.6 to 0.8. The distribution follow
+a binomial distribution with shifting peaks around the global average degree of
+each networks. These peaks represent the “clique” size or the size of a normal
+group of friends or students of the influence and friendship networks.
+
+The betweenness centrality distribution was computed for all networks.
+The plots for the influence networks and the WS networks are shown in Figure
+5.12, 5.13, 5.14 and 5.15 while the plots for the friendship networks and the WS
+netwokrs are shown in Figure 5.16, 5.17, 5.18 and 5.19.
+
+39
+
+2008 Influence
+WS (p -24)
+
+correlation = 0.1845
+
+Frequency
+
+to below 0.01034482758621 “to below 0.05172413793103 to below 0.09310344827586 ‘to below 0.13448275062069
+
+_ Betweenness Centrality
+
+Figure 5.12: Betwenncss centrality distribution for the influence network for 2008
+and Watts-Strogatz network with a rewiring probability of p=0.24.
+
+2009 Influence
+| WS @ = 0.20)
+
+correlation = 0.2217
+
+Frequency
+
+‘to below 0,01034482750621 “to Below 0.05172413793103 to below 0.09310344827586
+
+Betweenness Centrality
+
+te below 0.13448275062069
+
+Figure 5.13: Betweencss centrality distribution for the influence network for 2009
+and Watts-Strogatz network with a rewiring probability of p=0.20.
+
+40
+
+@ 2010 Influence
+| WS @ = 0.27)
+
+correlation = 0.0932 |
+
+Frequency i
+
+°
+to below 0,01034482758621 ‘to below 0.05175413793103 ‘to below 0.09310344027586 ‘to below 0,13448275862069
+
+Betweenness Centrality
+
+Figure 5.14: Betweenncss centrality distribution for the influence network for 2010
+and Watts-Strogatz network with a rewiring probability of p=0.27.
+
+2011 Influence
+(_) WS @p = 0.24)
+
+correlation = 0.1621
+
+“0
+
+Frequency
+8
+
+10
+
+te below 0.13448275862069
+
+Neo below 0.05178413793103 to below 0.09310344827506
+
+Betweenness Centrality
+
+°.
+to below 0.01034482758621,
+
+Figure 5.15: Betwcenncss centrality distribution for the influcnce nctwork and
+Watts-Strogatz network with a rewiring probability of p=0.24.
+
+4)
+
+{@ 2008 Friendship
+[] WS (@p = 0.20)
+
+correlation = 0.2041
+
+Frequency
+
+to below 0,01034482758621 to below 0.05175413793109 “to below 0.09310344827586 ‘to below 0.13446275062069
+
+Betweenness Centrality
+
+Figure 5.16: Betwenness centrality distribution for the friendship nctwork for 2008
+and Watts-Strogatz network with a rewiring probability of p=0.20.
+
+2009 Friendship
+() WS @ = 0.20)
+
+correlation = 0.3454
+
+Frequency
+
+°
+to below 0,01034402758621 ‘to below 0.05178413793103 Yo below 0.09310344827506
+
+Betweenness Centrality
+
+No below 0.13448275862069
+
+Figure 5.17: Betwecnness centrality distribution for the fricndship nctwork for
+2009 and Watts-Strogatz network with a rewiring probability of p=0.20.
+
+42
+
+i 2010 Friendship
+WS (p = 0.28)
+
+correlation = 0.3273
+
+Frequency
+
+I
+
+a i
+to below 0.01034482750621 “to below 0,05178413793103 to below 0.09310344827586 "to below 0.13446275862069
+
+Betweenness Centrality
+
+Figure 5.18: Betwecenness centrality distribution for the fricndship nctwork for
+2010 and Watts-Strogatz network with a rewiring probability of p=0.28.
+
+2011 Friendship
+() WS @ = 0.28)
+
+correlation = 0.2892
+
+Frequency
+
+°
+to below 0,01034402758621 ‘to below 0.05178413793103 to below 0.09310344027506 Yo below 0.13448275862069
+
+Betweenness Centrality |
+
+Figure 5.19: Bctweenness centrality distribution for the fricndship nctwork for
+2011 and Watts-Strogatz network with a rewiring probability of p=0.28.
+
+The betweenness centrality distribution of the real networks deviate from
+the simulated Watts-Strogatz networks with correlation values ranging from 0.09
+to 0.30. The clustering coefficient of the both the simulated and real networks
+have very low values ranging from 0 to 0.15. However, the real networks follow a
+power-law form while the simulated networks seem to have peaks at higher values
+of BC. This can be explained by the real network's decreasing number of nodes
+and its system retaining the same set of people. There is a possibility of values of
+
+43
+
+betweenness centrality to fall because of the people getting to know more of each
+other across time making the network more connected.
+
+We now observe the distribution of the clustcring cocfficient for all networks.
+The distribution for the influence networks and the WS netwokrs are shown in
+Figures 5.20, 5.21, 5.22 and 5.23 and the distribution for the fricndship networks
+and its corresponding WS netwokrs are found in Figure 5.24, 5.25, 5.26 and 5.27.
+
+2008 Influence
+WS (p .27)
+
+correlation = 0.3351
+
+Frequency
+
+to below ocnsessi724i00 to below 0.34487566208 ‘e below 0,62060965517041 te below 0933172410799, |
+
+| Clustering Coefficient |
+
+ws A Ses
+
+Figure 5.20: Clustering coefficient distribution for the influence network for 2008
+and Watts-Strogatz network with a rewiring probability of p=0.27.
+
+2009 Influence
+WS (p ne?)
+
+correlation = 0.4576
+
+Frequency
+
+°
+to nelow openoessi720008 fo beldw 0.3448275862009 ‘te below 0,62060965517341
+
+Clustering Coefficient
+
+Figure 5.21: Clustering coefficient distribution for the influence network for 2009
+and Watts-Strogatz network with a rewiring probability of p=0.27.
+
+: 2010 Influence
+3 WS (p = 0.22)
+
+correlation = 0.6683
+
+Frequency
+
+‘te below o1nse5T172413703
+
+‘to below 0,62060965517041
+
+Clustering Coefficient
+
+Figure 5.22: Clustering coefficient distribution for the influence network for 2010
+and Watts-Strogatz network with a rewiring probability of p=0.22.
+
+2011 Influence
+() WS (p = 0.22)
+
+correlation = 0.5872
+
+Frequency
+
+ve below O1n96SS17R413799
+
+to nelow 0.06n005517240008 fe below 0.9440275862009, te below 0,62068965517701
+
+Clustering Coefficient
+
+Figure 5.23: Clustering coefficient distribution for the influence network for 2011
+and Watts-Strogatz network with a rewiring probability of p=0.22.
+
+45
+
+2008 Friendship
+WS (p 0)
+
+correlation = 0.3525
+
+Frequency
+
+te below 0.3440275062009 to below 0,62060965517002
+
+{® 2009 Friendship
+[WS (p 8)
+
+correlation = 0.3902
+
+Frequency
+
+fo below 0.3440075662009, te below 0,62068965517703
+
+Clustering Coefficient
+
+Figure 5.25: Clustering coefficient distribution for the friendship network for 2009
+and Watts-Strogatz network with a rewiring probability of p=0.28.
+
+46
+
+wy
+
+2010 Friendship
+0)
+
+correlation = 0.7833
+
+Frequency
+
+to nelow o.susessi724i00
+
+Figure 5.26: Clustering coefficient distribution for the friendship network for 2010
+and Watts-Strogatz network with a rewiring probability of p=0.20.
+
+@ 2011 Friendship
+a (WS @ -20)
+
+correlation = 0.6429 |
+
+Frequency
+
+to pelow o.o6usessi724108 te below 0.3440075062009 te betow 0,62068965517301
+
+Clustering Coefficient
+
+Figure 5.27: Clustering coefficient distribution for the friendship network for 2011
+and Watts-Strogatz network with a rewiring probability of p=0.20.
+
+For the clustering cocfficicnt, deviations have been observed between the
+real networks against the simulated networks having correlation values ranging
+from 0.3 to 0.7. The CC values of the simulated networks fall under the same
+values of the CC values of the real influence and friendship networks. However,
+the real networks have bigger spread compared to that of the simulated networks.
+This can be attributed to the social system’s characteristics of retaining the same
+set of people, the increasing interactions of these people, and the ”cliques” forming
+through time. The network have more varieties of ”cliques” or formation of im-
+mediate neighborhood compared to that of the ones generated by the WS models
+
+47
+
+thus making the CC distribution of the real networks spread wider compared to
+its simulated Watts-Strogatz network.
+
+5.2.2 Erdos-Renyi Model to House Co-authorship Networks
+
+The Erdos-Renyi or ER model and the House of Representatives co-authorship
+networks were observed and compared the network properties in all cases. Simu-
+lations were done up to 50 trials with different connecting probability from p=0.1
+to p=1. The distributions of the simulated network with the highest correlation
+coefficient wer obtained and plotted.
+
+Observation for the degree distribution of the House co-authorship networks
+and the simulated networks for different congresses are shown in Figure 5.28 to
+Figure 5.34.
+
+e 8th Congress
+al ER (p = 0.976)
+
+correlation = 0.5727
+
+Frequency
+
+‘e below 205.120205120705 ‘e below 209.230769220769 (e below 213.333939933003
+
+Degree
+
+Figure 5.28: Degrce distributions for the 8th Housc co-authorship nctwork and
+simulated ER networks with p = 0.976.
+
+48
+
+Figure 5.29: Degree distributions for the 9th House co-authorship network and
+simulated ER networks with p = 0.991.
+
+Figure 5.30: Degree distributions for the 10th House co-authorship nctwork and
+simulated ER networks with p = 0.948.
+
+Figure 5.31: Degree distributions for the 11th Housc co-authorship nctwork and
+simulated ER networks with p = 0.979.
+
+Figure 5.32: Degree distributions for the 12th Housc co-authorship nctwork and
+simulated ER networks with p = 0.910.
+
+13th Congress}
+ER (p = 0.975)
+
+correlation =|0.6653 |
+
+Frequency. Es
+
+telbciowb0n.205126205128" _ talbciow521,0756a1085642,
+
+Degree |
+
+Figure 5.33: Degree distributions for thc 13th Housc co-authorship nctwork and
+simulated ER networks with p = 0.975.
+
+Bran correlation = 0.2310
+5
+
+ES
+
+i
+
+i
+
+[>
+
+te netnw ban oabearolsear Da osiztzesi "  tebaw bee aioaseaToase
+
+Figure 5.34: Degree distributions for the 14th Housc co-authorship network and
+simulated ER networks with p = 0.975.
+
+The degree distributions in the real networks reflect the authorship size of
+a bill. It is observed that for both the simulated and real co-authorship networks,
+the k values are seen to lie in the range of 150 to 270 because of the system’s high
+number of authorship per bill. The real and simulated networks, however, have
+correlation coefficients ranging from 0.1 to 0.6. The real networks have a wider
+spread compared to the k values of the simulated ER networks. This is attributed
+to the co-authorship network’s system of authorship being not entirely random.
+There are more varying authorship sizes in the real network compared to that of
+
+the simulated networks.
+
+51
+
+The betweenness centrality distribution were computed for the all the co-
+authorship networks and the networks simulated from the Erdos-Renyi or ER
+modcl.The comparisons are shown in Figure 5.35 to Figure 5.41.
+
+é 8th Cannreat 1
+a5 ER (p = 0.978) |
+
+correlation = 0.1181
+
+Figure 5.35: Betweenness centrality distributions for the 8th House co-authorship
+network and simulated ER networks with p = 0.978.
+
+2 9th Congress
+ER (p = 0.993)
+
+correlation = 0.3325
+
+welociow0.01692307602308" vo below b o24ciszeatisae
+
+‘telbelow0,00929076913077
+
+Betweenness Centrality
+
+Figure 5.36: Betweenness centrality distributions for the 9th House co-authorship
+network and simulated ER networks with p = 0.993.
+
+52
+
+Figure 5.37: Betwecnness centrality distributions for the 10th House co-authorship
+network and simulated ER networks with p = 0.940.
+
+Figure 5.38: Betweenncss centrality distributions for the 11th Housc co-authorship
+network and simulated ER networks with p = 0.975.
+
+Figure 5.39: Betweenncss centrality distributions for the 12th Housc co-authorship
+network and simulated ER networks with p = 0.912.
+
+Figure 5.40: Betweenncss centrality distributions for the 13th Housc co-authorship
+network and simulated ER networks with p = 0.975.
+
+14th Congress
+a ER (p = 0.975) |
+
+correlation = 0.3717
+
+Frequency
+
+Betweenness Centrality
+
+Figure 5.41: Betweenness centrality distributions for the 14th Housc co-authorship
+network and simulated ER networks with p = 0.975.
+
+The distribution of the betweenness centrality of a network reflect the num-
+ber of bridges” that connect isolated clusters in a graph. The betweenness central-
+ity distribution for all the network fall around 0.001 to 0.1, reflecting the network
+structure’s dense connection. Although all the networks fall under this range,
+deviations of the BC values for the real and simulated networks are seen having
+correlation coefficients ranging from 0.09 to 0.3. This deviation is explained by the
+network being densely connected making the nodes have very low BC values. The
+real networks having wider spread compared to that of the simulated networks
+imply that the co-authorship system of the House of Representatives have more
+nodes that have differing values of betweenness centrality and that although the
+real House of Representatives co-authorship network is densely connected, it still
+has some number of nodes that connects certain subgraphs in the network.
+
+The clustering coefficient of the nodes of the networks are also computed
+and compared, as shown in Figure 5.42 to Figure 5.48. The distribution for real
+networks appear to be concentrated on high values of the clustering coefficient
+and while the distribution for the simulated networks also have high values for the
+clustering coefficient, they appear to have isolated distribution of lower clustering
+
+coefficient.
+
+55
+
+Figure 5.42: Clustering coefficient distributions for the 8th House co-authorship
+network and simulated ER networks with p = 0.970.
+
+Figure 5.43: Clustcring cocfficicnt distributions for the 9th Housc co-authorship
+network and simulated ER networks with p = 0.990.
+
+‘igure 5.44: Clustering coefficient distributions for the 10th Housc co-authorship
+network and simulated ER networks with p = 0.945.
+
+Figure 5.45: Clustering coefficient distributions for the 11th House co-authorship
+network and simulated ER networks with p = 0.974.
+
+57
+
+Figure 5.46: Clustering cocflicient distributions for the 12th House co-authorship
+network and simulated ER networks with p = 0.910.
+
+Figure 5.47: Clustcring cocfficicnt distributions for the 13th Housc co-authorship
+network and simulated ER networks with p = 0.977.
+
+() 14th Congress
+
+14 |) ER (p=0.979)
+
+correlation = 0.1767 |
+
+Frequency
+
+°
+to below 0,90512820312821 to below 0.93076923076923 (to Below 0.95641025641026 to Below 6.98205128305128
+
+| Clustering Coefficient
+
+Figure 5.48: Clustcring cocfficicnt distributions for the 14th Housc co-authorship
+network and simulated ER networks with p = 0.979.
+
+Comparison of the clustering coefficient of the real and simulated networks
+yielded high correlation coefficients ranging from 0.08 to 0.2. Although both the
+real co-authorship network and the ER network have CC values ranging from
+0.9 to 1, representing the network structure’s dense connections, there are still
+deviations with the spread of these values in the network. The real networks have
+wider spread compared to that of the simulated networks due to the different
+* configurations” of authorship groups that are found in the real system compared
+
+to that of the random graph.
+
+5.2.8 Erdos-Renyi Model, Barabasi-Albert, and Watts-Strogatz
+to MIDI Music Networks
+
+The Erdos-Renyi, Watts-Strogatz and the Barabasi-Albert model were used
+to gencrate nctworks and compare its nctwork paramctcrs with that of the MIDI
+music networks. Simulations were done up to 50 trials with different connecting
+probability from p=0.1 to p=1 for the ER and the WS model. The distributions of
+the simulated network with the highest correlation coefficient were obtained and
+plotted. The cumulative degree distributions were obtained for all the music
+networks - both real and simulated networks - and the comparison is shown in
+Figure 5.49.
+
+59
+
+‘e 100 oxo 3200
+
+?P
+
+Figure 5.49: Cumulative degree distribution for the MIDI music network and the
+ER, WS, and BA networks.
+
+It is observed from the previous figure that the MIDI music network follow
+the network generated by the Watts-Strogatz model or a small-world network.
+The clustering coefficient of the MIDI music network, the WS network and a
+randomized version of the music network was also obtained in order to support
+the degree distribution similarity of the music network to the WS network. This
+
+is shown in Figure 5.50.
+
+5 Music Networks
+@ Random Networks
+[MB Watts-Strogatz Network
+
+10
+
+“HULLTTTTATLUTUNTVUTUAAMGALA
+
+Jup to 0.06122448979392 up to 0,90612244897959 up to 0.55102010816327 up to 0.79591896791604
+
+Figure 5.50: Clustering coefficient distribution for the MIDI music network and
+the WS and a randomized version of the MIDI music network.
+
+One can note that the music networks have higher clustering coefficient
+
+60
+
+values compared to its randomized version. This is characteristic to a small-world
+
+network generated by the Watts-Strogatz model.
+
+61
+
+Chapter 6
+
+Summary and Conclusions
+
+Three sets of small real-world networks were used in this thesis - influence and
+friendship networks; House of Representatives co-authorship networks; and MIDI
+music networks. Network parameters were observed for structural analysis and
+several network models were used in order to generate networks to compare with
+the small real-world networks.
+
+6.1 Influence and Friendship Networks
+
+The average degree distribution of the influence and friendship gives informa-
+tion on the sizes of groups in the social networks. The degree distribution of the
+networks have peaks that represent the “clique” frequently found in the social
+network. Interestingly, the average degree distribution increased over the years
+except for the fourth year. This is due to the decreasing number of nodes of the
+network and for their fourth year - the affiliation in a research laboratory.
+
+Distributions of the betweenness centrality values were also computed and
+is seen to follow a power-law form. This means that most nodes have low values
+for BC reflecting the scarcity of ”bridges” that connect isolated clusters in the
+network. This is because of the students behavior in increasing the interactions to
+their fellow students through time making the network more connected. Moreover,
+one of the results of this increasing interactions among students is the decrease of
+the average BC over time.
+
+The clustering coefficient distribution for each network was also obtained
+and is seen to follow a binomial distribution with shifting peaks around the average
+CC of the network. The average clustering coefficient of the network is also seen
+to increase during the first three years but decrease during their fourth year.
+
+The Watts-Strogatz simulated networks (with connecting probability p =
+
+62
+
+0.20.3) matched the influence and friendship networks degree distribution with
+correlation coefficients ranging from 0.6 to 0.8. The betweenness centrality distri-
+bution and the clustcring coefficient distribution, on the othcr hand, obtaincd low
+
+correlation values ranging from 0.09 to 0.30 and 0.30 to 0.70, respectively.
+
+6.2 House of Representatives Co-Authorship Net-
+works
+
+Network parameters computed for the House or Representatives co-authorship
+networks represent features in its structure. Degree distributions computed for the
+networks were seen to peaks that represent tha authorship size common to each
+Congress. The betweenness centrality and the clustering coefficient were seen to
+have very low and very high values, respectively. This is reflective of the system
+being densely connected. Low values of betweenness centrality indicate that there
+are very few nodes that connect isolated clusters and high values of clustering
+coefficient indicate that almost all nodes have connected neighbor nodes. These
+results reveal the structure of the co-authorship network being highly connected
+with very few clusters.
+
+The Erdos-Renyi model was used to generate networks, with connecting
+probability p = 0.9—1.0 obtained low correlation values for the computed network
+parameters. The degrce distributions obtaincd correlation coefficients ranging
+from 0.1 to 0.6, the betweenness centrality obtained correlation coefficients ranging
+from 0.09 to 0.3 while thc clustcring cocfficient distirbution obtaincd corrclation
+
+coefficients ranging from 0.08 to 0.2.
+
+6.3. MIDI Music Networks
+
+Music network properties reflect the structure of the MIDI songs compiled.
+Classical music makes use of a wide range of notes making it to have a larger
+number of nodes and edges which may have resulted to high network radius and
+low betweenness centrality. There are fewer nodes that act as bridges because
+the network is densely connected. For the clustering coefficient, Classical music
+has a bigger spread in the network so that nodes are far from others making its
+clustering coefficient low. On the other hand, Rock music has a smaller network
+and nodes can easily cluster by forming connections to its neighboring nodes.
+
+The second data set is used to compute network properties to be compared
+
+63
+
+over time. Country music is observed to have a large radius over time compared
+to Rock and Pop music suggesting that its network has consistently have more
+number of nodes and cdges compared to that of Rock and Pop. This suggest
+that Country music is a more complex network than Rock and Pop. The mean
+betweenncss centrality, clustering cocfficient, and degree for all the music networks
+has a temporal variation but no trend can be seen. This may suggest that the
+structure of Classical, Rock and Pop music is constantly changing over timc.
+Comparisons of the degree and clustering coefficient were made among the
+MIDI music networks, Erdos-Renyi simulated networks, Watts-Strogatz simulated
+networks and Barabasi-ALbert simulated networks. It has been seen that the
+cumulative degree distribution of the MIDI music networks matched that of the
+Watts-Strogatz network. Moreover, a computation of the clustering coefficient
+distribution showed that the MIDI music network has higher clustering coefficient
+compared to the network’s randomized version. Thus, making the MIDI music
+
+network a small-world network.
+
+0)
+
+64
+
+Bibliography
+
+(7
+
+(10
+
+(uy
+
+M. van Steen, Graph Theory and Compler Networks. CreateSpace, 2010.
+
+R. Diestel, Graph Theory, vol. 173 of Graduate Texts in Mathematics.
+Springer-Verlag Heidelberg, New York, 3rd ed., 2005.
+
+A. Barrat, M. Barthelemy, and A. Vespignani, Dynamical Processes on Com-
+plex Networks. Cambridge University Press, 2008.
+
+S. Dorogovstev and J. Mendes, “Evolution of networks,” Advances in Physics,
+2002.
+
+L. Amaral, A. Scala, M. Barthelemy, and H. Stanley, “Classes of small-world
+networks,” Proceedings of the National Academy of Sciences, 2000.
+
+M. Faloutsos, P. Faloutsos, and C. Faloutsos, “On power-law relationships of
+the internct topology,” Proceedings of the conference on Applications, tech-
+
+nologies, architectures, and protocols for computer communication, 1999.
+
+S. Lawrence and C. Giles, “Accesibility of information on the web,” Nature,
+1999.
+
+M. Newman, “The structure of scientific collaboration networks,” Proceedings
+of the National Academy of Sciences, 2001.
+
+H. Jeong, S. Mason, A. Barabasi, and Z. Oltvai, “Lethality and centrality of
+protein networks,” Nature, 2001.
+
+R. i Cancho and R. Sole, “The small world of the human language,” Proceed-
+ings of the Royal Society of London, 2001.
+
+A. Broder, R. Kumar, F. Maghoul, P. Raghavan, S. Rajagopalan, A. Tomkins,
+and J. Wiener, “Graph structure of the web,” Proceedings of the 9th WWW
+Conference, Amsterdam, 2000.
+
+65
+
+12
+
+13)
+
+14
+
+15)
+
+16)
+
+17]
+
+18)
+
+19
+
+20)
+
+[21
+
+[22
+
+23)
+
+24)
+
+R. Kumar, P. Raghavan, S. Rajagopalan, and A. Tomkins, “Extracting large-
+scale knowledge bases from the web,” Proceedings fo the 25th VLDB Confer-
+ence, Edinburgh, Scotland, 1999.
+
+R. Albert, H. Jeong, and A. Barabasi, “The diameter of the world-wide web,”
+Nature, vol. 401, no. 5544, 1999.
+
+L. Adamic, “Zipf, powcr-laws, and parcto - a ranking tutorial,”
+http://www. pare.zeroz.com/istl/groups/iea/papers/ranking, 2000.
+
+R. Pastor-Satorras, A. Vazquez, and A. Vespignani, “Dynamical and correla-
+tion properties of the internet,” Physical Review Letters, 2001.
+
+R. Govindan and H. Tangmunarunkit, “Heuristics for internet map discov-
+ery,” Proceedings of the 2000 IEEE INFOCOM Conference, Tel Aviv, Israel,
+2000.
+
+S. Redner, “How popular is your paper? an empirical study of citation dis-
+tribution,” Eur. Phys. J, 1998.
+
+A. Barabasi and R. Albert, “Emergence of scaling in random networks.”
+Science, 1999.
+
+A. Barabasi, H. Jeong, Z. Neda, E. Ravasz, A. Schubert, and T. Vicsck,
+“Evolution of the social network of scientific collaborations,” Physica A, 2001.
+
+R. Ferrer, C. Janssen, and R. Sole, “The topology of technolofy graphs: Small
+
+world patterns in electronic circuits,” Physical Review E, 2001.
+
+W. Aiello, F. Chung, and L. Lu, “A random graph model for massive graphs,”
+Proceedings of the Thirty-Second Annual ACM Symposium on Theory of
+Computing, 2000.
+
+F. Liljeros, C. Edling, L. Amaral, H. Stanley, and Y. Aberg, “The web of
+human sexual contacts,” Nature, 2001.
+
+R. Albert and A. Barabasi, “Statistical mechanics of complex networks,”
+Review of Modern Physics, 2002.
+
+M. Newman, “The structure and function of complex networks,” SIAM Re-
+view, 2003.
+
+66
+
+25)
+
+26
+
+27
+
+[28
+
+29)
+
+[30]
+
+[31
+
+[32]
+
+[33
+
+[34]
+
+C. McKay, “Automatic genre classification of midi recordings,” MA Thesis,
+McGill Unversity, 2004.
+
+R. Basili, A. Serafini, and A. Stellato, “Classification of musical genre: a
+machine learning approach,” Proceedings of ISMIR, 2004.
+
+C. Xu, N. Maddage, X. Shao, F. Cao, and Q. Tiaon, “Musical genre classifica-
+tion using support vector machines,” Acoustics, Speech and Signal Processing,
+2003.
+
+S. Itzkovitz, R. Milo, N. Kashtan, R. Levitt, A. Lahav, and U. Alon, “Re-
+curring harmonic walks and network motifs in western music,” Advances in
+
+Complex Systems, 2006.
+
+X. Liu, C. Tse, and M. Small, “Complex network structure of musical com-
+positions: Algorithmic generation of appealing music,” Physica A, 2010.
+
+D.M. Huber, The MIDI Manual. Taylor and Francis, 2007.
+E. Selfridge-Field, Beyond MIDI. MIT Press, 3rd ed., 1997.
+
+D. Watts and S. Strogatz, “Collective dynamics of ”small-world” networks,”
+Nature, 1998.
+
+L. Amaral, A. Scala, M. Barthelemy, and H. Stanley, “Classes of small-world
+networks,” Proceedings of the National Academy of Sciences, 2000.
+
+A. Barabasi and R. Albert, “Emergence of scaling in random networks.”
+Science, 1999.
+
+67
+

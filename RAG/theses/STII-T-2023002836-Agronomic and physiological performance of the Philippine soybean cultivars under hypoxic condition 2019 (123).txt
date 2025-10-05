@@ -1,0 +1,3796 @@
+SS
+
+x
+
+
+bd
+
+UNIVERSITY OF THE PHILIPPINES LOS BANOS
+
+Master of Science in Agronomy
+LIEZLY LUMOCSO MAGDUA
+
+AGRONOMIC AND PHYSIOLOGICAL PERFORMANCE OF PHILIPPINE
+SOYBEAN CULTIVARS UNDER HYPOXIC CONDITION
+
+EUREKA TERESA M. OCAMPO
+
+Adviser
+Date: __May 2019
+This thesis can be made available to the general public | Yes
+This thesis can be accessed after consultation with author and thesis advisers | No
+
+This thesis can be accessed only to those bound by the confidentiality agreement [| No
+
+LIEZLY L. MAGDUA
+
+OZ4
+EUREKA TERESA M. OCAMPO
+
+{NO
+STI-18-1393
+
+
+AGRONOMIC AND PHYSIOLOGICAL PERFORMANCE OF PHILIPPINE
+SOYBEAN CULTIVARS UNDER HYPOXIC CONDITION
+
+LIEZLY L. MAGDUA
+
+SUBMITTED TO THE FACULTY OF THE GRADUATE SCHOOL
+UNIVERSITY OF THE PHILIPPINES LOS BANOS
+IN PARTIAL FULFILLMENT OF THE
+REQUIREMENTS FOR THE
+DEGREE OF
+
+MASTER OF SCIENCE
+(Agronomy)
+
+May 2019
+
+The thesis attached hereto entitled, “AGRONOMIC and PHYSIOLOGICAL
+PERFORMANCE OF PHILIPPINE SOYBEAN CULTIVARS UNDER HYPOXIC
+CONDITION”, prepared by LIEZLY L. MAGDUA in partial fulfillment of the
+requirements for the degree of MASTER OF SCIENCE (AGRONOMY) is hereby
+
+accepted.
+
+nscey ANNE F. ti ava enrol anusin
+
+Member, Guidance Committee Member, Guidance Committee
+
+Seg 2280 zg Mey 2/4
+Date Signed Date Signed
+
+EUREKA TERES YM. OCAMPO
+Chair, Guidancé Committee
+
+24 Mag 20/9
+Date Signed
+
+Accepted in partial fulfillment of the requirements for the degree of MASTER OF
+
+SCIENCE (AGRONOMY).
+
+EDNA A. AGUILAR
+Director, Institute of Crop Science
+
+RO May 2018
+Date Signed
+
+JOSE V. CAMACHO, JR.
+Dean, Graduate School
+
+Je, P14
+Date Signe
+
+
+BIOGRAPHICAL SKETCH
+
+The author was born on 25" June 1994 in Valencia City, Bukidnon. He obtained
+his Bachelor of Science degree in Agriculture in the Central Mindanao University on
+March 2014. For a semester after his undergraduate graduation, he worked as an
+instructor at the Camiguin Polytechnic State College and afterwards channelled to the
+institute of plant breeding and worked for almost 2 years as a research associate in corn
+macro-nutrient omission experiments under Dr. Artemio M. Salazar from November
+2014 to July 2016.
+
+He was admitted to the Graduate School in UPLB on August 2016 to pursue a
+Master of Science degree in Agronomy major in Plant Physiology minor in Plant
+Breeding. He was also fortuitously granted Scholarship under the Accelerated Science
+Technology Human Resource Development Program (ASTHRDP) of the state
+Department of Science and Technology (DOST).
+
+He is currently employed as a University Research Associate for the “Heterotic
+Assessment of Selected Philippine Maize Germplasm for Cultivar Development” under
+the leadership of Dr. Tonette P. Laude. The project is one of the sub-studies of the “Corn
+Germplasm Utilization for Advanced Research and Development” (CGUARD) program
+pioneered by Dr. Artemio M. Salazar, funded by the Bureau of Agricultural Research,
+
+Department of Agriculture.
+
+LIEZLY L. MAGDUA
+
+ACKNOWLEDGEMENTS
+
+The author would like to express boundless gratitude to his mentors:
+
+Thesis Advisory Committee:
+e Dr. Eureka Teresa M. Ocampo
+e Dr. Antonio G. Lalusin
+e Prof. Hazel Anne F. Makahiya
+Field of Crop Physiology:
+e Dr. Pompe C. Sta Cruz
+e Dr. Constancio C. De Guzman
+e Dr. Calixto M. Protacio
+e Dr. Nina M. Cadiz
+e Prof. Bong M. Salazar
+e Prof. Lilian F. Patefia
+Field of Plant Breeding and Genetics:
+e Dr. Jose E. Hernandez
+e Dr. Tonette P. Laude
+e Prof. Jefferson F. Paril
+e Prof. Ma. Cecilia S. Reamillo
+e Prof. Jae Joseph Russell B. Rodriguez
+Field of Biochemistry:
+e Prof. Joseph Carmelo K. San Pascual
+e Prof. Eljezwyne Clomer G. Barcellano
+
+The author would also like to shower the people he worked with and made the following places a delight to
+exist in with a torrent of many thank you(s):
+
+e Plant Physiology Laboratory
+
+e Cereals Breeding Section
+
+The author expresses his deepest sincerest gratitude to the following for the immensely helpful financial
+support throughout his graduate study:
+
+e DOST-ASTHRDP
+The author would also like to thank the Philippine Council for Agriculture, Aquatic and Natural Resources
+Research and Development (DOST-PCAARRD) for funding the following program: “MODECERA
+(Monitoring and Detection of Ecosystems Changes for Enhancing Resilience and Adaptation in the
+Philippines)” Project 2 ‘Monitoring the Responses and Productivity of Annual Field Crops; and
+Development of Intervention Strategies to Enhance Crop Adaptation to Climate Change” of the program
+which helped greatly in the completion of this study.
+
+And finally the author would like to give himself to the following:
+e Almighty God
+e Mama Liza and Papa Ely
+e Lone sister Liezel and two big Bros Mark Eric and Eliezar
+e The rest of the really big and amazing Lumocso and family
+e Dearest friend and friends
+
+TABLE OF CONTENTS
+
+IPR PAGE
+
+TITLE PAGE
+
+APPROVAL PAGE
+BIOGRAPHICAL SKETCH
+ACKNOWLEDGEMENTS
+TABLE OF CONTENTS
+
+LIST OF TABLES
+
+LIST OF FIGURES
+
+LIST OF APPENDIX TABLES
+LIST OF APPENDIX FIGURES
+
+ABSTRACT
+
+INTRODUCTION
+Objectives of the Study
+
+REVIEW OF LITERATURE
+Effect of Waterlogging on Soil Oxygen and Chemical Properties
+The Waterlogged Condition and Soybean Tolerance, Physiology and
+Adaptive Traits
+
+Soybean Waterlogging Tolerance
+
+vi
+
+PAGE
+
+iii
+
+xiii
+xiv
+
+XV
+
+Waterlogging Tolerance Responses
+
+Waterlogging Tolerance Physiology
+Biochemical Waterlogging Tolerance
+Morphological Waterlogging Tolerance
+
+Agronomic Waterlogging Tolerance
+
+MATERIALS and METHODS
+
+Experimental Site
+
+Experimental Unit, Treatments, and Design
+Establishment, Cultural Management, and Practices
+Meteorological Data
+
+Data Collection, Handling and Processing
+
+Data Analysis
+
+RESULTS
+
+Weather Condition
+
+Analysis of Variance over Two Years
+
+Performance of Soybean Cultivars
+
+Effect of Waterlogging Treatments
+
+Interaction Effect of Waterlogging Treatments on Soybean Cultivars
+Correlation of Traits to Seed Yield
+
+Damage Index based on Seed Yield
+
+DISCUSSION
+
+SUMMARY and CONCLUSION
+
+20
+
+26
+
+27
+
+28
+
+30
+
+30
+
+33
+
+34
+
+35
+
+36
+
+52
+
+55
+
+61
+
+62
+
+69
+
+78
+
+RECOMMENDATION
+
+LITERATURE CITED
+
+APPENDIX
+
+viii
+
+82
+
+83
+
+94
+
+TABLE
+
+LIST OF TABLES
+
+Pearson’s coefficient by multiple linear correlation among root
+architectural traits and, yield and yield components of soybean
+under normal (non-waterlogged) condition over years x cultivars
+interaction data points
+
+Pearson’s coefficient by multiple linear correlation among root
+architectural traits and, yield and yield components of soybean
+under 30DAP waterlogged condition over years x cultivars
+interaction data points
+
+Pearson’s coefficient by multiple linear correlation among root
+architectural traits and, yield and yield components of soybean
+under R1 stage waterlogged condition over years x cultivars
+interaction data points
+
+Pearson’s coefficientt by multiple linear correlation among root
+architectural traits and, yield and yield components of soybean
+across treatment conditions over years x cultivars interaction data
+points
+
+Seed yield related traits conferring waterlogging tolerance, cultivars
+showing the trait, and possible reason how these traits could
+possibly be responsible for tolerance of soybean (G. max) cultivars
+subjected to waterlogging treatments.
+
+PAGE
+
+64
+
+65
+
+66
+
+80
+
+FIGURE
+1
+
+LIST OF FIGURES
+
+Mean seed yield (14% MC t ha’') of Soybean cultivars subjected to
+waterlogging treatments. A. Comparison of years (across cultivars
+and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean central stem node number of Soybean cultivars subjected to
+waterlogging treatments. A. Comparison of years (across cultivars
+and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean central stem branch number of Soybean cultivars subjected
+to waterlogging treatments. A. Comparison of years (across
+cultivars and treatments); B Comparison of cultivars (across years
+and treatments); C. Comparison of Waterlogging treatments
+(across years and cultivars); and D. Interaction of cultivars and
+treatments
+
+Mean central stem podding node (or pod-bearing nodes in the
+central stem) of Soybean cultivars subjected to waterlogging
+treatments. A. Comparison of years (across cultivars and
+treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean branch podding node (or pod-bearing nodes in the branches)
+of Soybean cultivars subjected to waterlogging treatments. A.
+Comparison of years (across cultivars and treatments); B
+Comparison of cultivars (across years and treatments); C.
+Comparison of Waterlogging treatments (across years and
+cultivars); and D. Interaction of cultivars and treatments
+
+Mean pods per plant of Soybean cultivars subjected to
+
+PAGE
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+10
+
+11
+
+12
+
+waterlogging treatments. A. Comparison of years (across cultivars
+and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean pods per node of Soybean cultivars subjected to
+waterlogging treatments. A. Comparison of years (across cultivars
+and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean percentage of filled seeds of Soybean cultivars subjected to
+waterlogging treatments. A. Comparison of years (across cultivars
+and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean 100 seed oven dried weight of Soybean cultivars subjected to
+waterlogging treatments. A. Comparison of years (across cultivars
+and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean root length of Soybean cultivars subjected to waterlogging
+treatments. A. Comparison of years (across cultivars and
+treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean root surface area of Soybean cultivars subjected to
+waterlogging treatments. A. Comparison of years (across cultivars
+and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean root diameter of Soybean cultivars subjected to waterlogging
+
+treatments. A. Comparison of years (across cultivars and
+treatments); B Comparison of cultivars (across years and
+
+xi
+
+43
+
+44
+
+45
+
+46
+
+47
+
+48
+
+13
+
+14
+
+15
+
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Mean root volume of Soybean cultivars subjected to waterlogging
+treatments. A. Comparison of years (across cultivars and
+treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+Plant segment dry weight partitioning of Soybean cultivars
+subjected to waterlogging treatments. A. Comparison of years
+(across cultivars and treatments); B Comparison of cultivars
+(across years and treatments); C. Comparison of Waterlogging
+treatments (across years and cultivars); and D. Interaction of
+cultivars and treatments
+
+Mean Soybean waterlogging stability index or “damage index”
+based on the seed yield. A. Comparison of years (across cultivars
+and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across
+years and cultivars); and D. Interaction of cultivars and treatments
+
+xii
+
+49
+
+50
+
+67
+
+TABLE
+
+LIST OF APPENDIX TABLES
+
+Chemical properties of the 0-30 cm surface soil of the experimental
+area
+
+Strip-plot design combined analysis of variance (ANOVA) mean
+square values of the root architectural traits of Soybean (G. max)
+cultivars subjected to waterlogging treatments over two years
+
+Strip-plot design combined analysis of variance (ANOVA) mean
+square values of the yield, and yield components of Soybean (G.
+max) cultivars subjected to waterlogging treatments
+
+Strip-plot design combined analysis of variance (ANOVA) mean
+
+square values of the Plant Segment Dry Weight Partitioning of
+Soybean (G. max) cultivars subjected to waterlogging treatments
+
+xiii
+
+PAGE
+103
+
+104
+
+105
+
+106
+
+FIGURE
+1
+2
+3
+
+4a
+
+4b
+
+LIST OF APPENDIX FIGURES
+
+Weather condition throughout the experiment period.
+
+Observed R1 stage or beginning bloom stage of Soybean.
+
+Planting field soybean (G. max) for agronomic and physiological
+performance of Philippine soybean cultivars under hypoxic
+condition experiment
+
+Condition of field soybean (G. max) before waterlogging stress for
+agronomic and physiological performance of Philippine soybean
+cultivars under hypoxic condition experiment
+
+Condition of field soybean (G. max) before waterlogging stress for
+agronomic and physiological performance of Philippine soybean
+cultivars under hypoxic condition experiment
+
+Supplemental irrigation of field soybean (G. max) for agronomic
+and physiological performance of Philippine soybean cultivars
+under hypoxic condition experiment
+
+Field soybean (G. max) waterlogging experiment. A. Thirty days
+after planting waterlogging treatment overview; B. Water
+impounding by levee; C and D. Plot view of waterlogged
+condition.
+
+Wilting of field soybean (G. max) in agronomic and physiological
+performance of Philippine soybean cultivars under hypoxic
+condition experiment
+
+Sample overview: sequence for root system morphology evaluation
+of waterlogged soybean cultivars. A. Scanning; B. Image
+acquisition; and C. WhinRHIZO™ program image analysis.
+
+PAGE
+
+94
+95
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+ABSTRACT
+
+LIEZLY L. MAGDUA. University of the Philippines Los Baiios, April 2019.
+Agronomic and Physiological Performance of Philippine Soybean Cultivars under
+Hypoxic Condition.
+
+Major Professor: Dr. Eureka Teresa M. Ocampo
+
+A two-factor strip plot field experiment was conducted from March to August 2017 and 2018
+to screen response of cultivated soybean varieties to waterlogging at two developmental stages,
+and distinguish the morphological traits of tolerant/susceptible cultivars, and identify traits that
+can be used as selection criteria for flooding tolerance. Response of cultivars to the timing of the
+stress at fourteen days waterlogged duration was significant on seed yield per se and on the seed
+yield governing components. Based on seed yield damage index, PSB Sy] is the most tolerant
+genotype followed by the landrace 'Manchuria'; PSB Sy6 followed by PSB Sy3 were determined
+as the most susceptible genotypes under waterlogged condition. The effect on soybean seed yield
+of the two waterlogging stress timings (viz. 30 days after planting (DAP) and beggining bloom
+(R1) stage) were equal in statistical rank. Forthwith, it is suggested that the number of pods plant”
+" coupled with high percentage of seed-filled pods and the weight of seeds (plant) are the crucial
+seed yield components. Flooding stress caused damage on root length and shoot dry matter
+partitioning on susceptible genotypes, whereas the tolerant PSB Syl (across waterlogging
+treatments) was able to increase its root length, and leaf and stem partitioned dry matter. It
+appears that the tolerance mechanisms of soybean to waterlogging acts on the different seed yield
+components. Result suggests that it is viable and crucial to test soybean cultivars or varieties for
+
+waterlogging tolerance based on seed yield response and its relevant component traits.
+
+XV
+
+INTRODUCTION
+
+The vulnerability of the Philippines to climate change comes from being
+predominantly located in the tropics. The country ranks third among the world’s
+countries most vulnerable to weather-related risk (IBRD, 2013). Because of unpredictable
+climate patterns, the country’s agricultural productivity would continue to decline. In
+tropical and subtropical regions, part of the severe crop losses are caused by prolonged
+seasonal rainfall. Areas where rainfall is projected to decrease would face a growing
+shortage of water, whereas the incidence of flooding increases in areas where rainfall is
+intensified (PAGASA 2011). As early as the last quarter of the 19th century, a total of
+90,880 hectares of poor drainage soils in the Philippines was already recorded (Recel,
+1989) while a huge increase of almost six folds measuring a total of 511,456 hectares was
+recently recorded in the country (Carating, 2013). These poorly drained land areas are
+prone to and usually under soil waterlogging condition. Responding to these risks and
+
+trends creates opportunities that can benefit the Philippine agriculture.
+
+Soybean plants are important legume crops, used as a major source of food, protein,
+and oil, worldwide. Soybean is used as a major protein ingredient in the formulation of
+livestock and poultry feeds. At present, soybean is cultivated mainly for oil extraction
+and for the protein-rich de-oiled cake, which is a very important by-product with great
+commercial value (Singh and Shivakumar, 2010). In Asia, soybean farming is largely
+
+intensive and subsistent, it is grown as a sole crop or intercropped with other upland
+
+crops. Areas with productive rice or maize crop are usually suitable for soybean
+production. Highlights of the 2014 Philippine Annual Soybean Review and Planning
+Workshop was the report of “record-breaking” 5,280 hectares planted with soybean
+across all regions noted during the 2013 cropping, resulting in a three-fold increase in
+soybean production from 1,685 hectares in 2012 (Soybean TWG, 2014). In spite of the
+substantial increase, the country’s soybean area of production is still inadequate which is
+less than 1% relative to the US and China soybean cropped area, as well as compared to
+the rice cropped area in the country. Local soybean production remains minimal. The
+recorded soybean cropped area is only 21% of the land area planted to peanut which is its
+co-oil leguminous crop. In support to building a strong soybean production industry in
+the country, there is still a need to exploit the available soybean germplasm
+notwithstanding the modest domestic development; since the country has the inevitable
+demand for soybean grains for food and for feed formulation postulated by users and the
+agribusiness company involved in feed-milling operations. Because of the limited
+potential for increasing production area, it is very important that yield be accelerated
+under favorable non-stress and unfavorable stress-prone cultivated lands in order to meet
+
+increasing domestic and global demand.
+
+Soybean production is beset by several problems, among which are flooding or soil
+waterlogging. As with all the other crops, field production of soybean is also subjected to
+multiple biotic and abiotic stresses, especifically, soil waterlogging condition or excess
+water/moisture condition or flooding. For example, maize cropped areas are usually
+
+suitable for soybean production preferably in maize-soybean rotation which is one of the
+
+most important farm practice which deliver various physical and environmental gains.
+However, even such advantageous practice is hindered especially in Southeast Asia
+where 15% of the maize growing areas are affected by waterlogging (Rathore ef al.,
+1998; Hou and Thseng, 1991). Among all of the abiotic stresses, soil waterlogged
+condition is one of the major environmental stress factors that has a devastating effect on
+crop growth and ultimately causes reduction in yield and production (Normile, 2008).
+Waterlogging threatens soybean productivity in humid regions of Asia and is regarded as
+a major impediment to yield increase in the monsoonal areas of Asia (Kokubun, 2013). In
+the Philippines, waterlogging frequently occurs due to excessive rainfall, inappropriate or
+over irrigation, or poor drainage with high water table and therefore is accelerated on
+fine-textured soil sites. Waterlogging can happen during any growth stage of soybean, the
+crop is commonly intolerant of waterlogging stress (Tougou ef al., 2012) especially
+during vegetative (Sojka, 1985; Griffin and Saxton, 1988; Scott et al., 1989; Linkemer et
+al., 1998). This stress also has adverse effects on crop growth and seed development of
+
+soybean plants (Thomas and Sodek, 2005; Rao et al., 1999; Seong et al., 1999).
+
+In spite of the obvious importance of the problem, little attention was paid to its study
+unlike other extreme ecological stresses. The most economic way to reduce the damage
+caused by waterlogging is to introduce waterlogging tolerance into current varieties
+(Zhou, 2010). To achieve this target, sources of tolerance and a reliable waterlogging
+
+tolerance evaluation method are crucial.
+
+The general objectives of the study were to:
+
+A. evaluate the response of popular soybean cultivars to waterlogging stress in early
+season (30 days after planting, DAP) and late season (beginning bloom, R1 stage)
+flooding, and
+
+B. identify traits that can be used as selection criteria for flooding tolerance.
+
+The specific objectives of the study are to:
+
+1. study the effect of waterlogging stress on the agronomic and physiological traits
+of the different soybean cultivars, and
+2. analyze the morphological responses of the different soybean cultivars subjected
+
+to waterlogging stress.
+
+REVIEW OF LITERATURE
+
+Effect of Waterlogging on Soil Oxygen and Chemical Properties
+
+Armstrong and Drew (2002) on the topic of root growth and metabolism under oxygen
+deficiency explained that during waterlogging, water, which preferentially replaces air
+from soil pores is the single most operative impedance as a result of decelerating the
+diffusion of O2 to 1/10,000 and decrease of O2 concentration to about 1/32 of that in air.
+Furthermore, they illustrated that the final result is an effective resistance to flow which
+is about 320,000 times greater in saturated soils than that of air; the resistance then drives
+the development of root O2 deficiency.
+
+Jackson and Colmer (2005) then elaborated that the excessive amount of water that
+results in flooding stress generates a hypoxic situation.
+
+Under hypoxic condition, the function of soil microbes becomes important for plant
+life and growth. Tazi and Zeiger (2002) explained that anaerobic soil microorganisms
+(anaerobes) reduce Fe** to Fe**, and because of Fe”* higher solubility, it can advance to
+harmful concentrations when soils are anaerobic for more weeks. Moreover, they posted
+that other anaerobes reduce sulfate (SO,”) to hydrogen sulfide (H2S), which is a
+respiratory toxicant. They further compiled that under hypoxic condition with rampant
+supply of organic substrate, bacterial metabolites of anaerobes such as acetic acid and
+butyric acid are discharged into the soil water, and these acids along with reduced sulfur
+
+compounds account for the offensive odor of waterlogged soil. All of those substances
+
+made by microorganisms under anaerobic circumstance are deadly to plants at eminent
+volume.
+
+Taiz and Zeiger (2002) instilled that when temperatures are higher (greater than
+20°C), oxygen consumption by plant roots, and soil fauna and microorganisms, can
+
+totally deplete the oxygen from the bulk of the soil water in as little as 24 hours.
+
+The Waterlogged Condition and Soybean Tolerance,
+Physiology and Adaptive Traits
+
+Waterlogged Condition
+
+Critical review of Drew (1997) on injury and acclimation under hypoxia and anoxia
+explained that waterlogging in the rooting zone takes place with poor drainage after rain
+
+or irrigation (Drew 1997).
+
+Recently, study of Borella ef al. (2014) on waterlogging-induced changes in
+fermentative metabolism in roots and nodules of soybean genotypes concluded that
+waterlogging hinder the oxygen supply to the root system which suppresses respiration,
+and greatly cuts down the energy status of cells that influence important metabolic
+
+processes.
+
+Tamang and Fukao (2015) then resolved that excessive water in soybean negatively
+impacts its productivity and viability from receiving multiple stresses including low
+
+oxygen, low light, nutrient deficiency, and high risk of infection.
+
+Classic observation of Sugimoto ef al. (1988) using ‘Tamahomare’ soybean variety
+exposed that waterlogging obstruct stomatal conductance; Sojka ef al. (2005) then
+
+pointed out that waterlogging hinder photosynthesis.
+
+Waterlogging can obstruct hydraulic conductance. Everard and Drew (1987) observed
+that the values of water flux through anoxic roots fell below those of aerobic controls in
+
+7-d-old, maize roots.
+
+Oxygen deficit created by waterlogging can degrade root functions such as water
+uptake. Baradford and Hsiao (1982) studying on stomatal behavior and water relations of
+waterlogged tomato plants observed that Stomatal conductance and transpiration are
+reduced by 30% to 40% after approximately 24 hours of soil flooding. Oxygen deficit
+also root nutrient uptake function. Amarante and Sodek (2006) determined that
+
+waterlogging of soybean plants (Glycine max L.) led to impaired symbiotic No fixation.
+
+Soil chemical properties also change when anaerobic conditions persist for several
+days. This is followed by loss of chlorophyll of the lower leaves, arrest of crop growth
+
+(Patel et al., 2014).
+
+Soybean Waterlogging Tolerance
+
+Early study of Heatherly and Pringle (1991) on soybean cultivars response to flood
+irrigation of clay soil noted that soybean genotypes differ in their response to flood
+
+irrigation.
+
+Pires et al. (2002) studying on the morpho-physiological changes in Soybean in
+flooded soils detected that differences existed between cultivars under flooded soil.
+
+Malik et al. (2002) studying on the effect of different durations of waterlogging and
+subsequent drainage on wheat summarized that the magnitude of yield loss caused by
+waterlogging is associated to factors such as the growth stage of plants, depth of the
+water level and duration of waterlogging. They found that during waterlogging, the
+seminal root system stopped growing and did not recover to control values when drained,
+and the leaf nitrogen concentration was severely decreased.
+
+For soybean, early study of Sugimoto et al. (1988) on the effect of excess moisture
+injury of soybeans cultivated in a upland field converted from paddy resolved that the
+earlier the growth stage subjected to hypoxic condition was, the greater were the effects
+
+of excessive soil moisture on bleeding, stomatal aperture and mineral absorption.
+
+Waterlogging Tolerance Responses
+
+Parelle et al. (2010) noted on the topic genetic variability and determinism of
+
+adaptation of plants to soil waterlogging that induced traits can be roughly grouped into
+
+short-term responses (e.g., metabolic adjustments) and long-term acclimations (e.g.,
+
+development of aerenchyma).
+
+Short Term Responses
+
+A typical short-term response of roots is a decrease of respiration and an increase of
+glycolytic flux and alcoholic fermentation. One of the known qualified plant responses to
+soil waterlogging is the metabolic shift from aerobic respiration to anaerobic
+fermentation, and most proteins induced throughout hypoxic conditions are enzymes
+
+involved in the establishment of this fermentative pathway (Parent ef al., 2008).
+
+Diverse enzyme activities, including that of alcohol dehydrogenase, lactate
+dehydrogenase, pyruvate decarboxylase, and sucrose synthase, increased during the
+
+hypoxic pretreatment (Germain ef al., 1997).
+
+Borella et al. (2014) studying on the waterlogging-induced changes in fermentative
+metabolism in roots and nodules of soybean genotypes settled that the activity of alcohol
+dehydrogenase, pyruvate decarboxylase and lactate dehydrogenase enzymes, as well as
+
+the content of ethanol and lactate, increased with hypoxia in roots and nodules
+
+Alcohol dehydrogenase (ADH) is one of a number of enzymes of glycolysis and
+fermentation recognized to be synthesized preferentially under low O2, conditions. Result
+of Andrew et al. (1993) study on hypoxic and anoxic induction of alcohol dehydrogenase
+(ADH) in roots and shoots of Zea mays show that in root tips, ADH induction by anoxia
+
+was small and transient relative to induction by hypoxia.
+
+Tougou ef al. (2012) study on the responses to flooding stress in soybean seedlings
+with the alcohol dehydrogenase transgene noted that when young soybean seedlings at an
+
+early stage are transferred to flooding anaerobic conditions, alcohol dehydrogenase (Adh)
+
+10
+
+mRNA and Adh protein increase temporarily in the root tips, where active cell division
+
+demands high energy production.
+
+In plant cells, the activity of alcohol dehydrogenase (ADH) is largely increased as a
+response to oxygen deficit (Heldt et a/., 2011). ADH activity increases under different
+stress conditions, including anoxia (Crawford, 1977). Taiz and Zeiger (2002) elucidated
+that during episodes of anoxia, pyruvate produced by glycolysis is initially fermented to
+lactate. Consequently, the proton production by glycolysis, and other metabolic
+pathways, and decreased proton translocation across the plasma membrane and tonoplast
+lead to a lowering of cytosolic pH. At lower pH, lactate dehydrogenase activity is
+inhibited, and pyruvate decarboxylase is activated, this leads to an increase in the
+fermentation of ethanol and a decrease in the fermentation of lactate at lower pH,
+however, the pathway of ethanol fermentation consumes more protons than does the
+pathway of lactate fermentation, but the pathway increases the cytosolic pH and enhances
+
+the ability of the plant to survive the episode of anoxia.
+
+The net yield of ATP in anaerobic fermentation is only 2 moles of ATP per mole of
+hexose sugar respired (compared with 36 moles of ATP per mole of hexose respired in
+aerobic respiration) (Taiz and Zeiger, 2002), consequently, it convey changes in the
+respiratory metabolism of roots (Tewari and Arora, 2016) that originates in part from a
+lack of ATP to drive essential metabolic processes (Drew, 1997) resulting to energy
+
+deficiency (Andrews and Pomeroy, 1989). Abrupt changes in respiratory metabolism in
+
+11
+
+turn produce toxic metabolites and accumulate toxins like lactic acid (C3H¢6O3) and
+
+ethanol (C2HsOH) as anaerobic condition prevail (Parent et al., 2008; Perata et al., 2011).
+
+Soil waterlogging condition also leads to decreased biological nitrogen fixation, as
+nodules need sufficient oxygen for carrying aerobic respiration and supplying ATP,
+which is essential for maintaining nitrogenase activity. Study of Amarante and Sodek
+(2006) on waterlogging effect on xylem sap glutamine of nodulated soybean settled that
+
+waterlogging of soybean plants (Glycine max L.) led to impaired symbiotic N2 fixation.
+
+Under oxygen-limiting condition, ATP production is restricted; RNA and protein
+syntheses are highly inhibited except for the synthesis of specific RNAs and anaerobic
+polypeptides, one of which is alcohol dehydrogenase (Andrews ef al., 1993). These
+
+unsuppressed RNAs and proteins are involved in glycolysis and ethanol fermentation.
+
+Long Term Responses
+
+Long-term responses are mainly related to growth, either of existing or of newly
+
+formed structures.
+
+Classic study of Justin and Armstrong (1987) on the anatomical characteristics of
+roots and plant responses to soil flooding showed that flooding response and tolerance
+were related to fractional root porosity.
+
+On injury and acclimation under hypoxia and anoxia, early review of Drew (1997)
+
+distinguished that metabolic changes under anoxia help maintain root apical meristem
+
+12
+
+cell survival by generating ATP anaerobically and minimizing the cytoplasmic acidosis
+associated with cell death. Behind the root apex, where cells are fully expanded,
+ethylene-dependent death and lysis occurs under hypoxia to form continuous, gas-filled
+
+channels (aerenchyma) conveying O2 from the leaves.
+
+Recent critical review of Kokubun (2013) on the genetic and cultural improvement of
+soybean for waterlogged conditions in Asia remarked that soybean cultivars were found
+to form aerenchyma, which transports O2 from aboveground tissues to the root system, in
+
+response to waterlogging.
+
+Shimamura et al. (2010) put forward that aerenchyma provides a low-resistance Oz
+transport pathway that enhances plant survival during soil flooding. Study on soybean
+root morphological and anatomical traits associated with acclimation to flooding by
+Bacanamwo and Purcell (1999) recorded that no aerenchyma was observed in roots of
+nonflooded plants; however, it was abundant in roots of flooded plants. Their results
+indicate that acclimation to flooding in soybean involves preferential allocation of
+photosynthates to development of porous adventitious roots and that aerenchyma
+
+formation for soybean relying on N> fixation is critical for acclimation to flooding.
+
+Result of Shimamura er al. (2003) on the formation and function of secondary
+aerenchyma in hypocotyl, roots and nodules of soybean (Glycine max) under flooded
+conditions concluded that after 14 days of treatment, porosity exceeded 30% in flooded
+hypocotyl with well-developed secondary aerenchyma, while it was below 10% in
+
+hypocotyl of irrigated plants that had no aerenchyma
+
+13
+
+Result of Thomas ef al. (2005) concluded that flooding resulted in the rapid formation
+of adventitious roots and aerenchyma between the stem (immediately above the water
+line), roots and nodules. In the submerged stem, taproot, lateral roots and adventitious
+roots, lysigenous aerenchyma arose initially in the cortex and was gradually substituted
+
+by secondary aerenchyma arising from cells derived from the pericycle.
+
+Marashi and Mojaddam (2014) results showed that aerenchyma tissue and
+adventitious roots increased under waterlogging stress. The maximum and the minimum
+adventitious roots and aerenchyma tissue observed under 14 and 7 days waterlogging and
+the maximum and the minimum adventitious roots and aerenchyma tissue observed under
+
+5 and 0 cm water above the soil surface, respectively.
+
+Pires et al. (2002) study on morpho-physiological changes in soybean in flooded soils
+showed that the soybean stayed under flood from stadium V2 to V5 (21 days) presented
+mechanisms (stem base hypertrophy and adventitious roots with aerenchyma), that
+allowed its adaptation to hypoxia conditions under flooded soil. There was reduction in
+
+the levels of N, K, Mg and Mn and increase in the level of Fe in the leaves when flooded
+
+Bailey-Serres and Voesenek (2008) critical review on flooding stress acclimations and
+genetic diversity marked that the multifaceted alterations in cellular and organ structure
+that promote access to and diffusion of O2 processes are driven by phytohormones,
+
+including ethylene, gibberellin, and abscisic acid.
+
+Reid and Bradford (1984) composed on the effects of flooding on hormone relations
+
+that O2 deficiency inhibits synthesis of indole acetic acid (IAA), gibberellins, and
+
+14
+
+cytokinins by roots. However, in flooded pea plants, the concentration of abscisic acid
+(ABA) in the xylem sap increases (Zhang and Davies, 1987) and that increase in ABA
+originated both from a release of ABA sequestered in chloroplasts and from increased
+concentration of ABA in the xylem sap delivered to the leaves by the roots when the
+latter organ are under stress (Taiz and Zeiger, 1998), this increase offers a ready
+explanation for the decline in stomatal conductance and leaf growth that take place with
+
+flooding (Bradford and Hsiao, 1982).
+
+Marashi and Mojaddam (2014) study on adventitious root and aerenchyma
+development in wheat (Triticum aestivum L.) subjected to waterlogging showed that
+increased ethylene to accelerate aerenchyma tissue formation. Oxygen at below ambient
+levels is known to stimulate ethylene production. Oxygen deficiency stimulates the
+methionine-ethylene intermediate 1-aminocyclopropane-l-carboxylic acid (ACC)
+production by roots, and the ethylene precursor is carried in the transpiration stream to
+the leaves (Else and Jackson, 1998) where it is readily converted to ethylene. Ethylene in
+turn is known to stimulate aerenchyma production in some roots and can also affect root
+growth (Armstrong and Drew, 2002). Enlargement of this gas spaces is one of the most
+important adaptations which help prevent the onset of oxygen deficiency in growing roots
+
+(Arber, 1920; Justin and Armstrong, 1987; James and Sprent, 1999).
+
+Early study of Drew et al. (1979) on maize showed that ethylene treatment hastened
+the emergence of adventitious (nodal) roots from the base of the shoot, but slowed their
+
+subsequent extension. Ethylene also promoted the collapse of cells in the cortex of these
+
+15
+
+roots, with lysigenous development of prominent air spaces (aerenchyma). Their results
+suggested that adventitious rooting and cortical air space formation in nodal roots in Zea
+mays may be stimulated by enhanced concentrations of endogenous ethylene arising
+either from entrapment of the gas by unstirred water layers around the roots and/or by
+increased biosynthesis.
+
+On the other hand, study of Shimamura et al. (2014) on the role of abscisic acid in
+flood induced secondary aerenchyma formation in soybean hypocotyls showed that
+application of 1.0 4M ABA suppressed the enlargement of phellogen-derived cells,
+thereby suppressing subsequent gas space formation, and then almost completely
+inhibited aerenchyma development. Their results indicated that secondary aerenchyma
+formation requires a decrease in negative regulator ABA in soybean plants, that is, ABA
+inhibits elongation of cells derived from phellogen in secondary aerenchyma formation
+
+such as internodal cell elongation of floating rice stems.
+
+Waterlogging Tolerance Physiology
+
+There are two principal reasons for differences in flooding tolerance: morphological
+
+differences resulting in differences in the transport of oxygen to roots and biochemical
+
+differences in response to anaerobic conditions.
+
+Biochemical Waterlogging Tolerance
+
+Under stress, enormous amounts of reactive oxygen species (ROS) are produced that
+can cause lipid peroxidation, resulting in damage to cell membranes, protein oxidation,
+
+enzyme inhibition, and strand breakage in nucleic acids.
+
+Owing to low oxygen concentrations induced by waterlogging, the balance of active
+oxygen is disrupted and the active oxygen species (ROS) would be accumulated,
+sequentially, the membrane lipid peroxidation and the variations of anti-oxidation system
+
+is induced in cells which suffer from low oxygen stress (Blokhina, 2000).
+
+Major ROS scavenging enzymes in plants include superoxide dismutase (SOD),
+catalase (CAT), ascorbate peroxidase (APX), and glutathione reductase (Loggini et al.,
+1999). POD (peroxidase), a protective enzyme involving in membrane lipid peroxidation,
+can eliminate active oxygen species (such as H2O>2 and -OH). Previous studies indicated
+that high POD activity was the physiological basis of plant against abiotic stress (Zhou et
+al. 1999); additionally, it is known that the activities of POD were significantly
+negatively correlated with MDA content, referring that POD may play an important role
+
+in preventing plants from cell membrane lipid peroxidation (Yong-Zhong ef al., 2010).
+
+Physiological and genetic evidence clearly indicates that the ROS scavenging systems
+
+of plants are an important component of the stress protective mechanism (Allen, 1995).
+
+When flooded at the VI or V4 growth stages, concentrations of N and K in the above-
+
+ground plants were lower than the control after the flood. When flooded at R2,
+
+17
+
+concentrations of N and K were lower than in the control. The soybeans were particularly
+
+sensitive to the seven days of continuous flood at the R2 growth stage (Scott ef al., 1990).
+
+Sung (1993) study on waterlogging effect on nodule nitrogenase and leaf nitrate
+reductase activities in soybean showed that imposition of waterlogging either at R1
+(anthesis) or RS (commencement of seed fill) growth stage suppressed the activities of
+
+nodule nitrogenase and leaf nitrate reductase.
+
+Morphological Waterlogging Tolerance
+
+Trought and Drew (1980) study on shoot and root growth in relation to concentrations
+of dissolved gasses and solutes in the soil solution inferred that waterlogging slowed
+shoot fresh weight accumulation, leaf extension and nodal root growth; it also caused
+
+death of the seminal root system and early senescence of the lower leaves.
+
+Sallam and Scott (1987) study on the effects of prolonged flooding on Soybeans
+during vegetative growth concluded that prolonged flooding significantly reduced all
+
+soybean root and shoot growth parameters.
+
+Summary of Vartapetian and Jackson (1997) review on plant adaptations to anaerobic
+stress determined that mechanisms that underlie short-and long-term tolerance to external
+anaerobic conditions for roots include metabolic adaptations such as avoidance of self-
+
+poisoning and cytoplasmic acidosis, maintenance of adequate supplies of energy and
+
+18
+
+sugar, modifications to gene expression and metabolic acclimation to tissue anoxia by
+
+previous exposure to partial oxygen shortage
+
+Malik er al. (2002) study on short-term waterlogging effects on the growth and
+physiology of wheat concluded that during waterlogging, the seminal root system stopped
+growing. Leaf nitrogen concentration was severely decreased. When waterlogged pots
+were drained, seminal root mass did not recover to control values. By contrast,
+
+adventitious roots resumed elongation after drainage.
+
+Morita et al. (2004) study on the effects of waterlogging on root system of soybean
+concluded that growth of taproot and its lateral roots is suppressed by waterlogging,
+while formation of adventitious roots is promoted. Thus, soybean plants often form
+
+shallow root system under waterlogging conditions.
+
+Henshaw ef al. (2007) study on the root and nodule development response of soybean
+genotype to early-season flooding concluded that flooding reduced soya bean primary
+root weight, length and volume across genotypes. Genotypic differences in root
+development and tolerance to flooding were noted, with early-season flood tolerance
+correlated with primary root dry weight, length and surface area, and adventitious root
+dry weight. Their results indicate that full season trials may be necessary to identify
+
+flood-tolerant soya bean germplasm.
+
+Patel et al. (2014) study on flooding: abiotic constraint that limit vegetable
+productivity inferred that continued flooded conditions lead to lack of oxygen in the soil,
+
+restricting respiration of the growing roots. Additionally, plant transpiration is affected
+
+19
+
+under anaerobic conditions and extended waterlogging results in root death due to
+
+inadequate oxygen supply.
+
+Bradford and Hsiao (1982) study on the stomatal behavior and water relations of
+waterlogged tomato plants concluded that stomatal conductance and transpiration are
+
+reduced by 30% to 40% after approximately 24 hours of soil flooding.
+
+Spooner (1961) study on the effects of irrigation timing and length of flooding periods
+on Soybean yields detected that the determinate soybean cultivars were more susceptible
+
+to prolonged flooding during early reproductive growth than early vegetative growth.
+
+Villalobos-Rodriguez and Shibles (1985) study on the response of determinate and
+indeterminate tropical soybean cultivars to water stress revealed that indeterminate
+cultivars were better able to recover from water stress than were determinate ones, as
+indicated by their greater seed yield after recovery from stress treatment. This response
+
+was associated with more pods per node rather than with other yield components.
+
+Shimamura ef al. (2010) study on the stem hypertrophic lenticels and secondary
+aerenchyma enable oxygen transport to roots of soybean in flooded soil concluded that
+hypertrophic lenticels on the stem of soybean, just above the water surface, are entry
+points for Oz and these connect to aerenchyma and enable Oy transport into roots in
+
+flooded soil.
+
+Shimono ef al. (2012) study on the interactive effects of elevated atmospheric CO
+
+and waterlogging on vegetative growth of soybean showed that the negative effects of the
+
+20
+
+waterlogging were greater in root dry weight than in top dry weight, and the root
+
+exudation per unit root dry weight was also reduced by waterlogging.
+
+Recently, Tewari and Arora (2016) on soybean production under flooding stress
+emphasized that flooded conditions decrease root development, hence reducing the crop’s
+
+ability to absorb water and nutrients
+
+Agronomic Waterlogging Tolerance
+
+Minimal seed or biological yield reduction is the ultimate criteria for plant
+waterlogging tolerance, but the inherent components and processes which promote such
+tolerance can be examined. VanToai ef al. (1994) studying on the genetic variability for
+flooding tolerance in soybeans defined that flooding tolerance can be defined as high
+yield under flooding stress. Their study documented that differences in flooding tolerance
+
+existed among U.S. soybean cultivars.
+
+Early study of Spooner (1961) on the effects of irrigation timing and length of
+flooding periods on soybean yields showed a linear decrease in seed yield with flood
+
+duration.
+
+In relation to seed yield, Hedley and Ambrose (1981) remarked that the high planting
+densities required to attain good yields with the leafless pea make it a necessity to select
+
+plants with reproductive sinks that are tolerant of competitive environments.
+
+21
+
+Improvement of plant waterlogging tolerance critical review of Zhou (2010) notify
+that germplasm evaluation based on grain yield may be confounded because of the
+possibility that tolerance and recovery mechanisms only partly contributed to the grain
+
+yield after the waterlogging stress was terminated.
+
+Early study of Griffin and Saxton (1988) on the response of solid-seeded soybean to
+flood irrigation studied that when water was held longer than 2 d_post-flowering,
+significant yield reductions were noted. For their 2 year with flood periods of 4 or 8 d,
+yields for soybean flooded at V6 were substantially higher than yields from the R2 or R2
++ RS treatments. Increased numbers of both seeds per pod and seeds per plant accounted
+
+for the higher yields in the V6 treatment.
+
+Scott et al. (1989) study on the flood duration effects on soybean growth and yield
+noted that flood duration effects on the soybean plant were manifested in yellowing and
+
+abscission of leaves at the lower nodes, stunting, and reduced dry weight and seed yield.
+
+Linkemer ef al. (1998) study on waterlogging effects on growth and yield
+components in late-planted soybean showed that the early vegetative period (V2) and the
+early reproductive stages (R1, R3, and R5) were most sensitive to waterlogging. Yield
+loss in both field and greenhouse studies was induced primarily by decreased pod
+
+production resulting from fewer pods per reproductive node.
+
+Sugimoto et al. (2000) study on the effects of excess moisture in the soil at different
+stages of development on the growth and seed yield of soybean showed that at the flower
+
+bud differentiation stage, seed yield and vegetative growth were markedly depressed by
+
+22
+
+both waterlogging and flooding treatments. The longer the duration of the treatment, the
+severer the effects on seed yield. In their case, the numbers of branches and nodes per
+plant were decreased, whilst the shedding of buds, flowers and pods were increased. The
+resultant decrease in the number of pods per plant was the major reason for the decrease
+in seed yield. At the ripening stage, soybean was more tolerant to excess moisture in the
+soil. Vegetative growth was not affected by either treatment of the water table. The major
+
+reason for the decrease in seed yield was due to the decrease in the 100 seed weight.
+
+Sullivan et al. (2001) study on evaluating on-farm flooding impacts on Soybean
+showed that there was a significant negative correlation of flooding duration with the
+stand count, height, number of pods, and yield of soybean. There was no significant
+
+correlation of flooding duration with seed weight, oil, or protein content of the seeds
+
+VanToai et al. (2010) study on flooding tolerance of soybean germplasm from
+southeast Asia under field and screen-house environments demonstrated that flooding for
+two weeks at the R2 growth stage reduced grain yield under field conditions between
+36% and 100% (all plants dead). Tolerance to R2 flooding was associated with higher
+number of pods per plant and 100-grain weight. While there was no correlation in yield
+between field and screen-house tests, the flood tolerance ranking of the field test was
+correlated with the ranking of one screen-house test. Screen-house tests could distinguish
+
+tolerant from susceptible varieties based on plant survival and grain yield.
+
+Egli and Yu (1991) study on crop growth rate and seeds per unit area in soybean
+
+showed that seeds per m? as a direct function of canopy photosynthesis and a partitioning
+
+23
+
+coefficient. They further reiterated that the number of seeds per unit area is an important
+
+yield component in soybean
+
+Verma (1992) study on correlation and path analysis in blackgram revealed that the
+branches per plant, clusters per plant, pods per plant, seeds per pod, pod length and
+
+hundred seed weight exhibited significant and positive correlation with yield per plant.
+
+Seong et al. (2000) study on the responses of soybean cultivars to excessive soil
+moisture imposed at different growth stages revealed that cultivar differences in response
+to excessive soil moisture condition were conspicuous in seed dry weight and harvest
+index (HI) but not in the response to seed number or pod number per plant. The timing of
+irrigation causing the condition of excessive soil moisture influenced the vegetative or
+
+reproductive traits.
+
+Board and Modali (2005) study on the dry matter accumulation predictors for optimal
+yield in soybean revealed that environmental effects on yield were regulated by node and
+
+reproductive node number per area, pod number per area, and seed number per area.
+
+Collaku and. Harrison (2005) study on heritability of waterlogging tolerance in wheat
+concluded that selection for a relatively highly heritable trait, such as kernel weight,
+would be an effective way to improve waterlogging tolerance in early generations, as
+
+grain yield has a low heritability.
+
+Fageria (2009) determined that number of pods is one of the most important yield
+
+components in determining grain yield of dry bean.
+
+24
+
+Kumidini (2010) composed on soybean growth and development topic noted that
+vegetative development is, in part, a function of the rate of development of main stem
+nodes, the final main stem node number and branching, all of which influence the canopy
+
+structure.
+
+Rotundo ef al. (2012) study on the physiological strategies for seed number
+determination in soybean revealed that seed number was associated with rapid growth
+
+rates, increased partitioning and greater seed set efficiency.
+
+Kuswantoro (2015) study on agronomical characters of some soybean germplasm
+under waterlogging condition revealed that waterlogging was started at 21 days after
+planting until harvesting by applying water level about 5 cm above the soil surface. The
+results showed that soybeans could grow and produce grains even in a waterlogging
+condition in almost throughout its life cycles. Genotype which had the highest grain yield
+
+was supported by the number of pods per plant.
+
+Matsuo et al. (2017) summary on vegetative and reproductive morphology in soybean
+breeding noted that the most important factors for bean productivity are the number of
+
+pods per plant and the total weight of seeds per plant.
+
+Board and Kahlon (2011) summarized that for soybean: yield components which have
+potential to influence yield are seed number per area (seed m”), seed size (g per seed),
+seed per pod (no.), pod number per area (pod m”), pod per reproductive node (no.),
+reproductive node number per area (reproductive node m”), percent reproductive nodes
+
+(%; percentage of nodes becoming reproductive), and node number per area (node m”).
+
+25
+
+yield is controlled by primary yield components seed size and seed m”; seed m” is
+controlled by secondary yield components seed per pod and pod m”; pod m” is
+controlled by tertiary yield components pod per reproductive node and reproductive node
+m”; and reproductive node m” is controlled by quaternary yield components node m”?
+and percent reproductive nodes.
+
+It is essential to improve food production in the face of increasing extreme weather
+events such as soil waterlogging conditions and the most economic way to reduce the
+damage caused by waterlogging is to introduce waterlogging tolerance into current
+
+varieties (Zhou, 2010). To achieve this target, both sources of tolerance and a reliable
+
+trait evaluation method are crucial.
+
+MATERIALS and METHODS
+
+Experimental Site
+
+Field experiment was conducted at the experiment station of the University of the
+Philippines Los Bafios. Durig the first trial, planting was done on March 13, 2017 at IRRI
+dryland lot UW (14° 8' 32.0064" N latitude , 121° 15' 40.7412" E longitude; altitude of
+30masl). The trial was repeated the following year wherein planting was done on March
+12, 2018 at lot UQ (14° 8' 35.6892" N latitude, 121° 16' 1.2792" E longitude; altitude of
+31masl). The two cropping seasons encompassed the long-day condition in the region.
+The experimental area was a plain, upland topography after long term rice-rice cropping
+system; characterized by a Macolod clay loam soil type classified as Typic Dystrudepts
+(USDA soil taxonomy), brown-colored having a tenacious clay loam surface soil and is
+poorly drained primarily derived from volcanic tuff (Carating et al., 2014). The cultivated
+areas are planted to upland field crops (Cereals, root crops, sugarcane), fruit (Lansium
+domesticum), and industrial crops (Cocos nucifera) (Carating et al. 2014). The first upper
+layer has tenacious friable gravelly in structure and consistency and clay loam soil
+texture, whereas the second layer has granular sticky compact in structure and
+
+consistency and clay soil texture (DA-BSWM, 1946).
+
+27
+
+Soil Sampling and Analysis
+
+Initial soil sampling was made for the entire experimental area. Following the W-
+shaped sampling pattern, a composite soil sample taken to a depth of 6-7 inches was
+secured into a labeled waterproof container and was processed. A portion of the
+composite sample was submitted to the Agricultural Systems Institute - CAFS, UPLB for
+analysis. The chemical properties of the experimental area prior to planting are presented
+
+in Appendix Table 1.
+
+Experimental Unit, Treatments, and Design
+
+Three popular and one land race soybean cultivar was used namely: the (1) PSB Syl
+(“LG Soy1”) and (2) PSB Sy3 (“LG Soy2”) developed by the National Crop Research
+and Development Center - La Granja station, (3) PSB Sy6 (“Tiwala 8”) developed by the
+Institute of Plant Breeding-UPLB, and (4) the landrace ‘Manchuria’ — an unregistered
+cultivar but is widely cultivated in soybean growing areas in Mindanao land mass
+especially in Caraga and Zamboanga region. All test materials have intermediate (narrow
+and ovate) leaf shape and are yellow-colored seed acquired from their designated
+improvement center and/or growing areas.
+
+Two-factor field experiment was conducted following the strip-plot design described
+by Gomez and Gomez (1984). Treatments were considered as the first factor and
+
+randomly assigned to the vertical-strip plot whereas experimental cultivars were
+
+28
+
+considered as the second factor and was randomly assigned to the horizontal-strip plot
+(independent of the vertical-strip plot randomization) to control independence of error for
+statistical analysis. The experiment was arranged following the randomized complete
+block design (RCBD) lay-out replicated thrice. Each plot consisted of six (6) rows of 5
+meters long isolated at 60 cm distance between rows; the two (2) outer rows were
+designated as border rows and the four (4) inner rows as data rows. Isolation between
+blocks was implemented by inserting one (1) meter distance between blocks serving as
+the alley way. For the first factor, three (3) water management regimes was implemented
+namely: (i) Normal condition, where no waterlogging at any stage of the crop or normal
+water management; (ii) Thirty days after planting (30DAP WL) and (iii) R1 (Fehr and
+Caviness 1977; Appendix Figure 2) stage (Rl Stage WL) soybean waterlogging.
+Experimental plot of the latter two treatments were secured by making compact levee
+(Appendix Figure 6B) around the plot to hold the desired water depth. Waterlogging
+(Appendix Figure 6A) was implemented by complete flooding the appropriate plots for
+fourteen (14) days straight, maintaining ~5-10 cm water depth above the soil surface
+
+(Appendix Figure 6C,D).
+
+Establishment, Cultural Management, and Practices
+
+The experimental area was subjected to conventional land preparation. In brief,
+
+mowing implement was used to cut down standing weeds, a pass of mould board
+
+harrowing then was implemented to expose the soil and incorporate plant biomass, the
+
+29
+
+soil then was pulverized; finally, furrows were set at 60 cm apart. All land preparation
+phases was conducted using farm tractor using appropriate implement at each land
+preparation stage.
+
+At planting, the national cooperative testing (NCT) nationwide fertilization rate of 30-
+30-30 (N, P20s, K2O, kg/ha respectively) was applied. The complete granular fertilizer
+(14-14-14 NPK) was used to satisfy the fertilization rate which was 64.3 grams per
+individual row of 5 meter length. The whole fertilization rate was applied once as basal;
+the fertilizer was evenly drilled in each individual row and was covered with the adjacent
+ridge soil. Seeding then was initiated by evenly drilling seed-packet-contained excess
+seeds in each row and covered with the fine ridge soil. Thinning to fifteen (15) plants per
+linear meter was conducted fourteen (14) days after planting (DAP). Supplemental
+overhead irrigation was implemented after seeding and occasionally until soybean
+maturity when rainfall was not sufficient. Weed population was controlled by manual
+hand weeding twice before the canopy closes, tractor driven inter-row cultivation was
+also implemented at twenty one (21) days after seeding, and occasional mowing was
+implemented in between rows until soybean maturity. Chemical insect pest prevention
+(and/or control) was carried out by applying a broad spectrum insecticide Lannate™ (40
+SP; Methomyl active ingredient) at 15 and 25 DAP and Sevin™ (50 WP, Carbaryl active
+
+ingredient) from 35 DAP until maturity at 30 days interval.
+
+30
+
+Meteorological Data
+
+Experimental area’ daily solar radiation, rainfall, maximum and minimum
+temperature, sunshine hours, wind speed, and relative humidity were taken from the
+
+nearest agro-meteorological station.
+
+Data Collection, Handling and Processing
+
+Phenological Data
+
+Days to fifty percent Emergence
+
+This was recorded as the number of days from sowing to such time when
+approximately fifty percent of the seedlings have emerged being the appearance
+of the first leaf lamina breaking through the soil surface. This was conducted by
+
+visual observation.
+
+Days to fifty percent Flowering
+
+This was recorded as the number of days from emergence to that day when
+
+fifty percent of all plants in the inner row have produced their first open flower.
+
+LIBRARY 7
+
+Yield and Yield Components
+
+The seed yield was taken plot-wise and converted into tons per hectare. Four (4) linear
+meters (equivalent to 2.4 m? plot area) from the inner four rows by Quadrat design was
+harvested in each plot, that is, a linear meter containing no less than 10 plants from the
+central portion of each of the four inner rows was harvested. Harvesting was done by
+cutting the confined plants (in the Quadrat) close to the soil surface leaving no more than
+2 cm stubble. Harvested plants in each plot were counted and recorded, threshed and
+processed, and used to obtain the plot seed weight and moisture content to derive
+adjusted grain yield on a plot basis at 14% moisture content employing equation 1;
+whereas ten random subsample plants was used to measure central stem node number,
+central stem branch number, central stem podding (reproductive) node, branch podding
+(or reproductive) node, pods per node, pods per plant, percent filled pods, and 100 seed
+dry matter weight (HSW); the ten subsamples then was segmented to (i) leaves (all leaf
+lamina material), (ii) stem (including petiole), (iii) roots (root mass fraction) that was
+separated at the cotyledonary node, (iv) pods (without seeds), and (v) seeds for dry
+weight partitioning coefficient (%) determination. All dry weight and seed moisture
+content measurements were conducted by oven drying samples at constant 70°C for 72
+hours straight in a forced-air oven. All weight measurements were carried out using a
+calibrated electronic weighing scale (JCS-3K Model, AA Annex Automation Inc.,
+
+Singapore).
+
+32
+
+Yield stability index (Bouslama and Schapaugh, 1984) of soybean cultivars based on
+
+seed yield was computed following the equation 2.
+
+7 [Plot seed weight(kg)X Fora Fh ae ui
+Seed Yield (t Ha )= TAT (eq. 1]
+
+Normal condition - Waterlogged condition
+
+WS seed Yield = x 100 [eg. 2]
+
+Normal condition
+
+Root System Morphology Evaluation
+
+Evaluation of the root system morphology was conducted at maturity following the
+root excavation method outlined by Bohm (1979). Briefly, six (6) randomly selected
+plants representing an average growth performance of the plot within the inner four rows
+in each plot was tagged. Using local steel spade, a drench was dug at ~25 centimeter
+away from the plant stem for the four sides resulting to a cube at a depth of ~30
+centimeter. The root system confined in the cube of soil then was excavated. The samples
+were separately placed in a net bag; all the samples were placed in a plastic container and
+soaked overnight. The root system then was gently washed and cleaned from the
+remaining adhering soil particles and placed in a clean net bag. All samples then were
+stored, fully submerged in a 95% ethyl alcohol solution for not more than seven (7) days.
+Stored root samples were photographed by scanning (Appendix Figure 8A) over EPSON
+Perfection V700 PHOTO (Model: B11B178011, Epson America, Inc.,) calibrated for
+Regent Instruments Software, wherein individual root samples were laid plane on the
+
+standard tray (STD4800) and submerged with distilled water prior to image acquisition
+
+33
+
+(Appendix Figure 8B). Root system morphology analysis of the scanned image was
+conducted with the WinRHIZO PRO 2013 program (Regent Instruments Canada Inc.,
+Quebec, Québec, Canada; Appendix Figure 8C); image analysis measurements then were
+
+collated in the Microsoft Excel Office® Program (Microsoft™ Corporation).
+
+Data Analysis
+
+Analysis of variance (ANOVA) was conducted to detect significant effect of the
+treatments, cultivars and their interaction on the seed yield, yield components and root
+traits of soybean using the Statistical Tool for Agricultural Research (STAR®,
+International Rice Research Institute) software, consistent with the design of the
+experiment (strip-plot lay-out arranged in randomized complete block design). Means
+detected with significant difference was compared according to Fisher’s protected LSD
+post hoc means comparison. Correlation analysis using treatment means over replications
+in years by cultivars interaction data points, relating root architectural traits and yield
+components to seed yield was also conducted through multiple linear Pearson’s
+
+correlation analysis.
+
+RESULTS
+
+Weather Condition
+
+No drought condition was experienced by the tested soybean cultivars during the
+experiment though low rainfall was observed during the early phase of the crop
+(Appendix Figure 1, Rainfall) in both years. Lesser precipitation in year 2018 was
+corrected by supplemental irrigation (Appendix Figure 5). In both years, air temperature
+fluctuation was recorded during the first three weeks after planting (7-21DAP) in the
+experimental area (Appendix Figure 1, temperature), from there on the air temperature
+increased during the succeeding three weeks (35-42 DAP); the next temperature
+fluctuation recorded was at twelve to fourteen week (84-98 DAP) and the air temperature
+from there on decreased exponentially until harvesting. The observed temperature
+fluctuation also imposed fluctuation in heat units (Appendix Figure 1, heat units),
+consequently, the plants were exposed to heat stress when the air temperature exceeded
+the optimum maximum air temperature at 30°C (Hollinger and Angel, 2019; Appendix
+Figure 1, heat stress units). Across years, mean heat stress units of 2.341.4°C from
+emergence to around flowering was experienced by the plants. There was a two-fold
+increase in heat stress units (4.2+0.3°C) experienced by the plants after flowering which
+persisted for six weeks then declined to 2.2+1.1°C until harvesting. Daily total incident
+solar radiation is directly proportional to the temperature (Stefan-Bolzman Law), and is
+
+positively correlated with the sunshine duration (Kimball, 1919; Angstrém, 1924) but
+
+35
+
+negatively correlated with the amount of cloud cover (Kasten and Czelplak, 1979; Gul er
+al., 1998). Throughout the duration of the experiment in both years, the trend was a
+decreasing incident solar radiation resulting from decreasing daily sunshine duration
+(Appendix Figure 1, sunshine) and increasing cloud cover (Appendix Figure 1, cloud
+cover). In both years all test genotypes germinated (50% emergence) 10+1 days after
+
+planting (DAP) and flowered (50% R1 stage, Fehr and Caviness, 1977) 45+1 DAP.
+
+Analysis of Variance over Two Years
+
+Combined ANOVA over two years showed that soybean cultivars, treatments, and
+their interaction had distinct influence on the root architectural traits, yield and yield
+components (Appendix Table 1 and 2). Bartlett chi-square goodness of fit and Shapiro-
+Wilk error terms normality distribution tests on the observed variances for most of the
+traits considered showed that the variance among tested soybean cultivars that received
+the same treatment (and vice versa) was uniform (i.e. homogenous) and normally
+distributed (P<0.05), respectively. Root surface area, volume and number of root tips and
+percent filled pods were not normally distributed (P<0.05) but were homogenous. Over
+two years, exclusive of the 100 seed weight parameter, the genotypes and treatment and
+interaction effects, and block effects was also in additive manner as observed by no
+significant difference across block on the rest of the measured parameters, implying that
+the genotype and treatments effect was constant across blocks and vice versa. Coefficient
+
+of variation of the traits measured showed a range from 7.88% to 68.39% which is
+
+36
+
+classified as low to high, respectively according to Pimentel-Gomes (2000), indicating
+equivalent degree of precision with which the genotypes, treatments, cultivar-treatment
+interaction were compared, and reliability and validity of the experiment (Gomez and
+
+Gomez, 1984).
+
+Performance of Soybean Cultivars
+
+The range of soybean seed yield (across treatments and years) observed was between
+0.62 to 0.97 t ha’! adjusted to 14% moisture content (Figure 1). Tested genotypes had
+significant seed yield difference (P<0.10). PSB Sy6 and ‘Machuria’ had the highest mean
+seed yield followed by PSB Syl and PSB Sy3. PSB Sy6, ‘Manchuria’, and PSB Syl
+were comparable to each other while the PSB Sy3 cultivar had 34.7% significantly lower
+mean seed yield against the highest seed yield obtained.
+
+Except root volume, soybean cultivars differed significanlty in root architectural traits
+(P<0.01; Appendix Table 1). Genotype PSB Syl and PSB Sy6 had the longest
+comparable mean root length per plant recorded of 484.16 and 447.79 mm, respectively,
+while, the other two genotypes, PSB Sy3 and 'Manchuria' performed relatively shorter
+root length of 335.93 and 326.84 mm, respectively. The shortest root length recorded that
+of PSB Sy3 was nearly a fold (67.51%) shorter than the longest root length recorded that
+of PSB Syl (Figure 10. The ranking was true to the rest of the root traits measured
+
+(Figure 11 to 13).
+
+37
+
+20 :
+gets ;
+= a ’ al
+a= a ane r
+O10), |g @al afte e, ie
+
+HH oe
+4
+
+fd =
+o an
+__ j
+4
+4
+
+ak ies Se aa i We ne Sra Tt
+~- Ol=- MO OC BB HizwZ22 dia is 2oaiwe 2 2
+SSSSS SPSS ESS ESSERE SES 2
+®D Do oO: oO o
+
+35228 8\2 3 2% B22 R= 3 B22
+$seee se ga 8a) 8a, 8a Ba
+& z| z| &
+
+PSB Sy1 | PSBsy3 | PSB sy6 ‘Manchuria
+
+Figure 1. Mean seed yield (14% MC t ha”) of soybean cultivars subjected to
+waterlogging treatments. A. Comparison of years (across cultivars and
+treatments); B Comparison of cultivars (across years and treatments); C.
+Comparison of Waterlogging treatments (across years and cultivars); and D.
+
+Interaction of cultivars and treatments.
+
+38
+
+30 . _
+a
+25 a a 4 8
+I i
+HS a a A !
+§ 2 ab 5
+2 T b i
+3. be be | ab a
+St a u
+315 ry
+§8 aa
+n
+§ 10
+Cc
+Do
+o c
+5 . 0
+a re cee eigu gseoaisez ais 2. loo
+RgSSS obs eRe eee Ee eRes
+SRB BR SSS BSSBLSS BSS BSS S
+8 Sliaana & a s a 8 as 8 3| a sf
+= S| =] 82) 82 82 82 82
+1 x al x| | x
+| PSB Sy1! PSB sy3 PSB Sy6 ' Manchuria
+
+Figure 2. Mean central stem node number of soybean cultivars subjected to waterlogging
+treatments. A. Comparison of years (across cultivars and treatments); B
+Comparison of cultivars (across years and treatments); C. Comparison of
+Waterlogging treatments (across years and cultivars); and D. Interaction of
+
+cultivars and treatments.
+
+Figure 3.
+
+fo>}
+> |
+=
+
+Central Stem Branch Number
+(count)
+w
+
+39
+
+Year 2017 |
+Year 2018 |
+
+Normal |
+
+PSB Sy6 |
+30DAP WL |
+
+Manchuria
+
+4
+
+R1 Stage WL
+
+30DAP WL |
+
+Normal ,
+
+a i
+fia - |
+|
+i
+
+6b
+Be?
+7 ff
+
+0
+a
+
+i ——T A Tt [= “To T \
+siBesiresibes
+R2% 22% B22 8
+ss a Fadl Ss a
+no on n on
+Sl oe = oO —
+a z| a a
+y1'_PSB sy3 "PSB Syé “Manchuria
+
+Mean central stem branch number of soybean cultivars subjected to
+
+waterlogging treatments. A. Comparison of years (across cultivars and
+
+treatments); B Comparison of cultivars (across years and treatments); C.
+
+Comparison of Waterlogging treatments (across years and cultivars); and D.
+
+Interaction of cultivars and treatments.
+
+40
+
+20 ee —; .
+H ga
+o | c| ; |
+B A (2)
+ao 14 : fa a a
+3 a
+2 21 J} 6 6
+Ps a ab ab ab " b
+SS104a | ba,le “ a @
+ee 6 fe) a
+Oo 64 ce Pa
+4 oO a
+0 a ae rr T T 7—T T T T H T T
+™~ Oi—- MO CO O/H 2] Hina lt Hint HianHt2'i13
+~ - OOM S/S S| S S| S oS S| S a
+oO NNnNDn €|/2 za =z a z
+Ssiaaas Gs as S28 Ssh Ss
+| oO oO Ow Oe oO
+i a oc a fat oc
+PSB Sy1' PSB Sy3 ' PSB Sy6 ‘Manchuria
+
+Figure 4. Mean central stem podding node (or pod-bearing nodes in the central stem) of
+soybean cultivars subjected to waterlogging treatments. A. Comparison of years
+(across cultivars and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of Waterlogging treatments (across years and
+
+cultivars); and D. Interaction of cultivars and treatments.
+
+Branch Podding Node
+
+(count)
+
+35
+
+30 -
+
+nN
+Ss
+
+=
+a
+
+=
+o
+
+ee
+
+a
+
+41
+
+Year 2017 |
+Year 2018
+
+PSB Syl |
+PSB Sy3 |
+
+PSB Sy6_
+
+Manchuria |
+
+Normal
+
+30DAP WL |
+
+Ri Stage WL
+
+°
+
+@
+
+=
+°
+
+Hi-
+Oo
+
+Normal |
+
+~~
+n
+wo
+
+30DAP WL |
+
+S R1 Stage WL |
+
+Ss
+
+Normal —
+30DAP WL |
+
+J!
+=
+o
+D
+Bs}
+n
+=
+a
+
+Normal
+
+30DAP WL
+
+Figure 5. Mean branch podding node (or pod-bearing nodes in the branches) of soybean
+
+cultivars subjected to waterlogging treatments. A. Comparison of years (across
+
+cultivars and treatments); B Comparison of cultivars (across years and
+
+treatments); C. Comparison of Waterlogging treatments (across years and
+
+cultivars); and D. Interaction of cultivars and treatments.
+
+42
+
+160 oe —
+“po 8 B :
+{sa}
+° a a
+120 | * _—
+i"
+= 100- Pw 6 | Oo
+Eo a a) T
+BS oF | '
+$3 810 a a 6
+ge e 9184 :
+& 60 L a?
+40 ‘ a
+| CG B
+oy -_
+0 as i a a aan aL ppp — i. a |
+~S O]—~ | Cig 2 | s ered wi 2in2z2
+S glean sl\e== essitzslps zigz =
+~ vimana o/s Ed Sis 2 esa Bs 2 gis a 2)
+NDnNN |= za 2a =a =a
+BSE EE gl” 8 5)” 8" 8 5)” Bal" 8 8
+& al z| & &
+PSB Sy1 ' PSBSy3 | PSB sy6 ‘Manchuria
+
+Figure 6. Mean pods per plant of soybean cultivars subjected to waterlogging treatments.
+A. Comparison of years (across cultivars and treatments); B Comparison of
+cultivars (across years and treatments); C. Comparison of Waterlogging
+treatments (across years and cultivars); and D. Interaction of cultivars and
+
+treatments.
+
+43
+
+8 nn
+oo o ;
+74 a
+a i
+o 5 }
+35 b 6 ‘
+iS ag
+ora
+B34 B} 5 wa 6
+3 a
+& 34° be a 2 a
+' a
+a es a
+24 cd .
+4 a
+~- Or OO Cit Hlew2H2dii«w2t 2st H2ivn2
+Ege oo S|E = S22 ES SEF SES
+~winpoom sis? SiS Sse ¥ise Fseg
+a NNNM C= z 2 2 jz x
+Sse fe seal 8s Bal” 8a Ba
+oO oO = oOo oO oO =
+i z| z| Ee &
+PSB Sy1'! PSB Sy3 PSB Sy6 “Manchuria
+
+Figure 7. Mean pods per node of soybean cultivars subjected to waterlogging treatments.
+A. Comparison of years (across cultivars and treatments); B Comparison of
+cultivars (across years and treatments); C. Comparison of Waterlogging
+treatments (across years and cultivars); and D. Interaction of cultivars and
+
+treatments.
+
+44
+
+70 .
+Bo fo]
+60 b
+50
+2
+if
+n
+B40) F #
+Bee oil? ‘ ab
+ira , ia * 4 Pa a i »
++ | 4% O be a a
+20 - oe “loge
+L I
+10 | by a o ,
+Ps B
+~- Ol- MO OO O/B HH] Hj$ia] 242 5B] 2H]!'altiisa a
+Ssleooea s\EPS/ESSESSES SPSS
+Sinan s|5% s5% 35% 35% 85a 8
+oa
+ggeaa si Sal 8a gay gal sa
+mo oO oO oO ao
+Pad wo a | =| fava
+PSB Sy1! PSB sy3 ' PSB sy ! Manchuria
+
+Figure 8. Mean percentage of filled seeds of soybean cultivars subjected to waterlogging
+treatments. A. Comparison of years (across cultivars and treatments); B
+Comparison of cultivars (across years and treatments); C. Comparison of
+Waterlogging treatments (across years and cultivars); and D. Interaction of
+
+cultivars and treatments.
+
+(g DM)
+
+for}
+
+100 Seed Weight
+
+Figure 9.
+
+45
+
+B
+
+J!
+=
+
+o
+a
+8
+an
+—
+oa
+
+Normal |
+Normal |
+30DAP
+
+Year 2017 |
+Year 2018
+PSB Sy1 |
+PSB Sy3 ,
+PSB Sy6 |
+Manchuria
+S3ODAP WL |
+R1 Stage WL
+
+PSB Sy1
+
+Normal |
+3ODAP WL
+R1 Stage WL
+
+Normal
+
+30DAP WL
+
+R1 Stage WL |
+
+Normal
+
+30DAP WL
+R1 Stage WL
+
+PSB Sy3
+
+PSB Sy6 “Manchuria |
+
+Mean 100 seed oven dried weight of soybean cultivars subjected to
+
+waterlogging treatments. A. Comparison of years (across cultivars and
+
+treatments); B Comparison of cultivars (across years and treatments); C.
+
+Comparison of Waterlogging treatments (across years and cultivars); and D.
+
+Interaction of cultivars and treatments.
+
+46
+
+al of : |
+600 ;
+a
+a b i
+500 | a oo =
+a ;
+££ i a Oo
+2 40 ja a be a : a be |
+= a a - a
+OE coe Le] i |
+8 E300 _
+200 |
+100 |
+ho 22 8 2z2laa z|3 =! als als =|
+ISSISSS SESSESS ESS ES SESE
+28g 3B o/5% 15% 95% 35% 85% 8
+oo 0 i=
+sgeees Ba ga 8a 2a Be
+recliners EE
+PSB Sy1 | PSB sy3 ' PSB sy6 | Manchuria
+
+Figure 10. Mean root length of soybean cultivars subjected to waterlogging treatments.
+A. Comparison of years (across cultivars and treatments); B Comparison of
+cultivars (across years and treatments); C. Comparison of Waterlogging
+treatments (across years and cultivars); and D. Interaction of cultivars and
+
+treatments.
+
+Root Surface Area
+(mm? plant’)
+
+~~
+Oo
+
+47
+
+al lo |
+B
+7 a a
+J abe ® i) ’ a |
+, a 4
+8 o c 5 be a a 8 U c ‘ be al
+7 Qo a = i
+a - ,lCUe s |
+ao |
+a
+3 en Sea ar sd J SS
+‘BS SSS PZ ESS ESSERE SESE
+Skane sso g5o 5% 355 35% 8
+SSjexeeX2 si agai aai*aar-aag “ag
+= 2) 82) 82 82 82 8%
+x «| al | rg
+PSB Sy1 ' PSBSy3 ' PSB sy6 | Manchuria
+
+Figure 11. Mean root surface area of soybean cultivars subjected to waterlogging
+
+treatments. A. Comparison of years (across cultivars and treatments); B
+
+Comparison of cultivars (across years and treatments); C. Comparison of
+
+Waterlogging treatments (across years and cultivars); and D. Interaction of
+
+cultivars and treatments.
+
+48
+
+2.0 ; _ :
+A c
+Jo @ cc] |
+16 ab t
+, a . ran
+1.4 a a a a!
+o~ | be wo O)* ¥ B ” B 6 @ * i
+gel la be @ ie ab be bbe a 6 o |
+$210 a ' ea, a |
+sf ’ a
+g£08 ja
+0.6
+04
+0.2
+Im Ole © © Ola HY H's ol@G cs oaiw22
+Re 2S SES Ses sla cea Bas
+ama ols [=] {=} Ss {=}
+BEINN D cla SPizxt Vs =) 4 =) a b=)
+xX &| z| «| x
+PSB Sy! ! PSBsy3 | PSB syé 'Manchuria
+
+Figure 12. Mean root diameter of soybean cultivars subjected to waterlogging treatments.
+A. Comparison of years (across cultivars and treatments); B Comparison of
+cultivars (across years and treatments); C. Comparison of Waterlogging
+treatments (across years and cultivars); and D. Interaction of cultivars and
+
+treatments.
+
+49
+
+2.5 4 7
+a 8
+a
+20 44
+is)
+gm15 ja
+ee) | laa
+Sa a LJ
+St ab
+2510 4
+e210 Fa
+0.5 - i
+|
+[ys ols O Sig a
+NS Vinam 6/5 &
+S82 22 si- Ss
++> =| 3
+|
+
+Figure 13. Mean root volume of soybean cultivars subjected to waterlogging treatments.
+A. Comparison of years (across cultivars and treatments); B Comparison of
+cultivars (across years and treatments); C. Comparison of Waterlogging
+treatments (across years and cultivars); and D. Interaction of cultivars and
+
+treatments.
+
+50
+
+a m Seed
+Ea teii| mPod
+f ef | =, GLeaf
+202 4 (Beale z ‘| Stem
+01 5 i oe es ae ae “| mRoot
+0.0 —— ee i
+iS Ol Saget Hiatt +ia itz a
+SRP SS 20 ESE SCE SCE sees
+5 5 ej2a 2a 2 2zaoz2zaQ
+SSeeES" Sal sa ag ga ee
+a a a a a
+PSB Sy1 PSB Sy3 PSB Sy6 Manchuria
+
+Figure 14. Plant segment dry weight partitioning of soybean cultivars subjected to
+waterlogging treatments. A. Comparison of years (across cultivars and
+treatments); B Comparison of cultivars (across years and treatments); C.
+Comparison of Waterlogging treatments (across years and cultivars); and D.
+
+Interaction of cultivars and treatments.
+
+Secondary plant architecture-related seed yield components of soybean cultivars were
+significantly different (Table 2). Central stem node number and the number of
+reproductive node (the stem podding node) significantly differed between genotypes
+
+(Ps<0.05). PSB Sy] had the most central stem node number per plant of 22.7 followed by
+
+51
+
+PSB Sy6 (17.3), 'Manchuria’ (14.4), and PSB Sy3 (14.3; Figure 2); consequently, PSB
+Syl, PSB Sy6, PSB Sy3 and 'Manchuria' had the most number of reproductive node
+(pod-bearing node) in the central stem in decreasing order (Figure 4), with the PSB Sy]
+cultivar obtained the most number but comparable to that of the PSB Sy6 and PSB Sy3
+but significantly differing from the ”Manchuria’ genotype. Branching (central stem
+branch number) and the reproductive node number from the stem branch (pod bearing
+node from the branch) also differed significantly between soybean cultivars (P<0.05,
+Figure 3 and 5). PSB Sy6 consistently had the most mean branch number and
+reproductive node from the branch per plant of 3.2 and 20.6 count, respectively. PSB Sy1
+and PSB Sy3 performed comparably lower in this trait with the PSB Sy6. The landrace
+Manchuria consistently had the fewer mean number of branching (Figure 3) and branch
+reproductive nodes (Figure 5) of only 1.8 and 4.8, respectively.
+
+Primary seed yield components of soybean cultivars was significantly different (Table
+2). Mean pods per plant (P<0.05) and pods per node (P<0.05) significantly differed
+between genotypes. PSB Sy1 had the most mean pods per plant of 107 (Figure 6) though
+it hat the intermediate pods per node of 3.7 among the genotypes. Conversely, the
+landrace 'Manchuria' had the lowest pods per plant of 56 but it had the most pods per
+plant of 6. PSB Sy3 and PSB Syé6 had the comparable intermediate mean pods per plant
+of 70 and 88, respectively, and pods per node of 2.4 and 2.8 relatively to the two extrems
+obtained by PSB Syl and Manchuria. soybean cultivars also differed significantly in
+
+mean percentage of filled pods (P<0.05) and 100 seed dry matter weight (HSW; P<0.05).
+
+52
+
+The recorded range for percent pod filling was only 12.6% to 32.5% (Figure 8) and 9.0
+grams to 11.2 grams on the HSW (Figure 9) across the tested soybean cultivars. PSB Sy6
+had the highest mean percent filled pods of 32.5% whereas ‘Manchuria’ had the highest
+HSW of 11.2 grams. The PSB Sy1, PSB Sy3 and ‘Manchuria’ had the lowest comparable
+percentage filled pods whereas PSB Syl, PSB Sy3 and PSB Syé6 had the lowest
+comparable HSW .
+
+Across cultivars and treatments, partitioned dry matter to the roots differed
+significantly (P<0.05) between years, wherein, a mean of 0.7 partioning coeffcient was
+recorded for year 2017 whereas a two-fold redcution to 0.3 was recorded for year 2018
+(Figure 14).
+
+There was no significant difference on the amount of dry matter partioned to the root
+system, leaf, and seed (the harvest index, HI; Figure 14). Whereas cultivars differed
+significantly (P<0.05) on the dry matter partitioned to stem and pod segments. PSB Sy6
+and 'Manchuria' had the highest dry matter partitioning to the stem whereas PSB Sy] and
+
+PSB Sy3 had highest dry matter partitioning to plant pod segement.
+
+Effect of Waterlogging Treatments
+
+Waterlogging treatments differentially affected seed yield of soybean cultivars
+(P<0.10). Across genotypes, non-stressed or non-waterlogged ("Normal") condition
+recorded the highest mean 14% moisture seed yield of 1.2 tons per hectare. The two
+
+waterlogging stress conditions significantly reduced soybean seed yield; fourteen (14)
+
+53
+
+days waterlogging of soybean cultivars at the thirtieth (30) days after planting had
+resulted to 54.6% reduction relative to the non-waterlogged (Normal) plots, whereas the
+same waterlogging duration imposed at the R1 stage of soybean had reduced seed yield to
+a magnitude of 39.9% and is comparable to the yield reduction of the latter treatment as
+revealed by post hoc Fisher's LSD mean comparison (Figure 1).
+
+On the root architectural traits of soybean (across year and genotypes), root length,
+root diameter, and root tips statistically differed between waterlogging treatments
+(P<0.05) while the effect of waterlogging treatments on the root surface area and root
+volume did not differ statistically. Normal condition had the shortest root length recorded
+of 335.4 mm while 30DAP WL and R1 Stage WL treaments promoted an increase in root
+length at 20.5% and 22.2%, respectively. On the root surface area, although there were no
+significant statistical difference, the Normal plots had the lowest mean of 90.5 mm? per
+plant while 30DAP WL treatment resulted to an 8.1% increase in the area, whereas R1
+Stage WL treatment increased the area at 11.7% relative to the Normal plot. On the root
+diameter, R1 stage WL plots had the widest mean root diameter per plant but did not
+differed significantly in Normal plot, while 30DAP WL treatment resulted to reduction at
+13.4% relative to the Normal plot. On the root volume, although there were no significant
+statistical difference, Normal plots also had the highest mean root volume per plant of 2.0
+cm’, relatively to this, 30DAP WL treatment and RI Stage WL resulted to reduction in
+this root trait at 18.2% and 10.2%, respectively.
+
+Secondary plant architecture-related seed yield components of soybean (across
+
+genotypes) was also significantly affected. Waterlogging treatments did not show
+
+54
+
+statistical difference in central stem reproductive or podding node number but established
+significant difference on the plant central stem node number (P<0.05), branch number or
+branching (P<0.05), and branch reproductive or podding node (P<0.10). Normal plots
+and 30DAP WL treatment had the least and comparable central stem node while R1 stage
+WL promoted an increase of 30.1% relative to Normal plot. Normal plots and R1 Stage
+WL treatment had the least and comparable number of branching while 30DAP stage WL
+promoted an increase of 57.6% relative to Normal plot.. Consistent with the effect on
+mean central stem node and, R1 Stage WL treatment also had effected the most number
+of reproductive node number derived from the central stem, whereas Normal plot and
+30DAP WL treatment had the comparable mean value recorded.
+
+On the primary seed yield components measured, pods per node, pods per plant and
+HSW did not differ significantly between waterlogging treatments across genotypes,
+however, percentage filled pods (P<0.05) was significantly different between
+waterlogging treatments. The range of percent filled pods was low and is between 16.9%
+to 27.9% (across years and treatments). Normal plot had the most percent filled pods,
+while 30DAP WL and R1 Stage WL treatment decreased percent filled pods relative to
+the Normal plot by 21.5% and 64.6%, respectively.
+
+Waterlogging treatments did not cause significant difference in the soybean plant
+segmental dry matter partitioning. Harvest index was alike for all waterlogging
+treatments across genotypes.
+
+There was no statistically significant difference between the two waterlogging stress
+
+condition employed in seed yield reduction relative to the Normal plot.
+
+55
+
+Interaction Effect of Waterlogging Treatments on Soybean Cultivars
+
+Significant interaction effect existed between the two factors at P<0.05, this indicates
+that the cultivar difference was significantly affected by the treatments and that the
+treatment effect differed significantly with the genotypes used. Within PSB Syl,
+subjected to Rl Stage WL had the highest recorded mean seed yield of 1.1 tons per
+hectare which is 21.2% higher but is statistically comparable to the mean seed yield
+recorded from the Normal plot; whereas, this cultivar subjected to 30DAP WL treatment
+effected the most reduced mean seed yield which was 1.9% relative to the Normal plot
+(Figure 1). In PSB Sy3, Normal plot treatment attained the highest mean seed yield at
+0.86 tons per hectare, this cultivar when subjected to 30DAP WL had a reduced mean
+seed yield relative to the Normal plot by 15.5% but did not statistically differed, while
+when subjected to Rl Stage WL treatment it had the reduced mean seed yield of only
+0.25 tons per hectare, a 240.7% mean reduction relative to Normal plot. PSB Sy6 had the
+highest mean seed yield recorded across all treamtment-cultivar interactions at 1.7 tons
+per hectare under Normal condition of 1.9 tons per hectare, but subjecting this cultivar to
+30DAP WL and R1 Stage WL effected an extreme mean seed yield reduction by 645.5%
+and 150.9%, respectively. The landrace ‘Manchuria’ yielded the mean of 1.1 and 1.0 tons
+per hectare under R1 Stage WL and Normal strip plot and was statistically comparable;
+however, this cultivar subjected to 30DAP WL treatment effected a significant mean seed
+yield reduction to 0.7 tons per hectare and had the the mean reduction of 55.8% relative
+
+to the Normal plot.
+
+56
+
+On the root length component of the root architectural traits, there was significant
+interaction existed between the two factors at P<0.05; this indicates that the cultivar
+difference was significantly affected by the treatments and this was true also to the
+measured root surface area, root diameter, root volume, and root tips. Within PSB Syl,
+under Normal and R1 Stage WL strip plot treatments had the a statistically comparable
+mean root length, however, this cultivar when subjected to 30DAP WL treatment effected
+a significant increased mean root length at 33.1% relative to Normal plot mean root
+length; similar trend was observed on the root surface area in this cultivar, but on mean
+root diameter per plant, 30DAP and R1 Stage WL treatments effected a significant
+reduction by 23.9% and 22.5%, respectively, relative and is non-comparable to the mean
+root length under Normal strip plot; mean root volume responded in the same manner as
+root diamter in this cultivar. In PSB Sy3, the 30DAP WL treatment effected the reduction
+on all the root architectural traits measured across all treatment-cultivar interaction; it
+reduced root mean root length and root surface area relative to Normal condition
+treatment by 0.1% and 0.2% but did not statistically differ to Normal condition, mean
+root diameter by 18.1%, and mean root volume by 69.2% per plant; meanwhile, the R1
+Stage WL treatment relative to Normal condition increased the mean root root length by
+44.5%, root surface area by 38.2, root diameter by 15.3%, and root volume per plant by
+33.8%. In PSB Sy6, Normal strip plot treatment had the shortest mean root length per
+plant which differed significantly to the measured value under 30DAP and R1 Stage WL
+treatments; such that mean root length per plant was increased by 29.7% and 42.6% when
+
+this cultivar was subjected to 30DAP and WL treatment, respectively. Similar trend of
+
+57
+
+treatment effect was observed on the mean root surface area and root volume per plant.
+Contrariwise, reversed trend of the treatment effect was observed on the mean root
+diameter per plant, such that the lowest mean value observed was under the Normal strip
+plot treatment and subjecting this cultivar to 30DAP and R1 Stage WL treatment
+promoted a decreased mean root diameter by 23.6% and 10.7%, respectively. Aside from
+the root volume, there was no significant difference between the observed mean value for
+the rest of the root traits measured under Normal and R1 Stage WL treatments in the
+landrace ‘Manchuria’; significant reduced mean value was recorded when this cultivar
+was subjected to the 30DAP WL treatment causing a reduction of 0.6% on the mean root
+length per plant, root surface area by 6.1%, and root volume by 18.8% relative to under
+Normal strip plot treatment.
+
+On the secondary plant architecture-related seed yield components of soybean,
+significant interaction effect difference existed between the two factors at P<0.05; this
+indicates that the cultivar difference was significantly affected by the treatments and vice
+versa. Exclusive of the extent of branching (central stem branch number) and branch
+podding node, the number of node coming from the central stem, reproductive node
+coming from the main stem of PSB Sy] did not significantly differ across waterlogging
+treatments. PSB Syl under Normal strip plot treatment had most mean number of
+branches per plant of 4.1, however subjecting this cultivar to 30DAP and R1 Stage WL
+treatments effected reduction in branching by 93.7% and 38.5%, respectively. The PSB
+Sy3 under Normal strip plot treatment had the mean central stem node number of 17.5,
+
+subjecting this cultivar to 30DAP WL treatment effected a significant reduction on this
+
+58
+
+trait by 453.6%%, contratriwise, subjecting this cultivar to Rl Stage WL promoted an
+increased value in this trait by 21.5%, relative to under Normal conditon treatment.
+Similar response trend was observed on the reproductive node coming from the central
+stem and branch. The extent of branching (central stem branch number), however, was
+reduced in the two stress stages by 485.3% and 6.2% in 30DAP WL and RI stage WL.
+The secondary yield components of PSB Sy6 was increased by either of the waterlogging
+stress treatment. 30DAP WL increased the mean central stem node number by 81.9%,
+extent of branching by 52.4%, and reproductive nodes coming from the central stem by
+64.2 and branches 64.1, relative to under Normal condition treatment; whereas subjecting
+this cultivar to Rl Stage WL treatment promoted a relatively higher degree on the
+measured secondary traits by 83.6%, 64.6%, 73.7%, and 67.1%, respectively. The mean
+number of central stem node number of the landrace ‘Manchuria’ did not differ
+significanlty across waterlogging treatments although 30DAP and R1 Stage WL
+treatments effected a reduced number on this trait by 15.0% and 14.9%, respectively. The
+mean number of reproductive node coming from the branches were comparable across
+waterlogging treatments although 30DAP and R1 Stage WL treatments effected a
+reduced number on this trait by 8.4% and 58.7%, respectively. Normal and R1 Stage WL
+treatments had the most comparable effect on the extent of branching while 30DAP WL
+treatment effected intermediate significant reduction on this trait by 38.4% relative to
+under Normal condition treatment; same trand was also observed on the reproductive
+node coming from the central stem where 30DAP WL treatment reduced the mean value
+
+by 66.3%.
+
+59
+
+The primary seed yield components had significant interaction effect difference
+existed between the two factors at P<0.05; this indicates that the cultivar difference was
+significantly affected by the treatments and vice versa. PSB Syl under Normal and
+30DAP WL treatment had comparable mean total pods per plant although the latter
+treatment had 5.9% lower value relative to the former treatment; notably, subjecting this
+cultivar to Rl Stage WL treatment resulted to a significant reduced value in this trait by
+38.6% relative to under Normal condition strip plot. Mean pods per node did not differ
+across waterlogging treatments in this cultivar though 30DAP and R1 Stage WL
+treatments effected a 0.4% and 30.4% decrease, respectively, relative to under Normal
+condition strip plot. Although treatments had equal statistical rank, the Waterlogging
+stress treatments increased the ratio of seed-filled pods over the total harvested pods by
+29.3% and 38.3% promoted by 30DAP and R1 Stage WL treatments, respectively.
+Waterlogging stress treatments increased significantly the 100-seed dry matter weight
+contrastive under Normal condition by 8.9% and 1.6% for 30DAP WL and R1 stage WL,
+respectively. PSB Sy3 under Normal condition strip plot had pods per plant of 79.4,
+subjecting this cultivar to 30DAP WL treatment decreased the mean value significantly
+by 398.7% whereas subjecting the cultivar to Rl Stage WL treatment effected a
+significant increase in mean value of this trait by 29.9%, contrastive to under Normal
+condition. Similar treatment effect trend was obsserved on mean pods per node and
+percentage of seed-filled pods. Notably, both waterlogging stress treatments increased
+significantly the 100-seed dry matter weight contrastive under Normal condition by
+
+16.0% and 16.1% for 30DAP WL and RI stage WL, respectively. Waterlogging
+
+60
+
+treatments significantly affect PSB Sy6 mean pods per plant, pods per node, percent
+seed-filled pods, and 100-seed dry matter weight. Among the cultivars under normal
+condition, PSB Sy6 had the least recorded mean pods per plant of 27.2, however,
+subjecting such cultivar to 30DAP and R1 Stage WL treatment significant promoted an
+increase in mean value of the trait by 27.1% and 19.5%, respectively. Similar treatment
+effect trend was observed on the mean pods per node, while reverse trend was observed
+on the percent seed-filled pods and 100-seed dry matter weight, wherein, 30DAP effectd
+a reduction in the mean value by 107.8% and 2.5% of the percent seed-filled pods and
+100-seed dry matter weight, respectively, whereas R1 Stage WL treatments effected a
+reduction in the mean value by 781.3% and17.8%, of the percent seed-filled pods and
+100-seed dry matter weight, respectively. The landrace 'Manchuria’ under Normal and
+30DAP WL treatment had comparable mean pods per plant and pods per node; however,
+subjecting the landrace cultivar to Rl Stage WL treatment significantly effected a
+reduction at 40.2% and 33.9% on this two traits, respectively. The landrace 'Manchuria’
+under Normal and R1 stage WL treatment had comparable percentage of sedd-filled
+pods; however, subjecting the landrace cultivar to 30DAP WL treatment significantly
+effected a reduction at 23.0%. Though equally ranked statistically, the 100-seed dry
+matter weight of the landrace ‘Manchuria’ was reduced in waterlogging treatmens by
+13.7% and 5.1% when subjected to 30DAP WL and RI stage WL, respectively.
+
+Among the plant segmental dry matter partitioning coefficient, significant interaction
+effect difference existed between the two factors at P<0.10 on the pod and seed segments.
+
+As shown in Figure 14 shows the plant segment dry weight partitioning of soybean
+
+61
+
+cultivars subjected to waterlogging treatments. Subjecting PSB Syl to waterlogging
+treatments reduced the pod partitioning coefficient by 36.8% and 39.4% in 30DAP WL
+and RI stage WL, respectively; seed partitioning coefficient is also reduced in this
+cultivar under waterlogging treatments by 59.4% and 450.3% in 30DAP WL and R1
+stage WL, respectively. Subjecting PSB Sy3 to waterlogging treatments reduced the pod
+partitioning coefficient by 16.4% and 23,4% in 30DAP WL and RI stage WL,
+respectively; seed PC is also reduced in this cultivar under waterlogging treatments by
+28.3% and 34.1% in 30DAP WL and R1 stage WL, respectively. Subjecting PSB Sy6 to
+waterlogging treatments reduced the pod partitioning coefficient by 27.5% and 6.9% in
+30DAP WL and R1 stage WL, respectively; but seed partitioning coefficient is increased
+in this cultivar under waterlogging treatments by 5.1% and 34.5% in 30DAP WL and R1
+stage WL, respectively. Notably, subjecting the landrace ‘Manchuria’ to waterlogging
+treatments increased the pod PC by 22.6% and 26.9% in 30DAP WL and RI stage WL,
+respectively; seed partitioning coefficient is also increased in this cultivar under
+waterlogging treatments by 57.1% and 73.5% in 30DAP WL and RI stage WL,
+
+respectively.
+
+Correlation of Traits to Seed Yield
+
+Using treatment means over replications in years by cultivars interaction data points,
+multiple linear correlations analysis relating roots architectural traits and yield
+components to seed yield revealed that under normal condition, soybean seed yield has
+
+significant high negative correlation to central stem node number, extent of central stem
+
+62
+
+branching, and central stem podding node, and number of pods per plant; on the other
+hand, seed yield has significant high positive correlation to percentage of filled pods
+(Table 4). Under 30DAP WL stress, seed yield has significant negative correlation to
+extent of branching only (Table 5), while in R1 stage WL stress, seed yield has
+significant high negative correlation to the root surface area (Table 6). Across treatments,
+seed yield has significant intermediate negative correlation to central stem node number,
+branch podding node, and pods per plant, and significant intermediate positive correlation
+
+with percentage of filled pods (Table 7).
+
+Damage index based on seed yield
+
+PSB Sy3 and PSB Sy6 had the highest comparable susceptibility index (Figure 15).
+Damage WSI or index base on seed yield recorded for PSB Sy6 was 64.5% relative to
+non-stress condition while the PSB Sy3 had 36.3%. PSB Syl seed yield was not reduced
+by either of the waterlogging stress and achieved the negative value of -13.1% index.
+
+‘Manchuria’ had the intermediate susceptibility index of 16.4%.
+
+“(4BH) 00'1 01.290 <(ereIpouurayUT) £9°0 09 £€°0 “(MOT) E£°0 01 00'O ‘ABUT JUAIDNJI0D,
+
+‘queoljIUsIs jou —
+
+SU {JaAQ] AjI[Iqeqosd [0'O> Ie JLOIFTUTIS - yy {JOAd| AtIqeqosd ¢o'9 ye wRoTUBIS - 4, ‘JaAo] AipIqeqosd Q]°O Je JUROTFIUIS - ,
+
+ES
+
+b PIa1A PaaS ‘St
+=65°0 xepul jseueH “pL —
+su@G0r sud’ ‘ MGO P98 001 Eh g < Fi
+sub€0-  suQh' = 250 1 Spog paylij abeyusnag ‘Z), 3 ze
+9270 sup" 0h b queld Jad spog josequny 4, S g
+600 vB = uZS0 oe 980 SEO t @pon Jad spog jo JAquINN ‘O| -
+su€0'O- supp s0Z'0- 200 oO OL b PON Buippog wats jesjuad *6 San
+sul90 2G 200 =slZ0 BO BOO L'0 ‘ PON Bulppog seyouelg Wa}S JesUaD *g 2 & 3
+SLO 050 «90 sh'0 080 G00 8S 96'0 b JOAQUIN YOUeIg WA}S |esUaD “2 3 Fa a
+suBE'O-  subS'O — su0h'0 BHD) 660) SEO shBO BO 80 ‘ Joquinn apon ways jeNuaQ’g & FX
+60'0  suZEOr seZEO- SEDO os Z8'0 09010 G60 SI's GO 080 b Sdi] JOOy Jo saqUINN *G >
+970 = s0S0 890" ZO) GO BOD uh HED SEO LO ESO ‘ SWNJOA JOON “py = ED »
+suGh'O-  sEZ'0" eB BED ZL 290 0900 60'S 200" S10 su 5790 b Jajoweigjooy'g 8 eB
+suf0'0 EO 970-0 oeZ6'0 910660 690 BSD 9B BED GO 000 b ealy aeyng jooy'z 5 ~
+£010 suGEOr e870" ZOD 06'0 600660690 S080 oO = ESO 0's 0F b bua] Jooy "| _
+
+SL bb €L Zt tL OL 6 g Z 9 S v € 4 b SIaOWEIEd
+
+SS
+
+‘sjuiod eyep uoTRIAIUI SIBAI[ND X SIBOK IDA UOTIPUOD (pe8Zo]19}eM-UOU) [eULIOU JopuN Uvaqhos Jo sjusUOduUIOS
+PISIA pur plaif “pur syreyy yemmjooytyoue Joos Buowe uoyepasos seaury odrynur Aq ,WuatsyJa09 UOTea1109 S,uosIead “] 292L
+
+£9
+
+“(y31H) 00°T 01 £9°0 {(aretpowtzaqUT) 29°90 01 €€'0 (MOT) £€'0 01 00'0 -9BUEI JUATOD0D,
+
+‘queoljiusis Jou —
+
+SU {JOAgT AtTIqeqoid [Q'O> Je WFTUBIS - x4 “T2A2] Atpiqeqosd ¢o'0 ye ]WedIFIUBIS - 44 “[OA2] Ayyiqeqosd Q] ‘0 3@ yuRoyIUsIS - ,
+
+Leen ee
+
+\ PIAA P22S “SL
+x90 | XepulIseneH Ph
+uO 0060" mao pees oor’) § _ 3
++60 190 alSO | L Spo pally aBewaned 7, 8 2
+28 w6F0 60 lO uejd 10d spog jo sequin}, g
+sO HCO NGO EEO TO pon Jad spo Jo JeqUMN 0}
+580" 9870 070 ob6'O BED SEO PON BuIppod WAS UBD
+wulQ' £8096 G9 EL'D EO EDD apon Buppog seyoueig was emuey'g 3 8 8
+s08'0- ELD 08 sbB'O BD ID L'OHO sequinn youeg wars jee) "2 B <a
+w2Z60 iGO EV LO EO PVD LEO TOL sequin BPON WeIs JeNUEQ’g a =
+s67' 640 910 ssh B'O SHO ODT EET BID Sd Joy jo sequin GS
+OE E50 suhE' Zw OWED OTD BOO 670 OGD aunionroou'y _ 3
+w97'0 890 BHO EL uO VO 90' SZO HO EO EVO OL sjoueig}oou'€ 3. BS
+sO 9200 20° 70-9 9ED BGO HOLD BOO ZVD G60 NGO BLO Bary aoepng joy 2” &
+x90 s20'0 9010" h'0- 69°0 870 SSO Hh O G00 EDD ETO ZO yyBue7 1o0y "|
+
+a OL 6 g L 9 g v ¢ z D svajaweled
+
+pA
+
+‘syuiod eyep UOTOBIDIUT SIBATIND X SIBAK J9AO UOTpUCd pasdopiajem {YCOE Jopun uvaqhos Jo sjuouoduroa
+plaid pue ppsif ‘pue spre pemyoaytyore joor Suowe uoyepauoo sesur] afdynur Aq ,WuoroyJa09 UONe]PL09 S,uosIead *Z Gel
+
+9
+
+(481) 00'T 1 £9°0 ‘(ereIpauteyUT) 19° 01 €€°0 “(MOT) £€'0 01 00'0 :28URI JUAIDIJa05,
+
+‘queoyusis jou —
+
+SU {JaAaq] AitTIqeqosd [Q°0> Je JWLOIFTUBIS - 444 JAE] Ad|Iqeqoud ¢O'0 1 JUeOITUBIS - ,4 “[OA] ApTIqeqosd 0] 0 1 JUBDYTUBIS - ,
+
+b PIa!A P22g “SL
+sub b0- L X@pu] JSOUEH “pL oP
+sbb0 620 i MO P2825 001 CL § - 3
+s00'0 = 670 LEO 4 Spod pajii4 abewaned 2, 8 ae
+suGS0-  suGE0- su99'0- su 0 ‘ Jue|d ad spog Jo JaqUINN “|| g g
+270 600 e600 80990 b PON 4d spog JO JaqUINN “O|
+supp su99'0- sub '0- uO" o98D 90 b PON Bulppog wa}s eID "§ oa
+Zr ufP'0° SLO" sub" 660 PLO" LO 4 PON Bulppog sayouesg ways |eNU2D °g 3 23
+su99'0-  suGE'O- suZ5'0- uO os66O BGO" 98D LEO b seQUNN Youelg Ways jeNUaD "2-3 x a
+7 ‘ JaQUINN apoN WaIS jeUED'g &
+sugG'0- sub€"O- s65°0-EL'0" os 66°0) 790-080 os 96'D | onB6'O 4 88°0 ‘ dij Joy jo saquiny °g
+supp'0- 90 sZEO- 600-97 su GO-GO GZ GTO LOD EO t BUINJOA ION 'p  _ 3 »
+sh0'0  subb'O- 69° sub 00" sub L000" ETO" LOO hb EL OL b Jajaweiq joy 3 @ 8
+sGL'0- sep supZ0- 50850" BD uC” uGH'OwbL'Oon98'D BSD os B8'D OTD EO b ealy a0epng Joou'z 5 ~
+sv9G'0- subZ'0- su2S'0- 620" oO 9S" ZO sZ6'0 SEO 78D G60) PEO LO 60 b yyBua7 yooy “| _
+SL i el a be Ob 6 8 Z 9 S v € 4 4 suajaweled
+
+Lae nn el
+
+‘sjuiod eyep uot oRIDIUT SIeATIND X SIBIX I9AO UOIIPUOD padZoj1a}em aBeIs | Y Jopun ueaqdos jo sjuauodwio0s
+Plaid pue pyatf ‘pure syres yemnjooytyose joos Suowe uolyEayo0o sour] aduyjnu Aq ,Wa!oyJa09 WoTE[a1I09 S,wOsIvad “€ 242L
+
+$9
+
+(431) 00° I 91 £9°0 ‘(eretpautayUT) 49° 01 €€°0 “(MOT) ££'0 01 00'0 :@BuRI JAaIDYJa0D,
+
+‘queoljIusis jou —
+
+SU {[aAg] AyIqeqosd [9'O> Je TLOTFIUBIS - 44% {[2A2] AipIqeqosd ¢g"Q 3e jUROTpIUTIS - ,, ‘[2Ao] Aipiqeqod Q]'0 Je JuRoITUBIS - ,
+
+Ea
+
+L PIa!A 22S “SL
+suf LO" b X@pul SONEH “pL o 2
+0070 su9E"0- b MdO P2298 001 EL § ~ 3
+1050 = 570-0 L Spoq pajit4 abejuanieg 2} SB ze
+60S'0-  su60'0- 4990 BE L Jue|q 4ad spog JO saqUNN *} | 3 g
+sv60'0-  suSh'0- LPO 20h 0 L PON 18d spod JO QUINN “O} .
+suG'O-  suGL'0- bW'0" 60" 6D - S00 L PON Buippog wa} [UID 6G oo
+sbp'0- uh" aah 90" DEO 980 HZ EL 4 pon Buippog sayouerg wa}s [sued °g 3 23
+so0V'0- $600 aebSO>  suLEO web 8'0 ZL Z'0n68°0 4 sOQUNN YouRIg WAIS jeUED “ZB = a
+wbS'0°  suph 0-80 BE GO LZ BO L090 b JaqUINN BpoN WIS jeUE’g _& oX
+seZOO-  suQh'O- subZ0-su97' ws uP0'0 os B'0 B50 ED EL'0 b SdlJ JOoy jo saquiny °¢
+s60'0-  GS°0 sBE'O- EO = OHO LO 670 BZ 970 ETD BED b BUNIOA YOON "p  _ a xo
+sZb0 GSO" 950 LD 000 ZPD 90D USF sO) POD SOO 290" b JajaWe!d JOO "€ a g Ey
+sub€'Q>  so80'0-  suZh'0- 59h BLD SLO onQZ'0wsESO WED oB90ZEO 05D ENO b Pally SOe~NS J00Y Z Fa
+supe" 6h" subZ0-  su2Z'0-—oB'O EO oe Z'0 a0 BED web Z'0 BED GED EDO S6'0 t yyBua7 yooy "| _
+
+Sb vl eb ia tL ob 6 8 Z 9 g v £ z L SuaJOWELEG
+
+Es
+
+‘squrod eyep UONSeIOIUT SIBATIIND X SIBOA JBAO SUOTIIPUOD JUoUTJBAN] ssoIDe URAgAOS Jo syuaUOdWIOS
+plats puke pyarc ‘pue sre yemmpooytyoue joor Buowe uoweyas09 seaul] afduyjnur Aq ,JWa1oyJa09 UoNe[eLOD S,uosIead ‘pf 421
+
+99
+
+67
+
+” OH
+Ic
+om & ob sa
+60 +
+4 1
+D i
+2 404
+> i f} |
+2B 2. ]
+oD |
+ey :
+eo) +m +
+(= i
+BS 20 |
+5 a |
+g 4]
+-60
+-80
+| | ab a a ab be oe 6 a a abo ob b
+-100 + ;
+gelags ale gle gle ele gle z
+i(S Sin om m 5/& B/& Ble Bla Bie B
+S822 2 8/6 8/8 sé 88 818 &
+ae 213 7218 218 218 2i8 2
+i w z | “ fo ~
+| PSB Sy! PSBSy3 PSBSy6 Manchuria
+
+Figure 15. Mean soybean waterlogging stability index (or “damage index”; Bouslama and
+Schapaugh, 1984) based on the seed yield. A. Comparison of years (across
+cultivars and treatments); B Comparison of cultivars (across years and
+treatments); C. Comparison of waterlogging treatments (across years and
+
+cultivars); and D. Interaction of cultivars and treatments.
+
+DISCUSSION
+
+Because germplasm evaluation based on seed yield is puzzled because of the potential
+that tolerance and recovery mechanisms can partly contribute to the yield after the
+waterlogging stress is over (Zhou, 2010). In this study, factors other than the effect of the
+waterlogging stress on genotypes and vice versa, especially insect pest was contained to a
+feasible extent by routine preventive and control measures implementation. However,
+weather condition was field-based and natural. Weather variables especially incident
+solar radiation and rainfall contribute the most percentage among the drivers affecting
+crop performance. Rainfall was not limiting, and the relatively low yield (0.25 — 1.90 tons
+per hectare) across years is essentially attributed to the low incident solar radiation
+intercepted which hit the grain filling phase of the crop caused by decreased effective
+sunshine duration and high cloud cover (Appendix Figure 1). Further, despite being a
+nitrogen-fixing crop, supplemental fertilization was impplemented, and the nitrogen,
+phoshorus and potassium was not a limiting environmental input based on the inherent
+experimental area properties (Appendix Table 1); experimental soil pH was favorable.
+Generally, soybean is characterized as a short-day photoperiod sensitive plant, while our
+tested genotypes were grown under the long-day condition in the region, photoperiodic
+effect were assumed negligible since annual day-length variation is not that pronounced
+owing to the close equatorial proximity of the experimental location. The experimental
+area encouraged waterlogging according to its physical features having fine clayey
+
+textured tenacious clay loam surface soil and sticky compact strucutre, consequently the
+
+69
+
+edaphic features lead to poor drainage, quick and extended waterlogging condition; in
+addition, temperature rise (>20°C) which hit throughout the waterlogging stress period
+more weighed down the occurrence of the stress — caused by enhanced depletion of
+oxygen from the bulk of soil water by overall oxygen consumption of plant roots, soil
+fauna and soil microorganism (Taiz and Zeiger, 2002). The observed seed yield was also
+ensured to detect utmost effect by waterlogging on the genotypes and vice versa, so that
+pest do not cause significant influence by means of applying strict insect pest preventive
+and control measures. In pursuit of finding and understanding functional traits for
+waterlogging tolerance and tolerant cultivar this study was conducted although the usual
+planting calendar of soybean for rainfed environment in the country is towards the dry
+months and/or after rice or maize, whereas the evaluation was conducted in opposite
+cropping season.
+
+Popular soybean cultivars showed variation for tolerance to waterlogging as also
+observed by the team of Vantoai (1994). Within the species and variety, together with the
+soil type, timing and duration of the stress are the causal factors of the extent of yield loss
+in crops due to waterlogging (Patel et al., 2014). The soil type was conducive to
+waterlogging condition and the duration was fixed to a maximum of fourteen (14) days in
+reference to Scott ef al., 1989 and Singh and Singh, 1995. In this study, it demonstrate
+both the (i) agronomic waterlogging tolerance (Setter and Waters, 2003) which is the
+maintenance of comparatively high grain yields and (ii) physiological waterlogging
+tolerance as the survival or the sustenance of growth under waterlogging relative to non-
+
+waterlogged condition.
+
+70
+
+For soybean, yield components which have potential to influence yield are seed
+number per area (seed plant’), seed size (weight seed’'), seed per pod (no.), pod number
+per area (pod plant’), pod per reproductive node (no.), reproductive node number per
+area (reproductive node plant’'), percent reproductive nodes (%; percentage of nodes
+becoming reproductive), and node number (node plant) (Board and Kahlon, 2011).
+Response of genotypes to waterlogging treatments and effect of waterlogging treatments
+were varied on measured seed yield components althought it is legitimate that seed yield
+is controlled by seed size and seed per plant; seed per plant is controlled by seed per pod
+and pod per plant; pod per plant is controlled by pod per reproductive node and
+reproductive node per plant; and reproductive node per plant is controlled by node per
+plant and percent reproductive nodes (Board and Kahlon, 2011). Between cultivars across
+years and treatments, the highest seed yield which was achieved by PSB Sy6 (Figure 1)
+was mainly attributed to its high branching architecture (Figure 3) which promoted
+highest number of pod bearing nodes (Figure 4), though it had relatively low pods per
+node (Figure 7) promoting medium total pods per plant (Figure 6). The high branching
+and its consequent high reproductive pod bearing node compensated its low percentage
+filled pods (Figure 8) and intermediate HSW (Figure 9). Similar high seed yield
+mechanism was also observed by Kuswantoro (2015). Meanwhile, the landrace
+Manchuria’ achieved its comparable high yield in unlike property. Among the yield
+components measured, its high yield was stimulated by high pods per node (Figure 7) and
+percent filled pods (Figure 8) was the main attribute. This mechanism is noteworthy
+
+where seed number is associated to increased partitioning and greater seed set efficiency
+
+71
+
+(Rotundo ef al. 2012). The PSB Syl intermediate yield was also induced in different
+manner wherein it was its high node (Figure 2) and pod bearing node (Figure 4) from the
+central main stem combined with medium contribution from branching habit (Figure 3)
+and pods coming from the branches (Figure 5) resulting to highest pods per plant (Figure
+6); to it, it compensated its medium percentage filled pods (Figure 8). Meanwhile, the
+lowest seed yield recorded from PSB Sy3 were attributed to having fewest central stem
+node number (Figure 2) and intermediate branching habit (Figure 3) resulting to
+intermediate pod bearing node coming from the central stem (Figure 4) and branches
+(Figure 5) and medium total pods per plant (Figure 6), it was also agravated by its few
+pods per node (Figure 7) and percent filled pods (Figure 8). Between treatments across
+genotypes, highest seed yield was obtained under non-waterlogged stressed plot as a
+function of low node number (Figure 2) in the central stem but intermediate branching
+habit (Figure 3) and intermediate pod bearing node from both the central stem (Figure 4)
+and the branches (Figure 5), though it had the lowest pods per node (Figure 7), pods per
+plant (Figure 6) and percent filled pods (Figure 8); its intermediate HSW (Figure 9)
+compensated the latter limiting components. On the other hand, the lowest seed yield
+promoted by subjecting genotypes to 30DAP WL effected in unlike manner in which it
+increased pods per node (Figure 7), pods per plant (Figure 6), percent filled pods (Figure
+8) and HSW (Figure 9) but it decreased significantly the number of branches and the pod
+bearing node from both the central stem and branches. Kumidini (2010) emphasized that
+the final main stem node number and branching influence the canopy structure indicating
+
+that it may help improve crop photosynthetic ability in the canopy level, but it is
+
+72
+
+noteworthy to mention that it is the percentage of filled pods that weighs more to effect
+high seed yield as in the case of PSB Sy1 considering the cultivar-treatment interaction,
+and that low central stem node number and branching habit but high percent filled pods
+of the PSB Sy6 and the landrace ‘Manchuria’ promoted the relatively high seed yield.
+According to Fageria (2009) number of pods is one of the most important yield
+components in determining grain yield of dry bean and the yield increase in a quadratic
+fashion with increasing number of pods per plant, forthwith, it can be commended that
+the extent of seed-filled pods must be considered to presume a high seed yield. Linkemer
+et al. (1998) also reported a significant decline in pod number, branch number, pods per
+node, and seed size after 7 days of flooding at various vegetative and reproductive stages.
+A reduction in pod number in Soybeans was also established by Sullivan et al. (2001).
+
+In the production system, it is interesting to have available cultivars that feature root
+systems that develop well under stressful conditions. Considering seed yield performance
+in relation to root architectural traits and dry matter partitioning, relative to non-
+waterlogged stressed plots, the highly susceptible PSB Sy3 cultivar subjected to 30DAP
+WL treatment effected reduction in root length, root surface area, root diameter, root
+volume, and root, leaf and pod and seed dry matter partitioning; similarly, decreased root
+diameter, and root, pod, and seed dry matter partitioning was also observed under R1
+stage WL treatment. Hence flooding stress causes damage of both root length and shoot
+dry matter in susceptible soybean cultivar. On the other hand, the tolerant PSB Sy]
+cultivar subjected to 30DAP WL treatment were able to increase its root length and root
+
+surface area but reduced its root diameter, and root volume, and was able also to reduce
+
+73
+
+its root, pod, and seed dry matter partitioning coefficient, yet, was able to increase its leaf
+and stem partitioned dry matter indicating a sustained high source capacity for
+photosynthetic activity and for photo-assimilate production. Similar adjustment was
+observed under R1 stage WL treatment. Similar observations were also observed on
+soybeans flooded at the vegetative stage as reported by Griffin and Saxton, 1988 and
+Linkemer et al. 1998. The observed root dry weight reductions resulting from
+waterlogged condition were consistent with that observed by Shimono et al. (2012).
+Decrease in root biomass accumulation rates in flooded soybean has been noted by Pires
+et al. (2002) and Sallam and Scott (1987). Dry weight losses are generally attributed to
+dieback of the primary root system (Vartapetian and Jackson, 1997, Jackson and Ricard,
+2003) and a decrease in the amount of photo-assimilate available for additional root
+extension (Trought and Drew, 1980). It is important to note that accumulation of primary
+root biomass was reduced for all genotypes under flooded relative to non-flooded
+treatments, and this is consistent with the findings of Pires et al. (2002) and Sallam and
+Scott (1987). Decreased N>2 fixation (Bacanamwo and Purcell, 1999) due to suppression
+of the activities of nodule nitrogenase and leaf nitrate reductase (Sung, 1993) under
+waterlogged condition can be attributed to the observed reduction on root architectural
+traits resulting from nitrogen deficiency (Jones 1988) and the consequent yellowing of
+leaves and abscission (Scott et al., 1989), which were also observed in this study, can be
+attributed to the decreased shoot dry matter and seed yield because, accordingly,
+approximately 50% of soybean’s leaf N is in RuBisCO, the enzyme involved in CO
+
+carboxylation onto Ribulose bis-Phosphate (Sinclair, 2004). This enzyme is recognized as
+
+74
+
+the rate-limiting step for photosynthesis. Thus, when N becomes deficient, the entire
+photosynthetic cycle declines, hence, stressful condition takes place as an indirect effect.
+In accordance with Tewari and Arora (2016), flooded conditions decrease root
+development, hence reducing the crop’s ability to absorb water and nutrients. According
+to Morita et al. (2004), the consequent reduction in reduced root morphological traits
+under waterlogged condition is a result of suppressed growth of taproot and its lateral
+roots, consequently, soybean plants often form shallow root system under waterlogging
+conditions. Dry matter accumulation is important in yield formation because yield
+components recognized as important in controlling yield on the environmental level are
+responsive to total dry matter accumulation (Egli and Yu, 1991; Board and Modali, 2005
+).
+
+Several workers reported a reduction in soybean yields under waterlogged condition,
+ranging in duration from 24 hours to 14 days (Spooner, 1961; Scott et al., 1989; Singh
+and Singh, 1995). In this study, we noticed that the response of the popular state
+cultivated soybean cultivars to the timing of the waterlogging treatments under similar
+duration, i.e. fourteen (14) days, were different on seed yield per se and on its effect on
+both the primary and secondary seed yield governing components. The team of Vantoai
+(1994) emphasized that seed yield is an essential factor for the evaluation of soybean
+tolerance under flooding stress. Although direct selection on grain yield has low
+effectiveness since its heritability under waterlogged stress has been reported to be very
+low (Collaku and Harrison, 2005) because of environmental variables (Ranalili and
+
+Cubero, 1997), the ability to produce high seed yield in flooded fields is still the ultimate
+
+75
+
+criterion of flooding tolerance (Zhou, 2010). The team of Henshaw (2007) tried to link
+early season waterlogging tolerance at very early V2 stage based on root traits and
+morphological responses and seed yield waterlogging tolerance to hasten identification
+and selection of tolerant genotypes, but weren’t able to link the gap successfully, as a
+consequnece, they inferred that potentially tolerant genotypes can only be screened by
+full season trials that go to final yield. Our calculation of a “damage index” was based on
+yield of plants in waterlogging treatments expressed as a percentage of yield under
+nonwaterlogged conditions, eg. 2. Linkemer ef al. (1998) observed that waterlogging
+reduced soybean seed yield by 67% at the R1 physiological stage and in this study, we
+observed a reduction of 62.9% on the most susceptible cultivar. Consistent with the result
+of Sugimoto et al. (2000), the resultant decrease in the number of pods per plant and the
+HSW was also the major reason for the decrease in seed yield of the most susceptible
+PSB Sy] cultivar. Several workers reported that the soybean is more sensitive against the
+excessive water in soil during the early reproductive stage rather than on the vegetative
+stages (Griffin and Saxton, 1988; Kwon and Lee, 1988; Heatherly and Pringle, 1991), in
+this study we observed a reciprocal trend, yet, although the yield reduction was generally
+greater under 30DAP WL stress treatment at 30.5%, compared to only 21.6% under R1
+stage WL stress condition, the two timing of waterlogging treatment were equal in
+statistical rank.
+
+Elston and Bunting (1980) have pointed out that an indeterminate growth habit in a
+tropical legume should be advantageous to recovery from water stress, whether excess or
+
+deficit. In this study, this classic recommendation was true for the tolerant PSB Sy!
+
+76
+
+cultivar, because an indeterminate plant would have the potential to continue growing
+and produce new pods after the termination of stress (Villalobos-Rodriguez and Shibles,
+1985). However, it can be articulated that determinate growth habit can also be
+advantageous for waterlogged condition as exemplified by the exhibited tolerance of the
+determinate landrace ‘Manchuria’.
+
+Branch number of legume plants is highly variable, and is an important determinant of
+grain yield (Ranalili and Cubero, 1997); for the susceptible cultivar PSB Sy3 and PSB
+Sy6 were it had the most number of branches among the genotypes, this trait was not an
+enhancing component to achieving high seed yield although it may improve canopy
+structure (Kumidini, 2010); on the other hand, low branching habit of the tolerant cultivar
+‘Manchuria’ were observed to be an advantage to achieving high seed yield, and
+management wise, low branching can be compensated by increased plant densities
+(Hedley and Ambrose, 1981). Therefore, in a consistent manner, it can be reinforced that
+most important factors for bean productivity are the number of pods per plant coupled
+with high percentage of seed-filled pods and the total weight of seeds per plant (Matsuo
+et al., 2017) because seed yield is commonly expressed as the product of harvested seed
+number per unit land area and individual seed weight (Rotundo et al., 2012).
+
+In grain legumes, as in most crops, because yield has a low heritability, a number of
+breeders (e.g. De Pace, 1979; Hawtin, 1982) proposed indirect selection using traits or
+trait combinations that are related to yield and are correlated. VanToai ef al. (2010)
+reported significant correlation between grain yield with number of branches, number of
+
+nodes and number of total grain in flooded soybean plots, while Verma (1992) reported
+
+77
+
+that yield was positively and significantly correlated with 100 seed-weight, number of
+primary branches and plant height. Sallam and Scott (1987) on the other side, reported
+significant correlation between root length, surface area, dry weight, and flood tolerance
+in soybean crop, where Henshaw ef al. (2007) articulated that maintenance of primary
+root extension and accumulation of root biomass may serve as an indicator of soybean
+flood tolerance (Henshaw er al., 2007). In this study, . Using treatment means over
+replications in years by cultivars interaction data points, multiple linear correlations
+analysis relating roots architectural traits and yield components to seed yield revealed that
+under normal condition, soybean seed yield has significant high negative correlation to
+central stem node number, extent of central stem branching, and central stem podding
+node, and number of pods per plant; on the other hand, seed yield has significant high
+positive correlation to percentage of filled pods. Under 30DAP WL stress, seed yield has
+significant negative correlation to extent of branching only, while in R1 stage WL stress,
+seed yield has significant high negative correlation to the root surface area. Across
+treatments, seed yield has significant intermediate negative correlation to central stem
+node number, branch podding node, and pods per plant, and significant intermediate
+
+positive correlation with percentage of filled pods.
+
+SUMMARY and CONCLUSION
+
+This study was conducted to (i) screen popular cultivated soybean varieties and a
+landrace cultivar to waterlogging at two soybean developmental stages, (ii) distinguish
+the morpho-associated traits of tolerant and susceptible cultivar/s and (iii) identify traits
+that can be used as selection criteria for flooding tolerance. It appeared that the popular
+cultivated soybean cultivars showed variation for tolerance to waterlogging. In this study,
+we noticed that the response of the popular cultivated soybean cultivars to the timing of
+the waterlogging treatments under similar duration, i.e. fourteen (14) days, were different
+on seed yield per se and on its effect on both the primary and secondary seed yield
+governing components. Across waterlogging treatment, it turned out based on the degree
+of seed yield reduction (Figure 15) that PSB Sy] is the most tolerant cultivar followed by
+the landrace 'Manchuria’, whereas the cultivar PSB Sy6 was the most susceptible cultivar
+under waterlogged condition followed by the PSB Sy3 cultivar. Moreover, considering
+the cultivar-treatment interaction in Figure 15, it can be reinforced that the cultivar PSB
+Syl is the most tolerant among other genotypes as revealed by its relatively low mean
+yield reduction when subjected to 30DAP WL (1.8%) and RI stage WL (-28.0%)
+treatment. The landrace 'Manchuria' rank the second wherein mean seed yield reduction
+is only 29.4% and 3.39% when subjected to 30DAP WL and R1 stage WL treatment,
+respectively. The PSB Sy6 which had the highest yield across treatments and under
+Normal condition (Figure 1) were determined to be the most susceptible to waterlogged
+
+condition wherein its yield was reduced by 81.1% and 48.0% when subjected to 30DAP
+
+79
+
+WL and R1 stage WL, respectively. Meanwhile, the PSB Sy3 which yield the least
+among the genotypes across the treatments (Figure 1) and under R1 stage WL treatment
+were reinforced also to be the second most susceptible cultivar wherein its yield
+reduction under waterloged stress condition were comparable as was observed in PSB
+Sy6 (Figure 15).
+
+The high seed yield (across treatments) achieved by the PSB Sy6 were mainly
+attributed to its high branching architecture which promoted highest number of pod
+bearing nodes; while the landrace ‘Manchuria’ achieved its comparable high yield
+differently, wherein its high yield was due to more pods per node and percent filled pods.
+It is noteworthy to mention that it is the percentage of filled pods that contributes more to
+high seed yield as in the case of PSB Sy1 in cultivar-treatment interaction, and that low
+central stem node number and branching habit but high percent filled pods of the PSB
+Sy6 and the landrace ‘Manchuria’ promoted relatively high seed yield. Forthwith, it can
+be commended that the amount or number of seed-filled pods must be considered to
+presume a high seed yield, furthermore, the most important factors for bean productivity
+are the number of pods per plant coupled with high percentage of seed-filled pods and the
+total weight of seeds per plant. Branch number of legume plants is highly variable, and is
+an important determinant of grain yield (Ranalili and Cubero, 1997); for the susceptible
+cultivar PSB Sy3 and PSB Sy6 were it had the most number of branches among the
+genotypes, this trait was not associated with high seed yield although it may improve
+canopy structure (Kumidini, 2010). On the other hand, low branching habit of the tolerant
+
+cultivar ‘Manchuria’ was observed to be an advantage to achieving high seed yield.
+
+80
+
+Table 5. Seed yield related traits conferring waterlogging tolerance, cultivars showing the
+trait, and possible reason how these traits could possibly be responsible for
+
+tolerance of soybean (G. max) cultivars subjected to waterlogging treatments.
+
+. ‘ Possible reason how these
+Traits conferring
+
+. Cultivar showing this trait traits could possibly be
+waterlogging tolerance :
+responsible for tolerance
+High percentage of filled PSB Sy 1 Seed yield is controlled by
+pods seed size and seed per plant.
+More pods per node and ‘Manchuria’ Seed yield is controlled by
+percent filled pods seed size and seed per plant;
+
+seed per plant is controlled
+by seed per pod and pod per
+plant; pod per plant is
+controlled by pod per
+reproductive node and
+
+reproductive node per plant.
+
+Based on findings in this study, it appears that waterlogging tolerance can occur through
+different yield component mechanisms (Table 4).
+
+Decrease in root biomass accumulation rates in flooded soybean has been noted.
+Flooding stress causes damage of both root length and shoot dry matter in susceptible
+soybean cultivar, on the other hand, the tolerant PSB Sy1 cultivar subjected to 30DAP
+
+WL treatment were able to increase its root length and root surface area but reduced its
+
+81
+
+root diameter, and root volume, and was able also to reduce its root, pod, and seed dry
+matter partitioning coefficient. However, there was an increase in its leaf and stem dry
+matter indicating a sustained high source capacity for photosynthetic activity and for
+photo-assimilate production.
+
+In this study, the hypothesis of Elston and Bunting (1980) that an indeterminate
+growth habit may be advantageous to recovery from water stress, whether excess or
+deficit were true for the highly tolerant PSB Syl cultivar, where an indeterminate plant
+would have the potential to continue growing and produce new pods after the termination
+of stress (Villalobos-Rodriguez and Shibles, 1985). However, it can be articulated that
+determinate growth habit can also be advantageous for waterlogged condition as
+
+exemplified by the exhibited tolerance of the determinate landrace ‘Manchuria’.
+
+RECOMMENDATIONS
+
+It appears that the tolerance mechanisms of soybean to waterlogging acts on the
+different seed yield component mechanisms . Result suggests testing soybean
+waterlogging tolerance based on seed yield response and its relevant component traits is
+viable and is the crucial feature, such that, the ability to produce high seed yield in
+flooded fields is still the ultimate criterion of flooding tolerance (Zhou, 2010);
+meanwhile, other suitable traits which are relevant as an indicator of adaptation is also
+useful such as branching habit, growth pattern (determinate vs. determinate), root
+achitectural traits, reproductive nodes, pods per node and seed set as determinants of
+
+flooding tolerance.
+
+LITERATURE CITED
+
+ALLEN RD. 1995. Dissection of oxidative stress tolerance using transgenic plants. Plant
+Physiology, 107:1049-1054.
+
+AMARANTE L, SODEK, L. 2006. Waterlogging effect on xylem sap glutamine of
+nodulated soybean. Biology Plantarum, 50:405-410.
+
+ANDREWS DL, COBB BG, JOHNSON JR, DREW MC. 1993. Hypoxic and anoxic
+induction of alcohol dehydrogenase (ADH) in roots and shoots of Zea mays.
+Transcripts and enzyme activities. Plant Physiology, 101:407-414
+
+ANDREWS CJ, POMEROY MK. 1989. Metabolic acclimation to hypoxia in winter
+cereals: low temperature flooding increases adenylates and survival in ice
+encasement. Plant Physiology, 91:1063-1068.
+
+ANGSTROM A. 1924. Solar and terrestrial radiation. Quarterly Journal Report on.
+Meteorological Society. 50, 121-126.
+
+ARBER A. 1920. Water plants: A study of aquatic angiosperms. Cambridge University
+Press, Cambridge. 436 pp.
+
+ARMSTRONG W, DREW MC. 2002. Root Growth and Metabolism under Oxygen
+Deficiency. In: Waisel, Y., A. Eshel, and U. Kafkafi, (eds). Plant Roots: The
+Hidden Half (3 Ed). pp.729-76. Marcel Dekker, New York (USA).
+
+ARMSTRONG W. 1979. Aeration in higher plants. Advances in Botanical Research,
+7:225-332.
+
+BACANAMWO M, PURCELL LC. (1999). soybean root morphological and
+anatomical traits associated with acclimation to flooding. Crop Science, 39:143-
+149.
+
+BAILEY-SERRES J, VOESENEK L. 2008. Flooding stress: acclimations and genetic
+diversity. Annual Review of Plant Biology, 59:313-339.
+
+BLOKHINA O. 2000. Anoxia and oxidative stress: lipid peroxidation, antioxidant status
+and mitochondrial functions in plants. Academic Dissertation, Department of
+Biosciences Division of Plant Physiology, University of Helsinki. pp. 11-34.
+
+BOARD JE, KAHLON CS. 2011. Soybean Yield Formation: What Controls It and How
+It Can Be Improved. pp.1-36, In: El-Shemy, H. A. (Ed). Soybean Physiology and
+Biochemistry. Publisher: Intech, Rijeka (Croatia). 498 pp.
+
+84
+
+BOARD JE, MODALI H. 2005. Dry matter accumulation predictors for optimal yield
+in soybean. Crop Science, 45:1790-1799.
+
+BOHM W. 1979. Methods of Studying Root Systems, (Ecological Studies Volume 33).
+Springer-Verlag Berlin: Heidelberg. ISBN-13:978-3-642-67284-2. 188pp.
+
+BORELLA J, DO AMARANTE L, DE OLIVEIRA DSC, DE OLIVEIRA ACB,
+BRAGA EJB. 2014. Waterlogging-induced changes in fermentative metabolism
+in roots and nodules of soybean cultivars. Scientia Agricola, 71:499-508.
+
+BOUSLAMA M, SCHAPAUGH WT. 1984. Stress tolerance in soybean. Part 1:
+evaluation of three screening techniques for heat and drought tolerance. Crop
+Science, 24:933-937.
+
+BRADFORD KJ, HSIAO TC. 1982. Stomatal behavior and water relations of
+waterlogged tomato plants. Plant Physiology, 70:1508-1513.
+
+CARATING RB, GALANTA RG, BACATIO CD. 2014. World Soils Book Series:
+The Soils of the Philippines. Springer Science and Business Media: Dordrecht,
+the Netherlands.
+
+COLLAKU A, HARRISON SA. 2005. Heritability of waterlogging tolerance in wheat.
+Crop Science, 45:722-727.
+
+CRAWFORD RMM. 1977. Tolerance of anoxia and ethanol metabolism in germinating
+seeds. New Phytologist, 79:511 - 517.
+
+DE OLIVEIRA MF, ARIAS CAA. 2017. Center for Diversity and Genetic Resources.
+pp. 29-41. In: da Silva, F. L., A. Borem, T. Sediyama, and W. H. Ludke (eds).
+soybean Breeding. Springer International Publishing AG, Switzerland
+
+DE PACE C. 1979. Characteristics with significant correlation to seed yield in broad
+bean populations grown in Southern Italy. Jn: D. A. Bond, G. T. Scarascia-
+Mugnozza and M. H. Poulsen (eds.), Some Current Research on Vicia faba in
+Western Europe, Commiss. Europ. Commun., EUR 6244, pp. 144-167.
+
+[DA-BSWM] DEPARTMENT OF AGRICULTURE — BUREAU OF SOILS and
+MANAGEMENT. Soil Map: Province of Laguna. Surveyed by D. Z. Rosell, F.
+Bernardo, L. A. Romero, and L. Engie. Retracted from Soil Map dated 1946.
+
+DREW MC. 1997. Oxygen deficiency and root metabolism: Injury and acclimation
+under hypoxia and anoxia. Annual Review of Plant Physiology and Plant
+Molecular Biology, 48:223-250.
+
+DREW MC, JACKSON MB, GRIFFARD S. 1979. Ethylene—promoted adventitious
+rooting and development of cortical air spaces (aerenchyma) may be adoptive
+response to flooding in Zea mays (L). Planta, 153:217-224.
+
+85
+
+EGLI DB, YU ZW. 1991. Crop growth rate and seeds per unit area in soybean. Crop
+Science, 31:439-442.
+
+ELSE MA. JACKSON MB. 1998. Transport of 1-aminocyclopropane- 1-carboxylic
+acid (ACC) in the transpiration stream of tomato (Lycopersicon esculentum) in
+relation to foliar ethylene production and petiole epinasty. Australian Journal of
+Plant Physiology, 25:453-458.
+
+ELSTON J, BUNTING AH. 1980. Water relations of legume crops. Jn: R. J.
+Summerfield and A. H. Bunting (eds), Advances in Legume Science. Royal
+Botanic Gardens, Kew, pp. 37--42.
+
+EVERARD JD, DREW MC. 1987. Mechanisms of inhibition of water movement in
+anaerobically treated roots of Zea mays L. Journal of Experimental Botany
+38:1154-1165.
+
+FAGERIA NK. 2009. Mineral Nutrition versus Yield of Field Crops. pp. 1-29. In: The
+Use of Nutrients in Crop Plants. CRC Press Taylor and Francis Group, Florida,
+USA
+
+FEHR WR, CAVINESS CE. 1977. Stage of soybean development. Special Report 80.
+Coop. Ext. Service Agric. and Home Economic Expt. Sta., Iowa State Univ.
+Ames, Iowa.
+
+GERMAIN V, RICARD B, RAYMOND P, SAGLIO PH. 1997. The role of sugars,
+hexokinase, and sucrose synthase in the determination of hypoxically induced
+tolerance to anoxia in tomato roots. Plant Physiology, 114:167-175
+
+GOMEZ KA, GOMEZ AA. 1984. Statistical Procedures for Agricultural Research (Ohi
+Edition). John Wiley and Sons Inc., New York (USA)
+
+GRIFFIN JL, SAXTON AM. 1988. Response of solid-seeded soybean to flood
+irrigation. II. Flood duration. Agronomy Journal, 80:885-888.
+
+GUL MS, MUNEER T, KAMBEZIDIS HD. 1998. Models for obtaining solar radiation
+from other meteorological data. Solar Energy, 64:99-108.
+
+HAWTIN GC. 1982. The genetic improvement of faba bean. Jn: G. C. Hawtin and C.
+Webb (eds.). Faba Bean Improvement. World Crops, Nijhoff, The Hague, pp. 15-
+22.
+
+HEATHERLY LG, PRINGLE HC. 1991. soybean cultivars response to flood irrigation
+of clay soil. Agronomy Journal 83:23 1-236.
+
+HEDLEY CL, AMBROSE MJ. 1981. Designing ‘leafless’ plants for improving yields
+of the dried pea crop. Advanced Agronomy, 34: 225-277.
+
+86
+
+HELDT HW, PIECHULLA B, HELDT F. 2011. Plant biochemistry. (4th ed).
+Academic Press, Massachusetts (USA)
+
+HENSHAW TL, GILBERT RA, SCHOLBERG JMS, SINCLAIR TR. 2007. Soya
+Bean (Glycine max L. Merr.) Genotype Response to Early-season Flooding: I.
+Root and Nodule Development. Journal of Agronomy and Crop Science, 193:177-
+188. doi:10.1111/).1439-037X.2007.00257.x
+
+HOLLINGER SE, ANGEL JR. 2019. Illinois Agronomy Handbook: Weather and
+Crops (Chapter 1). pl-12. Crop Science Extension and Outreach, University of
+Illinois at Urbana Champaign. Accessed at
+http://extension.cropsciences.illinois.edw/handbook/ on 3 April 2019.
+
+HOU FF, THSENG FS. 1991. Studies on the flooding tolerance of soybean seed:
+varietal differences. Euphytica, 57:169-173.
+
+IBRD(THE INTERNATIONAL BANK FOR RECONSTRUCTION and
+DEVELOPMENT)/THE WORLD BANK. 2013. Getting a Grip on Climate
+Change in the Philippines, Contributing to the foundation and ensuring the future
+for a low carbon, climate resilient society through the Philippine Climate Public
+Expenditure and Institutional Review. Extended Technical Report 78798. 279 p.
+
+JACKSON MB, RICARD B. 2003: Physiology, biochemistry and molecular biology of
+plant root systems subjected to flooding of the soil. Jn: H. de Kroon, and E. J. W.
+Visser, eds. Root Ecology, pp. 193—207. Springer-Verlag, Berlin.
+
+JACKSON MB, COLMER TD. 2005. Response and adaptation by plants to flooding
+stress. Annals of Botany(London), 96:501-505.
+
+JAMES EK, SPRENT JI. 1999. Development of N2-fixing nodules on the wetland
+legume Lotus uliginosus exposed to conditions of flooding. New Phytologist,
+142:219-213.
+
+JONES JB. 1998. Plant nutrition manual. CRC Press, Boca Raton, FL.
+
+JUSTIN SHFW, ARMSTRONG W. 1987. The anatomical characteristics of roots
+and plant responses to soil flooding. New Phytologist, 105:465—495.
+
+KHANNA-CHOPRA R, SELOTE DS. 2007. Acclimation to drought stress generates
+oxidative stress tolerance in drought-resistant than-susceptible wheat cultivar
+under field conditions. Environmental and Experimental Botany, 60(2):276-283
+
+KASTEN F, CZELPLAK G. 1979. Solar and terrestrial radiation dependent on the
+amount and type of cloud. Solar Energy, 24:177-189.
+
+KIMBALL HH. 1919. Variations in total and luminous solar radiation with geographical
+position in the United States. Monthly Weather Review, 47:769-793.
+
+87
+
+KOKUBUN M. 2013. Genetic and cultural improvement f soybean for waterlogged
+conditions in Asia. Field Crops Research, 152:3-7.
+
+KUMIDINI S. 2010. soybean Growth and Development. pp. 48-73. Jn: Singh, G. (ed).
+The soybean: Botany, Production, and Uses. CAB International. ISBN 978-1-
+84593-644-0
+
+KUSWANTORO H. 2015. Agronomical Characters of Some soybean Germplasm under
+Waterlogging Condition. Journal of Agronomy [Asian Network for Scientific
+Information] 14(2):93-97.
+
+KWON YW, LEE MK. 1988. Physiological responses of soybean plants to flooding at
+the vegetative growth and the flowering stages. Research Report RDA, 31:289-
+300.
+
+LANDON JR. 1984. Booker tropical soil manual: a handbook for soil survey and
+agricultural land evaluation in the tropics and subtropics. New York : Longman
+
+LINKEMER G, BOARD JE, MUSGRAVE ME. 1998. Waterlogging effects on
+growth and yield components in late—planted soybean. Crop Science, 38:1579-
+1584.
+
+LOGGINI B, SCARTAZZA A, BRUGNOLI E, NAVARI-IZZO F. 1999.
+Antioxidative Defense System, Pigment Composition, and Photosynthetic
+Efficiency in Two Wheat Cultivars Subjected to Drought. Plant Physiology,
+119:1091-1099.
+
+MAKBUL S, GULER NS, DURMUAND N, GUVEN S. 2011. Changes in anatomical
+and physiological parameters of soybean under drought stress. Turkish Journal of
+Botany, 35:369-377.
+
+MALIK AI, COLMER TD, LAMBERS H, SETTER TL, SCHORTEMEYER M.
+2002. Short-term waterlogging has long-term effects on the growth and
+physiology of wheat. New Phytologist, 153:225-236.
+
+MARASHI AK, MOJADDAM M. 2014. Adventitious root and aerenchyma
+development in wheat (Triticum aestivum L.) subjected to waterlogging.
+International Journal of Bioscience, 5:168-173.
+
+MARSHALL DR, BROUE P, PRYOR AJ. 1973. Adaptive significance of alcohol
+dehydrogenase isozymes in maize. Nature, 244:16-17.
+
+MATSUO E, DA COSTA FERREIRA S, BOREM A, SEDIYAMA T. 2017.
+Vegetative and Reproductive Morphology. pp. 43-54. In: da Silva, F. L., A.
+Borem, T. Sediyama, and W. H. Ludke (eds). soybean Breeding. Springer
+International Publishing AG, Switzerland
+
+88
+
+MCMANMON M, CRAWFORD R. 1971. A metabolic theory of flooding tolerance:
+the significance of enzyme distribution and behaviour. New Phytologist, 70:299-
+306.
+
+MORITA S, ABE J, FURUBAYASHIM S, LUX A, TAJIMA R. 2004. Effects of
+waterlogging on root system of soybean. Proceedings of the 4th International
+Crop Science Congress, September 26 to October 1, 2004, Australian Society of
+Agronomy, Brisbane, Australia
+
+MUSGRAVE ME, DING N. 1998. Evaluating wheat cultivars for waterlogging
+tolerance. Crop Science, 38:90-97.
+
+NORMILE D. 2008. Reinventing rice to feed the world. Science, 321, 330-333.
+
+PALLITT KE, YOUNG AJ, ALSEHER RG, HESS JI. 1992. Antioxidants in Higher
+Plants. CRC Press, Boca Raton. pp. 59-60.
+
+PARELLE J, DREYER E, BREDEL O. 2010. Genetic variability and determinism of
+adaptation of plants to soil waterlogging. pp. 241-265 Jn: Mancuso, S. and S.
+Shabala (eds). Waterlogging signalling and tolerance in plants. Springer-Verlag
+Heidelberg (Germany). doi 10.1007/978-3-642-10305-6
+
+PARENT C, CAPELLI N, BERGER A, CREVECOEUR M, DAT JF. 2008. An
+Overview of Plant Responses to Soil Waterlogging. Plant Stress, 2(1):20-27.
+
+PATEL PK, SINGH AK, TRIPATHI N, YADAV D, HEMANTARANJAN A. 2014.
+Flooding: abiotic constraint limiting vegetable productivity. Advances in Plants
+and Agricultural Research 1,00016.
+
+PERATA P, ARMSTRONG W, VOESENEK LA. 2011. Plants and flooding stress.
+New Phytologist, 190:269-273.
+
+PHILIPPINE ATMOSPHERIC, GEOPHYSICAL and ASTRONOMICAL
+SERVICES ADMINISTRATION (PAGASA). 2011. Climate change in the
+Philippines. Cited Jn: The International Bank for Reconstruction and
+Development/THE WORLD BANK. 2013. Getting a Grip on Climate Change in
+the Philippines, Contributing to the foundation and ensuring the future for a low
+carbon, climate resilient society through the Philippine Climate Public
+Expenditure and Institutional Review. Extended Technical Report 78798. 279 p.
+
+PIMENTEL-GOMES F. 2000. Curso de estatistica experimental (14th ed.). Livraria
+Nobel: Piracicaba, Sao Paulo (Brazil).
+
+PIRES JF, SOPRANO E, CASSOL B. 2002. Morpho-physiological changes in soybean
+in flooded soils. Pesqui. Agropecu. Bras., 37:41-50.
+
+89
+
+RANALILI P, CUBERO JI. 1997. Bases for genetic improvement of grain legumes.
+Field Crops Research 53:69-82
+
+RAO SK, SHRIVASTAVA AN, MISHRA R. 1999. Effect of excess soil moisture on
+seed yield, seed size development and quality in commercial varieties of soybean.
+Legume Research, 22:259-262
+
+RATHORE TR, WARSI MZK, LOTHROP JE, SINGH NN. 1998. Production of
+maize under excess soil moisture (waterlogging) conditions. Jn: Proceedings of
+the Second Asian Regional Maize Workshop PACARD. Los Baifios, Philippines.
+pp. 23-27.
+
+RECEL M. 1989. Problem soils in the Philippines. Soils and Water Technical Bulletin,
+6(1). Bureau of Soils and Water Management, Quezon City (Philippines).
+
+REID DM, BRADFORD KJ. 1984. Effects of flooding on hormone relations. Jn:
+Kozlowski T. T. (ed). Flooding and plant growth. Orlando: Academic Press, 195-
+219
+
+RICARD B, VANTOAI T, CHOUREY P, SAGLIO P. 1998. Evidence for the critical
+role of sucrose synthase for anoxic tolerance of maize roots using a double
+mutant. Plant Physiology, 116:1323-1331.
+
+RICHE CJ. 2004. Identification of soybean cultivars tolerance of waterlogging through
+analyses of leaf nitrogen concentration. Unpublished Master’s Thesis, The
+Department of Agronomy and Environmental Management, Louisiana State
+University, USA.
+
+ROBERTS JKM, CHANG K, WEBSTER C, CALLIS J, WALBOT V. 1989.
+Dependence of ethanolic fermentation, cytoplasmic pH regulation and viability on
+the activity of alcohol dehydrogenase in hypoxic maize root tips. Plant
+Physiology, 89:1275-1278.
+
+ROTUNDO JL, BORRAS L, BRUIN JD, PADERSEN P. 2012. Physiological
+strategies for seed number determination in soybean: Biomass accumulation,
+partitioning and seed set efficiency. Field Crops Research, 135:58-66
+
+RUSSELL DA, DAPHNE MM, WONG L, SACHS MM. 1990. The anaerobic
+response of soybean. Plant Physiology, 92:401-407.
+
+SALLAM A, SCOTT HD. 1987. Effects of prolonged flooding on Soybeans during
+vegetative growth. Soil Science, 144, 61-66.
+
+SCOTT HD, DE ANGULO J, WOOD LS, PITTS DJ. 1990. Influence of temporary
+flooding at three growth stages on soybean growth on a clayey soil. Journal of
+Plant Nutrition, 13:1045-1071.
+
+90
+
+SCOTT HD, DE ANGULO J, DANIELS MB, WOOD LS. 1989. Flood duration
+effects on soybean growth and yield. Agronomy Journal, 81:631-636.
+
+SEONG RC, KIM JG, NELSON CJ. 1999. Dry matter accumulation and leaf mineral
+contents as affected by excessive soil water in soybean. Korean Journal of Crop
+Science, 44:129-133.
+
+SEONG RC, SOHN JY, SHIM SI. 2000. Responses of soybean cultivars to excessive
+soil moisture imposed at different growth stages. Korean Journal of Crop
+Science, 45:282-287.
+
+SETTER TL, WATERS I. 2003. Review of prospects for germplasm improvement for
+waterlogging tolerance in wheat, barley and oats. Plant and Soil, 253:1-34.
+
+SHIMAMURA S, YAMAMOTO R, NAKAMURA T, SHIMADA S, KOMATSU S.
+2010. Stem hypertrophic lenticels and secondary aerenchyma enable oxygen
+transport to roots of soybean in flooded soil. Annals of Botany(London), 106:277-
+284.
+
+SHIMAMURA S, MOCHIZUKI T, NADA Y, FUKUYAMA M. 2002. Secondary
+aerenchyma formation and its relation to nitrogen fixation in root nodules of
+soybean plants (Glycine max) grown under flooded conditions. Plant Production
+Science, 5:294-300.
+
+SHIMAMURA S, MOCHIZUKI T, NADA Y, FUKUYAMA M. 2003. Formation and
+function of secondary aerenchyma in hypocotyl, roots and nodules of soybean
+(Glycine max) under flooded conditions. Plant Soil, 251:351-359.
+
+SHIMAMURA S, YOSHIOKA T, YAMAMOTO R, HIRAGA S, NAKAMURA T,
+SHIMADA S, KOMATSU S. 2014. Role of Abscisic Acid in Flood Induced
+Secondary Aerenchyma Formation in soybean (Glycine max) Hypocotyls. Plant
+Production Science, 17(2):131-137.
+
+SHIMONO H, KONNO T, SAKAI H, SAMESHIMA R. 2012. Interactive Effects of
+Elevated Atmospheric CO2 and Waterlogging on Vegetative Growth of soybean
+(Glycine max (L.) Merr.). Plant Production Science, 15(3):238-245.
+
+SINCLAIR TR. 2004. Improved carbon and nitrogen assimilation for increased yield.
+In: Soybeans: Improvement, production, and uses. Boerma, H.R. and Specth, J.E.
+(Eds.), pp. 537-568, Amer. Soc. of Agron., Madison, WI.
+
+SINGH G, SHIVAKUMAR BG. 2010. The Role of soybean in Agriculture. pp. 24-47.
+In: Singh, G. (ed). The soybean: Botany, Production, and Uses. CAB
+International. ISBN 978-1-84593-644-0
+
+91
+
+SINGH KD, SINGH NP. 1995. Effect of excess soil water and nitrogen on yield,
+quality, and N-uptake of soybean (Glycine max (L) Merrill). Annals of
+Agricultural Research, 16:151-155.
+
+SOJKA RE. 1985. Soil oxygen effects on two determinate soybean isolines. Soil
+Science, 140: 333-343.
+
+SOJKA RE, OOSTERHUIS DM, SCOTT HD. 2005. Root oxygen deprivation and the
+reduction of leaf stomatal aperture and gas exchange. Jn: M. Pessarakli (ed.).
+Handbook of photosynthesis. pp. 299-314, Taylor and Francis Group, New York,
+NY.
+
+SOYBEAN TWG. 2014 Annual soybean Review and Planning Workshop held at Jaro,
+Iloilo, the Philippines from February 10 to 14, 2014.
+
+SPOONER AE. 1961. Effects of irrigation timing and length of flooding periods on
+soybean yields. Arkansas Agricultural Experiment Station Bulletin 644.
+
+SUGIMOTO H, AMEMIYA A, SATOU T, TAKENOUCHI A. 1988. Excess
+moisture injury of soybeans cultivated in a upland field converted from paddy. II.
+Effects of excessive soil moisture on bleeding, stomatal aperture and mineral
+absorption. Japan Journal of Crop Science, 57:77-82.
+
+SUGIMOTO H, SATOU T, NISHIHARA S, NARIMATSU K. 1989. Excess moisture
+injury of soybeans cultivated in an upland field converted from paddy. II. Foliar
+application of urea as countermeasure against excess moisture injury. Japan
+Journal of Crop Science, 58:605-610.
+
+SUGIMOTO H, KOESMARYONO Y, NAKANO R. 2000. Effects of Excess Moisture
+in the Soil at Different Stages of Development on the Growth and Seed Yield of
+soybean. Pakistan Journal of Biological Sciences, 3(9):1465-1467.
+
+SULLIVAN M, VAN TOAI TT, FAUSEY N, BEUERLEIN J, PARKINSON R,
+SOBOYEJO A. 2001. Evaluating on-farm flooding impacts on soybean. Crop
+Science, 41:93-100.
+
+SUNG FJM. 1993. Waterlogging effect on nodule nitrogenase and leaf nitrate reductase
+activities in soybean. Field Crops Research, 35:183-189.
+
+TAIZ L, ZEIGER E. 2002. Stress Physiology (Chapter 25). Jn: Plant Physiology (3rd
+edition). Sinauer Associates, Sunderland (England)
+
+TAMANG BG, FUKAO T. 2015. Plant Adaptation to Multiple Stresses during
+Submergence and Following Desubmergence. International Journal Molecular
+Science, 16:30164-30180.
+
+92
+
+TEWARI S, ARORA NK. 2016. soybean production under flodding stress and its
+mitigation using plang growth-promoting microbes. pp.24-40 Jn: M. Miransari
+(ed). Environmental stresses in soybean production: soybean production qn
+Volume). Academic Press (Elsevier Inc.,).
+
+THOMAS AL, SODEK L. 2005. Development of the nodulated soybean plant after
+flooding of the root system with different sources of nitrogen. Brazilian Journal
+of Plant Physiology, 17:291-297
+
+THOMAS AL, GUERREIRO SMC, SODEK L. 2005. Aerenchyma formation and
+recovery from hypoxia of the flooded root system of nodulated soybean. Annals
+of Botany(London), 96:1191-1198.
+
+TOUGOU M, HASHIGUCHI A, YUKAWA K, NANJO Y, HIRAGA S,
+NAKAMURA T, NISHIZAWA K, KOMATSU S. 2012. Responses to flooding
+stress in soybean seedlings with the alcohol dehydrogenase transgene. Plant
+Biotechnology, 29:301-305.
+
+TROUGHT MCT, DREW MC. 1980: The development of waterlogging damage in
+wheat seedlings (Triticum aestivum L.): 1. Shoot and root growth in relation to
+concentrations of dissolved gasses and solutes in the soil solution. Plant Soil,
+54:77-94.
+
+VANTOAI TT, BEUERLEIN AF, SCHMITTHENNER SK, ST. MARTIN SK.
+1994. Genetic variability for flooding tolerance in Soybeans. Crop Science,
+34:1112-1115.
+
+VANTOAI TT, HOA TTC, HUE NN, NGUYEN HT, SHANNON JG, RAHMAN
+MA. 2010. Flooding tolerance of soybean [Glycine max (L.) Merr.] germplasm
+from southeast asia under field and screen-house environments. Open Agriculture
+Journal, 4:38-46.
+
+VARTAPETIAN BB, JACKSON MB. 1997: Plant adaptations to anaerobic stress.
+Annals of Botany(London),79:3—20.
+
+VERMA S. 1992. Correlation and path analysis in blackgram (Vigna mungo (L.)
+Hepper). Indian Journal of Pulses Research, 5:71-73.
+
+VILLALOBOS-RODRIGUEZ E, SHIBLES R. 1985. Response of Determinate and
+Indeterminate Tropical soybean Cultivars to Water Stress. Field Crops Research,
+10:269-281.
+
+VOESENEK LA, COLMER CJ, PIERIK TD, MILLENAAR R, PEETERS FF.
+2006. How plants cope with complete submergence. New Phytologist, 170:213-
+226.
+
+93
+
+YONG-ZHONG L, BIN T, YONG-LIAN Z, KE-JUN M, SHANG-ZHONG X, FA-
+ZHAN Q. 2010. Screening Methods for Waterlogging Tolerance at Maize (Zea
+mays L.) Seedling Stage. Agricultural Sciences in China, 9(3):362-369.
+
+ZHANG J, DAVIES WJ. 1987. ABA in roots and leaves of flooded pea plants. Journal
+of Experimental Botany, 38:649-659.
+
+ZHOU M. 2010. Improvement of Plant Waterlogging Tolerance. pp. 267-285. In:
+Mancuso, S. and S. Shabala (eds). Waterlogging signalling and tolerance in
+plants. Springer-Verlag Heidelberg (Germany). doi 10.1007/978-3-642-10305-6
+
+APPENDIX
+
+7000
+22017 e
+6000 ~» 2018 / 10
+500.0 Pi A
+F 2
+E 5°
+3 z
+5 26
+= a
+3 «
+H
+<
+
+2
+8
+
+34 2017 _ 2017
+8 ~o- 2018
+Taz © 2018 g700
+im ®- $600
+aa tone $
+Ss” ae 2
+z2 3
+& <
+Br A
+zy 5
+20
+3
+2017
+1
+gz ©2018 fe
+Zoo £
+g €
+0 ge
+Tas
+$ rf)
+3% « @
+a® $2
+Sw A
+< a1
+7
+
+°
+
+9
+“2017
+
+&
+
+HeatUnits
+(Accumulated)
+RRERERS
+
+MeanHeat Stress Units
+
+7 2 35 49 63 (77 81 105 110 133 7 21 35 49 63) 77 81 105 119 133
+Days after Planting Days after Planting
+
+Appendix Figure 1. Weather condition throughout the experiment period. Source: The
+Philippine Atmospheric, Geophysical and Astronomical Services
+Administration (PAGASA) National Agromet Station - UPLB
+(14°10'N, 121°15' E, altitude of 21.7 masl).
+
+Appendix Figure 2. Observed R1 stage or beginning bloom stage of Soybean.
+
+95
+
+96
+
+Appendix Figure 3. Planting field soybean (G. max) for agronomic and physiological
+
+performance of Philippine soybean cultivars under hypoxic
+
+condition experiment.
+
+97
+
+Appendix Figure 4a. Condition of field soybean (G. max) before waterlogging stress for
+
+agronomic and physiological performance of Philippine soybean
+
+cultivars under hypoxic condition experiment.
+
+98
+
+Appendix Figure 4b. Condition of field soybean (G. max) before waterlogging stress for
+agronomic and physiological performance of Philippine soybean
+
+cultivars under hypoxic condition experiment.
+
+99
+
+Appendix Figure 5. Supplemental irrigation of field soybean (G. max) for agronomic and
+
+physiological performance of Philippine soybean cultivars under
+
+hypoxic condition experiment.
+
+Appendix Figure 6. Field soybean (G. max) waterlogging experiment. A. Thirty days
+
+after planting waterlogging treatment overview; B. Water
+
+impounding by levee; C and D. Plot view of waterlogged condition.
+
+Appendix Figure 7. Wilting of field soybean (G. max) in agronomic and physiological
+
+performance of Philippine soybean cultivars under hypoxic
+
+condition experiment.
+
+
+102
+
+Appendix Figure 8. Sample overview: sequence for root system morphology evaluation
+of waterlogged soybean cultivars. A. Scanning; B. Image
+
+acquisition; and C. WhinRHIZO™ program image analysis.
+
+103
+
+Appendix Table 1. Chemical properties of the 0-30 cm surface soil of the experimental
+
+area.
+
+Soil Character Unit Mean* Remarks?
+pH - 6.33£0.06 Medium slightly acidic
+Organic matter % 1.48+0.23 Deficient
+Total Nitrogen gkg! 1.20+0.08 Sufficient
+Extractable Phosphorus ppm, Olsen 45.3347.51 Adequate
+Exchangeable Potassium cmole kg" soil 1.40+40.27 Very high
+Exchangeable Sodium cmolc kg" soil 1.68+0.48 High
+Exchangeable Calcium cmolc kg” soil 14.24+2.06 High
+Exchangeable Magnesium cmolc kg” soil 8.49+40.22 Very high
+Cation exchange capacity cmolc kg! soil 33.39+3.37 High
+
+Average of three working soil samples + standard deviation of the mean; ’According to
+
+Landon (1984) key to soil characteristic.
+
+104
+
+Appendix Table 2. Strip-plot design combined analysis of variance (ANOVA) mean
+
+square values of the root architectural traits of soybean (G. max)
+
+cultivars subjected to waterlogging treatments over two years.
+
+ROOT ARCHITECTURAL TRAITS
+
+Sources Degree Root
+of of Root Surface Root Root Root
+Variation Freedom Length Area Diameter Volume Tips
+Year 1 14.6" 9.9"s 10.1% 19.2** 4.4ns
+Block within Year 4 431.405 23.395 0.0°s 0.1"s 4027.9"s
+Variety 3 112902.0™  3056.3** 0.3** 0.5"  861370.7*
+Year x Variety 3 0.3"s 0.2Ns 0.1"s 0.0"s 0,195
+Pooled Error (a) 12 3177.9 243.1 0.0 0.2 33170.0
+Treatment 2 73723.6 846.1" 0.2** 0.45 494142.0**
+Year x Treatment 2 0.0"s 0.105 0.1* 0.1Ns 0.405
+Pooled Error (b) 8 5965.0 233.6 0.0 0.1 38857.0
+Variety x Treatment 6 72129.3"* — 2639.9** 0.1" 1.3"  604143.4*
+Year x Variety x Treatment 6 0.2Ns 0.4"s 0.0* 0.175 0.0"s
+Pooled Error (c) 24 6114.1 173.6 0.0 0.2 §6675.5
+Total 71
+Mean 398.7 97.0 1.2 1.4 1138.5
+Bartlett PR(>Chisq) 0.0 0.08 0.08 0.6 0.0%
+Shapiro-Wilk Pr(<W) 0.4i 0,3! 0,084 0.0 0.0%
+%CV (a) 14.1 16.1 11.9 30.4 16.0
+%CV (b) 19.4 15.8 7.9 20.6 17.3
+%CV (Cc) 19.6 13.6 9.8 31.2 20.9
+
+TODW — oven dry weight; ‘* - central main stem; * - significant at 0.10 probability level;
+
+** . significant at 0.05 probability level; *** - significant at <0.01 probability level; " — not
+
+significant; * - there is no significant difference in the variances; ** - normally distributed
+
+data at 95% certainty, + —
+
+coefficient of variation.
+
+not normally distributed data at 95% certainty; CV —
+
+105
+
+Appendix Table 3. Strip-plot design combined analysis of variance (ANOVA) mean
+
+square values of the yield, and yield components of soybean (G.
+
+max) cultivars subjected to waterlogging treatments.
+
+YIELD AND YIELD COMPONENTS
+
+Sources Degree Secondary Seed Yield Component Primary Seed Yield Components
+of of Stem Branch = Stem 100
+Variation Freedom Node Branch Podding Podding oes, pee fl Pea Seed
+Numbert Node Nodet obwt
+Year 1 10.9"s 0.45 15.6 18.6** 8.2"* 19. 1s 14.05 18.0rs
+Block within Year 4 2.6"5 0.6" 13.6"5 0.1"s 0.1"5 138.2 105.6 17.3"
+Variety 3 237.3" 8.1% 879.4 188.5" 34.0% 8862.4 1682.4** 18.0"
+Year x Variety 3 4.405 0.15 0.0"5 0.0"5 4.488 0.195 0.2ns 0,175
+Pooled Error (a) 12 44 0.6 49.9 6.9 04 1384.0 241.3 0.8
+Treatment 2 269.7" = 13.3" 168.95 88.7" 1.45 4131.35 678.0" 0.5"s
+Year x Treatment 2 0.8" 0.35 0.2" 0.0" 0.5" 0.0°5 O.trs 0,1"
+Pooled Error (b) 8 17.2 44 68.0 18.6 0.6 1529.4 31.0 08
+Variety x Treatment 6 374.5 10.6" = 391.2" = 93.9" 6.3% 10619.6 1648.2 43”
+Year x Variety x Treatment 6 0.9"s O.1"s 0,2ns 0.2ns 4.4" 0.105 0.2ns 0.0"
+Pooled Error (c) 24 5.1 0.5 30.2 2.9 0.3 445.4 100.6 14
+Total val
+Mean 17.0 2.8 14.8 10.5 3.6 80.2 227 98
+Bartlett PR(>Chisq) 0.0 0.03¢ 0.08 0.0t 0.08 00+ 0.08 0,3¢
+Shapiro-Wilk Pr(<W) 0.18 0.51 0.418 0.5 0.91 0.41 0.08 0.1%
+%CV (a) 12.0 28.2 477 25.0 16.5 46.4 68.4 9.3
+%CV (b) 24.3 38.2 55.7 444 21,7 48.8 24.5 9.3
+%CV (Cc) 13.3 25.3 37.1 16.1 15.6 26.3 44.2 10.7
+
+TODW - oven dry weight; ' - central main stem; * - significant at 0.10 probability level;
+
+** - significant at 0.05 probability level; **” - significant at <0.01 probability level;
+
+—not
+
+significant; * - there is no significant difference in the variances; ** - normally distributed
+
+data at 95% certainty; #* — not normally distributed data at 95% certainty; CV -
+
+coefficient of variation.
+
+106
+
+Appendix Table 4. Strip-plot design combined analysis of variance (ANOVA) mean
+
+square values of the Plant Segment Dry Weight Partitioning of
+
+soybean (G. max) cultivars subjected to waterlogging treatments.
+
+Sources Degree Partitioning Coefficients
+Vanation Krectom Root Stem Leaf Pod Seed
+Year 1 239.62** 207.65 39.15 325.65 109.6"
+Block within Year 4 7.38 396.1*%* 33.05 622.2** = 45.1**
+Variety 3 53.55 523.2** 56.875 652.0** 19,*
+Year x Variety 3 21.195 38.9Ns 5.8 21.,1s 2.798
+Pooled Error (a) 12 16.7 37.7 63.9 39,7 3.6
+Treatment 2 16.475 50.05 61.5"5  184.20s 0.205
+Year x Treatment 2 3.05 14.995 1,705 4.4ns 0.9"s
+Pooled Error (b) 8 48 774 36.1 67.5 6.9
+Variety x Treatment 6 7.45 40.6"5 57.1°5 183.3" 14,3"
+Year x Variety x Treatment 6 2.65 12.8"5 7,378 1.9ns 3.0"5
+Pooled Error (c) 24 44 38.4 37.5 70.5 4.2
+Total 71
+Mean 47 41.2 164 36.4 2.9
+Bartlett PR(>Chisq) 0.4¢ 0.0# —0.0# 0.1% 0.0#
+Shapiro-Wilk Pr(<W) 0.8% 1.0% — 0,3t 0.1% 0.84
+%CV (a) 36.4 149 388 17.3 25.9
+%CV (b) 16.3 21.3 26.7 22.6 21.1
+%CV (c) 14.2 15.0 27.4 23.1 31.5
+
+TODW — oven dry weight; ‘* - central main stem; * - significant at 0.10 probability level;
+
+wo significant at 0.05 probability level; ws significant at <0.01 probability level; °° — not
+
+significant; } _ there is no significant difference in the variances; HL normally distributed
+
+data at 95% certainty; Ht _ not normally distributed data at 95% certainty; CV —
+
+coefficient of variation
+
+a
+BS
+ENR
+

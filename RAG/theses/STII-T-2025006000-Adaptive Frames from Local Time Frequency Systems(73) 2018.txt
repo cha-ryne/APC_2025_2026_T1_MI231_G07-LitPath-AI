@@ -1,0 +1,3225 @@
+College of Science
+University of the Philippines
+Diliman, Quezon City
+
+December 201€
+
+UNIVERSITY OF THE PHILIPPINES
+Master of Science in Mathematics
+Arvin Lamando
+
+Adaptive Frames from Local Time-Frequency Systems
+
+Thesis Adviser:
+Gino Angelo M. Velasco, Dr.rer.nat
+Institute of Mathematics
+
+University of the Philippines Diliman
+
+Date of Submission
+
+December 19, 2018
+
+Thesis Classification:
+
+F
+
+This thesis is available to the public.
+
+Institute of Mathematics
+College of Science
+University of the Philippines
+Diliman, Quezon City
+
+ENDORSEMENT
+
+This is to certify that this Master's thesis entitled Adaptive Frames from Lo-
+cal Time-Frequency Systems prepared and submitted by Arvin Lamando
+in partial fulfillment of the requirements for the degree of Master of Science in
+Mathematics, is hereby accepted. f
+
+GINO ANGELO M. iLASCO, Dr.rer.nat
+Thesis Adviser
+
+LOUIE JOHN D. VALLEJO/ Ph.D.
+
+Thesis Reader
+
+The Institute of Mathematics endorses acceptance of this master’s thesis as partial
+fulfillment of the requirements for the degree of Master of Science in Mathematics.
+
+CARLENE P.C. PILAR-ARCEO, Ph.D.
+
+Director
+Institute of Mathematics
+
+‘The master’s thesis is hereby officially accepted as partial fulfillment of the re-
+quirements for the degree of Master of Science in Mathematics.
+
+PERKY §. ONG, PH.D.
+Dban/ College of Science
+
+Acknowledgments
+
+I would like to extend my gratitude to the following people/individuals:
+
+To Dr. Gino Angelo Velasco for agreeing to mentor and advise me through this
+whole endeavor.
+
+To DOST-ASTHRDP program for the scholarship.
+
+To the UP Institute of Mathematics for all the mathematical fun.
+
+‘To my parents and brothers for their continuous support.
+
+To my significant other, Dyan, who has been my friend and support. throughout
+kindergarten until graduate school.
+
+iii
+
+Abstract
+
+Adaptive Frames from Local Time-Frequency Systems
+
+Arvin Lamando Adviser:
+University of the Philippines, Diliman Gino Angelo M. Velasco, Dr.rer.nat
+December 19, 2018
+
+Time-frequency analysis is intrested in simultaneous representation of signals
+in time and frequency. The discrete representation of such signals can be studied in
+terms of fraine theory whosc fundamental result is that: any signal f € L?(IR¢) can
+be written as a sum, provided that the so-called upper and lower frame bounds
+exist from the frame inequalities. An exainple of such a frame in the context
+of time-frequency analysis arc the Gabor frames, which can be constructed by
+discretely sampling the continuous Short-Time Fourier transform with a single
+window function on points in the time-frequency plane with some nice structure,
+an example of such arc lattices. Generalizations of Gabor frames have also been
+studied. for example, time-frequency systems where multiple window functions
+are allowed, or when the sampling points are not necessarily restricted to have
+any structure. These gencralizcd frames can also be adapted to certain properties
+of signals. An example of such an adaptive system is Dérfler’s quilted Gabor
+frames, w hich shows that an upper frame bound exists for a system constructed
+by quilting local time-frequency systems from pre-existing Gabor frames. In this
+work, we show that we do not need the existence of Gabor frames to construct
+an upper frame bound for Dérfier’s construction. Furthermore, we prove that our
+relaxed construction admits a lower frame bound by using density techniques on
+irregular sampling. This results to an adaptive frame from local time frequency
+systems. We also use results from relevant sampling to construct other adaptive
+
+time-frequency systems.
+
+iv
+
+Table of Contents
+
+Acknowledgments
+
+Abstract. ee
+
+Chapter 1. Time-Frequency Analysis... 2.00.0... eee eee
+Ll Fourier Analysis. 6... eee
+1.2 Short-Time Fourier Transform
+1.3. Frame Theory Lee
+1.4  Time-Frequency Localization Operators .
+
+1.5 Amalgam Spaces 0... cee ee eee
+
+Chapter 2. Existence of General
+Adaptive Irregular Gabor Frames ... 2.2.22. -.00-
+
+21 Background ©... eee
+
+2.2 Multisets and Density Results
+
+2.3. Existence of the Upper Frame Bound . . .
+
+2.4 Existence of the Lower Frame Bound . . .
+
+Chapter 3. Adaptive Frames via
+Relevant Sampling 0. ......00 20005
+
+Appendix ATime-Frequency Analysis... 2... 000 vee eee
+A.1 Vector-Valued Integrals... 2.2222 eee
+
+Appendix BAmalgam Spaces»... 0... 0000s eee
+B.1 Completeness of the Amalgam Spaces . . .
+B.2 Technical Results for BUPUs
+B.3. Convolution of Amalgam Spaces . .
+
+Appendix CExistence of General
+Adaptive Irregular Gabor Frames... 2.2.2...
+
+C.1 Convolution of Gy and Lb. eee
+C2 Lemma 2.18 Supplement 2...
+
+28
+28
+
+. 29
+. 33
+. 36
+
+61
+61
+
+- 62
+
+List of References .
+
+Introduction
+
+Given a signal, the classical result of Fourier analysis is that it should be pos-
+sible to ‘break up’ the original signal to simpler waves corresponding to cach
+of its constituent frequencies, and reconstruct it back by superposition of these
+simpler waves. In a more abstract setting, we are given a suitable function f
+of time that represents a signal, and we can apply to it the Fourier transform
+F, which can be interpreted as an operator that extracts the frequencies present
+in the signal. Mathematically speaking, the above is possible since it can be
+shown that the Fourier transform is an invertible linear operator acting on suit-
+able function spaces. The general basic form of the Fourier transform is given by
+the mapping f(x) ++ (Ff)(w) = Jeu f(z)e-***")de and its inverse is given by
+fw) + (Ff)(x) = fou f(w)e?***")du. Therefore we have the inversion forinula
+given by
+
+(x!
+
+= (FEN) = [A Nlwemede.
+
+The equation above then, is a continuous representation of the signal f in terms of
+its continuous frequency spectrum Ff, with x = (x1, %2,...,t4) € R@ interpreted
+as the time (temporal) axis, and w = (wy,w2,...,wa) € R¢ interpreted as the
+frequency (spectral) axis. While the invertibility of the Fourier transform allows
+us, in principle, to peer freely between the temporal and spectral behavior of a
+signal, it is by itself. not a sufficient tool for doing so simultaneously. To claborate,
+
+the classical Fourier transform might give us the frequencies of a signal, but it does
+
+not give us any information on when these frequencies occur. In gencral, as it quite
+happens in practice, the frequency of a signal may also differ in time. The ficld
+of time-frequency analysis emerged from this problem, and it is interested in the
+theory and techniques that allows for simultaneous representation of a signal in
+both the time and frequency domains. This idea of finding a representation of a
+signal simultancously in both domains also has an intrinsic localization problem.
+For simplicity of demonstration, consider d = 1, and for a given time a, we want
+to know the frequency of a signal f given by Ff, and one might naively do this
+by letting 6 > 0. and using the indicator function
+1 ifte [x-6,2+6]
+
+Npe-srvay(t) =
+0 otherwis
+
+
+and consider taking the transform of f - xj2-s,2s) instead and letting 6 + 0.
+Unfortunately, this will give us a meaningless result via Uncertaintly Principle [7],
+which says that a function and its Fouricr transform cannot be simultancously
+compactly supported. In particular, for this problem, as the support f - Xj2-5,2+5)
+‘concentrates’ about x, as 5 -» 0, the support of F(f - xjr-s2+s}) ‘widens’ in at
+least an inversely proportional manner to 6 [7], therefore the idea of measuring a
+localized time and frequency by this naive method is almost meaningless in the
+sense that a crisp view of the signal in time will give you a vague view in frequency.
+
+Signals arc intractable to strict simultancous time and frequency localizations
+as described above, but time-frequency analysis has developed a standard tool
+that can still approximate the method which we will demonstrate for d = 1. Let
+g € L>(R) be a continuous function that decays syinmetrically in R about 0, the
+canonical example for this would be the Gaussian function g(x) = e~**". For a
+given signal f, the product f -g gives a transformation of f that is approximately
+localized in the origin x = 0. This approximation is in general due to f -g being
+not compactly supported but it still captures the local values of f near 0, which
+in turn is duc to the smoothness and fast symmetric decay of g. Hence for any
+time a € R, we have an ‘x—localized’ f given by ¢ ++ f(t) - g(t — x). Taking the
+Fourier transform of this localized signal gives a two-variable function F(r,w) =
+Ja f(t) - g(t — z)e-?*"")dt which we interpret as the frequency distribution of f
+about «. The resulting two-variable function F(z,w), in terms of both time and
+frequency, is one of the standard tools used in time-frequency analysis. It is called
+the Short-Time Fourier transform denoted for any f.g € L?(R") by V,f. where g
+is called the window function. The Short-Time Fourier transform will be discussed
+and studied in depth in this work.
+
+Just like the classical Fourier scrics, it is possible to recover a signal f discretely
+via the Short-Time Fourier transform, for this, Ict us introduce the w-modulation
+operator M, : g++ g-e"-) and the translation operator T; : f(-) 4 f(-— 2)
+where z,w € R¢ and f,g € L?(R¢). Barring the technical considerations, for
+some family of window functions gn,g € L?(R") where n € N, and any signal
+J € L(R®), given a countable collection of points {q,wn : 2 € N} it is possible
+
+for f to be written as below
+
+L= DOViFlan en) In
+
+ira «)
+L= Yo Gn (Me, Tod)
+
+nett
+
+There are established theoretical results in time-frequency analysis. of our partic-
+ular interest are the Gabor frames. A Gabor frame is a family of time-frequency
+shifted single window function sampled on well-structured lattice points in the
+time-frequency plane. It can be shown that these Gabor frames have the property
+of perfect reconstruction as in (1) where cy = Vyf(tn-we) and gn = Mun Ten9
+{19]. While simple and thcorctically pleasing, Gabor frames are not practically
+suitable for addressing realistic signals. To see why this is so, we go back to the
+fact that the Short-Time Fourier transform is not exempt from the fundamental
+restrictions imposed by the Uncertainty Principle, it only allows us to select an
+appropriate window, if g is nicely concentrated in the time domain, then in gen-
+eral, we get some ‘Ieakage’ or poor resolution in the frequency domain of f and
+vice versa. Because of this, we have another localization issue, take for example
+the one dimensional case of any realizable signal which may have parts of high
+frequency short pulses, and parts of sustained and well-defined sinusoidal waves as
+it evolves in time. We obviously nced different windows for these cases, for short
+pulses: we need a short window function and rapid sampling in the time domain.
+Conversely, for sustained waves, we need long windows, and sparse sampling in
+
+the time domain. In general, while it can do perfect reconstruction, the rigidity
+
+of Gabor frames which uscs a single window function is a poor choice of tool for
+
+the task of adaptable signal representation [1].
+
+Window design and sampling for adaptive time-frequency systems is still an
+area of active research [1]. Our goal in this study is to contribute to the breadth
+of knowledge in the area by constructing a candidate for a gencral locally adaptive
+time-frequency system. To be precise. select a family of countable compact scts
+{Qy},ea that cover the time-frequency plane R™ that satisfies some properties for
+well-behavedness. Now if for cach A € A, Fy C Q, are sets of finite points inside
+each compact set. and gy are window functions associated with each compact set,
+we will prove that subject to some technical considerations, we have the following
+
+reconstruction for all f € L?(R¢):
+
+L= 0 Yes Teagn (2)
+
+AEA (1, wr JEPa
+for some sequence of coefficients {¢s,r},ea. One can see that equation (2) embodies
+what we want for a locally adaptive discrete representation in the context of time-
+
+frequency analysis. Going back to one dimensional example, suppose we choose
+
+cach compact set 24 to correspond to cach region of interest, those in which there's
+
+a short pulse or a long sustained component. Then our representation says that we
+can assign appropriate window functions ga in which to pecr inside these regions,
+by finite samples Fy C 25.
+
+Establishing that a family of functions in a Hilbert space satisfy two inequal-
+ities called the upper and lower frame inequalities arc sufficient conditions for
+perfect reconstructions in the space. This result from frame theory is central to
+time-frequency analysis, and the bulk of this study is devoted to establishing that
+these inequalities hold in the function space which models our signals. This work
+rests upon the results made by M. Dérfler’s quilted Gabor frames [9] in which
+the author has already made half of the work by showing that an upper frame
+inequality hold for a construction very similar to ours, except that the author
+initially required that the samples come from pre-existing Gabor frames. We will
+show that this assumption is not necessary, and that the upper frame inequality
+will still hold. We also make extensive use of H.G. Feichtinger and W. Sun’s den-
+sity techniques from their paper Sufficient conditions for irregular Gabor frames
+[13] to construct a lower frame inequality for our locally adaptive representation.
+We also dedicate a chapter for frames derived from relevant sampling techniques
+
+which are probabilistic in nature.
+
+This study is structured as follows:
+
+The first chapter is roughly a review of basic time-frequency analysis, which in-
+
+cludes classical Fourier analysis, Short-Time Fourier transform, and frame theory.
+The remaining two sections include discussion and recollection of known results
+on time-frequency localization operators and the amalgam spaces.
+
+In the second chapter we prove our main result. We will also discuss and prove
+some technical results regarding the point of view of secing sampling points in
+R~ as multiscts, and how we recover our usual notion of unordered sequences by
+properly indexing multisets. Furthermore, we derive a multiset characterization
+of relatively separated points. We then proceed to show that M. Dérfler’s upper
+frame inequality holds for our construction, and subsequently show that using
+density techniques and an added hypothesis on the regularity of the diameter of
+our compact regions. we can derive a lower frame inequality for our locally adaptive
+representation.
+
+In the third chapter we use the techniques and results by G.A Velasco on
+
+relevant sampling [26] (o construct other locally adaptive frames by combining
+
+a
+
+it with frames by ‘finite replacement’ [9] and localized frames by time-frequency
+operators [27].
+
+Lastly, all results with proofs that appear in Chapter 2 and 3 that are shown
+without citation are original work, or are established theorems but which are
+proven independently by the author, or are similar results but are proven under
+slightly different hypotheses. Chapter 1 is a review, and most results are known
+and cited. Some proofs or details are provided in the Appendix section, both for
+results that are known and original. The Appendix serves as a basin for technical
+details which are important, but may break the flow of the paper.
+
+Chapter 1
+
+Time-Frequency Analysis
+
+We dedicate an introductory chapter to review basic results on time-frequency
+analysis, We start with a short section on Fourier analysis as background material.
+The reader interested in an in-depth study is directed to the following texts (15,
+5, 19].
+
+1.1 Fourier Analysis
+
+Fundamental to Fourier analysis is the Fourier transform, which we define below.
+Note that for the rest of the study, we work with the usual Lebesgue measure and
+L*(R‘) for 1 < p < 00 is the Banach space
+
+integration on R¢ = R x Rx
+ates ;
+of all measurable functions f : R’ + C such that the norm |Ifllp = (Jp lfl?)*
+
+is finite. We have a similar definition for p = 00, where we consider the essential
+
+x
+
+supremum norm [|f|leo = esssup,eg« |/(!)|. For any Lebesgue measurable set MC
+R¢, we denote its Lebesgue measure by |M1|. Let X be a normed linear space with
+two norms ||-||, and ||-||2 on it. If there exist C,,C2 > 0 such that for any x € X,
+Cillz|le < |Iell: < Callz||2 then the two norms are said to be norm equivalent, and
+we write |[-[l1 < |||. Note that given a mapping p : X + X wherein ||p(-)||2 is
+anorin for X it is convenient to use the notation: for any x € X, |[zl|1 = |lo()Ile
+to mean |] - ||, = {Io(-)Il2- This notation should not be confused to mean that =
+is a pointwise relation between different points in X. Onc can just think of this
+notation as using any z € X as test points in which the norm relation = holds
+uniformly in X.
+‘The definitions and results here can be found in (19, Chapter 1].
+
+Definition 1.1. Let f € L'(R"). Its Fourier transform, denoted by f, is defined
+
+as
+
+fw) f Player? de, (1a)
+
+(tty. ta)yw = (Wry ered) ER and (wot) =
+
+Enclidean inner product on RY.
+
+where
+
+
+Chapter 1. Time-Frequency Analysis 7
+
+The usual interpretation of (1.1), is that given a signal, modeled by the function
+f, its Fourier transform f encapsulates the information on the function's frequency
+spectrum. The Fourier transform is an operator between functions spaces. This
+result is outlined as a lemma of Riemann-Lebesgue.
+
+Lemma 1.1 (Ricmann-Lebesgue). If L'(R*), then f is uniformly continuous and
+limy-so0 Lf (w)] = 0.
+
+From the lemma above, and from the fact that by taking the absolute value
+of (1.1), we have ||/lloo < |[fll1- Therefore, the Fourier transform F is indeed an
+operator F that maps L'(R*) to Co(R4), where Co(R*) is the space of continuous
+functions in 4 that vanish at infinity.
+
+While F is initially defined to be an operator acting on integrable functions,
+we can extend its definition to L?(R*)
+
+Theorem 1.2 (Plancherel). If f € L'(R*) M L2(R¢) then
+
+Ilflle = Ilflle-
+
+Consequently, F extends to a unitary operator (hence continuous) on L?(R") that
+satisfies Parseval’s formula: for all f,g € L?(R*)
+
+(f.9) = (f.9)- (1.2)
+Theorem 1.3 (Inversion Formula). If f,f € L\(R¢), then for allz € R"
+a= fl fwe’ar. 13)
+Fe) = [ feenrae (13)
+That is, F-! = IF, where T is the reflection operator If (x) = f(—2).
+
+The inversion formula above is only given for L'(R*) functions, but it can
+actually be shown that it is equivalent to Plancherel’s Theorein 1.2. This would
+allow us to show that the inversion formula is also valid for the L?(IR“) extension of
+the Fourier transform. Again, F can be extended to L?(R*) via density arguments,
+in particular by noting that L’(IR¢).L7(IR*) is dense in L?(R“) (24], if f € L?(R")
+and {fe}een is a sequence of functions in L'(R“) 9 L7(R*) such that limy-soc fr =
+f in L2(R")-norm, then as one would probably see in a proof of Plancherel’s
+Theorem. the extension of F can be defined to be Ff := limpsoo F fy. Note that
+for any k EN. fy € Co(R") © L'(R4) by Ricmann-Lebesgue Lemma hence the
+
+Chapter 1. Time-Frequency Analysis 8
+
+equivalence of the inversion Formula and Plancherel’s theorem, and the continuity
+of F, and Z as operators on L1(R4) would imply that
+
+F(LF f) = FIF jim fi, =
+
+lim F(ZF fi) = jim FF" fe = Jim fr = f.
+
+Similarly we can show that (F)Ff = f, and since the sct of unitary operators
+acting on a Hilbert space to itself form a group under composition, then we see
+that by uniqueness of inverses, F-! = IF as well for L(R4).
+
+The inversion formula above is a continuous representation of a signal f in
+terms of its frequency spectrum f. For discretely periodic functions, say Z* periodic
+functions on R¢ so that f(x +n) = f(z) for any 2 € R¢ and n € Z¢, therefore for
+any y € RY, there exists an x € (0, 1)¢ and m € Z# such that f(y) = f(x + m),
+thus periodic functions in Zé are fully characterized by their values in (0, 1]¢. The
+
+following Theorem gives us a discrete representation for such functions
+
+Theorem 1.4 (Fourier Series). Let f € L?((0.1)*) C L?(R¢) be Z4-periodic and
+let
+
+feny= [seer a.)
+alt
+be the n-th Fourier coefficient. Then f can be expanded into the Fourier series
+£=Vimer” (1.5)
+fe
+Moreover, we have
+Jf, eaae = llizqoain = ear (1.6)
+oa]? nezt
+
+Some technical note for this Theorem: the n-th Fourier coefficient as defined
+above in (1.4) is reminiscent of the in (1.1) for functions in L'(IR4). However as
+outlined in Plancherel’s Theorem 1.2, for gencral functions in L?(IR‘), it is defined
+via density argument. But in (22] it was shown that the same formula above
+is exactly the Fourier transform for the smaller space of functions in L((0, 14)
+
+stifics the use of the same notation,
+
+which are Z*-periodic, therefore this fact j
+and calling f(n) the n-th Fourier coefficient.
+
+Time-frequency analysis is concerned mainly with representations of signals
+
+or functions that simultancously carry information about the distribution of their
+
+time and frequency. In this study we consider the dis
+
+te time-frequency repre-
+
+sentation of functions in terms of the Short-Time Fourier Transform.
+
+Chapter 1. Time-Frequency Analysis 9
+
+1.2 Short-Time Fourier Transform
+
+In this section, we discuss the main tool of time-frequency analysis, namely, the
+Short-Time Fourier transform. We list here some of its most important and useful
+Properties whose proofs can be found in [19, Chapter 3]. It can be defined in terms
+
+of the two fundamental operators, the translation and modulation operators.
+
+Definition 1.2. Let x,w € R! and f : IR“ + C. The translation and modulation
+operators on L?(R‘) to L?(R*), givon by T; and AM, respectively, are defined by
+
+T.f(t) = f(t - 2); (1.7)
+Muf(t) = fe", (1.8)
+
+where t = (t,...,ta),w = (w1,..wa) € R¢ and (tw) = 4, t;- wy is the usual
+Euclidean inner product on R‘. For any z,w € R*. their composition M,T; is
+called the time-frequency shift operator, which we also denote in short-hand by
+M,,Tz for any z = (x,y) € R',
+
+(2) = m(x,w) :
+
+IfR*x R¢ is interpreted as the time-frequency plane, and a function f : R¢ 3 R
+is interpreted as a signal propagating in the time axis R“, then (1.7) can be seen
+as a time shift operator. For the modulation operator (1.8), it is similarly seen as
+
+a frequency shift, although it is not apparent from its form.
+Proposition 1.5. Let (z,w) € R’, f € L(Y). Then
+F(Maf) =ToF f, (1.9)
+F(T; f) = MaF f. (1.10)
+It is now apparent from Equation (1.9) that modulation is indeed a frequency
+
+shift since its behavior under the Fourier transform becomes a translation. We
+
+also note the adjoints of these operators are time and frequency shifts as well.
+Proposition 1.6. For any z.w € R", the adjoint of Te is T-; and the adjoint of
+Ma is Mo.
+
+Now, it is important to note that these two operators do not conmute, and it
+
+is casily verifiable by simple computation that
+
+TM. Ho) NLT. (1.11)
+
+Integrals over the whole space arc translation invariant, and in general, for 1 <
+
+p < oc the translation operator is an isometry on L?(R4). It is also obvious that
+
+Chapter 1. Time-Frequency Analysis 10
+
+modulation is an isometry on L”(RY) because |e] = 1 for any C € R. The
+
+time and frequency shift operators are important because they arc the basis of
+
+time-frequency analysis. D. Gabor, in his paper Theory of Communications (17),
+proposed the use of time-frequency shifts of the Gaussian function as a building
+block to reconstruct any signal. In the subsequent discussions of this chapter, we
+will provide some of the results in which this can be done, and we will also sketch
+some extension of this idea.
+
+Related to the two fundamental operators is the Short-Time Fourier transform,
+which we define below.
+
+Definition 1.3. Let g : R¢ + C be a nonzero fixed function in L?(R¢). Then the
+Short-Time Fourier transform (STFT) of a function f € RY with respect to g is
+defined for all (z.,w) € R™ as
+
+Vestas) =f OgE= ae? de. (0.12)
+
+The function g is also called the window function. From this definition, we can
+also sec that
+
+VoF (t,w) = (fr MaT=9) 12(R24) (1.13)
+= F(f Teg) (1.14)
+
+The representation given by (1.13) shows the immediate connection between
+translation and modulation operators and the Short-Time Fourier transform using
+the inner product on L?(R%4). The representation given in (1.14) makes it casy
+to see what exactly the Short-Time Fourier transforin is trying to do. Ideally, g
+is a continuous function that take values in R¢ and has symmetrical decay about
+the origin, hence f - Tag essentially localizes f about x. Therefore, provided that
+the window function g is nice enough, we can think of the Short-Time Fourier
+transform as a workaround for the non-existent instantaneous frequency spectrum
+of f about x due to the Uncertainty Principle [7]. From this perspective, we
+
+see that the Short-Time Fourier transform is a simultancous time and frequency
+
+representation of any signal f, and thus it is considered @ primary tool for time-
+frequency analysis. Also, note that we will henceforth omit distinctions on inner
+products for different spaces, whenever the context: is clear cnough. Below is a
+
+result which lists down the important properties of the STFT.
+
+Theorem 1.7. Let f. fi. fo.9:- 9-92 € L(R").
+
+Chapter 1. Time-Frequency Analysis i
+
+1. The STFT maps V, : L?(R*) + L*(R), and is a uniformly continuous
+
+function on R™*.
+
+2 Covariance Property: For any (u, 7)
+(Vo(TuMy f))(2,0) =e
+
+t,w) € R™ we have
+
+HOY, f(e —u,w — 7). (1.15)
+
+9. Orthogonality Relations:
+(Vo fis Voof2) = (Sis f2) (Gus 92)- (1.16)
+
+Using the commutation relation (1.11) we can rewrite (1.15) in a useful alter-
+nate form.
+
+Corollary 1.8. For any f,g € L?(R*), and (u,n),(a,w) € R#
+(Vo(TuMy)f)(a,w) = PM"YV, f(a — u,w — 1). (1.17)
+Proof. Let f,9 € L*(R4), and (u,7),(2,w) € R%. Then
+(Vq(TuMly)f)(,02) = ((TuMy) f, MaT=9)
+
+OY, Fx — uw —n).
+Hence
+PMO MyT, f, MuTag) = eM Vs f(x — usw — 1),
+therefore
+Vo(MyTuf (ty) = PY V, Fa — usw — 1).
+a
+We can also use the properties above for different representations of the STFT.
+Corollary 1.9. For f,g € L?(R*) and (x,y) € R™,
+Vof (2, yen = Vig(—x.
+
+7): (1.18)
+
+Proof. From the adjoints of M,, and T,, the commutation relation (1.11), and
+equation (1.13) we have for (x,y) € R™4
+Vig(—2,-9) = MaT-2f)
+
+= (MyT-2f,9)
+
+= (f,TzM,9)
+ut) MT)
+= Ph) (f, MyT.9)
+PRAY, F(x, y)
+
+as required. Qo
+
+Chapter 1. Time-Frequency Analysis 12
+
+Corollary 1.10. For any (x,y) € R™, and f,9, 9 € L2(R4) with go #0,
+1
+Vo (2,9) = 75 Veo, Voom(, ¥)9)- (1-19)
+IIgoll
+Proof. Given (x,y) € R*4, and f,g,90 € L?(R¢) with go # 0. Letting fi = f,
+
+fx = 1(2,)9, 1 = G2 = go, then Equation (1.16) reads
+(Voods Voo(m(2,9)9)) = (f.(2,9)9)(90; 90)s
+which implies
+
+VYof(@9) = Tag Vonks Yow)
+
+Another corollary to the orthogonality relations (1.16) is given below.
+
+Corollary 1.11. If f,g € L°(R‘), then
+
+1I¥of lle = Il lellgll2-
+In particular, éf |\gll2 = 1, then the operator V, : L?(IR*) -+ L(IR%) is an isometry.
+
+The above result also says that Vy is a bounded operator. Since it can easily
+be shown to be linear, then we can always find a unique continuous operator
+Vj : L2(R™) + 17(R4) that defines the adjoint of V,. We will use vector-valued
+integrals to find the adjoint of the Short-Time Fourier transform (see Appendix).
+First, note that for a fixed window fimction g € RY, and F € L?(R™), we have
+that (c,w) > F(z,w)-M.Tsg is a mapping from R to L2(R4). Since L2(R¢) is
+reflexive, then f = [fou F(x.w) -MuTrg dedw € L?(R*). We have the following
+
+theorem.
+Theorem 1.12. The adjoint of the Short-Time Fourier transform V, : L?(IR¢)
+1?(R*) is given by
+Vi Pe Ie F(z.w)M.Teg drdu. (1.20)
+Pa
+
+Just like the classical in Fourier transform, the STFT allows for continuous
+reconstruction of a signal.
+Theorem 1.13 (STFT Inversion Formula). Let 9.7 € L(R*) and (9,7) # 0.
+Then for all f € L2(R")
+
+f= Gi The VJ (rw) ALT yydeda (1.21)
+
+Chapter 1. Time-Frequency Analysis 13
+
+Note that the inversion formula can be written in terms of the STFT and its
+adjoint, given by
+
+Ga Mew) =". (1.22)
+
+In the representation above, if we let g = y # 0, and re-normalize so that ||g||z = 1,
+then we have for all f € L?(R%)
+
+fe i if Mal (es) MaTagduods. (1.23)
+
+If each x € R* and w € R¢ are seen as points in the time and frequency plane axes,
+respectively, then the equation above shows that we can ‘continuously sample’ the
+whole time-frequency plane where each point in the plane (2,) corresponds to a
+time-frequency shifted window function g, given by M.,Tzg. What (1.23) says is
+that, we can recover the original signal f by ‘continuously summing’ up all M,T.9
+with V,f(x,w) acting as coefficients. Furthermore, the usual interpretation is
+that the coefficients V, f(x,w) are the time-frequency content contributed by the
+support supp(M.Tz9) © R¢ of M.Tzg. Thus, the representation given by the
+
+STFT inversion formula is highly redundant since one can always find points
+(z1,w;) and (%z,wz) in the whole time-frequency plane such that the supports of
+
+Mu,Trg and M,Tx.9 have a large overlap [19]. One of the main problems in time-
+
+frequency analysis is to discretize the representation given by (1.23), sampling only
+a countable number of points, say T := {(tn,wn) : 2 € N} C R™ in which the
+
+discretized STFT inversion formula holds for all f € L?(R") :
+i) yy tm Wn) Mas, Tr 9 (1.24)
+
+such that the supports of each time-frequency shifted window function My,,T,9
+
+with cach other is minimal.
+Before ending this section, we define an important space of functions connected
+
+with the STFT called the the modulation space So(R").
+
+Definition 1.4. Let 90 e7*lkI” be the Gaussian function in R¢. Then the
+
+modulation space So(R“) is a normed linear space with norm || -|Is, given by
+
+So(R") = {f € L?(R*) : [If llso == IIVonSli < 00}.
+
+That is. Sp(R4) is the space of functions which has integrable STFT with
+
+respect to the window finetion go.
+
+Chapter 1. Time-Frequency Analysis 14
+
+Example 1. — The following shows that go itsclf is in So(IR¢) [19].
+Let us note that the Fourier transform of a Gaussian function is a
+Gaussian function as well, in particular, F(e~?*l#I)(w) = go(w) (19,
+Lemma 1.5.1]. We have
+
+Vso) = (0p, Mago) = ff e-*itRerei- ste
+fs
+
+seu f Palle §I? 9 2ri(twe) gp
+Pa
+
+= F(T) (w)
+=e enuade nimi (1.25)
+
+Where we used equation (1.7) for the last line, and the fact that the
+Fourier transform of a Gaussian is a Gaussian. The last line above
+(1.25) is again, a Gaussian function with some complex multiple, and
+therefore, it must be integrable in R™4.
+
+Some important results for this space can be found in [14], we are particularly
+interested in the result pertaining to the independence of the Modulation spaces
+
+to the Gaussian function.
+
+Proposition 1.14. The Gaussian function go is itself in So(R¢). Furthermore, if
+% € So(R*), for any f € So(R*), [Voy
+
+afll is an equivalent norm for So(R*).
+
+In light of this result, we can Iet go to be any fiction in So(R¢). Some sufficient
+conditions from [18, 14] are outlined in the result below:
+
+Proposition 1.15. The following are sufficient conditions Jor any f € L?(IR*) to
+be in So(R*):
+
+1. f € L1(R*) and f has compact support.
+
+2. f-tws, fw, € L2(R4), where w.(z) = (1+ |||), s > d.
+
+1.3 Frame Theory
+
+In this section, we discuss frames, a theorctical tool that is used to study the
+
+conditions for the existence of discrete time-frequency representations of signals.
+
+We first define what a frame is. An in-depth discussion of frames and some of
+
+basic results can be found in [19, Chapter 5 & 6].
+
+Chapter 1. Time-Frequency Analysis 15
+
+Note that we also make use of the following concepts and notations on the
+subsequent discussions. If T is a bounded linear operator on a complex Hilbert
+space . then T is called positive if and only if for all x € H, (Tz,)y is real and
+nonnegative. Furthermore, for two positive operators Ty, and T; on H. we write
+T, < Tp if and only if for all x € H, 0 < ((Tn —T;)2,2)4-
+
+Definition 1.5. A sequence {¢;};eu in a Hilbert space H is called a frame for 1
+
+if there exist positive constants A,B > 0 such that for all f €
+
+AIP SSO Kf.es)P < BILSIP- (1.26)
+
+je
+Any two constants A, B satisfying the above inequalities are called frame bounds.
+While the inequalities above may scem unassuming at first, it’s apparent con-
+nection to discretization can be scen by studying it along with the three following
+
+operators.
+
+Definition 1.6. For any sequence {e;}jes © H, the analysis operator C is given
+by
+
+CS = {(f.e)}se7- (1.27)
+
+The synthesis operator D is defined for a finite sequence ¢ = (¢;);es by
+
+De =~ cje; € H, (1.28)
+
+and the frame operator S is defined on H by
+SI =D fedes- (1.29)
+The first result of this section deals with the basic properties of the operators
+
+above.
+Proposition 1.16. Suppose that {cj : j € J} is a frame for H.
+1. Cis a bounded operator from 1. into €(J) with closed range.
+
+2. The operators C and D are the adjoints of each other. Consequently, D
+extends to a bounded operator from (J) into H. and satisfies
+
+> Gi)
+
+yet
+
+< B'PlIelh. (1.30)
+
+
+Chapter 1. Time-Frequency Analysis 16
+
+3. The frame operator § = C*C = DD* maps . into H. and is a positive
+invertible operator satisfying Aldy < S < Bldy and Bu'Idy < S-! <
+
+Av"Idy, where Idy is the identity operator on 1.
+
+Next we define what it ineans for a series to converge unconditionally. This
+will allow us to extend the notion of convergence in 1. concerning frames as in
+equations (1.28), and (1.29), and see that they behave particularly well. The
+following result is important, because it tells us exactly how any series made up
+of frames converge, we have the following
+
+Theorem 1.17. Let {e;}jeg be a frame in H. If f = Dye, cses for somec € CJ),
+then for any bijection m : N -+ J, the sequence of partial sums >, Cm(n) fnn(n)
+converges to H, that is, Dj, cye; converges unconditionally to f.
+
+From the theorem above, we can see that frames are permutation invariant as
+a serics, provided the coefficients are in ((J).
+
+The next result ties up frames and the discrete representations of signals.
+
+Theorem 1.18. If {e; : j € J} is a frame with frame bounds A,B > 0, then
+{S-e; : 7 € J} is a frame with frame bounds B-!,A-! > 0, the so-called dual
+
+frame. Furthermore, every f € 2. has expansions
+
+F= LU Seses, (1.31)
+and
+f= DilfeS ey. (1.32)
+ja
+
+where both sums converge unconditionally in H.
+
+In this study, given a countable index set 7, and I = {(a;,w;): 7 € J} CR,
+we generally refer to T as a sampling set and any collection of functions of the
+form {hj : j € J} as discrete time-frequency systems. Theorem 1.18 above now
+
+gives us a sufficient condition to look for if we want a discretization like (1.23).
+
+More precisely, if we have a single window function such that hy = Mu,T;,g for
+
+all j € J, then we are looking for the existence of constants A. B > 0 such that
+
+AIMIB S$ S01, MayTs, 9)? $ BILL. (1.33)
+
+sed
+
+Chapter 1. Time-Frequency Analysis 17
+
+In simpler terms, we want a {M,,Ts,9 : j € J} to be a frame for L?(R*). The set
+{M.,T:,9 : | € J} =: G(g,T), a discrete time-frequency system of time-frequency
+shifts of a single window function is called a Gabor system, and a Gabor system
+that is a frame, is called a Gabor Frame. From the discussion above, even if one
+can find such a frame, it is in general, hard to find an explicit form for the inverse
+
+frame operator S~!, hence we only have
+
+£= SOF SMa, Ta,9)) Ma Tay 95
+je
+
+f= SOF Ma,Te,9)S7 (Ma, 7,9)
+ies
+
+The case when the sampling set is a lattice is well studied. A lattice is a countable
+subset of R™ of the form MZ™ where M € Mzz(R) is a nonsingular matrix. In
+particular, when M is a diagonal matrix such that MZ?! = aZ x 6Z*, then it is
+called a regular lattice, and sampling points of such a form arc also called regularly
+sampled points. For Gabor systems sampled on regular lattices on R? (d = 1) of the
+form 9(g, 0,8) = {TaxMpag : (k,n) € Z?}, with window g = 2/4e-*** € 1?(R):
+G(g,T) is a frame [19] if and only if @- # < 1, furthermore, there exists [19] a
+77 € L7(R*) such that S-"(Tax.Mpng) = Tox pny, therefore
+
+L£= SO Uf. ToxMpng) Tor Min:
+
+(kn)ez?
+£= SO (Tow Mpn) Tor Mang. (1.34)
+(kn)ez?
+Equation (1.34) is exactly the discretized version of the STFT inversion formula
+(1.13) whenever (9,7) = 1. It is only off by a complex exponential factor due to
+the commutation relation (1.11).
+
+In this study, we do away with the nice structure of lattices. and work with non-
+lattices or irregularly sampled points in the time-frequency plane. We also consider
+working with multiple window functions, where in principle, each sampling point
+corresponds a window function. That is, we want to know what are the necessary
+conditions for an arbitrary sampling sect T = {(xj.w,) : j € 7} with associated
+windows {g, € L?(R¢) : 7 € J} such that there exist A.B > 0 where for any
+f € LA(RY), we have
+
+AIIIB SSO MS. Mo, Te, 9s)? $ BILIB- (1.35)
+
+jet
+
+Chapter 1. Time-Frequency Analysis 18
+
+We reiterate that the case of Gabor frame can then be taken to be a special case
+of this, when all the sampling points correspond to a single window function:
+9; = g. Onc of the primary contribution of being able to find such a frame is on
+adaptive representation of signals. This is easily seen in audio signals [3, 8, 1]
+which might be made up of different components over time (think of an ensemble
+or orchestra) which might require different time-frequency resolutions. Due to the
+Uncertainty Principle, long sinusoidal components cannot be clearly depicted by
+Short-Time windows, and similarly, components with high frequency or of rapid
+pulses cannot be depicted by long-time windows. The usual Gabor systems have
+this fundamental problem as their single window function cannot be used for such
+an adaptive signal analysis. A comprehensive discussion on a possible construction
+of such a frame will be done in Chapter 2.
+
+1.4 Time-Frequency Localization Operators
+
+In this section, we discuss the time-frequency localization operators which was
+introduced by I. Daubechies in [6], and studied further by D. Bayer [2] as part of
+his dissertation on pseudo-differential operators.
+
+For the rest of the study, we denote the support of a function f : R¢ > C on
+R¢ by the supp f = {z € R?: f(x) #0}. Where S for any set S C RY denotes the
+
+closure of S in R¢
+
+Definition 1.7 (Time-Frequency Localization Operator). Given a symbol  €
+1P(R%), (1 <p < 00), and window functions 1,2 € L?(R4), the time frequency
+operator HY'“* for a function f € L7(R*) is defined using the STFT and its
+adjoint via
+
+Hg" f = V3 (0 -Vorf)- (1.36)
+
+In this work, we will be using the spectral properties of a compact operator.
+
+Definition 1.8. If X and Y are Banach spaces and T : X + Y is linear, then T
+is said to be compact if and onlly if for any bounded subset B C X, the closure of
+
+its image under T, T(B), is compact in ¥
+
+Operators that are compact and self-adjoint have a well-known spectral prop-
+
+erty [25, Theorem 4.24]. and we will this result primarily in Chapter 3 where
+
+frames are constructed using the eigenvalues of the time-frequency localization
+
+operators.
+
+Chapter 1. Time-Frequency Analysis 19
+
+Theorem 1.19 (Spectral Theorem for Self-Adjoint Compact Operator). Let H
+be a Hilbert space with C as its underlying field and T : H +H be a self-adjoint
+compact operator. Then there exist an orthonormal set {e; : i € 1} where the
+index set I is either N or {1,2,...,k} and a sequence (A;)ier € C which converges
+to 0 such that
+
+span (e; : i € I)* = ker(T).
+Moreover, for all x € H, Tz = Dye; x(x, €%)ex with unconditional convergence.
+
+The result [2, 3.1.6] below gives the basic boundedness estimate for the time-
+frequency localization operator:
+
+Proposition 1.20. The time-frequency localization operator is a continuous, self-
+adjoint mapping from L?(R*) to L?(IR*) satisfying the following norm estimate
+
+WAS"? file < Ilallp -Ihealle  Ilvelle - Ilfll2- (1.37)
+
+Note that (1.36) can be written formally in terms of an integral using the
+definition of Vj,, which is
+
+Hew f= i If 5g Tp (208) Me Trtpatir da. (1.38)
+
+where (1,w) € R™, If we have o(z,w) = 1 everywhere with (y;, 2) = 1, then
+
+via the inversion formula, H?”? = Id on L2(R4). Of our particular interest is
+when the support of the symbol ¢ is contained in a compact sct inside the time-
+frequency domain. In this case, we interpret H?!-?? f as the part of f in the inverse
+Fouricr Transform that is ‘truncated’ on the set of the support of @. To sce this,
+consider the particular case for a compact set 2 in the time-frequency domain R™!
+
+in which o = x9. This gives us
+Hef = i if Vor F (tw) MuTeprdzdw.
+ln
+
+If the symbol o has a compact support in R%, then the time-frequency localization
+
+operator is compact [2, 3.1.7] as well. We state it as a theorem below.
+
+Theorem 1.21 (Compactness for Symbols with Compact Support). Let o €
+L?(R"), (1 < p < 00) such that suppo is compact in R™, and gi. € L?(R%).
+
+then Hg"? is a compact operator on L?(R*).
+
+Chapter 1. Time-Frequency Analysis 20
+
+In this work, we are mainly interested in symbols of the form xq € L™(IR*“)
+where xq is the indicator function on a compact subset 2 C R”™ of the time-
+frequency plane. Since such symbols are compactly supported with supp xa = 2,
+
+then H¥'"? is a compact operator. Therefore. we can apply the Spectral Theorem
+1.19 on Hewe2,
+
+1.5 Amalgam Spaces
+
+In time-frequency analysis, we are also intcrested in functions satisfying certain
+properties locally, in which those local properties can be combined to obtain a
+global property of the function. Spaces containing such functions are appropriately
+called amalgam spaces, since they consist of functions whose amalgamation of their
+local and global properties satisfy some finiteness criterion. We will define what
+these spaces are preciscly. We refer the reader interested in a thorough discourse
+of amalgam spaces to the papers by H.G. Feichtinger (12, 11]. For amalgams on
+the L?, and &7 spaces as what this chapter is based on, we refer the reader to
+the papers [16, 20]. We will be proving most of the results here, while some are
+relegated to the Appendix. Most of the proofs appearing here are patterned on
+C. Heil’s techniques [20], where he worked on the amalgams on R,
+
+Definition 1.9. Let 1 < p,q < 00, and L?,,(R*) be the space of all functions
+f R= C such that for any compact sct 2. RY. [If “xallinea < 00. Given a
+compact set 2 with nonempty intcrior, we define the amalgam space denoted by
+W(L?, L4)(R*) to be
+
+W(L?, L4)(RY) = {f € Le c(R") = |] IF + xoselleel|,¢ < 2} - (1.39)
+
+The definition is well-defined as the space is independent of the compact set 2.
+Below is a result on the completeness of the amalgams spaces. Its proof is deferred
+
+to the Appendix.
+
+Theorem 1.22. W(I?,L9)(R‘) is a Banach space with norm
+[lfllweecey = || IF = xesellie||,.- Furthermore, different choices of the compact
+
+sets 2 with nonempty interior give equivalent norms.
+
+We are also not strictly restricted to L? spaces. in fact it is possible to define
+amalgam spaces W(B, C) for arbitrary Banach spaces B.C satisfying certain con-
+
+ditions [12]. But for the purpose of this study, we are only interested in subspaces
+
+Chapter 1. Time-Frequency Analysis a1
+
+S? of the L” spaces which has the norm induced by L”. Precisely, we consider the
+
+space
+W(S?, L4)(R!) = {fF € Ly.o<(R*) 9 S°(R") : |[flwes.u9 < 00},
+
+equipped with the norm induced by W(L?, L’).
+
+From the definition, we can quickly prove familiar inclusion relations for the
+local L? components. Notc that for normed functions spaces, (A, |]-||4); (B; II-[Is)
+such that A C B then A + B means that the inclusion map ze: A > B is
+continuous, that is, there exists some C > 0 such that for any a € A, |la||z <
+Cllalla.
+
+Lemma 1.23 ((28]). Let Q be a compact subset of R¢ and 1 < p, < p2 < 00, then
+TP(2) 4 LP\(Q).
+Proof. Consider the case where 1 < pi < p2 < 00 (p: = Po is trivially true). If
+
+f € L?2(Q), then by Hélder’s inequality:
+
+ULF + xse- Xallir S Ibxall, 52355 If" + xall, 2
+LF
+
+S |Q] v2 |IF + xalle-
+Therefore
+eel
+WF = xallis SIP ALF + xallre- (1.40)
+
+Incquality (1.40) is true even if pp = 00, using similar estimates and Hélder's
+
+inequality. ia)
+
+Theorem 1.24. If 1 <p: < p2 < 00 then for any 1 < q < 00, W(L*, L4)(R4) @
+W(L, L9)(R*).
+
+Proof. Since 2 is compact, then so is 2+, hence by Lemma 1.24 there exists a
+
+constant C > 0 such that
+IE xasellier S CIF Xesellie- (1.41)
+Hence we have, for 1 <q < 00
+
+[tr rollin <0 f AS -x0vellbn-
+
+Therefore our conclusion follows. For g¢ = 00. the result easily follows by taking
+
+the essential suprommn of the inequality (1-41). o
+
+Chapter 1. Time-Frequency Analysis 22
+
+An analogous inclusion result for the global components is stated below, but
+
+we defer its proof to the Appendix, which follows from the elementary inclusion
+
+relations on the discrete €” spaces.
+
+Lemma 1.25. Let 1 < p < q < 00 and J is any countable index set, then
+(FT) > LUT).
+
+Proof. Note that for any 0 < a < 1, and any countable ¢ = {c;}jer CC
+
+(= ll), <Vie
+
+JET nes
+
+Therefore, if 1 < p < q so that 4 <1 then
+
+< (Sur)
+
+JET
+
+The estimate above implics that @(J) is continuously embedded in (J) as
+required. For q = 0, note that |cj|P < Dyez lesl” for any j € J, therefore
+
+‘suPjeg Ieyl)” < Icj?, which implies that |l¢lle < Ielle. O
+
+SUPjeg S Lies
+
+Corollary 1.26. [f1 <q $ qz $00, then for any] <p < 00, W(L?, L™)(R!)
+W(L?. L%)(R").
+
+Another result, showing the behavior of the amalgam spaces when p = q is
+
+shown below.
+Proposition 1.27. W(L’, L’)(R®) = L7(R*).
+Proof. We have for any f : R¢ + C
+
+IARyunsey = ff, eOPrnee atte = fa-+21 IU = 1 I
+Hence, W(L?, L”)(R*) = L?(R"). The same can be done when p = cc. ao
+
+The Amalgam spaces also inherit the monotonicity property of L? spaces. that
+
+Chapter 1. Time-Frequency Analysis 23
+
+Proposition 1.28. For any 1 < p,q < 00, if |f| < |g| almost everywhere, then
+Il llwo.tey  Ilgllwus,e9
+
+Proof. We only consider case 1 < p,q < oo. Since x + x" is an increasing function
+on [0,00) whenever 1 < k < 00, then |f/? < |g|? almost everywhere. Hence by
+monotonicity of the Lebesgue integral, we have for all « € RY, |If- xaszllur S
+Ilg-Xeseller, similarly, || [If -xXesellveller < || [lg-x04ellz0|| 4 As required. The
+proof for p,q = oo is similar. fs)
+
+Next, we discuss the structure of the amalgam space when we consider, as a
+local component, a closed subspace of L?.
+
+Theorem 1.29. Let 1 < q < p < 00 and S? C LP be a closed subspace, then
+W(S?, L*) + W(L?, L4) and W(S?, L*) is a closed subspace of W(L?, L*) (hence
+a Banach space).
+
+Proof. Since the norm on $? is induced by L”, it is straightforward to see that
+W(S?, L*)(R¢) + W(L?, L4)(R"). To show that W(5?, L*)(R*) is closed, let
+{Jn}nen be a Cauchy sequence in W(S?,L*)(R“), then by completeness of
+W(L?,L9)(R¢), there exists an f €  W(LP,L9)(R4) such that
+. then by (1.26), we have
+
+limp seo IIf — fallw¢u».9) = 0. Since q < p by hypothesi
+W(L?, L4)(R*) 4 W(L?, L?)(R") = L”(R*), therefore there exists some K > 0
+such that ||gllz» < Kllgllwu.19) for all 9 € W(L?. L%). In particular, this means
+that {fu}nen is a Cauchy sequence in S?. Furthermore, limyso llf — fallur <
+K limas0o If ~ fallen
+S” is a closed subspace of L?. Therefore W(S?. L")(R“) is a closed subspace of
+W(L?, L9)(R*) as well. Oo
+
+=0, therefore f, + f in L?, and thus f € S?, because
+
+From the two preceding results along with Proposition 1.29 and Theorem
+
+(1.24), we immediately have the following result
+
+Corollary 1.30. If 1 < pi < m2 < 00, and S* C L™ is a subspace, then
+ws, L9)(R*) > W(L, L*).
+
+As what can be seen above, functions in W(L”. L")(R“) are characterized by
+the L? integral of their local L? norms with respect to the translates of any compact
+set with nonempty interior. We shall show an equivalent norm on the space
+W(L", L")(R*) and prove that the amalgam space can be discretized where the
+
+‘global’ L7 norm can be replaced by the discrete ( norm.
+
+Chapter 1. Time-Frequency Analysis 24
+
+Definition 1.10. A sct of functions {y;}j¢y such that 0 < y <1 for all j E J
+on R¢ is a bounded uniform partition of unity (BUPU) if
+
+1 Dies =
+
+2. supjes |l¥illee < 00,
+
+3. there exists a compact set U C R¢ with nonempty interior and points z; € R?
+such that supp(;) C U + 2, and
+
+4. for each compact K CR", supreqi#{j € J: 2 © K +25} < supiey #{j €
+JK +u0K +440} <o.
+
+From the BUPUs, which always have associated compact sets U and points z
+as in the definition above, we can derive an cquivalent norm for W(L?, L?)(R*)
+
+which is discrete in nature.
+
+Theorem 1.31. If {j};es is a BUPU with a compact set U and points 2; ¢ R¢
+as in Definition 1.10, then
+
+(1.42)
+
+Do llfslloxves,
+
+jet
+
+IFllwoesaye
+
+Ls
+Proof. In the definition 1.9 above, Iet 2 C R# be large enough so that {z — w :
+zwéEU}=U-UCQ Ife €U +z, then z € z—U, therefore we have
+the following inclusions U +z; C U+2—U © Q+z. From there we have
+
+[fl B= Fl ¥y - Xsuppte,) S Lf] Yi * Xa4e- Hence
+UF eyllar = IL-8 > Xeeallir S MILF + xaseller,
+where M := supjc, |I¥;lle: < 0c. From the inequality above, we have
+
+SOF Valluexvess(e) = SAF Palle S Ku MILF - xaellor,
+
+jet {jeJ:reU +25}
+
+No
+
+where Ky := supzeri{j € J: 2 € U + 4} < 00. By monotonicity of Lebesgue
+
+measure, we have
+
+= |[Nullur $ KoM || IF -xasellerllie- (1.43)
+a
+
+So llfeallexves,
+
+jes
+
+To prove the other inequality, choose an appropriate Q such that U DU - 2.
+
+For cach a € R4, define
+
+Fp = {JE J: (U + 3) OA(Q +2) FO}.
+
+Chapter 1. Time-Frequency Analysis 25
+
+Hence if j € F;, there exists some z € R¢ such that z = u+z; = q+2, for
+some u € U, and q € 9. In particular, x = u + z;— q € U +2. Therefore, via
+Dijev i = 1 and the construction above,
+
+UF xorsallan = || °UPxarse) Wy
+
+jet
+SDM fxerse- Ville
+
+ged
+
+= D7 MCFxarse) - Piller
+
+GPs
+
+SMF sll
+
+IPs
+
+SSIS billeoxuss,(2)
+
+i€F
+
+SDC IF  dallurxvs,(2),
+
+jet
+
+Le
+
+hence, again, by monotonicity of the Lebesgue integral,
+
+SIF vallurxuss,
+
+jet
+
+[MF + xorsellerl pe S (1.44)
+
+Le
+The inequalities (1.43), (1.44), and the fact that for all f € L°(R4),
+
+Ue -xersellurll ae = [| IF -xasellee||,, due to Theorem 1.22 proves norm equiv-
+alence (1.42). a
+
+We give another result [20, 11.6.6] which talks about the convergence of a series
+
+of functions under the Z? norm.
+
+Theorem 1.32. Let 1 < p < 00. Assume {fu}ney C L°(R*) are nonnegative
+functions such that {supp fu}ney has @ mazimum of of K intersections with cach
+other. If 1 < p< co then for cach finite F C J we have
+
+Up ip
+(Susie) IDO fallur <2" (= Vat) (1.45)
+
+neF neF ne
+
+where 3 + 4 = 1. Therefore, Dyes Ilfallin < 00 if and only if ,,<, fn converges
+
+A
+in L”(R"). In this case, the convergence is unconditional, and we can replace F
+
+with by J in (1.45). An analogous result holds for p = oo.
+
+In particular, BUPUs allow us to use known properties of the sequence space
+4)
+
+Chapter 1. Time-Frequency Analysis 26
+
+Corollary 1.33. Let {yj},ey be a BUPU with associated compact set U and points
+{zj}ies then
+UF lear.) = IIMS» Uyllae }iesller (1.46)
+
+Proof. Since {supp(f - ¥,)},<y oly has finite overlaps by BUPU definition, then
+for the case 1 < q < 00, we have by (1.45)
+
+DEUS Ville Xue,
+
+ied
+
+I Fllwo.re9 =
+
+Ls
+
+Va
+= (=u IF -sle-xsal)
+
+Sel
+Va
+= (Soa : wr)
+jet
+= ILE Villar boevllen-
+A similar result holds for g = 00. Oo
+
+The theorem above allows us to consider a simpler norm for the Amalgam
+spaces by considering the BUPU generated by the family {xo,, :n € Z4}, with
+Cn = 6n + 6(0,1)*, where n € Z" and 6 > 0. It can quickly be checked that these
+functions satisfy items 1— 3 of Definition 1.10, with supp(xo,,s) = nd + 6{0, 1]
+and with 6(0, 1]* standing in for U in the definition so that supp(xc,,s) = nd + U.
+It can also be shown that for any bounded set K C R4, supmezs #{n € Zt:
+(K +6) (K + mé) 4 0} < 0 (see Appendix). This characterization of the
+Amalgam space will allow us to simplify computations in the proceeding chapter.
+Also, note that by the above theorem, different values of 6 > 0 also give equivalent
+norms. Furthermore, note that we can also replace item 1 of definition 1.10 with
+Die i = 1 ae., and the proof will still remain valid, hence we can actually
+consider the closed intervals C,,,s = dn + (0, 1]*.
+
+Recall that for f,g : R¢ + C their convolution f * g is defined to be the
+
+function
+
+eae = syle — tae
+
+quences, a discrete version of convo-
+
+subject to convergence of the integral. For
+lutions can be defined. Let a = {ar}xeg.b = {Px}xeg be complex sequences on a
+countable index set J, then we define their convolution by
+
+(a b)(n) = Y aebn. be
+
+hed
+
+Chapter 1. Time-Frequency Analysis 27
+
+For normed function spaces A, B, and C, by Ax B C C, what we mean is that
+there exists a 1 > 0 such that for alla € A, and b € B, |la* ble < Kllallallblla:
+where || - [las [I - Ila, and || - |e denote the norms on A,B, and C respectively.
+We are also interested in the convolution propertics of the amalgam spaces, and
+relevant to this is Young’s convolution inequality for integrals and sequences [21,
+Theorem 20.18, page 296].
+
+Lemma 1.34 (Young’s Convolution Incquality). [f1 < p,q < co such that iti=
+1+}, and f € LP(R*), 9 € L4(R4)a = {an}nezeegy, and b = {bu}Jneg € OT)
+then
+
+If * alle < [lf llollglles
+Ila * ll- < llallollglle-
+
+That is, L”(R*) + L9(R¢) C L*(R*), and (J) * (J) © &(I); with the usual
+modifications for p,q = 00.
+
+The following is also a useful gencral result regarding convolutions and sub-
+
+spaces
+
+Proposition 1.35. If A,B,C, D are normed function spaces such that A+ B
+and B+*C CD, then A+C CD as well.
+
+Proof. Let a € A and ¢ € C, since a € B as well, then by hypotheses there exist
+Ky, Ky > 0 such that [la «ell> < Killallallelle < eK llallallelle. a
+
+It can also be shown that the convolution of Amalgam spaces behave in a
+predictable way. This is an important convolution result, whose proof we defer to
+
+the Appendix.
+
+Theorem 1.36. If 1 < pi,qi S 00 with i= 1,2,3 such that 2+ 2 = 142 and
+
+24+ h=142, then W(L", L)(R4) « W(L?, L)(R4) C W(L, L®)(R4).
+
+We end this chapter with a result from [13] about the function w.(z) = (1+
+|lz||?4)-*2 for # > 2d. Let Co(R%) be the subspace of continuous functions that
+
+vanishes at infinity in L°°(R4), then
+
+Proposition 1.37. w, € W(Co, L!)(R™) ¢ L'(R™).
+
+Chapter 2
+
+Existence of General
+
+Adaptive Irregular Gabor Frames
+
+2.1 Background
+
+This work is motivated by M. Dérfler’s paper on quilted Gabor frames [9], which
+talks about a possible construction of a locally adaptive frame in the context of
+time-frequency analysis.
+
+Given a sct S, we denote its cardinality by #S.
+
+Definition 2.1. A family of compact subsets {A,}xea on R% is an admissible
+cover for R™ if
+
+1. Unen 21 = R™, and
+2. supyen #{r €A:2,NQ FO} < 00.
+
+Hence, adinissible covers are those in which the number of intersections of any
+
+given member with the others are uniformly hounded above
+
+Definition 2.1 (Quilted Gabor Frame). Let {9(g;, A;)}jez be a family of Gabor
+Frames for L?(R4) and {Q,}rer be an admissible covering of R*. Let m:Z + J
+be a one-to-one map that assigns each region in the covering to Gabor Frames. so
+that we have the local time-frequency systems £L, = 2 Amir). Then the set
+
+U9(amiey.£+)
+
+rel
+
+is called a quilted Gabor frame for L(R¢), if there exist constants 0 < A, B < 00,
+
+such that
+
+AILPIB S$ 32 SO MAO) amend? S BILLIE
+
+ret del,
+holds for all f € L2(R").
+Given a well selected covering for R™, we can think of a Quilted Gabor frame
+
+as the restriction of the sampling points in cach assigned frame to the region in
+
+28
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 29
+
+which they correspond, and if the union (i.c. quilting) of these restricted samples
+also make up a frame for R24, then we call it a quilted Gabor frame.
+
+Since for each region Q,, we are only using finite local sampling points 2, 9
+Am(r), then it seems natural to think that we may be able to relax the requirement
+that we sample cach local systems from existing frames. That is, we are looking
+for conditions on the coverings 2, and how to select finite points in it that we can
+also quilt so that we have a frame for L?(IR“). It will be shown
+
+More precisely, given a countable index set A, we want to find sufficient con-
+ditions in which an admissible covering {Q,},en with finite: points Fy C Q) in
+it, and a family of windows {g,},ea such that there exist A,B > 0 where for all
+fe Lr’),
+
+AIA S YO M67 O)o)P < BILE. (2.1)
+
+DEA preF
+
+This problem is almost the same as Dérficr’s construction, only that we do not
+assume a priori the existence of cach Gabor frames associated to the compact
+sets 2). We will show that an upper frame inequality still holds even without this
+assumption. Furthermore, our main contribution is the proof on the existence of
+the lower frame bound as in incquality (2.1) above using the density techniques
+from H.G. Feichtinger and W. Sun's paper on irregularly sampled Gabor frames
+{13}.
+
+2.2 Multisets and Density Results
+
+We first address a subtle point about sampling in the Time-Frequency plane by
+quilting. In Dérfler’s quilted Gabor frames and our initial hypotheses above, we
+are dealing with regions that cover time-frequency plane and we sample from
+points inside these regions, so in general, after quilting we end up with unordered
+and possibly repeated sampling points. Therefore, it is more appropriate to look
+at our sampling points as multiscts instead of just scts or sequences since they
+are the natural generalization of sets that are sensitive to repetitions, and ignores
+ordering.
+
+We begin by a definition of multiscts themselves and then defining the opera-
+
+tions between them.
+
+Definition 2.2. A multisct is a pair (5. js) whore S is a set called the underlying
+set and jis : S + Nyo is a mapping to the strictly positive natural numbers called
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 30
+
+the multiplicity function for S. For s € S, the natural number p(s) is called the
+multiplicity of s.
+
+Note that when there is no confusion, we shall refer to the multiset (S, js)
+simply as S.
+
+To allow comparison and to define operations between multisets, we need to
+extend the range of the multiplicity function to include 0, and the domain to a
+larger set as in the following definition.
+
+Definition 2.3. Let U be a fixed set called the universe such that A C U and
+Ha be the multiplicity function of A. Extend a : A > Noo to the mapping
+pa: U + Noo by pals) =0 if seU\ A.
+
+Note that this definition implies that ordinary sets are just multisets with
+multiplicity functions bounded above by 1. Also, two multiscts (S, ys) and (A, ya)
+are cqual if and only if under a universe U, such that A,B CU, ps = pa.
+
+Definition 2.4. Let A, B € U be underlying sets contained in a common universe
+with multiplicity functions jz, 4», respectively. Comparisons and operations be-
+
+tween inultisets are defined as follows:
+
+(i) We generalize the notion of sct inclusion, the multiset B contains A denoted
+by AC B if and only if for all 2 € U, palz) < pa(z);
+
+(ii) The intersection of multiscts A and B is the multisct with underlying set C
+characterized with the multiplicity function given by zo(x) = min(y.4(2'), fea (x))
+for x € U;
+
+(iii) The union of multisets A and B is the multiset with underlying set C charac-
+terized with the multiplicity function given by ue(t) = max(u,(z), we(2))
+for z €U;
+
+(iv) The sum of the multiscts A and B is the multiset with the underlying set C
+
+characterized by the multiplicity function po(:t) = a(x) + pen().
+
+We are mainly interested in the sum of multisets which we will denote as Aq: B
+for multisets A and B. For example, if we have the finite multisets {1,1,2,3.4}
+and {1,2,3,4,4} then {1.1,2,3,4} ® {1,2,3,4,4} = {1,1.1,2,2.3,3,4,4, 4}.
+
+Now that we have the definition of multisets down, we define the notion of
+
+relatively separated mnultisets, which are originally defined as sequences in [A].
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 31
+
+Note that we strictly differentiate from sets and multisets in the sequel to avoid
+
+confusion.
+
+Let us also discuss how to properly index multise
+
+s. Let (S, zs) be a multiset
+and given an index set A, let f : A + S be the surjective indexing function. We
+say that f is a proper indexing for the multiset (S, ys) if for all a € S, |f-'(z)| =
+us(z). To construct such an indexing, let Z = Ures{(2, nz) 1 < nz < pis(z)} and
+define the surjective function f : I+ S via (x,nz) 4 «.
+
+Definition 2.5. Let A be a set, and (5, 1s) be a multiset.
+
+(i) A set A is separated if inf, serra |a — b| > 0; A constant 6 > 0 such that
+Ja — b| > 6 for all a bin A is called a separation constant.
+
+(ii) A multiset 5 is relatively separated if it is a finite multisct sums of separated
+
+(iii) A point \ € R™ is an accumulation point for a set of multiset (5,12) if
+every open ball in R™ centered at A contains infinitely many points in the
+underlying set of (S, us).
+
+Note that a set, say A, which is separated, must not contain any accumulation
+point, since if it does, then infa,s¢A:a¢6 [a — b| = 0. This observation can be gener-
+
+alized to multisets by the following proposition.
+
+Proposition 2.6. A multiset is relatively scparated if and only if it has no accu-
+
+mulation points and has a bounded multiplicity function.
+
+Proof. Let (S.us) be a relatively separated multisct. so that (S,jus) = @%,S;
+where cach S; are separated sets. Since separated scts are, by definition, sets.
+And sets necessarily have multiplicity functions bounded by 1. then for all « € S,
+
+\ns(z)| = [0% s,(2)| < NV, hence the multiplicity function jzs is bounded. Now
+
+suppose for contradiction that (S, zs) has an accumulation point \ € R, then by
+
+definition, there exists a sequence {Ax}xenw © S = UN, S; such that JA — Ag] < 4.
+
+But since the sequence {Ax}xenw is infinite and there are only finite S;’s, then at
+least one of the S;’s must contain an infinitely many terms of the sequence {Ax }xens
+which is a contradiction since this will imply that one of the separated sets S; will
+have an accumulation point.
+
+Conversely, assume that (S.jzs) has a bounded multiplicity function and has no.
+y= No.
+
+accumulation points. Therefore there exists No € N. such that sup,ey fas(2"
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 32
+
+Assume also that (S, js) docs not have an accumulation point, therefore, any
+subset of the underlying set S$ cannot have an accumulation point, meaning any
+subset of 5 is also a separated sct. Now, for convenience, Ict us define the multiset
+operation n - (M, ym) = @/,M = (M,n- yy), so if M is just an ordinary set,
+then n- M is just the multiset with clements in M repeated n times.
+
+Next, for each t € N we define the subsets $; C S via S; := {x € S: s(x) = i}.
+Hence 5; consists of elements of S with multiplicity exactly i. Thus by hypothesis
+we can write (5, zs) = S,® (2-52) @ (3-53) ®...®(No + Sno) because for any s € S
+such that js() = i where i € {1,2,..., No}, s(x) = i-jus,(z) and 1s,(ct) = 0 for
+
+J #1. Since (S,us) has no accumulation points then each S; is a separated set,
+hence (5, ys) is a relatively separated multiset. ia)
+
+With the proposition above, we can now show that
+
+Lemma 2.7. Let {Qa},en be an admissible cover and Fy C Qy be arbitrary fi-
+nite points for each index X, then the multiset @yeq Fa is a relatively separated
+
+multiset.
+
+Proof. The regions {Q,},¢a constitute an admissible cover of the R plane, there-
+fore the number of intersections of cach region with the others is bounded above,
+that is, there exists Np such that for all A € A, given * := {r € A: 2,2 ¥ B},
+then #* < Np. Therefore, the multisct @,¢q Fy has a multiplicity function
+
+bounded by No. Furthermore, eq Fy cannot contain any accumulation point
+in R™. Let z € R4, by hypothesis. it can only be contained in a finitely many
+compact sets {Qy},eq, otherwise we contradict the admissibility condition (since z
+will then be an intersection point of infinitely many %s). Let {9,}, be all such
+compact sets that contain z, and let d := diain(J, Q),), then the open ball Ba(z)
+of z contains the set UN, {M,}, and hence by construction, Ba(z) contains only at
+most the finite points Uf, Fs, thus z is not an accumulation point of @yeq Fa-
+
+Since z is arbitrary. @yeq Fa does not have any accumulation point. o
+
+This point of view of multisets is implicit in the current literature dealing with
+possibly repeated sampling points [9] [4], and we recover the usual notion of frames
+if we take any proper multiset indexing. That is, if J “ S$ where J is an index
+set, S is the underlying set of a multiset (S, 15) and m is the surjective mapping
+
+that defines the indexing, then we say that multisct (S, jes) is a frame for a Hilbert
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 33
+
+space H if there exist A,B > 0 such that for all f € H
+Alf S OMS: found S BILFIRe (2.2)
+sed
+Since we can always do this, and ordering is irrelevant in frames, our multiset
+formulation just reduces to the usual frames in terms of ‘sequences’.
+
+2.3 Existence of the Upper Frame Bound
+
+In this section will we prove that an upper frame inequality holds for our construc-
+tion. The serics of results below for this section is mostly due to M. Dérfler [9]
+but we nevertheless show it here, some with slight difference in their hypothesis,
+and we note that it holds even without the assumption of the existence of any
+Gabor frame, while also taking into consideration the point of view of multisets
+as developed in Scction 2 of this chapter.
+
+We first. give a slightly different convolution formula from [19, Lemma 11.3.3]
+
+which will be an important inequality for our forthcoming estimates.
+
+Lemma 2.8. Let  € L7(R%), and gj, € So(R*) such that ||g)ll2 = 1, then for all
+fe DR").
+
+IVoFl(2) < (IVag Fl * lVogol)(2) (2.3)
+Proof. We have from the inversion formula that
+L=VgVal = Ihe Veg fe.) Ma Tegodrdu.
+
+Therefore by the covariance property (1.15) Vig (TuiMyg) (22,0) = e277!) Veg gar —
+= e2"() Vg9(x,w), and the commutation relation
+
+u,w — 7). and VagC
+
+(111) M,T, = eT, M,,
+VaF (ayn) =p Veo Ss MnTug) (2.4)
+= Wag f, Voy MnTu9) (2.5)
+=f. Veg (0) Vag) (2, w) dads (2.6)
+= I if, Vag f (as w)Vagg(u = 27 — we" dards. (2.7)
+With (u,7)) = <. and taking the absolute value of the equation above implies
+WIGS (Vig fl * [Vagol)(2)
+
+Me A
+as required.
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 34
+
+Note that for the rest of the study, we denote gy to be a function in So(R*).
+
+Lemma 2.9 ((9]). Let 1 <p < oo. Let S be a relatively separated multiset in R4
+so that S = @}!,S; where each S; is a separated set. Then there exists C > 0 for
+any F € W(Co, L”)(R™), Fis € &(S) and
+
+ip
+IlFislleeis) = (x esr) $ CIF llwico.ry (2.8)
+
+265
+Proof. Recall that the amalgam space W(Cp, L?)(R™) has norm ||F|lyicy,er) =
+Domes IF » TenyXqll2.- Where Q is the unit box in R.
+
+By hypothesis, each S; is separated, therefore there exists some 6 > 0 such
+that for any i € {1,2,...,R}, t,y € S:, |z—y| 2 5 > 0. Therefore by counting, for
+any i, there are at most (1+ $)*4 points x € S; inside each box (k,n) + Q. And
+since, S is an R sums of these S;'s, then there are at most R(1 + 4)” points of S
+inside each box (k,n) +Q. Since for any z € (k,n) + Q, |F(z)| < IIF-Temxelleo:
+
+RC
+YD rteyreR(1+5) Tame
+
+TyE((k.n)+Q)NS-
+which implies
+1
+Drew sR(1+ 5) YI Tawxelt
+ES (kyn)ez24
+Hence the conclusion follows with O? := R(1+4)™. o
+
+Lemma 2.10. Assume that M © Hyco := {g € L?(RY) : [Vpgl(z) $ C+
+\lz|I2)-#2} for arbitrary fized go € So(R*), and some C > 0, 5 > 2d. Then there
+eists aC, > 0 such that for all f € L?(R*)
+
+sup |Vofl
+oem
+
+<Gllflk (2.9)
+
+'W(Co.L?)
+
+Proof. Using the convolution relation in Lemina 2.8 we have
+WofVS [VaoFl * Vagal] (A)-
+Since |Vpgo(A)| < Vo9(—A) < CC ILAIP)-*? = Cw,(A), for all g € AY, then by
+hypothesis
+sup oF (A) < (IVa.Fl * Curs)(A)- (2.10)
+Since s > 2d, this implies from 1.37 that w, € W(Co, L')(R™!) C W(L!. L!)(R™) =
+
+L(R™), Furthermore, from the orthogonality relations (1-11), for all f € L?(R"),
+
+Igollallflle- We also have the following inclusions:
+
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 35
+
+1. From 1.24 andl.27, W(L?, L2)(R™) = L?(R4) C W(L!, L?)(R™);
+
+2. From Young's convolution inequality (1.34): L (R24) * L°(R%4) c L°(R*)
+and L?(R4) « L1(R?4) C 17(R4);
+
+3. Since Co(R) C L®(R%), then from Item 2 above and Proposition 1.35:
+L(R™)Co(R™) C L°(R™). Since ¢ € Co(R™) <=> [Kelle = Ilellu < 00,
+and f +c € Co(R%) whenever f € L'(R™), and c € Co(R%) (see Appendix)
+then L'(R*) * Co(R) C Co(R%) as well;
+
+4. From Items 2 and 3 above, along with Theorem 1.36, we have W(L?, L?)(R%)+
+W(Co, L)(R*4) © W(Co, L?)(R™);
+
+5. Finally, using Item 1 and 4 above, along with Proposition 1.35, then
+A(R) » W(Cp, L!)(R™) C W(Co, L?)(R™).
+
+From the convolution relation given by Item 5 above, we know that there exists
+K > 0 such that
+
+I Woo Zl * wsllw(oo.u2) S BUlVoofllcllwsllce
+
+= K|[gollellwsllooll flle-
+
+Therefore by monotonicity of the amalgam norn in (2.10) and the inequality
+above, we have ||supsea |Moflllwico.n1) S CH llgollalwslloollfll2- Hence, taking
+
+Cy := CK||goll2||wslloo proves our theorem. ia)
+We now present our construction as a theorem.
+
+Theorem 2.11. Let A be a countable set. Fix s > 2d,C > 0. For each X € A,
+let 9, € Hec. Let 2, © R* be a compact set where {Qy}r€n forms an admissible
+covering. Then for any arbitrary finite points F inside each Qy, the multiset
+
+collection
+
+Qi r(Palga: pa € Fa}
+
+dea
+
+admits an upper frame inequality for L>(R*).
+
+Proof. We want to show that there exists a constant B > 0 such that for all
+fe L(R‘)
+YE MW rvol? < BIR
+
+AEA preF a
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 36
+
+To do this, Iet f € L?(IR“), then we have the following incquality
+SY Keto? <> YS sup [Vay fP@s)-
+AEA PAP AEA prehy “EX
+Since the multisct ®,eq Fy is a relatively separated multiset by Lemma 2.7, then by
+the previous results given by Lemmas 2.9 and 2.10, supyeq |Vo,.f| € W(Co, L?)(R)
+and we have the following estimate
+
+e
+XY MAmenanye < noo? (14 am) IIR.
+
+DEA PrEFy,
+
+So we can take B := NoCf(1 + gqy5)4, where No is the maximum of the multi-
+
+plicity function of the multiset ®,ca Fy, and 6(No) is a separation constant that
+
+depends on No. o
+
+This shows us that for uniformly well decaying window functions inside cach
+region, we can actually choose any finite sampling points inside each compact
+
+region to quilt a system with an upper frame bound.
+
+2.4 Existence of the Lower Frame Bound
+
+Our next step is to show a sufficient criteria for the existence of a lower frame
+bound. For the sequel, we work with the same construction, that is, the sct
+of windows gy still has uniform decay, but we add another stipulation that our
+compact sets 2, behave in a controlled manner, in particular, supyeq[Diam®,] <
+co. In other words, we do not let the local components grow arbitrary large. We
+
+start with the following definitions and lemmas.
+
+Definition 2.2. Let n € N. C is a rectangle in R" if C = []j_, Ze where cach
+I, are intervals in R. A rectangle C is degenerate if at least one Z, is a singleton
+interval. If cach of the intervals are bounded, then we call C a bounded rectangle
+
+in R®. A rectangle is closed (open) if every Z, is a closed (open) interval.
+
+Remark:
+The interscction of rectangles is a rectangle. This follows directly from
+the fact that intersections of cartesian products is the cartesian product
+
+of intersections.
+
+Lemma 2.12. Let n € N, for any rectangle C in R", |C| = 0 if and only if C is
+
+either degencrate or emply.
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 37
+
+Proof. Suppose |C| = 0 and C is nonempty. By definition of the Lebesgue measure
+on n-dimensions, |C] = |Zi| - |Z2| - ... - [Zn] = 0, which implies that at Icast one
+Ty, say, Iv has measure zero. Since C is not empty, then nonce of the intervals Z,
+is empty, including Z,, this implies that Zy is a degencrate interval, since every
+non-empty and non-singleton interval has positive measure. From the definition
+above, it must be that C is a degenerate rectangle.
+The converse is trivial since empty sets and singletons have zero Lebesgue measure.
+a
+Corollary 2.13. Let n €N, for any two rectangle C and C’ in R", |CNC'|>0
+if and only if CNC’ is non-degenerate and non-empty.
+Proof. This follows directly from the Lemma above, and from the fact that the
+
+intersection of rectangles is also a rectangle. a
+
+Lemma 2.14. Let n € Z and q € Z". Define Dy := q +(0.1]". Then for any
+bounded non-degenerate and non-empty rectangle C in R", CC Uteicnn,is0) Do
+
+Proof. We prove a simpler result. Consider a,b € R such that a < b, then there
+exists k € Z such that k < a and k+(0, 1]M(a, b) is non-degencrate and non-empty.
+Indeed, if a € Z, then choose k = a so we have the non-singleton and non-empty
+intersection k + [0,1] (a,b) = (k,b) if0 <b—a <1, or k+ (0, 1]A(a,b) = (k, k+1]
+ifb—a>1. Ifa ¢ Z, we can always choose some k € Z such that k <a<k+1
+in which k + [0,1] (a,6) = (a,k +1] fk +1 <b, or k + [0,1] (a.b) = (a,b) if
+k+12> b. Hence, once such a k is found and k +1 < b, we can intersect the ‘next’
+interval (k + 1) + [0,1] to (a,b) to get a non-cinpty non-degencrate interval and
+keep going until we cover all of (a,b). By the previous corollary, we have shown
+that (a,b) © Usrensetto.sjn(a.y>0)(4 + (0, 1]). The result can easily extended to
+any bounded non-degenerate non-empty interval (not just open intervals). Since
+C = JI, Ze where each Z; is a bounded non-degenerate non-cmpty interval in R,
+then we can apply the previous result to each of these Z;’s from which our lemma
+
+follows. a
+
+The next theorem is a result regarding the density of sampling points in the time-
+frequency plane R and families of rectangles that cover it.
+Definition 2.3. Let I be a countable sct of (sampling) points in R, if there
+
+exists 6 > 0 such that
+2d
+
+rR” = UT] [> - a +
+
+der k=1
+
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 38
+
+where A= (Ay, Ags: Aga) € P, thon we say that I’ is 6~dense set of points in
+RY,
+
+Example 2. The set of integer pairs Z? is a 5—dense in R? with
+6=2.
+
+We have the following result on any 6—densc sampling points in R%.
+
+Proposition 2.15. Let 6 > 0 and I be a 5—dense set of R°4. Then any closed
+
+rectangle C in R™ of side lengths at least § has a non-empty intersection with
+
+Proof. By hypothesis we can always write C = [Tx (cx, di] where cx, dy € R and
+Ck S dy, for all k = 1,2,...,2d. Since R** MC = C, then by hypothesis we have
+
+ULL ([»-§ Act 3] Misa) - fle
+
+derket
+
+(2.11)
+In particular, consider the mid-point (5%) ,e(19,.,24) © With [eu de] - Then by
+equation (2.11), there exists A € P'such that (2#£),e(12,..24 € M24 [du — §, de + §].
+That is, for all k € {1,2,...,2d}.
+
+n-fshtecn,
+
+By hypothesis § < dy - cx, therefore from the inequality above
+
+which implies
+
+Therefore \ € C, as required. o
+
+Lemma 2.16. Let {Fu}nez2 be a family of functions that map R* = C, andW:
+R™ 5 R be a function that is continuous everywhere such that W € W(Co, L*).
+Suppose further that there exists C > 0 such that for all n € Z™, and z € R™,
+|Fa(z)| $ CW(z). Let 6 > 0 and {Ey}nez be a family of rectangles in R™ such
+that each has side length not more than 5, Unex2e En = R™, and |En 0 Em| = 0
+forn # m. Then for all m € Z*".
+
+jim YO [End
+
+nezel
+
+\Fin(21) — Ful22)| =
+En
+
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 39
+
+Proof. Let N € N,q € Z™, and EC R™ an arbitrary subset. Define
+
+Ay ={n € 2": |E, O[-N, N]*4| > 0}
+Dy =4 + (0,1]*
+Or(Fm; Fn) = sup |Fin(z1) — Fa(z2)|
+
+ame
+
+Now, by Lemma 2.15, we have for all n € Z*, En © Utg|znn,)1>0Dq, therefore
+W X24 SW-Y teiesnngi>0} XDq- Also, the fact that (WD feteanvgt>0) XP4)(2) S
+DetEand41>0) lIW + x0, leo for all z € R® implies the following estimate
+
+DY al + On, (Frns Fa) $20 > [EnlllW = x2, loo
+
+nghw "thy
+S20 ST 1Bal > IW x0, loo:
+nghy ——{@1EanDyl>0}
+
+Note that if ¢ = (q1, 92, -.-, G24), and given |E,MD,| > 0, then ||g||eo = max{|qi}, [aal; --
+
+N <= n¢ Ay, for € > 0) so we have
+
+Bal On, (Fm Fu) $20 > 2 BATH - x0, leo
+
+ng An Ilalloo2N {1:|EnADq|>0}
+
+Also, for a fixed q € Z, we have Umie,apgi>0 En © 9+[—4, 145)", 80 Dazanryiso [En S
+(1+ 26)?4. Therefore we have
+
+De [Enl - On, (Fans Fn) S 20(1 +26) S> [IW - x0, llec-
+
+néaw Helle
+By hypothesis, W’ € W(Co, L')(R*), then for € > 0 there exists an N = N(e, 1’).
+independent of 5 such that
+D [Bal Oy (Fm: Fa) < 5- (2.12)
+ngAy
+On the other hand, W is continuous everywhere, and thus Riemann integrable on
+[-N -1,.N +1). Hence there exists 7 = n(e,W) such that for any partition of
+[-N -1,N +1). say P = {p1,p2,---, Po}, by rectangles pj C R™, i = 1,2,...,q; if
+the mesh of P is less than 7 then the upper and lower Darboux sums U(P,W) =
+
+x
+
+the following incquality:
+
+pil - infsep, WV (2) and L(P,W) = 207) [pil - Sup sep, IV (2) respectively, obey
+
+U(P.AV) - L(P,W) < Ba
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 40
+
+In particular, because {Cy := E,O[-N —1,N +1)" }neawy, Partitions (~N —
+1,N +1), if 5 < min{n, 1} <n, then
+
+DY 1Enl OF ms Fu) $C > Enl + (sup W(21) = inf W(a))
+
+nehw neaw neh n
+< Cal (s i - ;
+om | (sup W(a) ink W(22)) (2.13)
+<£
+>
+
+Therefore, by (2.12), and (2.13), if we choose 6 < min{n,1}, then Dyeza|Enl -
+Or, (Fr Fu) <€ as required. Fe
+
+It is important to note that the above result is ‘uniformly valid’ for any family
+of rectangles in the sense that for any € > 0, there exists an 7 > 0 such that for
+any family of rectangles {En}nez2 satisfying the same hypothesis as the above
+lemma: if 6 < min{n, 1}, it follows that
+
+SS IEnl+ sup. [Fn(21) - Fa(z2)| < (2.14)
+
+pez 21226 En
+
+This fact can be verified from the proof above. The quantities N(e,W) and 7
+are independent of the rectangles {En }nezs- Assuming the same hypothesis on
+
+{Fy} nezz, the following is a corollary of this
+
+Corollary 2.17. Let & be the family of covering rectangles such that E € Es if and
+only if E = {Ey}nezz such that [En Em| = 0 whenevern £m. R™ = Ujegu Ens
+and whose side lengths are no more than 6. Then for allm € Z*"
+Jim suj En| + On, (Fn Fm) = 0.
+Page 2 | Or (Fas Fru)
+For the next lemma, we use the general fact that w. € W’(Cy, L')(R™) A
+LR),
+
+Lemma 2.18. Let {E, : n € Z*4} be a sequence of rectangles in R™ such that
+Uneze En = Rand [En Em| = 0 for n # m. Suppose that the side length
+of each Ey, is no greater than some 5 > 0. Let im € Ey and {gu}near be a
+collection of window functions such that {gu}ncam © Hac. Suppose further that
+0 < infuez lIg, lle S SUP nex IIgall2 < 00, then the sequence {|E|"?x(n)gm 22 €
+
+24} is a frame for L?(R4) provided 6 is small enough.
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 41
+
+Proof. Let Yn = (ns1tna)s(#,Y) € Eny we use the orthogonality relations formula
+(1.19) VoF(,¥) = Gpapg (Vous: Voo™(2, y)9) and an alternate form of the covariance
+Property (1.15) Voo(m(2, y)g)(t,w) = e*"9-)V,,9(¢ — zw —y), to get
+Wom (25 9)—Vou Cmadh
+J Ymitt) [Vaal ea= aeons
+a
+
+- Ton
+
+foo 9nult = ny — Terione-
+
+< Toate fg lYmP te) Wag 2,0 — pera
+
+2
+— VooGn(t = Ys = nero did)
+
+1
+Sye [f Woof (t, 0)?» [Voodun(t — 2, ws — y)erei-ae-d
+Igolle L Jee
+
+— VaoGn(t — Ynys — ye” |dtden
+x [ WVipGin(t — 2,0 — y)eni-sea)
+gos
+
+— Voogn(t — Yn se — nemo ded.
+
+We used Hélder’s inequality for the last line above noting that V,f(t,w)
+
+(Voorn (t = su — y)e2H-=4-1 — Von gut — sea — y)ermt—tm ad),
+
+(VoaGmalt — 2302 — ye2-24—Y — Vay gu(t — insta — yerrarservd) V2 12 R24).
+
+the hypothesis on the window functions and the fact that
+
+Continuing, we us
+Vof (x, ye") = Vig(=a, —y) from Proposition (1.9) and that [ta] = |w] for any
+
+complex number w.
+
+Vom F (19) —Von (m9 VP
+
+z Pl [Voy (t,00) 2 = [Vag gral — 200 — y)e2Rt-#-8)
+Igoll3
+= Vo Gat — Ynys — y)en—™m#Y |dtdus
+
+2C|hw,| cs
+< ae [Vou F(t, 22) 2 - [Vpagol@ by ~wye?@iee—v)
+
+2Clwally Wy, F(¢,12) Ory -ti0y(Van0s Vpn o) ter
+Hgolls Jz
+
+The nonnegativity of |Vyo f(t-w)I? » Ore4--100)(Vim> Van) for all (t,w) and n € Z*
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Fraines 42
+
+allows us, by Tonelli’s theorem, to interchange integrals and sums in it
+
+XJ Monet a0) ~ Vou Flom Paedy
+
+nezzd
+Cvs 7
+Tigollt [Mnf tiv) dtd - wb a [Enl - 1, ~(¢.)(Vom 50» Von G0)
+2Clfwell,
+< B }
+“Taal TF iP Pal: (tu VanI0s Van S0)- (2.18)
+
+We can similarly show that (see Appendix):
+
+»» fe Won (mss We — Van F (na Ina em Pdardy
+
+nezie
+
+< 2Cllwsll:
+= FToae IE oie >» [BnlO (04-184 Vann Van 9n)> (2.16)
+
+Hence by triangle and Hélder’s inequality
+
+= Vow Fly ye) — Vp, Fyn, ae 2) Peery
+
+nega
+
+in
+2C|lws]
+< W2lteslh (xe Y [Bal Ocy-003 Vang: v.93)
+
+Tolle | {Stee 2,
++( sup D7 [BslOvay-es(Ydn Ygn)) JIB (227)
+(yer
+
+The right-hand side of the inequality above approaches zero as 6 > 0 by Lemma
+
+2.16 and Corollary 2.17. Therefore we can choose 6 > 0 such that
+
+A
+AEE ( sup >> |Enl = Oz,-(eu)(Vomo: v.93)
+
+Toole L \wapenes ote
+
+wn
++( sup > [EnlO(u)-e, (Voo9ns vam) ] < antl (2.18)
+
+(1 aweR™ pe
+
+For case of bookkeeping, let am(z,y) = Von f(a: yer,
+and by = Voy f (nr: Ina)e™2), Now, since [En O Em| = 0 for n # m, then by
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 43
+
+triangle, Hélder’s inequality, and inequalities (2.17) and (2.18)
+
+ff Mond tn) Pady = | andy
+
+nezte
+
+nezed
+5X J, Mo am(esa)) + (am(ssy) Pedy
+neq
+SY | lrn-an(e,y)Pdedy+ S> J lon(z,y)?
+nezed © En rege 9 Fn
++20 bn am (tv) llam (2, y)|dady
+nez2d
+
+Ss AMIE + Ibo B/E
+
+(SD Jf, m= antes ret) (= I. lotsa)
+eZee neat
+
+S APMISIE + All fll2)(Igmllall fille) + Igo AILS
+= (A+ Ilgmll2)" Fle
+
+Therefore, we have for any m € Z™!
+
+X [lal < Clana + 0) VIB: (2.19)
+
+nezd
+Similarly, using inequality (2.19)
+
+lant BIB = Sf anf len) Poay
+nezt
+
+nezd
+vf. (lam (2,4) — bal + [bal)?ardy
+
+im (sy) — bn + ba |Pdvely
+
+~ nen
+
+lam (x,y) — by Pdardy + Lh, al dedy
+“el lama, patie) (s ; Pend)
+
+nezet neges 7 Bn
+ARIIG + AAal/1l)(Ihgnlle - As)Ilfllo+ of, [bul?dady
+
+nezet
+< (2Bullonlle— SDIN/18+ Sof alto.
+nez™
+
+The above inequality implies that
+
+(Ilgmlle ~ As)? IW/IB $ Zh. lbalededy. (2.20)
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 44
+Finally, the inequalitics (2.19) and (2.20) implies that
+
+:
+(in lgell- 4s) IAB SS MP Balas na) on)
+
+ne@zid
+neze
+2
+< (a lal + As) Wie
+nez2d
+
+Hence, {|En|"?(qn)gn : 2 € Z} is a frame for L?(R%4), a
+We can now use these results, on any admissible cover {S,},ea to show that
+
+Theorem 2.19. For each X€ A, let Ey be a finite family of rectangles that cover
+Qy such that |E, 9 E}| = 0 whenever Ey # E, € Ey. Furthermore, let Fy be a
+set of finite points inside 24 satisfying: for any Ey € Ey, there exists a py € Fy
+such that py € Ex Qs. If supyeq{Diam 2g] < oo. then the multiset Byea Fr is a
+uniformly 5—dense set for L?(R°*) for some 5 > 0.
+
+Consequently, given a family of windows {g, : 4 € A} C Hye, then for a
+sufficiently small 6. the multiset ®yea{t(Pa)ga : Pr € Fa} is a frame for L?(R%).
+
+Proof. Let D := sup,e,[Diam ,] < 00. Hence we have
+
+r:= sup max Diam[E, Qj] < D < oo.
+sek ee
+
+We now show that @ye, Fa is 2r—dense. That is, we show that
+R* = User Users Mizil(padi - 7: (pa)s + 7). Let 2 € R, then z € 2, for some
+XE A, and furthermore 2 € ExNQ, for some Ey € Ey by construction. Therefore,
+
+for any p, € Fh,
+
+lz—pal <__inax Diam} <r < 00,
+n€ {Na}
+
+which implies that for all # € {1
+
+Therefore
+2 € J] (pai — 7 (a) + 71-
+ist
+
+Hence we can take 6 = 2r.
+Next, let Ey = 16 + 60,17, where n € 2%. Thus {En}nex%e covers R™!
+by rectangles of side length 6. and [Ey A By] whenever » # m. Since R™ =
+
+Chapter 2. Existence of General Adaptive Irregular Gabor Frames 45
+
+Usea Unser, Midi l(pa)s — §,(ra): + §), then any rectangle of side length 6 will
+intersect at least one point in U,e, Fs by Proposition 2.15. Hence we can assign
+Pn € Ey to be pa = py € Fy for some d € A. Also, let gn = g, whenever Pa = Pr.
+Therefore by Lemma 2.18, as 6 + 0, we get have a lower-frame bound A’ > 0 such
+that for all f € L?(R%) :
+
+ANNA S So Mf 1Bal?m (pn) gn).
+ez
+
+Then by Theorem 2.11 and sup,eg2|En| < 6%, we have some B > 0 and A:=
+#a > Osuch that for all f € L?(R™) :
+
+AIlfIB S D2 Mfm(pndond? S$ S> SO (flora)? < BILSIB, (2.21)
+nezad AEA PrEF
+
+hence @sea{m(Pa)ga : pa € Fs} is a frame for L?(R%). o
+
+This shows that for ‘well-bchaving’ regions that cover the time-frequency plane,
+
+it is possible for such an ‘adaptive’ frame to exist by taking points inside sufficiently
+
+dense ‘grids’ E, MQ, in cach local regions.
+
+Chapter 3
+
+Adaptive Frames via
+
+Relevant Sampling
+
+In this chapter, we consider randomly sampled points that are also localized inside
+a compact region of the time-frequency plane. We will also extensively use the
+spectral theorem for self-adjoint compact operators 1.19. In particular, given a
+time-frequency localization operator H defined with a compactly supported sym-
+bol, then it is a self-adjoint compact operator H : L?(R*) + L?(R4), and we can
+always write f = 72, (f,e)ee + Frer where fier € Ker H and {(px, ox) }%21 are
+
+the cigenvaluc-cigenfunction pairs of H in its spectral decomposition as given in
+
+Theorem 1.19. We can also always write Hf = 072, ax(/. 7%) ex. Furthermore if
+Vw = span{y, : k= 1,2,..., NV} C L7(R4) and Py, : L?(R“) + Vy is the orthogo-
+nal projection operator onto the closed subspace Vw, then Py f = Dhar (fs Px) Pe:
+
+We start with the following lemma adapted from G.A. Velasco's paper on
+
+relevant sampling [26].
+
+Lemma 3.1. Let Hag := H§” be the time-frequency localization operator with
+respect to the compact set 2 C R? such that |Q| > 1 and window y € So(R?)
+such that ||p|l2 =1. Furthermore, let {an}nen be the (decreasing) sequence of real
+eigenvalues of Hog. Let N EN, 7 € [aws1,an], and Fy © Q be a set of finite
+points inside Q. Let Vy © ImHay be the subspace of L*(R) given by the span
+of the first N eigenfunctions of Ha, and let Pyy be the orthogonal projection
+operator onto Vy. Let g € L?(R) be another window function such that ||gll2 = 1.
+If the inequality
+
+ye > (Hopes?) ~ vIIPIB ;
+re? Mesa(A)g) PP > im] (3)
+n
+
+where 7 > v > 0, holds for all p € Vy, then there exist A.B > 0 such that for all
+Se LR’)
+AllPuvtIB S So MF Pew ADP S BILPy UB- (3.2)
+
+dea
+
+46
+
+Chapter 3. Adaptive Frames via Relevant Sampling 47
+
+Proof. Take B= #Fp and A := #5)" and let f € L7(R). By Cauchy-
+Schwartz inequality, we have
+
+DY ln fx OV9)F < BIL IB
+
+Next, we take 7 as in the hypothesis, so that (HapPyy f,Pyyf) > rlPyyfIB-
+Therefore by (3.1)
+De KP ve fi ()9)P > AllPvy FIG.
+
+dF
+The theorem follows since the projection operator Pyy is self adjoint. o
+
+Remarks
+
+1. If we replace f € L(IR) with p € Vy in the theorem above, then by the
+self-adjointness of Pyy, {Py 7(A)9},em is a frame for Vy.
+
+2. Note that the v in (3.1) can always be replaced by another v’, possibly a
+
+larger one, so that the value of A in (3.2) can be controlled.
+3. The number +y depends on N.
+
+In [26], G.A. Velasco has shown that with a high and controllable probability, a
+sufficiently dense set of local random samples inside Q, satisfies (3.1). With this,
+we can use the sampling inequality given by (3.1) to construct locally adaptive
+frames from randomly sampled points in the time-frequency plane.
+
+An immediate application of the result above can be found in conjunction
+with the existence theorem from [10, Theorem 5.10] which says that under certain
+conditions, for a family of time-frequency localization operators H” over regions
+2, © R? with common windows y € So(R) and eigenvalues {Pf }xen, one can
+choose N, € N such that there exists C,D > 0 such that for all f € L?(R)
+CIPI S$ yea Dien MP YEP S DILSIB. This equivalent norm, along with the
+relevant sampling result by Lemma 3.1 can be used to give a modified version of
+
+27, Theorem 4.10], which also constructs a localized time-frequency plane.
+
+Theorem 3.2. Let {H* : « € A} (where A is a countable index set) be a family
+of time-frequency localization operators H" = H$;¥ over compact subsets Q, CR?
+respectively with a common window function ¢ € So(R) such that ||y|lz = 1. For
+each jp € A, let {(yil,ax,)}%1 be the cigenvalue-eigenfunction pairs of H" in
+
+its spectral decomposition. Suppose further that the compact regions satisfy the
+
+Chapter 3. Adaptive Frames via Relevant Sampling 48
+
+following: 2 < infyer |Qu] < supyen|%u| < co and there exist Ap, Ba > 0 such
+that Aa S Dye Xa, S Ba.
+
+Corresponding to each u € A, N, € N are chosen such that there exist C, D > 0
+such that for all f € L?(R*) CILFIR S Dye Dees UP YEIP < DILFIIB. Choose
+also a finite, relatively separated subsets F,, C Q, that satisfics the hypotheses
+of Lemma 3.1 with respect to N = N, respectively such that 0 < inf,ea{an,},
+0 < infyea(#F.) S SuPyea(#Fy) < 00 and windows g* € L?(R) where ||g"l[2 = 1.
+Then the system Byca{Pry,™(A)9"}aren, is a frame for L7(R).
+
+Proof. By hypothesis, the collection of the eigenvalues {an,}yea has a positive
+lower bound, so for each js € A, we can choose, in light of Lemma 3.1 a >
+
+% > O such that yy — Yu < supyea|Qy| and invent — %} > 0. Hence we
+choose A := Mucal#Farintventm—¥s} and this choice of A implies that if we choose
+
+SUP yea IAL
+
+B:= supyea(#F,), then A < Band
+
+Ne Np
+ASCMAYDP Ss SOUS Pew, FOP S BME YOP,
+
+again by Lemina 3.1. Finally, we arrive at the desired conclusion when the above
+
+incquality is summed in p over A. ia)
+
+Next we show a result by Dorfler [9], and we'll use it to show that a finite
+number of clements in a Gabor frame can be replaced with a finite number of
+time-frequency shifted windows that are not necessarily a frame for L?(R) to
+
+generate a new frame.
+
+Theorem 3.3. Let G = {g;: i € Z} be a frame for L?(R4), and F, CT be a finite
+subset. of Z. and {hj : j € Fa} be any finite number of elements in L*(R").
+
+Let A, be the lower frame bound corresponding to the frame G and Cr,, Cr,
+be the corresponding analysis operators for {g; : i € Fi} and {hj : j € Fa}
+respectively. If there exists a bounded linear mapping L : @(F,) + @(F2) such
+that
+
+Nes, - Ca, Els
+
+then the set
+{gi:i € Z\ Fi} U {hy : 5 € Fe}
+
+is a frame for L?(IR¢) with a lower frame bound given by (Ay—2K)/ max(1, 2\|L"|\*).
+
+Chapter 3. Adaptive Frames via Relevant Sampling 49
+
+Proof. Using the frame inequality we have
+
+AMA S DO MA 9)P + OMAP = SO MAP + ICE
+
+ieD\F ich iel\Fi
+
+Next, we have, by triangle inequality and the fact that 2ab < a?+0? for alla,b€ R
+
+IC F1E S MCx, ~ L*Cx,)flla + IL"Crs fla)?
+SAIN(Cx — LC.) FB + AL Cm F113
+SAICx, — L*Cry| PBI + QL" PCa 3.
+
+Therefore
+
+(Ar = 2KQIIFIE SO MF. 90? + 21Z"1PICS. IB
+eA
+
+< max(1,2/|*|/?) ( YS MAP + Ss, wr)
+
+ieT\F, J€F2
+Hence, the theorem follows, with lower frame bound as stated, and with upper
+frame bound given by (Bi + Dyer, Ilfyll3). where By is the upper frame bound
+corresponding to the frame g. a
+
+We now present the main theorem for this chapter. Given a (Gabor) frame
+G(g,A) for L2(R), and a compact subset 2 C R®. Replacing the sampling points
+in Fy = ANQ with a different ‘randomly’ chosen finite sampling points Fz C 2
+which satisfies 3.1 can still yield a Global frame for L?(IR), provided the sequences
+in &(F;) obey a certain inequality.
+
+Theorem 3.4. Let G(g,A) be @ Gabor frame for L?(R) such that ||gll2 = 1 with
+lower frame bound A, and let 2 CR? be a compact set with finite points Fy = QN
+A. Suppose further that 2 and Hoy satisfy the hypothesis of Lemma 3.1 for some
+N EN and for some finite points Fz 9. with accompanying window function
+h € L>(R) such that ||h||2 = 1, that is, by remark on Lemma 3.1, {Puy (u)A} ners
+is a frame for the subspace Vy  . Furthermore, if for all ¢ = {c,}aex, such that
+
+Ilclls =1, the inequality given by
+
+SY eam(A)g - Pry (= car). »)|l
+
+EF AGF
+
+< 4 (3.3)
+
+is satisfied, then the union {x(\)g:X€ A\Fi}U{Prym(u)h: © Fy} és a frame
+for LAR).
+
+Chapter 3. Adaptive Frames via Relevant Sampling 50
+
+Proof. Again, let Cx, and Cr, be the corresponding analysis operators where f ++
+{(fim(A)g)}aer and p> {(p: Pry (yh) }ucr Fespectively. Now, {Pyym(u)h :
+# € Fy} is a frame for Vy, so the frame operator Sy, = C},Cy, exists along with
+its inverse. We are going to usc the previous theorem, so we define the operator L :
+OF) + C(Fr) via c = fexhaers 9 ((Caex Prw cat), 87) Pry TMD) ners
+which can easily be scen to be linear since Py, is linear and because scalars
+distribute. We now show that it is also bounded.
+
+ILel= >>
+
+2
+
+YE (exPrum (Ag. Siy (Pry (u)h))
+
+=D ([Dorro, sigur]
+a>» (oer SFr)
+<E(T MoParornsi(Prr WW
+XS lerPax00,574(PnmsOl)
+‘
+=> (= [lexPoy (Ag, Sif)
+F
+<¥ (= Plas)
+
+< (BF HAS TZIPIIAB,
+where the last inequality follows due to Halder since Dyer, leal = Laer, Ileal S
+(Caer, 2)": (Chen lea)!” = VHFillela. The estimate above shows that L
+
+is bounded.
+Again, let ¢ = {ca}aex,, note that by the frame condition on Vy, then Py, f =
+
+Dyers (Pee fs Sih (Pent (u)h)) Pry (u)h for all f € L°(R)
+
+Y eam gy
+
+ICs, ~ CeLlle= sup
+
+Melle=1
+
+Fed
+= TT year 0, $Hf( uO) Peer (sl|
+HEF: EF J
+= sup |] cag = Pew (Ease)
+Meli2=" er AEF 2
+
+1A
+a>
+
+Chapter 3. Adaptive Frames via Relevant Sampling 51
+
+Therefore,
+5 A
+IICs, — Ca,L < 5.
+
+where the inequality follows due to Hélder and the hypothesis. Hence from The-
+orem 3.3, the union {m(A)g: A € A\ Fi} U{Pyym(u)h : we € Fo} is a frame for
+DAR). a
+
+Appendix A
+
+Time-Frequency Analysis
+
+A.1_ Vector-Valued Integrals
+
+This section serves as a background material for vector-valued integrals, which is
+useful for finding the adjoint of the STFT: Vy. Given g € L2(R4). Let B be a
+Banach space and a: R¢ -> B, then we can define the integral [nu a(z)dz to be
+an operator ffq.a(z)dz : B* -+ F where F = R or C is the underlying field of B,
+and BY is the dual of B. Thus we define, in particular, for cach h* € B*,
+
+Jf acorae ier ff cae), trys (an)
+
+where we adopt the notation that for b € B and f* € B*, (f*,b) = f*(b) €F, and
+(b, f°) = (F*8). Furthermore, if B is reflexive so that B** = B, then whenever
+(A.1) defines a (conjugate-)linear and hounded functional f** on B™, it also defines
+a unique f € B = B* by some isometric isomorphism T : B + B* such that
+T(f) = f**. So we can define
+
+(fh)
+
+(T(f), bY) = (fh) = i if _ ala) hyde. (A.2)
+
+We can also extend the definition above, when we are dealing with Hilbert spaces,
+
+we state this as a theorem.
+
+Theorem A.1. Let 71 be a Hilbert space and a: R - 1 be a vector-valued func-
+tion. If fJyaa:h-+ [fqaa(z), h)dx is in H", then ffzva:hrr ffaala(c), h*)da
+isin H™.
+
+Proof. Let h* € H*, then by Riesz-Representation Theorem [25, Theorem 1.29]
+there exists a unique h € H such that for all f € H,
+
+(fh) = (fh)
+Therefore by the equation above, we have for all x € RY.
+
+(a(x). h*) = (aler).h).
+
+Appendix A. Time-Frequency Analysis 53
+
+hence
+
+Jf soc teyae = [ff (oenee (A.3)
+
+By the equality of the two mappings above, and by hypothesis, we conclude that
+JJf_s is also a linear and bounded functional in H* as required. is)
+
+By the theorem above, when we work with Hilbert spaces, which are always
+reflexive (23, 4.6-6], we can actually extend the definition of the vector valued
+integral [fsa to be a functional on H, and if it is linear and bounded, then
+all the previous discussion also hold. Note that we do not really know a priori
+what f := Jfge@ is, but by definition we are only assigning the f € which
+corresponds to [faa € H** = H by reflexivity. Furthermore, it also allows us to
+
+make symbolic manipulations like
+
+= Gh. a(z)dz,h)
+
+(fk
+
+Ih. (a(x), h)dx (A.4)
+
+rigorously valid.
+
+Appendix B
+
+Amalgam Spaces
+
+B.1 Completeness of the Amalgam Spaces
+
+We first prove that the amalgam spaces W(L?, L?) is a Banach space, which will
+
+require a lemma on completeness characterization.
+
+Lemma B.1. Suppose condition 1 holds, and let (X,||-- ||) be @ normed vector
+
+space. The following are equivalent:
+
+1. For any sequence { fa}nen © X, absolute convergence of {fu}nen in X implies
+
+convergence of ren fn in X.
+2. X is a Banach space.
+
+Proof. Let {fu}nen be a Cauchy sequence in (X,|] -|[), then we can define a
+
+subsequence {fn,}ren such that
+
+Wess ~ Soall < oe
+
+Therefore
+DMs ~ full <
+
+there is an f such that 7721 (fn ~ foe) = f — Say € X- Conver-
+
+gence in X means that
+
+By hypothes
+
+y
+fim IGF ~ fan) — (fm = Fras) = 0
+fim IF ~ foul = 0
+
+Therefore, limnseo fn = f € X, which means that (X, || - ||) is complete.
+For the converse, suppose that (X, || - I) is complete, and {fu}nen © X such
+
+that 7%
+
+exists a Ns € N such that
+
+ill fall < 00, then there exists a T € Rsuch that for all ¢ > 0, there
+
+N
+Joe
+NINs => |S Mll- 7) <5
+
+
+Appendix B. Amalgam Spaces 55
+
+Consequently, for all N > M > a
+
+= Ufall =
+
+nsM+1
+
+I|-T4+T- veel
+
+\-T 1-4]
+
+ete
+at
+
+Sine
+
+=e
+
+By triangle inequality: ||" 441 fall $
+implies that {S7", fa}w is Cauchy, and therefore converges in (X, || - ||) as re-
+quired a
+
+yaa llfull, hence the estimate above
+
+We use this characterization to show the completeness of the amalgam spaces.
+
+Theorem B.2. W(L”,L)(R) is a Banach space with norm |Lfllwu
+|| IF: xeszlle||p¢- Furthermore, different choices of the compact sets 2 with
+
+nonempty interior give equivalent norms.
+
+Proof. We make use of Lemma B.1, and Iet { fn }nent Such that 7,¢y IIfallw(2c0) <
+co, hence we only ned to show that 7 ,cy fa € W(L”, L*)(R") to show complete-
+ness of W(L?, L*)(R*).
+
+Let Q be a compact subset of R? with nonempty interior, then we have by
+definition that nen IIfullwoze.t2) = Donen || Ifa“ Xa+zll2»|],¢ < 00; therefore by
+Lemma B.1 and completeness of L"(R*), ), Dee fn * Xavallir € LAR®).
+
+Since the L? integral ||Dnew Il fn * Xa+zlli»]|7, is finite by our conclusion above,
+then Drew Ifa - Xaszlli» is finite for almost all x € R“. Hence by Lemma B.1,
+Cnen fa Xo4z € LP(R*), and therefore there exists a ge € L”(R‘) such that
+G2 = nen In Xa4z for almost all x € R’.
+
+Next we define g(t) = g(t) whenever t € + 2. which indeed is well-defined
+since gz(t) = gy(t) a.c. on (Q+2)N(2+y). Hence we have the following estimate:
+
+Hgllweee.ry = |] Mg xesalleell pe
+= || Mgellu ll»
+= || IDO fa xetellirll. (B.1)
+
+ne
+
+<I Mae xeallerll in
+
+nen!
+
+=D Wallan. < 00.
+
+nett
+
+Appendix B. Amalgam Spaces 56
+
+We can sce from line (B.1) above that >,<y fn € W(L?, L*), therefore by Lemma
+B.1, W(L?, L*) is complete, and thus is a Banach space.
+
+Next we show that the norm is independent of the choice of the compact set
+QC R*. Let 4, be compact subsets of R4 with nonempty interiors. Since
+these subsets arc bounded, then there exist finite point {z,...,zv} in R% such
+that 1 © Upis(M2 +24). Therefore by monotonicity of the Lebesgue integral, we
+have the following cstimate
+
+io
+IMP Xevtellur SASS xeetztzellc
+rast
+
+Me
+
+S DUMP + Xeetetsellar
+
+Me
+
+Tee (F + X0242)I Iu
+
+<B
+
+IF + Xazt2l|v>-
+
+where TJ; is the translation by z € JR (continuous) operator and
+B = max{||T.|l,.--llTexll} » N- Now, by monotonicity of the Lebesgue inte-
+gral || 1f-% + 2ller|[,. S$ Bll I £ + xaasclle|
+be found similarly, by noting the existence of finite points {y1,...,yar} such that
+MS Up % + He a
+
+js The reverse inequality can
+
+B.2 Technical Results for BUPUs
+
+Recall that a family of functions {yj},ey such that 0 < pj < 1 for all j € J on R®
+is a BUPU if it satisfies the following
+
+L Dyes Bi
+
+2. supje,[IPilleo < 00:
+
+3. there exists a compact set U C R¢ with nonempty interior and points z; € R¢
+such that supp(¥;) € U + zi, and
+
+4. for cach compact K C RY. suprexw #{j € J 22 © K +23} S supies #LI E
+Js (K-42) N(K +z) £0} < 00
+
+We are in particular, interested in showing that B = {xo,, : 7 € Z4}, where Cag =
+
+n+ 6{0.1]", is a BUPU. As we have noted in the main tex
+
+we can safely assume
+
+Appendix B. Amalgam Spaces 57
+
+the slightly more gencral condition that 7 ¢, 3 = 1 only almost everywhere, and
+tl
+
+indeed true for our case since the cubes C,,s’s only intersect at their faces
+which is of measure zero, therefore Dez Xc,,¢ = 1 almost everywhere. It is also
+true that supyezs ||Xc,,lle = 1 < 00 since they are indicator functions. Item 3
+above is also true for B, by taking the compact set U = 6(0, 1)’ and noting that
+supp(Xc,,s) = 6[0, l]¢ + én = U + dn. Finally, we will show that item 4 also holds
+for B. We first prove the following
+
+Proposition B.3. For any compact set K C R4, suppegs #{m € Z4: (K + 6n)N
+(K + 6m) #0} < 00
+
+Proof. First, given a positive B and any n € Z* let us give an upper bound on
+the count of m € Z¢ satisfying |n — m| < B. Optimally, this is the number of m’s
+that intersect with the closed sphere of radius B centered at n. But we can give an
+easy non-optimal uniform bound on this number by considering the cube of side
+lengths B centered at n (hence the cube ‘circumscribing’ the original sphere). By
+counting from cach ‘axis’, the number of all such m’s is (1 + B)!. This is true for
+any combination of n and m.
+
+Now, let us define Qn := {m € Z#: (K + dn) N(K + dm) # O}. I'm € Qu.
+then (K + 6n)N(K + 6m) # 0 which implies that there exist k,,k2 € K such that
+
+uniformly,
+
+ky +6n = ky +6m, which further implies that |n —m| =
+
+so we have the following inclusion: Qn © {m € Zé: jn —m| < 222%}. Our result
+
+then follows immediately from the inclusion: supyeze #Qn < (1+ S23)" < 96
+
+since K is bounded. Oo
+The next proposition is a general result that finishes our proof.
+
+Proposition B.4. Let K C R4 be any compact set and {zj : j € J} C RY
+be countable points. If supicn #17 € J: K+ zNk+% # OD} < 00, then
+sUPser #{j EJ: EK +23} S supice HG EI: K + Nk +2: £0} < co.
+
+Proof. For any x € R¢ and j € J, let us define
+
+B= {je J:2€ K +25}
+Q:= (GE I: K+ 0K +279}.
+
+Thus we need to show that supers #Bs < supiey #Qi. To do this. again, let
+r € R" and choose any i € By so that x € K + 2. Now, let q € B,. therefore
+
+Appendix B. Amalgam Spaces 58
+
+«€ K +2, as well, hence cx € K + 2,0. K + 2;, thus we can conclude that g € Q;.
+
+We now have the following inclusion B, C Q; for all i € Bz. Therefore
+#Bz S #Q; < sup #Q; < sup #Q;,
+ich ied
+and thus supsers #Br < supiey #Q; as required. o
+
+Therefore, applied to our particular case, we have shown that for any compact
+K CRY, supsegu#{m € Zt: 2 € K +6m} < SUP,eze #{m € Zt: (K +6m)n
+(K + 6n)}, hence B is a BUPU.
+
+We will also present a proof of the inclusion from Corollary 1.26.
+
+Corollary B.5. If1 < 91 < gz $ 00, then for any 1 < p < 00, W(L?, L")(R¢)
+W(L?, L®)(R*).
+
+Proof. From Corollary 1.33, and from the elementary inclusion given by Lemma
+1.25, there exists a C > 0 such that for any BUPU {Wy},es and f € W(L?, L®)
+
+UF llwore.teey = IAMS = ¥lle desl
+SCI AIS Puller }sesllen
+Hence W(L?, L%)(RY)  W(L”, L®)(R4). o
+
+B.3 Convolution of Amalgam Spaces
+Lemma B.6. Let f,y: RC be functions such that supp f © Qy, and g Oy
+where 25,4 are measurable subsets, then
+
+supp(f* 9) ©2749, (B.2)
+
+Proof. Since Qs, are measurable, and f -T.y = 0 ac. outside 27M (z — 2),
+
+then
+
+(reaey= f seoale-oae= fo sete - Hae
+
+2yM(2—2y)
+Furthermore, since 2; (z—Qy) # @ implies = € Q, +24, then by contraposition
+and the equation above z ¢ 2+, implies 2/(2-) = 0 implies (f*9)(z) = 0.
+Which finally implies, by another contraposition. that supp(f'*g) C 0;4+9,. O
+
+For f : R¢ + C, we can compute its W(”. L")(R4) norm by considering for
+n €Z, fa i= f-Xnsfouyts and 80 |Ifllwoetn = (Dnese lfallfn)/% for the rest
+of this section, we will use this notation. Furthermore, we have the following
+
+corollary. which has a straightforward proof using the Lemma B.6.
+
+Appendix B. Amalgam Spaces 59
+
+Corollary B.7. For any f,g : R¢ — C, and any n,m € Z¢, supp(fm * Jn) ©
+m+n-+ (0, 2\¢.
+
+From Corollary B.7, we can prove Theorem 1.36
+
+Theorem B.8. If 1 < pi,qi < 00 with i =1,2,3 such that a ars = 14+ and
+ate =l+d, then W(L", L™)(R4) « W(L, L®)(R4) C W(L, L®)(R*)
+
+aa
+
+Proof. Let f € L?(R“) and g € L2(R¢), and k,n,m € Z!. First we use Corollary
+B.7 for the following,
+
+supP((fm * Jn) * Xe+io.y) S (& + (0,1)4) (m+n) +(0,2)) — (B.3)
+
+‘Therefore by the inclusion (B.3), (f * 9) -Xu+{o,)4 is nonzero provided k € m-+n+
+(0, 1)4M Z4). Since {0, 1)* is compact in R4, then there only exist a finite number
+of elements in Z4 that intersects with (0,1)4, and therefore we can write that k
+
+can only take the finitely many values k € Uf_,{m +n + di: di € (0, 1)*}.
+
+a
+
+Therefore we have
+
+SS (fn * Gn) + Xer10,19¢
+
+(nm)ez#
+
+IG #9) > Xespoayllons =
+
+[LPs
+
+A
+YO Yen * 9a) Xertouye
+
+i=] nezd
+
+SO Mena, * 9)
+
+a=1 net
+
+SOS Y Meeanalvllonllon-
+
+i=] neg?
+
+Ln (B4)
+
+Where C > 0 is the constant from the hypothesis 2 + 2 = 1+ 3 which implies
+TP\(R¢) « L*(R4) © L73(R4) due to Young’s Convolution Inequality for integrals
+1.34.
+
+IF # gllweurs.t9) = |] CF #9) xestoayellars Ler
+4
+SCSI || YE Whean-ailla Ign o22 lees
+i=l nez
+
+SCD |I(C-alifollaes) + Ulm) (E)llez2llos (BS)
+
+S CGM) || [allo [lows +I] geld lese (B.6)
+< C(QM)C I lwo .cnyllgllwore we). (B.7)
+
+Appendix B. Amalgam Spaces 60
+
+The convolution in line (B.5) is the discrete sequence convolution, and T_4, from
+(B.6) is the —d; translation operator on 7(Z“), M = max{||T-«;|lese
+1,2,...,q}, and finally, C’ > 0 from (B.6) is the constant associated with the fact
+that (24) » (24) € &(Z*) from the hypothesis 2 + + = 1+ 2 and Young’s
+Convolution Inequality for sequences 1.34. ia)
+
+
+Appendix C
+
+Existence of General
+
+Adaptive Irregular Gabor Frames
+
+C.1 Convolution of Cy and L!
+
+We will prove the following result which appeared in the proof of Lemma 2.10.
+Proposition C.1. L'(R¢) + Co(R¢) C Co(R4)
+
+Proof. From item 3 of the proof of Lemma 2.10, we know that L'(RY) * Co(R¢) C
+L™(R?), then it is sufficient to show that for any f € L'(R*) and c € Co(R*),
+f *c € Co(R®). That is, we need to show that f *c is continuous and vanishes at
+infinity.
+
+To show that the convolution vanishes at infinity, let ¢ > 0, then we have by
+hypothesis that there exists a 6 > 0 such that for any z,t € R¢
+
+[z|>6 => |g(=)| < 7
+Ih
+which is equivalent to the statement
+
+lz-t] <5 => |g(z-9]
+
+<i
+
+Therefore, choosing the same d we have:
+
+f Hoge - Ha < [oste—onee
+:
+<a Leone
+
+|2e|>5 =>
+
+As required.
+Next, we show that it is continuous. Let ¢ > 0. by contimuity of ¢, there exists
+
+a6 > 0 such that for any 2, 2.0 € RY
+
+jz — 29] <6 => Ie(=) — een) <
+
+fo
+Ills
+
+GL
+
+Appendix C. Existence of General Adaptive Irregular Gabor Frames 62
+
+which is equivalent to the statement
+
+Itz -t) (20 -t)] <6 => |e(z -#) - ez -t)| <
+
+wih
+
+Therefore, choosing the same 6 we have:
+Ie-0~(e~ol<6 = | ogee f f090- da
+JRE Rd
+
+< [WO tote 0 tea ~
+
+:
+<i: [uel
+
+As required. Therofore f +c € Co(R*). o
+
+C.2 Lemma 2.18 Supplement
+We will show that assuming the sane hypothesis as Lemma 2.18, then
+> f. Wad (tas te — Va Fas Tag) Peery
+
+nea
+
+2CIIWalh py
+< IB: sup S7 [BnlOes)~6, (Von9 Voor. CL
+> lly 18 Il Ila - (tuyeR2" 1 | | (tw) = En ‘09h Voo9n)- ( )
+
+Proof. Again we use the orthogonality and covariance properties of the short-
+Tae Vood Voo (2 4)g) and
+Pev(sur-wWVooalt-24-9) yespectively. Let (#:4); (tus ua) € En
+
+time Fourier transform which implies: V,f(z.y) =
+(Voor (x,y) g)(t.02) =
+these in turn implies
+
+Vo, shea yer) — Vi, Fass Yang ern a) 2
+
+2
+* [e211 (Vin f Von (ary) — C22) Youre Ynys Ine) Gn) |
+
+= TF She VonS (ts) [Vandal = us =) ~ Vondal = inst = To)
+
+< lal UL. [Vp f(t: 2) ?|Vgo9n(t — Ynys — 9) — Voodn(t — inst? — Yna) Iter
+
+x fff Motel = a8 1) — Vel A= ait,
+
+where we used Hélder’s inequality for the last step, noting that
+
+Vy L (tow) ~ (Vipul = Ins = 9) — VouGn(l = Ins = ng)? L2(R*4) and
+ing)? € L?(R%), Continuing, we use
+
+(Vin gull = m2 = 9) — Van Gu(t =
+
+Appendix C. Existence of General Adaptive Irregular Gabor Frames 63
+
+the hypothesis that the short-time Fourier transform of the window functions
+are uniformly dominated by the function w., furthermore the nonnegativity of
+[oo (t:0)I? - O(1u)-14(Von» Von) for all (t,w) and n € Z?4 allows us, by Tonelli’s
+theorem, to interchange integrals and sums in it. We also use Lemma 2.16 and
+
+Corollary 2.17 to get
+
+Won F (ins yer) — Ve, F (Ynys Ta ernie 2) |?
+
+2Cllalh
+TE [ [Mont lts PO) Vos Vo, de
+
+This implies
+
+OJ fof om nde — Vad ag) Pedy
+
+nez
+
+2C|wslla
+Ilgoll
+
+— 2C|lwell
+
+IA
+
+[fotos sup. EHO Yat Vt)
+
+SUMS AILAIIB- tds sup S> [EnlOeuy(Vindaa» Vindou)
+
+Toll eaene 24,
+
+as required. o
+
+fo
+
+(14
+
+(12
+
+List of References
+
+P. Balazs, M. Doerfler, M. Kowalski, and B. Torresani. Adapted and adaptive
+linear time-frequency represcutations: A synthesis point of view. IEEE Signal
+Processing Magazine, 30(6):20 31, Nov 2013.
+
+D. Bayer. Bilinear Time-Frequency Distributions and Pseudodifferential Op-
+erators. PhD thesis, Universitat Wicn, 2010.
+
+N. Bruijn, de. Uncertainty principles in fourier analysis. In O. Shisha, editor,
+Inequalities : proceedings of a symposium held at Wright-Patterson air force
+base, Ohio, August 19-27, 1965, pages 57-71. Academic Press, 1967.
+
+O. Christensen. An Introduction to Frames and Riesz Bases. Birkhauser
+Bascl, 2016.
+
+A. Constantin. Fourier Analysis, volume 1 of London Mathematical Society
+Student Tests. Cambridge University Press, 2016.
+
+I. Daubechies. Time-frequency localization operators: a geometric phase
+space approach. IEEE Transactions on Information Theory, 34(4):605-612,
+July 1988.
+
+D. Donoho and P. Stark. Uncertainty principles and signal recovery. SIAM
+Journal on Applied Mathematics. 19(3):906 931, 1989.
+
+M. Dérfler. Time-frequency analysis for music signals: A mathematical ap-
+
+proach. Journal of New Music Research. 30(1):3 12, 2001.
+
+M. Dérfler. Quilted gabor frames - a new concept for adaptive time-frequency
+
+representation. Advances in Applied Mathematics, 47:668 -667, 2011.
+
+M. Dérfler and J. L. Romero. Frames adapted to a phase-space cover. Con-
+
+structive Approximation, 39(3):445 184, Jun 2014.
+
+H. G. Feichtinger. Banach convolution algcbras of wiencr’s type. proc. conf.
+
+functions, serics, operators. pages 509 524. 01 1980.
+
+H. G. Feichtinger. Wicner amalgams over cuclidean spaces and some of their
+
+applications. 2003.
+
+Gl
+
+List of References 65
+
+13)
+
+14
+
+17]
+
+18]
+
+19]
+
+[20]
+
+[21]
+
+[22]
+
+23}
+
+[24]
+
+25)
+
+26)
+
+[27]
+
+28)
+
+H. G. Feichtingor and W. Sun. Sufficient conditions for irregular gabor frames.
+Advances in Computational Mathematics, 26(4):403, Dec 2005.
+
+H. G. Feichtinger and G. Zimmermann. A Banach space of test functions for
+Gabor analysis, pages 123-170. Birkhiuser Boston, Boston, MA, 1998.
+
+G. B. Folland. Fourier Analysis and its Applications.
+
+J. J. F. Fournier and J. Stewart. Amalgams of [? and [?. Bull. Amer. Math.
+Soc. (N.S.), 13(1):1-21, 07 1985.
+
+D. Gabor. Theory of Communications. London: Institution of Electrical
+Engineering, 1946.
+
+K. Grdchenig. An uncertainty principle related to the poisson summation
+forinula. Studia Mathematica, 121:87-104, 1996.
+
+K. Gréchenig. Foundations of Time-Frequency Analysis. Birkhauser Basel,
+2001.
+
+C. Heil. An introduction to weighted wiener amalgams, 2003.
+
+E. Hewitt and K. A. Ross. Abstract Harmonic Analysis 1. Springer-Verlag
+New York. 1979.
+
+Y. Katznclson. An Introduction to Harmonic Analysis. Cambridge University
+Press, 2004.
+
+E. Kreyszig. Introductory Functional Analysis with Applications. John Wiley
+and Sons. 1978.
+
+E. H. Lic and M. Loss. Analysis. American Mathematical Society, 1997.
+B. D. MacClauer. Elementary Functional Analysis. Springer, 2009.
+
+G. A. Velasco. Relevant sampling of the short-time Fourier transform of
+
+time-frequency localized functions. ArXiv e-prints, July 2017.
+
+Velasco, Gino Angelo and M. Dérfler. Sampling time-frequency localized
+functions and constructing localized time-frequency frames. European Jour-
+nal of Applied Mathematics. 28(5):854876, 2017.
+
+A. Villani. Another note on the inclusion L?(j1) © L%y). The American
+Mathematical Monthly, 92(7):485. 487, 1985.
+

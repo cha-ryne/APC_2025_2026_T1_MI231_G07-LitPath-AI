@@ -1,0 +1,4907 @@
+
+UNIVERSITY OF THE PHILIPPINES LOS BANOS
+Master of Science in Genetics
+
+GRACETINE D. MAGPANTAY
+
+GENOME-WIDE INDEL MARKERS TO DIFFERENTIATE ORYZA
+GENOMES AA AND GG AND O. GRANULATA NEES & ARN.
+EX. G. WATT (GG) AS POTENTIAL DONOR OF
+DROUGHT TOLERANCE GENES
+
+CELIA B. DELA VINA, MSc
+Adviser
+
+Date: MAY 2019
+
+This dissertation can be made available to the general public YES
+
+This dissertation can be accessed only after consultation with the author and
+dissertation adviser .
+
+This dissertation can be accessed only by those bound by confidentiality
+agreement .
+
+en DOST-STII LIBRARY
+CELIA Aa ViNA, MSe IMI INO0 I 01
+STI-19-1066
+
+
+GENOME-WIDE INDEL MARKERS TO DIFFERENTIATE ORYZA GENOMES
+AA AND GG AND 0. GRANULATA NEES & ARN. EX. G. WATT (GG) AS
+POTENTIAL DONOR OF DROUGHT TOLERANCE GENES
+
+GRACETINE D. MAGPANTAY
+
+SUBMITTED TO THE FACULTY OF THE GRADUATE SCHOOL
+UNIVERSITY OF THE PHILIPPINES LOS BANOS
+IN PARTIAL FULFILLMENT OF THE
+REQUIREMENTS FOR
+THE DEGREE OF
+
+MASTER OF SCIENCE
+(Genetics)
+
+MAY 2019
+
+The manuscript attached hereto, entitled “GENOME-WIDE INDEL MARKERS TO
+DIFFERENTIATE ORYZA GENOMES AA AND GG AND O. GRANULATA NEES &
+ARN. EX. G. WATT (GG) AS POTENTIAL DONOR OF DROUGHT TOLERANCE
+GENES,” prepared and submitted by GRACETINE D. MAGPANTAY in partial
+fulfillment of the requirements for the degree MASTER OF SCIENCE (GENETICS), is
+
+hereby accepted.
+
+A A Ot
+ME S. MENDIORO MA. CARMINA C. MANUEL
+Member, Advisory Committee Member, Advisory Committee
+20 Na 30 2014
+Date Signed Date Signed
+7 IRHOeT WwW a
+SUNG-RYUL KIM CELIA B. DELA VINA
+Co-Chair, Advisory Committee Chair, Advisory Committee
+oN ve on
+Date Signed Date Signed
+
+Accepted in partial fulfillment of the requirements for the degree of
+MASTER OF SCIENCE (GENETICS)
+
+AA\Ond
+MERLWN S. MENDIORO
+
+Director, Institute of Biological Sciences
+Date we |
+
+JOSE V. CHO, JR.
+Dean, Graduate School
+5H, 01
+
+Date Signe?
+
+BIOGRAPHICAL SKETCH
+
+The author is both a scientist and an artist. She worked as a researcher for the
+molecular biology of trees at the Ecosystems Research and Development Bureau,
+Department of Environment and Natural Resources. She also worked as a researcher at the
+C4 Rice Center at the International Rice Research Institute and as a GMO Database and
+Web Content Developer at the International Service for the Acquisition of Agri-biotech
+Applications. As an artist, she has been involved in various plays at the University of the
+Philippines Los Banos (UPLB) as a playwright, actor, designer, production staff, and
+backstage staff. Currently, she continues her passion in both fields by being the Secretary
+General of the Young Professionals for Agricultural Development Philippines, where she
+
+fuses arts with agriculture to promote the science to young audience.
+
+She graduated with a degree in BS Biology (major in Genetics) from UPLB in 2012.
+She is the eldest among four children of Mr. Faustino T. Magpantay and Mrs. Margarita
+D. Magpantay. She is engaged to John Carlo Marasigan, who is taking Doctor of Medicine
+
+at the University of the East.
+
+GRACETINE D. MAGPANTAY
+
+ACKNOWLEDGMENTS
+
+With tears in my eyes, I wish to thank first and foremost God for giving me the opportunity to be a scholar of
+the Department of Science and Technology while taking my Master’s degree and for allowing me to explore and
+determine my life purpose while in the university for the second time. Not everyone who dreams turns those dreams into
+reality, and yet, here I am living the life with many opportunities because of the title UPLB has given me. Yet it seems
+that I cannot choose which path to take given these many choices. Nevertheless, it was the experience and the learnings
+that made my Master's degree worthwhile. It was a rough road of tears and depression, but I gained more appreciation
+to scientists, especially plant breeders who do what I did in this manuscript on a daily basis. They are the heroes of the
+farmers, and they should be celebrated. To give my thanks, I want to express my greatest gratitude to these people who
+made my MS life worthwhile. To these research teams at IRRI, Drought Physiology: Ate Nel, Kuya Carlo, and Kuya
+Allan for helping me in my thesis especially in the drought set-up and data analysis. Novel Gene Resources: Kuya Terry,
+Tito Boyet, Ate Annie, Ate Janice, Ate Loty, Kuya Ricky, Steff, Ate Joie, Dutch, Kuya Dafort, and Ate Larue for
+the guidance and moral support. I salute your hard work for the team. I will always treasure being part of your team. C4
+Rice Center: Jia, Shamik, Abhishek, Dr. Paul Quick, Ms. Jacque, Ate Gemma, Ate Juvy, Ate Flor, Ate Aya, Ate
+Mae, Jojie, Paolo, Ate Kristel, and Ate Mel for the bonding, guidance, and for making me feel at home even if we were
+at work. Thank you for understanding me and my mental health. I will forever keep you in my heart. To my teachers,
+My ever-patient advisers Prof. Celia Dela Vina, Dr. Merlyn Mendioro, and Dr. Ma. Carmina Manuel, who served
+not just as my advisers but my mothers in the institute. To the guidance of Dr. Kshirod Jena, Dr. Amelia Henry, and
+Dr. Sung Ryul Kim from the International Rice Research Institute for giving me the chance to work in the most
+prestigious rice research center in the world, thank you so much. I also would like to send my gratitude to Dr. Yoy Cruz,
+who was my professor in Developmental Genetics. You inspired me. To my mentor Prof. Dennis Gupa, thank you for
+the inspiration and for believing in the scientist in me. To my organizations, UP Broadway Company, you are my
+sweetest escape. You made me grow as an ate and a leader. Thank you so much for the three sets of 525,600 minutes of
+love and moments so dear. To more years measured in love! AGRA prodmates and PGU prodmates thank you so much
+for the friendship and supporting me when IJ opened Indie Sweets. I will never forget you. Destiny Pro, thank you for
+keeping my faith in God alive and purposeful. Thank you Kuya Wilbs, Ate Jova, Nat, Aimee, Karen, Kriz, Dana, Ate
+Rheyn for the good times. SFC, for the wisdom, guidance, and most of all, your prayers. Thank you Ate Iah, Ate
+Menggay, Ate Yel, Ate Aiza, Ate Wendy, and Ate Dora for the love. YPARD Ph, for giving me the opportunity to
+fulfill my dream of staging a musical for a noble purpose. Thank you Kuya Jim, Jax, Darwin, Jorge, Maggie, Bards,
+Carl, and Ate Rheyn for the hard work and support. ISAAA, for the opportunity to work by utilizing my skills in both
+the arts and sciences, and for letting me do my Master’s thesis while working. Thank you Maam Olah, Ate Tin, Ate
+Clem, and Ate Weeway for empowering me as a woman. To my best friends, My college best friends Jazz, Maggie,
+Genie, Dui, Lucelle, Winnie, and Nene, thank you for encouraging me even if our relationship is long distance. You
+will always be home no matter the distance. I love you, and I miss you. C2 Whitehouse roommates and Genetics-mates
+Ella and Jen, thank you for our sharing moments. Soar high. ENFP best friends, Salvi and Emman, thank you because
+I learned a lot from our friendship. Thank you for making me believe in fluid love and forgiveness. I am just one call
+away. INFJ and INFP friends Mon, Max, Anj, Jane, Abet, Bed, Wineia, Jo, Kriz, and Alme. Thank you that I do not
+need words to explain my soul. UPBC best friends and cupcakes Bed, Max, Jo, Hana, Dave, Roxy, Joshua, Jakey,
+thank you for the great company and for seeing the worst in me and yet stayed. I love you. My best friend Aimee, thank
+you for our crying and ranting sessions. I’Il always be here. To my family, Mama and Papa, for raising me a fighter and
+for believing in me and listening to my opinions. Thank you for the unconditional love. This is for you. Tayen, Paulo,
+and CJ for the random chat messages about anything. You are among the reasons I keep fighting every day. Tamie, for
+being my greatest mentor ever since I was born. Thank you for your undying love and support. You are the best! Inay
+for always missing me and wishing all the best for me. You are a fighter, and you are my role model. Lolo Ito and Lola
+Gilda in heaven, you may not be here to celebrate with me, but thank you for loving and caring for me when you were
+here. My titos, titas, and cousins, thank you for believing in me. To my little balls of fur Putput, Olive, and Orange.
+You make my everyday life bearable. To my bestest friend and future husband, Carlo, thank you for your love, care,
+comfort, and support. Thank you for praying for me, for helping me to be the best version of myself, for the space to
+grow as a woman, and for being with me in this journey. I love you. I also dedicate this manuscript to the people with
+mental health disorders but still fighting. This is for you. To the farmers, whom we researchers dedicate our work, this
+is also for you. To the student reading this manuscript for a report or a thesis, keep on keeping on. If I finished my thesis,
+you can too! Lastly, I want to thank the saints in heaven for interceding for us here on earth. Thank you for the miracles
+in my life St. Pio, St. Michael, St. Therese of the Child Jesus, St. Dymphna, and Mama Mary.
+
+TABLE OF CONTENTS
+
+IPR PAGE
+
+TITLE PAGE
+
+APPROVAL PAGE
+
+BIOGRAPHICAL SKETCH
+
+ACKNOWLEDGMENT
+
+TABLE OF CONTENTS
+
+LIST OF TABLES
+
+LIST OF FIGURES
+
+LIST OF APPENDICES
+
+LIST OF ACRONYMS
+
+ABSTRACT
+
+CHAPTER 1. INTRODUCTION
+
+CHAPTER 2. REVIEW OF LITERATURE
+Oryza: Taxonomy and Phylogenetics
+Rice Improvement Through Interspecific Hybridization
+O. granulata Complex
+Insertion-Deletion Markers
+Drought Stress Response in Rice
+
+CHAPTER 3. MATERIALS AND METHODS
+InDel Marker Design and Screening
+
+Sequence Retrieval and InDel Marker Design
+
+vi
+
+PAGE
+
+vi
+viii
+ix
+xi
+xiii
+
+XV
+
+13
+16
+19
+22
+28
+28
+
+28
+
+PAGE
+
+Plant Materials 29
+
+Plant Sampling and DNA Extraction 29
+
+PCR Amplification and AGE 29
+
+Band Scoring 30
+
+Drought Stress Screening 31
+
+Plant Materials 31
+
+Physiological set-up 33
+
+Stomatal Density 35
+
+CHAPTER 4. RESULTS AND DISCUSSION 36
+Development of Polymorphic InDel Markers 36
+Drought Stress Response of O. granulata and O. sativa 48
+
+Root Traits 48
+
+Shoot Traits 52
+
+Water Uptake 54
+
+Stomatal Density 56
+
+CHAPTER 5. SUMMARY AND CONCLUSION 61
+LITERATURE CITED 63
+
+APPENDICES 76
+
+vii
+
+LIST OF TABLES
+
+Taxonomic classification of Oryza genus, including
+sections, complexes, chromosome number, genome type,
+genome size, distribution, and useful traits.
+
+Agronomically important traits for each life stage, part, or
+aspect of rice.
+
+Physiological responses of plants during drought.
+
+Species and accessions checked for stomatal density and
+their genome and important traits.
+
+List of genome-wide InDel markers designed in silico for
+marker-assisted breeding of Oryza granulata Nees & Arn.
+Ex. G. Watt and O. sativa L. interspecific hybrids.
+
+List of SSR markers tested for polymorphism between AA
+and GG Oryza genomes.
+
+Comparison of marker validation results between InDel and
+SSR markers used to amplify Oryza sativa L. (AA), O.
+granulata Nees & Arn. Ex. G. Watt (GG), and O.
+meyeriana (Zoll. & Moritzi) Baill. (GG) genomes.
+
+Gel images of SSR and InDel markers, which were
+designed from Oryza sativa L. and O. granulata Nees &
+Arn. Ex. G. Watt sequences, tested for polymorphism
+among O. sativa, O. meyeriana (Zoll. & Moritzi) Baill., and
+O. granulata accessions.
+
+viii
+
+PAGE
+
+15
+
+23
+
+32
+
+37
+
+39
+
+42
+
+45
+
+FIGURE
+
+10
+
+11
+
+12
+
+LIST OF FIGURES
+
+(a) Parts of Oryza spikelet; and (b) Spikelet structures.
+
+Morphological diversity of representative species for each
+genome type of Oryza.
+
+Phylogenetic relationships between Oryza representative
+species.
+
+Growth duration diagrams of direct seeded (a) and
+transplanted (b) rice from nursery to harvesting.
+
+Oryza granulata Nees & Arn. Ex. G. Watt (A) plant, (B)
+distribution, (C) spikelet, (D) Sri Lanka habitat, and (E)
+India habitat from NIAS Genebank.
+
+Diagram of a mylar tube and PVC tube used to test the
+drought response of Oryza granulata Nees & Am. Ex. G.
+Watt and O. sativa L.
+
+Rice chromosome map showing markers that are
+polymorphic between AA and GG genomes.
+
+Drought-related root traits of Oryza granulata Nees & Arn.
+Ex. G. Watt and O. sativa L. DD is drought set-up, and WW
+is well-watered.
+
+Humidity and temperature measurements during the drought
+experiment
+
+Drought-related shoot traits of Oryza granulata Nees & Arn.
+Ex. G. Watt and O. sativa L. DD is drought set-up, and WW
+is well-watered.
+
+Water uptake of Oryza granulata Nees & Arn. Ex. G. Watt
+(clone and seed) and O. sativa L. for 19 days. (A) Well-
+watered. (B) Drought.
+
+Stomatal density of cultivated and wild rice species. The
+green bars are the species of interest, whereas the orange
+bars are species that have drought tolerance traits.
+
+PAGE
+
+10
+
+12
+
+18
+
+33
+
+43
+
+49
+
+50
+
+53
+
+55
+
+57
+
+FIGURE
+
+Correlation of stomatal density with leaf width and length of
+Oryza sativa L., O. glaberrima Steud., O. rufipogon Griff.,
+O. longistaminata A. Chev. Et Boehr, O. punctata Kotschy
+ex Steud., O. minuta J.S. Presl. Ex C.B. Presl., O. officinalis
+Wall ex Watt, O. latifolia Desv., O. alta Swallen, O.
+australiensis Domin., O. brachyantha A. Chev. et Roehr., O.
+granulata Nees et Am. Ex Watt, O. ridleyi Hook F., O.
+coarctata Tateoka.
+
+Abaxial leaf surface images of wild and cultivated rice
+(Oryza) species.
+
+PAGE
+
+58
+
+60
+
+APPENDIX
+
+A
+
+LIST OF APPENDICES
+
+Gel images of InDel markers designed from Oryza
+sativa L. and O. granulata Nees & Arn Ex. G. Watt
+sequences to test polymorphism among O. sativa, O.
+meyeriana (Zoll. & Moritzi) Baill., and O. granulata
+accessions.
+
+Gel images of SSR markers to test polymorphism among
+Oryza sativa L., O. meyeriana (Zoll. & Moritzi) Baill.,
+and O. granulata Nees & Arn Ex. G. Watt accessions.
+
+Weight measurements of pots during drought stress
+experiment between Oryza sativa L. and O. granulata
+Nees and Arn. Ex. G. Watt.
+
+Drought response trait measurements for Oryza
+granulata Nees & Arn Ex. G. Watt clone and seed and
+O. sativa L. genotypes.
+
+Flag leaf measurements and stomatal count and densities
+in Oryza sativa L., O. glaberrima Steud., O. rufipogon
+Griff., O. longistaminata A. Chev. Et Boehr, O.
+punctata Kotschy ex Steud., O. minuta J.S. Presl. Ex
+C.B. Presl., O. officinalis Wall ex Watt, O. latifolia
+Desv., O. alta Swallen, O. australiensis Domin., O.
+brachyantha A. Chev. et Roehr., O. granulata Nees et
+Am. Ex Watt, O. ridleyi Hook F., O. coarctata Tateoka
+wild rice species used in the study.
+
+ANOVA tables for Oryza sativa L. and O. granulata
+Nees & Arn. Ex. G. Watt root and shoot traits generated
+using Statistical Tool for Agricultural Research (STAR).
+
+Randomized complete block design of pots for drought
+stress experiment between Oryza sativa L. and O.
+granulata Nees & Arn. Ex. G. Watt.
+
+Table of means of the root and shoot traits of Oryza
+
+sativa L. and O. granulata Nees & Arn. Ex. G. Watt
+seedlings subjected to drought.
+
+xi
+
+PAGE
+
+76
+
+87
+
+98
+
+99
+
+100
+
+102
+
+106
+
+107
+
+APPENDIX PAGE
+
+I Least significant difference (LSD) tests and pairwise 109
+mean comparisons of drought response traits that have
+significant differences.
+
+J Scanned root images of Oryza sativa L., O. granulata 113
+
+Nees & Arn. Ex. G. Watt (seed), and O. granulata
+(clone) used in the drought stress experiment.
+
+K Boxplots generated for the traits analyzed in the drought 119
+
+stress set-up comparison between Oryza sativa L. and O.
+granulata Nees & Arn. Ex. G. Watt.
+
+xii
+
+LIST OF ACRONYMS
+
+AB Advanced Backcross
+
+BAC Bacterial Artificial Chromosome
+
+BB Bacterial Blight
+
+BESs BAC-end Sequences
+
+BIL Backcross Inbred Lines
+
+BPH Brown Planthopper
+
+CAM Crassulacean Acid Metabolism
+
+CMS Cytoplasmic Male Sterility
+
+CSSL Chromosome Segment Substitution Lines
+DNA Deoxyribonucleic Acid
+
+GLH Green Leaf Hopper
+
+InDel Insertion-Deletion
+
+IRGC International Rice Genebank Collection of IRRI
+IRGSP International Rice Genome Sequencing Project
+ISSR Inter Simple Sequence Repeat
+
+ITS Intergenic Spacer
+
+MAAL Monosomic Alien Addition Lines
+
+MAGIC Multi-parent Advanced Generation Inter-Cross
+
+MYA Million Years Ago
+NGS Next Generation Sequencing
+NIL Near Isogenic Lines
+
+OMAP Oryza Map Alignment Project
+
+xiii
+
+PCR
+QTLs
+RAPD
+RFLP
+RIL
+RuBisCO
+SBH
+RAP-DB
+RH
+RYMV
+SSR
+WBPH
+
+WGS
+
+Polymerase Chain Reaction
+
+Quantitative Trait Loci
+
+Random Amplified Polymorphic DNA
+Restriction Fragment Length Polymorphism
+Recombinant Inbred Lines
+Ribulose-1,5-bisphosphate Carboxylase/Oxygenase
+Sheath Blight
+
+Rice Annotation Project Database
+
+Relative Humidity
+
+Rice Yellow Mottle Virus
+
+Simple Sequence Repeats
+
+White-backed Planthopper
+
+Whole Genome Shotgun
+
+xiv
+
+ABSTRACT
+MAGPANTAY, GRACETINE DIMACULANGAN. University of the Philippines Los
+Banos, May 2019. Genome-wide InDel Markers to Differentiate Oryza Genomes AA
+
+and GG and O. granulata Nees & Arn. Ex. G. Watt (GG) as Potential Donor of
+Drought Tolerance Genes
+
+Major Professor: Celia B. Dela Vina, MSc.
+
+Wild relatives of rice are good sources of genes for abiotic and biotic stress tolerance and
+resistance that were lost due to domestication. Development of molecular markers is
+required in assisted selection of introgression lines and characterization of the donor plant
+for the trait of interest. In this study, 94 insertion-deletion (InDel) markers were designed
+and validated using PCR and agarose gel electrophoresis; further, Oryza granulata was
+characterized during the seedling stage for its potential as donor of drought tolerance genes.
+Results showed higher percentage of polymorphic markers (93.18%) between the AA and
+GG Oryza genomes using InDel markers compared with only 25.93% polymorphic
+markers using 96 simple sequence repeat (SSR) markers. Comparison in the drought stress
+responses between O. granulata and O. sativa did not show significant differences in
+maximum root depth, root and shoot dry weights, root length density, percent lateral roots,
+total root length, root to shoot ratio, tiller number, and plant height. Since the stomatal
+density of O. granulata (317-378 stomata/mm?) is less than that of O. sativa (632
+stomata/mm?), this trait can be tested in a drought set-up in future studies. Drought
+response in terms of stomatal density, hard soil penetration, leaf greenness, and suberin
+content of O. granulata may still be further studied. Overall, this study tells that designing
+appropriate markers for screening and testing the potential of the target donor species as
+source of the trait of interest are important especially in complicated traits like drought
+
+tolerance.
+
+CHAPTER 1
+
+INTRODUCTION
+
+Rice (Oryza sativa L.) is the second most planted cereal in the world and is the
+staple food of more than half the world’s population, providing 40%-70% of each person’s
+caloric intake (Yu et al. 2002; Bouman et al. 2007). It accounts for 86% of total cereal
+production in Southeast Asia and 28% around the world (Jaffee et al. 2014). It highly
+contributes to farmer livelihood, food security, and government revenue in several
+countries in Asia and Africa (FAO 2004a; Wang et al. 2005; Konuma et al. 2014; Roy et
+
+al. 2014).
+
+As a product of domestication, rice has lost genes that are important in stress
+tolerance and resistance, making them susceptible to pests, diseases, and abiotic stresses
+(Kottapalli et al. 2010). Among these stresses is drought which accounts for 15%—50% loss
+in yield, affecting the livelihood of thousands of farmers around the world (Kumar et al.
+2008; Srividhya et al. 2011). Efforts in classical (Kumar et al. 2008) and transgenic
+(Todaka et al. 2015) breeding have been done by researchers to transfer drought tolerance
+traits to cultivated rice. These strategies require sources of genes for drought tolerance,
+
+such as the wild relatives of rice (Yamaki et al. 2013).
+
+The O. granulata complex is composed of two wild rice species, identified as
+sources of genes for drought tolerance. This complex has the GG genome, which is the
+farthest related genome to cultivated rice (Wambugu et al. 2013). Choosing this complex
+as source of the desired trait is one way to effectively use and expand the pool of genetic
+
+resources (Niihama et al. 2015). Although considered as different species, O. granulata
+
+2
+
+Nees & Arn. Ex. G. Watt and O. meyeriana (Zoll. & Moritzi) Baill. share the same genome
+and have negligible reproductive barriers. They were even recommended to be placed into
+the same species (Gong et al. 2000). To further explore this possibility, molecular markers
+will be of great use. These markers are also applicable in assisting interspecific
+
+hybridization between AA and GG genomes.
+
+Microsatellite or simple sequence repeat (SSR) markers have been used in rice
+marker-assisted breeding but have low applicability in wild rice species (Miah et al. 2013;
+Yamaki et al. 2013). Thus, new markers must be developed to assess introgression of
+important traits from wild rice to cultivated one. Wild rice sequence information is publicly
+available in the form of Bacterial Artificial Chromosome (BAC)-end sequences (BESs)
+and can be utilized to design markers, such as insertion-deletion or InDels. InDel markers
+are codominant markers that can easily be detected via polymerase chain reaction (PCR)
+and gel electrophoresis. They are as practical as SSRs in terms of cost and precision but
+are more frequent in the rice genome (Lu et al. 2015). InDels have been successfully used
+in genetic and breeding in rice (Wu et al. 2013; Yonemaru et al. 2015). Twenty-two InDel
+primers have been designed and validated by Yamaki et al. (2013) to discriminate among
+the wild and cultivated species of rice, including O. granulata. However, additional
+primers that are distributed in the whole genome are needed to differentiate between O.
+
+sativa and O. granulata complex.
+
+Root and shoot traits contribute to plant drought resistance (Polania et al. 2017;
+Suralta et al. 2012; Suralta et al. 2018). In varying water regimes, plant shoots and roots
+
+respond differently. To determine how the O. granulata complex responds to drought,
+
+3
+
+shoot and root traits are appropriate for observation in water-deficient and well-watered
+
+soil.
+
+In the present study, the general objective is to develop genome-wide InDel markers
+to differentiate AA and GG genomes in rice and determine the potential of O. granulata as
+
+donor of drought tolerance genes. Specifically, the study aims to do the following:
+
+1. develop InDel primers to detect polymorphisms among O. sativa, O. granulata,
+and O. meyeriana;
+
+2. compare InDel markers to SSR markers; and
+
+3. determine drought stress response of O. granulata and O. sativa by considering
+
+root and shoot traits and stomatal density.
+
+The study was conducted at the Novel Gene Resources laboratory and screenhouses
+at the International Rice Research Institute, Philippines from August 2016 to November
+
+2018.
+
+CHAPTER 2
+
+REVIEW OF RELATED LITERATURE
+
+Oryza: Taxonomy and Phylogenetics
+
+In 1753, Linnaeus gave the genus name Oryza and species name Oryza sativa to
+rice, whereas O. glaberrima was given to the West African cultigen by Steudel in 1855
+(Vaughan 1989). Before 1965, the number of species in the genus were about 30, but today,
+Oryza includes 24 species comprising two cultivated and 22 wild species (Vaughan 1989;
+Sanchez et al. 2014; Shakiba and Eizenga 2014). These species, which have been collected,
+studied, and exchanged since AD 1012, are arranged in 10 different genome types: AA,
+BB, CC, BBCC, CCDD, EE, FF, GG, HHJJ, and KKLL; five complexes: O. sativa, O.
+officinalis, O. granulata, O. ridleyi, and O. schlechteria complex; and three sections:
+Oryza, Padia, and Brachyantha (Table 1) (Vaughan 1994; Ammiraju et al. 2010; Sanchez
+et al. 2014; Shakiba and Eizenga 2014). The two cultivated rice species, O. sativa, which
+originated from tropical Asia, and O. glaberrima, which originated from West Africa, have
+AA genomes and belong to O. sativa complex and section Oryza (FAO 2004b; Shakiba
+and Eizenga, 2014). These two cultigens and other members of the O. sativa complex
+prefer full sun, grow near lakes, rivers and seasonal pools of water (Shakiba and Eizenga
+
+2014).
+
+The members of Oryza have distinguishable variation in spikelet structure, which
+contains the fruit and caryopsis, and thus, it is one of the key characters for morphological
+
+rice classification (Fig. 1) (Vaughan 1989). Other morphological characteristics used for
+
+Table 1. Taxonomic classification of Oryza genus, including sections, complexes,
+chromosome number, genome type, genome size, distribution, and useful traits
+(Ammiraju et al. 2010; Sanchez et al. 2014; Shakiba and Eizenga 2014).
+
+SPECIES: 2N GENOME GENOME USEFUL TRAITS DISTRIBUTION
+TYPE ‘SIZE (MB)
+Section: Oryza
+Complex: O. sativa
+O. sativa L. (ssp. 24 AA 420, High yielding Worldwide
+japonica, ssp. indica) 466
+O. nivara Sharma et 24 AA 448 Resistance to grassy stunt virus and BB Tropical and
+Shastry subtropical
+Asia
+O. rufipogon Griff. 24 AA 439, Resistance to BB, blast, BPH, tungro virus; Tropical and
+450 moderately tolerant to Shb; tolerance to subtropical
+aluminum and soil acidity; increased Asia, Tropical
+elongation under deep water; source of CMS _—_ Australia
+and yield-enhancing loci
+O. glaberrima Steud. 24 A8As 354 Tolerance to drought, acidity, iron toxicity West Africa
+and P-deficiency; resistance to BB, blast,
+RYMV, African gall midge, nematodes;
+weed competitive
+O. barthii A. Chev. 24 A&A8 411 Resistance to GLH, BB; drought avoidance Africa
+tolerance to heat and drought
+oO. glumaepatula 24  A®PA®? 464 Elongation ability; source of CMS; tolerance South and
+Steud. to heat Central
+America
+O. longistaminata A. 24 Ala! 352 Resistance to BB, nematodes, stem borer; Africa
+Chev. Et Boehr drought avoidance
+O. meridionalis Ng 24 A"A™ 435 Elongation ability; drought avoidance; Tropical
+tolerance to heat and drought Australia
+Complex: O. officinalis
+O. punctata Kotschy 24 BB 423 Resistance to BPH, BB, zigzag leafhopper; Africa
+ex Steud. 48 BBCC (BB) _ tolerance to heat and drought
+O. minuta J.S. Presl. 48 BBCC 1124 Resistance to BB, blast BPH, GH Philippines,
+Ex C.B. Presl. Papua New
+Guinea
+O. eichingeri A.Peter 24 cc Resistance to BPH, WBPH, GLH South Asia,
+East Africa
+O. officinalis Wallex 24 cc 653 Resistance to thrips, BPH, GLH, WPH, BB, Tropical and
+Watt stem rot; heat tolerance subtropical
+Asia, Tropical
+Australia
+O. rhizomatis 24 cc Drought avoidance; resistance to blast; heat Sri lanka
+
+Vaughan
+
+tolerance
+
+Table | continued.
+
+SPECIES 2N GENOME —- GENOME USEFUL TRAITS DISTRIBUTION
+TYPE ‘SIZE (MB)
+O. alta Swallen 48 CCDD 1124 Resistance to stripped stem borer; high South and
+biomass production Central
+America
+0. grandiglumis 48 CCDD High biomass production South and
+(Doell) Prod. Central
+America
+O. latifolia Desv. 48 CCDD Resistance to BPH, BB; high biomass South and
+production Central
+America
+oO. autraliensis 24 EE 960 Resistance to BPH, BB, blast; drought Tropical
+Domin. avoidance; tolerance to heat and drought Australia
+Section: Brachyantha
+O. brachyantha A. 24 FF 338 Resistance to BB, yellow stem borer, leaf Central Africa
+Chev. et Roehr. folder, whorl maggot; tolerance to laterite
+soil
+Section: Padia (forest-dwelling)
+Complex: O. granulata
+O. granulata Nees et 24 GG 862 Shade tolerance, adaptation to aerobic soil; South and
+Am. Ex Watt BB, BPH resistance Southeast
+Asia
+O. meyeriana (Zoll.et 24 GG Shade tolerance; adaptation to aerobic soil; Southeast
+(Mor. ex Steud.) drought tolerance; BB resistance Asia
+Baill.)
+Complex: O. ridleyi
+O. longiglumis Jansen 48 HHJJ Resistance to blast, BB Irian Jaya,
+Indonesia,
+Papua New
+Guinea
+O. ridleyi Hook F. 48 HHJJ 1283 Resistance to blast, BB, tungro virus, stem South Asia
+borer, whorl maggot
+Complex: O. schlechteria
+O. coarcta Tateoka 48 KKLL m7 Salinity tolerance; stoloniferous Asian coastal
+area
+O. schlechteri Pilger 48 KKLL Stoloniferous Papua New
+Guinea
+
+SOT I ooo +
+BPH brown plant hopper, GLH green leaf hopper, WBPH white-backed planthopper, BB bacterial blight, Shb
+sheath blight, CMS cytoplasmic male sterility, RYMV rice yellow mottle virus
+
+9 10 11 12 13 14 15
+
+1617 f8 {920 21 22
+
+(a) (b)
+
+Figure 1. (a) Parts of Oryza spikelet (Gramene 2006); (b) Spikelet structures of (1) O.
+schlechteri, (2) O. brachyanta, (3) O. longiglumis, (4) O. ridleyi, (5) O.
+granulata, (6) O. meyeriana, (7) O. minuta, (8) O. officinalis, (9) O. eichingeri,
+(10) O. punctata, (11) O. latifolia, (12) O. alta, (13) O. grandiglumis, (14) O.
+australiensis, (15) O. meridionalis, (16) O. rufipogon, (17) O. glumaepatula,
+(18) O. nivara, (19) O. sativa, (20) O. longistaminata, (21) O. barthii, and (22)
+O. glaberrima (Vaughan 1989).
+
+rice classification are attachment of spikelets to pedicel, lemma structure, presence of
+sterile lemmas, and type of embryo (Launert 1965; Tateoka 1964). In 1994, almost all the
+species known today and their genome types were identified, except for the species O.
+coarcta and the genome types of O. granulata, O. schlechteri, and O. ridleyi complexes,
+which were discovered in 1997 (Vaughan 1994; Aggarwal et al. 1997). The bases of
+classifications used were morphology, cytogenetics for genome relationship analysis,
+isozyme analyses, restriction fragment length polymorphism (RFLP), intergenic spacer
+(ITS) variation, SSR analysis, and chloroplast genes analysis (Vaughan 1994; OECD
+1999). Figure 2 shows morphological diversity of genome type representatives of wild rice
+
+sourced from Ammiraju et al. (2010).
+
+Figure 2. Morphological diversity of representative species for each genome type of Oryza
+(Ammiraju et al. 2010).
+
+Several methods have been applied to study the genetic variation and relationship
+present in the species of the Oryza genus, such as inter simple sequence repeat (ISSR)
+polymorphism analysis (Joshi et al. 2000), genome-specific DNA probing (McIntyre and
+Winberg 1998), RFLP analysis (Ge et al. 2001), and random amplified polymorphic DNA
+(RAPD) analysis (Martin et al. 1997), but the results varied due to different targets in the
+rice genome. With the finished O. sativa genome sequencing in 2002 (Buell 2002a; Buell
+2002b; Goff et al. 2002; Yu et al. 2002; Vaughan et al. 2003) and the construction of BAC
+library of Oryza wild species (Wing et al. 2005; Ammiraju et al. 2006; Ammiraju et al.
+
+2010), more accurate phylogenetic analyses were conducted.
+
+The year 2005 saw the launching of the Oryza Map Alignment Project (OMAP)
+which aimed to construct and align BAC-based physical maps of representative species for
+
+each genome type of Oryza to the reference genome sequence of O. sativa ssp. japonica
+
+9
+
+c.v. Nipponbare generated by the International Rice Genome Sequencing Project (IRGSP)
+(Wing et al. 2005; Ammiraju et al. 2006). In 2006, the same group published the
+completion of the BAC library construction with genome sequences of some of the wild
+species, such as O. nivara, O. rufipogon, O. glaberrima, O. barthii, O. longistaminata, O.
+punctata, and O. brachyantha (Ammiraju et al. 2006; Sanchez et al. 2014). The BAC-end
+sequences were predominantly used for the discernment of the relationships between the
+species of Oryza (Fig. 3). The distribution, abundance, and role of transposable elements
+in the evolution of rice species were the focus of some of these studies (Zuccolo et al. 2007;
+Roulin et al. 2008; Gill et al. 2010). In 2013, Zou et al. utilized several nuclear genes
+representing all the 12 chromosomes of diploid wild species of rice to predict the
+divergence times of lineages in Oryza. They estimated that Oryza originated 13 to 15
+million years ago (MYA) during middle Miocene and obtained two diversifications: first
+diversification involved F-/G-genomes and H-/J-/K-genomes within <1 Myr after Oryza
+originated; second diversification gave rise to A-/B-/C-genomes 5-6 MYA. In 2018, 13
+
+wild and domesticated species were fully sequenced (Stein et al. 2018).
+
+10
+
+Figure 3. Phylogenetic relationships between Oryza representative species (Ammiraju et
+al. 2010; Sanchez et al. 2014).
+---: origin of tetraploids, @: maternal parents, O: unidentified diploid species.
+
+The identification of genes controlling useful traits in wild rice species has also
+been obtained through interspecific or intergenomic hybridization and development of
+mapping populations. These mapping populations may be composed of recombinant inbred
+lines (RIL), advanced backcross (AB), backcross inbred lines (BIL), chromosome segment
+substitution lines (CSSL), near isogenic lines (NIL), multi-parent advanced generation
+inter-cross (MAGIC), or monosomic alien addition lines (MAALs) (Shakiba and Eizenga
+
+2014).
+
+11
+
+O. sativa L. (2n= 24) is a rice cultigen species, which originated from tropical Asia
+
+(FAO 2004a; Zeilang and Pattanayak 2013). Its production involves three general stages,
+namely, pre-planting, growth, and post-production (IRRI n.d.). Included in these stages are
+12 steps for successful rice production, which comprise usage of crop calendar, choosing
+the best variety and best quality seeds, preparation of fields, planting on time, weeding
+early, usage of fertilizer, water efficiency, harvesting on time, storage, efficient milling,
+and understanding the market. Crop calendars are used for better planning of farm activities
+and efficient costing, because they include the best date to plant, growth duration of
+varieties from planting to harvest, dates for plowing, weeding, fertilizing, and harvesting,
+and the needed labor and equipment for each activity (IRRI n.d.). Figure 4 shows growth
+duration diagrams from IRRI featuring direct seeded and transplanted rice, which can be
+
+used for creating crop calendars.
+
+The selection of the best rice variety, which is suitable to the farmer’s growing
+conditions, is important for cost-efficient rice farming. The farming conditions that need
+consideration are water availability from rain or irrigation, soil type, and field elevation,
+whereas crop duration, crop height, and grain quality are needed in selecting the best
+variety. Seeds are also checked for cleanliness, pureness, and health. IRRI indicated that
+good seed is free from stones, soil, or weed seeds, contains only grains from one variety,
+big, of the same color, and no cracks or spotting. Float test is often used in checking for
+seed viability, whereas moisture content (<12-14%) is used to evaluate vigor and life of
+
+the seed (IRRI n.d.).
+
+DIRECT SEEDED RICE
+Growth Duration
+
+Hong
+
+2° 0
+meee: aed =
+
+gan
+a
+Peewee Las) ‘
+om
+(a)
+TRANSPLANTED RICE
++ FIELO—++— NURSERY FIELD
+
+|
+| Vegetative Phase Reproductive Phase Ripening Phase
+
+Hn a
+
+ines ©
+mele EY Fe
+
+§)
+
+(b)
+
+Figure 4. Growth duration diagrams of direct seeded (a) and transplanted (b) rice from
+nursery to harvesting (IRRI n.d.).
+
+Besides being an important crop for food security, rice also serves as a model
+system for the grass family (Ammiraju et al. 2010). In 2002, full draft sequences of O.
+
+sativa L., which are independent efforts of Beijing Institute of Genomics, IRGSP,
+
+13
+Syngenta, and Monsanto, were already available (Buell 2002a; Buell 2002b; Goff et al.
+2002; Yu et al. 2002; Vaughan et al. 2003; Yu et al. 2005). These sequences are used as
+references for bioinformatics. In 2005, the Beijing Institute of Genomics group described
+an improved reference genome for rice by integrating their data with those from IRSGP
+and Syngenta; it described the less but comparable data quality from whole genome
+shotgun (WGS) method than clone-by-clone method and demonstrated the large role of
+gene duplications in the evolution of rice (Yu et al. 2005). In 2013, Kawahara et al. updated
+the Nipponbare reference genome through the improvement of the genome assembly by
+revising the minimum tiling path of clones using optical map and identifying sequence
+
+error by resequencing (Kawahara et al. 2013).
+
+With the availability of rice reference sequences, next generation sequencing
+(NGS) and microarrays are the most preferred method for genotyping different varieties
+and species of rice (Yu et al. 2014), although some may still use PCR (Hirotsu et al. 2010).
+Rice6K, a whole genome SNP array, utilizes the Illumina Infinium technology for high
+throughput genotyping, germplasm fingerprinting, and background selection in rice (Yu et
+al. 2014). This platform is already being used in several laboratories, including those in
+
+IRRI.
+
+Rice Improvement Through Interspecific Hybridization
+
+Rice production is expected to decline by 2050, and the world is facing a higher
+demand for rice due to population growth (Abdullah et al. 2005; Sharma 2014).
+
+Intensifying the problem is the continuous decrease in paddy area, brought about by
+
+14
+urbanization and climate change (Chen 2007; Okamoto et al. 2014; Hao et al. 2015).
+Affirmatively, the growing number of studies for high quality rice is thought to have an
+
+impact on these projections (Shakiba and Eizenga 2014; Sharma 2014).
+
+The main goal of rice breeding is to increase food production by improving the
+grain yield potential, grain quality, resistance to pests and diseases, and tolerance to abiotic
+stresses (Gowda et al. 2003; Guimaraes 2009). Table 2 presents some agronomically
+
+important traits which are present in rice (Gowda et al. 2003).
+
+In 2003, nearly 450 genes affecting rice morphology, physiology, biochemistry,
+and biotic and abiotic stress response have been identified in rice (Gowda et al. 2003).
+These discoveries involved genes that code for or control morphological traits, such as,
+anthocyanin pigmentation, hull and pericarp color, spikelet traits, grain size and shape,
+endosperm traits, panicle traits, photosensitivity, hybrid sterility, male sterility, fertility
+restoration, wide compatibility, and chlorophyll deficiency. Abiotic resistance genes
+against bacterial blight, blast, Cercospora, stripe viruses, grassy stunt virus, hojablanca,
+yellow dwarf virus, plant hopper, green leafhopper, zigzag leafhopper, whitebacked plant
+hopper, and gall midge, were also included (Gowda et al. 2003). Interspecific hybridization
+in rice is done to introduce useful abiotic and biotic stress tolerance/resistance genes and
+genes for yield improvement from wild Oryza species to popular O. sativa L. varieties
+(Khan et al. 2015). Through backcross breeding, researchers are able to produce MAALs,
+which contain complete sets of chromosomes from the recurrent parent and an additional
+chromosome from the donor parent (Yasui et al. 1997). A set of MAALs with all 12
+chromosomes passed on as extras into backcross lines is useful in mapping genes, which
+
+can be associated with resistance/tolerance traits, in wild rice chromosomes (Hossain et al.
+
+15
+
+Table 2. Agronomically important traits for each life stage, part, or aspect of rice (Gowda
+
+et al. 2003).
+
+STAGE/PART/ASPECT
+
+DESIRABLE TRAITS
+
+Seed
+
+Vegetative
+
+Physiological
+
+Roots
+
+Flowering
+
+Stress (biotic or abiotic)
+
+Yield
+
+No dormancy and faster germination; Rich in carbohydrates,
+proteins, lipids, vitamins and minerals; Longer shelf life;
+Resistance to pests and diseases; Long, slender and basmati
+aroma; Medium gelatinization temperature and amylose
+content
+
+Vigorous growth and development; Strong, short stem and
+resistance to lodging; More, longer, narrow and erect leaves;
+More productive tillers per culm
+
+High photosynthetic efficiency and low photorespiration;
+Rapid leaf area development and high biomass accumulation;
+High sink to source translocation; Long greenness of flag leaf
+Increased canopy photosynthesis in entire growth period
+
+More roots with high penetration ability; Healthy root system
+and rapid nutrient uptake; Adaptation to aerobic and anaerobic
+soils
+
+Early flowering, high rate of pollination and fertilization; More
+spikelets per panicle and more flowers per spikelet; Complete
+emergence of panicle from the boot leaf; Long, erect and large
+panicle; Resistance to seed shattering
+
+Tolerance or resistance to many diseases such as fungal (blast
+and sheath blight), bacterial (leaf blight), viral (tungro and
+grassy stunt) and insect pests including BPH, stem borer and
+hoppers etc.; Tolerance to salts, metal toxicity, submergence
+etc.
+
+Higher yield in a wider soil and climatic zones
+
+
+16
+2012). From these MAALs, disomics, which are diploid lines containing 24 chromosomes
+introgressed with small segments of DNA from the wild rice donor, may be produced
+through backcrossing (Angeles-Shim et al. 2014). In 2014, Sanchez et al. listed cases of
+introgression of abiotic/biotic stress resistance/tolerance genes from different wild Oryza
+species into rice. Many of the genes controlling the traits are not yet identified.
+Nevertheless, many varieties with useful traits from wild Oryza developed through wide
+hybridization and marker-assisted selection (MAS) have already been released. These
+varieties carry the genes for grassy stunt resistance, BPH resistance, acid sulfate tolerance,
+salinity tolerance, tungro resistance, BB resistance, blast resistance, high yield, weed
+
+competitive ability, and heat tolerance (Sanchez et al. 2014).
+
+O. granulata Complex
+
+The O. granulata complex is composed of two species, namely, O. granulata and
+O. meyeriana. Both species have the GG genome and identified to be drought tolerant,
+shade tolerant, and bacterial blight resistant. O. granulata and O. meyeriana are considered
+as different species, but they share the same genome, have negligible reproductive barriers
+
+and were recommended to be placed into the same species (Gong et al. 2000).
+
+O. meyeriana and O. granulata are drought and shade tolerant wild species of rice,
+with resistance to bacterial blight and adaptation to aerobic soil (Duncan 1994; Gao et al.
+
+2000). They are the most basal and farthest related species to cultivated rice in the Oryza
+
+17
+genus and have diploid GG genomes (Fu et al. 2008; Wambugu et al. 2013). They are also
+
+insensitive to photoperiodism (Vaughan 1989; Vaughan 1994; Fu et al. 2008).
+
+O. granulata is widely distributed in South and Southeast Asia, and thrives in forest
+floors of full shade (Gao et al. 2000). It is a short (usually <1 m) herb, with lanceolate dark
+green leaves, and awnless spikelets (<6.4 mm) with granulate texture of palea and lemma.
+O. granulata is distinguished from O. meyeriana mainly by the length of the spikelet. It
+was observed to be flowering all year long, with peaks in July and August (Vaughan 1994;
+Gao et al. 1996). It was also found to be a colonizing plant, which populates hectares of
+space through clonal propagation and exhibits seed dormancy (Gao et al. 2000).
+Accordingly, they have high genetic diversity among populations and low genetic diversity
+within populations in Yunnan, China (Qian et al. 2001; Gao et al. 2000; Wu et al. 2004).
+Figure 5 shows the O. granulata plant, spikelet structure, distribution, and habitat. Hybrids
+and advanced progenies of O. sativa and O. granulata were produced in 1991, but all lines
+showed negative results for the introgression of O. granulata traits to cultivated rice (Brar
+
+et al. 1991; Sanchez et al. 2014).
+
+Oryza granulata Nees & Am. Ex. G. Watt (A) plant, (B) distribution, (C)
+spikelet, (D) Sri Lanka habitat, and (E) India habitat from NIAS Genebank
+(https://www.gene.affre.go.jp/index_en.php).
+
+19
+
+O. granulata has no existing expressed sequence tags (ESTs) in the National Center
+
+for Biotechnology information (NCBI) database, but BESs are available in the Rice
+Annotation Project Database (RAP-DB) (rapdb.dna.affrc.go.jp/) (Ammiraju et al. 2006;
+Ammiraju et al. 2010). In 2018, its genome was sequenced to study its expansion and
+evolution (Wu et al. 2018). These BAC-end sequences have enough information for
+
+molecular marker design.
+
+Insertion-Deletion Markers
+
+Molecular markers speed up the breeding process by serving as landmarks in the
+genome that can be associated with a trait and detected during the early stages of a plant.
+Several markers may be used, including isozymes and DNA markers. SSR or microsatellite
+markers are commonly used because of their relative abundance in genomes, high
+polymorphism, codominance, wide distribution throughout the genome, and inexpensive
+requirements (Miah et al. 2013). However, they have limited genome abundance and
+coverage (Liu et al. 2013). SSRs have been extensively used in rice, and to complement
+the limitation of these markers, other markers are used in association studies to cover the
+
+whole genome.
+
+Insertion-deletion (InDel) markers are cheap and easy to use and can be mined from
+Next Generation Sequencing data (Vali et al. 2008). They are codominant markers that can
+easily be detected via PCR and gel electrophoresis and are as practical as SSRs but are
+
+more frequent in the rice genome (Lu et al. 2015). They have been used in plant breeding
+
+20
+and in identifying various traits in rice and other plants (Pacurar et al. 2012; Markkandan
+et al. 2018). In 2012, 229 InDel markers were developed to distinguish between two
+accessions of Arabidopsis thaliana. These markers were used to map 35 mutations in a
+hybrid of the tested accessions (Pacurar et al. 2012). Using the reference sequences of
+Hedou 12 and Williams 82 soybean accessions, Song et al. (2015) developed 243 candidate
+InDel markers, which were validated and tested among 14 soybean cultivars and were used
+in mapping CRINKLY LEAF gene in chromosome 7. Quantitative trait loci (QTLs)
+underlying flowering time in soybean were also identified using InDel markers (Wang et
+al. 2018). Recently, Jain et al. (2019) generated and validated a total of 8307 InDels through
+Dindel software using genome sequences of intraspecific and interspecific hybrids of
+chickpea. InDels have also been used along with SNPs in identifying genes for pathogen
+resistance in potato (Rickert et al. 2003). Organellar genome can be a source of InDels too
+as shown in the study by Cho et al. (2017), who developed five InDel markers from the
+chloroplast genome of tartary and common buckwheat and tested them in identifying traces
+
+of the two species in processed foods.
+
+In rice, InDel markers were developed to distinguish between two rice cultivars
+Nipponbare and 9311 (Liu et al. 2015) and between indica and japonica landraces (Zeng
+et al. 2013; Sahu et al. 2017). These markers were also applied by Steele et al. (2007) to
+distinguish Basmatis from other fragrant rice varieties. They designed 47 InDel markers,
+in which 71% showed polymorphisms between Basmati and non-Basmati rice varieties. In
+2015, Yonemaru et al. developed two sets of InDel markers for breeding of Japanese rice
+
+cultivars from elite line Koshihikari. InDel markers have also been used in the
+
+21
+determination of genetic diversity of rice landraces in Chhattisgarh, India (Sahu et al. 2017)
+
+and in marker-assisted introgression of rice blast resistance gene in rice (Hua et al. 2014).
+
+InDel markers can be mined between wild and cultivated rice genomes rice
+characterization and improvement. In 2013, 22 InDel primers have been designed and
+validated by Yamaki et al. to discriminate among the wild and cultivated species of rice.
+In 2014, Angeles-Shim et al. used InDel markers together with SSR markers and single
+nucleotide polymorphisms to identify introgression segments from O. latifolia to O. sativa.
+Niihama et al. (2015) designed InDels for breeding chromosome segment substitution lines
+(CSSLs) between O. sativa, japonica cultivars and wild Oryza species, which include O.
+rufipogon, O. barthii, O. glumaepatula, O. meridionalis, and O. longistaminata. InDel
+markers were also used in assisted introgression of salt tolerance genes from O. rufipogon
+line Dongxiang to rice (Quan et al. 2017) and in characterization of genetic structure of O.
+
+rufipogon populations in China (Jin et al. 2018).
+
+22
+
+Drought Stress Response in Rice
+
+Water is vital in plant growth. Apart from being an important substrate in
+photosynthesis, it also regulates plant temperature and turgor pressure in vascular tissues,
+aids the entry of carbon dioxide, and distributes minerals to the different parts of the plant
+(Chavarria and dos Santos 2012). Because of its large role in plant development, it is a
+
+limiting factor in crop production (Soren et al. 2010; Shamsi and Kobraee 2011).
+
+Drought stress has been the focus of several crop researches, especially on rice and
+wheat (Babu 2010; Soren et al. 2010; Khakwani et al. 2011). It greatly affects crop yield,
+especially in tropical countries where most crops are grown (Babu 2010; Li et al. 2011). In
+rice, several quantitative trait loci (QTLs) were identified to be potentially linked to
+drought tolerance and some were introgressed to popular varieties (Steele et al. 2006; Babu
+2010). However, most of these loci have not been fine-mapped and cannot be used in MAS
+yet (Babu 2010). Continuous mining for sources of drought tolerance genes from other
+germplasm, especially the wild species of rice, is currently being done in different research
+
+facilities (Neelam et al. 2018; Donde et al. 2017).
+
+Drought-adapted plants thrive in arid conditions by three ways: escape, avoidance,
+and tolerance (Leonardis et al. 2012). Different plants, including O. sativa, manifest these
+drought responses (Sack et al. 2003; Babu 2010; Soren et al. 2010). Table 3 presents
+different physiological responses exhibited by plants to escape, avoid, or tolerate drought.
+In the past years, some of the genes involved in these responses have been identified and
+
+may be used as target genes when screening for drought tolerant lines.
+
+23
+
+Table 3. Physiological responses of plants during drought (Cattivelli et al. 2008).
+
+MODULATION
+PLANT TRAITS EFFECTS RELEVANT FOR YIELD UNDER STRESS
+Stomatal More/less rapid water consumption. Leaf Stomatal resistance increases
+conductance/leaf temperature reflects the evaporation and hence is _ under stress
+temperature a function of stomatal conductance
+Photosynthetic Modulation of concentration of Calvin cycle Reduction under stress
+capacity enzymes and elements of the light reactions
+Timing of Early/late flowering. Maturity and growth Wheat and barley advanced
+
+phenological phases
+
+Anthesis-silking
+interval (ASI) in
+maize
+
+Starch availability
+during ovary/embryo
+development
+
+Partitioning and stem
+reserve utilization
+
+Stay green
+
+Single plant leaf area
+
+Cuticular resistance
+and surface
+
+roughness
+
+Photosynthetic
+pathway
+
+Osmotic adjustment
+
+Membrane
+composition
+
+Antioxidative defense
+
+Accumulation of
+stress-related proteins
+
+duration, synchrony of silk emergence and
+anthesis, reduced grain number
+
+ASI is negatively associated with yield in
+
+drought conditions
+
+A reduced starch availability leads to abortion,
+reduced grain number
+
+Lower/higher remobilization of reserves from
+stems for grain-filling, effecting kernel weight
+
+Delayed senescence
+
+Higher/lower tapping of soil water resources
+
+Higher or lower water loss, modification of
+boundary layer and reflectance
+
+C3/C4/CAM, higher WUE and greater heat
+tolerance of C4 and CAM
+
+Accumulation of solutes: ions, sugars, poly-
+sugars, amino acids, glycinebetaine
+Regulation in response to water potential
+changes
+
+Protection against active oxygen species
+
+Involved in the protection of cellular structure
+and protein activities
+
+flowering, rice delayed, maize
+asynchrony
+
+Drought stress at flowering
+causes a delay in silk
+emergence relative to anthesis
+
+Inhibition of photosynthetic
+activity reduces starch
+availability
+
+Compensation of reduced
+current leaf photosynthesis by
+increased remobilization
+
+Reduced total mass but
+increased root/shoot ratio,
+growth into wet soil layers,
+regrowth on stress release
+
+Slow response to water
+potential
+
+Acclimation of defence
+systems
+
+Accumulated under stress
+
+
+24
+
+The reproductive stage of a crop, especially pollen formation, is highly affected by
+
+water loss or deficit (Babu 2010). To escape drought, plants undergo a short life cycle or
+developmental plasticity (Leonardis et al. 2012). Here, the plant completes its life cycle
+during periods with sufficient water before the onset of drought. Using the phenology of
+the plant, the breeder may know the most suitable time to plant the crop in order to avoid
+the onset of drought (Warren and Barnett 2014). However, tropical countries, especially
+the Philippines, have unpredictable rainy and sunny seasons, brought about by climate
+change (Dulce et al. 2012). Consequently, phenological calendars cannot be used all the
+
+time.
+
+Drought avoidance is another mechanism by which plants survive in arid
+conditions. It involves enhanced water uptake and reduced water loss (Leonardis et al.
+2012). By this definition, drought avoidance involves morphological adaptations of the
+
+roots and leaves.
+
+Photosynthesis results to the production of glucose and oxygen by reacting carbon
+dioxide (CO2) and water (H2O) through the light energy from the sun (Krishnan 2011).
+About 90% of the water uptake by the roots are transpired or lost into the atmosphere
+through the stomata. The stomata have to be opened in order for CO> to enter the plant cell.
+In other words, transpiration is needed for photosynthesis to proceed. Also, plants need to
+transpire in order to regulate plant temperature and turgor pressure in vascular tissues and
+distribute minerals to the different parts of the plant (Chavarria and dos Santos 2012).
+During hot dry days, plants lose more water than in humid conditions. Therefore, water
+
+deficit is detrimental to the crop’s yield and life. To overcome this, some plants have
+
+25
+
+evolved to close their stomata, roll their leaves, increase leaf glaucousness, and undergo
+
+senescence of older leaves, or reduce their leaf area (Leonardis et al. 2012).
+
+Crassulacean Acid Metabolism (CAM) photosynthesis is a way plants reduce water
+loss and increase yield in plants, because this process happen during the day, with the
+stomata partially or completely closed (Males and Griffith 2017). C4 plants utilize CO2
+more efficiently than C3 plants at high light intensity because CO? is directly delivered to
+ribulose-1,5-bisphosphate carboxylase/oxygenase (RuBisCO) (Rizal et al. 2012). CAM
+plants, on the other hand, open their stomata at night and closes them at daytime. CO2 is
+stored in acid form, which is broken down during the day and delivered to RuBisCO
+(Cushman and Bohnert 1999). CAM plants are mostly desert plants, some of which also
+have reduced or lost their leaves and have succulent bodies in order to reduce water loss
+
+and store water, respectively. They also never use photorespiration.
+
+Root morphology is also important in drought avoidance. Some plants exhibit root
+elongation to deeper soil in order to reach available water (Hodge et al. 2009; Cattivelli et
+al. 2008) while some plants have suberin, which prevent water loss in the roots to avoid
+cell death in the area (Meyer and Peterson 2013). The expansin gene in soybean was
+correlated with root elongation (Lee et al. 2003). In rice, several QTLs associated with root
+development have been detected. Among these QTLs are phosphorus uptake 1 (PUP 1),
+which contributes to phosphorus (P) uptake in low P content soils, and deeper rooting]
+(DRO1). PUP! is actually a gene termed phosphorus starvation tolerance (PSTOL1),
+which was discovered as a receptor-like cytoplasmic kinase (Gamuyao et al. 2012),
+whereas DRO] encodes an unknown protein that is associated with plasmalemma. DRO!
+
+is regulated by auxin response factor (ARF).
+
+26
+
+Suberin is a fatty acid that is highly expressed in the roots of some plants during
+drought stress (Meyer and Peterson 2013). When suberin layers get thick, water cannot go
+out of the roots, preventing the root cells from desiccation (Pollard et al. 2008). Genes
+CYP86A33, a fatty acid oxidase, and STKCS6, a gene responsible for cutin biosynthesis,
+greatly affect the production of suberin (Figueras 2006). Drought tolerance involves
+osmoregulation, osmotic adjustment, and stomata regulation. In a recent review by Soren
+et al. (2010), several genetic engineering techniques that aim to improve drought tolerance
+in rice were described. Drought stress affects plant metabolism and results to upregulation
+and down-regulation of certain genes. It could follow three different response pathways,
+namely, abscisic acid (ABA)-dependent, ABA-independent, and WRKY pathways. This
+regulation of gene expression involves changes in membrane integrity and modulation of
+lipid biosynthesis. The accumulation of compatible solutes that causes decreased water
+potential inside the cell and forcing water to be pulled inside also happen. Further, H*-
+ATPase and Ca”*-ATPase activities change, triggering change in Ca”* influx, cytoplasmic
+
+pH and reactive oxygen species (ROS) production (Soren 2010).
+
+Some solutes that contribute to drought tolerance are glycine-betaine, mannitol,
+raffinose, galactiomol, fructans, trehalose, and proline (Soren et al. 2010). Their production
+is controlled by different genes. For instance, glycine-betaine is produced by oxidizing
+betainealdehyde by betainealdehyde dehydrogenase (BADH). Betainaldehyde is a product
+of choline oxidation by choline oxidase (COX). COX and BADH can be found in the
+
+stroma and are induced by stress.
+
+During stress, the levels of control include expression of transcription factors,
+
+mRNA splicing, epigenetic regulation, and mRNA translation. The transcription factors
+
+27
+that are regulated during stress are of the bZIP, MYB, MYC, ERF, and WRKY families.
+The bZIP family depends on ABA and respond to transcriptional and post-transcriptional
+level during drought stress. MYC and MYB act as positive regulators once endogenous
+ABA has accumulated. Ethylene responsive factors (ERFs) function in both ABA-
+dependent and independent pathways, are ethylene responsive, and involved in the
+expression of dehydration and low-temperature-responsive genes. Lastly, WRKY are
+transcription factors involved in the development, response to stress, and hormone-
+
+requiring mechanisms of a plant (Sahoo et al. 2013).
+
+In a study by Islam et al. (2018), seedling stage drought tolerance was highlighted
+to be critical in seed germination, seed establishment, and seedling development. Among
+the mentioned effects of drought to rice in the seedling stage are inhibition of cell
+enlargement, impaired seed germination, lower seedling height, reduced biomass
+
+production, and lower tiller number.
+
+Another mechanism that may be involved in rice drought response involves the
+stomata. In 2018, Caine et al. discovered that fewer stomata in rice leaves contributes in
+drought tolerance by requiring less water to survive and having enough water to cool itself
+in arid conditions. Additionally, low stomatal count was also associated with low stomatal
+conductance, which is related to photosynthesis (Ouyang et al. 2017). In the same study,
+smaller stomata were associated with strong drought response. No literature is available on
+
+the study of stomatal density and size in wild rice species at the time of the present study.
+
+CHAPTER 3
+
+MATERIALS AND METHODS
+
+InDel Marker Design and Screening
+
+Sequence retrieval and InDel marker design
+
+BAC-end sequences (BESs) of O. granulata and homologous O. sativa sequences
+were retrieved from Rice Annotation Project Database (RAP-DB) (Sakai et al. 2013). The
+BESs were aligned against the reference genome sequence of rice (O. sativa spp. japonica
+cv. Nipponbare) in MSU-RGAP release 7 — genomic sequences using BLASTn on Rice
+Genome Annotation Project
+
+(http://rice.plantbiology.msu.edu/analyses_search_blast.shtml) website without changing
+
+the default parameters (expect threshold = 1e-5; max number of alignments reported = 10;
+word length = 11; filter = none), and gaps of more than 18 bp were searched every three
+megabases. These gaps represent insertions or deletions in either of the two aligned species.
+Primers were designed around these InDels using AmplifX ver. 1.7.0 (http://en.bio-
+soft.net/pcr/AmplifX.html) (Jullien 2004). The difference in the expected product size
+between the two parentals was determined by performing in silico PCR using the same
+software. Gap sizes of 10% to 20% of the product size were selected for easy detection of
+band size difference using agarose gel electrophoresis as done by Yamaki et al. (2013).
+The primers were then ordered from Macrogen, Korea. This protocol was derived from
+previous studies (Lang et al. 2010; Melloul et al. 2014; Pang et al. 2014; Scascitelli et al.
+
+2010).
+
+29
+
+Plant materials
+O. sativa ssp. indica cv. IR64 (AA), O. sativa ssp. indica cv. IRRI 154 (NSIC Re
+222) (AA), O. granulata (IRGC 102118) (GG), O. granulata (IRGC 106474) (GG), O.
+meyeriana (IRGC 89241) (GG), and O. meyeriana (IRGC 89243) (GG) were used as plant
+
+materials in primer testing.
+
+Plant sampling and DNA extraction
+
+Total genomic DNA was extracted from leaf tissues of plant samples using TPE
+(100 mM Tris-HCI pH 9.5, 1 M KCI, 10 mM EDTA pH 8.0) Buffer based on the simple
+DNA preparation protocol (Kim et al. 2016), as follows: (1) 2-cm young leaf was sampled
+from the plant of interest; (2) the leaf was frozen using liquid nitrogen and ground using
+GenoGrinder for 8 minutes; (3) 400 pL TPE buffer was added, and the solution was shaken
+and kept at 65 °C for 30 min; (4) the samples were centrifuged at 12,000 rpm for 15
+minutes; (4) 20 wL of the supernatant was aliquoted and diluted with 130 4L nanopure
+water and was directly used for PCR. Crude DNA solution was stored in -20 °C until PCR
+
+amplification.
+
+PCR amplification and AGE
+PCR reactions were performed using a final volume of 20 1 with the following
+components: 2 1 L crude genomic DNA, | unit Tag DNA polymerase, 1X PCR buffer, 0.25
+
+mM dNTPs, and 0.25 mM of each primer. The PCR program was done as follows: 2.5 min
+
+30
+at 95 °C, 35 cycles (25 s at 95 °C, 25 s at 55 °C, and 50 s at 72 °C), and 5 min at 72 °C.
+The primers used in the PCR reactions are listed in Appendices A and B.
+
+The amplified fragments were resolved via electrophoresis runs on 3.5% agarose
+gels. The images were captured using a gel imager. Polymorphic bands between the plants
+
+can be used to detect introgression from one species to the other.
+
+Band Scoring
+
+The gels were scored according to the presence of the expected band sizes. The
+following scores were assigned to each marker: 0 — monomorphic between AA and GG
+genomes; | - polymorphic between AA and GG genomes; 2 — polymorphic between O.
+meyeriana and O. granulata, 3 — polymorphic between O. sativa accessions; 4
+polymorphic between O. granulata accessions; 5 — absent bands in either genomes; 6 no
+PCR products among all samples; and 7 — polymorphic between AA and GG genomes, but
+bands other than the expected sizes are present. The percentage of the amplified and
+polymorphic markers were computed for the InDel and SSR markers. The polymorphic
+markers were plotted against rice chromosomes’ using PhenoGram
+(http://visualization.ritchielab.org/phenograms/) based on Proximity Algorithm (Ritchie
+
+Lab 2012).
+
+31
+
+Drought Stress Screening
+
+Plant Materials
+
+Oryza sativa ssp. indica cv. IR64 and O. granulata 102118 were used as plant
+materials in the drought study. The seeds and leaf samples were obtained from Novel Gene
+Resources Laboratory with the approval of Dr. Kshirod K. Jena and Dr. Sung-Ryul Kim.
+In the drought test, seed dormancy was broken before germination by placing seeds at 40
+°C to 42 °C for two days. O. sativa seeds were pregerminated for two days on a petri dish
+at 28 °C, whereas O. granulata was germinated in MS media (after not germinating on a
+petri dish on the first try). For the seedlings to have approximately the same ages, O. sativa
+was germinated later than the O. granulata plants. The clones were tillers from an existing
+
+plant.
+
+The species tested for stomatal density included O. sativa, O. glaberrima, O.
+rufipogon, O. longistaminata, O. punctata, O. officinalis, O. minuta, O. latifolia, O. alta,
+
+O. australiensis, O. brachyantha, O. granulata, O. ridleyi, and O. coarctata (Table 4).
+
+32
+
+Table 4. Species and accessions of Oryza checked for stomatal density and their genome
+and some important traits (Ammiraju et al. 2010; Sanchez et al. 2014; Shakiba
+
+and Eizenga 2014).
+SPECIES VARIETY/ACCESSION GENOME IMPORTANT TRAITS
+
+O. sativa L. IR31917 AA High yield
+
+O. sativa L. IR64 AA High yield
+
+O. glaberrima Steud. IRGC 96717 AA Drought tolerance
+
+O. rufipogon Griff. IRGC 80671 AA Increased elongation under
+deep water; source of yield-
+enhancing loci
+
+O. longistaminata A. Chev. Et IRGC 110404 AA Drought avoidance
+
+Boehr
+
+O. punctata Kotschy ex Steud. IRGC 105690 BB Drought and heat tolerance
+
+O. officinalis Wall ex Watt IRGC 100896 cc Heat tolerance
+
+O. minuta J. S. Presl. Ex C. B. IRGC 101141 BBCC Insect and pathogen
+
+Presi. resistance
+
+O. latifolia Desv. IRGC 100914 CCDD High biomass production
+
+O. alta Swallen IRGC 105143 CCDD High biomass production
+
+O. australiensis Domin. IRGC 100882 EE Drought avoidance
+Drought and heat tolerance
+
+O. brachyantha A. Chev. Et IRGC 101232 FF Insect and pathogen
+
+Roehr. resistance
+
+O. granulata Nees et Am. Ex IRGC 102118 GG Drought tolerance
+
+Watt
+
+O. granulata Nees et Am. Ex IRGC 100879 GG Drought tolerance
+
+Watt
+
+O. ridleyi Hook F. IRGC 100821 HHJJ Insect and pathogen
+resistance
+
+O. coarctata Tateoka IRGC 104502 KKLL Salinity tolerance
+
+33
+
+Physiological set-up
+
+Two-day old seedlings were planted on sterilized and fertilized soil placed in mylar
+tubes. These tubes are long and slender to allow measurement and comparison of root
+length. The mylar tubes were placed inside PVC tubes, which were arranged randomly on
+
+a case with 5x7 slots (63.5 cm x 88.9 cm). The set-up is shown in Figure 6.
+
+barcode,
+mice
+deat pe: el) (pied ie)
+lath puny sealed
+
+Figure 6. Diagram of a mylar tube and PVC tube used to test the drought response of Oryza
+granulata Nees & Arn. Ex. G. Watt and O. sativa L.
+
+At the beginning of the experiment, mylar tubes were assembled using mylar plastic
+sheets, which were cut into 45 cm x 8 cm and joined end-to-end using duct tape. The
+bottom of the tube was covered with fabric to allow passing through of water from the tube.
+Dried, sieved, and sterilized upland soil was weighed and placed into each tube up to 40
+cm height. The mylar tubes were placed inside PVC tubes, which were epoxy-sealed at the
+bottom, painted white, and checked for leaks at the beginning of the experiment. The
+
+weight of the PVC tubes together with the mylar tube and dry soil were determined.
+
+34
+
+Two treatments, namely, well-watered (WW) and drought (DD), were set-up. The
+WW treatment was maintained at field capacity, whereas the DD treatment was dried down
+from 75% of the field capacity throughout the experiment. To determine the field capacity
+of the soil, soil-filled mylar tubes were saturated with water by adding water at the top and
+soaking the bottom of the tube for two hours, and then, water was allowed to drain from
+the bottom of the tube. The remaining water was determined as the field capacity. Seventy -
+five percent of the field capacity was computed and placed in the DD tubes. The tubes were
+arranged in a case with 5x7 slots using a randomized complete block design.
+
+Five replicates per genotype were set-up for the experiment. The genotypes tested
+were O. sativa L., O. granulata cloned from an existing plant, and O. granulata from seed.
+Each tube was barcode-labeled. The germinated seeds and clones were sowed in a
+screenhouse and were kept moist until established. The pots were weighed every two days,
+with watering of the WW plants to maintain field capacity and drying down of the DD
+plants. The plants were harvested after 21 days.
+
+During harvesting, the maximum root depth and plant height were first measured.
+Then, the shoots were placed inside envelopes and placed inside the oven to determine the
+dry weight. Before being dried in the oven, the roots were placed in 25% ethanol solution
+(v/v) and was scanned and analyzed using WinRhizo to determine the total length and
+lateral length of the roots. Once measured, the roots were placed inside the oven and
+weighed to obtain dry weight.
+
+ANOVA was performed using the Statistical Tool for Agricultural Research (STAR)
+
+package. Graphs with error bars were created using Microsoft Excel.
+
+35
+Screenhouse temperature and relative humidity were measured using Hobo™ to
+
+determine if the environment is the factor affecting plant response.
+
+Stomatal Density
+
+The flag leaves of mature wild rice plants were obtained from the screenhouse,
+measured for leaf length and width, soaked in water, and put in 4 °C until scratching. The
+middle part of the flag leaves was scratched using blades until only one layer of cells at the
+abaxial side was left. The leaves were viewed under 10X magnification using a light
+microscope (Olympus BX61) under bright field, and five replicates were included for
+counting. The stomata included inside the field of view were counted, and stomatal density
+was computed using Eqn. 1. Five fields of view per species were sampled, and stomata
+were counted using the cell counter function in Image J software (Arena et al., 2016). To
+normalize the data, a field of view correction factor (CF) of 359 was used. The CF is the
+
+area (mm?) of the field of view computed from x:692.23 * y:518.59/1000
+
+(Eqn. 1) Stomatal Density = Stomatal count (no./field of view) x 1000
+CF
+
+Pearson’s Correlation coefficients were computed between leaf length and width, leaf
+length and stomatal density, and leaf width and stomatal density. Scatter plots were
+
+generated to show the relationships among these factors.
+
+CHAPTER 4
+
+RESULTS AND DISCUSSION
+
+Development of Polymorphic InDel Markers and Comparison with SSR Markers
+
+To assist breeding programs, molecular markers are essential to track the exchange
+of genomic sequences among crossed lines. Using O. granulata BAC-end sequences from
+RAPDB (https://rapdb.dna.affrc.go.jp/), many insertions and deletions (InDels) were found
+by aligning these BESs with the Nipponbare genome using BLAST in MSU-TIGR
+(http://rice.plantbiology.msu.edu/analyses_search_blast.shtml). Gaps that are not
+necessarily continuous and can come from either genome were searched in every three
+megabases in the Nipponbare genome. Some BESs contain sparse number of InDels, and
+thus searching the subsequent BESs was done until InDels with the correct size and have
+flanking sequences from which primers can be designed were found. When the following
+criteria were set in AmplifX ver. 1.7.0 software (http://en.bio-soft.net/per/AmplifX.html)
+in designing a useful primer, namely >50 °C melting temperature, > GC percent, 3' end
+stability, no polyX, and no self-dimer and self-end dimer formation, 121 InDel primer pairs
+were designed. A total of 94 InDel primers with product size difference of more than 20%
+of the product sizes were finally selected for synthesis and testing. Manual mining of
+InDels and designing of the primers were tedious and took a substantial amount of time in
+
+the research process.
+
+A total of 94 InDel markers and 96 SSR markers were tested for polymorphism
+
+between the AA and GG genomes (Tables 5 and 6). The InDel sizes ranged from 16 bp to
+
+sD ot vse eee ‘DWOLVDLIDVOVIDD IVIDVIVIDDWIIILVILID —__ puans +) BPODPE z 1009059 w
+QO ew ‘SID ig eee vse SVIDLVILIDVIVIILLID DDLVVIOOVILLVOLVILLVD (puans +) 689¢90%2 9007S0DD w
+si sr via 639 DLVLVIOVIIIIOWVIOVWID LVILLIDDLIOLILIVVIOLLIO (puans +) $00 $099 ty
+sw er on elt VOVVOLVIIOLLIDOLVOIOL ADDLVILOLLOLVDIOVIOLY (puns +) ¥00_s099 w
+si If 007 lee LVDIVVIIIDDINIINIIOLY YODVILVVDIDVIDOVWIOLD (poens +) £00_s099 iy
+m er vey uy DIDOVWVOLOOLLLYDLOD LVDLOVIOVWVSVIVDOV (pens ‘200_s090. Li
+sa Le see wy LLVLNOVOLILLVIOVIO VOILVOIVIVLIOVVDDIOL (pouns 100_$099 6
+vd ww oz Lt WVLODLIVIODVILOOV SVIVLLODDLLLOVLVD (puens, 900_90D9 Lid
+Ln) (74 zt eee IDVOOVIOLIOLYIINNLD DVVLVDLVIODDLIOLIWY (pouns +) 400-¥0DD oe
+Land ve vor yi4 VLVIODDIODLOLOVIVVIVD: LOVIDLVOOLVLVIVIOILY (porns -) 900 09D La
+aD oe zoe zee LD2D1VIII1NILOO1NIVLLI QLDOLLIDVIODILVILY (puans $00" r0DD se
+cae) oe 187 oze DVVIDLOVIDLOVIOVIOVOVVD DLYIDVILIDLOLVIVVIOVOL (poens +) $00_¥0DD ig
+vay ts o8z zee LQ0VOVIVOVWILIOLIIL DVDVVIDLVIIIVIOVOVLLVD (poens -) £00_y095 z
+vad Or oz 091 YDDVDLODYDLVDLOVID LYDVVLDDVIOVWVIDDLOD (puens ‘700_0DD te
+rar) Is eee 66£ DDLLVIDILYVILIOVIVIVIOD DYDLLVIDDWWOLYDLODVLVD (poens 100-7099 Ie
+Os) a za vot VOLIDLVIVOVVIVIOVIOL DDLIDIVDLLILLOVDDLYIVWVO (puens -) 10 £099 0€
+el a 4 tt VLVODDVVOWWDLOVOVODVOL DVVOVLYIDWVDDLYDVYVDD: (poens -) £10609 4
+bs) or see Sut DVVVDDDVIVOVILLIDLLLIVD WOVVIDLOVVOVIODLID (Puans +) 66160687 7S060E87:EOP t10-€099 4
+a 4 vie az VOOVLIDLIDLLVDLI9VLOD LLLODIOVILVIOVVOOWVLVD (poens -) 110-6099 ww
+i) i $9t we VOLLLVODLVOODLLVDVI VOVLIOVOVVOLOOVWIOL (pons - 010-6099 %
+(D9 0N ‘eID we TOE ee OLIDWVIIDLVODOVOV OLOOLLIODLLVDLLIILSV (puns +) 600 E099 s
+bs) % 6st ete DDLVIDIODLYDDVDLYDWVO LIQDLLYDLLODVVOVVDD199 (pons - 8007c0D9 "
+QD Z1'9"199 ‘EHD &- we see LVIIVOVIDLIOIOIOOL DLVDOVWVIDLIVIVYWIIIDLO (pours +) 4007€099 &
+Gy ve tor oer DILYOVODLOOILLLVDLL DVLVOVIDILIOOIILILVIV (pvens 900-6099 id
+Cy st uy ey YLLOVOVLIIOVVI01D99 ADOVIDLVDDLVOVVOIDVIIIL (pvens $00_€099 zw
+Cy ve wt loz LVYOOI0VILVILVVDIILVII VOLDVIIOVILDLYVIVD (puns - ‘v0 €0D9 4
+Ot) ee 891 107 DAIDIVLLVOVOLIOLYIILLLID AD2LIDOLIOVIILDIOV1I0D (puans +) cce6ezsz"s998EzS7:EORP £00_€099 Ci
+Ge 1z Wwe oor LIDVODVODVDOVOVILID DOIDLLVIOLVIOLIDVILLD (porns -) 1st" 2089L:£0% 100_£099 a
+™ we one zor VV299VIDVLLOLYVVLIOLVII DYVDVIOLIDOVLLLIVLOVIVOV (wens -) 600-2009 u
+™ a sey uy DYVILLYVVVDVOIDVD1IILID VODDVIOVIDLYDLLLOLLVILOL9 (puna -) 800_720DD gt
+~™ Ie tee 969 ALVLIOVODLILIOLIILLVVOD VLIOVIVVIOVODVOVVOLL (puens +) 92001991 "1ZZ60991:20 400-2099 5
+™ of ols osy OW DDVDDLYIOVIOVIOLD PLLIDLLVIIIIOLVINID (pens 900° 20DD rl
+Zia ‘THD [4 ee sol IDIVLLIDDIVIODLVIDLO QVILOVVIOWVIILVIIOL (pens $00_2099 a
+md Oe 4 log IDDOVDLVIINDLILVLLOL VODVVDDDLYVIILVOLDIO (puns - £00209 t
+™m Is- sel oat ALLVDLIDLVILLLIOVIVILIO IVILIILOVOLOVVILVDLIIO (poans -) ‘7002090 ts
+™ we 607 Wwe YODVDLIDLILVLILVLIIIVOVD IDVIDLIDDVILLDLVLVOVDLOV (puens 100-2009 ot
+™ ae It sar VOLLIDDIDIDIVIODLYD YVVIDVWOVIVIILVD909 sv 600-1099 6
+i) Ie out ist AQVOVYDVVIOVILVVIII0 YOWVDVLVILIDDIDOINIO 66 800109 4
+™m £07 sz LOQLIDLVIDLYVI2VD999 DLLIOLVOIDLVVID1OLD oe 4001099 L
+i) a siz ez IDLVDODLYIIOLIONLID VLVODDVYDDLLLIDIID v1 90071095 9
+i) at Ist ee LLOVOLIDIOVOLILV.LIIO DIDLOWLILVVODOVOLIO (puens $00_1099 s
+mo st sw Ost VOLDOVIVWWLIVWILNII9 VOVIDDLODILVWVVODVVIVOD (pons - ¥00_1099. v
+wo ue et ost YOIDDVOILVIDVVIDDYDD LLVLD9VODVDIOVILIOD a4 £00_1099 €
+12 uy ti44 LL VVVIOVIIVIOOVVIOVDLY VOVWIIOLLIDOLIDDIDLD (@oens 200_1099 z
+19 w GSE SIE YOOVLIOVWVLIOVVDVIIO YOOLVOLLYWIIVWIOVDID (poems +) SpLLEIE PEOLELE:1ORP 19071099 1
+me Way @® ‘arequoddin,
+9H SVG apie ceaaa tc azn ieoae (¢ OL s) wma ISHIATE (¢ OLS) Wma TAVMHOR “va ejuode{ dds eager 929 30 2DNANDIS = MEDION
+Qnaoes dows ‘WONA9 SONTALANA TAL NI NOLLISOd
+
+| eta ee UU EEEE IEEE
+
+‘spliqdy diyisadssaqul “] vayws ‘CE pue
+NEM ‘D “xq “Wy 7 Soon ByHjnUDAd HzU_ Jo BuIpaeq PojSIsse-1ayxIEUI 1OJ OII/1S Us PoUBIsop sJoyJeUl [>QU] OplM-sWOUAd Jo js] “S B1GUL
+
+Cy
+“
+
+ADDLVDVILIIVLLVIIIVWDIV
+DIDDWVOLOLVVIODLLIVVOD
+
+AVOVWILVIOVILIDVILVVILIO
+
+LOVIDVIOVIOVIVIDLIOLIOLY
+
+QOVILVVIVIDDVWVVOVOVLLLD
+VDLVDLVWVIDLIOLIOOLVIV
+
+VWVDVV2099VDLOOLLVOL
+
+VOVIDIVODOLLIVIVLVVOLD VOVIVDDVDDIDIIOLIVIIDIO
+
+VOVIDLIVIILVIVVDLVIOVD LYVOOLIDDIDDLVDLILLIOL
+
+IIDDLOVDDLLIDLVDLVIVILY
+
+AVDDOVVDVIOVIIIVLIILIO
+
+ADDLVIIIOLIDLIOOLLIOVILVL
+
+(paens -) peor coc e6v69607:90"P
+(puans +) pZLL 764" vE6926L:90%
+
+OVVDLVDVIIDVDOLOLOVILVV
+
+“19 exjunds| ds mage #20 40 ZONEADTS
+
+1102199 16
+010 z199 id
+600-2199 %
+800 ZIDD 16
+400-2199 06
+9002199 a
+S00 15D @
+00 21D es
+€00_Z1DD a
+700_Z199 se
+100 2195 n
+600-11 &
+800119 i
+400-1199, (8
+900-119 08
+$00-1199 be
+00119. La
+£00"1199 u
+2001190 o
+100-1159 sk
+$00 01DD a
+00 0199 73
+£00_0199 wu
+40076099
+90076099 oe
+006059 9
+00 60D 9
+100609 ro
+4008009 »
+900809 59
+$00 8095 i)
+vod B0DD 9
+€00_80D9 ic)
+700_80D9 19
+100809 9
+9007409 6s
+$007409D ts
+¥00_L099 ts
+£00_L09D 9S
+700_L0DD $s
+100-4099 1s
+600-9099 ts
+8009099 ts
+4009009 Is
+9007909 0s
+$00"9099 ov
+¥00_90DD w
+200-909 fa
+‘<pnvW ON
+
+‘DWONID TONIMLATY TAL NI NOLLISOT
+
+“*panutjuod ¢ 91qe 1,
+
+
+Ga)
+sunyz IVOLY Tina 15
+on aN 08 ——~r — = By tor DIOOVIODVLOIDLIVVD SLVYVILOOLVDVO. a
+
+be a 0s ost QODLOVWWVDLOVDDLIDOL DVLVDDIOOLIILLLOWVDDL fe
+2 N t a nw rst LVOLIILLV¥LIDVIIIIO QODLIVLODLLLVOLVWII9 Goze
+an ax % ° fet o st DDLIDLOLOALWVILVILOV DVILVIDVILIOVILIOVIL ats a
+ne ax a é Fs ss oer SODLIVDLVOVIOLLLVIOV DOVIDLIINILLVIOOID sey
+an ax 0 ard os ont DLIDIDILVDLVONIDLOVI DIOVIOVVDIOLLODOLLD SOW
+“oon ax oe o : ss 9 Ist DLLIOOVOVOLIODLLLLVS AVOVOVIVIDLLIOIVVLVV viewed Sy
+amd ax @ c . s £07 DDLVDODLOVIDDDLOLVIY QVIDLVDIVODLOWVIOOLY Sea
+a ax Ef ‘ mo s wor DDLIOVIILYDIVIOOVLIO DODDLILLIVVILIOLVIVY isn
+Az ox H 5 ar s LT DVDVLIODDDOVVODVDLID DOLYDOVVILIDLVIVLDOLD cose tr
+Pe Py I a .* $ 9 ofr VLLVVOVVVVIIOVIIDLVD QVIDVLALVIDVV.LIDVIOV icc ad
+arnt ax x ° = 0s 1 DIVOLLLDLIOVIILLWVD QVLIDIDLDIIIILOILLVY ESOL OF
+ORAL TA an 9 6 py Bé o mH SDLIIWWDILVDVILODLLY DIIDIOLLLLIIIDILIOLL ISNA OE
+“rt ox ve : tm 4s 0s aut DLIDLIDVILIOLIDDIDLL QVILLVDOOVIILDILLVOV vowed
+vor an vw 8 ind ° our DLIDIDLLLLIIDVIOVDDVY OVILLIDVILLODLILVIID oLesWu LE
+xn ax * te . s 5 m DLLIDVOWVIVOVOODLYVL AIVOVILLVLYDOIVLLVODY vLPWA 9
+omant ax s rf : s $ wet DLVDLVIDIDLOVVDDLID YDLVVVOLLYIOVVDLYVD cose SE
+omit ax ra te * s oot YVOVLLODVDLVOVOOLVLY DPVLLLIDOVIVVIDOLV9D Lssenu te
+arn an @ it _ 0 vst D19DLL2D9ILLALLIOVWY DLYVIDLVDILLVDVII009 SIU fe
+“som ox m ° ar ss " DODVVDDOVODLIDLIDVLO DVIMLILLYDIVID1IIO vIELNM TE
+2 ax & i om oy $ ust D9OL9LLIVVIIVIVIID DLIDID1DO1D2VVDIOVO “unde
+a an oe 7 > 8 3 ut Q21LDLVDLOIOVIIODLY QVIDVVLVWOILVVDIIVII R09 OE
+xn an 3 * 2° $ a VOVDOVWLLVVLIVVOIDLL OVVLVDVOOIVOVIDIOLVL ers 6
+ome an % a 5 $ ’ ut DLODLVVOVVILLLYVOLOY VOVYVIDIDDLDVLLLLVOV OKosWE AT
+bed an ze ot Pi s eer JODLIOLIDIOLILOVVLY SVLIDVLIOVILVOIOVDIO SELON
+" an Hi x a * $ v Sst DLLOVVOVVLOVDVDVDNID DOVWV1DL99V1991999V ICANT
+oman ax ot i @ is * mm VOWVOLDVLLLVILLI99V9 DIVIOVIVILVVDVVILVLD eI §T
+mtr an Hi n $ SPLLDLIVIIDLIOLIILD D2VDIDVIDLOLWVLVOLLVS corde
+“ara aN i Ki sy os ust DPVYDOVILLILLNDIND 2920VIIIDLDLLII e109
+“OMA on re i ie ss € 19 AVVOVOVVDYYODLLYDVID DVLIDILOLIEVLVVVIOVI sO
+oman an s Fa = § €1z VIVLILDLLIDLYVVDDIOV LLVLOVLLLVV1991999V9 tor IZ
+Bere ax % a as s an SOVDVVOVLIOVOILVDIVIV DVIODVDVIIOVOVOVOVYD SRSEAU OT
+on an % Fa » * $ or DLLVLLYVWVOLYVVOIVOO DVVOLLWVDVDDOLVLVLVD ZSEIN 6
+ane on rd fe s ra SLLVLLVWWVOIVVVOLVOO DVVOLLWVDVDOLVLVLVO zseIWd A
+met ax i i = s Ost DOLLLLVIODIVLIVVDVID DOVWVIDLLLLID99LVIV a a
+An an i st $ mi DOVIDLLIDIOVOVYLLIDY AIVOVVOVWVDIDVVOIDLLL sO
+oman an % te 7 i ost YVDVVOVVOVODLVOLLID VLLILLIDLOLILLLYII9 cos I
+sore) an ‘A Mf 2 s : uz DLYVLIDIDIDDV199199199 DIDIVOOWVLIVOVIVIVLL verend rl
+Feat an it 3 ai s gor QVDVYDLLYDIDIVIIOL QDDDLVOVILIVVVIVIOLY Tee
+an an o t “ $ t wt VLOVVIIDVLLLYDYD9901 QVIOLLLDVOVLLYVWVOLLYD veo
+aru an oe ot L Fs eat DIDDLIDLLVIOLVIOLVI DDLOVIVOLDLVIIIOLOY sscwd
+ane an % a = Fa ut DOVDLODVIOVIOVOVLLLL QILIIDLLLOIVIODOVIOVL eevee Ol
+nz an ¢ mo $ on 22091 VVIOVILLLOOLIV PVOLIDLINIIID1INIVDD vow 6
+nz an Ha c s § vet DYDVDDVIVVDDDYVDIOV 2DDIIWWVLVLVIIILIID lyswed 8
+an ay 9 fe 2” $ tet DVDDLILVILIOIOLLIY DDLLLWVLVDIDLLVLLLVIO aod k
+oA an 99 €€ a ss ou i :
+QVIDIDOVIOVLY — VDIDLLLIDIDLVILVLLYYVOLOLVD §=— BOR
+ne ae 7 = i ‘ tr SybazavavevaaNvao¥ SywvDa1D991LVIDO1201 ood
+an an i 6 a OL er 2029VIDIILIIIDLIID DDYDDOLOVVVVIODVD9 a
+are an a ‘1 ‘ne oF wr DVOVOVDIIIVWVIDVOLIY SLDPIDLIIVOLLOOILL wwe
+oo an ot i Be os tor DDDVOVVIIDDDLLLVOIOV DLLLIOIOIDLLALOLIIL SEU Z
+ane an ve tt ho i 1 SPIDLIDAIDLLIDLLIID DVVOVVOVVV299VV20VI9 aut
+Zz aN ve ais op 19 ou
+min ALAR, ALLOW noo nao SAYN
+4 monet TOON, arm mares SONTAAS waATUd ISAATE ZONANDAS WAWTEd TEVMUOS $0901 __ ON
+mppuvisn! JONTLN ALLOW 40 ‘ON ‘BSS 20__“oxrvauy _ SWOSOWOUH cuisiarna
+eS cd ___NANOAS MATE ESAT SONNOAS MEW TEVMUOd S907 ON
+
+“saulouad 9241C DD pue yy usemjoq wistydsowIA]od Joy pajso} SIOYIEUI YSS JO IS] “9 IQUL
+
+40
+
+DALVVOLVIDIDOVIOL
+
+DDIDIVIIVIOLVILVDLIOV
+
+WL 96
+sanz’ on vw 9 my ss eet QD19L191991999999V1 DLDLIOILLIOIDIDLLVD SrrUNd 6
+Suez an 4 6 99 ss eet DOVOVDDIOILLIVOIWV ILLVIIOLILLLOIALLVD SION 16
+sanz}. ain [ia 6 fm oy ss st OVIDLOOVLOVIOLOOLISL DLVDLVLVVOIIDLOVIIOD Sons £6
+TZ an 7 ot a 6s 19 eur DDLIDVIIIVOVLIIILIVV SOOLOLIOLLLIIVLILIOV cut
+vor oN % a PS 05 6 DDVVLYLVDDODLVIDLVII DOVOVWVDLODIIDDLLD oT 6
+mons aN wy vw a ss a 091 OVVVDVDVVDLLLIVVOVVD DILVILVVLLIDVVOVOLOV L6ITWU 6
+sawz'd on % uw fs ss oe DBLVIOLVIOLOIVIOLIVII DIOVIVLOVLIDLIOLIOVI cow 8
+s0nz'D on 9€ 6 om 1s ss eat DOVLODLOVIODIOVIOID DLDLODIDIOLLIODIVIID YSN 88
+Bam’ an [x4 6 fe 8s ss 6 DIDDDLVIVLOVIOVIOVIO DVDLODLOIIVOLODLVI eA ed
+ore oN of or a ss u vst QVDVILLLVIVOVWVDIOOL VIOVWVLVDDILLLVVO TOE
+VOTEANA, an of or cal ss u set DLVILLOLIVIDVIVIIIOV DLODVIDLYVVILILLVOVL went 8
+sonzO an w 6 a ss u set OLVVILLOVVOLOLLVILVV QOLVDVWVILLOLVVLVVOV OWN
+IZ an 9 el as ss cor QILIDIIILLLLLVIILILD DODLOVLOVDOVOIVODLYD a
+‘vOURA TAL dn % a a ss u mt OLLIDLVIOLLLYVVVIOLY DLVOIDDVIIDVLLIOVLIO woud 8
+Zz an % et a 99 ss wor DOLIDOIDLLLLLVII1ILD DDDLDVIOVDIVOOVDDLVD SOOM IB
+om ay 09 of a ss or DDLDVLLDVVVVLIOWVYVD LIDLLLVIVLLVOVOVLLVDL seIU OF
+nz ain w u foe ue 19 oz SIVILIDVIOVILLLYDOOD DDDLOIVIVDLVDOVIOLLL LIU
+Sanz an ” 8 % 19 os sor QIOVLLIVOVWILDDIVVIIL DDDIDLILVIIIOILILV SLI aL
+ORT on % €L a ow 05 on QOLLIDVIIVLLIALIOLLY LOVIOVIOVLVLIDLYDVOO wend
+vou on 4 6 2a ss or zr VOVIODVVLOVVIOLVVVOV DDLYVOODLVLIVOLVIVLD SOW OL
+Sawqz'd ain wm 8 = ss or ou LYVOOWWLVOLVIOOVVDVD QVDDVIDVWOVYVIIIID SSW SL
+ONAN TAL an % zt ew 0s 161 DVVOVVII9NI9901D19 D1D9ILILVIVOVIOILLLY IHL
+Bamz'D an we a & oO ss we SVDOVOVIVODLIDLVDOLD QVODLYVILVVDODI199. sold
+wor an wv 9 wn oy os oor DLIVOLODVOLOVIOLIIOOD DDOVIDLLVIODLLLYDVID a
+1z din, te 8 an ow ss at SLYDDLIVIODVILIDVD DLD92VILLLVVLI990VV srOLd iL
+Bonz} an az 6 my ss a DODDLVIVILIDOOVOVLVL PVLVDLLVIOIILINOLIOD SIEM OL
+woe TA ay we 8 m9 os tI DVLOIIIDLYVDLIDOVIDD DLVILVDDVILVIILIOIII tse 8
+s0ez'} aN o€ or fo 19 ss eT SLLILLVDLINDV99II0 SLVIDLVDVVIOLVDLIOOV 1s09W 89
+oA on 05 St 3 ss aut DLVVOVVDIIVVOVIDOVV QODLDOLVIOVIVOLLLVIV word 19
+wo an % at @ os 0s 01 DLDDVILDILIOVDIILIID DVLIOVILIDILLOLVIOL SLO 9
+woyeA TAL an fd vt aos 05 191 SLIVILOLOWWOIOVLIOL 29DI0VIVIDLILVVDOLWY cea 89
+mons e aN S451 vo)N(vo) ss 907 ALLWVLOVIDVIVILIOVIO OVIILLLIOILIOLIOIV wun 19
+wong on 09 [4 pad 05 a el QVWVOOVOLIOVDIDIDIVD DOLODILVVLILVOVLIOVY oro 9
+wore A din sy st tue os ust DVDDDVODLIALLIVVDLD DOVDILVIIIVODOLDIVLL Ct
+Zz ain a 6 sa 9 ss 6 IDIDLLOIVIOIVLILIOOV DLVIDVILYDILDLVIVOOV stu ID
+ome W an oe ot 1" $s ‘ aut DDLDLOVILVOWVIVDIVIO YDIVVLLVWVYD92VILLIO LesPWe 08
+‘Iz ain cd vt P99 19 ist D2VIOVVIOONIVWVLY1D99 21991991991 DVLLVIS¥ COLE 6S
+om TW in ou se " ss war DOVVOVLLDIVLVDDVLOVD OVYVVLLIVOVIODLIDLYY sts aS
+IZ an 9% et Psy ss ist DO99LLVILLDVILIOVDL OLVOVIILILIOVOLVDIOV wean Ls
+om, ay gat %6 " $s uz DVIDLIVLIVIVIIIDDLYY DLVLLLIVVLIDLI99 001 sone 9S
+sO TA ain % 9 fon sy 0s oe DLOVILDVVVVOVVIII99. DODDVOVILOLOLLLVDLY Zio $5
+var TA ay % 8 M69 os oat DDVOVIDILOVIIOVIOLOD DLLOVOWVOVDOVIDLIIL RI 9S
+ome TW. din 6e € m $s t 961 VOVVIYDLLOVODVLOVDVD OVLIDVOVOLLVVVLVD129 ous ofS
+1z aN vw g Sooo 19 at DILVOVOVIOIOLIVLDODLI QIOLILILLIDLVIIVILLE Los tS
+Tay SaLLOW =m
+awn __ALSREVA BIONTT = LvaaTE MILO HINOD pour sondowa TWN
+wppwyism JONTUTA ALLOW 40 ‘ON ass 20_“anvasy _ZNOSOWOWH auiniania___IONANDAS OATHS ISUIATE SONANDAS WOWTEd MIVAEOS $N201__ ON
+
+**panunuos 9 21qe |
+
+
+4l
+61 bp (Table 7). Among 94 InDel primers tested, 88 (93.62%) primers amplified, and 82
+(93.18%) primers are polymorphic between AA and GG genomes (Table 7 and Fig. 7).
+These polymorphic primers can therefore be used to determine interspecific hybrids
+between O. sativa and O. granulata or O. meyeriana. Notably, 9.09% or eight markers,
+namely, GG06_001, GG11_004, GG12_004, GG02_007, GG03_005, GG06_007,
+GG09_005, and GG09_006 were polymorphic between O. granulata and O. meyeriana.
+These markers can be used in distinguishing between the two species with the GG genome
+and can be applied in diversity studies in the O. meyeriana complex. In addition, 4.55% or
+four markers, namely GG05_001, GG11_04, GG02_007, and GG09_006 were also found
+to be polymorphic between the two accessions of O. sativa, and none of the markers were
+polymorphic between the two accessions of O. meyeriana and those of O. granulata (Table
+7). Lastly, 1.06% or one marker (GG08_006) was found to amplify in all the tested
+accessions but is monomorphic among the samples. The rest of the markers were found to
+amplify only in one genome but had no PCR products in the other genome. These markers
+were not considered for recommendation for use in genotyping. Table 8 presents
+
+representative gel images of the two kinds of markers and the corresponding gel scores.
+
+Figure 7 shows the chromosome map with location of the polymorphic InDel
+markers. Chromosomes 1, 2, 5, 6, 7, 8, 9, and 10 have large regions that are not represented
+by markers. These unrepresented regions can be covered by using other markers such as
+SSRs and SNPs in addition to InDels in marker-assisted screening of plants. In summary,
+eight markers were designed for chromosome 1, seven for chromosome 2, 11 for
+chromosome 3, eight for chromosome 4, six for chromosome 5, six for chromosome 6,
+
+three for chromosome 7, seven for chromosome 8, five for chromosome 9, four for InDels
+
+42
+
+Table 7. Comparison of marker validation results between InDel and SSR markers used
+to amplify Oryza sativa L. (AA), O. granulata Nees & Arn. Ex. G. Watt (GG),
+and O. meyeriana (Zoll. & Moritzi) Baill. (GG) genomes.
+
+InDels SSRs
+Number of tested primer 94 96
+pairs
+Product range 16-61 bp -
+Percent amplification 93.62% (88 pairs) 28.12% (27 pairs)
+
+Percent polymorphism
+AA vs GG
+GG vs GG
+AA vs AA
+Monomorphic
+
+Disadvantages
+
+93.18% (82/88 pairs)
+9.09% (8/88 pairs)
+4.55% (4/88 pairs)
+
+1.14% (1/88 pair)
+Manual design
+
+25.92% (7/27 pairs)
+7.41% (2/27 pairs)
+
+7.A1\% (2/27 pairs)
+
+1.11% (3/27 pairs)
+
+low cross-transferability
+
+43
+
+“(Z10Z 9eT e1yoIry) (swesBousyd/B10qejaryoysuOHEZtensiay/:dyy) wrerdousyd
+SuIsn poyerouss sowoued HH pue Wy udomjoq o1ydsoulcjod aye yey} sloyreU JoqU] 7g Sulmoys dew! awosoulory sory *, aunty
+
+44
+
+are relatively most abundant and regularly distributed in chromosomes 3 and 12 and is least
+
+abundant in chromosome 7.
+
+To highlight the advantage of InDel markers, SSR markers were also tested for
+amplification in the six Oryza accessions (Table 8). Results showed that only 28.12% or
+27 primers out of 96 were able to amplify the tested samples (Tables 6 and 7). More
+importantly, 25.93% markers (7/27), namely RM5753, RM3769, RM7217, RM4069,
+RM2197, RM7448, and RM8216 were found to be polymorphic among the AA and GG
+genomes. Only two markers (7.41%), namely, RM5753 and RM5607 were polymorphic
+between O. meyeriana and O. granulata. Also, two markers (7.41%) were polymorphic
+between the two accessions of O. sativa; these were RM5753 and RM3320. None of the
+markers were polymorphic between the accessions of O. meyeriana and those of O.
+granulata, whereas the three markers, namely, RM6024, RM3123, and RM5373 were
+found to be monomorphic (3.12%) among the two genomes. Sixteen markers (16.67%)
+
+were able to amplify in the AA genome only.
+
+With the growing sophistication of New Generation Sequencing technologies, the
+genomic sequences of the species of choice can be obtained, and markers that are based on
+this information can be designed with more accuracy. The designed InDel markers in this
+study were proven to have higher success rates in amplification and detection of
+polymorphism between AA and GG genomes (93.62% and 93.18%, respectively)
+compared with rice SSR markers (28.12% and 25.92%, respectively). These markers are
+cost-efficient but requires time and intensive labor in designing. Manual designing of these
+markers was performed in this study because automated pipelines, such as InDel Markers
+
+Development Platform or IMDP, require sophisticated technical and computational
+
+45
+
+Table 8. Gel images of representative InDel and SSR markers which were designed from
+Oryza sativa L. and O. granulata Nees & Arn. Ex. G. Watt sequences tested for
+polymorphism among O. sativa, O. meyeriana (Zoll. & Moritzi) Baill., and O.
+
+GG01_001
+
+GG06_00i
+
+GG09_006
+
+GG08_006
+
+GG01_006
+
+‘GG03_007
+
+granulata accessions.
+
+1,2,3
+
+Table 8 continued...
+
+MARKER BAND SIZE AA GG SCORE
+OS: OS; OM: OM: OG: O
+
+RMS753 + + + (1,23
++ + +
+
+RM3320 + + + + + 3
++
+
+RM6024 + + + + + + 0
+
+RM7643 + + = = = 5 5
+
+RM6618 5 5 5 5 B = 6
+
+RM7217 + + + + 1,7
+
++ +
+
+LEGEND: OS - O. sativa IR64; OS2 - O. sativa NSIC Re 222; OMi — O. meyeriana Acc. 89241; OM2- O. meyeriana
+Acc. 89243; OG: - O. granulata Acc. 102118; OG2 - O. granulata Acc. 106474; 0 — monomorphic; 1 - polymorphic
+between AA and GG genomes; 2 — polymorphic between O. meyeriana and O. granulata; 3 — polymorphic between
+O. sativa accessions; 4 — polymorphic between O. granulata accessions; 5 — absent bands in either genomes; 6 no PCR
+products among all samples; 7 — new bands present
+
+47
+requirements (Lu et al. 2015). Nevertheless, the software and parameters in AmplifX 2.0
+used in designing the InDel primer pairs in the present study were shown to be optimal.
+Modifications in the PCR protocol, such as adjustment of the annealing temperature and
+
+extension time, can still be applied and optimized for multiplex screening.
+
+The low amplification and polymorphism rates obtained in the SSR markers were
+mainly because these SSR markers were not specifically designed to differentiate between
+the AA and GG genomes, whereas the InDel primers were designed directly from
+differences between the sequences of the two genomes. The obtained rates of success are
+quite expected. Low rate of polymorphism was also observed in a cross-transferability
+
+study of SSR markers to O. granulata (Gao et al. 2005).
+
+Some chromosomes, such as chromosomes 6 and 10, have smaller number of
+designed, amplified, and polymorphic InDel markers than the rest. Other markers, such as
+SNPs and gene-specific markers, or genotyping-by-sequencing can be added in genotyping
+to compensate for the low number of InDel markers in these chromosomes. InDel markers
+specifically designed between O. sativa and O. meyeriana may also be used for
+chromosomes 6 and 10. This is the first time that genome-wide InDel markers were
+
+designed for the differentiation of AA and GG genomes.
+
+48
+
+Drought Stress Response of O. granulata and O. sativa
+
+The members of the O. granulata complex are claimed to be drought tolerant by
+some researchers (Wu et al. 2004; Qian et al. 2006), but others say otherwise (Ammiraju
+et al. 2010; Sanchez et al. 2014; Shakiba and Eizenga 2014). Thus, in this study, O.
+granulata 102118 was subjected to seedling-stage drought stress, and its response was
+
+compared with cultivated rice O. sativa IR64.
+
+Root Traits
+
+Root architecture is key to plant drought avoidance, wherein plants avoid water
+stress by root elongation and ability to penetrate hard soil (Kato et al. 2008). When
+maximum root depth, dry weight, root length density, percent lateral roots, and total root
+length were investigated in O. sativa and O. granulata seed and clone (Fig. 8), variations
+among genotypes and treatment were observed. However, no significant differences were
+found in the genotype: treatment interaction; this result implies that the drought stress
+treatment did not affect root response in all genotypes (P<0.05). Furthermore, large
+standard error (SE) values were computed as shown by the error bars in the graphs, which
+probably affected the groupings. The SE values may have been caused by the non-uniform
+
+environment where the set-up was placed.
+
+Figure 9 shows the relative humidity (RH) and temperature measured near the
+drought set-up throughout the experiment. Up until September 19, 2016, which spanned
+more than 80% of the experiment, temperature and RH had an inverse relationship with
+
+each other. From August 29, 2016 to the morning of September 04, 2016 the highest values
+
+Maximum Root Depth °° Root Dry Weight =DD
+eww eww
+60 0.1
+50 2 0.08 a :
+= =
+E 3 : S 0.06
+¥
+oy
+& 20 i : 0.04 b
+s 10 ws % 0.02 ds
+zg <
+an ade °
+O. granulata  O. granulata O. satin O. gramilata_—_O. gramilata ‘
+102118 to2118 Ro SH ribo peu Laois
+(clone) (seed) (clone) eo)
+A B
+Root Length Density =DD Percent laterals =DD
+eww eww
+QQ fr a
+0.8
+15 < fs b
+° & 0.6
+2 10 5
+5 ‘ 204
+<5 J | al 0.2
+0 0
+O. gramlata QO. gramlata__—_O., sativa O. gramulata.—_O.. gramulata O. sati
+5 102118 (clone) 102118 (seed) IR64 102118 (clone) 102118 (seed) i
+Cc D
+Total Root Length ited Root to Shoot Ratio
+ew
+_. 3000
+& 2500 A
+Fo
+€ 2000
+= 1500
+2 1000 b
+3 500 b
+ey | sell ah
+O. gramilata —_O. gramilata’__), sativa
+102118 (clone) 102118 (seed) IR64 O. gramlaia O. gramilata O. sativa
+102118 (clone) 102118 (seed) IR64
+E F
+
+49
+
+Figure 8. Drought-related root traits of Oryza granulata Nees & Arn. Ex. G. Watt and O. sativa
+L. DD: drought set-up; WW: well-watered.
+
+50
+
+Figure 9. Humidity and temperature measurements during the drought experiment
+performed between Oryza sativa L. and O. granulata Nees & Arn. Ex. G. Watt.
+
+of RH were observed from 5:00 AM to 6:30 AM. In the afternoon of September 04, 2016,
+RH suddenly rose at 2:00 PM and peaked at 3:30 PM. In the succeeding days until
+September 19, 2016, the highest RH values were observed from 1:00 AM to 6:30 AM.
+However, the lowest RH values during this time were higher than the past days, indicating
+a more humid environment. In the third to the last day of observation, RH values were not
+going down for the whole day, and the temperature values were relatively low. In the last
+two days of observation, the RH values went down a little, but the temperature values were
+still low. These last three days of observation must have affected the set-up the most,
+
+because the plants during this stage were more rapidly growing and taking up more water
+
+51
+than the earlier part of the experiment. Also, the location of the set-up was near the edge
+
+of the roof, where raindrops must have entered the tubes and watered some of the plants.
+
+Nevertheless, the root traits of O. granulata had significantly lower values than O.
+sativa regardless of treatment except for root dry weight and root-to-shoot ratio. In terms
+of maximum root depth, the three genotypes all had deeper reach into the soil in the well-
+watered treatment compared with the drought stress treatment, implying that none of the
+genotypes had further elongation of roots in the latter treatment to reach more water at the
+bottom of the soil. In terms of the root dry weight, the seed-derived and clone-derived O.
+granulata plants were grouped differently, suggesting that the two genotypes cannot be
+used interchangeably in experiments. The clone-derived plants had already obtained more
+biomass than the seed-derived ones because they were tillers obtained from older plants.
+In the total root length and root length density traits, the values in the drought set-up were
+higher than the well-watered set-up in all genotypes, suggesting that the plants responded
+to drought by building more roots laterally to take up more water. The percent lateral values
+almost had no difference in both set-ups in all genotypes. In terms of root-to-shoot ratio
+values, no significant difference was found across all genotypes and treatments.
+Nevertheless, the seed-derived O. granulata plants had the highest values regardless of
+treatment, suggesting that these plants allotted more energy in their roots than the shoots
+compared with O. sativa. This trait may be important in the adaptation of O. granulata in
+water-limited soils and can be explored further in a more uniform environment. Generally,
+the tested O. granulata accession did not show drought avoidance root traits that were
+
+superior to O. sativa.
+
+52
+
+Shoot Traits
+
+Rice is also known to have reduced plant height and lower dry matter production
+when subjected to drought (Kumar et al. 2015). Figure 10 shows the plant response to
+drought of O. sativa and O. granulata in terms of shoot dry weight, tiller number, and plant
+height. No significant difference in the genotype: treatment interaction was found in tiller
+number and plant height (P<0.05), suggesting that drought stress did not affect the response
+of all genotypes tested. Genotypes were also grouped together in terms of tiller number
+regardless of treatment. The plant height of O. sativa was grouped differently from the two
+genotypes of O. granulata regardless of treatment. Out of all the traits tested, significant
+difference was found in the genotype: treatment interaction in terms of shoot dry weight
+(P<0.05). However, the resulting groupings still did not show different response of the
+
+genotypes from the well-watered treatment when subjected to drought.
+
+Shoot Dry Weight *DD Tiller number
+aww
+0.6 4
+a
+04 3
+C) cy a
+re b £2 °
+ o2 b a B
+£ ab b =
+z 1
+0
+O. gramilata —_. gramilata O. sativa 0
+102118 (clone) 102118 (seed) TR64 O. gramilata —_O. gramulata
+-0.2 102118 (clone) 102118 (seed)
+A B
+Plant Height
+70
+
+60
+fee
+340 b b
+£30 =DD
+= 20 aww
+2 iid
+0
+
+O. granulata O.granulata 0. sativa
+
+102118
+(clone)
+
+102118 IR64
+(seed)
+
+Cc
+
+53
+
+=DD
+eww
+
+O. sativa
+
+Figure 10. Drought-related shoot traits of Oryza granulata Nees & Arn. Ex. G. Watt and O. sativa
+L. DD: drought set-up; WW: well-watered
+
+54
+
+Water Uptake
+
+Figure 11 shows the trend of water uptake by the three genotypes, where the two
+O. granulata genotypes showed almost the same response. The O. sativa plants showed
+higher water uptake than the other two and generally in an increasing trend because of plant
+growth. This trend can be supported by the root and shoot trait values obtained for O.
+sativa, which are comparably higher than those of O. granulata. In both set-ups, the water
+uptake suddenly went down on the sixth day of measurement. These measurements were
+obtained from September 13, 2016 to September 15, 2016. By looking at the RH and
+temperature data from Figure 9, the RH changed its pattern to relatively more humid
+values. Thus, less water was transpired from the plants and the moisture from the air might
+
+have wetted the soil during these dates, making the water uptake values decrease.
+
+In the drought stress set-up, the water uptake values of the clone-derived and seed-
+derived O. granulata plants showed difference from each other. These two genotypes have
+also different values from O. sativa. The trends shown in the drought stress set-up may be
+supported by the root and shoot dry mass and height values observed. Water uptake was
+generally decreasing towards the end of the study but suddenly increased in the latter part
+
+of the experiment probably because of higher relative humidity and lower temperature.
+
+O. granulata was generally not performing superiorly compared with O. sativa in
+this study in terms of the used parameters for drought response, except for the root-to-shoot
+ratio trait. In the mentioned trait, the clone-derived and seed-derived O. granulata plants
+have significantly different responses in terms of root dry weight, suggesting that they
+
+cannot always be used interchangeably in drought experiments. Additionally, O. granulata
+
+55
+
+Average water uptake (Well-watered)
+
+&
+°
+ag
+4
+a
+a
+5
+Bs
+° iaccaiasbiathiniae aera «cae
+Day of Measurement
+=" O. granulata 102118 (clone) “=O. granulata 102118 (seed) O. sativa IR64
+A
+Average Water Uptake (Drought stress)
+Cc}
+©
+3
+a
+=)
+5
+Gl
+Ss
+2
+i}
+ro
+o
+=
+=<
+
+Day of Measurement
+
+——= 0. gramulata 102118 (clone) =O. gramulata 102118 (seed) O. sativa 1R64
+
+B
+
+Figure 11, Water uptake of Oryza granulata Nees & Arn. Ex. G. Watt (clone and seed)
+and O, sativa L. for 19 days. A. Well-watered B. Drought.
+
+56
+was harder to germinate compared with O. sativa. Thus, the germination rate of O.
+granulata cannot be used as a donor trait for breeding.
+
+Nevertheless, O. granulata may have other mechanisms in adapting to water-
+limited environments. O. granulata naturally lives on fully shaded forest floors, where
+moisture is still present and shade is protecting the plants from high transpiration. Its
+relatively small shoot structure and dark green leaves may be helping it thrive in low-
+moisture soil. In addition, the roots of the clone-derived O. granulata plants used in the
+present study are woody and hard. This trait may be contributing to its survival in dry lands
+by being able to penetrate hard soil. Also, the species tend to allot more of its energy
+reserves to the roots instead of the shoots, based on the root-to-shoot ratio values. Other
+possible drought resistance-contributing traits that can be investigated in O. granulata are
+the level of greenness of its leaves, suberin content and topography in the roots, and hard
+soil penetrability. Drought stress may also be tested in other stages of development and
+
+different level of severity in O. granulata or interspecific hybrid-derived lines.
+
+Stomatal Density
+
+In 2018, Caine et al. discovered that fewer stomata in rice leaves contributes in
+drought tolerance by requiring less water to survive and having enough water to cool itself
+in arid conditions. Additionally, low stomata were also associated with low stomatal
+conductance, which is related to photosynthesis (Ouyang et al. 2017). At the time of the
+present study, no literature is available on the study of stomatal density and stomatal size
+
+in wild rice species. Figure 12 shows the mean stomatal density of cultivated rice species
+
+57
+
+Figure 12. Stomatal density of cultivated and wild rice (Oryza) species. The gray bars
+are the species of interest whereas the green bars are species that have
+drought tolerance traits.
+
+O. sativa and O. glaberrima and wild rice species O. coarctata, O. alta, O. ridleyi, O.
+australiensis, O. granulata, O. punctata, O. latifolia, O. minuta, O. longistaminata, and O.
+rufipogon. Among the tested species, five are known to show drought tolerance, namely
+O. glaberrima, O. longistaminata, O. punctata, O. australiensis, O. granulata. Based on
+the graph, these drought tolerant species have 269-472 stomata/mm? stomatal density, with
+O. granulata 102118 having 317-378 stomata/mm?. O. sativa IR64, which is not drought
+tolerant, was found to have the highest stomatal density (632 stomata/mm?). When the leaf
+width and length were analyzed in terms of their contribution to stomatal density, weak
+correlation was found (Fig. 13). Leaf width has a very weak negative correlation with
+
+stomatal density, whereas leaf length showed weak positive correlation with stomatal
+
+58
+
+“i ee @ ® o
+ee ga oe ee? e1cue
+R = 0.0654 (very weak positive) R = 0.3585 (weak positive)
+
+R=-0.0124 (very weak negative)
+
+Figure 13. Correlation of stomatal density with flag leaf width and length measurements
+of Oryza sativa L., O. glaberrima Steud., O. rufipogon Griff., O.
+longistaminata A. Chev. Et Boehr, O. punctata Kotschy ex Steud., O. minuta
+J.S. Presl. Ex C.B. Presl., O. officinalis Wall ex Watt, O. latifolia Desv., O.
+alta Swallen, O. australiensis Domin., O. brachyantha A. Chev. et Roehr., O.
+granulata Nees et Am. Ex Watt, O. ridleyi Hook F., O. coarctata Tateoka.
+
+59
+density. The contribution of stomatal density to drought tolerance may also be tested in a
+drought-treatment experimental set-up.
+
+Stomatal size and arrangement may also be important traits contributing to drought
+tolerance. Figure 14 shows images of the cultivated and wild rice species scratched
+epidermis. At 10X magnification, the stomata of each species can be seen to have different
+arrangements and sizes. O. coarctata showed the lowest stomatal density and had relatively
+larger stomatal size compared with other species. In a study by Hughes et al. (2017), several
+evidences were cited on the negative correlation between stomatal density and size.
+
+With the species of interest O. sativa and O. granulata having different stomatal
+densities, the tested trait may be a factor of O. granulata drought response such that water
+loss is prevented through lower transpiration. However, this claim must be tested first in a
+
+drought experiment.
+
+“sooads (92449) 2011 poyealyno pur pjim Jo soBeuyy sovy.ns Jeg] [eEKeqy “py emnBhq
+
+ZOSPOL DOU 2M724009 ‘-O €vISOl DOU M17 ‘0 178001 ODM LPO TSBNOT DDUI Ssuayvasnv ‘Q
+
+6L8001 DOU Mjnusd ‘Q ZETIOL DUI Pyundyovsg ‘O  N69SOL DOU Mund Q —-SLTZOL DUI PINUDLT CO
+
+¥16001 DOU 270/01 ‘0 TPLLOl ODUI MHunU QO POPOL DOU PMURUNs1BU0] “O LIL96 DOU Mussaqns3 ‘oO
+
+968001 DOUI sHPUIAYO ‘0 LIGIEML DOU HVS‘ = 1908 DD UT wOSodYns ‘CO POUT Dans ‘O
+
+
+CHAPTER 5
+
+SUMMARY AND CONCLUSION
+
+Rice (Oryza sativa L.), the second most planted cereal in the world, has lost genes
+that are important in stress tolerance and resistance during domestication. Classical and
+transgenic breeding have been done by researchers to transfer stress tolerance genes to rice.
+These genes may be sourced out from wild relatives of rice, which include the O. granulata
+complex. The members of this complex, namely O. granulata and O. meyeriana were
+found to possess drought tolerance genes. However, the mode of action of their drought
+response and useful markers that can be used in breeding are not yet available. Thus, the
+present study aimed to develop genome-wide InDel markers to differentiate AA and GG
+genomes in rice and determine the potential of O. granulata as donor of drought tolerance
+genes. Specifically, the study aimed to design InDel primers to detect polymorphisms
+among O. sativa, O. granulata, and O. meyeriana; to compare InDel markers to SSR
+markers; and to determine drought stress response of O. granulata and O. sativa by
+
+considering root and shoot traits and stomatal density.
+
+A total of 94 InDel primers that can be used in screening interspecific hybrids
+between AA and GG genomes were manually designed and tested for polymorphism
+among O. sativa, O. granulata, and O. meyeriana. The applicability of these markers was
+compared with that of SSR markers. The designed InDel markers were shown to have
+remarkably higher rate of polymorphism (93.18%) between AA and GG genomes
+
+compared with SSR markers (25.93%). These InDel markers may be used in breeding
+
+62
+programs to identify plants that have introgressions from the species with GG genome O.
+granulata and O. meyeriana. Low rates of polymorphism (1.11%-9.09%) were found
+when distinguishing between different accessions and within the same genome using both
+InDel and SSR markers. Thus, the designed primers may be limitedly applicable in
+diversity studies among O. granulata and O. meyeriana accessions and species in the O.
+granulata complex. However, a larger sample size will be needed for testing before coming
+up with an acceptable conclusion regarding the usefulness of InDel markers in genetic
+
+diversity studies in these Oryza species.
+
+Asa preliminary step in its use in interspecific hybridization, O. granulata was also
+evaluated as a donor plant for drought tolerance in rice through seedling stage drought
+physiology set-up and morphological and stomatal density analyses, which have not been
+done in wild rice species. In general, O. granulata did not show superior drought response
+traits over O. sativa except for root to shoot ratio. Nevertheless, improvement in the set-up
+for the drought experiment, that is, providing a more uniform environment for the plants,
+can still be done in the future in order to lessen standard error values. Since the stomatal
+density of O. granulata (317-378 stomata/mm7’) is less than that of O. sativa (632
+stomata/mm2), this trait can be tested in a drought set-up in future studies. Other traits such
+as stomatal size, hard soil penetrability, suberin content, and greenness of leaves response
+to drought stress can be investigated in O. granulata in future studies. Preliminary tests on
+the response of the target donor parent material for breeding for drought stress, which is
+governed by complex mechanisms are indeed necessary before proceeding to a breeding
+
+program in order to have efficient usage of materials, costs, and efforts.
+
+LITERATURE CITED
+
+ABDULLAH AB, ITO S, and ADHANA K. 2005. Estimate of rice consumption in Asian
+countries and the world towards 2050. Japan, Tottori University. pp. 28-42.
+http://worldfood.apionet.or.jp/alias.pdf.
+
+AGGARWAL RK, BRAR DS, and KHUSH GS. 1997. Two new genomes in the Oryza
+complex identified on the basis of molecular divergence analysis using total genome
+DNA hybridization. Mol. Gen. Genet. 25: 1-12.
+
+AMMIRAJU JSS, LUO M, GOICOECHEA JL, WANG W, KUDRNA D, MUELLER C,
+TALAG J, KIM H, SISNEROS NB, BLACKMON B, FANG E, TOMKINS JB,
+BRAR D, MACKILL D, MCCOUCH S, KURATA N, LAMBERT G, GALBRAITH
+DW, ARUMUGANATHAN K, RAO K, WALLING JG, GILL N, YU Y, SAN
+MIGUEL P, SODERLUND C, JACKSON S, and WING RA. 2006. The Oryza
+bacterial artificial chromosome library resource: Construction and analysis of 12
+deep-coverage large-insert BAC libraries that represent the 10 genome types of the
+genus Oryza. Genome Research 16: 140-147.
+
+AMMIRAJU JSS, SONG X, LUO M, SHINEROS N, ANGELOVA A, KUDRNA D, KIM
+H, YU Y, GOICOECHEA JL, LORIEUX M, KURATA N, BRAR D, WARE D,
+JACKSON S, and WING RA. 2010. The Oryza BAC resource: a genus-wide and
+genome scale tool for exploring rice genome evolution and leveraging useful genetic
+diversity from wild relatives. Breeding Science 60: 536-543.
+
+ANGELES-SHIM RB, VINARAO RB, MARATHI B, and JENA KK. 2014. Molecular
+Analysis of Oryza latifolia Desv. (CCDD Genome)-Derived Introgression Lines and
+Identification of Value-Added Traits for Rice (O. sativa L.) Improvement. Journal of
+Heredity doi:10.1093/jhered/esu032.
+
+ARENA ET, RUEDEN CT, HINER MC, WANG S, YUAN M, and ELICEIRI KW. 2016.
+Quantitating the cell: turning images into numbers with ImageJ. Developmental
+Biology 6:2 https://doi.org/10.1002/wdev.260
+
+BABU RC. 2010. Breeding for drought resistance in rice: an integrated view from
+physiology to genomics. Electronic Journal of Plant Breeding 1(4): 1133-1141.
+
+BOUMAN B, BARKER R, HUMPHREYS E, TUONG T P, ATLIN G, BENNETT J,
+DAWE D, DITTERT K, DOBERMANN A, FACON T, FUJIMOTO N, GUPTA R,,
+HAEFELE S, HOSEN Y, ISMAIL A, JOHNSON D, JOHNSON S, KHAN S, SHAN
+L, MASIH I, MATSUNO Y, PANDEY S, PENG S, MUTHUKUMARISAM IT, and
+WASSMAN R. 2007. Rice: Feeding the billions. In: Water for Food, Water for Life:
+A Comprehensive Assessment of Water Management in Agriculture. Colombo:
+International Water Management Institute: pp. 515-549.
+
+64
+
+BRAR DS, ELLORAN R, and KHUSH GS. 1991. Interspecific hybrids produced through
+embryo rescue between cultivated and eight wild species of rice. Rice Genet Newsl
+8:91-93.
+
+BUELL CR. 2002a. Current status of the sequence of the rice genome and prospects for
+finishing the first monocot genome. Plant Physiol 130: 1585-1586.
+
+BUELL CR. 2002b. Obtaining the sequence of the rice genome and lessons learned along
+the way. Trends Plant Sci. 7: 538-542.
+
+CAINE RS, YIN X, SLOAN J, HARRISON EL, MOHAMMED U, FULTON T, BISWAL
+A, DIONORA J, CHATER CC, COE RA, BANDYOPADHYAY A, MURCHIE EH,
+SWARUP R, QUICK WP, and GRAY JE. 2018. Rice with reduced stomatal density
+conserves water and has improved drought tolerance under future climate conditions.
+New Phytologist 21: 1. https://doi.org/10.1111/nph.15344
+
+CATTIVELLI L, RIZZA F, BADECK FW, MAZZUCOTELLI E, MASTRANGELO AM,
+FRANCIA E, MARE C, TONDELLI A, and STANCA AM. 2008. Drought tolerance
+improvement in crop palnts: an integrated view from breeding to genomics. Field
+Crops Research 105:1-14.
+
+CHAVARRIA C and DOS SANTOS HP. 2012. Plant water relations: absorption, transport
+and control mechanisms. In: Montanaro G and Dichio B. Advances in Selected Plant
+Physiology Aspects. DOI: 10.5772/33478.
+
+CHEN J. 2007. Rapid urbanization in China: A real challenge to soil protection and food
+security. Catena 69: 1-15.
+
+CHO K, HONG S, YUN B, WON H, YOON Y, KWON K, and MEKAPOGU M. 2017.
+Application of InDel markers based on the chloroplast genome sequences for
+authentication and traceability of tartary and common buckwheat. Czech J. Food Sci.
+35(2): 122-130.
+
+CUSHMAN JC and BOHNERT HJ. 1999. Crassulacean acid metabolism: molecular
+genetics. Annual Review of Plant Physiology and Plant Molecular Biology 50:305-
+332.
+
+DONDE T, MUKHERJEE M, BARIK M, BAKSH S, PADHI B, MAHADANI P,
+BEHERA L, SWAIN P, SAHU K, SINGH N, CZECHOWSKI T, GRAHAM I,
+MCCOUCH SR, SINGH ON, and DASH SK. 2017. Marker-assisted introgression
+of drought tolerance from wild ancestors into popular Indian rice varieties using a 7K
+Infinium SNP tray. Canadian Journal of Biotechnology 1:205.
+
+DULCE CB, OBIAS SB, TALAVERA AG, FURIGAY JN, ORTINERO XA, PLOMOS
+RP, GEPTE ADG, BUCOG ECA, ALCID ML, ARCILLA MJD, DULCE MSA.
+2012. Community Based Disaster Risk Management. Assistance and Cooperation for
+Community Resilience and Development Inc. (ACCORD). Retrieved May 10, 2019
+
+65
+
+from https://resilientphilippines.com/wp-content/uploads/2017/09/ACCORD-
+manual-vol-1-Community-Based-Disaster-Risk-Management.pdf.
+
+DUNCAN AV (Ed.) 1994. The wild relatives of rice. A Genetic Resources Handbook.
+International Rice Research Institute pp. 50.
+
+FAO. 2004a. International year of Rice: All about rice. Retrieved May 9, 2015 from
+http://www. fao.org/rice2004/en/aboutrice.htm.
+
+FAO. 2004b. International Year of Rice: Rice and Human Nutrition. Retrieved May 9, 2015
+from http://www. fao.org/rice2004/en/f-sheet/factsheet3.pdf
+
+FIGUERAS OS. 2006. Functional genetics of suberin: the role of CYP86A33 and STKCS6
+in potato tuber periderm. Universitat de Girona. Retrieved May 8, 2019 from
+https://www.tdx.cat/handle/10803/7634;jsessionid=82 14461 B1CO0E452D5AB16B
+76699B21E
+
+FU X, LU Y, LIU X, and LI J. 2008. Crossability barriers in the interspecific hybridization
+between Oryza sativa and O. meyeriana. Journal of Integrative Plant Biology 51(1).
+https://doi.org/10.1111/).1744-7909.2008.00728.x
+
+GAMUYAO R, CHIN JH, PARIASCA-TANAKA J, PESARESI P, CATAUSAN S,
+DALID C, SLAMET-LOEDIN I, TECSON-MENDOZA EM, WISSUWA M, and
+HEUER S. 2012. The protein kinase Pstol] from traditional rice confers tolerance of
+phosphorus deficiency. Nature 488:535—539
+
+GAO LZ, GE S, and HONG D. 2000. Low levels of genetic diversity within populations
+and high differentiation among populations of a wild rice, Oryza granulata Nees et
+Arn. Ex watt., from China. Int. J. Plant Sci. 161(4): 691-697.
+
+GAO LZ, S-Z ZHANG, Y ZHOU, S GE, and D-Y HONG. 1996 A survey of current status
+of wild rice in China. Chin Biodivers 4:162—166.
+
+GAO L, ZHANG C, and JIA J. 2005. Cross-species transferability of rice microsatellites
+in its wild relatives and the potential for conservation genetic studies. Genetic
+Resources and Crop Evolution 52: 931-940. DOI 10.1007/s10722-003-6124-3
+
+GE S, SANG T, LU BR, and HONG DY. 2001. Rapid and reliable identification of rice
+genomes by RFLP analysis of PCR-amplified Adh genes. Genome 44: 1136-1142.
+
+GILL N, SANMIGUEL O, DHILLON BDS, ABERNATHY B, KIM HR, STEIN L,
+WARE D, WING R, and JACKSON SA. 2010. Dynamic Oryza genomes: repetitive
+DNA sequences as genome modelling agents. Rice 3:251-269.
+
+GOFF SA, RICKE D, LAN TH, PRESTING G, WANG R, DUNN M, GLAZEBROOK J,
+SESSIONS A, OELLER P, VARMA H, HADLEY D, HUTCHISON D, MARTIN
+C, KATAGIRI F, LANGE BM, MOUGHAMER T, XIA Y, BUDWORTH P,
+ZHONG J, MIGUEL T, PASZKOWSKI U, ZHANG S, COLBERT M, SUN W,
+CHEN L, COOPER B, PARK S, WOOD TC, MAO L, QUAIL P, WING R, DEAN
+
+66
+
+R, YU Y, ZHARKIKH A, SHEN R, SAHASRABUDHE S, THOMAS A,
+CANNINGS R, GUTIN A, PRUSS D, REID J, TAVTIGIAN S, MITCHELL J,
+ELDREDGE G, SCHOLL T, MILLER RM, BHATNAGAR S, ADEY N, RUBANO
+T, TUSNEEM N, ROBINSON R, FELDHAUS J, MACALMA T, OLIPHANT A,
+and BRIGGS S. 2002. A draft sequence of the rice genome (Oryza sativa L. ssp.
+Japonica). Science 296: 92-100.
+
+GONG Y, BORROMEO T, and LU B. 2000. A biosystematics study of the Oryza
+meyeriana complex (Poaceae). Plant Systematics and Evolution 224(3-4): 139-151.
+
+GOWDAM, VENU RC, ROOPALAKSHMI K, SREEREKHA MV, and KULKARNI RS.
+2003. Advances in rice breeding, genetics and genomics. Molecular Breeding 11:
+337-352.
+
+GRAMENE. 2006. Oryza Archive. Retrieved May 14, 2015 from
+http://archive.gramene.org/species/oryza/rice_intro.html.
+
+GUIMARAES EP. 2009. Rice Breeding. In: Carena MJ (ed). Cereals, the banks and the
+Italian Economy. Springer Science DOI: 10.1007/978-0-387-72297-9.
+
+HAO L, SUN G, LIU Y, WAN J, QIN M, QIAN H, LIU C, JOHN R, FAN P, and CHEN
+J. 2015. Urbanization dramatically altered the water balances of a paddy field
+dominated basin in Southern China. Hydrol. Earth Syst. Sci. Discuss 12: 1941-1972.
+
+HIROTSU N, MURAKAMI N, KASHIWAGI T, UJIE K, and ISHIMARU K. 2010.
+Protocol: a simple gel-free method for SNP genotyping using allele-specific primers
+in rice and other plant species. Plant Methods 6:12.
+
+HODGE A, BERTA G, DOUSSAN C, MERCHAN F, and CRESPI M. 2009. Plant root
+growth, architecture and function. Plant Soil 321:153-187.
+
+HOSSAIN KG, JACKSON SA, and KIANIAN SF. 2012. Genome structure and
+chromosome function. In: Bass HW and Birchler JA (eds.). Plant Cytogenetics, Plant
+genetics and genomics: Crops and Models 4. Springer Science+Business Media.
+
+Retrieved May 10, 2019 from
+https://pdfs.semanticscholar.org/7ce3/a 1 065c39bdfl 902ac0c60d6ba864e22cb920.p
+df.
+
+HUA L, LIANG L, HE X, WANG L, ZHANG W, LIU W, LIU X, and LIN F. 2014.
+Development of a marker specific for the rice blast resistance gene Pi39 in the
+Chinese cultivar QIS and its use in genetic improvement. Biotechnology and
+Biotechnological Equipment 29(3): 448-456.
+
+HUGHES J, HEPWORTH C, DUTTON C, DUNN JA, HUNT L, STEPHENS J, WAUGH
+R, CAMERON DD, and GRAY JE. 2017. Reducing Stomatal Density in Barley
+Improves Drought Tolerance without Impacting on Yield. Plant Physiology. DOI:
+https://doi.org/10.1104/pp.16.01844
+
+67
+
+IRRI. n. d.. 12 Steps for Successful Rice Prodution. Retrieved May 15, 2015 from
+http://www.knowledgebank irri.org/images/docs/12-Steps-Required-for-Successful-
+Rice-Production.pdf.
+
+ISLAM MM, KAYESH £, ZAMAN E, URMI TA, and HAQUE MM. 2018. Evaluation of
+Rice (Oryza sativa L.) Genotypes for Drought Tolerance at Germination and Early
+Seedling Stage. The Agriculturists 16(1): 44-54.
+
+JAFFEE S, DAWE D, SANTOS N, and MOHANTY S. 2014. Introduction and Objectives.
+In: Dawe D, Jaffee S, and Santos N. Rice in the Shadow of Skyscrapers: Policy
+Choices in a Dynamic East and Southeast Asian Setting. Rome: Food and Agriculture
+Organization of the United Nations (FAO). p. 1-5.
+
+JAIN A, ROORKIWALM, KALE S, GARG V, YADALA R, and VARSHNEY RK. 2019.
+InDel markers: An extended marker resource for molecular breeding in chickpea.
+PLoS ONE https://doi.org/10.1371/journal.pone.0213999
+
+JIN X, CHEN Y, LIU P, LI C, CAI X, RONG J, and LU B. 2017. Introgression from
+cultivated rice alters genetic structures of wild relative populations: implications for
+in situ conservation. AoB PLANTS 10(1) https://doi.org/10.1093/aobpla/plx055
+
+JOSHI SP, GUPTA VS, AGGARWAL RK, RANJEKAR PK, and BRAR DS. 2000.
+Genetic diversity and phylogenetic relationship as revealed by inter simple sequence
+repeat (ISSR) polymorphism in the genus Oryza. Theor App! Genet 100: 1311-1320.
+
+JULLIEN, N. 2004. AmplifX Version 1.7.0. Available online: http://crn2m.univ-
+mrs.fr/pub/amplifx-dist
+
+KATO Y, HIROTSU S, NEMOTO K, and YAMAGISHI J. 2008. Identification of QTLs
+controlling rice drought tolerance at seedling stage in hydroponic culture. Euphytica
+160: 423-430. DOI 10.1007/s1068 1 -007-9605-1
+
+KAWAHARA Y, DE LA BASTIDE M, HAMILTON JP, KANAMORI H, MCCOMBIE
+WR, OUYANG S, SCHWARTZ DC, TANAKA T, WU J, ZHOU S, CHILDS KL,
+DAVIDSON RM, LIN H, QUESADA-OCAMPO L, VAILLANCOURT B, SAKAI
+H, LEE SS, KIM J, NUMA H, ITOH T, BUELL CR, and MATSUMOTO T. 2013.
+Improvement of the Oryza sativa Nipponbare reference genome using next
+generation sequence and optical map data. Rice 6:4.
+
+KHAKWANI AA, DENNETT MD, and MUNIR M. 2011. Drought tolerance screening of
+wheat varieties by inducing water stress conditions. Songklanakarin J. Sci. Technol.
+33(2): 135-142.
+
+KHAN MH, DAR ZA, and DAR SA. 2015. Breeding Strategies for Improving Rice Yield
+- A Review. Agricultural Sciences 6:467-478.
+http://dx.doi.org/10.4236/as.2015.65046.
+
+68
+
+KIM SR, YANG J, AN G, and JENA KK. 2016. A simple DNA preparation method for
+high quality polymerase chain reaction in rice. Plant Breeding Biotechnology 4(1):
+99-106.
+
+KONUMA H, MERINO G, VOEGELE J, and ZEIGLER RS. 2014. Foreword. In: Dawe
+D, Jaffee S, and Santos N. Rice in the Shadow of Skyscrapers: Policy Choices in a
+Dynamic East and Southeast Asian Setting. Rome: Food and Agriculture
+Organization of the United Nations (FAO). pp. v-vi.
+
+KOTTAPALLI K.R., LAKSHMINARASU M and JENA K.K. 2010. Effective strategy for
+pyramiding three bacterial blight resistance genes into fine grain rice cultivar, Samba
+Mahsuri, using sequence tagged site markers. Biotechnol. Lett. 32: 989-996.
+
+KRISHNAN V. 2011. Electron transfer in chemistry and biology- the primary events in
+photosynthesis. Resonance 2(12): 77-86.
+
+KUMAR A, BERNIER J, VERULKAR S, LAFI TTE HR.and ATLIN GN. 2008. Breeding
+for drought tolerance: direct selection for yield, response to selection and use of
+drought-tolerant donors in upland and lowland-adapted populations. Field Crops Res.
+107 (3): 221-31.
+
+KUMAR R., SREENU K., SINGH N., JAIN N., SINGH NK., RAI V. 2015. Effect of
+drought stress on contrasting cultivars of rice. International Journal of Tropical
+Agriculture 33(2): 1559-1564
+
+LANG NT, BIHN NQC, NHA CT, and BUU BC. 2010. A candidate gene response to
+drought stress condition in rice (Oryza sativa L.). Omonrice 17: 105-113.
+
+LAUNERT. 1965. Oryza perrieri Camus changed to Leersia perrieri (Camus) Launert. In
+Vaughan DA. 1989. The genus Oryza L.: Current status of taxonomy. IRRI Research
+Paper Series No. 138 1-21.
+
+LEE KS, RASABANDITH S, ANGELES ER and KHUSH GS. 2003. Inheritance of
+resistance to bacterial blight in 21 cultivars of rice. Phytopathology 93: 147-152.
+
+LEONARDIS AMD, PETRARULO M, VITA PD and MASTRANGELO AM. 2012.
+Genetic and molecular aspects of plant response to drought in annual crop species.
+In: Advances in Selected Plant Physiology Aspects, Giuseppe M and B Dichio (eds.).
+InTech Publisher. pp. 45-74.
+
+LI P, CHEN J, and WU P. 2011. Agronomic characteristics and grain yield of 30 spring
+wheat genotypes under drought stress and nonstress conditions. Agronomy Journal
+103(6): 1619-1628.
+
+LIU B, WANG Y, ZHAI W, DENG J, WANG H, CUI Y, CHENG F, WANG X, WU
+J. 2013. Development of InDel markers for Brassica rapa based on whole-genome
+re-sequencing. Theor Appl Genet 126: 231-239.
+
+69
+
+LIU J, LI J, QU J, and YAN S. 2015. Development of genome-wide insertion and deletion
+polymorphism markers from Next-Generation Sequencing data in rice. Rice 8:27.
+DOI 10.1186/s12284-015-0063-4
+
+LU Y, CUI X, LIR, HUANG P, ZONG J, YAO D, LI G, ZHANG D, and YUAN Z. 2015.
+Development of genome-wide insertion/deletion markers in rice based on graphic
+pipeline platform. Journal of Integrative Plant Biology 57(11).
+https://doi.org/10.111 1/jipb.12354
+
+MALES J and GRIFFITHS H. 2017. Stomatal biology of CAM Plants. Plant Physiology
+Review DOI:10.1104/pp.17.00114.
+
+MARTIN C, JULIANO A, NEWBURY HJ, LU BR, JACKSSON MT, and FORD-LLOYD
+BV. 1997. The use of RAPD markers to facilitate the identification of Oryza species
+within germplasm collections. Genet Res Crop Evol 44: 175-183.
+
+MARKKANDAN K, YOOS, CHO YC, and LEE DW. 2018. Genome-Wide Identification
+of Insertion and Deletion Markers in Chinese Commercial Rice Cultivars, Based on
+Next-Generation Sequencing Data. Agronomy 8(4):36
+https://doi.org/10.3390/agronomy8040036.
+
+MCLNTYRE CL and WINBERG BC. 1998. A rapid means of identifying wild rice species
+DNA using dot. In: Miao L, Wang C, Zheng C, Che J, Gao Y and Wen Y.2010.
+Molecular mapping of a new gene for resistance to rice bacterial blight. Scientia
+Agricultura Sinica, 43, 3051-3058. blots and genome-specific rDNA probes.
+Genome 44: 175-183.
+
+MELLOUL M, IRAQI D, UDUPA SM, ALAOUI MAE, ALAOUI SA, IBRIZ M, and
+ELFAHIME E. 2014. Development of specific primers for the detection of HVA1
+from barley in transgenic durum wheat by polymerase chain reaction (PCR)
+technology. African Journal of Biotechnology 13(4): 581-592.
+
+MEYER CJ and PETERSON CA. 2013. Structure and function of three suberized cell
+layers: epidermis, exodermis, and endodermis. In: Eshel A and Beeckman T. Plant
+roots: the hidden half. 4th ed. NW: CRC press. pp. 5-1—5-16.
+
+MIAH G, RAFII MY, ISMAIL MR, PUTEH AB, RAHIM HA, ISLAM KN, and LATIF
+MA. 2013. A Review of Microsatellite Markers and Their Applications in Rice
+Breeding Programs to Improve Blast Disease Resistance. Int. J. Mol. Sci. 14: 22499-
+22528; doi:10.3390/ijms 141122499.
+
+NEELAM K, SAHI GK, KUMAR K, and SINGH H. 2018. Identification of drought stress
+tolerance in wild species germplasm of rice based on leaf and root morphology. Plant
+Genetic Resources 16(4): 289-295.
+
+NIAS Genebank (https://www.gene.affrc.go.jp/index_en.php)
+
+70
+
+NITHAMA M, MOCHIKUZI M, KURATA N, and NONOMURA K. 2015. PCR-based
+INDEL markers co-dominant between Oryza sativa, japonica cultivars and closely-
+related wild Oryza species. Breed Sci Sep 65(4): 357-361. doi: 10.1270/jsbbs.65.357
+
+OECD (ORGANISATION FOR ECONOMIC COOPERATION AND
+DEVELOPMENT). 1999. Consensus Document on the Biology of Oryza sativa
+(Rice). France: OECD. pp. 16-20.
+
+OKAMOTO K, SHARIFI A, and CHIBA Y. 2014. The impact of urbanization on land use
+and the changing role of forests in Vientiane. In Yokoyama et al. Integrated studies
+of social and natural environmental transition in Laos. Advances in Asian-
+Environmental Research. Japan: Springer. DOI 10.1007/978-4-431-54956-7_2.
+
+OUYANG W, STRUIK PC, YIN X, and YANG J. 2017. Stomatal conductance, mesophyll
+conductance, and transpiration efficiency in relation to leaf anatomy in rice and wheat
+genotypes under drought. J Exp Bot. 68(18): 5191-5205. doi: 10.1093/jxb/erx3 14.
+
+PACURAR D, PACURAR M, STREET N, BUSSELL J, POP T, GUTIERREZ L, and
+BELLINI C. 2012. A collection of INDEL markers for map-based cloning in seven
+Arabidopsis accessions. Journal of Experimental Botany 63(7): 2491-2501.
+
+PANG SL, ONG SS, LEE HH, ZAMRI Z, KANDASAMY KI, CHOONG CY, and
+WICKNESWARI R. 2014. Isolation and characterization of CCoAOMT in
+interspecific hybrid of Acacia auriculiformis x Acacia mangium -a key gene in lignin
+biosynthesis. Genetics and Molecular Research 13 (3): 7217-7238.
+
+POLANIA J, RAO IM, CAJIAO C, GRAIALES M, RIVERA M, VELASQUEZ F,
+RAATZ B, and BEEBE SE. 2017. Shoot and root traits contribute to drought
+resistance in recombinant inbred lines of MD 23-24 x SEA 5 of common bean.
+Frontiers in Plant Science https://doi.org/10.3389/fpls.2017.00296.
+
+POLLARD M, BEISSON F, LI Y, and OHLROGGE JB. 2008. Building lipid barriers:
+biosynthesis of cutin and suberin. Cell Press d. doi:10.1016/j.tplants.2008.03.003 A
+
+QIAN W, GE S, and HONG DY. 2001. Genetic variation within and among populations
+of a wild rice Oryza granulata from China detected by RAPD and ISSR markers.
+Theor Appl Genet 102: 440-449.
+
+QIAN W, Ge S, and HONG D. 2004. Genetic diversity in accessions of wild rice Oryza
+granulata from South and Southeast Asia. Genetic Resources and Crop Evolution 53:
+197-204.
+
+QUAN R, WANG J, HUI J, BAI H, LYU X, ZHU Y, ZHANG H, ZHANG Z, LI S, and
+HUANG R. 2017. Improvement of salt tolerance using wild rice genes. Frontiers in
+Plant Science 8: 2269.
+
+RICKERT AM, KIM J, MEYER S, NAGEL A, BALLVORA A, OEFNER PJ,
+GEBHARDT C. 2003. First-generation SNP/InDel markers tagging loci for pathogen
+
+71
+
+resistance in the potato genome. Plant Biotechnology Journal 1(6)
+https://doi.org/10.1046/j.1467-7652.2003.00036.x
+
+RITCHIE LAB. 2012. Phenogram. http://visualization.ritchielab.org/home/index
+
+RIZAL G, KARKI S, THAKUR V, CHATTERJEE J, COE RA, WANCHANA S, and
+QUICK WP. 2012. Towards a C4 rice. Asian Journal of Cell Biology DOI:
+10.3923/ajcb.2012
+
+ROULIN A, PIEGU B, WING RA, AND PANAUD 0. 2008. Evidence of multiple
+horizontal transfers of the long terminal repeat retrotransposon RIRE/ within the
+genus Oryza. The Plant Journal 53: 950-959.
+
+ROY PS, DASH AK, SUBUDHI HN, RAO RN, and RAO GJN. 2014. Molecular and
+morphological characterization of Indian rice hybrids. Australian Journal of Crop
+Science 8(12):1607-1614.
+
+SACK L, GRUBB PJ, and MARANON T. 2003. The functional morphology of juvenile
+plants tolerant of strong summer drought in shaded forest understories in southern
+Spain. Plant Ecology 168: 139-163.
+
+SAHOO KK, TRIPATHI AK, PAREEK A, SINGLA-PAREEK SL. 2013. Taming drought
+stress in rice through genetic engineering of transcription factors and protein kinases.
+Plant Stress 7(1): 60-72.
+
+SAHU P, MONDAL S, SHARMA D, and VISHWAKARMA G. 2017. InDel marker based
+genetic differentiation and genetic diversity in traditional rice (Oryza sativa L.)
+landraces of Chhattisgarh, India. PLoS ONE — 12(11):e0188864.
+https://doi.org/10.1371/journal. pone.0188864.
+
+SAKAI H, LEE SS, TANAKA T, NUMA H, KIM J, KAWAHARA Y, WAKIMOTO H,
+YANG C, IWAMOTO M, ABE T, YAMADA Y, MUTO A, INOKUCHI H,
+IKEMURA T, MATSUMOTO T, SASAKI T, and ITOH T. 2013. Rice Annotation
+Project Database (RAP-DB): An Integrative and Interactive Database for Rice
+Genomics. Plant and Cell Physiology 54:2 https://doi.org/10.1093/pcp/pcs183
+
+SANCHEZ PL, WING RA, and BRAR DS. 2014. The wild relative of rice: genomes and
+genomics. Zhang Q and Wing RA. Genetics and genomics of rice. Plant Genetics and
+Genomics: Crops and models 5. New York: Springer.
+
+SCASCITELLI M, COGNET M, and ADAMS KL. 2010. An Interspecific Plant Hybrid
+Shows Novel Changes in Parental Splice Forms of Genes for Splicing Factors.
+Genetics 184: 975-983.
+
+SHAKIBA E and EIZENGA GC. 2014. Unraveling the secrets of rice wild species. Intech.
+http://dx.doi.org/10.5772/58393.
+
+SHAMSI K and KOBRAEE S. 2011. Bread wheat production under drought stress
+conditions. Annals of Biological Research 2(3): 352-358.
+
+71
+
+resistance in the potato genome. Plant Biotechnology Journal 1(6)
+https://doi.org/10.1046/j.1467-7652.2003.00036.x
+
+RITCHIE LAB. 2012. Phenogram. http://visualization.ritchielab.org/home/index
+
+RIZAL G, KARKI S, THAKUR V, CHATTERJEE J, COE RA, WANCHANA S§, and
+QUICK WP. 2012. Towards a C4 rice. Asian Journal of Cell Biology DOI:
+10.3923/ajcb.2012
+
+ROULIN A, PIEGU B, WING RA, AND PANAUD O. 2008. Evidence of multiple
+horizontal transfers of the long terminal repeat retrotransposon RIRE/ within the
+genus Oryza. The Plant Journal 53: 950-959.
+
+ROY PS, DASH AK, SUBUDHI HN, RAO RN, and RAO GIN. 2014. Molecular and
+morphological characterization of Indian rice hybrids. Australian Journal of Crop
+Science 8(12):1607-1614.
+
+SACK L, GRUBB PJ, and MARANON T. 2003. The functional morphology of juvenile
+plants tolerant of strong summer drought in shaded forest understories in southern
+Spain. Plant Ecology 168: 139-163.
+
+SAHOO KK, TRIPATHI AK, PAREEK A, SINGLA-PAREEK SL. 2013. Taming drought
+stress in rice through genetic engineering of transcription factors and protein kinases.
+Plant Stress 7(1): 60-72.
+
+SAHU P, MONDAL S, SHARMA D, and VISHWAKARMA G. 2017. InDel marker based
+genetic differentiation and genetic diversity in traditional rice (Oryza sativa L.)
+landraces of Chhattisgarh, India. PLoS ONE _ 12(11):e0188864.
+https://doi.org/10.1371/journal. pone.0188864.
+
+SAKAI H, LEE SS, TANAKA T, NUMA H, KIM J, KAWAHARA Y, WAKIMOTO H,
+YANG C, IWAMOTO M, ABE T, YAMADA Y, MUTO A, INOKUCHI H,
+IKEMURA T, MATSUMOTO T, SASAKI T, and ITOH T. 2013. Rice Annotation
+Project Database (RAP-DB): An Integrative and Interactive Database for Rice
+Genomics. Plant and Cell Physiology 54:2 https://doi.org/10.1093/pep/pcs183
+
+SANCHEZ PL, WING RA, and BRAR DS. 2014. The wild relative of rice: genomes and
+genomics. Zhang Q and Wing RA. Genetics and genomics of rice. Plant Genetics and
+Genomics: Crops and models 5. New York: Springer.
+
+SCASCITELLI M, COGNET M, and ADAMS KL. 2010. An Interspecific Plant Hybrid
+Shows Novel Changes in Parental Splice Forms of Genes for Splicing Factors.
+Genetics 184: 975-983.
+
+SHAKIBA E and EIZENGA GC. 2014. Unraveling the secrets of rice wild species. Intech.
+http://dx.doi.org/10.5772/58393.
+
+SHAMSI K and KOBRAEE S. 2011. Bread wheat production under drought stress
+conditions. Annals of Biological Research 2(3): 352-358.
+
+72
+
+SHARMA R. 2014. Outlook for Rice Demand, Supply, and Trade. In: Dawe D, Jaffee S,
+and Santos N. Rice in the Shadow of Skyscrapers: Policy Choices in a Dynamic East
+and Southeast Asian Setting. Rome: Food and Agriculture Organization of the United
+Nations (FAO). p.8-15.
+
+SONG X, WEI H, CHENG W, YANG §S, ZHAO Y, LI X, LUO D, ZHANG H, and FENG
+X. 2015. Development of INDEL markers for genetic mapping based on whole
+genome resequencing in Soybean. G2 (Bethesda) 5(12): 2793-2799.
+
+SOREN KR, ALI K, TYAGI V, and TYAGI A. 2010. Recent advances in molecular
+breeding of drought tolerance in rice (Oryza sativa L.). Indian Journal of
+Biotechnology 9: 233-251.
+
+SRIVIDHYA A, VEMIREDDY LR, SRIDHAR S, JAYAPRADA M, RAMANARAO PV,
+HARIPRASAD AS, REDDY HK, ANURADHA G and SIDDIQ E. 2011. Molecular
+mapping of QTLs for yield and its components under two water supply conditions in
+rice (Oryza sativa L.) J. Crop Sci. Biotech 14 (1): 45-56.
+
+STEELE KA, OGDEN R, MCEWING R, BRIGGS H, and GORHAM J. 2007. InDel
+markers distinguish Basmatis from other fragrant rice varieties. Field Crops research
+105: 81-87.
+
+STEELE KA, PRICE AH, SHASHIDAR HE and WITCOMBE JR. 2006. Marker-assisted
+selection to introgress rice QTLs controlling root traits into an Indian upland rice
+variety. Theor App! Genet 112:1247—1260.
+
+STEIN JC, YU Y, COPETTI D, ZWICKL DJ, ZHANG L, ZHANG C, CHOUGULE K,
+GAO D, IWATA A, GOICOECHEA L, WEI S, WANG J, LIAO Y, WANG M,
+JACQUEMIN J, BECKER C, KUDRNA D, ZHANG J, LONDONO CEM, SONG
+X, LEE S, SANCHEZ P, ZUCCOLO A, AMMIRAJU JSS, TALAG J, DANOWITZ
+A, RIVERA LF, GSCHWEND AR, NOUTSOS C, WU CC, KAO S, ZENG J, WEI
+F, ZHAO Q, FENG Q, EL BAIDOURI M, CARPENTIER MC, LASERRE E,
+COOKE R, FARIAS D, DA MAIA LC, DOS SANTOS RS, NYBERG KG,
+MCNALLY KL, MAULEON R, ALEXANDROV N, SCHMUTZ J, FLOWERS J,
+FAN C, WEIGEL D, JENA KK, WICKER T, CHEN M, HAN B, HENRY R, HSING
+YC, KURATA N, DE OLIVEIRA AC, PANAUD O, JACKSON SA, MACHADO
+CA, SANDERSON MJ, LONG M, WARE D, and WING RA. 2018. Genomes of 13
+domesticated and wild rice relatives highlight genetic conservation, turnover and
+innovation across the genus Oryza. Nature Genetics 50: 285-296
+
+SURALTA RR, BATUNGBAKAL MYT, BELLO JCT, CAPARAS LM, LAGUNILLA
+VH, LUCAS KMD, PATUNGAN LM, SIPING AJO, CRUZ JA, CABRAL MCJ,
+and NIONES JM. 2018. An enhanced root system developmental responses to
+drought by inoculation of Rhizobacteria (Streptomyces mutabilis) contributed to the
+improvement of growth in rice. Philippine Journal of Science 147(1): 113-122.
+
+73
+
+SURALTA RR, LUCOB NB, and PEREZ LM. 2012. Shoot and root development in rice
+(Oryza sativa L.) genotypes during progressive drying in soils with varying moisture
+regimes. Philippine Journal of Crop Science 37(2): 1-12.
+
+TATEOKA. 1964. O. perennis Moench ssp. cubensis. In: Vaughan DA. 1989. The genus
+Oryza L.: Current status of taxonomy. IRRI Research Paper Series No. 138 1-21.
+
+TODAKA D, SHINOZAKI K, and YAMAGUCHI-SHINOZAKI K. 2015. Recent
+advances in the dissection of drought stress regulatory networks and strategies for
+development of drought tolerant transgenic Rice Plants. Frontiers in Plant Science
+6:84 doi: 10.3389/fpls.2015.00084
+
+VALI U, BRANDSTROM M, JOHANSSON M, ELLEGREN H. 2008. Insertion-deletion
+polymorphisms (InDels) as genetic markers in natural populations. BMC Genet 9:8
+
+VAUGHAN DA. 1989. The genus Oryza L.: Current status of taxonomy. IRRI Research
+Paper Series No. 138 1-21.
+
+VAUGHAN DA. 1994. The Wild Relatives of Rice: A Genetic Resource Handbook.
+Manila: International Rice Research Institute (IRRI).
+
+VAUGHAN DA, MORISHIMA H, and KADOWAKI K. 2003. Diversity in the Oryza
+genus. Current Opinion 6: 139-146.
+
+WAMBUGU PW, FURTADO A, WATERS DLE, NYAMONGO DO, and HENRY RJ.
+2013. Conservation and utilization of African Oryza genetic resources. Rice 6:29.
+
+WANG/J, KONG L, YU K, ZHANG F, SHI X, WANG Y, NAN H, ZHAO X, LU S, CAO
+D, LI X, FANG C, WANG F, SU T, LI S, YUAN X, LIU B, and KONG F. 2018.
+Development and validation of InDel markers for identification of QTL underlying
+flowering time in soybean. The Crop Journal 6(2): 126-135.
+
+WANG Y, XUE Y, and LI J. 2005. Towards molecular breeding and improvement of rice
+in China. Trends in Plant Science 10(12):610-614.
+
+WARREN PL and BARNETT LA. 2014. Phenology: Using phenology as a tool for
+education, research, and understanding environmental change. College of
+Agricultural Sciences Cooperative Extensions. University of Arizona.
+https://www.usanpn.org/files/Phenology-az1633-2014.pdf
+
+WING RA, AMMIRAJU JSS, LUO M, KIM H, YU Y, KUDRNA D, GOICOECHEA JL,
+WANG W, NELSON W, RAO K, BRAR D, MACKILL DJ, HAN B, SODERLUND
+C, STEIN L, SAN MIGUEL P, and JACKSON S. 2005. The Oryza map alignment
+project: The golden path to unlocking the genetic potential of wild rice species. Plant
+Molecular Biology 59: 53-62.
+
+WU CJ, CHENG ZQ, HUANG XQ, YIN SH, CAO KM, and SUN CR. 2004. Genetic
+Diversity among and within populations of Oryza granulata from Yunnan of China
+
+74
+
+revealed by RAPD and ISSR markers: implications for conservation of the
+endangered species. Plant Science 167: 35-42.
+
+WU D H, WU HP, WANG CS, TSENG H Y, HWU K K. 2013. Genome-wide InDel
+marker system for application in rice breeding and mapping studies. Euphytica
+192(1): 131-143.
+
+WU Z, FANG D, YANG R, GAO F, AN X, ZHUO X, LI Y, YI C, ZHANG T, LIANG C,
+CUI P, CHENG Z, and LUO Q. 2018. De novo genome assembly of Oryza
+granulata reveals rapid genome expansion and adaptive evolution. Communications
+Biology 1:84
+
+YAMAKI S, OHYANAGI H, YAMASAKI M, EIGUCHI M, MIYABAYASHI T, KUBO
+T, KURATA N, and NONOMURA K. 2013. Development of InDel Markers to
+disctiminate all genome types rapidly in the genus Oryza. Breed Sci Sep 63(3): 246-
+254. doi: 10.1270/jsbbs.63.246
+
+YASUI H, NONOMURA KI, and IWATA N. 1997. Detection of Alien Oryza punctata
+Kotschy Chromosomes in Rice, Oryza sativa L., by Genomic in situ Hybridization.
+J. Fac. Agr. 42(1-2): 63.68.
+
+YONEMARU J, CHOI S H, SAKAI H, ANDO T, SHOMURA A, YANO M. 2015.
+Genome-wide InDel markers shared by diverse Asian rice cultivars compared to
+Japanese rice cultivar “Koshihikari”. Breeding Sci 65(3): 249-256.
+
+YU J, HU SN, WANG J, WONG G KS, LI S G, LIU B, DENG Y J, DAI L, ZHOU Y,
+ZHANG X Q, CAO M L, LIU J, SUN J D, TANG J B, CHEN Y J, HUANG X B,
+LIN W, YE C, TONG W, CONG L J, GENG JN, HAN Y J, LIL, LI W, HU GQ,
+HUANG X G, LI W J, LI J, LIU Z W, LIL, LIU J P, QI QH, LIU JS, LIL, LIT,
+WANG XG, LU H, WU T T, ZHU M, NI P X, HAN H, DONG W, REN X Y, FENG
+X L, CUI P, LI X R, WANG H, XU X, ZHAI W X, XU Z, ZHANG J S, HE S J,
+ZHANG J G, XU J C, ZHANG K L, ZHENG X W, DONG J H, ZENG W Y, TAO
+L, YE J, TAN J, REN X D, CHEN X W, HE J, LIU D F, TIAN W, TIAN CG, XIA
+H G, BAO Q Y, LI G, GAO H, CAO T, WANG J, ZHAO W M, LI P, CHEN W,
+WANG X D, ZHANG Y, HU J F, WANG J, LIU S, YANG J, ZHANG G Y, XIONG
+Y Q, LI Z J, MAO L, ZHOU C S, ZHU Z, CHEN R S, HAO B L, ZHENG W M,
+CHEN S Y, GUO W, LI GJ, LIU S Q, TAO M, WANG J, ZHU L H, YUAN L P,
+YANG H M. 2002. A draft sequence of the rice genome (Oryza sativa L. ssp. indica).
+Science, 296: 79-92.
+
+YU J, WANG J, LIN W, LIS, LI H, ZHOU J, NI P, DONG W, HU S, ZENG C, ZHANG
+J, ZHANG Y, LI R, XU Z, LI S, LI X, ZHENG H, CONG L, LIN L, YIN J, GENG
+J, L1G, SHIJ, LIU J, LV H, LI J WANG J, DENG Y, RAN L, SHI X, WANG X, JI
+Z, ZHAO W, SUN Y, ZHANG Z, BAO, HAN Y, DONG L, JI J, CHEN P, WU 8,
+LIU J, XIAO Y, BU D, TAN J, YANG L, YE C, ZHANG J, XU J, ZHOU Y, YU Y,
+ZHANG B, ZHUANG §, WEI B, LIU B, LEI M, YU H, LI Y, XU H, WEIS, HE X,
+
+75
+
+FANG L, ZHANG Z, ZHANG Y, HUANG X, SU Z, TONG W, LI J, TONG Z, LI
+S, YE J, WANG L, FANG L, LEI T, CHEN C, CHEN H, XU Z, LI H, HUANG H,
+ZHANG F, XU H, LI N, ZHAO C, LI 8, DONG L, HUANG Y, LIL, XI Y, QI Q,
+LI W, ZHANG B, HU W, ZHANG Y, TIAN X, JIAO Y, LIANG X, JIN J, GAO L,
+ZHENG W, HAO B, LIU S, WANG W, YUAN L, CAO M, MCDERMOTT J,
+SAMUDRALA R, WANG J, WONGG, and YANG H. 2005. The Genomes of Oryza
+sativa: A History of Duplications. PLoS Biology.
+https://doi.org/10.137 1 /journal.pbio.0030038
+
+YU H, XIE W, LI J, ZHOU F, and ZHANG Q. 2014. A Whole-genome SNP array
+(RICE6K) for genomic breeding in rice. Plant Biotechnology Journal 12(1): 28-37.
+
+ZEILANG PK and PATTANAYAK A. 2013. Wide hybridization in the genus Oryza:
+Aspects and Prospects. Indian Journal of Hill Farming 16(2): 71-77.
+
+ZENG YX, WEN ZH, MA LY, JI ZJ, LI XM, and YANG CD. 2013. Development of 1047
+insertion-deletion markers for rice genetic studies and breeding. Genetics and
+Molecular Research 12(4):5226-5235.
+
+ZOU XH, YANG Z, DOYLE JJ, and GE S. 2013. Multilocus estimation of divergence
+times and ancestral effective population sizes of Oryza species and implications for
+the rapid diversification of the genus. New Phytologist 198: 1155-1164.
+
+ZUCCOLO A, SEBASTIAN A, TALAG J, YU Y, KIM H, COLLURA K, KUDRNA D,
+and WING RA. 2007. Transposable element distribution, abundance and role in
+genome size variation in the genus Oryza. BMC Evolutionary Biology doi:
+10.1186/1471-2148-7-152.
+
+16
+
+Appendix A. Gel images of InDel markers designed from Oryza sativa L. and O. granulata
+Nees & Arn. Ex. G. Watt sequences and tested for polymorphism among O. sativa,
+O. meyeriana (Zoll. & Moritzi), and O. granulata accessions. Legend: OS: — O.
+sativa IR64; OS2 - O. sativa NSIC Re 222; OMi — O. meyeriana Acc. 89241; OM2 -
+O. meyeriana Acc. 89243; OG; — O. granulata Acc. 102118; OG2 - O. granulata
+Acc. 106474; (0) — monomorphic; (1) - polymorphic between AA and GG genomes;
+(2) — polymorphic between O. meyeriana and O. granulata; (3) — polymorphic
+between O. sativa accessions; (4) polymorphic between O. granulata accessions; (5)
+— absent bands in either genomes; (6) no PCR products among all samples; (7) — new
+bands present
+
+TXPECTED PRESENCE (+) OR ABSENCE (.) OF BAND
+
+MARKER IMAGE BAND SIZE AA GG SCORE
+(bp) OS: OS: OM: OM2 OG: OG:
+359 + + + +
+GGO01_001 1
+315 + +
+223 + + + +
+GGo1_002 1
+176 + +
+260 + +
+GG01_003 1
+223 + + + +
+250 + +
+GG01_004 1
+225 + + + +
+251 + - + +
+GG01_005 1
+233 + +
+238 - = 5 5
+GG01_006 5
+215 + +
+251 + +
+GG01_007 1
+
+203 + + + +
+
+
+Appendix A continued...
+
+GG01_008
+
+GG01_009
+
+GG02_001
+
+GG02_002
+
+GG02_003
+
+GG02_005
+
+GG02_006
+
+GG02_007
+
+GG02_008
+
+GG02_009
+
+161
+
+241
+
+209
+
+189
+
+138
+
+301
+
+281
+
+195
+
+510
+
+727
+
+696
+
+439
+
+417
+
+380
+
+77
+
+1,2,3
+
+BB
+
+Appendix A continued...
+321 + + + +
+GG03_001 1
+300 + +
+201 - -
+GG03_003 168 + + + + 1,7
++ +
+201 + +
+GG03_004 1
+167 + + + +
++ +
++
+GG03_005 236 1,2,7
+411 - - -
+436 + +
+GG03_006 1
+402 + + + +
+245
+GG03_007 6
+222
+359 - - o oS
+GG03_008 333 + + 1,7
++ + + +
+323 - - + + + +
+GG03_009 1,7
+301 + + - - = =
+265 + + - - - -
+GG03_010 1,7
+244 oe + + + +
+314 - - 5 5
+GG03_011 6
+288 5 Oo
+335 + + + +
+GG03_012 1
+
+275 + +
+
+
+Appendix A continued...
+
+GG03_013
+
+GG03_014
+
+GG04_002
+
+GG04_004
+
+—__ a oe
+
+269
+
+252
+
+182
+
+164
+
+399
+
+338
+
+160
+
+120
+
+332
+
+280
+
+320
+
+281
+
+332
+
+302
+
+270
+
+262
+
+233
+
+79
+
+Appendix A continued...
+
+GG04_008
+
+GG05_001
+
+GG05_002
+
+GG05_003
+
+GG05_004
+
+GG0s_00s
+
+GG0S_006
+
+GG05_007
+
+203
+
+179
+
+422
+
+385
+
+477
+
+434
+
+231
+
+249
+
+659
+
+614
+
+354
+
+333
+
+253
+
+230
+
+1,3
+
+Appendix A continued...
+
+GG06_001
+
+GG06_002
+
+GG06_004
+
+GG06_005
+
+GG06_006
+
+GG06_007
+
+GG06_008
+
+‘GG06_009
+
+GG07_001
+
+383
+
+354
+
+383
+
+331
+
+407
+
+364
+
+426
+
+386
+
+601
+
+192
+
+175
+
+194
+
+178
+
+312
+
+318
+
+300
+
+81
+
+1,2,7
+
+1,7
+
+1,2
+
+Appendix A continued...
+
+GG07_002
+
+GG07_003
+
+GG07_004
+
+GG07_005
+
+GG07_006
+
+GG08_001
+
+GG08_002
+
+GG08_003
+
+GG08_004
+
+325
+
+302
+
+408
+
+387
+
+270
+
+242
+
+449
+
+422
+
+278
+
+192
+
+171
+
+386
+
+413
+
+383
+
+592
+
+556
+
+82
+
+Appendix A continued...
+
+GG08_005
+
+GG08_006
+GG08_007
+
+GG09_001
+
+GG09_004
+
+GG09_005
+
+GG09_006
+
+GG09_007
+
+GG10_003
+
+351
+
+329
+
+360
+
+339
+
+321
+
+299
+
+236
+
+216
+
+511
+
+450
+536
+
+505
+
+318
+
+298
+
+307
+
+287
+
+83
+
+1,2
+
+1,2,3
+
+Appendix A continued...
+
+
+Appendix A continued...
+
+GG11_007
+
+GG11_008
+
+GG11_009
+
+GG12_001
+
+GG12_002
+
+GG12_003
+
+GG12_004
+
+GG12_005
+
+457
+
+442
+
+399
+
+373
+
+223
+
+193
+
+323
+
+241
+
+220
+
+150
+
+129
+
+85
+
+1,2
+
+Appendix A continued...
+
+GG12_006
+
+GG12_007
+
+GG12_008
+
+GG12_009
+
+GG12_010
+
+GGI2_011
+
+
+87
+
+Appendix B. Gel images of SSR markers tested for polymorphism among Oryza sativa L.,
+
+MARKER
+
+RMII18
+
+RM3336
+
+RM6618
+
+RM7643
+
+RM8083
+
+O. meyeriana (Zoll. & Moritzi), and O. granulata Nees & Arn. Ex. G. Watt
+accessions. Legend: OS, — O. sativa IR64; OS: - O. sativa NSIC Re 222; OMi
+— O. meyeriana Acc. 89241; OM2 - O. meyeriana Acc. 89243; OG: — O.
+granulata Acc. 102118; OG: - O. granulata Acc. 106474; (0) —
+monomorphic; (1) - polymorphic between AA and GG genomes; (2) —
+polymorphic between O. meyeriana and O. granulata; (3) — polymorphic
+between QO. sativa accessions; (4) polymorphic between O. granulata
+accessions; (5) — absent bands in either genomes; (6) no PCR products among
+all samples; (7) — new bands present
+PRESENCE (+) OR ABSENCE (-) OF BAND
+
+‘EXPECTED
+IMAGE BAND SIZE AA GG SCORE
+(bp) OS:_OS:_ OM: OM: OG: OG:
+
+170 - - - - - 5 6
+102 5 OO 5 5 - . 6
+144 : - - : 6
+134 - - - - - - 6
+160 + + - - - - 5
+
+154 - - - . = = 6
+
+Appendix B continued...
+
+RMS461
+
+M5764
+
+RM6733
+
+RM8255
+
+RM2634
+
+RM3732
+
+RM3294
+
+RM5303
+
+232
+
+134
+
+114
+
+217
+
+188
+
+154
+
+106
+
+212
+
+150
+
+Appendix B continued...
+
+RM7288
+
+RM1284
+
+RMI1352
+
+RMI1352
+
+RM3586
+
+RM5928
+
+RM6013
+
+146
+
+150
+
+149
+
+149
+
+18
+
+213
+
+267
+
+167
+
+89
+
+Appendix B continued...
+
+RM8203
+
+RM1223
+
+RM2811
+
+RM3735
+
+RMS030
+
+RMS473
+
+M6089
+
+RM7187
+
+1
+
+158
+
+138
+
+172
+
+127
+
+170
+
+157
+
+Appendix B continued...
+
+RM7314
+
+RMI182
+
+RM2857
+
+RM3800
+
+RM4674
+
+RM6517
+
+164
+
+160
+
+132
+
+112
+
+120
+
+178
+
+182
+
+91
+
+Appendix B continued...
+
+RM7653
+
+RM2229
+
+RM5753
+
+RMS745
+
+RMS5314
+
+RM6395
+
+RM6818
+
+121
+
+130
+
+173
+
+201
+
+203
+
+151
+
+110
+
+130
+
+1,2,3
+
+Appendix B continued...
+
+RM7412
+
+RM3555
+
+RMS211
+
+RMO6011
+
+RM6184
+
+RM7012
+
+154
+
+154
+
+154
+
+197
+
+139
+
+196
+
+180
+
+277
+
+93
+
+Appendix B continued...
+
+RM7412
+
+RM3555
+
+RMS211
+
+RM6011
+
+RM6184
+
+RM7012
+
+154
+
+154
+
+154
+
+197
+
+139
+
+196
+
+180
+
+277
+
+93
+
+Appendix B continued...
+
+RM3262
+
+RM2819
+
+M3309
+
+RM6429
+
+RM7049
+
+M3320
+
+167
+
+182
+
+167
+
+178
+
+157
+
+159
+
+168
+
+Appendix B continued...
+
+RM3769
+
+RM4692,
+
+RM6051
+
+RM6797
+
+RM6816
+
+RM7039
+
+RMI108
+
+RM3123
+
+RM4455
+
+RMS095
+
+103
+
+179
+
+136
+
+152
+
+179
+
+166
+
+168
+
+124
+
+191
+
+116
+
+182
+
+95
+
+
+Appendix B continued...
+
+RMS5373
+
+RM6179
+
+RM7217
+
+RM8138
+
+RM4069
+
+110
+
+108
+
+210
+
+149
+
+107
+
+126
+
+107
+
+136
+
+195
+
+164
+
+1,7
+
+5,7
+
+Appendix B continued...
+
+RM7654
+
+RMI1103
+
+RM2197
+
+RM3226
+
+RM3717
+
+RM7448
+
+RM8216
+
+173
+
+216
+
+160
+
+123
+
+158
+
+138
+
+198
+
+210
+
+97
+
+2,5
+
+98
+
+STRLEL —CBBLEL —GBGLET SOREL EIleel polBCl cS teel IveBEl TVeBet 056 007 Pavasjdan SE
+OOEST I196E91 BLOVIT 96IS9I 9ETODI ZBL99T Z9'LL9T SR'ERDT 82041 0s6 lovly povamdan ve
+ETESSI SOLSST PROIST ISEDST GL'LOST LOST So'SLST pB'BLSI T2651 0s6 7S L8E Parardon fe
+TOL LOGZ9T BEET SGEDT —LOTLPOT —EO'ESIT. ITI991 €9'S991 961891 0s6 60'sor Povamdan ze
+SWI COOH G9'SS9T GEOI9T wL'B991  EPHLIT 6LzEDT TL LRDL 19 vOLL 0s6 ley porardan Ie
+LETBOT GL'SB9T PZHDT LBD LOWBDT © TL'I89T © LOWBT «—SBILSL © prOSDT«sTECROL «OBOE = 056 ives «= SESE MM (pe0s) ovopmums3‘Q OE
+SESOST ZOGISI LLBZST 96OEST ETZPSI GOOSST LEO9ST Zz89SI REO6SI PLZZ OSE SvPOST —-Z0LBE aa payor O 6
+SOECLI GLETLI LSLELT SOGZLI ZIELT STSCI EOELI LILI ~LELL  ZOLELL EEE —086 zeLect «CoS MA (eup) omynuos8 QB
+BVLZ9L LYED9T § F6ORDT 919991 BOERDT 6S'6LDT S9BB9I ZHPLOL 6SZOLI — EBTOLL © EH'SPE ~—056 SLoosl = 7EvOy, Ss MAM Dauos ‘0 uw
+ELST 96RSSI 99ZIST ZL99S1 SSLST I9TRSI PI'I6ST S'L6ST 696191 69TZZ OSB SBLESI —9T'St¥ aq (cup) omprues8 QO 97
+RLTEST SYOEST S9'OPST OTST PLPST PETSST LEST EL 19SI Ispisl 7117 0s6 QOTPST —9B'ELE aa (peas) ompmuu3-Q ST
+IS€O9T 68609T PTHIOT PI'LIST €vvZ91 EE6ZIT BPOEST IT I9L STB — GOLIZ —0S6 EGOS «LTH aa (2009) o1ynuns8 QHZ
+VOGESI LIZSSI PETIST GTLSSI IT99SI LOILST 89 0RST 9E9RSI 199091 8zzzz_—0S6 veLSI 1790 aq Dao 0 &
+HIB EP POLI H9'STLE LOSOLI B6SILI IGBOLI ESRILI LZTOLI SOTELI 8S ItLl BEE 086 €wLl vey AM payor ‘0 w
+LTZSSL_ GORSST LLZOST ETPOST PO'BDST SOTZST SSLLSI sSe'IBSt STOO ETT0Z sé prs 160% aa (p208) oroymuos3-Q IZ
+POODLE LGOILI ESILI ROGOLI YZILT HLBOLI 69PILT 99LOLL ILIZLI I OZLI ZISE —0S6 UZILT = 860Th AM (a00p9) oxyruosS ‘QO OT
+LSESOL S9'T9I 769991 BRIT IL'SLOT ESOROT SLLBDT ELELI vEZSI «BOSD «LITE —0S6. Iswi9l = LLL6E MAN (p29) oroynumsQGT
+SUvST BI'PBST 10109T H6'SRSL ZO'SODT TIO9I S9OIDT 958651 86791 —PLSTIL ©—«LOOHE © 056 igszol = SEE AM pauos ‘0 81
+SORIOT 97'HZIT PETIT EBB GTEC B9IET ELIPOT T'HP9I S6BS9T 056 Iy0zat pe'LSP aq (p20s) oropmms3 ‘OL
+{OORT STE GO'LEDT ETLAOT EE TEST G6LEDT ESI6ST PZPLII 989691 181691 Bec 056 s16s1 = 6ZOP AA (p208) ompmmu8 QT
+SLES LESPST GOLSST TESST yBO9SI S9'99ST Su'sest 9L'IRSI 8y'Z091 0s6 vest —-90'S6E aa (2009) evoyruos3 QO SI
+Ly6991 LOBLOT SLPBIT LS'PLOI SLOLOL SOELOT SwOLOT BS'ED91 IL'SB91_ «= LPIBSL «EWE (OSE ZerssT = L0h AM (200) evopmum3 Qt
+SUSLYL BEO6PI BTOOST EL'SOSL ZHSIST BPZZST GEZEST ES'ISI T0'S9st 056 Ivzest 5°59 aa Bauoe ‘0 €l
+PEEOLI SS'SOLL IEOILE IBOLT EO90LI PIOLT EZEOLI LBI6SI €L'6OLI —*LEOLLL © LOPE —0S6 8960L1 168Th AMM (ou0}) evoynuos8Q I
+PUGLIL £10691 66'B69T 6L'BBDT SBE ZETEIT © HL969T SS PBDI ©—SO'SOLL © EL'EOLL © GETVE ©=— 056 zszoLl EV IIy AA (p205) rors IT
+ZUOISE ZZLST_1VORST Z9'TBST I96BST 9S EST vEZODT T'809T eS-0E9I 056 161091 SE ey aa pauos ‘0 or
+LB'SSSE EEEDST BEEIST GHOST IZ99SI LTOLST vEDLST LLOBSI £19651 056 6LO9S1 96.00% aq (9228) oroymmms3 “0 6
+wyESSI ETISI SLORST LOTLSI Zh IBSI 99LEST CBEST TSOST SLBT9I 056 West § —-S6'StP aa (2u0p9) omjnusi8-Q 8g
+CHT EPID IF6L9T 9699 EVOEST SBT 19691 LORD 6TSILI SILL SLE — OSE. erst = 198%P AM pauos ‘0 L
+BOSLST GETRST (98ST ZTLBSL_LSTOSL LOST © S'66SL_—#9°Z091 £60791 056 6evIs1 BTS aa (euop) orpnuos8-Q 9
+LO'OPSL STOSSI 9OLSSI Iv 09ST Gz BIS EELSI LOOBSI BL'vRST 091 056 887951 80T0F aa (p098) proprmucs3 “0 s
+SO'OLIT 166R9T 96 L69T ZHRROT POOLI  CEEEIT SO66DT EO'SESI LH6OLI P9'EOLL BVOPE —0S6 SellLt = zIZe AM (2unps) onyrumi8 QO b
+QPECSI PODEST SSPPST EOEPSI O6SSI SL¥9SI STZSI ZT'LLSI £9'S6SI 0s6 vrs S9bIy aa aus 0 €
+ZSBP9T EGER LYOLT ELHSL BOBOLI 9SZOLI ZOTILI LSL691 vO  BhRTLL Ge OSE 056 voezel «= STLzty MM payne 0 z
+BE OPIT SOOT _G8'SS9T LIAL PT PSOI PLP9l _THGPOT IESE ST6SOL _—LU'BS9L_—«LO'9EE__—0S6 ST06S1 800y AA (9205) poymuud “0 i
+AEDS _ SP 0591 GS SS9N__LU'LYOL bE vspl_ _Vivel__oeval_ Tevet si'ésg1_ivaspl_t09eE_086 _§
+steq hea okeq shea phe) eke ct eq NV @an “omy |7,, Manon — @) 404 *
+OL Tun =«noma MO aaivunivs ALana WNTAImuL a) Loa
+EDINA MGLVA
+(9) LHOIIM Lod WALLY
+“WeM ‘DX
+
+“WIV puke Soon DID[NUDAs ‘C pur “] DADS DzUC UDZIM4Oq JUoUNIIAdxe ssaNs JYBNoIp BuLMp sjod Jo sjusuoINsvoUl WY3I9\ “OD XIpueddy
+
+an
+a
+
+poreayy-1ySnoig — Gq ‘poseyem-[]oM — AAA ‘Pucde7
+
+at) O91 T 62100 L000 v $ A PoOs\BIIZOI QUI SrnUDss 0-10 OF
+seo os'€ 43 G £0£0°0 6z110 ss $s aa (Poos)poul vauos D=Q 6Z
+850 991 €1z z LLS0'0 £010 u s vn (2u0}9)g11ZOL DOM On =UQ BZ
+990 £95 90s £ 18500 9EIv'0 it s AM (pees)poul Pas D2 LZ
+90 ra’ Ose z Siro zILTO siz s aa (2uo}9)811Z01 DOU ENMNAB Dz 9
+000 000 00 0 0 0 0 s (p298)811Z01 ODUI PenuD.B v=
+
+000 000 00 0 0 0 0 v (940}9)811Z01 DOW Monuw48 V=UIE
+
+890 loe ole z 8z£00 Tero 6z v aa (poos)poul vauvs D240 EZ
+a) ItL St € yyS0'0 98770 $9 ¢ VAN (poos)poul Pays 20
+090 al s6l z 97£0'0 L£00 sol , aa (P98)811Z01 DOW PnunsB v= IZ
+Lv0 wT Ose € 86900 Sse OL v AM (2u0}9)811Z01 DOU MDnusB Vz OT
+000 000 00 0 0 () 0 v (P298)811Z01 DOW] BEjnuns8 DUE
+
+£L0 879 s0s € zs0'°0 80Le°0 sol € AM (poos)p9ul Pauos D298
+oso 940 su I 60200 £4700 € € aa (Pe98)811Z01 SOW PwnuDsB v= LI
+1s0 6L0 Oz 1 9L00'0 6z00'°0 sy € AM (Peas)gt1Z01 DOW PNUD D=~1Q OT
+950 LET ita z 74900 92010 sz € aa (2u0}9)811Z01 DDI pPnunsB =U — ST
+000 000 00 0 0 0 0 € ; (eu0}9)81 1201 DOU MopnuDB D=ID
+
+9L0 09% voe z 9LL0'°0 66L1'0 $05 £ aa (pses)pout 2auvs =i ET
+vo sto Our I 90€0'0 6090'0 z z AM (2u0}9)811Z01 DOU PPjnus D=UQ ZI.
+980 Ive SI€ z ty7Z0'0 £5800 sol z AM (P928)811Z01 DDUI BojnuDsd v=1Q IL
+180 10 wl z 82000 1z10 sis z aa (Peas\poul ayes n= OL
+1910 790 ssi 1 65100 8400°0 sy z aa (poas)gi1Z0l DOW y7nww.B v= «6
+190 a4 O1z v 6690°0 9710 sv z aa (2uo}9)811Z01 ODM IInuDwB =I
+sLo ZLIz O6b € 8£600 9€66'0 sos z AM (pees)poul Daups = L
+£90 08" ost z 96£0'0 €s0'0 It I aa (2u0}9)811Z01 DUI Py nuows v=IQ 9
+vL0 61z ov € 6y£00 20010 €l if aa (Pe28)811Z01 DDUI P7OjnuDss v=E s
+6L0 OL Soe € 9990°0 £9670 61 if MM (2u0}9)811Z01 DOW PrejnuDsB D=1Q v
+9L'0 zy'9 4 I 6900 69110 S98 I aa (poos)poul vauvs v=iQ
+suo 60°91 Sb € 6010 zesy'o €& i AM (paos)pout rauns 0=iQ 7
+980 4 0 we. - z vem ug s o = I AM (P298)811Z01 DOW BDjNuDs8 D=ED it
+
+B m9) eqaay @) A @ ma an) qadap
+5181998] % ara aq juga DEL ‘1O0" LOOHS 1004 8] doy yuomyeary YdA.LONID mod
+
+‘sodAjoues payos ‘CE pur pods pur au0[d Dynjnunus vzA1C 10} sjuOWOINSeOUI 4123} osuodsal jySNoIg ‘q xIpueddy
+
+100
+
+ISLS LOZ $
+SELS 907 % Pe)
+sév9l 0€ 6rS SL8y Sul € 968001 Mlk
+80s 161 z a4 rd syourygo ‘0
+6655 loz I
+S'Iss 861 s
+€9Ly I ¥ 08d
+z16z Ov'z9b Ley bli € Ipllol 00k
+slp orl z 1 $597 pynusiu 0
+vse sel I
+S1ee 61 $s
+LL9E zel ’ aq
+Ort 00'19€ Lee 121 € 069501 99ul 9
+TLBE 6El z itt 8'S7 pyjzund ‘0
+ORE lel I
+tov LI s
+Viss 00z ¢ vw
+162 z9'v9b Sh 191 £ vOpOILDOW =
+6 thy 6sl z 61 ves prousumsst8uo] ‘O
+OBE Let I
+L79s z0z s
+$'s95 £07 ’ vad
+8s°SI £9'109 L979 Sv € 1490899ul ob
+vio Ce z Lo Slt uoBodyfns
+seo 827 I
+vor 991 $s
+aes 71 v vw
+ou'81 weLp Leap vt € Lu96 Dur E
+90% Ish z 17 6p pusaqn]3 ‘0
+96Sy sol I
+81069 87 $
+6LE9 6% v w
+8961 SL1E9 vols 807 € yu z
+g1S9 EZ z vT Sve pays ‘0
+6865 siz I
+7895 0% s
+7209 giz v w
+SeOl LV 28S 7995 yz € Lisi =
+66ss 10z z SLT sts pawns 0
+7109 8Iz I
+ad aeoH ATA PROVEN (ag HLGIM =HLONIT
+paepumys AO G'TaIa/ON) ama VAT AV aI INV1d ‘ON
+GAWON) INNOD TVLVAOIS INNOD TVLVWOLS
+
+“Apnjs ay} Ul pasn saisads 301 pyim eyxooje |, 2Dj91009 ‘CE “4 YOOH idajpi ‘CE ‘We xq “Wy
+32 SON DiDjnuDs3 ‘CE “IYB0Y 12 ‘ABYD “W DYJUDAYODAG ‘CE “UIWIOG SisuayHaysnD ‘CE ‘UaT[eEMg DID CE “ASA DYOfID] ‘EC WEA
+x9 TEM Stppuroyfo ‘CE “|Salg "'D XJ ‘[SAd 'S'f VInuIW ‘CE “pnarg xa AYOS}O-Yy DIDJOUNd ‘CE “DOG 1q “ACYD “YW VIDUIWIDISI3ZUO]
+‘O “UD uoszodyns ‘CEC “pnaig outssaqn]3 ‘EC “] vayws vzKC Ul SatyIsUap pue yUNOD [eJeUIO}s pue sjUoUIaMseoU Jeo] Se[y “q MIpueddy
+
+101
+
+Ost
+
+€Lst
+
+6S
+
+LOST
+
+858
+
+6S LI
+
+wy
+
+7's
+
+OL 761
+
+BY EST
+
+OO'LIE
+
+TL LLE
+
+69 8ZE
+
+80697
+
+L87E7
+
+LT9Sb
+
+6691
+esl
+6807
+TU
+6807
+y90E
+ECT
+L087
+16sz
+6807
+7T60E
+Lee
+
+Vee
+Tle
+
+9 €0€
+T29€
+BLE
+SS6E
+90%
+SEE
+9@E
+Eevee
+B6EE
+S1E€
+£567
+B9ET
+9997
+TE
+
+v90E
+9'S%
+y 827
+6 Loz
+10%
+x4
+
+x4
+
+sis
+eLepy
+10
+veer
+89%
+
+99
+SL
+69
+SL
+oll
+ug
+
+£6
+SL
+TL
+17
+oI
+caus
+601
+EL
+9EL
+rol
+Ist
+6lL
+£71
+oz
+raat
+6IL
+901
+$8
+$6
+rau
+Ol
+18
+4)
+68
+6L
++8
++8
+vst
+“st
+8S
+cst
+891
+
+HK AMTNKEAMTNKAMTHK AMINA AMIE NRKAMTHHAMI HDA AMS
+
+so
+
+TL
+
+I
+
+ray
+
+£0
+
+TT
+
+97
+
+68
+
+Tse
+
+€l
+
+sol
+
+ve
+
+SSE
+
+ees
+
+Vs
+
+ma
+
+7OSPOl ODUI
+70124009 ‘E
+
+{fHH
+178001 DOU
+s@lpuO
+
+£3/3)
+
+648001 DDWI
+pyojnup8 ‘OQ
+
+99
+
+811Z01 OOM
+oyp\nup3 ‘0
+
+ad
+ZETIOL DOU
+pyjundyo04q ‘O
+
+aa
+
+788001 DOU
+sisuatpoassnv ‘OQ
+
+aqd3
+tvIsol DU
+ND 'O
+
+dado
+16001 DUI
+Dyofue] ‘O
+
+a1
+
+SI
+
+v1
+
+£1
+
+a
+
+I
+
+or
+
+***ponuljuos q xIpueddy
+
+102
+
+6695'0 6@ ToL
+
+sv00°0 60°0 0z iouq
+
+$000°0 97 II 40S0°0 vlol'o z quouyealy, :adjouen
+
+$000°0 POLI L9L0°0 L9L0°0 I quouneal
+
+0 76°67 9vEl‘0 £6970 z adXjouan
+
+9991°0 18° 1800°0 97€0°0 v doy
+[COR ey aN TVA d mavnds Mavnds 40 WAS ad aounos
+
+NVaW
+qsiem Aq yooys “gf
+
+99°6b08 6@ ToL,
+
+99'DL SLt6rl 0z tong
+
+6881°0 18 OE'SEL ZL'0L7 z quounealy :odAouep
+
+vsp0'0 9S‘b £0°0vE £0°0vE I quouneal |
+
+0000°0 S89E IZ'0SLZ Z'00ss z adijouen
+
+61b7'0 6r'l by il SLSbb v doy
+Gud QNTVAd FAVNOSNVAW  Fuvnos AO WAS EG aounos
+
+Jeonsneig Zujsn payeroued siren OOYS pur Joo1 YEA “D *Xq ‘WY 2 SOON DJDjNUDAZ ‘C— puke “] ANIDS DZAIC 10} S292) VAONV ‘A Xipueddy
+
+yideq jooy umuxey, “vy
+
+“CAVLS) Youeasoy JemMyNoUsy Joy [OO]
+
+103
+
+Lee 67 Teo
+19601 €€€6 17 0z jong
+vSE0 60° al vz z quouneor] :adhjousn,
+4909°0 ra) £0 £0 I quouyeorL
+$8S0°0 87'E of TL z adAyouan
+z1€9'°0 s9°0 LOIL'0 1998°7 v doy
+Gs) ud aNIVAd WaAVNOS NVAW wavnos ad aounos
+4o Was
+€870'0 67 TROL,
+2000°0 €r10'°0 0z Jong
+Svv7z'0 Is] 1100°0 7Z00'0 [4 quouneel :odXjousn
+SILL'0 60°0 1000°0 1000°0 I yuouneasy,
+$$00°0 8°9 6%00'0 8600°0 z adkjouan
+676S°0 IL'0 $000°0 Z00°0 v doy
+Gs) ad aNTVA A WUAVNOS NVA wuvnos EC aounos
+40 was
+
+JoqUMN IIL “d
+
+qsIeM AIqyooy “OD
+
+104
+
+sjooy [eae] “D
+
+Aysuaq yysueyjooy “J
+
+el 67 Trio
+85S0'0 SSII'I 0z Joug
+6£66'°0 10°0 £000°0 L000°0 4 quounealy :edAjousy
+L240 €1'0 400°0 400°0 I quouneall
+81€0'0 tb 96770 76S¢'0 Z adijousy
+7980°0 Lard L7El0 Loes‘0 v dou
+Gs) ad aNTVAd WAVNOS NVAW mavnos ad aounos
+ao was
+1818°9S9 6% Te10L
+L190°6 LEET IBT 0z Jou
+£€060°0 Lz pL79'vz 8rS76r z quauneary :edAjous
+7990°0 Ble 6vIZ' bE OvIZ ve I quouneas],
+1000'0 16°91 PST'ESI 180S°90€ z adAyouan
+6480°0 9e% L1Ov IZ 1909°S8 v doy
+aud ANTVA A TAVNOS NVAW
+SLY L8E9 62 ToL
+66p0'11T 8660777 0z ioug
+1S1Z'0 99° €9bb'p81 L268'89€ z quouneary :adhouep
+£S€0'°0 I's €9€6'S9S £9£6'S9S I yuouneal |
+7000°0 €7EL 696'89¢1 8E6'LE6T z adAjouey
+1979°0 99°0 SLTP'EL 1L'£67 v doy
+Gud anTvaAd wavNOS NVAW aavnods aq aounos
+40 WAS
+
+qsIeH weld “J
+
+105
+
+wBuey i00y fo] |]
+
+€€ P7TBEEET 67 ToL,
+76 1861ZE Sty 6£96E9 0z Jong
+€060°0 wz 8E1E'990S28 829°ZEIOSLI Zz quouneall :odAjousy
+7990'0 Sle L€9'ZELSIZ1 1€9°ZELSIZI I quouqeal],
+1000°0 1691 Lov 09¢SbyS 66°02606801 z adhjousn
+6L80°0 97 SLS9'6Pb09L £9°86L1POE v doy
+Gi) ud QNIVAA TUVNOs NVAW wuvnos ad aounos
+40 was
+v9ES‘OL 6z Io
+799£'0 T€ZeEL 0z jog
+ZOLL'O 970 8960°0 LE61'0 z quounealy :odhousp
+€8°0 $00 €L10°0 €L10°0 I quoujear],
+8820'0 68°7 6S0'I 6LIVZ z adXjouan
+vr99'0 90 1120 €¢88°0 v doy
+Gs) ad QNTvAd wavNOs NVIW WAVAOS EC wounos
+40 was
+
+oney 1ooys 0) 3004 “H
+
+106
+
+Appendix G. Randomized complete block design of pots for drought stress experiment
+
+between Oryza sativa L. and O. granulata Nees & Arn. Ex. G. Watt.
+
+NO. GENOTYPE TREATMENT
+1 O. granulata 102118 ww
+2 Oryza sativa R64 (2n) ww
+3 Oryza sativa IR64 (2n) DS
+4 O. grarulata (clone) ww
+5 O. granulata 102118 DS
+6 O. granulata (clone) DS
+7 Oryza sativa IR64 (2n) ww
+8 O. gramulata (clone) Ds
+9 O. gramulata 102118 DS
+10 Oryza sativa IR64 (2n) DS
+iB O. granulata 102118 ww
+12 O. granulata (clone) ww
+13 Oryza sativa 1R64 (2n) DS
+14 O. gramulata (clone) ww
+15 O. granulata (clone) DS
+16 O. granulata 102118 ww
+17 O. granulata 102118 DS
+18 Oryza sativa IR6A (2n) ww
+19 O. gramulata 102118 ww
+
+20 O. grarmulata (clone) ww
+
+21 O. gramulata 102118 DS
+
+2 Oryza sativa IR64 (2n) ww
+
+23 Oryza sativa IR6A (2n) DS
+
+24 O. granulata (clone) DS
+
+25 O. granulata 102118 DS
+
+26 O. gramulata (clone) DS
+
+27 Oryza sativa [R64 (2n) ww
+
+28 O. grarulata (clone) ww
+
+29 Oryza sativa TR64 (2n) DS
+
+30 O. granulata 102118 ww
+
+31 unplanted
+
+32 unplanted
+
+33 unplanted
+
+34 unplanted
+
+unplanted
+
+22 | 23 | 24 | 25
+
+| 29 | 30 31 | 32
+
+35
+
+
+107
+
+Appendix H. Table of means of the root and shoot traits of Oryza sativa L. and O. granulata
+Nees & Arn. Ex. G. Watt seedlings subjected to drought. WW — well-watered; DD
+— drought-treated
+
+A. Maximum Root Depth
+
+TREATMENT
+GENOTYPE DD ww
+Oryza granulata IRGC
+1021 18(clone) 13.9 9.6
+Oryza granulata IRGC 102118(seed) 6.2 5.3
+Oryza sativa IR64(seed) 44.5 29.5
+B. Root Dry Weight
+TREATMENT
+GENOTYPE DD ww
+Oryza granulata IRGC
+102118(clone) 0.05774 0.04494
+Oryza granulata IRGC 102118(seed) 0.02086 0.01582
+Oryza sativa IR64(seed) 0.04708 0.07354
+C.. Tiller Number
+TREATMENT
+GENOTYPE DD Www
+Oryza granulata IRGC 102118(clone) 2 1.8
+Oryza granulata IRGC 102118(seed) 1.4 1.2
+Oryza sativa IR64(seed) 2 3
+D. Plant Height
+TREATMENT
+GENOTYPE DD ww
+Oryza granulata IRGC 102118(clone) 19.1 22.56
+Oryza granulata IRGC 102118(seed) 14.5 18.5
+
+Oryza sativa IR64(seed 30.02 48.62
+
+108
+
+E. Root Length Density
+
+TREATMENT
+GENOTYPE DD ww
+Oryza granulata IRGC 102118(clone) 1.976452 2.228439
+Oryza granulata IRGC 102118(seed) 1.001395 1.397961
+Oryza sativa IR64(seed 5.506869 11.265958
+F. Lateral Roots
+TREATMENT
+GENOTYPE DD ww
+Oryza granulata IRGC 102118(clone) 0.49505 0.4513287
+Oryza granulata IRGC 102118(seed) 0.490397 0.4691086
+Oryza sativa IR64(seed) 0.752124 0.725576
+G. Root to Shoot Ratio
+TREATMENT
+GENOTYPE DD ww
+Oryza granulata IRGC 102118(clone) 0.515688 0.3566658
+Oryza granulata IRGC 102118(seed) 0.806337 0.9855178
+Oryza sativa IR64(seed) 0.34927 0.1849276
+H. Total Root Length
+TREATMENT
+GENOTYPE DD ww
+Oryza granulata IRGC 102118(clone) 372.5611 420.0608
+Oryza granulata IRGC 102118(seed) 188.7629 263.5156
+
+Oryza sativa IR64(seed) 1038.045 2123.6331
+
+109
+
+Appendix I. Least significant difference (LSD) tests and pairwise mean comparisons of drought
+response traits that have significant differences.
+
+A. Maximum Root Depth
+
+1. Genotype
+LSD test
+Alpha 0.05
+Error Degrees of Freedom 20
+Error Mean Square 74.6375
+Critical Value 2.0860
+Test Statistics 8.0594
+Summary of the Result:
+GENOTYPE MEANS N
+Oryza granulata 102118(clone) 11.756 10
+Oryza granulata 102118(seed) 5.75 b 10
+Oryza sativa IR64(seed 37.00 a 10
+2. Treatment
+LSD test
+Alpha 0.05
+Error Degrees of Freedom 20
+Error Mean Square 74.6375
+Critical Value 2.0860
+Test Statistics 6.5804
+Summary of the Result:
+TREATMENT MEANS N
+DD 21.53 a 15
+Www 14.80 b 15
+
+B. Shoot Dry Weight
+
+1. Comparison of Genotype at each level of Treatment
+
+LSD test
+Alpha
+Error Degrees of Freedom
+Error Mean Square
+Critical Value
+Test Statistics
+
+0.05
+20
+0.0045
+2.0860
+0.0885
+
+11
+
+o
+
+Summary:
+GENOTYPE N DD ww
+Oryza granulata 102118(clone) 5 0.0910 ab 0.1201 b
+Oryza granulata 102118(seed) 5 0.0346 b 0.0437 b
+Oryza sativa IR64(seed) 5 0.1323 a 0.3974 a
+2. Comparison of Treatment at each level of Genotype
+LSD test
+Alpha 0.05
+Error Degrees of Freedom 20
+Error Mean Square 0.0045
+Critical Value 2.0860
+Test Statistics 0.0885
+Summary:
+
+TREATMENT N_ Onza granulata Oryza granulata Oryza sativa
+102118(clone) 102118(seed) IR64
+
+DD 5 0.0910 a 0.0346 a 0.1323 b
+
+Www 5 0.1201 a 0.0437 a 0.3974 a
+
+C. Root Dry Weight
+
+1. Genotype
+LSD test
+Alpha 0.05
+Error Degrees of Freedom 20
+Error Mean Square 0.0007
+Critical Value 2.0860
+Test Statistics 0.0249
+Summary:
+GENOTYPE MEANS N
+Oryza granulata 102118(clone) 0.0513 a 10
+Oryza granulata 102118(seed) 0.0183 b 10
+Oryza sativa IR64(seed) 0.0603 a 10
+D. Plant Height
+1. Genotype
+LSD test
+Alpha 0.05
+Error Degrees of Freedom 20
+Error Mean Square 111.0499
+Critical Value 2.0860
+
+Test Statistics 9.8306
+
+Summary:
+
+111
+
+GENOTYPE MEANS N
+Oryza granulata 102118(clone) 20.83 b 10
+Oryza granulata 102118(seed) 16.50 b 10
+Oryza sativa IR64(seed) 39.32 a 10
+2. Treatment
+LSD test
+Alpha 0.05
+Error Degrees of Freedom 20
+Error Mean Square 111.0499
+Critical Value 2.0860
+Test Statistics 8.0267
+Summary of the Result:
+TREATMENT MEANS N
+DD 21.21b 15
+WwW 29.89 a 15
+E. Root Length Density
+1. Genotype
+LSD test
+Alpha 0.05
+Error Degrees of Freedom 20
+Error Mean Square 9.0617
+Critical Value 2.0860
+Test Statistics 2.8082
+Summary:
+GENOTYPE MEANS N
+Oryza granulata 102118(clone) 2.10 b 10
+Oryza granulata 102118(seed) 1.20b 10
+Oryza sativa IR64(seed. 8.39 a 10
+F. Lateral Roots
+1. Genotype
+LSD test
+Alpha 0.05
+Error Degrees of Freedom 20
+Error Mean Square 0.0558
+Critical Value 2.0860
+Test Statistics 0.2203
+
+112
+
+Summary:
+GENOTYPE MEANS N
+Oryza granulata 102118(clone) 0.4732 b 10
+Oryza granulata 102118(seed) 0.4798 b 10
+Oryza sativa IR64(seed 0.7388 a 10
+G. Total Root Length
+1. Genotype
+LSD test
+Alpha 0.05
+Error Degrees of Freedom 20
+Error Mean Square 321981.9722
+Critical Value 2.0860
+Test Statistics 529.3434
+Summary:
+GENOTYPE MEANS N
+Oryza granulata 102118(clone) 396.31 b 10
+Oryza granulata 102118(seed) 226.14 b 10
+
+Oryza sativa IR64(seed) 1580.84 a 10
+
+113
+
+Appendix J. Scanned root images of Oryza sativa L., O. granulata Nees & Arn. Ex. G.
+Watt (seed), and O. granulata (clone) used in the drought stress experiment.
+
+A. O. sativa — Well-watered
+
+B. O. sativa — Drought stressed
+
+114
+
+C. O. granulata (seed) - Well-watered
+
+115
+
+D. O. granulata (seed) - Drought stressed
+
+116
+
+E. O. granulata (clone) - Well-watered
+
+117
+
+F. O. granulata (clone) - Drought stressed
+
+118
+
+119
+
+Appendix K. Boxplots generated for the traits analyzed in the drought stress set-up comparison
+between Oryza sativa L. and O. granulata Nees & Arn. Ex. G. Watt.
+
+Total Root Length (cm) Maximum Root Depth (cm)
+
+4 : 1 r x EEE
+Q a ee a
+Plant Height (cm) Root length Density
+
+° a a ee ee) 3 ? a M Mi
+Root Dry Weight (g) Root to Shoot Ratio
+
+000 © 002 00k 008 0080 os oe v0 © ae oS
+
+120
+Shoot Dry Weight (g) Tiller Number
+
+Percent laterals
+
+00 02 oe 06 08
+

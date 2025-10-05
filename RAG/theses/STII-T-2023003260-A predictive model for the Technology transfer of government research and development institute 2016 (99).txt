@@ -1,0 +1,3600 @@
+%
+A Mette tive Model fat he Techn
+Renereh aed Dooopimen el ast
+
+
+UNIVERSITY OF THE PHILIPPINES
+
+Master of Science in Industrial Engineering
+
+Rea C. Castro
+
+A Predictive Model for the Technology Transfer of Government Research
+and Development Institutes: The Case of MIRDC
+
+Thesis Adviser.
+
+Prof. Nestor O. Raneses
+Department of Industrial Engineering and Operations Research
+University of the Philippines Diliman
+
+Date of Submission
+
+June 2016
+
+Thesis Classification
+
+This thesis is available to the public
+
+0 a
+STI-17-0747
+
+“Thereby grant the University of the Philippines a non-exclusive, worldwide, royalty-free
+license to reproduce, publish and publicly distribute copies of this thesis or dissertation in
+whatever form subject to the provisions of applicable laws, the provisions of the UP IPR
+policy and any contractual obligations, as well as more specific permission marking on the
+Title Page.”
+
+‘Specifically I grant the following rights to the University:
+
+@) To upload a copy of the work in the theses database of the
+college school institute/department and in any other databases
+available on the public internet
+
+b) To publish the work in the college/school/institute/department
+journal, both in print and electronic or digital format and online; and
+
+©) To give open access to above-mentioned work, thus allowing “fair
+use” of the work in accordance with the provisions of the Intellectual
+Property Code of the Philippines (Republic Act No. 8293), especially
+for teaching, scholarly and research purposes
+
+& Gy
+
+Rea C. Castao oliy{u
+Student Name over Signature and Date
+
+
+A Predictive Model for the Technology Transfer of Government Research
+and Development Institutes: The Case of MIRDC
+
+Thesis by
+Rea C. Castro
+2010-79530
+
+BS Electronics and Communications Engineering
+
+In Partial Fulfillment of the Requirements
+For the Degree of Master of Science
+
+In Industrial Engineering - Production Systems Track
+
+National Graduate School of Engineering
+College of Engineering
+University of the Philippines Diliman
+Quezon City
+
+June 2016
+
+THESIS APPROVAL
+
+This thesis entitled A Predictive Model for the Technology Transfer of Government
+Research and Development Institutes: The Case of MIRDC prepared and submitted
+by REA C. CASTRO, in partial fulfilment of the requirements for the degree of MS
+INDUSTRIAL ENGINEERING is hereby accepted
+
+Duh @ Bases
+
+PROF. NESTOR O. RANESES
+Thesis Adviser
+
+Accepted as partial fulfillment of the requirements for the degree of MS INDUSTRIAL
+ENGINEERING
+
+DR. AURA C. MATIAS.
+
+Dean
+
+ACKNOWLEDGEMENT
+
+My thesis journey would not be possible without the intellectual, moral, and emotional
+support of so many people. | would like to express my sincere gratitude and
+appreciation to the following
+
+My Lord and Saviour Jesus Christ for giving me wisdom and strength to accomplish what
+seems to be a very difficult task:
+
+My mother, Sol, for all the love, support, and encouragement.
+
+Prof. Nestor Raneses, my thesis adviser, for his elongated patience and guidance in the
+completion of the study
+
+Mr. Allen Lamarca and Ms. Mara Sherlin Talento, both from UP Los Banos for their
+significant contribution in developing the model and statistical computations of this study:
+
+Deputy Executive Director for R&D - Engr. Jonathan Puerto, Chief of Planning and
+Management Division - Ms. Mercedita Abutal, Section Chiefs of Prototyping Division
+Francisco Dime, Joey Ferrer and Isidro Millo, Section Chiefs and Senior Science
+Research Specialist of Materials and Process Research Division - Ma. Grace Peralta
+Florentino Lafuente, and Lemuel Apusaga, Ma. Girlie Millo and Mervin Gorospe of the
+Technology Diffusion Division for their constructive suggestions and valuable inputs on
+the R&D and Technology Transfer activities of MIRDC:
+
+Gil Macanip, Cornelio Baldon, Vilma Sia, and Mitchell Hernandez for making available
+various data and reference materials
+
+To my officemates - Resty, Norma, and Hazel for helping me in any way possible in
+completing this study
+
+and to all the other people who have made significant contribution to making this
+endeavor possible
+
+ABSTRACT OF THESIS
+
+The technology transfer data of the Metals Industry Research and Development
+Center (MIRDC) covering the period from 2010-2014 showed that the Center's
+penetration rate of each sector of the metals and engineering (M&E) industries, namely
+tool and die, machining, forging, metalcasting, electroplating, heat treatment, and
+welding, was disproportioned. Metalcasting (49%) was the most penetrated sector while
+forging and electroplating (0%) were the sectors least penetrated. Total penetration rate
+for the whole M&E sector was low at 14.66%. In addition, the annual transfer rate for
+Grant-in-Aid (GIA) research and development (R&D) projects peaked at 40% in 2012-
+2013, and dipped to its lowest at 0% in 2010-2011. The total technology transfer rate of
+GIA R&D (28%) was significantly smaller when compared to the transfer rate of Contract
+R&D (100%)
+
+This study aimed to contribute to the improvement of MIRDC's technology
+transfer performance through the: (1) development of a model that has the capability to
+predict the transferability of both Contract and GIA R&D outputs; and (2) identification of
+Critical Success Factors (CSF) for the transferability of these technologies.
+
+The Artificial Neural Network (ANN) technique was used to develop the predictive
+model because of its capability to quantify relationships between numerical and
+categorical variables. The model developed had a 93.75% prediction accuracy and
+6 25% error rate. Using Binary Logistic Regression, it was identified that the CSF for the
+transferability of MIRDC-developed technologies were project duration, project
+value/cost, assistance to the welding sector, and product development R&D type.
+
+It is expected that the results of this study will aid key actors in making a more
+informed decision, particularly in technology transfer. Such that MIRDC’s Top
+Management may be able to formulate evidence-based policies related to R&D project
+planning and implementation. In addition, the results may be useful tools in guiding the
+MIRDC personnel towards better grasp of the R&D process and how the resulting
+technology can be made more effective and efficient for its purpose. Knowing and
+understanding the CSFs affecting the R&D technology transfer will enable MIRDC to
+effectively channel energy and resources to a more successful R&D project
+implementation. This will then redound to more benefits for the M&E industry.
+
+TABLE OF CONTENTS
+
+ACKNOWLEDGEMENT .
+ABSTRACT OF THESIS 00 coe 0+
+TABLE OF CONTENTS
+LIST OF TABLES, FIGURES AND FORMULAE
+1. INTRODUCTION
+2. RATIONALE
+3. STATEMENT OF THE PROBLEM
+4. REVIEW OF LITERATURE
+4.1 Technology Transfer Model
+42 Artificial Neural Network (ANN)
+5. GAPS IN RESEARCH
+6 CONCEPTUAL FRAMEWORK
+7. RESEARCH HYPOTHESIS
+8 OBJECTIVES OF THE STUDY
+8.1 General Objectives
+8 2 Specific Objectives
+9. SIGNIFICANCE
+10. SCOPE AND LIMITATION
+11. RESEARCH METHODOLOGY
+11.1 Sources of Data
+
+11.2 Identification of Significant Input Variables
+
+11.3 Development of the Technology Transfer Model
+11.4 Identification of Critical Success Factors (CSFs)
+
+11.5 Validation of the Technology Transfer Model
+12. RESULTS AND DISCUSSION
+12.1 MIRDC R&D Modalities
+
+12.2 Significant Input Variables
+
+14
+15
+15
+a
+25
+26
+30
+31
+31
+31
+32
+33
+34
+
+35
+36
+a
+42
+43
+43
+
+48
+
+12.3 ANN Technology Transfer Model...
+
+12.4 Critical Success Factors for Technology Transferability...
+
+13. VALIDATION......
+
+14. CONCLUSION.....
+
+15. RECOMMENDATIONS FOR FURTHER STUDY
+46. REFERENCES «0... cccsccssecssee svveneesesetesarnsasnvaneven
+17. APPENDIX ...
+APPENDIX A: Nature and Uses of Metals and Engineering Industries Sector.
+
+APPENDIX B: Graphs of R&D Data
+
+APPENDIX C: MIRDC Developed Technologies Readiness for Transfer and ..
+
+Commercialization Evaluation Form...
+
+APPENDIX D: List of Intellectual Property Applied/Approved
+
+APPENDIX E: ANN Predictive Output for 2010-2014 Completed Projects.
+
+APPENDIX F: ANN Predictive Output for Validation Data
+18. GLOSSARY OF TERMS AND ACRONYMS
+
+vi
+
+49
+53
+55
+58
+60
+62
+66
+
+68
+
+72
+
+72
+73
+74
+81
+83
+
+vil
+
+LIST OF TABLES, FIGURES AND FORMULAE
+
+Tables
+
+Table 1: Classification of Completed Projects According to Value/Cost. co
+Table 2: Classification of Completed Projects According to Duration 7
+Table 3: MIRDC Industry Penetration Rate . oe WW
+Table 4: MIRDC’s Annual Technology Transfer Rate ecceancntananenenseen
+Table 5: Criteria and Weight for Commercialization/Transfer of Technology ..... 13
+Table 6: Technology Transfer Models . 16
+Table 7: ANN Application in Various Fields 24
+Table 8: ANN Data Format 36
+Table 9: Comparison Between Contract R&D and GIA R&D 43
+Table 10: Point Biseral for Quantitative Input Variables 48
+Table 11: Cramer's V of Qualitative Input Variables 49
+Table 12: Weights of the Input-Hidden-Output Nodes. 51
+Table 13: Bias of the Hidden Nodes 51
+Table 14: Bias of the Output Node 51
+Table 15: Output Matrix of the ANN Predictive Model 82
+Table 16: Output Matrix of ANN Predictive Model for Validation Data 55
+
+Table 17: Summarized ANN Prediction Result for Validation Data 56
+
+vill
+
+Figures
+
+Figure 1: Metals and Engineering Industries Sector .........ceeneenue 2
+Figure 2: SIPOC for Contract R&D. 4
+Figure 3: SIPOC for GIA R&D... 6
+
+Figure 4: Basic Neural Network ...........:0
+
+Figure 5: Conceptual Framework........ sevctnntnninteneesee ee)
+Figure 6: Load Training Data Tab 38
+Figure 7: Training Parameters Tab 39
+Figure 8: Training and Testing Tab 40
+Figure 9: Data Visualization Tab .......c:sssnestnensene 41
+Figure 10: ANN Predictive Model Too! . ects
+Figure 11: Trained Information of the ANN Mode! 50
+Figure 12: Binary Logistic Regression Output Display......... ee)
+Formulae
+
+Equation 1: Bias of Node ........cnsecns 22
+Equation 2: Sigmoid Function sone 23
+Equation 3: Data Normalization ocsnentnn enn 37
+
+Equation 4: Binary Logistic Regression 53
+
+1. INTRODUCTION
+
+The Department of Science and Technology (DOST) is the premiere science and
+technology body in the country charged with the twin mandate of providing central
+direction, leadership, and coordination of all scientific and technological activities and
+formulation of policies, programs, and projects to support national development in the
+country (www dost.gov.ph, Accessed: 1 May 2016)
+
+DOST defines Research and Development (R&D) as ‘creative work undertaken
+on a systematic basis in order to increase the stock of knowledge of man, culture, and
+society and the use of this stock of knowledge to devise new application’. The innovation
+process is defined as the integration of existing technology and inventions to create a
+new or improved product, process, or system (Freeman, 1982)
+
+MIRDC is an attached agency of the DOST and is the sole government entity that
+supports the country’s M&E sector It vigorously diffuses various metalworking
+technologies, techniques, and innovations needed for the development of the local metal
+firms to increase their productivity and enhance their competitive advantages leading to
+the creation of both job and business opportunities (www mirdc. dost gov ph, Accessed
+4 May 2016)
+
+MIRDC aligns its initiatives with the identified priority areas of the Department
+which are strategically focused to support the administration's agenda for national
+development. The activities of MIRDC are in line with the mandate of the DOST
+especially on the realization of its major final outputs (MFO) which includes Scientific
+Research and Development (www.mirdc dost gov ph, Accessed: 1 May 2016)
+
+The Center assists metals and engineering industries as well as other industries
+(ie. food, agriculture, transportation and manufacturing) through R&D to come up with
+improved products, processes, materials, and equipment prototypes
+
+The M&E industry plays an important role in the economic development of a
+country. It is the backbone of major industries and plays a substantial role to the growth
+of the country's economy. The industry, although comprised of small independent firms,
+cuts across and caters to different sectors (The Philippine Metalworking Industry Study,
+2014). The local M&E industry can be broken down into seven (7) sectors (Figure
+1)namely: Machining, Metalcasting, Welding, Forging, Too! and Die, Electroplating, and
+Heat Treatment. Each sector is further described in Appendix A.
+
+Figure 1: Metals and Engineering Industries Sector
+Source The Phukpoie Metalworking industry Study. 2014
+
+The “project” is the basic unit in the investigation of a specific Science and
+Technology problem. it has predetermined objective/s to be accomplished within a
+specific time frame (DOST Grant-In-Aid Guidelines, 2008). Driven by a commitment to
+create impact, MIRDC engages in two (2) types of R&D project modalities, the Contract
+R&D and Grant-In-Aid (GIA) R&D:
+
+* Contract R&D - a short-series type of research wherein all implementation
+expenses are shouldered by the customers (Procedures Manual for Acceptance
+of Contract and Joint Research Projects, PM-PD 03-06). The source of idea and
+direction of the R&D project are provided by the customer in accordance to his
+specific needs/requirements
+
+* GIA R&D - projects with allocated funds from DOST or any of its grant-giving
+units, including its sectoral councils. DOST's GIA program provides grants for the
+implementation of programsiprojects identified in the current DOST priorities and
+
+thrusts and supports science and technology activities classified in the General
+Appropriations Act (DOST Grant-in-Aid Guidelines, 2008),
+
+MIRDC has been a recipient of grants from the Philippine Council for Agriculture,
+Aquatic and Natural Resources Research and Development (PCAARRD) and the
+Philippine Council for Industry, Energy and Emerging Technology Research and
+Development (PCIEERD), DOST sectoral councils.
+
+The overview process for conducting Contract R&D and GIA R&D summarized
+using the Supplier-Input-Process-Output-Customer (SIPOC) Technique can be seen in
+Figure 2 and Figure 3, respectively. The SIPOC model shows how the processes for the
+two (2) R&D modalities progresses from idea generation stage to technology transfer
+stage.
+
+START
+Technological
+Customer ape Identify needs Neniaaorised Customer
+Requirements! Generate
+Cid needs idea Solutions identified | Customer
+Details of the R&D
+service, project
+value/cost estimates,
+customer Identified Request workplan, Customer:
+i. solutions service Memorandum of
+Agreement between
+customer and MIRC,
+Project Order
+Project Execution
+pe ela Implement project
+design, drawings,
+MIRDC ‘and specs, supplies Project monitoring Customer
+and matenals, report
+manpower, machine
+‘and equipment
+Work plan, design
+Grawings and specs,
+7 ‘Complete project
+MIRO supplies ans plete pro} Completed project, | Customer
+manpower; machine Technical report
+‘and equipment |
+MIROC | ps ment Release project Completed project | Customer
+
+inspected and
+accepted
+
+End
+
+Figure 2: SIPOC for Contract R&D
+
+Start
+
+Technological
+MIRDC -
+anogorent gaps, prevalent Identify needs ees miRoc
+Committee national problems
+MIRDC -
+Management Identified needs Generate idea Ust of possible MiRDC
+Committee Projects
+Approved project
+MIRO - list, DOST-GIA
+Research & —_| Proposal Evaluation jeenrared
+Development | Guidelines. capsule Prepare proposal | | Project proposal | = MIRDC
+Divisions proposal with with budget and
+budget and work workplan
+plan
+‘Approved proposal
+with LIB and work
+MiRoc- R&D —_| plan: design, Project Funding!
+Divisions drawings and Implement Monitoring Monitoring
+specs; funding project Report and bol)
+production Financial Report
+‘matenals! supplies
+‘manpower,
+machine, &
+equipment
+‘Approved proposal
+with LIB and work Project Funding
+plan; drawing Geliverables, Foes
+WROC- design and specs, Project ency
+Swsees® | fining prosueson | | COmPIMEPTOIECE | | resentation
+‘materials! supplies terminal repon.
+manpower, and other
+machine, & documentations
+
+equipment
+
+
+Transfer Technology
+MiRDC Technology output, technology transferred to
+documentation of the industry MSE and
+technology allied Industry
+firms,
+End
+
+Figure 3: SIPOC for GIA R&D
+
+MIRDC undertakes Contract and GIA R&D activities to come up with new and
+improved products, processes, and materials, as well as equipment prototypes.
+
+Prototype and developmental production using specialized metal casting technologies
+
+and specialized machining processes are done to assist the Micro, Small, and Medium
+Enterprises (MSME's) in ascertaining the commercial and technical feasibility of
+manufacturing various metal products (Philippine Quality Award Application Report)
+
+The Center's R&D data for 2010-2014 was summarized in terms of number of
+completed projects, project value/cost, project duration, sector served, IP availability, and
+
+R&D type as listed below:
+
+* A total of 112 R&D projects was completed of which 78% are Contract R&D while
+22% are GIA R&D.
+
++ There was a decreasing trend in the number of completed projects for Contract R&D
+
+while an increasing trend was observed for GIA R&D.
+
+‘The number of completed Contract R&D projects decreased from 23 in 2011 to 11
+
+in 2014. Inversely, the number of completed GIA R&D projects increased from 2 in
+2010 to 10 in 2013. This is the result of MIRDC’s involvement with DOST’s major
+R&D programs namely the High Impact Technology Solutions (HITS) and Makinarya
+
+Para sa Bayan (MakiBayan). The Center's prioritization of GIA R&D projects then
+
+reduced the number of Contract R&D projects that it was able to accommodate.
+
+
++ The total value/cost of MIRDC completed projects was Php148.950M. GIA and Contract
+R&D projects contributed to the total value by 97% and 3%, respectively.
+
+* Individual value/cost classification of completed projects:
+
+Table 1: Classification of Completed Projects According to Value/Cost
+
+Contract
+Value/Cost Range hee GIARED
+ou i (No.of | (Wo. of Completes
+Completed a
+Projets: 87)
+PhpS,000-PhpS0,000 713% -
+Php50,001-Php300,000 299% ua
+Php300,001-Php 1,000,000 23% a
+Php1,000,001-Php 10,000,000 - ao
+Php 10,000,001-Pnp20,000,000 . bo
+'Php20,000,001-Php30,000 000 G3
+—}_— s $$
+Fao 700%
+
+Source of data: MIRDC Performance Accomplishment Report,
+
+* Duration classification of completed projects
+
+Table 2: Classification of Completed Projects According to Duration
+
+Contract Rap | GIAR&D
+Duration Range | (Wo. of Completed | {N0. of Completed
+Projects: 87) Projects: 25)
+2weeks - 1 month 46% 2
+2 months-6 months 49.4% %
+[7 montns-12 months 35% 28%
+13 months-18 months 11% 16% 4
+
+
+100% soo
+
+Source of data: MIRDC Performance Accomplishment Report,
+
++ The completed projects were classified according to the M&E sector to which the
+output will primarily be beneficial. The top three (3) M&E sectors served by the
+MIRDC through its completed projects were the metal casting, welding, and
+machining sectors.
+
++ Five (5) Intellectual Properties (IPs) were generated from Contract R&D projects
+while 13 IPs were from GIA R&D. Among the IPs from GIA R&D, nine (9) were born
+out of the two (2) major projects of MIRDC, namely the Automated Guide-way Transit
+‘System and the Food Processing Equipment
+
++ The completed projects were also classified according to their R&D types. The top
+R&D types of completed projects were as follows:
+
+- Contract R&D projects: product development, design/drawing, and partprocess.
+localization
+
+- GIA R&D projects: prototype research and basic research
+
+A complete graph of these R&D data can be found in Appendix B
+
+2. RATIONALE
+
+Republic Act No. 10055 otherwise known as the “Philippine Technology Transfer
+Act of 2009" states in its declaration of policies and principles that the State shall call
+upon all research and development institutes that perform government-funded research
+and development activities to include technology transfer in their strategic mission
+(www.lawphil.net, Accessed: 30 November 2016). For the benefit of the Filipinos, results
+of governmentfunded R&D must be effectively translated into useful products and
+services.
+
+Technology, as defined in RA No. 10055, is either a product, process, practice,
+andior innovation. Choi (2009) provided a further definition of the embodiments of
+technology. Technology, as a product, involves tools, machines, instruments, or any
+objects that are intentionally created to extend practical human possibilities. Technology,
+as a process, is concerned with how to use or develop the object effectively. From the
+practice and/or innovation perspective, technology is a way to create a new or improved
+product, process, or system. However, the invisible aspects of technology such as
+knowledge and skills might be much more critical than the physical aspects for the
+successful transfer of technology,
+
+Technology transfer is defined in many different ways depending on the discipline
+of the researcher and the purpose of the research. The definition of technology transfer
+in RA No. 10055 served as the operational definition for this study. It states that
+technology transfer is the process by which one party systematically transfers knowledge
+to another party for the manufacture of a product, the application of a process, or
+rendering of a service, which may involve the transfer, assignment or licensing of
+Intellectual Property Rights (IPR)
+
+‘The MIRDC, being one of the DOST's research and development institutes, has
+to pursue the transfer of its technologies developed from R&D projects in accordance
+with the provisions of RA No. 10055,
+
+In the U.S. and much of the world, university technology transfer has become an
+important mechanism for economic growth. The Association of University Technology
+Managers (AUTM) reported that 567 new products based on university or non-profit
+research were introduced to the market in 2004 alone. From 1980 to 2004, AUTM cited
+
+10
+
+the creation of 4,542 spin-off companies from universities, research institutions, and
+hospitals. Over 65% of innovations licensed by universities and institutions in 2004 were
+granted to small businesses for commercialization purposes (FY 2014 AUTM Licensing
+Survey).
+
+Successful technology transfer can have a significant financial impact for both
+MIROC, as the transferor of the technology, and to the beneficiaries, as its transferee.
+Beyond the financial realm, the benefits may extend to competitive advantages,
+enhanced innovation, creation of new markets and birth of new consumers, vibrant
+culture of entrepreneurship, and long term advantage such as sustainable economic
+growth (Sherer, 2014).
+
+A deeper analysis of the R&D data in 2010-2014 revealed MIRDC’s technology
+transfer performance in terms of industry penetration and number of technologies
+transferred to the industry.
+
+One of the key measures of brand popularity is industry penetration rate
+(Reibstein, 2006). MIRDC’s impact or popularity to the M&E industry can be measured in
+terms of industry penetration rate. However, such parameter was not among the
+performance indicators currently monitored by the Center
+
+The industry penetration rate for each M&E sector was computed by dividing the
+number of transferee firms of R&D technologies developed by the Center with the
+number of existing firms, This study focused on the penetration rate of the MIRDC to the
+M&E sector firms in the National Capital Region (NCR) since majority of firms in the
+country are concentrated in NCR (The Philippine Metalworking Industry Profiling Study
+2012)
+
+Table 3 shows that MIRDC’s penetration rate for each M&E sector was
+disproportioned. Metal casting was the most penetrated at 49.02% while forging and
+electroplating were the least penetrated both at 0%. Further, the Center's total
+Penetration rate of the M&E sector was low at 14.66%
+
+11
+
+Table 3: MIRDC Industry Penetration Rate
+
+Number of Firms antonat genta Penetration
+MAE Industry Served Rate in %
+a Roglon (NCR) ‘cay
+©
+“Machining 6 7 2073
+Metalcasting Fo 3 4902
+| Tooland Die 6 144
+Welding 6 79
+Forging 0 3
+| Heat Treatment 1 13 769
+“Electroplating 0) 15 “0
+Total 56 ‘382 14.66
+
+‘Source of data MIRDC Performance Accomplishment Report 2010-2014 and The
+Philippine Metalworking Industry Profiling Study. 2012
+
+Table 4: MIRDC’s Annual Technology Transfer Rate
+
+| Contract RED — _ GIAR&D
+| Technology T
+2014 © 2013 | 2012 2011 | 2010 | Total | 2014 | 2013 2012 | 2011 | 2010 | Total |
+
+Status
+Completed | 11/14 18 | 23 21 | a7 | 7 | 10> 5 | 1 | 2 | 2
+
+\Transfered | 11/14 | 18) 23) 21) 67) 1 | 4/2/0/0/7
+
+| Transfer ToT T
+| wate 00%: | x00% | 100% | s00% | 100% | 100% | 429% | 40% 40% | 0 | 0 | 26%
+a
+
+‘Source of data MIRDC Performance Accomplishment Report, 2010-2014
+
+Technology Transfer Rate was computed by dividing the number of completed
+R&D projects with the number of projects transferred to the industry. Table 4 shows that
+in 2010-2014, the total technology transfer rate of 28% for GIA R&D was very small
+compared to the 100% of Contract R&D. The annual transfer rate for Contract R&D was
+consistently at 100% for the period. Further, the annual maximum transfer rate for GIA
+R&D was 40% which occurred among projects completed in 2012-2013 while the lowest
+was at 0% in 2010-2011. This data further shows the disproportion of MIRDC’s R&D
+technology transfer statistics
+
+12
+
+In September 2015, DOST issued Administrative Order (AO) No. 009 entitled
+“The Technology Transfer Protocol of the DOST-RDIs”. This protocol defined the
+policies, strategies, and process/procedures to be adopted by the DOST — Research and
+Development institutes (DOST-RDIs) to identify, protect, manage, and commercialize
+IPs and IPRs generated from R&D projects funded by the government and to undertake
+technology transfer activities, based on RA 10055.
+
+‘AO No. 009 was created to define DOST's policy on IP and lay down the
+institutional mechanism for technology transfer activities. This was also intended to guide
+DOST attached offices in performing their roles as government-funding agencies and
+RDIs.
+
+In compliance to AO No. 009, the MIRDC created a Technical Review Committee
+(TRC) represented by technology researchers from various divisions of the MIRDCto
+identify potential technologies for transfer/commercialization (AO No. 009, page 8, item
+VIlL.1.11). The primary task of the TRC was to conduct an initial evaluation to identify if
+the R&D technologies or IPs generated are all set for transfer/commercialization (MIRDC
+Office Order No. 15 Series of 2015)
+
+The TRC initially created an evaluation mechanism, which applies for GIA R&D
+technologies only, based on (1) criteria for commercialization/transfer of technology; and
+(2) completeness of project documents. The criteria for evaluating the technology
+readiness for commercialization/transfer of technology and their corresponding weight
+can be seen in Table 5. The list of required documents for evaluation as indicated in the
+MIRDC Developed Technologies Readiness for Transfer and Commercialization
+Evaluation Form can be seen in Appendix C
+
+B
+
+Table 5: Criteria and Weight for Commercialization/Transfer of Technology
+
+Criteria for Commercialization/Transfer Weight
+Technology (Performance objectives and parameters are
+met; complexity and operation limiting factors)
+
+Process (Adaptability and adoptability to M&E Industry) 20%
+Economic (Cost for additional R&D. site preparation,
+
+50%
+
+regulatory permit, equipment, O&M) 1%
+Market (Broad, specialized and niche demand) 10%
+Perception (Availability of prototype/techno demo, %
+attractiveness)
+
+Regulatory/Policy (Limitation of laws, policy, cultural,
+
+geography and sectors) om
+Total | 100% |
+
+Source MIRDC Developed Technologies Readiness for Transfer and Commercialzation Evaluation Form
+(TABOS 015 Revision 0 dated 26 June 2015)
+
+Since the creation of the TRC in June 2015, it has already evaluated a total of 11 R&D
+projects that were completed within 2010-2014. However, only the criteria on the
+completeness of the documents were considered in these evaluations while the criteria
+listed in Table 5 were disregarded
+
+14
+
+3. STATEMENT OF THE PROBLEM
+
+MIRDC is the sole government agency mandated to offer services that will
+directly cater to the needs and requirements of the local M&E industries. Among the
+services offered by the Center are (1) Research and Development and (2) Technology
+Transfer. Data regarding the Center's technology transfer initiatives from 2010-2014
+showed that the Center's penetration rate for each of the sectors of the M&E industries
+was disproportioned. The data revealed the following: (1) metalcasting sector was the
+most penetrated, with 49% penetration rate; (2) forging and electroplating were the least
+penetrated sectors, with 0% penetration rate; (3) the MIRDC was not quite successful at
+penetrating the M&E sector in general, with only 14.66% penetration rate; (4) the highest
+annual technology transfer rate for GIA R&D, which reached 40%, occurred in 2012-
+2013; (5) the lowest and very dismal technology transfer rate of 0% was recorded in
+2010-2011; (6) the total technology transfer rate of contract R&D is 100%; and (7) the
+total technology transfer rate from GIA R&D was a very poor 28% only
+
+Both the low penetration rate and the low technology transfer rate for GIA R&D
+show that majority of technologies that were developed using government funds are
+underutilized and the benefits that could have been accrued from the utilization and
+transfer to the industry were not entirely felt by the technologies’ potential beneficiaries,
+On the other hand, the seemingly low data on technology transfer also meant an
+emerging opportunity that there is still potential for MIRDC to reach out to more R&D
+technology beneficiaries.
+
+This study aims to find answers to the following problems: How can MIRDC
+improve its performance with respect to technology transfer? What variables affect the
+transferability of the Center's R&D outputs? More specifically, what factors determine
+the success of the MIRDC’s R&D project implementation?
+
+15
+
+4, REVIEW OF LITERATURE
+
+4.1 Technology Transfer Model
+
+Interest in technology transfer goes back to over six decades (Ramanathan,
+1989). Even though technology transfer is not a new business phenomenon, the
+considerable literature on technology transfer that has emerged over the years agrees
+that defining technology transfer is difficult due to the complexity of technology transfer
+process. The definitions depend on how the user defines technology and in what context
+(Bozeman, 2000)
+
+Ramanthan (2000) pointed out that the simplest form of technology transfer could
+be said to take place when the technology owner (the transferor) transfers the
+technology needed by a business partner (the transferee) to sell and service a product
+produced by the owner.
+
+Since the early 1970s, models of technology transfer that could facilitate the
+effective planning and implementation of technology transfer have been proposed by
+technology transfer practitioners. Both qualitative and quantitative models have been
+proposed
+
+‘A comparison of the different models developed over the past few decades can
+be seen in Table 6
+
+‘ABojouys9) peuiaysues a4) Jo
+uoneluisse eunsue 0} a9eid ul
+@q pinoys seunseaw yorldx3-
+
+“ypafoud seysuen ABojoUYyoa
+e jo uonequawejdun
+
+©} Bujuue|d wo panjonut
+
+‘ssaooid ay) jo sabes
+22s (¢) Suy a4) BuUNp aavaysues
+ayy jo
+um joelosd sjsuen ABojouyoay
+au eur
+
+quawenoaul jewiui
+
+sdojenep sosaysues)
+
+Jeusayx@ Buipinoid pue 'pavaysuen
+A6o}0Uy22)
+‘swiaysks uononpoid Buueyy6uens
+pue — jonpoud
+ay) Gundope
+dn-wejs pue yueld jo uoyonysuce
+Buihjioads
+
+yonposd — Burnosduat
+
+pue sseooid
+uononpoid jo
+ubisap jo silejep
+BuluBisap ‘Buruueld apnjoul o
+
+9261
+EPO; sapuatiem
+pue uewysag'z
+
+@q_pinoys aaraysuen ays-| se paoiojuies sem fouapuadag | pasodoid sem ssaooid abeis-2 v
+‘eouabijaju! payejas-yoaloud
+‘oun ut Jo Guuayje6 pue ‘Buuueld a6ues
+
+quiod Aue ye yoaloid ayeumuey
+40 ‘sayeSIW yO@U09 ‘sanIANOe
+uaujbuans 0}
+snus ssadoud yoee 105 sjulod
+uolsi9ap = PUB
+
+aigeyene aq
+
+S@UOISEIIN-
+
+ssoningoe uonewuawejduu!
+
+ssod 0} yosees oy
+pauiwexe —_Ayentsuayesduuoo
+aq Pinoys ssaooid
+
+Jeysuen ABojouyoe} equa ay-
+
+‘ABoj0uys9) Jo aseyound
+ay) 10) swesGoid pie uo Ayeas6
+pepuedap ABojouyoa) jo sieéng
+uaym Gunes ey) payeye: seapi
+pue ‘suua} ‘saniajoe ayy jo AueW
+‘aours Aepo) eouenatas pay
+
+SeH-
+
+yesse aigenyen e Aeme Guini6 sem
+ABojouysa) ay) Jo JeUMO ey) JEU
+uorssaidw ay BuIi6 s0Jaysuedy
+ay) 195 soup, ue) eu pasn-
+
+Jeoi6ojouyoa}
+4s
+‘aa1ajsuey pue JoaysueN ey) YI
+
+-Buo| ‘Buysesai03
+
+ayeyapun 0} 6uuinboe
+
+Jo eoueyodun ay) paziseydw3-
+
+1ev@p ul payloads a1am ssao0id
+
+yoea 40} Ino pauued aq 0} sanIANoY
+aQUeUa|UIEW pue ‘UoNejUaWa|du
+‘uoneydepe
+‘se yons saGeys snouen oyu papinip
+
+‘youeas
+
+sem ssaooid sejsues, ABojoUYyIe1-
+
+(1261)
+jepow Keyezeg 1
+
+NOILVONAWWOD3Y
+
+NOLLV.LINIT/SSSNXVSM
+
+AMVINNNS
+
+{aad073Agq uVvaA)
+MOHLNY N3GOW
+
+sfepow sejsues) ABojouys2! 'g aIGeL
+
+
+‘\uewuounua a9jsued)
+au) oj! siyBisur pooB ure6
+
+pinoys sieBeuew A6ojouyoa-
+
+ABojouyse; jo uoNeyuaWe|dw!
+
+ay) ul saraysuen ayy jo sajor
+
+ay Uo seUljepNB Jayo jou pI-
+
+pue ‘uonejawajdun “Buluueld
+@y) eouenyul ues yey) sjuaWele
+
+(2) _uares payeauijap jepow ay,
+
+(2961) PEM pue
+soupey ‘al1y9S'S
+
+‘ssaooud Jajsues) ABojOUyoe)
+amy 40 au
+wo. qy6u senianoe Buluueld
+
+BujuuiB2q
+
+2y) ul ealaJsueN Oy) eAjoAUl-
+
+S|UBUNILUUIOD Bo:NoseL
+Aneay aunbe: ueyo syelod
+ours Apnys Ayiqiseay injaseo
+yoy eouUaWIICD Jou Pinoys
+Wye Jajsuey AB0}OUY92 |-
+
+‘SOAHEN|U! UOREWWISSE
+uonejuawajdui-sod pue
+
+uonenoGeu oj uonuaHe ent Pled-
+
+iS
+
+Bunooys ajqnoy jo yuauidojenep
+pue ‘uonesado jo jueweoueww0s
+“uononssuos yueld ‘veld uonnoaxe
+
+pue Gulley e jo uoynoexe
+pue uoyesedaid “Sa0INes:
+Bunsejuoo-qns pue juawdinbe
+40} suayddns © yo. uonoajas
+‘Apmjs = BuuaauiBue —ppayieyep
+
+‘serpnjs Buuaaui6ue a1seq ‘papaau
+saiBojouyoa; jo
+qIsea} yaUNseAu!
+pasodoid
+sem jepow sseooid abers-6 ¥
+
+uoneaynuapr
+Aeuiujaid |‘
+
+eid cepnjour 0}
+
+(1861) leudisann,
+pue uewlyea'y
+
+“eas9ysueN
+aus UM Cid lewndo YM
+Jo19ysueR ABo|oUYDe} & BuIAeY
+JO aourpodu ayy ayesodsoou)
+
+pauoquew jon
+
+‘mo} $1 4a)SUeN),
+JO sseuanjoaya ay) ‘JEWS 00}
+40 yeai6 00} sayN9 $1 QL UBUM
+“eavejsuen pue s019)sueN ueaMyaq
+(id) leo1Bojouyoa)
+
+lenuaiog Jo ydaou0s ayy pasodolg
+
+aouelsiq
+
+(og61)
+bey pue yeys'e
+
+yoddns
+
+
+way e 40} paau ayy ayeaulag-
+
+‘ABojouyDe
+pauajsued ay) Jo UoNeoypow
+ayenoey
+yey SeIAnoe uoNejuaWa|dut
+sod 40) paau ayy eziseydw3-
+
+pue
+
+Pauonuew jon
+
+0} senseaw ayy aoeid ur Gumnd
+Aq, aun
+quawajddns siemojjo} ABojouys2-
+
+‘Auepuadepur Jaysuen,
+
+‘SUL JeMOII0} Jo Play Jeo1Bo}oUYyoa,
+ay) BuipesBdn ui ajo, jeaquo e Aejd
+siapea! A6ojouyoay yey) passang-
+
+(2661)
+wry pue ulaly,
+NepOW
+‘oujawoucs;'
+
+“Bulssiw asm sjuaWia|a
+
+“uononpoad jeoxawwi09
+JO JUaWeouaWUIOD pue ad10pOM
+
+uonewwisse pue uogeyjoBou eyj-| jo —antsuayeidwoo —_Bulpnjout
+dn-ves  pue —_Buluorssimuo>
+
+‘saujunos | ‘uojonposd spoo6 jey!deo ‘uBisap (o66L)!
+
+Buldojenep = sajfews = seyjo | pue suojesyioeds SuaauiGue | ssepyuowenueyo'9
+Ut plea aq you Aew si) se Bumyes | Buldojanep —“Apmjs—Auiqiseay
+saysuen | aeasuen ayy UY payonpuod | pue juausenut-aid © yno BuIKUeD
+ABoj0uy22) 0} sud pauoped | aq ued (uoKonpoid spoob jeydes) | :saseyd —ajsueN —_ABo]oUYDay
+@q_pinoys Apms Aynqiseay- | ¢ eseyd seyjeyr seajoun sem y-| (s) any pasodoid japow euL
+WuaWUOIIAUd
+seyeei5 ayy pue yuauiuouiaua
+aargjsuen “wsiueyoous
+-ypafoud s2ysueN ABo}OUYDa} yesuen = ‘pauiajsue) Bulag
+Bunuewejdu! pue Guruued ‘ABojouys) ‘seuaysuey “1019)SUeR
+uaym juewuounue seye06 oy qoafoid §—sasuen AB ojouyoay
+pue "Juowuonaua s019jsueN) yasuen | fue Jo ssaoons _jenjuana
+
+
+quae 19jsueN Jo a0104o soNEq
+
+40} ABojouyoa),
+J0__seoinos ajdyinw _Ayuepy
+
+Pauonuew jon
+
+{ABojouyo2
+peau oy)
+siojpey jeyew-uou pue yeyew)
+quawuomue puewep ‘(eaajsues
+au) quaidioas saysuen ‘(peueysuen
+Bureq A6ojouyoa, ay) jo Woy
+
+eau 40) SIA-B-SIA
+
+Pue juajU0d 8y}) welgo sejsueN
+
+‘wsiueysew s9jsuen “(s019JsueN
+au) quabe s9Jsuen ae sseooid
+
+Jaysuen ay) jo swwowiala Kay aul
+
+(0002)
+uewezog/iepow
+ssauenyoayg
+quaBuquog’¢
+
+queyoduy ave sosajsuen
+JO ad|0yo seyEq e BulqeUe 40}
+ABojouyD2} Jo Sa0inos 2
+Gurkmusp! Jo) peau auL
+
+nu
+
+uo|sioap uonisinboe A6ojouyoa},
+aun ym paddojs japow ay,
+
+uorsioap uonisinboe ABojouy29y
+eu But
+8q pinoo ABojouyse) pauyep ey)
+alayM Woy sedunos Bulysiqeyse
+paynuap!
+‘suognjos ABojouyoa)
+
+yeuy pue —_pauinboe
+
+‘suonnjos  A60jouyo9}
+Burkyssejo
+Burkyquapt
+ayew Burysigerse :sdays (¢) any
+
+‘sjuawainbe: aoeid
+
+J paysisuos Jeysuen ABojouyoaL
+
+(9661)
+e ye weung
+Napow dueuE9'g
+
+‘SOAHENIU!
+
+sepea|
+au) Woy pauajsuen AB0joUy29}
+2yj ezie90) pue “Aypow ‘ayeywisse
+
+
+“pazijeloseuuco aq youueo
+suoye GRY UE4M Sasso] jesse
+Buyeyns jo ysu ayy eonper
+
+0} xapul uonezieriaui09
+ssegons ABojouyo9y
+Bunoipeid 10) paride aq
+ueo japow uonenbe jeumonas
+
+Pauonueu oN
+
+6
+an uo|sioap-pue_—sishjeue
+
+jepow
+
+uo1ssai69) seaul) ‘sishjeue 4omyou
+el00s Guluuopad pue eyep juayed
+Bulssaoo1d-aid fq payonnsuoa
+sem japow anjoipaid ay
+
+‘eJep juayed au) ul! papnjout
+sajgeuen jo abues e pue sajsuen
+‘ABojouyoa} useMyaq suone|as au)
+Ayquenb 0} sisfjeue yuayed Buisn
+Jejsuen ABojouyoa) 40) |apow
+a@anoipaid e@ pasodoid jepow ay|-
+
+(S102) ousnepow
+annoIpaid Ob
+
+
+a
+
+Available studies on technology transfer model are mostly qualitative which often
+focuses on the delineation of activities involved in managing technology transfer
+(Jagoda, 2007) and on the elements that can influence the planning, implementation,
+and eventual success of any technology transfer project
+
+On the other hand, the quantitative technology transfer mode! emphasized the
+need for partners in technology transfer projects. Such would be vital in developing skills
+in using formal, analytical approaches to generate needed information for a more
+efficient technology transfer planning (Ramanathan, 2008).
+
+This study aims to improve the technology transfer performance of the MIRDC by
+developing a predictive model using the Artificial Neural Network (ANN) Technique. The
+predictive model using patent analysis developed by Choi et al. was used as reference to
+create a more precise technology transfer model based on various statistical techniques
+and machine learning algorithms.
+
+ANN is considered as a powerful statistical modeling technique in technical
+sciences. A number of authors have shown the interest of using ANNs instead of linear
+statistical models (Ibrahim, 2013). This statistical technique was primarily chosen
+because of its capability to quantify the relationship between numerical and categorical
+data that are part of this study.
+
+4.2 A
+
+ficial Neural Network (ANN)
+
+Predictive modelling is the technique of using historical information on a certain
+attribute or event to identify patterns which will assist in predicting a future value of the
+same with a certain probability attached to it (Dion, 2011)
+
+Artificial Neural Network (ANN) is a highly simplified model of the biological
+network structure used in engineering, such as in pattern recognition, forecasting, and
+data compression (Mandal, et al, 2009)
+
+ANN is trained to perform particular function by adjusting the values of the
+connection (weights) between elements (based on a comparison of the output and the
+target) until the network output matches the target. This is so that the network can
+
+22
+
+predict the correct outputs for a given set of inputs. This situation is illustrated by Nasr
+(2011) as shown in Figure 4.
+
+4
+Threshold
+a Activation
+Function
+fix) = semoid
+4 Wy 5 jy am > 9
+linet Ouput
+Summing
+Function
+
+&
+
+Inputs Synaptic
+Weights
+
+Figure 4: Basic Neural Network
+
+‘Source Application of Artificial Neural Network (ANN) for the Prediction of EL-AGAMY
+Wastewater Treatment Prant Performance-EGYPT
+
+The basic component of a neural network is the neuron, also called “node”.
+Inputs are represented by ay, az and a, and the output by O,, There can be many signals
+to a node which manipulates inputs to give a single output signal. The values W;,, W2,
+and Ws are weight factors associated with the inputs to the node. Weights are adaptive
+coefficients within the network that determine the intensity of the input signal. Every input
+(21, 22...2,) is multiplied by its corresponding weight factor (W,, Wa,...Wq) and the node
+assumes summation of these weighted inputs (W,"@1, W2'@2...Wy*a,) to estimate an
+
+output signal using a transfer function.
+
+The other input to the node is the node's internal threshold, b,, also called bias.
+This is a randomly chosen value that governs the nodes net input through the following
+
+equation
+
+Equation 1: Bias of Node
+Uj = (Wij * ai) + bj
+
+23
+
+Node’s output is determined using a mathematical operation on the node's net
+input in a linear and non-linear manner. One of the most commonly used transfer
+function is the Sigmoid Function:
+
+Equation 2: Sigmoid Function
+
+F@)= 7S ossm@si
+
+Ozesmi et al. (2004) listed the advantages of ANN over more traditional methods
+as follows: (1) form of relationships need not be specified (no assumptions needed on
+the distribution of data; (2) non-linear relationships or interactions among variables are
+easily modeled; (3) performance is usually better than general linear models; (4)
+complex data patterns can be handled because of their non-linear nature; (5) ability to
+generalize to new data. ANN can capture many kinds of relationships, thus, it allows the
+
+user to make a model phenomenon quicker and relatively easier.
+
+ANN has been applied to several fields during last years (Arbib, 2003; Hu, 2003)
+However, there are some fields in which the use of ANN's is still scarce; technology
+transfer is one of these. Some of the articles published on the application of ANN in
+various fields for 2008-2015 are found in Table 7.
+
+24
+
+Table 7: ANN Application in Various Fields
+
+Author
+
+‘Area of ANN
+Application
+
+‘Source
+
+Bayzid, S. et. al (2008)
+
+‘Social Computing in the
+Context of Third World
+Countries
+
+Retrieved from:
+httpuwww.cs.utexas.edu
+Retrieval Date: 14 March 2016
+
+Kaminski, W et. al
+(2008)
+
+Air Quality Management
+
+Retrieved from:
+
+hitps:/www.researchgate.net/publication/4
+371573
+
+Retrieval Date: 14 March 2016
+
+DOI: 10.1109/1CSEng 2008.14
+
+Moon J. et. al (2009)
+
+Residential Thermal
+
+Retrieved from:
+https://deepblue lib. umich edu
+
+btaleia Retrieval Date: 14 March 2016
+Retrieved ror
+Sustainable Development | htps:/www.researchgate.neUpublication/2
+Yoru, ¥. et. a1(2008) | for Thermodynamics 212263
+
+‘System
+
+Retrieval Date: 14 March 2016
+DO1-10,1103/PhysRevE 78.057202
+
+Suzuki, K(2011)
+
+Biomedical Applications
+
+Retrieved from
+http:/Awww intechopen.com/
+Retrieval Date: 14 March 2016
+ISBN. 978-953-307-243-2
+DOI: 105721644
+
+Nasr, Met, al (2012)
+
+Wastewater Treatment
+
+Retrieved from
+http www sciencedirect com!
+Retrieval Date: 14 March 2016
+DOI: 10.1016, ae) 2012.07.05
+
+Tuckova, J. and
+‘Sramka, M. (2012)
+
+Emotional Speech
+Analysis
+
+Retrieved from.
+http:ww inderscienceonline com’
+Date Retrieved. 14 March 2016
+DO! 10 1504/JDATS.2012.047819
+
+Retrieved from
+Knaze, S Estimation of Election | tp /arxiv.org/ip/arxvipapers/1309/1309 2
+et.al (2013) Participation 183 pat
+_ Dale Retrieved 14 March 2016__|
+Mehidi, S. ‘Assess Risk in Cement | Retrieved from: http:/Awww omicsgroup org/
+Date Retrieved: 14 March 2016
+oe id DOI: 10.4172/2169-0316 1000138
+> haa Reineved from_ http Zhww degruyter com!
+iaseck’, A. et. al Woler Level Modeting Date Retneved: 14 March 2016
+(2015) Online ISSN. 2300-7575
+
+DOI. 10.2478Aimre-2015-0003,
+
+
+25
+
+5. GAPS IN RESEARCH
+
+The following are technology transfer issues identified in existing studies
+
+* Available studies on technology transfer model are mostly qualitative which often
+focus on the delineation of activities involved in managing technology transfer
+while studies on quantitative model particularly on predictive modelling are very
+sparse (Ramanathan, 2005).
+
+* None of the existing technology transfer mode! developed was capable of
+incorporating numerical and categorical data at the same time.
+
+‘* Application of ANN have been applied to a huge amount of fields during the last
+years (Arbib, 2003 and Hu, 2003). However, there are some fields in which the
+use of ANN is still scarce such as in predicting the transferability of a technology
+
++ There is no available research on quantitative technology transfer model that has
+the capability to predict whether the technology is transferable or not based on
+government RDI factors for R&D project implementation
+
++ There is no available research on technology transfer model that is capable of
+identifying the critical success factors under which a government RDI such as
+MIRDC will be able to transfer developed technologies to the industry.
+
+This study altempted to address these issues by developing a technology
+transfer model using the Artificial Neural Network (ANN) Technique that will be used to
+predict the transferability of technologies developed by the MIRDC. The critical success
+factors for transferring these technologies to the industry will also be identified using
+binary logistic regression.
+
+26
+
+6. CONCEPTUAL FRAMEWORK
+
+This study utilized historical data for completed Contract R&D and GIA R&D projects
+of the Center.
+
+The output variable is the transferability of the technology while the six (6) input
+variables include the following: (1) R&D modality, (2) project duration, (3) project value,
+(4) R&D type, (5) M&E Sector Served, and the (6) availability of IP applied/approved.
+
+The above mentioned variables are defined as follows:
+
+a. Technology transferability - the technology generated through the Contract
+R&D or GIA R&D projects of the MIRDC is either (1) transferred or (0) not
+transferred to the industry
+
+. Transferred - Contract and GIA R&D technologies are transferred to the
+
+industry by means of the following
+
+¥ when a customer availed of the short-series R&D type offered by the
+MIRDC and accepted its output upon its completion; and
+
+¥ through the availability of a project collaborator who have expressed
+willingness to engage in the R&D project implementation. The collaborator
+has to have the complementary assets and resources to hasten the
+completion of the project
+
+* Not Transferred - Contract and GIA R&D technologies were not able to be
+transferred to the industry
+
+b. Project duration - period or timeframe (in terms of months) that covers the start
+and completion dates of the project
+
+¢. Project value/cost - expenses (in terms of Pesos) that is incurred during project
+implementation considered indispensable to its operation
+
+7
+
+d. R&D type - specific R&D services applied that can be categorized in any of the
+following:
+
+* Product Development - process of designing and creating new products or
+services beneficial to customers and is sometimes referred to as New Product
+Development; may involve modification of an existing product or its presentation,
+or formulation of an entirelynew product that satisfies a newly defined
+customer want or market niche (http://www.businessdictionary.com, Accessed:
+41 March 2016)
+
+* Prototype - an early sample, model, or release of a product to test a concept or
+process; a thing to be replicated or learned from and on which future designs will
+be based (Blackwell, 2015)
+
+* Basic Research - experimental or theoretical work undertaken primarily to acquire
+new knowledge of the underlying foundations of phenomena and observable
+facts, without any particular application or use in view (OECD, 2002)
+
+* Process improvement - systematic approach of addressing process or system
+performance gaps through streamlining and cycle time reduction, and
+identification and elimination of the causes of below specifications quality,
+process variation, and non-value-adding activities
+(http://www. businessdictionary com, Accessed: 11 March 2016)
+
++ Pre-feasibility studies - usually include a range of options for the technical and
+economic aspects of a project and are used to justify continued exploration, to
+complete the required project permitting or to attract a potential partner
+(htip:/www.caseyresearch com, Accessed: 11 March 2016)
+
+*  Design/Drawing - consist of the detailed specification of a manufactured item
+parts and their relationship to the whole, how the item will perform its intended
+functionality in an efficient, safe, and reliable manner needs to be taken into
+account in its design/drawing (http://www businessdictionary.com, Accessed: 11
+March 2016)
+
+28
+
+*  Part/Product Localization - process of adapting any aspect of a part or
+product for a specific locale or market. It is the practice of adjusting a
+product's functional properties and characteristics to accommodate industry
+requirements (http:/Awww.businessdictionary.com, Accessed: 11 March 2016)
+
+* Product Improvement - development and market introduction of a new,
+redesigned or substantially improved product
+(http:/www.businessdictionary.com, Accessed:11 March 2016)
+
+* Testing and Analysis - the process of measuring the performance of a product
+(http://en.wikipedia.org, Accessed: 11 March 2016)
+
+e. M&E Sector Served - any of the seven (7) M&E industries sector that would
+primarily benefit from the completed project namely: Machining, Metalcasting,
+Welding, Forging, Tool and Die, Electroplating. and Heat Treatment.
+
+f. Availability of IP - the availability (1) or non-availability (0) of an IP generated
+through the R&D projects. IP could either be on applied or approved status by the
+Intellectual Property Office.
+
+METALS INDUSTRY
+RESEARCH AND
+DEVELOPMENT CENTER
+
+Contract R&D
+
+Grant-in-Aid
+RED
+
+R&D
+Modality
+
+Project
+Duration
+
+Project
+
+Sector
+Served
+
+1P
+
+| |
+
+Technology Transfer Model
+
+(Artificial Neural Network)
+
+Transferred
+a)
+
+Not Transferred
+(0)
+
+Figure 5: Conceptual Framework
+
+29
+
+30
+
+7. RESEARCH HYPOTHESIS
+
+This study attempts to prove the following hypothesis
+
+1. The use of Artificial Neural Network Predictive model will improve the
+technology transfer performance of the MIRDC
+
+2. The input variables listed below have significant association with the
+transferability of the MIRDC generated technologies:
+
++X) R&D Modality + Xs- Sector Served
+‘+ X2- Project Duration © X- IP Availability
++ X- Project Cost + X:- R&D Type
+
+3. The following input variables are critical success factors for transferability of
+
+technology
++ X,- R&D Modality + Xr- Sector Served
++ X2- Project Duration + X:- IP Availabilty
+
+© X= Project Cost © X- R&D Type
+
+31
+
+8. OBJECTIVES OF THE STUDY
+
+8.1 General Objectives
+
+The study aims to improve the technology transfer performance of the MIRDC by
+developing a model that has the capability to predict the transferability of technologies
+generated from the Contract R&D and GIA R&D projects implemented by the Center.
+
+8.2 Specific Objectives
+
+Specific objectives of this research are as follows:
+
+1. To describe the transfer process for both Contract R&D and GIA R&D
+technologies:
+
+2. To determine the input variables with significant association to the
+transferability of Contract R&D and GIA R&D technologies: and
+
+3. To identify the critical success factors for the transferability of Contract R&D
+and GIA R&D technologies
+
+32
+
+9, SIGNIFICANCE
+
+It is expected that the use of the predictive technology transfer model and the
+application of CSFs in R&D implementation will increase the number of transferred GIA
+R&D technologies to the industry.
+
+The output of this study will help MIRDC Top Management make more informed
+decisions and will limit subjective judgments in policymaking and strategy
+implementation on its R&D projects
+
+The result of this study is expected to guide the Center's R&D personnel towards
+a better understanding of the R&D process and how the resulting technology can be
+made more effective and efficient for its purpose. Knowing and understanding the CSFs
+affecting R&D technologies transferability will result to a strategic focus and more
+efficient channeling of energy in the attempt to successfully implement a project
+
+The stakeholders including the small and medium enterprises in the M&E and
+other allied industries, academe, and other government agencies would also benefit from
+this study as they will be the direct recipient of a more effective R&D service from
+MIRDC. The public resources allocated to develop the R&D. whether it be from the
+customer for the Contract R&D or from government funds for the GIA R&D, can be used
+efficiently since continuous benefits for new/existing scientific and technological
+knowledge is ensured
+
+33
+
+10. SCOPE AND LIMITATION
+
+1. The study used historical data on completed R&D projects from 2010-2014
+culled from various reports submitted to the MIRDC's Planning and
+Management Division and to the DOST's Planning and Evaluation Services
+Division
+
+2. The MIRDC penetration rate focused mainly in NCR since majority of the
+MIRDC customers are from the area, where M&E firms are highly concentrated.
+
+3. The context of technology transfer as discussed in the study only refers to the
+context of technology transfer as implemented in MIRDC.
+
+34
+
+11. RESEARCH METHODOLOGY
+
+11.1 Sources of Data
+
+MIRDC's historical data for completed Contract and GIA R&D projects for 2010-
+2014 taken from various reports prepared by the two (2) divisions under the R&D
+Directorates such as the Materials and Process Research Division (MPRD) and
+Prototyping Division (PD) were used in this study
+
+Data such as project title, R&D modality, project value/cost, project duration, and
+name of the transferee firms were taken from the performance reports submitted
+annually by MPRD and PD to the Center's Planning and Management Division (PMD).
+The annual list of applied/approved IPs of the Center were taken from the DOST Annual
+Performance Reports. In determining the R&D type of each projects and the specific
+M&E industry it serves, assistance from plantila personnel belonging to the both division
+was secured
+
+To verify and secure some missing data from the references mentioned above.
+the researcher referred to other available documents of the Center such as Job Order
+Forms and Job Order Logbooks of the MPRD and PD. Other references used include
+“The Philippine Metalworking Industry Profiling Study for 2012", Work Instructions and
+Procedures Manual of MPRD, PD, and the Technology Diffusion Division (TDD).
+
+Information on the criteria used to evaluate the readiness of the technologies for
+transfer and the evaluation result of R&D technologies was secured from the Technology
+Review Committee Secretariat
+
+Unstructured interviews with at least five (5) personnel from the R&D Directorates
+who were actively involved in R&D project implementation and were acting in the
+capacity of Supervising Science Research Specialist (SRS)/Senior Science SRS were
+conducted to gather additional information with regards to the MIRDC’s R&D processes
+Results of the interviews were recorded electronically and were later transcribed
+
+35
+
+A total of 143 projects was initially gathered as data for this study. However,
+some attributes of these projects are either lacking or was inconsistent with the other
+available reference materials of the Center. A total of 31 projects with such issues was
+removed from the list thereby retaining a total of 112 projects composed of 87 Contract
+R&D and 25 GIA R&D.
+
+11.2 Identification of Significant Input Variables
+
+Stata Statistical Program Software was used to perform Point Biseral
+Computation and Cramer's V. The software will quantify the relationship of the
+quantitative and qualitative variables in the study.
+
+Point Biseral Correlation technique was used to determine the measures of
+association between the quantitative input (project value/cost and duration) and output
+variables (transferability of the technology). The maximum value for the measure of
+association is 1 when the variables have a perfect relationship with each other. The (+)
+and (-) sign determines whether the variables have a positive or negative association
+with each other, respectively.
+
+Cramer's V was used to calculate the strength of association between the
+qualitative input and output variables of the technology. The data has four (4) qualitative
+input variables namely: R&D Modality, Sector Served, IP Availability, and R&D Type
+The value of Cramer's V varies between 0 and 1. Close to 0 shows little association
+between variables while close to 1 indicates a strong association
+
+Only the input variables with significant association to the output variables were
+included in the development of the technology transfer model
+
+36
+
+11.3 Development of the Technology Transfer Model
+
+The ANN technique was applied to create a predictive technology transfer model
+
+with the aid of a Spice-Neuro Program. Spice-Neuro is a 3-layer neural network program
+with multi-inputs and outputs created by Cao Thang in Japan on 2003-2007
+
+The following procedures were observed to develop the technology transfer model with
+
+the aid of Spice-Neuro software:
+
+Step 1: Prepare the data
+
+Data was prepared using the excel format found below’
+
+where
+
+Table 8: ANN Data Format
+
+[wl] x |x | x x | x | ¥, | Laber
++ | GA | 6 | 4900000 | weism | prefs | Nottanstered | _Oatat
+2| GA 10 2100000 | welim: | pratonce | Nottontores | ae
+| xXon | xin | xan | xan | Xen Xén atan
+
+x a)
+
+1. ID. Order of Dataset
+
+2. Input Data
+
+a
+
+b.
+c
+a
+e
+
+x
+
+x.
+x
+
+Xe
+
+x.
+
+R&D Modality
+Project Duration
+Project Cost
+Sector Served
+R&D Type
+
+3 Output Data
+Y1_ Transferabilty of Technology ( Transferred or Not Transferred)
+
+a
+
+4° Label Label of each dataset
+
+Prior to loading the data in the program, non-numerical data were converted to
+
+‘numerical values using the following quantification
+
+37
+
+1. X,- R&D Modality
+a. GIAR&D-0
+b. Contract R&D-1
+
+2. Xq- Sector Served
+
+a. Welding - 1 d. Machining - 4
+b. Electroplating - 2 e. Metalcasting - 5
+c. Heat Treatment - 3 f. Tooland Die -6
+
+3. Xs- R&D Type
+
+Basic Research - 1 Product Improvement - 6
+Product/Part Localization - 7
+Prototype - 8
+
+Testing and Analysis - 9
+
+Design/Drawing - 2
+Pre-feasibility Study - 3
+Process Improvement - 4
+
+zoos
+
+eagge
+
+Product Development - 5
+
+4. Y,- Transferability to the industry
+a. Transferred - 1
+b. Not Transferred - 0
+
+After all the variables are converted numerically, the data value e, for the variable E
+in the 7” row is normalized using the formula.
+
+Equation 3: Data Normalization
+
+. . ei — Emin
+Normalized (ei) = ——————_
+Emax — Emin
+where
+
+Emm = minimum value for variable E
+Ena= maximum value for variable E
+
+38
+
+‘Step 2: Load the data
+
+Figure 6: Load Training Data Tab
+
+a. Inthe “Load the Training Data” button, required parameters were filled-in:
+
+Number of inputs: 5*
+Number of outputs:
+Number of data sets: 112*
+
+based on the actual dataset used for this study
+
+b. Clicking the “Browse from Text Files” button loaded the data into memory. Each
+dataset of the loaded data can be viewed on the right side of the screen.
+
+Step 3: Test and train the data
+In the “Training Parameters” tab:
+
+a. “Random Input” button under inputs option and “Randomly Split” button under
+splitting data options were selected
+
+39
+
+b. “Sigmoid” was chosen as the activated function for hidden layer and “Linear” as
+activated function for output layer
+
+Figure 7: Training Parameters Tab
+‘Source Splice MLP Program
+
+c. Filled-in the required data for the following:
+Number of hidden neurons: 5*
+Learning Rate: .05 *
+Required Mean Square Error (MSE): .05"
+‘Stop conditions: Stop after: 1,000 iterations"
+Stop after: 5 minutes
+Split ratio: 55%"
+
+“Optimal figures resulting to the lowest MSE value
+
+Note: A trial and error approach was carried out for every iterations to identify the optimal
+figures for each parameters resulting to the lowest MSE value.
+
+d. “Split” button was clicked
+
+Step 4: Train the Network
+Under the Training and Testing tab:
+
+a. “Reset Initial Weights” was ticked to reset the weights for all connections of the
+Neural Network (NN)
+
+b. Clicking the “Train” button trained the NN. The last trained information of the NN was
+displayed in a text box on the right side of the screen.
+
+Figure 8: Training and Testing Tab
+‘Source Spice MLP Program
+
+Note: All the data obtained were divided into training and testing data as contained in the
+neural network training algorithm. Training data was used to adjust the weights
+and biases of the neural network while the testing data was used only for testing
+the final solution in order to confirm the actual predictive power of the network
+
+¢. Save Weight to Text File - save weights of a current NN to a text file to enable
+inspection of values for each connection of the NN
+
+a
+
+‘Step 5: View graphs of input and output of data and outputs of NN
+
+Figure 9: Data Visualization Tab
+Source Spice MLP Program
+
+a. From the “Data Visualization’ tab, the graph of the input and output data as well as
+the output of NN can be viewed when “View Data’ was selected
+
+b. "Save Data with NN Outputs and Desired Outputs” options under Save Modelling
+Data were selected before clicking “Save Modeled Data’
+
+11.4 Identification of Critical Success Factors (CSFs)
+
+Critical Success Factors are sets of project variables or factors that are strongly
+correlated to project success and whose maximization or minimization, depending on
+whether they are favourable or unfavourable, will lead to project success (Ofon, 2003). CSF
+represents the few key input variables that were strongly associated to the R&D technology
+transferability to the industry
+
+Logistic Regression was performed using Stata Statistical Software to identify the
+CSF of R&D projects based on the result of the ANN Technology Transfer Model. Logistic
+Regression measured the relationship between the categorical dependent variable and one
+‘or more independent variables by estimating probabilities using logistic function. Binary
+
+42
+
+Logistic Regression was specifically performed since the outcome of this model was coded
+as: 1-Transferred and 0-Not Transferred.
+
+11.5 Validation of the Technology Transfer Model
+
+The Technology Transfer Model developed using ANN was validated by testing the
+R&D project data completed in 2015 in the ANN Technology Transfer Model and Binary
+Logistic Model
+
+‘An output tool of the ANN Technology Transfer Model was created using Visual
+Basic application as shown in Figure 10. The tool comprised of fields that have to be filled
+out in accordance to the 2015 data for completed projects to process the predictive result.
+The numerical value and its corresponding prediction is found in the “Status” portion.
+
+The threshold of the predicted value was set at 0.5. Predicted value of 0.5 and above
+will register a “Transferred in Industry’ status while value below 0.5 will register “Not
+Transferred in Industry’
+
+Figure 10. ANN Predictive Model Tool
+
+ource Visual Basic Output Window for
+
+
+43
+
+The same set of data was fitted into the Binary Logistic Regression equation. The
+
+threshold of the computed value was set at 1. Computed value of 1 and above will register
+
+“Transferred in Industry” status while below 1 will register a “Not Transferred in Industry”
+
+status.
+
+12. RESULTS AND DISCUSSION
+
+12.1 MIRDC R&D Modalities
+
+Table 9: Comparison Between Contract R&D and GIA R&D
+
+Attributes
+
+Purpose
+
+Contract Research and Development
+
+GIA Research and Development
+
+It is an agreement under which MIRDC
+conducts research for a specific area
+under its capability in behalf of the
+‘customer. (Source: Procedures Manual of
+MIRDC’s Prototyping Division [PM-PD 03-
+06 - Acceptance of Contract and Joint
+Research Projects})
+
+The technological intervention to be
+developed is based on the specific
+needs/requirements of the customer
+
+availing the R&D service.
+
+Develops technological interventions to
+areas identified in the current DOST
+priorities and thrusts and supports S&T
+activities classified in the General
+Appropriations Act (GAA). GAA indicates
+the detailed breakdown of the approved
+budget allocation for all government
+offices in the country (Source: DOST-GIA
+
+Guidelines, 2008)
+
+The Center's GIA R&D_ implements
+Programs or projects identified in the
+
+current DOST priorities and thrusts.
+
+DosT's
+Aquino’s administration include: (1) Use
+
+priorities under President
+‘S8T to Solve Pressing National Problems;
+(2) Develop Appropriate Technologies to
+Create Growth in the Countryside, (3)
+Improve (4)
+Use S&T to Enhance Government and
+
+Industry Competitiveness;
+Social Services; and (5)Enhance Capacity
+in Emerging Technology. (Source: DOST
+Website, Date Retrieved: 5 March 2016)
+
+
+44
+
+Source of the idea and direction of the
+R&D project are provided by the customer
+
+‘Sources of idea and direction of the R&D
+Project may come from any of the
+following: (1) instruction of MIRDC top
+management; (2) suggestions from DOST
+grant-giving sectoral councils; and (3)
+
+in accordance to his specific
+ours ory needs/requirements. newly-identified initiatives in line with the
+BED idea Priorities and thrust of DOST.
+(Source: Procedures Manual of MIRDC's
+Prototyping Division [PM-PD 03-10 -
+Identification, Selection] and Acceptance
+of GIA Projects)
+Mm Jaton to th , | Al expenses in relation to the projet
+expenses in felgtion 1 Ie ProIe°! | implementation are funded by the DOST
+implementation are shouldered by the
+ti or any of its grant-giving sectoral councils
+customer such as Philippine Council for Agriculture,
+5 1 | (Source: Procedures Manuel of Minoe's | “ate and Natural Resources Research
+jource of | (Source: Procedures Manual ‘Ss
+Fund oem D ppb 03.06 | 202 Development (PCARRD) and
+unds ying Division [PMs -
+Laat f Philippine Council for industry, Energy and
+Acceptance of Contract and Joint
+Emerging Technology Research and
+Research Projects))
+Development (PCIEERD)
+(Source) GIA Guidelines, | DOST
+‘Administrative Order No. 004)
+There is no specific mechanism how
+Customers, such as individualsifirms who | MIROC ‘dentifes potential sources of
+souen op | 12100 the RED serie, are the source demand/adoptor of the technology. The
+]ource OF |) + he demand for the technology. Center only knows in general terms the
+Comend potential beneficiaries.
+Tearine | these customers are arecty ivoWved
+echnoloay | seroughout the entire period of R&D |AS Such. the adoptor (if there would be
+implementation any) may not be entirely involved in RED
+implementation as they are only identified
+later on
+~~~} Contract R&D are transferred to the | The technologies generated through the
+industry through but is not limited to the | GIA R&D may be transferred to the
+Technol
+Taree | following services. product development, | industry through various modes such as
+ransfer
+Mechanam | C288 improvement, design and | technology demonstrations and fora,
+drawing, product improvement, testing | establishment of facilities, lectures,
+and and part/product | participation to _techno-fairs/exhibits,
+
+analysis,
+
+
+45
+
+Tocalization, among others.
+
+Once the deliverables of the Contract
+R&D is completed as indicated in the Job
+Order Form and was accepted by the
+customer, the transfer of the technology
+is considered to have already taken place.
+
+distribution of promotional materials, and
+press releases. Technical services are
+also provided through _ technical
+assistance, training and consultancy.
+
+(MIRDC Annual Report, 2014),
+
+MIRDC’s Technology transfer activities
+must be done in accordance to the
+DOST's Technology Transfer Protocol
+(Administrative Order No. 009 Series of
+2015).
+
+‘An Impact Assessment is supposedly
+conducted to determine the effectiveness
+and efficiency of the project 12 months
+after its completion and acceptance by
+
+No standard mechanism available
+
+Post | the customer.
+Transter
+Assessment
+(Source: Procedures Manual of MIRDC's
+Prototyping Division [PM-PD 04-02 —
+Conduct of Impact Assessment for
+Contract R&D Projects)
+7 Risk of ooking only al needs that are | - High technology uncertainty
+easily identified but with minor potential, | - High R&D project expense
+= There is no clear distinction between a | - Long R&D project duration
+Contract R&D and a _regular | - Difficult customer integration
+issues | metaborking jb. - High Sales-market-related uncertainty
+= The Center has yet to establish | - Uncertain/unknown time to market
+
+guidelines in accepting Contract R&D
+service to ensure no competition with
+Mae
+
+metalworking jobs.
+
+firms performing regular
+
++ Extensive need for change of customer
+behaviour
+
+MIRDC's Contract R&D is a form of service offered by MIRDC designed to meet the
+short-term research requirements of the M&E and allied industries. The customer is directly
+
+involved throughout the entire period of R&D implementation that the direction of the R&D,
+
+the expenses incurred, duration of implementation, the final output, and all the other project
+
+details is subject to his approval. When the project is completed and accepted by the
+
+customer, it is automatically considered as a transferred technology to the industry
+
+
+46
+
+Considering the nature of its implementation, all completed Contract R&D of the
+Center were automatically transferred to its customers. After 12 months of completion and
+acceptance by the customer, an impact assessment is supposedly conducted to determine
+the effectiveness and efficiency of Contract Research projects. However, no record was
+found to validate the conduct of said assessment.
+
+Meanwhile, MIRDC's GIA R&D is designed to contribute to productivity improvement
+and quality of life of Filipinos by generating and promoting appropriate technologies and
+problem solution for the M&E and allied industries. These technological interventions are
+developed for areas identified in the current DOST priorities and thrusts and to support S&T
+activities classified in the General Appropriations Act (GAA). It also aims to strengthen the
+technology transfer and utilization, human resources development, information
+dissemination, advocacy, and linkages of the Center.
+
+GIA R&D implementation which normally takes six (6) months up to two (2) years or
+more to be implemented is supported by government funds. As such, its proposed concept
+and budgetary requirements has to pass through a series of evaluation stages prior the
+approval of its implementation. Areas for evaluation include: scientific merit; technical,
+financial and timeframe; methodology/soundness of implementation; socio-economic impact;
+environmental impact; and marketability.
+
+Completed GIA R&D projects may be transferred to the industry through various
+modes. However, only a few of these technologies were actually transferred to the industry
+from 2010-2014. Another strategy that the Center employed to transfer technologies was to
+partner with a project collaborator who is defined as a company or organization who have
+expressed willingness to be engaged in the implementation of the project. The
+partner/collaborator should have resources or complementary assets necessary to complete
+the project. The collaborator and MIRDC enters into a Memorandum of Agreement (MOA)
+which states the responsibilities of both parties with regard to managing the technology that
+
+will be generated. Once all the activities stipulated in the MOA is completed, the technology
+
+will be considered as transferred.
+
+A significant observation between the technology transfer implementation of Contract
+R&D versus GIA R&D for 2010-2014 is the low transfer rate of GIA R&D to the industry.
+Primary reasons identified why most completed GIA R&Ds were not transferred to the
+industry
+
+47
+
+1. Technologies developed by MIRDC has to be subjected for further study to improve
+performance functions (i.e. capacity, speed, collection rate) and that several areas
+may need to be explored, improved, and optimized. In such cases, developed
+technology may not be for public consumption immediately upon completion;
+
+2. Technology developed was not intended to be commercialized but was instead
+made to be addition to the facilities/services MIRDC offers; and
+
+3. Some projects are basic research which may take time prior adoption by the
+industry. Basic research may have lower expectations for technology transfer
+(Wang, M. et. al, 2002). Studies on basic phenomena implies that the benefits are
+going to accrue over a much longer term, and perhaps be more indirect than the
+benefits that accrue from applied research or development.
+
+The attributes of a Contract R&D can be considered as the essential elements for
+technology transfer to take place: addressing customer's needs for products/processes
+under their respective unique circumstances and the necessity for the transferee to be
+involved right from the planning to the implementation stage of the R&D project. The latter
+was emphasized on the Dahiman and Westphal Technology Transfer Model. The lack of
+these elements were even mentioned as among the common technology transfer problems
+faced by Small and Medium Enterprises (Ramanathan, 2005). These may likewise be the
+elements that can be emulated in an effort to increase the number of GIA R&D technologies
+transferred to the industry.
+
+Further, performing feasibility studies prior to implementation and impact assessment
+after the transfer of R&D technology, important elements of a successful R&D, were non-
+existent with GIA R&D implementation mechanism of MIRDC. These include the
+performance of feasibility study prior the project development and impact assessment after
+the R&D technology was transferred to the industry.
+
+Conduct of feasibility study was part of the phases of the Dahiman & Westphal and
+Chantramonklasri Technology Transfer Models and the Technology Transfer Life Cycle
+(TTLC) developed by Jagoda and Ramanathan (2005). The TTLC approach takes a holistic
+view of a technology transfer project from its “conception” right up to its “conclusion” for
+developing a systematic approach for planning and managing technology transfer
+
+48
+
+According to Ramanathan (2005), technology transfer should not commence without a
+careful feasibility study to establish the viability of the technology because such undertaking
+usually requires heavy resource commitments.
+
+There is also a need for post-implementation activities that will facilitate assimilation
+and modification of the transferred technology. According to RA 10055, transferor of the
+technology, in this case, MIRDC, shall conduct an impact assessment on knowledge
+translation after a span of three (3) to five (5) years after technology transfer. This is to
+facilitate documentation of technology transfer experiences and practices that may lead to.
+future innovations. Impact Assessment must be conducted to: (1) ensure that the project
+rendered are effective and efficient for its purpose; (2) assess the current status of the
+technology; and (3) ensure that continuous project improvement is being implemented
+(Procedures Manual of MIRDC’s Prototyping Division [PM-PD 04-02 - Conduct of Impact
+Assessment for Contract and Joint Research Projects))
+
+12.2 Significant Input Variables
+
+The R&D project factors are composed of six (6) input variables of which two (2) are
+quantitative variables and four (4) are qualitative in nature. Significant input variables were
+identified using Point Biseral and Cramer's V for quantitative and qualitative input variables.
+respectively
+
+Table 10: Point Biseral for Quantitative Input Variables
+
+Quantitative Point Biseral
+
+P-value
+Input Variable | (messure of association) |
+~~ Duration 0.6392 /<0.0001
+
+Value/Cost -0.6023 <0.0001
+
+Table 10 shows that at 0.05 significance level. there is a strong negative
+association between duration and value/cost and the transferability of the technology
+indicated by the negative Point Biseral value of -0 6392 and -0 6023
+
+49
+
+Table 11: Cramer's V of Qualitative Input Variables
+
+Qualitative
+Cramer's V_ P-value
+Input Variable
+
+| R&D Modality | 0.8163 <0.0001
+Sector Served | 0.6387 <0.0001
+IP Availability 0.1848 0.064
+R&D Type 0.7533 <0.0001
+
+Table 11 shows that R&D Modality, among the qualitative inputs, had the most
+significant association with technology transferability due to its Cramer's V value of 0.8163
+that is closest to 1. R&D Type and Sector served also reflected a significant association to
+the output with Cramer's V value of 0.7533 and 0.6387, respectively. Only IP Availability has
+fo significant association among the qualitative input variables.
+
+Therefore, only the following statements were accepted for Hypothesis 2: X0 (R&D
+Modality), X1 (Duration), X2 (Cost), X3 (Sector Served) and X5 (R&D Type). These
+significant variables were used to develop the Technology Transfer Model using the ANN
+technique.
+
+The insignificant relationship between IP Availability and the transferability of
+technology can be attributed to the small number of R&D technologies with applied/approved
+IPRs. In fact, for 2010-2014, there was only a total of 18 IPs generated from MIRDC’s R&D
+technologies which is roughly 13% of the 112 projects completed by the Center, 28% of this
+was from Contract R&D while the 72% is from GIA R&D. Also, 12 out of the 13 GIA R&D IPs
+were filed only last 2013. The complete list of MIROC’s Applied/Approved IP can be seen on
+Appendix D.
+
+12.3 ANN Technology Transfer Model
+
+A technology transfer model was developed using the ANN Technique making use of
+the Splice MLP Program to compute neuron weights and biases, also known as “nodes”
+
+50
+
+The significant input variables included in the model were: R&D Modality,
+Project Duration, Project Cost, Sector Served, and R&D Type while the output variable is the
+transferability of the technology.
+
+The model was a fully connected feed forward network with a single input layer
+consisting of five (5) neurons, a single hidden layer with five (5) hidden neurons and a single
+output layer with one (1) output neuron. The trained information bearing the optimal values
+for weights and biases of the neurons resulting to the lowest Mean Squared Error (MSE)
+was indicated in the Training and Testing tab of the Splice MLP Program as shown in Figure
+11:
+
+Activated Function for Hidden Layer: Sigmoid
+Activated Function for Output Layer Linear
+
+Final Learning Rate 0002488335,
+Final MSE of Training Set 003619809
+Final MSE of Testing Set 0.04747496
+Number of Trained Data 62
+Number of Tested Data: 50
+
+Taken Iterations. 1000
+
+Figure 11: Trained Information of the ANN Model
+Source Spice MLP Program
+
+The ANN Model developed has five (5) input nodes, five (5) nodes at the single hidden
+layer and one (1) output node. Hence, there has to be 30 (5x5 + 6x1) unknown variable that
+‘must be estimated by the network. In practice, two to three times of 30 training data is necessary
+to reach an appropriate result for ANN prediction (www researchgate net Accessed 30 May
+2015). This study has a total of 112 data (62 Training Data and 50 Training Data) which is a good
+starting point to ensure that the optimal number of nodes were used in the model
+
+The model has an MSE of 0003619809 and 0.04747496 for the Training Set and
+Testing Set data, respectively MSE is a measure of mean difference between actual and
+predicted values. The smaller the MSE, the closer the predicted data to the actual data,
+Given that the required MSE for the model is 0.05, the resulting value for both data set was
+acceptable. Therefore Hypothesis 3 was accepted
+
+The error in prediction occurred among GIA R&D projects that are actually
+transferred but was predicted otherwise in the model. This error was due to the limited
+
+si
+number of GIA R&D project data inputted in the model. The 25 R&D project input was only
+22% of the total MIRDC data. This means that the number of GIA R&D used as training data
+
+was even smaller. This has caused a difficulty for the model to draw a correct prediction.
+
+The results of the ANN computation of weights of the input, hidden and output nodes
+and the biases of the hidden and output nodes can be seen in Tables 12-14,
+
+Table 12: Weights of the Input-Hidden-Output Nodes
+
+Hidden Nodes
+
+Node ; Node 2 Node 3 Node, | Nodes
+input-Hidden Nodes
+Input ; 0.2329355 | 007540511 | 0.3028532 | -0.453325 | -0.6936333
+sep mona |
+° Input “0172344 | 008492929 | O0SSi1E71 | 00570359 | 01774932 |
+| erect puns
+2 Inputs 0092947 | OF21304a | -0.02151348 | 0.09261949 | 03917639
+S| cores coun
+Se Input, O0ss21162 | 01143019 | -0002308 | 0138566 | -006148565
+_tsucr Sane.
+input, | 01779037 | -0 09687269 | 0 1269516 | -OUsGIEa5 | -0 7053962
+r Node ; Node 2 Node 3 Node, | Nodes
+Hidden-Output Nodes ‘a
+Sg) Output
+BB crenweaosy | 01903082 | 02996003 | 04089308 | -1.080642  -1.16091
+BZ am
+Tecmion) |
+Table 13: Bias of the Hidden Nodes
+| EEEEee Hidden Nodes 2
+[Node Node Node 3 Node, | Node «
+- Bas 0 03821202 0 1416752
+
+-0 148236 01571488 -0 2163658
+
+Table 14: Bias of the Output Node
+
+Output
+Bias | —-0644298
+
+52
+
+The detailed prediction result can be found in Appendix E. The summary of the result
+of the ANN Technology Transfer model is presented through an output matrix that shows the
+performance of the ANN algorithm as seen in Table 15. The row of the matrix represents the
+actual output instances while each column represents the instances in predicted output.
+
+Table 15: Output Matrix of the ANN Predictive Model
+
+| Actual Output
+
+Predicted Output 4g Total
+Saw
+87 0 87
+25
+112
+— J
+
+The sensitivity of the ANN Technology Transfer model is 92.55% (87/94) while its
+specificity) is 100% (18/18). The prediction accuracy is 93.75% while error rate (the
+probability that the ANN model will give wrong prediction) is 6.25% (7/112).
+
+The use of a predictive technology transfer mode! developed using ANN with an
+acceptable level of performance will help improve the technology transfer performance of the
+MIRDC in many ways. The model will be a useful tool for R&D personnel to gain a good
+understanding of the variables affecting transferability of the projects. A good understanding
+for such will enable them to be better planners of the R&D projects as significant factors for
+project transferability are to be taken into consideration. A better planned proposal increases
+the chances for a properly executed projects which will lead to the end goal of transferring to
+the industry the technology that will be developed out of the project. Thus, Hypothesis 1 was
+accepted.
+
+53
+
+12.4 Critical Success Factors for Technology Transferability
+
+Binary Logistic Regression was used to determine the critical success factors for the
+transferability of MIRDC-developed R&D technologies.
+
+Figure 12: Binary Logistic Regression Output Display
+
+Source Stata 12 Siatisical Sohware
+
+Only the input variables with P<0.1 were included in the final Binary Logistic
+Regression Model such as the project duration, value/cost and sector served and R&D type.
+
+Equation 4: Binary Logistic Regression
+Y = 6.9509 — 0.3396X1 — 0.0358X2 + 3.0973D1 —3.7991D2
+
+Y - transferability of the technology
+
+X, -project duration (in months)
+
+X2 - project value/cost (in hundred thousand)
+
+D,- equal to: 1 if the project sector is Welding or 0 if otherwise
+
+Dz - equal to 1 if the R&D project type is Product Development or 0 if otherwise
+
+54
+
+Figure 12 shows that the probability of the R&D technology being transferred (p-
+value <0.001) was significantly dependent on the four (4) identified predictors namely the
+project duration, project value/cost, Welding Sector, and Product Development R&D. Pseudo
+R? = 64.38% defined that the variation in transferability of the R&D technology can be
+explained by the four (4) identified predictors while the remaining 35.17% can be explained
+by other factors not included in the model.
+
+Equation 4 revealed that for every month increase in project duration, the log odds
+(logarithmic likelihood) of being transferable decreases by 0.3396. For every hundred-
+thousand-peso increase in project value/cost, the log odds of being transferable decreases
+by 0.0358. As project duration becomes longer and project value/cost becomes more
+expensive, the likelihood that the technology developed from the project will be transferred to
+the industry decreases. MIRDC's data revealed that as project duration becomes longer, the
+more difficult it is to be completed on-schedule and that the extension period required
+towards its completion was also longer compared to when the project duration was shorter.
+Likewise, difficulty in maximizing budget utilization increases as the project value/cost
+increases. According to Kujala et. al. (2014), complex projects or large projects are
+characterized by the following attributes: large size, complexity, uncertainty, and uniqueness.
+The wider the scope of the project, the higher is the value/cost of the project and the more
+significant the cost if the project gets stuck with the work in progress status. Result of the
+Binary Logistic Regression Equation for quantitative data is in agreement with the result of
+the Point Biseral computation indicating that Product Duration and Product Value/Cost have
+negative association with the transferability of the technology. Therefore, Hypothesis 5 was
+
+accepted.
+
+Equation 4 also states that the log odds of the technology being transferable is
+3.0973 times higher for welding sector compared to when it is classified under other M&E
+sector while the log odds is 3.7991 times lower if the R&D type is Product Development
+Including other M&E sectors and R&D type in the mode! will result to multi-collinearity
+
+13. VALIDATION
+
+55
+
+Using the 2015 data for completed projects, the predicted result of the ANN
+Technology Transfer Mode! was compared against the actual result as well as with the result
+
+of the Binary Logistic Regression Model.
+
+Table 16: Output Matrix of ANN Predictive Model for Validation Data
+
+Actual Output
+
+Predicted Output Ree Total
+| 1 16 ) 16
+0 0 4 4
+Total 46 4 20
+
+The sensitivity of the ANN Technology Transfer model was at
+
+100% while its
+
+specificity was also at 100% The prediction accuracy of the model was at 100% while the its
+
+prediction error was at 0% Using the completed set of 20 projects, all 20 twenty projects
+
+were predicted accurately as shown in Table 16 and 17. Appendix F contains the
+
+complete ANN prediction results for the validation data
+
+Table 17: Summarized ANN Prediction Result for Validation Data
+
+56
+
+ANN Model
+ANN
+1D R&D Actual en
+Project Title Value (X) | (x:
+Modality | Result | ee
+[ 1 | Development of Dice Using Investment Casting a
+cR 1 0.999 1
+Process
+2 | Development of Religious Icon using Investment
+Casting Process Cs u ed J
+3 | Development of Crucifix Using Investment Casting
+Process ce 1 0.986 1
+4 | Development of Lady Statue Using Investment
+Casting Process or v Cd J
+5 _| Design and Development of Leaf Puncher CR 7 0.992 7
+© | Development of Jaw Face for Zuic SKN Tensile a
+Testing Machine 1 0.997 1
+7 | Design and Development of Stamp Seal Die CR 7 0.985 7
+@ | Development of Probe Pest Finger CR 7 0995 7
+9 | Development of Calibrated Weight for Textile ee
+Application J 0.985 u
+10 | Development of Soft jaw for CNC lathe CR 1 0.983 1
+[11 | Development of Card Probing Fixture cR 1 0.990 1
+12 | Development of Textile Punch CR 7 0.983 1
+[43 | 3D scanning and Modeling of a BAC 11 1 CR 1 0.990 7
+14 | Design and Development of Arm Mold Set for ee
+Waste Plastic School Chair u 0.983 1
+[ 15 | Design and Development of Back Rest Mold Setfor | 4
+Waste Plastic School Chair u 0.983 1
+16 | Development of Tent System for Emergency &
+Application u Ue) i
+[17 | Test and Evaluation of 120 Passenger Per Coach — ~ ~
+GIA ° 0117 °
+|__| Capacity AGT System
+[18 [Urarading of Heat Treatment Faciity GA 0 0.065 0
+
+
+57
+
+19 _| Capability development and R&D on Electroplatin;
+el is Cred GIA 0.161 tC)
+of various Non-conductive
+
+20 | Simulation and Evaluation of AGT System
+
+GIA 0.145 0
+
+Passenger Station-Phase I!
+
+
+58
+
+14. CONCLUSION
+
+From the analysis and validation of the model, the following findings and conclusions are
+made:
+
+1. The technology transfer model developed using the ANN Technique was proven to be
+a flexible, rapid, cost-effective, and robust tool for prediction. The model generated
+appropriate results at a statistically acceptable value of MSE, sensitivity, specificity,
+and reliability values.
+
+2. The model indicated that the significant CSF for technology transfer were: 1) shorter
+duration, 2) lower value/cost, 3) welding sector as primary sector served, and 4)
+employing R&D type rather than product development
+
+3. The model showed that MIROC’s implementation of R&D has an enormous potential
+for improvement. Clearly, MIRDC has focused on transferring short -term R&D
+service to requesting customers or partnering with a cooperator with assets and
+resources that can implement the R and D project right away. There is not much
+consideration on the integrated aspects of technology transfer such as knowledge
+‘osmosis, skills internalization , and capability diffusion that go with its physical transfer
+‘The model suggests embedding the holistic definition of technology transfer focusing
+‘on the significant CSFs for technology transfer for increased penetration and
+successful transfer rate
+
+The model also implies that MIRDC could improve its R&D trajectories on sectors with
+large number of existing firms, particularly in the tool and die, machining and metal
+casting sectors. The probability of success in these sectors with more established
+firms are high because the Center is equipped with modern facilities and trained
+personnel to accommodate the needs of these industries.
+
+The model also suggest that to improve the transferability of GIA R&D technologies, it
+should focus on projects with short gestation periods and market-driven needs
+The ANN predictive model could be used as a compass to direct GIA funded projects
+of MIRDC and should mimic the features and characteristics of the contract R and D
+
+59
+
+6. With this ANN predictive model, MIRDC could have a generic technology transfer
+model for both GIA and contract R and D that could pro-actively predict a high
+probability of transfer and penetration success rate.
+
+60
+
+15. RECOMMENDATIONS FOR FURTHER STUDY
+
+After careful assessment of the results of this study, the following recommendations and
+areas for improvement are found necessary for the MIRDC to achieve a more effective
+transfer of technology:
+
+1. Incorporate the use of the ANN Predictive Model Tool in R&D during the project
+proposal preparation stages of the MIRDC. Proposed factors can be loaded in the ANN
+output tool to predict whether such combination of factors will lead to successful
+technology transfer to the industry. The predictive result can be used as basis to
+modify the proposal, as necessary
+
+2. Develop a separate ANN predictive model and sets of CSFs for Contract R&D and GIA
+R&D for better understanding of the variables affecting success in the implementation
+and transferability to the industry. This was not performed in this study due to the
+limited number of available data that can be processed by the statistical software used
+for this purpose
+
+3. Consider the criteria of customer satisfaction in determining the CSFs for technology
+transferability which can be done through conduct of survey via phone interview or a
+more comprehensive written survey among R&D customers of the MIRDC. The survey
+may be distributed among customers prior to release of the productservices availed
+from the Center
+
+4. Conduct a study to identify an institutionalized mechanism of MIRDC to measure and
+monitor its penetration rate in the industry on a regular basis. For the interim. the
+Center may consider adopting the methodology done by the researcher to compute for
+the penetration rate. This can be included among the monthly/quarterly report prepared
+by the Planning and Management Division for the Center.
+
+5. To further MIRDC’s compliance with the Technology Transfer Law for identification
+protection, management, and commercialization, the researcher recommends the
+following. 1) strengthen IP education for engineers/technician for them to become
+acquainted with how the intellectual property system works, 2) have an additional
+technical staff to be trained as patent agents to boost the Center's efforts in generating
+more property rights and ensuring protection of intellectual assets, 3) further encourage
+
+61
+
+researchers to engage in IP disclosure and protection; and 4) consider creating an
+incentive mechanism for researchers, which may include, among others, public
+recognition, monetary benefits, leave credits, and additional points for career
+advancement of engineers/technicians.
+
+Foster new partnerships and strengthen existing linkages with the academe and the
+industry as a way for the MIRDC to address its R&D concerns regarding funding, high
+impact researches, and adoption of completed technology. Private companies have the
+resources to fund capital-intensive research and their intrinsic market orientation helps
+ensure its relevance. Universities can become useful for the high quality of talent and
+solid research they can offer. The MIRDC, on the other hand, has R&D institutional
+support, an active and credible research program, strong research infrastructure and
+dedicated research personnel in research, administrative and support
+
+Make a thorough evaluation of the MIRDC’s implementation mechanism for R&D
+projects in comparison to that of other DOST RDIs. This can be accomplished through
+conduct of benchmarking activities or focus group discussions with personnel from
+R&D and Technology Transfer Divisions of the RDIs.
+
+62
+
+16. REFERENCES
+
+[1] _Asterbo, T., Key Success Factors for R&D Project Commercialization, 2003 via
+http:/citeseerx.ist psu.edu/viewdocidownload?doi=10.1.1.122.4818&rep=rep1 &type=paf,
+1-14, Accessed: 14 June 2016
+
+[2] Arce-Medina E. and Paredes, J. Artificial Neural Network Modeling Techniques
+Applied to the Hydrodesulfurization Process, 2009 via
+
+http:/www.sciencedirect com/science/article/pi/$S08957 17708001398, Volume 49, 207-214,
+Accessed: 25 January 2016
+
+[3] Baek, D. et al, A Technology Valuation Model to Support Technology Transfer
+Negotiations, 2007 via
+
+http: “Awww ausicom com/filelib/PDF/ResearchLibrary/Technology%20Valuation pdf,
+Accessed: 2 February 2016
+
+[4] Bradley, S. et. al, Models and Methods of University Technology Transfer, 2013 via
+http://bae.uncg edu/assets/research/econwp/2013/13-10 pdf, Accessed: 2 February 2016
+
+[5] Brem, A. and Voigt, K.., Integration of Market Pull and Technology Push in the
+Corporate Front End and Innovation Management ~ Insights from the German
+
+Software Industry, 2009 via
+
+https www researchgate.net/publication/234061006_Integration_of_market_pull_and_techn
+ology_push_in_the_corporate_front_end_and_innovation_management, Accessed
+
+2 February 2016
+
+[6] Chandra, N., Small and Medium Enterprises in the National Systems of Innovation
+Exploring the Barriers to Technology Transfer, 12-32, 2011, via
+
+http ‘Awww smmeresearch co za/SMME%:20Research20General/Case%20Studies/SME
+20in%20National20Systems’%200f”20Innovation pdf, Accessed: 4 January 2016
+
+[7] Choi, J. et. al, A Predictive Model of Technology Transfer Using Patent Analysis, 2015.
+via http:/Amww.mdpi.com/2071-1050/7/12/15809, Accessed: 30 March 2016
+
+63
+
+[8] De, S. and Debnath, A., Artificial Neural Network Based Prediction of Maximum and
+Minimum Temperature in the Summer Monsoon Months Over India, 2009, via
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.651.3861 &rep=rep1 &type=paf,
+Accessed: 30 March 2016
+
+[9] Gonzalez, X. and Pazo, C., Firms’ R&D Dilemma: to undertake or not to undertake
+R&D, 2004, via
+
+http://xgzlez. webs. uvigo.es/research_archivos/Applied%20Economic%20Letters.pdf, 55-59,
+Accessed: 20 December 2015
+
+[10] Hassan, A. et. al., International Technology Transfer Models: A Comparison Study,
+Journal of Ethical and Applied Information Technology, Volume 78. No.1, 2015, via
+http:/www jatit.org/volumes/Vol78No1/12Vol78No1 pdf, Accessed: 12 January 2016
+
+[11] Herstatt, C. and Lettl, C., Management of Technology Push Development Projects,
+2000, via https:/www.tuhh. de/tim/downloads/arbeitspapiere/Working_Paper_5.pdf,
+Accessed: 23 December 2015
+
+[12] Ibrahim, O., A Comparison of Methods for Assessing the Relative Importance of Input
+Variables in Artificial Neural Networks, Journal of Applied Sciences Research 9(11) 5692-
+5700, 2013, via http:/www. palisade.com/downloads/pdf/academic/DTSpaper1 10915. pdf,
+Accessed: 30 March 2016
+
+[13] Kujala, J. et al., Challenges of Cost Management in Complex Projects, International
+Journal of Business and Management; Vol. 9 No. 11, 2014,
+
+http:/Awww.ccsenet org/journal/index. php/ijbm/article/viewFile/39454/22715, Accessed: 30
+December 2015
+
+[14] L Mas, D and Ahifeld D., Comparing Artificial Neural Networks and Regression Models
+for Predicting Faecal Coliform Concentrations, 2007, via
+http:/www tandfonline.com/doi/paf/10. 1623/hys.52.4.713, Accessed: 30 March 2016
+
+[15] Maltarollo, V. et al., Applications of Artificial neural Network in Chemical Problems,
+2013, http://www. intechopen.com/books/artificial-neural-networks-architectures-and-
+applications/applications-of-artificial-neural-networks-in-chemical-problems, Accessed: 1
+April 2016
+
+64
+
+[16] Nasr, M. et. al., Application of Artificial Neural Network (ANN) for the Prediction of EL-
+AGAMY Wastewater Treatment Plant Performance-EGYPT, Alexandria Engineering Journal,
+Volume 51 Issue 1, 37-43, 2012, via
+
+http:/Awww. sciencedirect.com/science/article/pii/S1110016812000518, Accessed: 30 March
+2016
+
+[17] Olden, J. et. al., An Accurate Comparison of Methods for Quantifying Variable
+Importance in Artificial Neural Networks Using Simulated Data, 2004, via
+http:yAwww.massey.ac.nz/~mkjoy/pdf/Olden,Joy&DeathEM. pdf, Accessed: 2 April 2016
+
+[18] Rahal, A., Assessment Framework for the Evaluation and Prioritization of University
+Technologies for Licensing and Commercialization, Engineering Management Journal,
+Volume 18 No. 1, 2008, via
+http://www.tandfonline.com/doi/pdf/10.1080/10429247.2006.11431711, Accessed: 30
+September 2015,
+
+[19] Siegel, D and Phan, P., Analyzing the Effectiveness of University Technology Transfer:
+Implications for Entrepreneurship Education, 2004, via
+https:/ideas. repec. org/p/tpi/rpiwpe/0426. html, Accessed: 30 August 2015
+
+[20] Taboli, H. et. al, An Extended Model for Technology Transfer Potentials at the
+Industries, 2007, via http://epubs.scu.edu.au/theses/221/, Accessed: 20 May 2016
+
+[21] Tornatzky, L., Building State Economies by Promoting University-Industry Technology
+Transfer, 2000, via http:/www.nga. orgffilesilive/sites/NGAVfiles/pdf/UNIVERSITY PDF,
+Accessed: 18 January 2016
+
+[22] Tseng A. and Raudensky, M., Performance Evaluations of Technology Transfer
+Offices of Major US Research Universities, Journal of Technology Management and
+Innovation, Volume 9 No. 1, 2014, via http://www jotmi.org/index. php/GT/article/view/1443,
+Accessed: 20 May 2016
+
+(23] Xu, Z. and Li, H., Analyzing Integrated Cost-Schedule Risk for Complex Product
+Systems R&D Projects, 2014, via http:/ww hindawi.comijournals/jan/2014/472640/.
+Accessed: 5 January 2016
+
+65
+
+(24) Zizlavsk, O., Past, Present and Future of the Innovation Process, International Journal
+of Engineering Business and Management, Volume 5, 2013, via
+http://cdn.intechopen.com/pdfs-wm/45701.pdf, Accessed: 25 November 2016
+
+[25] MIRDC Annual Report, 2009-2013
+[26] DOST Annual Report, 2009-2013
+
+[27] MIRDC Procedures Manual for Prototyping Division
+Acceptance of Contract and Joint Research Projects (PM-PD 03-06, Rev 2) and
+Conduct of Impact Assessment for Contract Research Projects (PM-PD 04-02,
+
+Rev 2)
+
+[28] MIRDC Materials and Process Research Division
+‘Acceptance of Contract and Joint Research Projects (PM-MPRD 03-11, Rev 2),
+Conduct of Impact Assessment for Contract Research Projects (PM-MPRD 04-02,
+Rev 1)
+
+17.
+
+66
+
+APPENDIX
+
+APPENDIX A: Nature and Uses of Metals and Engineering Industries Sector
+
+NATURE AND USES OF METALS AND ENGINEERING INDUSTRIES SECTOR
+
+INDUSTRY —
+
+NATURE AND USES
+
+Machining
+
+Caters to the requirement of different sectors such as construction, automotive and transport,
+appliances, packaging, fabrication, and repair of machines.
+
+The industry is primarily involved in the transformation of metals such as steel, cast iron, and
+non- ferrous matenals like aluminum, copper, and zinc into products like hand tools, agricultural
+and industrial machineries and parts, motor vehicles component and appliance parts, and other
+machineries.
+
+Metalcasting
+
+Process of forming a shaped meial component by pouring the desired moiten alloy into a mold
+containing cavity of the desired shape. It is an upstream industry following the primary process
+of mining the mineral ores and extracting the metal from them.
+
+The sector serves as raw material within the engineenng industry and provides machinery,
+tooling and parts used in other industries like agnculture, housewares, chemical/petrochemical
+water/sewerage, medical/dental, machinery, mining, cement, electronics, automotive and
+defense/armaments,
+
+Welding
+
+Provides assistance in the design and fabncation of prototype or research projects and specially
+items, repair and replace all interior and exterior metals as needed due to damage, tear or wear,
+‘repair. reconstruct, or fabricate kitchen or medical equipment, and install rigging beams and
+walkways to aid in gaining or improving access
+
+Welding shop is a facility where metals or non-metals are joined through heating in suitable
+temperatures with or without application of pressure or by application of pressure alone. with or
+without the use of filer material
+
+Forging
+
+Tool and Die
+
+Manufacturing process where metal is pressed, pounded or squeezed under great pressure into
+high strength parts
+
+Forging process can create parts that are stronger than those manufactured by other
+metalworking process. Forged products are used in various industries such as automotive.
+mining, metalworking, construction and shipping sectors
+
+Uses general and specialized metal cutting technology to fabricate dies, molds and tooling to.
+convert materials into required shape
+
+One of the typical machines used in the industry are Computer Numerically Controlled (CNC)
+cutting machine
+
+Electroplating
+
+Heat
+
+1ceS5 in which electric current is carried across an electrolyte wherein a thin, smooth, metallic
+deposit is produced over a metal base
+
+In the industry, electroplating operations is a process that coats an object with layers of metals
+to improve the resistance to wear and corrosion, change the appearance. control friction, or
+impart new physical properties or dimension
+
+Heating and cooling operations performed on metals to change their properties such a:
+
+
+67
+
+Treatment
+
+strength, hardness, elongation, abrasion and fatigue resistance.
+
+The industry is important to industrial sectors, especially the materials processing technology.
+
+
+APPENDIX B: Graphs of R&D Data
+
+MIRDC's R&D data for 2010-2014 was presented in terms of number of completed
+projects, project value/cost, project duration, sector served, IP availabilty, and R&D type.
+
+MIRDC COMPLETED R&D PROJECTS
+
+MIRDC Completed R&D Projects
+‘Source MIRDC Annual Accomplishment Reports. 2010-2014
+
+ANNUAL BREAKDOWN OF MIRDC COMPLETED
+PROJECTS
+
+3
+
+88
+
+=GIARED
+
+=CR RED
+
+No. of Completed Projects,
+
+os 6 5 5 5
+
+2014 2013 2012«2011.-2010 Total
+Yoar
+
+‘Annual Breakdown of MIRDC Completed Projects
+Source MIRDC Annuai Accomplshment Reports, 2010-2014
+
+VALUE OF MIRDC COMPLETED PROJECTS
+
+Value of MIRDC Completed Projects
+‘Source: MIRDC Annual Accomplishment Reports, 2010-2014
+
+CLASSIFICATION OF MIRDC COMPLETED PROJECTS
+
+ACCORDING TO VALUE/COST
+270
+S00
+E50 .
+A sist
+* + 100.00110m0009
+$ -4 | + 1.00001-10 000000
+bed 10,000 001-20 000,000
+ris rw ok oh L - eee
+CR GIA CR GIA CR GIA CR GIA CR GIA .
+2014 | 2013 | 2012 | 2011 | 2010 Tota
+Yoar
+
+Classification of Completed Projects According to Value/Cost
+‘Source MIRDC Annual Accomplishment Reports. 2010-2014
+
+
+CLASSIFICATION OF MIRDC COMPLETED R&D.
+PROJECTS ACCORDING TO DURATION
+
+Pr
+
+Z
+
+Fie = 2 weeks-1 month
+
+S30
+
+3 #2 monhs-6 month
+
+a7 = Tmonths-12 months
+
+g° tLueitt 113 months 18 months
+
+Bo 119 monihe-24 months
+
+g  CRIGI\cR|GA cr|GIA cr Gia cR|GA
+
+Fs 125 months or more
+2014 20132012 | 2011-2010 Tota
+
+Year
+
+Classification of MIRDC Completed R&D Projects According to Duration
+‘Source: MIRDC Annual Accomplishment Reports, 2010-2014
+
+CLASSIFICATION OF MIRDC COMPLETED R&D
+PROJECTS ACCORDING TO M&E SECTOR SERVED
+
+250
+go = Machining
+3” = Metalcasting
+= ' Tool and Die
+5 = Welding
+"TT LoL F
+3 = Forging
+go Ls i 3 ‘Heat Treatment
+= “CR GIA CR GIA CR GIA CR GIA CR GIA
+
+2014 | 2013 | 2012 | 2011 | 2010 Total Laren)
+
+Year
+
+Classification of MIRDC Completed R&D Projects According to M&E
+
+Sector Served
+‘Source MIRDC Annus! Accomplishment Reports 2010-2014
+
+70
+
+NUMBER OF INTELLECTUAL PROPERTY (IP) FOR
+COMPLETED R&D PROJECTS
+
+No. of Completed Projects,
+
+—— re |
+
+cr | ial crc) cr| cal cr| Gal cr GA! cR| GA
+
+2014 2013 | 20122011 2010 | Total
+Year
+
+Number of Intellectual Property for Completed R&D Projects
+Source DOST Annu Accomplishment Reports, 2010-2014
+
+MIRDC COMPLETED PROJECTS CLASSIFIED
+ACCORDING TO R&D TYPE
+
+‘Product Development
+1 Prototype Development
+‘anc Research
+Pre Feasslty Stay
+
+| = DesigeDrawing
+
+No. of Completed Projects
+Besse
+
+*teutht onenang
+
+CR |G CRIGIA CR GIA CR GA CRIGIA
+
+2014 | 2013 | 2012 | 2011 | 2010 Total
+Year
+
+Produc improvement
+
+Testing Anaya
+
+MIRDC Completed Projects Classified According to R&D Type
+‘Source DOST Annual Accomplishment Reports, 2010-2014
+
+n
+
+n
+
+APPENDIX C: MIRDC Developed Technologies Readiness for Transfer
+and Commercialization Evaluation Form
+
+re
+fev im ane ss
+
+ROC Developed Technologies Readiness for Transfer and Commarciizaton
+Evauation Fom
+
+ved Een THe Renee Ne
+emine
+
+Teealteoracay
+
+Pat: Compleeness of Documents
+
+Tena hen
+
+pee apes
+
+Tees Geel
+
+ued bain Sane
+
+Tid Ueleres wh debled uci onde
+
+Dees vane
+
+Tasre eas equgreuand beg RH
+
+Rae dae
+
+T Resi lp aise or pate ea
+
+B applets ppn) apse
+
+Fovatle peefcanes end age sane feralabe
+
+Teroonended Pl Layo Poppe
+
+PE ROO ARRAN CNED RT
+snd hein nab, # ppletle
+
+abe penny cnn Bie tod maT
+fechnlgy, appcabie
+ Yeconlgy dee, esate
+
+per ples Tolan
+
+as ol Fenanca Ray A Fy TAT
+
+ere Soares Bad bese eT
+
+
+APPENDIX D: List of Intellectual Property Applied/Approved
+
+2B
+
+a LIST OF INTELLECTUAL PROPERTY (IP) APPLIED/APPROVED
+R&D
+
+Date | Modality
+
+Year ITEM IP___ Registry No. 2
+Rotary Press for Flattening Handwoven
+2008 | Abaca Fabric 2 | 2-2008-000382 | 14-Sep-06 | CR
+2007 | Decorticating Machine 2 | 2-2007-000361 | 6-Nov.07 | CR
+2011 Pandanus Leaves Slitter-Presser 2 2-2011-000270 | 22-Jun-11 cR
+12011 | Twining Machine 2 | 2-2011-000269 | 22-Jun-11 | CR
+2012 | Micro Cupola 2 | 2-2012-000615 | 9-Nov-12 | GIA
+Automated Guide-way Transit System | 2 | 2-2013-000665
+Rolling Stock Assembly of Automotive | 2
+Assembly of AGT ad
+Elevated Track Guide Wey Trnsitof [2 | 2 2943.oq0667 | 2-Dee12
+Electrification and Communication 2
+Sona Aer 2-2013-000668
+Coach Assembly of AGT 2° | 2.2013-000669
+Immersion Freezer with Propylene 2
+Gyeol Medium 2-2013-000628
+2013 Water Removal Through Freeze Drying | 2 ce
+| Machine 2-2013-000633
+Modular Water Retort 2 | 2-2013-000630
+[LPG Fire Spray Dryer with Solenoid [2
+Conta nyer wih Solen 2-2013-000632 | 3-Dec-13
+Solenoid Valve Controlled Vacuum 2
+Evaporator ee)
+Vacuum Frying Machine 2 | 2-2013-000629
+Vacuum Packaging Machine 2 | 2-2013-000629
+2014 | Intergrated Wrought Iron Forming 2 |2-2014.000436 | 22-Jul-14 | CR
+
+Equipment
+
+
+. ‘3880010 | Eb
+6 Cg vioz Bunse revonuanuos Bulsn areig Mer BuIROW Jo juawdoaneg,
+s 90660 Aysnpuy | Zt
+yioz | Bumog 10) ssa001g Bunsen jeuonuanuos Aq zw Jo juawdojanag
+- 62660 Pion quejdu| 3uy{ Jo jUaWdojenaq pue ubisag Buses | ++
+- $066°0 mice ss200ig Bunseo juauisanu) Buisr (g) aseg poduy jo juauidojenag | OF
+a yOLO'L Pree 88800/q BuNseD juaWIsanu] BuIsp aseg podus jo wauidojanag | &
+, boo" pine ‘awed joIsid wnuUNy jo waudojanag | &
+, ess0°0 yioz ‘aoepng ay) ul sanbiuyoay asing jo uoneanddy | 4
+« Aypoes axe yses] SneWwoINY | 9
+we1z0 Pre
+- 060z'0 102 J91S2UEH YIUIDEAH JaIEM AyoedeD YBIH Jo juauidojanag | F
+, ‘9080 venz warsig usued, Aem-aping payewoiny adAjojo1g Jo juaudojanag | ”
+5 ‘ys10'0 waysks usues Aem-aping | €
+rd pajewoiny Aipedeo yaeod sad saGuassed-021 Jo jwaudojanag
+> Cn uoneig iebuassegy pur jodaq waishs | _z
+| pio, sues) Aem-aping payewoiny ue jo wwauldojanag pue ubisaG
+, veeoo =| ~—ptoz Sayn0y WaISAS LOW IeMUeIOg Ba1uL Jo Apmis |
+| (o=xesmouo
+128 0=/ex paya\dwo :
+z 189A ai
+| wandino
+sueway banen
+
+SLOBPOUd G3131d NOD ¥102-010Z HOF LNd1NO SALLOIGAUd NNV JO AUVININNS :3 XIGNSddV
+
+
+28660 ‘WORSAASUOD | OF
+hoz | 40) pasn v salad 40) warsks Guuasty pue Buyjes jo juaudojanagq
+eco wonannsuog | 6z
+e102 40) pasn auesg 204 winig ayeug se89 nds jo uonez}e007
+zi66'0 ae Aquiassy 6unyr7 aui6uz jo uoneougey pue waudojanag | 2%
+Zz
+o1ie'o ere 7081 Buisnoy gq wnununty Jo uBIsaq
+20160 ie 7087 6uisnoy gq wnumuinty jo ubisag | 9%
+90160 Bite Japjoy aBpeg anseig Ue Suid 1SO ay) jo uBisag | 3%
+oze6'0 Lae. ‘alin y>ur-0} 40) wauidojanag pue ubisaq Gunseo | 2
+¥086'0 ‘Aysnpuy | 62
+e10z Bumog 105 ssa001g Bunsed euonuanuod hq WO Jo jwaUdojanag
+eo16e0 e1oz Busno} sa¥eads 103 PIOW nSeIq Jo Gumesqyubisag | 2
+oce6'o eroe ‘apospalg 4104 Jo juawdojanag pue ubisag |
+9686'0 reel ‘saBuiy 2/1 € X Z/t € 40} 21q Jo Waudojanag pue ubisag | O
+won wodsuex | 6b
+sero ad S1IGAg UIE, PEOY OUPaLZ PUAKH adhiojoId e jo juaudojanag
+99860 vloz Bunsea jeuonuanuog Bulsn (AQW) aletd JazUaRINd jo waudojanag | ®
+90660 yL0z Buysea jeuoquanuog Bulsn (11S) aleid s8zUaAIng jo wawdojanag | ¢+
+—— 880014 | OF
+a) vy10z Bunseo jeuonuanuos Buisn (g) 1s@y UMoID Jo 1wawdolaneg
+02860 ae '88200ig Buysed jevonuanuog Buisy) Say UMOID jo wausdoanag | St
+02960 $82901g Buse jeuoquaruoy Guisn wy jo waudojanag | 7+
+
+loz
+
+
+wy
+
+418660 = ‘$8e1g 40) aanewanly jeuarew due aseg ou) 1S29 Jo jwaudojanag
+. oy
+
+9660 Put yur] aaug yo wawidojanag
+aoa Banse jeuonuanuoy | Sy
+
+zu0z yBnow, Aajing Your-g 40) IeUaIEW BANEWaHTY Jo WaUdojanag
+eee waiskg podsuer, sianpoig jeaminauby | oP
+
+zhoz 404 auuyduses, 10) Bunsed Aalind Se4DUI 91 Jo waudojenag
+ozes'0 zt0z Quauodwo saj8qe7 amog) WO Jo waurdojanag pue ubssaq | ©”
+zy06'0 e10z 1d Gunuelg aieid wrug Buiysnud saysesy Jo ubisag | 2¥
+60160 etoz Jan09 wed uoneIs Bujaqe7 jo ubisag |?
+zazz'0 ‘SaMsnpu| BuuneynueW ABojouDe] | OF
+
+e102 Ubi Jo siuaweuinbay Buusauibug aoeyns aig 0} uoddng
+berto - ‘s0eung uawess, Ja} YoUaND seQ whndeA jo jwaudojanag | FF
+zrL0'0 re saounosay uos) auiddiiud Jo Buippy anjen aug 40} pms yeowyoa, | ©
+it
+
+2z08°0 ea sakig Aeidg jo juawidoranag,
+Ea
+
+‘9806°0 Pre sakig wnnoeA Jo wauidoj@anag
+zs0e'0 e10z soyeiodeng wnnaen jo juauidojanag | 5°
+LLeo LOE ‘aunpey Bunseg wnnoen Jo waudojanag | "©
+oreo Ar sazealy uorsiauiun) jo wauidojanag | ©
+o60e'0 na Hoy JaIEM Jo waudojanag | CE
+0896°0 woReIaUNS | TE
+
+et0z
+
+Buyseo Bulsn @ Jayaduu 104 pret, Bunseg weoseg jo uonezIndO,
+
+
+v686'0 ete (Kemfyg) ues uonang jo juawidojanag
+Soleo = uonnjog ploy 10} saBueyox3 yea} Jo uoneinwis pue ubisag | ©9
+0666'0 2102 POW auIyeW BuNfeWy BojoIg jo waudojanag | 9
+92660 Ww] 19
+zs0z leoman suajjoy aa Jo Guryeys Ja1}ou 404 BuIysng Jo uoNeOUGeS
+sseoo wowsodaponaia | 09
+zi0z 4q s6uneog aysodwon pasnionjsouen jo wawdojanag
+oezt'0 suaishs sang 9 skemvarem | 65
+z102 Jo) wawaBeuewy WUsesH J91eNA 20) J2)SanVeH JO Waudojanag
+uo ‘uoNanpoid BunseD rey Ayenon jews pue | 8S
+z1oz uonanuisuy ‘yaieasay Aupuno, 10) ejodng ODI @ 40 wawdoransg
+velz'0 eine ‘Axsnput aanyuing 30) 1\n0y OND Jo wausdojanag | 45
+bezo pita ‘auiysew BumIND eWSeld OND Jo 1uaudojanag | 9
+= Tonanpoig 1e6aui, pue vebng “openccsnw | SS
+z10z a1aMod Joy JaysTuD aueaieBns ayq jo AouaIoy!y ayy BuInosdus,
+249660 zoe quauidinb3 uo) 1BnoynA jo juauidojanag | °F
+18660 pine seBng opencosnyy Jo) sayueID g aie, BuIZi|ershu9 Jo waudojanag | °F
+0266'0 zine. ssaig Alejoy exeqy jo jwauidojanag | 29
+- 1s
+82001 Pure Jepaag Oph} Jo jwausdojanag
+05
+z066'0 Bite Z-Uld PUE |-Uld Jo twawdojanag
+C7
+an duund wey Jo jwaurdojanag
+9s66°0 ‘3890014 BUNSeD | BY
+
+zL0z
+
+quausanu} 9 Bupjow Jeqqny rug sng JakeIq OjOg Jo juaUdojanag
+
+
+8860 ee Jaysnig sseip se saleid mer 9 sauweH jo uoneauges | '®
+29860 Mae ‘Axsnput Guiniog 40) yeus inding uonou4 jo waudojenag | °F
+1200" ne (wwii p1) san09 wn 40} Bulysng ssesg payodwy jo uonezyes09 | 4
+‘0660 ‘aamdinag | 8Z
+$102 sng Syeziy Jo enqeoway amjesowauW0> Jo weuido}anaq
+bee0 1102! (wuuzes) s9n09 wn 40) Buiysng sseig payodus| jo uonezye09 | “+
+95960 @ vieiede7j0 sanpnns | 9
+bio Pueogqia 40 Sieg ajbuy jaais uoqied Jo uonesiday a1udeut
+vero rice Uonetquen pesog wpe, jo uonezyeno | $4
+nena S}8/0U0D paou9juieY 19aIS jBeEMIYBN | HL
+LLoz Jo 1WSuang anssaidwion uo ainjeradwia! payena/3 0} ainsodx3
+21660 Loz duing wey jo waudojanag | 2
+oz601 fasten |
+Ltoz__| @xemmn4 Jo adoy aun Bunsioy auero paBeweg jo siskreuy aunyes
+1066°0 Ae Sreuaiew oviy Buisn wig addiyo pom jo waudojanag | +4
+6£00"1 ror ‘auIyseW BuNEDICOEG-IUIW Sseq alBUIS Jo juawdojanag | O4
+2286°0 = Joe aueDueBNg 40) $1899 UOIUid pue Inds jo juaudojanag | °F
+coe (einsdea @ xog anjen) wodsuer | 89
+hoz J212 M30) Sywauodwon dung wey AjedeD YBIH Jo wauidojanaa
+61001 Mor Jassaid-soWIs snuepueg jo wawdojsnag | 49
+(Ss0id Tog pUE: jog 7aI@useq) | 89
+G20 bLoz seaing eudoner woy janjoig Jo Gugsa, ¥ UOHINPOLd YOlld
+9s66'0 zhoz yoyey Ainasay jo uoneuges | $9 |
+
+
+9686°0
+
+Buydno9 dung aynespsy Jo juauidojanag
+
+rT}
+
+o1oz
+1066'0 (uuor 9 MauEW “INT WEN | 96
+o1oz 40 ameis) vonmasans Yodw 204 samy snoibijay) jo uaurdojanag
+=a sarebeibby | 56 |
+ovoz quawsd Jo UID Kuejoy 10} wauiBag sade /Guny Bung ANN YeUS
+0686'0 nro (says 9) asinag BuuoWUoW poo}, 10} sBunUNOW Jo waudojanag | ”&
+1s66'0 rte uonanposg 1UaWAD Jo) $49}}0y PIEH-IN Jo UaNONPOIg rong | °F
+1s66°0 o1oz uonesado ployasnoy 10) ssaig sayy ajeog yews | 76
+zp00'L ae ‘adoy Aid-om jo uogonposg aun 40} aUIYDEW BuIUM, ssajpuen | +
+ores ara voneuWexg so;adsuj u0N9/3 Jo P1eog $,9373WOD JO sare\dwa, | °F
+{woH}221N09 404 1eyoUNg adeq Jo luauidojanag pue uB!saq,
+10660 440z sapunko zy apinBaneyy Jade jo jwaudojanag pue ubisaq | £8
+. 8
+00660 woz deo ped j1UG 1eVa1, Jo wauidojanaq
+16860 ara SIEM puehyoeg Pue JaAIY 40} JoYoUY Yue Jo jaUidojanag | “8
+£2960 nae Burysrug sadeg 10) apeig seweey 2519 ajqnog jo wawdojanag | 9
+1960 nae ‘amog aUINIOA jfeWS 40) Kesdg J966u, Jo juaudojanag pue ubisag | *
+620" = mes6ues iodew InN mals peeT jo uoneZe007 | °F
+19860 Mee uou 18e9 Bursn edg 104 xog weaig senBue}Day Jo wousdojanag | ©
+9960' JOVEAaT JONG WOH AUT UIEYD Jo areIej Panes jo siskyeuy anes |
+
+rd
+
+
+SauiyseW Guissaocig edonper adhyoo4d Jo Bunsel pial
+
+any
+
+zi6z'0 ovoz
+osz0'0 arte ‘{quioeAy saieM Jo uoneayisuag ssewoig | +t
+see6'0 a ‘BIORIY YDINYD Jo JpOW areDIIday aomeUD # Video | OFF
+vea6'o owe way! 1529 a|6ulg ‘uBisag JayeW a1, payrdug | 89
+£0660 arte ‘sayeBas66y Bunayy 40) diy appeg quersisay sean Aub | 29+
+fon Topnpucowas | ZOr
+ovoz 20} pasp auiyoew pareouge, Aje207 10} ZH Pue 14 UGIeMvaIUNOD
+£0660 ae ‘aseg dwey :yodx3 40) way] 38e9 aanescoagvasnyuuny | 9+
+00660 pomeell ioe
+ovoz LASNPUL 10} Kalin JOVEUeA pony whuLUNIY BuRSISeY IaH
+99860 ove ‘iulor pue sadig papiam jo uoneniday siudesBouerow | V+
+e960 yiea Hes uaHOW Bulsn JeaH Jo UoNNPUOZ kq Buydnog | 9
+rel Joidopy Opty ISly J Burzmuaisny 104 siajauieseg Jo juaWYsiqeIsS
+1686'0 so\depy WN Jo waudojanag | 2b
+ovoz
++696'0 voz squauodwiog ssaig Jo yuauidojanag | tO
+qwaudinba | OOF
++6860 ovoz Gunjug-Buiuyy 40) Buydno> wsweyoay wuawabeBUR Jo uoHezI}eI07,
+see ara ‘s@seg plow Uonsalu 26127 jo uonezi1e209 | 66
+9se6'0 Jeaig ssajureig Bulsn (s9n05 9 ase) 8}aWW J21eNM Jo waUdojanag | *
+
+o10z
+
+
+L Ly L $860 b Ete) amixa1 10) 146!aM paresques joqweudojanag | __ 6
+
+b Lez 1 660 L wo | JaBulg 189g aqog Jo wauidojanag | __g
+3 cix4 + $860 tb R=je) it 21g [eag dwejs jo jwaudojenag pue ubisag Z
+auiyoew Bunsay
+L 6Lh 1 4660 L 4O | 21SuaL NS’ 2INZ Jo) 2084 mer jo juaUdojaneQ 9
+L lve 1 7660 4 =i} saypund Je37] jo juaudojanag pue ubisaq s
+ssa00ig 6unseD
+L a6 L 9960 L xo wounsanuy 6uisn amerg hpe jo waudoranag |
+ssa00ig Bunsed
++ 867 L 9860 ‘ he) quaujsenu| Buisp xylorud jo jaudojanag: £
+ssa001g BunseD
+L 962 L 9660 L wo wausanuy 6uisn vos snoi6ijay jo waudoranaa | —_z
+$890014
+L Lyz ' 6660 ‘ wo Gunseo juaunsanuj Bus 391G jo jwaudojanag | 1
+(oasmueyo
+bebs/sa)
+(oesmewno
+| uonstpaig ynsoy | Aepow
+=502x) | (x) onren
+uo!sso16oy vopoipeld | yyy | TY | oR api yooford ai
+onsib
+bake fepoW NY
+
+WO NOLLVOIIWA HO4 LNdLNO SAILOIGAYd NNW JO ANVWINNS :4 XIGN3ddV¥
+
+
+Il aseyg-uonels sa6uasseg
+
+44 sro vio waisks Lov Jo uoNenieng pue uoneinwis | Oz
+‘ananpuco-uoN snouer jo Buneidon2a/3
+
+tas boro vio vo Gey pue wauidojanap Auigeded | _6L
+
+Beh 6900 vid. Ayes wouneas, eH jo BuipeiBdn | gb
+waisks LOW Ajpeded yoe0D
+
+z6'0- 2b wo sag sabuassed 0z1 jo uonenieng pue ser | 2b
+voneouddy
+
+06's 6660 rr) Aouabiaws 10) waisks yua4 jo waudojanaa | 9b
+JIEUD [0049S ONSEId BISEAA 10}
+
+vz £960 rr) 19S PIOW 1S8y YoeG Jo JUaUIdoJenag pue UBisea| SL
+sieyd 00udg BnSeid aISEM
+
+os £960 Fr) 40}185 PIOW uy jo wauidojanag pue UbIseq | Hb
+
+4 0660 Ee} 1 44 Ova & 40 Bujapow pue Buuuers ae | eb
+
+tez £860 i) young axe jo wauidojanag | Zt
+
+tz 0660 4 aunpxiy Buigoud pie jo wauidojenag |b
+
+4 £860 Eee} BUIEI OND 40) mel yos jo waudojaneG | _OL
+
+oneauddy
+
+
+83
+
+18. GLOSSARY OF TERMS AND ACRONYMS
+
+A. Definition of Terms
+
+Term
+
+Definition
+
+‘Adoptor
+
+‘a person or legal entity that is able to oblain license from MIRDC
+to use the technology/innovation it has generated for the
+purpose of reproduction, financing, manufacturing, marketing or
+other activity as specified in the contract between MIRDC and
+the adoptor.
+
+Adoption Rate
+
+percentage (%) of quantity of technology adopted by a person or |
+legal entity versus the quantity of completed projects
+
+Availability of IP
+
+Basic Research
+
+the availability or non availability of an Intellectual Property (IP)
+generated through the R&D projects. IP could either be on
+applied or approved status by the Intellectual Property Office.
+
+| experimental or theor
+
+| work undertaken primarily to acquire _|
+new knowledge of the underlying foundations of phenomena and
+observable facts, without any particular application or use in
+view
+
+Completed Projects
+
+Contract R&D
+
+Critical Success
+
+Factors
+
+projects that were able to achieve the predetermined objective
+and produce the required deliverables/output within a specified
+time frame
+
+a service offered by MIRDC to perform research and
+development on materials, process and equipment wherein all |
+the expenses for its implementation are shouldered by the
+customer.
+
+"| a set of project variables or factors that are strongly correlated
+to project success and whose maximization or minimization,
+depending on whether they are favourable or unfavourable, will
+lead to project success.
+
+Design/Drawing
+
+consist of the detailed specification of a manufactured item's
+parts and their relationship to the whole. How the item will
+perform its intended functionality in an efficient, safe and reliable
+
+manner needs to be taken into account in its design/drawing
+
+
+84
+
+Project Duration
+
+Period or timeframe in terms of months that covers the start and
+completion dates of the project
+
+GIA R&D
+
+projects with allocated funds from the DOST or all its grant-
+giving units, including its sectoral councils
+
+Innovation
+
+integration of existing technology and inventions to create anew |
+or improved product, process or system
+
+Logistic Regression
+
+Tmeasures the relationship between the categorical dependent
+variable and one or more independent variables by estimating
+probabilities using logistic function
+
+MBE Sector Served
+
+any of the seven (7) M&E industries sector that would primarily
+benefit from the completed project.
+
+‘Metals industry
+Research and
+Development Center
+(MIRDC)
+
+an aitached agency of DOST, is the sole government entity that
+supports the country’s metals and engineering sector.
+
+Part/Product
+Localization
+
+process of adapting any aspect of a part or product for a specific
+locale or market. Itis the practice of adjusting a products
+functional properties and characteristics to accommodate
+industry requirements.
+
+Penetration Rate
+
+iis the number of customer served by the Center through its
+completed projects divided by the number of existing shops in
+the country classified according to industry.
+
+Pre Feasibility Study
+
+usually include a range of options for the technical and
+economic aspects of a project and are used to justify continued
+exploration, to complete the required project permitting or to
+attract a potential partner
+
+Predictive Modelling
+
+the technique of using historical information on a certain attribute |
+or event to identify patterns which will assist in predicting a
+future value of the same with a certain probability attached to it
+It uses analytical tools to predict the probability of an outcome or
+future behavior.
+
+Process Improvement
+
+systematic approach to closing of process or system
+performance  gapsthrough — streamlining —_and cycle
+time reduction, and identification and elimination of causes of |
+
+below specifications quality, process variation, and non-value-
+adding activities
+
+
+85
+
+process of designing and creating new products or services to
+benefit customers and is sometimes referred to as new product
+development Product development may involve modification of
+
+Product Development .
+an existing product or its presentation, or formulation of an
+entirelynew product that satisfies a newly defined
+customer want or market niche
+‘development and market introduction of a new, redesigned or |
+Product Improvement an |
+substantially improved product.
+Tefers to R&D jobs with predetermined objective(s) tobe —|
+Projects accomplished within a specific time frame. It is categorized as
+Contract R&D and GIA R&D.
+~ ‘expenses in terms of Peso that is incurred in the implementation |
+Project Cost
+of projects considered indispensable to its operation.
+length of start and end period of project implementation period
+Project Duration or timeframe in terms of weeks and months that covers the start
+and completion dates of the project. |
+money attributed to a group or an individual in order to perform a
+Project Funding research, development or innovative activity — an activity which
+will be limited in scope, budget and time
+an early sample, model or release of a product to test a concept |
+Prototype or process to act as a thing to be replicated or learned from and
+on which to base future designs
+Quality of completed _| completed project is suitable for its intended purpose, able to
+project perform satisfactory service and meet customer expectation
+/R&D Type
+
+SIPOC Technique
+
+is a tool that summarizes the inputs and outputs of one or
+
+more processes. The acronym SIPOC stands
+
+for suppliers, inputs, process, outputs, and customers which form
+the columns of the table.
+
+refers to knowledge and know how, skills, products, processes, |
+
+|
+
+Technologies
+practices, inventions and/or innovations
+~ the technology generated through the Contract R&O or GIA R&D
+Technology projects of the MIRDC are either (1) transferred or (0) not
+Transferability transferred to the industry.
+
+Technical Expertise
+
+talent and expertise the MIRDC or an individual possess to
+
+
+86
+
+perform certain task related to the project
+
+process by which one party systematically transfers to another
+party the knowledge for the manufacture of a product,
+
+Technology Transfer
+SOY application of a process or rendering of a service which may
+involve the transfer, assignment or licensing of IPR
+Testing and Analysis _ | the process of measuring the performance of a product
+
+B. List of Acronyms
+
+ANN Artificial Neural Network
+AUTH ‘Association of University Technology Managers
+CRM Customer Relationship Management
+CSF Critical Success Factor
+DOsT Department of Science and Technology
+GAA General Appropriations Act
+GIA Grant-in-Aid
+IPR Intellectual Property Rights
+MSE Metals and Engineering
+MFO Major Final Output
+MIRDC Metals Industry Research and Development Center
+MLP - Multi Layer Perceptron
+MOA Memorandum of Agreement
+| MPRD Materials and Process Research Division
+MSE Mean Square Error
+~ Philippine Council for Agriculture, Aquatic and Natural Resource
+PCAARRD Research and Development
+PCHRD Philippine Council for Health Research and Development _
+a Philippine Council for Industry, Energy and Emerging
+Technology Research and Development
+PD Prototyping Division
+RA Republic Act _
+R&D Research and Development _
+RDI Research and Development Institute
+SIPOC ‘Supplier-Input-Process-Output-Customer |
+SLP "Single Layer Perceptron
+
+
+87
+
+TDD Technology Diffusion Division
+TRC Technical Review Committee
+Tc Technology Transfer Life Cycle
+
+
