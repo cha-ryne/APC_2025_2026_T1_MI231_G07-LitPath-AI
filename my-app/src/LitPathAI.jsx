@@ -137,7 +137,7 @@ const LitPathAI = () => {
       const data = await response.json();
       const { overview, documents, related_questions } = data;
 
-      // Format documents for frontend
+      // Format documents for frontend, mapping backend fields exactly
       const formattedSources = documents.map((doc, index) => ({
         id: index + 1,
         title: doc.title || '[Unknown Title]',
@@ -146,8 +146,8 @@ const LitPathAI = () => {
         abstract: doc.abstract || 'Abstract not available.',
         fullTextPath: doc.file || '',
         degree: doc.degree || 'Thesis',
-        callNo: doc.call_no || 'N/A',
-        disciplines: doc.disciplines || ['Research'],
+        call_no: doc.call_no || 'N/A',
+        subjects: doc.subjects || ['Research'],
       }));
 
       setSearchResults({
@@ -591,7 +591,7 @@ const LitPathAI = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="font-semibold text-gray-800">Call No:</span>
-                  <span>{selectedSource.callNo}</span>
+                  <span>{selectedSource.call_no}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Calendar size={16} className="text-gray-500" />
@@ -601,11 +601,19 @@ const LitPathAI = () => {
                 <div>
                   <span className="font-semibold text-gray-800">Discipline/s:</span>
                   <div className="ml-5 mt-1 text-gray-600">
-                    {selectedSource.disciplines && selectedSource.disciplines.length > 0 ? (
-                      selectedSource.disciplines.map((d, i) => <div key={i}>• {d}</div>)
-                    ) : (
-                      <div>N/A</div>
-                    )}
+                    {(() => {
+                      let subjects = [];
+                      if (Array.isArray(selectedSource.subjects)) {
+                        subjects = selectedSource.subjects;
+                      } else if (typeof selectedSource.subjects === 'string' && selectedSource.subjects.trim() !== '') {
+                        subjects = selectedSource.subjects.split(',').map(s => s.trim()).filter(Boolean);
+                      }
+                      return subjects.length > 0 ? (
+                        subjects.map((d, i) => <div key={i}>• {d}</div>)
+                      ) : (
+                        <div>N/A</div>
+                      );
+                    })()}
                   </div>
                 </div>
               </div>
