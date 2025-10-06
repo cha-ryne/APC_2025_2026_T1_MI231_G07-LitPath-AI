@@ -1,3 +1,6 @@
+import dotenv
+dotenv.load_dotenv()
+
 def recover_chromadb_from_index(pdf_folder, chunk_size=500):
     """
     If ChromaDB is empty but indexed_files.json exists, re-embed and re-index all PDFs listed in indexed_files.json.
@@ -23,6 +26,7 @@ def recover_chromadb_from_index(pdf_folder, chunk_size=500):
             text = f.read()
         meta = extract_thesis_metadata(text)
         meta["file"] = os.path.basename(txt_path)  # Use .txt as the source
+        meta["pdf"] = os.path.basename(txt_path)   # Use .txt as the 'pdf' reference
         meta["chunk_idx"] = 0  # Will be set per chunk
         # Ensure 'subjects' is always a string
         if "subjects" in meta and isinstance(meta["subjects"], list):
@@ -167,7 +171,7 @@ def prompt_chain(top_chunks, prompts, api_key):
             pdf_to_number = {}
             for i, c in enumerate(top_chunks):
                 meta = c['meta']
-                pdf_id = meta['pdf']
+                pdf_id = meta.get('pdf', meta.get('file', '[Unknown]'))
                 if pdf_id not in seen_pdfs:
                     seen_pdfs.append(pdf_id)
                     pdf_to_number[pdf_id] = len(seen_pdfs)
@@ -177,8 +181,8 @@ def prompt_chain(top_chunks, prompts, api_key):
             doc_info_str = "Top 10 relevant documents found (numbered for reference):\n" + "\n".join(doc_infos) + "\n\n"
             # Only include chunks from the top unique PDFs, in order
             chunk_context = "\n\n".join([
-                f"[{pdf_to_number[c['meta']['pdf']]}] From {c['meta']['pdf']} (chunk {c['meta']['chunk_idx']}): {c['chunk']}"
-                for c in top_chunks if c['meta']['pdf'] in pdf_to_number
+                f"[{pdf_to_number[c['meta'].get('pdf', c['meta'].get('file', '[Unknown]'))]}] From {c['meta'].get('pdf', c['meta'].get('file', '[Unknown]'))} (chunk {c['meta']['chunk_idx']}): {c['chunk']}"
+                for c in top_chunks if c['meta'].get('pdf', c['meta'].get('file', '[Unknown]')) in pdf_to_number
             ])
             context = f"{doc_info_str}Context: {chunk_context}\n\nWhen answering, please reference the relevant thesis by its number in square brackets, e.g., [1], [2], etc., to indicate the source of each point.\n\n"
             context += (

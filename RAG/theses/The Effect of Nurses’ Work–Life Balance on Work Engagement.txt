@@ -1,0 +1,901 @@
+269 © 2021 Tottori University Medical PressThe Effect of Nurses’ Work–Life Balance on Work Engagement: The Adjustment 
+Effect of Affective Commitment
+Toshiki Fukuzaki, * Noboru Iwata, † Sawako Ooba, ‡ Shinya Takeda * and Masahiko Inoue *
+*Department of Clinical Psychology, Tottori University Graduate School of Medical Sciences, Yonago 683-8503 Japan, † Faculty of 
+HealthCare, Kiryu University, Midori 379-2392 Japan, and ‡ Work-Life Balance Support Center, Tottori University Hospital, Yonago 
+683-8504 Japan
+ABSTRACT
+Background   This study aimed to examine the effects 
+of nurses’ work–life balance ( WLB ), job demands and 
+resources, and organizational attachment on their work 
+engagement (WE). The second aim was to shed light on whether the relationships among WLB , job demands, 
+resources, and WE are modulated by organizational 
+attachment.
+Methods  In total, 425 nurses working in a university 
+hospital responded to the questionnaire. The primary 
+statistical analysis method was hierarchical multiple regression with WE as the dependent variable.
+Results  In the model in which all variables were 
+applied, affective commitment  (AC) (β = 0.41), family-
+to-work positive spillover ( β = 0.25), and number of 
+children ( β = 0.13) were found to have a significant 
+association with WE. Family-to-work negative spillover (FWNS) and AC had significant  interaction  effects. The 
+result suggests that when AC was low, WE tended to 
+decline further due to FWNS ; however, when AC was 
+high, WE did not change due to the effect of FWNS .
+Conclusion   These results confirmed  that to improve 
+nurses’ WE, hospital organizations should implement initiatives to facilitate WLB  that considers nurses’ 
+household roles. Furthermore, high organizational attachment buffered the home’s negative influence on 
+work, thereby helping nurses work energetically.
+Key words  nurse; work engagement; work-life bal -
+ance
+Work–life balance ( WLB ) refers to harmony between 
+work and non-work aspects of life, and is an important 
+concept for workers to continue to work healthily and for the sustainability of organizations.
+1 Therefore, 
+countries around the world are taking steps to promote 
+WLB .2 For example, in Northern European countries, 
+which have advanced WLB initiatives, national and lo -
+cal governments are working to improve the infrastruc -
+ture for childcare and nursing care.3 In the US, it is well 
+known that companies are actively engaged in WLB  
+initiatives, believing that these will lead to increased 
+worker productivity.3 Since the formulation of the WLB Charter in 2007, Japan has made efforts to improve the 
+WLB of working people (e.g., work style reform or the 
+Premium Friday campaign).1
+These initiatives for promoting WLB are necessary 
+at both regular companies and medical institutions. This 
+is because one of the world’s most serious problems in the medical and health fields is the shortage of nurses, 
+and one of the causes of nurses leaving the workforce is 
+the difficulty of balancing work and family life.
+4, 5 For 
+example, women make up a large percentage of nurses, 
+and it is conceivable that life events, such as marriage or the birth of a child, would have a significant  impact on 
+them. Furthermore, because many nurses work shifts and work both during the day and at night, balancing 
+work and home life may be difficult. Studies of nurses 
+indicate that difficulty balancing work and home life in-
+creases the desire to leave the job.
+6, 7 High job turnover 
+and labour shortage due to a declining birth rate coupled 
+with an ageing population have long been a concern for the nursing profession.
+8 Considering  this, promoting 
+WLB measures that make it easier for nurses to work is an essential task for Japan.
+One important concept related to WLB  is work–
+family conflict.
+9 This concept refers to conflict over 
+roles when a person is unable to balance their roles at work and home, and a relationship has been demon -
+strated to exist between work and family conflict and 
+decreased performance at work, the desire to leave a job, 
+and increased instances of depression.
+10 Meanwhile, in 
+recent years, the positive effects of balancing work and 
+family life, such as work–family facilitation and work–
+family enrichment, have become apparent.11, 12 For 
+instance, work–family enrichment occurs when experi -
+ence in one role increases other experiences’ quality.11 Original Article Yonago Acta Medica 2021;64(3):269–281  doi: 10.33160/yam.2021.08.005
+Corresponding author: Toshiki Fukuzaki
+toshiki-fukuzaki@tottori-u.ac.jp
+Received 2021 April 27
+Accepted 2021 June 17
+Online published 2021 July 29Abbreviations:  AC, affective commitment;  BJSQ , brief job stress 
+questionnaire; FWNS , family-work negative spillover; FWPS , 
+family-work positive spillover; JD-R , job demands-resources; 
+WE, work engagement; WFNS , work-family negative spillover; 
+WFPS , work-family positive spillover; WLB , work-life balance
+270T. Fukuzaki et al.
+© 2021 Tottori University Medical PressFurther, a relationship has been demonstrated between 
+work and family enrichment and job satisfaction, physi -
+cal health, and mental health.13 In other words, to study 
+WLB  comprehensively, we must understand both the 
+adverse effects due to difficulties balancing work and 
+family, such as work–family  conflict, and the positive 
+impact due to successful balancing of work and family life, such as work–family enrichment.
+Recent research on occupational stress has centred 
+on so-called positive mental measures, which focus on identifying and further developing the individual workers and workplace groups’ strengths. The psy -
+chological concept of work engagement (WE) is at the centre of these positive mental measures. WE is defined 
+as “a positive, fulfilling, work-related state of mind characterised by vigor, dedication, and absorption.”
+14 A 
+relatively large number of studies on WE among nurses have focused on the relationship between WE and work environment factors,
+15, 16 and have reported that job re -
+sources, which refer to supervisor support and rewards, are related to WE.
+17, 18 In Japan, many studies of nurses 
+have focused on the association between WE and work environment factors,
+19 and the association between WE 
+and subsequent factors such as intention to continue, intention to leave, and sense of well-being have also been examined.
+20, 21
+The importance of WLB is increasing yearly in the 
+nursing profession in Japan,5 and it has been shown that 
+nurses’ WLB  is related to mental health.22 However, 
+few studies have focused on the relationship between WLB  and WE for nurses. Okada et al. conducted a 
+cross-sectional study on female nurses using the concept of work–family spillover.
+23, 24 The results show that WE 
+is increased by family–work positive spillover ( FWPS ), 
+which is when the fulfilment of roles at home has a posi -
+tive effect on work roles.
+Further, the results indicate that having multiple 
+roles at work and home is vital for improving WE. Considering  the shortage of nurses in Japan,
+8 every 
+individual nurse needs to be actively engaged with their work and perform well. This study also focuses on how nurses balance roles at work and at home. Further, it 
+uses the concept of work–family spillover to study the 
+extent to which WE is impacted by the harmful effects 
+of conflict between work and family roles and the posi-
+tive impact of well-balanced work and family roles.
+24 
+Consistent  with the results from Okada et al.,23 FWPS  
+is also expected to be the work–family spillover element that significantly affects WE in this study.
+Hypothesis  1: The positive impact of family roles 
+on work roles ( FWPS ) exhibits a significant effect on 
+WE.One occupational stress model is the job demands-
+resources model ( JD-R  model).
+25 This model’s 
+distinctive characteristic is that WE encompassed as a mediating variable between job resources and orga -
+nizational  variables in the motivational  processes.  A 
+concept that is representative of organizational variables in the JD-R  model is organizational commitment. 
+Organizational commitment is defined as “emotional attachment to an organization characterised by sharing 
+the organization’s values and goals, wanting to remain 
+at the organization, and having a desire to work hard as a representative of the organization.”
+26 Organizational 
+commitment is widely known as an organizational vari -
+able that predicts turnover.27, 28 It is also known to be 
+directly related to other work-related outcome variables, such as organizational citizenship behaviour.
+29, 30 As 
+has been demonstrated with the JD-R  model’s motiva -
+tional processes, increasing WE is thought to increase organizational commitment and form an organization’s attachment.
+25, 31 Furthermore, forming an attachment 
+to an organization decreases the desire to leave a job. It improves organizational citizenship behavior, and mea -
+sures that increase WE are thought to benefit individual 
+workers and the organizations to which they belong.
+Meanwhile, even before WE was proposed, some 
+research indicated that organizational commitment 
+affects job involvement, which affects the opposite 
+direction to the effect in the JD-R  model.
+32, 33 Recently, 
+Yang et al. performed a cross-sectional study on health -
+care workers and found that the relationship between 
+job stress factors and work performance is mediated by affective commitment,  which is the core principle of or-
+ganizational commitment.
+34 Therefore, as demonstrated 
+with motivational processes, we can conclude that WE affects organizational commitment and conversely, organizational  commitment  affects WE. In other words, 
+it is possible that when a worker forms an attachment 
+to an organization, the worker will be able to engage 
+with work actively. However, most recent studies follow the JD-R  model and investigate the effect of WE on 
+organizational commitment,
+31, 35 and there is a lack of 
+research in the opposite direction, that is, on the effect of 
+organizational commitment on WE. The present study investigates  the effect of organizational  commitment  on 
+WE to address this.
+Hypothesis  2: Organizational  commitment  exhibits 
+a significant main effect towards WE.
+In addition to the direct effect of organizational 
+commitment on WE, this study also focuses on the adjustment effect of organizational commitment. Begley and Czajka demonstrated  that organizational 
+commitment has an adjustment effect that weakens 
+271Nurses’ work-life balance and work engagement
+© 2021 Tottori University Medical Pressthe relationship between organizational stress and job 
+dissatisfaction.36 However, like Begley and Czajka,36 
+existing research on the adjustment  effect of organiza -
+tional commitment has focused only on the relationship 
+between stress factors and stress responses. It has not investigated  whether organizational  commitment  affects 
+the relationship between WE and WLB or job resources related to WE when a positive work-related variable, such as WE, is used as a dependent variable and WLB 
+or job resources related to WE are used as independent 
+variables.
+Mottaz indicated that organizational commitment is 
+more strongly affected by intrinsic rewards, such as hap -
+piness derived from work itself, than extrinsic rewards, such as salary.
+37 A study on nurses that examined the 
+relationship between organizational commitment and work-related behavior demonstrated a relationship between a nurse’s organizational commitment and self-development behavior. The nurse strives to work at a high level as a specialist.
+38 These findings indicate 
+that the sense of belonging in an organization can vary based on differences  in workers’ values regarding their 
+work. In other words, nurses with strong organizational commitment derive powerful intrinsic rewards, such as happiness, from performing their work, and these 
+nurses actively engage in their work. Thus, compared 
+to nurses with low organizational commitment, nurses 
+with high organizational commitment may place more 
+value on the job resources they need to engage in their work and the positive effect of their family roles on their work roles. Based on the above, this study uses job resources and WLB as independent variables and WE as the dependent variable to investigate the adjustment effect of organizational  commitment  on the relationship  
+between those factors.
+Hypothesis  3: Organizational  commitment  
+strengthens the relationship between job resources and 
+WE.
+Hypothesis  4: Organizational  commitment  
+strengthens the relationship between FWPS  in WLB  
+and WE.
+SUBJECTS AND METODS
+Participants
+An anonymous  cross-sectional  questionnaire  survey 
+was administered to nurses working at a university 
+hospital in Japan’s Chugoku region. The participants 
+were provided with envelopes containing explanatory documents and questionnaires describing the study’s purpose, personal information protection, and data 
+management methods. The survey period was from 
+December  2019 to January 2020. Of the 757 people who received the survey, 533 responded  (70.4% response 
+rate). Of these, missing values and data with entry er -
+rors were excluded. Data on nurses working in depart -
+ments with five or more employees were used in the analysis to consider the influence of workplace group units, and data on nurses working in smaller numbers were excluded from the analysis. The final data used in the analysis were from 425 participants  (37 men and 
+388 women). The mean age of the participants was 32.8 
+years (standard deviation 8.9).
+The Ethical Review Committee  of the Tottori 
+University School of Medicine approved this study 
+(Reference number: 19A147).
+Measures
+Demographic characteristics
+The following items were included: age, gender, educa -
+tion, marital status, number of children, care recipients 
+(living together or apart), occupation, a career in the current job, employment status, managerial position, night shift in a recent month, and overtime work in a recent week.
+Work–life balance
+The Japanese version of the work–life  balance scale 
+was used.39 This scale was developed using the concept 
+of work–family spillover, which refers to the fact that situations and experiences  in one role of work/family 
+also influence situations and experiences in the other function of work/family.
+24 This scale also focuses on 
+positive emotions and the negative emotions of burden and conflict experienced  by employing  multiple roles. 
+This scale, similar to work–family  conflict, allows the 
+examination of the direction of work-to-family and family-to-work influences and consists of four sub -
+scales: work–family  negative spillover (WFNS ), family–
+work negative spillover ( FWNS ), work–family positive 
+spillover ( WFPS ), and family–work positive spillover 
+(FWPS ). The work–life balance scale consists of 22 
+items: 8 for WFNS , 5 for WFPS , 4 for FWNS , and 5 for 
+FWPS . These items were evaluated on a 4-item scale 
+(from 0 “never” to 3 “always”).
+Job demands
+Six items from the Brief Job Stress Questionnaire 
+(BJSQ ) were used to evaluate the quantitative and 
+qualitative work burden.40 These items were evaluated 
+on a 4-point scale where the higher the work burden, the higher the score.
+Job resources
+We used job control, supervisor support, and co-worker 
+272T. Fukuzaki et al.
+© 2021 Tottori University Medical Presssupport, as well as job demands from the BJSQ .40 
+Extrinsic rewards from the Japanese short version of the 
+effort–reward  imbalance  model questionnaire  were also 
+used.41 Job control, supervisor  support, and co-worker 
+support consisted of three items, and extrinsic rewards 
+consisted  of seven items. All items were rated on a 
+4-item scale, and the higher the job control, support of supervisors and co-workers, and extrinsic rewards, the higher the score.
+Work engagement
+A shortened  version of the Japanese version of the 
+Utrecht work engagement scale was used.42 This scale 
+consists of nine items in three subscales: vigor, dedica -
+tion, and absorption. Responses were requested on a 7-point scale (0 to 6), ranging from “Never” to “Always/
+Every day.”
+Affective commitment
+The three-dimensional organizational commitment scale consists of three subscales: affective commitment, 
+continuance commitment, and normative commit -
+ment.
+43 In this study, we used six items of the affective 
+commitment scale,43 which indicates emotional attach -
+ment to the organization, and asked participants to rate their responses on a 5-point scale (from 1 point “not applicable” to 5 points “fairly applicable”).
+Statistical analyses
+First, after calculating the fundamental statistics for each variable, differences in each variable by marital status were examined using t-test and chi-square test.
+Second, Pearson’s correlation coefficients  between 
+each variable were calculated.  Additionally,  as the 
+questionnaires were distributed and collected at the 
+departmental level, the data obtained were expected to 
+have a multilevel structure, including individual and 
+departmental levels. Therefore, the intraclass correlation 
+coefficient  was calculated  to examine the effect of the 
+departmental level.
+Third, hierarchical multiple regression analyses 
+were conducted  to examine the effects of demographic 
+characteristics, job demands and resources, work–family spillover, and affective commitment on WE. Demographic  characteristics  were used in Step 1, job 
+demands and resources in Step 2, work–family spillover in Step 3, and affective commitments  in Step 4. Then, to 
+test the interaction  effects of job demands and resources 
+and affective commitment and work–family spillover and affective commitment,  each interaction  was entered 
+in Step 5.
+44 The interactions were calculated after cen -
+tring each variable on accounting for multicollinearity issues.
+The analysis was performed using IBM SPSS 
+Statistics version 26 and R version 4.0.0. The signifi -
+cance level for all analyses was set at 5%.
+RESULTS
+Descriptive statistics
+Table 1  shows the demographics of the participants in 
+the analysis. About 90% of the participants were female,  
+42.4% had a spouse, and 57.6% had no spouse.
+Table 2 shows the differences  in each variable by 
+marital status. The group with a spouse had a higher 
+age and career in the current job, a higher percentage 
+of managerial positions, and a lower number of night 
+shifts than the group without a spouse. They also had higher supervisor  support and higher WE and affective 
+commitment. For work-life balance, WFNS  was high, 
+but WFPS  and FWPS  were high as well.
+The intraclass correlation, Pearson’s correlation, 
+and reliability coefficients are shown in Table 3 . The 
+intraclass correlation  was significantly  higher than 0.1, 
+only for age and number of night shifts. All other vari-
+ables were not significant  and less than 0.1. Therefore, 
+we judged that the variation at the multilevel structure’s department level was small for each variable used in this study and conducted the individual-level analysis.
+Pearson’s correlation coefficients showed strong 
+correlations among age and length of service, WFPS , 
+and FWPS . Moderate correlations were found be -
+tween job demands and WFNS , WFNS , and FWNS . 
+Furthermore, the relationship between FWPS  and WE, 
+between WE and affective commitment, was moderate.
+Although the reliability  coefficients  for extrinsic 
+rewards were slightly low at 0.65, the rest of the coef -
+ficients were above 0.70, considered sufficient.
+Hierarchical multiple regression analysis
+With WE as the dependent variable, Table 4 shows the results of entering the interaction between job demands, resources, and affective commitment in Step 5, and Table 5  shows the results of joining in the interaction 
+between work–family spillover and affective commit -
+ment in Step 5. The unstandardized  coefficients,  95% 
+confidence intervals of unstandardized coefficients, 
+standardized  coefficients,  P-values, and VIFs in the two 
+tables are the values obtained when all the variables in 
+Steps 1 to 5 are employed.  Considering  the multicol -
+linearity problem due to the high correlation  coefficient 
+between age and career in the current job in Table 3, we did not include age. Although  WFPS  and FWPS  
+showed strong correlation, we judged that the problem of multicollinearity was small based on the value of VIF 
+273Nurses’ work-life balance and work engagement
+© 2021 Tottori University Medical Press(1.02–2.62); thus, we entered the two variables.
+With WE as the dependent variable, Tables 4 
+and 5 show a significant  increase in the coefficients  of 
+determination in Steps 2–4 ( ΔR2) with the strongest 
+effect on affective commitment  (β = 0.42, 0.41; Tables 4 and 5, respectively) followed by FWPS  (β = 0.24, 0.25) 
+and number of children ( β = 0.12, 0.13). All were posi -
+tive impacts. Job demands and resources did not show 
+a significant  direct effect. In Table 4, the increase in the 
+determination  coefficient  was significant  only when an Table 1. Characteristics of respondents ( n = 425)
+n % Mean SD
+Age (years) 32.8 8.9
+Gender
+Men 37 8.7
+Women 388 91.3
+Education
+University/graduate school graduate 199 46.8
+Junior college graduate 51 12.0
+Vocational school/college graduate 157 36.9
+High school graduate 16 3.8
+Others 2 0.5
+Marital status
+Spouse Yes 180 42.4
+Spouse No 245 57.6
+Number of child(ren)
+0 274 64.5
+1 39 9.2
+2 69 16.2
+3 31 7.3
+≥ 4 12 2.8
+Care recipient (living together)
+Yes 19 4.5
+No 406 95.5
+Care recipient (living apart)
+Yes 25 5.9
+No 400 94.1
+Occupation
+Nurse 401 94.4
+Midwife 24 5.6
+Career in the current job (years) 8.7 7.8
+Employee status
+Full-time 412 96.9
+Part-time ∙ others 13 3.1
+Managerial position
+Yes 67 15.8
+No 358 84.2
+Night shift in a recent month (times) 4.9 3.3
+Overtime work in a recent week (hours) 4.9 10.9
+274T. Fukuzaki et al.
+© 2021 Tottori University Medical Pressinteraction between supervisor support and affective 
+commitment was entered in Step 5 ( P < 0.05, n.s.  for 
+all others). A simple slope analysis revealed that, for 
+low affective commitment  (mean − 1 SD), the WE did 
+not change with the support of the supervisor; however, 
+for high affective commitment  (mean + 1 SD), WE 
+increased with the support of the supervisor (Fig. 1 ). 
+As shown in Table 5, the increase in the determination 
+coefficient  was significant  only when an interaction  be-
+tween FWNS and affective commitment was introduced  
+in Step 5 ( P < 0.01, n.s.  for all others). When the affec -
+tive commitment  was low (mean – 1 SD), higher  FWNS  
+resulted in lower WE; however, when it was high (mean 
++ 1 SD), higher FWNS  did not change WE (Fig. 2).
+DISCUSSION
+This study aimed to examine the effects of WLB , orga -
+nizational commitment, and job demands and resources 
+on WE among nurses. Furthermore, we examined whether the level of organizational commitment modu -
+lates the relationships between job resources and WE 
+and between FWPS  and WE. Affective commitment, 
+FWPS , and the number of children directly affected 
+WE, respectively, concerning the extent of the impact. 
+Job demands and resources did not have significant  ef-
+fects on any of the variables. Additionally,  the affective 
+commitment  had a moderating  effect on the association 
+between support from supervisors and WE and between 
+FWNS  and WE.
+First, from among the four aspects of WLB , only 
+FWPS showed a significant  association  with WE, thus 
+supporting Hypothesis 1. These results are similar to those reported by Okada et al.
+23 Second, the effect 
+of FWPS  was more significant for nurses who were 
+married than for those who were not married ( P < 
+0.05; Table 2). This finding is similar to that reported 
+by Okada et al.23 In other words, the present results 
+corroborate the findings of Okada et al. that having Table 2. Difference in study variables by marital status ( n = 425)
+Spouse No  
+n = 245Spouse Yes  
+n = 180Total  
+n = 425P value
+Mean SD Mean SD Mean SD 
+Age (years) 29.7 7.9 36.9 8.6 32.8 8.9 0.000
+Gender n (%)
+Men 21 (8.6) 16 (8.9) 37 (8.7)
+0.909*
+Women 224 (91.4) 164 (91.1) 388 (91.3)
+Career in the current job (years) 5.9 6.3 12.5 8.2 8.7 7.8 0.000
+Managerial position n (%)
+Yes 23 (9.4) 44 (24.4) 67 (15.8)
+0.000*
+No 222 (90.6) 136 (75.6) 358 (84.2)
+Night shift in a recent month (times) 5.2 3.0 4.5 3.6 4.9 3.3 0.030
+Overtime work in a recent week 
+(hours)5.1 11.5 4.7 10.2 4.9 10.9 0.738
+Job demands 19.5 2.9 19.7 2.7 19.6 2.8 0.460
+Job control 7.6 1.6 7.8 1.6 7.7 1.6 0.097
+Supervisor support 7.9 1.9 8.3 1.9 8.0 1.9 0.042
+Co-worker support 9.0 2.1 8.9 2.0 8.9 2.0 0.669
+Extrinsic reward 19.6 2.4 19.9 2.2 19.7 2.3 0.181
+Work to family negative spillover 6.9 4.9 9.0 5.6 7.8 5.3 0.000
+Work to family positive spillover 5.0 3.0 5.8 2.9 5.3 3.0 0.004
+Family to work negative spillover 1.0 1.8 0.9 1.6 1.0 1.7 0.505
+Family to work positive spillover 4.5 3.2 6.2 3.1 5.2 3.3 0.000
+Work engagement 22.3 9.2 26.4 8.3 24.1 9.0 0.000
+Affective commitment 18.7 3.8 19.8 3.8 19.2 3.9 0.004
+*chi-square test.
+275Nurses’ work-life balance and work engagement
+© 2021 Tottori University Medical Pressmultiple roles at work and home improves WE.23
+It is known that employees who are married or 
+have children are very likely to use family benefit 
+systems to balance work and family life.45 Further, 
+improvement in WE is associated with psychological 
+health, job performance and well-being.21, 46 In other 
+words, it is conceivable that it may be beneficial to develop policies that consider nurses’ household roles, such as offering shorter work hours and time off for child-rearing and eldercare. This would enable nurses to work energetically and maintain their health. Their improved job performance would, in turn, contribute to the revitalization of hospital organizations.
+This study’s results did not indicate significant 
+direct associations between job resources and any of the variables. These results differed from those of Okada et Table 3. Intraclass coefficient, correlations and reliability estimates for study variables (Cronbach's alpha) ( n = 425)
+ICC 1 2 3 4 5 67 8 9 10 11 12 13 14 15 16
+1.Age 
+(years)0.14* –
+2.Career in 
+the current 
+job (years)0.06 0.85** –
+3.Night shift 
+in a recent 
+month (times)0.30** 0.03 0.06 –
+4.Overtime work in a recent week (hours)0.01 –0.05 –0.04 0.04 –
+5.Number of child(ren)0.02 0.56** 0.53** –0.13** –0.08 –
+6.Job de -
+mands0.06 0.060.07 0.04 –0.02 0.05 (0.83)
+7.Job control 0.050.07 0.13** 0.01 0.00 0.05 –0.20**(0.70)
+8.Supervisor support0.07 –0.03 –0.02–0.07 0.04 0.05 –0.08 0.30** (0.83)
+9.Co-worker 
+support0.02 –0.14** –0.10* –0.06 –0.01–0.07 –0.06 0.31** 0.61** (0.90)
+10.Extrinsic reward0.01 –0.03 0.00 –0.02 0.06 –0.03 –0.24** 0.32** 0.44** 0.28** (0.65)
+11.Work to family negative spillover0.00 0.14** 0.11* –0.04 –0.030.27** 0.40** –0.22** –0.16** –0.18** – 0.31** (0.91)
+12.Work to family positive spillover0.00 –0.03 0.00 –0.10* –0.01 0.13** –0.01 0.14** 0.25** 0.18** 0.18** 0.08 (0.81)
+13.Fam-
+ily to work 
+negative 
+spillover0.00 0.050.070.07 –0.01 0.00 0.09 –0.10*–0.07 –0.05 –0.24** 0.40** 0.11* (0.84)
+14.Fam-
+ily to work 
+positive 
+spillover0.00 0.14** 0.15** –0.08 –0.01 0.25** 0.00 0.20** 0.31** 0.18** 0.21**0.070.71** 0.04 (0.85)
+15.Work en -
+gagement0.00 0.22** 0.20** –0.16** 0.02 0.25** –0.05 0.31** 0.33** 0.21** 0.34** – 0.11* 0.34** –0.09 0.44** (0.93)
+16.Affective 
+commit -
+ment0.010.17** 0.18** – 0.21** 0.04 0.14** –0.02 0.31** 0.34**0.17** 0.40** –0.16** 0.29** –0.08 0.32** 0.59** (0.85)
+*P < 0.05; ** P < 0.01.
+276T. Fukuzaki et al.
+© 2021 Tottori University Medical PressTable 4. Results of hierarchical multiple regression analysis which tested interaction effects of job demand and 
+resources, affective commitment ( n = 425)
+Ba95% CI βbP value ΔR2Adjusted 
+R2 VIF
+Step 1 0.10 0.09***
+Gender (0 = Men, 1 = Women) 0.49–1.88 ― 2.87 0.02 0.684 1.08
+Marital status  
+(0 = Spouse No, 1 = Yes)0.44–1.29 ― 2.17 0.02 0.618 1.77
+Number of child(ren) 0.94 0.12 ― 1.76 0.12 0.024 2.15
+Career in the current job (years) –0.02 –0.14 ― 0.10 –0.02 0.721 2.21
+Managerial position  
+(0 = No, 1 = Yes)1.74–0.38 ― 3.86 0.07 0.108 1.44
+Night shift in a recent month  
+(times)–0.06 –0.27 ― 0.15 –0.02 0.578 1.17
+Overtime work in a recent week 
+(hours)0.01–0.05 ― 0.06 0.01 0.866 1.02
+Step 2 0.17*** 0.25***
+Job demands 0.06–0.21 ― 0.32 0.02 0.665 1.34
+Job control 0.43–0.04 ― 0.90 0.08 0.071 1.33
+Supervisor support 0.07–0.41 ― 0.54 0.01 0.784 2.03
+Co-worker support 0.24–0.19 ― 0.66 0.05 0.269 1.74
+Extrinsic reward 0.25–0.10 ― 0.60 0.06 0.160 1.59
+Step 3 0.08*** 0.33***
+Work to family negative spillover –0.09 –0.25 ― 0.07 –0.06 0.248 1.75
+Work to family positive spillover –0.05 –0.37 ― 0.28 –0.01 0.785 2.27
+Family to work negative spillover –0.05 –0.48 ― 0.39 –0.01 0.836 1.34
+Family to work positive spillover 0.66 0.36 ― 0.97 0.24 0.000 2.37
+Step 4 0.10*** 0.44***
+Affective commitment 0.97 0.76 ― 1.18 0.42 0.000 1.57
+Step 5 0.02 0.44***
+Job demands × Affective  commitment0.02–0.04 ― 0.08 0.03 0.447 1.17
+Job control × Affective  commitment–0.02 –0.14 ― 0.10 –0.02 0.717 1.68
+Supervisor support × Affective commitment0.13 0.01 ― 0.25 0.11 0.032 2.08
+Co-worker support × Affective commitment–0.06 –0.16 ― 0.04 –0.05 0.271 1.94
+Extrinsic reward × Affective  
+commitment0.04–0.05 ― 0.12 0.04 0.385 1.71
+*P < 0.05; ** P < 0.01; *** P < 0.001. 
+aUnstandardized  regression coefficients. bStandardized  regression coefficients.  VIF, variance infla -
+tion factor.
+277Nurses’ work-life balance and work engagement
+© 2021 Tottori University Medical Pressal. and other previous studies that reported a significant 
+association between WE and job resources.17, 18, 23, 47 
+The variables related to job resources used in the pres -
+ent study pertained to control and support in the job 
+demands–control–support model and extrinsic rewards from the effort–reward imbalance model.
+48, 49 These 
+variables are related to job resources in the conventional representative occupational stress model. These vari -
+ables were defined and used as they were.However, Okada et al. combined the variables 
+of job resources at the job level,
+23 department level, 
+and workplace  level from the New Brief Job Stress 
+Questionnaire.50 They used them for a similar hierarchi -
+cal multiple regression analysis as conducted in the present study. Therefore,  the differing results between 
+these two studies could be attributed to the fact that the present study did not examine job resources as a 
+part of job level, department level, and workplace level Table 5. Results of hierarchical multiple regression analysis which tested interaction effects of work-life balance 
+and affective commitment ( n = 425)
+Ba95% CI βbP value ΔR2Adjusted 
+R2 VIF
+Step 1 0.10 0.09***
+Gender (0 = Men, 1 = Women) 0.21–2.17 ― 2.58 0.01 0.865 1.08
+Marital status  
+(0 = Spouse No, 1 = Yes)0.34–1.39 ― 2.07 0.02 0.700 1.77
+Number of child(ren) 1.030.21 ― 1.85 0.13 0.014 2.14
+Career in the current job (years) –0.03–0.15 ― 0.09 –0.03 0.631 2.17
+Managerial position (0 = No, 1 = Yes) 1.85–0.28 ― 3.98 0.07 0.089 1.46
+Night shift in a recent month (times) –0.07–0.28 ― 0.14 –0.03 0.519 1.19
+Overtime work in a recent week 
+(hours)0.01–0.05 ― 0.07 0.01 0.761 1.03
+Step 2 0.17*** 0.25***
+Job demands 0.03–0.23 ― 0.29 0.01 0.817 1.30
+Job control 0.34–0.07 ― 0.86 0.07 0.092 1.33
+Supervisor support 0.11–0.36 ― 0.58 0.02 0.643 2.00
+Co-worker support 0.23–0.19 ― 0.65 0.05 0.276 1.72
+Extrinsic reward 0.22–0.13 ― 0.57 0.06 0.223 1.60
+Step 3 0.08*** 0.33***
+Work to family negative spillover –0.08–0.24 ― 0.08 –0.05 0.337 1.75
+Work to family positive spillover –0.04–0.37 ― 0.28 –0.01 0.793 2.24
+Family to work negative spillover –0.05–0.49 ― 0.38 –0.01 0.814 1.35
+Family to work positive spillover 0.700.40 ― 1.01 0.25 0.000 2.35
+Step 4 0.11*** 0.44***
+Affective commitment 0.970.76 ― 1.18 0.41 0.000 1.54
+Step 5 0.01 0.44***
+Work to family negative spillover × 
+Affective commitment0.00–0.04 ― 0.03 0.00 0.916 1.38
+Work to family positive spillover × Affective commitment0.03–0.05 ― 0.10 0.03 0.496 2.62
+Family to work negative spillover × Affective commitment0.140.02 ― 0.26 0.11 0.018 1.31
+Family to work positive spillover × 
+Affective commitment–0.01–0.08 ― 0.06 –0.01 0.819 2.54
+*P < 0.05; ** P < 0.01; *** P < 0.001. 
+aUnstandardized  regression coefficients. bStandardized  regression coefficients.  VIF, variance infla -
+tion factor.
+278T. Fukuzaki et al.
+© 2021 Tottori University Medical Pressvariables. Indeed, the use of these variables separately 
+or consolidating  them as a single variable affected the 
+results. Considering  that job resources are an extremely 
+comprehensive concept,51 future studies need to inves -
+tigate how the concepts used to assess job resources and the differences  in calculation  methods affect the results 
+and reflect the actual workplace situation accurately.
+The affective commitment had the strongest 
+association with WE, thus supporting Hypothesis 2. 
+Mowday et al. commented  that, among the differences Fig. 1. Interaction effect of supervisor support and affective commitment on work engagement.
+Fig. 2. Interaction effect of family to work negative spillover and affective commitment on work 
+engagement.
+
+279Nurses’ work-life balance and work engagement
+© 2021 Tottori University Medical Pressbetween organizational commitment and job satisfac -
+tion, the latter is readily affected by day-to-day  events 
+while the former is not.26 Organizational commit -
+ment takes a relatively long time to develop, and it is 
+stable. Additionally,  in nurses, affective commitment 
+is associated with learning behavior and professional activities.
+38, 52 In other words, when organizational 
+commitment increases, nurses can consistently in a state of high WE and can work on nursing service diligently. Considering  the JD-R  model’s organizational 
+attachment formation process,
+25 it is conceivable that 
+workplace environments with abundant job resources and where work is fulfilling invigorate employees to work energetically. Further, engaging in work with a positive attitude leads to the formation of organizational attachment. We believe that organizational attachment formation creates a virtuous circle that enables employ -
+ees to work energetically consistently and sustainably.
+This study demonstrated two moderating effects 
+of affective commitment.  The results indicated that WE 
+increased when the affective commitment was high, and there was support from supervisors. However, 
+when the affective commitment was low, WE did not 
+change despite support from supervisors. This shows 
+the moderating effect of affective commitment on the association between supervisors and WE’s support, thus partially supporting  Hypothesis  3. This finding suggests 
+that nurses who are attached to the organization can work even more energetically if they have support from supervisors.
+WE can be improved effectively by providing 
+abundant job resources.
+53 Based on the Pearson product-
+moment correlation  coefficient,  the present study found 
+a significant  positive association  between each variable 
+of job resources and WE (Table 3). However, this result was not confirmed  in the hierarchical  multiple regres -
+sion analysis (Tables 4 and 5). Therefore, it is essential 
+to develop a deeper understanding of employees’ sense 
+of belonging to their organizations and their value on 
+their job descriptions.  Although the JD-R model posi -
+tions WE as a mediator in the relationship between job 
+resources and organizational commitment,
+25 the present 
+results observed individual  differences  in the extent to 
+which job resources increased WE. In other words, it is conceivable that organizational commitment is formed by first improving  WE.
+25 Furthermore, the present re -
+sults suggest that organizational commitment indirectly affects WE through supervisors’  support, which is a job 
+resource.
+This study did not find significant moderating 
+effects of affective commitment in the association of FWPS  with WLB and WE. Thus, Hypothesis 4 was not 
+supported. Meanwhile, it was observed that when the affective commitment  was low, WE decreased if FWNS  
+was high. Conversely,  when the affective commitment 
+was high, there was no change in WE even when FWNS  was high. In other words, this study found that 
+affective commitment had significant moderating effects  
+on the association of FWNS  with WLB and WE. These 
+results suggest that organizational attachment buffers the home’s negative influence, thus enabling nurses to 
+continue to work energetically.
+Aryee et al. reported that work–life balance is as-
+sociated with affective commitment  and used the social 
+exchange theory to explain the effect of WLB measures 
+on organizations.
+54, 55 They found that when employees 
+perceive that the organization shows concern and inter -
+est in their work and family roles, the employees begin to feel obligated to reciprocate to the organization.
+54 
+Possibly, when organizations promote WLB  policies 
+that consider employees’ families, employees experi -
+ence a sense of attachment to their organization, and they work energetically in return. Furthermore, due to the moderating effect of affective commitment on the association between FWNS  and WE, promotion of 
+WLB  may enable nurses to continue to perform even 
+better despite the negative impact of FWNS  on WE.
+Finally, there were several limits to this study. The 
+survey results were obtained from nurses working at a single university hospital. Therefore, it is necessary to verify these results with nurses from other institutions. Additionally,  as this was a cross-sectional  survey, each 
+measured variable’s causal relationships cannot be de -
+scribed. There is a need to conduct a longitudinal study in the future, especially to examine the causal relation -
+ship between affective commitment  and WE. Further, 
+WFPS  did not have a significant effect on WE. This 
+study focused on examining the extent to which work–family spillover affects WE. Therefore,  WE was set as 
+the dependent variable. However, studies have suggested 
+that expending positive efforts at work has a positive 
+work-to-family effect, that WE mediates WFPS.
+56 
+Further, they suggest that this relationship is linked to satisfaction with home life.
+57 In the future, it will be 
+necessary to examine this positive cycle of work and home balance in which WE mediates the relationship between FWPS  and WFPS . This study only examined 
+affective commitment, the representative subordinate concept of organizational commitment. The present 
+findings demonstrated the importance of the level of 
+affective commitment  in the JD-R model motivational 
+process. However, it will be necessary to verify whether normative and continuance commitment also have similar effects in the future. Finally, as described in the 
+Discussion  section, the variables related to job resources 
+used in this study were those of the work level variables 
+280T. Fukuzaki et al.
+© 2021 Tottori University Medical Pressin the representative occupational stress model.48, 49 
+The present results demonstrate that WE improves due 
+to the interaction between support from supervisors 
+and affective commitment.  However, job resources are 
+a comprehensive concept that includes other variables, 
+such as how work is performed in the organization that 
+were not used in this study.51 Therefore, in the future, 
+it will be necessary to examine which variables of job resources are associated with WE and under which con -
+ditions job resources exhibit an association with WE.
+Acknowledgments:  This work was supported by a research 
+funding grant from the Tottori University President. We would 
+like to thank all nurses who participated in this study.
+The authors declare no conflict of interest.
+REFERENCES
+ 1 Office for Work-Life Balance, Gender Equality Bureau, 
+Cabinet Office. [Internet].  Tokyo: Work-life balance charter 
+[cited 2020 Nov 12]. Available from: http://wwwa.cao.go.jp/
+wlb/towa/index.html.  Japanese.
+ 2 Takeishi E. Challenges  to achieving  a work-life balance: 
+Implications from an international comparative Study. RIETI policy discussion paper series 10-P-004. 2010;1-36.
+ 3 The Japan Institute for Labour Policy and Training [Internet]. 
+Tokyo: Work-life balance [cited 2005 Dec]. Available 
+from: https://www.jil.go.jp/foreign/labor_system/2005_12/
+world_01.html.  Japanese.
+ 4 Bureau of International  Health Cooperation.  National Center 
+for Global Health and Medicine [Internet].  Tokyo: State of 
+world’s nursing [cited 2020 Nov]. Available from: https://kyo -
+kuhp.ncgm.go.jp/library/other_doc/2020/Sekainokango2020_
+light_n.pdf. Japanese.
+ 5 Japan Nursing Association.  2010-2015Work-Life  Balance 
+(WLB) Index Survey of Nursing Professionals.  Tokyo: 
+Mitsubishi UFJ Research & Consulting Co; 2016. Japanese.
+ 6 Brewer CS, Kovner CT, Greene W, Cheng Y. Predictors 
+of RNs’ intent to work and work decisions 1 year later in a U.S. national sample. Int J Nurs Stud. 2009;46:940-56.  DOI: 
+10.1016/j.ijnurstu.2008.02.003 ,  PMID: 18377910
+ 7 Simon M, Kümmerling  A, Hasselhorn  HM; Next-Study 
+Group. Work-home  conflict in the European nursing profes -
+sion. Int J Occup Environ Health. 2004;10:384-91.  DOI: 
+10.1179/oeh.2004.10.4.384 ,  PMID: 15702752
+ 8 Japan Ministry of Health. Labor and Welfare [Internet]. 
+Tokyo: Dainanaji Kangoshokuin  jyukyumitooshi  ni kansuru 
+kentouhoukokusho  [cited 2010 Dec 14]. Available  from: 
+https://www.mhlw.go.jp/stf/houdou/2r9852000000z68-fimg/2r9852000000z6df.pdf.  Japanese.
+ 9 Greenhaus JH, Beutell NJ. Sources of Conflict Between Work  
+and Family Roles. Acad Manage Rev. 1985;10:76-88.  DOI: 
+10.5465/amr.1985.4277352
+ 10 Allen TD, Herst DEL, Bruck CS, Sutton M. Consequences 
+associated with work-to-family  conflict: A review and agenda 
+for future research. J Occup Health Psychol. 2000;5:278-308. 
+DOI: 10.1037/1076-8998.5.2.278 ,  PMID: 10784291
+ 11 Greenhaus  JH, Powell GN. When Work And Family Are 
+Allies: A Theory Of Work-Family  Enrichment.  Acad Manage 
+Rev. 2006;31:72-92. DOI:  10.5465/amr.2006.19379625 12 Wayne JH, Grzywacz  JG, Carlson DS, Kacmar KM. Work–
+family facilitation:  A theoretical  explanation  and model of 
+primary antecedents and consequences. Hum Resour Manage 
+Rev. 2007;17:63-76. DOI:  10.1016/j.hrmr.2007.01.002
+ 13 McNall LA, Nicklin JM, Masuda AD. A Meta-Analytic 
+Review of the Consequences  Associated  with Work–Family 
+Enrichment.  J Bus Psychol. 2010;25:381-96.  DOI: 10.1007/
+s10869-009-9141-1
+ 14 Schaufeli WB, Salanova M, González-romá  V, Bakker AB. 
+The Measurement  of Engagement  and Burnout: A Two 
+Sample Confirmatory Factor Analytic Approach. J Happiness 
+Stud. 2002;3:71-92. DOI:  10.1023/A:1015630930326
+ 15 Simpson  MR. Engagement  at work: A review of the 
+literature. Int J Nurs Stud. 2009;46:1012-24.  DOI: 10.1016/
+j.ijnurstu.2008.05.003 ,  PMID: 18701104
+ 16 Sakai M, Naruse T, Watai I, Arimoto A, Murashima  S. A 
+Literature  Review on Work Engagement  of Nurses. J Jpn 
+Acad Nurs Sci. 2012;32:71-78.  Japanese with English abstract. 
+DOI: 10.5630/jans.32.4_71
+ 17 Spence Laschinger  HK, Wilk P, Cho J, Greco P. Empower -
+ment, engagement and perceived effectiveness in nursing work environments:  does experience  matter? J Nurs Manag. 
+2009;17:636-46.  DOI: 10.1111/j.1365-2834.2008.00907.x ,  
+PMID: 19575722
+ 18 Adriaenssens  J, De Gucht V, Van Der Doef M, Maes S. 
+Exploring  the burden of emergency  care: predictors  of 
+stress-health  outcomes in emergency  nurses. J Adv Nurs. 
+2011;67:1317-28.  DOI: 10.1111/j.1365-2648.2010.05599.x ,  
+PMID: 21371083
+ 19 Tsukada T. Research trend and penetration of Work Engage -
+ment in Japan: from domestic literature review and net search 
+results. Keieironshu. 2017;6:43-53. Japanese.
+ 20 Nakamura M, Yoshioka S. Factors related to work engage -
+ment among nursing staffs working in a university hospital. 
+J Yonago Med Ass. 2016;67:17-28.  Japanese with English 
+abstract.
+ 21 Saiga E, Yoshioka S. Factors Influencing the Happiness of 
+Japanese Nurses: Association  with Work Engagement  and 
+Workaholism. Kawasaki J Med Welf. 2021;26:81-93.
+ 22 Nakai M, Oda Y, Takahashi  Y, Tabuchi Y, Kimura N, 
+Morioka I. Relationship between work—life balance and 
+mental health of nurses in a hospital. Jpn J  Health Edu Promo -
+tion. 2011;19:302-21. Japanese with English abstract.
+ 23 Okada N, Yabase K, Kobayashi  T, Okamura H. Do multiple 
+personal roles promote working energetically in female 
+nurses? A cross-sectional  study of relevant factors promoting 
+work engagement in female nurses. Environ Health Prev Med. 2019;24:56.  DOI: 10.1186/s12199-019-0810-z ,  PMID: 
+31510922
+ 24 Grzywacz  JG. Work-family  spillover and health during 
+midlife: is managing  conflict everything?  Am J Health 
+Promot. 2000;14:236-43.  DOI: 10.4278/0890-1171-14.4.236 ,  
+PMID: 10915535
+ 25 Bakker AB, Demerouti  E. The Job Demands‐Resources 
+model: state of the art. J Manag Psychol. 2007;22:309-28. 
+DOI: 10.1108/02683940710733115
+ 26 Mowday RT, Steers RM, Porter LW. The measurement of 
+organizational  commitment.  J Vocat Behav. 1979;14:224-47. 
+DOI: 10.1016/0001-8791(79)90072-1
+ 27 Williams LJ, Hazer JT. Antecedents  and consequences  of 
+satisfaction and commitment in turnover models: A reanalysis  
+using latent variable structural  equation methods. J Appl 
+Psychol. 1986;71:219-31. DOI:  10.1037/0021-9010.71.2.219
+281Nurses’ work-life balance and work engagement
+© 2021 Tottori University Medical Press 28 Stewart NJ, MacLeod MLP, Kosteniuk  JG, Olynick J, Penz 
+KL, Karunanayake  CP, et al. The importance  of organiza -
+tional commitment  in rural nurses’ intent to leave. J Adv 
+Nurs. 2020;76:3398-417.  DOI: 10.1111/jan.14536 ,  PMID: 
+33048386
+ 29 Bateman TS, Strasser S. A longitudinal  analysis of the 
+antecedents  of organizational  commitment.  Acad Manage J. 
+1984;27:95-112.  PMID: 10265651
+ 30 Morris JH, Sherman JD. Generalizability  of an Organiza -
+tional Commitment  Model. Acad Manage J. 1981;24:512-26. 
+DOI: 10.2307/255572
+ 31 Hakanen JJ, Schaufeli WB, Ahola K. The Job Demands-
+Resources model: A three-year cross-lagged study of burnout,  
+depression, commitment, and work engagement. Work Stress. 
+2008;22:224-41. DOI:  10.1080/02678370802379432
+ 32 Brown SP. A meta-analysis  and review of organizational 
+research on job involvement.  Psychol Bull. 1996;120:235-55. 
+DOI: 10.1037/0033-2909.120.2.235
+ 33 Takagi H. Psychological  aspects of organizations:  An explora -
+tion of organizational  commitment.  Tokyo: Hakutou Shobou; 
+2003. Japanese.
+ 34 Yang T, Guo Y, Ma M, Li Y, Tian H, Deng J. Job Stress and 
+Presenteeism  among Chinese Healthcare  Workers: The Me-
+diating Effects of Affective Commitment.  Int J Environ Res 
+Public Health. 2017;14:978.  DOI: 10.3390/ijerph14090978 ,  
+PMID: 28850081
+ 35 Santos A, Chambel MJ, Castanheira  F. Relational job charac -
+teristics and nurses’ affective organizational  commitment:  the 
+mediating role of work engagement. J Adv Nurs. 2016;72:294-
+305. DOI: 10.1111/jan.12834 ,  PMID: 26467032
+ 36 Begley TM, Czajka JM. Panel analysis of the moderating 
+effects of commitment on job satisfaction, intent to quit, 
+and health following organizational  change. J Appl Psychol. 
+1993;78:552-6.  DOI: 10.1037/0021-9010.78.4.552 ,  PMID: 
+8407703
+ 37 Mottaz CJ. Determinants  of Organizational  Commitment. 
+Hum Relat. 1988;41:467-82. DOI:  10.1177/001872678804100604
+ 38 Sawada T. The relationship of occupational and organiza -
+tional commitments with professional activities and burnout 
+tendencies  in nurses. Jpn J Psychol. 2009;80:131-37.  DOI: 
+DOI: 10.4992/jjpsy.80.131. Japanese with English abstract. 
+ 39 Shimada  K, Shimazu  A, Geurts SAE, Kawakami  N. 
+Reliability  and validity of the Japanese version of the 
+Survey Work–Home Interaction – NijmeGen, the SWING 
+(SWING-J).  Community  Work Fam. 2019;22:267-83.  DOI: 
+10.1080/13668803.2018.1471588
+ 40 Shimomitsu  T, Haratani T, Nakamura  K, Kawakami  N, 
+Hayashi T, Hiro H, et al. Final development of the brief 
+job stress questionnaire mainly used for assessment of the 
+individuals.  In: Kato S, editor, Report of the research grant 
+for the prevention of work-related diseases from the Ministry of Labor Tokyo Medical University. Tokyo; 2000. p. 126-64. 
+Japanese.
+ 41 Tsutsumi A, Kawanami  S, Horie S. Effort-reward  imbalance 
+and depression  among private practice physicians.  Int Arch 
+Occup Environ Health. 2012;85:153-61.  DOI: 10.1007/s00420-
+011-0656-1 ,  PMID: 21655960
+ 42 Shimazu A, Schaufeli WB, Kosugi S, Suzuki A, Nashiwa 
+H, Kato A, et al. Work Engagement  in Japan: Validation 
+of the Japanese Version of the Utrecht Work Engagement 
+Scale. Appl Psychol. 2008;57:510-23.  DOI: 10.1111/j.1464-
+0597.2008.00333.x 43 Kuratani N, Kido Y. Organizational  commitment  in the 
+public-administration  organization:  an empirical study on 
+the antecedents and consequences of organizational commit -
+ment. Sanno Univ Bull. 2006;26:55-71.  Japanese with English 
+abstract.
+ 44 Cohen J, Cohen P, West SG, Aiken LS. Applied multiple 
+regression/correlation analysis for the behavioral sciences, 3rd 
+ed. Mahwah, NJ, US: Lawrence Erlbaum Associates  Publish -
+ers; 2003.
+ 45 Thompson  CA, Beauvais  LL, Lyness KS. When work-
+family benefits are not enough: the influence of work-family 
+culture on benefit utilization,  organizational  attachment,  and 
+work-family  conflict. J Vocat Behav. 1999;54:392-415.  DOI: 
+10.1006/jvbe.1998.1681
+ 46 Shimazu A, Schaufeli WB, Kubota K, Kawakami  N. Do 
+workaholism and work engagement predict employee well-
+being and performance  in opposite directions?  Ind Health. 
+2012;50:316-21.  DOI: 10.2486/indhealth.MS1355 ,  PMID: 
+22673364
+ 47 Sato Y, Miki A. Influences  of Job Stress, Coping profile and 
+social support on work engagement  among hospital nurses: 
+A comparative  analysis according  to their years of clinical 
+experience.  J Sci Labor. 2014;90:14-25.  Japanese with English 
+abstract.
+ 48 Johnson JV, Hall EM. Job strain, work place social support, 
+and cardiovascular  disease: a cross-sectional  study of a ran-
+dom sample of the Swedish working population.  Am J Public 
+Health. 1988;78:1336-42.  DOI: 10.2105/AJPH.78.10.1336 ,  
+PMID: 3421392
+ 49 Siegrist J. Adverse health effects of high-effort/low-reward 
+conditions.  J Occup Health Psychol. 1996;1:27-41.  DOI: 
+10.1037/1076-8998.1.1.27 ,  PMID: 9547031
+ 50 Inoue A, Kawakami  N, Shimomitsu  T, Tsutsumi A, Haratani 
+T, Yoshikawa  T, et al. Development  of a short questionnaire 
+to measure an extended set of job demands, job resources, 
+and positive health outcomes:  the new brief job stress 
+questionnaire.  Ind Health. 2014;52:175-89.  DOI: 10.2486/
+indhealth.2013-0185 ,  PMID: 24492763
+ 51 Demerouti  E, Bakker AB, Nachreiner  F, Schaufeli WB. The 
+job demands-resources  model of burnout. J Appl Psychol. 
+2001;86:499-512.  DOI: 10.1037/0021-9010.86.3.499 ,  PMID: 
+11419809
+ 52 Nakamura E. Relationships between pediatric nurses’ learning behavior and work commitment.  FPU J Nurs Res. 
+2008;5:80-8.  Japanese.
+ 53 Bakker AB, Leiter MP. Work engagement:  A handbook of 
+essential theory and research. New York: Psychology  Press; 
+2010.
+ 54 Aryee S, Srinivas ES, Tan HH. Rhythms of life: antecedents 
+and outcomes of work-family balance in employed parents. 
+J Appl Psychol. 2005;90:132-46.  DOI: 10.1037/0021-
+9010.90.1.132 ,  PMID: 15641894
+ 55 Blau P. Exchange and power in social life. NY: Wiley; 1964.
+ 56 Bakker AB, Geurts SAE. Toward a Dual-Process  Model of 
+Work-Home Interference. Work Occup. 2004;31:345-66. DOI:  
+10.1177/0730888404266349
+ 57 Bakker AB, Shimazu  A, Demerouti  E, Shimada  K, 
+Kawakami  N. Work engagement  versus workaholism:  a 
+test of the spillover-crossover  model. J Manag Psychol. 
+2013;29:63-80.  DOI: 10.1108/JMP-05-2013-0148
