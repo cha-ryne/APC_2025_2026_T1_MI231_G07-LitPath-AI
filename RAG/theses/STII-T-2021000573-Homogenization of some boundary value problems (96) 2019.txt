@@ -1,89 +1,17 @@
-HOMOCENIZALION OF SOME BOUNDARY VALUE PROBLEMS
-IN PERFORATED DOMAINS
-
-VATE Mig AV/TIES:
-
-SS UP MLNS aieas At
-SAT St Ge veane
-Cimversiiy oF Whe Phuinyines
-
-Diliinan, Cuezow City
-
-June 2019
-
-UNIVERSITY OF THE PHILIPPINES
-
-Master of Science in Mathematics
+Homogenization of Some Boundary Value Problems in Perforated Domains
 
 Jake M. Avila
 
-Homogenization of Some Boundary Value Problems
-in Perforated Domains
+University of the Philippines Diliman
 
-Thesis Adviser:
+Master of Science in Mathematics
 
-Bituin C. Cabarrubias, Ph.D.
-Institute of Mathematics
-University of the Philippines, Diliman
-
-ST-18-1526
-
-Date of Submission:
-01 June 2019
-
-Thesis Classification:
-
-F
-
-This thesis is available to the public.
-
-Institute of Mathematics
-College of Science
-University of the Philippines
-Diliman, Quezon City
-
-ENDORSEMENT
-
-This is to certify that this master’s thesis entitled Homogenization of Some
-Boundary Value Problems in Perforated Domains prepared and submitted
-by Jake M. Avila in partial fulfillment of the requirements for the degree of Master
-
-of Science in Mathematics, is hereby accepted.
-
-Bll anulra.
-BITUIN C. CABARRUBIAS, PH.D.
-Thesis Adviser
-
-Spud
-ALIP A: OROPEZA, PH.D.
-/ Thesis Reader
-
-The Institute of Mathematics endorses the acceptance of this master’s thesis as partial
-fulfillment of the requirements for the degree of Master of Science in Mathematics.
-
-CARLENE P.C. PILAR-ARCEO, PH.D.
-
-Director
-Institute of Mathematics
-
-The master’s thesis is hereby officially accepted as partial fulfillment of the require-
-ments for the degree of Master of Science in Mathematics.
-
-| Dawe
-LAURA Tj) DAVID, PH.D.
-Acting Dean’. College of Science
+June 2019
 
 Abstract
 
-Homogenization of Some Boundary Value Problems
-in Perforated Domains
-
-Jake M. Avila Adviser:
-University of the Philippines, Diliman Bituin C. Cabarrubias, Ph.D.
-June 2019
-
 This work deals with the asymptotic behavior of some boundary value problems
-posed in perforated domains of R. In the first one, we consider a linear parabolic
+posed in perforated domains of Rᴺ. In the first one, we consider a linear parabolic
 problem in a periodically perforated domain with nonlinear-Robin boundary condition
 on the inner boundary while a Dirichlet condition is imposed on the outer boundary.
 Second, we consider the case with “small holes” as described in [15] and deal with
@@ -94,139 +22,6 @@ while a Dirichlet condition is prescribed on the other holes as well as on the o
 boundary. We apply an appropriate extension of the Periodic Unfolding Method for
 the homogenization of each problem.
 
-Table of Contents
-
-Abstract Pi i i ee
-
-Acknowledgments... 6 6...
-
-List of Tables 2... eee
-
-2.2
-
-2.3
-
-21.3 DP-spaces 2.0... ee
-2.1.4 Boundary value problems and periodicity. ...........
-Sobolev spaces 2... ee
-2.2.1 D(Q) and distributions... 2... 6... ee ee ee
-2.2.2 ThespacesW!? and H}... 1.2... eee eee
-2.2.3 The spaces Hj and Hh, - 6. ee ee
-2.2.4 The space L?P(Q;X) 2... eee
-Some Well-posedness Theorems ..............0000005
-2.3.1 Lax-Milgram Theorem .......... 200.0 e eee
-2.3.2 Schauder’s Fixed Point Theorem ..............-.
-2.3.3 Faedo-Galerkin Method .............-.0 00005
-
-Chapter 3. Periodic Unfolding Method.............-..00-005
-
-3.1
-3.2
-3.3
-3.4
-3.5
-
-General notation ..............
-
-Unfolding operator for fixed domains ..............0005
-Unfolding operator in perforated domains................
-Time-dependent unfolding operator in perforated domains ......
-Unfolding operator in domains with small holes ............
-3.5.1 Unfolding operator in domains depending on two parameters .
-
-OXItaanna
-
-11
-12
-12
-14
-15
-16
-16
-17
-17
-
-18
-18
-19
-21
-24
-25
-26
-
-3.5.2 Unfolding operator in domains depending on three parameters 31
-
-Chapter 4. Linear Elliptic Problem in Domains with Small Holes ...... . 34
-4.1 Homogenization results... 2... 6 ee 36
-Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes .... 42
-5.1 Preliminary results 2... 0. ee es 46
-5.2 Homogenization results... 1... ee ee 50
-Chapter 6. Linear Parabolic Problem in Perforated Domains.......... 58
-6.1 Well-posedness result . 62
-6.2 Homogenization results... 0... ee 70
-Chapter 7. Summary ........ 20... ce eee ee ee eee 76
-Appendix A. Well-known Results... .......0... 00000000000 82
-A.1 Young’s Inequality ©... 2... eee 82
-A.2 Lebesgue Dominated Convergence Theorem .............. 82
-A.3 Integration by Parts . 6... 6... ee eee 82
-List of References... 6... ee 83
-
-Acknowledgments
-
-Young man,
-
-in mathematics
-you don’t
-understand things.
-You just
-
-get used to them.
-
-John von Neumann replying to a physicist as quoted by Dr. Felix Smith in [45].
-
-To my thesis adviser, Dr. Bituin Cabarrubias, I really appreciate everything you’ve
-done for me. You continue to inspire me to pursue mathematics, in particular the area
-of homogenization theory. I’m sincerely grateful to our discussions both in the thesis
-and in life; should other aspiring students choose you as an adviser, I will indeed be
-
-very jealous.
-
-To my thesis reader, Dr. Alip Oropeza, and to my examiners Dr. Marian Roque
-and Dr. Editha Jose, I am indebted to your broad understanding of novelty and co-
-herence in mathematical research.
-
-Also, I would like to recognize Professor Patrizia Donato for introducing some of
-the boundary value problems solved in this work.
-
-To the Accelerated Science and Technology Human Resource Development Program-
-National Science Consortium (ASTHRDP-NSC) of the Department of Science and
-Technology (DOST) for funding this thesis.
-
-To UP Badminton Association in Diliman, Kabebe-es, and Powerplay friends,
-thank you for our unparalleled relationship that epitomizes competence, camaraderie,
-and commitment.
-
-To Mama and Papa, Tita Lhen and Tita Cory, my siblings and cousins, I am very
-blessed to be loved by you all.
-
-List of Tables
-
-7.1 Linear Elliptic Problem in Domains with Small Holes. . . .
-7.2 Quasilinear Elliptic Problem in Domains with Small Holes.
-
-7.3. Linear Parabolic Problem in Perforated Domains.
-
-
-List of Figures
-
-, (blue) and A, (gray). 6 eee 19
-{z}y and [zly.. 2.6... 19
-The cell Y* and the set S. . 22
-The domain. ..... 22
-The cell Ys and the set B. ..... we 26
-The domain 2X5... ee 27
-The cell ¥5,s, and the sets BandT................0006 31
-The domain 6,5. 0. ee eee 32
 
 Chapter 1
 
@@ -3521,35 +3316,6 @@ for (5.1).
 
 4, Optimal controls for the three problems.
 
-Appendix A
-
-Well-known Results
-
-A.1  Young’s Inequality
-Let a,b € R and 7 > 0. Then,
-nol
-
-< gt 4
-ab < 5a’ +5b.
-
-A.2 Lebesgue Dominated Convergence Theorem
-
-Let {f,} be a sequence of measurable functions such that f, — f pointwise almost
-everywhere as n — oo and let g be integrable with |f,| < g for all n. Then, f is
-integrable and
-
-J fae = jim, f faz.
-
-A.3 Integration by Parts
-Let 2 be a domain and u and w be measurable functions. Then,
-
-futur = [ wondes— f wWude.
-
-82
-
-{10}
-
-[uy]
 
 List of References
 

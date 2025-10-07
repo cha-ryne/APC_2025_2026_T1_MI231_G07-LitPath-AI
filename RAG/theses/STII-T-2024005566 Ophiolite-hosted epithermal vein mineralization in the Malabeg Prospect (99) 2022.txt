@@ -1,152 +1,12 @@
-aya ie ope Ly a
+Ophiolite-Hosted Epithermal Vein Mineralization in the Malabeg Prospect, Cabangan Massif, Zambales, Philippines
 
-oie pea < ae
-
-echo ne eh eee DO eee Oe
-
-
-UNIVERSITY OF THE PHILIPPINES
-Master of Science in Geology
 John Emmanuel Sevilla Fungo
 
-Ophiolite-Hosted Epithermal Vein Mineralization in the Malabeg Prospect, Cabangan Massif,
-Zambales, Philippines
+UNIVERSITY OF THE PHILIPPINES DILIMAN
 
-Thesis Adviser:
-Jillian Aira S. Gabo-Ratio, D.Eng.
-National Institute of Geological Sciences
+Master of Science in Geology
 
-University of the Philippines
-
-Date of Submission
 September 2022
-Thesis Classification
-
-P
-
-National Institute of Geological Sciences
-College of Science
-University of the Philippines
-Diliman, Quezon City
-
-ENDORSEMENT
-
-This is to certify that this master’s thesis entitled Ophiolite-Hosted Epithermal Vein Mineralization in
-the Malabeg Prospect, Cabangan, Zambales, Philippines, prepared and submitted by John Emmanuel
-S. Fungo in partial fulfillment of the requirements for the degree of Master of Science in Geology, is hereby
-
-accepted.
-Jillian Aira S. Beprrto Deng.
-
-Thesis Adviser
-
-Graciano P. Yumul gy, Ph.D.
-Thesis Reader
-
-The National Institute of Geological Sciences endorses acceptance of this master’s thesis as partial
-fulfillment of the requirements for the degree of Master of Science in Geology.
-
--
-NOELYNNA T! RAMOS, D.Sc.
-OIC-Director
-National Institute of Geological Sciences
-
-The master’s thesis is hereby officially accepted as partial fulfillment of the requirements for the Degree
-
-of Master of Science in Geology
-
-GIOVANNI A. TAPANG, Ph.D.
-Dean, College of Science
-
-Ophiolite-Hosted Epithermal Vein Mineralization in the Malabeg
-Prospect, Cabangan, Zambales, Philippines
-MSc Thesis, National Institute of Geological Sciences
-
-University of the Philippines Diliman
-September 2020
-
-Classification*: P
-*] — invention or creation, P — publication, C — confidential information
-
-Available to the general public | Yes |
-
-Available only after consultation with author/adviser for thesis/dissertation _| No
-Available only to those bound by nondisclosure or confidentiality agreement__| No
-
-Jillian Aira Gabo-Ratio, D. Eng.
-Thesis Proponent Thesis Adviser
-
-ACKNOWLEDGMENTS
-
-This study is funded by the Department of Science and Technology—Science Education
-Institute (DOST-SEI) under the Accelerated Science and Technology Human Resource
-Development Program (ASTHRDP). Part of the research analyses were also funded by the Japan
-Student Services Organization (JASSO), Society of Economic Geology Foundation Inc. (SEGF)
-and NIGS 2020 Research Grant of Dr. Jillian Gabo-Ratio, D.Eng.
-
-I thank the following:
-
-Dr. Jillian Gabo-Ratio, for always going the extra mile for your advisees, for sharing your
-patriotism, altruism, and empathy for students, and for encouraging our non-scientific endeavors
-that molded us into holistic human beings.
-
-Dr. Betchaida Payot, for the much needed ‘tough love’, for always reminding us to be kind, and
-for the camaraderie outside of laboratory life.
-
-Dr. Americus Perez, for being the asymptote of my path to research. Your level of science is
-something that always inspires me despite my current inability to achieve it.
-
-Deo and Bryan, for the moral support during ‘dark times’, fundamental scientific discussions, and
-for the good influence when it comes to science and life.
-
-Boy A, Jerson and Markee, for expediting the sample and data collection and technical discussions
-about the NEWMINCO tenement. Without you, this study would simply not exist.
-
-Dr. Graciano P. Yumul Jr. and Dr. Carla Dimalanta, for accepting me into your research group,
-providing wisdom from your experiences and sharing your love of science. Rushurgent Working
-Group certainly has the biggest impact on my perspective and enthusiasm for science.
-
-RWG Ninth Gen: Julius, Jesley, Rurik, and Nat, for your support and long-time company during
-classes, conferences, and laboratory life, and for the scientific discussions.
-
-Economic Geology Group senpais: Jess, for being the standard of sample retrieval and preparation;
-Acer, for being the standard of scientific aesthetics; Omar, for being the standard of scientific
-thinking; and Karl, for being the standard of dramatic moments.
-
-‘Room 124 Slapsoils’ 2021-2022, Chelsi, Macky, Alex, Yn’s, Kenny, Josh and Alan for being
-dependable kohais, for making it easier for me to achieve my thesis defense requirements, and for
-the camaradcrie.
-
-RWG members, senpais, notably Theophi, Val, Annette and Sarena, and kohais, namely Noel, Eli,
-Maddie, Karla, Kate, Jacky, Ara, Mike, Vann, Christian, Cass, Mariz, Keanne, Normie, Raymond,
-Pat, Mia, Nikko and Vincent, for the scientific discussions, camaraderie and support.
-
-Dr. Allan Gil S. Fernando, for accommodating our batch of graduate students during your time as
-DDAA, even risking your own health on the line.
-
-iv
-
-Yonezu-sensei, Naoto, Fukuda, Bogi, Sayfudin, Aden, Jacob and Sokha for welcoming us to the
-Department of Earth Resource Engineering at Kyushu University and support for the laboratory
-analyses.
-
-Takahashi-sensei, Ate Pearlyn, Kuya Hertz and Manuel for welcoming me to the Graduate School
-of International Resource Sciences at Akita University and support for the laboratory analyses.
-
-Unconformity band, notably Dr. Mario Juan A. Aurelio, Dr. Carlo A. Arcilla, Jagu, Vandear,
-Lawrence, Chance and Martha; beyond music, there were generous amounts of scientific
-discussions and camaraderie.
-
-Former professors, Dr. Leo T. Armada, Dr. Jojo Foronda, Dr. Rosanna Balangue-Tarriela
-(requiescat in pace), Dr. Noelynna T. Ramos, Dr. Mahar Lagmay, and Dr. CP David, regardless
-of the subject, ] have learned very much from you.
-
-Former classmates and graduate students in NIGS, for the scientific discussions and support.
-
-My parents and youngest sister, for acknowledging this phase of my life where I finally put my
-self-interest first.
-
-God, for keeping me alive until I have realized my ikigai. Ad Deum, ad patriam, ad scientiam.
 
 ABSTRACT
 
@@ -154,160 +14,30 @@ The Malabeg prospect is one of the few reported peridotite-hosted gold and base 
 vein-type mineralization within the Cabangan Massif, Zambales Ophiolite Complex.
 Mineralization is associated with NW-trending quartz-adularia veins along contacts between the
 middle Eocene serpentinized harzburgites and Late Oligocene to Late Eocene diabases of the
-Cabangan Massif and in open spaces within host rocks, wherein veins and floats have gold
-
-concentrations up to 74.5 ppm.
-
-Four stages of alteration and mineralization were determined for the Malabeg prospect.
-Stage | consists of talc-carbonate alteration of the serpentinized peridotites. Stage 2 consists of
+Cabangan Massif and in open spaces within host rocks, wherein veins and floats have gold concentrations up to 74.5 ppm. Four stages of alteration and mineralization were determined for the Malabeg prospect.
+Stage 1 consists of talc-carbonate alteration of the serpentinized peridotites. Stage 2 consists of
 dolomite veins found adjacent to host rocks. Stage 3 consists of quartz-carbonate veins, where
 thombic boundaries are observed between quartz and calcite. Arsenopyrite is present in Stages 2-
 3. Stage 4 consists of quartz-adularia exhibiting massive, comb and brecciated textures. Ore
-mineralogy consists of chalcopyrite + galena + sphalerite + pyrite + pyrrhotite + electrum.
+mineralogy consists of chalcopyrite + galena + sphalerite ± pyrite ± pyrrhotite ± electrum.
 Supergene alteration is represented by iron oxides ranging from limonite to hematite, pyrolusite
 and secondary chalcocite, aside from the thin laterite capping the ultramafic regolith. Six electrum
 grains in Stage 4 quartz-adularia reveal an average composition of 74.33% Au and 21.55% Ag.
 Mean iron-sulfide mole percent for nine sphalerite points coexisting with pyrite or pyrrhotite is
 14.91. Two-phase fluid inclusions in Stage 4 quartz-adularia reveal bimodal homogenization
 temperatures range from 170 to 180 °C and 190 to 200 °C while salinity values range from 1.4 to
-10.23 wt.% NaCl. From these, depths of 67-144 meters below the paleo-water table was estimated
-
-while the trend of values plotted on the homogenization temperature versus salinity graph is
-
-vi
-
-inconclusive. An intermediate sulfidation state is recognized for the Malabeg prospect, which is
-
-supported by ore assemblage, sphalerite mineral chemistry and fluid inclusion properties.
-
-The results suggest initial pulses intermediate sulfidation (IS) fluids from a nearby
+10.23 wt.% NaCl. From these, depths of 67-144 meters below the paleo-water table was estimated while the trend of values plotted on the homogenization temperature versus salinity graph is inconclusive. An intermediate sulfidation state is recognized for the Malabeg prospect, which is supported by ore assemblage, sphalerite mineral chemistry and fluid inclusion properties. The results suggest initial pulses intermediate sulfidation (IS) fluids from a nearby
 magmatic source related to the Bataan Volcanic Arc. Fluid-rock reaction with the serpentinized
 harzburgites, together with evolved fluids, produced listwanitization (Stages 1-3), while the high
 buffering capacity of the host rocks lowered the sulfidation state of the system and precipitated
 arsenopyrite along with the initial quartz-carbonate veins. Faulting and reaction-induced self-
 cracking within listwanites promoted growth of open spaces in structurally weak planes that served
 as loci for the precipitation of the succeeding IS fluids into Stage 4 quartz-adularia veins. Shift
-towards an oxidizing environment produced supergene alteration minerals such as hematite,
-
-pyrolusite and secondary chalcocite.
-
-Ore content along the various lithologies also suggest different affinities for transport and
+towards an oxidizing environment produced supergene alteration minerals such as hematite, pyrolusite and secondary chalcocite. Ore content along the various lithologies also suggest different affinities for transport and
 precipitation. As, Zn, Co, Cr and Ni peak in Stages 1-3 which may have been precipitated favorably
-with the carbonates while Au, Cu and Pb peak in Stages 3-4 which may have precipitated favorably
-
-with silica.
-
-Overall, the results suggest shallow hydrothermal activity in the area as a part of a larger
+with the carbonates while Au, Cu and Pb peak in Stages 3-4 which may have precipitated favorably with silica. Overall, the results suggest shallow hydrothermal activity in the area as a part of a larger
 porphyry-epithermal system associated to the Bataan Volcanic Arc. The results can also serve as
-a guide for the exploration of other peridotite-hosted epithermal deposits with similar tectonics
-
-settings.
-
-vii
-
-TABLE OF CONTENTS
-
-Acknowledgments 0.0... ccc cece cee cees cee cesseesseesscnetsessessensceseessesssesssessesieetnsisseeeesenaases iv
-ADS ACE cece rene ctecenecssesetesesseecsesseneseessassesessesscessssseesesaesessesnenessesiesseesetaeeaseeentees vi
-List of Tables oo... ccc cccsecscscenesscseesscscsesesssecesscessesscseseessesesesssscsesscsesesesseseeseseeesecnes x
-List of Figures... cc cccecccsceceeseessceseeneeeeessecseeeceeeesessecneesseceeceseceeeeeesaeceeeaeceeeeesteseeseneentenee xi
-Chapter 1: Introduction... ccc cere cnecescsecseseceaeeesesseeessessesesessessseeseeseeeaee 1
-Lo Introduction oo... cccesscseescsscssssesscnessesscecseeessesaseessesscesesesaesaceecsesaeeeseeseecsesaseessesseseeea 2
-1.2 Statement of the Problem ..........ccccccesesesces erences eters neers csseseneesessceceseesaseseneeseseeeeed 3
-1.3 Significance of the Study oo... ccc cccenssseeecsesserscssssesseeetaessessesesaeeassessesatsesaeeneneen 4
-1.4 Objectives of the Study... ccc cscs essere cscssctecsesscsesscesesessesseecsersseesestesserastesseseeseeed 4
-1.5 Scope and Limitations... ccs esseeesessesseeestessesseseeeesaesecseeseeeseeessesseeessesseeesaeeeeeeeeeseeaee 5
-1.6 Thesis Organization oo... ccc cece cesses cetececsesscsecsescsssscsescessesscesssesssesaseessesneaesaesaeeeees 5
-Chapter 2: Review of Related Literature... cee ccesesseeseceeessesaeenececnsesseesesteeeaeeeeeaees 6
-2.1 Epithermal Mineralization... ccc ce ecescssesseeseenseneeeseeeesecesecseeessaeeeesesssesseseeseeeaeeereneees 7
-2.2 Ophiolite-Hosted Vein-Type Mineralization .......ccc ccc cece sseescssceeecseesessesesseesesaee 10
-2.3 Ore and Gangue Interpretation 00.0... csesesesseeecsscsecseesenessesscssesesseeecsecseseeeesesaseessesaee 19
-2.4 Mineral Chemistry and Fluid Inclusion Analysis ..........cccccceeeseseeesseeseessenecrereeeeanes 22
-2.5 Regional Geology oo... cecssessscnesseseneeeseteesesscsseseneceeseesesetsessessesessesssesssesseeeseessesaeneeeeeate 25
-
-2.6 Metallogenesis in Western Luzon .
-
-Chapter 3: Methodology ................... 34
-BmlehicldwOrkdtand| samp Qteememmetsneseenesteteastsnereatttrerammtansmeeretaraseentarserer ree 35
-3.2 Petrography and Ore Microscopy .......ccccscsssessessessesessesssseesesecsessesseesesssessessesaeeesneeneeaeaes 35
-3.3 Mineral Chemistry Analysis..............0000 ceceaesesecaeeaesaessesesseeecsaenesaesaesaeeeeneees 35
-3.4 X-Ray Diffractometry (XRD). 37
-3.5 Fluid Inclusion Analysis ..... 37
-3.6 Fire Assay and ICP-OES..... ccc cccccccsescecscsscsecsecsesecsecsesseeececsassesessessesaeeecsecsasaeeaseeeaeeas 37
-
-Chapter 4: Results and Discussion .........0...cccccccc ccc scesccsccecsesecseseeeeseetseseesseeeneeseseseeeaeees 39
-4.1 Mineralization in the Malabeg prospect..........ccceccssessessscsecsseceseesecssesseeesesseceeseassateneserenes 40
-
-4.1.1 Host Rocks cece ceseereeeeeees .40
-4.1.2 Alteration and Mineralization .........ccccccssessscsescsssssescssesecscaescseseseneseseaessseeeseaeecseersvenseeeneneaes 43
-
-4.1.3 Mineral Chemistry 00.0... ccccceccesccsescesssecseeecseceeseeecseceeeeceecsessecsesaceeceesnesaeeeeeeseessesaeeseeseaesenes 51
-
-4.1.4 Fluid Inclusion Petrography and Microthermometry ..0........csscceeseeeseesesseeseeeeseeseteeeeseeeeseaee 53
-4.2 DISCUSSION occ ses eseeseseseseescsssesecsesesesecscsesessescsesscsesescsesesscersesssseseseseessesescsseeaseeees 54
-4.2.1 Mineralization Style... ee scesesesceeetesseneeneeseescnecseescnesesseeeceecessnesseeseeeceesaeeseeeesesesssaseeseees 54
-
-4.2.2 Hydrothermal Fluid Evolution in the Malabeg prospect
-4.2.3 Metal Endowment
-4.2.4 Tectonic Setting
-
-Chapter 5: Summary and Conclusions ..............cccccccce cece sserseneesessesessessessessssecsseesseneeees 69
-References..........scccsrsersssescsscsrseresseececssrsacencssescsnceseacscessescenensesesccseseessessceeseasssscsarsasencecsarsarsees 71
-APPeNdix ........sscsssrssssscsressesseccercsseacencssesseecssessenceseacenceseseecesssseeseenensensscesseaseasenseseasecssesaceesecenees 82
-
-AL Drill core photos ....... ccc cececstscsreesens cess cneceesecsesesecenesssssssecessssssceesinecasesnenneege 83
-
-LIST OF TABLES
-
-2.1 Compilation of listwanite occurrences and their characteristiCs.......0.cccccssseseeseeeeseeeees 14
-4.1 Composition of electrum grains... cece cecce recess csecseseeseseesesssssecsseseeessecsesseseesaseeeee 52
-4.2 Composition of sphalerite grains coexisting with pyrite and pyrrhotite ....0. teers 52
-
-4.3 Mineralization characteristics observed in the Malabeg prospect versus other ophiolite-hosted
-
-epithermal vein deposits... ccc cseessseseescscsesenenecscseesessscssescscensescsseeesssesseesessessesseaeeeeetaes 51
-
-4.4 Mineralization characteristics observed in the Malabeg prospect versus other epithermal
-
-CePOSIts oe eee eeceecccscsecseeseeececsesscsssesecsessesscssasessssssseessessdeessessesensssessceeeaeeessesaeeasiesateessaees 61
-
-4.5 Average ore content per lithology... ccceeeccssesseetesseceseesecteeeeeesessesecesesseseeeesessesseeaeeeeeeaees 66
-
-LIST OF FIGURES
-
-2.1 Schematic diagram of a volcanotectonic Setting... eeceeseeeeseeeesseeteneeeeseeeseeseneseeteetieseeees 8
-2.2 Schematic diagram of a rift setting 0.0... ceesessenseneesetsenecseeseeseeateesessseeseeecserseeseesentenee 9
-2.3 Map view of the Doriri lode oo... cies ecceseneeseesetersereeeeeseesenecessensessceseesaessseesaecaeseseeseeseeaeeaee 10
-2.4 Quart textures indicating primary QTOWtD ...... ccc ce ssceeceeetetseeseecseesenscsecseceeseeseesenaeeese 20
-2.5 Schematic diagram of hydrothermal breccia classification 00.0.0... ccc eesesseseneeseeeeseeseeneeeeees 21
-2.6 Sulfidation state parameter (log fS2) vs temperature oo... eeseeeeseeseneeerseeeseteeesneeseneesees 22
-
-2.7 Fluid inclusion assemblages (FIA) observed in Veta Madre at Guanajato, Mexico ..
-
-2.8 Summary of homogenization temperature versus salinity of fluid inclusions..
-
-2.9 Effervescence vs depth plot for brine... cece eee ene teeters 24
-2.10 Epithermal deposit map of the Philippines... ccc cece cerns rers cece cesessereeaeeee 26
-2.11 Total alkali silica classification of post-obduction dikes in the Coto Block ....... cee 28
-2.12 Chondrite-normalized multi-element diagrams of the Coto dikes. 0.0... cceseeeseeseeeeeee 28
-2.13 Outcrop and sample photos within the NEWMINCO property EP-001-2015-II] 0... 32
-3.1 SEM-EDX analySIs .....0.ccccccccscescesscceseescsesessssscsessesesesesesssssessessssassesssssssssessessscsscsseenenss 36
-3.2 EPMA analySis......ccccceeeseeeessseeeeseeessessesessesseeececsecsessssssscnsssessesssesssescesssessecsseasseseesenege 36
-4.1 Geologic map of NEWMINCO property EP-001-2015-TID oc ceccceesseseseeessereeeeeeeenes 41
-4.2 Host rock outcrops and photos in the Malabeg prospect ..........ccscccssesseeereeseeseeeessesseeeeees 42
-4.3 Representative drill core photos.........cccscccesscseseesessesscsecsscsesscssessceesecsesssssssessesseessecsesecees 44
-4.4 Vein occurrences and textures ......c.ccccscccsessecseessccessesseceseesssseeesssesssseecsesessssseeeseeeneeseeees 47
-4.5 Hand specimen and photomicrographs of Stages 1-3 ........cccesscsesseseseseseessseseeesseseeseseeeneeaes 48
-4.6 XRD diffractograms .........ccccesesesesssesesseeneeesscseessscssssescsessscsesenscesacsessescsesesscsasessenasesaeets 49
-4.7 Photomicrographs of sulfides under reflected light ...........ccccccescsesescsseecsesesseesetseeneeaeees 50
-4.8 Alteration and ore paragenesis.......cccccccceesscecscceeesssssessesessesecessecseceseesesesaesesaseeeneena 51
-4.9 Images from EPMA.........ccccccessccssessesscsesscsessecsscsseesesescssecssessscssessscssssesessesssesseseseeesseneeentes 53
-4.10 Fluid inclusion analySis ........cccccccscsssseceecsccsesecsscsesecsessscscsseescsesseceesaesasecsesseesetaeeaeeeees 56
-4.11 Temperature-depth plot 0.0... ccccccccccssseecsesesecsesesesscsscsssesscsssssscsseecsseesssseeecsesesesasaeenes 57
-4.12 Temperature vs sulfur fugacity graph... ccc sseesseseeesseeecseseeessssesesseesssesseseesenenees 58
-4.13 Listwanitization and epithermal mineralization model ............cccseesseseseseeseeeeteeeeneneneeeeees 64
-
-xi
+a guide for the exploration of other peridotite-hosted epithermal deposits with similar tectonics settings.
 
 CHAPTER 1
 
@@ -3358,62 +3088,3 @@ targets for gold in the South Eastern Desert, Egypt. Journal of Geochemical Expl
 
 Zoheir, B., & Lehmann, B. (2011). Listvenite-lode association at the Barramiya gold mine,
 Eastern Desert, Egypt. Ore Geology Reviews, 101-115.
-
-81
-
-Appendix
-
-Appendix 1: Representative drill core photos
-
-MLDH 001
-
-MLPH ao?
-
-37.30-40.20 m: highly fractured and brecciated grayish talc-carbonate with quartz veinlets (1-5
-mm)
-
-40.20-40.60 m: highly fractured quartz vein with intensely silicified light gray talc-carbonate
-breccias. Minor brass yellowish specks of chalcopyrite were observed from hand specimens.
-
-40.60-41.22 m: talc-carbonate consisting of greenish to greenish-gray talcitized groundmass, dark
-brown chromite and black talcitized ultramafic grains. Minor disseminated golden yellow specks
-of pentlandite were observed from hand specimens.
-
-83
-
-MLDH 008
-
-30.30-30.70 m: black harzburgite with orange-brown hematite staining
-
-30.80-31.40 m: quartz veins with black fragments of harzburgite
-
-31.4-32.4 m: black talcitized and serpentinized harzburgite with cream-colored dolomite stringers
-and 20-centimeter vein at 31.4-31.6 m. Reddish brown patches of hematite were also observed.
-
-32.4-33 m: massive quartz veins with minor comb texture in some portions and black fragments
-of harzburgite. Rare chalcopyrite was observed.
-
-84
-
-MLDH 008
-
-38.75-41.1 m: grayish talc-carbonate with white carbonate veins and pervasive orange-brown
-hematite staining
-
-41.2-41.6 m: light bluish fractured diabase fragments
-
-85
-
-MLpHoos
-
-52-52.5-53.5 m: talc-carbonate consisting of greenish to greenish-gray talcitized groundmass, dark
-brown chromite and black talcitized ultramafic grains. Minor disseminated golden yellow specks
-of pentlandite were observed from hand specimens.
-
-53.5-53.7 m: quartz veins with bluish-gray specks of galena and minor brass-yellow disseminated
-chalcopyrite.
-
-53.7-55 m: dark gray diabase dike with quartz veinlets
-
-86
-

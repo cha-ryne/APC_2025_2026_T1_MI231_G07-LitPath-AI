@@ -1,205 +1,14 @@
+Populating galactic dark matter halos with galaxies using machine learning
 
-UNIVERSITY OF THE PHILIPPINES
-Master of Science in Physics
 Allen Neil C. Garcia
 
-Populating galactic dark matter halos with galaries using machine
-learning
+UNIVERSITY OF THE PHILIPPINES DILIMAN
 
-Thesis Adviser:
-Reinabelle Reyes, Ph.D.
-National Institute of Physics
-University of the Philippines Diliman
-
-Date of Submission:
-June 2023
-
-Thesis classification:
-P
-
-This thesis is available to the public.
-
-Title of Thesis / Dissertation: Populating galactic dark matter halos with galaxies using machine learning
-Author: Allen Neil C. Garcia
-
-MS Thesis
-
-National Institute of Physics
-
-University of the Philippines Diliman
+Master of Science in Physics
 
 June 2023
-
-Classification* : P
-
-* |—invention or creation, P — publication, C — confidential information
-
-Available to the general public Yes
-
-Available only after consultation with author/adviser for thesis No
-
-Available only to those bound by nondisclosure or confidentiality agreement l No
-Allen Neil C. Garcia Re elle C. Reyes, PhD
-
-Student Thesis Adviser
-
-Honor Code
-
-By submitting this thesis / dissertation, | affirm that | uphold the core values of
-Honor and Excellence as codified in the University of the Philippines Code of
-Student Conduct. This work adheres to the highest standards of academic integrity
-wherein scholarly sources have been attributed accurately; data has been collected
-and analyzed in accordance with established academic and scientific practices; and
-results have been reported in a scholarly and transparent manner.
-
-
-National Institute of Physics
-College of Science
-University of the Philippines
-Diliman, Quezon City
-
-ENDORSEMENT
-
-This is to certify that this master’s thesis titled Populating galactic dark
-matter halos with galaxies using machine learning prepared and sub-
-mitted by Allen Neil C. Garcia in partial fulfillment of the requirements for
-the degree of Master of Science in Physics, is hereby accepted.
-
-REINABELL} YES, Ph.D.
-Thesis Adviser
-
-FRANCIS NO! ARAAN, Ph.D.
-Thesis Reader
-
-The National Institute of Physics endorses acceptance of this master’s thesis
-in partial fulfillment of the requirements for the degree of Master of Science
-in Physics.
-
-WILSON O. GARCIA, Ph.D.
-Director
-National Institute of Physics
-
-The thesis is hereby officially accepted in partial fulfillment of the require-
-ments for the degree of Master of Science in Physics.
-
-GIOVANNI A. TAPANG, Ph.D.
-Dean, College of Science
-
-PLEASE POST NATIONAL INSTITUTE OF PHYSICS PLEASE. POST
-
-College of Science
-
-University of the Philippines
-Diliman, Quezon City
-
-ANNOUNCEMENT OF THE MASTER’S EXAMINATION
-
-ALLEN NEIL C. GARCIA
-
-in defense of his M.S. thesis
-
-POPULATING GALACTIC DARK MATTER HALOS WITH GALAXIES
-USING MACHINE LEARNING
-
-for the degree of M.S. Physics
-
-8:30 A.M., TUESDAY, 20 JUNE 2023, at NIP Room R211
-
-THESIS ADVISER
-
-REINABELLE C. REYES, Ph.D.
-Associate Professor of Physics
-National Institute of Physics
-CS., U.P. Diliman, Quezon City
-
-THESIS EXAMINER
-
-MICHAEL FRANCIS IAN G. VEGA, Ph.D.
-
-Professor of Physics
-National Institute of Physics
-C.S., U.P., Diliman, Quezon City
-
-ENDORSED BY:
-
-ILSON O. GARCIA, Ph.D.
-irector
-ational Institute of Physics
-
-THESIS READER
-
-FRANCIS NORMAN C. PARAAN, Ph.D.
-Professor of Physics
-
-National Institute of Physics
-
-C:S., U.P. Diliman, Quezon City
-
-THESIS EXAMINER
-
-ERIC A. GALAPON, Ph.D.
-Professor of Physics
-
-National Institute of Physics
-C.S., U.P., Diliman, Quezon City
-
-AUTHORIZED BY:
-
-x
-
-GIOVANNI A. TAPANG, Ph.D.
-Dean
-College of Science
-
-“The good thing about science is that it’s true
-whether or not you believe in it.”
-
-Neil deGrasse Tyson
-
-Acknowledgments
-
-I would like to express my deepest gratitude and appreciation to the following
-who have contributed to the completion of this thesis:
-
-To my adviser, Dr. Reinabelle C. Reyes, for giving me the opportunity to
-be mentored by someone as remarkable as you, for tirelessly guiding me throughout
-the majority of my graduate school and research journey, and for everything you
-have done for me and the Data & Computation research group,
-
-to the members of my thesis committee, Dr. Francis Norman Paraan, Dr.
-Michael Francis Ian Vega, and Dr. Eric Galapon, for your valuable insights
-that helped me improve my work,
-
-to Prof. Romeel Davé and his colleagues, for helping us address our questions
-about the SIMBA catalogs,
-
-to my colleagues in the Data & Computation group, for welcoming and
-accepting me to the group, even though I came from a different university,
-
-to my friends inside and outside of graduate school, Nicko, Pat, Lanz, Bryan,
-Monty, Dubs, and Dexter, for being open to discussions about research and
-academics and for being available to engage in non-academic activities with me,
-
-to the DOST-ASTHRDP-NSC, for providing the scholarship that financially
-supported me throughout my graduate school journey,
-
-to my family, for always supporting me in every endeavor I pursue,
-
-and to Nima, the love of my life, for keeping me sane during this difficult but
-fulfilling journey, for patiently lending an ear to my nerdy research and physics
-discussions, without ever tiring or losing interest, for constantly believing in my
-abilities especially when I’m starting to doubt myself, and for staying by my side
-through the good and the bad times.
-
-iii
 
 ABSTRACT
-
-Populating galactic dark matter halos with galaxies using machine
-learning
-
-Allen Neil C. Garcia Adviser:
-University of the Philippines, 2023 Reinabelle Reyes, Ph.D.
 
 Robust understanding of the connection between galaxies and the dark matter
 (DM) halos that host them is achieved using modern hydrodynamic simulations.
@@ -209,11 +18,11 @@ map baryonic properties of galaxies onto DM halos from the SIMBA cosmological
 hydrodynamic simulation, at redshifts z = 0 — 2, in a computationally efficient
 manner. In particular, we trained random forest (RF) and extremely randomized
 trees (ERT) models to predict central galaxy properties, namely, the stellar mass
-M,, neutral and molecular hydrogen masses Myq and Myp, star formation rate
-SFR, and the gas-phase metallicity Zg,, using DM halo properties, namely, the
+M∗, neutral and molecular hydrogen masses M_HI and M_H2, star formation rate
+SFR, and the gas-phase metallicity Z_gas using DM halo properties, namely, the
 primary halo mass My and the mass of the previous halo progenitors, nearby halo
-mass densities p within r = 300, 1000, 3000 kpc, halo half mass radius r,, halo spin
-A, and halo velocity dispersion o. Consistent with previous work, we find that the
+mass densities ρ within r = 300, 1000, 3000 kpc, halo half mass radius r_h, halo spin
+λ, and halo velocity dispersion σ. Consistent with previous work, we find that the
 model predictions are able to successfully recover the mean relations between the
 halo mass and galaxy properties, as well as the intrinsic second parameter corre-
 lations, such as the fundamental metallicity relation (FMR) with the stellar mass
@@ -225,153 +34,6 @@ approaches for generating realistic galaxy catalogs.
 
 PACS: 98.80.-k (Cosmology), 07.05.Kf (Data analysis: algorithms and imple-
 mentation; data management)
-
-iv
-
-Table of Contents
-
-Acknowledgments iii
-Abstract iv
-1 Introduction 2
-2 Probing the galaxy-halo connection 5
-2.1 Subhalo/Halo Abundance Matching . 5
-2.2 Halo Occupation Distribution (HOD) 6
-2.3 Semi-Analytic Models (SAMs) .......-......-.2005. 7
-2.4 Hydrodynamic simulations ...............2-.200005 8
-2.5 Machine Learning (ML) ..............2000000004 9
-
-3 The SIMBA cosmological hydrodynamic simulation 11
-3.1 Overview of SIMBA 11
-3.1.1 Star formation 12
-
-3.1.2 Black hole growth and seeding. ..............-- 13
-
-3.2 SIMBAruns.............. 15
-3.3 Datafrom SIMBA ..... 6... 0.000. 16
-
-4 Machine learning framework 18
-4.1 Supervised tree-based ML algorithms ................. 18
-4.2 Machine learning set-up 20
-
-5 Machine Learning vs SIMBA 23
-5.1 Predicted galaxy properties vs SIMBA true values.......... 23
-5.1.1 Stellarmass... 2.2.2... 0.0... eee eee 25
-
-5.1.2 Neutral hydrogen mass... . 27
-
-5.1.3 Molecular hydrogen mass..........-.......04 29
-
-5.1.4 Star formation rate... ...........2...20000. 31
-
-5.1.5 Gas-phase metallicity 33
-
-5.1.6 Black hole mass 35
-
-
-5.1.7 Summary 2... 2... ee
-
-5.2 Consistency with second parameter correlations . . 38
-5.2.1 Fundamental metallicity relation .........--..-- 38
-
-5.2.2 Black hole - stellar mass relation and quenching ...... . 41
-
-5.3 Relative importance of halo properties ...............-- 44
-
-6 Conclusions and Recommendations 49
-51
-
-Bibliography
-
-List of Figures
-
-5.1
-5.2
-5.3
-
-5.4
-5.5
-
-5.6
-5.7
-
-5.8
-5.9
-
-5.10
-5.11
-
-5.12
-5.13
-5.14
-5.15
-5.16
-5.17
-5.18
-5.19
-5.20
-
-Stellar mass vs. halo mass relation for SIMBA and ML at all redshifts 26
-
-KDE plots for M, at all redshifts ...............-05. 26
-Neutral hydrogen mass vs. halo mass relation for SIMBA and ML
-
-at all redshifts. 2... eee 28
-KDE plots for My at all redshifts . . 28
-Molecular hydrogen mass vs. halo mass relation for SIMBA and ML
-
-at all redshifts... 6. eee 30
-KDE plots for Myp at all redshifts... 2... .........00-- 30
-Star formation rate vs. halo mass relation for SIMBA and ML at
-
-all redshifts ©... 2... ee eee 32
-KDE plots for the SFR at all redshifts ................ 32
-Gas-phase metallicity vs. halo mass relation for SIMBA and ML at
-
-all redshifts 2.2... ee eee 34
-KDE plots for Zgas at all redshifts... .............00.4 34
-Black hole mass vs. halo mass relation for SIMBA and ML at all
-
-redshifts ©... 2... ee 36
-KDE plots for Myn at all redshifts... ....... 36
-Fundamental metallicity relation at z = 0 39
-Fundamental metallicity relation at z = 1 40
-Mun — M, relations atz=0............. 41
-sSFR-—M, relations atz=0..............0.000002 42
-Mpn — frm relations atz=0 ...............0. 020006 43
-RF and ERT feature importances at z = 0 45
-RF and ERT feature importances at z = 1 46
-RF and ERT feature importances at z = 2 47
-
-
-List of Tables
-
-3.1
-3.2
-
-5.1
-5.2
-5.3
-5.4
-5.5
-5.6
-5.7
-5.8
-5.9
-
-Raw count of SIMBA halos and galaxies .........--..--- 17
-Summary statistics for the sample used ........---.-2--- 17
-Performance metrics reported by related works............ 25
-Test performance metrics for the stellar mass predictions ..... . 25
-
-Test performance metrics for the neutral hydrogen mass predictions 29
-
-Test performance metrics for the molecular hydrogen mass predictions 31
-
-Test performance metrics for the star formation rate predictions .. 31
-Test performance metrics for the gas-phase metallicity predictions . 33
-Test performance metrics for the black hole mass predictions .... 35
-Summary of performance metrics of the ERT models ........ 37
-Summary of performance metrics with varying train-test splits ... 38
 
 Chapter 1
 
@@ -2307,6 +1969,4 @@ Journal 813, 82 (2015).
 
 N. Haring and H.-W. Rix, “On the Black Hole Mass-Bulge Mass Relation,”
 The Astrophysical Journal 604, L89-L92 (2004).
-
-58
 

@@ -1,131 +1,12 @@
-wen?
-
-we, nen Sere te
-
-hers 5 <
-© Bont sexes < carey ae sere | ian ol
-
-DP Seetetern Oe RRR se tetas ry eee
-
-
-RANDOM-COVARIATE-DEPENDENT RECTANGULAR REFERENCE REGIONS
-UNDER MULIVARIATE NORMALITY
+RANDOM-COVARIATE-DEPENDENT RECTANGULAR REFERENCE REGIONS UNDER MULIVARIATE NORMALITY
 
 Raden Gerald R. Agustin
 
-A thesis presented in partial fulfillment of the
-requirements for the degree
+UNIVERSITY OF THE PHILIPPINES DILIMAN
 
 Master of Science in Statistics
 
-School of Statistics
-University of the Philippines
-Diliman, Quezon City
-
 June 2022
-
-UNIVERSITY OF THE PHILIPPINES
-Master of Science (Statistics)
-
-RADEN GERALD R. AGUSTIN
-
-“Random-Covariate-Dependent Rectangular Reference Regions under
-Multivariate Normality”
-
-Thesis Adviser:
-
-MICHAEL DANIEL C. LUCAGBO
-School of Statistics
-University of the Philippines Diliman
-
-Thesis Reader/Critic:
-WELFREDO R. PATUNGAN
-School of Statistics
-University of the Philippines Diliman
-Thesis Member/Chairman:
-JEFFRY J. TEJADA
-
-School of Statistics
-University of the Philippines Diliman
-
-Date of Submission
-May 2022
-
-Permission is given for the following people to have access to this thesis:
-
-Available to the general i
-Available only after consultation with author/thesis adviser
-
-Available only to those bound by confidentiality agreement
-
-Student’s signature:
-
-Signature of Thesis Adviser: We
-
-I hereby grant the University of the Philippines non-exclusive worldwide, royalty-free
-license to reproduce, publish and publicly distribute copies of this thesis or dissertation in
-whatever form subject to the provisions of applicable laws, the provisions of the UP IPR
-policy and any contractual obligations, as well as more specific permission marking on the
-Title Page.
-
-Specifically I grant the following rights to the University:
-a) to upload a copy of the work in the theses database of the college/ school/ institute/
-department and in any other databases available on the public internet;
-b) to publish the work in the college/ school/ institute/ department journal, both in print and
-electronic or digital format and online; and
-c) to give open access to above-mentioned work, thus allowing “fair use” of the work in
-accordance with the provisions of the Intellectual Property Code of the Philippines (Republic
-Act No. 8293), especially for teaching, scholarly and research purposes.
-
-Student's signature:
-
-Date:
-
-THy
-
-A eX
-
-SCHOOL OF STATISTICS
-
-) AR UNIVERSITY OF THE PHILIPPINES DILIMAN
-
-UPSS OGS FORM 2c (STAT 300 FINAL DEFENSE)
-
-23 May 2022
-
-The Dean
-School of Statistics
-University of the Philippines Diliman
-
-We have the honor to inform you that MR. RADEN GERALD R. AGUSTIN, a Master of Science
-(Statistics) candidate, defended his thesis entitled “Random-Covariate-Dependent
-Rectangular Reference Regions under Multivariate Normality” on 23 May 2022 via Zoom
-Meeting. The following are the results of his defense.
-
-Committee’s Decision: [ x ] Pass [ ] Provisional Pass { ] Fail
-
-Committee Members For Approval For Disapproval
-
-Dr. Michael Daniel C. Lucagbo
-Adviser
-
-Dr. Welfredo R. Patungan
-Reader/Critic
-
-Dr. Jeffry J. Tejada
-Member/Chairman
-
-Respectfully,
-JEFFRY J “ON PhD
-Chairman
-Endorsed by: Noted by:
-Michael AM a PhD rose VG NSANGAN, PhD
-Director for Graduate Studies Dean
-
-© Quirino Ave. cor. T.M. Kalaw St, UP Diliman, Quezon City, Philippines
-
-CG 8981-8500 loc. 3503/3504 (632) 8928-0881
-eS www.stat.upd.edu.ph (4 statdean.upd@up.edu.ph rf facebook.com/UPDStat
 
 Abstract
 
@@ -149,82 +30,6 @@ compute covariate-dependent reference regions for insulin-like growth factors.
 
 KEYWORDS: Multivariate reference region; Mixed reference intervals; Parametric bootstrap;
 Rectangular prediction region
-
-Acknowledgments
-
-The completion of this study could not have been possible without the expertise of Dr. Michael
-Daniel C. Lucagbo, my thesis adviser. His guidance helped me in all the time of the research and
-writing of this thesis. I could not have imagined having a better adviser and a mentor for my mas-
-
-ter’s study. Daghang salamat, Sir!
-
-I would also like to thank the rest of my thesis committee: Dr. Jeffry Tejada and Dr. Welfredo
-
-Patungan, for their encouragement and insightful comments to improve this study.
-
-To the Department of Science and Technology - Science Education Institute (DOST-SED), for
-
-the financial support I received.
-
-My appreciation also extends to my friends and to my UP MPRO family for their continuous
-
-support and understanding during my thesis days.
-
-And lastly, to my family, for their support and constant source of inspiration.
-
-ii
-
-Contents
-
-1 Introduction
-1.1 Background of the Study .............0..
-1.2 Motivation and Objectives ...............
-
-2 Review of Literature
-2.1 Univariate Reference Intervals .............
-2.2 Multivariate Reference Regions ............
-2.2.1 Ellipsoidal Multivariate Reference Regions . .
-2.2.2 Rectangular Multivariate Reference Regions .
-2.2.3 Justification for the Use of Random Covariates
-2.2.4 When to Use Random vs Fixed Covariates. . .
-
-3 Methodology
-3.1. Two-Sided Prediction Regions .............
-3.2 One-Sided Prediction Regions .............
-3.3. Mixed Prediction Regions ...............
-
-4 Results
-4.1 Simulation Settings ................00.
-4.2 Numerical Results for Two-sided Prediction Regions .
-4.3 Numerical Results for One-sided Prediction Regions.
-4.3.1 Upper One-Sided.............0..
-4.3.2 Lower One-Sided..............0..
-4.4 Numerical Results for Mixed Prediction Regions .. .
-
-4.5 Comparing the Random- and Fixed-Covariate Methodologies. ...........
-
-4.6 Real-life Data Application: Insulin-like Growth Factors
-5 Discussion
-
-Bibliography
-
-12
-14
-17
-19
-
-24
-25
-27
-27
-29
-31
-32
-38
-
-42
-
-45
 
 Chapter 1
 
@@ -1726,6 +1531,3 @@ Methods in Medical Research, 29(12):3569-3585.
 Zimmerman, H. J. (1999). Hepatotoxicity: the adverse effects of drugs and other chemicals
 
 on the liver.
-
-47
-

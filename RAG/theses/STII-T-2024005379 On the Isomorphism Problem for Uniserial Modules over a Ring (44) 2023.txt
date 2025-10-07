@@ -1,90 +1,14 @@
-)
-1
-i
-1
-'
-
-
-UNIVERSITY OF THE PHILIPPINES
-Master of Science in Mathematics
-Kouichi T. Tamura
-
 On the Isomorphism Problem for Uniserial Modules over a Ring
 
-Thesis Adviser:
-Jose Maria P. Balmaceda, Ph.D.
-Institute of Mathematics
+Kouichi T. Tamura
 
-University of the Philippines Diliman
+UNIVERSITY OF THE PHILIPPINES DILIMAN
 
-Date of Submission
-5 July 2023
-Thesis Classification:
+Master of Science in Mathematics
 
-F
-
-This thesis is available to the public.
-
-Institute of Mathematics
-College of Science
-University of the Philippines
-Diliman, Quezon City
-
-ENDORSEMENT
-
-This is to certify that this master’s thesis entitled On the Isomorphism Prob-
-lem for Uniserial Modules over a Ring prepared and submitted by Kouichi
-T. Tamura in partial fulfillment of the requirements for the degree of Master of
-
-Science in Mathematics, is hereby accepted.
-
-aN n
-JOSE MARIA P. BALMACEDA, Ph.D.
-Thesis Adviser
-
-JPAME D.L. CARO, Ph.D.
-Thesis Reader
-
-The Institute of Mathematics endorses the acceptance of this master’s thesis as
-partial fulfillment of the requirements for the degree of Master of Science in Math-
-
-ematics.
-
-JOSE ER: C. LOPE, Ph.D.
-j Director
-
-Institute of Mathematics
-
-This master’s thesis is hereby officially accepted as partial fulfillment of the re-
-
-quirements for the degree of Master of Science in Mathematics.
-
-GIOVANNI A. TAPANG, Ph.D.
-Dean
-College of Science
-
-Honor Code
-
-By submitting this thesis, I affirm that I uphold the core values of Honor and Ex-
-cellence as codified in the University of the Philippines Code of Student Conduct.
-This work adheres to the highest standards of academic integrity wherein scholarly
-sources have been attributed accurately; data has been collected and analyzed in
-accordance with established academic and scientific practices; and results have
-
-been reported in a scholarly and transparent manner.
-
-Name and Signature of Student: Kfuichi T. Tamura
-
-iii
+July 2023
 
 Abstract
-
-On the Isomorphism Problem for Uniserial Modules over a
-Ring
-
-Kouichi T. Tamura Thesis Adviser:
-University of the Philippines Diliman Jose Maria P. Balmaceda, Ph.D.
-2023
 
 Determining whether two uniserial modules over an Artin algebra are isomor-
 phic is an open problem in representation theory. However, isomorphism is a
@@ -97,82 +21,7 @@ models. An application of this result is given. Conversely, it is shown that wit
 the assumption that every ideal of the ring is an elementary substructure of the
 ring as a module over itself, we have that the ring must be infinite, simple and
 von Neumann regular. It is also shown that the prescribed conditions are strictly
-insufficient for isomorphism. The thesis will include a discussion of preliminary
-
-concepts and known theorems that leads to the main results.
-
-Table of Contents
-
-Abstract
-
-Acknowledgments. . . Tae ea
-
-Chapter 1. Introduction
-
-Chapter 2. Model theory
-
-2.1 First-order theories and structures...........
-
-2.2 The morphisms in model theory ..........
-
-2.3 Afundamental theorem .................
-
-Chapter 3. Elimination of quantifiers
-
-3.1 Positive primitive formulas. ..............
-
-3.2 Model completeness i 2.0.04) .:e woe aw eee ss
-
-Chapter 4. Main results
-
-4.1 On syntactic completeness... .
-
-4.2 Anapplication ..................0..
-
-4.3 Possible research directions. ..............
-
-List of References... 2... 0.0.0.0 0000 005.
-
-11
-12
-18
-
-29
-29
-33
-34
-
-35
-
-Acknowledgments
-
-I would like to acknowledge first and foremost my thesis adviser, Dr. Jose Maria
-P. Balmaceda. This thesis would not have been possible without his guidance. Dr.
-Balmaceda steered me in the correct direction and provided valuable insights that
-helped me focus on a problem that can be accomplished given the limited time.
-He provided and suggested helpful resources and is also very open when I find
-difficulties in writing the paper. He helped greatly in revising my proposal and
-thesis. Furthermore, he also helped in my scholarship requirements by providing
-assistance and revisions to the required paperworks. For these, I am gratefully
-
-indebted to him.
-
-I would also like to thank the thesis examiners Dr. Agnes T. Paras and Dr.
-Julius M. Basilla for providing valuable insights, comments, resources and sug-
-gestions. They were also my professors in my core subjects and their insights
-on mathematics helped not only in making this thesis, but also in understanding
-
-mathematics and learning how to understand mathematics in general.
-
-I would also like to thank and acknowledge Dr. Jaime D.L. Caro as the thesis
-reader and I am grateful for his valuable suggestions, questions and advice about
-the thesis. I would also like to express my gratitude to Dr. Manuel Joseph C.
-
-Loquias for helping me obtain resources such as papers related to my thesis.
-
-Finally, I would like to thank the Filipino people and DOST-SE] ASTHRDP
-
-for placing their trust in completing my studies and this research.
+insufficient for isomorphism. The thesis will include a discussion of preliminary concepts and known theorems that leads to the main results.
 
 Chapter 1
 
@@ -1713,6 +1562,3 @@ Vol. 217, Springer (2002) 2nd edition.
 
 S. Mac Lane and I. Moerdijk, Sheaves in Geometry and Logic: A First Intro-
 duction to Topos Theory, Springer (1994).
-
-36
-
