@@ -11,7 +11,14 @@ def main():
         fpath = os.path.join(theses_dir, fname)
         with open(fpath, "r", encoding="utf-8") as f:
             text = f.read()
+        if not text.strip():
+            print(f"Skipping {fname}: file is empty.")
+            continue
         meta = extract_thesis_metadata(text)
+        # Only skip if meta is not a dict or is completely empty
+        if not meta or not isinstance(meta, dict):
+            print(f"Skipping {fname}: could not extract any metadata.")
+            continue
         meta["file"] = fname
         all_metadata[fname] = meta
     with open(out_path, "w", encoding="utf-8") as f:

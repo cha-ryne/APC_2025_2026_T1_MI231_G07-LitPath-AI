@@ -1,4 +1,3 @@
-
 import dotenv
 dotenv.load_dotenv()
 
@@ -217,13 +216,13 @@ def prompt_chain(top_chunks, prompts, api_key):
             ])
             context = f"{doc_info_str}Context: {chunk_context}\n\nWhen answering, please reference the relevant thesis by its number in square brackets, e.g., [1], [2], etc., to indicate the source of each point.\n\n"
             context += (
-                "Synthesize the findings from the top relevant theses in response to the following question. "
+                "Synthesize the findings from the top 5 relevant theses in response to the following question. "
                 "Group your answer by key themes or outcomes relevant to the question. "
                 "Write in plain text, paragraph style, without bullet points, asterisks, or markdown formatting. "
-                "Only place thesis references in square brackets immediately after the period at the end of each paragraph, never inside sentences or after other punctuation. "
-                "If multiple theses support a paragraph, concatenate their numbers in square brackets at the end of the paragraph, after the period, with no space before the bracket. "
-                "Do not place references anywhere else. "
-                "Conclude with a summary paragraph that synthesizes the findings. After the summary, concatenate all referenced thesis numbers in square brackets (e.g., [2][5][6][8][9]), with no explanatory sentence or line break. "
+                "At the end of each paragraph, place in square brackets the number(s) of the most relevant thesis or theses (from the list above) that support the information in that paragraph, e.g., [1] or [2][3]. "
+                "Do not place references anywhere else. Do not default to [1] for every paragraph—use the correct number(s) for each paragraph based on the supporting evidence. "
+                "You must reference all top 5 unique theses at least once in your answer, distributing them across the overview. If a thesis is not referenced, add it to a relevant paragraph. "
+                "Conclude with a summary paragraph that synthesizes the findings. After the summary, concatenate all referenced thesis numbers in square brackets (e.g., [1][2][3][4][5]), with no explanatory sentence or line break. "
                 "Highlight relationships, causal links, and actionable insights. "
             )
         # Build prompt for Gemini
@@ -250,53 +249,93 @@ def prompt_chain(top_chunks, prompts, api_key):
         response.raise_for_status()
         result = response.json()
         raw_answer = result['candidates'][0]['content']['parts'][0]['text'].strip()
-        # Post-process: move all references to end of each paragraph
         import re
+        # --- Rearrangement logic ---
+        ref_pattern = re.compile(r'\[(\d+)\]')
+        # Find order of first appearance of each reference in Gemini output
+        paragraphs = re.split(r'\n\s*\n', raw_answer)
+        ref_order = []
+        for para in paragraphs:
+            for ref in ref_pattern.findall(para):
+                if ref not in ref_order:
+                    ref_order.append(ref)
+        # Map old number to new number based on first appearance
+        # Only consider numbers that are in allowed range
+        allowed_numbers = [str(n) for n in range(1, len(seen_pdfs)+1)]
+        ref_order = [r for r in ref_order if r in allowed_numbers]
+        # If fewer than 5, fill in with missing numbers in original order
+        for n in allowed_numbers:
+            if n not in ref_order:
+                ref_order.append(n)
+        # Build mapping: old_num -> new_num
+        old_to_new = {old: str(i+1) for i, old in enumerate(ref_order)}
+        # Rearrange seen_pdfs and doc_infos to match new order
+        seen_pdfs_new = [seen_pdfs[int(old)-1] for old in ref_order]
+        doc_infos_new = []
+        for i, pdf_id in enumerate(seen_pdfs_new):
+            meta = None
+            for c in top_chunks:
+                meta_c = c['meta']
+                pdf_id_c = meta_c.get('pdf', meta_c.get('file', '[Unknown]'))
+                if pdf_id_c == pdf_id:
+                    meta = meta_c
+                    break
+            doc_infos_new.append(f"[{i+1}] Title: {meta.get('title','') or '[Unknown]'}\n    Author: {meta.get('author','') or '[Unknown]'}\n    Year: {meta.get('publication_year','') or '[Unknown]'}\n    File: {pdf_id}")
+        doc_info_str_new = "Top 10 relevant documents found (numbered for reference):\n" + "\n".join(doc_infos_new) + "\n\n"
+        # Update chunk_context as well
+        pdf_to_number_new = {pdf_id: i+1 for i, pdf_id in enumerate(seen_pdfs_new)}
+        chunk_context_new = "\n\n".join([
+            f"[{pdf_to_number_new[c['meta'].get('pdf', c['meta'].get('file', '[Unknown]'))]}] From {c['meta'].get('pdf', c['meta'].get('file', '[Unknown]'))} (chunk {c['meta']['chunk_idx']}): {c['chunk']}"
+            for c in top_chunks if c['meta'].get('pdf', c['meta'].get('file', '[Unknown]')) in pdf_to_number_new
+        ])
+        # Replace all references in raw_answer according to old_to_new
+        def replace_refs(text):
+            return ref_pattern.sub(lambda m: f"[{old_to_new.get(m.group(1), m.group(1))}]", text)
+        raw_answer_new = replace_refs(raw_answer)
+        # Post-process: move all references to end of each paragraph (as before)
         def process_paragraphs(text):
-            # Only allow references to the top N unique PDFs, in order
-            allowed_numbers = set(str(n) for n in range(1, len(seen_pdfs)+1))
+            allowed_numbers_new = set(str(n) for n in range(1, len(seen_pdfs_new)+1))
             paragraphs = re.split(r'\n\s*\n', text)
-            ref_pattern = re.compile(r'\[(\d+)\]')
+            ref_pattern2 = re.compile(r'\[(\d+)\]')
             processed = []
-            all_refs = []
-            trailing_refs = []
-            # Check if last paragraph is only references
-            if paragraphs and ref_pattern.findall(paragraphs[-1]) and not re.search(r'[a-zA-Z]', paragraphs[-1]):
-                trailing_refs = ref_pattern.findall(paragraphs[-1])
+            assigned_refs = []
+            # Remove trailing reference-only paragraph if present
+            if paragraphs and ref_pattern2.findall(paragraphs[-1]) and not re.search(r'[a-zA-Z]', paragraphs[-1]):
                 paragraphs = paragraphs[:-1]
+
+            n_body = max(1, len(paragraphs)-1)  # Exclude summary
             for i, para in enumerate(paragraphs):
-                refs = [r for r in ref_pattern.findall(para) if r in allowed_numbers]
-                all_refs.extend(refs)
-                para_clean = ref_pattern.sub('', para).strip()
-                # Remove space before period
-                para_clean = re.sub(r'\s+\.$', '.', para_clean)
-                # Only add references at end if any found
-                if refs:
-                    refs_str = ''.join([f'[{r}]' for r in sorted(set(refs), key=refs.index)])
-                    para_clean = re.sub(r'\.$', f'.{refs_str}', para_clean)
-                processed.append(para_clean)
-            # For the last paragraph (summary), append only unique refs not already present at the end
-            if processed:
+                refs = [r for r in ref_pattern2.findall(para) if r in allowed_numbers_new]
+                # Only keep up to 2 unique references per paragraph
                 unique_refs = []
-                for r in all_refs + trailing_refs:
-                    if r in allowed_numbers and r not in unique_refs:
+                for r in refs:
+                    if r not in unique_refs:
                         unique_refs.append(r)
-                # Remove space before period
+                    if len(unique_refs) == 2:
+                        break
+                para_clean = ref_pattern2.sub('', para).strip()
+                para_clean = re.sub(r'\s+\.$', '.', para_clean)
+                if i < n_body and unique_refs:
+                    for r in unique_refs:
+                        para_clean += f'[{r}]'
+                        assigned_refs.append(r)
+                processed.append(para_clean)
+            # For the last paragraph (summary), append only unique refs actually assigned to body paragraphs
+            if processed:
+                summary_refs = []
+                for r in assigned_refs:
+                    if r not in summary_refs:
+                        summary_refs.append(r)
                 processed[-1] = re.sub(r'\s+\.$', '.', processed[-1])
-                # Find refs already present at end of summary
                 end_refs = re.findall(r'(\[\d+\])', processed[-1].split('.')[-1])
                 end_refs_set = set([ref.strip('[]') for ref in end_refs])
-                # Only append refs not already present
-                missing_refs = [r for r in unique_refs if r not in end_refs_set]
-                refs_str = ''.join([f'[{r}]' for r in missing_refs])
-                if processed[-1].endswith('.'):
-                    processed[-1] = processed[-1] + refs_str
-                else:
-                    processed[-1] = processed[-1] + '.' + refs_str
+                for r in summary_refs:
+                    if r not in end_refs_set:
+                        processed[-1] += f'[{r}]'
             return '\n\n'.join(processed)
-        answer = process_paragraphs(raw_answer)
-        # Update context for next step
-        context = f"{context}{answer}\n\n"
+        answer = process_paragraphs(raw_answer_new)
+        # Update context for next step (with new doc_info_str and chunk_context)
+        context = f"{doc_info_str_new}Context: {chunk_context_new}\n\nWhen answering, please reference the relevant thesis by its number in square brackets, e.g., [1], [2], etc., to indicate the source of each point.\n\n{answer}\n\n"
     return answer
 
 
@@ -559,23 +598,20 @@ class MultiThesisRAGHTTPRequestHandler(BaseHTTPRequestHandler):
                 import os
                 overview_msg = "No overview available."
                 if relevant_chunks:
-                    # If 5 or more unique sources, use only the first 5 unique sources' chunks
+                    # Build context from up to 5 unique theses (by file/pdf)
                     unique_files = []
-                    limited_chunks = []
+                    chunks_for_overview = []
                     for c in relevant_chunks:
                         file_name = c["meta"].get("file", c["meta"].get("pdf", ""))
                         if file_name and file_name not in unique_files:
                             unique_files.append(file_name)
                         if file_name in unique_files[:5]:
-                            limited_chunks.append(c)
-                        # Stop collecting if we have 5 unique sources and all their first chunks
-                        if len(unique_files) >= 5 and len(set([x["meta"].get("file", x["meta"].get("pdf", "")) for x in limited_chunks])) >= 5:
+                            chunks_for_overview.append(c)
+                        # Stop collecting if we have 5 unique sources
+                        if len(unique_files) >= 5:
                             break
-                    # If less than 5 unique, use all relevant chunks
-                    if len(unique_files) >= 5:
-                        chunks_for_overview = limited_chunks
-                    else:
-                        chunks_for_overview = relevant_chunks
+                    # Only keep chunks from the first 5 unique sources
+                    chunks_for_overview = [c for c in chunks_for_overview if c["meta"].get("file", c["meta"].get("pdf", "")) in unique_files[:5]]
                     api_key = os.environ.get("GEMINI_API_KEY", "")
                     if api_key:
                         try:
