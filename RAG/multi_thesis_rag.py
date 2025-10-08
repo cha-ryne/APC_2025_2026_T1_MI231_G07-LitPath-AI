@@ -31,6 +31,9 @@ def recover_chromadb_from_index(pdf_folder, chunk_size=500):
         # Ensure 'subjects' is always a string
         if "subjects" in meta and isinstance(meta["subjects"], list):
             meta["subjects"] = ", ".join(str(s) for s in meta["subjects"])
+        # Ensure 'university' is present
+        if "university" not in meta:
+            meta["university"] = ""
         chunks = sentence_chunking(text, chunk_size=chunk_size)
         chunk_embeddings = embed_chunks(chunks, embedder)
         chunk_metadatas = []
@@ -42,6 +45,9 @@ def recover_chromadb_from_index(pdf_folder, chunk_size=500):
             for k, v in meta_copy.items():
                 if v is None:
                     meta_copy[k] = ""
+            # Ensure 'university' is present in each chunk
+            if "university" not in meta_copy:
+                meta_copy["university"] = ""
             chunk_metadatas.append(meta_copy)
         ids = [f"{os.path.basename(txt_path)}_chunk_{i}" for i in range(len(chunks))]
         collection.add(
@@ -78,7 +84,8 @@ def build_chromadb_index(chunks, chunk_embeddings, metadata):
             "degree": m.get("degree", "Thesis"),
             "call_no": m.get("call_no", ""),
             "subjects": subjects_str,
-            "abstract": m.get("abstract", "")
+            "abstract": m.get("abstract", ""),
+            "university": m.get("university", "")
         })
     collection.add(
         embeddings=[list(map(float, emb)) for emb in chunk_embeddings],
@@ -402,6 +409,9 @@ def extract_and_chunk_pdfs(pdf_folder, chunk_size=500):
         meta = extract_thesis_metadata(text)
         meta["file"] = os.path.basename(txt_path)  # Use .txt as the source
         meta["chunk_idx"] = 0  # Will be set per chunk
+        # Ensure 'university' is present
+        if "university" not in meta:
+            meta["university"] = ""
         chunks = sentence_chunking(text, chunk_size=chunk_size)
         chunk_embeddings = embed_chunks(chunks, embedder)
         chunk_metadatas = []
@@ -415,6 +425,9 @@ def extract_and_chunk_pdfs(pdf_folder, chunk_size=500):
             for k, v in meta_copy.items():
                 if v is None:
                     meta_copy[k] = ""
+            # Ensure 'university' is present in each chunk
+            if "university" not in meta_copy:
+                meta_copy["university"] = ""
             chunk_metadatas.append(meta_copy)
         # Append to ChromaDB (do not clear existing)
         ids = [f"{os.path.basename(txt_path)}_chunk_{i}" for i in range(len(chunks))]
@@ -533,6 +546,7 @@ class MultiThesisRAGHTTPRequestHandler(BaseHTTPRequestHandler):
                             "degree": meta.get("degree", "Thesis"),
                             "call_no": meta.get("call_no", ""),
                             "subjects": meta.get("subjects", ""),
+                            "university": meta.get("university", "")
                         }
                         documents.append(doc)
                         seen_files.add(file_name)
