@@ -1,0 +1,2510 @@
+Open Academic Analytics for PUP Taguig Faculty Performance Evaluation
+
+GECILIE C. ALMIRANEZ
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+MASTER IN INFORMATION TECHNOLOGY
+
+April 2013
+
+Abstract
+
+The study aims to provide the institution with open academic analytics derived
+from faculty performance evaluation rating and served as a tool to enhance faculty
+performance. To accomplish this, the Online Faculty Evaluation System (OFES) was
+developed using open source technologies which include Php Yii framework, MySql and
+WampServer applying the Rapid Application Development approach. The system is
+divided into two main modules, data collection and performance analytics generation.
+Evaluation was done during mid and end of the semester period with 2,268 as target
+student evaluators for 72 faculty members. 100% of faculty were evaluated and almost
+95% of the target evaluators participated. Performance analytics were generated and
+immediately made available online to individual faculty and administrators upon
+completion of the evaluation. Strengths and areas for improvement have been identified
+and appropriate actions have been taken. Performance of faculty members have improved
+based on the results of the second evaluation. The result shows that there is a significant
+relationship between the preliminary and final result. Thus, the online faculty evaluation
+can be conducted once every semester. Regular implementation of the system can capture
+more academic analytics to support both operational and strategic decision making vital to further enhancement of quality education.
+
+Keywords :Online Faculty Evaluation System (OFES)
+
+I. The Problem Domain
+
+A. Statement of the Problem
+
+The Office of the Head of academic programs is primarily responsible for
+overseeing the performance of almost a hundred faculty members in PUP
+Taguig. It has one staff clerk and one student assistant. Historically, the office
+does not conduct faculty evaluation regularly every semester due to manpower
+constraints and tedious processes involved in evaluation. Sometimes the data
+gathered from the said evaluation was not process at all. On the other hand, if
+faculty evaluation is conducted, it takes semesters or years before the release
+of the results. The results received and distributed to faculty is already
+outdated. This has led to obsolete information when it reaches the faculty. As
+a result, the faculty members were not be Since the result is not available on
+time, the evaluation result is often not considered in giving faculty assignment
+which may lead to inappropriate or not suitable for faculty’s expertise. In
+addition, the head of academic program cannot immediately identify faculty
+development training programs needed that will address their current
+
+weaknesses as identified in the faculty evaluation conducted.
+
+The Head of Academic Programs(HAP) cannot also immediately
+assess who will be promoted or recommended if vacancy exists or who will be
+given a chance to pursue higher education in their relevant field of expertise
+through scholarship program. There is no analytics from the faculty
+
+evaluation results that can be derived from the existing system due to lack of
+
+staff personnel and manual system to conduct the evaluation and produce
+
+evaluation results of almost 100 faculty members of PUP Taguig branch.
+
+The system addressed the above stated problems and has been an essential
+
+tool that :
+
+1. made easy to conduct faculty evaluation and immediately provide
+
+faculty evaluation results ;
+
+2. generate customized reports and analytics of faculty performance
+
+for the administrator and faculty; and,
+
+3. generate recommendations based on the analytics for decision
+
+making process.
+
+B. Background and Objectives of the Project
+
+The Head of the Academic Programs of PUP Taguig serves also as the
+Research Coordinator and the Head to conduct faculty evaluation. With the
+problems and challenges faced by the current manual system on faculty
+evaluation, the Head of the Academic programs approved for the development of
+the Online Faculty Evaluation System which serves as software used to come up
+with academic analytics pertaining to faculty.
+
+The general objective of this project was to provide academic analytics of
+faculty performance evaluation which will be used for decision making. The
+specific objectives are to implement a web-based application called Online
+
+Faculty Evaluation System(OFES) by first semester of school year 2012-2013
+
+to capture information and provide reports on evaluation result; make evaluation
+results available online to administrator and faculty; to immediately identify the
+strengths and areas where improvements can be made both for individual faculty
+and as a whole; provide recommendations that administrators can use to support the
+
+decision-making process; and to provide historical performance ratings.
+
+C. Significance and Scope of the Project
+
+The Online Faculty Evaluation System contributed to the new concept
+which is academic analytics that refers to the analysis of data to monitor the
+progress of faculty performance. It solved the difficulty in conducting faculty
+evaluation and the difficulty of producing evaluation results on time. It provided
+the administrators with reports and analytics that help them come up with
+recommendations/sanctions.
+
+The scope of the project is to implement the Online Faculty Evaluation
+System at PUP Taguig campus to gather ratings of faculty performance from
+students and make it available online to faculty and administrators for the first
+semester for school year 2012-2013. It also provides reports, analysis of gathered
+
+information and recommendations for decision making.
+
+D. Documentation of Existence and seriousness of the identified
+problems
+
+The traditional student faculty evaluation system at Polytechnic University
+of the Philippines-Taguig Branch was developed to address the strengths and
+weaknesses of faculty members and for promotion purposes. PUP Taguig branch
+was founded in April,1992 with 473 students and 15 faculty members. PUP
+Taguig branch has grown to include graduate programs, and supporting 2,520 (see
+Table 3) students annual student enrolments in eleven degrees programs and three
+diploma programs. Prior to the development of Online Faculty Evaluation
+System(OFES), the faculty evaluation system in PUP Taguig is being conducted
+every last week of the semester which takes 10 to 15 minutes of filling-out the
+scannable forms for one subject alone. The head of the academic programs (HAP)
+and the student assistants conduct the evaluation manually by going from room to
+room. The HAP make use of random sampling (20 students per subject).
+Evaluation results often times are not being processed and distributed on time due
+to lack of personnel. In some instances, it took a year to process before
+
+distributing the results to faculty members which makes them obsolete.
+
+Due to laborious and time consuming manual system of evaluation, not all
+faculty members were able to be evaluated in the same evaluation period.
+Evaluation is normally done by batches, wherein one batch consist of full time
+
+faculty members, the other batch is consists of mostly part- time faculty members.
+
+In some instances, the HAP selects only few who will be subjected to evaluation.
+The said problems resulted to non- consistent implementation of evaluation
+
+system.
+
+The traditional faculty evaluation system at PUP Taguig branch was
+inconvenient in gathering rating since it disrupted the classes. It is also very
+laborious in terms of processing the results. These problems if left alone will
+further worsen by consistently growing students population year after year in the
+
+university.
+
+II. Review of Existing Alternatives
+
+Through conducting interviews and having an analysis on the present
+situation, the proponents suggested an alternative to enhance the current
+
+situations.
+
+Alternative 1. The HAP(Head of academic program) should have additional staff
+to conduct evaluation every semester and provide on time evaluation results with
+
+manual data mining.
+
+Alternative 2. Implement the Online Faculty Evaluation System(OFES) to
+
+facilitate evaluation twice every semester.
+
+Alternative 3, The university could make use of the scannable forms to speed up
+
+computations.
+
+III. Approach Taken in this Project
+
+A. Theoretical Framework
+
+The software development methodology used in developing the
+Online Faculty Evaluation was the Rapid Application Development using
+Iterative Prototyping wherein series of prototypes will be presented to the user
+until the system is completed. The term RAD (for rapid application
+development) is credited to James Martin, who wrote a book on the subject in
+1991. "RAD refers to a development life cycle designed to give much faster
+development and higher quality results than the traditional life cycle. It is
+designed to take maximum advantage of powerful development software that
+has evolved recently" (Martin 1991). Rapid Application Development is best
+applied to systems that would require 2 to 6 months of completion.” Rapid
+Application Development is created to radically decrease the time needed to
+
+design and implement information systems radically.” (Hoffer,3 Edition)
+
+RAD can often times be characterized as a combining of the JAD and
+
+evolutionary prototyping methodologies as depicted in Appendix E-6.
+
+Developers build / evolve prototype based on current requirements.
+Designers review the prototype. Customers try out the prototype, evolve their
+requirements. There are several advantages to using the rapid application
+development methodology. "The primary advantage of RAD is obvious;
+
+information systems developed in as little as one quarter the usual time.
+
+Shorter development cycles also mean cheaper systems, as fewer
+organizational resources need to be devoted to develop any particular system"
+(Hoffer et al. 1999). Also, because RAD uses smaller development teams,
+there is an additional cost savings (Martin 1991). Lastly, because the system
+was developed in such a short period of time, it was more closely match the
+
+current business needs and therefore be of more value (Hoffer et al. 1999).
+
+There are four phases using the Rapid Application development. First,
+Requirements Planning phase wherein users, managers, and IT staff
+members discuss and agree on business needs, project scope, constraints, and
+system requirements. It ends when the team agrees on the key issues and
+obtains management authorization to continue.Second, User design phase —
+during this phase, users interact with systems analysts and develop models and
+prototypes that represent all system processes, inputs, and outputs. The RAD
+groups or subgroups typically use a combination of Joint Application
+Development (JAD) techniques and CASE tools to translate user needs into
+working models.User Design is a continuous interactive process that allows
+users to understand, modify, and eventually approve a working model of the
+system that meets their needs. Third, Construction phase wherein it focuses
+on program and application development task . In RAD, however, users
+continue to participate and can still suggest changes or improvements as
+actual screens or reports are developed. Its tasks are programming and
+application development, coding, unit-integration and system testing. Fourth,
+
+Cutover phase wherein the data conversion, testing, changeover to the new
+
+system, and user training. Compared with traditional methods, the entire
+
+process is compressed. As a result, the new system is built, delivered, and
+
+placed in operation much sooner. Its tasks are data conversion, full-scale
+
+testing, system changeover, user training.
+
+B. Conceptual Framework
+
+Table 1 shows the conceptual framework of academic analytics and it was
+
+applied to the evaluation results provided by the Online Faculty Evaluation
+
+System(OFES).
+
+Table 1. Conceptual Framework
+
+INPUT
+Data Capture
+
+PROCESS
+Data Analysis/Report
+
+OUTPUT
+Predict/Act/Refine
+
+Faculty Evaluation
+Results
+
+Determine individual
+faculty ratings
+
+Recommendations
+on promotion, career
+advancement, award
+performance rewards
+or establish sanctions
+for underperforming
+teachers.
+
+Identifying Programs for faculty
+Weaknesses/Strengths | development
+
+based on Criterion
+
+used using graph
+
+Historical Identification of
+
+performance ratings
+of faculty
+
+faculty that can be
+rewarded or
+sanctioned.
+
+
+Academic analytics can be thought of as an engine to make
+decisions or guide actions. The engine consists of five steps: First,
+Capture wherein data is the foundation of all analytics efforts. Academic
+analytics can be based on data from multiple sources and in multiple
+formats (such as spreadsheets, enterprise financial system reports, or paper
+records). Second, Report, once the data have been extracted and stored in
+a common location, staff equipped with query, reporting, and analysis
+tools can perform queries, examine the information, and identify trends,
+patterns, and exceptions in the data. Third, Predict wherein data that have
+been collected and warehoused are analysed. Fourth, Act wherein the
+goal of any analytics project is to enable an institution to act based on
+predictions and probabilities. Actions might range from “information” to
+“invention”. And the last step is Refine wherein analytics projects should
+include a self-improvement process. Monitoring the impact of the project
+is a continual effort, and statistical models should be updated on a regular
+
+basis.(EDUCAUSE)
+
+C. Rationale for the Framework
+
+The traditional student faculty evaluation system at Polytechnic University
+of the Philippines-Taguig Branch was developed to address the strengths and
+weaknesses of faculty members and for promotion purposes. Due to laborious
+
+and time consuming manual system of evaluation, not all faculty members are
+
+being able to be evaluated in the same evaluation period. Evaluation is
+normally done in batches, one batch consists of full time faculty members, the
+other batch is consists of mostly part- time faculty members. In some
+instances, the HAP selects only few who will be subjected to evaluation. The
+said problems resulted to non- consistent implementation of evaluation
+system. The development and implementation of the Online Faculty
+Evaluation System using Rapid Application Development will surely
+addressed the given problems. Based on the results provided by the Online
+Faculty Evaluation System will be analysed using the concepts in academic
+
+analytics.
+
+D. Technologies that were considered or used
+
+The Online Faculty Evaluation System is a web-based application that was
+developed using Yii version 1.1.1 which is a high-performance component-
+based PHP framework. The web development platform used was WampServer
+and MySQL 5.5.8 as the database server. This platform is an effective open
+source technology for building and running dynamic and high performance
+web systems. PHP and MYSQL are two leading open-source scripting and the
+
+database technologies for web designers today.
+
+10
+
+E. User Testing and Project Assessment
+
+The Online Faculty Evaluation System was presented to the vice-president
+
+of branches and extensions after a series of tests(see Appendix B-4) and it has
+
+been approved for the pilot implementation at PUP Taguig. The
+implementation was fully supported by the director and head of academic
+programs of the branch (see Appendix D-2 and see Appendix B-4). The
+OFES was implemented by designated IT specialists during the first semester
+of school year 2012-2013. The implementation was conducted twice. The first
+evaluation was done immediately after the midterm and the other during the
+finals week. The pilot implementation was done to test the features of the
+system under controlled condition, that is using only one designated room
+equipped with computers connected to the Internet. The students involved in
+the evaluation were currently enrolled within the said semester. The students
+evaluated their respective professors online using their individual accounts.
+The faculty members were also given individual accounts to access their
+faculty evaluation results online in a specified time given by the head of
+academic programs. The head of the academic programs and the director of
+
+the branch have the authority to view all the faculty evaluation results.
+
+The pilot implementation was conducted after the midterm exam dated
+September 10-25, 2012. In order to directly monitor the performance of the
+system, freshmen and sophomores were required to do the online faculty
+
+evaluation in the computer laboratory. Each section composed of 50 to 70
+
+11
+
+students were scheduled to make use of the laboratory with 20 to 30 available
+computer units connected online. Due to limited computer units in the
+laboratory, each section is divided into two to three batches. The junior and
+senior students were required to do the online evaluation outside the
+university. The evaluation time took three(3) to four(4) minutes to finish
+
+evaluating a subject.
+
+The evaluation results were made available online on September 26,
+2012 and was viewed by the faculty members and administrator online using
+their respective account. The OFES was also presented to the PUP Vice-
+President for Branches and extensions and to the Directors of various PUP
+
+Campus/Branches.
+
+The second implementation was conducted October 14-25, 2012. All
+students were required to do the faculty evaluation outside the university with
+their given specific period of time. Evaluation results were generated on
+October 26, 2012. The Head of academic programs decided to make it
+
+available online to faculty members on November 18-25, 2012.
+
+12
+
+F. Data Models of Online Faculty Evaluation System
+a. Process Model
+
+The context diagram shows that faculty ratings will be collected from
+the students through the use of OFES and process to generate evaluation
+results and analytics to be viewed by the faculty, super adminiistrator and
+
+administrator.
+
+Student v 1 Result cae
+Evaluator Rating _ | |
+Metadata
+ONUNE
+FACULTY
+EVALUATION Result
+Facul SYSTEM . - | Admin(HAPDirec
+acu |
+Bs teat} Schedule | Ot
+See
+
+Figure 1. Context Diagram
+
+13
+
+b. OFES Hierarchical Structure
+
+Figure 2-5 shows the hierarchical of Online Faculty Evaluation
+System for the Super Administrator, Administrator, Faculty and student
+Evaluator Account(OFES).
+
+c. OFES Table Structures
+
+Figure 6-7 shows the different tables and their structures used in the
+
+Online Faculty Evaluation System(OFES).
+
+d. State Chart Diagram
+
+Figure 8 shows the behavior of each stakeholders in the Online
+
+Faculty Evaluation System.
+
+14
+
+JUNODY 410;8.4ySTUTUIPY Jadng 105 SAAO Jo aanjanajg [eoysaesaip] *7 24n31y
+ns
+
+sBulnes
+
+sqinsay Aevuns
+
+poe
+synsay jo
+sBumas suonsadans | quaweounouuy
+qwunosoy 23 sJUaWWOD
+(Ce
+uonenjeng
+: = sonsneis- sfuney Josimiadns
+suondo au suney | euossag 3
+aoueapy 40449 WaysAS é a Con ee eur
+= : ("> : jujules |
+out e | uopsano 4224
+syasay JO} | Ae W dad syjnsay [
+re
+ssuinas ysanbay ae {]2-42A0, uonenjen Peten@) squapnis
+a8equacia, | [enpinipul spelqns uapI
+as payjosug
+i“ Maina
+Aso8aye5, oo a
+soijeuy Jad s}jnsay uoneanoy (oe 7
+s8uN}aS Buney 112-4200. ajnpeyss eS syuapnis
+uoijeyndwo: — Ie-4200 sndwe) ‘amen.
+_ : synsay suolysano
+- somvjeuy jenpiipuy ainpayas poems Hess
+uoNeAoy sas je-4900 sse|D 38S Aso8aye> Aynoey
+AS 8 Was
+
+SUONJEIIJIION
+
+suoepuaWos2y
+
+soAjeuy synsay
+
+(40}e43s!U)wWIpy 4edns)
+
+awoH
+
+sajnpays
+
+sjuawins}su|
+
+15
+
+J9P[OY2ABIS JUEPNIG SATO JO aanponayg [wyosesayy “sg andy
+
+poo
+ayeoyiya9
+Wid
+(oe (=
+| uonenjeng | vonenjeng
+qasay | quapmis
+| uonenjeag
+
+(uapnis)
+
+@woH
+
+16
+
+SBu}aS
+quno20y
+
+junoassy Ayndeq 10} SAAO JO aanjonayg peolysawsay “p 2an3iy
+
+sonvjeuy
+
+uonenjeng
+ae . 488d
+Dee sondjeuy
+- Buney |
+Jasn
+
+soyAjeuy synsay
+
+uonenjenz
+
+uonenjenz
+HS
+
+17
+
+yuNordy 10je43S|UJWIPY 104 $340 JO BaNyzoNAYS jed]yDIeJ9I}H “E |1NI
+
+——
+
+| syinsey Aesuns
+
+suoisagans
+
+23 sjuaWWOD
+
+uonenjenz.
+HS
+
+uoienjeng uonenjeag
+
+Josimadns
+i e 4aed we
+
+18
+
+sBuqas
+qunoddy
+
+uonenjeng
+Josiadns
+
+synsey
+
+S919S1Ve1S
+jo Juawaounouuy
+
+spiemay
+3g suolyoues
+
+suondo
+aouenpy
+
+uonenjeng juawageuew)
+
+2 ——
+weis01g sonijeuy | vorsan Jad Suiuiesy
+sBumas quawdojanag | Buned = <1) ad syinsay ;
+:  Jenpiaipuy | je-sano uonenjeng pase40
+adejuaciag fee. eetiens Rice
+(a (ee ° Mainay payjoiu3
+08832) Vomummee
+$80} 10413 | sondjeuy sad synsoy uoneanoy
+sues wayshs une qestus
+o1yeyndwoD ee 112-4849, CTT é squapnis
+bs \ E120) sndwe>
+syasay (— synsey suonsano
+uoleAIY dO} soAjeuy | yenpiaipuy ajnpeyas HeIss
+AS 3 Was asenbey 4asn | Ie-4a00 sse[d 185 Auo8aye> Ayinoe4
+
+|
+1
+
+sajnpayos syuawnsjsu|
+
+suonepuawworssy sonvjeuy sqnsay uonenjeaz
+
+(Joqeuqsjujupy)
+
+awoH
+
+‘ate
+tate
+1k
+Mark
+
+int(1)
+decimal( 5,4)
+decimal(5,4)
+vvarchar(100)
+varchar(5)
+
+nd int)
+CategoryID varchar(100)
+Recommendation varchar(100)
+Description varchar(100)
+
+int(4)
+nas id vvarchar(50)
+controlNumber int(10)
+term varchar(4)
+semester varchar(20)
+schoolyear _-varchar(20)
+audit trail timestamp
+
+solid
+code
+
+branch id
+‘branch_name
+setdate
+setdeadtine
+setschoolyear
+setsemester
+status
+
+int(20)
+varchar(20)
+int(1)
+varchar(300)
+date
+
+date
+varchar(20)
+varehar(20)
+int(11)
+
+oa
+setdeadline
+
+setschoolyear
+setsemester
+
+status
+
+int(11)
+varchar( 100)
+date
+
+date
+varchar(20)
+varchar(20)
+varchar(20)
+
+oryID
+
+ter
+year
+
+yD
+
+sor
+
+int(a)
+varehar(10)
+
+decimal(5,4)
+varechar(30)
+varechar(30)
+varechar(30)
+varechar(30)
+varechar(30)
+
+ima)
+varehar(10)
+decimal(5,4)
+varchar(30)
+varehar(30)
+varchar(30)
+varchar(30)
+
+int(a)
+
+vvarchar(10)
+decimal( 5,4)
+vvarchar(30)
+varchar(30)
+varchar(30)
+varchar(30)
+varchar(30)
+
+int(20)
+varchar(200)
+varchar(200)
+varchar(200)
+int(20)
+
+varchar(200)
+
+id ima)
+
+FCode vvarchar(30)
+peers varchar(30)
+term varchar(30)
+semester vvarehar(30)
+schoolyear varchar(30)
+rating decimal(5,4)
+comment text
+
+id int)
+
+FCode varehar(30)
+term varchar(10)
+semester varehar(30)
+schoolyear varchar(30)
+rating docimel(5,4)
+‘comment text
+
+id intca)
+Fode varchar(30)
+supenssor varehiar(30)
+term varchar(10)
+semester varchar(30)
+schoolyear varchar(30)
+rating decimal(5,4)
+comment text
+
+sid ‘int(11)
+squestion vurehar(1000)
+Figure 6. Table Structures
+
+id int(4)
+FCode varchar(30)
+setpeers text
+
+rating decimal( 5,4)
+term varchar(10)
+setsemester __varchar(30)
+
+setschoolyear _yarchar(30)
+
+id int)
+
+FCode varchar(30)
+branch id int(a)
+
+semester varchar(30)
+schoolyear _varchart30)
+student decimal( 5.4)
+supervisor —_decimal(5,4)
+peer decimal(5,4)
+self decimal(5,4)
+overall decimal 5,4)
+
+SubjCode varchar(S0)
+SubjDescription varchar( 200)
+Units varchar($)
+
+HoursLab double(5,2)
+HoursLec double(5,2)
+GroupSubject _ varchar(50)
+Dept ID. varchar()
+
+ia int(a)
+stud_id varchar(30)
+term varchar(10)
+semester varchar(30)
+schoolyear _varchar(30)
+1 int(4)
+
+2 in)
+
+3 int)
+
+4 int(a)
+
+s int(a)
+
+6 int(a)
+
+1 int(4)
+
+8 int)
+
+9 int(4)
+
+10 int)
+result decimal(s,4)
+‘comment text
+
+setid
+
+id
+
+FCode
+term
+semester
+schoolyear
+rating
+overallrating
+
+int(a)
+varchar(20)
+
+vvarchar(100)
+
+vvarehar(20)
+vvarchar(20)
+decimal(s,4)
+varehar(4)
+varchar(20)
+varchar(10)
+vvarchar(10)
+timestamp
+
+int(4)
+varchar(S0)
+varchar(4)
+varchar(20)
+varchar(20)
+decimal(5,4)
+decimal(5,4)
+
+setid
+branch id
+
+branch_name
+
+code
+term
+
+setsemester
+setschoolyear
+
+seldate
+
+setdeadiine
+
+status
+
+FCode
+password
+
+‘enum_employmentStat
+
+LName
+FName
+MName
+Mobile
+Email
+
+int_courseGroup
+
+cevalRoles
+
+SeeQuestion
+SecAnswer
+
+Title
+
+InventoryUser
+
+EmpID
+isAdmin
+status
+userlevelid
+
+iserimage
+FAdmin
+
+int(10)
+int(4)
+vvarchar(200)
+varchar(20)
+varehar(4)
+varchar(S0)
+imt(20)
+
+date
+varchar(50)
+
+vvarchar(50)
+vvarchar(100)
+varchar(50)
+varchar{S0)
+varchar{50)
+varchar(50)
+varchar(20)
+varchar(50)
+‘inr(S)
+varchar(50)
+int(10)
+varchar(200)
+varchar(10)
+imt(5)
+varchar( 100)
+int(4)
+varchar(100)
+vvarchar(11),
+varchar(30)
+int(10)
+
+19
+
+Online Faculty Evaluation System - Table Structures
+
+int(100) CategoryID varchas() Question ——int(a) int(4) int(100)
+
+iD varchar(30) CategoryName varchar( 100) QuestionDetalsvarehar(250) terol jd int(10) Susicose varchar(20)
+
+rage decimal(5,4) status vvarchar(20) CategoryID —_varchar(4) LecLab varchar(10) FCode varchar(100)
+
+id int(10) details varchar(250) term varehar(4) FinalRating decimal(5,4)
+
+> varchar(10) status varchar(20) audit trail timestamp semester varchar(20)
+varchan(4) schoolyear varchar(10)
+
+ral timestamp LecLab varchar(10)
+term varchar(4)
+audit_tail timestarup
+int) id ino) id int(a) id int(4) id int)
+varchar(100) enroll id imt10) FCode varchar(30) FCode varchar(30) ci varchar(30)
+
+* vvarchar(50) LecLab varchar(10) supervisor __yarchar(30) peers varchar(30) varchar(10)
+
+‘ varchar(20) term varchar() term varchar(10) term varchar(30) varchar(30)
+
+' varchar(10) ‘audit trail timestamp semester varchar(30) semester varchar(30) varchar(30)
+vvarchar(4) int(a) schoolyear _varchar(30) schoolyear _-varchar(30) ita)
+
+vl timestamp ims) 1 int(4) 1 ima) inva)
+decimal(5,4) int(a) 2 int(4) 2 ina) int4)
+decimal(S,4) ina) 3 in) 3 int(4) ins)
+decimal(S,4) int(4) 4 int(4) 4 int(4) int(4)
+ddecimal(5,4) ints) 5 int) s int) int(a)
+decimalt5,4) ins) 6 int(4) 6 int) int)
+decimal(S,4) int) a int) 7 int(4) int)
+decimals.) int) 8 int) 8 int(4) ima)
+decimal(5,4) ina) 9 int(a) 9 int(a) ims)
+decimal(5,4) ima) 10 int(a) 10 int) int)
+decima5,4) ima) u int(a) n int) int(a)
+decimal(5,4) int(a) 2 int) 2 int) int(a)
+decimal(5,4) ima) B int(a) B int(a) int(4)
+decima5,4) int) uM int(a) 4 int(4) int(4)
+decimal(5,4) intt) 1s int(a) 1s ints) ints)
+decimal(5,4) int(4) 16 int) 16 int) int(4)
+decimal(S,4) ina) "7 int(a) 7 int(4) int)
+decimal(S,4) int) 1s int(a) 18 ints) int(a)
+decimal(5,4) int) 19 int(a) 19 ints) int(a)
+decimal(5,4) in) 20 inva) 20 int) int(a)
+ecimal(5,4) ina) 2 int) 21 int(4) mtd)
+decimal(5,4) int(4) 2 imt(4) 2 int(4) int(a)
+decimal(5,4) int(a) 23 ima) 23 int(a) int(a)
+decimal(5,4) int) 24 int) 24 int(a) int)
+decimal(5,4) 25 int) 25 int(a)
+decimal(5,4)
+int(100) setid iio) setid im) setid int 10) setid int(20)
+varchar(50) FCode varchar(50) setsupervisor _varchar(200) code varchar(S0) setbranch imt(20)
+varchar(50) code varchar(20) setbranch int(20) FCode varchar(S0) setoode vvarchar(20)
+varchan(200) setsupervisor varchar(50) setcode varchar(20) term varchar( 10) setdate date
+date term varchar(20) setdate date setsemester __varchar{20) setdeadline date
+
+ne date setsemester varchar(20) setdeadiine date setschoolyear _varchar(20) setsemester varchar(20)
+varchar(20) setschoolyear varchar(20) setsemester _varchar(20) setdate date setschoolyear int(20)
+varchar(50) setdate date setschoolyear _ int(20) setdeadline date term varchar(20)
+
+ter varchar(20) seldeadline date term varchar(20) setstat varchar(20) status varchar(20)
+
+year varchay(20) status varchar(20) status varchar(20) status varchar(20)
+int(10) id int(100) ‘branch id ae - error id im) id ima)
+varchar(20) enroll id int(10) ‘branch name —_yarchar(200) error_no int(100) roles vvarchar(50)
+
+5 varchar(20) ‘comment text ‘code varchar() cerror_message text percentage decimal 5,4)
+
+ar vvarchar(20) rating ddecimal(5,4) CourseCode —_varchar(50) cerror_file text
+varchar{20) LeeLab varchar(10) description —_varchar(300) ‘error_line int(100)
+
+ode varchar(20) term varehar(4) HsOrCollege _varchar(4) ‘adit trail timestamp
+
+ode varchar(20) ‘audit trail timestamp
+
+: vvarehar(20)
+
+a ima)
+
+ue varchar(20)
+
+Figure 7. Table Structures
+
+20
+
+Register New
+Account
+
+Enter Account
+
+Information
+
+Create/Upload
+
+User Log-in peat
+
+Confirm
+Account
+
+Enter Account
+Information
+
+Create /Modify.
+Evaluation
+
+Add,Update,Del
+ete Category
+
+Add,Update,Del
+estions
+
+Form
+confirmation
+
+Registration
+Data
+
+Perform
+Evaluation
+
+Evaluate do/get
+user input
+
+Submit
+Evaluation
+
+Evaluation Data
+
+Figure 8. Statechart Diagram
+
+Review
+Evaluations
+
+Choose
+Item/Individual
+to review
+
+Request
+
+Evaluations
+Summary
+
+View /Print his/her
+Evaluation/Post
+
+s to the
+
+administrator
+
+21
+
+G. Design Interfaces
+
+a. Home Page
+The OFES(Online Faculty Evaluation System) display the present
+evaluation schedule. The Faculty Log-in located at the right side of the
+screen shot is where the super administrator, administrator and the faculty
+members can log into the system. The student evaluation can log-in using
+the lower part of the form. To see the instruction on how to proceed with
+
+the evaluation, click “user guide”.
+
+arise x1 OFF 9 Vit xp 8g Vm x Vadon Ve x gia Vice x gre Vem x Vinee VO «Elim RSI
+
+€ ~ © | puptaguianet
+
+ONLINE FACULTY EVALUAT!
+
+Online Faculty Evaluation System
+
+PUP.OFES (nine Factty Evatiation Syscem)= en er
+‘the Prine
+deosone Ths apricaton, therefore, hasten
+
+cra eed to mie te are sytent PLP Popes
+
+rfrraton for the PUPT Fenty to rate deren
+
+ugh a castomcatie web tases
+
+rrakng¢ orig for fee aces ofboth PUPTegug fly
+
+communicate ther thous to proide vst nforreton ne
+
+ae Past? | Heed he?
+
+‘CANPUS/ COLLEGE ‘START DATE ‘RD DATES
+
+Tha 8S Femay,03 Arlt BD
+
+8) teetheon doa * (6 Bamepl ~ © tanec
+
+Tibp * @) Ons : 4 Stow aldoneleats
+
+Figure 9. Home and Log-in Page
+
+22
+
+b. Super Administrator Module
+In this module the super administrator shall have the following
+functions.
+i. Manage Users
+ii. Manage Instruments
+iii. Manage Schedules
+
+iv. View Results
+
+iew Analytics
+vi. View Recommendations
+vii. Manage Notifications
+
+viii. Manage Settings
+
+Pr CCT ar
+¢:¢
+
+Va VamVae lon Joerg ie neon ie Soma
+
+mB
+
+Save password | | Never for this site
+
+11 FA0006762009 (Hain Administrator)
+IVERSITY
+
+LINE FACULTY EVALUATION
+
+‘Start Date End Date Type of Evahation Erakate
+
+mba = wwe
+apo = ove
+zea B owe
+na =m wwe
+= woe
+ape ass s we
+ane anes s noe Ke
+
+‘CAMPUS /COLLEGE ‘START DATE ‘END DATES
+Fenayii23 tite
+2) fatwetfeiondea ~ $ ueepl * EE tawecedmim pf ~ F lathalston Tp ~ ) ons . # Sonaldomicrt x
+
+Figure 10. Super Administrator Page
+
+23
+
+Manage Users
+a. Add, view, update and delete faculty member
+b. Add, view, update and delete student.
+ce. Tagged Student to his/her subject enrolled.
+
+Yor, RCL, HO TH HL
+
+\)
+
+(1 Om)
+ty Mert 00
+
+A gps 200 00170 (ee Anon
+
+Pm
+
+aa
+aa
+an
+an
+an
+
+Le
+
+an
+ant
+an
+
+Ce
+
+an
+
+it,
+
+aa
+
+eee
+
+an
+an
+aa
+an
+
+Figure 11. User’s Maintenance Page
+
+Evaluation Instruments
+
+a. Add, view, update and delete Evaluation Category.
+
+24
+
+
+b. Add, view, update and delete Questions
+
+c. Add, view, update and delete Subjects for
+Evaluation.
+
+d. Update Professor of a subject.
+
+e. Review subject offered
+
+f. Add, view, update and delete recommended faculty
+
+development programs.
+
+crix x | OMP x Von xV dq 1V@ oq xVel om xV eon x iret x¥ gree x ijnce x¥ gna x¥ om x¥ Mon x¥ One xVilim x ema
+
+© — C | puptaguignet
+
+ALMIRANEZ, GECILIE C.
+
+ONLINE FACULTY EVALUATION
+
+[3.41.33 PM]
+og
+
+ese
+
+2) Puetfncintea i U6 unoplt * FE heaccdnayira ga * SE UthbSee Tapa * 8) oe : $ doualdomiers, x
+
+Figure 12: Evaluation Instrument’s Page
+
+25
+
+
+iii. Evaluation Schedules
+a. Set class schedule
+b. Campus schedule activation
+ec. Set or update self-evaluation schedule
+d. Set or update supervisor evaluation schedule
+e. Set or update peer evaluation schedule
+
+f. Announcement of results to faculty members
+
+Otic x! GPW xV Mere XV Wd XV S Op XV Sop xVedoni xVEret x gee x
+
+XV gre Ve tm x¥en eV one «Vin 1 SIG
+© ~ © 5 puptaguignet =
+e ALKIRANE, GECILIEC
+
+® Se FACULTY EVALUATION
+
+14.45: 26PM]
+
+Seurney, Ai 05 208
+
+Degang 141 of 41 ret)
+
+Se Chass Schedule
+Campus Scheduie Acbvaton
+Sf Evataton
+
+Peer Evauton
+Supervisor Evahaton
+‘Armouncement of Resuts
+
+NNN NNN NNN
+
+8) PaaselFncindoo * i (6B nepal * E fwece dnp ° LL Lathulon-Tidpf * ) OMas ‘ F Shona donnieats.
+
+Figure 13: Evaluation Schedule Page
+
+26
+
+iv. Evaluation Results
+
+a. View or Print Individual result of Professors in a
+Campus/Branch
+
+b. View graphs or Print Over-all result of per
+Category per Campus/Branch
+
+ce. View graphs or Print Over-all result of per
+Questionnaires per Campus/Branch
+
+d. Comments and Suggestions for OFES per Campus
+
+e. View graphs of Survey Results.
+
+Pre TAR CnC en Lan PEt
+
+Tg em TaeTow Vim Casal
+
+© CS puptaguignet
+
+CampuyBranch te & School Year: __ Sat: ge
+TAGUG CAMPUS Ama E] Prossartiane if}
+IL Pinon
+fer eters fest Feb tates Aen
+ATO RODE 19380 mam) ows §«=6( even)
+Rae woe, war ums ese) uw (Hemece |
+ane, 20E¢ uma was) | wo ware)
+Soman s | ilean ts se wos) uy [eeeee)
+creat pe ea NEES ESDP 380 exo) on = (erence)
+um jeez) ome «= (eee)
+TOA, AID. ass jee) owe (eee )|
+IDA RONG 880 wes) owe (lieemen)
+CCA CRUE Fry omer) om «= mere
+1 BRAS sms ae) we ers)
+11 como 0 as eee} om Tensei)
+| m2 crus exwoere ons Vere] «an [veneer] -
+* Fi tnreccdmyion p8 ” $ LthlSon-tibg * 8) ae ¢ # denadoiek. xX
+
+Figure 14. Evaluation Result Page
+
+27
+
+v. Analytics
+View graphs of User Analytics per Campus
+
+b. View graphs of Campus/Branch Over-all Rating
+Analytics
+
+c. View graphs of a Professors Over-all Rating
+Analytics
+
+d. View the graph of a Campus/Branch rating
+statistics.
+
+View graphs or Print Individual result of a
+
+Professor.
+f. View graphs of Rating statistics
+
+pr xVM VM tp XVM Oe XV Dep x Vaan x Vinee x gine x Vines x gre xb tee x Vom 3) Or x Vin x th
+=
+
+€ © © | puptaguignet’
+
+(From A Tea Of 258 ce Scere 4
+
+Figure 15. Analytics Page
+
+28
+
+
+vi. Recommendation
+a. View Recommended Faculty Development
+Programs for a Campus/Branch
+
+b. View list Professors with Sanctions or Rewards
+
+one: «| One xV oem xe xV ete eV Som x Vaden xia xV gee eVox rex! bone Mon xv one «\ Sint Rome
+
+€© © © Ci puptaguignet
+
+@: HINIC UNIVER
+\ ONLINE FACULTY EVALUAT!
+=
+
+By ttSeese 0382
+
+Faculty Development Programs - MDTERM
+
+Desrpton
+
+Coat Senra nikon dee peetate toes
+
+Actos Co pcos be nde ay ees,
+
+Faouty Develoment Progas - NALS
+
+‘ Recommendation Descrption
+(- UMAGER ENT OF LEARRING [4.0267]
+
+1 BincmuaerciemeG cricieresirnansieet remeron
+2 eeucemucereemad sstareomecn te nty Past) meter
+8) Pretec ear ~ L(G umept +E hemeccinin pt $ Uathaden-Tpa * 8) alts ¢ 4 douateonee x
+
+Figure 16. Recommendation Page
+
+29
+
+
+Notifications
+
+a. View Request for Resets or Reset Evaluation
+
+b. View System Error Logs
+
+PLAC Penn GC Pare En Coon cae on]
+
+© — © C puptaguignet
+
+1. FAQ006TG2008 (Man Administrator)
+
+Requess for Reset
+
+eee
+G) PeewetFortentoo ~ i U6 Loop ~ E heweccdnayfnn git * $L UnthlSbon Tapa 8) tas , Senile.
+
+Figure 17. Notification Page
+
+30
+
+Settings
+a. SEM & SY activation
+b. Update Computation settings
+c. Update Percentage settings
+d. Advanced options
+
+e. Account settings.
+
+one x On x mons ¥ atm Voy 2 Yate x eons Bea Vg Voie gre oon Mer ow oe ORO
+
+© © CS puntanignet E
+
+SENAY Actraton
+
+‘Computation Settings
+PeretageSetgs
+Adve Optons
+
+Account Stns
+ND
+
+5) Reeael Fncton_doar * Fi (6 Bumepdt * Ei ftwecednapinapd ° L UsthelShow-Trhpt * ) Oss ¥ 4 Show i downlts. |
+
+Figure 18. Settings
+
+31
+
+c. Administrator Module
+
+In this module the administrator has the same functions with the
+
+super administrator except access to other campuses or branches evaluation
+
+information information
+
+d. Faculty Module
+
+In this module the faculty members shall have the following
+
+functions.
+
+‘Weome, BROT AR, FULDK S.
+
+& Logged nw 18007162009 (Faaty) | Lopaxt
+
+( t) onunt FACULTY EVALUATION
+
+Meri, Mar 200
+
+You've got Rank 30 over 78 Professors.
+
+Protec ‘Sart Cate And Date ‘ype of Fvahartn Keats
+
+was w Oxon
+" ean
+
+wi mm fan
+ey nm baat
+Muneneat x x on baat
+ut ROTA ha om oan
+
+Figure 19. Individual Faculty Page
+
+32
+
+
+i. Results
+a. View or Print Personal Rating Result
+
+b. View a bar graph showing over-all result per category and per
+
+question for every evaluation period.
+
+Wet, BRON AR, LDCS.
+
+& Loge nm 168007162009 (Tecaty) | Logrt
+ONLINE FACULTY EVALUATION
+
+°
+
+ica
+
+Mend Mr 11070,
+
+’ werees Nittany tema en tage
+‘ —m <m awe anv anwar reo noe a
+2 risers ra um vor are iorr rons rey ry
+, 1m rm a wav are orY Coed a
+
+Figure 20. Individual Result Page
+
+33
+
+
+ii. Analytics
+a. View or Print Over-all Personal Rating
+
+b. View or Print Over-all Rating of a Campus/Branch
+
+(Campus/Branch Raung History Per Over-All Average
+
+Rating History
+(Toggle Legers To Vew indvaua! Aratyecs)
+
+Rating Hstory Per Gategory
+(Toggle Legerd To Vew indveia Anayecs)
+
+Rating Hstory Per Question
+(Toggle Legers To Vew rxivesa! Ara}ytcs)
+
+Figure 21. Analytics Page
+
+34
+
+iii. Settings
+
+a. Change Account Password
+
+NC UN
+
+ONLINE FACULTY EVALUATION
+
+\42 OM)
+Mey Me 8 200
+
+pleysest Wat Fle
+Antone 0)
+frttune hve
+dle tame 1
+Yee
+ad wroteon tot on
+
+Figure 22. Password Settings Page
+
+35
+
+e. Student Module
+i. Evaluate Professors
+ii. Request for Evaluation Reset
+iii, Save or Print Evaluation Certificate(available after Professors have
+
+been evaluated)
+
+Yom 1OMAKO ASO CAMILA yamn a0n71 Te 8 on om
+
+fare Cate feb Cte ett ty Poses ey Vase
+
+Figure 23. Evaluator’s Page
+
+36
+
+IV. Results and Discussions
+A. The On-line Faculty Evaluation System
+
+The On-line Faculty Evaluation System (OFES) were implemented two
+times. The total numbers of evaluators were 2,143 and 2,254 for pilot and second
+implementation respectively as shown in Figure 24 and Figure 25. This is
+approximately 90% of current student population. Compared to manual process
+which takes considerable time and effort to implement, there are 20 evaluators per
+class which is about 40% of the total students population. Thus, the current
+system is more accurate to capture the overall performance rating of the faculty
+
+compared to that of the manual method.
+
+The increase from 94.45% to 99.34% on the percentage of students
+participated in evaluation as shown in Figure 24 and 25 is due to compulsory
+participation implemented. The students were issued with the certificate as a proof
+that they participated in evaluation. The certificate is then a part of a requirement
+
+for end of semester clearance.
+
+Since the evaluators/ students take only an average time of three(3) to
+four(4) minutes per subject complete the online evaluation, refer to Table 1,
+100 % of current faculty members were evaluated. 72 out of 72 current faculty
+members regardless of their employment status (full time, part time, temporary or
+permanent) were evaluated. See Figure 26- 27. They are evaluated in terms of per
+
+class per subjects basis. In other words, if the faculty is handling only one subject
+
+37
+
+for different eight (8) courses or sections, the said faculty will be evaluated by
+eight (8) classes.
+
+The overall results of evaluation were made available to faculty members
+through the internet immediately after the evaluation period. Figures 28-29 shows
+the screen shots.
+
+The following figures are screenshots generated using the developed
+
+software.
+
+2143 of 2268 target
+evaluators able to
+participate
+
+126 students or 5.55
+of 2,268 target
+evaluators did not able
+to participate due to
+various reasons
+
+Figure 24. Percentage Distribution of Target Evaluators for Pilot Implementation
+
+38
+
+2254 out of 2268 or
+99.34 % of target
+evaluators able to
+participate
+
+15 out of 2268 0r
+0.66% of target
+evaluators did not
+able to participate
+due to various
+
+Figure 25. Percentage Distribution of Target evaluators for Second
+
+Implementation
+
+Table 2 Time Complete Evaluation per Subject
+
+[cis t-paen> [200]
+[330
+[320
+
+Class 1 - Batch 4
+Class 1 - Batch
+
+[case 2 oem | 360 _|
+
+CLASS BATCH
+[can span | 360 _|
+[cass span? [30]
+[cass sBaen? [300
+[cass s-Baens [30
+
+[580
+
+=
+
+3.70
+
+3 S80
+[cans spaen [390
+[cass Baers | 380]
+
+39
+
+Evaluated Facutty
+
+- PART-TIME TEMPORAR Y PER ENT FULL-TIME
+
+Figure 26. Distribution of Evaluated Faculty Members during Pilot Implementation
+
+Evaluated Faculty
+
+2 a
+16
+
+[= EVStustec z ver u i]
+
+Figure 27. Distribution of Evaluated Faculty Members during Second
+
+Implementation
+
+OLYTECHNIC UNIVERSITY OF THe reuurr
+
+Gen. Sones Ave Lowes Boovior 1692 Tague &
+a Rl SFR eH est
+
+SUMMARY OF EVALUATION
+
+Ae of Seturciey, Outober 13, 2012 on 7-17-20 ARs
+
+aa) ELLE IR TREN RE
+
+a get orce BST SteS See
+—— oars reek
+Se
+Sean es neers oe arene
+
+anwee)
+
+9 Comorsvates seraitwiy tS shumenis” antes o0 SSerd are spears content Pterrmaton
+
+acs
+> tetegrates cerstivety Beiter leering sleciver (nis Tose of the stucems a cotsbersive precess
+
+an
+13 bates tresenheser avaliable to sticews Sayers. omeisi sme,
+
+Pery
+42 Reguay sates te cine on oe: ae rocmes anc werorenares Ip compicte easignes ressersoibe
+
+az
+S Regge socurste recces cf chuseris Ceromanse sos pecwemy Sunwin: Ine came
+
+pe
+
+average <3
+
+S Coma ySneS RSE Se SueTT SMT EREASI TS Tee SRST SET ICU PSIPING SOAS ER Te SEP ORS NERDS
+
+ze
+> Crmae ano Shares timation on ine ciate-otmeer theses anc eractices F hicwer omciie
+
+a2
+
+8 ermecrates SUES ec caches Sreumsiance: anc leeming Fieve rumore: cf stusers
+as
+
+9 Geminis Se reevarce o crecen! tocics tS orevcus leesons ane “eae: he sitgect Cater te “eevert suven issues arsercsty,
+we scene:
+
+IC. Demonstrates uotc-cate fnowtecce andicr saareness of comet Pence are Issues ip me subset
+
+ee
+
+ace
+AD Ethances cmigerit: setecteen anster otras Sue “ecegutien to sheets Serormancercteass
+
+acs
+33 Agons escent: to Crate mer own couse cofectves, eansteaty cenres sLcertcrotesscr rules, ane manes Tem scoot
+as
+
+a2
+1a Aces stacents 2 tire meesencenty, mane rer can Cecsions ans neice hem accounianie tor mer Eanes Seats
+(Sosy op mer success = reaire Seeeone
+
+an
+15 Grcourages stisents (eam Devens what is required anc gutaes hem cn now te acety he sencescs semes
+
+an
+
+— =
+
+Ae. Scene SESS REE ENS SNS EATEN STOLEN SSCS FENG CES SNES. SESS CEE FES FREE
+Re TiSe ase
+as
+
+Astumes “Sine as factator, "Escurce Sevres" coScr, ower. lmengrstor. ceteree. ip uaing stocews 1 contasute to eromieese
+sro wrcearare or me concerts rans
+
+ace
+18 Demon anc Preemert: braming congtors anc excenerces Sat srovate hesity exchanges anster conten
+«=
+1S, Spuct reece seucaes fmeming anc tract nguesming conescs 25 ewanse the aranmen of cctectve lesmung cmecses
+ace
+SO Uses Ramucnore) ESSEC MISES MateNaES: eters, tesa. comouteweises Tetuciors eft yto ence er
+an
+Avoraze, a7
+Final Average = any
+Very Satisfactory
+
+Figure 28. Screen shots of Evaluation Results: Grades per Criteria
+
+41
+
+POLYTECHNIC UNIVERSITY OF THE PHILIPPINES - TAGUIG CAMPUS
+
+n. Sonics Ave. Lower Bicuten | 632 Tague CAy. Prlomines
+Te Nos S27-SO58 to 60/837-0214/837-0212
+
+SUMMARY OF EVALUATION
+Ac of Saturday, Ooinber 13, 2012 on 7-11-21 AM
+
+Pctrasce ALMIRAA ES, GESNIES
+Acudewe ant Protec:
+
+1 mageing ragire mt madsi dr msininahss ngmga sacysrte
+2 sre iz 3 very good orotescor thet makes Mer stucews les very wel end atienc cazses everydsy
+
+3. Simply m=CSSSSESTSE!
++ Gee Biess you msam Armiakeez
+
+5 Gee Bess you msam Ariraksez
+
+5. Thank You. Saizstpe ng seca craractes (AED NSS O_+) test
+
+7. Maiating tueng chr para za. emirg ‘srangen ne pasce rin ang business ra Tiga IT sludem::. Kung pen mauugray 37g
+teecisth2 sa pegnsregosrc.
+
+8 Nakao keamng bmuo ng 7ga titlemang mskatationg 22 Son Nedzvsio> eng ming eatayensn ss issrgsr ng creremming ct
+pegdeveco ng mga wet sogicsion system.
+
+2 thank waam “jeep tup.
+
+10. Msem Ald iz an exravagerl taecher because she atuays make uz pressured si the me. She asrtuz in ies move Tires inal
+cur best wey 3 nour simegies & lnctriques. in Te ster hanc, she isa very zicl seman n> exceioral endcorsdesion whe
+she 23  stwsyz get anc mari be follow. Sc we are forced 10 agsuneg 1g Kiley” o surstes in orogremming cass,
+
+11. Hopefully, sh2 wil be abe to share mere ur-b-cste enawiscce 1 us gradusting saierts apzicasis in fe outed weris
+
+12 Hoongte esmmcre tom he.
+
+very Symi proteazer eepecisly when il comes & suTIESTN of projects. This encourages students te sirtee tor s beter cupul.
+14. Avery Sct poteszer especisly when ll comes te subTisson of ects This encourages students te shtive tor 2 pemer cubul.
+‘Our subject wih her needs a very ceecly expansion and lls nice Pal she washes us wel She aways cemonsyate us the
+
+sapect aay of soning Me pretlems.
+16. Ag uss... mgsirg st mascshan 2a oghutre s msm sim.
+17. Talsgang frutsssr be ot mam sim sa sunjectn te. mramng ssanet a ssray cream pargistucysrte srg Thilo 232 ms
+
+15. Ste demanciares mastery of Ine sublec: and coe: her joo well a the adviser of the cass.
+
+45. She echances Ine Ircalecpe ef Mer stucents oy using Every possin= maleral which wil nel> them became competive arc
+srowedgeay® erough in their Nels
+
+20. wel known to the cunject.
+
+21 Ste one chalengng orotezsor fine subject: she Pane ere al shout programming. She torces shuderts te So their sudes by
+‘remzetves. She siso lust give the basics snd ist he stuserts 2 T= scvenced ores cevendng cr ner clven tskz, quizes oF
+micherm exsminsiors. f her sluseris are very competive, she size mekes her stems Ngner fer more challenge. She does n=
+Oppashe sme coseved si her students busy on her sumest
+
+22 Ste ip ore chalengng orotessor fine subjects she Pande sre al shou? programming. She torces studeris te So her sudes by
+‘themzelves. She siso ust give the basics end ist he stuserts es he scvenced ores cevendng cn her chien wees, quzees or
+cigherm examinsiors. her sludenks are very competve, she ssc makes her sterisrcs higrer for more challenge. She sces hs
+
+Figure 29. Screenshot of Evaluation Results: Comments
+
+42
+
+To determine the capacity of the system, stress test was conducted. Stress testing
+was done by gradually increasing the number of concurrent evaluators. Server error never
+occurred when the number of concurrent evaluators is less than 11. However, server error
+gradually occurs when the concurrent evaluator is more than 10. It was found out that the
+subscription to Web host service provider is limited to 10 concurrent users at 75,000 sql
+queries per hour. This causes the delay in online evaluation conducted during pilot and
+
+second implementation. Thus in order to accommodate an 2,300 evaluators within 6 days,
+
+the subscription to web host provider should have a capacity of 48 concurrent users.
+
+()
+Threshold = 80 user /day
+
+¢ @8hrs: @10 A-...9 )
+concurrent user / batch ¢
+wee @ 30 minper batch --y-------------4 LESTE om
+
+an ROMO IREE ht Nees S NER
+
+Figure 30. Daily User Analytics for Pilot Implementation
+
+43
+
+Threshold = 80 user /day @ 8hrs
+@ 10 concurrent user / batch
+@ 30 min per batch
+
+--¢ --------
+
+Figure 31. Daily User Analytics for Second Implementation
+
+Pilot implementation was conducted to serve as a means to determine the actual
+initial performance of the system. The results of the pilot implementation were to
+improve the features of the system. Concerns were gathered which resulted to some
+minimal revisions on the system. Table 3 shows the concerns that were gathered which
+
+resulted to some minimal revisions of the system and the process.
+
+Table 3. Concerns on Pilot Implementation of OFES
+
+No. COMMENTS
+1 The ranking of faculty based on the results is not in order.
+2 The descriptive definition of rates is incorrect.
+3 Issues on secrecy of information were raised by the faculty members.
+4 Resistance from some of the faculty members to implement the online
+faculty evaluation because of the following reasons:
+Results might not be reliable compare to the manual system.
+Students rates might be influence by other students since they do it online
+and outside the university
+5 Conflict on the schedule for the use of facilities. Since we make use of the
+computer laboratory for the evaluation, it affects the scheduled classes in
+6 Differing in opinion. When the faculty members viewed their respective
+evaluation results online, some took it subjectively and some took it
+objectively.
+7 Misconception o the rating scale. There are students who rated the faculty
+with incorrect rating system. Instead of 5 as the highest the students make |
+as the highest.
+
+Finally, the second implementation was considered very successful. Not
+
+only that the OFES gained acceptance from Head of Academic Programs and
+
+Director of PUP Taguig Campus (see Appendix D-4) but as well as for other branches
+
+and campuses as well. Some branches and campuses express their interest to adopt
+
+and implement the system in the second semester of school year 2012-2013.The PUP
+
+IT Center had already conducted system testing last October, 2012.
+
+45
+
+
+B. Academic Analytics : Output derived from Data Collected using On-line
+Faculty Evaluation System
+
+The web-based application was able to generate analytics. The analytics
+were posted online and viewed by the faculty members and administrators.
+Faculty performance analytics were generated by the Online Faculty Evaluation
+
+System after the evaluation period. These are the following:
+
+i. Reports on campus rating per category and per question as shown in
+Figures 32-35.
+
+ii. List of top ten professors, see Figure 36
+
+iii. Historical campus rating, refer to Figure 37 and 38
+
+iv. Rating statistics as shown in figures 39 and 40
+
+v. Historical performance rating of individual faculty, Figures 41 and 42
+and Table 4
+
+vi. Sanctions and Rewards, refer to Figure 43
+
+vii. | Recommended faculty development programs, see Figure 44
+
+46
+
+Summary of Over-all Average Result Per Category - MIDTERM
+
+Category Description Raueg Descriptive writing
+a content 3.9368 Very Satisfactory
+5 Knomiedge of Subject 0215 very Satefactory
+c Teaching for independent Learning 39339 Very Satsfactory
+> Management of Learning 3.9288 Very Satsfactory
+
+Figure 32. Campus Rating per Category —Pilot Implementation
+
+Summary of Over-all Average Resuit Per Category - HNALS
+
+A ‘Commitment 4.0538 Very Satisfactory
+8 Knonledge of Subject 4157 Very Satisfactory
+c Teaching for Independent Learning 4.0629 Very Satisfactory
+D Management of Learing 4.0268 Very Satisfactory
+
+Figure 33. Campus Rating per Category Second Implementation
+
+47
+
+Figure 32 and 33 shows a graph that the weakness of faculty members during the
+pilot and second implementation based on category is Management of the Learning.See
+Appendix D-5 for the report. It is interesting to note that under “Management of
+Learning” category, the lowest score is on the criteria 20 that says “Uses instructional
+materials(audio/video materials: fieldtrips, film-showing, computer-aided instructions
+etc.) to reinforce learning processes”. See Figure 34 and 35 for the graph and see
+Appendix D-6 for the reports. This result is expected since PUP-Taguig have very
+limited equipment such multi-media projectors, limited fieldtrips since cost of conducting
+
+such is prohibitive for the students.
+
+The strength of faculty members during the pilot and second implementation
+based on category is commitment(see Figure 32-33) specifically question number six(6)
+that says “Demonstrates mastery of the subject matter(explains the subject matter without
+
+relying solely on the prescribed textbook)”.
+
+The campus rating and per category was improved in the second implementation
+based on numerical rating shown in Figures 37 - 38. The individual rating was also
+generated by the system. See Figure 42. The number of outstanding professors increased
+and the number of satisfactory professors decreased, see Figure 39 and 40. Figure 41
+
+shows the history of individual rating of faculty and an increased was observed.
+
+Summary of Oves-al Average Resutt Per Quesuon - MIDTERM
+
+Figure 34. Over-all Campus Rating per Question- Pilot
+Implementation
+
+Summary of Over-a! Average Resut Per Quesuon - NALS
+
+Figure 35. Over-all Campus Rating per Questions- Second
+Implementation
+
+49
+
+(7:03: M]
+(ese, aisy 2 OE
+
+© wricaurs
+
+Figure 36. List of Top Ten Professors
+
+Camps enh Peng say PD A hse
+
+Figure 37. Historical campus rating — Pilot & Second Implementation
+
+SGERER ERE EF
+
+Cae bay
+
+Figure 38. Campus Rating History per Category
+
+51
+
+_ Over-All Rating Analytics
+
+For Frst Semester Midterm - 21
+
+Figure 39. Rating Statistics-Pilot Implementation
+
+Over-All Rating Analytics
+
+For rst Semester Fnals - 273
+
+Figure 40. Rating Statistics-Second Implementation
+
+52
+
+Figure 41. Historical Performance Rating of Individual Faculty
+
+53
+
+
+Semester & School Year:
+
+y IstSemof2122013
+
+Sort by :
++ Average Raing
+
+| 1. MACON, ELTA
+|
+
+| 2 CFLs, ATA
+| 3 moo. oRaoc
+
+4 ORCA MELP.
+
+| 5 omea,suao.
+
+| 6 GOO, TROMALT.
+
+7 FRAO, SBROLOTF.
+
+8 MARQUEZ, XRATHANA
+
+9) RUS aRNOETEL
+
+10 FERRER MASSA,
+
+| 11 Brae aTowORATAUR
+
+| 22 Tm, ur.
+|
+
+1B OCAPO, MYM.
+14 MOREE, MARIO REGINO
+15 UALZ, ROMA.
+‘16 SEMLLA, MARGARTTAT.
+77 UGIDD, BEB.
+
+18 FRA, ARDOY.
+
+40S
+
+455
+450
+430
+420
+435
+4355
+<0)
+4385
+420
+435
+4a)
+4205
+405
+32 )))
+
+ORSON 498) OUTSTANDING
+OASANDNG 49i4 QUISTANONG
+ORSANONG anu OmSTNONG
+OFSMONG 478 OUTSTNONG
+
+Wasi | 45 OUISTHRONG
+ORSAIONG 10 OUISTHONG
+VEYSRSARY | 46107 QUSTADNG
+Vey | 4585 (CUISTRONG
+vevsasacoy } am = |_VeRrsmsacorr_ |
+\eysosay | iss «| [ eySUSACORY
+aSISY | 407 «| [STSCI
+Vey Susan | 433 [ VERYSASOORY
+
+(Vevsnsacory ] ans [_VERYSIISACTORY.
+
+(vewsmsecory |} 431 (_VERYSAISFACTORY,
+
+(VeySaScORY ] 45) VERYSISACTRY
+
+(evsascory ] 4x5 | VeySaSACRY.
+
+(ieysasiomy ] «on [VeYSISACORY |
+
+Vays | 404 = [ VeYSISATRY
+
+EGREERBEESHEREEEEE ES
+
+Fisals Rating Remark Overall Rating Overall Remark
+
+PEEEEGEI
+
+PEEPEE EEE
+
+Very Satisfactory
+
+Figure 42. List of faculty with their rating during midterm, finals and the average
+were shown. These screenshots can only be viewed by the super administrator and
+
+administrator.
+
+
+FADLLTY SANCTIONS AND REWAROS
+
+THE FOLLOWING FAQLLTY
+
+* FACULTY mate RATING
+
+. not 1st rEsTER
+
+Figure 43. Sanctions and Rewards. List of faculty who needs follow-up and
+who need to be recognized
+
+Based on the results gathered, see Figure 43, the Head of the academic
+programs had immediately identified the faculty members who needs follow-up.
+The head of academic programs called the attention of all faculty members who
+got satisfactory rating and were scheduled for classroom observation (faculty
+members who needs follow up), while those who excel (faculty members to be
+
+rewarded) were commended.
+
+55
+
+ConussBand: Serestey Schou Yee:
+TAGUG CAMPUS 7} Sst Semester of 2122013
+
+Fay Deegent Pagans - MOTERM
+
+1 HAAGEMENT OF LEARHING [3287]
+
+1 SARE MBET (ndciens toto teetrerin seas.
+
+SRG
+
+2 DANE MDOT FRI Acsitonel D rggecirs tbe wed by fe aut nents. |
+
+Feouty Development Progans - FAALS
+
+: Recnanatin Destin
++ -HAMACENENT FRG 4.87
+
+| 1 BeRCMMBET Fema Crociersigicon Seren othe.
+| 2 BANE MET OF LER Aetna O popes ote wety be ety rents
+
+Figure 44. Recommended Faculty Development Programs
+
+56
+
+Table 4. Tabulated Data of Faculty Rating - pilot and second implementation
+
+Midterm Finals Midterm | Finals Midterm | Finals
+Rating Rating Rating Rating Rating | Rating
+43975 “aaior 3.6950 3.7689 43600 43850
+95695 a7168 37855 3.963 “aa240 45885
+33670 3.2801 4330 a7 35885 ana
+35470 3.6408 ‘41775 ‘aaTat 37295 Ett
+3.0905, Saiz 35530 36876 29530 37
+41395 42746 37935 aona7 27035 are
+37140 36256 39285 “aa325 3.9505 a1797
+36860 ‘a03e8 30560 31597 3a Etro
+37005 33820 35170 ‘aoi74 3a “40500
+33510 Etre Etsy 3a 3.0805 Ent
+4205 23655 3730 40336 42230 SATS
+“40280 “40073 ET “40562 3.6880 38491
+35620 3925 “a105 ase ams cen]
+3.9655 3238 3296 aie 32785 3288
+ae 43993 43030 aae7 43905 cestry
+3.9360 ass Eto 3368S 3.3650 Err
+725555 37240 33250 3.5599 “4.0065 ams
+35055 35136 35250 39086 42080 e167
+4am ae7 42300 “aa08a ‘3.6760 35634
+3905 3585 “a2350 3.7000 37082
+3.9905 “40783 EYst 35460 aaa7S 46309
+35370 3 ase ano 3.0800 3.6061
+33250 37 Et 3702
+cet ames “42300 “aas05
+45120 45640 a0 39283
+
+57
+
+Scatter Plot for Midterm and Final Rating
+
+5.00, ——_____ —
+¢
+
+4.50 SS a a a =
+« *¢
+aah *,
+A
+%
+
+4.00 a @
+e
+a
+e
+3.50 Oe *%
+o
+
+3.00
+
+Final Rating
+
+250 |}—— —
+
+2.00 —
+
+1.50 -
+
+1.00 - = ~—
+1.00 1.50 2.00 2.50 3.00 3.50 4.00 4.50 5.00
+Midterm Rating
+
+Figure 45. Scatter Plot for Midterm and Final Rating
+
+58
+
+Table 5. Relationship between Midterm and Final Rating
+
+Faculty | X Y Xy x squared y squared
+No Midterm | FINALS
+1|_4.3975 4.4101 19.3934 19.3380 19.4490
+2 | 4.5695 4.7169 21.5539 20.8803 22.2491
+3 | 3.3670 3.2401 10.9094 11.3367 10.4982
+4|_3.5470 3.6408 12.9139 12.5812 13.2554
+5 | 4.1395 4.2746 17.6947 17.1355 18.2722
+6| 3.7140 3.6256 13.4655 13.7938 13.1450
+7|_3.6860 4.0344 14.8708 13.5866 16.2764
+8 | _3.7005 3.8820 14.3653 13.6937 15.0699
+9 [4.2905 4.3655 18.7302 18.4084 19.0576
+10| 4.0240 4.0073 16.1254 16.1926 16.0585
+11 | 3.5620 3.9285 13.9933 12.6878 15.4331
+12| 3.9695 3.8338 15.2183 15.7569 14.6980
+13 | 3.9360 4.1135 16.1907 15.4921 16.9209
+14[ 2.9555 3.7240 11.0063 8.7350 13.8682
+15 | 3.9055 3.9136 15.2846 15.2529 15.3163
+16| 4.1720 4.1147 17.1665 17.4056 16.9308
+17| 3.9905 4.0783 16.2745 15.9241 16.6325
+18 | 3.5370 3.9315 13.9057 12.5104 15.4567
+19 | 3.3250 3.6577 12.1619 11.0556 13.3788
+20 | 4.3155 4.4745 19.3097 18.6235 20.0212
+21 | 3.6950 3.7689 13.9261 13.6530 14.2046
+22 | 3.7455 3.9631 14.8438 14.0288 15.7062
+23] 4.4330 46117 | 20.4437 19.6515 21.2678
+24| 4.1775 4.4741 18.6906 17.4515 20.0176
+25 | 3.7935 1 4.0127 15.2222 14.3906 16.1018
+26| 3.9295 | 4.1325 16.2387 15.4410 17.0776
+27 | 4.0560 4.1597 | _ 16.8717 16.4511 | 17.3031
+28 | 3.9170 4.0174 15.7362 15.3429 16.1395
+29 | 3.7930 4.0336 15.2994 14.3868 16.2699
+30 | 3.8525 4.0562 15.6265 14.8418 16.4528
+31] 4.8105 4.9164 23.6503 23.1409 24.1710
+32] 3.8965 4.0172 15.6530 15.1827 16.1379
+33] 3.5525 3.8685 13.7428 12.6203 14.9653
+34| 3.3250 3.5599 11.8367 11.0556 12.6729
+35 [3.5290 3.9046 13.7793 12.4538 15.2459
+36 | 4.2300 4.4044 18.6306 | ___17.8929 19.3987
+37 | 3.6155 3.5460 12.8206 13.0718 12.5741
+38[ 3.8560 | 4.1119 15.8555 14.8687 16.9077
+39| 3.6340 3.7012 13.4502 13.2060 13.6989
+2. 4.2300 4.4505 18.8256 17.8929 19.8070
+41|_ 4.2340 3.9283 16.6324 17.9268 15.4315
+
+
+42 4.8600 4.9450 24.0327 23.6196 24.4530
+43 | 4.4240 4.5885 20.2995 19.5718 21.0543
+44| 3.9885 4.2262 16.8562 15.9081 17.8608
+45} 3.7295 3.5188 13.1234 13.9092 12.3820
+46 | 4.7035 4.7214 22.2071 22.1229 22.2916
+47 | 3.9505 4.1797 16.5119 15.6065 17.4699
+48 3.3775 3.5239 11.9020 11.4075 12.4179
+49 | 3.9375 4.0500 15.9469 15.5039 16.4025
+50 | 3.0805 3.4146 10.5187 9.4895 11.6595
+51] 4.2290 4.4735 18.9184 17.8844 20.0122
+52 | 3.6880 3.8491 14.1955 13.6013 14.8156
+53] 4.2225 4.3473 18.3565 17.8295 18.8990
+54] 3.2755 3.2858 10.7626 10.7289 10.7965
+55 | 4.3905 4.3111 18.9279 19.2765 18.5856
+56 | 3.8650 3.4312 13.2616 14.9382 11.7731
+57 | 4.0065 4.2725 17.1178 16.0520 18.2543
+58 | 4.2040 4.1677 17.5210 17.6736 17.3697
+
+| 59 | 3.6760 3.5634 13.0991 13.5130 12.6978
+60} 3.7000 3.7042 13.7055 13.6900 13.7211
+61| 4.4975 4.6309 20.8275 20.2275 21.4452
+62 | 3.0400 3.6061 | 10.9625 9.2416 13.0040
+
+242.2555 250.4171 987.3640 957.1378 1020.9049
+very high
+positive
+R 0.992181318 | correlation
+L test for significance
+step1 ho: r=0
+ha: r#0
+step 2 alpha = 0.01 alpha/2 = .005
+ev=rvV(dfi/(1-
+step 3 r42))
+computed
+61.5794019 value
+step 4 tv=2.657 table value
+since cv > tv
+then we accept
+step 5 bl that is r40,
+that there is a
+significant
+relationship
+between
+midterm and
+al final result
+
+
+Table 5 and Figure 45 shows that there is a significant relationship between the
+midterm and final result. Thus, the Online Faculty evaluation can be conducted once
+every semester. The suggested evaluation time is three weeks before the finals this will
+ensure a maximum number of evaluators as shown in comparison between Figure 24 and
+
+Figure 25.
+
+Another academic analytics that can be extracted from the OFES results and may
+be useful for decision making for academic head is whether the amount of subject load
+influences the faculty performance. Table 6 and Figure 23 shows that the faculty rating
+
+has no significant relationship with the number of classes that the faculty handled.
+
+61
+
+Table 5. Relationship between the number of classes and rating
+
+ws |e
+*
+8
+
+io
+
+HH
+
+33250
+
+dele lili le
+f BIG ]a
+
+62
+
+re
+
+0.159835
+
+small positive
+correlation
+
+step 1: State the Null and Alternative
+Hypothesis
+
+hO: r=0
+
+hi: 0
+
+step 2: Level of Significance
+
+a=0.01
+
+step 3: Computed Value
+
+Cv=
+
+1.325348
+
+step 4: Table Value
+
+TV=2.651
+
+step 5: Statistical Decision
+
+Rating
+
+Relationship between number of
+
+classes and rating
+
+6.0000
+
+5.0000
+ba
+
+3.0000
+2.0000
+1.0000
+
+0.0000
+te) 2 4 6
+
+8 10
+
+Number of Classes
+
+wm ghggrbtes. *,
+
+12
+
+a
+Sd
+
+14
+
+Figure 46. Scatter Plot for the Relationship between Number of Classes and Faculty
+
+Rating
+
+63
+
+V. Conclusions
+
+The Online Faculty Evaluation System(OFES) provides important
+analytics which is useful in decision making. Academic analytics provided by
+OFES specifically the sanctions and rewards, overall campus rating, rating
+statistics, historical performances of individual and of campus as a whole have
+been proven to be very useful for administrators to come up with suitable and
+reliable strategies. The OFES served as a tool to enhance the efficiency of
+faculty performance. By immediately obtained the evaluation results and
+academic analytics produce by the OFES, the faculty members can identify
+their individual weaknesses on-time. The consistent implementation of OFES
+made the faculty members conscious or more aware of the criteria of
+evaluation instruments. Thus, they can address their deficiencies. There is a
+significant relationship between the midterm and final result. Therefore, the
+Online Faculty evaluation should be conducted once every semester. There
+has no significant relationship between the numbers of classes of faculty and
+the faculty rating then it was concluded that the current faculty loading or the
+number of classes does not affect the faculty rating. Open Academic Analytics
+for PUP Taguig Faculty Performance Evaluation using OFES(Online Faculty
+Evaluation System) answered the crucial problems in conducting faculty
+evaluation ,providing immediate results and providing analytics to
+
+administrator and faculty members in PUP Taguig.
+
+VI. Recommendations
+
+The Evaluation instrument should be explained carefully to students and
+professors before conducting the online faculty evaluation. Strengths and
+weaknesses identified in individual faculty evaluation results should be given
+attention and assessment to further enhance teaching performance. The over-all
+rating of faculty members should be addressed by the administrator to help
+faculty members improve efficiency and effectiveness of teaching methodologies.
+Regular implementation of student faculty evaluation will enhance efficiency and
+effectiveness of teaching methodologies and a chance to evaluate other variables
+connected to faculty evaluation. To completely conform with the university
+standard of evaluating faculty, inclusion of peer, supervisor and self- evaluation
+should also be included in the Online Faculty Evaluation System. Customization
+of the OFES(Online Faculty Evaluation System) is recommended to be applied to
+all PUP community to address the business requirements. Integration of OFES to
+PUP SlIS(Student Information System) through web service is highly
+recommended. Analysis of each item in the evaluation questionnaire and finding
+the relationship between the faculty rating and student grades can also be done in
+the future research. Upgrade the subscription of web host package to allow more
+
+concurrent users to further shorten the necessary time for evaluation.
+
+65
+
+Chapter VII. References
+Books:
+Martin, J. (1991) Rapid Application Development, New York: Macmillan
+Publishing Company.
+Maner, W. (1997) http://csweb.cs.bgsu.edu/maner/domains/RAD.htm.
+Hoffer,J., George, J., Valacich, J. (1999) Modern Systems Analysis &
+Design, Second Edition, Addison-Wesley.
+Modern Systems Analysis and Design (3rd Edition) [Hardcover]
+Jeffrey A. Hoffer (Author), Joey George (Author), Joseph Valacich
+(Author)
+Webpages :
+Sona MARD’, IKYAN, Bertan BADUR (2011) Analyzing Teaching
+Performance of
+Instructors Using Data Mining Techniques
+http://www.mii.It/informatics_in_education/pdf/INFE192.pdf
+Wikipedia “Rapid Application Development”
+http://en.wikipedia.org/wiki/Rapid_application_development
+Open Academic Analytics Initiative (OAAI) Next Generation Learning
+Challenges Full Proposal
+Researches:
+Bernaveld,A,Arnold,K,Campbell,J :Analytics in Higher Education:
+Establishing a Common Langauge
+Baepler,P,Murdock,C.J. Academic analytics and data mining in Higher
+Education
+Campbell, J.P.,Oblinger, D. Academic Anaytics 2007
+Articles:
+
+Educause, Open Academic Analytics InitiativeEducause, Open Academic
+Analytics initiative: Leveraging openness to improve learner sucess

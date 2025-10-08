@@ -1,0 +1,3010 @@
+ANALYSIS OF THE BACTERIAL AND FUNGAL COMMUNITY PROFILES IN BULK SOIL AND RHIZOSPHERES OF THREE MUNGBEAN [Vigna radiata (L.) R. Wilczek] GENOTYPES THROUGH POLYMERASE CHAIN REACTION — DENATURING GRADIENT GEL ELECTROPHORESIS (PCR-DGGE)
+
+ANNA MAE MONTANANO DE LOS REYES
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+Master of Science in Molecular Biology and Biotechnology
+
+December 2o17
+
+ABSTRACT
+
+Soil is a rich reservoir of immensely diverse microorganisms with established roles
+in the environment and potential functions in agricultural and industrial perspectives. In
+particular, rhizosphere microbial communities have strong correlations with plant health
+and growth; thus, making them vital for sustainable agriculture. However, the investigation
+of microbial communities in soil environment is challenging since majority of soil
+microorganisms are unculturable. This study utilized the culture-independent PCR-DGGE
+(polymerase chain reaction - denaturing gradient gel electrophoresis) method in order to
+obtain an initial assessment of the bacterial and fungal communities associated in bulk soil
+and rhizospheres of different mungbean genotypes under natural field conditions.
+Microbial community structures and their changes as influenced by plant growth,
+rhizosphere and mungbean genotype effects were examined through multivariate
+techniques of principal components analysis and band-based clustering, and through
+diversity analyses. Plant growth stage was found as the primary driver of community shifts
+in both microbial groups. Rhizosphere effect was also detected but was less discrete in
+fungal communities. On the other hand, genotype effect was not discernible although it
+was not inferred to be absent due to possible lack of manifestations of differences between
+genotypes based on tolerance to drought under non-stressed environment, and due to detection limits of DGGE. Additionally, the more prominent members of the bacterial and fungal communities were assigned with putative phylogenetic identities through sequence
+analysis. Bacillus and Arthrobacter species were dominant in bacterial communities in
+both plant growth stages whereas members of Ascomycota and Basidiomycota were
+common in fungal communities of mungbean. Overall, fungal communities were found to
+have higher estimated diversity and composition heterogeneity, and were more dynamic
+under plant growth influence, rhizosphere effect and uncontrolled environmental
+conditions than those of bacterial communities during mungbean growth in the field. Thus,
+the use of PCR-DGGE substantially provided a general overview on the structural diversity
+and the associated changes in these communities. Since this is a baseline study on the soil
+microbial communities associated with mungbean, information gathered may be subsequently used as reference for exploring their roles and functions.
+
+CHAPTER 1
+
+INTRODUCTION
+
+Soil is a complex and dynamic environment which harbors an immense diversity
+of microbial communities. As many as 10 billion microorganisms comprising of thousands
+of different species can be held in a gram of soil (Rosello-Mora and Amann, 2001). This
+unsurpassed soil diversity, in which bacteria are the most prevalent, proportionally reflects
+the range of functions microorganisms partake in ecological processes that sustain life
+(Emmerling et al., 2002; Nesme et al., 2016). Critical roles of microorganisms encompass
+biogeochemical cycles and food chains, maintaining essential relationships among
+themselves and with higher order organisms, (Hunter-Cevera, 1998), as well as soil
+formation (Rillig and Mummey, 2006). As such, these ‘unseen majority’ are essential
+contributors in the sustainability of terrestrial ecosystems (Van Der Heijden, 2008) and are
+recognized as useful indicators of soil health (Winding, 2004; Avidano et al., 2005).
+
+Considering the link between microbial diversity and ecosystem functioning,
+evaluations of the microbial characteristics of soil have been markedly regarded; among
+which the rhizosphere has been one of the widely studied components (Berendsen et al.,
+2012; Bakker e¢ al., 2012). The rhizosphere is the immediate region of soil surrounding
+plant root systems where microorganism-mediated processes are influenced by the root
+exudates (Berg and Smalla, 2009). As a result, microbial biomass and activities are
+enhanced in this area in comparison to bulk soil (Sorensen, 1997; Raaijmakers et al., 2009).
+
+Rhizosphere microbes are deemed major contributors for sustainable agriculture for they
+
+have strong correlations with plant health and growth (Berendsen ef al., 2012). For
+example, rhizobia and mycorrhiza provide nitrogen and phosphorous, respectively, to
+plants while plant-growth-promoting rhizobacteria (PGPR) have been found to affect plant
+growth via preventing pathogen colonization and priming of plant immunity (Bloemberg
+and Lugtenberg, 2001; Van der Ent et a/., 2009; Lugtenberg and Kamilova, 2009). It has
+been widely reported that plant species is one of the most important factors that shape these
+microbial communities in soil suggesting that plants are thought to be selective with their
+microbial populations (Berg and Smalla, 2009; Innes et al., 2004; Garbeva et al., 2008).
+
+Since soil microbial communities have both indubitable and potential functions not
+only in an environmental but also agricultural and industrial perspectives (Nesme et al.,
+2016), it is of great importance to be able to routinely assess and compare their diversity
+(Lalande et al., 2013). The study of microbial populations in soil, however, proves to be
+difficult as majority of microorganisms are unculturable with only less than 1% identified
+so far (Das et al., 2014; Torsvik and Ovreas, 2002). Nevertheless, the emergence of
+‘metagenomics’ has allowed the investigation of total microbial genomic material obtained
+directly from environmental samples without cultivation and without prior knowledge of
+the constituent communities (Riesenfeld et al., 2004).
+
+One such culture-independent technique is denaturing gradient gel electrophoresis
+(DGGE). DGGE is a genetic fingerprinting method that is dependent on polymerase chain
+reaction (PCR). It produces molecular fingerprints specific for a sample site by coupling
+PCR amplification of taxonomical targets (e.g. 16S rDNA of prokaryotes and 18S rDNA
+or internal transcribed spacer (ITS) of fungi) with variations in sequences analyzed by
+
+DGGE. The obtained fingerprints allow the spatial and temporal comparisons of soil
+
+communities from various locations or among treatments (Nakatsu, 2007; Muyzer et al.,
+1993). Even though modem metagenomics can permit in-depth studies of complex
+microbial communities (Simon and Daniel, 2011), the employment of cost-effective
+methods for reliable and simultaneous diversity analysis of multiple samples is still
+considered (Lalande et al., 2013). Fingerprinting techniques such as DGGE has been both
+widely and successfully applied for community structure analyses (Nakatsu, 2007).
+Legume (Fabaceae) is one of the two most functionally important plant groups on
+the globe next to the grass family (Poaceae) (Graham and Vance, 2003). The group
+includes mungbean, which has been transformed into a major crop in Asia for its value in
+supplementing human nutritional needs, improved soil productivity, and cost-efficient
+farming (AVRDC, 2010). It is also the principal food legume in the Philippines in terms of
+land area and value of production (Altoveros and Borromeo, 2007). Members of the legume
+family have been widely studied for plant-microbe interactions in the rhizosphere, owing
+to their agricultural significance and ability to form symbiotic relationships with rhizobia
+and arbuscular mycorrhizal fungi (AMF) (Denison and Kiers, 2011). Nevertheless, there
+has been limited characterization of rhizosphere community diversity that could affect
+legume-microbe symbioses for many members of the group including mungbean.
+Knowledge of the composition of bulk and rhizospheric bacterial and fungal
+communities during plant growth in natural field conditions could provide a primary
+understanding their occurrence. How diverse are these microorganisms? Do microbial
+community structures significantly change during plant growth? Would there be notable
+differences between the community patterns of bacteria and fungi? What could be the
+
+dominant species in these microbial populations? Gaining insights into these basic
+
+questions can pave the way to a better understanding of their roles in soil ecosystems and
+may serve as basis for hamessing agriculturally-beneficial microbes (Berg, 2009;
+Gopalakrishnan et al., 2015).
+
+Due to the lack of soil microbial assessments for mungbean, the general objective
+of this research is to perform an initial assessment of the bacterial and fungal community
+structures associated with mungbean under natural field conditions by using PCR-DGGE.
+The specific objectives of this research are enumerated as follows:
+
+1. Examine changes in the microbial community profiles through multivariate (i.e.
+band-based clustering and principal component analysis) and diversity analyses as
+influenced by (1) mungbean growth, (2) genotypes, (3) and rhizosphere effect, and
+compare between bacterial and fungal community structures.
+
+2. Identify dominant members of the bacterial and fungal communities through
+sequence analysis.
+
+The general findings of the study may serve as reference for possible future
+investigations such as physiological functions of rhizosphere microorganisms, the impact
+of drought stress on the microbiological aspect of the legume, comparison with other plant-
+specific soil microbial community researches, and combined analysis with other culture-
+
+dependent or —independent, and modern metagenomic approaches.
+
+CHAPTER 2
+
+REVIEW OF LITERATURE
+
+Microbial Diversity and Function in Soil
+
+Soil is a complex system comprised of a variety of microhabitats with different
+physicochemical gradients and discontinuous environmental conditions (Torsvik and
+Ovreas, 2002). Multiple factors such as climate, slope, location, bedrock and biotic
+activities are responsible for the variation of soil types which can support very different
+biological communities (Heritage et al., 1999). One of the most important components of
+soil is the vast microbial diversity surpassing eukaryotic organisms in terms of number. A
+gram of soil is estimated to have an impressive quantity of as many as 10 billion
+microorganisms (Heritage et al., 1999; Rosello-Mora and Amann, 2001) and a species
+diversity of between 4x10? (Torsvik et al., 1990) to 5x10* (Roesch et al, 2007). The number
+of bacterial species is estimated at 6,000 to 50,000 (Curtis et a/., 2002) and fungal hyphae
+to reach up to 200 m (Leake et al., 2004). This complexity and variability in communities
+of microorganisms is investigated in studies of microbial diversity, which encompasses
+genetic variability within taxons (species), and the number (richness) and relative
+abundance (evenness) of taxons and functional groups (Torsvik and Ovreas, 2002).
+
+Microbial diversity encompasses different groups of microorganisms, which
+includes the prokaryotic bacteria and archaeal groups; the eukaryotic fungi, algae, and
+protozoa; as well as the viruses. Given the breadth of their richness, microorganisms play
+
+varied and essential roles in the soil environment. They are typically the first to colonize
+
+and ameliorate effects of naturally occurring and man-made disturbed environments
+(ASM, 2015). For instance, cyanobacteria are responsible for the initial deposition of
+organic matter on exposed rocks. This event opens the feasibility of initiating biological
+processes that lead to soil formation and subsequently, to nutrient cycling (Heritage ef al.,
+1999). In the biogeochemical cycling of elements such as carbon, nitrogen, sulfur and
+phosphorous, microbial activities help provide different elements required by many
+naturally occurring biological processes by conversion to different chemical states or by
+fixation. Thus, biochemical reactions of soil microbes, primarily of bacteria, are relevant
+to human, crop production and environmental health. More so, life on Earth would not
+continue without the cycling of nutrients in which microbes are of prime players (Heritage
+et al., 1999; Topp, 2003).
+
+Topp (2003) enumerates the significance and relevant references for other notable
+functions of bacteria in agricultural soils, which include suppression of pathogens and
+pests, plant growth promotion, immobilization of heavy metals, pesticide degradation,
+maintenance of soil structure, and causative agents of plant disease. Fungi similarly have
+pivotal roles in plant health and development ranging from providing nutrients to
+destructing agricultural crops (Thorn, 1997).
+
+These variety of functions correlate with the immense structural diversity of
+microbial communities in soil. Given so, the complex and dynamic nature of these unseen
+communities presents much to be explored and to be gained from this knowledge (Topp,
+2003). To illustrate one application of such comprehension, Ahemad and Kibret (2013)
+cites diverse soil bacteria, both symbiotic and non-symbiotic, being used as bio-inoculants
+
+worldwide for the promotion of plant productivity under normal and _ stressed
+
+environmental conditions such as contamination with heavy metals, herbicides, fungicides,
+insecticides, and salinity. In this regard, microbial diversity in soil may be viewed as a
+massive pool of biological resources that can be surveyed for potential applications in favor
+
+of improved plant growth and adaptations in various environmental conditions.
+
+Plant and Microbe Interactions in the Rhizosphere
+
+The distribution of microorganisms in the soil environment is not even. In the
+presence of higher plants, these microbes tend to cluster around the roots — a phenomenon
+referred to as the “rhizosphere effect” (Heritage er al., 1999). Rhizosphere, from the Greek
+term ‘rhiza,’ meaning root, was first described by Hiltner in 1904 (Hartmann et al., 2008).
+Rhizosphere is the region of the soil that is under direct influence of plant roots (Tate,
+2000) extending approximately to 2 mm from the tissue surface known as rhizoplane
+(Dotaniya and Meena, 2015). The rhizosphere effect, however, can be up to 10 mm
+(Hartmann et al., 2008; Niu et al., 2012). Microbial diversity is found to be greatest near
+the rhizoplane and decreases with farther distance from the root surface (Paul and Clark,
+1996) as influenced by the gradient of exudates lost from the roots (Tate, 2000). The
+nutrients contained in leachates, sloughed cells, and decaying tissues stimulate the
+community of soil microbes in the vicinity (Tate, 2000). Between bacteria and fungi, the
+rhizosphere effect is greater for the former (Dotaniya and Meena, 2015).
+
+The rhizosphere effect appears as a strategy useful for plants to be able to thrive in
+nutrient-poor environments. In agriculture, plants are dependent on microbial activity,
+apart from fertilizers and input by rain, to obtain their nutrient supply (Warembourg, 1997).
+
+Plants release exudates such as carbohydrates, amino acids, organic acids,
+
+purines/nucleosides, enzymes, vitamins, inorganic ions and gaseous molecules (Dakora
+and Phillips, 2002) through the roots at different times in their life cycle to stimulate
+microbial activities in the soil. In turn, bacteria that reside in the rhizosphere determine the
+availability of many nutrients for plants, especially that of nitrogen and phosphorous; and
+the micronutrients iron, manganese, zinc and copper; rising in the favor of plant growth
+promotion (Dotaniya and Meena, 2015; Kent and Triplett, 2002). Nevertheless, plants may
+also release toxins and antagonistic compounds that may result in a selective effect on
+microbial communities while microorganisms may exert neutral or detrimental effects
+towards plants. The different interactions between plants and microorganisms result either
+in mutualistic, commensal or parasitic type of relationships (Warembourg, 1997).
+Naturally, these interactions or symbiosis would also depend on prevailing environmental
+conditions (Bais et al., 2006).
+
+A characteristic of the soil microbial community is the predominant
+microorganisms in the rhizosphere, which take origin in the soil. However, specific soil
+microbes in the population do vary with the established vegetation and this is attributed to
+the variation in the nature of root exudates between plant species, and with soil type (Tate,
+2000; Grayston et al., 1998; Berg and Smalla, 2009). This observation may, thus, have
+implications in agricultural applications where the crop species is considered with their
+associated microorganisms, which possibly perform important functions for the plant’s
+growth, health and quality (Berg and Smalla, 2009). Among known interactions of plants
+with soil microbes, the symbiosis of legumes with rhizobia is one of the more explored
+
+phenomenon (Hirsch et al., 2001).
+
+Legumes and their Symbiosis with Rhizobia and Mycorrhizas
+
+Legumes are members of the family Fabaceae (Leguminosae), with some 20,000
+species (Gepts et al., 2005) that comprise the third largest group of higher plants (Judd et
+al., 2002). In terms of agricultural importance, they come next to cereals based on area
+harvested and total production partaking 27% of the world’s major crop production (Gepts
+et al., 2005). The grain legumes, also known as pulses, are primarily grown for their edible
+seeds, which are harvested at maturity and marketed dry to be variably used as food or feed
+(Bareja, 2010). Pulses, such as the common bean, chickpea, cowpea, pigeonpea and
+mungbean, complement cereal crops in dietary terms with more than twice the protein and
+mineral content found in the latter (Beebe, 2006). Seeds of grain legumes contain 20 to
+40% protein and have the potential to provide the 15 essential minerals in the human diet.
+As much as a third of the nutritional nitrogen requirement of humans is derived from
+legumes (Graham and Vance, 2003; Gepts et al., 2005). Agricultural practices have used
+legumes as rotation crops with cereals (Beebe, 2006) as they render improved soil fertility
+by adding nitrogen to the soil (Mooleki, 2009). This ability to fix nitrogen, most often
+associated with legumes, is made possible by the formation of special structures in their
+roots with rhizobia (Sprent, 2010).
+
+Rhizobia are soil-inhabiting bacteria with the potential for forming specific
+structures on roots, called nodules (Zahran et al., 2012). In the strictest sense, the term
+“rhizobia” refers to members of the genus Rhizobium; however, overtime, the term has
+been used to refer to all bacteria with the capability of nodulation and nitrogen fixation in
+association with legumes and to bacteria that belong to genus that was previously part of
+
+the genus Rhizobium (Sahgal and Johri, 2006). Study of rhizobia-legume symbiosis has
+
+10
+
+garnered interest due to the trend in emphasis on environmentally sustainable development
+with the use of renewable resources. In particular, the potential role of biological nitrogen
+fixation in supplying N for agriculture is being tapped into in view of lowering of the use
+of N-fertilizers (Peoples et al., 1995). Nitrogen is a crucial limiting nutrient for plant
+growth and development; however, its most prevalent form as atmospheric nitrogen (N2)
+cannot be readily utilized by plants (Wagner, 2011). Biological nitrogen fixation (BNF) is
+carried out by a specialized group of prokaryotes, called diazotrophs, which catalyze the
+reduction of N2 to ammonia (NH3) with the aid of the enzyme complex nitrogenase.
+(Wagner, 2011; Zahran, 1999). This nitrogenase complex, however, is highly sensitive to
+inactivation by O2. The efficiency of nitrogen fixation via legume-rhizobia interaction is
+fostered by the legumes’ ability to maintain a very low concentration of free Oz in their
+root nodules by binding O2 to the hemeprotein called leghemoglobin. Legume-rhizobia
+associations contribute about 10!' kilograms of fixed Nz per year (Berg et al., 2012). These
+thizobium-legume symbioses prove to have significant roles in supplying N2 into soil
+ecosystems delivering more than half of the biological source of fixed nitrogen (Tate,
+1995).
+
+Most of the legume-nodulating bacteria that have been described have been
+classified to belong to the alpha Proteobacteria and to one of the six genera: Rhizobium,
+Bradyrhizobium, Sinorhizobium, Azorhizobium, Mesorhizobium and Allorhizobium
+(Postgate 1982, Relic et al., 1994; Rivas et al., 2009). In the presence of the host, a few
+among the large number of rhizobial cells in the soil infect the plant roots and multiply in
+root nodules to as many as millions of cells (Denison and Kiers, 2011). This relationship
+
+between legume and rhizobia is not obligate for either partner; some rhizobia may inhabit
+
+11
+
+within tissues of non-legumes (Ji et a/., 2010), and non-symbiotic rhizobia may also be
+present in greater numbers compared to symbiotic genotypes in soil (Segovia et al., 1991).
+
+There are two main types of mycorrhiza associated with legumes; the arbuscular
+mycorrhizas (AMs) and ectomycorrhizas (ECMs) (Sprent and James, 2007). Arbuscular
+mycorrhizal fungi (AMF), also known as endomycorrhiza, are obligate symbionts as they
+depend on plant roots for reduced carbon (Sikes, 2010). AMF, in turn, supply soil nutrients,
+particularly nitrogen and phosphorous to their host plant (Smith and Read, 2008). The term
+‘mycorrhiza’ was coined by Bernhardt Frank in 1885, originating from the Greek word
+‘myces,’ which means ‘fungus’ (Sedzielewska, 2012). Arbuscular mycorrhizal fungi get
+their name from the prominent branching structures called ‘arbuscules’ that they form
+within the cortical cells of roots. These structures, formed by fungi of the phylum
+Glomeromycota (SchiiBler et a/., 2001), are thought to facilitate exchange of the carbon
+and phosphorous between the plant and fungus by increasing the contact area between the
+two. Some AMF are also known as vesicular-arbuscular mycorrhizal fungi (VAM); these
+fungi from the suborder Glominae also form sack-like structures or vesicles within cortical
+cells (Bever et al., 2001). The life cycle of a mycorrhizal fungus begins when a spore
+germinates and hyphae branch toward plant root tissue. Upon penetration of the host’s
+parenchyma cortex, the fungus forms the relevant structures where the exchange of nutrient
+occurs. Hyphae extending in the soil take up nutrients for the plant while the host transfers
+carbon to the fungus to support its vegetative growth or spores (Denison and Kiers, 2011).
+
+Meanwhile, ECMs, which have a sporadic occurrence in legumes, have received
+less attention than the establishment of AMs in the crops. There have been no studies on
+
+the molecular aspects of ECM development in spite of the deduction that legumes appear
+
+12
+
+to be versatile in their symbioses, having the potential to form both types (James and
+Sprent, 2007). Nevertheless, general interest in ECM symbiosis has started to grow in
+recent years with the notable accumulation of sequence data from fungi in their natural
+environments, particularly from soil and roots (Tedersoo and Smith, 2013). The
+understanding of how ECMs are able to colonize roots of plants is relatively still at its early
+stage. Only a small number of studies at the molecular level are available and most have
+mainly focused on model associations with forest trees (Martin et a/., 2016). Ultimately,
+studies of these organisms in their inherent occurrence in nature would lead to
+
+understanding of their roles and potential applications in agriculture.
+
+Overview on Studies of Soil Microbial Communities
+
+Microbial community refers to all the microbial populations coexisting in the same
+space and time (Begon et al., 1986). Its structure describes the composition of the
+community and the abundance of its members (Friedrich, 2011). In general, there are many
+aspects considered in soil microbial diversity studies which make findings among relevant
+experiments difficult to compare. For instance, a variety of environmental biotic and
+abiotic factors as well as plant-microorganism interactions that may impact microbial
+communities are involved in different researches. Berg and Smalla (2009) summarizes
+biotic factors to include plant species, plant developmental stage, plant health, animals and
+grazers, and human activities while abiotic factors encompass soil quality, geography,
+climate and treatments or pesticides. Furthermore, the different systems used in
+experiments - ranging from hydroponic set-ups, chamber or greenhouse conditions to field
+
+tests - add complexity in making generalized conclusions (Berg and Smalla, 2009).
+
+13
+
+Assessment of results between studies is further complicated by the considered target
+microbial group of interest (e.g. bacterial, fungal or both), not to mention the different
+levels of resolution due to different approaches used (Fierer and Jackson, 2006; Roesch et
+
+al., 2007)
+
+Approaches in Soil Microbial Community Analysis
+
+Methods for investigating soil microbial communities can be either culture-
+dependent or culture-independent; the resolutions of which might be decisive for the
+findings reported (Berg and Smalla, 2009). Each of these available approaches has their
+advantages and drawbacks and so precaution must be taken in selecting the most suitable
+methods; the basis of which typically relies on experimental goals. The various techniques
+should be viewed as complementary for optimal access into the structural and functional
+
+diversity of complex microbial communities (Rastogi and Sani, 2011).
+
+Culture-dependent Methods
+
+Traditionally, culture-dependent techniques involving dilution plating on culture
+media has been used. The method makes use of different types of nutrient medium that
+have been designed to maximize recovery of microorganisms (Hill et al., 2000). However,
+it has been estimated that only less than 1% of the microorganisms found in soils can be
+grown in laboratory media and conditions (Torsvik and @vreds, 2002) based on
+comparisons between direct microscopic counts of cells and recovered colony forming
+
+units in soil samples. When complex microbial communities are being studied, for
+
+14
+
+example, enumeration of bacteria may produce erroneous results not representative of the
+population (Besnard et al., 2000).
+
+A popular culture-dependent method is the community-level physiological profiles
+(CLPP), which is used to identify bacterial species based on their utilization of different
+carbon sources. CLPP is favored as a rapid screening method that measures not only
+community structure but also reflects functional diversity (Garland and Mills, 1991; Zak
+et al., 1994). The technique has been facilitated by the use of a commercial taxonomic
+system, known as the BIOLOG® system, which has been extensively used for soil
+microbial community analyses (Garland, 1996; Lehman et al., 1995). Although CLPP may
+deliver useful information for soil microbial community assessments, the method suffers
+from several limitations, which are discussed by Hill et a/. (2000). Essentially, it has the
+same bias problems as culture plating (Hill er a/., 2000) and has been questioned to reflect
+
+function rather than structure (Garland, 1997).
+
+Culture-independent Methods
+
+Given the limitation of revealing only a small portion of the total microbial
+community populations, soil microbial ecologists have increasingly turned to the use of
+culture-independent methods. Using such approaches may be based on: (1) the extraction,
+quantification and identification of soil-sampled molecules that are specific to individual
+microorganisms or microbial groups; or (2) advanced fluorescence microscopic techniques
+(Hill et al., 2000). For the former, useful molecules include phospholipid fatty acids and
+nucleic acids (Morgan and Winstanley, 1997); while the latter involves either the
+
+hybridization of fluorescent-labeled nucleic acid probes with total RNA extracted from
+
+15
+
+soils or hybridizations with cells in situ (i.e. fluoresecent in situ hybridization or FISH).
+Summaries of the principles, advantages and drawbacks of the techniques are also
+discussed by Hill et al. (2000).
+
+Among these practices, the use of nucleic acids molecules have been the most
+useful in investigations of microbial community structures. Studies by Torsvik and
+colleagues (1990; 1996) compared the re-association kinetics of DNA extracted from soil
+with that of microbial pure cultures while using the reasoning that the greater the sequence
+diversity of the DNA, the greater the DNA reannealing time. Their findings concluded that
+the genetic diversity of soil was estimated to be 200 times greater than the diversity among
+bacteria cultured from the same soil; thereby, illustrating soil bacterial communities to be
+significantly more complex than what can be revealed by culture-dependent methods.
+
+Kirk and colleagues (2004) enumerate these approaches utilizing DNA to include
+guanine plus cytosine (G+C) content, nucleic acid reassociation and hybridization, DNA
+microarrays and DNA hybridization. In particular, genetic fingerprinting techniques are
+one of the most applied tools in microbial ecology. These techniques such as denaturing
+and temperature gradient gel electrophoresis (DGGE and TGGE), single strand
+conformation polymorphism (SSCP), amplified ribosomal DNA restriction analysis,
+(ARDRA) or restriction fragment length polymorphism (RFLP), terminal restriction
+fragment length polymorphism (T-RFLP) and (automated) ribosomal intergenic spacer
+analysis (RISA or ARISA), have been developed for qualitative and semi-quantitative
+estimation of diversity in ecosystems, study of spatial and temporal variations in
+community diversity, screening clone libraries, and species identification (Cetecioglu et
+
+al., 2012; Hofman-Bang et al., 2003).
+
+16
+
+High-throughput 454 sequencing platform or ‘pyrosequencing’ has also been
+significantly used for microbial diversity analyses in environmental systems (Lim et al.,
+2010, Nacke et al., 2011; Kaiser et al., 2016). It is the first of the low-cost platforms known
+as Next Generation Sequencing (NGS) that revolutionized metagenomics. However, the
+Roche-acquired technology is now obsolete; support for the platform ended in mid-2016
+(Karow, 2013). Escobar-Zepeda ef al. (2015) summarizes considerations for selecting
+among new generation sequencing technologies; overall, immense data generated by these
+technologies proportionally requires high computational resources and complex
+
+bioinformatics analyses.
+
+Polymerase Chain Reaction —
+
+Denaturing Gradient Gel Electrophoresis (PCR-DGGE)
+
+Denaturing gradient gel electrophoresis (DGGE) is a well-established molecular
+tool in microbial ecology for diversity analysis (Muyzer, 1999) in different environments
+or samples such as soil and water. In this method, same-length, double stranded DNA
+molecules are separated based on their melting behaviors that are attributed to differences
+in their base sequences. It was originally developed for distinguishing point mutations in
+defined genes in the 1980s; theoretically, a single base variation among DNA sequences
+can be detected by DGGE (Muyzer et al., 1993).
+
+DGGE separates same-length DNA fragments by electrophoresis in a gradient of a
+denaturing conditions, which is established using denaturants such as urea and formamide.
+The DNA fragments migrate in a linearly increasing gradient under the influence of an
+
+electric field until they reach a position in the gradient in which the molecules melt. As the
+
+17
+
+DNA fragments separate, the mobility of the molecules decrease. In order to prevent the
+complete disassociation of these fragments, a GC-rich sequence called a ‘GC clamp,’ is
+attached to the 5’-end of either the forward or reverse primers used in PCR. The GC clamp
+designed by Muyzer et al. (1993) - 5'-CGC CCG CCG CGC CCC GCG CCC GTC CCG
+CCG CCC CCG CCC G-3' - is most frequently used for most applications. The
+electrophoretic separation of mixed amplicons or PCR products results in a genetic profile
+or fingerprint composed of bands at different migration distances and of different
+intensities. The obtained fingerprint represents the community structure. The number of
+bands is assumed to reflect the microbial diversity while band intensities relate to the
+relative abundance within the amplified community (Muyzer et al., 2004; Oros-Sichler et
+
+al., 2007).
+
+Target Genes for PCR
+
+Prior to electrophoresis procedure, proper markers must be selected to represent
+target microbial community (Cetecioglu et al., 2012). In prokaryotic community analysis,
+the 16S ribosomal RNA (rRNA) gene sequences (i.e. encoded by rDNA) have been most
+widely favored (Nakatsu, 2007). These small subunit (SSU) rDNA molecules are found
+universally in all domains Bacteria, Archaea and Eucarya (Woese et al., 1990) and are
+composed of both highly conserved and variable sequence regions (Woese et al., 1987). In
+particular, bacterial 16S rRNA gene has 9 hypervariable regions interspersed along its
+length; the selection of which of these regions to use can notably affect the community
+analysis (Schmalenberger et al., 2001; Yu and Morrison, 2004). The highly conserved
+
+fragments are essential for primer design while the hypervariable regions are used for
+
+18
+
+phylogenetic characterization. The slow rate of change of certain regions of these
+ribosomal genes had set them to be considered as the contemporary standard for life
+detection in various environments (Isenbarger et al., 2008). To add to these properties, the
+relatively large size of the 16S and 18S rDNA molecules (i.e. 1.5 kb and 1.8-2.0 kb,
+respectively) (Bryant and Manning, 1999) and the presence of secondary structural
+domains favor that these molecules hold greater phylogenetic information (Hill er al.,
+2000). Aside from universal targets, group-specific primers can also be used for PCR-
+DGGE (Nakatsu, 2007).
+
+For eukaryotes, the 5S or 18S rRNA genes (Ward et al., 1992) have been the marker
+of choice (Hill et al., 2000). However, Liu and colleagues (2015) recently suggested that
+the ITS region is more precise and has more potential than the 18S rDNA. Their study
+using PCR-DGGE has revealed greater richness and diversity of fungal communities in
+both water and soil samples using ITS than with 18S rRNA gene. The difference between
+the two is that ITS regions are hypervariable whereas rRNA gene subunits are more
+conserved across the fungal kingdom. Consequently, ITS regions are particularly useful
+for fungal identification at the species and even lower levels. The drawback though is that
+subsequent multiple sequence alignments and phylogenetic analyses are limited by the
+considerable variations (Toju et al., 2012). Liu et al. (2015) emphasizes that as a
+consequence, the concurrent use of the both ITS and rRNA genes is growing for taxonomic
+
+and phylogenetic fingerprinting studies.
+
+19
+
+Challenges and Advantages of DGGE
+
+The optimization of procedures and conditions is imperative not only for the
+performance of DGGE but also during DNA extraction and PCR amplification due to
+inherent limitations and biases. For example, DNA extraction has issues in cell breakage
+steps either being too harsh or insufficient for different bacterial groups (Schneegurt ef al.,
+2003), and difficulty in separation of DNA from PCR-inhibiting components (e. g. humic
+substances) (Tebbe and Vahjen, 1993), thereby causing misrepresentation of community
+DNA. The choice of markers has also been demonstrated to notably affect PCR-DGGE
+profiles for the same microbial group (Anderson et a/., 2003; Brons and van Elsas, 2008;
+Zhang et al., 2009; Liu et al., 2015). Typically, primer annealing temperature, polymerase
+enzyme cofactor (Mg), and nucleic acid template concentrations are most often optimized
+for PCR (Boleda et al., 1996; Ishii and Fukui, 2001). On the other hand, electrophoresis
+conditions such as the running time, voltage, and range of percent gradient of denaturant
+to be used may be adjusted to suit among PCR product size and buffer properties (Muyzer
+et al., 1993; Green et al., 2009). With regard to size of PCR targets, one limitation of
+DGGE is that it is suitable for the separation of only smaller DNA fragments of up to 500
+base pairs (Muyzer and Smalla, 1998). DGGE has also been found to be incapable of
+clearly separating samples whose sequence differ from 0.1 to 1%; band appears more
+intense or smeared, which may lead to misinterpretation of diversity in a given sample
+(Jackson et al., 2000). The formation of heteroduplexes can be a source of artifacts in the
+rDNA gene and their separation from homoduplexes can also result in more intense bands
+that lead to overestimation of microbial diversity (Thompson et al., 2002). Neilson et al.
+
+(2013) has published that while method-specific artifacts prevent its application for
+
+20
+
+quantitative aspects, PCR-DGGE does provide an excellent high-throughput tool for
+comparative diversity analysis.
+
+Although DGGE may be labor-intensive, the method still provides a fast
+monitoring means for the determination of microbial community in a given ecosystem,
+particularly on the changes in structural diversity over time or space or in response to
+treatment. Both qualitative and semi-quantitative approach for such diversity estimations
+are delivered by the technique (Muyzer and Smalla, 1998; ITRC EMD, 2011; Cetecioglu
+et al., 2012). The notable advantage of DGGE is that it allows for further analysis of
+sequences provided; bands of interest may be excised and reamplified to identify specific
+operational taxonomic units (OTUs) (Valaskova and Baldrian, 2009). In general, it is
+considered as one of the most reliably used or even routinely applied method not only for
+microbial diversity analyses in soil (Oros-Sichler et al., 2007) but also in different
+environments (Cetecioglu et al., 2012). Nakatsu (2007) emphasizes its application in
+various environmental analyses and provides a substantial number of bacterial community
+studies that have successfully used the method; the scope of these studies has covered
+environments from agricultural soils, plant rhizospheres, forests, grasslands, upland,
+
+wetlands, industrial sites, sand dunes, landfills to plant endophytes.
+
+Mungbean as Subject Crop
+
+Mungbean (Vigna radiata L. Wilczek) is one of the major legumes in Asia along
+with chickpea (Cicer arietinum L.) and pigeonpea (Cajanus cajan L.) (Shanmugasundaram
+et al., 2009). The pulse crop, which is also known as ‘green gram,’ is a small bush or vine-
+
+like herb that has adapted itself to different agroclimatic conditions. It is predominantly
+
+21
+
+cultivated in Southeast Asia and is also grown in parts of Africa, Australia and USA.
+Requiring 90-120 days of frost free conditions, mungbean is both a warm season and short
+duration crop (Ranawake et al., 2011); the latter characteristic along with its property of
+adding to soil nitrogen status via N2 fixation renders it to be commonly used as a rotation
+crop with cereals. Furthermore, it is also used as an intercrop as it combines well with a
+wide range of cereals and oil seed crops. The most important product of the mungbean is
+its seed that is used in various food preparations such as vegetable dishes, noodles and
+bakery products (Krishna, 2010). Similar to most legumes, its seeds are rich in protein and
+complement cereals in providing nutrition. The seeds also contain vitamins A and C,
+thiamin, iron, and magnesium among other nutrients, and is known as a good source of
+folate (Department of Agriculture, Forestry and Fisheries, 2010). In Asia, it has been
+transformed from a marginal to a major crop, which has ensued contribution to better
+nutrition for the poor population, to improved soil productivity and to opening additional
+income opportunities for farmers (AVRDC, 2010). Meanwhile, mungbean is the principal
+food legume in the Philippines in terms of agricultural area and value of production
+(Altoveros and Borromeo, 2007) with which the Ilocos Region, Autonomous Region of
+Muslim Mindanao (ARMM), Western Visayas, Central Luzon and Cagayan Valley are the
+major producers. In 2006, the production was 25,955 metric tons, which contributed
+P790M to the local economy (PCARRD-DOST, 2003).
+
+Mungbean can be grown year-round but, typically, these are cultivated when
+harvesting time would fall during dry periods (PCARRD-DOST, 2003). Nevertheless,
+adequate rainfall is desired from flowering to late pod fill to ensure good yield (Department
+
+of Agriculture, Forestry and Fisheries, 2010). While it is considered a relatively drought-
+
+22
+
+tolerant crop (Morton et al., 1982), its yield is most dependent on ample supply of water
+over any other single environmental factor (Kramer and Boyer, 1997). Accordingly,
+mungbean has been widely examined in relation to its response to drought. The focus of
+these researches have chiefly been on the morphological and physiological facets of the
+crop (Ocampo and Robles, 2000a; Ocampo and Robles, 2000b; Dutta and Bera, 2008;
+Kumar and Sharma, 2009; Ranawake et al., 2011, Aslam et al., 2013; Alzarqaa et al., 2014;
+Narina et al., 2014; Kaur et al., 2017; Prakash et al., 2017). In contrast, there are limited
+reports related to its microbial aspects; most of which doesn’t so much delve into its soil
+microbial community but rather on the effects of inoculation with specific rhizobia or
+mycorrhiza (Tien et al., 2002; Ahmed et al., 2006; Delic et al., 2011; Habibzadeh, 2014;
+Mubeen et al., 2015). Among members of the Fabaceae family, general soil bacterial and/or
+fungal communities have been investigated for but not limited to Cicer arietinum (Ellouze
+et al., 2013) Glycine max (Sugiyama et al., 2014; Meriles et al., 2009), Acacia spp.
+(Birnbaum et al., 2014), Stylosanthes guianensis (Aubl.) Sw., Trifolium pratense L.,
+Medicago sativa L. (Zhou et al., 2017), and Medicago truncatula (Mougel et al., 2006). To
+date, there has been no general survey of either bacterial or fungal communities in
+
+rhizospheres of mungbean.
+
+CHAPTER 3
+
+MATERIALS AND METHODS
+
+Field Site Background
+
+The field experiment was performed in upland soil condition during the transition
+from dry to rainy season (April through June 2016) at Tranca, Bay, Laguna, located at
+latitude 14°08°22.2”N and longitude 121°15°33.7"E (Google Maps, 2017) as shown in
+Figure 1. The land area is found near the edge of Mount Makiling forest reserve and has
+been extensively used to grow a variety of vegetables and root crops since the 1980’s.
+Typical harvests, which include okra, mungbean, squash, cassava and sweet potato are
+grown in no particular pattern at about month-long intervals. Farming practices in the site
+involve sourcing water from deep well reservoir for perforain and furrow irrigation
+
+systems, supplying nitrogen and potassium fertilizers, and using insecticides as needed.
+
+Field Experimental Design
+Mungbean Genotypes and Field Lay-out
+
+A repeated measures (RM) in randomized complete block design (RCBD) was
+implemented wherein three mungbean genotypes were used based on their tolerance to
+drought stress. Seeds of Accession 831, Pag-asa 3 and Pag-asa 7 (Figure 2), were obtained
+from the University of the Philippines Los Bafios — Institute of Plant Breeding (UPLB-
+
+IPB). Los Bafios, Laguna. Accession 831 has been observed to be resilient to drought
+
+24
+
+(Del Rosario et al., 1992). Pag-asa 7 has also been found to endure low moisture conditions
+having relatively higher yields in such state. Conversely, Pag-asa 3 is intolerant to the
+abiotic stress. Figure 3 shows the experimental lay-out, seed sowing and cultivated
+mungbean plants. Adjacent plots A and B comprised of nine 5x5 m minor plots each,
+among which the three mungbean genotypes were randomly sown. The individual minor
+
+plots consisted of 10 rows in which 1000 seeds were equally distributed.
+
+Soil Sample Collection
+
+Sample collection of bulk and rhizosphere soils were performed during the
+flowering (35 days after sowing) and physiological maturity (57 days after sowing)
+developmental stages of mungbean (Figure 4). Bulk soil samples were collected by taking
+soil cores between rows of mungbeans at an even depth of approximately 10 cm. Five soil
+cores (2 cm diameter) from different points per subplot were completely mixed together in
+sterile propylene bags. Pooled soil mass from subplots planted with the same mungbean
+genotype were further combined together to obtain composite samples. An initial
+composite bulk soil sample from each of major plots A and B were also obtained before
+sowing to use as control. For rhizosphere soil, five plants per subplot were carefully
+excavated with which the roots were vigorously shaken to remove soil not tightly adhering
+to the roots. The remaining soil on the roots were then collected in sterile polypropylene
+bags. Composite rhizosphere soil samples were prepared similarly as done for bulk soil
+collection. Three composite bulk soil and rhizosphere samples were acquired from each
+replicate plot at every sampling event. A total of 24 composite soil samples were taken
+
+from the two major plots for the two sampling times. Soil samples were placed in sealed
+
+25
+
+container with ice during transport to the laboratory and were stored at -20°C prior to DNA
+extraction. Independent soil samples from the replicate plots were submitted to IPB
+
+Physiology Laboratory for physico-chemical analysis.
+
+Figure 2. Seeds of mungbean genotypes Accession 831 (A), Pag-asa 3 (B) and Pag-asa 7
+(C) obtained from the University of the Philippines Los Baiios — Institute of Plant Breeding,
+(UPLB — IPB), Los Bajios, Laguna.
+
+26
+
+Direction of planting rows 10m sm
+a peed ea en, =
+Pag-asa Pag-asa Acc Pag-asa Acc Pag-asa 3
+3 7 831 7 831 3
+Pag-asa ‘Acc Pag-asa Acc Pag-asa Pag-asa
+7 831 3 831 3 zp
+Is
+Acc Pag-asa Pag-asa Pag-asa Pag-asa Ace
+831 3 7 3 7 831
+Plot A Plot B
+
+Figure 3. Experimental field lay-out (A), seed sowing (B) and cultivated mungbean plants
+in the two major plots A (C) and B (D).
+
+27
+
+Figure 4. Growth stages of mungbean when soil samples were collected: (A) flowering and
+(B) physiological maturity.
+
+Molecular Analysis of Bacterial and Fungal Communities
+
+DNA Extraction from Bulk and Rhizosphere Soils
+
+The CTAB (cetyl trimethyl ammonium bromide) with mannitol DNA extraction
+protocol based on Fatima ef al. (2011) was used with modifications for all soil samples.
+One gram of soil per sample was ground in liquid nitrogen and subsequently mixed with 2
+ml extraction buffer comprising of 0.2 M Tris-HCl (pH 8.0), 0.02 M Na2-EDTA (pH 8.0),
+1.5 M NaCl, 0.30 M SDS (sodium dodecyl sulfate), 0.5 M mannitol and 1% CTAB.
+Samples were then incubated at 65°C in water bath for 1 hr with occasional stirring
+followed by centrifugation at 12,000 rpm for 15 min at 4°C. The resulting supernatants
+were transferred to new tubes and added with equal volumes of 0.5 M NaCl and 0.5 M
+CTAB. After incubation at room temperature for 10 min, the samples were mixed with
+approximately equal volumes of chloroform:isoamyl alcohol (C:1) solution and centrifuged
+
+again at 12,000 rpm for 15 min at 4°C. The aqueous layers were precipitated by addition
+
+28
+
+of isopropanol and by centrifugation using the same parameters in previous steps.
+Recovered pellets were washed with 95% ethanol, air dried and dissolved in 20 pl TE-
+RNase (mg/ml) for 1 hr at 37°C water bath. The solution was spun down at 10,000rpm
+for 10 min prior to transferring 20 pl supernatant to new tubes. Extracted DNA were kept
+at -20°C.
+
+The quality and quantity of DNA samples were initially assessed through
+electrophoretic run on 1.0% (wt/vol) agarose gels along with a series of lambda (4) DNA
+standards. Direct nucleic acid concentration and purity (UV absorbance ratio at 260/280
+nm) were determined using Epoch™ with Take3™ micro-volume plates (BioTek
+
+Instruments Inc., Winooski, VT, USA).
+
+PCR Amplification from Bacterial 16S rDNA Genes
+
+All primers used in the study are presented in Table 1. A GC clamp is added to
+forward primers used for the amplification of DNA that will be directly used for DGGE.
+To target the V6-V8 hypervariable region of the bacterial 16S rDNA, universal primer pair
+968F-GC and R1378 were used following a modified procedure of Valaskova and Baldrian
+(2009). PCR was carried out in 25 1 reaction mixtures, which contained 1X PCR buffer
+with MgCl, 0.1mM dNTPs, 0.1 1M forward primer, 0.1 1M reverse primer, 0.5 U Taq
+polymerase, 25-50 ng template DNA (1 ng/pl) and sterile ultrapure H20 to bring to total
+volume. Cycling conditions included an initial denaturation of 94°C for 2 min, followed
+by 35 cycles of 92°C for 30 s (denaturation), 55°C for 1 min (annealing), and 72°C for
+45 s (extension) with a final extension step at 72°C for 5 min. Obtained PCR products were
+
+subsequently verified by electrophoresis in 1.0% (wt/vol) agarose gels with SYBR® Safe
+
+29
+
+pre-staining. Gel electrophoresis was ran with 0.5X TAE (Tris-acetate-EDTA) buffer at
+
+100 V for 30 minutes using Mupid®-One System (Takara Bio USA, Inc.).
+
+PCR Amplification from Fungal ITS Regions
+
+The ITS1 region of fungal rDNA was amplified using nested PCR. The first PCR
+reaction used the primer pair ITS1f and ITS4 to amplify a longer fragment comprising both
+ITS1 and ITS2. To specifically amplify the ITS1 region, the product from the first reaction
+was directly utilized as template in the second PCR using ITS1f-GC and ITS2 primers.
+
+The first PCR reaction consists of 1X PCR buffer with MgClz, 0.1 mM dNTPs, 0.1
+uM forward primer, 0.1 1M reverse primer, 0.5 g/ml bovine serum albumin (BSA), 0.5
+U Taq polymerase and 50 ng DNA template (2 ng/pl). Sterile ultrapure H20 was added to
+bring the total volume to 25 yl. The amplification cycle consisted of an initial denaturation
+step of 94°C for 5 min, followed by 35 cycles of 94°C for 1 min, 50°C for 1 min, and 72°C
+for 1 min. Final extension step is at 72°C for 10 min.
+
+The second PCR reaction used 2.5 1 PCR product from the first reaction as DNA
+template for a 25 pl mixture. Each reaction consisted of 1X PCR buffer with MgClz, 0.2
+mM dNTPs, 0.2 1M forward primer, 0.2 1M reverse primer, 0.1 pg/ml bovine serum
+albumin (BSA), 0.5 U Taq polymerase and ultrapure H20 to bring to final volume. The
+cycling conditions were initial denaturation at 94°C for 5 min, 40 cycles of 94°C for 30 s,
+55°C for 30 s and 72°C for 30 s, and a final extension step at 72°C for 10 min. The PCR
+products were visualized using 1.5% (wt/vol) agarose gel electrophoresis using the same
+
+conditions described for bacterial DNA.
+
+30
+
+Each DNA sample was amplified with three replications. PCR of positive controls
+E. coli and F. verticillioides DNA were also included. The PCR protocols performed for
+bacteria and fungi were based on recommended procedures by Valaskova and Baldrian
+(2009); modified conditions were done as applicable. All PCR events were conducted using
+
+Bio-Rad T-100™ Thermal Cycler (Bio-Rad Laboratories, Inc., Hercules, CA, USA).
+
+Table 1. PCR primers used in the amplification of bacterial 16S rDNA and fungal ITS
+regions from community DNA extracted from bulk and rhizosphere soils of mungbean.
+
+Primer Target Sequence (5' to 3’) Reference
+968F-GC* Bacterial 165 ge ceg egg cee gcc cog Bac Bee Eve BEE Ba CER Felske et al. (1996)
+rDNA geg gAA CGC GAA GAA CCT TAC
+R1378 Bacterial 16S.» CGG TGT GTA CAA GGC CCG GGA ACG Heuer and Smalla (1997)
+rDNA
+ITSIF Fungal ITS CTT GGT CAT TTA GAG GAA GTA A Gardes and Bruns (1993)
+ITs4 Fungal ITS TCC TCC GCT TAT TGA TAT GC White et af. (1990)
+ITSIF-GC* — Fungal ITS. ce cog ecg cge ace ce Bec Bee BCE eee ca cee Gardes and Bruns (1993)
+ggg eCT TGG TCA TTT AGA GGA AGT AA
+ITs2 Fungal ITS GCT GCG TTC TTC ATC GAT GC White et al. (1990)
+
+*GC - 40 bases GC-rich nucleotide sequence (GC clamp) attached to 5' end of
+primer
+
+Denaturing Gradient Gel Electrophoresis (DGGE)
+
+The PCR products were separated by denaturing gradient gel electrophoresis
+(DGGE) using the DCode™ Universal Mutation Detection System (Bio-Rad Laboratories,
+Inc., Hercules, CA, USA) (Figure 5A). Twenty microliters DNA samples were added with
+10 pl 1 X BlueJuice™ gel loading dye prior to use. For bacterial community analysis, PCR
+products were loaded onto 6% acrylamide/bisacrylamide (37.5:1) gel. A denaturing
+gradient of 50% to 70% was used for separation of PCR amplicons. The denaturant (100%)
+
+contained 7 M urea and 40% formamide. Electrophoresis was initially started at 100 V for
+
+31
+
+10 min and was then lowered to 60 V and ran for 17 h in a 0.5 X TAE buffer at a constant
+temperature of 60°C. Post-staining was done with Gel Red nucleic acid stain for at least 1
+hr in 0.5 X TAE buffer with gentle shaking. Subsequently, gels were imaged under UV
+transillumination using Bio-Rad Gel Doc™ XR+ system (Bio-Rad Laboratories, Inc.,
+Hercules, CA, USA) and QuantityOneTM 1-D Gel Analysis Software.
+
+Fungal community banding profiles were obtained following DGGE protocol as
+done for bacteria with modifications in gel specifications and running conditions. DNA
+samples were loaded onto 8% acrylamide/bisacrylamide gels with a linear gradient of 20%
+to 45%. Additionally, the DGGE system was set at 50 V with a run time of 19 h.
+
+Prominent bands from the DGGE profiles were excised for sequence analysis.
+Excision was done under UV transillumination (Figure 5B) using sterile forceps. Excised
+bands were placed in 50 pl sterile ultrapure H2O, macerated, and centrifuged for 1 min.
+After incubation in 37°C water bath for 30 min, the resulting DNA were kept at -20°C prior
+
+to re-amplification and sequencing.
+
+Figure 5. DGGE set-up (A) and gel viewing under UV transillumination (B).
+
+32
+
+Analysis of DGGE Profiles
+
+DGGE profiles were examined through digital image analysis using BioNumerics
+7.6 Software (Applied Maths, Kortrijk, Belgium) following the manufacturer’s
+instructions. Band detection was done by using the band-search algorithm and following
+background subtraction. Manual verification of undetected bands and removal of uncertain
+identifications were made for every gel image processing. Banding profiles were
+normalized using a known species standard as reference for inter-gel comparisons.
+Analyses of community fingerprints through clustering, principal components analysis
+(PCA), and calculation of diversity index for each gel track were all proceeded with the
+
+software.
+
+Clustering and Principal Components Analysis (PCA)
+
+Multivariate analyses were applied to DGGE data. Similarities among the banding
+patterns of the bacterial and fungal communities were analyzed using the Dice coefficient.
+The band-based coefficient was used along with a band matching tolerance of 1.0% to
+produce similarity matrices. To convert the matrices to dendrograms, the unweighted pair
+group method with arithmetic means (UPGMA) clustering algorithm was utilized.
+Cophenetic correlations were employed to express consistency of dendrogram sub-clusters.
+DGGE profiles were further analyzed through principal components analysis (PCA) to
+show the spread of entries according to relatedness. Band-matching was done as
+
+prerequisite for construction of PCA plots.
+
+33
+
+Diversity Index
+
+The structural diversity of the microbial communities was analyzed through
+calculation of Shannon diversity index, H (Shannon and Weaver, 1963) for every gel lane
+by means of a script provided in BioNumerics (Applied Maths 2016a). Results were
+corroborated through manual computation using exported densitometric curves data of
+
+individual lanes. The Shannon diversity index (Hs) was calculated as:
+
+where n is the total number of bands in the profile, hi is the intensity of the individual band,
+and H is the total intensity of all bands in a profile. Average diversity indices per
+experimental variable were compared for differences. To determine which factors are
+
+significant sources of variation, F-test using ANOVA at 5% level of significance was used.
+
+Sequence Analysis of Bacterial 16S rDNA and Fungal ITS Regions
+
+Excised DNA bands were re-amplified using primer sets without the GC-clamp;
+968F-R1378 and ITSIf-ITS2 were used for bacterial and fungal DNA amplification,
+respectively. PCR products were verified as described previously prior to submission to
+First BASE Laboratories (Selangor, Malaysia) for sample purification via gel extraction
+and double-pass sequencing.
+
+Consensus sequences were obtained for the forward and reverse sequences of each
+DNA sample through pairwise alignments using BioEdit Sequence Alignment Editor (Hall,
+
+1999). The nucleotide sequences from DGGE gels were compared with those from
+
+34
+
+GenBank (https://www.ncbi.nlm.nih.gov/) using the BLASTN program (Altschul et al.,
+1997) to obtain putative phylogenetic identities for the extracted bands. Six partial 16S
+rDNA and 22 ITS region sequences were assigned with nearest phylogenetic neighbors.
+Sequence matches with >90% similarity were aligned using ClustalW tool in the Molecular
+Evolutionary Genetics Analysis (MEGA) software 7.0.26 (Kumar et al., 2016). The
+alignment for each microbial group was then used to create bootstrapped (n = 1,000)
+neighbor joining trees. Methanobacterium oryzae and Corallochytrium limacisporum were
+
+used as outgroup for bacterial and fungal phylogenies, respectively.
+
+CHAPTER 4
+
+RESULTS AND DISCUSSION
+
+Soil Preparation and Physico-chemical Properties
+
+Soil samples for both physico-chemical and molecular analyses were prepared
+using the approach of forming composite samples. Given the inherent heterogenous nature
+of soils, several samples are typically collected from different points and homogenized to
+form a larger quantity of composite soil sample. This method attempts to attain good
+representation of the site (Nakatsu, 2007). Soil physico-chemical analyses of the
+experimental site in Tranca, Bay, Laguna are presented in Table 2. Parameters measured
+from replicate field plots generally show no significant discrepancies supporting that there
+is minimal variation in the soil conditions between the adjacent replicate plots. As such,
+variations that may observed in the soil microbial community of mungbean can be chiefly
+
+correlated with the imposed variables of mungbean genotypes and growth stages.
+
+DNA Extraction and PCR Amplification
+
+The total microbial community DNA extracted from bulk soil and rhizosphere
+samples (Appendix A) were of sufficient molecular weight and purity (Appendix B) for
+successful amplification of 16S rDNA and ITS fragments. Partial 16S rDNA fragments for
+
+bacteria were obtained through direct PCR amplification whereas fungal ITS fragments
+
+36
+
+were obtained through nested PCR. Positive controls E. coli and F. verticillioides DNA
+were used to verify the efficacy of the PCR mixture and cycling parameters.
+
+Direct PCR procedure for bacterial DNA amplification involved the use of
+universal primers 968F-GC and R1378 which have been successfully used in analysis of
+bacterial communities by PCR-DGGE (Duineveld er al., 2001; Hernesmaa et al., 2005;
+Brons and Elsas, 2008). The hypervariable (V) regions V6 to V8 of the 16S rDNA are
+amplified with the primers; the V6 region, in particular, has the highest phylogenetic
+variability among the nine hypervariable regions in bacterial 16S rRNA genes (Heuer et
+al., 1999). As such, it is expected to allow significant access into the study of genetic
+profiles of bacterial communities (Brons and van Elsas, 2008). The target fragment has a
+size of approximately 430 bp (Yu and Morrison, 2004), which was observed in all PCR
+amplicons prepared in triplicates (Appendix C-1 to C-2). The amplified region corresponds
+to positions 968 to 1378/1401 in the 16S rDNA of E. coli.
+
+A nested PCR approach was used for fungal community analysis to improve
+specificity and sensitivity of PCR for DGGE (Muyzer, 1993). The first round of PCR was
+performed using the pair of forward primer ITS] f and reverse primer ITS4, which amplifies
+a fragment comprising of non-coding ITS1 and ITS2, and the 5.8S coding sequence in the
+rDNA region of fungi (White er al., 1990). The conjunct use of these markers specifically
+target fungal templates from mixed community DNA samples (Anderson et al., 2003)
+where the ratio of fungal DNA to non-fungal DNA may be low. The first PCR amplicons,
+which exhibit considerable size variability of 420 to 825 bp (Manter and Vivanco, 2007),
+
+were then directly used as template for subsequent PCR. In the second round of PCR,
+
+37
+
+ITS1f-GC and ITS2 were used to specifically amplify the ITS1 region. The use of these
+primers in PCR-DGGE have been shown to effectively estimate soil fungal diversity
+(Anderson et al., 2003; Artz et al., 2007). Amplicons obtained were found to have small
+
+variations in size (Appendix C-3 to C-4) at more or less 300 bp (Liu et al., 2015).
+
+Table 2. Physico-chemical analyses of soil from Tranca, Bay, Laguna experiment site.
+
+Parameters Plot A Plot B
+pH 6.1 6.0
+Moisture content (%) 38.96 33.28
+Organic matter (%) 2.93 2.93
+K (ppm) 0.2953 0.2752
+Ca (meq/100g) 5.000 4.878
+Mg (meq/100g) 0.789 1.014
+
+Analysis of Bacterial and Fungal DGGE Profiles
+
+It is recognized that selection of DNA extraction methods, primers and PCR
+technique may introduce bias and thus, influence PCR-DGGE band profiles. In order to
+minimize potential impacts of the processes used in the current study, protocols adapted
+from previous researches were tested and optimized for applicability, and for
+reproducibility of results.
+
+Molecular community fingerprints were prepared with three replications for each
+sampling event. The obtained DGGE profile for each soil sample represents its community
+structure. Upon visual inspection, DGGE profiles showed relatively little variation among
+the replicates for each sampling time (Appendix D). This suggests good reproducibility of
+
+the PCR amplification and DGGE procedures. The approximate number of populations
+
+38
+
+and their relative abundance are represented respectively by individual bands and band
+intensity. DGGE profiles were subjected to automated band detection to avoid potential
+biases associated with manual examination. Community fingerprints were analyzed as
+affected by plant growth, mungbean genotype, rhizosphere effect, and by comparing
+
+between bacterial and fungal communities through multivariate and diversity analyses.
+
+Community Shifts Across Plant Growth
+
+Initial inspection of bacterial DGGE profiles revealed relatively uniform patterns
+between flowering and physiological maturity samples (Figure 6A). The occurrence of
+dominant bands and dense array of faint bands among samples in both stages showed
+substantial resemblance.
+
+In order to extract more information from the DGGE profiles, two types of
+multivariate analysis were applied. Multivariate analysis is a technique that integrates
+different data from a given a sample, and infers relationships and interactions of factors
+(Andreote et al., 2009). Firstly, the clustering approach, which is based on correlation of
+densitometric curves, was used to demonstrate similarities in the data; the results of which
+are presented in the form of hierarchal structures (Gafan et al., 2005). Additionally,
+principal components analysis (PCA) was employed as ordination method that arranges
+entries along axes on the basis of species composition data. (Andreote et al., 2009). The
+technique generates a diagram where entries are spread according to their relatedness
+(Applied Maths, 2016b); and thus, aids in determining the main sources of variation
+
+observed between profiles (Wilbur et al., 2002).
+
+39
+
+Flowering Stage Physiological maturity
+A Bulk soil Rhizosphere Bulk soil Rhizosphere
+Plot A Plot 8 Plot A Plot B Plot A Plot B Plot A Plot 8
+CA B AB31 P3 P7 AG31 P3 7 AB31 P3 P7 AB31P3 —P7 PC A B ABB1 P3 P7 AB31 P32 P7 AB31 PI PT ABI1 PI PT
+
+{Br
+
+| Wu iF W GSRRsmeeeeres
+Hi
+
+ry
+" He it et et Ps
+heh
+Fl 2 FAFA FS FG FP FB FO FIO FAL FI P1 P2 P3. PA PS PG PY PB PO PIO PI P12
+B Flowering Stage Physiological maturity
+Bulk soil Rhiosphere Bulk soil Rhizosphere
+Plot A Plot 8 Plot A Plot 8 Plot A Plot 8 Plot A Plot
+PC A B ABS P3 P7 ABSI P3 P7 ABI P3 PY ABI P3 P7 PC A 6 ABSIP3 P7 ABSI PS P7 ABBIP3 P7 ABI PS P7
+Tape
+be
+i] -
+mo
+= a
+roves oo ee oe moked EP
+== 525 2. = i ae
+- — o> Goad oh ahr | — one (FO
+
+Fl FS Fa FS FGF? FB FO FIO FA FID PL P2 P3 Pa PS PG P7 PB PO PIO PII P12
+
+Figure 6. DGGE profiles of soil bacterial and fungal communities of mungbean. (A) DGGE
+band profiles of V6 to V8 hypervariable regions of bacterial 16S rDNA amplified from
+total genomic DNA extracted from bulk soil and rhizospheres of mungbean. The DGGE
+image represents a 50 to 70% denaturant gradient. (B) DGGE band profiles of fungal ITS1
+region amplified from total genomic DNA extracted from bulk soil and rhizospheres of
+mungbean. The DGGE image represents a 20 to 45% denaturant gradient. Numbered labels
+indicate sample name of excised bands for sequencing. Amplified 16S rDNA from E. coli
+and ITS1 region from F. verticillioides were used for positive control (PC) markers for
+bacterial and fungal profiles, respectively.
+
+40
+
+In comparison with initial inspection, clustering provided an estimate of the
+similarities, and therefore, differences between community fingerprints. These similarities
+were measured by the Dice coefficient based upon common and different bands. UPGMA
+analysis of combined data sets revealed that bacterial DGGE profiles were clustered based
+on plant growth stage (Figure 7A). Community fingerprints from pre-sowing, which were
+included as reference, were situated between the two groups although these were clustered
+with physiological maturity samples. DGGE profiles between flowering and physiological
+maturity stages have approximately 65% similarity. This observation indicates that there
+was a shift in bacterial community structure during plant growth. A closer examination
+through clustering of individual factors (Figure 8) revealed a distinct clustering between
+the two growth stages for bulk soil DGGE profiles (Figure 8C); the same can be observed
+for DGGE profiles from Plot A samples (Figure 8E). PCA of combined data sets for
+bacteria (Figure 10A) and of individual factors (Figure 11C to 11F) corroborates this
+finding. Generally, two groupings among the PCA plots can be ascertained and this is
+attributed to different sampling time.
+
+Fungal DGGE profiles were significantly different from those of bacteria; the
+occurrence of both dominant and faint bands were more variable among bulk and
+rhizosphere samples, between the two plant growth stages, and between replicates (Figure
+6B). Additionally, there appears to be more dominant populations particularly among
+physiological maturity community fingerprints. Clustering results (Figure 7B) provide
+estimation of how variable fungal DGGE profiles are over those of bacteria. Fungal DGGE
+
+profiles have a lower similarity of ~50% and 60% among flowering and physiological
+
+41
+
+maturity samples, respectively. Whereas, bacterial DGGE profiles (Figure 7A) have
+approximately 65% and 82% similarity for the two successive sampling events.
+
+Change in the community fingerprints during plant development were also
+observed for fungi although the clustering apart of DGGE profiles between the growth
+stages are not as cohesive compared to that of bacteria. The collection of physiological
+maturity profiles are located between those of flowering stage samples. There was a 50-
+65% similarity among profiles between the two growth stages. Dendrograms concentrated
+on soil environment (Figure 9C and 9D) showed more distinguishable clustering of DGGE
+profiles between the growth stages. For Plot A and Plot B dendrograms (Figure 9E and
+9F), the factor to which clustering can be attributed to was inconsistent. It appears that in
+Plot A, clustering is more influenced by type of soil sample while in Plot B, both growth
+stage and soil environment may be taken into account. PCA of total fungal (Figure 10B)
+and bulk soil and rhizosphere (Figure 12C and 12D) fingerprints show grouping of entries
+can be generally ascribed to growth stage although other subset plots do not project
+
+apparent groupings (Figure 12E and 12F).
+
+42
+
+BB B-PM.AGs1
+B-bu-8-PMP7
+BBLAPMPS
+B-BuAPM-PT
+Bove PMPs
+BBL APM.ARS1
+BRNE-PMABSI
+BRRBPMPT
+BRDA-PMPS.
+BRHA-PMPT
+B-RDAPMABII
+BRRBPMPS
+Pre-sovang (A-16S)
+Pre-sowing (8-16S)
+BRHA-FL-AGS1
+BRDAFLPS
+BRAFLPT
+BBE BLAST
+BBLBFLPS
+BBUAFLAGIT
+BBEAFLPT
+BBUBFLPT
+BBLAFLES
+BADE FLPS
+BARDBL?
+BRNBFL-ABIS
+
+FeRnLFL ABDI
+F-RMBFLPT
+F-BUASL-ABSI
+FeeuAFLS
+FeevAFLPT
+FeuBFLPS
+F-BuB-FLAS
+FeuerLe?
+Feu .PMPS
+
+1 reveemasst
+F-ouBPMPT
+F-BL-APMPS
+F-eVAPMABS
+F-BuAPMP7
+Pre-sowing (B-ITS).
+F-RRBPMARSH
+Pre-soving (MT).
+FRnBPMPS
+FRNAPMPS
+FRDAPILP?
+FRMBPMPT
+F-RNBFLPS
+FRNAPMABS
+PRRASL ABS
+F-RDAFLPS
+F-RDAFLPT
+
+Figure 7. Clustering analyses for combined data sets of bacterial 16S rDNA (A) and fungal
+ITS (B) DGGE profiles. Dendrograms represent the percent similarity of banding patterns
+based on unweighted pair group method with arithmethic mean (UPGMA) cluster analysis.
+Estimates of the reproducibility of each subcluster are represented by cophenetic
+correlations shown at the nodes of the dendrogram. The sample IDs are shown to the right
+of the DGGE image: B, bacteria; F, fungi; Bu, bulk soil; Rh, rhizosphere; A, plot A; B,
+plot B; FL, flowering; PM, physiological maturity; A831, Acc A831; P3, Pag-asa 3; P7,
+Pag-asa 7.
+
+43
+
+A. Mungbean flowering B. Mungbean physiological maturity
+70 80 90 100 go. 84 88 92 96 100
+herhaener-nlenchnabnenboperbann!
+B-RH-A-FL- 1B-Bu-B-PM-AB31
+Ban,
+
+BRHAFL
+1 B-Bu-B-FL.AGS1
+1 B-Bu-B-FLPS
+ee i
+| BBUAFLPT =|BRDBPMABD!
+| B-BUBFLPT BADE PPT
+m1 B-BUA-FL-PS B-RHAPM-PS
+B-RHEFL-ASSI | B.Rh-APM.P7
+Pre-sowing (A-16S) B-RH-A-PM-AB3I
+Pre-sowing (8-168) BRHB-PMPS
+BARN BFLPS Pre-sowing (A-16S)
+BRHBFLPT Pre-sowing (B-16S)
+D. Rhizosphere soil
+100 70 80 90 100
+Peer sUUD\- SUD OOOO VSUUTODURS SURE TEES
+
+=| 8-Bu-B-PM-AB31
+| 8-8u-B-PMPT
+BBUAPMP3
+B-Bu-APMP7
+
+B-Rh-B-PM.AB31
+Te.RhB-PMP7
+
+Boue-PMPS 04 e-RhA-PM-ABSI
+=== B-BU-APMABSI =18-Rh-B-PMPS
+Presowing (A168) Pre-sowng (A-165)
+Pre-sowing (B-16S) Pre-sowing (B-16S)
+=| 0481-0031 eRnorira
+BBUBFLPa BRNGFLPT
+5.bu “A-FL-ABS1 B-RDA-FL-AB31
+He.5u.a FL-P7 B-RhA-FL-P3
+| B-Bu-B-FL-P7 B-RH-A-FL-P7
+V.Bu-AFL-PS B-RRB-FLA31
+E. PlotA F, Plot B
+70 80 90 100 LC) 80 90 100
+30 90 Se EunNaDeR SER
+J 8-Rh-A-PM-P3 ' B-Bu-B-PM-A831
+
+18-Rh-A-PM-P7
+109 9 -Rh-A-PM-ABBL
+1Pre-sowing (A-165)
+Pre-sowing (B-165)
+B-Bu-A-PM-P3
+
+B-Bu-A-PM-P7 Pre- sowing (A-168)
+Bu-A-PM-AB31 Pre-sowing (8-165)
+b-Bu-A-FLABSL BUR FL ARS
+
+B.Bu-B-FL-PS
+8-Bu-B-FL.P7
+B-RHBFLPS
+B-RNB-FLP7
+O-RN-B-FL.AS31
+
+te Bu-A-FL-P7
+1B-Bu-A-FL-P3
+B-Rh-A-FL-AB31
+
+Figure 8. Clustering analyses of bacterial 16S rDNA DGGE profiles based on individual
+factors of soil sampling time, soil environment and source plot. Scale denotes percent
+similarity of banding patterns and numbers at the nodes of dendrograms represent
+
+cophenetic correlations.
+
+44
+
+A. Mungbean flowering B. Mungbean physiological maturity
+60, 70 80 90 100 60. 70 80 90 100
+
+FRDBFLABS
+
+Pre-sowing (ATS)
+Pre-sowmng (BTS),
+FARDAFLAGSI
+F-RDAFLPS
+
+C. Bulk soil
+70
+
+F.Bu-8-PMA8a1
+F.Bu-BPMPT
+FBUAPMPS
+F-BU-APMAGST
+F.BuAPMPT
+Pre-sowng (ATS)
+Pre-sowing (B:TS).
+
+100 60 70 80 90 100
+F-Bu-APM-AB31 Pre-sowing (BATS)
+F-Bu-APMPT F-RDB-PMAS
+F-Bu-APMPS Pre-sowing (ATS),
+Vp-Bu.AFL-A8St F-RB-PMPS
+IF-BUAFLPS F-BUB-PMABSI
+SSS F-BU-AFL-PT F-BUB-PMP7
+Pre-sowing (ATS),
+Pre-sowing (B-ITS).
+F-RAPMPS
+F-RRAPMP?
+F-RhAPM-ABSI
+FRDAFLABS
+FARRAFLPS
+F-RAFLPT
+
+F-RNB-FLPT
+FRNBFLPS
+
+Figure 9. Clustering analyses of fungal ITS DGGE profiles based on individual factors of
+soil sampling time, soil environment and source plot. Scale denotes percent similarity of
+banding patterns and numbers at the nodes of dendrograms represent cophenetic
+correlations.
+
+4s
+
+A B
+F7@ Fle Z
+F3 \
+3004 Pie sos F90. ~
+0
+an Re =
+2 Foe) Fl P2
+2° seoa aft
+nepal F4 Be FooFi2 <P3, FB |
+F5 oe F6 | oq Ph ee? Fae, i
+vA Pa P3 ©, By Pa de Ps.
+° alien ong Plo} GF
+PSA °F: © Flb 8
+Pa grr Ps Seoa if opi
+104 11 PF 2008
+©s19 PS “P12 p10 ba
+aeoa P10 1208 1005
+al ° Seod
+° °
+Py x 120s
+eos 1208 2005
+
+Figure 10. Principal component analysis (PCA) of all combined data sets for bacterial (A)
+and for fungal (B) PCR-DGGE profiles. Entries are labeled according to order in gel lanes
+based on Figure 6; flowering and physiological maturity samples are represented by F and
+P, respectively; PSA and PSB are pre-sowing samples from the replicate plots.
+
+46
+
+A. Mungbean flowering B. Mungbean physiological maturity
+
+E. PlotA F, Plot B
+
+Figure 11. Principal components analysis (PCA) of bacterial 16S community PCR-DGGE
+profiles according to plant growth stage (A,B), soil environment (C,D) and source plot
+GF).
+
+47
+
+A. Mungbean flowering B. Mungbean physiological maturity
+
+ Pag-asa 3
+Pag-asa 7
+mPsB
+PSA
+
+Figure 12. Principal components analysis (PCA) of fungal ITS1 community PCR-DGGE
+profiles according to plant growth stage (A, B), soil environment (C,D) and source plot
+GF).
+
+48
+
+Genotype Effect
+
+The different plant genotypes based on drought tolerance does not appear to have
+apparent effects on soil bacterial community compositions. Since it has already been
+determined that bulk soil DGGE profiles cluster separately from those of rhizosphere,
+inspection was narrowed down on rhizosphere DGGE profiles. It was observed that
+community fingerprints of same genotypes from replicate plots do not cluster together
+(Figure 8D). Higher similarities can be observed among different genotypes from the same
+plot in comparison to same genotypes from different plots. This was consistent in both
+flowering and physiological maturity stages. Furthermore, PCA did not exhibit close
+relatedness between entries of the same plant genotype. It remains that distribution was
+more affected by growth stage while grouping within DGGE profiles from the same
+sampling event was attributed to source plot (Figure 11D). Observations from bacterial
+clustering were similar to rhizosphere fungal DGGE profiles (Figure 9D). PCA for fungal
+rhizosphere entries also did not display close distribution between entries of the same plant
+
+genotype (Figure 12D).
+
+Rhizosphere Effect
+
+Dendrogram for each growth stage showed that rhizosphere bacterial DGGE
+profiles tend to group separately from the corresponding bulk soil profiles (Figure 8A and
+8B). Although flowering stage samples exhibited considerable range in variation (0 to
+35%) among rhizosphere profiles, cluster of bulk soil samples was intact with a minimum
+of ~84% similarity. Physiological maturity profiles yielded complete separation between
+
+the two soil environments with a difference of almost 20%. Additionally, PCA (Figures
+
+49
+
+11A and 11B) expressed consistent findings. These observations suggest that there were
+distinguishable rhizosphere effects on the bacterial community compositions.
+
+DGGE profiles among fungal rhizosphere communities did not distinctly cluster
+together in both growth stages (Figures 9A and 9B). Nevertheless, bulk soil DGGE profiles
+were still observed to generally collect together. Differences between bulk soil and
+rhizosphere profiles ranged from 30-46% at flowering stage and 33-40% at physiological
+maturity. The grouping of fungal bulk soil communities was only clearly observed in subset
+PCA for flowering stage (Figure 12A). Hence, it can be suggested that there was still some
+rhizosphere effect in fungal communities even though it is not as significant in comparison
+to that in bacterial communities.
+
+These findings through multivariate analyses support that there were differences in
+microbial populations between independent soil and rhizosphere soil. However, these types
+of analysis provide more of the general picture of relatedness among soil microbial profiles.
+Typically, rhizosphere effect is recognized as enrichments of certain bacterial or fungal
+members in the root area compared to surrounding bulk soil. While it is possible to identify
+bands which are not present or faint in bulk soils but became present or prominent in
+corresponding rhizospheres, simple visual inspection is not sufficient and has potential
+biases. Correspondingly, rhizosphere effect would also be further explored in terms of
+
+microbial abundance by means of diversity index.
+
+50
+
+Bacterial and Fungal Diversity Analysis
+
+The Shannon (H’) index was used for the estimation of community diversity. In
+ecological studies, it is one of the commonly applied compound diversity measures that
+inherently contains richness and evenness components (Morris et al., 2014). Typically, H’
+values range between 1.5 and 3.5 (Margalef, 1972) where a greater H’ value implies greater
+species diversity. H’ was calculated using densitometric curve data from band profiles and
+mean values according to plant growth, genotype, soil environment and source plot were
+obtained.
+
+Figure 13 shows that there was no significant differences between the H’ computed
+for bulk and rhizosphere samples although results were generally slightly lower for the
+latter. This is true for nearly all mean diversity indices obtained among components of the
+study. The exemption for this survey was only observed when the sampling time was taken
+into consideration; there was a marginally higher H’ for both bacterial and fungal
+rhizosphere communities at physiological maturity (Figure 13C and 13D) in comparison
+to corresponding mean H’ in bulk soil. Moreover, the mean diversity of fungi in
+rhizosphere samples at physiological maturity (3.0003) was notably higher to that of
+flowering stage (2.0992). Mungbean genotypes (Figures 13E and 13F) and replicate plots
+(Figures 13G and 13H) also yielded unremarkable differences in diversity.
+
+Between microbial groups, fungal diversity was observed to be fairly higher than
+bacteria in both bulk and rhizosphere soils. Mean diversity of fungi in rhizosphere soil was
+particularly higher than that of bacteria (2.3036) at physiological maturity. The higher
+standard deviation among mean H’ of fungal rhizosphere communities give the indication
+
+that fungal diversity appears to be more dynamic than bacterial diversity.
+
+A 320
+
+280
+240
+
+=
+
+2.00
+1.60
+120
+o80
+
+0.40
+0.00
+
+fo)
+
+3.20
+2.80
+2.40
+2.00
+1.60
+1.20
+0.80
+0.40
+0.00
+
+Shannon Index (H')
+
+3.20
+280
+2.40
+2.00
+1.60
+1.20
+0.80
+0.40
+0.00
+
+Shannon Index (H)
+
+o
+
+3.20
+2.80
+2.40
+2.00
+1.60
+120
+080
+040
+0.00
+
+Shannon Index (H’)
+
+Bacteria
+
+Bulk
+
+| I
+22141 a 2.3036
+
+Bulk
+
+1 Flowering
+
+Bulk
+Acc 831
+
+Bulk
+mPlot A
+
+Rhizosphere
+
+Rhizosphere
+
+Physiological maturity
+
+pasin 2.4411 23471 2.2423
+
+Rhizosphere
+
+Pag-asa3 /Pag-asa 7
+
+te) ,
+
+Rhizosphere
+
+= Plot B
+
+B
+
+0
+
+Shannon Index (H)
+
+n
+
+Shannon Index (H)
+
+Et
+
+Shannon index (H)
+
+3.60
+3.20
+280
+240
+2.00
+1.60
+1.20
+0.80
+0.40
+0.00
+
+3.60
+3.20
+2.80
+240
+2.00
+1.60
+120
+0.80
+0.40
+0.00
+
+3.60
+3.20
+2.80
+240
+2.00
+1.60
+1.20
+080
+0.40
+0.00
+
+3.60
+3.20
+280
+2.40
+2.00
+1.60
+1.20
+0.80
+040
+0.00
+
+Fungi
+
+Bulk
+
+Ie sgl
+- e EI e
+
+Bulk
+
+1B Flowering
+
+she I |
+ead 72008 25193 2.4617
+
+Bulk
+
+Rhizosphere
+
+Rhizosphere
+
+Physiological maturity
+
+Rhizosphere
+
+WAcc831 mw Pag-asa3  Pag-asa7
+
+Bulk
+mPlot A
+
+Rhizosphere
+
+mw Plot B
+
+51
+
+Figure 13. Mean Shannon diversity index of soil bacterial and fungal communities obtained
+for all combined data sets (A,B), and for separate factors of plant growth stage (C,D),
+mungbean genotype (E.F), and source plot (G,H).
+
+52
+
+Significant Contributors to Variation in Soil Microbial Diversity
+
+Changes in the structural diversity of soil microbial communities as a function of
+plant growth stage, genotype, and soil environment were assessed using mungbean grown
+in field conditions. As previously discussed, multivariate analyses have provided
+indications as to which among these factors had impact on community structures. The next
+approach was to corroborate these observations with statistical analysis of diversity.
+
+F-test using ANOVA was applied to assess if measured diversity among bacterial
+and fungal fingerprints (using data from Appendix E) were significantly different from
+each other and therefore, to recognize what were the factors that significantly contributed
+to cause these variations (Table 3). Independently, plant growth stage and source plot were
+found to significantly contribute variations in bacterial diversity. More so, the interaction
+between growth stage and soil environment also profoundly affects diversity (P<0.05).
+Plant growth stage and soil environment were also found to significantly affect fungal
+diversity, both as independent and interacting factors (Table 3). Bacterial and fungal
+diversity in bulk soil lowers across plant development from flowering to physiological
+
+maturity, whereas it increases in rhizosphere (Figure 14).
+
+53
+
+Table 3. Significant contributors to variation in Shannon diversity of bacterial and fungal
+DGGE profiles determined through F-test using ANOVA.
+
+Source P-value > F-value
+Bacteria Fungi
+Source plot 0.0141* 0.3837
+Mungbean genotype 0.8118 0.5536
+Soil environment 0.2626 —-0.0378°"
+Mungbean genotype* Soil environment 0.6764 0.94
+Growth stage 0.0219* — 0.0034°°
+Mungbean genotype*Growth stage 0.6816 0.7744
+Soil environment*Growth stage 0.0042** 0.0023"
+Mungbean genotype*Soil environment*Growth stage 0.5919 0.8319
+*Significant at 5%
+**Highly significant at 5%
+A Bacteria B Fungi
+
+2871033333
+
+3.0003
+2.836716667
+‘09915
+
+2.59565
+
+ree
+
+22328: 2.21405
+
+Flowering Physiological Maturity Flowering Physiological Maturity
+
+—e8ulk Soil ©—eRizosphere @—esulk Sol = © —eRhizosphere
+
+Figure 14. Interaction between plant growth stage and soil environment affecting mean
+Shannon diversity index of bacterial and fungal communities.
+
+Soil Microbial Communities Shifts under Uncontrolled Field Conditions
+
+This study investigated the soil microbial communities associated with mungbean
+to provide baseline information on structural diversity and community shifts under natural
+
+field conditions. In the interpretation of results, it must be considered that only predominant
+
+54
+
+microorganisms were represented by bands resolved in DGGE; the method is able to detect
+only populations that are greater than 1% of the total target pool (Muyzer et al., 1993).
+Furthermore, band intensities should not be taken as something that can be directly
+translated to a numerical assessment as it is simply a reflection of the relative density of
+different PCR products (Chandler et al., 1997) and therefore, diversity measured from
+fingerprints is just an estimation. Ultimately, observations gathered from this study are
+simply an initial characterization of more dominant populations rather than a
+comprehensive analysis of entire bacterial and fungal communities in mungbean-grown
+
+soil.
+
+Bacterial Communities
+
+Integration of multivariate and diversity analyses revealed that community shifts
+occurred in rhizosphere bacterial populations across mungbean growth. Evident temporal
+shifts have been previously reported for all plant species in a field study using pea, wheat
+and sugar beet where bacterial rhizosphere communities were observed across five
+developmental stages (Houlden et al., 2008). ). Seasonal changes were also cited in
+rhizosphere bacterial communities of field-grown strawberry, oilseed rape, and potato
+plants (Smalla ef a/., 2001). In another legume, both pot and field experiments using
+soybean reported the same findings (Xu et al., 2009). While it was suggested that plant
+growth stage was secondary to soil type in shaping the bacterial communities in soybean
+rhizosphere (Xu et al., 2009), current analyses in mungbean rhizosphere present growth
+stage emerging as the major factor. The shift in microbial communities across plant
+
+developmental stages may be attributed to changes in the quality and quantity of root
+
+55
+
+exudates. Although these were not investigated in the present study, several publications
+have supported that plant development significantly affects root exudates (Yang and
+Crowley, 2000; Duinevald et al., 2001; Garbeva et al., 2004; Swinnen et al., 1994), which
+in turn influences microbial community structures.
+
+It was expected that bulk soil communities would be relatively stable across plant
+growth stages but this was not the case. Bulk soil even exhibited greater difference in
+bacterial diversity between flowering and physiological maturity stages in comparison to
+rhizosphere. Inceoglu et al. (2010) similarly cited community changes over time in bulk
+soil in a two-field experiment using potato while Houlden et al. (2008) reported otherwise.
+Soil microbial communities may be affected by a number of factors other than root
+exudates. Soil characteristics, environmental conditions and farming practices (Tian et al.,
+2017; Zhao et al., 2016; Lo, 2010) may jointly contribute to their change through time.
+Considering the extent of each plot in the experiment (17x17 m), soil sampling area was
+largely susceptible to various environmental conditions such as irradiation, temperature
+fluctuations, wind and moisture. Furthermore, it is noted that mungbean was grown during
+the transition from dry to rainy season.
+
+It is recognized that root exudates differ not only according to plant growth stage
+but also according to plant species and cultivar (Rovira, 1959; Rengel, 2002; Schweitzer
+et al., 2008; Micallef et al., 2009a). Study of Arabidopsis rhizosphere has demonstrated
+that the rate and mechanism at which bacterial community succession progresses is
+significantly dependent on plant genotype (Micallef et al., 2009b) whereas, it was
+suggested that a small portion of total rhizosphere bacteria were influenced by soybean
+
+genotype (Xu et al., 2008). However, there was no apparent genotype effect observed
+
+56
+
+among the three mungbean genotypes based on multivariate analyses. The differences in
+performance among the cultivars based on their tolerance to drought may considerably
+have been pronounced if these were subjected to the environmental stress. In turn, these
+phenotype variations under drought conditions may potentially influence rhizosphere
+microbiota to some degree. Such was the case in a recent study using four distinct rice
+genotypes for drought-induced changes in soil bacterial as well as fungal and archaeal
+communities. Santos-Medellin et al. (2017) reported that rice genotype influences
+microbial composition in the rhizosphere; however, these effects were relatively minor and
+overall impacts of drought stress on microbial compositions were consistent for the
+different rice cultivars. Meanwhile, it is not firmly concluded that there was absolutely no
+genotype effect. For example, a band (B2) specific to Pag-asa 7 rhizosphere was detected
+at flowering stage (Table 4, Figure 6A); while it may be an indication of selection by
+genotype, it wasn’t considered as definite since it was only observed from plot A replicate.
+Furthermore, the technical limitation of DGGE of not being able to detect less abundant
+(<1%) but potentially important members of the community may have hindered better
+resolution of results. Ultimately, it is suggested that the influence of mungbean genotype
+on bacterial community composition deserves a more intensive examination to obtain
+better resolution on the matter.
+
+At this point, it is evident that the rhizosphere is an area of complex interactions
+between plant roots and soil that affects microorganism-driven activities (Berg and Smalla,
+2009). The different compositions of root exudates are expected to elicit different responses
+from bacteria, and therefore, there is selection of rhizosphere communities (Garbeva et al.,
+
+2004). Accordingly, the rhizosphere effect describes the phenomenon that the biomass and
+
+57
+
+activity of microorganisms are enhanced as a result of root-released materials in
+comparison with bulk soil (Raajmakers et al., 2009). Gomes et al. (2003) further describes
+the phenomenon as a reduced diversity and an increased relative abundance of a few
+populations.
+
+Rhizosphere effect was detected in the present study; however, the degree as to how
+significant this effect was cannot be stated but at most can be estimated by percentage
+difference between bulk and rhizosphere fingerprints. Diversity analyses demonstrated that
+there was a significant relationship between growth stage and soil environment. Bulk soil
+bacterial diversity decreased as mungbean matured whereas rhizobacterial diversity
+exhibited a slight increase. Even though the rhizosphere had lower diversity than bulk soil
+at flowering stage and for total data sets, it does not lead to the inference that there was no
+thizosphere effect. Inceoglu et al. (2010) reported that the influence of roots on bacterial
+populations is still deemed present in such instances although the effect may be small or
+transient. Furthermore, the presence of bands that were detected to be weak at bulk soil but
+became intense at rhizosphere samples, and vice versa, provides another indication of root
+influence. Previously mentioned field experiments by Smalla et al. (2001) and Inceoglu et
+
+al. (2010) also reported rhizosphere effects.
+
+Fungal Communities
+
+As a response to root exudations, fungal communities in the rhizosphere also
+underwent changes, albeit not as distinct as that of bacteria, during mungbean growth.
+Genotype effect was also not discernible which may be ascribed to lack of manifestation
+
+of differences of the cultivars based on drought tolerance under natural field conditions.
+
+58
+
+As for rhizosphere effect, it was also detected for fungal communities although less
+apparent based on multivariate analyses. Fundamentally, plant growth and soil
+environment significantly affects fungal diversity. These observations were parallel with
+findings of both pot and field experiments using three soybean genotypes regarding growth
+stage and genotype effect (Wang et al., 2009), and a field experiment using 2 maize
+cultivars with respect to the three factors investigated (Gomes et al., 2003).
+
+Fungal communities exhibited greater increase in relative abundance in rhizosphere
+from flowering to physiological maturity compared to rhizobacteria. In contrast, Wang et
+al. (2009) suggested more complex fungal community in soybean early reproductive stages
+than that in later stages due to decreasing trend in DGGE band count from early to late
+growth stages. Taking combined data sets into account, lower rhizosphere fungal diversity
+compared to bulk soil was also observed similar to bacteria. Finally, bulk soil and
+rhizosphere fungal communities were found to have high heterogeneity between replicates,
+and appears to be more dynamic in comparison to bacterial communities. It is considered
+that under field conditions, the experimental plots were exposed to intermittent rain and
+dry intervals (Appendix F) from near flowering to physiological maturity stage. This link
+may be supported by a microcosm study by Kaisermann et al. (2014), which tested the
+impact of small water content fluctuations in non-extreme conditions on bacterial and
+fungal community composition. They reported that there was no robust change in bacterial
+community composition, molecular microbial biomass, and fungal:bacterial ratio
+associated with soil water content change. In contrast, water fluctuation induced a strong
+change in the fungal community structure and rapidly alternated between states
+
+corresponding to the high and low levels of soil moisture content. Referring to previous
+
+59
+
+publications, they offered that the rapid shift could be explained by rapid hyphal tumover
+and the ability of some taxa to grow even in drying periods. As such, high plasticity is
+conferred to fungal communities. Moreover, the changes in community composition did
+not affect metabolic performance as supported by the idea that it is maintained by
+
+functional redundancy in non-extreme moisture conditions (Kaisserman et al., 2014).
+
+Sequence Analysis of DGGE Bands
+
+One of the advantages of DGGE analysis is the possibility of identifying members
+of the community by extracting bands from the gels and performing sequence analysis on
+re-amplified DNA. Tentative phylogenetic affiliations of six 16S rDNA gene and 22 ITS
+partial sequences are presented in Table 4.
+
+Bacterial DGGE band Bl, which became discernible among bulk soil and
+rhizosphere samples at flowering stage but appears to have diminished at physiological
+maturity, showed 96% similarity to Bacillus megaterium. On the other hand, the band that
+became prominent at physiological maturity (band B6) was recognized as a Bacillus sp.
+with a 73% similarity. Bands B3 and B6 from separate developmental stage sampling were
+both found to be related to Arthrobacter sp. with 98% and 78% similarity, respectively.
+Additionally, it was also observed to be dominant in both bulk and rhizosphere soils. One
+band was found specific to Pag-asa 7 at flowering stage in all replicate DGGE gels; band
+B2 was found related to Pseudomonas sp. with 97% similarity. This observation is
+indicative of genotype effect; however, the lack of consistency in the two replicates make
+it inconclusive. Band B4, which was distinctly present from pre-sowing to physiological
+
+maturity, had the closest match to an uncultured Rhodocyclaceae clone (66%). A neighbor-
+
+60
+
+joining phylogenetic tree was constructed using DGGE band and GenBank sequences with
+
+higher percent similarities to show the relationship among partial 16S rDNA sequences
+
+(Figure 15A).
+
+Table 4. Presumptive phylogenetic affiliations of bacteria and fungi present in bulk soil
+and mungbean rhizosphere recovered from DGGE bands.
+
+DGGE band ‘Closest relative? E-value % Similarity Phylogenetic assignment ‘accession mumber
+Bacterial 165
+sDNA DGGE
+Bi Bacillus megaterium strain MER_2 0 96%  Bacilli - Bacillales ‘KT719586.1
+B2 ——_Uncultured Pseudomonas sp. clone 3.14 ° 97%  Gammaproteobacteria - Pseudomonadales _DQ144425.1
+B3° ——_Arthrobacter sp. strain JWp9 0 98% Actinobacteria - Micrococcales KUS97206.1
+Uncultured Rhodocyclaceae bacterium clone
+B4 —- FSOHPNUO7UUZF 1.00E-48 66% —_Betaproteobacteria - Rhodocyclales 11Q086737.1
+BS Bacillus sp. R21 1,00E-92 73% — Bacilli- Bacillales KJ499789.1
+Bob —_Arthrobacter sp. strain TWp9 4.00E-105 78% Actinobacteria - Micrococcales KUS97206.1
+‘Fungal ITS
+DGGE
+Fi —_Uncultured fungus clone 039451958 BOOE-156 95% =~ F5386905.1
+F2 —_Uncultured fungus clone 7 T00E-146 (99% =~ 3X343327.1
+F3_Uncultured soil fungus clone 366 _0090 4006-133 96% 1DQ980588.1
+F4 —_Laccarta laccata vas. pallidifolta voucher FF-52 400E-102 96% Basidiomycota- Agaticales ‘KFO07942.1
+F5 —_Aureobasidtum sp. 3 BRO-2013 7.00E-141 98% Ascomycota - Dothideales KF367567.1
+F6 Uncultured fungus clone 036427186, 2.00E-96 8% - 7x3813021
+F7 —_Uncultured Psathyrella clone B17 1.00E-154 95% | Basidiomycota- Agaricales 3X135080.1
+FB ‘Uncultured fungus clone 036A19053 ‘S.00E-107 9% - (3X373320.1
+F9® —Uncultured Dic)mella clone 191_K2_K8_K10_ Kilov 3.00E-28 73% Ascomycota - Pleosporales KY430455.1
+Fiot Uncultured Plectosphaerella clone TVD_ITS1F-ITS4_66 ‘8.00E-125 ‘98% — Ascomycota - Glomerellales KF493966.1
+FUL ‘Uncultured Athelia clone B10-1 ‘S.00E-158 98% — Basidiomycota - Corticiales FM866386.1
+Fi2 ‘Uncultured fungus clone 038442871 2.00E-95 9% - JX3S9671.1
+F13 —_Uncultured fungus clone ZSY201307-5 SOUE-117 93% = - KX515726.1
+Fla Hannaella oryzae $.00E-107 96%  Basidiomycota - Tremellales ‘KUI82505.1
+FIS — Fusartum delphinotdes isolate AmEc3 4.00E-123 96% Ascomycota - Hypocreales KJ690090.1
+FI6 Alternaria sp. Z39-6B 3.00E-134 97% — Ascomycota - Pleosporales HM754629.1
+ria ‘Uncultured fungus clone Singleton_(216-1634_3172) 6.00E-96 N%  - F3780492.1
+F18 —_Payronellaea glomerata strain D-1-6 1.00E-57 76% © Ascomycota - Pleosporales 12233321
+FIS® —_Uncultured Diehmella clone PPO 100-4 6.00E-121 97% Ascomycota -Pleosporales KU245689.1
+F20 ‘Uncultured eukaryote clone 163 ‘2.00E-26 9% - ‘KY690339.1
+Fai Uncultured fungus clone Unisequence#16-3745_0746 4.00E-113 9% - GQ514351.1
+£224 _Uncultured Peciosphoeella clone TVD TISIF-TTS4 6§ 4006-103 91% Ascomycota Glomerliles KF 493966 1.
+
+‘2 First hit result from GenBank by BLASTN program.
+bd Bands from separate sampling time (mungbean flowering and physiological maturity) returned similar phylogenetic afiliations.
+
+DGGE band B3
+
+100
+Arthrobacter sp. strain JWp9
+
+Methanobacterium oryzae strain FPI
+
+—
+0.050
+
+B 39) DGGE band F2
+94] Uncultured fungus clone F7
+DGGE band FS
+©" Aureobasidlum sp. 3 BRO-2013
+$8 /— DGGE band F3
+‘Uncultured soll fungus clone 366 0090
+[— DGGE band F13
+71" Uncultured fungus clone ZSY201307-5
+OGGE band Fas
+Fusarium delphinoldes \solate AmEc3
+DGGE band F17
+77 Uncultured fungus clone Singleton (216-1634 3172)
+97) DGGE band F16
+Alternaria sp. 219-68
+L_Dcce band Fis
+#91 Uncultured Didymella clone PPO 100-4
+[—— DGGE band F20
+
+94) DGGE band Fa
+Laccaria laceata var. pallidifolia
+
+*L) DGGE band F14
+
+9" Hannaella oryzae
+DGGE band F12
+92 'Uncultured fungus clone 038442871
+DGGE bend FB
+w2l Uncultured fungus clone 036419053.
+DGGE band F11
+
+$9) DGGE band F1
+Uncultured fungus clone 039A51958
+
+@|_¢ DGGE band F7
+
+95! Uncultured Psathyrella clone 817
+DGGE band F10
+DGGE bend F21
+DGGE band F22
+Uncultured Plectosphaerella clone
+Uncultured fungus clone Unisequence 16-3745 0746
+Uncultured Athella
+Uncultured eukaryote clone 163,
+‘#1 Corallochytrium limacisporum 142528.1,
+
+A OGGE band B1
+99 a
+x, Bacilli
+7 Bacillus megaterlum strain MER 2
+DGGE band B2
+\___{ A- Proteobacteria
+Uncultured Pseudomonas sp. clone 3.14
+
+| Actinobacteria
+
+Ascomycota
+
+Basidiomycota
+
+Ascomycota
+
+} Basidiomycota
+
+61
+
+Figure 15. Neighbor-joining tree showing the phylogenetic relationship between partial
+sequences of 16S rDNA (A) and ITS (B) from DGGE bands, and retrieved sequences from
+GenBank database. The major groups of putative relatives are indicated along the right side
+
+of the figure. Bootstrap values (n = 1,000) are indicated at the nodes.
+
+62
+
+Gram-positive bacteria belonging to the Bacilli and Actinobacteria groups were
+prominent populations in both bulk soil and rhizosphere of mungbean. As with a related
+study using potato, Bacillus megaterium was found to be dominant in both bulk soil and
+rhizospheres (Smalla et al., 2001). Bacillus species were also identified as dominant
+populations in the rhizospheres of chrysanthemum (Duineveld et al., 2001), barley
+(Normander and Prosser, 2000), and of grass (Felske et al., 1998). Arthrobacter species
+have also been reported to occur significantly in bulk soil of potato (Smalla et al., 2001),
+and in the rhizosphere DNA of chrysanthemum (Duineveld et al., 2001), maize grown in
+tropical soil (Gomes et al., 2001), Medicago sativa and Chenopodium album (Schwieger
+and Tebbe, 2000). These findings add to the growing evidence that gram-positive bacteria
+are profoundly more dominant in the rhizosphere than previously supposed (Smalla et al.,
+2001).
+
+In comparison to DGGE profiles of bacteria, there are notably more dominant bands
+of varying electrophoretic mobility in the community fingerprints of fungi (Figure 6B).
+Half of the ITS sequences from flowering stage bands (F1 to F10) returned uncultured
+clones as closest match. Band F7 from bulk soil was 95% similar to an uncultured
+Psathyrella clone. On the other hand, bands F4, F5, F9 and F10 from rhizosphere were
+assigned as Laccaria laccata var. pallidifolia (96%), Aureobasidium sp. (98%), uncultured
+Didymella clone (73%) and uncultured Plectosphaerella clone (98%), respectively.
+Several of the remaining bands from physiological maturity (F11 through F22) were also
+found to match uncultured clones with similarities ranging from 91 to 97%. The
+observation of these uncultured fungi exemplifies the presence of soil microbiota that can
+
+only be explored through cultivation-independent methods such as DGGE. Distinct bands
+
+63
+
+from the rhizosphere were recognized to be related to uncultured Athelia clone (F11, 98%)
+and Hannaellla oryzae (F14, 96%). Unfortunately, the presence of these bands in replicate
+plots were inconsistent and so it cannot be affirmed that these were dominant fungal
+populations in mungbean rhizosphere. Other phylogenetic affiliations that were associated
+to bands from rhizosphere and bulk soils include Fusarium delphinoides (F15, 96%),
+Alternaria sp. (F16, 97%), Peyronellaea glomerata (F18, 76%), and the uncultured clones
+Didymella (F19, 97%) and Plectrosphaerella (F22, 91%). Among the recognized fungal
+identities, the ascomycetes Didymella (Order Pleosporales) and Plectosphaerella (Order
+Glomerellales) were recovered from both mungbean growth stages.
+
+The relationship between DGGE bands and GenBank sequences are presented in
+Figure 15B. Although 97% is the typical minimum level of sequence similarity for
+comparative analysis of not just ITS regions (O’Brien et al., 2005) but also whole and
+partial 16S rRNA sequences (Konstantinidis et al., 2006), at least 90% were still included
+for examining phylogeny since E-values were considerably high. It is notable that an
+uncultured eukaryote clone clustered with the outgroup Corallochytrium limacisporum,
+which has been previously used for the same purpose in AMF communities in legumes
+(Scheublin et al., 2004). Corallochytrium is a marine protist that possesses molecular
+evidence of fungal signatures (i.e. alpha-aminoadipate reductase) and has been essential
+for understanding the evolutionary origin of animals and fungi. Moreover, the eukaryote
+clone (KY690339.1) from GenBank was detected from benthic sediments. It may be
+reckoned the DNA amplified by ITSIf and ITS2 had portions of conserved fungal
+sequences but may potentially be a eukaryote other than fungi. Essentially, dominant
+
+members found in soil fungal communities of mungbean were found to belong to
+
+64
+
+Ascomycota and Basidiomycota. Members from the two fungal divisions have also been
+found to be largely present in rhizospheres of maize (Gomes et al., 2003) and in soybean
+where the ascomycete Plectosphaerella was also detected (Wang et al., 2009).
+
+For the present study, the identification of significant microbial groups associated
+with mungbean-grown soil is at its most rudimentary level. The molecular community
+fingerprints obtained through PCR-DGGE represent major populations in the soil and the
+less abundant but potentially valuable members are left undetected. The dense frequency
+of bands in bacterial and fungal DGGE profiles, as well as the erratic patterns observed in
+the latter, illustrate the complexity of highly diverse microbial communities in bulk soil
+
+and rhizosphere of mungbean.
+
+CHAPTER 5
+
+SUMMARY AND CONCLUSION
+
+PCR-DGGE was used to gain insight on the structural diversity of bacterial and
+fungal communities in bulk and rhizosphere soils of three mungbean genotypes cultivated
+in natural field conditions. The method, in combination with multivariate and diversity
+analyses, was able to reveal an overview of community structure and its dynamics.
+Bacterial community changes were primarily influenced by mungbean growth. Moreover,
+the community composition also considerably differed between bulk and rhizosphere soils.
+Mungbean genotype did not appear to have significant selection among the predominant
+populations that are within detection limits of DGGE. Hence, the effect of mungbean
+genotype on less abundant or specific microorganisms under appropriate experimental
+conditions deserve further investigation. Fungal communities were generally influenced by
+the given factors in the same manner although plant growth and rhizosphere effects were
+not as explicit in comparison to bacterial communities. Between the two microbial groups,
+the fungi had more heterogeneity in community profiles and were more dynamic under
+uncontrolled environmental field conditions.
+
+Likewise, PCR-DGGE was able to provide an approximation of microbial
+diversity. The trend in both bacterial and fungal diversity was that it decreased in bulk soil
+while it increased in rhizosphere as the plant matured. Nevertheless, bacterial and fungal
+diversity between bulk and rhizosphere soils were generally not significantly different
+
+except for fungal diversity in the rhizosphere when only growth stage is considered
+
+66
+
+among the influencing factors. Overall, fungal diversity was found to be greater than that
+of bacteria from the same soil environment.
+
+Sequence analysis of partial 16S rDNA and ITS sequences from prominent DGGE
+bands revealed that gram-positive groups Bacilli and Actinobacteria and several members
+of Ascomycota and Basidiomycota are commonly present in soil bacterial and fungal
+communities of mungbean, respectively.
+
+With this, the primary advantage of DGGE, which is to process multiple samples
+simultaneously in a relatively shorter time, was evident. It was effective to use as an initial
+screen and for comparison of the mungbean soil microbiota especially since both bacterial
+and fungal groups were taken into account. Additionally, it permitted the recognition of
+dominant populations in mungbean-grown field soil. The method has its limitations,
+however, where target DNA that is less than 1% of the total sample cannot be detected
+especially in highly diverse environments such as soil. This matter was encountered in the
+study where dense occurrence of bands make it difficult to discern discrete bands and so
+the aid of a relevant software for image analysis was imperative. Other studies have
+addressed this through the subsequent use of group-specific primers to gain better
+resolution among members of the community. Further recommendations include the use of
+polyphasic approaches ranging from traditional cultivation techniques to modern
+metagenomics in order to better understand not just the structure but also functions of soil
+
+microbial communities.
+
+LITERATURE CITED
+
+AHMED, Z.I, S.A. MUHAMMAD and C.A. RAUF. 2006. Effect of Rhizobium
+inoculation on growth and nodule formation of green gram. International Journal
+of Agriculture & Biology, 8(2): 235-237.
+
+AHEMAD, M. and M. KIBRET. 2013. Mechanisms and applications of plant growth
+promoting rhizobacteria: Current perspective. Journal of King Saud University —
+Science, 26: 1-20.
+
+ALTOVEROS, N.C. and T.H. BORROMEO. 2007. The state of the plant genetic resources
+for food and agriculture of the Philippines — a country report. Department of
+Agriculture. Bureau of Plant Industry.
+
+ALTSCHUL, S.F., T.L. MADDEN and A.A. SCHAEFFER. 1997. Gapped blast and psi-
+blast: a new generation of protein database search programs. Nucleic Acids Res,
+25, 3389-3402.
+
+ALZARQAA, A.A., S.S. ROUSHDY, A.A. ALDERFASI, F.A. AL-YAHYA and A.A.M.
+DAWABAH. 2014. The physiological response of mungbean (Vigna radiata) to
+water deficit stress and Meloidogyne javanica infection. WIT Transactions on
+Ecology and the Environment, 185: 89-100.
+
+ANDERSON, I.C., C.D. CAMPBELL and J. I. PROSSER. 2003. Diversity of fungi in
+organic soils under a moorland — Scots pine (Pinus sylvestris L.) gradient.
+Environmental Microbiology, 5(11): 1121-1132.
+
+ANDREOTE, F.D., J.L. AZEVEDO and W.L. ARAUJO. 2009. Assessing the diversity of
+bacterial communities associated with plants. Brazilian Journal of Microbiology,
+40: 417-432.
+
+APPLIED MATHS. 2016a. BioNumerics tutorial: Importing and processing a DGGE gel
+image. Retrieved from http://download.applied-maths.com/sites/default/files/
+whitepapers/Import_DGGE_gel .pdf Accessed 10 July 2017.
+
+APPLIED MATHS. 2016b. BioNumerics tutorial: calculating a PCA and a MDS on a
+fingerprint data set. Retrieved from http://download.applied-
+maths.com/sites/default/files/
+whitepapers/Dimensioning_techniques_fingerprints.pdf. Accessed 10 July 2017.
+
+ARTZ, R.R.E., I.C. ANDERSON, S.J. CHAPMAN, A. HAGN, M. SCHLOTER, J.M.
+POTTS and C.D. CAMPBELL. 2007. Changes in fungal community composition
+in response to vegetational succession during the natural regeneration of cutover
+peatlands. Microbial Ecology, 54: 508-522.
+
+68
+
+ASLAM, M., M.A. MAQBOOL, Q.U. ZAMAN, M.Z. LATIF and R.M. AHMAD.
+Responses of mungbean genotypes to drought stress at early growth stages.
+International Journal of Basic & Applied Sciences, 13(5): 22-25.
+
+ASM (American Society for Microbiology). 2015. Microbial diversity research priorities
+- A working document for multi-agency consideration. Retrieved from
+http://www.asm.org/index.php/public-affairs-report/1 14-unknown/unknown/5046
+-microbial-diversity-research-priorities-a-working-document-for-multi-agency-
+consideration.
+
+AVIDANO, L., E. GAMALERO, G. PAOLO COSSA and G. CARRARO. 2005.
+Characterization of soil health in an Italian polluted site by using microorganisms
+as bioindicators. Appl. Soil Ecol. 30, 21-33.
+
+AVRDC (Asian Vegetable Research and Development Center) — The World Vegetable
+Center. 2013. Making room for mungbean. Retrieved from
+http://avrdc.org/making-room-for-mungbean/.
+
+AVRDC (Asian Vegetable Researcch and Development Center) - The World Vegetable
+Center. 2010. Counting on beans: mungbean improvement in Asia. UK Aid
+Department of International Development. Retrieved from
+https://assets.publishing.service.gov.uk/media/57a08b 1 ced915d3cfd000b38/DFID
+_impact_case_study_Mungbean_FINAL_1_.pdf.
+
+BAIS, H.P., T.L. WEIR, L.G. PERRY, S. GILROY and J.M. VIVANCO. 2006. The role
+of root exudates in rhizosphere interactions with plants and other organisms. Ann.
+Rev. Plant Biol., 57:233-266.
+
+BAKKER, M.G., D.K. MANTER, A.M. SHELLIN, T.L. WEIR and J.M. VIVANCO.
+2012. Harnessing the rhizosphere microbiome through plant breeding and
+agricultural management. Plant Soil, 360: 1-13.
+
+BAREJA, B.G. 2010. List of pulses or grain legumes and their various names. Retrieved
+from http://www.cropsreview.com/grain-legumes.html.
+
+BEEBE, S. 2006. Successes and challenges in improving common bean productivity.
+International Center for Tropical Agriculture (CIAT), Colombia. Retrieved from
+http://www.cgiar.org/www-archive/www.cgiar.org/pdf/Beebe-%20Summary-
+Challenges%20in%20Bean%20improvement.pdf.
+
+BEGON, M., J.L. HARPER, and C.R. TOWNSEND. 1986. Ecology: Individuals,
+Populations and Communities. Oxford: Blackwell Scientific Publications.
+
+BERENDSEN, R.L., C.M.J. PIETERSE and P.A. BAKKER. 2012. The rhizosphere
+microbiome and plant health. Trends Plant Sci, 17: 478-486.
+
+69
+
+BERG, G. 2009. Plant-microbe interactions promoting plant growth and_ health:
+perspectives for controlled use of microorganisms in agriculture. Applied
+Microbiology and Biotechnology, 84(1): 11-18.
+
+BERG, G., C. ZACHOW, J. LOTTMANN, M. GOTZ, R. COSTA and K. SMALLA. 2005.
+Impact of plant species and site on rhizosphere-associated fungi antagonistic to
+Verticillium dahlia Kleb. Appl Environ Microbiol, 171: 4203-4213.
+
+BERG, G. and K. SMALLA. 2009. Plant species and soil type cooperatively shape the
+structure and function of microbial communities in the rhizosphere. FEMS
+Microbiol Ecol, 68(1):1-13.
+
+BERG, J.M., J.L. TYMOCKZKO, L. STRYER and GJ. GATTO. 2012. Biochemistry. 7"
+edition. New York: W.H. Freeman and Company. pp 706-708.
+
+BESNARD, V., M. FEDERIGHI and J. M. CAPPELIER. 2000. Development of a direct
+viable count procedure for the investigation of VBNC state in Listeria
+monocytogenes. Lett. Appl. Microbiol. 31, 77-81.
+
+BEVER, J.D., P.A. SCHULTZ, A. PRINGLE and J.B. MORTON. 2001. Arbuscular
+mycorrhizal fungi: More diverse than meets the eye, and the ecological tale of why.
+BioScience, 51(11): 923-932.
+
+BIRNBAUM, C., A. BISSETT, P.H. THRALL and M.R. LEISHMAN. 2014. Invasive
+legumes encounter similar soil fungal communities in their non-native and native
+ranges in Australia. Soil Biology & Biochemistry, 76: 210-217.
+
+BLOEMBERG, G.V. and B.J.J. LUGTENBERG. 2001. Molecular basis of plant growth
+promotion and biocontrol by rhizobacteria. Curr Opin Plant Biol, 4: 343-350.
+
+BOLEDA, M.D., P. BRIONES, J. FARRES, L. TYFIELD and R. PI. 1996. Experimental
+design: a useful tool for PCR optimization. Biotechniques, 21:134-140.
+
+BRONS, J.K. and J.D. VAN ELSAS. 2008. Analysis of bacterial communities in soil by
+use of denaturing gradient gel electrophoresis and clone libraries, as influenced by
+different reverse primers. Appl Environ Microbiol, 74(9): 2712-2727.
+
+BRYANT, S. and D.L. MANNING. 1999. Formaldehyde gel electrophoreses. In, R.
+Rapley (Ed.), The nucleic acid protocols handbook. New Jersey: Humana Press Inc.
+
+CETECIOGLU, Z., O. INCE and B. INCE. 2012. Gel electrophoresis based genetic
+fingerprinting techniques on environmental ecology. Jn S. Magdeldin (Ed.) Gel
+Electrophoresis — Advanced Techniques, ISBN: 978-953-51-0457-5, InTech,
+Retrieved from: http://www.intechopen.com/books/gelelectrophoresis-advanced-
+
+70
+
+techniques/application-of-genetic-fingerprinting-techniques-on-
+environmentalecology
+
+CHANDLER, D.P., J.K. FREDERICKSON and F.J. Brockman. 1997. Effect of PCR
+template concentration on the composition and distribution of total community 16S
+rDNA clone libraries. Mol Ecol, 6:475-482.
+
+CURTIS, T.P., W.T. SLOAN and J.W. SCANELL. 2002. Estimating prokaryotic diversity
+and its limits. Proc Natl Acad Sci, USA, 99: 10494-10499.
+
+DAKORA, F.D. and D.A. PHILLIPS. 2002. Root exudates as mediators of mineral
+acquisition in low-nutrient environments. Plant Soil, 245:35-47.
+
+DAS, S., Dash, H. R., Mangwani, N., Chakraborty, J., & Kumari, S. (2014). Understanding
+molecular identification and polyphasic taxonomic approaches for genetic
+relatedness and phylogenetic relationships of microorganisms. Journal of
+Microbiological Methods, 103, 80-100.
+https://doi.org/10.1016/j.mimet.2014.05.013
+
+DELIC, D., O. STAJKOVIC-SRBINOVIC, D. KUZMANOVIC, N. RASULIC, V.
+MRVIC, S. ANDJELOVIC and J. KNEZEVIC-VUKCEVIC. 2011. Effect of
+bradyrhizobial inoculation on growth and seed yield of mungbean in Fluvisol and
+Humofluvisol. African Journal of Microbiology Research, 5(23): 3946-3957.
+
+DEL ROSARIO, D.A., E.T.M. OCAMPO, A.C. SUMAGUE and M.C.M. PAJE. 1992.
+Adaptation of vegetable legumes to drought stress. In: Kuo CG (ed). Adaptation of
+Food Crops to Temperature and Water Stress: Proceedings of an International
+Symposium. Asian Vegetable Research and Development Center, 93-410: pp 360-
+371.
+
+DENISON, R.F. and E.T. KIERS. 2011. Life histories of symbiotic rhizobia and
+mycorrhizal fungi. Curr Biol 21: R775-R785.
+
+DEPARTMENT OF AGRICULTURE, FORESTRY AND FISHERIES. 2010. Mungbean
+— production guideline. South Africa: Directorate Agricultural Information
+Services.
+
+DOTANIYA, M.L. and V. MEENA. 2015. Rhizosphere effect on nutrient availability in
+soil and its uptake by plants: a review. Proc Natl Acad Sci., India, Sect B Biol Sci,
+85(1):1-12.
+
+DUINEVELD, B.M., G.A. KOWALCHUK, A. KEIJZER, J.D. VAN ELSAS and J.A.
+VAN VEEN. 2001. Analysis of bacterial communities in the rhizosphere of
+chrysanthemum via denaturing gradient gel electrophoresis of PCR-amplified 16S
+rRNA as well as DNA fragments coding for 16S rRNA. Appl Environ Microbiol,
+67(1): 172-178.
+
+71
+
+DUTTA, P. and A.K. BERA. 2008. Screening of mungbean genotypes for drought
+tolerance. Legume Research, 31 (2): 145-148.
+
+ELLOUZE, W., C. HARNEL, V. VUJANOVIC, Y. GAN, S. BOUZID and M. ST-
+ARNAUD. 2013. Chickpea genotypes shape the soil microbiome and affect the
+establishment of the subsequent durum wheat crop in the semiarid North American
+Great Plains. Soil Biology & Biochemistry, 63: 129-141.
+
+EMMERLING, C., M. SCHLOTER, A. HARTMANN and E. KANDELER. 2002.
+Functional diversity of soil organisms — a review of recent research activities in
+Germany. J Plant Nutr Soil Sci, 165: 408-420.
+
+ESCOBAR-ZEPEDA, A., A.V. DE LEON and A. SANCHEZ-FLORES. 2015. The road
+to metagenomics: From microbiology to DNA sequencing technologies and
+bioinformatics. Frontiers in Genetics. https://doi.org/10.3389/fgene.201 5.00348.
+
+FATIMA, F., I. CHAUDHARY, J. ALI, S. RASTOGI and N. PATHAK. 2011. Microbial
+DNA extraction from soil by different methods and its PCR amplification.
+Biochem. Cell. Arch 11(1).
+
+FELSKE, A., A. WOLTERINK, R. VAN LIS and A.D.L. AKKERMANS. 1998.
+Phylogeny of the main bacterial 16S rRNA sequences in Drentse A grassland soils
+(The Netherlands). App] Environ Microbiol, 64: 4950-4957.
+
+FELSKE, A., B. ENGELEN, U. NUBEL and H. BACKHAUS. 1996. Direct ribosome
+isolation from soil to extract bacterial rRNA for community analysis. Appl and
+Environ Microbiol, 62:3034-3036.
+
+FIERER, N. and R.B. JACKSON. 2006. The diversity and biogeography of soil bacterial
+communities. Proc Natl Acad Sci, 103: 626-631.
+
+GAFAN, G.P., V.S. LUCAS, G.J. ROBERTS, A. PETRIE, M. WILSON and D.A.
+SPRATT. 2005. Statistical analyses of complex denaturing gradient gel
+electrophoresis profiles. Journal of Clinical Microbiology, 43(8): 3971-3978.
+
+GARDES, M. and T.D. BRUNS. 1993. ITS primers with enhanced specificity for
+basidiomycetes — application to the identification of mycorrhizae and rusts. Mol
+Ecol, 2:113-118.
+
+GARBEVA, P., J.A. VAN VEEN, and J.D. VAN ELSAS. 2004. Microbial diversity in
+soil: selection microbial populations by plant and soil type and implications for
+disease suppressiveness. Annu Rev Phytopathol, 42:243-270.
+
+72
+
+GARBEVA, P., J.D. VAN ELSAS and J.A. VAN VEEN. 2008. Rhizosphere microbial
+community and its response to plant species and soil history. Plant Soil, 302: 19-
+32.
+
+GARLAND, J. L. 1997. Analysis and interpretation of community-level physiological
+profiles in microbial ecology. FEMS Microbiol. Ecol. 24:289-300.
+
+GARLAND, J.L. 1996. Patterns of potential C source utilization by rhizosphere
+communities. Soil Biol Biochem, 28: 223-230.
+
+GARLAND, J.L. and A.L. MILLS. 1991. Classification and characterization of
+heterotrophic microbial communities on the basis of patterns of community-level
+sole-carbon-source utilization. Appl. Environ. Microbiol. 57:2351-2359.
+
+GEPTS, P., W.D. BEAVIS, E.C. BRUMMER, R.C. SHOEMAKER, H.T. STALKER,
+N.F. WEEDEN and N.D. YOUNG. 2005. Legumes as a model plant family.
+Genomics for food and feed report of the cross-legume advances through genomics
+conference. Plant Physiology, 137:1228-1235.
+
+GIRMA, G. 2015. Microbial bioremediation of some heavy metals in soils: an updated
+review. Indian J Sci Res, 6(1): 147-161.
+
+GOMES, N.C.M., H. HEUER, J. SCHONFELD, R. COSTA, L. HAGLER-MENDONCA,
+and K. SMALLA. 2001. Bacterial diversity of the rhizosphere of maize (Zea mays)
+grown in tropical soil studied by temperature gradient gel electrophoresis. Plant
+Soil, 232: 167-180.
+
+GOMES, N.C.M., O. FAGBOLA, R. COSTA, N.G. RUMJANEK, A. BUCHNER, L.
+MENDONA-HAGLER and K. SMALLA. 2003. Dynamics of fungal communities
+in bulk and maize rhizosphere soil in the tropics. Applied and Environmental
+Microbiology, 69(7): 3758-3766.
+
+GOOGLE MAPS. 2017. Tranca, Bay, Laguna. Retrieved from
+https://www.google.com.ph/maps/place/14%C2%B008'22.2%22N+121%C2%B0
+15'33.7%22E/@14.1375981,121.2610989,85a,35y,310.67h,74.88t/data=!3m1 !1e3
+!4m6!3m5!1s0x0:0x0!7e2!8m2!3d14.1395082!4d121.2593539. Accessed 19 Sept.
+2017.
+
+GOPALAKRISHNAN, S., A. SATHAYA, R. VIJAYABHARATHI, R.K. VARSHNEY,
+C.L.L. GOWDA and L. KRISHNAMURTHY. 2015. Plant growth promoting
+rhizobia: challenges and opportunities. 3 Biotech, 5(4): 355-377.
+
+GRAHAM, P.H. and C.P. VANCE. 2003. Legumes: Importance and constraints to greater
+use — update on legume utilization. Plant Physiol, 131(3): 872-877.
+
+73
+
+GRAYSTON, S.J., S.Q. WANT, C.D. CAMPBELL and A.C. EDWARDS. 1998. Selective
+influence of plant species on microbial diversity in the rhizosphere. Soil Biol
+Biochem, 30: 369-378.
+
+HABIBZADEH, Y. 2014. Response of mung bean plants to arbuscular mycorrhiza and
+phosphorous in drought stress. International Journal of Innovation and Applied
+Studies, 6(1): 14-20.
+
+HALL, T.A. 1999. BioEdit: a user-friendly biological sequence alignment editor and
+analysis program for Windows 95/98/NT. Oxford University Press. Nucleic Acids
+Symposium Series (41): 95-98.
+
+HARTMANN, A., ROTHBALLER, M., SCHMID, M. and L. HILTNER. 2008. A pioneer
+in rhizosphere microbial ecology and soil bacteriology research. Plant Soil 312:7—
+14.
+
+HERITAGE, J., EVANS, E.G.V. and R.A. KILLINGTON. 1999. The microbiology of soil
+and nutrient cycling. Jn: Microbiology in action. Cambridge University Press, UK.
+
+HERNESMAA, A., K. BJORKLOF, O. KIIKKILA, H. FRITZE, K. HAAHTELA and M.
+ROMANTSCHUK. 2005. Structure and function of microbial communities in the
+thizosphere of Scots pine after tree-felling. Soil Biology & Biochemistry, 37: 777-
+785.
+
+HEUER, H. and K. SMALA. 1997. Application of denaturing gradient gel electrophoresis
+(DGGE) and temperature gradient gel electrophoresis (TGGE) for studying soil
+microbial communities. In: van Elsas J.D., Wellington E.M.H., Trevors J.T. (eds):
+Modern Soil Microbiology. Marcel Dekker New York, 353-373.
+
+HEUER, H., K. HARTUNG, G. WIELAND, I. KRAMER and K. SMALLA. 1999.
+Polynucleotide probes that target a hypervariable region of 16S rRNA genes to
+identify bacterial isolates corresponding to bands of community fingerprints. Appl
+Environ Microbiol, 65(3): 1045-1049.
+
+HILL, G.T., N.A. MITKOWSKI, L. ALDRICH-WOLFE, L.R. EMELE, D.D.
+JURKONIE, A. FICKE, S. MALDONADO-RAMIREZ, S.T. LYNCH. And E.B.
+NELSON. 2000. Methods for assessing the composition and diversity of soil
+microbial communities. Applied Soil Ecology, 15: 25-36.
+
+HIRSCH, A.M., M.R. LUM and J.A. DOWNIE. 2001. What makes the rhizobia-legume
+symbiosis so special?. Plant Physiology, 127: 1484-1492.
+
+HOFMAN-BANG, J., D. ZHENG, P. WESTERMANN, B.K. AHRING and L. RASKIN.
+2003. Molecular ecology of anaerobic reactor systems. Advances in Biochemical
+Engineering and Biotechnology, 81: 151-203.
+
+74
+
+HOULDEN, A., T.M. TIMMS-WILSON, M.J. DAY and M.J. BAILEY. 2008. Influence
+of plant developmental stage on microbial community structure and activity in the
+rhizosphere of three field crops. FEMS Microbiol Ecol, 65: 193-201.
+
+HUNTER-CEVERA, J.C. 1998. The value of microbial diversity. Curr Opin Microbiol,
+1(3): 278-285.
+
+INCEOGLU, O., J.F. SALLES, L.V. OVERBEEK and J.D. VAN ELSAS. 2010. Effects
+of plant genotype and growth stage on the betaproteobacterial communities
+associated with different potato cultivars in two fields. Applied and Environmental
+Microbiology, 76(11): 3675-3684.
+
+INNES, L., P.J. HOBBS and R.D. BARDGETT. 2004. The impacts of individual plant
+species on rhizosphere microbial communities in soils of different fertility. Biol
+Fertil Soils, 40:7-13.
+
+ISENBARGER, T.A., C.E. CARR, S.S. JOHNSON, M. FINNEY, G.M. CHURCH, W.
+GILBERT, M.T. ZUBER and G. RUVKUN. 2008. The most conserved genome
+segments for life detection on earth and other planets. Springer Science. Orig Life
+Evol Biosph, DOI 10.1007/s1 1084-008-9148-z.
+
+ISHII, K. and M. FUKUI. 2001. Optimization of annealing temperature to reduce bias
+caused by a primer mismatch in multitemplate PCR. Appl Environ Microbiol, 67:
+3753-3755.
+
+ITRC EMD (Interstate Technology & Regulatory Council — Environmental Molecular
+Diagnostics). 2011. Microbial fingerprinting methods. EMD Team Fact Sheet.
+Accessed from
+http://www. itreweb.org/documents/team_emd/Microbial_Fingerprinting_Fact_
+Sheet.pdf.
+
+JACKSON, C., E.l. RODEN and P.F. CHURCHILL. 2000. Denaturing gradient gel
+electrophoresis can fail to separate 16s rDNA fragments with multiple base
+differences. Molecular Biology Today, 1:49-51.
+
+JI, K.X., F. CHI, M.F. YANG, S.H. SHEN, Y.X. JING, F.B. DAZZO and H.P. CHENG.
+2010. Movement of rhizobia inside tobacco and lifestyle alternation from
+endophytes to free-living rhizobia on leaves. J Microbiol Biotechnol, 20: 238-244.
+
+JUDD, W.S., C.S. CAMPBELL, E.A. KELLOGG, P.F. STEVENS and MJ.
+DONOGHUE. 2002. Plant Systematics: A Phylogenetic Approach. 2™ ed. Sinauer
+Associates, Sunderland MA.
+
+KAISER, K., B. WEMHEUER, V. KOROLKOW, F. WEMHEUER, H. NACKE, I.
+SCHONING, M. SCHRUMPF and R. DANIEL. 2016. Driving forces of soil
+
+75
+
+bacterial community structure, diversity, and function in temperate grasslands and
+forests. Scientific Reports, 6:33696. DOI: 10.1038/srep33696.
+
+KAISERMANN, A., P.A. MARON, L. BEAUMELLE, and J.C. LATA. 2015. Fungal
+communities are more sensitive indicators to non-extreme soil moisture variations
+than bacterial communities. Applied Soil Ecology, Elsevier, 86: 158-164.
+
+KAROW, J. 2013. Following Roche’s decision to shut down 454, customers make plans
+to move to other platforms. GenomeWeb._ Retrieved from
+https://www.genomeweb.com/sequencing/following-roches-decision-shut-down-
+454-customers-make-plans-move-other-platform. Accessed 17 October 2017.
+
+KAUR, R., J. KAUR and T.S. BAINS. 2017. Screening of mungbean genotypes for
+drought tolerance using different water potential levels. Journal of Advanced
+Agricultural Technologies, 4(2): 159-164.
+
+KENT, A.D. and E.W. TRIPLETT. 2002. Microbial communities and their interactions in
+soil and rhizosphere ecosystems. Ann. Rev. Microbiol., 56: 211-236.
+
+KIRK, J.L., L.A. BEAUDETTE, M. HART, P. MOUTOGLIS, J.N. KLIRONOMOS, H.
+LEE and J.T. TREVORS. 2004. Methods of studying soil microbial diversity.
+Journal of Microbiological Methods, 58: 169-188.
+
+KONSTANTINIDIS, K.T., A. RAMETTE and J.M. TIEDJE. 2006. The bacterial species
+definition in the genomic era. Philos Trans R Soc Lond B Biol Sci, 361(1475):
+1920-1940.
+
+KRAMER, P.J. and J.S. BOYER. 1997. Water relations of plants and soils. Academic
+Press, San Diego.
+
+KRISHNA, K. R. 2010.Agroecosystems of South India: Nutrient Dynamics, Ecology and
+Productivity. Nature; Universal Publishers. pp. 358-371.
+
+KUMAR, A. and K.D. SHARMA. 2009. Physiological responses and dry matter
+partitioning of summer mungbean (Vigna radiate L.) genotypes subjected to
+drought conditions. J Agronomy & Crop Science, 195: 270-277.
+
+KUMAR, S., G. STECHER and K. TAMURA. 2016. MEGA7: Molecular Evolutionary
+Genetics Analysis version 7.0 for bigger datasets. Molecular Biology and Evolution
+33:1870-1874.
+
+LALANDE, J., R. VILLEMUR and L. DESCHENES. 2013. A new framework to
+accurately quantify soil bacterial community diversity from DGGE. Microb Ecol,
+66(3): 647-658.
+
+LEAKE, J.R., D. JOHNSON, D.P. DONNELLY, G.E. MUCKLE, L. BODDY and D.J.
+READ. 2004. Networks of power and influence: the role of mycorrhizal mycelium
+
+76
+
+in controlling plant communities and agroecosystem functioning. Can J Bot, 82:
+1016-1045.
+
+LEHMAN, R.M., F.S. COLWELL, D.B. RINGELBERG and D.C. WHITE. 1995.
+Combined microbial community-level analyses for quality assurance of terrestrial
+subsurface cores. J Microbiol Meth, 22: 263-281.
+
+LIM, Y.W., B.K. KIM, C. KIM, H.S. JUNG, B.S. KIM, J.H. LEE and J. CHUN. 2010.
+Assessment of soil fungal communities using pyrosequencing. J Microbiol, 48(3):
+284-289.
+
+LIU, J., ¥. YU, Z, CAI, M. BARTLAM and Y. WANG. 2015. Comparison of ITS and 18S
+tDNA for estimating fungal diversity using PCR-DGGE. World J Microbiol
+Biotechnol, 31: 1387-1395.
+
+LO, C.C. 2010. Effect of pesticides on soil microbial community. Journal of Environmental
+Science and Health, Part B, 45(5), 348-359. doi.org/10.1080/0360123 1003799804
+
+LUGTENBERG, B. and B. KAMILOVA. 2009. Plant-growth-promoting rhizobacteria.
+Annu Rev Microbiol, 63: 541-556.
+
+MANTER, D.K. and J.M. VIVANCO. 2007. Use of the ITS primers, ITS1F and ITS4, to
+characterize fungal abundance and diversity in mixed- template samples by qPCR
+and length heterogeneity analysis. Journal of Microbiological Methods, 71: 7-14.
+
+MARGALEF, R. 1972. Homage to Evelyn Hutchinson, or why is there an upper limit to
+diversity. Transactions of the Connecticut Academy of Arts and Sciences, 44, 211-
+235.
+
+MARTIN, F., A. KOHLER, C. MURAT, C. VENEAULT-FOURREY and DS.
+HIBBETT. 2016. Unearthing the roots of ectomycorrhizal symbioses. Nature
+Reviews, 14: 760-773.
+
+MERILES, J.M, S. VARGAS GIL, C. CONFORTO, G. FIGONI, E. LOVERA, G.J.
+MARCH and C.A. GUZMAN. 2009. Soil microbial communities under different
+soybean cropping systems: characterization of microbial population dynamics, soil
+microbial activity, microbial biomass, and fatty acid profiles. Soil and Tillage
+Research, 103(2): 271-281.
+
+MICALLEF, S.A., M.P. SHIARIS and A. COLON-CARMONA. 2009a. Influence of
+Arabidopsis thaliana accessions on rhizobacterial communities and natural
+variation in root exudates. J Exp Bot, 60: 1729-42.
+
+MICALLEF, S.A., S. CHANNER, M.P. SHIARIS and A. COLON-CARMONA. 2009b.
+Plant age and genotype impact the progression of bacterial community succession
+in the Arabidopsis rhizosphere. Plant Signaling & Behavior, 4(8): 777-780.
+
+77
+
+MOOLEKI, P. 2009. Benefits of including legumes in your crop rotation. Saskatchewan
+Pulse Growers, Agriculture Knowledge Center.
+
+MORGAN, J.A.W. and C. WINSTANLEY. 1997. Microbial biomarkers. In: van Elsas,
+J.D., Trevors, J.T., Wellington, E.M.H. (Eds.), Modern Soil Microbiology. Marcel
+Dekker, New York, pp. 331-352.
+
+MORRIS, E.K., T. CARUSO, F. BUSCOT, M. FISCHER, C. HANCOCK, T.S. MAIER
+et al. 2014. Choosing and using diversity indices: insights for ecological
+applications from the German Biodiversity Exploratories. Ecol Evol, 4(18): 3514-
+3524.
+
+MORTON, F., SMITH, R.E. AND J.M. POEHLMAN. Morton, F., Smith, R.E. 1982. The
+Mungbean. University of Puerto Rico; College of Agricultural Sciences.
+AID/DSAN-G-0101 / US Agency for International Development.
+
+MOUGEL, C., P. OFFRE, L. RANJARD, T. CORBERAND, E. GAMALERO et al. 2006.
+Dynamic of the genetic structure of bacterial and fungal communities at different
+developmental stages of Medicago truncatula Gaertn. Cv. Jemalong line J5. New
+Phytol, 170: 165-175.
+
+MUBEEN, R.B., M.D. SHAMIM, A.H. KHAN, A.K. SINGH, S.P. SINGH, R.K. YADAV
+and U. SINGH. 2015. Response of mungbean (Vigna radiata L.) to Rhizobium
+inoculation and growth regulators on biochemical changes and yield. Environment
+& Ecology, 33(1): 105-109.
+
+MUYZER, G., DE WAAL, E.C., and A.G. UTTERLINDEN. 1993: Profiling of complex
+microbial populations by denaturing gradient gel electrophoresis analysis of
+polymerase chain reaction-amplified genes coding for 16S rRNA. Appl Environ
+Microbiol, 59: 695-700.
+
+MUYZER, G. and K. SMALLA. 1998. Application of denaturing gradient gel
+electrophoresis (DGGE) and temperature gradient gel electrophoresis (TGGE) in
+microbial ecology. Antonie Leeuwenhoek, 73: 127-141.
+
+MUYZER, G. 1999. DGGE/TGGE: A method for identifying genes from natural
+ecosystems. Current Opinion in Microbiology. 2: 317-322.
+
+MUYZER, G., T. BRINKHOFF, U. NUBEL, C. SANTEGOEDS, H. SCHAFER and C.
+WAWER. 2004. Denaturing gradient gel electrophoresis (DGGE) in microbial
+ecology. In: Kowalchuk G.A., de Bruijn F.J., Head I.M., Akkermans A.D.L., van
+Elsas J.D. (Eds.): Molecular Microbial Ecology Manual. Kluwer Academic
+Publishers Dordrecht, 743-769.
+
+NACKE, H., A. THURMER, A. WOLLHERR, C. WILL, L. HODAC, N. HEROLD, I.
+SCHONING, M. SCHRUMPF and R. DANIEL. 2011. Pyrosequencing-Based
+
+78
+
+Assessment of Bacterial Community Structure Along Different Management Types
+in German Forest and Grassland Soils. PLos ONE,  6(2).
+doi.org/10.1371/journal.pone.0017000
+
+NAKATSU, C.H. 2007. Soil microbial community analysis using denaturing gradient gel
+electrophoresis. Soil Sci Soc Am J, 71(2): 562-571.
+
+NARINA, S.S., S.C. PHATAK and H.L. BHARDWAJ. 2013. Chlorophyll fluorescence to
+evaluate pigeonpea breeding lines and mungbean for drought tolerance. Journal of
+Agricultural Science, 6(11): 238-246.
+
+NEILSON, J.W., F.L. JORDAN and R.M. MAIER. 2013. Analysis of artifacts suggests
+DGGE should not be used for quantitative diversity analysis. Journal of
+Microbiological Methods, 92: 253-263.
+
+NESME, J., W. ACHOUAK, S.N. AGATHOS, M. BAILEY, P. BALDRIAN, D.
+BRUNEL, ... and P. SIMONET. 2016. Back to the future of soil metagenomics.
+Frontiers in Microbiology, 7(FEB), 1-5. doi.org/10.3389/fmicb.2016.00073.
+
+NIU, Y.F., CHAI, R.S., JIN, G.L., WANG, H., TANG, C.X. and Y.S. ZHANG. 2012.
+Responses of root architecture development to low phosphorus availability: a
+review. Ann Bot. doi:10.1093/aob/mces285.
+
+NORMANDER, B. and J.I. PROSSER. 2000. Bacterial origin and community composition
+in the barley phytosphere as a function of habitat and presowing conditions. Appl
+Environ Microbiol, 66:4372-4377.
+
+O'BRIEN, H.E., J.L. PARRENT, J.A. JACKSON, J.M. MONCALVO and RYTAS
+VILGALYS. 2005. Fungal community analysis by large-scale sequencing of
+environmental samples. Applied and Environmental Microbiology, 71(9): 5544-
+5550.
+
+OCAMPO, E.T.M. and R.P. ROBLES. 2000. Drought tolerance in mungbean I. osmotic
+adjustment in drought stressed mungbean. Philipp J Crop Sci, 25(1): 1-5.
+
+OCAMPO, E.T.M. and R.P. ROBLES. 2000. Drought tolerance in mungbean II. stomatal
+movement, photosynthesis and leaf water potential. Philipp J Crop Sci, 25(1): 7-15.
+
+OROS-SICHLER, M., R. COSTA, H. HEUER and K. SMALLA. 2007. Molecular
+fingerprinting techniques to analyze soil microbial communities. In Van Elsas, J.D.,
+Jansson, J.K. and J.T. Trevors (Eds.), Modern soil microbiology. 2"4 Edition.
+Florida: CRC Press, Taylor & Francis Group.
+
+PAUL, E.A. and F.E. CLARK. 1996. Soil microbiology and biochemistry. Academic
+Press, San Diego.
+
+79
+
+PCARRD-DOST. 2003. Mungbean. Philippine Council for Agriculture, Forestry and
+Natural Resources Research and Development — Department of Science and
+Technology. Retrieved from _ http://www.pcaarrd.dost.gov.ph/home/joomla/
+index.php?option= com_content&task=view&id=544&Itemid=418
+
+PEOPLES, M.B., D.F. HERRIDGE and J.K. LADHA. 1995. Biological nitrogen fixation:
+an efficient source of nitrogen for sustainable agricultural production. Plant Soil
+174:3-28.
+
+POSTGATE, J. R. 1982. The Fundamentals of Nitrogen Fixation. New York, NY:
+Cambridge University Press.
+
+PRAKASH, M., B. SUNILKUMAR, G. SATHIYANARAYANAN and J.
+GOKULAKRISHNAN. 2017. Screening for drought tolerance in mungbean.
+Legume Research: An International Journal, 40(3): 423-428.
+
+RAAIJMAKERS, J.M. , C.T. PAULITZ, C. STEINBERG, C. ALABOUVETTE and Y.
+MOENNE-LOCCOZ. 2009. The rhizosphere: a playground and battlefield for
+soilborne pathogens and beneficial microorganisms. Plant soil, DOI:
+10.1007/s11104-008-9568-6.
+
+RANAWAKE, A.L., N. DAHANAYAKA, U.G.S. AMARASINGHA, W.D.R.J.
+RODRIGO and U.T.D. RODRIGO. 2011. Effect of water stress on growth and
+yield of mungbean (Vigna radiata L.). Tropical Agricultural Research & Extension,
+14(4).
+
+RASTOGI, G. and R.K. SANI. 2011. Molecular techniques to assess microbial community
+structure, function and dynamics in the environment. Ahmad et al. (Eds.) Jn
+Microbes and Microbial Technology: Agricultural and Environmental
+Applications. Springer Science+Business Media.
+
+RELIC, B., X. PERRET, M.T. ESTRADA-GARCIA, J. KOPCINSKA., W.
+GOLINOWSKI, H.B. KRISHNAN, S.G. PUEPPKE and W.J. BROUGHTON.
+1994. Nod factors of Rhizobium are a key to the legume door. Mol Microbiol
+13:171-178.
+
+RENGEL, Z. 2002. Genetic control of root exudation. Plant and Soil, 245: 59-70.
+
+RIESENFELD, C.S., P.D. SCHLOSS and J. HANDELSMAN. 2004. Metagenomics:
+genomic analysis of microbial communities. Ann Rev Gen, 38: 525-552.
+
+RILLIG, M.C. and D.L. MUMMEY. 2006. Mycorrhizas and soil structure. New Phytol,
+171: 41-53.
+
+RIVAS, R., P. GARCIA-FRAILE and E. VELAZQUEZ. 2009. Taxonomy of Bacteria
+Nodulating Legumes. Microbiol Insights, 2: 51-69.
+
+80
+
+ROESCH, L.F.W., R.R. FULTHORPE, A. RIVA, G. CASELLA, A.K.M. HADWIN, A.D.
+KENT, S.H. DAROUB. F.A.O. CAMARGO, W.G. FARMERIE and E.W.
+TRIPLETT. 2007. Pyrosequencing enumerates and contrasts soil microbial
+diversity. ISME J I: 283-290.
+
+ROSELLO-MORA R. and R. AMANN. 2001. The species concept for prokaryotes. FEMS
+Microbiol Rev, 25:39-67.
+
+ROVIRA, A.D. 1959. Root excretions in relation to the rhizosphere effect. IV. Influence
+of plant species, age of plant, light, temperature, and calcium nutrition on
+exudation. Plant and Soil, 11: 53-64.
+
+SANTOS-MEDELLIN, C., J. EDWARDS, Z. LIECHTY, B. NGUYEN and V.
+SUNDARESAN. 2017. Drought stress results in a compartment-specific
+restructuring of the rice root-associated microbiomes. MBio, 8(4): 1-15.
+https://doi.org/10.1128/mBio.00764-17.
+
+SAHGAL, M. and B.N. JOHRI, 2006. Taxonomy of rhizobia: current status. Current
+Science, 90: 486-487.
+
+SCHEUBLIN, T.R., K.P. RIDGWAY, J.P.W. YOUNG and M.G.A. van der HEIJDEN.
+2004. Nonlegumes, legumes, and root nodules harbor different arbuscular
+mycorrhizal fungal communities. Applied and Environmental Microbiology,
+70(10): 6240-6246.
+
+SCHMALENBERGER, A., F. SCHWIJEGER and C.C. TEBBE. 2001. Effect of primers
+hybridizing to different evolutionarily conserved regions of the small-subunit
+tRNA gene in PCR-based microbial community analyses and genetic profiling.
+Appl Envrion Microbiol, 67(8): 3557-3563.
+
+SCHNEEGURT, M., S. DORE and C. KULPA. 2003. Direct extraction of DNA from soils
+for studies in microbial ecology. Current issues in molecular biology, 5(1):1-8.
+
+SCHUBLER, A., D. SCHWARZOTT and C. WALKER. 2001. A new fungal phylum, the
+Glomeromycota: phylogeny and evolution. Mycological Research, 105(12): 1413-
+1421.
+
+SCHWIEGER, F. and C.C. TEBBE. 2000. Effect of field inoculation with Sinorhizobium
+meliloti L33 on the composition of bacterial communities in rhizospheres of a target
+plant (Medicago sativa) and a non-target plant (Chenopodium album) — linking of
+16S rRNA gene-based single-strand conformation polymorphism community
+profiles to the diversity of cultivated bacteria. App! Environ. Microbiol, 66: 3556-
+3565.
+
+81
+
+SCWEITZER, J.A., J.K. BAILEY, D.G. FISCHER, C.J. LEROY, E.V. LONSDORF, T.G.
+WHITHAM and S.C. HART. 2008. Plant-soil microorganism interactions:
+heritable relationship between plant genotype and associated so? microorganisms.
+Ecology, 89(3): 773-781.
+
+SEDZIELEWSKA, K.A. 2012. A molecular approach to characterize the arbuscular
+mycorrhizal fungus, Glomus sp. AMykor isolate. Inaugural Dissertation. University
+of Greifswald, Germany.
+
+SEGOVIA, L., D. PINERO, R. PALACIOS and E. MARTINEZ-ROMERO. 1991. Genetic
+structure of a soil population of nonsymbiotic Rhizobium leguminosarium. Applied
+and Environmental Microbiology, 57: 426-433.
+
+SHANMUGASUNDARAM, S., J.D.H. KEATINGE and J.A. HUGHES. 2009. The
+mungbean transformation: diversifying crops, defeating malnutrition. International
+Food Policy Research Institute (IFPRI). IFPRI Discussion Paper 00922.
+
+SHANNON, C.L. and W. WEAVER. 1963. The Mathematical theory of Communication.
+University of Illinois Press. Urbana, IL.
+
+SIKES, B.A., POWELL, J.R., and M.C. RILLIG. 2010. Deciphering the relative
+contributions of multiple functions within plant-microbe symbioses. Ecology, 91:
+1591-1597.
+
+SIMON, C. and R. DANIEL. 2011. Metagenomic analyses: past and future trends. Appl
+Environ Microbiol, 77(4):1153-1161. doi:10.1128/ aem.02345-10.
+
+SINGH, R., P. SINGH and R. SHARMA. 2014. Microorganism as a tool of bioremediation
+technology for cleaning environment: a review. Proceedings of the International
+Academy of Ecology and Environmental Sciences, 4(1): 1-6.
+
+SMALLA, K., G. WIELAND, A. BUCHNER, A. ZOCK, J. PARZY, S. KAISER, N.
+ROSKOT, H. HEUER and G. BERG. 2001. Bulk and rhizosphere soil bacterial
+communities studied by denaturing gradient gel electrophoresis: plant-dependent
+enrichment and seasonal shifts revealed. Applied and Environmental Microbiology,
+67(10): 4742-4751.
+
+SMITH, S.E. and D.J. READ. 2008. Mycorrhizal symbiosis. p. 787. San Diego, London,
+Academic Press.
+
+SORENSEN, J. 1997. The rhizosphere as a habitat for soil microorganisms. Modern Soil
+Microbiology (Van Elsas, J.D., Trevors, J.T. and Wellington, E.M.H., eds). Pp. 21-
+45. Marcel Dekker Inc., New York.
+
+82
+
+SPRENT, J.I. 2010. Biological nitrogen fixation associated with angiosperms in terrestrial
+ecosystems. Jn: Nutrient Acquisition by Plants: An Ecological Perspective.
+Hormoz BassiriRad (Ed.). Springer Berlin Heidelberg.
+
+SPRENT, J.I. AND E.K. JAMES. 2007. Legume evolution: where do nodules and
+mycorrhizas fit in? Plant Physiology, 144: 575-581.
+
+SUGIYAMA, A., Y. UEDA, T. ZUSHI, H. TAKASE and K. YAZAKI. 2014. Changes in
+the bacterial community of soybean rhizospheres during growth in the field. PLoS
+ONE, 9(6): 1-9.
+
+SWINNEN, J., J. A.V. VEEN and R. MERCKX. 1994. 14-C pulse labeling of field-grown
+spring wheat: an evaluation of its use in rhizosphere carbon budget estimations.
+Soil Biol Biochem, 26: 161-170.
+
+TATE, R.L. 2000. Soil microbiology. 2" edition. New York: John Wiley & Sons, Inc.
+
+TALBOT, N. N.D. DNA _— extraction for fungi. Retrieved from
+www.exeter.ac.uk/media/universityofexeter/schoolofbiosciences/nicktalbotgroup/
+documents/DNA_Extraction_for_fungi.doc. Accessed February 2017.
+
+TEBBE, C.C. and W. VAHJEN. 1993. Interference of humic acids and DNA extracted
+directly from soil in detection and transformation of recombinant DNA from
+bacteria and a yeast. Appl Environ Microbiol, 59: 2657-2665.
+
+THOMPSON, J.R., L.A. MARCELINO and M.F. POLZ. 2002. Heteroduplexes in mixed-
+template amplifications: formation, consequence and elimination by reconditioning
+PCR. Nucleic Acids Research, 9: 2083-2088.
+
+THORN, G. 1997. The fungi in soil, p. 63-127. In J. D. van Elsas, J.T. Trevors, and E.M.H.
+Wellington (Ed.) Modern soil microbiology. Marcel Dekker, Inc., New York, N.Y.
+
+TIAN, Q., T. TANIGUCHI, W.Y. SHI, G. LI, N. YAMANAKA and S. DU. 2017. Land-
+use types and soil chemical properties influence soil microbial communities in the
+semiarid Loess Plateau region in China. Scientific Reports, 7(October 2016),
+45289. https://doi.org/10.1038/srep45289.
+
+TIEN, H.H., T.M. HIEN, M.T. SON and D. HERRIDGE. 2002. Rhizobial inoculation and
+N? fixation of soybean and mungbean in the eastern region of South Vietnam. In D.
+Herridge (ed) Inoculants and Nitrogen Fixation of Legumes in Vietnam. ACIAR
+Proceedings 109e. pp 29-36.
+
+TOPP, E. 2003. Bacteria in agricultural soils: diversity, role and future perspectives.
+Canadian Journal of Soil Science, 83:303-309.
+
+83
+
+TORSVIK, V., J. GOKSOYR and F.L. DAAE. 1990. High diversity in DNA of soil
+bacteria. Applied and Environmental Microbiology, 56(3): 782-787.
+
+TORSVIK, V., R. SORHEIM and J. GOKSOYR. 1996. Total bacterial diversity in soil
+and sediment communities — a review. Journal of Industrial Microbiology, 17: 170-
+178.
+
+TORSVIK, V. and L. OVREAS. 2002. Microbial diversity and function in soil: from genes
+to ecosystems. Current Opinion in Microbiology, 5:240-245.
+
+VALASKOVA, V. and P. BALDRIAN. 2009. Denaturing gradient gel electrophoresis as
+a fingerprinting method for the analysis of soil microbial communities. Plant Soil
+Environ 55(10):413-423.
+
+VAN DER ENT, S., M. VAN HULTEN, M.J. POZO, T. CZECHOWSKI, M.K.
+UDVARDI, et al. 2009. Priming of plant innate immunity by rhizobacteria and
+beta-aminobutyric acid: differences and similarities in regulation. New Phytol, 183:
+419-431.
+
+VAN DER HEIJDEN, M.G.A., J.N. KLIRONOMOS, M. URSIC, P. MOUTOGLIS, R.
+STREIWOLF-ENGEL, T. BOLLER, A. WIEMKEN and I.R. SANDERS. 1998.
+Mycorrhizal fungal diversity determines plant biodiversity, ecosystem variability
+and productivity. Nature, 396: 69-72.
+
+VAN DER HEIJDEN, M., R. BARDGETT, and N. VAN STRAALEN. 2008. The unseen
+majority: soil microbes as drivers of plant diversity and productivity in terrestrial
+ecosystems. Ecology Letters, 11(3): 296-310.
+
+WAGNER, S.C. 2011. Biological nitrogen fixation. Nature Education Knowledge,
+3(10):15.
+
+WANG, G., Y. XU, J. JIN, J. LIU, Q. ZHANG and X. LIU. 2009. Effect of soil type and
+soybean genotype on fungal community in soybean rhizosphere during
+reproductive growth stages. Plant Soil, 317: 135-144.
+
+WARD, D.M., M.M. BATESON, R. WELLER and A.L. RUFF-ROBERTS. 1992.
+Ribosomal RNA analysis of microorganisms as they occur in nature. Jn: Marshall,
+K.C. (Ed.), Advances in Microbial Ecology. Plenum Press, New York, pp. 219-
+286.
+
+WAREMBOURG, F. R. 1997. The ‘rhizosphere-effect’: a plant strategy for plants to
+exploit and colonize nutrient-limited habitats. Bocconea 7:187-194.
+
+WHITE, T.J., T. BRUNS, S. LEE and J. TAYLOR. 1990. Amplification and direct
+sequencing of fungal ribosomal RNA genes for phylogenetics. In Innins M.A.,
+
+84
+
+Gelfand D.H., Sninsky J.J., White T.J. (eds): PCR Protocols. Academic Press San
+Diego, 315-322.
+
+WILBUR, J.D., J.K. GHOSH, C.H. NAKATSU, S.M. BROUDER and R.W. DOERGE.
+2002. Variable selection in high-dimensional multivariate binary data with
+application to the analysis of microbial community DNA fingerprints. Biometrics,
+58: 378-386.
+
+WINDING, A. 2004. Indicators of soil bacterial diversity. In: Agricultural impacts on soil
+erosion and soil biodiversity: developing indicators for policy analysis. Proceedings
+of an OECD expert meeting on soil erosion and soil biodiversity indicators, 25-28
+March 2003, Rome, Italy, OECD, Paris, pp 495-504.
+
+WOESE, C.R. 1987. Bacterial evolution. Microbiol Rev, 51: 221-271.
+
+WOESE, C.R., O. KANDLER and M.L. WHEELIS. 1990. Towards a natural system of
+organisms: proposal for the domains Archaea, Bacteria, and Eucarya. Proc. Natl.
+Acad. Sci. USA, 87: 4576-4579.
+
+XU, Y., G. WANG, J. JIN, J. LIU, Q. ZHANG and X. LIU. 2009. Bacterial communities
+in soybean rhizosphere in response to soil type, soybean genotype, and their growth
+stage. Soil Biology & Biochemistry, 41: 919-925.
+
+YU, Z. and M. MORRISON. 2004. Comparisons of different hypervariable regions of ms
+genes for use in fingerprinting of microbial communities by PCR-denaturing
+gradient gel electrophoresis. Appl Environ Microbiol, 70(8): 4800-4806.
+
+ZAHRAN, H. H. 1999. Rhizobium-legume symbiosis and nitrogen fixation under severe
+conditions and in an arid climate. Microbiology and Molecular Biology Reviews,
+63(4): 968-989.
+
+ZAHRAN, H.H., M. ABDEL-FATTAH, M.M. YASSER, A.M. MAHMOUD and E.J.
+BEDMAR. 2012. Diversity and environmental stress responses of rhizobial
+bacteria from Egyptian grain legumes. Australian Journal of Basic and Applied
+Sciences, 6(10): 571-583.
+
+ZAK, J.C., M.R. WILLIG, D.L. MOORHEAD and H.G. WILDMAN. 1994. Functional
+diversity of microbial communities: a quantitative approach. Soil Biol.
+Biochem. 26:1101-1108.
+
+ZHANG, H.L.Y., D. LI, H. XU, G. CHEN and C. ZHANG. 2009. Comparisons of different
+hypervariable regions of rrs genes for fingerprinting of microbial communities in
+paddy soils. Soil Biology and Biochemistry, 41: 954-968.
+
+ZHAO, C., Y. MIAO, C. YU, L. ZHU, F. WANG, L. JIANG, D. HUI and S. WAN. 2016.
+Soil microbial community composition and respiration along an experimental
+
+85
+
+precipitation gradient in a semiarid steppe. Scientific Reports, 6(1), 24317.
+doi.org/10.1038/srep24317.
+
+ZHOU, Y., H. ZHU, S. FU and Q. YAO. 2017. Variation in soil microbial community
+structure associated with different legume species is greater than that associated
+with different grass species. Frontiers in Microbiology, 8: 1-13.

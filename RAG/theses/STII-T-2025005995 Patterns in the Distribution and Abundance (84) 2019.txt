@@ -1,0 +1,1782 @@
+PATTERNS IN THE DISTRIBUTION AND ABUNDANCE OF POST OUTBREAK POPULATION OF THE COCONUT LEAF BEETLE, Brontispa longissima (Gestro) (COLEOPTERA: CHRYSOMELIDAE) IN ALBAY, PHILIPPINES
+
+GENEAN L. GALICIA
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+Doctor of Philosophy in Entomology
+
+JUNE 2019
+
+ABSTRACT
+
+The study was conducted to characterize the changes in the population of the
+coconut leaf beetle over time and space, and to relate these changes to the infestation
+pattern of palms, age of palms, development and reproduction of the pest, and the growth
+and development of the coconut leaf. Field monitoring of the CLB population in old
+stands of coconut (more than 7 years old) and young stands of coconut (3-5 years old)
+was done from February 2017 to July 2018 in Albay Philippines where an outbreak of the
+pest occurred in 2009. Laboratory and greenhouse studies on the rate of development
+and reproduction of the pest and of the coconut leaf were also done in order to explain the patterns observed in the field. The spatial distribution of the CLB population as well as the infested palms were
+aggregated throughout the monitoring period based on the Index of dispersion and
+Lloyd’s mean crowding. Clumped distribution pattern is related to the percent infested
+palms, density and age of coconut palms. Development time and reproduction of CLB is
+inferred to be synchronous with the emergence of every shoot of coconut leaf which has an average of more or less 23 days before another shoot emerged. This observation complemented the laboratory and field biology studies where CLB was able to complete
+its development from egg to adult in 32.00 ± 0.33 and 34.33 ± 0.41 days and pre-
+oviposition period of 20.10 ± 0.70 days. On the basis of these findings, the infestation of
+CLB was shown not to spread even if there was an increase in the population hence, decisions on pest control should not be based on monitoring of infested palms alone.
+
+Keywords: reproduction, development, age structure, index of dispersion, age of palm
+
+CHAPTER I
+
+INTRODUCTION
+
+The coconut leaf beetle, Brontispa longissima is a serious problem of
+coconut palms in the Philippines in 2005 because of its dramatic increase in the
+population. According to PCA in 2009, it was first sighted among coconut trees
+along Airport Road NAIA and Roxas Boulevard in Pasay City. The infestation
+had spread in different areas throughout the country from Southern Luzon to
+Mindanao. A total of 281 Municipalities and 46 provinces in 13 regions were
+confirmed infested by the coconut leaf beetle in 2009. The pest ravages coconuts
+and other palms in the CALABARZON area especially in Cavite, Batangas and
+Laguna. Lately, it has been found sporadically in Quezon, Camarines Sur, Albay
+and Northern Samar. In the latter provinces, the coconut leaf beetle may have
+been brought in by landscape contractors who are unaware or unfamiliar of the
+pest. Data shows that from August 2007 to March 2011, it has already affected
+
+more than 3 million coconut trees.
+
+It is unclear if CLB was introduced to the Philippines in 2005 because the
+pest was listed in Gabriel’s inventory of pests in the Philippines (1997) as cited by
+Johnston (1965). However, most of the reports claimed that it was introduced in
+
+the Philippines. The question of its introduction could not be verified so far.
+
+Takano et al., (2011) reported that there are two monophyletic groups of
+CLB ,one distributed over a limited area (Australia, Papua New Guinea, Samoa
+and Sumba Island) referred to as the Pacific clade and the other dispersed over a
+wide area of Asia and the Pacific Region (referred to as the Asian clade). Recent
+invasions and outbreaks have been reported only in areas where the Asian clade
+have been found. The Asian clade has a significantly longer lifespan and
+produces more eggs than the Pacific clade suggesting that the former has
+advantageous life history traits with the potential to become serious pests.
+However, Takano’s claim only suggest the place of origin or distribution
+
+pathways of B. longissima.
+
+Three morphological forms of adult CLB had been documented in
+different countries. The color morph occurring in Thailand is the same morph
+present in the Philippines except in Palawan where the color morph found in
+Malaysia is also present (Navasero et al., 2008). The genus Brontispa are mainly
+found in Southeast Asia and the Western and Norther Pacific. A number of
+species have been described, although several revisions of the genus have seen a
+considerable reduction in the number of species. The latest major revision of the
+subfamily Hispinae to which the genus Brontispa belongs was in 1957. Since
+then, no further studies on the taxonomy of the genus Brontispa have been
+implemented. The sudden and rapid spread of the pest into Southeast Asia and its
+considerable intra specific variation in color patterns within the species B.
+
+longissima has caused confusion among plant protection specialists in the region,
+
+and now urgently warrants a revision of the genus Brontispa ( Liebregts et
+
+al.,2004 ).
+
+The incursion of CLB in the Philippines in 2005 from Pasay to other areas
+was assumed to be brought about by trading or elicit entry of imported ornamental
+plants. It may have been present two years earlier based on the presence of trees
+with almost all fronds damaged. In 2006, it was reported to be present only in the
+Southern Luzon Provinces, Bulacan and Camarines Sur. Three years later it has
+reached 34 other provinces representing all the major islands. Its infestation was
+
+not confined only in the Philippines. (Navasero et al., 2008).
+
+The distribution and infestation of CLB all over the country was compiled
+by CABI (1989). This pest was first recorded in Indonesia (1885) and American
+Samoa (1974) and continued to spread over the continent into Australia (1979),
+China (1988), Maldives (1999), Vietnam (1999), Thailand (2000), Cambodia
+
+(2001), Lao PDR (2001), Myanmar (2004) and Philippines (2005).
+
+The coconut leaf beetle caused serious economic damage in Southeast
+Asia. The invasion of coconut beetle in Cambodia resulted to 1.95 million trees
+or 16% were killed by this pest. Losses estimated at US$17.8 million to the
+country industry in Vietnam in 2002. In 2004, it is reported that the total areas hit
+by the coconut beetle in Thailand were 7229 hectares (FAO, 2004). In the
+
+Philippines, PCA (2009) documented 2,317,768 coconuts attacked and damaged
+
+by the pest of which 48% are bearing, another 48% non-bearing and the rest are
+
+seedlings (4%).
+
+Although the coconut leaf beetle infestation in the Philippines has not
+gone to an alarming level for the past five years, the pest remains to be a threat to
+the coconut industry. It is therefore imperative to develop a pest control strategy
+
+against the pest coupled with a reliable pest monitoring system.
+
+Objective of the Study
+
+The study was conducted to understand the pattern of infestation of the
+coconut leaf beetle (CLB) in relation to the development and reproduction of the
+pest and the development of coconut .
+
+Specifically, it aimed;
+
+1. To determine the spatial distribution of damaged palms across season as
+affected by the age of coconut,
+
+2. To relate the infestation pattern of palms to the density and age structure of
+the coconut leaf beetle population,
+
+3. To determine the rate of development and reproduction of the coconut leaf
+
+beetle and the leaf development of coconut.
+
+CHAPTER II
+
+REVIEW OF RELATED LITERATURE
+
+Taxonomy of the Coconut Leaf Beetle (Brontispa longissima Gestro)
+
+The taxonomy of the coconut leaf beetle is unclear. Takano et al., (2011) suggest
+there are two cryptic species in the current species concept of B. longissima based on
+
+mitochondrial DNA analysis and laboratory crosses.
+
+Some workers have used different names which are synonyms with B.longissima .
+Different color morphs of CLB have been described which varies geographically from
+reddish-brown to black. Color forms of CLB were described as separate species or
+subspecies but currently they are all treated as one species. In Indonesia, many local
+varieties have been described from time to time such as var. /ongissima with brown
+elytra, originally described in Wolan (Maluku Province), and in Java; var.frogatti Sharp
+with almost black elytra, from New Britain and the Solomon islands;var.selebensis
+Gestro with a spindle-shaped, black marking on the suture of the elytra, originating from
+south and north Sulawesi ,also from near Bogor and Java. Numerous forms, intermediate
+between the last two varieties were considered to occur in Sulawesi, Maluku and Papua
+Provinces. Fertile offspring from /ongissima and selebensis crosses could be produced in
+
+the laboratory (Kalshoven, 1981). Generally, the color of the adults varies
+
+geographically from reddish -brown in Java to almost black in the Solomon Islands, New
+
+Guinea and Papua Province (Indonesia) (Rethinam, 2007).
+
+The genus Brontispa Sharp (Coleoptera: Chrysomelidae: Cassidinae) contains 22
+described species. Seventeen species of which reported feeding on various palms
+(Staines, 2011). Species are difficult to separate and the genus is in need of revision.
+Among them, Brontispa longissima (Gestro) is the most studied species (Takano et al.,
+
+2012).
+
+Coconut hispine beetle is also known as coconut beetle, coconut leaf hispid, New
+Hebrides coconut hispid, dorsalis palm leaf beetle,brontispe du cocotier,tweekleurige
+klapperbladkever and Kokosnussblattkafer. Similarly, ever since its first description by
+Gestro in 1885 as Brontispa longissima some workers have used different names such as
+B. froggatti Sharp, B. castanea Lea, B. reicherti Uhmann, B. simmondsi Maulik and
+Oxycephala longipennis Gestro which are all synonyms of B. longissima (Gestro).
+However, B. limbata (Waterhouse et al., 1987 ) from Mauritius is considered valid
+
+species.
+
+Species belonging to the genus Brontispa are mainly found in Southeast Asia and
+the western and northern Pacific. A number of species have been described, although
+several revisions of the genus have seen a considerable reduction in the number of
+species. The latest major revision of the subfamily Hispinae, to which the genus
+Brontispa belongs, was in 1957. Since then, no further studies on the taxonomy of the
+
+genus Brontispa have been implemented. The sudden and rapid spread of the pest into
+
+Southeast Asia, and the fact that there is considerable intra specific variation in color
+patterns within the species B. longissima has caused confusion among plant protection
+specialists in the region. This scenario, urgently warrants a revision of the genus
+
+Brontispa (Liebregts et al., 2004).
+Geographic Distribution of the Coconut Leaf Beetle
+
+The geographic distribution of the coconut leaf beetle was compiled by CABI in
+1989. Its distribution was enumerated in table form per area with corresponding year of
+
+origin and spread (Table 1).
+
+Coconut hispine beetle, B.longissima was originally described from the Aru
+Islands (Maluku Province). It is native to Indonesia (Aru Islands, Maluku Province and
+possibly to Papua Province formerly known as Irian Jaya) and also to Papua New Guinea,
+including the Bismarck Archipelago, where it seldom causes serious problems Its arrival
+in Tahiti has facilitated its further spread in Polynesia. In recent times, it has invaded
+coconut palms in Republic of Nauru, Cambodia, Laos, Vietnam, Thailand, Myanmar and
+Hainan Island (China). B. longissima has reached Ari Atol in Maldives from where it can
+easily spread to Sri Lanka and Southern parts of India, if not contained. It is now
+
+distributed in Asia, Australia and Pacific Islands (Rethinam, 2007).
+
+Table 1. Geographic distribution of Brontispa longissima. Modified and updated from
+the CABI (1989) distribution map no. 227.
+
+PLACE REMARKS
+
+China 1988 Shenzhen area of Guangdong
+Province, spread to Hongkong in 1988,
+also in Hainan Island
+
+Indonesia 1885 (Aru Islands, Maluku Province and
+Papua Province formerly known as Irian
+Jaya), believed to be the original home
+along with Bismarck Archipelago
+(Papua New Guinea)
+
+1912 Salazar Islands of Sulawesi and in
+entire Sulawesi, Bali, Java, and Sumatra
+
+Malaysia Year not known
+
+Maldives 1999 Ari Atol
+
+Myanmar 2004
+
+Cambodia 2001
+
+Laos 2001
+
+Singapore Recent introduction, year not told
+
+Taiwan 1975 Pingtung, spread north and east to
+Hualein and Haitung
+
+Thailand 2000 serious damage in Prachuap
+Khirikan Province (recent introduction)
+
+Vietnam 1999
+
+American Samoa 1974
+
+Australia 1979 Darwin (Northern Territory)
+
+moved eastwards to Queensland Cairns
+and Cook town and as far south as
+
+Innisfail
+French Polynesia 1981
+New Caledonia 1942
+
+New Hebrides 1961
+
+Table 1. Continued ...
+
+North Mariana Islands 1999 Saipan and Rota
+
+Papua New Guinea First reported from Bismarck
+Archipelago, believed to be the original
+home along with adjacent Indonesia
+(Aru Islands, Maluku Province and
+Papua Province formerly known as Irian
+
+Jaya)
+Republic of Nauru 2001
+Samoa 1980
+Solomon Islands 1929
+Tahiti 1961
+Vanuatu 1937
+Wallis and Futuna 1987
+
+Coconut Leaf Beetle Infestation in the Philippines
+
+The coconut leaf beetle is believed to be endemic in the Philippines since it was
+listed in Gabriel’s book (1997) and Johnston (1965). Aside from this pest four native
+species of hispine were also listed namely; Brontispa depressa, Hispodonta sp.,
+Octodonta (Uhmania) angulosa, Octodonta (Uhmania) banguiensis and Octodonta
+
+(Uhmania) surigaona.
+
+Brontispa infestation was first sighted among coconut trees along Airport Road,
+NAIA and Roxas Boulevard in Pasay City in April 2005. Since then, infestation has been
+reported in nearby provinces. In 2007, 40,000 coconut trees in Samar were hit by the leaf
+beetle. In that same year, it also attacked more than 2,000 trees in Pangasinan. In 2009,
+PCA documented 2,317,768 coconuts attacked and damaged by the pest of which 48%
+
+are bearing, another 48% non-bearing and the rest are seedlings (4%). From 2010 to
+
+10
+
+2011, the coconut leaf beetle attacked coconut farms in Maasin City, Southern Leyte. In
+2012, the coconut leaf beetle threatened coconut farms in Central Mindanao or the
+Socesksargen Region, as they already infested at least 12 towns in the region’s four
+provinces. PCA data shows that from August 2007 to March 2011, Brontispa has already
+
+affected more than three million coconut trees (PCA, 2014).
+
+Coconut Leaf Beetle Infestation in Southeast Asia and Pacific
+
+Brontispa longissima is native to Indonesia (Aru Islands, Maluku Province and
+possibly Papua Province, formerly Irian Jaya) and to Papua New Guinea, including the
+Bismarck Archipelago, where it seldom causes serious problems. It is now distributed in
+Asia, Australia and Pacific Islands attacking not only coconut palm but also several other
+palm species. It has reached Ari Atol in Maldives from where it could easily spread to
+Sri Lanka and southern parts of India, if not contained. In Australia it has been recorded
+in 27 native and exotic palms. Lack of strict quarantine on the movement of palms
+(particularly ornamentals) is considered as a major factor in the spread of B. longissima.
+The spread of B. longissima and other coconut pests in Oceania is mainly attributed to
+
+human activities (Dharmaraju, 1984). The following countries were invaded by CBL;
+
+Cambodia. Brontispa longissima invaded Cambodia around 2001. Of the total 12.3
+million coconut trees, 1.95 million trees or 16% were killed by B. longissima, while 7.2
+
+million trees or 58% were attacked.
+
+11
+
+China. The coconut leaf beetle was found in Hainan, Guangdong and Taiwan provinces,
+but the worse affected areas are in Hainan province. In Hainan province, 11 species of
+
+host palm trees were recorded.
+
+Lao PDR. CLB was first reported in 2001. A survey showed that six villages in two
+provinces are faced with damaged from CLB. These included Namithon village in the
+Pakkading district of Bolikamxay province and the villages of Novilay, Vangboaangtai,
+
+Vangboangnua, Fouang and Nabo in the Sepon district of Savannaket province.
+
+Thailand. Damaged caused by Brontispa was first recorded in Naranthiwas province,
+the border area near Malaysia in 2000. Heavy infestation was first reported in February
+2004 in southem provinces including Surat Thani (Samui island and Pa-ngan Island) and
+Prachuap Khiri Kan. It is reported that the total areas hit by the coconut leaf beetle
+
+outbreaks amounted to 7229 hectares.
+
+Vietnam. The coconut leaf beetle was first detected in the Melkong Delta region in
+1999. Despite extensive use of chemical insecticides to control this pest, the beetle
+spread and incurred losses estimated at US$ 17.8 million to the coconut industry by 2002.
+
+(FAO, 2004).
+
+Life History Studies of the Coconut Leaf Beetle
+
+Adult females lay their 1.4 mm long and 0.5 mm wide brown flat eggs in the still-
+folded leaflets of both young and mature coconut palms. The eggs are surrounded by
+
+debris and excrement, and laid longitudinally in rows of an excavated area of leaf tissue.
+
+12
+
+They hatch in a minimum and maximum period of 3 - 4 and 4 - 7 days respectively. The
+whole cycle from egg to adult occupies about five to seven weeks in Java and Sulawesi
+(Kalshoven, 1981; Lever, 1969), but can extend to nine weeks in other (presumably
+cooler) places. The adult beetle (7.5 to 10 mm long and 1.5 to 2 mm wide) matures two
+weeks after emergence from the pupa. It lives for two to three months, The female on
+average lays 120 eggs during several weeks (Kalshoven, 1981), which produce 40 larvae.
+The beetles are nocturnal and fly well. They always live in the still-folded leaflets and
+
+move outside only to infest the nearby palms or for mating (Rethinam, 2007).
+
+Hosang et al., (2004) reported that the total life cycle of B. longissima from egg to
+adult emergence was 5-7 weeks or 5-9 weeks. Adult females lay singly or in groups of
+two to four on the still folded leaflets of both young and mature coconut palms (Rethinam
+and Singh, 2005). The eggs hatch after an incubation period of about 5 days (Yueguan
+and Yankun, 2004) or 3-7 days (Sankaran, 2006). The newly -hatched larva begins to
+feed between and inside unopened leaflets (Yueguan and Yankun, 2004). Larval
+development from first instar to fifth instar takes approximately five weeks in the rearing
+laboratory at a temperature range of 25-30 °C and 60-90 % humidity. The pupal period is
+about five days (Kalshoven, 1981) . Female beetles feed for two to three weeks before
+producing viable eggs. Kawazu et al., (2012) found that female beetles would copulate
+immediately after emergence, males did not copulate until three weeks after emergence.
+
+Most copulation occurred in the early morning or afternoon.
+
+13
+
+The beetles feed in the unopened new leaf spear. Adults, pupae and larvae are
+most commonly found in this part of the palm. As the new leaf opens, the damage can be
+seen as brown patches. Fronds with old damage may appear “scorched” due to a
+
+combination of beetle damage and wind damage (Chinn, 2000).
+
+Life Cycle and Behavior of the Coconut Leaf Beetle
+
+Takano et al., (2012) studied the development of B. longissima in the laboratory
+using Satakentia liukiuensis. They found that larvae completed their development
+between 20-30°C; larvae reared at 31°C failed to pupate. Development was completed at
+the effective cumulative temperature of 891.2 degree-days. With an estimated lower
+developmental threshold of 13.3°C.
+
+Similar study was conducted by Thu Giang (2009) using leaves of Typha
+angustifolia Lesser. The adult biology and developmental time of egg coconut hispine
+beetle were studied in the laboratory at 25°C, 60-70 % relative humidity and 12 L: 12 D
+photoperiod. The duration of mating of B. longissima averaged 9.0 1.3 min. The pre-
+oviposition of adult was 22.5 +1.4 days. Female laid on average 24.5 +4.4 eggs, adult
+longevity was over 2 months. Egg deposition of B. longissima is higher during the night
+time compared to the day time. Larvae in general have 4 instars. Temperature had a
+significant effect on developmental time of larvae, the higher the temperature, the shorter
+its duration of development. High humidity (> 95%) is suitable for survival rate and
+
+development of B. longissima eggs.
+
+14
+
+Ecological Studies
+
+Host Range of the Coconut Leaf Beetle
+
+The coconut leaf beetle attacks not only coconut palm but also several other
+palms (Table 2) and several forms of cycads. Some of these palms include betel palm
+(Areca catechu), sago palm (Metroxylon sagu), Mexican fan palm (Washingtonia
+robusta), fox tail palm (Wodyetia bifurcate), Alexandra palm (Archontophoenix
+alexandrae), dwarf date palm (Phoenix roebelenii), nipa palm (Nypa fruitican), royal
+palm (Roystonea regia), oil palm (Elaeis guineensis) nicobar palm (Bentinckia
+nicobarica), Carpentaria palm (Carpentaria acuminate), fish tail palm (Caryota mitis),
+ivory nut palm (Phytelephas sp.). In Australia, there were 27 native and exotic palms
+
+(Rethinam, 2007) recorded to be hosts of CLB.
+
+Table 2. Host range of the coconut leaf beetle.
+
+15
+
+SPECIES HOSTS REFERENCE
+Brontispa Latania sp. Lever, 1937
+longissima Oreodoxa regia H.B.K.
+
+Elaeis guinennsis Jaqc.
+Thrinax parviflora Swartz
+
+Kentia sp.
+
+Cocos nucifera L.
+
+Archontophoenix alexandrae (F.
+
+Mull.) H.Wende & Drude
+Caryota sp.
+
+Metroxylon sagu Rottb.
+Bentnickiopsis sp.
+
+Balaka sp.
+
+Calamus sp.
+
+Roystonea regia H.B.K
+Washingtonia filifera Wendl.
+W. robusta H.Wendl.
+Hyophorbe lagenicaulis (L.H.
+Bailey) H.E. Moore
+Livistona chinensis R.Br.
+Areca traiandra Roxb.
+
+Natural Enemies of the Coconut Leaf Beetle
+
+Lepesme, 1947
+
+Howard and Abad, 2001
+
+At the height of the widespread infestation in Southeast Asia and Pacific of this
+
+pest, various control strategies unique or common to the countries affected were utilized
+
+such as the use of endemic natural enemies and chemical control. Some reports indicated
+
+that a number of natural enemies keeps the coconut leaf beetle in check. These natural
+
+enemies include Asecodes hispinarum and Metarhizium anisopliae in China, Tetrastichus
+
+brontispae, Metarhizium anisopliae var.
+
+anisopliae and Beauveria bassiana in
+
+16
+
+Indonesia, 4. hispinarum in Cambodia, and Chelisoches morio, Metarhizium anisopliae
+
+var. anisopliae, Beauveria bassiana and Tetrastichus brontispae in the Philippines (Table
+
+3).
+
+Table 3. Natural enemies of the coconut leaf beetle.
+
+SPECIES
+(ORDER:FAMILY)
+
+PLACE OF
+REPORTING
+
+REMARKS AND
+REFERENCE
+
+Egg parasitoids
+Hispidophila (Haeckeliana)
+brontispae Ferriere
+(Hymenoptera:
+Trichogrammatidae)
+
+Ooencyrtus podontiae Gahan
+(Hymenoptera: Encyrtidae)
+
+Trichogrammatoidea nana
+Zehntner (Hymenoptera:
+Trichogrammatidae)
+
+Larval/pupal parasitoids
+
+Tetrastichus brontispae
+Ferriere (Hymenoptera
+:Eulophidae)
+
+Java, Indonesia
+
+Java ,Indonesia
+
+Java, Indonesia
+
+Java/Indonesia
+
+Described in 1931,one wasp
+develops per Brontispa egg,
+parasitized 15% eggs in the field
+(Kalshoven,1981)
+
+Parasitized 10% eggs
+(Kalshoven, 1981).In 1984,
+Brontispa eggs parasitized by
+Ooencyrtus were introduced from
+Bogor. Introduced to several
+countries for evaluation, recorded
+in Malaysia
+
+Described in 1896, successful egg
+parasitoid of Brontispa as well as
+of several other coconut pests.
+Native to
+Java(Indonesia),introduced to
+Fiji, Papua New Guinea and
+Solomon Islands
+
+Found in 60-90% of the pupae
+and 10% of the larvae
+(Kalshoven, 1981). Considered
+most effective species ,widely
+introduced in the Pacific Islands
+
+for the control of Brontispa
+
+Table 3. Continued ...
+
+Asecodes hispinarum
+Boucek (Hymenoptera:
+Eulophidae)
+
+Chrysonotomyia sp.
+(Hymenoptera:
+Eulophidae)
+
+Entomopathogenic fungi
+Metarhizium anisopliae
+(Metchnikoff) Sorokin
+(Moniliales: Moniliaceae)
+
+Beauveria bassiana
+(Balsamo) Vuillemin
+(Moniliales: Moniliaceae)
+
+Predator
+
+Chelisoches morio
+Fabricius (Dermaptera:
+Chelisochidae)
+
+Source: Rethinam, 2007
+
+Samoa
+
+Samoa
+
+Samoa
+
+Java /Indonesia
+
+Dispersal Behavior of Hispine Beetles
+
+Larval parasitoid of B.
+longissima collected from
+Samoa and released in
+Nauru, Thailand, Vietnam
+and Maldives
+
+Parasitoid was the most
+important cause of larval
+mortality, parasitizing 75%
+of the 4th instar larvae
+collected from Samoa
+
+Widely distributed soil
+inhabiting
+entomopathogenic fungus.
+Isolated from B.
+longissima
+
+Common fungi, spraying
+of coconut trees with 5x10*
+conidia/ml effective
+against adults and larvae
+
+Important predator of
+Brontispa, available in
+most of its distribution
+zones
+
+17
+
+Most hispines species seem to be restricted to understory to mid-canopy level
+
+plants. Work on hispines has shown many species to be monophagous or narrowly
+
+18
+
+oligophagous. These species are found mostly in relation to their host plants. Other
+hispines are broadly oligophagous or polyphagous and can be found in many habitats
+
+(Staines, 2011).
+
+The foraging of adult chrysomelids is influenced mostly by altitude, strength of
+affinity with the host, attractiveness to flowers and denseness of foliage, and less by the
+availability of young foliage and the abundance of ants or spiders. Adults closely
+associated with particular hosts clustered on these in a predictable way but faunal
+similarities among tree species had little to do with tree phylogenetic considerations
+
+(Basset et al., 1996)
+
+A very specialized group, the Hispinae feed on Monocotyledonae. There are
+many cases of allotropy known among the Chrysomelidae, but very often there is below
+some kind of hidden botanical relationships or the choice is due to lack of suitable host
+plant or due to the succulence of the cultivated plants. Most of the Chrysomelidae feed
+on leaves, roots or dead stems or bark. They generally eat the epidermis in the open air
+but larvae also can feed on the collar of the root. Larvae of Hispinae and some Alticinae
+and Galerucinae are miners (roots, leaves) or gallicolous (Sagrinae). Many larvae of
+Chrysomelidae stay at the inferior side of the leaves (Cassidinae, Galerucinae), but that
+can be linked with microclimate or with the difference between both epidermis of the
+density of stomata. It has been proved that color vision exists in Chrysomelid beetles
+(Chrysolina, Angelastica) and they are able to distinguish green tints from one another, as
+well as yellow and orange from blue -violet and green. Food selection is also olfactive,
+
+gustative and mechanical (Jolivet et al., 1981).
+
+19
+
+Flight ability is not uniformly distributed among the Chrysomelidae. Some
+groups are good flyers (Donaciinae, Criocerinae, Alticinae, Galerucinae, etc.), some bad
+(Cassidinae) or non-flyers, such as most of the Chrysolina and the genera with reduced or
+absent wings (Timarcha). Flight is generally done during the heat of the day, under the
+sun, or even in the shade in the tropical forest. Sometimes, flight is migratory
+(Leptinotarsa, Paropsis, Diabrotica) and linked with physiological changes and external
+
+stimuli. Generally, flight is diurnal but can be nocturnal (Jolivet et al., 1981).
+
+Measures of Insect Population Density
+
+Estimating population densities of pest arthropods is the most important part of
+basic research in agricultural ecosystems and one of the main components in pest
+management programs; many other properties are derived from the density measure. A
+reliable sampling program to estimate density should include a proper sampling time,
+sampling unit and sampling size in which the determination of special distribution is
+crucial. Knowledge of the spatial distribution of insects is important in understanding the
+biology and ecology of a species and the basis for the development of sampling protocols
+
+(Moradi-Vajargah, 2011).
+
+Insect population can be measured in several ways. The methods for estimating
+population densities in arthropods constitute the cornerstone of basic research in
+agricultural ecosystems and are the principal tool for implementation of pest management
+
+programs. A reliable sampling program includes an identification of the appropriate
+
+20
+
+sampling time, sampling unit, a determination of the spatial distribution of sampling units
+
+as well as sample size (Sedaratian, 2010).
+
+Statistical procedures are usually based on parametric techniques commonly used
+to summarize information and to perform meaningful inferences about a phenomenon of
+interest. The traditional statistical tools classify insect population distribution in an
+aggregate, uniform or random manner, based on mean values, variances and frequency
+distributions (ratio variance/media, Taylor’s potential law, k parameter etc.) (Duarte et
+
+al., 2015)
+
+Measures of Spatial Distribution Pattern
+
+The spatial distribution pattern of insects can be determined by five commonly
+used methods; index of dispersion, Taylor’s power law, Iwao’s patchiness regression,
+Morisita’s coefficient of dispersion and Lloyd’s mean crowding (Moradi-Vajargah,
+2011). However, in this study only Index of dispersion and Lloyd’s mean crowding were
+
+used.
+
+Index of dispersion
+
+Dispersion of a population can be classified through a calculation of the variance
+to mean ratio; namely: s2/m=1 random, < 1 regular and > 1 aggregated. Departure from
+a random distribution can be tested by calculating the index of dispersion (ID), where n
+denotes the number of samples: ID = (n-1) s2/m ID is approximately distributed as x2
+
+with n-1 degrees of freedom. Values of ID which fall outside a confidence interval
+
+21
+
+bounded with n-1 degrees of freedom and selected probability levels of 0.95 and 0.05, for
+
+instance, would indicate a significant departure from a random distribution.
+
+Lloyd’s Mean crowding (x*)
+
+Lloyd’s mean crowding (x*) was proposed by Lloyd to indicate the possible
+effect of mutual interference or competition among individuals. Theoretically, mean
+crowding is the mean number of other individuals per individual in the same quadrate:
+
+x*=m+s2/m-1.
+
+As an index, mean crowding is highly dependent upon both the degree of
+clumping and population density. To remove the effect of changes in density, Lloyd
+introduced the index of patchiness, expressed as the ratio of mean crowding to the mean.
+As with the variance-to-mean ratio, the index of patchiness is dependent upon quadrate
+
+size x*/m=1 random, <1 regular and >1 aggregated (Lloyd, 1967).
+
+CHAPTER III
+
+MATERIALS AND METHODS
+
+Study Area
+
+The study was conducted in Guinobatan, Albay from February 2017 to July 2018
+in the following places: Purok 4 and Purok 7 in Barangay Muladbucad Grande, Purok 7
+in Barangay Mauraro and Purok 4 in Barangay Lower Binogsacan (Figure 1). These
+study sites were selected based on the basis of history of CLB infestation. Three of the
+six sites were coconut farms with palms that were 7 years old and up (Al, A2, A3) and
+hereby referred to in this manuscript as “bearing age” while the other three sites were
+farms of young coconut that were composed of 3-5 years old palms (B1, B2, B3) and
+
+hereby referred to as “non-bearing age”.
+
+The study sites are all located at the foot of Mayon Volcano and considered as an
+upland agroecosystem with a mix of sloping and flat terrain. Coconut is the primary crop
+grown. Along with coconut palms, other fruit trees like mango, pili, cacao, banana and
+papaya were also present as well as forest trees. The undergrowth of these trees was
+
+utilized as grazing area for cattle and carabaos.
+
+23
+
+Figure 1. Map of the relative position of the sampling sites in Guinobatan,
+Albay.
+
+Pattern of Distribution
+
+Within each of the study site described above, an area consisting of one hectare of
+coconut was designated as monitoring site. All coconut palms within the one-hectare
+monitoring site were mapped (Appendix Figure 2). Mapping was done by dividing the
+lot into 100 grid cells of 10 m x 10 m area. Each cell was delineated with plastic straw
+for easy identification of coconuts within the cell. The relative position of each palm on
+each grid cell was marked. After mapping, each palm was visually examined for CLB
+damage and recorded. Monitoring of the CLB infestation was initially planned to be
+done only once in the wet season (February 2017) and once in the dry season (May 2017)
+
+but it was extended to cover more than a year (July 2018).
+
+24
+
+The spatial distribution of the palms was determined using two indices: Lloyd’s
+Mean Crowding and Index of Crowding. The average number of palms per hectare as
+
+well as the level of infestation in each of the sampling site were also analyzed.
+
+Population Age Structure and Density
+
+In order to characterize the population of the coconut leaf beetle (CLB) in the
+study sites, destructive sampling of palms inside the designated 1-hectare monitoring area
+were done. The sampling was synchronized with the damage monitoring of palms in
+
+February 2017, May 2017 and July 2018.
+
+A sample of 10 -15 coconut palms per study site was taken at random. The
+number of coconut leaf beetle from the samples was counted and classified according to
+the life stage. The adults were collected and distinguished into male and female to
+determine the sex ratios. Female adults were dissected to determine its reproductive
+
+stage using the rating system in Table 4.
+
+Table 4. Rating system used to designate reproductive stage of the female coconut leaf
+beetle (Brontispa longissima Gestro) (Adapted from Cardenas et al., 2000).
+
+REPRODUCTIVE STAGE DESCRIPTION
+Virgin females Ovarioles not differentiated
+Gravid females Ovarioles with mature ova but without
+corpora lutea
+Spent females Regressed ovarioles without mature ova
+
+with corpora lutea
+
+25
+
+Life History of the Coconut Leaf Beetle
+
+The life history of the coconut leaf beetle was studied under laboratory and field
+conditions in the Crop Science Department, BUCAF, Guinobatan, Albay and in the
+
+Insect Ecology Laboratory, IWEP, UP Los Bajios, College, Laguna.
+
+Laboratory Life History. The growth and rate of development of CLB was
+studied using F1 laboratory population that were originally field collected from various
+places in Guinobatan, Albay. Rearing methodology followed that of the protocol
+
+developed by Liebregts et al., (2006) (Appendix Figure 3).
+
+Data were obtained from individually reared insects. Fifty eggs of one cohort
+were taken and observed until hatching. As soon as the eggs hatched, larvae were reared
+individually in test tubes measuring 25x200 mm provided with excised young coconut
+leaf. Replacement of food was done every two days. Daily observations of the insects for
+
+mortality and molting was done. Temperature was recorded daily.
+
+The following data were gathered for the development time in terms of number of
+days; egg stage (incubation period), larval stage, total larval period, pupal period, pre-
+oviposition period and number of days from egg to adult stage. In terms of reproductive
+potential, fecundity was recorded also such as the number of eggs per female in its life
+time.
+
+Field Biology. To study the field biology of coconut leaf beetle, twenty coconut
+seedlings were inoculated separately with 1* instar larva. There were two newly-emerged
+
+1* instar larva introduced per plant initially, but only one larva was maintained per plant
+
+26
+
+as soon as the larva has settled to feed. Observations were done daily until adult stage
+emerged from a total of 20 larvae. The data gathered were the same as the laboratory
+studies. Ambient air temperature in the green house was recorded daily from 8 am and
+
+Spm.
+
+Development of the Coconut Leaf
+
+To study the development of the coconut leaf, 10 coconut seedlings were planted
+in the field with a spacing of three meters each. Observation was done daily to determine
+the growth, appearance and increase in height of the first true leaf and the succeeding
+leaves. The stages were designated arbitrarily and described accordingly as significant
+
+changes were observed in the growth.
+
+Another set of 10 seedlings were planted in polyethylene bags and observed under
+
+greenhouse condition. The same data as earlier described in this section were gathered.
+
+CHAPTER IV
+
+RESULTS AND DISCUSSION
+
+Spatial Distribution of Infested Palms
+
+The palms infested with the coconut leaf beetle (CLB) in a farm showed a
+clumped distribution pattern based on either Index of Clumping or Lloyd’s Mean
+Crowding (Table 5). The values of both indices were consistently higher in palms of
+non-bearing age (3-5 years old) than those of the bearing age (greater than 7 years old)
+
+across sampling time.
+
+In the first sampling, this result indicate that clumping was observed in both age
+groups of palms but the damage in non-bearing palms are more clumped than in bearing
+palms. This variation was influenced by the percentage of infestation. It is expected that
+index of clumping would increase as more palms are infested given the same area of
+sampling. The higher infestation in the non-bearing age seemed to indicate that CLB has
+a preference to young palms. It is also possible that the damage to young palms was more
+
+apparent because they succumb to the infestation faster than palms of bearing age.
+
+From the first to the second sampling, there was no difference in the pattern of
+infestation of palms in the study sites. There was neither an increase nor decrease in the
+
+number of infested palms as well as their distribution. Considering the high infestation
+
+28
+
+level and the length of time between the two sampling events, there was no indication
+that the CLB have moved to the neighboring palms to feed or oviposit. Unlike other
+insects, the CLB did not disperse readily from one plant to another. In the second
+sampling, there was no change in the pattern of infestation of palms in the sample farms.
+Unlike other insects, the CLB did not disperse readily from one plant to another.
+Considering the high infestation level and the length of time between the two sampling
+events, there was no indication that the CLB have moved to the neighboring palms to
+
+feed or oviposit.
+
+In the third sampling, the infestation pattern showed a clumped distribution just
+like the first two sampling time. Both indices were higher in non-bearing palms than in
+bearing palms. The infestation level in the sample farms significantly decreased after a
+
+year and a few palms were felled due to CLB damage.
+
+The index of clumping determines that CLB movement is very low within a
+hectare and its feeding behavior is concentrated per frond as a manifestation of the
+percent infestation and clumped distribution of damaged palms especially in non-bearing
+age. According to Strauss (1988) in chrysomelids, mating, oviposition and adult and
+larval feeding all take place on the same plant. It indicates that both adult and larvae feed
+
+on the same resource, indicating a large influence on patterns of host use.
+
+These behavior correlates with the percentage infestation and density of CLB in
+non-bearing age. The increased dispersion in non-bearing palms is thought to result from
+
+the higher rate of attack of CLB which indicate a higher infestation. It is also an indicator
+
+29
+
+of an outbreak in the area with 100 percent infestation in non-bearing palms. Chew et al.,
+(1991), observed that infestation rise when hosts are predictable. Predictable and
+apparent hosts accumulate greater herbivore loads. Thus, herbivore loads are also related
+to host apparency.
+
+Table 5. Spatial distribution of palms infested with the coconut leaf beetle (Brontispa
+longissima Gestro) per hectare (Guinobatan, Albay).
+
+SAMPLING | AGE OF DENSITY OF | INFESTED a
+TIME PALMS PALMS PALMS CPST SEDI uC)
+(No./ha) (Yo/ha)
+Index of Lloyd’s mean
+clumping crowding
+Bearing 151.0 68.6 63.7 78.7
+February
+2017 Non- 132.0 89.4 96.0 164.0
+bearing
+Bearing 151.0 68.6 63.7 78.7
+May 2017 | Non- 132.0 89.4 96.0 164.0
+bearing
+Bearing 148.7 12.9 43 6.7
+July 2018 | Non- 125.7 62.0 11.3 14.7
+bearing
+es ee ee ee ce
+
+The level of infestation per palm varied with the age of coconut palms. It is
+expected that percent infested palms would increase given the same area of sampling and
+higher number of palms per hectare. The same percent infested palms in non bearing age
+in two sampling time indicate that CLB has a preference to young palms (Table 6 ). Non-
+bearing age had the higher infested fronds in three sampling time than the bearing age.
+
+The intensity of damage was influenced by the mean population of CLB in non-bearing
+
+30
+
+age. This indicates that CLB has a preference to young palms. The population of CLB in
+non-bearing age was higher throughout the sampling period. This indicate that percent-
+infested palms is related to the density and age structure of CLB in the field. Most of the
+CLB populations are in adult and larval stage in those fronds with highest number of
+infestations. These stages were considered as the destructive stage since they are feeding
+continuously on the palms and brought too much damage in the fronds. Adult and larva
+CLB were observed feeding on the same resource. This indicates that CLB has a
+behavior of maximizing the resources available within an area. Its feeding behavior was
+influenced also by the heterogeneity of the environment such as microclimate especially
+relative humidity and preferred part of the plant. Individuals are attracted to a particular
+structures (closed fronds) or stimuli and microclimatic conditions inside the frond
+(humid). In this case, CLB tends to aggregate inside the closed fronds as a manifestation
+of their preference to humid conditions. Other studies show that aggregation is brought
+about by coconut leaf volatiles. Both sexes are attracted to a mixture of B-myrcene, (-)-
+limonene and E-2-hexen-]-ol (1:6:1), which are key components of coconut palm leaf
+volatiles. A blend of B-myrcene and (-)-limonene (0.7:1-1:0.7) in low amounts (100 ng)
+elicits aggregation and oviposition in females. Chemical analyses of food-deprived,
+gravid female B. longissima show high concentrations of B-myrcene and (-)-limonene
+in their accessory glands, suggesting that female beetles sequester both compounds and
+release them during oviposition (Fang , 2011). Thus, level of infestation of CLB per palm
+can be explained by the feeding behavior, slow dispersion, higher density, age structure
+
+of CLB and age of palms in the area.
+
+31
+
+Table 6. Level of infestation of the coconut leaf beetle (Brontispa longissima Gestro) per
+palm in the various sampling sites as affected by age of palms (Guinobatan,
+
+Albay).
+SAMPLING | AGE |DENSITY OF | INFESTED CLB
+TIME OF PALMS PALMS | INFESTATION/PALM
+PALMS | (No-/ha) (%ofha) Number of | Number of
+infested fronds CLB
+Bearing 151.0 68.6 25 59.8
+February 2017 | Non 132.0 89.4 44 623
+bearing
+Bearing 151.0 68.6 29 575
+May 2017 | Non 132.0 89.4 3.0 164.9
+bearing
+Bearing 148.7 129 0.6 10.1
+Buty 2018 Non 125.7 62.0 15 19.8
+bearing
+
+Population Density and Age Structure of the Coconut Leaf Beetle
+
+The density of CLB in six sampling sites varied with the age of coconut palms
+
+and sampling period (Table 7 and Figure 2). Highest density was observed on second
+
+sampling in non-bearing age. However, its population decline on the third sampling. It
+
+implies that CLB preferred non-bearing age of coconut palms and drier period for their
+
+development and multiplication .
+
+32
+
+Table 7. Mean density of the coconut leaf beetle (Brontispa longissima Gestro) in the
+
+various sampling sites as affected by age of palms (Guinobatan, Albay).
+
+SAMPLING AGE OF CLB STAGES
+TIME PALMS (Number/Palm)
+Egg Larva Pupa Adult = Total
+Bearing 11.9 27.9 11 9.0 59.8
+Feb 2017
+iat Non-bearing 88 196 138 201 623
+Bearing 23.4 18.8 3.1 12.3 57.5
+May 2017
+Non-bearing 45.8 60.1 9.8 49.3 164.9
+Bearing 2.9 44 0.4 2.3 10.1
+July 2018
+Non-bearing S22) 6.4 2.7 5.5 19.8
+
+a
+S
+a
+a
+cS)
+3
+&
+3
+<
+Zz
+
+Figure 2.
+
+Bearing Non bearing
+
+Bearing Non bearing
+
+Feb.2017
+
+May-17
+
+Sampling period
+
+Begg Mlarva
+
+Bearing Non bearing
+
+Jul-18
+
+pupa Sadult
+
+. Population of the the coconut leaf beetle ( Brontispa longissima Gestro ) in
+
+the study sites.
+
+33
+
+The age structure of CLB varied with the age of coconut and sampling period
+(Figure 3). Both bearing and non-bearing age has more immature stages than the adult
+stage from the first sampling until last sampling period. The highest population was in
+the larval stage. Its population was concentrated in the non-bearing age. This indicates
+
+that CLB has a preference for non-bearing age of palms.
+
+100%
+90%
+80%
+70%
+60%
+50%
+40%
+30%
+20%
+10%
+
+Mean The Coconut Leaf Beetle (Brontispa longissima
+Gestro) popluation per coconut palm
+
+0%
+Bearing Bearing Non Bearing Non
+age = age bearing age bearing
+age age age
+Feb-17 May-17 Jul-18
+
+Sampling period
+
+WEge Blarva @Pupa w Adult
+
+Figure 3. Age structure of the coconut leaf beetle (Brontispa longissima Gestro) in
+bearing and non-bearing age of coconut palms.
+
+The reproductive stage of adult female CLB was derived from the samples of
+adults collected in the field (Table 8). Its distribution varies from the sampling period
+
+and age of coconut palms. Both ages of coconut palms comprise mostly of virgin
+
+34
+
+females from February and May 2017 and gravid females in July 2018. Spent females
+
+were also observed in two sampling period regardless of age of coconut palms.
+
+The percent infested palms can be explained by density,age structure and
+reproductive stage of adult female. To explain field infestation, the rate of reproduction
+of CLB for three months was doubled. Its reproductive stage of adults was mostly on
+virgin and gravid females. Results indicate that, the percent infestation in the field will
+start in three months’ time. This can be explained further by the density and reproductive
+stage from the samples taken in three sampling period. The result of laboratory
+experiment, could support the claim that CLB infestation would start in three months’
+time. CLB with the presence of spent female is a good indicator that they did not
+dispersed well in the area. This also indicate that new infestation was observed on the
+first sampling period and CLB population started to established. Two month old infested
+on the second sampling and three month old infested on the third sampling as explained
+by the rate of development, reproductive stage and age structure in the field. This
+explains why pattern of infestation was observed in each sampling area. It says that,
+infestation levels are related to numerical stability of hosts as well as the population
+
+density of insects.
+
+35
+
+Table 8. Mean reproductive stage of adult female coconut leaf beetle (Brontispa
+
+longissima Gestro) in the various sampling sites (Guinobatan, Albay).
+
+SAMPLING AGE OF REPRODUCTIVE STAGE OF CLB | TOTAL
+TIME PALM Virgin Gravid Spent
+female female female
+Bearing 4.0 0.4 0.5 49
+February 2017
+Non-bearing 8.8 28 1.8 13.4
+Bearing i 47 1.6 0.5 68
+May 2017
+Non-bearing 19.5 5.5 0.1 25.1
+Bearing 2.7 47 0.0 74
+July 2018
+Non-bearing 9.7 17.3 0.0 27.0
+Total 49.4 32.3 2.9 84.6
+
+Rate of Development and Reproduction of the Coconut Leaf Beetle
+
+The development time of CLB reared under field condition was shorter than those
+
+reared under laboratory condition (Table 9). Male CLB had shorter duration of life cycle
+
+than the female. There were 5 larval instars instead of 4 and 6 as reported by Froggatt
+
+and O’Connor (1941) .The total duration of larval stage was 23.73+0.33 days and
+
+23.73+0.38 days in females and 23.00+0.38 days and 22.86+0.14 days in males both in
+
+the laboratory and field condition. The total developmental period, days from egg to
+
+adult, was 34.33+0.41 days and 28.37+0.29 days in females and males in the laboratory
+
+and 32.00 +0.33 days in females and 26.71+0.36 days in males in field condition. Both
+
+sexes reared in laboratory and field condition had relatively equal duration of larval
+
+stages and total developmental period from egg to adult.
+
+36
+
+The data obtained from this study is relatively shorter than those reported by other
+investigators (O’Connor, 1940; Froggatt and O’Connor, 1941; Kalshoven, 1981,
+Waterhouse and Norris 1987; FAO, 2006). The variation in the developmental period
+could be attributed to the differences in temperature, relative humidity, host plants and
+other environmental conditions existing in the different study areas. The number of
+larval instars differed from that reported by Froggart and O’Connor (1941) which was 4.
+As previously reported, the stages may vary from 5 to 6 at different places (O’Connor,
+
+1940).
+
+In order to test if there was a significant difference in the development rate
+between the coconut leaf beetle reared from the field and laboratory, a Mann Whitney
+Wilcoxon test was used. This test is a non-parametric test which was the best option for
+small number of samples. P-value is less than 0.05, which indicates that there was a
+significant difference in the development rate between samples from the field and
+
+laboratory.
+
+37
+
+Table 9. Development time of the coconut leaf beetle (Brontispa longissima Gestro)
+reared under laboratory and field condition (duration in days) (Mean+ SEM).
+
+STAGES LABORATORY (n=50) FIELD (n=20)
+Female Male Female Male
+
+Egg 4.73+ 0.13 4.83+0.16 3.25+0.16  3.86+0.34
+Larva
+
+1* instar 4.53+ 0.10 4.91+0.10 3.88+ 0.13 3.86+0.14
+
+2" instar 5.83+ 0.20 5.20+0.17 4.1340.13  4.43+0.20
+
+3" instar 5.034 0.10 4.80+0.11 5.00£0.19  4.57+0.20
+
+4" instar 6.45+ 0.12 6.46+0.14 5.00 0.19 4.86+0.14
+
+5 instar 4.75+ 0.41 6.91+0.05 5.00+0.19  5.14+0.14
+Pupa 5.884 0.19 5.26+0.18 5.7540.16  5.43+0.30
+Total Larval period | 23.73+ 0.33 23.54+0.29 23.00+0.38 22.86+0.14
+Days from egg to 34.33+ 0.41 28.37+0.29 32.00+0.33 26.71+0.36
+adult
+
+P-value <0.05 (P value is less than 5 which indicates significant difference in the development time)
+
+The adult parameters of CLB reared in the laboratory was different from those
+reared in the field except for the sex ratio (Table 10). The sex ratio did not deviate from
+the expected 1:1 sex ratio and this conforms to the study of Acevedo et al., (2014).
+Female longevity was longer under laboratory condition as compared with those reared in
+the field. Female longevity was 228.38+9.50 days and 119.625+5.19 days in the
+laboratory and field condition. Male longevity was 185.20+15.21 days and 174.57+14.68
+
+days both in the laboratory and field condition. Pre-oviposition period was 20.10+0.70
+
+38
+
+days in the laboratory and the female laid 87.93+3.26 eggs per female during several
+
+weeks. However, no comparison was made since adult CLB reared in the field died.
+
+Similar studies showed that female lays an average of 120 eggs during several
+weeks and lives for 220 days (PCA-RDEB, 2012). In this study, female CLB life span
+was almost 8 months and laid 87 eggs per female. It was also observed in the laboratory
+under extreme circumstances, that single female CLB could laid 126 eggs and adult
+
+longevity for female was 302 days and male was 355 days .
+
+Table 10. Adult parameters of the coconut leaf beetle (Brontispa longissima Gestro)
+reared under laboratory and field condition (Mean+ SEM).
+
+PARAMETERS LABORATORY FIELD
+Sex ratio 1:1 1:1
+Female Longevity (days) 228.38+9.50 119.625+5.19
+Male Longevity (days) 185.20+15.21 174.57£14.68
+Fecundity(eggs/female) 87.93+3.26 0.00
+Pre-oviposition (days) 20.10+0.70 0.00
+
+The density of CLB for three months exposure in the field varied from sampling
+period (Figure 4). From a single pair of CLB introduced per palm, the rate of
+development was doubled. The study shows that a single pair of CLB could produce
+more adults for three months’ time on single coconut palms and could survive throughout
+
+its generation.
+
+39
+
+Coconut Leaf Beetle (Brontispa
+longissima Gestro)
+
+Mean population per pair of the
+
+100%
+90%
+80%
+70%
+60%
+50%
+40%
+30%
+20%
+10%
+0%
+Egg
+
+Larva Pupa adult
+Sampling period
+
+@1 month #2months ®3 months
+
+Figure 4. Mean population of the coconut leaf beetle (Brontispa longissima Gestro)
+after three- month caged experiment under field condition.
+The reproductive stage of CLB was counted after a month and thereafter (Figure
+5) . CLB undergoing pre-oviposition or virgin female was higher in the second month of
+observation and relatively equal in proportion after three months of introduction in the
+gravid female. However, the mean physiological age was observed to be more on the
+
+virgin female.
+
+40
+
+100%
+90%
+80%
+70%
+60%
+50%
+40%
+30%
+20%
+10%
+
+0%
+
+Reproductive stage of the Coconut Leaf Beetle
+(Brontispa longissima Gestro)
+
+1month 2 months 3 months
+Sampling period
+
+Virgin female = Gravid female Spent female
+
+Figure 5. Reproductive stage of adult female coconut leaf beetle (Brontispa
+longissima Gestro) derived from three-month caged experiment under
+field conditions.
+
+Development of the Coconut Leaf
+
+The developmental stages of coconut leaf was observed for three months’ time
+under field and green house conditions (Table 11). The developmental stages were
+described based on the duration (days) of its emergence. The stages include the
+following pinnae emergence (0-5 days), first shoot emergence (17 DAEP- Days after
+emergence of pinnae), second shoot emergence (52 DAEP), third shoot emergence (75
+DAEP) and fourth shoot emergence (93 DAEP) (Appendix Figure 1). The emergence of
+
+every shoot of the coconut leaf was observed with an average of more or less one month
+
+41
+
+(23 days) before another shoot emerge. The emergence of shoot of the coconut leaf is
+
+inferred to be synchronous with the development of CLB based on the study in the
+
+laboratory and field condition.
+
+Table 11. Development of the coconut leaf (duration in days) in Guinobatan, Albay.
+
+STAGE DAEP (Days after DURATION (days)
+emergence of pinnae)
+
+Pinnae emergence - 0-5
+Pinnae elongation 15 10
+1* shoot emergence 17 2
+2" shoot emergence 52 12
+3" shoot emergence 75 rel
+93 7
+
+4" shoot emergence
+
+
+42
+
+GENERAL DISCUSSION
+
+Infestation Pattern and Development and Reproduction of CLB
+
+The biology of CLB in the laboratory and field also explains the clumped pattern
+of infested palms per hectare. Aggregated distribution of infested palms is probably due
+to the iteroparous egg laying behavior of the adults. CLB lay eggs singly throughout its
+lifetime and the development of their offspring takes place where the eggs laid. It was
+observed that, when eggs hatch, the emerging larvae stayed and fed on the same fronds as
+they developed until the frond was fully opened. Adult dispersal was very low since they
+are weak fliers and often do not move far over the course of their lifespan . Female CLB
+
+inferred to stay on the same frond until the leaflets were fully utilized.
+
+This behavior correlates with the percent infestation in the non-bearing age of
+coconut palms where 100% infestation was observed. This indicates that an outbreak
+was observed. Likewise, higher infestation is also related to the density of CLB per
+hectare . The increase in dispersion in non-bearing palms is thought to result from the
+
+higher rate of attack on palms .
+
+Development of CLB and the Coconut Leaf
+
+The damage per palm can be explained by determining the rate of reproduction of
+CLB for three months and its physiological age. To explain field infestation, the rate of
+reproduction of CLB for one month until three months was doubled. The physiological
+
+age of adults was mostly on virgin females and gravid females. Results indicate that the
+
+43
+
+percentage infestation in the field will start in three months’ time when the CLB started
+its infestation as reflected in the rate of reproduction and physiological age both in the
+
+laboratory and the field.
+
+The local dispersion of CLB adult is very low since the coconut palms could produce
+suitable frond every 23 days as reflected in the development of the coconut leaf. This
+will serve as their source of new infestation . The behavior of CLB is to mate
+immediately with the male CLB. Such indicates that probably the male CLB will transfer
+to another coconut palms and look for female CLB to be mated. Therefore, female CLB
+will stay on the coconut palms until it was totally consumed before they will transfer to
+
+another suitable palms to laid eggs.
+
+The development time of CLB females ranged from 32.00+0.33 and 34.33+0.41
+days for both field and laboratory and pre-oviposition period of 20.10+0.70 days. Such
+results indicates that female CLB are ready to lay eggs after 55.54 days. In the field, only
+female CLB was observed to transfer and attacked first the coconut palms in the area
+after 55 Days after planting and was observed to lay eggs immediately. This conforms
+with the result of development time of CLB in the laboratory. However, observation was
+
+not done comprehensively in terms of CLB egg laying behavior in the field.
+
+The rate of reproduction of CLB after three months in the screen house was
+inferred to be related to the development of the coconut leaf. More CLB adult was
+
+produced on a single host after three months of observation. This indicates that, one pair
+
+44
+
+of CLB could produce more individuals and complete their development on a single host
+
+and ready to transfer on another host after three months’ time.
+
+It was inferred from the study that one coconut palm can support several
+generations of CLB. CLB adults were weak fliers so they tend to stay on a single host
+until it was totally consumed and fully opened before they transferred to another host to
+lay eggs. However, it was observed in the study that one pair of CLB and its generations
+could only survived on a single host for three months since coconut palms could not
+support its further development. Therefore, CLB tends to transfer on another host for
+their survival. The behavior of female CLB is to mate immediately with the male. Such
+indicates that probably the male CLB will the first one to transfer to another coconut
+palm and look for female CLB to be mated. While the female CLB will stay on the
+coconut palms until it was totally consumed before they will transfer to another suitable
+palms to lay eggs. This indicates that CLB development synchronized with the
+emergence of suitable host in a coconut palms as their source of new infestation. These
+observations can be supported by the studies conducted on the rate of development ,
+
+reproduction of CLB and its relationship with the development of coconut leaf.
+
+However, its relationship to the development of coconut leaf have not done
+comprehensively since development of the coconut leaf was done for only short period of
+
+time.
+
+45
+
+Infestation Pattern and Development of the Coconut Leaf
+
+Larval population was more clumped as indicated by the highest value in the
+index of clumping . Aggregated way of life of CLB especially in the larval stage are
+formed and maintained for a number of reasons and by a number of mechanisms.
+Simply, it is the result of uneven distribution of resources and attracted by stimuli from
+conspecifics which serve as a reliable indicator of an ephemeral or cryptic resources .
+The volatile compounds released by a plant under attack by insect herbivores often
+change in composition both quantitively and qualitatively compared to the volatiles
+released by an undamaged plant . This aggregation behavior can be explained also by the
+feeding behavior and reproductive biology of CLB which is influenced by the
+heterogeneity of the environment such as microclimate especially relative humidity and
+preferred part of the plant. In the case of CLB, aggregations may arise passively because
+individuals are attracted to a particular structures (closed fronds) or stimuli and
+microclimatic conditions inside the frond (humid). This observation is supported by
+studies of Copp in 1983 that ladybird beetles clump as temperatures fall from 35°C to
+
+15°C in dark or diffuse light, and they dispersed at temperatures above 35°C.
+
+A number of hypotheses have been proposed to answer why do beetles aggregate?
+One possible explanation is that animals aggregate for the purposes of mating and that the
+probability of mating increases in larger groups. A second possible explanation for
+
+aggregation behavior is that survivorship is greater in larger groups. The increased
+
+46
+
+survivorship is greater in larger groups and result from an increase in feeding efficiency
+
+or from lower rates of predation or parasitism (Bach,C.1990).
+
+The infestation pattern was indicated by the number of infested fronds. The mean
+number of infested frond correlates with the density and age structure of CLB. This
+indicates that the higher the number of CLB per palm, the higher the number of fronds
+damage (Table 9). Specific pattern was observed on the age structure of CLB throughout
+the sampling period and on the age of coconut palms. Larval stage was higher in
+
+population in February 2017 and reached its peak in May 2017 and declined in July 2018.
+
+Non-bearing age of palms indicates a higher mean number of infested fronds
+coupled with the higher density of CLB . Most of the CLB populations are in adult and
+larval stage in those fronds with highest number of infestations. Results showed that the
+feeding behavior , developmental rate, physiological age and adult dispersal could
+
+explain its infestation pattern .
+
+The CLB adult had a low dispersal or movement, this can be supported by the
+physiological stage of adults in the field. Most of the adults in the area from February
+2017 and May 2017 are virgin females and the presence of spent females. The spent
+females are indicator that CLB adult did not dispersed well in the area. They tend to stay
+on the same coconut palms throughout their life span. The number of infested fronds
+correlates with the density, age structure, physiological age and probably the
+development of the coconut leaf. This indicates that, the higher the number of CLB per
+
+palm, the higher the number of fronds damaged which in turn could result to outbreak
+
+47
+
+scenario. It also indicates that probably the development of CLB synchronized with the
+development of the coconut leaf that is why CLB did not dispersed well because of the
+new resource available in the area. This explains why infestation pattern was observed to
+
+be clumped.
+
+CHAPTER V
+
+SUMMARY, CONCLUSION AND RECOMMENDATION
+
+Spatial distribution of damaged palms, infestation pattern, density, age structure
+and rate of development and reproduction were studied to understand the pattern of
+infestation of CLB in relation to the development and reproduction of the pest and
+development of the coconut. These information’s were gathered to generate basic
+knowledge as a basis in designing a proper monitoring and sampling scheme for CLB.
+These studies showed that those parameters were closely linked to the season, age of
+
+coconut and to the development of the coconut leaf.
+
+Both Index of dispersion and Lloyd’s mean crowding methods indicate an
+aggregated distribution pattern of infested palms in a farm across season as affected by
+the age of coconut. This variation was influenced by the percentage of infestation
+considering the same area of sampling sites. Clumped distribution of infested palms is an
+
+indicator of an outbreak in the area with 100% infestation in non-bearing palms.
+
+Infested palms varied with the age of coconut and non-bearing age had the highest
+infestations than the bearing age. This correlates with the higher density of CLB in non-
+
+bearing age as well as the presence of more adults and larval stage in the area.
+
+49
+
+The clumped distribution of CLB and infestation pattern that could lead to an
+outbreak scenario can be explained by the feeding behavior, reproductive biology, egg
+
+laying, dispersal and movement of CLB as well as its density.
+
+The developmental stages of the coconut leaf for three months includes pinnae
+emergence, 1° shoot emergence, 2™ shoot emergence, 3rd shoot emergence and 4" shoot
+emergence. Analysis on the developmental period of CLB and rate of development
+indicates that the development of every shoot of coconut seedlings was inferred to be
+synchronous with the development of CLB. The emergence of shoot of coconut leaf was
+observed with an average of more or less one month (23 days) before another shoot
+emerge. This explains why CLB did not dispersed well in the area because of the
+presence of suitable host as their source of new infestation. This observation
+complemented the laboratory and field biology studies where CLB was able to complete
+its development from egg to adult in 32.00 + 0.33 and 34.33+0.41 days and pre-
+
+oviposition period of 20.10 + 0.70 days.
+
+The spatial distribution of damaged palms, infestation pattem of palms,
+population density, age structure, and rate of development and reproduction of CLB on
+coconut palms as well as the development of coconut leaf are important basic
+information for the development of sampling plans, which are among the key elements in
+pest management strategies. Development of sampling protocols require knowledge of
+
+the spatial distribution of insects in understanding the biology and ecology of a species .
+
+50
+
+On the basis of these findings, CLB infestation did not spread even if there was
+an increase in the population. Therefore monitoring of infested palms alone is not
+
+enough to come up with pest control strategy .
+
+Additional studies should investigate the relationship of development of coconut
+leaf/palms for a longer period of time. Infestation monitoring should be done every six
+months or one year to determine its spatial distribution in an area. Further studies should
+be conducted on long dispersal of CLB as well as its population dynamics on bearing and
+non-bearing palms. Likewise, behavior on mating and migration pattern of CLB adult is
+
+also recommended.
+
+LITERATURE CITED
+
+ACEVEDO, A.M.T., M.A.J. TORRES, M.M.E. MANTING, E. SABADO, A.R.C.
+ALFILER and G. DEMAYO. 2014. Sex ratios of Brontispa longissima
+(Gestro) infesting coconuts in selected provinces in the Philippines. Annals
+of Biological Research, 5(2),111-116.
+
+BACH,C.E. 1990. Plant successional stage and insect herbivory flea beetles on sand
+dune willow. Ecology, 7 (2),598-609.
+
+BASSET, Y.V.E.S. and G.A. SAMUELSON. 1996. Ecological characteristics of an
+arboreal community of Chrysomelidae in Papua New Guinea. Chrysomelidae
+biology, 2,243-262.
+
+CABI. 1989. Distribution maps of pests.Nos.9, 65, 170, 227, 504, 505, 506, 507,
+508. CAB International Institute of Entomology, 56 Queen’s Gate, London,
+SW7 SJR, UK.
+
+CARDENAS, A.M. and J.M. HIDALGO. 2000. Seasonal activity and reproductive
+biology of the ground beetle Carabus dufouri. (Coleoptera : Carabidae)
+European Journal of Entomology, 97 (3), 329-338.
+
+CHEW, F.S. and S. P. COURTNEY. 1991. Plant apparency and evolutionary
+escape from insect herbivory. The American Naturalist, 138 (3),729-750.
+
+CHINN, D. and H. BROWN. 2001. Biological control of palm leaf beetle,
+Brontispa longissima (Gestro) (Coleoptera:Chrysomelidae) with the wasp
+parasitoid, Tetrastichus brontispae (Ferriere) (Hymenoptera: Eulophidae) in
+Darwin. Technical Bulletin Department of Primary Industry and Fisheries,
+Norther territory of Australia, 288, 61-65.
+
+COPP, N. H. 1983. Temperature-dependent behaviours and cluster formation by
+aggregating ladybird beetles. Animal behaviour, 31(2), 424-430.
+
+DHARMARAJU, E. 1984. Transport and the spread of crop pests in Tropical
+Polynesia. Commerce and the spread of pests and disease vectors, 257-272.
+
+DUARTE, F., M.V. CALVO, A. BORGES and I.B. SCATONI. 2015. Geostatistics
+applied to the study of the spatial distribution of insects and its use in
+
+52
+
+integrated pest management. Revista. Agronomica del Noroeste Argentino,
+35(2):9-20.
+
+FANG, Y., J. SUN and Z. ZHANG. 2011. Response of Brontispa longissima to
+coconut palm (Cocos nucifera) leaf volatiles. Physiological Entomology, 36
+(4), 321-326.
+
+FAO. 2004. Report of the expert consultation on coconut beetle outbreak in APPPC
+member countries.pp.26-27.
+
+FROGGATT, J.L. and B.A. O'CONNOR. 1941. Insects associated with the coconut
+palm. Part II. New Guinea Agricultural Gazette, 7(2).
+
+GABRIEL, B.P. 1997. Insects and mites injurious to Philippine crop plants. [np].
+
+GIANG, H. T. T. and S. NAKAMURA. 2009. The study on biological characteristics
+of Brontispa longissima (Gestro) (Coleoptera: Chrysomelidae). Journal of
+Science Development, 7(2), 159-164.
+
+HISPINE PEST OF PALMS FACT SHEET: A resource for pests and diseases of
+cultivated palms. 2016. Id tools. org.
+
+HOSANG, M.L.A., J.C. ALOUW and H. NOVARIANTO. 2004. Biological control
+of Brontispa longissima (Gestro) in Indonesia. Report of the expert consultation
+on coconut beetle outbreak in APPC member countries, 26-27.
+
+ICHIKI, R.T., D.T. DUNG, S.I. TAKANO and S. NAKAMURA. 2009. Artificial
+diets for rearing the coconut hispine beetle Brontispa longissima and its
+parasitoid Asecodes hispinarum. Journal of Applied Entomology, 133(7), 539-
+545.
+
+JOLIVET, P. , E.  PETITPIERRE and T.H.HSIAO.(Eds.).2012. Biology of
+Chrysomelidae (Vo.42).Springer Science and Business Media.
+
+KALSHOVEN, L.G.E. 1981. Pests of crops in Indonesia. Revised and translated into
+english by P. A. van der Lann. Jakarta and P. T. Ichtiar Baru-Van Houve.
+pp.701.
+
+KAWAZU, K., W. SUGENO, A. MOCHIZUKI, S.I. TAKANO, M. MURATA, R.T.
+ICHIKI and S. NAKAMURA. 2012. Age in relation to copulation, egg
+development and multiple mating behavior in the coconut palm pest Brontispa
+longissima (Coleoptera: Chrysomelidae). Annals of the Entomological Society
+of America, 105(5), 746-750.
+
+53
+
+KAWAZJU, K., W. SUGENO, A. MOCHIZUKI, S. NAKAMURA. 2017. Polyandry
+increases reproductive performance but does not decrease survival in female
+Brontispa longissima, Bulletin of Entomological Research, 107(2),165-173.
+
+LI, J., D.R. SEAL, G.L. LEIBEE, and O.E. LIBURD. 2012. Seasonal abundance and
+spatial distribution of the leafminer, Liriomyza trifolii (Diptera: Agromyzidae)
+and its parasitoid, Opius dissitus (Hymenoptera: Braconidae) on bean in
+Southern Florida. Florida Entomologist, 95 (1),128-136.
+
+LIEBREGTS, W. and K. CHAPMAN. 2004. Impact and control of the coconut
+hispine beetle, Brontispa longissima (Gestro) (Coleoptera: Chrysomelidae).
+
+LLOYD, M. 1967. Mean crowding. J. Anim. Ecol.36:1-30. Bureau of Animal
+Population, Department of Zoological Field Studies. Oxford University,
+England.
+
+LUMENTUT, N., S. KARINDAH, L. SULISTYOWATI, and R.D. PUSPITARINI.
+2013. The demographic of Brontispa longissima variety of celebensis (Gestro)
+(Coleoptera: Chrysomelidae) on mapanget tall coconut and brown dwarf
+coconut. IOSRJAVS), 6(2),33-37.
+
+LEVER, R. J. 1969. Pests of the coconut palm (No. 18). Food & Agriculture Org.
+
+MORADI-VAJARGAH, M., A. GOLIZADEH, H. RAFIEE-DASTJERDI, M.P.
+ZALUCKI, M. HASSANPOUR, and B. NASERI. 2011. Population density
+and spatial distribution pattern of Hypera postica (Coleoptera: Curculionidae) in
+Ardabil, Iran. Notulae Botanicae Horti Agrobotanici Cluj-Napoca, 39 (2),42-48.
+
+NAKAMURA, S., K. KONISHI and K. TAKASU. 2006. Invasion of the coconut
+hispine beetle, Brontispa longissimi; current situation and control measures in
+Southeast Asia. In proceedings of international workshop on development of
+database (APASD) for biological invasion (Vol. 3, pp. 1-9). Taichung, Taiwan:
+Taiwan Agricultural Chemicals and Toxic Substance Research Institute.
+
+NAVASERO, M.V., N.T. SAAVEDRA and M.B. ZIPAGAN. 2008. The coconut leaf
+beetle, Brontispa longissima (Gestro) (Chrysomelidae, Colepotera), a serious
+threat to the Philippine coconut industry. In proceedings of the 39 PMCP
+Anniversary and Annual Scientific Conference, Asturias Hotel, Puerto Princesa
+City, Palawan.
+
+O'CONNOR, B. A. 1940. Notes on the coco-nut leaf hispa, Brontispa froggatti Sharp,
+and its parasites. New Guinea Agricultural Gazette, 6(2).
+
+54
+
+PHILIPPINE COCONUT AUTHORITY-ALBAY. 2014. Highlights of
+accomplishments.
+
+PHILIPPINE COCONUT AUTHORITY-RESEARCH AND DEVELOPMENT AND
+EXTENSION BRANCH. Technology series No.3 (March 2012). A monthly
+techno-info release of PCA-RDEB.
+
+RETHINAM, P., S._ P. SINGH, S. APPANAH, H.C. SIM, and K.V. SANKARAN.
+2007.Current status of the coconut beetle outbreaks in the Asia-Pacific region.
+Developing an Asia-Pacific strategy for forest invasive species: the coconut
+beetle problem:bridging agriculture and forestry. Food and Agriculture
+Organization of the United Nations Regional Office for Asia and the Pacific, 1-
+23.
+
+SANKARAN, K.V. 2006. The coconut leaf beetle, Brontispa longissima. Newsletter
+of the Asia -Pacific forest invasive species network, 1(6),3-4.
+
+SEDARATIAN, A.A., Y. FATHIPOUR, A.A. TALEBI, and S. FARAHANI. 2010.
+Population density and spatial distribution pattem of Thrips tabaci
+(Thysanoptera: Thripidae) on different soybean varieties.
+J.Agr.Sci.Tech,(12),275-288.
+
+STAINES, C.L. 2011. Hispines (Chrysomelidae, Cassidinae) of La Selva Biological
+Station, Costa Rica. Zookeys, (157),45.
+
+STRAUSS, S.Y. and A.R. ZANGERL. 2002. Plant-insect interactions in terrestrial
+ecosystems. Plant-animal interactions: an evolutionary approach, 77-106.
+
+TAKANO, S.I, A. MOCHIZUKI, K. KONISHI, K. TAKASU, J.C. ALOUW, D.S.
+PANDIN and S. NAKAMURA. 2011. Two cryptic species in Brontispa
+longissima (Coleoptera: Chrysomelidae): evidence from mitochondrial DNA
+analysis and crosses between the two nominal species. Annals of the
+Entomological Society of America, 104(2),121-131.
+
+TAKANO, S. 1. K. TAKASU, T. FUSHIMI, R.T. ICHIKI and S. NAKAMURA.
+2012. Life history traits and damage potential of an invasive pest Brontispa
+longissima (Coleoptera: Chrysomelidae) on Satakentia _ liukiuensis.
+Entomological Science, 15(2),238-245.
+
+TAKANO, S. I, A. MOCHIZUKI, K. TAKASU, K. KONISHI, J.C. ALOUW, D.S.
+PANDIN and S. NAKAMURA. 2013. Rapid discrimination of two cryptic
+species within Brontispa longissima (Gestro) (Coleoptera: Chrysomelidae) by
+PCR-RFLP.Journal of Pest Science, 86 (2),151-155.
+
+55
+
+WATERHOUSE, D.F. and K.R. NORRIS. 1987. Biological control: Pacific prospects.
+
+YAMASHITA, A. and K. TAKASU. 2010. Suitability of potential host plants in Japan
+for immature development of the coconut hispine beetle, Brontispa longissima
+(Gestro) (Coleoptera: Chrysomelidae). Japan Agricultural Research Quarterly:
+JARQ, 44(2), 143-149.
+
+YAMASHITA, A., A. WINOTAI, S. NAKAMURA and K. TAKASU. 2009. Food
+plants suitable for mass rearing of the coconut hispine beetle Brontispa
+longissima. Korean Journal of Agricultural Science, 36(1), 57-61.
+
+YUEGUAN, F. and X. YANKUN. 2004. Occurrence and control of coconut leaf
+beetle in China. Report of the Expert Consultation on Coconut beetle outbreak
+in APPC member Countries,26-27.
+
+ZIPAGAN, M. 2014. Personal communication.

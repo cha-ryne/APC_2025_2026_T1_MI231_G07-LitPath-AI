@@ -1,0 +1,1499 @@
+GEOMECHANICAL STUDY OF SIMPANG PULAI LIMESTONE ROCK
+
+MORLIE L. TALIMBAY
+
+UNIVERSITI TEKNOLOGI PETRONAS
+
+Master of Science (Petroleum Engineering)
+
+SEPTEMBER 2018
+
+ABSTRACT
+
+Fine-grained carbonate reservoirs represent one of the great future hydrocarbon
+resources which the industry will focus on. These carbonate reservoirs exhibit extreme
+heterogeneity especially complex pore size distributions thus posing complex challenges in
+reservoir production and management. Geomechanics study aims to understand and predict
+these challenges in the reservoir specifically the geomechanical behavior of reservoirs. Studies
+have been done to develop correlations to further understand the relationship of these
+geomechanical properties but due to the extreme heterogeneity of carbonate rocks, researchers
+find it difficult to have an agreement on their findings. To further understand the relationships
+of carbonate’s geomechanical properties, static and dynamic geomechanical properties were
+investigated and correlations were developed. Twelve carbonate rock samples from Simpang
+Pulai, Perak were taken for coring. The lithology and grain type were obtained using thin
+section analysis. Results of thin section analysis also showed that the carbonate samples have
+compacted grain arrangement resulting to lower porosity. Six cores were subjected to OYO
+analysis and triaxial test. The tests determined the dynamic Young’s modulus and static
+Young’s modulus respectively. The other six cores were used to test for the unconfined
+compressive strength. The test determined the unconfined compressive strength of the other
+six core samples. All correlations done between unconfined compressive strength and
+compressional wave velocity, shear wave velocity and dynamic Young’s modulus showed
+positive linear relationships. Correlations between static Young’s modulus and compressional
+wave velocity, shear wave velocity and dynamic Young’s modulus have also positive
+relationships. However, all coefficient of determination (R²) of the newly developed
+correlations have lower values with 0.559 being the highest. The error in the experiment due
+to equipment problem affected the correlation results. Therefore, due to the error in the
+experiment, all the newly developed correlations will have a large error in predicting UCS and
+Eₛ.
+
+CHAPTER 1
+
+INTRODUCTION
+
+1.1 Background of the Study
+
+The branch of petroleum engineering that is called petroleum geomechanics aims to
+understand and predict the mechanical behavior of reservoirs and adjacent formations through
+the full process of exploration to exploitation to abandonment [1,2]. It is a multidisciplinary
+branch of petroleum engineering that understand, model, and control the mechanical response
+of subsurface geo-materials, such as reservoir rocks and cap rocks. Major geomechanical
+properties are usually obtained from standardized laboratory tests [3]. The geomechanics study
+have many applications in the petroleum industry. In drilling engineering, it is important to
+know the borehole stability and the mud weight window. The pressure induce by drilling fluid
+changes the stress state of the rock. As a result, the rock around the borehole may fail if the
+redistributed stresses are greater than the rock strength. In reservoir engineering, it can give
+prediction about the fluid flow and can also identify the reservoir compaction. While in the
+
+completion engineering, the geomechanics is required prior to the well stimulation job.
+
+Fine-grained carbonate reservoirs (e.g. limestone) represent one of the great future
+hydrocarbon resources which the industry will focus on. These carbonate reservoirs exhibit
+extreme heterogeneity especially complex pore size distributions thus posing complex
+challenges in reservoir production and management [4,5,6]. Many carbonate reservoirs will not
+produce oil unless they will be fractured. This is where geomechanics play an important role
+since the geomechanics can help in optimizing the well stimulation job (e.g. hydraulic
+
+fracturing) which will maximize the production.
+
+This study focuses in determining the geomechanical properties of limestone rocks
+from Simpang Pulai, Perak. Cores will be used in this study to measure both static and dynamic
+
+geomechanical properties of limestone samples from Simpang Pulai.
+
+1.2 Problem Statement
+
+Understanding geomechanical properties of rocks have come to play an increasingly
+important role in the oil and gas industry. Thus, assessment of geomechanical properties of
+
+using cylinder samples also becomes an important area of study.
+
+Studies have been done to develop correlations and understand the relationships
+between the carbonate’s geomechanical properties using compressional and shear velocities
+[7,8,9,10]. However, due to the extreme heterogeneity of carbonate rocks, researchers find it
+difficult to have an agreement on their finding since each of these correlations are locally
+dependent on mineralogy and texture and are limited to specific rock type under certain
+
+conditions.
+
+To further understand the relationships of carbonate’s geomechanical properties,
+investigation of static and dynamic geomechanical properties of carbonate rocks are proposed
+
+and static and dynamic geomechanical properties will also be correlated.
+
+1.3 Objectives
+
+1. To determine the static and dynamic geomechanical properties of limestone.
+
+2. To develop a new correlation that can predict the static geomechanical properties using
+
+dynamic geomechanical property of limestone.
+
+1.4 Scope of the Study
+
+This study will focus on performing experiments to investigate and determine the
+geomechanical properties of limestones cores from Simpang Pulai, Perak. Unconfined
+Compressive Strength (UCS) & Young’s modulus in drained condition will be tested using
+static tests. Using values of bulk density, shear wave velocity and compression wave velocity,
+
+the dynamic Young’s modulus in drained condition will also be measured. The resulting
+
+geomechanical properties from the experiment, both static and dynamic will be correlated to
+produce a new correlation that can predict UCS and static Young’s modulus using shear wave
+
+velocity, compressional wave velocity and dynamic Young’s modulus.
+
+CHAPTER 2
+
+LITERATURE REVIEW
+
+2.1 Carbonates
+
+Carbonates are anionic complexes of (CO3)* and divalent metallic cations such as Ca,
+Mg, Fe, Mn, Zn, Ba, Sr, and Cu, along with a few less common others. The bond between the
+metallic cation and the carbonate group is not as strong as the internal bonds in the CO3
+
+structure, which in turn are not as strong as the covalent bond in carbon dioxide (COz) [11].
+
+2.1.1 Types of Minerals
+
+The most common carbonate minerals are in the hexagonal system based on the
+
+illustrations of Hurlbut and Klein (1977), notably calcite and dolomite as shown below.
+
+Figure 2.1: Internal Atomic Structure of Calcite
+
+(a) (b) (©)
+Calcite Crystal Forms
+
+Dolomite Crystal Forms
+
+Figure 2.2: Typical Calcite and Dolomite Crystal Forms
+
+According to Reeder R. J., (1983) in his book Carbonates: Mineralogy and Chemistry,
+it is safe to say that carbonate reservoirs and aquifers are composed of calcite and dolomite -
+limestones and dolostones. Together, these rocks make up about 90% ofall naturally occurring
+carbonates. Only a small fraction of the remaining 10% of carbonate minerals includes azurite
+and malachite, which are semiprecious stones and are commonly found in jewelry or other
+
+ornaments [12].
+
+2.2 Carbonate Reservoir
+
+As stated by Dusseault, M.B., (2011) the two-major reservoir lithotypes are carbonates
+and sandstones, and the two materials presenting the largest challenges are Unconsolidated
+Sandstones (UCSS) and Naturally Fractured Carbonate Reservoirs (NFCR) [13].
+
+Carbonates hold about half of the world’s oil and gas, yet of the relatively few texts on
+reservoir geology, only a handful deal with carbonates. Carbonate reservoirs occur in the
+subsurface so most of the data used to study them comes from borehole cores, drill cuttings,
+
+logs, well tests, production data, and geophysical measurements [11]. To learn more about the
+
+carbonate reservoirs and how to find, extract and manage the oil and gas it contains, further
+
+studies are needed [14].
+
+As mentioned, one of the problem encountered in carbonate reservoir is fracturing.
+Either artificially fractured for increase production or naturally fractured reservoir (NFR), the
+approach will be different compared to depositional and diagenetic reservoirs. Fractures are
+generally unrelated to depositional and/or diagenetic rock properties. These types of fractures
+are produced by mechanical stresses after the rocks have been lithified not like depositional
+and diagenetic. There are two variables that can determine the type of fractures that will form
+onarock, these are stress characteristics and material behavior. Stress is defined as force acting
+
+on an area while strain is deformation due to stress.
+F
+oat (2.1)
+
+&g =— (2.2)
+where:
+o = stress (Pa)
+F = force (N)
+A= area (m?)
+£q = axial strain (unit — less)
+dL = change of length (m)
+L = initial length (m)
+
+Material behavior maybe brittle failure or ductile deformation. Figure 2.3 illustrates the
+
+material behavior under stress.
+
+OA : Proportional limit
+
+A: Elastic limit
+
+B_ : Yield stress point/upper
+yield stress point
+
+C_ : Lower yield stress point
+
+D_ : Ultimate stress point
+
+E : Breaking or rupture point
+
+Stress
+
+Strain
+
+Figure 2.3: Stress — Strain Curves (Source:www.mechnicalbooster.com)
+
+This is where geomechanics will become an important part of this study. According to
+Hamid, O., Omair, A., & Guizada, P., (2017) the changes in stress/strain affect the formation
+of interest as well as the overburden layers and directly affect all operations such as drilling,
+completion and production strategies because of permeability reduction. Stress affects nearly
+all petrophysical properties. Compaction, shear casing and well damage, caprock integrity,
+
+fault reactivation and sand production can occur during formation depletion [15].
+
+2.3 Thin Section Analysis
+
+Budennyy, S. et al., (2017) stated that microscopic thin section images play a role of
+crucial source of rock properties: quantitative mineralogical and chemical compositions of
+rocks, correlation of rock-forming, accessory and secondary minerals, grain size distribution,
+
+porosity structure and saturation type [16].
+
+Ruzyla, K., & Jezek, D. I., (1987) proposed a procedure in doing thin section.
+According to them once samples have been selected, impregnation and thin sectioning
+
+procedures are critical to successful petrographic analysis [17].
+
+Folk (1959) and Dunham (1962) are the two most commonly used carbonate
+
+classifications on the basis of matrix content. Figure 2.4 summarized these two carbonate
+
+classifications [18,19].
+
+Pacet | one | 1-10 oll ne SPAR & [SontinG] SORTING [ROUNDED 6]
+
+Aesems : “| Lime Mu0) poor | Goo0 | aBRavED,
+Representative | MICRITE a| Fossiui- | sparse
+
+Rock FEROUS |
+
+JosmicaiTe | wicrire |SIOMICRITE|BIOMICRITE
+
+Saaree ae
+
+Submoture
+
+Sondstone
+
+DEPOSITIONAL TEXTURE RECOGNIZABLE DEPOSITIONAL TEXTURE.
+NOT RECOGNIZABLE
+
+i i it Original components wore
+Original components not bound together during deposition Doers
+deposition... as shown by
+intergrown skeletal matter, Cysteine)
+laminaton contrary to 0
+
+Contains mud Lacks mud
+(particles of clay and fino silt sizo) and is
+
+cavites that are rooted over
+Less than 10 | More than 10 ty orpanis or queskonsthy {Suvde secordog ie
+poreant grains | percent grains organic mater and aro too | “assfeatons dosign
+
+| Haryo to bs ielerstcee texture or diagenesis.)
+
+Mudstone | Wackestone Grainstone Boundstone
+
+Figure 2.4: Carbonate Classification Folk (1959) and Dunham (1962)
+
+Dunhams (1962) classifications base on matrix content and the description for each
+
+type are shown below [19].
+
+1. Mudstone: the rock is mostly made of carbonate mud or cryptocrystalline carbonate
+
+matrix. Grains (fossils, ooids, etc.) will be less than 10 % of the rock.
+
+2. Wackestone: grains make up more than 10% of the rock but the grains are "matrix
+
+supported" they float in the matrix.
+
+3. Packstone: grains with matrix between them but the grains are grain supported.
+
+4. Grainstone: grains with spar (cement) between them, little or no mud.
+
+5. Boundstone: Original components organically bound during deposition such as
+
+stromatolites.
+
+2.4 Geomechanical Study
+
+Zoback, M.D., (2010) and Aadnoy, B., & Looyeh, R., (2011) defined petroleum
+geomechanics as the branch of petroleum engineering that aims to understand and predict the
+mechanical behavior of reservoirs and adjacent formations through the full process of
+
+exploration to exploitation to abandonment [1,2].
+
+As discussed by Hamid, O., Omair, A., & Guizada, P., (2017) development of
+formations with stress sensitivity is raising awareness thus making geomechanics as a vital
+aspect of future management. Understanding geomechanical behavior is becoming more and
+more important for the petroleum industry [15]. It has been reported by many authors (e. g.
+Herwanger and Koutsableloulis 2011) that significant changes in pore pressure (AP) due to
+depletion or injection in weak formation might lead to increase in effective stress, compaction,
+reduction in porosity and permeability, casing deformation, failure and subsidence, challenges
+in fracturing the formation, closing and opening pre-existing fracture fault re-activation and
+bedding parallel slippage. The deformations affect the apparent time-shifts from seismic
+
+surveys of under and overburden.
+
+2.5 Geomechanical Properties
+
+According to Woehrl, B. et al., (2010) accurate knowledge of rock mechanical
+properties is essential for many geomechanical applications. Examples include the prediction
+of wellbore stability or the investigation of the reservoir and overburden compaction behavior
+
+during reservoir depletion [20].
+
+Hamid, O., Omair, A., & Guizada, P., (2017) discussed that generally, basic
+geomechanical characteristics of rock material are obtained from experimental tests on core
+samples at ambient conditions. To define these characteristics under in-situ conditions at depth
+(temperature, confining stress, pore pressure, saturation etc.), may require extensive laboratory
+
+experiments at more challenging and expensive conditions [15].
+
+Yale, D. P., & Jamieson, W. H., (1994) also stated that mechanical properties can be
+measured in the laboratory from triaxial tests ("'static" tests) or they can be estimated from
+wireline measurements of compressional and shear acoustic velocities and rock density
+
+("dynamic" tests) [21].
+
+Soroush H., & Qutob H., (2011) also pointed out that formation elastic parameters
+including Young’s modulus, Poisson’s ratio and shear modulus are the input parameters for
+wellbore instability and sanding prediction analysis. These parameters are customarily
+estimated from laboratory experiments on core samples and called static elastic properties. This
+is an expensive and time-consuming approach, as intensive care required for sample
+preparation and handling. An alternative laboratory approach is to measure the dynamic moduli
+on a core sample through Acoustic Travel Time (ATT) method. This method is advantageous
+
+in being non-destructive and fast [22].
+
+2.5.1 Static Test
+
+2.5.1.1 Unconfined Compressive Strength Test
+
+Uncofined compressive strength (UCS) of rocks are widely used by rock engineers in
+designing surface and underground structures. The procedure for measuring this rock strength
+has been standardized by both the International Society for Rock Mechanics and American
+Society for Testing and Materials [23,24].
+
+The UCS is one of the most commonly used rock engineering parameters whether for
+rock mass classification or for strength determination. The mean UCS and its variability are
+often assumed to represent a reliable rock material property [25]. The UCS of rock samples is
+
+determined using either the laboratory UCS test or UCS correlated index tests [26].
+
+In UCS test, a cylindrical rock sample is compressed along its axis until peak strength
+is achieved and failure occurs. This test is intended to measure the uniaxial compressive
+strength (UCS) of rock sample and elastic properties such as Young’s modulus and Poisson's
+ratio are obtained by measuring and recording axial load, axial deformation and lateral
+
+deformation [27].
+
+2.5.1.2 Triaxial Test
+
+Woehrl, B. et al., (2010) stated that one precise way to obtain rock mechanical
+properties is to perform triaxial laboratory tests on specimens obtained from core samples.
+However, extensive coring is expensive and time-consuming and is therefore not carried out
+routinely. In addition, measurements made on core material can be biased due to relaxation and
+
+alteration of cores after recovery [20].
+
+In triaxial compression test, the sample is initially mounted within a copper jacket to
+prevent the direct communication of the dry rock sample and the confining fluid. Then, sample
+is compressed hydrostatically, by applying a cell pressure to a sample surrounding sleeve and
+by applying an equal axial stress along its axis simultaneously. Once the requested hydrostatic
+conditions achieved, axial load is to be increased and real-time data monitored. Accordingly,
+axial deformation and lateral deformation will occur, one can obtain triaxial compressive
+strength (TCS), Young’s modulus and Poisson's ratio, and these become dependent on
+confining stress [27]. Yale, D. P., & Jamieson, W. H., (1994) proposed an experimental method
+
+in doing triaxial test [20].
+
+The static Young’s modulus (Es) is the ratio of axial stress (6a) and axial strain (€) and
+
+given by Equation 2.3 below.
+
+z= (2.3)
+
+where:
+E, = static Young's Modulus (Pa)
+0q = axial stress (Pa)
+
+€q = axial strain (unit — less)
+
+2.5.1.2.1 Mohr — Coulomb Failure Criterion
+
+According to Wang, D. et al., (2015) Mohr-Coulomb failure criterion is a failure
+criterion that provides limit to rock stresses and are essential for accurate rock failure analysis.
+They are derived from laboratory tests on rock samples and can be typically divided into those
+that depend on all three principal stresses and those that neglect the effect of the intermediate
+principal stress on failure. The Mohr-Coulomb criterion belongs to the latter group and is thus
+applicable to conventional triaxial test data (61 > 62 = 03). It is extensively applied in
+geomechanics practice. The Mohr-Coulomb strength criterion proposed that when shear failure
+takes place across a plane, the normal stress on and the shear stress t across that plane are
+
+related by a functional relation characteristic of the material [27].
+
+tT=cto,tanp (2.4)
+
+where:
+T = shear stress
+On, = normal stress
+
+c = cohesion
+
+12
+
+y = angle of internal friction of the material
+
+2.6 Dynamic Test
+
+2.6.1 Elastic Waves Velocity
+
+Archer, S., and Rasouli, V., (2012) stated that dynamic geomechanical rock properties
+including the Young’s modulus (E) and Poisson’s ratio (v) are calculated in relation with the
+rock density (p), compression wave velocity (vp) and shear wave velocity (vs) [28]. Yale, D.
+P., & Jamieson, W. H., (1994) proposed an experimental method to determine the dynamic
+drained mechanical properties [21]. The dynamic Young’s modulus can be computed using
+
+Equation 2.5.
+
+__ pve (3v2-4v3)
+Fa =" (een) e)
+
+where:
+
+Eayn = dynamic Young's Modulus (Pa)
+p =rock density (g/cc)
+
+U_ = compression wave velocity (m/s)
+
+v, = shear wave velocity (m/s)
+
+2.7 Correlation
+
+According to Woehrl, B. et al., (2010) continuous information of mechanical properties
+is frequently provided by correlation-based methods. For a given well, log-derived
+petrophysical data such as: acoustic slowness, porosity, and bulk density are correlated with
+
+laboratory-derived rock mechanical properties [20].
+
+13
+
+Soroush H., & Qutob H., (2011) added that laboratory approach to measure the
+“dynamic” moduli on a core sample through Acoustic Travel Time (ATT) method cab be done
+however, the “static moduli” are required to be obtained for any geomechanics related studies.
+As a result, a correlation between static to dynamic moduli needs to be developed. Several
+correlations have been proposed in the literature for this purpose, although each has been
+
+developed in a specific formation and hence not appropriate to be used in other areas [22].
+
+14
+
+CHAPTER 3
+
+RESEARCH METHODOLOGY
+
+This chapter includes a brief discussion of research methods design that were used in
+this experimental study and discussed the workflow of the project. The research started by
+collecting the limestone samples from Simpang Pulai, Perak. The place of the experiment is in
+Universiti Teknologi Petronas, Seri Iskandar, Perak. Twelve (12) cores from the rock samples
+were used to test for geomechanical properties. The size of six (6) cores was 1.5-inch by 3-inch
+and this was for triaxial test and OYO analysis. The other six (6) cores were 2-inch by 4-inch.
+and this was for uniaxial compressive test. Since all samples were from the same location, just
+one sample underwent thin section analysis. In addition to that, Chapter 3 also presents the
+equipment that were used throughout the experiment. Figure 3.1 shows the location where the
+rock samples are collected and Figure 3.2 shows the flow diagram of the project. The map was
+
+taken from google earth.
+
+Hutan bij
+
+
+Collection of samples
+
+Measuring density, P wave
+
+velocity and S wave velocity
+
+[Ly Geomechanical properties results
+
+Interpretation of the
+
+results by using linear
+
+correlation
+
+Figure 3.2: Flow Diagram of the Project
+
+3.1 Coring
+
+Twelve (12) cores were produced from the carbonate rock samples using a coring
+machine. For triaxial test, the required core size was 3.81 by 7.62 cm. Six (6) cores with the
+said size were produced. The other six (6) cores were 5.08 by 10.16 cm and this was for
+unconfined compressive strength test. To achieve the desired length of the samples, trimming
+
+was done to all samples. After trimming, samples underwent drying for one day.
+
+3.2 Thin Section
+
+Ruzyla, K., & Jezek, D. I., (1987) proposed procedure was adapted in doing thin section
+[17]. Since all samples are from the same location, just one sample underwent thin section
+
+analysis.
+
+1. Samples were impregnated with low-viscosity epoxy introduced while the samples
+
+are under a vacuum.
+
+2. Thin section was carefully ground to final thickness (usually 30 pm) to avoid
+fracturing and plucking.
+
+3. Do the analysis on the thin section using plane polarized and cross polarized with
+
+different magnification.
+
+3.3 OYO Analysis
+
+For OYO analysis, the proposed experimental method done by Yale, D. P., & Jamieson,
+W. H., (1994) was the basis of the experiment [21]. SonicViewer-SX is the instrument that was
+used for elastic wave velocity test. Before performing the acoustic test to all samples, a density
+
+measurement was done to all samples by getting their mass and volumes.
+
+1. The acoustic velocities (compressional and shear) of the six samples was
+
+determined without pore fluid (“drained conditions”).
+
+2. Frequencies of the acoustic measurements was approximately 500 kHz for the P-
+
+wave and 100 kHz for the S-wave.
+
+Using the values of compressional wave velocity, shear wave velocity and the measured
+density from the analysis, dynamic Young’s modulus of each sample were computed. The
+study used the elasticity equation (Equation 2.5) to compute for dynamic Young’s modulus.
+
+This was the same equation used by Archer, S. and Rasouli, V., (2012) during their study [28].
+
+3.4 Triaxial Test
+
+After the ultrasonic measurement, triaxial test was carried out on the same six samples.
+Yale, D. P., & Jamieson, W. H., (1994) proposed experimental method was the basis of triaxial
+test and guided by the ASTM D 2664 — 95a [21,39]. IPC RT-1000 was the equipment used in
+
+triaxial tests. Two sets were tested for triaxial test where every set contains three core samples.
+1. Measurements were made in a triaxial (true biaxial) cell by recording axial and
+volumetric strain as the sample was loaded axially under constant confining stress
+
+without pore fluid.
+
+2. Aconfining stress of 500, 1000, and 1500 psi was used for all samples to simulate
+
+approximate reservoir stress conditions.
+3. Axial loading rate was 0.8 mm/min.
+Equation 2.3 was used to determine the static Young’s modulus of all six core samples.
+
+The Mohr-Coulomb strength criterion was also used for accurate rock failure analysis.
+
+Equation 2.4 was used to establish the equation for this failure envelope.
+
+18
+
+3.5 Unconfined Compressive Strength (UCS) Test
+
+For UCS test, the “Standard Test Method for Unconfined Compressive Strength of
+Intact Rock Core Specimens Designation: D 2938 — 95” was followed in this test since the
+procedure for measuring this rock strength has been standardized by both the International
+Society for Rock Mechanics and American Society for Testing and Materials [23,24]. IPC RT-
+1000 was the equipment used for unconfined compressive strength test. Six core samples were
+
+subjected to this test. Equation 2.1 was used to determine the UCS of six samples.
+
+3.6 Correlation
+
+Correlation analysis was used as this is a common statistical analysis choice in various
+fields. This was used to determine to what extent geomechanical properties are correlated with
+each other. For the correlation tool, Microsoft excel was used for this study as it is the handiest
+and easy to use tool available. Pearson correlation coefficient (R) and R-squared (R?) were
+determined between unconfined compressive strength (UCS) to compressional wave velocity
+(vp), shear wave velocity (vs) and dynamic Young’s modulus (Ea). These were also done
+between the static Young’s modulus (Es) and compressional wave velocity (vp), shear wave
+
+velocity (vs) and dynamic Young’s modulus (Ea).
+
+CHAPTER 4
+
+RESULTS AND DISCUSSIONS
+
+4.1 Limestone Properties
+
+4.1.1 Thin Section Analysis
+
+Carbonate rocks can be generally subdivided into two major groups, limestone
+composed of calcite mineral (CaCO3) and dolomite composed of dolomite mineral
+(CaMg(CO3)2). The thin section analysis done in the sample confirms that it contains calcite
+grains having angular to sub-angular grain shapes. This can be seen in Figure 4.1 (b) as the
+encircled green mineral grains represents calcite. The grain-supported fabric makes it a
+Grainstone type of carbonate rock based on Dunham’s (1962) Classification. Porosity is very
+
+low because of the compacted grain arrangement.
+
+Figure 4.1: Limestone Properties (a) plane polarized, 4x (b) cross polarized, 4x
+
+Having a reduced space between grains means that the sample was subjected to high
+pressure during the time of deposition that caused compaction and results to lower porosity.
+This can be also supported by looking at the density of the samples. The twelve samples have
+
+an average density of 2.84 g/cm’. This high density suggests that the sample formed from a
+
+20
+
+larger carbonate buildup that results into a high confining pressure environment and just
+
+uplifted into the surface at present time.
+
+4.2 OYO Analysis, UCS and Triaxial Tests
+
+4.2.1 OYO Analysis
+
+The static and dynamic moduli of the same rock may significantly differ from each
+other. The main reason is the difference in the deformation (strain) amplitude between the
+dynamic and static experiments. In the dynamic wave propagation experiment the strain is
+about 10° while static strain may reach 107 [30,31]. The presence of fractures, cracks, cavities
+
+and planes of weakness and foliation also affects the results of static and dynamic moduli [30].
+
+Table 4.1: Summarized Results of OYO Analysis
+Dynamic
+Compressional | Shear Velocity,
+
+Density Young’s
+Sample Velocity, vp Vs
+
+(g/em) Modulus, Ea
+
+(m/s) (m/s)
+(GPa)
+
+SPS-1 2.89 5597 2953 65.9
+SPS-2 2.84 4639 2852 Shes}
+SPS-3 2.86 4753 2984 59.8
+SPS-4 pie) 5067 3040 65.3
+SPS-5 2.88 5067 217, 48.7
+SPS-6 2.83 5133 2584 50.3
+
+Dynamic Young’s modulus depends on the compressional wave velocity, shear wave
+velocity and density as it is calculated using these data. Higher values of compressional
+velocity, shear velocity and density will result into higher dynamic Young’s modulus. The test
+results in Table 4.1 have shown that compressional wave travel time increases (decreases) as
+the density increases (decreases) and shear wave travel time also increases (decreases) as the
+
+density increases (decreases). See Apendix A for complete results of the analysis done in the
+
+21
+
+cores. The samples density ranges from 2.83 to 2.9 g/em’ higher than the normal density range
+of limestone which is 2.3 to 2.7 g/cm?, These suggests that the samples are not pure limestone
+
+rock.
+
+Elastic wave velocity is affected by rock density in such way that the dense rock has
+higher velocity either compressional wave velocity or shear wave velocity because of the
+
+higher compaction of the grains [32].
+
+Compressional velocities range from 4,639 to 5,597 m/s while shear velocities range
+from 2,517 to 3,040 m/s. A slight variation of compressional and shear travel time is due to
+different factors like degree of weathering and decay, number of openings and orientation of
+
+cracks [33].
+
+4.2.2 Unconfined Compressive Strength (UCS) Test
+
+Unconfined compression test was done to identify and measure the shear strength of
+the core samples. There were six runs done in this study to test and analyze all the cores. There
+were also two stresses recorded; maximum stress and breakpoint stress. The maximum stress
+is defined as the unconfined compressive strength which is one of the mechanical properties
+
+that this study needs to determine.
+
+22
+
+Load (kN)
+3
+
+88
+
+~ | Breakpoint|Stress
+
+25 3
+Strain (%)
+
+Toad-Strain [Act]
+
+35 4
+
+Figure 4.2: Load-Strain Graph of SPS-7
+
+Figure 4.2 shows the graph of load-strain for SPS-7 core. The graph shows the
+maximum load and the break point load. The maximum load of 133.56 kN resulted to a
+maximum stress of 65.39 kPa. This maximum stress is defined as the unconfined compressive
+strength of the sample and can be seen as the highest peak in Figure 4.2 above. This is the point
+where the sample starts to crack internally. While the break point load of 128.3 KN resulted to
+a break point stress of 62.81 kPa. This happens when the core starts to break and slides along
+the line. This can be seen in the graph above as the sudden drop of the line after the maximum
+load. It can also be noticed that before reaching the maximum load, the graph trend shows a
+
+sudden decrease before increasing again. This sudden decrease is caused by an existing internal
+
+crack in the core sample.
+
+23
+
+
+iss Internal Crack R io)
+| inffrmal Crack Response |
+75 | |
+70 } J
+65 | eer |
+
+eg
+&
+
+Breakpoint Stress
+
+0s 1 15 2 28
+Strain (%)
+
+Figure 4.3: Load-Strain Graph of SPS-8
+
+Load-strain graph for SPS-8 shows an internal crack in the core sample. The reason
+behind this can be seen in Figure 4.3. The graph trend shows slight decrease of load before
+reaching the maximum load which confirms the existence of internal crack. The maximum load
+which can be seen in figure 4.3 as the peak of the graph has a maximum stress of 42.59 kPa.
+This maximum stress is the unconfined compressive strength. This maximum stress indicates
+that the core starts to crack internally. Before reaching the break point load of 67.7 KN, the
+graph shows a sudden increase in the trend line. This shows that the core is not totally reaching
+its brittle fracture. After that sudden increase, the break point load was reached and the core
+
+totally breaks and slides along a line.
+
+24
+
+100
+
+‘Strain (%)
+
+[= toad-Strain Act]
+Figure 4.4: Load-Strain Graph of SPS-9
+
+The maximum load of SPS-9 can be seen in Figure 4.4 above. The load-strain graph
+demonstrates the point where the core starts to crack internally. This point is the peak of the
+graph having a maximum load of 106.6 kN which is equal to 52.20 kPa maximum stress. This
+maximum stress is the unconfined compressive strength of the core. However, based on the
+result, the break point load is higher than the maximum load. The break point load result of
+117.6 KN has a maximum stress of 57.55 kPa. The value of break point stress is supposedly
+lower than maximum stress since load will drop when it reaches the maximum stress due to
+internal crack. This will continue until it reaches the break point stress where the core will
+
+fracture completely.
+
+25
+
+Maximum Stress ‘Se
+x4 {
+|
+|
+t
+i
+
+| A
+Internal Crack Response|
+zi io
+
+‘Load (KN)
+8
+
+05 1 15 2 25 3
+‘Strain (%)
+
+Figure 4.5: Load-Strain Graph of SPS-10
+
+SPS-10 load-strain graph in Figure 4.5 above shows the maximum load and break point
+load of the core. Before reaching the maximum load, the trend of the graph shows a decrease
+in the load before increasing again. This was caused by the existence of an internal crack in the
+core sample. The load increase continues after the effect of the internal crack until it reaches
+the maximum load of 121.7 kN. The maximum stress at this point is 59.57 kPa which is the
+defined as the unconfined compressive strength. This maximum load is the peak of the graph.
+At this stage, the sample starts to crack internally and it will continue to crack until it reaches
+the point where the crack breaks along the line. This is called as the break point and can be
+
+seen in the figure above as the sudden drop of the load.
+
+26
+
+jee Maximum Stipss | | fia nape
+
+|
+70 1;
+| if | |
+65 { } }
+60 — } ! | 1
+55 t
+50
+g45 ;
+340 { Z
+$35 | +
+|
+|
+
+30
+25
+20
+15
+10
+
+|
+|
+| |
+A | |
+t
+| + +
+Internal Crack|Response | Breakpoint sf :
+3
+
+35 4
+
+0s 1 15 2 25
+‘Strain (%)
+
+Figure 4.6: Load-Strain Graph of SPS-11
+
+An effect of internal crack can be seen in Figure 4.6 above. A sudden decrease of the
+load before increasing again suggest that the sample have an existing internal crack. The graph
+shows a continuous increase until it reaches the peak. The peak of the graph is the maximum
+load where the core starts to experience internal crack due to the applied load on the sample.
+The maximum load is 79.2 kN which resulted to maximum stress of 38.78 kPa. This maximum
+stress will be the unconfined compressive strength. The graph above also suggests that the
+sample experience plastic deformation before reaching the break point since Figure 4.6 shows
+a gradual drop of the graph. However, like the result in SPS-9, the break point load result in
+SPS-11 is also higher than the maximum load. The break point load result is 117.6 kN. This is
+the same result with SPS-9 whereas supposedly the break point should be lower than maximum
+stress since load will drop when it reaches the maximum stress due to the effect of internal
+
+crack.
+
+27
+
+a + ——
+| | | |
+110 } | Maxinium Stress Ss
+
+100 | |
+
+90 | | | a |
+70 Z| —+
+= 7 i
+z 60 | | | la at am |
+y |
+} } L
+z es cee Z |
+30 | } y
+20 | | | — ——
+10 | | | Le | | Breakpoinnt|Stress
+| we | |
+0s 1 18 2 25 3 35
+
+Strain (%)
+— Load-Strain [Act.}
+
+Figure 4.7: Load-Strain Graph of SPS-12
+
+There’s no sign of that SPS-12 contains any internal crack as can be seen in Figure 4.7.
+The load-strain graph above shows the point where the core starts to crack internally. This point
+is the peak of the graph having a maximum load of 114.6 kN which gives a 56.10 kPa maximum
+stress. The maximum stress is the unconfined compressive strength of the core. The break point
+load in this test is higher than the maximum load. The break point load is 117.6 kN while the
+maximum load is 114.6 KN. As discussed, the value of break point stress is supposedly lower
+than maximum stress since load will drop when it reaches the maximum stress due to internal
+crack and it will continue until it reaches the break point stress where the core will fracture
+
+completely.
+
+All of the samples exhibit low UCS. The cause of this is due to the effect of weathering.
+The unconfined compressive strength decreases as weathering increases due to the changes in
+microfabric especially in porosity and pore geometry [37]. However, SPS-9, SPS-11 and SPS-
+12 tests resulted to a higher breakdown pressure values than maximum pressure. These errors
+from the experiment due to equipment problem affected the results. Figure 4.8 and Figure 4.9
+
+shows the samples before and after UCS test.
+
+Figure 4.9: Samples After UCS Test
+
+4.2.3 Triaxial Test
+
+A total of six tests were done for the triaxial tests using the remaining core samples.
+The triaxial test results were used to get the Young’s Modulus and produce the Mohr Circle to
+
+identify the failure envelope of the core samples.
+
+29
+
+i
+
+~~
+
+° 10,000 20,000 30,000 40,000 50,000 60,000 70,000 80,000 90,000 100,000
+Principal stress (kPa)
+
+Figure 4.10: Mohr Circle — Set 1
+
+In order to determine the Mohr-Coulomb failure criterion for all test data, Mohr circles
+of three samples were plotted in one graph as can be seen in Figure 4.10. As mentioned, each
+sample undergone triaxial test with different confining pressure. All of these are graphically
+
+shown as circles in Figure 4.10.
+
+30
+
+Table 4.2: Values from Mohr’s Circle Set 1
+
+Angle of
+Sigma-3, o° Sigma-1, o! Cohesion Internal
+Te (kPa) (kPa) (kPa) Friction
+©)
+1 (SPS-2) 739.5 88,767
+2 (SPS-3) 1,005 1,094,494 5,994.1 69.9
+3 (SPS-4) 1,492 60,258 |
+
+Table 4.2 describes the behavior of the three samples when subjected to different stress.
+The Sigma-3 (03) in triaxial test is the minimum principal stress while Sigma-1 (01) is the
+maximum principal stress. In this experiment, 0; is represented by axial stress (vertical stress)
+while 63 is represented by radial stress (horizontal stress). This means that in SPS-2, the
+minimum principal stress it can take is 739.5 kPa while the maximum principal stress it can
+take is 88,767 kPa. This is also the same with SPS-3 having a minimum principal stress of
+1,005 kPa and maximum principal stress of 1,094,494 kPa. While SPS-4 have 1,492 kPa and
+60,258 kPa minimum and maximum principal stresses respectively. These are limit of the
+
+principal stresses of the three samples or the failure envelope.
+
+The Mohr-Coulomb Criterion for set 1 is given by the equation below. The cohesion
+value of 5,994.1 kPa is the limit of shear stress that the rock can accommodate without going
+to failure. This is a linear equation that will determine if the rock will fail or not. This means
+
+that any value outside the failure envelope will fail.
+T = 5,994.1 + o,tan69.9 (4.1)
+The static Young’s Modulus of the three samples were also determined to be 9.3 GPa,
+
+14.6 GPa and 17.2 GPa respectively. Young’s Modulus describe the stiffness of the material,
+meaning the higher the Young’s Modulus the stiffer the material. The higher modulus of the
+
+31
+
+samples was caused by the higher axial stress due to the effect of confining pressure. Confining
+
+pressure causes the samples to become “stiffer” thus resulting into a higher axial stress.
+
+0 10,000 20,000 30.000 40,000 50,000 60,000 70,000 80,000
+Principal stress (kPa)
+
+Figure 4.11: Mohr Circle — Set 2
+
+Mohr circles of three more samples for set 2 were also plotted in one graph to determine
+the Mohr-Coulomb failure criterion for all test data. The samples undergone triaxial test with
+different confining pressure and the results of principal stresses were graphically shown as
+
+circles in Figure 4.11.
+
+32
+
+Table 4.3: Results of Triaxial Test for Set 2
+Angle of
+Sigma-3, o° | Sigma-1, o! Cohesion Internal
+et (kPa) (kPa) (kPa) Friction
+1)
+| 1 (SPS-6) 704 50,706
+2 (SPS-5) 1,013 | 68,049 3,200.1 70
+| 3 (SPS-1) 1,491 | 89,384
+
+The results of the triaxial test can also be seen in Table 4.3 above. Like the first result
+on set 1, Sigma-3 (03) is the minimum principal stress while Sigma-1 (01) is the maximum
+principal stress. The minimum principal stress SPS-6 can accommodate is 704 kPa while the
+maximum principal stress it can accommodate is 50,706 kPa. SPS-5 has a minimum principal
+stress of 1,013 kPa and maximum principal stress of 68,049 kPa. The last sample, SPS-1 has
+1,491 kPa minimum principal stress and 89,384 kPa maximum principal stress. These principal
+
+stresses are the limit and represents the failure envelope of set 2.
+
+The Mohr-Coulomb Criterion for set 2 is given by Equation 4.2. This equation
+determines if the material such as rock will fail or not. Any value outside the failure envelope
+means the material will fail. The cohesion of the rock describes the amount of shear stress the
+rock can accommodate without breaking. For set 2 results, the limit or the cohesion is 3,200.1
+kPa.
+
+T = 3,200.1 + o,tan70 (4.2)
+The static Young’s Modulus is the ratio of axial stress and axial strain which describes
+the materials stiffness. The higher the Young’s Modulus the stiffer the material will be. The
+
+static Young’s modulus of the three samples are 10.1 GPa, 15.1 GPa and 11.9 GPa respectively.
+
+The higher modulus of the samples was caused by the higher axial stress due to the effect of
+
+33
+
+confining pressure. When confining pressure increases, the core sample will become “longer”,
+
+the axial stress will increase, and thus static Young’s modulus will increase.
+
+The figures below show the limestone samples before and after the triaxial test. There
+were two sets of triaxial test done. Set-1 used SPS-2, SPS-3 and SPS-4 cores while set-2 used
+SPS-1, SPS-5 and SPS-6 cores for triaxial testing.
+
+Figure 4.13: Samples After Triaxial Test (Set 1)
+
+34
+
+Figure 4.14: Samples After Triaxial Test (Set 2)
+
+4.3 Correlation
+
+4.3.1 UCS to vp and vs Correlation
+
+The correlation lines of UCS to vp and vs for the combined data from the experiment
+are given by relations that are shown in Figure 4.15 and Figure 4.16 respectively. The equations
+for these relationships are given below:
+
+UCS = 0.0202v, — 49.545 (4.3)
+
+UCS = 0.0257, — 20.139 (4.4)
+
+35
+
+Uniaxial Compressive Stregth (KPa)
+
+0 1000 2000 3000 4000 5000 6000
+P-wave Velocity (m/s)
+
+Unixial Compressive Strength (KPa)
+
+500 1000 1500 2000 2500 3000
+S-wave Velocity (m/s)
+
+Figure 4.16: Linear Correlation between UCS and vs
+
+Parameters like porosity and density have some influences on rock strength [22]. These
+the same parameters have also an effect on the compressional wave velocity and shear wave
+velocity [32,33]. Therefore, UCS is expected to show a relationship with these elastic waves
+velocity. A positive relationship can be seen in both plots above with correlation coefficient
+(R) of 0.67 for UCS to vp and 0.78 for UCS to vs. This means that the linear relationship strength
+of UCS to vs is 67% while UCS to v; is 78%. Positive relationship means that UCS increase
+
+linearly with increasing compressional wave velocity and shear wave velocity. The positive
+
+36
+
+relationship of UCS to elastic waves velocity is due to the fact that the effect of porosity and
+
+density are the same in UCS and elastic waves velocity (22,34,35].
+
+4.3.2 UCS to Ey Correlation
+
+Relationship of UCS and dynamic Young’s modulus (Ez) can be seen in Figure 4.17.
+
+This relationship is represented by Equation 4.5.
+
+UCS = 1.0317Eq — 6.9337 (4.5)
+
+=e
+é
+&
+=
+&
+2
+a
+2
+G
+8
+E
+§
+=]
+3
+8
+=
+2
+
+20 30 40 50
+Dynamic Young's Modulus (GPa)
+
+Figure 4.17: Linear Correlation between UCS and Ea
+
+Compressional wave velocity, shear wave velocity and density will be used to get the
+dynamic Young’s modulus (Eq) [28]. The compressional velocity and shear wave velocity will
+be dependent on porosity, fluid saturation and density [32,33]. Thus, these parameters will also
+have an effect on the dynamic Young’s modulus value. Porosity and density have also an effect
+on rock strength [22]. This suggests that there is a relationship between unconfined
+compressive strength (UCS) and dynamic Young’s modulus (Eq). Figure 4.17 showed that
+
+there’s a positive linear relationship between UCS and Eq meaning UCS increases linearly as
+
+37
+
+the Eu increases. The strength of this linear relationship is 75% (R=0.75). Like the UCS to vp
+and v; correlation, the same explanation can be applied here to describe the positive relationship
+
+of UCS to Ea since Ea depends on these elastic waves velocity and density.
+
+4.3.3 Es to vp and vs Correlation
+
+The correlation of static Young’s Modulus (Es) to vp and vs are presented in Figure 4.18
+
+and Figure 4.19 respectively. Equation 4.6 represents the linear relationship of Es to vp while
+
+Equation 4.7 represents the linear relationship of E; to vs.
+E, = 0.0006v, + 10.244 (4.6)
+
+E, = 0.004v, + 1.706 (4.7)
+
+z
+&
+&
+re
+3
+3
+3
+Ss
+bs
+od
+)
+2
+5
+o
+g
+2
+Es
+5
+
+2000 3000 4000
+P-wave Velocity (m/s)
+
+Figure 4.18: Linear Correlation between E; and vp
+
+38
+
+=e
+&
+a
+re
+3
+3
+3
+8
+=
+a
+30
+2
+5
+3
+g
+2
+&
+a
+
+500 1000 1500 2000 2500 3000
+S-wave Velocity (m/s)
+
+Figure 4.19: Linear Correlation between Es and vs
+
+Static test measures the Young’s modulus (Es) of the cores directly while compressional
+wave velocity (vp), shear wave velocity (vs) and density will be used to get the dynamic
+Young’s modulus (Ea) indirectly [28]. Thus, Es is expected to have a relationship with elastic
+waves velocity since elastic waves are used for the computation of Ea. Based on Figure 4.18
+and Figure 4.19, Es to vp correlation and E; to vs correlation exhibit positive linear relationships.
+However, correlation between Es to vp resulted into a low correlation coefficient. Es correlation
+coefficient (R) to vp is 0.06 (6%) while for Es to vs the correlation coefficient (R) resulted to
+0.29 (29%). This means that the results of elastic wave velocity correlation to Es gives uncertain
+values resulting to lower correlation coefficients especially the Es to vp. Based on the result of
+triaxial test done, SPS-1, SPS-2, SPS-4 and SPS-5 cores have existing cracks that affected the
+results for both E; and elastic waves velocity. The presence of cracks in the material affects the
+material’s deformability under static loading, meaning that the Young’s modulus obtained from
+the static test will have a lower value [30,31]. Compressional wave velocity was also affected
+by the presence of cracks. Compressional wave velocity decreased by 0.6% as the crack density
+changed and decreased by 1.5% as the crack aperture increased, suggesting that the presence
+
+of natural fractures affect the vp since vp cannot propagate well through the material with gaps
+[30,36].
+
+39
+
+4.3.4 Es to Ey Correlation
+
+The regression line of static Young’s Modulus (Es) on dynamic Young’s Modulus (Ea)
+
+of carbonate rocks for the combined data is given by Equation 4.8.
+
+E, = 0.1393E, + 5.0149 (4.8)
+
+Static Young's Modulus (GPa)
+
+10
+
+20 30 40 50 60 70
+
+Dynamic Young's Modulus (GPa)
+
+Figure 4.20: Linear Correlation between Es and Ea
+
+Figure 4.20 showed a positive relationship between Es to Ea. This positive relationship
+means there is a linear increase between E; and Eg. The reason for this positive relationship is
+because both geomechanical properties were measured to know the “stiffness” of the cores.
+The only difference is that static test measures Young’s modulus directly while dynamic test
+measures it indirectly. However, the correlation coefficient (R) of the two geomechanical
+properties is giving a low strength of correlation. Based on the result, the correlation coefficient
+(R) is 0.33 (33%). The presence of cracks in SPS-1, SPS-2, SPS-4 and SPS-5 cores were the
+reason why the results of static tests were inconsistent than the results of dynamic tests which
+
+resulted to a lower correlation coefficient. The static method, which is necessary for
+
+40
+
+quantifying the rock’s deformability, is more sensitive to the presence of discontinuities in the
+rock [30]. The more discontinuities in the rock, the lower the Young’s modulus value and the
+
+higher the discrepancy between the static and dynamic values [30,31].
+
+Table 4.4 presented the predicted relations, coefficient of correlation and coefficient of
+determination of the different parameters. UCS to vs correlation gives the highest degree of
+correlation coefficient, followed by UCS to Eu correlation and UCS to vp correlation. While
+the correlations of Es; to vp, vs and Eq resulted to a lower correlation coefficient. However,
+coefficient of determination (R?) showed that the equations developed were not good at
+predicting the UCS and E; since all results give lower R?. The errors in the experiment due to
+
+equipment problem affected the position of data points that resulted into lower R?.
+
+Table 4.4: Summary of the Statistical Correlation for Carbonate Rock
+
+Coefficient Coefficient
+io Nae iPrealictss! Kalgion ae Dene
+®) R)
+
+UCS |
+
+versus 4.3 UCS = 0.0202v, — 49.545 0.67 | 0.447
+Vp |
+
+UCS
+
+versus 44 UCS = 0.0257¥v, — 20.139 0.78 0.3099
+Vs |
+
+UCS
+
+versus 4.5 UCS = 1.0317Eq — 6.9337 0.75 0.559
+Ea
+Es
+
+versus 4.6 E; = 0.0006v, + 10.244 0.06 0.0036
+Vp
+Es
+
+versus 4.7 E, = 0.004, + 1.706 0.29 0.0812
+Vs
+
+41
+
+Es
+versus 4.8 E, = 0.1393Eg + 5.0149 0.33 0.1097
+Ea
+
+42
+
+
+CHAPTER 5
+
+CONCLUSION AND RECOMMENDATIONS
+
+5.1 Conclusion
+
+Based on the results of the experiment done to 12 core samples, the following
+
+conclusions may be drawn from the study:
+
+The UCS of the samples were determined using Unconfined Compressive Strength test.
+UCS of the six limestone cores were found to be 65.39 kPa, 42.59 kPa, 52.20 kPa, 59.57
+kPa, 38.78 kPa and 56.10 respectively. Using triaxial test, the static Young’s modulus
+were also determined. The static Young’s modulus of the six samples were found to be
+11.9 GPa, 9.3 GPa, 14.6 GPa, 17.2 GPa, 15.1 GPa and 10.1 GPa respectively. OYO
+analysis were used to determine the dynamic Young’s modulus of the core samples.
+Using the compressional wave velocities and shear wave velocities from OYO Analysis
+and the measured densities of the samples, the dynamic Young’s modulus of six
+samples were found to be 65.9 GPa, 55.3 GPa, 59.8 GPa, 65.3 GPa, 48.7 GPa and 50.3
+GPa respectively.
+
+Due to the equipment error, the newly developed correlations for predicting UCS and
+E; were affected. R? highest value of 0.559 in UCS versus Eu was not in the acceptable
+value of 0.9. Other R? results in the developed correlations are lower than 0.559.
+Although all correlations showed positive relationships, these results are still not
+enough to state that the established relationships have strong correlations. Therefore,
+due to the error in the experiment, all the newly developed correlations will have a large
+
+error in predicting UCS and Es.
+
+43
+
+5.2 Recommendations
+
+The data presented in this work is just a small step to further understand the behavior
+of limestone rocks. Several future work recommendations that might lead to improved
+
+understanding on the geomechanical properties of limestone are listed below.
+
+¢ Develop a correlation of static to dynamic geomechanical properties of limestone not
+
+using the compressional and shear wave velocity.
+
+e Evaluation of the relationship of limestone geomechanical properties to other properties
+
+(e.g. porosity, permeability, pressure, temperature, type of mineral, saturation).
+
+e Investigation of the differences of the static and dynamic geomechanical properties
+
+from the laboratory and the log-based estimate geomechanical properties.
+
+44
+
+REFERENCES
+
+[1] Zoback, M.D. (2010) Reservoir Geomechanics. Cambridge University Press. p. 15
+
+[2] Aadnoy, B. and R. Looyeh. (2011) Petroleum rock mechanics: drilling operations and well
+
+design. Gulf Professional Publishing, p. 27
+
+[3] Mehrgini, B., Memarian, H., Dusseault, M.B., Eshraghi, H., Niknejad, M. Hassanzade, M.,
+and Ghavidel, A. (2015) Experimental assessment of the influences of temperature on
+
+geomechanical characteristics of a carbonate reservoir. ARMA p. 15-143.
+
+[4] Adam, L., Batzle, M., and Brevik, I., (2006) Gassmann’s fluid substitution and shear
+modulus variability in carbonates at laboratory seismic and ultrasonic frequencies: Geophysics,
+
+71, no. 6, p. 173-183.
+
+[5] Assefa, S., McCann, C., and Sothcott, J., (2003) Velocities of compressional and shear
+
+waves in limestones: Geophysical Prospecting, 51, p. 1-13.
+
+[6] Scotellaro, C., Vanorio, T., and Mavko, G., (2007) The effect of mineral composition and
+pressure on carbonate rocks: Presented at the 77th Annual
+
+International Meeting, SEG.
+
+[7] Adam, L., Batzle, M., Lewallen, K. T. and van Wijk, K., (2009) Seismic wave attenuation
+
+in carbonates: Journal of Geophysical Research, 114.
+[8] Verwer, K., Kenter, J. A. M., Braaksma, H., and van Lanen, X. M. T., (2008) Acoustic
+
+properties of carbonates: Effects of rock texture and implications for fluid substitution,
+Geophysics, 73, B51-B65.
+
+45
+
+[9] Kenter, J. A. M., Braaksma, H., Verwer, K., and van Lanen, X. M. T., (2007) Acoustic
+behavior of sedimentary rocks: Geological properties versus Poisson’s ratios: The Leading
+Edge, 26, p. 436-444.
+
+[10] Rogen, B., Fabricius, I. L., Japsen, P., Hoier, C., Mavko, G., and Pedersen, J. M., (2005)
+Ultrasonic velocities of North Sea chalk samples: Influence of porosity, fluid content and
+texture: Geophysics, 53, p. 481-496.
+
+[11] Ahr. W. M. (2008) Geology of Carbonate Reservoirs: The Identification, Description, and
+Characterization of Hydrocarbon Reservoirs in Carbonate Rocks, Texas A&M University,
+John Wiley & Sons, Inc., Hoboken, New Jersey, p. 2-11
+
+[12] Reeder, R. J. (Ed.) (1983). Carbonates: Mineralogy and Chemistry. Reviews in
+Mineralogy, Vol. 11, Mineralogical Society of America, p. 394
+
+[13] Dusseault, M.B. (2011) Geomechanical challenges in petroleum reservoir exploitation.
+KSCE Journal of Civil Engineering, 15: 4, p. 669-678.
+
+[14] Bakhorji A. M., (2010) Laboratory Measurements of Static and Dynamic Elastic
+
+Properties in Carbonate, p. 8.
+
+[15] Hamid, O., Omair, A., & Guizada, P. (2017, March 6). Reservoir Geomechanics in
+Carbonates. Society of Petroleum Engineers. doi:10.2118/183704-MS
+
+[16] Budennyy, S., Pachezhertsev, A., Bukharev, A., Erofeev, A., Mitrushkin, D., & Belozerov,
+B. (2017, October 16). Image Processing and Machine Learning Approaches for Petrographic
+
+Thin Section Analysis. Society of Petroleum Engineers. doi:10.2118/187885-MS
+
+[17] Ruzyla, K., Jezek, D. I., (1987), Staining method for recognition of pore space in thin and
+polished sections: Journal of Sedimentary Petrology, v. 57, p. 777-778.
+
+46
+
+[18] Folk, R. L., (1959), Practical petrographic classification of limestones: AAPG Bulletin, v.
+43, p. 1-38.
+
+[19] Dunham, R. J., (1962), Classification of carbonate rocks according to depositional texture,
+in Ham, W. E., ed., Classification of Carbonate Rocks: AAPG Memoir 1, p. 108-121.
+
+[20] Woehrl, B., Wessling, S., Bartetzko, A., Pei, J., & Renner, J. (2010, January 1).
+Comparison of Methods to Derive Rock Mechanical Properties from Formation Evaluation
+
+Logs. American Rock Mechanics Association.
+
+[21] Yale, D. P., & Jamieson, W. H. (1994, January 1). Static and Dynamic Mechanical
+
+Properties of Carbonates. American Rock Mechanics Association.
+
+[22] Soroush H. and Qutob H. (2011). Evaluation of rock properties using ultrasonic pulse
+technique and correlating static to dynamic elastic constants. The 2nd South Asian Geoscience
+Conference and Exhibition, GEOIndia2011, 12-14th January 2011, Gearter Noida, New Delhi,
+
+India.
+
+[23] Rock Characterization Testing and Monitoring, International Society for Rock Mechanics
+
+Suggested Methods, Ed. E.T. Brown, Pergamon Press, Oxford, 1981.
+
+[24] Standard Test Method for Unconfined Compressive Strength of Intact Rock Core
+Specimens, Soil and Rock, Building Stones, Annual Book of ASTM Standards 4.08., ASTM,
+Philadelphia, Pennsylvania, 1984.
+
+[25] Bewick, R. P., Amann, F., Kaiser, P. K., & Martin, C. D. (2015, January 1). Interpretation
+of UCS Test Results for Engineering Design. International Society for Rock Mechanics and
+
+Rock Engineering.
+
+[26] Altindag R. & Guney A. (2010, July 2). Predicting the relationships between brittleness
+and mechanical properties (UCS, TS and SH) of rocks. Vol. 5(16), p. 2107 — 2118
+
+47
+
+[27] Wang, D., Nawrocki, P. A., Jebbouri, A., Hozayen, M., Radwan, E. S., & Zhang, X. (2015,
+January 1). Geomechanical Study of Fractured Carbonate Reservoir — Part I, Rock Testing
+
+Data. International Society for Rock Mechanics and Rock Engineering.
+
+[28] Archer, S. and Rasouli, V. (2012). A log-based analysis to estimate mechanical properties
+and in-situ stresses in a shale gas well in North Perth Basin, in Kroshnaw, F.M. (ed), 1st
+International Conference on Petroleum and Mineral Resources, Dec 3-5, 2012. Kurdistan, Iraq:
+
+University of Koya
+
+[29] Standard Test Method for Triaxial Compressive Strength of Undrained Rock Core
+Specimens Without Pore Pressure Measurements, Annual Book of ASTM Standards 4.08.,
+ASTM, Philadelphia, Pennsylvania, (1984).
+
+[30] Brotons, V., Tomas, R., Ivorra, S. and Grediaga, A., (2014) Relationship between static
+and dynamic elastic modulus 3 of calcarenite heated at different temperatures: The San Julian’s
+Stone, DOI 10.1007/s10064-014-0583-y
+
+[31] Kolesnikov, YI., (2009) Dispersion effect of velocities on the evaluation of material
+
+elasticity. J Min Sci 45(4):347-354
+
+[32] Hamada G. M., (2004). Reservoir Fluids Identification Using V)/Vs Ratio. Oil & Gas
+Science and Technology, p. 649 -654
+
+[33] Azizi, V & Memarian, Hossein., (2006) ESTIMATION OF GEOMECHANICAL
+PARAMETERS OF RESERVOIR ROCKS, USING CONVENTIONAL POROSITY LOG.
+10.3997/2214-4609.201404063.
+
+[34] Chang C., Zoback M., & Khaksar A., (2006)., Empirical relations between rock strength
+
+and physical properties in sedimentary rocks, Journal of Petroleum Science and Engineering,
+
+Volume 51, Issues 3-4, p. 223-237
+
+48
+
+[35] Mahdizadeh M., Ahangari K., Javadi A., Afzal P., & Yasrebi A. B. (2016) Determination
+of Relationship Between Uniaxial Compressive Strength (UCS) And Rock Densities Using
+Fractal Modelling in Karoun-4 Dam, Sw Iran, Proceedings of the 24th UK Conference of the
+
+Association for Computational Mechanics in Engineering, Cardiff University, Cardiff
+
+[36] Wei, J., Di, B., & Ding P., (2013). Effect of crack aperture on P-wave velocity and
+dispersion. Applied Geophysics. 10. 10.1007/s11770-013-0379-z.
+
+[37] Atiye Tugrul, A., (2004). The effect of weathering on pore geometry and compressive
+strength of selected rock types from Turkey. Engineering Geology, Volume 75, Issues 3-4, p.
+215-227

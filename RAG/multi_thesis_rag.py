@@ -1,3 +1,4 @@
+from llm_typo_correction import correct_text_with_llm
 import dotenv
 dotenv.load_dotenv()
 
@@ -17,13 +18,17 @@ def recover_chromadb_from_index(pdf_folder, chunk_size=500):
     embedder = SentenceTransformer('all-MiniLM-L6-v2')
     from extract_metadata import extract_thesis_metadata
     recovered_chunks = 0
-    for pdf_path in indexed_files:
-        txt_path = os.path.splitext(pdf_path)[0] + ".txt"
+    api_key = os.environ.get("GEMINI_API_KEY", "")
+    for txt_path in indexed_files:
         if not os.path.exists(txt_path):
-            print(f"[RECOVERY] Missing .txt for {pdf_path}, skipping.")
+            print(f"[RECOVERY] Missing .txt for {txt_path}, skipping.")
             continue
         with open(txt_path, "r", encoding="utf-8") as f:
             text = f.read()
+        # LLM typo correction
+        if api_key:
+            print(f"[LLM] Correcting text for {os.path.basename(txt_path)}...")
+            text = correct_text_with_llm(text, api_key)
         meta = extract_thesis_metadata(text)
         meta["file"] = os.path.basename(txt_path)  # Use .txt as the source
         meta["pdf"] = os.path.basename(txt_path)   # Use .txt as the 'pdf' reference
@@ -310,7 +315,7 @@ def extract_and_chunk_pdfs(pdf_folder, chunk_size=500):
     to_index = []
     for pdf_path, txt_path in zip(pdf_files, txt_files):
         mtime = os.path.getmtime(txt_path)
-        if pdf_path not in indexed_files or indexed_files[pdf_path] != mtime:
+        if txt_path not in indexed_files or indexed_files[txt_path] != mtime:
             to_index.append((pdf_path, txt_path, mtime))
 
     if not to_index:
@@ -371,10 +376,15 @@ def extract_and_chunk_pdfs(pdf_folder, chunk_size=500):
     embedder = SentenceTransformer('all-MiniLM-L6-v2')
     appended_chunks = []
     appended_metadata = []
+    api_key = os.environ.get("GEMINI_API_KEY", "")
     for pdf_path, txt_path, mtime in to_index:
         print(f"[DEBUG] Indexing: {os.path.basename(pdf_path)}")
         with open(txt_path, "r", encoding="utf-8") as f:
             text = f.read()
+        # LLM typo correction
+        if api_key:
+            print(f"[LLM] Correcting text for {os.path.basename(txt_path)}...")
+            text = correct_text_with_llm(text, api_key)
         meta = extract_thesis_metadata(text)
         meta["file"] = os.path.basename(txt_path)  # Use .txt as the source
         meta["chunk_idx"] = 0  # Will be set per chunk
@@ -402,7 +412,7 @@ def extract_and_chunk_pdfs(pdf_folder, chunk_size=500):
         )
         appended_chunks.extend(chunks)
         appended_metadata.extend(chunk_metadatas)
-        indexed_files[pdf_path] = mtime
+        indexed_files[txt_path] = mtime
 
     # Save updated index
     with open(indexed_path, "w", encoding="utf-8") as f:
@@ -509,18 +519,38 @@ class MultiThesisRAGHTTPRequestHandler(BaseHTTPRequestHandler):
                     if len(documents) >= 10:
                         break
 
-                # Only call Gemini if there are relevant chunks (distance below threshold)
+
+                # Call Gemini overview as long as there is at least 1 relevant chunk
                 relevant_chunks = [c for c in top_chunks if c["score"] < DISTANCE_THRESHOLD]
                 import os
                 overview_msg = "No overview available."
                 if relevant_chunks:
+                    # If 5 or more unique sources, use only the first 5 unique sources' chunks
+                    unique_files = []
+                    limited_chunks = []
+                    for c in relevant_chunks:
+                        file_name = c["meta"].get("file", c["meta"].get("pdf", ""))
+                        if file_name and file_name not in unique_files:
+                            unique_files.append(file_name)
+                        if file_name in unique_files[:5]:
+                            limited_chunks.append(c)
+                        # Stop collecting if we have 5 unique sources and all their first chunks
+                        if len(unique_files) >= 5 and len(set([x["meta"].get("file", x["meta"].get("pdf", "")) for x in limited_chunks])) >= 5:
+                            break
+                    # If less than 5 unique, use all relevant chunks
+                    if len(unique_files) >= 5:
+                        chunks_for_overview = limited_chunks
+                    else:
+                        chunks_for_overview = relevant_chunks
                     api_key = os.environ.get("GEMINI_API_KEY", "")
                     if api_key:
                         try:
                             prompts = [question]
-                            overview_msg = prompt_chain(relevant_chunks[:10], prompts, api_key)
+                            overview_msg = prompt_chain(chunks_for_overview, prompts, api_key)
                         except Exception as e:
                             overview_msg = f"[Gemini error: {e}]"
+                    else:
+                        overview_msg = "No Gemini API key configured."
                 else:
                     overview_msg = "No relevant information found for your query."
 
@@ -528,7 +558,7 @@ class MultiThesisRAGHTTPRequestHandler(BaseHTTPRequestHandler):
                 if not relevant_chunks:
                     documents = []
                     import re
-                    overview_msg = re.sub(r"\[\d+\]", "", overview_msg)
+                    overview_msg = re.sub(r"\\[\\d+\\]", "", overview_msg)
 
                 resp = {
                     "overview": overview_msg,
