@@ -288,7 +288,6 @@ agassizi Selenka, and Euapta lapa Muller (Hammond, 1982) and Australostichopus
 
 mollis (Slater and Jeffs, 2010).
 
-10
 
 Sheltering behaviour has also been documented in holothurians in the wild,
 specifically for Actinopyga mauritania (Graham and Battaglene, 2004), Holothuria
@@ -347,7 +346,6 @@ Fertilised eggs from a pair of male and female spawners were maintained in fully
 
 covered tanks (1 ton). The succeeding larval stage was fed with Chaetoceros calcitrans.
 
-12
 
 Post-settled juveniles aged 2 months (47 days post-settlement) were then harvested and
 used in the experiment. At this point, the naive juveniles weigh 0 grams, and so length
@@ -379,7 +377,6 @@ The feeding activity of juveniles was monitored on days 1, 11, 19 and 29, for
 
 24 hours at 3 hour intervals starting from 08:00 AM, an hour after the light bulb was
 
-13
 
 turned on in treatment 12L:12D. During each 3 hour interval, the animals were scored
 as either feeding or inactive. The juveniles were scored as active and feeding if there is
@@ -440,7 +437,6 @@ between days 11 and 19 of monitoring, and were removed prior to water replacemen
 
 Henceforth, 24L x W was excluded in the analysis of growth and survival.
 
-15
 
 Survival was significantly lowest in constant light treatment with shelters at
 15% (Kruskal-Wallis Test, H (4, N=20) = 11.51 p=0.02; Fig 2.5). Meanwhile, survival
@@ -473,7 +469,6 @@ Notably, a shift from an average daytime feeding to nighttime feeding started
 
 on day 11. The shift in the diel feeding pattern occurred even in the absence of light
 
-16
 
 and dark cycle which indicates that nocturnal feeding is developmentally determined,
 that is, nocturnal feeding develops as the juveniles age. This may be delayed by non-
@@ -504,7 +499,6 @@ post-settled juveniles in the 24L treatment experienced mass mortalities even wh
 
 their tegument started to develop pigmentation. Rather, pigmentation might have a
 
-17
 
 different function such increasing their survival in wild through matching with the
 background or substrate, which included the seagrass detritus, macrolagae, sponges,
@@ -536,7 +530,6 @@ during the day and emerge at night (Edullantes 2014; Palomar-Abesamis, Abesamis,
 
 and Juinio-Mefiez 2017; Palomar-Abesamis, Juinio-Mefiez, and Slater 2017). Negative
 
-18
 
 phototaxis was also observed in the older juveniles of the species (Chapter 3 of this
 thesis; Palomar-Abesamis, Juinio-Mefiez, and Slater 2017) suggesting their natural
@@ -566,7 +559,6 @@ treatments, indicating that sheltering due to negative phototaxis is absent. Thi
 
 also be due to the not fully developed photosensitivity in this age group.
 
-19
 
 This study showed that nocturnal feeding in S. cf. horrens occurs during the
 early juvenile stage and is related to the development of photosensitivity in response to
@@ -581,13 +573,11 @@ are warranted to optimize a light regime that can enhance microalgae and juvenil
 
 growth, without hindering the development of photosensitivity in the animal.
 
-20
 
 Figure 2.1 Actual photo of the experimental unit. Jars (height = 24 cm, base diameter
 = 13.5 cm) were filled with 2 liters of UV-filtered seawater. Blue mesh nets (1 x 5
 inches) fixed to chicken wire (diameter = 6cm) and stones were used as shelters.
 
-21
 
 Vad wl
 24L 12L:12D 24D
@@ -613,7 +603,6 @@ absence. Each treatment was replicated 4 times, and each replicate jar contained
 
 juveniles (0.56 cm + 0.16 SD).
 
-22
 
 Treatments
 
@@ -638,7 +627,6 @@ treatments (S = shelter present, W = shelter absent). Thick arrows indicate the 
 feeding time per monitoring day and thin arrows represent the average number of
 feeding juveniles per monitoring hour.
 
-23
 
 9 Day
 
@@ -664,7 +652,6 @@ within 24 hours. In the x-axes are the photoperiod treatments (24D, 12L:12D, and
 and shelter treatments (S = shelter present, W = shelter absent). Error bars represent
 standard deviation from the mean.
 
-24
 
 a
 ab
@@ -673,12 +660,9 @@ ab
 b b
 120 a a
 a
-100
 a
 80 J
 60 @B
-20
-0
 Sy Ww Ss Ww s w
 24L
 
@@ -693,7 +677,6 @@ Absolute growth rate
 oO
 
 Survival %
-3
 
 Treatment
 
@@ -705,7 +688,6 @@ significant differences (Kruskal-Wallis Test, p<0.05). Mass mortality occurred i
 out of four replicates of the 24LxW treatment (arrowhead), hence, excluded in the
 statistical analyses.
 
-25
 
 Chapter 3
 
@@ -736,7 +718,6 @@ more juveniles together in the same corner of the aquaria when inactive, an indi
 
 of aggregate-formation and positive thigmotaxis. This validates previous observations
 
-26
 
 ot larger juveniles being nocturnal feeders, controlled by an endogenous clock, and
 having a strong thigmotactic response when inactive. The positive and negative effects
@@ -746,7 +727,6 @@ from the half-exposed treatment, in particular, are useful for further developme
 
 nursery systems for S. cf. horrens.
 
-27
 
 3.1 Introduction
 
@@ -779,7 +759,6 @@ Sea cucumber culture is a plausible means to augment fishery production and
 rebuild natural stocks (Juinio-Mefiez et al., 2017).In the Philippines, culture of high
 value Holothuria scabra is being optimized, while the culture of Stichopus cf. horrens
 
-28
 
 is being explored. Developing and optimizing culture strategies should be based on the
 biology of the culture organism and its response to controllable factors. Maximising
@@ -811,7 +790,6 @@ investigated. Three shading treatments were used: covered (C), exposed (E), and 
 covered (HC). Overall, the goal of this study was to examine the direct and indirect
 effects of light intensity on juvenile S. cf. horrens behaviour, growth and survival.
 
-29
 
 It is hypothesized that rearing S. cf. horrens juveniles in a fully covered set-up
 would minimize physiological stress on the animal and lead to higher survival.
@@ -842,7 +820,6 @@ female spawners were maintained in fully-covered tanks (1 ton). The succeeding l
 
 stage was fed with Chaetoceros calcitrans. The juveniles (~4 months old) were then
 
-30
 
 LUIGI . :
 fatvested and initially reared in ocean-based cages for a month to boost growth, prior
@@ -876,7 +853,6 @@ HC. The set-up was maintained for 30 days with flow through seawater under ambie
 natural light conditions in an outdoor hatchery. HOBO loggers were deployed in 1
 aquaria per treatment for the measurement of light intensity and temperature.
 
-31
 
 Twenty four-hour monitoring of juvenile feeding and sheltering was done on
 days 0, 5, 10 and 30, starting at 0800H and subsequently in 2-hour intervals for all
@@ -908,7 +884,6 @@ from the initial weight, and dividing the value by the number of experimental da
 
 by first summing up the total weight per replicate aquaria, then averaged per treatment.
 
-32
 
 Survival is the percentage of juveniles that survived up to the end of the experiment in
 
@@ -943,7 +918,6 @@ amount of detritus in the sample. The higher the Phae/Chl a ratio, the larger th
 
 contribution of the detritus to the sediment organic matter.
 
-33
 
 Organic matter (OM) content was estimated using the loss on ignition method
 (LOI) by Byers et al. (1978) and Luczack et al. (1997). Sediment samples were dried
@@ -973,7 +947,6 @@ distribution. Statistica software was used to run both Mann-Whitney U Test and
 
 Kruskal-Wallis Test.
 
-34
 
 Sediment Chl a, Phae/Chl a, labile organic matter, refractory organic matter and
 total organic matter were averaged per sampling day for the covered and exposed
@@ -1006,7 +979,6 @@ periods at an average of 1.32 inactive individuals (44%) per hour during the day
 
 3.3A). The mean direction (i.e. hours) of inactivity within treatment was not statistically
 
-35
 
 significant (Moore’s Modified Rayleigh Test, p>0.05). Nevertheless, significant
 temporal difference within treatment was observed in treatment E between days 0
@@ -1037,7 +1009,6 @@ case, there are minor variations when it comes to mean feeding hours but all of 
 
 still happened at night.
 
-36
 
 3.4.2 Location of individuals during inactive and active periods
 
@@ -1072,7 +1043,6 @@ replicate aquaria between days 15 to 30 of rearing. As a result, the average sur
 
 lowest in this treatment at 50% (Fig. 3.6A).
 
-37
 
 Initial and final biomass were comparable across treatments (Kruskal-Wallis
 Test: H (2, N =17) =2.89 p=0.23), even after the biomass was adjusted (Kruskal-Wallis
@@ -1106,7 +1076,6 @@ by the half-covered treatment at 1015.71 + 272.60 lux, and the covered treatment
 
 663.48 + 384.15 lux. There is no illumination at night in all of the treatments. Water
 
-38
 
 temperature was maintained at almost similar levels across treatments due to the flow
 through water system. The average temperature during the day is 28.33 °C + 0.21 SD,
@@ -1139,7 +1108,6 @@ The second PC accounts for 22% of the variation, is dominated by illumination
 
 and Chl a. Treatment E is separated from the rest along this PC. This is concordant with
 
-39
 
 the results of overall Chl a having significantly highest concentration in E treatment
 (13.44 mg/g + 4.57 SD; Kruskal-Wallis test: H (3, N=28) =17.93 p<0.01), where the
@@ -1171,7 +1139,6 @@ Phae/Chl a. On the other hand, treatment E had significantly lowest Phae/Chl a o
 
 Matched Pairs Test, p<0.05).
 
-40
 
 Lastly, the fourth PC accounts for 15.1% of variation and is dominated by
 temperature. Temperature was comparable across treatments (Fig 3.9B) since flow
@@ -1202,7 +1169,6 @@ the replicate individuals fed at night (Palomar-Abesamis, Juinio-Meiiez, and Sla
 2017). The reason for the discrepancy might be the age, where our study used smaller
 and presumably younger juveniles (4.27 g to 19.41 g, 180 days post fertilization). The
 
-41
 
 effect of conspecific on feeding behaviour cannot be discounted, wherein juveniles in
 this study reared with conspecifics had daytime feeding activities as opposed to those
@@ -1234,7 +1200,6 @@ maintenance of cyclic nocturnal activity was reported only for juvenile A. japon
 reared at 15-500 lux (Dong et al., 2010b). Results of the present study demonstrated a
 similar sensitivity to low light (713 lux) of S cf. horrens. Nevertheless, some juveniles
 
-42
 
 were also observed inactive at night, and foraging individuals at day indicate that
 
@@ -1268,7 +1233,6 @@ fully covered and exposed treatments (Fig 3.4A), an indication of positive thigm
 
 addressed by contact with a physical structure. The juveniles found in pairs or groups
 
-43
 
 were mostly at the corners (Fig. 3.4B), further suggesting that their need for physical
 contact can be addressed both by a conspecific and a physical structure. In the case of
@@ -1329,7 +1293,6 @@ AGR was also documented even when survival is low in two replicate aquaria, whic
 
 might be due to intrinsic variability in growth per individual (Fig 3.7).
 
-45
 
 3.5. 1 Implications to culture
 
@@ -1361,7 +1324,6 @@ et al., 2015). Growth of juvenile Holothuria scabra reared individually in aquar
 
 in groups in sea pens enriched with Sargassum spp. was likewise enhanced (Sinsona
 
-46
 
 and Juinio-Mefiez, 2018). In contrast, aquarium experiments with individual juvenile
 S. cf. horrens showed addition of macroalgal detritus did not enhance growth and
@@ -1372,7 +1334,6 @@ interactions in this species is essential in determining optimal stocking densit
 
 with light and food related interactions under different culture conditions and systems.
 
-47
 
 Table 1 Time of mean inactivity and feeding in hours across monitoring days.
 Superscripts a-b corresponds to significant differences across treatments at day 0
@@ -1417,12 +1378,10 @@ Day Night Day Night
 30 S>E S>E L.s. DLs.
 (0.025) (0.009)
 
-48
 
 Figure 3.1 Photograph of the experimental units from left to right: half-covered (HC),
 covered (C) and exposed treatments (E)
 
-49
 
 A Treatments B
 
@@ -1445,7 +1404,6 @@ Figure 3.2 Experimental treatments containing 3 juveniles each (A) and diagramma
 representation of the monitoring grid (B). For the half-covered set-up, grids A to D
 correspond to the shaded region, while grids E-H correspond to the exposed region
 
-50
 
 Treatments
 = Covered
@@ -1459,7 +1417,6 @@ treatment (covered, exposed, half-covered). Thick arrows indicate the average fe
 time per monitoring day and thin arrows represent the average number of feeding
 juveniles per monitoring hour.
 
-51
 
 A Average number of inactive juveniles per grid
 Treatment 0 22
@@ -1488,7 +1445,6 @@ juveniles were predominantly inactive at day, only the data from daytime observa
 
 representation.
 
-52
 
 
 Average number of active & feeding juveniles per grid
@@ -1518,15 +1474,10 @@ Since feeding predominantly happened at night, only the data from nighttime
 observations (06:00 PM to 08:00 AM) on days 0, 5, 10, 15 and 30 were averaged for
 this representation.
 
-53
 
 120 n=11 A
 
 ae n=18 n=9
-80
-60
-40
-20
 ()
 
 Survival (%)
@@ -1548,9 +1499,6 @@ AGR)
 40 Olntial
 @ Final
 B 30 |
-20
-4
-2
 ao 10
 ()
 Covered Exposed Half- Half-
@@ -1565,7 +1513,6 @@ standard deviation from the mean. Letters indicate significant differences in av
 AGR across treatments (Kruskal-Wallis Test, p<0.05). Asterisk indicates significantly
 lower final biomass in the covered treatment (Mann-Whitney U Test, p<0.05)
 
-54
 
 
 0.15
@@ -1607,7 +1554,6 @@ across sampling days. These are the replicates that have experienced negative AG
 lowest densities (1 individual). The only remaining individual in replicate 6 did not eat
 on day 30, hence the absence of a bar in the graph.
 
-55
 
 gssees
 
@@ -1625,7 +1571,6 @@ Aysuayuy 1y61q
 26.5
 
 ooez
-0022
 00Lz
 000z
 Oo6L
@@ -1638,16 +1583,8 @@ ooeL
 o0z-
 OOLL
 oooL
-0060
-0080
-0020
-0090
 o0so
-0060
 00€0
-0020
-0010
-0000
 
 Time (H)
 
@@ -1655,7 +1592,6 @@ Figure 3.9 Average light intensity (A) and temperature (B) across treatments dur
 
 the experiment.
 
-56
 
 ‘Ty Treatments and Day
 *E(1) A HC_E (1)
@@ -1687,16 +1623,9 @@ Phaeo/Chl a (P/C), labile organic matter (LOM), refractory organic matter (ROM),
 
 total organic matter (TOM).
 
-57
 
 Wdddeadoll cial
 
-50
-40
-30
-20
-10
-0
 0.15
 
 Chia
@@ -1715,7 +1644,6 @@ ME Refractory OM (ROM)
 baabadidbiadiadaanid sibitasenis
 
 0.05
-0
 
 *(ROM)
 *(ROM
@@ -1724,7 +1652,6 @@ Half-covered
 (Exposed area)
 
 3s
-2
 OG
 $3
 8a
@@ -1735,13 +1662,10 @@ Gc
 lo
 
 Exposed
-58
 
 *(ROM, LOM)
 Covered
 
-25
-15
 
 )
 
@@ -1790,7 +1714,6 @@ seagrass units (ASU). Ten post-settled juveniles were added in each 2-L replicat
 
 Each treatment had 4 replicates. The average illumination was 713 lux and water
 
-59
 
 temperature was 28.3°C during the 30 day experiment. For the older juveniles,
 sediment (2 cm thick) was added to the experimental aquaria (31 cm x 15.5 cm 22.5
@@ -1821,7 +1744,6 @@ photosensitvity of S cf. horrens and to demonstrate that the shift happens durin
 
 early juvenile stage or a few weeks after settlement. The biology of early and post
 
-60
 
 settlement juveniles of S. cf. horrens is not known. However results of this study
 suggest that the nursery phase may be similar to H. scabra. In nature, juvenile H.
@@ -1855,7 +1777,6 @@ Light also indirectly affected the animal, by influencing the benthic microalgal
 
 biomass as indicated by Chorophyll (Chl a) in the sediment. Specifically, Chl a was
 
-61
 
 highest in the exposed treatment (E) (13.44 mg/g + 4.57 SD) due to high light intensities
 (4726.51 + 1582.43 lux at noon) (Chapter 2). Concurrently, the highest juvenile
@@ -1887,7 +1808,6 @@ Thirty-day exposure to continuous light or high light intensities resulted in
 lower survival among post-settled and older juveniles. Younger juveniles exposed to
 30 days of constant light (713 lux) had the highest mortality, with mass mortalities in 2
 
-62
 
 out of four replicates (Chapter 2). Results suggest that continuous exposure to light
 intensities may be lethal to juveniles. Survival was also compromised in the exposed
@@ -1918,7 +1838,6 @@ behaviour can also be done, especially for optimizing mass production protocols.
 
 Further, the development of photosensitivity and related photoreceptor cells of the 2 S.
 
-63
 
 cf. horrens clades is an interesting research opportunity to better understand the biology
 
@@ -1978,7 +1897,6 @@ https://doi.org/10.1016/j.foodchem.2005.11.019
 
 Delroisse, J., Mallefet, J., Flammang, P., 2016. De Novo Adult Transcriptomes of Two
 
-65
 
 European Brittle Stars: Spotlight on Opsin-Based Photoreception. PLoS One 11.
 https://doi.org/10.1371/journal.pone.0152988
@@ -2037,7 +1955,6 @@ Gorospe, J.R., 2015. Growth and survival of the early stage Holothuria scabra Ja
 Graham, J.C.H., Battaglene, S.C., 2004. Periodic movement and sheltering behaviour
 of Actinopyga mauritiana (Holothuroidea: Aspidochirotidae) in Solomon Islands,
 
-66
 
 in: SPC Beche-de-Mer Information Bulletin. pp. 23-31.
 
@@ -2096,7 +2013,6 @@ frequency on survival and growth of juvenile cuttlefish Sepia officinalis L. in
 experimental rearing. J. Exp. Mar. Bio. Ecol. 296, 215-226.
 https://doi.org/10.1016/S0022-098 1(03)00322-8
 
-67
 
 Lambio, K.A., 2017. Growth of Holothuria scabra juveniles in a periphyton-based
 ocean nursery system. University of the Philippines.
@@ -2155,7 +2071,6 @@ nursery diets for juvenile sea cucumber Stichopus cf. horrens. Aquac. Res. 49,
 Palomar-Abesamis, N., Juinio-Mefiez, M.A., Slater, M.J., 2017b. Effects of light and
 microhabitat on activity pattern and behaviour of wild and hatchery-reared
 
-68
 
 juveniles of Stichopus cf. horrens. J. Mar. Biol. Assoc. United Kingdom 98, 1703—
 1713. https://doi.org/10.1017/S0025315417000972
@@ -2207,13 +2122,11 @@ https://doi.org/10.1093/icb/ict050
 Uthicke, S., Karez, R., 1999. Sediment patch selectivity in tropical sea cucumbers
 (Holothurioidea: Aspidochirotida) analysed with multiple choice experiments. J.
 Exp. Mar. Bio. Ecol. 236, 69-87. https://doi.org/10.1016/S0022-098 1(98)00190-
-7
 
 Vail, L., 1987. Diel patterns of emergence of crinoids (Echinodermata) from within a
 reef at Lizard Island, Great Barrier Reef, Australia. Mar. Biol. 93, 551-560.
 https://doi.org/10.1007/BF00392793
 
-69
 
 Yamaguchi, M., Masuda, R., Yamashita, Y., 2018. Phototaxis, thigmotaxis, geotaxis,
 and response to turbulence of sea cucumber Apostichopus japonicus juveniles.

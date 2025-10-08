@@ -483,7 +483,6 @@ Guernsey 4.72 3.15 471 0.76 14.04
 
 Jersey 5.13 3.98 4.83 0.77 14.42
 
-20
 
 Gorewit (1988) pointed out that the processes for the production of the fat,
 proteins and lactose, despite being independent from each other, are all influenced by
@@ -513,7 +512,6 @@ open structure due to their high proline content, allowing easy digestion by the
 
 (Thom et al., 2015). Caseins are good emulsifiers since they have polar and non-polar
 
-21
 
 residues that are not uniformly distributed, resulting in hydrophobic and hydrophilic
 regions. Caseins contain sticky PQ (proline and glutamine) sequences which is one
@@ -543,7 +541,6 @@ serum proteins that account for approximately 20% (6.3 g/L) of total milk protei
 
 Unlike caseins, whey proteins do not contain phosphorus and remain in solution at pH 4.6
 
-22
 
 (Fox et al., 2015). The presence of numerous sulfur-containing amino acids that form
 disulfide bonds allows the whey proteins to fold into a compact globular shape. They
@@ -575,7 +572,6 @@ Reuter, 1993). Milk that is richer in proteins especially casein yields more che
 
 Gawad et al., 2011). Auldist et al. (2004) observed that Jersey milk yielded 10% more
 
-23
 
 cheese per kilogram than HF milk due to the fact that the former has more proteins
 (4.06%), specifically caseins than the latter (3.34%). Aside from cheese yield, the casein
@@ -605,7 +601,6 @@ top layer of cream as fat globules, being less dense than water, rise to the sur
 
 globule is surrounded by a thin membrane (the milk fat globule membrane or MFGM)
 
-24
 
 which acts as the emulsifying agent. Mechanical action such as shaking and churning can
 break the emulsion and cause these globules to coalesce into butter grains. Milk fat
@@ -633,7 +628,6 @@ smooth due to the enhanced crosslinking between the curd whereas cheese with hig
 
 content is elastic and less firm.
 
-35
 
 In this connection, some dairy farmers have selectively bred dairy cattle to
 increase fat content and therefore decrease the PFR (protein-to-fat ratio). The acceptable
@@ -663,7 +657,6 @@ Lactose content tends to decrease steadily all throughout lactation. This is in
 
 contrast to the trend observed for protein and fats wherein there is a decrease in fat and
 
-26
 
 protein contents during early lactation followed by a rapid rise in the second half of
 lactation (Fox et al., 2015). This inverse relationship between the concentrations of
@@ -693,7 +686,6 @@ Lactose has been regarded as milk component of low economic value in the past.
 
 In cheese-making, more than 90% of the lactose ends up in whey (Prazeres et al., 2012),
 
-27
 
 which is simply discarded as byproduct and dumped or fed to animals. However, in the
 advent of technologies that efficiently extract lactose from whey, lactose has become an
@@ -721,7 +713,6 @@ strongly associated with LY with estimates close to 1 (Haile-Mariam and Pryce, 2
 
 Although some genetic studies involving LC and LY exist in literature, further studies are
 
-28
 
 needed to improve our understanding of the genetic aspects of this trait as LC is now
 
@@ -750,7 +741,6 @@ cleaves it into the insoluble para-K-CN (PKC; amino acid | to 105) and the solub
 
 glycomacropeptide (GMP; amino acid 106-171). Economically, such cleavage is very
 
-29
 
 crucial in cheese making. Physiologically, the generated GMP is important in increasing
 
@@ -780,7 +770,6 @@ cattle breeds. CSN3 allele A has threonine (ACC) and aspartic acid (GAT) at amin
 
 positions 136 and 148, respectively while allele B has isoleucine (ATC) substituting for
 
-30
 
 threonine, and alanine (GCT) for aspartic acid (Patel et al., 2007). These CSN3 variants
 have been reported to affect milk production traits, cheese processing properties, and the
@@ -807,7 +796,6 @@ certain molecules such as retinol, vitamin D, cholesterol and palmitic acid. How
 
 other scientists believe that BLG has more important physiological functions that may
 
-31
 
 “Apmis ayy Aq paurwusaiop 10u sem uoHeIoosse ay. — 1190 UeIE ‘en 5] PaoueyUD YUIM pareloosse st g{ IWEIIEA ~ g
 “yen yyrur at yy were souptou uaamuag YOReIDosse OU St 919] — YN. ‘ren tur paouequa quia pareroosse st y wee, — y
@@ -851,7 +839,6 @@ a 10H 0661 “Te upueaty
 “apneo Aurep ut syrey)
 Axyenb puv park yur poouequa yIM syuELIEA g pue Y (ENSD) Uaseo-¥ ay) BuNeDOSSe SaIpMIS sMOIAad °Z'Z PIGEL
 
-32
 
 explain its significant amounts (7-12% of total milk proteins) in bovine milk. Even until
 now, many are puzzled about the high amino acid sequence similarity of BLG with the
@@ -873,7 +860,6 @@ with milk traits arouses interest among researchers and may vary across breeds a
 
 country of origin,
 
-33
 
 -Apnas at kq pautuusyap 10u sem uoHyeIoOsse ay — s|]90 4UeLE,
 
@@ -912,7 +898,6 @@ GiaIA—INSINOD @aIAINSINOD TAIN INGINOD — GTHIA
 
 pue pjord sn pooueyus qm squeLen g pue y (97g) UNINgo|Bo.0e]-y ay) SuNEIDOsse SaIpmIs snOIAad “€°Z FIGEL
 
-34
 
 Molecular Phylogenetic Analysis
 
@@ -941,7 +926,6 @@ column, and sequence in an alignment. Unreliably aligned columns and sequences a
 
 automatically removed to prepare the data for downstream analyses (Sela et al., 2015).
 
-35
 
 Bayesian phylogenetic analysis can be accomplished using BEAST (Bayesian
 Evolutionary Analysis of Sampling Trees) which implements a family of MCMC
@@ -968,7 +952,6 @@ molecular evolution studies nowadays further involves exploring the occurrence o
 
 adaptive evolution on certain genes. In adaptive evolution, beneficial alleles are selected
 
-36
 
 and thus increase in frequency while deleterious ones are disfavored. Selection analysis
 
@@ -995,7 +978,6 @@ they reduce the function of the protein and are therefore deleterious. They get 
 
 eliminated from the population. Alternatively, in the case of positive or diversifying
 
-37
 
 selection (dN/dS >1), a nonsynonymous substitution conferred some advantage to the
 
@@ -1026,7 +1008,6 @@ as a responsive, fully interactive, and API-enabled web applications (Weaver et 
 
 carrying out likelihood-based analyses of rates and patterns of evolution. Datamonkey
 
-38
 
 provides access to complex and sophisticated evolutionary analyses including GARD
 (Genetic Algorithm for Recombination Detection), FEL (Fixed Effects Likelihood),
@@ -1057,7 +1038,6 @@ Substitution rates. Evidence for diversifying selection is reported using poster
 
 probabilities, instead of p-values. Posterior probabilities of greater than 0.9 strongly
 
-39
 
 suggests positive selection. Since it employs a novel strategy of employing a pre-
 specified discrete grid of dN and dS values that are applied across sites, FUBAR runs
@@ -1086,7 +1066,6 @@ are constantly exposed to mutable environmental conditions. Very recently, Kumar
 
 dominant offshoots in the COVID-19 pandemic. Their study mainly relied on selection
 
-40
 
 analysis to identify the multiple replacements of predominant coronavirus strains in
 Europe and Asia, as well as the continued presence of multiple high-frequency strains in
@@ -1115,7 +1094,6 @@ associate the motif with a particular biological, cellular or molecular function
 
 al., 2010).
 
-41
 
 These methods have been proven useful in various studies. For instance,
 Mahmood et al. (2016) were able to identify motifs in the P450 genes of the housefly to
@@ -1150,7 +1128,6 @@ composition in the Philippines.
 
 Keywords: CSN3, BLG, PCR-RFLP, genetic polymorphisms
 
-43
 
 Introduction
 
@@ -1177,7 +1154,6 @@ genotyping can be done based on SNP markers within the gene of interest. PCR-RFL
 
 analysis has been able to provide cost-effective SNP genotyping and mutation
 
-44
 
 detection in various livestock species such as pigs (Gonzales et al., 2018), sheep
 
@@ -1205,7 +1181,6 @@ breeding program. The general objective of this study was to genotypically evalu
 
 Holstein x Jersey (HxJ) crossbreds in a commercial dairy farm in the Philippines based
 
-45
 
 on single nucleotide polymorphisms in two selected candidate genes (CSN3 and BLG) for
 milk yield and quality, The specific objectives were to:
@@ -1222,7 +1197,6 @@ of Animal Science, College of Agriculture and Food Science, University of the
 
 Philippines Los Bafios, College, Laguna from January 2020 to January 2022.
 
-46
 
 Materials and Methods
 
@@ -1253,7 +1227,6 @@ Enhancer and incubated at 65°C for 14-18 h in a shaking waterbath. To homogeniz
 
 sample, two volumes of the resulting mixture (approximately 560 1L) were added, pulse-
 
-47
 
 vortexed and incubated for 10 min at 65°C. Absolute ethanol (200 uL) was added to the
 solution and mixed immediately and thoroughly by pulsed-vortexing to prevent any
@@ -1301,7 +1274,6 @@ Taq polymerase 0.2 U. 0.2U
 *Primers were based on Mitra et al. (1998) and Schlee et al. (1992) for CSN3 and Rachagani et al.
 (2006) for BLG.
 
-49
 
 PCR reactions were performed in Veriti™™ Thermal Cycler with thermal
 
@@ -1335,7 +1307,6 @@ The genotype and allele frequencies of the CSN3 and BLG genes were computed
 
 by manual allele counting according to Falconer and Mackay (1996). The GenAIEx 6.5
 
-50
 
 program (Peakall and Smouse, 2012; Smouse etal. 2017) was used to compute for Ne
 (number of effective alleles), Ho (observed heterozygosity), He (expected heterozygosity)
@@ -1365,13 +1336,11 @@ CSN3 AB genotype shows all four bands, as was verified through sequencing (Fig. 
 
 It can be noted from the chromatogram that the homozygotes AA and BB have distinct
 
-51
 
 Figure 3.1. Screenshot of sample BLASTn results showing successful alignment and
 identification of the sequenced PCR products for the (a) x-casein (CSN3)
 and (b) 8-lactoglobulin (BLG) genes in dairy cattle (Bos taurus L.)
 
-52
 
 L123 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 NC
 
@@ -1398,7 +1367,6 @@ population of Holstein x Jersey dairy cattle (Bos taurus L.). Genotypes
 are designated as capital letters. (L - 1kb+ DNA ladder; NC — negative
 control).
 
-53
 
 CSN3 AA BLG AA
 BLG AB g
@@ -1416,7 +1384,6 @@ genotypes. Yellow boxes highlight the codon that contains the SNP for
 each locus. Heterozygotes have two overlapping peaks at the SNP
 position while homozygotes have one distinct peak.
 
-54
 
 green and blue peaks, respectively at the SNP position. In contrast, the AB genotype has
 
@@ -1441,7 +1408,6 @@ overlapping red and blue peaks at the site of T>C substitution, whereas the homo
 
 had defined red (T for AA genotype) and blue (C for BB genotype) peaks.
 
-55
 
 Genotype and Allele Frequencies for CSN3 and BLG Genes
 
@@ -1467,7 +1433,6 @@ isolation and selection towards certain traits such as high yield and high fat a
 
 protein content, as mentioned by Zaglool et al. (2016). Muin and Supriyantono (2012)
 
-56
 
 Table 3.2. Genotype and allele frequencies and test results for Hardy-Weinberg
 equilibrium for x-casein (CSN3) and B-lactoglobulin (BLG) genes in a
@@ -1494,7 +1459,6 @@ N= total number of genotyped individuals
 
 1s = not significant (p> 0.05)
 
-57
 
 pointed out that there was an increase in the frequency of the B allele among their
 crossbreds as a result of the migration of the B allele coming from the BB-genotyped
@@ -1522,7 +1486,6 @@ fixation of either alleles in the population. It would be easier to alter the ge
 
 of this herd, compared to when an allele has already been fixed or become predominant.
 
-58
 
 The farm breeders have more freedom in deciding as to which allele to select depending
 
@@ -1550,7 +1513,6 @@ of a good level of genetic variability was also confirmed by the calculated Ne v
 
 number of equally frequent alleles it would take to achieve a given level of gene diversity
 
-59
 
 Table 3.3. Population genetic indices for k-casein (CSN3) and B-lactoglobulin (BLG)
 genes in a Holstein x Jersey crossbred cattle population in a commercial dairy
@@ -1571,7 +1533,6 @@ aw
 PIC = 1 - ye - Dy py 2P}P} stecratn sees eine sate
 & ais
 
-60
 
 or expected heterozygosity. Since Ne was equal to the actual number of alleles, it shows
 
@@ -1600,7 +1561,6 @@ The genotypic frequencies of both loci also showed no significant departure from
 
 Hardy-Weinberg equilibrium. Such balanced distributions for the two alleles of both loci
 
-61
 
 indicate the absence of fixation of either allele in the herd. This is advantageous for the
 breeding program since more variability is available to select from, and the breeder has
@@ -1638,7 +1598,6 @@ BOTSTEIN, D., R.L. WHITE, M. SKOLNICK and R.W. DAVIS. 1980. Construction of
 a genetic linkage map in man using restriction fragment length polymorphisms.
 Am J Hum Genet. 32(3):314-31.
 
-62
 
 CAO Z.P., Z. WANG, X.Y. WANG and H. LI. 2007. Association of Spotl4a gene
 polymorphisms with body weight in the chicken. Poultry Science 86(9): 1873-
@@ -1686,7 +1645,6 @@ JAWASREH, K., A. AL MAREEN and P. AAD. 2019. Effect and interaction of B-
 Lactoglobulin, Kappa Casein, and Prolactin Genes on milk production and
 composition of Awassi sheep. Animals 9:1-14.
 
-63
 
 KUCEROVA, J., A. MATEJICEK, A.M. JANDUROVA, P. SORENSEN, E.
 NEMCOVA. M. STIPKOVA, T. KOTT., J. BOUSKA and J. FRELICH. 2006.
@@ -1732,7 +1690,6 @@ SCHLEE, P AND O. ROTTMANN. 1992. Bovine kappa-casein: determination of alleles
 A and B by polymerase chain reaction and RFLP analysis using plucked hair as a
 source of DNA. Arch. Tierz. 35: 347-349.
 
-64
 
 SHAIDULLIN, R., G. SHARAFUTDINOV, A. MOSKVICHEVA, T. FAIZOV and Y.
 YULDASHBAEV. 2020. Inheritance of allelic variants of the kappa-casein gene
@@ -1796,7 +1753,6 @@ have a significant increase in PMY.
 
 Keywords: CSN3, BLG, milk yield, milk quality, association analysis
 
-66
 
 Introduction
 
@@ -1824,7 +1780,6 @@ Philippines relies heavily on importing such crossbreds to ameliorate the countr
 
 herd (National Dairy Authority, 2019).
 
-67
 
 Owing to changes in the dietary preference of consumers, the focus of dairy
 breeding has shifted from not just increasing milk production but also in improving milk
@@ -1853,7 +1808,6 @@ lactoglobulin is a major whey protein in milk while x-casein belongs to the fami
 
 proteins (caseins) that dominate the protein micelles in milk. These proteins are uniquely
 
-68
 
 found in milk. Genetic variants exist for these two loci, each resulting in protein variants
 that differ from each other only by a few amino acids. BLG A and BLG B are the most
@@ -1882,7 +1836,6 @@ protein content (PC), protein yield (PY), lactose content (LC), lactose yield
 
 the Philippines;
 
-69
 
 2. determine the individual and combined effects of the CSN3 and BLG variants
 
@@ -1919,7 +1872,6 @@ Figure 4.1. A Holstein x Jersey crossbred milking cow (Bos
 taurus L.) in a commercial farm in Batangas,
 Philippines.
 
-70
 
 iy
 
@@ -1951,7 +1903,6 @@ buffer at 100 volts for 30-45 min, to check the quality of the DNA. Bands were s
 
 with GelRed™ and visualized using the Enduro™ Gel Documentation System (Labnet,
 
-2
 
 ‘New Jersey). The remaining DNA samples were stored at 4°C for immediate use or -20°C
 
@@ -2023,7 +1974,6 @@ BREEDCn = effect of m" breed composition (2 levels)
 Exim = random error
 
 
-14
 
 The allele substitution effect was estimated by running a linear regression analysis
 with the trait as dependent variable and the coded genotypes (AA=0, AB=1, BB=2) as the
@@ -2049,7 +1999,6 @@ Factor (VIF) was calculated per predictor variable and was kept as low as possib
 
 than 10) to rule out the problem of multicollinearity.
 
-15
 
 In general, the multiple linear regression model was defined as
 
@@ -2086,7 +2035,6 @@ The highest PMY (43 kg) was recorded from the first calving data of cow with
 
 Registry Number QC-1018 (genotype AAA). This was roughly two times greater than
 
-16
 
 Table 4.1. Descriptive statistics of milk yield and milk quality traits of Holstein x Jersey
 crossbred cattle (Bos taurus L.) in a commercial dairy farm in Batangas,
@@ -2145,7 +2093,6 @@ value; MAX~ maximum value
 = standard error ofthe mean; CV coefficient of variation; MIN — minimum
 
 
-1
 
 the mean PMY which is 22.29 kg. In contrast, cow QC-294-07 (CSN3 AB) during its first
 calving obtained the lowest PMY (9.3 kg). For the ADMY, the highest value was 22.92
@@ -2174,7 +2121,6 @@ published values for cattle in general such as those reported by Fox and coworke
 
 According to them, the average is 4% for fat content, 3.4% for protein content and 4.8%
 
-8
 
 for lactose content. Moreover, Coffey and his co-workers (2016) compared the biological
 performance of Holstein and Jersey purebred cows with their crossbreds using a large data
@@ -2202,7 +2148,6 @@ They were all observed in the third calving data. Multiple comparison using the 
 
 Howell test revealed that the first and second lactations did not have significantly different
 
-79
 
 FY, PY and LY. These values were only significantly different for the first two lactations,
 with the first lactation being higher than second first. However, in general, Spearman Rank
@@ -2228,7 +2173,6 @@ variation in PC and 19.3% of that in PFR can be explained by variation in the CS
 
 genotype.
 
-80
 
 Table 4.2. Eta (n) and Eta square (n2) coefficients between milk traits and x-casein (CSN3)
 and B-lactoglobulin (BLG) genotypes.
@@ -2248,7 +2192,6 @@ Lactose Yield 0.149 0.022 0.150 0.023
 0.439 0.193 0.083 0.007
 
 
-81
 
 Association of the CSN3 genotypes with the milk traits was further studied using
 univariate ANOVA (Table 4.3). PMY was not significantly affected by CSN3, although
@@ -2275,7 +2218,6 @@ breed. However, the same paper noted a positive effect of the A allele on MY for
 
 breed.
 
-82
 
 Table 4.3. Effect of x-casein (CSN3) and B-lactoglobulin (BLG) genotypes on milk traits
 in Holstein x Jersey crossbred cows (Least Squares Means + standard errors).
@@ -2315,7 +2257,6 @@ content; LC = lactose content; FY = fat yield; PY = protein yield; LY = lactose 
 ‘means followed by the same letter in the same row do not differ by LSD test atthe particular level of significance
 
 
-83
 
 Table 4.4. Effect of substituting the A allele with the B allele for x-casein (CSN3) and B-
 lactoglobulin (BLG) genes on nine bovine milk traits based on linear regression
@@ -2338,7 +2279,6 @@ PMY = peak milk yield; ADMY = average daily milk yield, FC = fat content, PC = p
 ‘content; FY = fat yield; PY = protein yield; LY = lactose yield; PFR = protein-to-fat ratio,
 “significant at P<0.05 **significant at P< 0.01
 
-84
 
 FC and FY were also proven to be affected by the CSN3 polymorphism. FC was
 found to be highly significantly different among the three CSN3 genotypes (p<0.01), with
@@ -2366,7 +2306,6 @@ PER and confirms the findings of earlier studies in Holsteins (Ng-Kwai-Hang et a
 
 Bovenhuis et al., 1992; Freyer et al., 1999; Tsiaras et al., 2005; Zambrano-Burbano et al.,
 
-85
 
 2012; and Anggraeni et al., 2017), and other cattle breeds (Kucerova et al. 2006 in Czech
 Fleckvieh; Gurses et al., 2016 in Brown Swiss; and Shaidullin et al., 2020 in Russian Black-
@@ -2396,7 +2335,6 @@ Univariate ANOVA results presented in Table 4.3 corroborate with those of Eta
 
 correlation. There were no significant relationships between the BLG marker and the milk
 
-86
 
 ited
 
@@ -2425,7 +2363,6 @@ respectively. Neither did Ojala et al. (1997) on Holstein and Jersey breeds, Gla
 
 Holstein, Girolando, Czech Flechvieh and Sahiwal cattle breeds. Gradinaru et al. (2013)
 
-87
 
 and Neamt et al. (2017) stated that BLG polymorphism did not affect PC and FY. No
 
@@ -2453,7 +2390,6 @@ association, further studies using a larger population size should be conducted 
 
 present results.
 
-88
 
 Combined Genotype Effects of CSN3 and BLG on Milk Traits
 
@@ -2483,7 +2419,6 @@ expected that the ADMY of ABBB combined genotypes are also high. However, the
 
 differences in ADMY across the genotype combinations were not statistically significant.
 
-89
 
 Table 4.5. Genotype combinations for the x-casein (CSN3) and B-lactoglobulin (BLG)
 genes and their frequencies of occurrence in a Holstein x Jersey crossbred
@@ -2504,7 +2439,6 @@ BBBB ul
 
 Total 228
 
-90
 
 ‘ones vej-or-ursroud = yaa ‘Iat4 250198] = A ‘PIOIS
 uppioud = Ad ‘Pla 18} = Aa ‘tuoru0d asoroe] = 37 ‘UaIU0d wIaroud = Sg ‘UarHOD ej = Oa ‘PION ANU AuEp oBeLOnE = ANY ‘PION tw Ieod = AWE
@@ -2529,23 +2463,16 @@ niga @pat} (WOT Gad] (ood @paa] oa] @) away +) And | -3dALOND
 s}re3 4]1W Uo sauad (7g) UINgo]Soyx]-q pur (¢VSD) Uldsed-4 ay} Joy suOHUIQUIOD adKjoUad Jo SATA “9'p AGEL
 
 
-35
 
-30
 
-25
 
-20
 
-15
 
 Peak Milk Yeild (kg)
 
-10
 
 Figure 4.2.
 
-91
 
 CSN3 Genotype
 
@@ -2560,7 +2487,6 @@ Effect of genotype combinations for the x-casein (CSN3) and B-
 lactoglobulin (BLG) genes on peak milk yield of a Holstein x Jersey
 crossbred cattle (Bos taurus L.) population in Batangas, Philippines.
 
-92
 
 Nevertheless, it is worth mentioning that the highest ADMY was recorded from
 cow QC-25629 which was genotyped as ABBB. Moreover, it can also be seen from Fig.
@@ -2591,7 +2517,6 @@ even though the polymorphisms in these two genes did not show much association w
 
 milk yield when analyzed individually. They also examined BLG and CSN3 but also found
 
-93
 
 that the interaction between these two genes did not improve milk production traits in
 sheep. In the present study, the combined effects of CSN3 and BLG on milk production
@@ -2621,7 +2546,6 @@ MilkTrait = By + B,CSN3,q, + B2CSN3qp; + BsBLGaa, + ByBLGap, (Eq.1)
 +ByCSN3qp; x BLGaa; + BoCSN3 5, X BLGaB,
 +BoBREEDC; + B,oAGESTART, + By ,CALV; + &;
 
-94
 
 Aside from the usual check for normality and equality of error variances, this model
 was evaluated based on the adjusted R2, investigation of scatter plots of residuals,
@@ -2648,7 +2572,6 @@ Table 4.7 summarizes the results of multiple regression analyses for the nine mi
 
 traits.
 
-95
 
 sequin
 
@@ -2693,7 +2616,6 @@ OWVULVd —QTAIA. IN3INOD —GT3IA. LN3INOD = TIA. INAINOD.—ATIVa. TI
 “("] snanp} sog) ayes posqssoso Aasiag x UlD)S[OH{ JO syed} yy! ouIU
 410} s}apou! uorssax8ou apduyjnus aup Jo ;x parsnfpe pue sopo1pasd yoea Jo (g) stua!oyJo0o UoIssoIBOY “Lp IPL
 
-96
 
 Peak Milk Yield
 
@@ -2719,7 +2641,6 @@ that of our univariate ANOVA analysis, although in the latter, the differences a
 
 genotypes were not statistically significant.
 
-97
 
 Moreover, cows that are more Jersey (J>H) in terms of breed composition are
 expected to have PMY lower by 4.054 kg than cows that are J=H, again holding other
@@ -2747,7 +2668,6 @@ predictor variable (i.e. change in Y over change in X) was computed (Eq. 3 and 4
 
 follows:
 
-98
 
 apy,
 Teanga, = B2 + BsBLGan, + BoBLGa, (Eq:3)
@@ -2778,7 +2698,6 @@ and BLG BB corroborates our earlier observation based on univariate analysis tha
 
 interaction of these two genotypes is favorable in enhancing the PMY.
 
-99
 
 This model has an optimal adjusted R? value of 0.111, indicating that 11.1% in the
 variation in the PMY can be explained by this model. This value is rather low and may be
@@ -2809,7 +2728,6 @@ et al. (2017) reported the same trend using a Thai multiple breed farm populatio
 
 However, they also pointed out that upgraded crossbreds with high Holstein fractions may
 
-100
 
 fail to reach their high milk yield potential due to the hot and humid climatic conditions in
 Thailand (Koonawootrittriron et al., 2009; Seangjun et al., 2009). Generally, cows with
@@ -2872,7 +2790,6 @@ The regression model parameters for fat yield are presented in Eq. 10 and Table
 FY; = Bo + BiCSN3 qa; + BoCSN3 yp; + B3BLGaa, + ByBLGap, — (Eq.10)
 +BsCSN3qp, X BLGap, + BgBREEDC,+ B,AGESTART, + €
 
-102
 
 The model for FY indicates that the FY of CSN3 AA cows can be predicted to be
 significantly higher than that of CSN3 BB cows (p<0.05), holding all other factors constant.
@@ -2904,7 +2821,6 @@ significantly different from the CSN3 BB genotype in terms of PC (p<0.01). To in
 
 their effects, the marginal effect of the predictor X on PC is equivalent to Zé =
 
-103
 
 —B(7 — PC;). Thus, this equation shows that the amount of change will depend on the
 initial magnitude of PC, and a positive B will cause a decrease in PC while a negative 8
@@ -2931,7 +2847,6 @@ Eq. 12 and Table 4.7 indicate the parameters of the best fitting model for milk
 
 protein yield.
 
-104
 
 PY; = Bo + BrCSN3qq, + B2CSN3qp; + BzBLGaq, + ByBLGap, —(Eq.12)
 +BsCSN3 qx; X BLGap; + BeBREEDC;+ BpAGESTART, + &;
@@ -2960,7 +2875,6 @@ R? and were therefore removed from the model.
 
 LC; = Bo + BiCSN3qq, + BoCSN3,p, + &: (Eq.13)
 
-105
 
 The regression coefficients indicate that cows with CSN3 AA and AB genotypes
 can be predicted to produce milk with 0.07% and 0.051% higher lactose content,
@@ -2990,7 +2904,6 @@ BLG AA tend to have lower LY than BLG BB.
 
 This model can explain a small proportion (3.8%) of the variation in LY.
 
-106
 
 Protein-to-Fat Ratio
 
@@ -3021,7 +2934,6 @@ AB cows that are lower in PFR by 0.02. This is in conjunction with our earlier d
 
 considering the enhancing effect of the B allele on PFR.
 
-107
 
 Moreover, the age at start of calving significantly affects PFR. A higher PFR is
 expected from cows that calved earlier, as supported by the positive B value (0.001). In
@@ -3052,7 +2964,6 @@ the contrary, the results for BLG were not as conclusive as those for CSN3 since
 
 variants that were previously reported to have strong correlation were found to be not
 
-108
 
 associated to these traits at all. This may be due to inconsistencies in rearing conditions,
 breed used, and data analysis methods used by different researchers. In our study, BLG
@@ -3080,7 +2991,6 @@ to make soft and more flavorful cheese. As for milk yield, since CSN3 A and BLG 
 
 shown strong association with higher ADMY, these variants can be used as markers to
 
-109
 
 select for improving milk yield. Specifically, as revealed by the results of multiple
 regression and univariate analyses, the goal of breeders should be to produce more cows
@@ -3109,7 +3019,6 @@ to limit the milk yield data within 240 days of lactation because a number of an
 
 records to complete the usual 305-day lactation.
 
-110
 
 In conclusion, this study was able to demonstrate that the CNS3 and BLG variants
 affect the yield and quality of milk from HxJ crossbreds in a commercial farm in the
@@ -3198,7 +3107,6 @@ Holstein cattle in Mexico. J. Anim. Plant & Animal Sciences 24(5): 1316-1321.
 EL-GAWAD, M.A.M.A. and N.S. AHMED. 2011. Cheese yield as affected by some
 parameters: Review. Acta Sci. Pol., Technol. Aliment. 10(2):131-153
 
-12
 
 EENENNAAM A. and J.F. MEDRANO. 1991. Milk protein polymorphisms in California
 dairy cattle. J. Dairy Sci. 74: 1730-1742.
@@ -3244,7 +3152,6 @@ GRADINARJU, A.C., D.E. ILIE and S. CREANGA.2013. Milk protein genetic variants i
 Romanian Spotted, Holstein Friesian and Montbéliarde cows and some correlations
 with milk parameters. Res J Biotech 8: 3-9.
 
-113
 
 GURSES, M., H. YUCE, E.0. ETEM and B. PATIR. 2016. Polymorphisms of kappa-
 casein gene and their effects on milk production traits in Holstein, Jersey and
@@ -3336,7 +3243,6 @@ RACHAGANI, S., I.D. GUPTA, N. GUPTA and S.G. GUPTA. 2006. Genotyping of 8-
 Lactoglobulin Gene by PCR-RFLP in Sahiwal and Tharparkar Cattle Breeds. BMC
 Genetics 7:31.
 
-115
 
 RASCHIA M.A., J.P. NANI, D.O. MAIZON, M.J. BERIBE, A.F. AMADIO, and M.A.
 POLI. 2018. Single Nucleotide Polymorphisms in candidate genes associated with
@@ -3383,7 +3289,6 @@ Veterinary Medical Society 69(4): 1271-1282.
 STOCCO, G., C. CIPOLAT-GOTET, T. BOBBO, A. CECCHINATO, and G.
 BITTANTE. 2017. Breed of cow and herd productivity affect milk composition
 
-116
 
 and modeling of coagulation, curd firming, and syneresis. J. Dairy Sci. 100:129-
 145.
@@ -3456,7 +3361,6 @@ transcription of the gene.
 
 Key words: B-lactoglobulin, molecular phylogeny, codon selection, DNA-binding motifs
 
-118
 
 Introduction
 
@@ -3484,7 +3388,6 @@ understanding the function of particular genes in the evolution of species. Muta
 
 recombination create new genetic variants, which are in turn maintained in the population
 
-119
 
 through genetic drift or natural selection. Ahmad et al. (2016) also noted that it may also
 
@@ -3513,7 +3416,6 @@ sequences among representative bovid taxa and revealed that positive selection h
 
 the diversification of x-casein at the amino acid sequence level. Until then, numerous
 
-120
 
 studies have delved into the evolution of this milk protein. Recently, Manguy and Sheilds
 (2019) were able to describe specific codons and amino acid residues in the
@@ -3543,7 +3445,6 @@ and
 
 of selected mammalian species.
 
-121
 
 This study was conducted at the Institute of Biological Sciences, College of Arts
 and Sciences, University of the Philippines Los Bafios, College, Laguna from June 2021
@@ -3571,7 +3472,6 @@ eynocephalus, and Homo sapiens (Table 5.1).
 Table 5.1. Coding sequence accession numbers of selected mammalian taxa used for
 hylogenetic analysis of the B-lactoglobulin gene.
 
-122
 
 ‘Species Common Name [Coding Sequence TCDS [Length Nunberof Amino Aad)
 (CDS) Le
@@ -3647,7 +3547,6 @@ a
 *ND = no data available
 
 
-123
 
 For the promoter region, 1000 bp segment directly upstream from the start codon
 of the BLG gene was extracted from the available genome assemblies of a subset of the
@@ -3680,7 +3579,6 @@ Bayesian inference was performed using BEAST (Bayesian Evolutionary
 
 Analysis Sampling Trees) software package v1.10.4 (Drummond et al., 2012; Suchard et
 
-124
 
 al., 2018). Prior to Bayesian analysis, the MEGA X alignment file was exported as a
 FASTA file and then converted to a NEXUS file using SeaView version 4 (Gouy et al.,
@@ -3704,7 +3602,6 @@ MEGA X using Tamura 3-parameter model. The reliability of the tree was estimated
 
 using 1000 bootstrap iterations.
 
-125
 
 Positive and Negative Selection Analyses of the Complete Coding Sequence of BLG
 
@@ -3734,7 +3631,6 @@ or negative selection was detected using FEL (Kosakovsky Pond et al., 2005) and
 
 FUBAR (Murrell et al., 2013) algorithms. To highlight the sites under significant
 
-126
 
 positive and negative selection (i.e. p-value <0.1 threshold for MEME and FEL; posterior
 probability >0.9 for FUBAR), iCn3D (Wang et al., 2020) was used for visualization on
@@ -3758,7 +3654,6 @@ coefficient was selected as the motif column comparison function, with a signifi
 
 value threshold of 0.05.
 
-127
 
 Results and Discussion
 
@@ -3787,7 +3682,6 @@ BLG sequence of the Taurine x Indicine crossbred also indicates that the crossbr
 
 equally similar to B. taurus as it is to B. indicus.
 
-128
 
 Femity
 
@@ -3801,12 +3695,10 @@ rooted with BLG-related PAEP (progesterone-associated endometrial
 protein) gene sequences from Homo sapiens, Papio anubis and P.
 hamadyras.
 
-129
 
 Table 5.2. Estimates of evolutionary divergence over sequence pairs between
 mammalian taxa based on B-lactoglobulin (BLG) coding sequences.
 
-003
 00 ou dont 03s 9087 ome
 
 ose G05) Gast 0652 ost 90st 0055 cast
@@ -3823,7 +3715,6 @@ O29) 0288 039) 039) 249 Oar 08s 02 O3M ast 310 OAR
 314030 0312 0309 0311 _ 0305 _o02_0305 0788 _0302_0307_0372_ 03040200
 
 
-130
 
 These two Bos species also showed high similarity with another member of the
 Bos genus, Bos mutus, with an estimated evolutionary divergence of only 0.01. B. mutus,
@@ -3848,7 +3739,6 @@ al., 2004). This goat-sheep clade in turn clustered with the rest of the members
 
 family Bovidae, including subfamily Bovinae (Bayesian PP 1.0).
 
-131
 
 Moreover, the Bovidae clade clustered with the rest of the taxa belonging to Order
 Artiodactyla (even-toed ungulates), namely Rangifer tarandus (Family Cervidae) and Sus
@@ -3879,7 +3769,6 @@ produces milk with fat content ranging from 1.7% to 10.4% and protein content ra
 
 from 3.1 to 5.9% while reindeer milk contains high amounts of fat (22.5%) and protein
 
-132
 
 (10.3%) and relatively low lactose content (2.5%) (Table 5.3). Reindeer cheese is
 regarded as among the creamiest of all whole milk cheeses. Since milk is intended by
@@ -3907,7 +3796,6 @@ artiodactyls, with a higher similarity to Sus scrofa (21.5% divergence). This re
 
 with fossil and other molecular data (Nikaido et al., 1999; Gatesy and O’Leary, 2001;
 
-133
 
 Table 5.3. Fat, protein and lactose content of milk from some mammalian species.
 
@@ -3934,7 +3822,6 @@ Papio anubis 45 1s 7.8 | Oftedal and Iverson, 1995
 Papio cynocephalus 45 15 7.8 | Oftedal and Iverson, 1995
 Mammals (in general) 5 6 | Zhang et al., 2018
 
-134
 
 Thewissen et al., 2009) showing that modem representatives of artiodactyls including
 pigs, hippopotamus, deer, sheep, and cattle are the closest living relatives of cetaceans. In
@@ -3962,7 +3849,6 @@ coding sequence variation were driven by species phylogeny. They did not allow c
 
 separation of these mammalian species that produce milk with low and high fat, protein
 
-135
 
 nor lactose content. These results could suggest that BLG gene alone may not play a
 general role in controlling milk composition across the whole eutherian clade. However,
@@ -3994,7 +3880,6 @@ OSAMBRVY@E EB:
 101 111
 DALNENKVLV
 
-161
 
 Positive selection Purifying selection
 
@@ -4005,7 +3890,6 @@ acid sites that are positively (orange and yellow highlights) and negatively
 the MEC model.
 
 
-137
 
 Figure 5.3.
 
@@ -4016,7 +3900,6 @@ Selecton. The yellow green and blue triangles represent the amino- and
 carboxyl- ends of the protein. Red arrow points to the central cavity or
 the calyx.
 
-138
 
 cause detrimental effects. This supports the essentiality of these residues found within
 
@@ -4042,7 +3925,6 @@ towards the end of the protein. Such long and flexible a-helices are situated on
 
 surface of the B-barrel (Kontopidis et al., 2004).
 
-139
 
 P wos ae 2 ws a
 sl os 7 os sm
@@ -4057,7 +3939,6 @@ Figure 5.4. 3D and linear representations of the BLG protein, with emphasis on t
 positively selected sites detected by Selecton and Datamonkey (MEME,
 FEL and FUBAR), drawn on 3NPO using iCn3D.
 
-140
 
 Several sites undergoing negative purifying selection were identified by Selecton
 (30 sites), FEL (40 sites) and FUBAR (28 sites) (Fig. 5.5). Five sites (D11, A16, S27,
@@ -4085,7 +3966,6 @@ a topology that was generally similar to the BLG CDS tree. A highly supported cl
 
 composed of the bovids, namely Bos taurus, B. indicus, B. mutus, Bubalus bubalis, Ovis
 
-141
 
 = SPADA
 Tran FWUBNSAEPEOSUNCaCTVRTPEVOMEX. FRYOXALKALP.
@@ -4119,9 +3999,7 @@ region of the B-lactoglobulin gene of selected mammalian
 species. Bootstrap values are shown on the nodes. The
 PAEP gene from Homo sapiens was used as outgroup.
 
-142
 
-143
 
 aries and Capra hircus, was evident, with 98% bootstrap value. Also, Delphinapterus
 leucas clustered with Sus scrofa, although bootstrap support was low (36%). The
@@ -4167,11 +4045,9 @@ detected by MEME (Multiple EM for Motif Elicitation) tool, and
 the corresponding 8-lactoglobulin contents of different
 mammalian species (Roy et al., 2020).
 
-145
 
 ‘anyon suse dope (eeu) 373
 
-29
 ES
 
 core PIERRE PAY,
@@ -4196,7 +4072,6 @@ AW SNOULDIORUA D1HIDASS JOL_40'ON. SOON _antaca 0907 a9NanDaS ANY WIMINAN ALLOW,
 
 “auad (97g) UIINqojZo}0e]-g oy) Jo Uo!Bos Jo}OWLONd auf J0y SyINSeI OWOD Pu WO.LINOL ‘AWA 50 Areurums “p's 214.1,
 
-146
 
 woroUTY JeINooJOU = JW pue jWauOdutod re[N]]99 = DO ‘ssadoad [eo1o}O1g = doe«
 $0'0 > anyea-b ye yueoytuais,
@@ -4212,7 +4087,6 @@ Aa SNOUDIaIA JUNIDBaS Ss AOL S40L___40ON_antvica (0907 3oNanDAS ANY WAMWAN ILLON
 
 “panuyuod “p's 2481
 
-147
 
 identifies significant GO terms that suggest the biological roles of the motifs (Buske et
 
@@ -4239,7 +4113,6 @@ with motif 1. On the other hand, for the other three motifs that are common to a
 
 molecular functions such as transcription factor activity, protein binding and sequence-
 
-148
 
 ZF S- 4 io
 
@@ -4248,7 +4121,6 @@ HCalbteT Coal OCCT caGHGCrcAGAdCesesheCoradCTCCHGt
 Figure 5.8. ZN331 binding sites detected by TOMTOM in motifs 2 (top) and 6 (bottom)
 of the BLG promoter region.
 
-149
 
 specific DNA binding, cellular component functions such as transcription factor complex,
 and biological processes such as negative regulation of signal transduction. As for motif 8
@@ -4277,7 +4149,6 @@ The phylogenetic trees that were generated from the coding sequences and the
 
 promoter regions of the BLG gene revealed groupings that were consistent with the
 
-150
 
 present classification of the 13 eutherian mammalian taxa included in this analysis. The
 three Bos species (B. taurus, B. indicus and B. mutus) showed very low divergence. They
@@ -4303,7 +4174,6 @@ Arctocephalus leucas, a low lactose milk producer, than to Bos mutus and Bison b
 
 which are also sources of high lactose milk.
 
-151
 
 Evolutionary analysis for signatures of selection identified codon or amino acid
 sites that are undergoing diversifying selection. These include D96, K100, $110, E112,
@@ -4331,7 +4201,6 @@ leucas had their own motif profile. Interestingly, Equus caballus had only four 
 
 conserved motifs. TOMTOM and GOMo tools revealed the presence of binding sites for
 
-152
 
 a zine-finger transcription factor in motifs 2 and 6, signifying the possibility that the
 absence of these motifs in Equus caballus could explain why BLG expression in horses is
@@ -4366,7 +4235,6 @@ maximization to discover motifs in biopolymers. Proceedings of the Second
 International Conference on Intelligent Systems for Molecular Biology. AAAI
 Press: California. pp. 28-36.
 
-153
 
 BONAREK, P., H. DZIEDZICKA-WASYLEWSKA, A. GORECKI, K.
 KURPIEWSKA, K. LEWINSKI, J. LOCH and A. POLIT. 2011. Two modes of
@@ -4414,7 +4282,6 @@ strategy in subantarctic fur seals Arctocephalus tropicalis breeding on Amsterda
 Island: evidence from changes in milk composition. Physiological and
 Biochemical Zoology 74: 548-559.
 
-154
 
 GLASER F., T. PUPKO, I. PAZ, R.E. BELL, D. BECHOR, E. MARTZ and BEN-TAL
 N. 2003. ConSurf: Identification of Functional Regions in Proteins by Surface-
@@ -4459,7 +4326,6 @@ Bioinformatics 22(24): 3096-3098.
 KREITMAN, M. 2000. Methods to detect selection in populations with applications to
 the human. Annual Review of Genomics and Human Genetics 1:539-559.
 
-155
 
 KUMAR, S. G. STECHER, M. LI, C. KNYAZ and K. TAMURA. 2018. MEGA X:
 Molecular Evolutionary Genetics. Analysis across. computing
@@ -4505,7 +4371,6 @@ cetartiodactyls based on insertions of short and long interspersed elements:
 hippopotamuses are the closest extant relatives of whales. Proc Natl Acad Sci
 USA. 96:10261-6.
 
-156
 
 OFTEDAL OT. 1997. Lactation in whales and dolphins: evidence of divergence between
 baleen- and toothed-species. J Mammary Gland Biol Neoplasia 2(3):205-30.
@@ -4553,7 +4418,6 @@ the nutrient composition of mammalian milks. Journal of Animal Ecology
 STERN, A., A. DORON-FAIGENBOIM, E. EREZ, E. MARTZ, E. BACHARACH and
 T. PUPKO. 2007. Selecton 2007: advanced models for detecting positive and
 
-187
 
 purifying selection using a Bayesian inference approach. Nucleic Acids Research.
 35: W506-W511.
@@ -4625,7 +4489,6 @@ frequencies for the CSN3 A and B alleles were almost equal at 0.509 and 0.491,
 
 respectively. Similarly, almost equal gene frequencies were recorded for BLG A (0.507)
 
-159
 
 and B (0.493) alleles. The genotypic frequencies of both loci also showed no significant
 departure from the Hardy-Weinberg equilibrium. Such balanced distributions for the two
@@ -4653,7 +4516,6 @@ interaction of the two loci was revealed to have an effect on PMY. When consider
 
 individually, CSN3 and BLG did not show any association with PMY. However, when
 
-160
 
 taken jointly, cows with combined CSN3-BLG genotype of ABBB were observed to
 have a considerable increase in PMY. Contrastingly, a lower PMY was observed among
@@ -4682,7 +4544,6 @@ Although the results of these two approaches generally agree with each other,
 
 MLR has the advantage of being able to explore simultaneously the effect of several
 
-161
 
 predictors of a particular milk trait. In this study, aside from the individual effects of
 CSN3 and BLG genotypes, the interaction between these two loci were simultaneously
@@ -4710,7 +4571,6 @@ selection. Interestingly, one of the these is the SNP that was studied in the as
 
 analysis, particularly V118. On the other hand, the position of purifying sites in the
 
-162
 
 mature protein supports the proposed function of BLG in the transport of important
 
@@ -4835,7 +4695,6 @@ AULDIST, M., K. JOHNSTON, N. WHITE, W. FITZSIMONS AND M. BOLAND.
 cheesemaking capacity of milk from Friesian and Jersey dairy cows. Journal Of
 Dairy Research 71(1): 51-57.
 
-166
 
 AYRES, D.L., A. DARLING, D.J. ZWICKL, P. BEERLI, M.T. HOLDER, P.O. LEWIS,
 J.P. HUELSENBECK, F. RONQUIST, D.L. SWOFFORD, M.P. CUMMINGS,
@@ -4882,7 +4741,6 @@ Holstein-Friesian x Jersey crossbred cows. New Zealand Veterinary Journal
 BEUZEN, N.D., M.J. STEER and K.C. CHANG. 2000. Molecular markers and their use
 in animal breeding. Ver J. 160: 42-52.
 
-167
 
 BHAT, M.R., T.A. DAR and L.R. SINGH. 2016. Casein proteins: structural and
 functional aspects. Gigli 1. (Ed.), Milk Proteins - From Structure to Biological
@@ -4929,7 +4787,6 @@ CASSELL, B. 2007. Mechanisms of inbreeding depression and heterosis for profitab
 dairying. Proc. 4th Biennial W. E. Petersen Symposium, University of Minnesota,
 St. Paul. University of Minnesota Press, St. Paul. pp. 1-6.
 
-168
 
 CASSELL, B. and J. MCALLISTER. 2009. Dairy crossbreeding research: Results from
 current projects. Virginia Cooperative Extension. pp. 404-094.
@@ -4976,7 +4833,6 @@ aspects of milk proteins. Iran J Pharm Res. 2016 Summer;15(3):573-591.
 
 DAWES RJ. 2008. Breeds of Cattle. 2" ed. TRS Publishing Corp.: Missouri. pp. 391.
 
-169
 
 DEB, R. U. SINGH, S. KUMAR, R. SINGH, G. SENGAR AND A. SHARMA. 2014.
 Genetic polymorphism and association of kappa-casein gene with milk production
@@ -5022,7 +4878,6 @@ ETTEMA, J. AND J. SANTOS. 2004. Impact of Age at First Calving on Lactation,
 Reproduction, Health, and Income in First-Parity Holstein on Commercial Farms.
 Journal of Dairy Science 87: 2730-2742.
 
-170
 
 FALCONER, D.S. and T-F.C. MACKAY. 1996. Introduction to Quantitative Genetics,
 4th ed.; Longman Group Ltd.: Essex, UK.
@@ -5070,7 +4925,6 @@ University Ames, lowa 50011-1070 www.matric.iastate.edu.
 GATESY, J. AND M.A. O'LEARY. 2001. Deciphering whale origins with molecules and
 fossils. Tr Ecol Evol. 16:562-70.
 
-71
 
 GAUNT, S. N. 1980. Genetic variation in the yields and contents of milk constituents.
 Int. Dairy Fed. Bull. Doc. 125:73.
@@ -5115,7 +4969,6 @@ GOUY M., S. GUINDON and O. GASCUEL. 2010. SeaView version 4 : a multiplatform
 graphical user interface for sequence alignment and phylogenetic tree
 building. Molecular Biology and Evolution 27(2):221-224.
 
-172
 
 GRADINARJU, A.C., D.E. ILIE and S. CREANGA.2013. Milk protein genetic variants
 in Romanian Spotted, Holstein Friesian and Montbéliarde cows and some
@@ -5162,7 +5015,6 @@ HRISTOV P., D. TEOFANOVA, I. MEHANDZHIYSKI, L. ZAGORCHEV and G.
 RADOSLAVOV. 2012. Application of Milk Proteins Genetic Polymorphism for
 Selection and Breeding of Dairy Cows in Bulgaria. In N. Chaiyabutr (Ed.), Milk
 
-173
 
 Production—Advanced Genetic Traits, Cellular Mechanism, Animal Management
 and Health. London: InTech. http://dx.doi.org/10.5772/50758,
@@ -5208,7 +5060,6 @@ species are negatively correlated. Experimentia 43: 1015-1018.
 JENNESS, R. and S. PATTON. 2018. Principles of Dairy Chemistry. Scientific
 International (Pvt) Ltd.: India. pp. 230-245.
 
-174
 
 JENSEN, R.G. and D.S. NEWBURG. 1995. Bovine milk lipids. Handbook of Milk
 Composition 85(2): 295-350.
@@ -5257,7 +5108,6 @@ Bioinformatics 22(24): 3096-3098.
 KREITMAN, M. 2000. Methods to detect selection in populations with applications to
 the human. Annual Review of Genomics and Human Genetics 1:539-559.
 
-175
 
 KUCEROVA, J., A. MATEJICEK, A.M. JANDUROVA, P. SORENSEN, E.
 NEMCOVA. M. STIPKOVA, T. KOTT., J. BOUSKA and J. FRELICH. 2006.
@@ -5303,7 +5153,6 @@ MAHMOOD, K., D.H. HOJLAND, T. ASP and M. KRISTENSEN. 2016. Transcriptome
 Analysis of an Insecticide Resistant Housefly Strain: Insights about SNPs and
 Regulatory Elements in Cytochrome P450 Genes. PLOS ONE 11(3): e0151434.
 
-176
 
 MANGUY, J. and D.C. SHIELDS. 2019. Implications of kappa-casein evolutionary
 diversity for the self-assembly and aggregation of casein micelles. R. Soc. Open
@@ -5350,7 +5199,6 @@ KOSAKOVSKY POND and K. SCHEFFER. 2013. FUBAR: A Fast,
 Unconstrained Bayesian AppRoximation for Inferring Selection. Molecular
 Biology and Evolution 30(5):1196-1205.
 
-7
 
 MURRELL, B., J.0. WERTHEIM, S. MOOLA, T. WEIGHILL, K. SCHEFFLER and
 S.L. KOSAKOVSKY POND. 2012. Detecting Individual Sites Subject to
@@ -5395,7 +5243,6 @@ OGOREVC J., T. KUNEJ, A. RAZPET and P. DOVC. 2009. Database of cattle
 candidate genes and genetic markers for milk production and mastitis. Animal
 Genetics 40:832-851.
 
-178
 
 OJALA,M., T.R.FAMULA and J.F.MEDRANO. 1997. Effects of milk protein
 genotypes on the variation for milk production traits of Holstein and Jersey cows
@@ -5443,7 +5290,6 @@ evolution, 25(9): 1795-1808
 PRAZERES, A. R., F. CARVALHO, and J. RIVAS. 2012. Cheese whey management: A
 review. J. Environ. Manage. 110:48-68.
 
-179
 
 RACHAGANI S. and I. D. GUPTA. 2008. Bovine kappa-casein gene polymorphism a
 its association with milk production traits. Genet. Mol. Biol. 31:893-897.
@@ -5491,7 +5337,6 @@ RON, M., 0. YOFFE, E. EZRA, J. F. MEDRANO and J. I. WELLER. 1994.
 Determination of effects of milk protein genotype on production traits of Israeli
 Holsteins. J. Dairy Sci. 77:1106-1113.
 
-180
 
 ROSS, S.M. 2017. Introductory Statistics. 4"" Ed. New York: Elsevier. pp. 797-800.
 
@@ -5539,7 +5384,6 @@ Association of prolactin and beta-lactoglobulin genes with milk production trait
 and somatic cell count among Indian Frieswal (HF x Sahiwal) cows. Biomarkers
 and Genomic Medicine 7 (1):38-42.
 
-181
 
 SITKOWSKA, B., W. NEJA and E. WISNIEWSKA. 2008. Relations between kappa-
 casein polymorphism (CSN3) and milk performance traits in heifer cows. J Cent
@@ -5584,7 +5428,6 @@ SUCHARD, M.A., P. LEMEY, G. BAELE, D.L. AYRES, A.J. DRUMMOND and A.
 RAMBAUT. 2018. Bayesian phylogenetic and phylodynamic data integration
 using BEAST 1.10. Virus Evolution 4(1): 16.
 
-182
 
 SUN, W., H. CHANG, Z.J. REN, Z.P. YANG, R.Q. GENG, S.X. LU, L. DU and K.
 TSUNODA. 2004. Genetic differentiation between sheep and goats based on
@@ -5630,7 +5473,6 @@ VERDIER-METZ, |., J.B. COULON and P. PRADEL. 2001. Relationship between milk
 fat and protein contents and cheese yield. Animal Research, EDP Sciences50
 (5):365-371
 
-183
 
 WALSTRA, P., T. J. GEURTS, A. NOOMEN, A. JELLEMA, and M. A. J. S. VAN
 OEKEL. 1999. Dairy Technology, Principles of Milk Properties and
@@ -5676,7 +5518,6 @@ YUE X.P., Q. FANG, X. ZHANG, C.C. MAO, X.Y. LAN, H. CHEN and C.Z. LEI.
 2013. Effects of CSN/S2 Genotypes on Economic Traits in Chinese Dairy Goats.
 Asian-Australas J Anim Sci. 26(7): 911-915.
 
-184
 
 ZAGLOOL, A.W., A. AWAD, LES. EL ARABY and K.M. EL-BAYOMI. 2016.
 Association of 8-Lactoglobulin gene polymorphisms with milk yield, fat and

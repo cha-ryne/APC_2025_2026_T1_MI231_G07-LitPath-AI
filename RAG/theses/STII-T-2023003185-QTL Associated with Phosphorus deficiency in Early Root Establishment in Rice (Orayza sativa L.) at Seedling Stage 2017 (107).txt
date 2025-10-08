@@ -256,7 +256,6 @@ cytological and biochemical markers. DNA markers are DNA fragments that reveals
 
 variation that are used to detect polymorphism. This is identified through molecular
 
-10
 
 technologies such as southern blotting (Southern 1975), PCR or Polymerase Chain
 Reaction (Mullis 1990) and DNA sequencing (Collard et al. 2005). DNA markers as
@@ -285,7 +284,6 @@ the detection of QTL for different abiotic traits in rice. Markers such as the A
 
 Fragment Length Polymorphism (AFLP), Restriction Fragment Length Polymorphism
 
-11
 
 (RFLP), Simple Sequence Repeats (SSR)/Microsatellite and Expressed Sequence Tag
 (EST) are widely used for different population types (Gregorio, 1997; Gregorio et al.
@@ -311,7 +309,6 @@ coding regions of genes, or in the intergenic regions between genes making them 
 
 most abundant genetic variation in a eukaryotic genome (Kwok et al. 1996).
 
-12
 
 SNPs are individually responsible for specific phenotypic expressions, or could
 represent a neutral variation useful for the evaluation of diversity in the context of
@@ -337,7 +334,6 @@ are the most abundant type of genetic variation with a variable distribution amo
 
 (Rafalski 2002) thus, the probability of detecting polymorphism in a target gene increases
 
-13
 
 (Ganal et al, 2009). Also, in population studies, SNPs are a lot easier to be tracked down
 because they are genetically stable from generation to generation (Kim et al, 2009).
@@ -391,7 +387,6 @@ known as QTL mapping (Collard et al. 2005). QTL mapping is used for the identifi
 
 of the responsible loci for the variation in the quantitative trait, such as phosphorus
 
-15
 
 deficiency tolerance and salinity tolerance. QTL mapping uses a statistical technique to
 localize chromosomal regions that may contain the genes that is responsible to the
@@ -421,7 +416,6 @@ crosses (Mohanrao and Deepak 2015). There are several types of mapping populatio
 
 but F, and Backcross (BC) are the most commonly used in molecular mapping studies
 
-16
 
 because they are simple and easy to develop in a relatively shorter period of time. The F2
 population is produced by crossing or selfing F; hybrids while the BC population is
@@ -450,7 +444,6 @@ effectiveness of phenotyping will determine the accuracy of the QTL mapping resu
 
 (Rahaman et al. 2015). The individuals being subjected to phenotyping are first to be
 
-17
 
 genotyped using molecular marker techniques. Once both phenotypic and genotypic data
 are obtained, statistical analysis is performed to detect an association between the
@@ -480,7 +473,6 @@ QTL Cartographer (Basten et al. 1994); 2) MAPMAKER/QTL (Lincoln et al. 1992); 3)
 
 PlabQTL (Utz and Mechinger, 2003); 4) QGene (Nelson, 1997); 5) Map Manager QTX
 
-18
 
 (Manly et al. 2001); 6) MapQTL (Van Ooijen, 2009); 7) Epistat (Chase et al. 1997); and
 
@@ -513,7 +505,6 @@ F,, (142 DT-RILs) seedling and reproductive stage and used
 Figure 1. Developmental scheme of F,4 D-T RILs mapping population derived from
 Dasanbyeo and TR22183 genotypes.
 
-20
 
 Seedling Stage Phenotyping
 
@@ -534,7 +525,6 @@ X- Plant
 Figure 2 Seedling stage phenotyping hydroponics set-up of the 142 DT-RILs under
 phosphorus deficient and phosphorus efficient condition.
 
-21
 
 The seeds were first incubated using a convection oven for three days at 50°C to
 break dormancy. They were washed with 5% Zonrox to remove any contaminants during
@@ -556,7 +546,6 @@ concentrations for the remaining nutrient elements were not changed. Each tray c
 
 eight liters of Yoshida solution. Table | is a list of the contents of the hydroponic media.
 
-22
 
 Table 1 Concentrations of nutrient elements using Yoshida Culture in hydroponic
 seedling stage of the F,, DT-RILs under low phosphorus (-P) and high
@@ -593,7 +582,6 @@ During data gathering, root samples from 142 lines in the P-deficient set-up and
 
 P-sufficient set-up were preserved for further phenotypic data gathering. The root
 
-23
 
 samples were then scanned using WinRHIZO scanner. For each root scanned, the
 following phenotypic parameters were generated:
@@ -620,7 +608,6 @@ Spectrophotometer (Nanodrop, ND-100, USA). The DNA samples from the nanodrop
 
 readings were diluted to working concentrations of 50 ng/pl using deionized distilled
 
-24
 
 water. The DNA samples were then submitted to GSL for SNP genotyping using
 genotyping by sequencing.
@@ -649,7 +636,6 @@ performed using STAR to determine the relationship of the data. The correlation 
 
 characters was computed at P < 0.05 and P < 0.01 using trait averages.
 
-25
 
 Construction of Linkage Map and QTL Analysis
 
@@ -708,7 +694,6 @@ RL Root Length (cm)
 
 SL Shoot Length (cm)
 
-27
 
 The mean and range of the 142 F,4 DT-RILs and their parents are presented in
 Table 3. The distributions of phenotypic data for all the traits observed are shown in
@@ -734,7 +719,6 @@ results of transgressive segregation (de Vicente and Tanksley 1993; Rieseberg et
 
 al.1999).
 
-28
 
 Table 3. Mean values of the measured traits of Fj, DT-RILs population in rice (Oryza sativa L.)
 produced from the cross Dasanbyeo X TR22183 at seedling stage under phosphorus
@@ -780,9 +764,7 @@ Figure 3. Frequency distribution of root phenotypic data — (a) TPA, (b) TSA, (
 sativa L.) under phosphorus deficienc. Arrows indicate the mean of the
 traits for the two parents and the population
 
-29
 
-30
 
 T T <2 a T
 or of oz oo o
@@ -794,7 +776,6 @@ os or oc oz o o
 
 squerd “4 jo soquinn
 
-150
 Root Length (cm)
 tu)
 
@@ -803,7 +784,6 @@ F3
 &
 z
 ° a =
-228
 Fa Fs
 & J
 _ g
@@ -812,7 +792,6 @@ sauerd “4 jo29qWwoN
 
 Figure 3. Continued. . .
 
-31
 
 Correlation between Traits
 
@@ -854,7 +833,6 @@ traits except TPA. This indicates that for every increase in its value there is 
 
 corresponding increase in the values of TIP, FRK, CR, RL and SL and vice versa. This
 
-32
 
 data explained how the total surface area is affected by many of the root traits such as
 crown roots and number of tips.
@@ -881,7 +859,6 @@ TR22183 marker. The 992 polymorphic markers were used as the genotype data and u
 
 to run with the phenotype data for linkage map construction.
 
-33
 
 QTL Mapping and Analysis
 
@@ -907,13 +884,11 @@ S11251162
 S1l1747144
 §171984383
 Sto2i2i772
-8112294714
 
 $1_2476543
 5412616125,
 422815580,
 S1_2809683.
-8173259598
 $4_3680733
 $173745250
 $473954703
@@ -972,19 +947,14 @@ S2-1380496
 $2_2064718
 §2-2773499
 $2_3360745
-274041906
 $2_4250745
 $2_4390302
 $2-4408126
-847895
-274908190
 
 $2_5194939
 $2_5204619
 $275254453,
-275346325
 S2-ss00a67
-205746222
 $2-5800588
 $2"5042760
 $2_6110191
@@ -1082,7 +1052,6 @@ gat Sec3ocreas
 248 Se Szoezras
 38s So 32101201
 
-2732015082
 $2734430369
 
 Chromosomes
@@ -1159,11 +1128,9 @@ O75 53 202aeeae
 292 3733010621
 199 33466106
 195 3734123771
-3734657308
 
 Dasanbyeo x TR22183 parents using 992 polymorphic SNP markers.
 
-34
 
 Figure 4. Genetic linkage map of the F:4 DT-RILs population of rice (Oryza sativa L.) from
 
@@ -1245,7 +1212,6 @@ $4_30243791
 $4_34074152
 $4_31257859
 
-223
 
 403 $4_31410708
 266 $4_31800256
@@ -1343,7 +1309,6 @@ $5_22947152
 3.40 $5_24041138
 
 $5_24197356
-5524612269
 $5_25329651
 $5_25778321
 $5_27092349
@@ -1408,7 +1373,6 @@ $6_30510502
 $6_30827833
 $6_31110893
 
-35
 
 Chromosome?
 S7_218487
@@ -1465,15 +1429,12 @@ Chromosomes
 
 $8_3601707
 $8_3858207
-984326543
-585066312
 s@_5318021
 
 §8_5619487
 
 8_6264140
 
-87747024
 
 A\ se_934879
 
@@ -1486,10 +1447,7 @@ $8 10591945
 §8.13976743
 $8 14786445
 $8_15176911
-815698752
-5819251454
 58_19494836
-5819591534
 $8_20165619
 $8_20366812
 $8_20451092
@@ -1501,19 +1459,15 @@ $8. 22012998
 $8_22457493
 $8_22723720
 $8_73504564
-823571056
 $8_73906938
-5824738259
 §8_25495781
 58_26215686
 $8_26381588
 $8_26544130
-5826866060
 $8_27190095
 $8.27320054
 §8_27641077
 $8_27761380
-5827829404
 $8_28399689
 
 Chromosomed
@@ -1580,7 +1534,6 @@ a4 $9" 20224356
 $9_22415213
 $9_22709072
 
-36
 
 Chromosome10
 1.15 $10_173348
@@ -1652,7 +1605,6 @@ Chromosomet1
 3.79 =f $11_ 1030329
 $14_1796739
 
-041
 2.61 $11_2049993
 432 811_2124854
 425 $11_2288140
@@ -1702,7 +1654,6 @@ $11_10232778
 $11_11013070
 $11_11693959
 
-257
 287 $11_13618702
 3.10 $11_14086256
 079 §11114119202
@@ -1748,7 +1699,6 @@ $11_22413155
 811_22570560
 $11_22999967
 
-493
 373 655
 448 23246216
 1.72 $11_23288878
@@ -1784,7 +1734,6 @@ $12_2507466
 $12.2913256
 $12_3438197
 $12_3777630
-5123884843
 
 Be $12_4053360
 ie $12_4153216
@@ -1850,9 +1799,7 @@ ae $12-27123455
 
 $12_27360082
 
-37
 
-38
 
 QTLs for root vigor under phosphorus deficiency at seedling stage were identified
 through inclusive composite interval mapping using SNP markers. It revealed a total of
@@ -1878,7 +1825,6 @@ from TR22183 parent. In chromosome |, TR22183 have an additive effect of 0.403 a
 
 qCRI explains 9.9682% of phenotypic variance. In chromosome 12, gCR/2 was detected
 
-39
 
 with an LOD = 3.8392 explaining an 8.7617% of phenotypic variance and an additive
 
@@ -1894,7 +1840,6 @@ during the seedling stage of the Fj, DT-RILs of Dasanbyeo x TR22183
 
 too = Markers" Position Threshold 34068 |
 
-10
 
 D Score
 
@@ -1920,9 +1865,7 @@ Position in the whole genome
 
 Figure 5. Continued. . .
 
-40
 
-41
 
 Shoot Length
 
@@ -1939,7 +1882,6 @@ There were four QTLs (qgRL/1, gRL5, qgRL8, and qgRL9) mapped in chromosome 1,
 
 explaining a 5.9985% of phenotypic variation and a -6.4852 from parent Dasanbyeo. In
 
-42
 
 chromosome 5, gRL5 indicated the highest LOD of 12.4051 for QTLs for root length
 with a phenotypic variation of 20.7266% for a 12.346 additive effect towards TR22183
@@ -1963,7 +1905,6 @@ An additive effect of 7.1995 for gSL5 from parent TR22183 and an additive effect
 
 7.6149 from parent Dasanbyeo for gSL/2 were indicated.
 
-43
 
 QTL for Total Projected Area (TPA)
 
@@ -1986,7 +1927,6 @@ threshold 3.0 with a phenotypic variance of 5.1333% and an additive effect of 0.
 
 from TR22183 parent.
 
-44
 
 QTL for Number of Root Tips (TIP)
 
@@ -2013,7 +1953,6 @@ parent TR22183 with an additive effect of 6.0148 for gFRKS5 and 3.7988 qFRK8 wit
 
 phenotypic variance of 14.3977 and 6.0566 respectively.
 
-45
 
 The identified QTLs in this study did not correlate with previous works on QTL
 mapping for root morphological trait at seedling stage. QTLs from other studies have
@@ -2041,7 +1980,6 @@ the directory found in the Q-TARO (Yonemaru et al, 2010) database. In the direct
 
 702 functionally characterized genes were annotated as of 31 March 2012. The
 
-46
 
 information of genes is organized in the database to facilitate comparisons with QTL
 information (Yonemaru et al, 2010).
@@ -2068,7 +2006,6 @@ and OsbZIP72 expresses salinity tolerance and drought tolerance respectively (Yo
 
 et al, 2010).
 
-47
 
 QTL Clusters
 
@@ -2078,7 +2015,6 @@ surface area of the root containing QTLs- g7SA4.1 and gTSA4.2 flanked by S4_4650
 
 to S4_4941718 and S4_20266971 to S4_20274005 respectively (Figure 5).
 
-48
 
 EREARAREAZEBFE DB
 
@@ -2106,7 +2042,6 @@ SSPS'I-
 $8951
 1966'0-
 £0980
-0970
 
 6bI9L-
 S661'L
@@ -2124,8 +2059,6 @@ add
 (adda
 GALLIGGV
 
-79080
-99509
 LL6E'¢1
 C8BLL
 1£66°9
@@ -2140,7 +2073,6 @@ ELpl el
 
 60S0°IT
 1€6L'01
-694611
 OPEL'SI
 8E99° LT
 99%L 0%
@@ -2150,7 +2082,6 @@ $866
 LISL'8
 StLS TL
 
-78966
 
 “(AVGAM |
 
@@ -2196,7 +2127,6 @@ SWaoaVN ONDINV TT | i
 
 JO STA Zp Bursn Surddew jeasoyut apisoduios sarsnjoul y8nosm) e8ejs Suljpses ye psqsj9p STLO ‘S FGeL
 
-49
 
 *(ND) SuBSIO[IJUDD UT passaidxe are SOOURISIG “ESI ZTUL X OoAqueseq Jo STY-Ld "A
 9y} Jo aBeys Sul[poos oy) SuLNp Aouaroyap sroydsoyd sapun IOBIA 3004 OJ JOJ SLO JO uoHeso] sy) Suimoys dew aBeyul] oNEUayH *9 andy
@@ -2240,7 +2170,6 @@ qTIP8, qTIP9 and qTIP10); four for number of forks (gFRKI, gFRK5, gFRK8 and
 
 qFRK9) and five for number of crossings (qCRS3, qCRS4.1, qCRS4.2, qCRS8 and
 
-51
 
 qCRS9). The largest QTL effect have been found in chromosome 9 and 5 with PVE =
 20.7266% for RLS and PVE = 20.8062% for gFRK9.
@@ -2269,7 +2198,6 @@ of development could be done using the same F,4 DT-RILs population to identify Q
 
 for phosphorus deficient tolerance.
 
-52
 
 Fine-mapping for the QTLs qRLS5, qRL9 and qTSA9, is recommended to aid in
 the identification of tightly linked markers for marker assisted breeding and QTL
@@ -2315,7 +2243,6 @@ BIMPONG I.K., B. MANNEH , B. DIOP, K. GHISLAIN, A. SOW, N.K.A. AMOAH
 and G.B. GREGORIO. 2014. New quantitative trait loci for enhancing
 adaptation to salinity in rice from Hasawi, a Saudi landrace into three African
 cultivars at the reproductive stage. Euphytica. DOI 10.1007/s10681-014-1134-
-0
 
 BIMPONG, I.K. , B. MANNEH , R. EL-NAMAKY, F. DIAW, N. K. A. AMOAH, B.
 SANNEH, K. GHISLAIN, A. SOW, R.K. SINGH , G.B.GREGORIO, J. B.
@@ -2324,7 +2251,6 @@ Tolerance in Rice at the Young Seedling Stage using 384-plex Single
 Nucleotide Polymorphism SNP, Marker Sets, Molecular Plant Breeding, Vol.5,
 No. 9 47-63 (doi: 10.5376/mpb.2014.05.0009)
 
-54
 
 BONILLA, P., J. DVORAK , D. MACKILL, K. DEAL and G. GREGORIO. 2002. RFLP
 and SSLP mapping of salinity tolerance genes in chromosome 1 of rice (Oryza
@@ -2370,7 +2296,6 @@ DE VICENTE, C. and T. FULTON. 2004. Molecular Marker Learning Modules—Vol. 2.
 DE VICENTE, M.C. and S.D. TANKSLEY. 1993. QTL analysis of transgressive
 segregation in an interspecific tomato cross. Genetics 134(2):585-96.
 
-55
 
 DESCHAMPS S, LLACA V, MAY GD. 2012. Genotyping-by-Sequencing in Plants.
 Biology 2012, 1, 460-483; doi:10.3390/biology 1030460. IPGRI, Rome, Italy
@@ -2417,7 +2342,6 @@ GAMUYAO R., HYOUN C. J., PARIASCA T. J., PESARESI P., CATAUSAN S.,
 DALID C. et al. 2012 The protein kinase PSTOL1 from traditional rice confers
 tolerance of phosphorus deficiency. Nature 488, 535-542.
 
-56
 
 GANAL MW, ALTMANN T, RODER MS. 2009. SNP Identification in Crop Plants.
 Current Opinion in Plant Biology, 12, 211 -217.
@@ -2465,7 +2389,6 @@ and yield related traits under different water and P application conditions in
 tropical region in rice (Oryza sativa L.). Euphytica 213(37): DOI
 10.1007/s 1068 1-016-1822-z
 
-57
 
 INTERNATIONAL RICE GENOME SEQUENCE PROJECT. 2005. The map-based
 sequence of the rice genome. Nature 436(7052):793-800.
@@ -2514,7 +2437,6 @@ database: An identification of single nucleotide polymorphism (SNP) and
 quantitative trait loci (QTL) markers. African J. Biotechnology 8 (13): 2963 -
 2967.
 
-58
 
 KIM B, KIM DG, LEE G, SEO J, CHOI IY, CHOI BS, YANG TJ, KIM KS, LEE J,
 CHIN JH, KOH HJ (2014) Defining the genome structure of ‘‘Tongil’’ rice, an
@@ -2561,7 +2483,6 @@ MANSURI, S.M., JELODAR N.B. and N. BAGHERI. 2012. Evaluation of rice
 genotypes to salt stress in different growth stages via phenotypic and random
 amplified polymorphic DNA (RAPD) marker assisted selection.African
 
-59
 
 Journal of Biotechnology Vol. 11(39), pp. 9362-9372. DOI:
 10.5897/AJB11.1490
@@ -2609,7 +2530,6 @@ Linking drought-resistance mechanisms to drought avoidance in upland rice
 using a QTL approach: progress and new opportunities to integrate stomatal
 and mesophyll responses. J. Exp. Bot. 53: 989-1004.
 
-60
 
 QUAIL MA, SMITH M, COUPLAND P, OTTO TD, HARRIS SR, CONNOR TR,
 BERTONI A, SWERDLOW HP, GU Y. 2012. A tale of three next generation
@@ -2657,7 +2577,6 @@ Molecular Breeding 29(4):875-886.
 THOMSON MSJ. 2014. High-Throughput SNP Genotyping to Accelerate Crop
 Improvement. Plant Breed Biotech. 195-212.
 
-61
 
 UGA Y, OKUNO K, YANO M. DROI. 2011. A major qtl involved in deep rooting of
 rice under upland field conditions. J EXP BOT 62:2485-2494.
@@ -2703,7 +2622,6 @@ XU, Y., WANG, Y., LONG, Q. ET AL, 2014. Overexpression of OsZHD1, a zinc finger
 homeodomain class homeobox transcription factor, induces abaxially curled
 and drooping leaf in rice. . Planta 239: 803. doi:10.1007/s00425-013-2009-7
 
-62
 
 YANO,M., M.MURAKI, M.FUJIMORI, T.TAKAMIZO AND B.KINDIGER. 2005.
 Identification of QTL controlling adventitious root formation during flooding

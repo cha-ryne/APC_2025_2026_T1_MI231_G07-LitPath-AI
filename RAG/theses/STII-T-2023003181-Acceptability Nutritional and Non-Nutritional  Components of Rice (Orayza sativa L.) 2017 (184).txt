@@ -234,7 +234,6 @@ rice but not to the degree necessary to meet the requirements of well-milled ric
 
 rice or white rice is obtained by milling husked rice in such a way that some of the germ and all
 
-10
 
 the extemal layers and most of the internal layers of the bran have been removed. Extra-well-
 milled rice, on the other hand, is obtained by milling husked rice that almost the entire germ,
@@ -251,7 +250,6 @@ and the length/width ratio as seen in Table 1. Rice traders are required to indi
 
 classification is chosen.
 
-11
 
 Table 1. Rice classification (adapted from CODEX Alimentarius Commission, 1995).
 
@@ -316,7 +314,6 @@ more than 6.0 mm and a length/width ratio of less than 3.
 length/width ratio of less than 2.
 
 
-12
 
 Composition and Nutritive Value
 
@@ -341,7 +338,6 @@ content of milled rice is considered one of the highest among cereal proteins at
 
 percent (Shekhar et al., 2016).
 
-13
 
 Pigmented Corn (Zea mays L.)
 
@@ -360,7 +356,6 @@ Upon harvesting, maize ears are removed from the plant either manually or mechan
 
 husks covering the ears are stripped off following the separation of kemels (FAO, 1992).
 
-14
 
 ENDOSPERM PERICARP
 
@@ -381,7 +376,6 @@ pericarp. It is mostly used as livestock feed, industrial processes or millgroun
 
 maize is a grain with a soft endosperm and is usually cultivated for a variety of products for
 
-15
 
 human consumption such as flour and parched beverages. Its pericarp is stretched thin and a
 slighty dented crown. Sweet com, on the other hand, has a thick medium pericarp and a glassy
@@ -447,7 +441,6 @@ purple com cob using semipreparative HPLC and identified using LC-MS hydrolytic 
 b— expressed as cyanidin 3-glucoside
 d- Lopez-Martinez et al. (2009)
 
-17
 
 These anthocyanins include cyanidin-3-glucoidase, pelargonidin-3-glucosidase, peonidin-3-
 glucosidase, and respective malonyl derivatives. These have been found to be vaso-protective,
@@ -473,7 +466,6 @@ varieties used in tortillas. In addition, it was also discovered to have high am
 
 zinc (Dickerson, 2003).
 
-18
 
 Starch
 
@@ -496,7 +488,6 @@ amylopectin because of its short and branched chains (Juliano, 1993; FAO, 1998).
 
 the properties of rice and com starches.
 
-19
 
 Tabie 3. Properties of rice and com starches.
 
@@ -529,7 +520,6 @@ release glucose in the bloodstream for a specific length of time. Ludwig (2000) 
 
 Gl-foods contribute to satiety. Results revealed an inverse relationship between AC and GI
 
-20
 
 among the non-waxy rice varieties but due to variations in satiety, more researches with longer
 feeding period must be conducted to strongly prove the association between AC and satiety
@@ -559,7 +549,6 @@ Figure 3. Camotes com variety used in the study.
 
 Figure 4. Rice varieties used in the study.
 
-22
 
 11 mixtures of NSIC Rc98
 (Lian) and CGUARD-N68
@@ -609,7 +598,6 @@ J
 
 Chemical analyses of the top 9 most acceptable cooked mixtures
 
-23
 
 Proximate Peotteg Cataa) Minerals Essential Phytochemicals Others
 composition - Starch - Calcium Amino Acids - Anthocyanidins - Antioxidant
@@ -633,13 +621,11 @@ ee
 
 Statistical analyses
 
-1
 
 Computation of % nutrient contribution |
 
 Figure 5. Schematic diagram showing the protocol of the study.
 
-24
 
 Preparation of Rice and Pigmented Corn Grits Mix
 Table 4 shows the different mixtures for the high amylose rice-pigmented com grits (Lian
@@ -673,7 +659,6 @@ measurement by length in a test tube of a cold gel held horizontally for 30 minu
 
 (41-60mm), soft (61-100mm).
 
-25
 
 Gelatinization temperature refers to the temperature grain turns into gel as determined by
 the Alkali Spreading Value (RTWG, 2000). Six whole grains were spread evenly in a 60mm x
@@ -697,7 +682,6 @@ recovered from WAI sample. WAI was calculated as the weight of gel per gram of d
 
 and WS] as the amount of dried solids recovered fro1.1 WAI test.
 
-26
 
 Sensory Evaluation
 
@@ -724,7 +708,6 @@ procedure of the study including its possible risks and benefits, participation 
 
 and confidentiality of results were discussed among the participants. An informed consent
 
-27
 
 (Appendix E) containing all the necessary information were provided and signed by the
 participants. They were provided with bottled water and instructed to rinse their mouths before
@@ -751,7 +734,6 @@ to read and agree with the terms of the informed decision. Names were replaced w
 
 codes that identify each participant.
 
-28
 
 Chemical Analyses
 
@@ -781,7 +763,6 @@ digestion flask. Crude protein was then calculated using the formula:
 % nitrogen = weight of nitrogen x 100
 weight of sample
 
-29
 
 Nitrogen was converted to protein using the formula, % protein = % nitrogen x 6.25. On
 the other hand, carbohydrate (expressed as nitrogen free extract, NFE) was computed using the
@@ -813,7 +794,6 @@ Shallenberger et al. (1975). The line equation was used to calculate for the sta
 
 samples:
 
-30
 
 % glucose = weight of glucose x 100
 weight of sample
@@ -846,7 +826,6 @@ where:
 0.025 = normality of EDTA
 (50/5) = aliquot of sample
 
-31
 
 Iron analysis (Appendix I) was done after the procedures of AOAC (1980). After mixing,
 the solution was allowed to stand for one hour and the absorbance was read at 520 nm using a
@@ -873,7 +852,6 @@ the procedure of Tsai et al. (1972) (Appendix J). The absorbance was read at 390
 
 was calculated using the formula:
 
-32
 
 % lysine =__weight of lysine __ x 100
 
@@ -905,7 +883,6 @@ flavonoid content was measured using the formula:
 % flavonoid =__weight of flavonoid _ x 100
 weight of sample
 
-33
 
 Total phenols (Appendix K) were measured using the procedure of AOAC (1980).
 Phenols or phenolics are a large group of naturally occurring organic compound found in plants
@@ -934,9 +911,7 @@ Shimada ef al. (1992). The lower the absorbance at 517 nm represented the higher
 scavenging activity. The following calculation was usd:
 
 % DPPH scavenging activity = [1- (test sample absorbance/blank sample absorbance)] *
-100
 
-34
 Glycemic Index
 
 D-glucose in plant extracts usually occurs together with maltose maltosaccharides, starch,
@@ -991,7 +966,6 @@ the harder gel consistency which may result to a longer cooking time as seen in 
 
 gel consistency was caused by the formation of rigid gels during cooking. Amylose polymers of
 
-36
 
 starch leach when the granules were heated. Upon cooling, networks start to form causing the
 granules to harden (Nguyen ef al., 1998; Lii and Tsai, 2000). Thus, Lian-Camotes mixtures took
@@ -1027,7 +1001,6 @@ granules that occur upon heating in the presence of water (FAO, 1998). Gelatiniz
 
 temperature of starch refers to the cooking temperature wherein least 90 percent of the starch
 
-37
 
 granules have gelatinized or lost birefringence (Little ef a/., 1958). It is dependent on the water
 content and starch content and is determined by the alkali spreading value (ASV). ASV is a
@@ -1046,7 +1019,6 @@ Mabango 3 requires a shorter time to be cooked compared to Tubigan 18, Lian, and
 
 observed in Table 8.
 
-38
 
 Table 6. Gelatinization temperature of rice and pigmented corn.
 
@@ -1079,7 +1051,6 @@ followed by Lian, Tubigan 18, and Mabango 3. Therefore, as amount of com increas
 
 water increases.
 
-39
 
 Table 7. Cooking water of rice and pigmented com grits mixtures.
 
@@ -1109,7 +1080,6 @@ Camotes had the highest temperature requirement to be gelatinized, followed by L
 
 increases.
 
-40
 
 Table 8. Cooking time of rice and pigmented com grits mixtures.
 
@@ -1146,7 +1116,6 @@ mixtures required greater amounts of cooking water compared to the other mixture
 
 as the amount of com and amylose increase, the greater the height of the samples after cooking.
 
-41
 
 Table 9. Height increase of rice and pigmented com grits mixtures.
 
@@ -1182,7 +1151,6 @@ Camotes mixtures obtained the least water absorption indices due to high amylope
 
 that absorb less water unlike amylose (Frei and Becker, 2003; Oko et al, 2014).
 
-42
 
 (S0'0>) 4 3 GSH S.A24N], Bursn quarayyip Apueo puss jou oe SMOI PUL SULINIOS UTYJIAL J9}}9] OUTes OY] ZuLeYS SUDA,
 
@@ -1205,7 +1173,6 @@ oo omeaay ac sajowes-uery $a}JOWB) antes s9}0we)-uer] SLRao NOD
 
 ‘SOINJXIW S}1I3 Wd poyuawdid pue so1d Jo SooIpUuy ([SM) AITIqnjos sae pure ([y¥M) UONdIosqy sJ9}eA\ “OT F1G2L
 
-43
 
 Associations Between Gel Consistency and Cooking Parameters
 
@@ -1234,7 +1201,6 @@ increase upon cooking, enabling mixtures to be more in contact with water as a r
 
 cooking water and longer cooking time, thus increasing the WSI.
 
-44
 
 WAL has weak negative correlation with WSI. Based on the results, Tubigan 18-Camotes
 mixtures obtained the highest mean values for WAI. Contrastingly, its mixtures had the least
@@ -1264,7 +1230,6 @@ i
 
 .
 
-45
 
 Sensory Evaluation
 
@@ -1281,7 +1246,6 @@ Camotes, Tubigan 18-Camotes, and Mabango 3-Camotes as seen in Table 12. These sa
 
 were subjected to chemical analyses.
 
-46
 
 Table 12. Mean sensory characteristics and acceptability of cooked rice and pigmented com grits
 
@@ -1339,7 +1303,6 @@ HSD at p (<0.05).
 Legend: 1-dislike extremely, 2-dislike very much, 3-dislike moderately, 4-dislike slightly,
 5-neither like nor dislike, 6-like slightly, 7-like moderately, 8-like very much, 9-like extremely
 
-47
 
 Second Sensory Evaluation
 
@@ -1366,7 +1329,6 @@ that 90:10 Mabango 3-Camotes mix obtained the highest mean value of 6.89 in term
 
 (like slightly). In contrast, 70:36 Lian-Camotes mix had the least mean value of 5.19 (neither like
 
-48
 
 nor dislike). In summary, 90:10 Mabango 3-Camotes mix was significantly higher than all other
 samples. This means that as the amount of com increases, the least a mixture becomes acceptable
@@ -1389,7 +1351,6 @@ type. The results agree with the pilot sensory evaluation wherein pure Camotes c
 
 lowest rating of 4.51 (dislike slightly) among the 31 samples.
 
-49
 
 Tenderness
 
@@ -1415,7 +1376,6 @@ Results in Table 13 show that 90:10 Mabango 3-Camotes had the highest mean value
 
 Tubigan 18-Camotes obtained the lowest mean value of 5.07 (neither like nor dislike) in terms of
 
-50
 
 flavor. Therefore, the result of the sensory evaluation regardless of rice type implies that as the
 amount of com increases, the least acceptable it becomes in terms of flavor. This may be due to
@@ -1438,7 +1398,6 @@ agree with the pilot sensory evaluation wherein pure Camotes com obtained the lo
 
 4.51 (dislike slightly) among the 31 samples.
 
-51
 
 Table 13. Mean sensory characteristics and acceptability of the top nine cooked rice and
 pigmented com grits mixtures.
@@ -1466,7 +1425,6 @@ HSD at p (<0.05).
 Legend: 1-dislike extremely, 2-dislike very much, 3-dislike moderately, 4-dislike slightly,
 5-neither Jike nor dislike, 6-like slightly, 7-like moderately, 8-like very much, 9-like extremely
 
-52
 
 Chemical Analyses
 
@@ -1494,7 +1452,6 @@ significantly higher than 90:10 Tubigan 18-Camotes that had the lowest crude fat
 
 of 0.57 % and 0.56 %, for both raw and cooked samples, respectively.
 
-53
 
 Based on the results in Table 14, there is a di. ect proportion between the amount of com
 and crude fat for both raw and cooked samples. In general, maize grits have a higher crude fat
@@ -1520,7 +1477,6 @@ rice. Thus, regardless of rice type and rice form, as the amount of corn increas
 
 increases.
 
-54
 
 Crude Fiber
 
@@ -1547,7 +1503,6 @@ the amount of corn increases, ash increases regardless of rice type and rice for
 
 pure Camotes com contains higher amounts of ash than pure rice.
 
-55
 
 Carbohydrate (Nitrogen Free Extract)
 
@@ -1565,7 +1520,6 @@ com. Thus, it can be observed that as the amount of com increases, carbohydrate 
 
 decreases regardless of rice type and rice form.
 
-56
 
 -(60'0>) 43 GSH S.AoyNy Suisn yuorayyip ApueoruBis Jou ose SMOI pu SUUIN]JOS UTYILM J9}}9] OWTeS oY} SULILYS SULA,
 
@@ -1608,7 +1562,6 @@ ALVUCAHOSYVD HSV : Yad aAGdAND =NIALOYNd aando Lvd aqnao TaNLSIOW “90rd
 
 ‘(siseq Aup 8 QQ] /Sul) sounjxtw s}113 W109 pojusWSid pue dU payxood puke Are Jo uoTsOoduiod syewurxold “p] 21921
 
-57
 
 Carbohydrate Profile
 
@@ -1637,7 +1590,6 @@ amylose content. The cooked 90:10 Lian-Camotes mix obtained the highest mean val
 
 %, which was also significantly higher than all the other samples among the top nine mixtures.
 
-58
 
 Inversely, cooked 70:30 Mabango 3-Camotes mix had the lowest mean value of 20.74 % that
 was also significantly lower compared to the other samples among the top nine mixtures. Table
@@ -1661,7 +1613,6 @@ Thus, as the amount of leached amylose increases, leached amylopectin decreases 
 
 2010; Patindol et al., 2010; Hanashiro et al., 2004).
 
-59
 
 Table 15. Mean carbohydrate profile of raw and cooked rice and pigmented com grits mixtures
 
@@ -1704,7 +1655,6 @@ calcium. Calcium levels decreased after cooking, which may be due to losses of u
 
 during washing and cooking in rice (Juliano, 1993). Among the top nine cooked samples, 90:10
 
-60
 
 Lian-Camotes obtained the highest mean value of 15.73 mg and 70:30 Mabango 3-Camotes with
 the lowest mean value of 8.33 mg. An indirect proportion between the amount of corn and mean
@@ -1733,7 +1683,6 @@ zinc content. In general. zinc content decreased after cooking for all the sampl
 
 Table 16. Zinc may have been lost during washing of rice by up to 11 percent and an additional
 
-61
 
 one percent during cooking (Juliano, 1993). Out of the top nine cooked mixtures, 90:10 Lian-
 Camtes obtained the highest mean value at 0.74 mg. Conversely, 70:30 Mabango 3-Camotes had
@@ -1755,7 +1704,6 @@ form. This may be due to the higher amounts of phosphorus in pure rice compared 
 
 Camotes com.
 
-62
 
 ‘(so'0>) d 38 GSH S,A2xN Suisn JusayIp APUoyTUSIs Jou oe SMOI PUR SULUNJOS UTYIIM JON] SUTes oY} SULIEYS sULI] ,
 
@@ -1782,7 +1730,6 @@ SNYOHdSOHd ONIZ NOUl WAIDTVO GQALNAWDId -AOTa
 
 “(800 [ Sw) soumgxnu SJU3 wos payvawdid pue a9i1 poxood pur ares Jo s}uajUOS stuoYdsoyd pure ‘ourz ‘Uos ‘UMTOTeO URIJAI “OT 2192 L
 
-63
 
 Essential Amino Acids
 
@@ -1809,7 +1756,6 @@ value at 19.85 mg. There was also a direct proportion between the amount of com 
 
 tryptophan value as seen in Table 17. Thus, as the amount of com increases, tryptophan values
 
-64
 
 increase regardless of rice type and rice form. This may be attributed to the higher tryptophan
 
@@ -1842,7 +1788,6 @@ Mabango 3-Camotes mix
 *Means sharing the same letter within columns and rows are not significantly different using
 Tukey’s HSD at p (<0.05).
 
-65
 
 Phytochemicals
 
@@ -1871,7 +1816,6 @@ may have been due to the susceptibility of flavonoids to hydrolysis as a result 
 
 (Rommel and Wrolstad, 1993; Wrolstad, 2000). Data analysis shows that there were significant
 
-66
 
 differences between rice type, mixture, and rice form in terms of flavonoid content. Out of the
 top nine cooked samples, 70:30 Mabango 3-Camotes had the highest mean value of 7.36 mg,
@@ -1899,7 +1843,6 @@ cooking. This may be due to the lixiviation phenomenon that results the loss of 
 
 by up to 64 % (Bunea ef a/., 2008). This may also be due to the softening of the cell wall
 
-67
 
 allowing the release of carotenoids (Rodriguez-Amaya, 1999). Based on Table 18, 70:30
 Tubigan 18-Camotes obtained the highest mean value at 16.96 ug, while 90:10 Lian-Camotes
@@ -1911,7 +1854,6 @@ wherein as amount of com increases, beta-carotene ~ontent also increases regardl
 
 and rice form.
 
-68
 
 (50: 0>) dae GSH SAN Sursn yuoraygIp ApuRoyrusis JOU are SMOI pue SULINJOO UTYBIM Joyo] SWS dy} SuUTEYs SUBSIAI ,
 
@@ -1940,7 +1882,6 @@ ANALOUVO-VLAd STONdHd TVLOL SGIONOAVTA SNIGINVADOHINV
 
 “soun]xIwW SU wWI0d payuowid pue cou poyYoos pue mes JO sjuajuod jeotUsyoouAyd ves] ZT 192L
 
-69
 
 Antioxidant Capacity
 
@@ -1958,7 +1899,6 @@ mean values than the pure rice types. Based on Table 19, as the amount of com in
 
 anticxidant capacity increases regardless of rice type and rice form.
 
-70
 
 Table 19. Mean antioxidant capacity of raw and cooked rice and pigmented com grits mix (%
 
@@ -1996,7 +1936,6 @@ activity. On the other hand, flavonoids were found to have a strong positive cor
 
 phenols, beta-carotene, and antioxidant capacity. Moreover, total phenols have a strong positive
 
-71
 
 correlation with antioxidant capacity and beta-carotene. Consequently, beta-carotene has a strong
 positive correlation with AOC.
@@ -2024,7 +1963,6 @@ apacty 0.0000 0.0000 0.0000 0.0000
 
 ***Correlation is significant at 0.01 level (2-tailed) using Pearson Correlation
 
-72
 
 Table 21. Correlation coefficients of phytochemicals and antioxidant capacity in cooked rice and
 pigmented com grits mixtures.
@@ -2062,7 +2000,6 @@ The starch hydrolysis curves follow the first order equation: C= Coo (1-e“); w
 
 the concentration at t time, C oo is the equilibrium concentration, k is the kinetic constant and t is
 
-73
 
 the chosen time. Figures 6 and 7 show the rate of starch hydrolysis in raw and cooked mixtures,
 respectively. Starch hydrolysis between pure samples varied widely regardless of rice form. The
@@ -2077,7 +2014,6 @@ by Tubigan 18, Lian, and Camotes for both rice forms.
 
 Figure 6. Rate of starch hydrolysis in raw samples.
 
-74
 
 Figure 7. Rate of starch hydrolysis in cooked samples.
 
@@ -2095,7 +2031,6 @@ cooked mixtures were significantly different from each other wherein values rang
 
 39.86 % (70:30 Lian-Camotes) and 58.59 % (90:10 Mabango 3-Camotes) on a dry basis. Lian-
 
-75
 
 Camotes mixtures that also have the highest amylose contents obtained the least hydrolyzed total
 starch for both rice forms. Regardless of rice type and rice form, it can be observed that as the
@@ -2124,7 +2059,6 @@ In theory, glycemic index increases upon cooking. However, results reveal that t
 
 were significant variations between the EGI of raw and cooked mixtures. The EGI of pure
 
-716
 
 Camotes com and 70:30 mixtures for Lian-Camotes and Tubigan 18-Camotes decreased after
 cooking. This may be attributed to retrodegradation. This occurs when the gelatinized starch,
@@ -2138,7 +2072,6 @@ phenomenon did not completely reverse gelatinization, it can therefore contribut
 
 in glycemic index (FAO, 1998; Montignac, NA).
 
-77
 
 (55-0) 407 ‘(69-95) averpoutaquy ‘(0L<) YSTH+
 (S0'0>) 438 GSH S,AoynL Bursn yuasayyIp ApuLoyUsis Jou ose SMOI PUL SUUINJOS UTYIIM JONO] OWES oI) SuLIeYS SULIT
@@ -2169,7 +2102,6 @@ CALVINILSH HOUVLS IVLOL
 
 SOIN]XIW SJUS WOd pozuowSid pue 9911 pdyOod pue MEI Jo (JHA) XOpul SIWO4]3 payeultjso ue] “ZZ 9192.
 
-78
 
 Associations Between Carbohydrate Profile and EGI
 
@@ -2209,7 +2141,6 @@ Index
 
 ***Correlation is significant at 0.01 level (2-tailed) using Pearson Correlation.
 
-79
 
 Table 24 summarizes the associations between carbohydrate profile and EGI for cooked
 rice and pigmented com grits mixtures. Results reveal that starch has a strong positive
@@ -2239,7 +2170,6 @@ Estimated Glycemic | 0.0110 -0.4602*** 0.7439*** 1.0000
 
 Index
 
-80
 
 Nutritional and Health Value
 
@@ -2265,7 +2195,6 @@ mixtures can be considered as good sources of proteins to potentially alleviate 
 
 malnutrition.
 
-81
 
 The dietary protein is the minimum intake that satisfies human metabolic demands to
 maintain appropriate body composition and growth. To effectively satisfy metabolic demands,
@@ -2292,7 +2221,6 @@ and pigmented com grits mixtures contains low amounts of calcium and iron based 
 
 computed nutrient contribution in Tables 25 to 37. Only pure Lian rice was considered an iron
 
-82
 
 source in both sexes age zero to nine years. Calcium is an essential nutrient needed for muscular
 contraction, mitosis, blood coagulation, nervous or synaptic impulse transmission, and structural
@@ -2320,7 +2248,6 @@ Phosphorus contribution was highest in 90:10 Tubiga 18-Camotes and lowest in 70:
 
 Mabango 3-Camotes. All samples were sources of phosphorus across all age groups except for
 
-83
 
 adolescents of both sexes. This is because phosphorus is needed during the rapid growth period
 of adolescence to meet cellular and bone formation requirements (Institute of Medicine [US]
@@ -2347,7 +2274,6 @@ countries such as Japan and US. It was noted by the Joint FAO/ WHO Expert Commit
 
 Food Additives (JECFA) that anthocyanin containing-extracts had a very low toxicity (WHO,
 
-84
 
 1982) based on previous toxicological studies. The estimated acceptable daily intake (ADI) of
 anthocyanins for humans was estimated to be 2.5 mg per kg’ body weight per day. This value
@@ -2370,7 +2296,6 @@ sources that are rich in Vitamin A must be consumed with rice and pigmented com 
 
 meet the daily requirements and avoid development of vitamin A deficiency disorders.
 
-85
 
 doInos YSIY 4» Q0INOS 4
 sIL 17 TLIC xe6 bb xed TE 1€9 sat ols OLS 00°0 00°0 698 LVL OL<
@@ -2395,7 +2320,6 @@ SNwdOHdSOHd ONIZ NOUI WALTVO V NINVIIA THLOUd qv
 
 (%) (SIOZ ‘TAdd) UVA ATtep wo paseq swuesd QQ] Jod ues] ond payooo Jo uoNNqiucs yuauINU yuadIIg “CZ 9192
 
-86
 
 201NOS YSIY 4% QOINOS »
 #7 81 x7 81 sL8E7 x78 91 £8 09L 797 797 ££0 870 +0061 x€E 91 OL<
@@ -2419,7 +2343,6 @@ SNUOHdSOHd ONIZ NOU WNID TVD V NINVILIA NIADLOUd
 
 (%) (S10Z ‘TUdd) UVA Tle uo paseq suress go] 9d ainyxrus sajowre’) — ueVT 01:06 P2YOOo Jo UONNG UCD JUSLINU JUdOIAd “97 S192L
 
-87
 
 9OIMOS YSIY x QOINOS
 +8LL1 +8LL1 +0677 eb 91 ple orl 87 8E7 os'0 Lv0 +1961 +9891 OL<
@@ -2443,7 +2366,6 @@ SNUOHdSOHd ONIZ NOUI WNIDTVO V NINVIIA NIDLOUd av
 
 (%) (S107 TUAd) UWA Alrep uo paseq suress 00] Jad aingxw Saws — URTT (7-08 P2YOOS JO UONNQUIHOS JUSUINU JUddIAg “17 91921
 
-88
 
 SONOS YSIY x» BdINOS
 +00 LT +00 LI x9T7T 89°C 69€ Tel soz soz 140 190 aefO07 LVL OL<
@@ -2467,7 +2389,6 @@ SNdOHdSOHd ONIZ NOUI WAID TVD VNINVLIA NIFLOUd
 
 (%) (S107 TAAd) UVA Altep uo paseq swuesd QQ] J9d oinyxtws sajoweD ~ URI] YEO P2YOOS JO UONNGUUOD JudLINU JUddIOg 'BZ 9192L
 
-89
 
 20s YSIY x5 Q0INOS
 +1612 1617 xeL60€ +7817 61's 6701 £v'9 £v'9 00°0 00°0 6r'8 0eL OL<
@@ -2491,7 +2412,6 @@ SNYOHdSOHd ONIZ NOUI WAIDTVO V NINVILIA NidLOUd
 
 (%) (S107 Tadd) YUVA Ayrep uo poseq swrei3 99] Jod g] uesiqny sind Jo uonnquyuod yusuINU yUD0I9g “67 9IG2L
 
-90
 
 SOMOS YSIY x» QOINOS
 +8961 = «8961 = x67 TZ 00ST Lvv obs soz S07 seo 0¢e'0 +*81°07 aSELI OL<
@@ -2516,7 +2436,6 @@ SNYOHdSOHd NOUl WNIDTVO V NIWVLIA NIGALOUd
 
 (%) (S107 ‘PECd) UVA A1ep uo paseq sures got Jed amyxiun sojowey — gf ueTIQA], Of 306 P2009 Jo UoNguIUOD sUaUINU IUAd0q “O€ 2142L
 
-91
 
 9dINOS YSIY yx Q0INOS y
 861 = «861 = S907 scr Liv L78 9LT 9L'I 950 80 #491 07 +b8L1 oL<
@@ -2544,7 +2463,6 @@ sndOHdSOHd ONIZ NOUI WAID TV) V NIANVLIA NIQDLOUd
 
 (%y (S102 ‘fAdd) UVA ATrep uo paseq surei3 QO] Jad ommyxtur sajovreD - g] ULTIQN] 07:08 P24009 Jo UONGUyUOS JUoUINU JUDDI0q “1 € 2192L
 
-92
 
 doMOS YSIY 4» QOINOS y
 +1981 x1981 «E07 te bl ese 09L sol sol s9'0 Lg0 sab 17 «81°81 OL<
@@ -2569,7 +2487,6 @@ SNYOHdSOHd ONIZ NOUI WAI TVvO V NIAVIIA NIGDLOUd wv
 
 (e%) (S107 ‘TUdd) UVA Alrep uo paseq surex8 Qo] Jad ainpxt sojoure:) — gy UBBIQN Qx:0L P2400 JO UONNGUIUOD JuoUINU JUsOIEq “7 E 91G2L
 
-93
 
 QOINOS YSIY x QOINOS ,
 s8L 81 = x8L 81 e207 ce vl I9'p £16 te ele 000 00'0 I¢8 TEL OL<
@@ -2594,7 +2511,6 @@ SNWYOHdSOHd ONIZ NOU WADTIV) V NINVLIA NIGDLOUd
 
 (%) (S102 ‘Tadd) UVa Alrep uo paseq suresd ¢o] Jed ¢ osueqeyA, poyxoos Jo uoNNguUOS juUsLINU JUDdIEg “EE 9192],
 
-94
 
 QOMOS YSIY yx QOINOS »
 *89ST —-489°ST «E191 9E Il ogc vs9 sui suit £€0 670 +0681 +ST9I OL<
@@ -2618,7 +2534,6 @@ SNUYOHdSOHd NOUI WNIDTVD V NIWVLIA NIGLOUd
 
 (%) (S107 Tad) UV Allep uo paseq swresd 9g] Jad sunyxiun sojoured — ¢ oBuEqeWA| 0] :06 P2400 JO UONNGUIUCS JUSUNU JUDIE “PE 2192.
 
-95
 
 20INOS YSIY 4% QOINOS
 «STST 9 #STSE LL OT 7311 Ove seo scl ssl Ls'0 0s'0 +9861 +L0'L1 OL<
@@ -2644,7 +2559,6 @@ SNuYOHdSOHd NIZ NOUI WNID TVD V NINWVLIA NIGALOUd wv
 (%) (S107 TAdd) AVA Allep uo paseq suresd QQ] sod onyxiu sojoureD — ¢ OSURqeA] 07:08 PIYOOS Jo UOINQLIJUOS JUSUINU JUI.IOg “SE 2192,
 %. 2) q Payood J nna L d SE M9eL
 
-96
 
 Q0INOS YSIY x» QOINOS »
 s6orl S6' v1 x0ULT soz Ive S19 6e1 6e 1 $90 950 +401 07 #87 L1 OL<
@@ -2670,7 +2584,6 @@ SndOHdSOHd ONIZ NOUI WNIDTVO V NINVLIA NIDLOUd
 
 (%) (S107 ‘TAdd) UWA Aitep uo paseq sures Qo] 10d ounjxtw sojoured — ¢ odueqe] 0¢:0L P2009 JO uoNINquyUOD juoUINU JUdDI0q “YE 9192L
 
-97
 
 201NOS YSIY 4% QOINOS
 #8907 = 89°07) 9D SE LL HT ors Oro! 607 607 L8Z 6v7 +0681 +8791 OL<
@@ -2694,7 +2607,6 @@ SNYOHdSOHd ONIZ NOUI WAIDTVvO V NIWVLIA NIGLOUd
 
 (%) (SIOZ ‘TAAd) UVA A1kp Uo paseq sures3 QQ] 10d sayoure_ and psyoo9 jo uoNNqUAUOS JUsUINU JUIOIOg “LE 2192.L
 
-98
 
 QOMOS YSIY »% Q0INOS
 
@@ -2732,7 +2644,6 @@ O£70L
 
 L007 ‘NN/OVS/OHM 49 (OWd/3/848) [a UO paseg sommxtur so}oure})-UeI] Po3x009 Jo UOTINGIUOS ueydojdin pue oursAy usoieg “g¢ 2142
 
-99
 
 SdINOS YSIY yy Q0INOS 4
 
@@ -2751,7 +2662,6 @@ L002
 
 ‘NN/OVA/OHM 44 (O%d/8/32) Ida 4O poseq scinyxiw sajouleD-¢ OSUEqe~ poyx0OO9 Jo UOKNQINUCS ueYydo;dkn pue oUISA] JUDOIOg ‘Oh 9192L
 
-100
 
 The total food energy was computed based on the Atwater specific factor system in white
 polished rice. This method considered the heat of combustion and coefficients of digestibility of
@@ -2768,7 +2678,6 @@ kcal) compared to pure Lian (410.45 kcal), Tubigan 18 (410.86 kcal), and Mabango
 
 kcal).
 
-101
 
 LV7lp 1197 SvSE 09 0SE 001:0
 L0°80¢ 879 e9LE LV P9E O€:0L
@@ -2793,7 +2702,6 @@ ADWANG LVI Oud OHO CALNAWD da Ta
 
 “(8 001 /feOy) SouMXIW S}L13 LOD payusWISId puke 9011 poyxOod Jo JUA]UOd JUSLNUOJOeUL pu ABrI9Ud WUd0I9g “Tp GEL
 
-102
 
 A food is a good source of energy if it contains >15 % of Nutrient Reference Values per
 100 grams and a high source if has >30 % of Nutrient Reference Values per 100 grams
@@ -2819,7 +2727,6 @@ Thus, consumption of rice and pigmented corn grits mix can be a potential source
 
 intervention for diabetes and obesity.
 
-103
 
 20NOS YSTY xx QOINOS »
 “FETE aPORL LOBE sOOGE-OUEC aETOL EERE aSU6C aLOBE sPVOC siOLol6BC lO SOG sIleeSCSCS
@@ -2877,7 +2784,6 @@ a. Gel consistency has a strong negative correlation with cooking water, cooking
 
 time, and height increase; and a moderate negative correlation with WS).
 
-105
 
 b. Cooking water has a strong positive correlation with cooking time and height
 increase; and a moderate positive correlation with WSI.
@@ -2914,7 +2820,6 @@ d. Beta-carotene has a strong positive correlation with antioxidant capacity.
 
 decreased after cooking.
 
-106
 
 9. EGI was found to be lower in mixtures that have high amylose and low amylopectin
 contents
@@ -2964,7 +2869,6 @@ Marketing and economic studies including product pricing may also be a supplemen
 
 study to promote consumption of rice and pigmented com grits mix.
 
-108
 
 LITERATURE CITED
 
@@ -3000,7 +2904,6 @@ mays L.) Kernels. J Nutr Food Sci 3:237.
 BARBA, CVC and CABRERA, MIZ. 2008. Recommended energy and nutrient intakes for
 Filipinos 2002. Asia Pac J Clin Nutr 17(S2):399-404.
 
-109
 
 BETT-GARBER, KL’ CHAMPAGNE, ET, INGRAM, DA, and MCCLUNG, AM. 2007.
 Influence of Water-to-Rice Ratio on Cooked Rice Flavor and Texture. Cereal Chem.
@@ -3038,7 +2941,6 @@ CHEAUPUN, K, JONGDEE, S, BLANCO, P, BRYANT, R, LANG, NT, HALL, RD,
 FITZGERALD, M. 2014. Diversity of Global Rice Markets and Science Required for
 Consumer Targeted Rice Breeding. PLoS ONE 9(1):E85106. Available at
 
-110
 
 <http://journals. plos.org/plosone/article?id=10.1371/joumal.pone.0085106>. Accessed
 on 31 May 2017.
@@ -3076,7 +2978,6 @@ DEL MUNDO, AM, KOSCO, DA, JULIANO, BO, SISCAR, J, and PEREZ, CM. 1989. Sensory
 and instrumental evaluation of texture of cooked and raw milled rices with similar starch
 properties. J. Texture Stud. 20:97-110.
 
-111
 
 DEL ROSARIO, AR, BRIONES, VP, VIDAL AJ, and JULIANO, BO. 1968. Composition and
 endosperm structure of developing and mature rice kemel. Cereal Chem., 45:225-235.
@@ -3112,7 +3013,6 @@ Amino Acid Requirements in Human Nutrition. Geneva, Switzerland.
 {FAO-WHO] JOINT FAO/WHO EXPERT CONSULTATION. 2002. Human vitamin and
 mineral requirements. Rome, Italy.
 
-112
 
 FELLX, ADR, TRINIDAD, TR, TUANO, APP, and JULIANO, BO. 2013. Short-Term Satiety of
 Cooked Philippine Rices of Varying Apparent Amylose Content and Glycemic Index.
@@ -3151,7 +3051,6 @@ GATCHALIAN, MM. 1989. Sensory evaluation methods for quality assessment and
 development. 2"™ ed. UP College of Home Economics, Diliman, Quezon City,
 Philippines.
 
-113
 
 GIBSON RS. 1994. Zinc nutrition in developing countries. Nutr Res Rev 7:151-173.
 
@@ -3191,7 +3090,6 @@ Available at < http://www.knowledgebank irn.org/step-by-step-
 production/postharvest/milling>. Accessed on 31 May 2017.
 
 
-114
 
 {ISI] INTERNATIONAL STARCH INSTITUTE. 2014. Maize — Com. Available at
 <http://www.starch.dk/isi/starch/maize.asp>. Accessed on 27 June 2016.
@@ -3228,7 +3126,6 @@ in Central Luzon, Philippines, 1966 to 2012. PLoS One. 10(8):e0136562.
 LAFIANDRA, D, RICCARDI, G, and SHEWRY, PR. 2014. Improving cereal grain
 carbohydrates for diet and health. Journal of Cereal Science. Elsevier. 59(3):3 12-326.
 
-115
 
 LATHAM, MC. 1997. Human nutrition in the developing world. Food and nutrition series No.
 29. Available at <http://www.fao.org/docrep/w0073e/w0073e00.htm#TopOfPage>.
@@ -3266,7 +3163,6 @@ Accessed on 21 September 2016.
 MEILGAARD, M, CIVILLE, GV, and CARR, BT. 1999. Sensory Evaluation Techniques. CRC
 Press: Boca Raton, FL.
 
-116
 
 MEJIA, D. 2003. MAIZE: Post-Harvest Operation. IN-PhO-Post-harvest Compendium. FAO-
 UN.
@@ -3303,7 +3199,6 @@ MUTTERS, RG, and THOMPSON, JF. 2009. Rice Quality Handbook. UCANR Publications.
 NCI_Thesaurus&code=C1016>. Accessed on 10 May 2017
 
 
-117
 
 NGUYEN QD, JENSEN CT, and KRISTENSEN PG. 1998. Experimental and modelling studies
 of the flow properties of maize and waxy maize starch pastes. Chemical Engineering
@@ -3342,7 +3237,6 @@ Applications, Vol. 5:5.
 
 PANLASIGUI, LN, THOMPSON, LU, JULIANO, BO, PEREZ, CM, YIU, SH, and
 
-118
 
 GREENBERG, GR. 1991. Rice varieties with similar amylose content differ in starch
 digestibility and glycemic response in humans. American Journal of Clinical Nutrition,
@@ -3378,7 +3272,6 @@ PHILRICE SED. 2013. Philippine Rice R&D Highlights 2013. PhilRice.
 PLATTE, JA, and MARCY, VM. Photometric Determination of Zinc with Zincon. Application
 to Water Containing Heavy Metals. Anal. Chem. 1959, 31, 1226- 1228.
 
-119
 
 [RTWG] RICE TECHNICAL WORKING GROUP. 2000. National Cooperative Testing Manual
 for Rice: Guidelines and Policies. National Seed Industry Board — Department of
@@ -3413,7 +3306,6 @@ Agric. Food Chem. 40:945-948.
 SMITH, CW, and DILDAY, RH. 2003. Rice: Ongin, History, Technology, and Production. John
 Wiley & Sons.
 
-120
 
 SIMEON, LM. 2016. Rice, com production down in QI. The Philippine Star. Available at
 <http://www.philstar.com/business/2016/03/23/1565636/rice-com-production-down-q1>.
@@ -3431,7 +3323,6 @@ THE TEA ASSOCIATION OF AMERICA. 2002. Flavonoid analysis.
 TRAN NA, DAYGON VD, RESURRECCION AP, CUEVAS RP, CORPUZ HM, and
 FITZGERALD, MA. 2011. A single nucleotide polymorphism in the Waxy gene explains
 a significant component of gel consistency. Theoretical and Applied Genetics 123: 519-
-525
 
 TROIANO, RP, BRIEFEL, RR, CARROLL, MD, and BIALOSTOSKY, K. 2000. Energy and
 fat intakes of children and adolescents in the United States: data from the National Health
@@ -3450,7 +3341,6 @@ Hyperglycemia in Mice. J. Nutr. 133(7):2125-2130.
 
 UTRILLA-COELLO, RG, AGAMA-ACEVEDO, E, OSORIO-DIAZ, P, TOVAR, J, and
 
-121
 
 BELLO-PEREZ, LA. 2011. Composition and starch digestibility of whole grain bars
 containing maize or unripe banana flours. Starch/Starke, 63, 416-423.
@@ -3487,7 +3377,6 @@ methodology and clinical implications. Am J Clin Nutr 54:846-854.
 at <http://www.who.int/gho/ncd/mortality_morbidity/en/>. Accessed on 8 May 2017.
 
 
-122
 
 [WHO] WORLD HEALTH ORGANIZATION. 1982. Toxicological evaluation of certain food
 additives. Presented at the 26thMeet. Jt. FAO/WHO Expert Comm. Food Addit., Geneva.

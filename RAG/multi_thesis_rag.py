@@ -1,4 +1,4 @@
-from llm_typo_correction import correct_text_with_llm
+
 import dotenv
 dotenv.load_dotenv()
 
@@ -18,17 +18,12 @@ def recover_chromadb_from_index(pdf_folder, chunk_size=500):
     embedder = SentenceTransformer('all-MiniLM-L6-v2')
     from extract_metadata import extract_thesis_metadata
     recovered_chunks = 0
-    api_key = os.environ.get("GEMINI_API_KEY", "")
     for txt_path in indexed_files:
         if not os.path.exists(txt_path):
             print(f"[RECOVERY] Missing .txt for {txt_path}, skipping.")
             continue
         with open(txt_path, "r", encoding="utf-8") as f:
             text = f.read()
-        # LLM typo correction
-        if api_key:
-            print(f"[LLM] Correcting text for {os.path.basename(txt_path)}...")
-            text = correct_text_with_llm(text, api_key)
         meta = extract_thesis_metadata(text)
         meta["file"] = os.path.basename(txt_path)  # Use .txt as the source
         meta["pdf"] = os.path.basename(txt_path)   # Use .txt as the 'pdf' reference
@@ -94,7 +89,7 @@ def build_chromadb_index(chunks, chunk_embeddings, metadata):
     return collection
 
 
-def search_chromadb(query, embedder, collection, top_n=10, distance_threshold=0.8):
+def search_chromadb(query, embedder, collection, top_n=10, distance_threshold=1.5):
     query_emb = embedder.encode([query], convert_to_numpy=True)[0].tolist()
     results = collection.query(
         query_embeddings=[query_emb],
@@ -103,18 +98,42 @@ def search_chromadb(query, embedder, collection, top_n=10, distance_threshold=0.
     )
     out = []
     print(f"\n[DEBUG] Top {top_n} results for query: '{query}'")
+    # Collect top chunks, ensuring top 5 unique txt files are represented
+    seen_files = set()
+    unique_chunks = []
     for i in range(len(results["documents"][0])):
         meta = results["metadatas"][0][i]
         score = float(results["distances"][0][i])
         print(f"  Rank {i+1}: Score={score:.4f}, Title={meta.get('title','')}, Author={meta.get('author','')}, Year={meta.get('publication_year','')}")
         # Only include if score is below threshold (Euclidean: lower is better)
         if score < distance_threshold:
-            out.append({
-                "chunk": results["documents"][0][i],
-                "meta": meta,
-                "score": score
-            })
-    return out
+            file_id = meta.get("file") or meta.get("pdf")
+            if file_id and file_id not in seen_files:
+                unique_chunks.append({
+                    "chunk": results["documents"][0][i],
+                    "meta": meta,
+                    "score": score
+                })
+                seen_files.add(file_id)
+            if len(unique_chunks) >= 5:
+                break
+    # If fewer than 5 unique, fill up to top_n with best scoring chunks (may repeat files)
+    if len(unique_chunks) < 5:
+        for i in range(len(results["documents"][0])):
+            meta = results["metadatas"][0][i]
+            score = float(results["distances"][0][i])
+            if score < distance_threshold:
+                file_id = meta.get("file") or meta.get("pdf")
+                # Allow repeats if not already in unique_chunks
+                if not any(c["chunk"] == results["documents"][0][i] for c in unique_chunks):
+                    unique_chunks.append({
+                        "chunk": results["documents"][0][i],
+                        "meta": meta,
+                        "score": score
+                    })
+            if len(unique_chunks) >= top_n:
+                break
+    return unique_chunks
 
 def sentence_chunking(text, chunk_size=500):
     # Sliding window chunking with overlap
@@ -376,15 +395,10 @@ def extract_and_chunk_pdfs(pdf_folder, chunk_size=500):
     embedder = SentenceTransformer('all-MiniLM-L6-v2')
     appended_chunks = []
     appended_metadata = []
-    api_key = os.environ.get("GEMINI_API_KEY", "")
     for pdf_path, txt_path, mtime in to_index:
         print(f"[DEBUG] Indexing: {os.path.basename(pdf_path)}")
         with open(txt_path, "r", encoding="utf-8") as f:
             text = f.read()
-        # LLM typo correction
-        if api_key:
-            print(f"[LLM] Correcting text for {os.path.basename(txt_path)}...")
-            text = correct_text_with_llm(text, api_key)
         meta = extract_thesis_metadata(text)
         meta["file"] = os.path.basename(txt_path)  # Use .txt as the source
         meta["chunk_idx"] = 0  # Will be set per chunk
@@ -463,10 +477,16 @@ class MultiThesisRAGHTTPRequestHandler(BaseHTTPRequestHandler):
                 unique_pdfs = set(m["pdf"] for m in all_meta if "pdf" in m)
             except Exception:
                 unique_pdfs = set()
+            # Count .txt files in RAG/theses (excluding non-thesis files)
+            import glob
+            import os
+            thesis_dir = os.path.join("RAG", "theses")
+            txt_files = [f for f in glob.glob(os.path.join(thesis_dir, '*.txt')) if os.path.isfile(f)]
             resp = {
                 "status": "healthy",
                 "total_documents": len(unique_pdfs),
-                "total_chunks": total_chunks
+                "total_chunks": total_chunks,
+                "total_txt_files": len(txt_files)
             }
             self._set_headers()
             self.wfile.write(json.dumps(resp).encode("utf-8"))
@@ -493,7 +513,7 @@ class MultiThesisRAGHTTPRequestHandler(BaseHTTPRequestHandler):
                 top_chunks = []
                 seen_files = set()
                 documents = []
-                DISTANCE_THRESHOLD = 1.0  # Lower means stricter relevance
+                DISTANCE_THRESHOLD = 1.5  # Lower means stricter relevance
                 for i in range(len(results["documents"][0])):
                     meta = results["metadatas"][0][i]
                     file_name = meta.get("file", meta.get("pdf", ""))

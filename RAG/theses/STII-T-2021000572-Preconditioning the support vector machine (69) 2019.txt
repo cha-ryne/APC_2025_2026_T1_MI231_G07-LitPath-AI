@@ -178,7 +178,6 @@ boundary points of D [1].
 This definition can make sense even if we have a discrete set of points. Suppose
 that A is a finite subset of 2. Then the points in A along the boundary of the
 
-5
 
 Chapter 2. Preliminaries 6
 
@@ -410,7 +409,6 @@ following unconstrained optimization problem with modified hinge loss function
 A 2 T
 amin, sllwll" +3 » max(0, a — yw’ z4)
 
-12
 
 Chapter 3. Hinge Loss Function with Varying Margins
 
@@ -422,7 +420,6 @@ where C > 0 and
 max(0,a — y;w'2;) =
 a—yw's, if yw'a; <a.
 
-13
 
 Chapter 4
 
@@ -463,7 +460,6 @@ following function
 px(t) =
 klt|— 3k?, if |t| > k,
 
-14
 
 Chapter 4. Proposed Hinge Loss Function 15
 where k € [0, +00] satisfy
@@ -641,7 +637,6 @@ Output: w
 
 3: Determine steplength a, s.t. strong Wolfe rule is satisfied;
 
-19
 
 Chapter 5. Numerical Implementations
 
@@ -657,7 +652,6 @@ In Algorithm 1, replace f by Problem 3.1 or 4.1.
 
 5.1.1 Line Search Algorithm for Strong Wolfe Conditions
 
-20
 
 The choice of line search parameter a, is crucial. In order to ensure that p; is a
 
@@ -803,7 +797,6 @@ when a = 20,50. For the values of beta: we consider —3 < 6 < 0 with an increme
 of 0.5. We use C = 0.01 in comparing the classification performance of the hinge loss
 function and the proposed hinge loss function.
 
-23
 
 Chapter 6. Experiments and Results 24
 
@@ -845,7 +838,6 @@ the two classes best is a = 0.05 since it has the smallest objective function va
 Notice that in each datasets, the a that has the least number of misclassified data is
 between 0.05 and 1. Moreover, if we set a = 0, the solution is infeasible.
 
-25
 
 Chapter 6. Experiments and Results
 
@@ -880,52 +872,30 @@ a
 [2
 [2
 
-2
 
-2
 
-2
 
-2
 
-2
 
-6
-6
 [6 |
 [6
 [6
 [6
 [6
 [6
-6
-6
-6
-6
-6
-6
 
-6
 
-6
 re
 re
 rs
 |
 
-5
 
-5
 
-5
 
-5
 
-5
 
-5
 
-6
 
 N
 ~~
@@ -970,7 +940,6 @@ between two classes, we fixed a = 1 for the following implementations.
 
 Chapter 6. Experiments and Results
 
-27
 
 Class -1 (4,0) | Dimension | Size | Outlier (Dis- |
 2 | tribution)
@@ -1073,7 +1042,6 @@ Sig.(2-tailed)
 
 Table 6.13: Spearman Correlation Coefficient in D8
 
-29
 
 Chapter 6. Experiments and Results 30
 
@@ -1176,7 +1144,6 @@ Table 6.18: Accuracy Values from D1-D4 for five runs
 
 PHL |
 SI se 0.9700
-0
 
 Ce EO a 9950 _| 0.9625 | 0.9975 | 0.9525
 0.9975 SSS 0.9975 | 0.9675
@@ -1276,7 +1243,6 @@ Chapter 6. Experiments and Results
 
 Table 6.24: Number of Misclassified Data when C' = 1 and C = 0.0001
 
-35
 
 Chapter 7
 
@@ -1349,7 +1315,6 @@ pp. 408-415.
 
 [12] P.J. Huber and E.M. Ronchetti, Robust Statistics (John Wiley & Sons, 2009).
 
-55
 
 List of References 56
 

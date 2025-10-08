@@ -1,0 +1,3226 @@
+Analysis of microbial eukaryotic communities for source tracking of microbial contamination in the Pasig-Marikina-San Juan (PAMARISAN) River System in Metro Manila, Philippines
+
+Diana Rose D. Mamawal
+
+University of the Philippmes Diliman
+
+Master of Science in Microbiology
+
+June 2024
+
+
+ABSTRACT
+
+Microbial eukaryotes are an important part of the total microbial diversity
+globally. However, little is known about their composition and sources in contaminated
+surface waters. Here, the pathogens and potential sources (i.e., cattle, ducks, dogs,
+poultry, swine, and sewage) of microbial eukaryotic communities in polluted sink
+environments (i.e., Pasig, Marikina, and San Juan Rivers in Metro Manila, Philippines)
+during the dry and wet seasons collected between December 2021 and March 2023
+were examined using the 18S rDNA amplicon sequencing combined with Fast
+Expectation-Maximization for Microbial Source Tracking (FEAST) program.
+Taxonomic composition revealed the dominance of SAR, Opisthokonta, and
+Archaeplastida in the rivers, accounting for 69.7%, 18.9%, and 10.2% mean abundance
+of microbial sink communities, respectively. Economically and clinically relevant
+human pathogens from Apicomplexa and Fungi were also found in sink environments
+including Cryptosporidium sp., Plasmodium sp., Kodamaea sp., Candida sp.,
+Aspergillus sp., and Fusarium sp. The Spearman’s rank correlation test demonstrated
+that dissolved oxygen, total suspended solids, pH, temperature, fecal coliform count,
+and phosphates were the important environmental factors driving the microbial
+eukaryotic community variations. While the presence of indicator species Uronemella
+filificum and Euplotes vannus in the dry season and Spumella sp. and unclassified
+Chlorophyta in the wet season did not exhibit significant abundance, their occurrence
+suggests their potential as bioindicators for bacterial and nutrient pollution assessment
+in the river system. Moreover, the observed distinctiveness of community patterns
+between sinks and sources, as shown by the NMDS plot using Bray-Curtis distances, strengthens the effectiveness of the source-tracking analysis. Results generated from FEAST displayed that sewage (19.6%), followed by duck (0.644%) and cow (0.566%)
+feces, were the major sources of riverine microbial eukaryotes. Spatio-seasonal
+variations were also observed wherein downstream stations received higher
+contributions of microbial eukaryotes from source samples than upstream stations, and
+that source contributions were higher in the wet than in the dry season, indicating the
+impact of rainfall in enhancing the dispersal of microbial eukaryotic communities.
+Results from community-based microbial source-tracking (MST) can give knowledge
+on how microbial eukaryotes in freshwater environments are shaped by different
+factors. Moreover, it could provide information on evaluating potential hazards caused
+by pathogens and providing effective strategies for the conservation and management of the river system.
+
+Keywords: community-based source tracking, FEAST, microbial eukaryotes, Philippines, 18S metagenomics
+
+CHAPTER 1
+
+INTRODUCTION
+
+Microbial contamination in water bodies poses health risks to humans and
+damage to aquatic organisms, thereby continuing to affect the valuable
+application of surface waters (Abdalla & Khalil, 2018; Lepak et al., 2019).
+Metro Manila rivers, which serve as an important means of transport,
+sustenance, recreation, and livelihood, have similar problems. Pasig River is the
+largest river in Metro Manila connecting Manila Bay and Laguna de Bay. It
+flows from Laguna de Bay then joins the Marikina and San Juan Rivers at
+Taguig and Manila, respectively, and eventually drains into Manila Bay
+(Deocaris et al., 2019). San Juan River drains water from Manila and Quezon
+City, while Marikina River flows from Marikina and Rizal provinces (Azuma
+et al., 2017). These rivers have been critical sites for biodiversity and a source
+of income for many people. Due to increased urbanization in the Metro Manila
+Region over the past three decades, surrounding industries, establishments, and
+communities have overexploited resources and later discharged wastes resulting
+in the deterioration of water quality (Escoto et al., 2021).
+
+The Pasig-Marikina-San Juan (PAMARISAN) River System has long
+failed some parameters of the Department of Environment and Natural
+Resources (DENR) Class C water quality standards, which are suited for aquatic
+species’ propagation. Although rehabilitation efforts were made, the waters in
+the river system are still unsafe for swimming (NCR-DENR, 2021; CNN
+Philippines Staff, 2023; Philippine Daily Inquirer, 2023). Few studies have
+
+reported microbial contamination in these rivers.
+
+The presence of nosocomial bacteria under Order Enterobacterales and Hepatitis
+A viruses (HAV) were detected in Pasig River (Bai et al., 2019; Guzman et al., 2020).
+Protozoans such as Giardia spp., Cryptosporidium spp., Acanthamoeba spp., and
+Naegleria spp. were also observed in Metro Manila rivers near Pasig River (Labana et
+al., 2016; Onichandran et al., 2014). In addition, Salmonella spp. was detected in the
+sampled irrigation waters of urban farms in cities of Quezon and Marikina in Metro
+Manila (Garcia et al., 2015). As of now, few studies have been made to trace sources
+of fecal contamination in the water bodies of the Philippines (Labrador et al., 2020;
+Abello et al., 2021; dela Pefia et al., 2021; Nacario et al., 2022; Malajacan et al., 2023).
+However, characterizing microbial communities and pathogens present alongside
+identifying sources are not well studied. Therefore, addressing this gap may enhance
+the implementation of management strategies, lessen pollution and danger to human
+health.
+
+The use of fecal indicator bacteria like Escherichia coli and other coliforms has
+long been practiced in assessing water quality issues. However, it does not detect the
+origin of fecal pollution. Microbial Source Tracking (MST) methods are either
+population-based (library-dependent) or species-based (library-independent) (Harwood
+et al., 2014). Both methods utilize microbes with ecological or evolutionary
+relationships to the host or source thus providing ways to determine sources of
+microbial contamination in environmental samples (Stewart et al., 2006). A recent
+library-dependent method using direct DNA sequencing technologies has been
+recommended for application in MST (Newton et al., 2013). According to Gilbert &
+Dupont (2011), the rapid development of sequencing technologies has made it possible
+
+to characterize and even sequence large environmental samples of bacterial
+
+communities from a variety of sources. Next-generation sequencing (NGS) or high-
+throughput sequencing allows multiple samples to be sequenced simultaneously
+through the incorporation of barcode strategies (Cardenas & Tiedje, 2008).
+Metagenomics is an application of NGS, which involves the analysis of a collection of
+genes sequenced from the environment, thus allowing for the characterization of
+communities of organisms. Although numerous studies have used NGS to determine
+microbial communities from different samples, only a few reports have utilized this
+technology for MST purposes focusing on identifying potential host-specific fecal
+indicators and examining the source of fecal contamination across a range of fecal and
+water samples (Jeong et al., 2011; Unno et al., 2010).
+
+Eukaryotic microbes also make up a large proportion of microbial diversity,
+specifically protists and fungi accounting for 17% of the global microbial biomass and
+protists making up 25% of microbial eukaryotic biomass (Bar-On et al., 2018). Their
+existence in environments is shaped by ecological parameters such as pH, temperature,
+salinity and dissolved oxygen (Amaral-Zettler, 2013; Duret et al., 2015; Stefanidou et
+al., 2018). However, despite their large contribution to microbial diversity,
+metagenomic studies frequently focus on prokaryotes, thereby creating knowledge gaps
+in the metagenomic reports about microbial eukaryotes (West et al., 2018). Hence,
+progress in identifying eukaryotic components must be considered. Over the past years,
+Cryptosporidium and Giardia species, commonly known protozoan pathogens of
+concern in surface waters, are at most utilized as indicators for fecal contamination
+(Snel et al., 2009). With the application of NGS in characterizing the eukaryotic
+microbial community for MST, one could give extensive information on eukaryotic
+
+microbial genera that could be additionally utilized as source-specific markers.
+
+The primary focus of this study was to trace sources of microbial contamination
+in the PAMARISAN River System by investigating microbial communities of fecal and
+water samples using NGS, specifically, targeting eukaryotic microbes. Specifically, the
+study aimed to answer the following research questions: (1) What microbial eukaryotic
+communities are unique and dominant across river, sewage, and fecal samples between
+dry and wet seasons? (2) What eukaryotic microbial pathogens are observed across
+samples? (3) What is the dominant source of contamination in the rivers? (4) What
+water quality parameters affect the microbial community structure?
+
+Using NGS of the resulting amplicon targeting the V4 region of the 18S rRNA
+gene, the microbial communities and diversity of the fecal and environmental samples
+can be characterized and compared, respectively. With this, potential microbial
+eukaryotic indicators specific to the host source can be identified. In addition, the use
+of a machine learning program would allow the determination of fecal contamination
+
+sources in the rivers.
+
+CHAPTER 2
+REVIEW OF RELATED LITERATURE
+
+2.1. Microbial Contamination in the PAMARISAN River System
+
+The PAMARISAN River System comprises Pasig River and its
+tributaries, Marikina and San Juan Rivers as shown in Figure 1. Pasig River
+runs 27 km long and flows westward from Laguna de Bay through Napindan
+Channel, then links downstream with Marikina and San Juan rivers, and finally
+drains to Manila Bay through Baseco Channel. The river serves as
+transportation from Manila Bay to Laguna Lake or vice versa, and a water
+
+source for Metro Manila residents (Corre et al., 2020).
+
+Marikina River
+
+San Juan River 1
+s
+f ‘4
+fA
+x
+1 a
+v t
+‘ s
+4
+- =-\er F
+or tantiae (
+C4
+be (
+Newel of
+sad
+a
+s.
+.
+»
+Pasig River
+
+Figure 1. Map showing the PAMARISAN River System (R Core Team, 2022).
+
+Marikina River, a 78-km water system and the largest tributary of Pasig River,
+flows from the Sierra Madre Mountains in Rizal and passes through Rizal provinces
+and Marikina City. It has also been recognized for its rich and clean water and bank
+often utilized for recreational purposes (Balinado et al., 2019). San Juan River, on the
+one hand, is a 10-km long water body which begins near La Mesa Dam and flows
+through the cities of Quezon, San Juan, Mandaluyong, and Pasig. The river also
+provides a means of transportation and water source for industrial and domestic uses
+(Gorme et al., 2010). The PAMARISAN River System is mostly surrounded by several
+establishments and residential houses in highly urbanized areas in Metro Manila
+making them susceptible to pollution.
+
+Ever-increasing industrialization and population in Metro Manila are
+reciprocated with several environmental problems within the river system. This
+includes the concern about chemical contamination with an increase in heavy metal
+compounds coming from nearby establishments with either improper discharge of
+effluent, chemicals left untreated, or no proper protocol for waste management
+(Paronda et al., 2019). With this, eutrophication comes in contributing to algal bloom,
+and a decrease in dissolved oxygen results in inhibiting the survival of aquatic species
+(Clemente, 2020). A study by Azuma et al. (2017) reveals high chemical oxygen and
+biochemical oxygen demands in one tributary of Pasig River. Moreover, anthropogenic
+and animal wastes and overexploitation in water resources also created habitat
+degradation and water deterioration over time making these rivers biologically dead
+especially during the dry season (Lazo et al., 2009). Due to these environmental
+challenges, water quality in the river system continues to worsen with the threat of the
+
+emergence of microbial pathogens.
+
+Microbial contamination is a serious threat to human health as the presence of
+pathogens such as bacteria, protozoa, and viruses cause detrimental effects commonly
+affecting the gastrointestinal tract, respiratory tract, eyes, and skin (Praveen et al., 2016;
+Stewart et al., 2006). Most of these pathogens are linked with waterborne diseases
+which are primarily found in the feces of humans and animals (Leclerc et al., 2002).
+Aside from humans, other species like livestock and wildlife from nearby surface
+waters are also considered sources of this contamination (Farnleitner et al., 2010;
+Wardrop et al., 2018). Only a few studies have reported the presence of harmful
+microbes in the PAMARISAN River System. Among them are the studies from Tan &
+Hedreyda (2020) and Guzman et al. (2020) where opportunistic pathogens
+Acinetobacter baumannii and Morganella morganii were isolated from the sampled
+waters in Pasig River. In addition, two subgenotypes of HAV, a virus which causes
+acute hepatitis, have also been detected in the river (Bai et al., 2019). The occurrence
+of Salmonella spp. and Enterococcus sp. were also reported in the irrigation waters of
+urban farms in Quezon City and Marikina City (Garcia et al., 2015; Oliveros & Vital,
+2022). Moreover, fecal and total coliform counts in Pasig and Marikina rivers surpassed
+the acceptable DENR standard threshold values (Castro & Obusan, 2023). This
+suggests that the water contamination might possibly be human-derived. Other water
+bodies near the river system have also been observed to be contaminated with
+pathogenic microorganisms. Pathogenic bacteria under Class Clostridia and protozoans
+Giardia spp., Cryptosporidium spp., Acanthamoeba spp., and Naegleria spp. were
+detected in rivers located in Metro Manila, Cavite, and Batangas (Labana et al., 2016;
+
+Onichandran et al., 2014).
+
+Throughout the years, the public has been aware of the risks associated with
+microbial-contaminated water, and with that, water quality monitoring done by
+government sectors has also been increasing. However, proper assessment and
+discussion of water quality issues are still lacking with no clearly identified sources of
+contamination (Teaf & Garber, 2011). Although water monitoring through MST is a
+challenging task, the method promises results in improving water quality monitoring
+
+strategies (Simpson et al., 2002).
+
+2.2. Microbial Eukaryotic Contamination in Aquatic Systems
+
+Eukaryotic microbes include a diverse group of species with unique
+morphological and biological characteristics. Microbial eukaryotes are composed of
+protists, microalgae, and microfungi with protists and fungi dominating the population
+(McGrath & Katz, 2004). Despite the wide range of research in terms of their
+importance in the ecosystem (Kamp et al., 2015), their metabolism (Bhattacharjee &
+Rosen, 2007; Worden et al., 2004), and evolutionary relationships (Keeling, 2019),
+metagenomic studies investigating their community composition are far lesser than
+prokaryotes thereby needing further attention. Only a few studies have been published
+focusing on their diversity and community composition in surface water samples such
+as in estuaries (Santoferrara et al., 2014), brine pools (Wang et al., 2014), ocean (Lepere
+et al., 2011; Massana & Pedrés-Alid, 2008; Piganeau et al., 2008), and even deep sea
+(Bik et al., 2012). Independent of that subject are also community composition and
+diversity studies relating to the human microbiome (Parfrey et al., 2011) and
+mammalian gut (Parfrey et al., 2014).
+
+Through the years, bacteria and viruses are commonly known organisms
+
+associated with human diseases, however, microbial eukaryotes can also be responsible
+
+8
+
+for some illnesses but with lesser prevalence than prokaryotes (Dawson, 2005; Esch &
+Petersen, 2013; Logrieco et al., 2003). Some documented microbial eukaryotic
+contaminants which pose human health risks are mostly species belonging to Kingdom
+Protista specifically Giardia sp., Toxoplasma sp., and Cryptosporidium sp. which are
+known parasites that are released to marine or soil environments coming from feces of
+humans, wildlife, and domesticated animals (Fayer & Trout, 2005). Toxin-producing
+dinoflagellates and microalgae have also been recorded from sampled bivalves (Basti
+et al., 2015; Matsuyama, 2012) and surface waters (Chen et al., 2019) across various
+countries. With these, improved strategies like MST in mitigating chronic impacts
+brought by contaminants to both aquatic life and human health must be considered
+(Burkholder, 1998). Protozoans such as Cryptosporidium and Giardia species which
+are high-risk zoonotic contaminants are often utilized as indicators for fecal
+contamination (Snel et al., 2009). However, studies on the use of eukaryotic microbes
+as indicators are not well documented as well as their application in molecular
+approaches. As of now, no research has been conducted on the use of NGS in attributing
+
+microbial eukaryotic composition to MST.
+
+2.3. Microbial Source Tracking (MST) Methods
+
+In general, MST refers to a variety of methods used to identify host sources of
+fecal or microbial contamination in a certain environment. This is also beneficial to
+determine the degree of contamination that could affect human health during contact
+with water (Scott et al., 2002; Stoeckel & Harwood, 2007). In addition, the method can
+somehow provide modeling risk to human health and evaluate or assess effective
+strategies and best management practices (Simpson et al., 2002). MST can be
+
+categorized into library-dependent and library-independent. Library-dependent
+
+9
+
+methods usually depend on the database or library construction of microbial profiles
+from known fecal sources and are then compared with a contaminated environmental
+sample to attribute the source of contamination (Mott & Smith, 2011). On the other
+hand, library-independent methods utilize molecular protocols to look for the host-
+specific organisms or genetic markers from the contaminated sample (Bernhard &
+Field, 2000; Carson et al., 2005).
+
+Library-dependent methods can be either phenotypic or genotypic. Phenotypic
+methods require culture and isolation of bacteria from different samples and then
+correlate through direct subtype matching. Usually, distinguishing attributes of fecal
+indicator bacteria such as Escherichia coli and other enterococci are utilized for
+matching (Harwood et al., 2003). Some of the methods include antibiotic resistance
+analysis (ARA) (Whitlock et al., 2002; Wiggins, 1996), fatty acid methyl esters
+(FAME) (Duran et al., 2006), and carbon utilization profiling (CUP) (Moussa &
+Massengale, 2008; Nemec & Massengale, 2010) with ARA being the least expensive
+(Wiggins, 1996). On one hand, genotypic methods such as ribotyping, amplified
+fragment length polymorphism (AFLP), denaturing gradient gel electrophoresis
+(DGGE), pulse-field gel electrophoresis (PFGE), and repetitive element sequencing-
+based PCR (Rep-PCR), also involve bacterial isolation yet utilize microbial fingerprints
+to identify the source of contamination (Scott et al., 2002). In the Philippines, few
+studies have used the genotypic library-dependent method such as Rep-PCR and DNA
+fingerprinting of E. coli isolates to track sources of fecal contamination across
+environmental waters within the Greater Manila Area (Labrador et al., 2020; dela Pefia
+
+et al., 2021; Nacario et al., 2022). Although being used as a traditional method for MST,
+
+10
+
+both methods tend to be laborious as these involve the production and validation of a
+library or database for every specific geographical site (Ahmed, 2007).
+
+In terms of library-independent methods, the majority are culture-independent.
+The method clearly shows the advantage of not needing to culture microorganisms and
+at the same time provides participation for many microbes that cannot be cultured
+(Wuertz et al., 2011). Among these library-independent culture-independent methods,
+most utilize PCR in order to amplify and directly target specific genes of interest
+associated with bacteria mostly focusing on the 16S rRNA gene thereby creating high
+accuracy in source tracking as well as in detecting pathogens. In addition, the use of
+qPCR can also provide a quantitative determination of several gene targets which
+makes it more beneficial (Field et al., 2003; Harwood et al., 2009). Through time,
+bacteria and viruses commonly present in the gastrointestinal tract of the host tend to
+have similarities with their host genetic makeup making one a potential host-specific
+candidate. Specifically, gene markers of Bacteroides sp. are frequently used for
+detecting humans as a source of contamination since it was observed that it dominates
+the human fecal bacterial population (Ko et al., 2018; Okabe et al., 2007). Microbial
+eukaryotes such as Cryptosporidium spp. and Giardia spp. have also been used to
+source track fecal contamination in environmental waters (Ruecker et al., 2007; Yang
+et al., 2008 Prystajecky et al., 2014; dela Pefia et al., 2021). Another alternative method
+is the use of bacteriophage which is a library-independent culture-dependent method,
+and its high specificity and stability in various environments propose a promising tool
+in source tracking (Hundesa et al., 2010).
+
+A study in the Philippines has also utilized a library-independent method for
+
+source tracking of fecal contamination in Laguna Lake using genetic markers such as
+
+1
+
+host-associated E. coli and human mitochondrial DNA (Abello et al., 2021) as well as
+Bacteroides 16S rDNA-based markers (Malajacan et al., 2023) specific to animal and
+human host sources. Studies showed that library-independent methods tend to have
+higher specificity and sensitivity when compared to library-dependent methods.
+However, since no host-associated assays are purely specific to their host target, cross-
+
+reactivity may occur (McLain et al., 2009).
+
+2.4. NGS-based MST
+
+Through the years, the rapid progress in sequencing technology gave way to more
+advanced sequencing methods to be introduced. Most DNA sequencing studies are now
+performed through NGS which has higher daily throughput as compared to Sanger
+sequencing. One advantage is that the nucleotides are being sequenced either in a series
+of repetitions or real-time manner tenfold than that of Sanger sequencing (Ari & Arikan,
+2016; Hert et al., 2008). Due also to its reduced cost, several laboratories solely rely on
+this type of sequencing (Kircher & Kelso, 2010).
+
+Two commercial NGS equipment are commonly being utilized, the Roche 454
+Genome Sequencer (GS) and the Illumina Genome Analyzer. Roche 454 GS does not
+need to undergo separation protocol as the nucleotide bound with DNA polymerase is
+automatically detected during light emission (Liu et al., 2012). Longer read length is
+also an edge in using this system as this allows high accuracy for taxonomic
+classification (Pearman et al., 2020). On the other hand, the Illumina platform employs
+a similar method to Sanger sequencing where physical separation is needed because the
+reaction between DNA polymerase and nucleotide is terminated after each base.
+Although the method only sequences shorter reads, it can still provide highly accurate
+
+results since it can sequence a billion reads at once as detected by optical signals
+
+12
+
+(Bentley et al., 2008). Despite similarities in their limitations such as dephasing and
+increase in noise background, most comparative studies have shown that the Illumina
+system, although produces shorter reads, showed better assessment in terms of
+background error, contig length, and frameshift frequency as shown in the study of Luo
+et al. (2012) when evaluating planktonic community. In addition, studies from Li et al.
+(2014) and Hirai et al. (2017) also displayed higher sequence coverage and detection of
+HIV-1 minority variants as well as higher accuracy in characterizing the copepod
+community, respectively, when using Illumina Analyzer. With the accessibility of both
+methods, one can evaluate their accuracy and at the same time correct traditional-based
+sequences from the database (Schuster, 2008).
+
+One application of NGS includes the characterization of communities of
+organisms like microbial communities, which is commonly known as metagenomics.
+The samples are directly subjected to DNA extraction and are then ready to be analyzed
+thereby avoiding the need for some time-consuming bacterial culture and isolation
+(Hugenholtz & Tyson, 2008). It also allows the combined analysis of several samples
+being sequenced at the same time thus providing each sample with a more accurate
+characterization (Baran & Halperin, 2012). Sequence-based metagenomics is divided
+into two methods, the use of amplicon or marker genes to reveal microbial composition
+and diversity, and the use of whole genome or shotgun metagenomics where sequences
+are generated at random (Tessler et al., 2017). Clearly, NGS tools have allowed large-
+scale sequencing studies of multiple samples derived from various ecosystems such as
+surface waters (Sunagawa et al., 2015; Yang et al., 2015), soil (Schmidt et al., 2013),
+and even gut microbiota (Ghanbari et al., 2015; Maccaferri et al., 2011) targeting either
+
+the whole genome or hypervariable regions of the rRNA gene. Aside from that, the
+
+13
+
+technology is currently being used for MST purposes; however, only a few studies have
+been conducted.
+
+Some studies have only looked at water samples, including the study of Wilhelm
+et al. (2011) where bacterial communities from sampled surface waters of Taihu Lake
+in China were investigated using pyrosequencing targeting the V3 region of the 16S
+rRNA gene. The study determined potential fecal indicator bacteria and found that the
+source of contamination is not human. Others have focused on fecal materials, in
+particular on the study of McLellan et al. (2010) where the V6 region of the 16S rRNA
+gene was targeted in order to observe community profiles as well as to track the source
+of contamination in the sewage samples collected from an untreated wastewater plant
+in Wisconsin, USA. On the other hand, Lee et al. (2011) focused on the V2 region of
+the 16S rRNA gene of various animal and human fecal sources in order to determine
+potential bacterial markers for identifying sources of river contamination in South
+Korea. A study from Hewitt et al. (2013) also utilized the V2 region of 16S rRNA gene
+to compare the bacterial communities between neonatal intensive care unit samples
+(NICUs) and published amplicon sequences of potential sources. Using SourceTracker,
+NICU samples displayed similarity with building surface and air samples with a high
+proportion of opportunistic pathogens like Propionibacterium species. Similarly, a
+study from Knights et al. (2011) also utilized SourceTracker to determine the percent
+contribution of possible sources of contamination such as gut, oral, skin, and soil
+contamination to the laboratory, office, and NICU samples. It was found that the
+contaminated sink samples were mostly dominated by skin bacteria. SourceTracker is
+a Bayesian approach tool in estimating the ratio of contaminants from potential source
+
+environments. This gives wide-range of applications in terms of reducing errors in PCR
+
+14
+
+and sequencing as well as in forensics and environmental pollution (Knights et al.,
+2011).
+
+A study by Bauza et al. (2019) on the other hand, utilized Illumina sequencing
+targeting the V3 and V4 hypervariable regions of 16S rRNA to examine microbial
+community composition of young and adult human feces and compare it to a range of
+samples collected from inside (surfaces) and outside (drainage, nearby stream, soil) of
+households in the urban slums of Nairobi, Kenya. The same objective was pursued in
+the studies of Unno et al. (2010) and Jeong et al. (2011) except that 454 Roche
+pyrosequencing platform was utilized and a wide range of fecal samples from animal
+and humans were observed to determine sources of river contamination in South Korea.
+Similarly, 454 pyrosequencing was also utilized targeting the V4 region of the 16S
+tRNA gene as observed in the study of Neave et al. (2014) to track the source of water
+contamination in Darwin harbor of northern Australia. Results showed that the main
+source of contamination was the sewage effluent of an inner suburb near the harbor. A
+study by Liang et al. (2021) also utilized the V3-V4 region of the 16S rRNA gene to
+source track contamination in the Fsq river in China. The Fast Expectation-
+Maximization for Microbial Source Tracking (FEAST) program developed by Shenhav
+et al. (2019) was used to obtain the percent contribution of sources to sink. Results
+showed that humans were prevalent during the dry season, while swine and ruminant
+were dominant during the wet season. Lastly, a study by Gad et al. (2022) tracked the
+microeukaryotic footprint in a watershed in China and found that sediments, sewage
+effluents, and influents were the major sources of the dominant microeukaryotic taxa
+like Stramenopiles, Alveolates, Rhizaria, Opisthokonta, Archaeplastida, and
+
+Amoebozoa.
+
+15
+
+CHAPTER 3
+MATERIALS AND METHODS
+
+3.1. Study area and sample collection
+
+Figure 2 shows the map of the PAMARISAN River System and the
+
+stations where the samplings took place (in black ink).
+
+7
+
+st
+
+s2
+
+(™) )
+@ if
+: y 4 A
+@ 7
+oO wt eg
+ee b |
+st e
+P2 $2 Sampling Sites
+@ 02 x» @ Aviat tarms
+@ @ PANARISAN river stations
+oe @ sewage infuent pants
+@ Batasan (upstream)
+
+Rosa (downstream)
+San Juan River - Culiat
+(upstream)
+
+‘San Juan River -
+Lubiran (downstream)
+
+hb ohn
+TPE
+
+Figure 2. Map showing PAMARISAN river stations, sewage treatment plants,
+
+and animal farms generated using R programming (R Core Team, 2022). The
+
+inset shows the sampling stations relative to the Philippines.
+
+Water samples were collected between December 2021 and March 2023 from
+selected PAMARISAN River System sites in two sampling events to accommodate dry
+(December 2021-April 2022; November 2022-March 2023) and wet (May 2022-
+October 2022) seasons. The selected sites were chosen based on the water quality
+monitoring and sampling sites operated by the Environmental Management Bureau
+(EMB) and the Pasig River Coordinating and Management Office (PRCMO) of the
+DENR (DENR, 2020; DENR-EMB, 2021). Sampling permits were also secured with
+the approval of the University of the Philippines Diliman’s Chancellor and the head of
+the said DENR agencies. Each river is represented by its upstream and downstream
+sites. Pasig, Marikina, and San Juan Rivers are represented by Napindan (P1), Batasan
+(M1), and Culiat (S1) as their upstream sites, while Baseco (P2), Sta. Rosa (M2), and
+Lubiran (S2) served as the downstream stations, respectively. A list of river stations
+with coordinates is shown in Appendix Table A1, while the number of river samples is
+shown in Table 1. The measurement of the water quality parameters such as the
+biochemical oxygen demand (BOD, mg/L), color (TCU), total suspended solids (TSS,
+mg/L), phosphates (mg/L), nitrates (mg/L), fecal coliform (MPN/100mL), dissolved
+oxygen (DO, mg/L), pH, and temperature (°C) were obtained from the PRCMO and
+EMB. The results obtained were also compared with the Water Quality Guidelines
+(WQG) Classifications B and C of the DENR to accommodate different recreational
+activities such as bathing and swimming (Class B), as well as boating, fishing, and
+other similar activities (Class C) (Department of Environment and Natural Resources,
+2016).
+
+Two-liter water samples were obtained from a 20-cm depth per sampling station
+
+and stored in sterile wide-mouth Nalgene bottles (ThermoFisher Scientific, NY, USA).
+
+17
+
+All collected samples were stored in an ice box and immediately transported to the
+laboratory for processing. Depending on the turbidity, 500mL—1 L per sample was
+filtered through a 47 mm x 3 ym mixed cellulose ester (MCE) membrane (Newstar,
+Hangzhou, China) to retain microbial eukaryotic cells. Filter papers were then
+suspended with DNA/RNA Shield (Zymo Research, CA, United States) and stored at
+—20°C until DNA extraction.
+
+Five individual fecal samples from each of the potential host sources including
+cow, dog, duck, poultry, and swine were collected at the farms within the Greater
+Manila Area, surrounding the PAMARISAN River System. For human fecal-derived,
+the influent wastewater collected from sewage treatment plants near the river system
+served as sewage representatives in dry and wet seasons. A list of farm sites and sewage
+treatment plants with coordinates is also shown in Appendix Table Al. Meanwhile, the
+number of fecal and sewage samples collected is shown in Table 1. All fecal samples
+were collected in stool cups and transported immediately to the laboratory.
+Approximately 0.25 g of feces was weighed, suspended with DNA/RNA Shield (Zymo
+Research, CA, United States), and kept at -20°C in preparation for DNA extraction. In
+addition, 250-500 mL of each sewage sample was filtered through a 47 mm x 3 pm
+mixed cellulose ester (MCE) membrane (Newstar, Hangzhou, China) to retain
+
+microbial eukaryotic cells. Filter papers were then stored at —20°C as fecal samples.
+
+18
+
+Table 1. Number of river, sewage, and fecal samples collected.
+
+Sample Ty pe Dry Wet No. of individual fecal Total
+asi wt < samples per host source
+River 6 6 12;
+Sewage 2 2} 4
+
+n
+N
+D
+
+Fecal (cow, dog, duck,
+poultry, swine)
+
+For biosafety practices, processing of water, sewage, and fecal samples
+involved handling microorganisms under risk group 2, specifically using general
+aseptic techniques, biosafety cabinet II (BSCII), and proper protective equipment
+(PPE). On the other hand, the classification of agents to be handled in environmental
+DNA samples is under risk group 1. All samples were decontaminated at 121°C for 15
+minutes prior to disposal.
+
+3.2, Library preparation and metagenomic sequencing
+
+DNA from individual fecal samples was extracted using a ZymoBIOMICS™
+DNA/RNA Miniprep Kit (Zymo Research, CA, United States). On the other hand,
+DNA of sewage and surface water samples was extracted using E.Z.N.A.® Soil DNA
+Kit (Omega Bio-tek, Inc, GA, United States). Quantitation and purity of DNA were
+determined using Invitrogen Qubit 4 Fluorometer (Thermo Fisher Scientific Inc., MA,
+United States) and Multiskan SkyHigh Microplate Spectrophotometer (Thermo Fisher
+Scientific Inc., MA, United States), respectively. A ratio ranging between 1.8 and 2.0
+from A260/A280 reading served as the basis of a highly purified DNA to be utilized
+for further sequencing preparation. Afterward, these samples were sent to Apical
+
+Scientific Sdn. Bhd. (Malaysia) for final DNA and amplicon polymerase chain reaction
+
+19
+
+(PCR) quality check, library preparation, library quality check, and amplicon
+metagenomic sequencing.
+
+In the Apical Scientific Sdn. Bhd. (Malaysia), the quality of the DNA samples
+was visualized on 1% Tris-Acetate-EDTA (TAE) agarose gel, while the quantity was
+measured using Implen NanoPhotometer® N60/NS50 (Implen, LA, United States) and
+iQuant™ Broad Range dsDNA Quantification Kit (GeneCopoeia, MD, United States).
+The 18S rRNA gene was amplified using the eukaryotic primers 528F
+(GCGGTAATTCCAGCTCCAA) and 706R (AATCCRAGAATTTCACCTCT)
+targeting the fungal V4 hypervariable region (Cheung et al., 2010). The V4
+hypervariable region of the 18S rRNA gene reveals higher-level taxonomic groups,
+similar to that of the full-length gene, as compared to other hypervariable regions such
+as V9 (Dunthorn et al., 2012; Mitsi et al., 2023). The samples were then subjected to
+amplicon library preparation based on IIlumina’s 18S metagenomic library preparation.
+The libraries were then pooled and sequenced using MiSeq platform with Illumina
+Nextera XT Index Kit v2 to obtain 300-bp paired end reads with an output of
+approximately 100,000 raw tags per sample.
+
+3.3. Bioinformatics processing and metabarcoding via ASV-based analysis
+
+The bioinformatics pipeline for processing of the sequences was based on the
+workflow used by Apical Scientific Sdn. Bhd. (Malaysia). Poor quality regions of
+metagenomic raw reads were quality control checked using FastQC
+(https://www. bioinformatics.babraham.ac.uk/projects/fastqc/) and trimmed with
+Cutadapt, using an average quality score of 30 and a minimum read length threshold of
+20 bp (Martin, 2015). Sequences were sorted for a perfect match to the sequencing
+
+adaptor indicated by the provider. The remaining sequences were also filtered into
+
+20
+
+separate files based on a perfect match to predefined barcode sequences. The barcode
+sequences were then removed to not cause interference for sequence quality control and
+feature table construction with DADA2 V1.18 (Callahan et al., 2016). Trimming and
+filtering of the demultiplexed fastq files were done using the DADA2 fastqPairedFilter
+function. Paired-end reads were denoised and merged using the DADA2 mergePairs
+function. In addition, the isBimeraDenovo in the DADA2 R package was used for
+adding a chimera-checking and removal script to sequences. Afterward, a feature data
+summary and a list of output sequences known as amplicon sequence variant (ASV)
+sequences were generated. The use of ASV provides a more accurate and detailed view
+of microbial communities than other traditional clustering methods such as operational
+taxonomic units (OTUs) (Callahan et al., 2016). All sequence data generated in this
+study have also been submitted to the NCBI Sequence Read Archive (SRA) and have
+currently pending accession numbers. The accession numbers will be provided upon
+their availability.
+3.4. Diversity and taxonomic composition of eukaryotic microbial communities
+Microbial community diversity was measured with alpha and beta diversity
+metrics. Alpha diversity, which refers to the species richness, evenness, or even both
+within a sample, was measured using Shannon and Simpson indices between seasons
+in river samples. On the other hand, beta diversity focuses on the comparison between
+samples based on microbial community composition. Using the vegan R package, beta
+diversity was visualized with non-metric multidimensional scaling (NMDS) plot using
+Bray-Curtis distances in terms of relative abundance of ASVs (Oksanen et al., 2022).
+NMDS represents the best data in two dimensions, and plots the sample units based on
+
+rank order in such a way that sample units with similar original distance matrices are
+
+21
+
+closer together than those with dissimilar matrices (Oksanen et al., 2022). A
+Permutational Multivariate Analysis of Variance (PERMANOVA) using the Adonis
+function was then used to assess the spread or dispersion of overall microbial
+communities, communities of river and sewage samples, and communities of
+pathogens. The use of the PERMANOVA test was based on the assumption of
+Homogeneity of Multivariate Dispersion which states that the dispersion of groups
+should be similar (Anderson, 2006). The homogeneity test using betadisper function
+showed no significant differences in multivariate dispersion, allowing the use of the
+PERMANOVA test (Appendix Tables C1, C3, C5, and C7).
+
+The eukaryotic microbial community was characterized based on the ASVs
+across fecal and environmental samples representing phylum and genus levels.
+Taxonomy assignment of the chimera-removed sequence variants was done using the
+SILVA nr database V138.1 algorithm (Quast et al., 2012). The data generated from
+SILVA were then subjected to R programming (R Core Team, 2022) for taxonomic bar
+plot visualization of the |sequences. The use of indicspecies R package determined the
+unique or key species which allowed for the recognition of potential eukaryotic
+microbial indicators in each sample (De Caceres & Legendre, 2009). The indicator
+species analysis package uses its multipatt() function with the default IndVal index as
+the test statistic and the number of random permutations which is 999 (nperm=999) (De
+Caceres & Legendre, 2009). In addition, the presence of important ecological and
+pathogenic microbial eukaryotes was also determined across river samples between two
+seasons. All data visualization was conducted using ggplot2 R package (Wickham,
+
+2016).
+
+22
+
+3.5. Source-tracking and statistical analyses
+
+The relative contribution of eukaryotic microbes from potential sources to sink
+samples was analyzed using five independent runs of the Fast Expectation-
+Maximization for Microbial Source Tracking program or FEAST (Shenhav et al.,
+2019). The ASV dataset of individual fecal and sewage samples was obtained to create
+a “source” library, while the ASV dataset of water samples during dry and wet seasons
+was classified as “sinks”. The source tracking analysis was validated by pooling equal
+proportions of DNA concentration from the source samples in triplicates, and
+comparing these proportions to the percentages estimated by FEAST (Fuhrmeister et
+al., 2020). Ideally, the resulting predictive values generated by FEAST must be
+consistent or closer to the original set of DNA concentration proportions.
+
+NMDS plot using Bray-Curtis distances was performed to determine association
+between the environmental water parameters and eukaryotic microbial communities in
+sink samples across dry and wet seasons. The goodness of fit in each environmental
+parameter was estimated through envfit function with 999 permutations. Spearman’s
+rank correlation test was used to reveal the association between water quality
+parameters and microbial eukaryotic communities of dominant phyla. Wilcoxon rank-
+sum test was performed to determine any significant differences between seasons in
+terms of significantly enriched ASVs, alpha diversity indices, microbial communities
+of dominant phyla in sink samples, environmental water parameters, and percent
+contribution of host sources to sinks. The test was also utilized to identify significant
+differences of microbial community patterns across sink and sewage samples per
+season. Moreover, significant differences between contributions of sources to sinks
+
+were determined across upstream and downstream sites of the river system in each
+
+23
+
+season using Kruskal-Wallis test. Comparison of shared and unique ASVs across all
+samples and ecologically important pathogens was visualized using the UpSetR
+package (Gehlenborg, 2019). All statistical analyses were conducted in R v 4.1.3 (R
+Core Team, 2022).
+
+A flowchart of the general methodology is given in Figure 3.
+
+‘Sample collection
+and processing
+
+“Measurement of
+physicochemical
+rameters
+
+Alpha and Beta
+rersity
+
+Taxonomic
+
+composition of
+
+Measurement and microbial cukuryotic
+i communities
+
+preservation of fecal samples
+Identification ot
+pathogens
+
+Indicator species
+analyses
+
+samples
+
+Filtration and preservation of
+water and sewage samples
+
+‘brary preparation
+‘and metagenomic
+sequencing
+
+Final DNA and
+
+‘Correlation of water
+
+rameters with
+CS) microbial eukaryotic
+Quantitation and ]{ Sending of samples r Cin composition
+purity of DNA |] to Apical Scientific rezions using
+sewage samples samples Malaysia for 18S S24F and 706R Source racking
+metagenomic Primers analyses using
+
+sequencing FEAST
+
+Library
+sequencing
+using lumina
+Miscq platform
+
+Quality assessment
+‘and trimming in Fast
+QC and Cutada
+
+‘Bioinformatics
+
+ing and ‘Quality assessment
+y demultiplexed
+
+sequences
+
+sequences
+Error rate estimation
+and sample
+interference
+
+Figure 3. Flowchart of the general methodology.
+
+SILVA ar datubuse
+
+24
+
+CHAPTER 4
+RESULTS AND DISCUSSION
+4.1. Seasonal variations in terms of diversity in the PAMARISAN River
+System
+
+The 18S metagenomic sequencing produced a total of 1,687,456 filtered
+sequence reads in sink samples. Specifically, 1,510 ASVs are detected in the
+dry season and 1,127 ASVs in the wet season (Figure 4A). The Venn diagram
+in Figure 4A displays the number of unique ASVs in each season where 1,177
+and 794 unique ASVs are observed for dry and wet seasons, respectively. In
+addition, 333 ASVs are shared by both seasons, where only one ASV had a
+significantly higher relative abundance in the wet season (P = 0.0184, Figure
+4A and Appendix Table D1). Seventeen dominant ASVs with relative
+abundances greater than 1% belong to Orders Ochrophyta, Ciliophora,
+Chlorophyta, and Dinoflagellata in the dry season. In wet season, eight
+dominant ASVs belong to Orders Ciliophora, Ochrophyta, Protalveolata,
+Chlorophyta, and Cercozoa with relative abundances greater than 1%
+(Appendix Table B1).
+
+Alpha diversity metrics used in the study include Shannon and Simpson
+which account both species richness and evenness in a sample. Shannon
+diversity gives balance on accounting all species in a sample thereby being more
+particularly sensitive to rare species, whereas Simpson diversity squares the
+relative abundances thus emphasizing the metric to be driven by the most
+abundant organisms (Morris et al., 2014). Although no significant differences
+
+are observed across the alpha diversity metrics between two seasons (P > 0.05,
+
+Appendix Table D2), it is noteworthy that Shannon diversity is higher in the dry than
+in the wet season (3.74 and 3.16 mean Shannon for dry and wet seasons, respectively),
+while Simpson diversity is higher in the wet than in the dry season (0.0688 and 0.150)
+(Figure 4B). In both seasons, the dominant phyla are SAR (69.7% mean abundance),
+Opisthokonta (18.9%), and Archaeplastida (10.2%), while low dominance is found in
+Excavata (0.29%) and Amoebozoa (0.09%) (Figure 4C). In terms of comparing the
+relative abundances of dominant phyla between the two seasons, Archaeplastida,
+Excavata, Opisthokonta, and SAR are higher in the dry than in the wet season, while
+Amoebozoa is higher in the wet season (Figure 4C). Similar to alpha diversity,
+significant differences are not observed in terms of dominant microbial eukaryotic
+community composition at the phylum level between dry and wet seasons (P > 0.05,
+
+Appendix Table D3).
+
+26
+
+Shannon Simpson |
+
+eS rir Shaved Toy
+333
+0 —
+
+im Season
+. | Sy
+| S Wet
+3
+4 |
+3
+
+logsFC
++ cise BONS a, ry
+%, SE >: s
+Cc y a
+a A
+4
+/ .
+] \.
+j t
+{ fe Amoebozoa
+i
+}
+\ i Wh 0bIesHa4
+fo &
+\ fava,
+
+Rep a
+é en ae “te,
+
+Figure 4. Differences in microbial eukaryotic communities in river samples between
+the dry and wet seasons. (A) Venn diagram displaying the distinct and shared ASVs
+between the two seasons. Only one ASV is significantly enriched in the wet season
+(Wilcoxon rank-sum test, P < 0.05) and displayed as a yellow-colored dot in the upper
+right quadrant of the volcano plot. Gray-colored dots signify non-significant AS Vs. The
+
+plot was made using log2 fold change (FC) on the x-axis and -log10 p-values of the
+27
+
+statistical test on the y-axis. (B) Alpha diversity indices (Shannon and Simpson) of
+microbial eukaryotic communities in dry and wet seasons. (C) Radial network diagram
+displaying the relative abundances of dominant phyla during dry and wet seasons.
+
+The results showed similarities in the composition pattern and alpha diversity of
+microbial eukaryotic communities between dry and wet seasons, suggesting the small
+impact of seasonal variations due to limited samples representing the seasons. However,
+it should be noted that Shannon is higher in the dry compared to the wet season. In other
+words, the richness, evenness, and sensitivity to rare taxa in the community are higher
+in the dry season. This is similar to the study of Ren et al. (2019) where alpha diversity
+of bacterial communities in a freshwater lake is higher in the dry season, and that
+variation in nutrient concentrations in the lake stimulated the differences. In contrast,
+Simpson diversity index is higher in the wet than in the dry season, emphasizing high
+species richness and evenness of the dominant taxa during the wet season. Moreover,
+one ASV belonging to Cryptomycota is significantly enriched in the wet season,
+indicating its uniqueness and higher abundance compared to the dry season. A study
+from Looby & Treseder (2018) displayed that Cryptomycota communities are more
+adapted to wet conditions, suggesting their high richness in soils with high moisture
+content. Thus, their high abundance during the wet season might be due to this
+preference added with the effect of rainwater in the transfer of these fungal species from
+
+soils to water bodies.
+
+28
+
+4.2. Microbial eukaryotic compositions and diversity across sink and source
+samples
+
+Consistent with the data above, the dominant phyla in sink samples for both
+seasons include SAR, Opisthokonta, Archaeplastida, Excavata, and Amoebozoa in
+decreasing order (Figure 5A). Among the sources except for sewage, their dominant
+phyla are Opisthokonta (66.3% mean relative abundance), followed by SAR (27.1%),
+Archaeplastida (1.73%), Amoebozoa (1.37%), and lastly by Excavata (0.197%) (Figure
+4A). Sewage samples have different patterns from other source samples where SAR
+(43.5%) and Archaeplastida (37.5%) are displayed to be the most abundant phyla
+followed by Opisthokonta (15%), Excavata (0.0228%), and Amoebozoa (0.0108%).
+Distinct patterns of microbial eukaryotic communities across samples are also shown
+at the genus level (Figure 5B). Uncultured LKM11 clade (59% mean abundance) and
+Paramecium (32.5%) are the dominant genera for dry and wet seasons in sink samples,
+although Paramecium is higher in the wet season (38.5%) than in the dry season
+(26.5%) (Figure 5B). Similarly, the high dominance of Paramecium (41.9%) is
+observed among sewage samples. Chicken, cow, dog, duck, and pig fecal samples are
+dominated by Candida-Lodderomyces clade (19.4%), Blastocystis (22.4%), Rhabditida
+(9.71%), Codonella (14%) and Pichia (8.86%), and Mrakia (10.8%) and Kazachstania
+(14.2%), respectively. The differences in microbial eukaryotic community patterns
+across sink and source samples can be observed at the phylum and genus taxa (Figure
+5). In addition, similarities in microbial communities across samples collected within
+the same animal farm and with similar host source types are also observed. Species
+under Candida-Lodderomyces clade dominate all the chicken fecal samples collected
+
+in Malabon, while Kazachstania is the most abundant genus found in Cavite chicken
+
+29
+
+samples. Duck samples collected in Bulacan reveal that Codonella and Pichia are the
+
+most abundant, while those in Cavite are dominated by Candida-Lodderomyces clade.
+
+Lastly, Kazachstania and Mrakia are the most abundant genera collected in Bulacan
+
+5B).
+
+and Cavite, respectively (Figure
+
+| SAR
+
+Incertae_Sedis
+Cryptophyceae
+Haptophyta
+Centronelica
+Picozoa
+SA1-3006
+Collodityonidae
+unclassified
+
+Archaeplastica
+Excavata
+
+‘Amoebozoa
+
+y
+
+,
+
+Source || Source | Source
+
+Source | Source
+
+Source || Source
+
+Source || Source
+
+Source
+
+‘Source
+
+Sample ID
+
+Sink
+
+Sink
+
+75%
+
+s
+
+(%) eouepunge oanejou
+
+25%
+
+100%
+
+F3
+8
+
+(%) e2uepunge oaneioy
+
+75%
+25%
+
+30
+
+Figure 5. Taxonomic bar plot showing relative abundance distribution of microbial
+eukaryotic communities across sink and source samples at the phylum level (A) and
+genus level (B). Only the top 9 genera were displayed in the plot. Other genera with
+<0.001% relative abundances are not shown. Sample ID labels for fecal samples: CV =
+Cavite; ML = Malabon; BL = Bulacan; VL = Valenzuela.
+
+The NMDS plot reveals that the microbial eukaryotic communities of sink
+samples (river samples in dry and wet seasons) tend to cluster together with the sewage
+but separately from the fecal samples (i.e., chicken, cow, dog, duck, and pig),
+suggesting that clustering is based on the nature of the samples. This is consistent with
+the results from the PERMANOVA test where community compositions did not vary
+significantly between sink and sewage samples (PERMANOVA, Pseudo-F = 0.967, P
+= 0.508, Appendix Table C4). However, the distinctiveness of overall microbial
+communities is observed between the sink and source environments (Figure 6), which
+is supported by a significant difference in their microbial community compositions
+based on the number of observed ASVs (PERMANOVA, Pseudo-F = 2.54, P =
+1.00E-04, Appendix Table C2).
+
+In addition, significant differences in relation to relative abundances are observed
+between pairs of rivers and sewage versus rivers per season (Wilcoxon rank-sum test,
+P <0.05, Appendix Tables D4 and D5). In the dry season, microbial communities in
+Marikina River had significantly higher abundance than in Pasig River (P = <2.2E-16)
+and San Juan River (P = <2.2E-16). Significant differences are also observed between
+sewage and the PAMARISAN River System, where a higher abundance of microbial
+eukaryotic communities in sewage samples is evident (P < 0.05). However, no
+
+significant differences were displayed between the Pasig and San Juan Rivers (P =
+
+31
+
+0.981, Appendix Table D4). In the wet season, microbial community compositions
+between all the river and sewage samples are significantly different from one another
+(P < 0.05), except for San Juan River and sewage samples where high relative
+
+abundances in communities are observed (P = 0.201, Appendix Table D5).
+
+Type
+Sink
+Source
+Sample
+04 Chicken
+Cow
+Dog
+River_Dry
+Duck
+| Pig
+3] "Sewage
+River_Wet
+
+0
+NMDS1
+
+Figure 6. The NMDS ordination plot (stress value of 0.142) based on Bray-Curtis
+distances showing variations of microbial communities among sink and source
+environments.
+
+Similar to the study of Fuhrmesiter et al. (2020), samples appear to significantly
+cluster based on sample type (fecal vs environmental), which can be explained by the
+fewer environmental inputs of fecal samples compared to environmental samples
+resulting in their distinct microbial compositions. This is evident in the differences in
+
+dominant genera compositions found in river and fecal samples in this study. Cyclotella
+
+32
+
+(stramenopile) and Paramecium (alveolate) are the most dominant ASVs in sink
+samples during the dry and wet seasons, respectively: all belonging to the SAR
+supergroup which consists of Stramenopila, Alveolata, and Rhizaria. The community
+composition in the river system is consistent with the studies of Bjorbakmo et al. (2020)
+and Gad et al. (2022) showing the dominance and high diversity of SAR communities
+in the aquatic realm. Opisthokonta, a large group consisting of fungi, and
+Archaeplastida, a group comprising of eukaryotic photoautotrophs, are also ubiquitous
+in soil, freshwater, and marine environments, suggesting their abundance in river
+samples (del Campo et al., 2015; C. Zhang et al., 2022). Even though no significant
+differences in community composition are observed between the two seasons, it is
+noteworthy that microbial eukaryotic community composition is characterized by the
+higher abundance of Paramecium and microfungi in the wet than in the dry season,
+which might be linked with tributary inflow. During the wet season, the rainfall
+increases the chance of water inflow from other channels into the river system, thereby
+increasing also the occurrence of Paramecium and microfungal communities in the
+surface waters (O’Brien et al., 2023). Furthermore, the nature of the samples between
+sink and sewage might have resulted in the similarities in their community patterns. In
+addition, these similarities might also be due to a river water intrusion which can serve
+as the major extraneous water source in the sewer systems (Guo et al., 2020).
+
+On the other hand, the high abundance of communities under Candida-
+Lodderomyces clade in chicken feces is explained by the fact that they are commensal
+mycobiota in poultry and can be stimulated by antibiotic and probiotic treatments
+(Ward et al., 2019). Mrakia and Kazachstania spp. are other common gut
+
+microorganisms in animals like pigs that are driven by dietary carbohydrates
+
+33
+
+composition in the host’s gut (Luo et al., 2021). Some ciliates and ascomycetous yeasts
+are also part of gut flora which function in shaping the health of various agricultural
+animals, suggesting the high abundances of Codonella and Pichia spp. in duck feces
+(Newbold et al., 2015; Angchuan et al., 2021). Moreover, the occurrence of Blastocystis
+and nematode infections in cows and dogs, respectively, are also evident as shown by
+the dominance of Blastocystis and Rhabditida species in these fecal samples. It is also
+observed that chicken fecal samples collected in Malabon have similar microbial
+community patterns as compared to chicken fecal samples collected in Cavite.
+Similarly, duck and pig fecal samples in Bulacan showed more similar patterns with
+each other than those fecal samples collected in Cavite. Various environmental factors
+such as antibiotic usage and feed composition during livestock production may have
+resulted in these differences thereby highlighting the impact of different environmental
+and anthropogenic-related factors in shaping the structure of gut-associated protozoa
+and mycobiota in animals (Palleja et al., 2018; Lv et al., 2023).
+4.3. Seasonal variations in the composition of microbial eukaryotic pathogens in
+the PAMARISAN River System
+
+To identify the pathogens that are present in the microbial eukaryotic
+communities, the two topmost important ecological and pathogenic groups, Orders
+Apicomplexa and Fungi, were selected. Dominant species under Order Apicomplexa
+in the dry season include Theileria sp. (0.0446% of total communities) in Pasig River,
+Cryptosporidium spp. (0.00429%) in Marikina River, and Paraschneideria spp.
+(0.00731%) in San Juan River (Figure 7A). On the other hand, Plasmodium (0.00625%)
+and Gregarina spp. (0.00544%) are the dominant Apicomplexans in Pasig and San Juan
+
+Rivers in the wet season, respectively (Figure 7A). Overall, high abundance of
+
+34
+
+Apicomplexans is found in Pasig River during the dry season and San Juan River during
+the wet season (Figure 7A). Although different patterns in community compositions of
+microbial pathogens under Order Apicomplexa are observed, no significant differences
+are found between the two seasons (PERMANOVA, Pseudo-F = 1, P = 1, Appendix
+Table C6).
+
+The high abundance of Paramicrosporidium spp. is observed in Marikina (0.86%
+of total communities) and Pasig Rivers (2.59%) during the dry season, and San Juan
+River (1.42%) during the wet season. In addition, Kodamaea spp. exhibited greater
+abundance in San Juan (1.99%) and Marikina (0.54%) Rivers during the dry and wet
+seasons, respectively. Lastly, Candida-Lodderomyces clade is the most abundant
+pathogenic fungi in the Pasig River (1.52%) during the wet season. Common fungal
+pathogens including Candida (0.742%) and Aspergillus spp. (0.896%) are also
+abundant in the San Juan River during the wet season, while Fusarium spp. (0.91%)
+mostly dominate in the Pasig River during the dry season. In general, pathogenic fungi
+are most abundant in Pasig River and San Juan River during the dry and wet seasons,
+respectively (Figure 7B). Similarly, no significant differences were displayed between
+seasons in terms of the microbial pathogenic composition under Order Fungi
+
+(PERMANOVA, Pseudo-F = 0.369, P = 0.923, Appendix Table C8).
+
+35
+
+Total @
+
+Theileria
+Paraschneideria
+Plasmodium
+
+Gregarina
+
+Cryptosporidium (@)
+
+Hoplorhynchus
+
+Tota!
+
+Paramicrospondium
+
+Candida-
+Lodderomyces clade
+
+Exophiala
+
+‘Mitosporidium
+‘daphniae
+
+Pichia
+Candida
+
+Rhodotorula
+
+Yamadazyma-
+Candida clade
+
+Biatnospora
+Fusarium
+
+Clavispora-
+Candida clade
+
+Coniochaeta
+Herpotnchiallacese
+Medicopsis
+Aspergillus
+Rorella
+
+Dothideomycetes
+Pseudochaeto-
+‘sphaeronema
+
+Meyerozyme-
+Candida clade
+
+Dry
+
+°
+
+Ss
+
+M
+
+River Samples
+
+Relative Abundance (%)
+© 0.001
+OQ 0.005
+O 0010
+
+() 0080
+
+SZ,
+
+omme)
+
+°
+
+Relative Abundance (%)
+° On
+05
+OQ os
+O 19
+50
+
+C_ ) 100
+
+River Samples
+
+Figure 7. Relative abundances of dominant pathogenic genera under Order
+
+Apicomplexa (A) and Order Fungi (B) in sink samples between dry and wet seasons.
+
+“Total” represents the sum of the relative abundance of pathogens.
+
+Many microbial eukaryotic species that are known to be obligatory parasites of
+
+both vertebrates and invertebrates are classified under Order Apicomplexa. These
+
+36
+
+microbial eukaryotes have secretory organelles thought to be important in the parasite's
+invasion of its host (Guizetti & Frischknecht, 2021). Among the observed genera of
+Apicomplexa in the PAMARISAN River System which affect humans include
+Cryptosporidium species causing cryptosporidiosis in extensive vertebrate hosts and
+Plasmodium spp. causing malaria and infecting humans through mosquitoes as vectors
+(Votypka et al., 2016). The presence of Cryptosporidium spp. in the Marikina River
+indicates that the river had been contaminated with feces from infected humans and
+animals, and that direct fecal dumping and sewage spills might be the cause of
+transmission into the water bodies (Gerace et al., 2019). On the other hand, the
+occurrence of Plasmodium spp. in the San Juan River during the wet season suggests
+that rainfall and mosquito vector breeding sites on or nearby surface waters might be
+the major driving factors for the presence of parasites into the waterways (Shayo et al.,
+2021).
+
+Aside from Apicomplexa, Order Fungi also comprises several human pathogenic
+species which are observed in the PAMARISAN River System. Some of the dominant
+ones were opportunistic yeasts Kodamaea spp. and Candida spp. causing fungemia and
+candidiasis in immunocompromised individuals respectively, and other nosocomial
+fungal pathogens like Aspergillus spp. and Fusarium spp., which give rise to a wide
+range of fungal infection especially in immunodeficient patients (Perlroth et al., 2007).
+A study of Steffen et al. (2023) showed that the presence of Candida and Kodamaea
+spp. in the river is linked with high levels of fecal pollution in environmental waters,
+which may lead to rising cases of fungal infections among people who depend on
+natural water sources. On one hand, Aspergillus and Fusarium spp. in the river system
+
+indicates their widespread occurrence in the environment including freshwater habitats,
+
+37
+
+thereby showing their extensive adaptability to environmental conditions (Burgess &
+Bryden, 2012; Richardson & Rautemaa-Richardson, 2019). The pathogen compositions
+across Apicomplexa and Fungi are not significantly different, which might be due to
+the small number of sink samples. Although seasonality is taken into account as a
+potential factor, the findings indicate that its influence is low. Studies from Gerba
+(2015) and Pietryczuk et al. (2018) display that the composition of pathogens is more
+likely correlated with other factors such as sewer management systems, anthropogenic
+activities, and pathogen adaptability irrespective of seasonal variations.
+4.4. Dynamics between environmental water parameters and microbial eukaryotic
+composition
+
+The data for water quality parameters such as BOD, color, TSS, phosphates,
+nitrates, fecal coliform, DO, pH, and temperature were obtained from the DENR. Most
+of the parameters in the PAMARISAN River System such as BOD, TSS, phosphates,
+fecal coliform, DO, and temperature did not meet the water quality guideline
+
+classifications B and C of the DENR.
+
+38
+
+Table 2. Environmental water parameters of sink samples between dry and wet seasons
+and their standard values based on water quality guidelines (WQG) classifications B
+
+and C of the DENR (Department of Environment and Natural Resources, 2016).
+
+BOD, Color, TSS, Phosphates, Nitrates,
+mg/L TCU mg/L mg/L mg/L
+WQG Class B 5 50 65 0.5 7
+WQG Class C 7 75 80 0.5 7
+Dry MI 13 10 326 0.234 0.606
+M2 20 15 43 0.343 0.225
+Pl 10 10 135 0.52 0.59
+P2 - 5 37 0.37 0.35
+SI 46 20 31 1.863 0.509
+S2 21 20 35 0.92 <0.018
+Wet MI 17 25 31 0.371 0.174
+M2 17 15 12 111 0.09
+Pl 10 10 135 0.52 0.59
+P2 - 10 6 0.737 0.09
+SI 27 25 15 2.126 0.067
+$2 47 25 21 2.057 0.119
+
+Note: Bold values indicate higher measurements than the DENR environmental standard values
+
+39
+
+Table 2. (Continued) Environmental water parameters of sink samples between dry and
+wet seasons and their standard values based on water quality guidelines (WQG)
+classifications B and C of the DENR (Department of Environment and Natural
+
+Resources, 2016).
+
+Fecal
+
+Coliform, Leet pH aes
+MPN/100mL
+WQG Class B 100 5 65-85 26-30
+WQG Class C 200 5 65-9 25-31
+Dry Mi 350,000 631 7.76 30.8
+M2 1,200,00 2.01 733 293
+Pl 35,000 6.38 7.16 25.6
+P2 240,000 3.77 759 26.6
+sl 120,000,000 2.63 725 207
+82 28,000,000 1.06 745 31.9
+Wet Mi 92,000 71 38 33.4
+M2 9,200,000 4.03 7.44 31.4
+PI 35,000 6.38 7.76 25.6
+P2 540,000 2.21 731 31
+sl 43,000,000 2.42 735 28
+82 35,000,000 2.01 7.59 28.2
+
+Note: MPN/100mL — Most Probable Number per 100 milliliters; Bold values indicate higher
+measurements than the DENR environmental standard values
+
+As shown in Table 2, BOD and fecal coliform in the river system in the dry and
+wet seasons exceed the upper standard limit values of both classes B and C. TSS has
+higher values compared to the standard upper limit values in the M1 and P1 during the
+dry season and P1 during the wet season. Except for the M1, M2, and P2 in the dry
+season, and M1 in the wet season, the phosphates in other rivers are above the upper
+limit value which is 0.5 mg/L. It must also be noted that the M1 and P1 during the two
+seasons are the only stations that pass the lower limit value of DO which is 5 mg/L. For
+pH, only M1 in the wet season exceeds the upper limit value of pH 8.5 of Class B.
+
+40
+
+Furthermore, S2 in the dry season and M1 and M2 in the wet season exceed the standard
+
+upper limit of the temperature of Class C which is 31°C, while M1 in the dry season
+
+and P1 in both seasons did not meet the temperature range value of Class B which is
+
+26-30°C. To test any significant differences in environmental water parameters between
+
+the two seasons, the Wilcoxon rank-sum test was used. The results only show a
+
+statistical difference in TSS between the dry and wet seasons (P = 0.0446), indicating
+
+a higher water turbidity in the dry than in the wet season (Figure 8, Appendix Table
+
+D6).
+
+40.
+30
+
+20
+
+10>
+
+5
+
+BOD, mg/L Color, TEU TSS, mg/L
+° ° 25 er Cmca
+300
+20 fl
+200-
+15
+100
+
+eat
+
+Phosphates, mg/L
+
+Nitrates, mg/l.
+
+aa
+
+Fecal Coliform, MPN/100mL
+
+a
+
+0.4)
+
+02+
+
+00.
+
+1.250408
+
+7.500+07
+
+2.500+07
+
+0.000+00 +
+
+pH
+
+1.000+08-
+
+5.006407 |
+
+Temperature, °C
+
+a
+
+32
+
+|__|
+
+a
+
+=
+
+—
+
+Season
+EA by
+3 wet
+
+Figure 8. Mean values of environmental water parameters between dry and wet
+
+seasons. Statistical significance between seasons was assessed by the Wilcoxon rank-
+
+sum test and indicated by an asterisk (* represents P < 0.05).
+
+“4
+
+NMDS ordination plot in Figure 9 indicates that spatio-seasonal variations of
+microbial eukaryotic communities are significantly associated with changes in water
+
+quality parameters such as pH (P = 0.018) and temperature (P = 0.007, Appendix Table
+
+C9).
++
+Temperature pH
+DO
+Color
+By ‘f Seasons
+BO
+g / by
+2 y/ Wet
+TSS
+Phosphates
+Fecal Goliform
+Nitrates
+
+NMDS1
+
+Figure 9. NMDS plot of microbial eukaryotic communities in sinks (symbols) and
+environmental water variables (segments). Parameters with asterisk/s have goodness of
+fit at significant level through envfit function (* represents P < 0.05, ** represents P <
+0.01), while the length of the segment shows the magnitude of influence on the
+microbial communities.
+
+Associations between environmental water parameters and the five dominant
+phyla of the total microbial eukaryotic communities across two seasons were also tested
+using Spearman’s rank correlation test. The results show a significant positive
+correlation between parameters TSS (P = 0.00278) and pH (P = 0.0499) with Phylum
+
+42
+
+Excavata during the dry season (Figure 10, Appendix Table E3). Moreover, TSS (P =
+0.0333) and phosphates (P = 0.0333) are positively and negatively correlated with
+Phylum SAR, respectively, in the dry season (Figure 10, Appendix Table E5). During
+the wet season, temperature was observed to have a significant positive association with
+Phylum Amoebozoa (P = 0.0167), while fecal coliform (P = 0.0767) and phosphates
+(P = 0.0244) have significant negative associations with Phylum Excavata (Figure 10,
+Appendix Tables El and E3). A significant positive correlation is also observed
+between DO and Phyla Excavata (P = 0.0149), Opisthokonta (P = 0.0167), and SAR
+(P = 0.0333) during the wet season (Figure 10, Appendix Tables E3, E4, and ES).
+Lastly, no significant correlations are displayed between the parameters and Phylum
+Archaeplastida across the two seasons (P > 0.05, Figure 8, Appendix Table E2).
+Overall, TSS exerts the most influence among other parameters as shown by its strong
+relationship (significant rho values closer or equal to 1) with the top microbial
+
+eukaryotic communities (Figure 10).
+
+43
+
+DO
+
+TSS
+
+pH
+
+Temp
+
+Color
+
+BOD
+
+FC
+
+Dry Wet
+* * *
+02 031 0.65 0.31 0.54 0.37 0.71 089 0.94 0.88
+*e *
+048 065 1 065 0.88 || 0.14 -0.08 046 06 02
+0.08 0.42 0.6 0.42 0.6 0.23 0.17 0.67 04 0.37
+Ss Spearman's
+0.114 0.11 0.81 0.11 0.49 0.31 0.25 0.66 0.6 0.48 tho 10
+* 05
+0.25 -0.08 -0.08 -0.08 -0.08 | 094 077 04 0.08 06
+0.0
+0.61 0.17 061 -0.17 -0.52 || 0.03 -0.18 0.28 0.06 -0.18 05
+0.54 -0.08 -0.6 -0.08 -0.42 || -0.23 -0.52 -0.52 -0.23 -0.46
+|
+*
+0.42 -0.2 -0.71 -02 -048 || -0.37 -0.54 086 -0.54 -0.65 |
+* * |
+0.77 0.65 -082 065 -088 | -06 -0.71 092 -06 -0.77 |
+2dr ao 98 eee ssHOEAR 008 oot asll coe ro NE pe
+pani" ccn2OF™ EX Opie pmmoP™ ccnaeP™ Ex!
+Dominant Phyla
+Figure 10. Spearman’s rank correlation coefficient values between environmental
+
+water parameters and microbial eukaryotic communities of dominant phyla between
+
+two seasons. Statistical significance between seasons was assessed by Wilcoxon rank-
+
+sum test and indicated by asterisks (* represents P < 0.05, ** represents P < 0.01). Y-
+
+axis labels: N = nitrates, Temp = temperature, FC = fecal coliform, P = phosphates.
+
+The PAMARISAN River System has been observed with varying levels of
+
+organic, inorganic, and fecal pollution between dry and wet seasons (Paronda et al.,
+
+2019; Clemente, 2020; Nacario et al., 2022). The results suggest that the rivers were
+
+significantly more turbid in the dry compared to the wet season as shown by the
+
+significant differences in TSS levels. Although no statistical differences are found in
+
+the case of other parameters, it must be noted that nitrates and fecal coliform counts are
+
+44
+
+higher in the dry season, and that the dissolved oxygen is lower in the dry than in the
+wet season. High level of TSS indicates high concentrations of nutrients, chemicals,
+and microorganisms suspended in the waters thereby increasing the turbidity. This may
+also obstruct sunlight, which could decrease photosynthesis as well as the amount of
+dissolved oxygen in a water body (Irvine et al., 2002; Manitcharoen et al., 2020). These
+high nutrient and microbiological levels during the dry season can be explained by a
+low dilution and degradation capability of the river system added to sediment’s high
+nutrient release (Hideo et al., 2017). The upstream of Marikina and Pasig Rivers in both
+seasons are consistent by having DO levels that pass the DENR standard, which is also
+shown by their lower BOD, phosphate concentration, and fecal coliform counts
+compared to other sites, such as the San Juan River. Despite that, BOD and fecal
+coliform levels in all river stations are still high enough to be of concern. Moreover, the
+river system was phosphate-enriched during the wet season, implying that abounding
+suspended solids-containing phosphates are carried by rainwater into the rivers (Lian
+et al., 2020). Among the parameters, only color and nitrates pass the DENR WQG
+classes B and C across all stations. Low nitrate concentrations in the rivers can be
+explained by the assimilation of nitrate by aquatic plants and other microorganisms for
+their nutrient consumption (Moreno-Vivian & Flores, 2007; Aljawahiry et al., 2022).
+In addition, the removal of particulates in surface waters through sedimentation added
+with denitrification in sediments might have resulted in a more diluted color level in
+the river system (Dong et al., 2000).
+
+Significant associations are found between the total microbial eukaryotic
+community composition and parameters temperature and pH in wet and dry seasons,
+
+respectively. Temperature variations have considerable impact on microbial eukaryotic
+
+45
+
+activity and enzymes, where the optimal temperature promotes the fastest metabolism
+and consequent growth rate. Lower than optimal temperatures cause slower metabolism
+and a reduction in enzyme function, while higher temperatures can denature microbial
+proteins (Norf & Weitere, 2010; Tarkington & Zufall, 2021). High temperature (above
+30°C) is detected in the Marikina River during the wet season. Eukaryotic microbes
+have varying optimum temperature levels, where some prefer high temperatures of
+25°C and some with temperatures as low as 9°C (Wu et al., 2020). Thus, this increase
+in temperature might have eliminated some of the eukaryotes living in the vicinity
+thereby altering the community composition and causing a decrease in alpha diversity
+in the wet season (Norf & Weitere, 2010). On the other hand, the high alpha diversity
+in the dry season might be associated with the neutral to slightly alkaline pH range of
+7.25-7.76 being consistently observed in most stations in the river system. It has been
+reported that the majority of the microbial eukaryotes can greatly disseminate in neutral
+pH environments (Amaral-Zettler, 2013).
+
+Phyla Excavata and SAR are found to be positively correlated with TSS in the
+dry season. Some species of Excavata and SAR release organic and inorganic
+byproducts into their surroundings, thereby contributing to the increase in suspended
+solids in the river system (Madoni, 2011). In addition, the high abundance of
+phytoplankton during the dry season might have also contributed to the increase in TSS
+(Buana et al., 2021). The observed significant positive correlation between pH and
+Excavata during the dry season might be due to the removal of carbon dioxide during
+photosynthesis by representative photosynthetic Excavata resulting in a slight increase
+of pH in the river system (Zerveas et al., 2021). In addition, a few genera from Phylum
+
+Excavata such as Bodo and Naegleria have also been shown to thrive in alkaline
+
+46
+
+environments (Amaral-Zettler, 2013; Johnson & Aguilera, 2019). High phosphate
+concentration decreases the photosynthesis of microbial eukaryotes while increasing
+the food availability for heterotrophs. However, phosphate levels in natural waters
+affect more the biomass or size of these organisms rather than their abundance,
+explaining the significant negative correlation of phosphates with communities under
+phyla SAR and Excavata in dry and wet seasons, respectively (Akpor & Momba, 2010;
+Wang et al., 2014).
+
+Moreover, a significant negative association between Excavata and fecal
+coliform counts is shown during the wet season, suggesting that communities of this
+phylum are composed of bacterivores that preferentially feed on dispersed bacteria in
+surface waters, thereby reducing the fecal coliform counts in the river system (Simpson
+& Eglit, 2016). A significant positive correlation between Phylum Amoebozoa and
+temperature suggests the adaptability of free-living amoebas in withstanding high-
+temperature surface waters due to the formation of dormant cysts (Salazar-Ardiles et
+al., 2022). A significant positive correlation is also observed between dissolved oxygen
+and Phyla Excavata, Opisthokonta, and SAR. Microfungi of Opsithokonta are known
+to utilize oxygen in order to decompose organic material, heterotrophic unicellular
+eukaryotes also utilize dissolved oxygen for respiration, while algae and other
+photosynthetic eukaryotes of Excavata and SAR produce oxygen as a byproduct of
+photosynthesis (Belevich et al., 2021; Fenchel, 2014; Pietryczuk et al., 2018). Thus, the
+positive association might be explained by the high DO production-to-consumption
+ratio in the river system during the wet season, resulting in higher DO levels. Lastly,
+the overall strong influence of TSS in the dominant microbial eukaryotic communities
+
+suggests that the parameter can be carriers of compounds, nutrients, and even bacteria
+
+47
+
+in the aquatic systems, thereby providing a suitable environment for microbial
+eukaryotic propagation and metabolism (Lu et al., 2023).
+4.5. Indicator species across sink and source environments
+
+The indicator species analysis reduces a large number of species to a small
+number of interesting species that defines or characterizes a specific group. Uronemella
+filificum, Paraphysomonas foraminifera, and Euplotes vannus are the top species
+indicators in sink samples during the dry season (P < 0.05, Figure 11A, Appendix Table
+F1), while Spumella sp., unclassified Chlorophyta, and uncultured Cryptomycota are
+the top indicators during the wet season (P < 0.05, Figure 11A, Appendix Table F2).
+For the source samples, microbial eukaryotic human and animal pathogens are mostly
+observed as species indicators. Among them include Mucor circinelloides and Candida
+albicans in chicken feces, Blastocystis sp. in cow and pig feces, Ancylostoma duodenale
+in dog feces, and Prototheca spp. in sewage (P < 0.05, Figure 11B, Appendix Tables
+F3, F4, F5, F6, F7, and F8). Other species indicators of source samples are pathogens
+of fungi and insects (Lecanicillium sp.), intestinal commensals of invertebrate and
+vertebrate hosts (Rhizomastix libera), rumen gut fungus (Neocallimastix frontalis),
+amoeba (unclassified Gracilipodida), and yeast that causes spoilage
+(Zygosaccharomyces rouxii).
+
+Distinct indicator species are observed across sink and source samples. U.
+filificum and E. vannus in the dry season displayed the dominance of ciliates as the top
+indicator species in the PAMARISAN River System. U. _filificum mostly consume
+sulfur-oxidizing bacteria and can be found in mats of these bacterial species, whereas
+E. vannus are mostly attached to populations of bacteria and phytoplankton (Wilks &
+
+Sleigh, 2008; Petroff et al., 2015). Ciliates are known bioindicators of saprobic
+
+48
+
+environments and thus, occurrence of bacterivorous ciliates indicate a high level of
+organic pollution in freshwater environments due to increased anthropogenic
+disturbances (Dias et al., 2021). This is consistent with the higher fecal coliform levels
+observed in the dry than in the wet season. Moreover, the river system during the wet
+season is dominated by algae as top indicator species. These include Spumella sp.,
+which is an omnivorous golden algal stramenopile that prefer feeding on larger prey,
+and unclassified species under Chlorophyta, which is a green algal photosynthetic
+organism (Baudelet et al., 2017; Jeong et al., 2021). Both of these species are also
+shown to be bioindicators for determining the level of trophicity in a water body which
+is determined by nutrient concentration directly linked with water quality (Khuram et
+al., 2021; Salo & Salovius-Laurén, 2022). Consistently, a higher nutrient concentration
+in the form of phosphate was observed in the river system during the wet season.
+
+The presence of M. circinelloides (fungus), Blastocystis sp. (anaerobic protist),
+A, duodenale (intestinal hookworm parasite), and Prototheca spp. (chlorophyll-lacking
+algae) being the top indicator species in various sources is an indication of possible
+prevalence of the following infections: mucormycosis, blastocystosis, ancylostomiasis,
+and protothecosis infections in chickens, cows and pigs, dogs, and humans, respectively
+(Wawr: a <etal., 2013; Kim et al., 2017; Seguel & Gottdenker, 2017; Wang et al.,
+2022). C. albicans, which is also an indicator species of chickens, is a part of gut
+mycobiota in several hosts including humans and domestic and wild animals, and thus
+can be used as a marker or indicator of fecal pollution in surface waters (Steffen et al.,
+2023). Moreover, one of the cow’s top indicator species N. frontalis, is an obligate
+anaerobic rumen fungus and has the potential to be used as a marker specific for
+
+ruminant fecal pollution (Kim et al., 2017).
+
+49
+
+Uronemelia fiificum Paraphysomonas foraminifera Euplotes vannus
+
+0000 con oo
+§ (Gospmenap | unclassified Chlorphyta | mncultured Cryptomycota_|
+| 1 -
+beset a |—_|
+Season &3 Dry 53 Wet
+B Mucor circinelloides B8967 Lecanieillium Candida albicans
+H a
+Blastocystis sp. subtype 10 CA6 Neocallimastixtrontalis
+S &
+z a) ;
+2 fal
+3 Unclassified Gracilipodida Blastocystis sp. subtype 15 CA25 Zygosaccharomyces rouxll
+2 ‘i
+i g
+a
+Prototheca sp. EC-2017 Prototheca zopfil
+
+3 Chicken & Dog & Pig
+
+Source Samples 3 Cow Duck 3 Sewage
+
+Figure 11. Indicator species analysis showing relative abundances of significant top
+indicator species in sink (A) and source (B) samples.
+4.6. Spatio-seasonal variations of source contributions to sink environments
+
+The validation analysis using the FEAST program was conducted including taxa
+with low abundances (<0.001%). The program predicted low percentages from chicken,
+cow, dog, and pig fecal samples. Their contribution ratios are also slightly
+
+underestimated across the replicates in the observed values compared to the original
+50
+
+DNA concentration ratios. On the other hand, correct prediction is observed in duck
+and sewage samples (Table 3). The distinctiveness of sink and source communities as
+shown by the NMDS plot implied also the good predictive performance of FEAST.
+
+Table 3. Validation of source tracking analysis displaying the pooled sources in equal
+
+DNA concentration ratios.
+
+Chicken Cow Dog Duck Pig Sewage Unknown
+
+Original DNA
+concentration ratios 17 17 17 17 17 17 0
+(%)
+Rep 1 10.0 6.1 2.9 21.4 0.8 19.2 39.5
+FEAST Rep2 45 87 160 267 3.6 33.2 73
+estimates (%) nes 8042s «18.9«18.7 28.1
+Mean 15S 6.4 77 18.3 77 23.7 25.0
+
+The contribution of microbial eukaryotic contamination of the potential sources
+to the PAMARISAN River System is compared between dry and wet seasons. In the
+dry season, FEAST analyses display that the microbial eukaryotic communities from
+the downstream stations have significantly higher proportions of sewage than those
+from the upstream sites of the rivers (16.9% and 4.1% mean contributions for
+downstream and upstream, respectively) (P < 0.05, Figure 12A, Appendix Table G1).
+In addition, dog and pig fecal contributions are also higher in downstream compared to
+upstream sites (0.2% and 0.1% of mean dog contributions and 0.02% and 0.01% of pig
+for downstream and upstream, respectively) (P < 0.05, Figure 13, Appendix Table G1).
+For the wet season, sewage contributions are highest in $1 (67.7%) and S2 (43.1%),
+and then in Pasig River (11% and 8.8% for upstream and downstream, respectively),
+
+and in Marikina River (2.2% and 8%) (Figure 12B, Appendix Table G1). Similarly,
+51
+
+downstream sites of the river system receive more significant contributions from duck,
+cow, dog, pig, and chicken than those in upstream sites (0.5% and 0.1% of mean duck
+contributions, 0.3% and 0.04% of cow, 0.2% and 0.03% of dog, 0.02% and 0.01% of
+pig, and 0.03% and 0.003% of chicken for downstream and upstream, respectively) (P
+<0.05, Figure 13, Appendix Table G1).
+
+Among all sites in the dry season, P2 has the highest contribution from dogs
+(0.419%), ducks (0.369%), and pigs (0.0408%), followed by the S1 (0.352%, 0.326%,
+and 0.0433% of dog, duck, and pig contributions, respectively), and then M2 (0.0315%,
+0.0321%, and 0.012%) (Figure 13, Appendix Table G1). On the other hand, the M2
+receives the highest duck (0.82%), cow (0.716%), dog (0.308%), and chicken
+(0.0409%) fecal contributions during the wet season, followed by the S2 (0.513%,
+0.216%, 0.184%, and 0.036% of duck, cow, dog, and chicken contributions,
+respectively) (Figure 13, Appendix Table G1). Moreover, a larger contribution of
+unknown sources is found in the dry season (95.6% mean contribution) than in the wet
+season (72.8%), especially for the upstream sites of the river system (Figure 12).
+Although the contribution of sources is generally higher in the wet than in the dry
+season, no significant differences in the percent contributions are found between the
+
+two seasons (P > 0.05, Appendix Table D7).
+
+52
+
+Figure 12. FEAST evaluation showing contributions of potential sources across overall
+microbial eukaryotic communities to different stations of the PAMARISAN River
+
+System during the dry (A) and wet (B) seasons.
+
+53
+
+Dry Wet
+| |
+| |
+15% \
+|
+= |
+§ |
+3 Duck
+Fs 1.0% Deg
+5 cow
+8
+= © 0
+8 | Chicken
+iS |
+|
+0.5% }
+0.0% Inara paren CRRRN
+
+MrooM2 PY P24 SR. Mt M2) Pt PZ OSH 82
+River stations
+
+Figure 13. FEAST evaluation showing contributions of potential fecal host sources
+across overall microbial eukaryotic communities to different stations of the
+PAMARISAN River System during the dry and wet seasons.
+
+The FEAST analysis indicates that the communities under Phylum Amoebozoa
+across the downstream sites of the PAMARISAN River System mainly originate from
+sewage in the dry season (80%, 50%, and 1.72% for M2, P2, and S2, respectively),
+whereas no contributions from all sources are displayed across the upstream stations of
+the river (Figure 14A, Appendix Table G2). In contrast, upstream areas of the river
+system receive significantly higher contributions from sewage than the downstream
+areas during the wet season (56.4%, 31.3%, and 10% for M1, SI, and P1, respectively)
+(P < 0.05, Figure 14B, Appendix Table G2). The high contribution of the communities
+in Phylum Amoebozoa from cow (19.7% and 15.8% for M2 and S2, respectively), pig
+(10.4% and 2.3%), dog (4.26% and 4.19), and chicken (5.03% and 2.73%) fecal
+
+54
+
+samples are observed in M2 and S2 during the wet season (Figure 14B, Appendix Table
+G2). Despite the differences in host’s contributions between the two seasons, no
+significant differences are found between them (P > 0.05, Appendix Table D8).
+
+During the dry and wet seasons, the majority of the downstream sites in the river
+system under Phylum Archaeplastida acquire higher sewage contributions compared to
+upstream sites (18.5% and 7.35% mean percent contributions for downstream and
+upstream, respectively) (P < 0.05, Figure 14, Appendix Table G3). A higher duck
+proportion is also observed in the P2 during the wet season (3.47%), as well as chicken
+(0.79%), dog (0.459%), and cow (0.151%) proportions (P < 0.05, Figure 14B,
+Appendix Table G3). Communities under Phylum Excavata receive higher sewage
+proportions across downstream stations (44.4% mean contribution) of the river system
+than the upstream stations (4.84%) during the dry season (P < 0.05, Appendix Table
+G3), whereas lower sewage contributions are displayed across the downstream (3.71%)
+than upstream stations (40.4%) during the wet season (P < 0.05, Figure 14, Appendix
+Table G4). Similarly, statistically significant differences between dry and wet seasons
+in terms of source contributions to sinks are not observed across Phyla Archaeplastida
+and Excavata (P > 0.05, Appendix Tables D9 and D10).
+
+For Opisthokonta, the downstream sites of the river system receive a larger
+fraction of sewage than the upstream sites during the dry season (22.5% and 8.3% mean
+contributions for downstream and upstream, respectively) and wet season (29% and
+10% for downstream and upstream, respectively) (P < 0.05, Figure 14, Appendix Table
+G5). Opisthokonta from dogs, ducks, and cows are also higher downstream (1.1%, 1%,
+0.4% mean contributions of dogs, ducks, and cows, respectively) compared to upstream
+
+stations (0.4%, 0.3%, and 0.1%) of the river system during the dry season (P < 0.05,
+
+55
+
+Figure 14A, Appendix Table G5). In contrast, Opisthokonta signals from dogs and
+ducks are significantly higher across upstream (1.1% and 1% mean contribution of
+ducks and dogs, respectively) than downstream sites (0.9% and 0.8%) during the wet
+season (P < 0.05, Appendix Table G5), while cow contributions are higher across
+downstream (0.6%) than upstream (0.4%) stations (P < 0.05, Figure 14B, Appendix
+Tables DI] and G5). The similarities in contribution patterns still display
+nonsignificant differences in the source contributions between the two seasons (P >
+0.05, Appendix Table D11).
+
+Similarly, the SAR in the downstream sites of the river system during the two
+seasons mainly originates from the sewage (31.1% and 10.2% mean contributions for
+wet and dry seasons, respectively), where contributions are still significantly higher in
+wet than in dry season (P < 0.05, Figure 14, Appendix Table G6). Small fractions of
+SAR from ducks in the dry season are also shown in P2 and SI (1.27% and 1.01%),
+respectively, as well as M2 in the wet season (1.82%) (Figure 14, Appendix Table G6).
+Similar to other phyla, there are no significant differences between dry and wet seasons
+
+across contributions of other sources to sinks (Appendix Table D12).
+
+56
+
+A |_Archaeplastida_| Opisthokonta
+
+Percent Contribution (%)
+
+B ‘Amoebozoa Archaeplastida Excavata
+
+=
+
+GISFIS SIGS
+
+VERO ORBEA Ree
+River stations
+
+Figure 14. FEAST evaluation showing contributions of potential sources across five
+
+dominant phyla communities to different stations of the PAMARISAN River System
+
+during the dry (A) and wet (B) seasons.
+
+57
+
+Source contributions to sinks of ecologically important pathogens under Orders
+Apicomplexa and Fungi are also determined. For Apicomplexa, the results demonstrate
+that sewage contributions are higher in the downstream compared to upstream stations
+of the river system during dry and wet seasons (30.3% and 6.35% mean contributions
+during dry and 14.3% and 11.4% during wet for downstream and upstream sites,
+respectively) (P < 0.05, Figure 15, Appendix Table G7). In addition, no other
+contributions from identified host sources are shown except for sewage (Appendix
+Table G7). During the wet season, a significant fraction of ducks (25.8%, P < 0.05) is
+observed in M2, followed by sewage (4%) (Appendix Table G7). The S2 also acquires
+5.3% of duck contributions, while S1 receives 6.6%, and 2.3% of cow and duck
+contributions, respectively (Figure 15, Appendix Table G7).
+
+For Fungi, sewage is found to be their major source across all sites during wet
+(32% mean contribution) and dry (19%) seasons (Figure 15, Appendix Table G8). The
+sewage contributions are shown to be significantly higher in downstream (30.6%) than
+upstream stations (7.58%) during the dry season, while significantly higher in upstream
+(34.3%) than downstream (297%) during the wet season (P < 0.05, Figure 14, Appendix
+Table G8). A small fraction of ducks is also evident in P2 (1.08%) in the dry season,
+whereas 0.8% of chicken and 0.7% of pig contributions across M2 and P2, respectively,
+are significantly higher compared to other sites in the wet season. Both Orders
+Apicomplexa and Fungi from all sources did not show any significant differences on
+their contribution to sinks between dry and wet seasons (P > 0.05, Appendix Tables
+
+D13 and D14).
+
+58
+
+Apicomplexa Apicomplexa Fungi Fungi
+D Wet
+eo ry Wet Dry
+60%
+z
+§
+§ Sewage
+B 40% Dog
+° 1) cow
+8 Pig
+8 Chicken
+é
+
+20%
+
+EEE EES FEEL EE PS SPPO SPP POM
+Vor ororo® sarah ak aral of or oF of of oo a gi eh oF oF 9%
+PLE PL OVE EPH MLC VPM GeO MS
+
+River stations
+
+Figure 15. FEAST evaluation showing contributions of potential sources across
+microbial eukaryotic pathogens under Order Apicomplexa and Fungi to different
+stations of the PAMARISAN River System during the dry and wet seasons.
+
+The validation results are consistent with the studies of Fuhrmeister et al. (2020)
+and Chen et al. (2023) where different programs for source-tracking analysis show great
+predictive performances, suggesting the good fitness of FEAST in discriminating
+various source types. Aside from that, the observed distinctiveness of microbial
+eukaryotic communities across the sink and source samples could also add to the
+robustness of the source-tracking analysis. The potential sources of microbial
+eukaryotes in the PAMARISAN River System did not show significant seasonal
+variations. However, the contribution of sources, especially sewage, is consistently
+
+observed to be higher in the wet than in the dry season. This is also in accordance with
+
+59
+
+the higher number of ASVs shared between sinks and sewage samples in the wet season
+as shown in Appendix Figure HI. An explanation for this might be due to the
+overflowing of sewage caused by the heavy precipitation during the wet season, thereby
+receiving large microbiological quantities in the sink environments (Abraham, 2011;
+Olds et al., 2018). Most microbial eukaryotes are also carriers of pathogenic bacteria,
+and thus intense rainfall increases the possibility of waterborne pathogen transmission
+in environmental waters (Olds et al., 2018).
+
+Agricultural pollution is also observed to be a contributor to microbial
+eukaryotic transmission in the river system due to the presence of small fractions of
+ducks, cows, pigs, and chickens during the wet season. The cattle, chicken, swine, and
+duck farms in Bulacan, Cavite, and Malabon City are located close to inland waters and
+other land use types such as built-up, perennial crops, and annual crops (Appendix
+Table I1). These inland waters are also connected to other channels that eventually lead
+to the PAMARISAN River System (Appendix Table I1). Thus, there is a concern about
+the transfer of fecal waste-containing pathogens from farms to the rivers especially
+during the wet season. Precipitation increases the runoff, flow of groundwater, river
+currents, and erosion along various channels during this season, thereby increasing the
+transport of animal wastes into nearby environmental waters which might have resulted
+from either contaminated irrigation water runoff or direct fecal discharge from farms
+(Geeraert et al., 2015). Moreover, crop agriculture can also contribute to the increase in
+contamination in the water bodies. If improperly handled, the use of manure fertilizers
+alongside irrigation waters can potentially contaminate and introduce chemicals and
+microorganisms in the rivers, thereby resulting in fecal contamination (Sabir et al.,
+
+2021). Lastly, microbial contamination in the river system is further complicated by the
+
+60
+
+existence of built-up land use next to nearby livestock farms. The vegetation scarcity,
+impermeable surfaces, and other human activities may also contribute to the increase
+of surface runoff volume, thereby increasing also the chance of fecal pollution
+transmission into the rivers (Schoonover & Lockaby, 2006).
+
+The large proportions of unknown source contributions indicate that there are
+still other environmental sources that might contribute to microbial eukaryotic
+contamination including soils, sediments, agricultural wastewater, etc. (Gad et al.,
+2022). The FEAST relies on databases or libraries for source-tracking, however, these
+libraries cannot fully capture the diversity of microbial eukaryotic communities and
+reflect all possible sources, thus resulting in a significant fraction of unknown
+sequences (Brown, 2018). In addition, the distant proximity of animal farms based on
+the data from the Geoportal Philippines (2020) as shown in Appendix Table I2 might
+have also contributed to the minimal contributions of agricultural sources in the river
+system resulting in a large proportion of unknown sources.
+
+High signals of dominant phyla as well as pathogenic microbial eukaryotic groups from
+sewage are observed in the downstream stations of the river system during the dry
+season. The factors affecting the flow of water in the dry season are limited, which can
+result in a consistent flow and low dilution capability, indicating the accumulating flows
+of sewage contamination downstream (Mishra et al., 2019). Specifically, larger
+fingerprints of Phylum Amoebozoa are observed in cows, pigs, dogs, and chickens
+compared to other dominant phyla in the wet season. Amoebozoa comprises species
+that can transform into dormant cyst structures capable of thriving in extreme
+environmental conditions, suggesting their high dispersal capability (Salazar-Ardiles et
+
+al., 2022). On the other hand, sewage is observed to be the sole contributor of Excavata
+
+61
+
+transmission to the river system in both seasons, indicating the dominance of Excavata
+communities in human-derived sewage samples. Furthermore, SAR and Opisthokonta
+footprints in livestock and dogs are observed during both seasons. SAR and
+Opisthokonta include species that are known to be part of the mycobiota of different
+livestock, domestic, and wild animals (Lavrinienko et al., 2021; Lv et al., 2023). Several
+fungal species from Opisthokonta can also adapt in inclement environments due to their
+ability to form spores which are important for their dispersal and survival (Chaudhary
+et al., 2022; Gostinéar et al., 2022).
+
+Apicomplexa comprises parasitic species that are economically and clinically
+relevant due to human and animal diseases they cause (Votypka et al., 2016). Among
+the sources, Apicomplexa communities in sewage are only detected in the river system
+during the dry season, whereas a significant fraction of sewage, ducks, and cows are
+observed during the wet season. A comparable pattern is also noted which demonstrated
+higher shared Apicomplexa ASVs between sinks and sources in the wet than in the dry
+season (Appendix Figure H2). The PAMARISAN River System, located in Metro
+Manila, is positioned at lower elevations to areas with duck and cattle farming in
+Bulacan and Cavite (Regmi, 2017). The duck and cattle farms in these provinces have
+land use type combinations of built-up, grassland, and annual crop, and that inland
+waters are consistently observed adjacent to these farms (Appendix Table I1). Thus,
+feces and other pollutants deposited on urbanized surfaces and soils in built-up and
+grassland areas can be picked up by rainwater runoff and transported into nearby water
+channels (Alaoui et al., 2011; Zhang et al., 2018). Moreover, the manure from cattle
+and duck farming operations may be applied to annual crops. Thus, these extra residues
+
+can also be carried into nearby water bodies, eventually contaminating the rivers
+
+62
+
+(Hooda et al., 2000; Strokal et al., 2016). The proportions of sewage and ducks increase
+from upstream to downstream, suggesting again the contribution of rainfall in carrying
+domestic and agricultural fecal pollution in downstream parts of river waters (Manini
+et al., 2022). In addition, the close proximity of sewage treatment plants in the
+downstream stations of the rivers can also explain the high sewage contributions in
+these areas (Appendix Table 12). Overall, the results indicate potential health hazards
+of Apicomplexa for humans. However, more studies are needed to examine these
+
+hazards in the PAMARISAN River System.
+
+63
+
+CHAPTER 5
+CONCLUSION
+
+The findings of the study suggest that the PAMARISAN River System
+could present health risks for humans due to the presence of microbial
+eukaryotic parasites which are possibly carried along with the potential sources.
+Distinct microbial eukaryotic community patterns were observed between sink
+and source environments enhancing the effectiveness of FEAST in
+discriminating source contributions. The results also revealed that microbial
+eukaryotes mainly originated from sewage, followed by ducks and cows, and
+that higher contributions were observed during the wet compared to the dry
+season, suggesting the impact of rainwater and sewage overflow on the presence
+of microbial eukaryotic communities in the river waters. Moreover,
+environmental parameters such as DO, TSS, pH, temperature, fecal coliform,
+and phosphates were found to be major drivers affecting the composition of
+selected dominant phyla. TSS and fecal coliform counts were higher in the dry
+season, while the wet season showed higher phosphate concentration, implying
+the presence of ciliates and microalgae as bioindicators of river pollution across
+dry and wet seasons, respectively. Together, the study enables a more
+comprehensive evaluation of the transmission dynamics of microbial
+eukaryotes in a freshwater environment. Moreover, the results can provide
+implications for the conservation and preservation of the river system through
+
+creating effective strategies focused on managing potential sources.
+
+CHAPTER 6
+RECOMMENDATIONS
+
+The findings of the study can be used as a baseline information to assess
+microbial eukaryotic contamination in the PAMARISAN River System. Future
+research can further utilize other host or environmental sources such as soils,
+sediments, agricultural wastewater, sewage effluent, etc. to determine other
+potential sources that contribute to microbial contamination in the river system.
+An additional collection of water samples from either similar or different sites
+(other tributaries or channels leading to the river system) in different periods or
+sampling events is also recommended for a more comprehensive view of the
+microbial eukaryotic communities, especially pathogens present in the waters.
+Discussion with farm owners on best practices is also highly encouraged to
+prevent further fecal contamination of the river system. Comparison with
+antibiotic resistance gene database can also be done to further establish the
+importance of One Health approach in the Philippines. Furthermore,
+dissemination of the results of future studies to the monitoring and/or regulatory
+agencies and the public is highly encouraged to continuously improve
+management strategies and inform the stakeholders of any possible human and
+
+animal health hazards.
+
+REFERENCES
+
+Abdalla, F., & Khalil, R. (2018). Potential effects of groundwater and surface water
+contamination in an urban area, Qus City, Upper Egypt. Journal of African Earth
+Sciences, 141, 164-178. https://doi.org/10.1016/j.jafrearsci.2018.02.016
+
+Abello, J. J. M., Malajacan, G. T., Labrador, K. L., Nacario, M. A. G., Galarion, L. H.,
+Obusan, M. C. M., & Rivera, W. L. (2021). Library-independent source tracking
+of fecal contamination in selected stations and tributaries of Laguna Lake,
+Philippines. Journal of Water and Health, 19(5), 846-854.
+https://doi.org/10.2166/wh.2021.058
+
+Abraham, W.-R. (2011). Megacities as sources for pathogenic bacteria in rivers and
+their fate downstream. International Journal of Microbiology, 2011, 1-13.
+https://doi.org/10.1155/2011/798292
+
+Ahmed, W. (2007). Limitations of library-dependent microbial source tracking
+methods. Journal of Australian Water, 34(1), 96-101.
+
+Akpor, O. B., & Momba, M. N. B. (2010). Relationship of protozoan biomass to
+phosphate and nitrate removal from activated sludge mixed liquor. Biotechnology
+Journal, 5(3), 304-313. https://doi.org/10.1002/biot.200900135
+
+Alaoui, A., Caduff, U., Gerke, H. H., & Weingartner, R. (2011). Preferential flow
+effects on infiltration and runoff in grassland and forest soils. Vadose Zone
+Journal, 10(1), 367-377. https://doi.org/10.2136/vzj2010.0076
+
+Aljawahiry, T., Hasoon, A., Imran, A., Abdulla, A., Al-Mualm, M., & Abbas, S. (2022).
+Effectiveness of aquatic plants in reducing water nitrates. Journal of
+
+Environmental Sciences, 20(5), 1031-1037.
+
+66
+
+Amaral-Zettler, L. A. (2013). Eukaryotic diversity at pH extremes. Frontiers in
+Microbiology, 3. https://doi.org/10.3389/fmicb.2012.00441
+
+Anderson, M. J. (2006). Distance-based tests for homogeneity of multivariate
+dispersions. Biometrics, 62(1), 245-253. _ https://doi.org/10.1111/j.1541-
+0420.2005.00440.x
+
+Angchuan, J., Khunnamwong, P., Wongpanit, K., Limtong, S., & Srisuk, N. (2021).
+Yeasts associated with the small-intestinal contents and epithelium of Pon Yang
+Kham (Charolais Crossbred) fattening beef cattle. Microorganisms, 9(7), 1444.
+https://doi.org/10.3390/microorganisms907 1444
+
+Ari, §., & Arikan, M. (2016). Next-generation sequencing: Advantages, disadvantages,
+and future. Plant Omics: Trends and _ Applications, 109-135.
+https://doi.org/10.1007/978-3-3 19-31703-8_5
+
+Azuma, S., Pagayao, N., Tanchuling, M. A. N., & Hibino, T. (2017). Sediment and
+water quality in the Pasig River tributaries and creeks in the Philippines. Journal
+of Japan Society of Civil Engineers, Ser. B3 (Ocean Engineering), 73(2), 1_929-
+1_934. https://doi.org/10.2208/jscejoe.73.1_929
+
+Bai, H., Shiota, T., Yoshizaki, S., Saito-Obata, M., Malbas, J. F. F., Lupisan, S. P.,
+Oshitani, H., Takeda, N., Muramatsu, M., Wakita, T., Ishii, K., & Li, T.-C. (2019).
+Detection of subgenotype IA and IIIA hepatitis A viruses in rivers flowing through
+Metro Manila, the Philippines. Japanese Journal of Infectious Diseases, 72(1),
+53-55. https://doi.org/10.7883/yoken.JJID.2018.148
+
+Balinado, L., Bahia, S., Manzano, R., & Cuibillas, J. (2019). Perceptions on the water
+quality of Marikina River of selected riverbank residents of Barangays Manggahan
+
+and Santolan, Pasig City, Philippines. Asia Pacific Higher Education Research
+
+67
+
+Journal, 6(1).
+
+Bar-On, Y. M., Phillips, R., & Milo, R. (2018). The biomass distribution on Earth.
+Proceedings of the National Academy of Sciences, 115(25), 6506-6511.
+https://doi.org/10.1073/pnas. 1711842115
+
+Baran, Y., & Halperin, E. (2012). Joint analysis of multiple metagenomic samples.
+PLoS Computational Biology, 8(2), e1002373.
+https://doi.org/10.1371/journal.pcbi. 1002373
+
+Basti, L., Endo, M., Segawa, S., Shumway, S. E., Tanaka, Y., & Nagai, S. (2015).
+Prevalence and intensity of pathologies induced by the toxic dinoflagellate,
+Heterocapsa circularisquama, in the Mediterranean mussel, Mytilus
+galloprovincialis. Aquatic Toxicology, 163, 37-50.
+https://doi.org/10.1016/j.aquatox.2015.03.012
+
+Baudelet, P.-H., Ricochon, G., Linder, M., & Muniglia, L. (2017). A new insight into
+cell walls of Chlorophyta. Algal Research, 25, 333-371.
+https://doi.org/10.1016/j.algal.2017.04.008
+
+Bauza, V., Madadi, V., Ocharo, R. M., Nguyen, T. H., & Guest, J. S. (2019). Microbial
+source tracking using 16S rRNA amplicon sequencing identifies evidence of
+widespread contamination from young children’s feces in an urban slum of
+Nairobi, Kenya. Environmental Science & Technology, 53(14), 8271-8281.
+https://doi.org/10.1021/acs.est.8b06583
+
+Belevich, T. A., Milyutina, I. A., & Troitsky, A. V. (2021). Seasonal variability of
+photosynthetic microbial eukaryotes (<3 ym) in the Kara Sea revealed by 18S
+rDNA metabarcoding of sediment trap fluxes. Plants, 10(11), 2394.
+
+https://doi.org/10.3390/plants 10112394
+
+68
+
+Bentley, D. R., Balasubramanian, S., Swerdlow, H. P., Smith, G. P., Milton, J., Brown,
+C.G., Hall, K. P., Evers, D. J., Barnes, C. L., Bignell, H. R., Boutell, J. M., Bryant,
+J., Carter, R. J., Keira Cheetham, R., Cox, A. J., Ellis, D. J., Flatbush, M. R.,
+Gormley, N. A., Humphray, S. J., ... Smith, A. J. (2008). Accurate whole human
+genome sequencing using reversible terminator chemistry. Nature, 456(7218), 53—
+59. https://doi.org/10.1038/nature07517
+
+Bernhard, A. E., & Field, K. G. (2000). A PCR assay to discriminate human and
+ruminant feces on the basis of host differences in Bacteroides-Prevotella genes
+encoding 16S rRNA. Applied and Environmental Microbiology, 66(10), 4571—
+4574. https://doi.org/10.1128/AEM.66.10.4571-4574.2000
+
+Bhattacharjee, H., & Rosen, B. (2007). Arsenic Metabolism in Prokaryotic and
+Eukaryotic Microbes. (D. H. Nies & S. Silver (eds.); Vol. 6). Springer.
+
+Bik, H. M., Sung, W., De Ley, P., Baldwin, J. G., Sharma, J., Rocha-Olivares, A., &
+Thomas, W. K. (2012). Metagenetic community analysis of microbial eukaryotes
+illuminates biogeographic patterns in deep-sea and shallow water sediments.
+Molecular Ecology, 21(5), 1048-1059. _ https://doi.org/10.1111/j.1365-
+294X.2011.05297.x
+
+Bjorbekmo, M. F. M., Evenstad, A., Roseg, L. L., Krabberad, A. K., & Logares, R.
+(2020). The planktonic protist interactome: Where do we stand after a century of
+research? The ISME Journal, 14(2), 544-559. https://doi.org/10.1038/s41396-
+019-0542-5
+
+Brown, C. (2018). Evaluation of the use and limitations of a community-based
+microbial source tracking method [Doctoral dissertation, University of
+
+Minnesota]. University Digital Conservancy,
+
+69
+
+https://hdl.handle.net/11299/216410.
+
+Buana, S., Tambaru, R., Selamat, M. B., Lanuru, M., & Massinai, A. (2021). The role
+of salinity and total suspended solids (TSS) to abundance and structure of
+phytoplankton communities in estuary Saddang Pinrang. JOP Conference Series:
+Earth and Environmental Science, 860(1), 012081. https://doi.org/10.1088/1755-
+1315/860/1/012081
+
+Burgess, L., & Bryden, W. (2012). Fusarium: A ubiquitous fungus of global
+significance. Microbiology Australia, 33(1), 22.
+https://doi.org/10.1071/MA12022
+
+Burkholder, J. M. (1998). Implications of harmful microalgae and heterotrophic
+dinoflagellates in management of sustainable marine fisheries. Ecological
+Applications, 8(1), $37. https://doi.org/10.2307/2641362
+
+Caceres, M. De, & Legendre, P. (2009). Associations between species and groups of
+sites: Indices and statistical inference. Ecology, 90(12), 3566-3574.
+https://doi.org/10.1890/08-1823.1
+
+Callahan, B. J., McMurdie, P. J., Rosen, M. J., Han, A. W., Johnson, A. J. A., &
+Holmes, S. P. (2016). DADA2: High-resolution sample inference from Illumina
+amplicon data. Nature Methods, 13(7), 581-583.
+https://doi.org/10.1038/nmeth.3869
+
+Cardenas, E., & Tiedje, J. M. (2008). New tools for discovering and characterizing
+microbial diversity. Current Opinion in Biotechnology, 19(6), 544-549.
+https://doi.org/10.1016/j.copbio.2008.10.010
+
+Carson, C. A., Christiansen, J. M., Yampara-Iquise, H., Benson, V. W., Baffaut, C.,
+
+Davis, J. V., Broz, R. R., Kurtz, W. B., Rogers, W. M., & Fales, W. H. (2005).
+
+70
+
+Specificity of a Bacteroides thetaiotaomicron marker for human feces. Applied
+and Environmental Microbiology, 71(8), 4945-4949.
+https://doi.org/10.1128/AEM.71.8.4945-4949.2005
+
+Castro, A. E., & Obusan, M. C. M. (2023). Microbial quality and emerging pollutants
+in freshwater systems of Mega Manila, Philippines: A scoping review. Urban
+Water Journal, 20(6), 639-651. https://doi.org/10.1080/1573062X.2023.2209559
+
+Chaudhary, V. B., Aguilar-Trigueros, C. A., Mansour, I., & Rillig, M. C. (2022). Fungal
+dispersal across spatial scales. Annual Review of Ecology, Evolution, and
+Systematics, 53(1), 69-85. https://doi.org/10.1146/annurev-ecolsys-012622-
+021604
+
+Chen, J., Chen, H., Liu, C., Huan, H., & Teng, Y. (2023). Evaluation of FEAST for
+metagenomics-based source tracking of antibiotic resistance genes. Journal of
+Hazardous Materials, 442, 130116.
+https://doi.org/10.1016/j.jhazmat.2022.130116
+
+Chen, T., Xiao, J., Liu, Y., Song, S., & Li, C. (2019). Distribution and genetic diversity
+of the parasitic dinoflagellate Amoebophrya in coastal waters of China. Harmful
+Algae, 89, 101633. https://doi.org/10.1016/j.hal.2019.101633
+
+Cheung, M. K., Au, C. H., Chu, K. H., Kwan, H. S., & Wong, C. K. (2010).
+Composition and genetic diversity of picoeukaryotes in subtropical coastal waters
+as revealed by 454 pyrosequencing. The ISME Journal, 4(8), 1053-1059.
+https://doi.org/10.1038/ismej.2010.26
+
+Clemente, E. D. (2020). Evaluating the water quality contribution of Estero de Paco to
+Pasig River and Manila Bay, Philippines. E3S Web of Conferences, 148, 07010.
+
+https://doi.org/10.1051/e3sconf/202014807010
+
+71
+
+CNN Philippines Staff. (2023). SMC San Juan River cleanup: Over 90,000 MT of silt,
+solid waste removed. Https://Www.Cnnphilippines.Com/News/2023/3/3/Smc-
+River-Cleanup-San-Juan.Html.
+
+Corre, P., Abadilla, M. R. C. S., Arnaldo, M. N. L., Irlanda, M. T. S., Mariano, A. C.
+P., Dogma, I. J. J., & Papa, R. D. (2020). Vorticella and Colacium as epibionts of
+copepods in Pasig River, Philippines. Philippine Journal of Systematic Biology,
+14(1). https://doi.org/10.26757/pjsb2020a14008
+
+Dawson, D. (2005). Foodborne protozoan parasites. International Journal of Food
+Microbiology, 103(2), 207-227.
+https://doi.org/10.1016/j.ijfoodmicro.2004.12.032
+
+del Campo, J., Mallo, D., Massana, R., de Vargas, C., Richards, T. A., & Ruiz-Trillo,
+I, (2015). Diversity and distribution of unicellular opisthokonts along the
+European coast analysed using high-throughput sequencing. Environmental
+Microbiology, 17(9), 3195-3207. https://doi.org/10.1111/1462-2920.12759
+
+dela Pefia, L. B. R. O., Labrador, K. L., Nacario, M. A. G., Bolo, N. R., & Rivera, W.
+L. (2021). Microbial source tracking of fecal contamination in Laguna Lake,
+Philippines using the library-dependent method, rep-PCR. Journal of Water and
+Health, 19(5), 762-774. https://doi.org/10.2166/wh.2021.119
+
+dela Pefia, L. B. R. O., Vejano, M. R. A., & Rivera, W. L. (2021). Molecular
+surveillance of Cryptosporidium spp. for microbial source tracking of fecal
+contamination in Laguna Lake, Philippines. Journal of Water and Health, 19(3),
+534-544. https://doi.org/10.2166/wh.2021.059
+
+DENR-EMB. (2021). EMB Annual Narrative Report 2021. Https://Emb.Gov.Ph/Wp-
+
+Content/Uploads/2022/08/F INAL-EMB-ANNUAL-NARRATIVE-REPORT-
+
+72
+
+FOR-CY-2021.Pdf.
+
+Deocaris, C. C., Allosada, J. O., Ardiente, L. T., Bitang, L. G. G., Dulohan, C. L.,
+Lapuz, J. K. I., Padilla, L. M., Ramos, V. P., & Padolina, J. B. P. (2019).
+Occurrence of microplastic fragments in the Pasig River. H2Open Journal, 2(1),
+92-100. https://doi.org/10.2166/h20j.2019.001
+
+Department of Environment and Natural Resources. (2016). 2016 Water Quality
+Guidelines (WQG) and General Effluent Standards (GES) of 2016.
+Http://Faolex. Fao. Org/Docs/Pdf/Phi201041.Pdf (Accessed 11 September 2023).
+
+Dias, R. J. P., de Souza, P. M., Rossi, M. F., Wieloch, A. H., da Silva-Neto, I. D., &
+D’Agosto, M. (2021). Ciliates as bioindicators of water quality: A case study in
+the neotropical region and evidence of phylogenetic signals (18S-rDNA).
+Environmental Pollution, 268, 115760.
+https://doi.org/10.1016/j.envpol.2020.115760
+
+Dong, L., Thornion, D., Nedwell, D., & Underwood, G. (2000). Denitrification in
+sediments of the River Colne estuary, England. Marine Ecology Progress Series,
+203, 109-122.
+
+Dunthorn, M., Klier, J., Bunge, J., & Stoeck, T. (2012). Comparing the hyper-variable
+V4 and V9 regions of the small subunit <scp>rDNA</scp> for assessment of
+ciliate environmental diversity. Journal of Eukaryotic Microbiology, 59(2), 185-
+187. https://doi.org/10.1111/j.1550-7408.201 1.00602.x
+
+Duran, M., Haznedaroglu, B. Z., & Zitomer, D. H. (2006). Microbial source tracking
+using host specific FAME profiles of fecal coliforms. Water Research, 40(1), 67—
+74, https://doi.org/10.1016/j.watres.2005.10.019
+
+Duret, M. T., Pachiadaki, M. G., Stewart, F. J., Sarode, N., Christaki, U., Monchy, S
+
+"9
+
+73
+
+Srivastava, A., & Edgcomb, V. P. (2015). Size-fractionated diversity of eukaryotic
+microbial communities in the Eastern Tropical North Pacific oxygen minimum
+zone. FEMS Microbiology Ecology, 91(5). https://doi.org/10.1093/femsec/fiv037
+
+Esch, K. J., & Petersen, C. A. (2013). Transmission and epidemiology of zoonotic
+protozoal diseases of companion animals. Clinical Microbiology Reviews, 26(1),
+58-85. https://doi.org/10.1128/CMR.00067-12
+
+Escoto, J. E., Blanco, A. C., Argamosa, R. J., & Medina, J. M. (2021). Pasig River
+water quality estimation using an empirical ordinary least squares regression
+model of Sentinel-2 Satellite. The International Archives of the Photogrammetry,
+Remote Sensing and Spatial Information Sciences, XLVI-4/W6-, 161-168.
+https://doi.org/10.5194/isprs-archives-XL VI-4-W6-2021-161-2021
+
+Farnleitner, A. H., Ryzinska-Paier, G., Reischer, G. H., Burtscher, M. M., Knetsch, S.,
+Kirschner, A. K. T., Dirnbéck, T., Kuschnig, G., Mach, R. L., & Sommer, R.
+(2010). Escherichia coli and enterococci are sensitive and reliable indicators for
+human, livestock and wildlife faecal pollution in alpine mountainous water
+resources. Journal of Applied Microbiology, no-no.
+https://doi.org/10.1111/j.1365-2672.2010.04788.x
+
+Fayer, R., & Trout, J. (2005). Zoonotic Protists in the Marine Environment (S. Belkin
+& R. R. Colwell (eds.)). Springer.
+
+Fenchel, T. (2014). Respiration in heterotrophic unicellular eukaryotic organisms.
+Protist, 165(4), 485-492. https://doi.org/10.1016/j.protis.2014.05.006
+
+Field, K. G., Chern, E. C., Dick, L. K., Fuhrman, J., Griffith, J., Holden, P. A.,
+LaMontagne, M. G., Olson, B., & Simonich, M. T. (2003). A comparative study
+
+of culture-independent, library-independent genotypic methods of fecal source
+
+74
+
+tracking. Journal of Water and Health, 1(4), 181-194.
+https://doi.org/10.2166/wh.2003.0020
+
+Fuhrmeister, E. R., Ercumen, A., Grembi, J. A., Islam, M., Pickering, A. J., & Nelson,
+K. L. (2020). Shared bacterial communities between soil, stored drinking water,
+and hands in rural Bangladeshi households. Water Research X, 9, 100056.
+https://doi.org/10.1016/j.wroa.2020.100056
+
+Gad, M., Hou, L., Cao, M., Adyari, B., Zhang, L., Qin, D., Yu, C.-P., Sun, Q., & Hu,
+A. (2022). Tracking microeukaryotic footprint in a peri-urban watershed, China
+through machine-learning approaches. Science of The Total Environment, 806,
+150401. https://doi.org/10.1016/j.scitotenv.2021.150401
+
+Garcia, B. C. B., Dimasupil, M. A. Z., Vital, P. G., Widmer, K. W., & Rivera, W. L.
+(2015). Fecal contamination in irrigation water and microbial quality of vegetable
+primary production in urban farms of Metro Manila, Philippines. Journal of
+Environmental Science and Health, Part B, 50(10), 734-743.
+https://doi.org/10.1080/03601234.2015.1048107
+
+Geeraert, N., Omengo, F. O., Tamooh, F., Paron, P., Bouillon, S., & Govers, G. (2015).
+Sediment yield of the lower Tana River, Kenya, is insensitive to dam construction:
+sediment mobilization processes in a semi-arid tropical river system. Earth
+Surface Processes and Landforms, 40(13), 1827-1838.
+https://doi.org/10.1002/esp.3763
+
+Gehlenborg, N. (2019). UpSetR: A more scalable alternative to venn and euler diagrams
+for visualizing intersecting sets. R Package Version 1.4.0. Https://CRAN.R-
+Project.Org/Package=UpSetR.
+
+Geoportal Philippines. (2020). Geoportal Philippines: Land use map.
+
+75
+
+Https://Geoportal.Gov.Ph/.
+
+Gerace, E., Presti, V. D. M. Lo, & Biondo, C. (2019). Cryptosporidium infection:
+Epidemiology, pathogenesis, and differential diagnosis. European Journal of
+Microbiology and Immunology, 94), 119-123.
+https://doi.org/10.1556/1886.2019.00019
+
+Gerba, C. P. (2015). Environmentally transmitted pathogens. In Environmental
+Microbiology (pp. 509-550). Elsevier. https://doi.org/10.1016/B978-0-12-
+394626-3.00022-3
+
+Ghanbari, M., Kneifel, W., & Domig, K. J. (2015). A new view of the fish gut
+microbiome: Advances from next-generation sequencing. Aquaculture, 448, 464—
+475. https://doi.org/10.1016/j.aquaculture.2015.06.033
+
+Gilbert, J. A., & Dupont, C. L. (2011). Microbial metagenomics: Beyond the genome.
+Annual Review of Marine Science, 3(1), 347-371.
+https://doi.org/10.1146/annurev-marine-120709-142811
+
+Gorme, J. B., Maniquiz, M. C., Song, P., & Kim, L.-H. (2010). The water quality of the
+Pasig River in the city of Manila, Philippines: Current Status, management and
+future recovery. Environmental Engineering Research, 15(3), 173-179.
+https://doi.org/10.4491/eer.2010.15.3.173
+
+Gostinéar, C., Zalar, P., & Gunde-Cimerman, N. (2022). No need for speed: Slow
+development of fungi in extreme environments. Fungal Biology Reviews, 39, 1—
+14. https://doi.org/10.1016/j.for.2021.11.002
+
+Guizetti, J., & Frischknecht, F. (2021). Apicomplexans: A conoid ring unites them all.
+PLOS Biology, 19(3), 3001105. https://doi.org/10.1371/journal.pbio.3001 105
+
+Guo, S., Shi, X., Luo, X., & Yang, H. (2020). River water intrusion as a source of inflow
+
+76
+
+into the sanitary sewer system. Water Science and Technology, 82(11), 2472-—
+2481. https://doi.org/10.2166/wst.2020.516
+
+Guzman, J. P. M. D., De las Alas, T. P. L., Lucban, M. C., & Sevilla, C. E. C. (2020).
+Green tea (Camellia sinensis) extract inhibits biofilm formation in acyl
+homoserine lactone-producing, antibiotic-resistant Morganella morganii isolated
+from Pasig River, Philippines. Heliyon, 6(10), €05284.
+https://doi.org/10.1016/j-heliyon.2020.e05284
+
+Harwood, V. J., Brownell, M., Wang, S., Lepo, J., Ellender, R. D., Ajidahun, A.,
+Hellein, K. N., Kennedy, E., Ye, X., & Flood, C. (2009). Validation and field
+testing of library-independent microbial source tracking methods in the Gulf of
+Mexico. Water Research, 43(19), 4812-4819.
+https://doi.org/10.1016/j.watres.2009.06.029
+
+Harwood, V. J., Staley, C., Badgley, B. D., Borges, K., & Korajkic, A. (2014).
+Microbial source tracking markers for detection of fecal contamination in
+environmental waters: Relationships between pathogens and human health
+outcomes. FEMS Microbiology Reviews, 38(1), 1+40.
+https://doi.org/10.1111/1574-6976.12031
+
+Harwood, V. J., Wiggins, B., Hagedorn, C., Ellender, R. D., Gooch, J., Kern, J.,
+Samadpour, M., Chapman, A. C. H., Robinson, B. J., & Thompson, B. C. (2003).
+Phenotypic library-based microbial source tracking methods: Efficacy in the
+California collaborative study. Journal of Water and Health, 1(4), 153-166.
+
+Hert, D. G., Fredlake, C. P., & Barron, A. E. (2008). Advantages and limitations of
+next-generation sequencing technologies: A comparison of electrophoresis and
+
+non-electrophoresis methods. ELECTROPHORESIS, 29(23), 4618-4626.
+
+77
+
+https://doi.org/10.1002/elps.200800456
+
+Hewitt, K. M., Mannino, F. L., Gonzalez, A., Chase, J. H., Caporaso, J. G., Knight, R.,
+& Kelley, S. T. (2013). Bacterial diversity in two neonatal intensive care units
+(NICUs). PLoS ONE, 8(1), e54703. https://doi.org/10.1371/journal.pone.0054703
+
+Hideo, O., Shuichi, E., Toshiyuki, I., Yasuaki, O., & Shinji, T. (2017). Seasonal
+changes in water quality as affected by water level fluctuations in Lake Tonle Sap,
+Cambodia. Geographical Review of Japan Series B, 90(2), 53-65.
+https://doi.org/10.4157/geogrevjapanb.90.53
+
+Hirai, J., Nagai, S., & Hidaka, K. (2017). Evaluation of metagenetic community
+analysis of planktonic copepods using Illumina MiSeq: Comparisons with
+morphological classification and metagenetic analysis using Roche 454. PLOS
+ONE, 12(7), 0181452. https://doi.org/10.1371/journal.pone.0181452
+
+Hooda, P. S., Edwards, A. C., Anderson, H. A., & Miller, A. (2000). A review of water
+quality concerns in livestock farming areas. Science of The Total Environment,
+250(1-3), 143-167. https://doi.org/10.1016/S0048-9697(00)00373-9
+
+Hugenholtz, P., & Tyson, G. W. (2008). Metagenomics. Nature, 455(7212), 481-483.
+https://doi.org/10.1038/455481a
+
+Hundesa, A., Bofill-Mas, S., Maluquer de Motes, C., Rodriguez-Manzano, J., Bach, A.,
+Casas, M., & Girones, R. (2010). Development of a quantitative PCR assay for the
+quantitation of bovine polyomavirus as a microbial source-tracking tool. Journal
+of Virological Methods, 163(2), 385-389.
+https://doi.org/10.1016/j.jviromet.2009.10.029
+
+Irvine, K., Somogye, E., & Pettibone, G. (2002). Turbidity, suspended solids, and
+
+bacteria relationships in the Buffalo River Watershed. Middle States Geographer,
+
+78
+
+35.
+
+Jeong, J.-Y., Park, H.-D., Lee, K.-H., Weon, H.-Y., & Ka, J.-O. (2011). Microbial
+community analysis and identification of alternative host-specific fecal indicators
+in fecal and river water samples using pyrosequencing. The Journal of
+Microbiology, 49(4), 585-594. https://doi.org/10.1007/s12275-01 1-0530-6
+
+Jeong, M., Kim, J. I., Nam, S. W., & Shin, W. (2021). Molecular phylogeny and
+taxonomy of the Genus Spumella (Chrysophyceae) based on morphological and
+molecular evidence. Frontiers in Plant Science, 12.
+https://doi.org/10.3389/fpls.202 1.758067
+
+Johnson, D. B., & Aguilera, A. (2019). Extremophiles and acidic environments. In
+Reference Module in Life Sciences. Elsevier. https://doi.org/10.1016/B978-0-12-
+809633-8.90687-3
+
+Kamp, A., Hogslund, S., Risgaard-Petersen, N., & Stief, P. (2015). Nitrate storage and
+dissimilatory nitrate reduction by eukaryotic microbes. Frontiers in Microbiology,
+6. https://doi.org/10.3389/fmicb.2015.01492
+
+Keeling, P. J. (2019). Combining morphology, behaviour and genomics to understand
+the evolution and ecology of microbial eukaryotes. Philosophical Transactions of
+the Royal Society B: Biological Sciences, 374(1786), 20190085.
+https://doi.org/10.1098/rstb.2019.0085
+
+Khuram, I., Ahmad, N., Solak, C. N., & Barinova, S. (2021). Assessment of water
+quality by bioindication of algae and cyanobacteria in the Peshawar Valley,
+Pakistan. Turkish Journal of Fisheries and Aquatic Sciences, 22(3).
+https://doi.org/10.4194/TRJFAS 19805
+
+Kim, M., Park, T., & Yu, Z. (2017). Metagenomic investigation of gastrointestinal
+
+79
+
+microbiome in cattle. Asian-Australasian Journal of Animal Sciences, 30(11),
+1515-1528. https://doi.org/10.5713/ajas.17.0544
+
+Kircher, M., & Kelso, J. (2010). High-throughput DNA sequencing - concepts and
+limitations. BioEssays, 32(6), 524-536. https://doi.org/10.1002/bies.200900181
+
+Knights, D., Kuczynski, J., Charlson, E. S., Zaneveld, J., Mozer, M. C., Collman, R.
+G., Bushman, F. D., Knight, R., & Kelley, S. T. (2011). Bayesian community-wide
+culture-independent microbial source tracking. Nature Methods, 8(9), 761-763.
+https://doi.org/10.1038/nmeth.1650
+
+Ko, H. Y., Cho, K., Park, S., Kim, J. H., Kang, J.-H., Jeong, Y. S., Choi, J. D., Sin, Y.,
+Lee, C., & Ko, G. (2018). Host-specific Bacteroides markers-based microbial
+source tracking in aquaculture areas. Microbes and Environments, 33(2), 151-161.
+https://doi.org/10.1264/jsme2.ME17166
+
+Labana, R., Onichandran, S., Kumar, T., & Salibay, C. (2016). Surveillance of intestinal
+protozoans and multi-drug resistant bacteria from various water samples from the
+Philippines. Journal of Microbial & Biochemical Technology, 8(2).
+
+Labrador, K. L., Nacario, M. A. G., Malajacan, G. T., Abello, J. J. M., Galarion, L. H.,
+Rensing, C., & Rivera, W. L. (2020). Selecting rep-PCR markers to source track
+fecal contamination in Laguna Lake, Philippines. Journal of Water and Health,
+18(1), 19-29. https://doi.org/10.2166/wh.2019.042
+
+Lavrinienko, A., Scholier, T., Bates, S. T., Miller, A. N., & Watts, P. C. (2021).
+Defining gut mycobiota for wild animals: A need for caution in assigning authentic
+resident fungal taxa. Animal Microbiome, 3(1), 75.
+https://doi.org/10.1186/s42523-021-00134-z
+
+Lazo, M., Nieto, K., Rayel, M. F., Sto. Domingo, D., Vergara, M. A., & Papa, R. D.
+
+80
+
+(2009). Composition, abundance and distribution of rotifers in the Pasig River,
+Philippines. The Philippine Scientist, 46.
+
+Leclerc, H., Schwartzbrod, L., & Dei-Cas, E. (2002). Microbial agents associated with
+waterborne diseases. Critical Reviews in Microbiology, 28(4), 371-409.
+https://doi.org/10.1080/1040-84029 1046768
+
+Lee, J. E., Lee, S., Sung, J., & Ko, G. (2011). Analysis of human and animal fecal
+microbiota for microbial source tracking. The ISME Journal, 5(2), 362-365.
+https://doi.org/10.1038/ismej.2010.120
+
+Lepak, R. F., Hoffman, J. C., Janssen, S. E., Krabbenhoft, D. P., Ogorek, J. M., DeWild,
+J. F., Tate, M. T., Babiarz, C. L., Yin, R., Murphy, E. W., Engstrom, D. R., &
+Hurley, J. P. (2019). Mercury source changes and food web shifts alter
+contamination signatures of predatory fish from Lake Michigan. Proceedings of
+the National Academy of Sciences, 116(47), 23600-23608.
+https://doi.org/10.1073/pnas. 1907484116
+
+Lepere, C., Demura, M., Kawachi, M., Romac, S., Probert, I., & Vaulot, D. (2011).
+Whole-genome amplification (WGA) of marine photosynthetic eukaryote
+populations. FEMS Microbiology Ecology, 76(3), 513-523.
+https://doi.org/10.1111/).1574-6941.2011.01072.x
+
+Li, J. Z., Chapman, B., Charlebois, P., Hofmann, O., Weiner, B., Porter, A. J., Samuel,
+R., Vardhanabhuti, S., Zheng, L., Eron, J., Taiwo, B., Zody, M. C., Henn, M. R.,
+Kuritzkes, D. R., & Hide, W. (2014). Comparison of Illumina and 454 Deep
+Sequencing in participants failing Raltegravir-based antiretroviral therapy. PLoS
+ONE, 9(3), €90485. https://doi.org/10.1371/journal.pone.0090485
+
+Lian, X.-Q., Zhu, G.-W., Yang, W.-B., Zhu, M.-Y., & Xu, H. (2020). Effect of heavy
+
+81
+
+rainfall on nitrogen and phosphorus concentrations in rivers at river-net plain.
+Huan Jing Ke Xue, 41(11), 4970-4980.
+https://doi.org/10.13227/j.hjkx.202003 183
+
+Liang, H., Yu, Z., Wang, B., Ndayisenga, F., Liu, R., Zhang, H., & Wu, G. (2021).
+Synergistic application of molecular markers and community-based microbial
+source tracking methods for identification of fecal pollution in river water during
+dry and wet seasons. Frontiers in Microbiology, 12.
+https://doi.org/10.3389/fmicb.202 1.660368
+
+Liu, L., Li, Y., Li, S., Hu, N., He, Y., Pong, R., Lin, D., Lu, L., & Law, M. (2012).
+Comparison of next-generation sequencing systems. Journal of Biomedicine and
+Biotechnology, 2012, \-11. https://doi.org/10.1155/2012/251364
+
+Logrieco, A., Bottalico, A., Mulé, G., Moretti, A., & Perrone, G. (2003). Epidemiology
+of toxigenic fungi and their associated mycotoxins for some Mediterranean crops
+(X. Xu, J. A. Bailey, & B. M. Cooke (eds.)). Springer.
+
+Looby, C. I., & Treseder, K. K. (2018). Shifts in soil fungi and extracellular enzyme
+activity with simulated climate change in a tropical montane cloud forest. Soil
+Biology and Biochemistry, 117, 87-96.
+https://doi.org/10.1016/j.soilbio.2017.11.014
+
+Lu, L., Zhao, D., Li, Z., & Fernandez, L. D. (2023). Editorial: Microbial diversity and
+ecosystem functioning in fragmented rivers worldwide. Frontiers in
+Microbiology, 14. https://doi.org/10.3389/fmicb.2023.1253190
+
+Luo, C., Tsementzi, D., Kyrpides, N., Read, T., & Konstantinidis, K. T. (2012).
+Correction: Direct comparisons of Illumina vs. Roche 454 sequencing
+
+technologies on the same microbial community DNA sample. PLoS ONE, 7(3).
+
+82
+
+https://doi.org/10.1371/annotation/64ba358f-a483-46c2-b224-eaa5b9a33939
+
+Luo, Y., Li, J., Zhou, H., Yu, B., He, J., Wu, A., Huang, Z., Zheng, P., Mao, X., Yu, J.,
+Li, H., Wang, H., Wang, Q., Yan, H., & Chen, D. (2021). The nutritional
+significance of intestinal fungi: Alteration of dietary carbohydrate composition
+triggers colonic fungal community shifts in a pig model. Applied and
+Environmental Microbiology, 87(10). https://doi.org/10.1128/AEM.00038-21
+
+Lv, Q.-B., Meng, J.-X., Ma, H., Liu, R., Qin, Y., Qin, Y.-F., Geng, H.-L., Ni, H.-B., &
+Zhang, X.-X. (2023). Description of gut mycobiota composition and diversity of
+Caprinae animals. Microbiology Spectrum, 11(1).
+https://doi.org/10.1128/spectrum.02424-22
+
+Maccaferri, S., Biagi, E., & Brigidi, P. (2011). Metagenomics: Key to human gut
+microbiota. Digestive Diseases, 296), 525-530.
+https://doi.org/10.1159/000332966
+
+Madoni, P. (2011). Protozoa in wastewater treatment processes: A minireview. Italian
+Journal of Zoology, 78(1), 3-11. https://doi.org/10.1080/11250000903373797
+
+Malajacan, G. T., Nacario, M. A. G., Obusan, M. C. M., & Rivera, W. L. (2023). Host-
+associated Bacteroides 16S rDNA-based markers for source tracking of fecal
+pollution in Laguna Lake, Philippines. Microorganisms, 11(5), 1142.
+https://doi.org/10.3390/microorganisms] 1051142
+
+Manini, E., Baldrighi, E., Ricci, F., Grilli, F., Giovannelli, D., Intoccia, M., Casabianca,
+S., Capellacci, S., Marinchel, N., Penna, P., Moro, F., Campanelli, A., Cordone,
+A., Correggia, M., Bastoni, D., Bolognini, L., Marini, M., & Penna, A. (2022).
+Assessment of spatio-temporal variability of faecal pollution along coastal waters
+
+during and after rainfall events. Water, 14(3), 502.
+
+83
+
+https://doi.org/10.3390/w14030502
+
+Manitcharoen, N., Pimpunchat, B., & Sattayatham, P. (2020). Water quality analysis
+for the depletion of dissolved oxygen due to exponentially increasing form of
+pollution sources. Journal of Applied Mathematics, 2020, 1-7.
+https://doi.org/10.1155/2020/9085981
+
+Martin, M. (2015). Cutadapt removes adapter sequences from high-throughput
+sequencing reads. Retrieved from EMBnet.Journal,
+Https://Journal.Embnet.Org/Index. Php/Embnetjournal/Article/View/200/458.
+
+Massana, R., & Pedrdés-Alid, C. (2008). Unveiling new microbial eukaryotes in the
+surface ocean. Current Opinion in Microbiology, 11(3), 213-218.
+https://doi.org/10.1016/j.mib.2008.04.004
+
+Matsuyama, Y. (2012). Impacts of the harmful dinoflagellate Heterocapsa
+circularisquama bloom on shellfish aquaculture in Japan and some experimental
+studies on invertebrates. Harmful Algae, 14, 144-155.
+https://doi.org/10.1016/j.hal.2011.10.019
+
+McGrath, C. L., & Katz, L. A. (2004). Genome diversity in microbial eukaryotes.
+Trends in Ecology & Evolution, 19(1), 32-38.
+https://doi.org/10.1016/j.tree.2003.10.007
+
+McLain, J. E. T., Ryu, H., Kabiri-Badr, L., Rock, C. M., & Abbaszadegan, M. (2009).
+Lack of specificity for PCR assays targeting human Bacteroides 16S rRNA gene:
+Cross-amplification with fish feces. FEMS Microbiology Letters, 299(1), 38-43.
+https://doi.org/10.1111/j.1574-6968.2009.01745.x
+
+McLellan, S. L., Huse, S. M., Mueller-Spitz, S. R., Andreishcheva, E. N., & Sogin, M.
+
+L. (2010). Diversity and population structure of sewage-derived microorganisms
+
+84
+
+in wastewater treatment plant influent. Environmental Microbiology, 12(2), 378—
+392. https://doi.org/10.1111/j.1462-2920.2009.02075.x
+
+Mishra, S., Kneis, D., Berendonk, T. U., & Aubeneau, A. (2019). Optimum positioning
+of wastewater treatment plants in a river network: A model-based approach to
+minimize microbial pollution. Science of The Total Environment, 691, 1310-1319.
+https://doi.org/10.1016/j.scitotenv.2019.07.035
+
+Mitsi, K., Richter, D. J., Arroyo, A. S., Lépez-Escardé, D., Anté, M., Oterino, A. G.,
+& Ruiz-Trillo, I. (2023). Taxonomic composition, community structure and
+molecular novelty of microeukaryotes in a temperate oligomesotrophic lake as
+revealed by  metabarcoding. Scientific Reports,  13(1), 3119.
+https://doi.org/10.1038/s41598-023-30228-4
+
+Moreno-Vivian, C., & Flores, E. (2007). Nitrate assimilation in bacteria. In H. Bothe,
+S. Ferguson, & W. Newton (Eds.), Biology of the Nitrogen Cycle (pp. 263-282).
+Elsevier. https://doi.org/10.1016/B978-044452857-5.50018-7
+
+Morris, E. K., Caruso, T., Buscot, F., Fischer, M., Hancock, C., Maier, T. S., Meiners,
+T., Miller, C., Obermaier, E., Prati, D., Socher, S. A., Sonnemann, I., Waschke,
+N., Wubet, T., Wurst, S., & Rillig, M. C. (2014). Choosing and using diversity
+indices: insights for ecological applications from the German Biodiversity
+Exploratories. Ecology and Evolution, 4(18), 3514-3524.
+https://doi.org/10.1002/ece3.1155
+
+Mott, J., & Smith, A. (2011). Library-Dependent Source Tracking Methods. (C.
+Hagedorn, A. Blanch, & V. Harwoord (eds.)). Springer.
+
+Moussa, S. H., & Massengale, R. D. (2008). Identification of the sources of Escherichia
+
+coli in a watershed using carbon-utilization patterns and composite data sets.
+
+85
+
+Journal of Water and Health, 6(2), 197-207. https://doi.org/10.2166/wh.2008.021
+
+Nacario, M. A. G., dela Pena, L. B. R. O., Labrador, K. L., & Rivera, W. L. (2022).
+DNA fingerprinting using BOX-AIR and (GTG)5 primers identify spatial
+variations of fecal contamination along Pasig River, Philippines. Environmental
+Monitoring and Assessment, 194(12), 868. https://doi.org/10.1007/s10661-022-
+10504-y
+
+NCR-DENR. (2021). DENR National Capital Region conducts cleanup in Marikina
+River. Https://Ner.Denr.Gov.Ph/Index.Php/News-Events/Photo-Releases/Denr-
+National-Capital-Region-Conducts-Cleanup-in-Marikina-River.
+
+Neave, M., Luter, H., Padovan, A., Townsend, S., Schobben, X., & Gibb, K. (2014).
+Multiple approaches to microbial source tracking in tropical northern Australia.
+MicrobiologyOpen, 3(6), 860-874. https://doi.org/10.1002/mbo3.209
+
+Nemec, M. D., & Massengale, R. D. (2010). The use of carbon-utilization profiling to
+determine sources of fecal contamination in a central Texas watershed. Lake and
+Reservoir Management, 26(2), 104-113.
+https://doi.org/10.1080/07438141.2010.490769
+
+Newbold, C. J., de la Fuente, G., Belanche, A., Ramos-Morales, E., & McEwan, N. R.
+(2015). The role of ciliate protozoa in the rumen. Frontiers in Microbiology, 6.
+https://doi.org/10.3389/fmicb.2015.01313
+
+Newton, R. J., Bootsma, M. J., Morrison, H. G., Sogin, M. L., & McLellan, S. L. (2013).
+A microbial signature approach to identify fecal pollution in the waters off an
+urbanized coast of Lake Michigan. Microbial Ecology, 65(4), 1011-1023.
+https://doi.org/10.1007/s00248-013-0200-9
+
+Norf, H., & Weitere, M. (2010). Resource quantity and seasonal background alter
+
+86
+
+warming effects on communities of biofilm ciliates. FEMS Microbiology Ecology,
+74(2), 361-370. https://doi.org/10.1111/j.1574-6941.2010.00948.x
+
+O’Brien, L., Siboni, N., Seymour, J. R., Balzer, M., & Mitrovic, S. (2023). Tributary
+Inflows to a Regulated River Influence Bacterial Communities and Increase
+Bacterial Carbon Assimilation. Microbial Ecology, 86(4), 2642-2654.
+https://doi.org/10.1007/s00248-023-02271-1
+
+Okabe, S., Okayama, N., Savichtcheva, O., & Ito, T. (2007). Quantification of host-
+specific Bacteroides—Prevotella 16S rRNA genetic markers for assessment of
+fecal pollution in freshwater. Applied Microbiology and Biotechnology, 74(4),
+890-901. https://doi.org/10.1007/s00253-006-0714-x
+
+Oksanen, J., Simpson, G. L., Blanchet, F. G., Kindt, R., Legendre, P., Minchin, P. R.,
+O’Hara, R. B., Solymos, P., Stevens, M. H. H., & Szoecs, E. (2022). vegan:
+Community ecology package. R Package Version 2.6-4. Https://CRAN.R-
+Project.Org/Package=vegan.
+
+Olds, H. T., Corsi, S. R., Dila, D. K., Halmo, K. M., Bootsma, M. J., & McLellan, S.
+L. (2018). High levels of sewage contamination released from urban areas after
+storm events: A quantitative survey with sewage specific bacterial indicators.
+PLOS Medicine, 15(7), €1002614. https://doi.org/10.137 1/journal.pmed. 1002614
+
+Oliveros, A., & Vital, P. (2022). Isolation, characterization, and antimicrobial
+resistance of Enterococcus sp. from irrigation waters in Metro Manila, Philippines.
+Environment Asia, 5(3), 133-142.
+
+Onichandran, S., Kumar, T., Salibay, C. C., Dungea, J. Z., Tabo, H. AL, Tabo, N., Tan,
+T.-C., Lim, Y. AL, Sawangjaroen, N., Phiriyasamith, S., Andiappan, H., Ithoi, I.,
+
+Lau, Y.-L., & Nissapatorn, V. (2014). Waterborne parasites: A current status from
+
+87
+
+the Philippines. Parasites & Vectors, 7(1), 244. https://doi.org/10.1186/1756-
+3305-7-244
+
+Palleja, A., Mikkelsen, K. H., Forslund, S. K., Kashani, A., Allin, K. H., Nielsen, T.,
+Hansen, T. H., Liang, S., Feng, Q., Zhang, C., Pyl, P. T., Coelho, L. P., Yang, H.,
+Wang, J., Typas, A., Nielsen, M. F., Nielsen, H. B., Bork, P., Wang, J., ...
+Pedersen, O. (2018). Recovery of gut microbiota of healthy adults following
+antibiotic exposure. Nature Microbiology, 3(11), 1255-1265.
+https://doi.org/10.1038/s41564-018-0257-9
+
+Parfrey, L. W., Walters, W. A., & Knight, R. (2011). Microbial eukaryotes in the human
+microbiome: Ecology, evolution, and future directions. Frontiers in Microbiology,
+2. https://doi.org/10.3389/fmicb.201 1.00153
+
+Parfrey, L. W., Walters, W. A., Lauber, C. L., Clemente, J. C., Berg-Lyons, D., Teiling,
+C., Kodira, C., Mohiuddin, M., Brunelle, J., Driscoll, M., Fierer, N., Gilbert, J. A.,
+& Knight, R. (2014). Communities of microbial eukaryotes in the mammalian gut
+within the context of environmental eukaryotic diversity. Frontiers in
+Microbiology, 5. https://doi.org/10.3389/fmicb.2014.00298
+
+Paronda, G. R. A., David, C. P. C., & Apodaca, D. C. (2019). River flow pattern and
+heavy metals concentrations in Pasig River, Philippines as affected by varying
+seasons and astronomical tides. JOP Conference Series: Earth and Environmental
+Science, 344(1), 012049. https://doi.org/10.1088/1755-1315/344/1/012049
+
+Pearman, W. S., Freed, N. E., & Silander, O. K. (2020). Testing the advantages and
+disadvantages of short- and long- read eukaryotic metagenomics using simulated
+reads. BMC Bioinformatics, 21(1), 220. https://doi.org/10.1186/s12859-020-3528-
+
+4
+
+88
+
+Perlroth, J., Choi, B., & Spellberg, B. (2007). Nosocomial fungal infections:
+Epidemiology, diagnosis, and treatment. Medical Mycology, 45(4), 321-346.
+https://doi.org/10.1080/13693780701218689
+
+Petroff, A. P., Pasulka, A. L., Soplop, N., Wu, X.-L., & Libchaber, A. (2015).
+Biophysical basis for convergent evolution of two veil-forming microbes. Royal
+Society Open Science, 2(11), 150437. https://doi.org/10.1098/rsos. 150437
+
+Philippine Daily Inquirer. (2023, April 2). Transforming Pasig River.
+Https://Opinion.Inquirer.Net/162123/Transforming-Pasig-River.
+
+Pietryczuk, A., Cudowski, A., Hauschild, T., Swistocka, M., Wiecko, A., & Karpowicz,
+M. (2018). Abundance and species diversity of fungi in rivers with various
+contaminations. Current Microbiology, 75(5), 630-638.
+https://doi.org/10.1007/s00284-017-1427-3
+
+Piganeau, G., Desdevises, Y., Derelle, E., & Moreau, H. (2008). Picoeukaryotic
+sequences in the Sargasso Sea metagenome. Genome Biology, 9(1), RS.
+https://doi.org/10.1186/gb-2008-9-1-r5
+
+Praveen, K. P., Ganguly, S., Wakchaure, R., Para, P. A., Mahajan, T., Qadri, K.,
+Kamble, S., Sharma, R., Shekhar, S., & Dalai, N. (2016). Waterborne diseases and
+its effect on domestic animals and human health: A review. International Journal
+of Emerging Technology and Advanced Engineering, 6(1).
+
+Prystajecky, N., Huck, P. M., Schreier, H., & Isaac-Renton, J. L. (2014). Assessment
+of Giardia and Cryptosporidium spp. as a microbial source tracking tool for
+surface water: Application in a mixed-use watershed. Applied and Environmental
+Microbiology, 80(8), 2328-2336. https://doi.org/10.1128/AEM.02037-13
+
+Quast, C., Pruesse, E., Yilmaz, P., Gerken, J., Schweer, T., Yarza, P., Peplies, J., &
+
+89
+
+Gléckner, F. O. (2012). The SILVA ribosomal RNA gene database project:
+Improved data processing and web-based tools. Nucleic Acids Research, 41(D1),
+D590-D596. https://doi.org/10.1093/nar/gks1219
+
+R Core Team. (2022). R: A language and environment for statistical computing. R
+Foundation for Statistical Computing Vienna, Austria. Https://Www.R-
+Project.Org/.
+
+Regmi, R. K. (2017). Urbanization and related environmental issues of Metro Manila.
+Journal of Advanced College of Engineering and Management, 3.
+
+Ren, Z., Qu, X., Zhang, M., Yu, Y., & Peng, W. (2019). Distinct bacterial communities
+in wet and dry seasons during a seasonal water level fluctuation in the largest
+freshwater lake (Poyang Lake) in China. Frontiers in Microbiology, 10.
+https://doi.org/10.3389/fmicb.2019.01167
+
+Richardson, M., & Rautemaa-Richardson, R. (2019). Exposure to Aspergillus in home
+and healthcare facilities’ water environments: Focus on biofilms. Microorganisms,
+7(1), 7. https://doi.org/10.3390/microorganisms7010007
+
+Ruecker, N. J., Braithwaite, S. L., Topp, E., Edge, T., Lapen, D. R., Wilkes, G.,
+Robertson, W., Medeiros, D., Sensen, C. W., & Neumann, N. F. (2007). Tracking
+host sources of Cryptosporidium spp. in raw water for improved health risk
+assessment. Applied and Environmental Microbiology, 73(12), 3945-3957.
+https://doi.org/10.1128/AEM.02788-06
+
+Sabir, M. S., Shahzadi, F., Ali, F., Shakeela, Q., Niaz, Z., & Ahmed, S. (2021).
+Comparative effect of fertilization practices on soil microbial diversity and
+activity: An overview. Current Microbiology, 78(10), 3644-3655.
+
+https://doi.org/10.1007/s00284-021-02634-2
+
+90
+
+Salazar-Ardiles, C., Asserella-Rebollo, L., & Andrade, D. C. (2022). Free-living
+amoebas in extreme environments: The true survival in our planet. BioMed
+Research International, 2022, 1-10. https://doi.org/10.1155/2022/2359883
+
+Salo, T., & Salovius-Laurén, S. (2022). Green algae as bioindicators for long-term
+nutrient pollution along a coastal eutrophication gradient. Ecological Indicators,
+140, 109034. https://doi.org/10.1016/j.ecolind.2022.109034
+
+Santoferrara, L. F., Grattepanche, J., Katz, L. A., & McManus, G. B. (2014).
+Pyrosequencing for assessing diversity of eukaryotic microbes: Analysis of data
+on marine planktonic ciliates and comparison with traditional methods.
+Environmental Microbiology, 16(9), 2752-2763. https://doi.org/10.1111/1462-
+2920.12380
+
+Schmidt, P.-A., Balint, M., Greshake, B., Bandow, C., Rémbke, J., & Schmitt, I. (2013).
+Illumina metabarcoding of a soil fungal community. Soil Biology and
+Biochemistry, 65, 128-132. https://doi.org/10.1016/j.soilbio.2013.05.014
+
+Schoonover, J. E., & Lockaby, B. G. (2006). Land cover impacts on stream nutrients
+and fecal coliform in the lower Piedmont of West Georgia. Journal of Hydrology,
+331(3-4), 371-382. https://doi.org/10.1016/j.jhydrol.2006.05.031
+
+Schuster, S. C. (2008). Next-generation sequencing transforms today’s biology. Nature
+Methods, 5(1), 16-18. https://doi.org/10.1038/nmeth1 156
+
+Scott, T. M., Rose, J. B., Jenkins, T. M., Farrah, S. R., & Lukasik, J. (2002). Microbial
+source tracking: Current methodology and future Directions. Applied and
+Environmental Microbiology, 68(12), 5796-5803.
+https://doi.org/10.1128/AEM.68.12.5796-5803.2002
+
+Seguel, M., & Gottdenker, N. (2017). The diversity and impact of hookworm infections
+
+91
+
+in wildlife. International Journal for Parasitology: Parasites and Wildlife, 6(3),
+177-194. https://doi.org/10.1016/j.ijppaw.2017.03.007
+
+Shayo, F. K., Nakamura, K., Al-Sobaihi, S., & Seino, K. (2021). Is the source of
+domestic water associated with the risk of malaria infection? Spatial variability
+and a mixed-effects multilevel analysis. International Journal of Infectious
+Diseases, 104, 224-231. https://doi.org/10.1016/j.ijid.2020.12.062
+
+Shenhav, L., Thompson, M., Joseph, T. A., Briscoe, L., Furman, O., Bogumil, D.,
+Mizrahi, I., Pe’er, I., & Halperin, E. (2019). FEAST: Fast expectation-
+maximization for microbial source tracking. Nature Methods, 16(7), 627-632.
+https://doi.org/10.1038/s41592-019-0431-x
+
+Simpson, A. G. B., & Eglit, Y. (2016). Protist diversification. In Encyclopedia of
+Evolutionary Biology (pp. 344-360). Elsevier. https://doi.org/10.1016/B978-0-12-
+800049-6.00247-X
+
+Simpson, J. M., Santo Domingo, J. W., & Reasoner, D. J. (2002). Microbial source
+tracking: State of the science. Environmental Science & Technology, 36(24),
+5279-5288. https://doi.org/10.1021/es026000b
+
+Snel, S. J., Baker, M. G., Kamalesh, V., French, N., & Learmonth, J. (2009). A tale of
+two parasites: The comparative epidemiology of cryptosporidiosis and giardiasis.
+Epidemiology and Infection, 137(11), 1641-1650.
+https://doi.org/10.1017/S0950268809002465
+
+Stefanidou, N., Genitsaris, $., Lopez-Bautista, J., Sommer, U., & Moustaka-Gouni, M.
+(2018). Unicellular eukaryotic community response to temperature and salinity
+variation in mesocosm experiments. Frontiers in Microbiology, 9.
+
+https://doi.org/10.3389/fmicb.2018.02444
+
+92
+
+Steffen, H. C., Smith, K., van Deventer, C., Weiskerger, C., Bosch, C., Brandao, J.,
+Wolfaardt, G., & Botha, A. (2023). Health risk posed by direct ingestion of yeasts
+from polluted ~—river — water. Water Research, 231, 119599.
+https://doi.org/10.1016/j.watres.2023.119599
+
+Stewart, J., Santo Domingo, J., Wade, T., & Sadowsky, M. (2006). Fecal pollution,
+public health, and microbial source tracking (J. W. Santo Domingo & M. J.
+Sadowsky (eds.)). ASM Press.
+
+Stoeckel, D. M., & Harwood, V. J. (2007). Performance, design, and analysis in
+microbial source tracking Studies. Applied and Environmental Microbiology,
+73(8), 2405-2415. https://doi.org/10.1128/AEM.02473-06
+
+Strokal, M., Ma, L., Bai, Z., Luan, S., Kroeze, C., Oenema, O., Velthof, G., & Zhang,
+F. (2016). Alarming nutrient pollution of Chinese rivers as a result of agricultural
+transitions. Environmental Research Letters, 11(2), 024014.
+https://doi.org/10.1088/1748-9326/1 1/2/024014
+
+Sunagawa, S., Coelho, L. P., Chaffron, S., Kultima, J. R., Labadie, K., Salazar, G.,
+Djahanschiri, B., Zeller, G., Mende, D. R., Alberti, A., Cornejo-Castillo, F. M.,
+Costea, P. I., Cruaud, C., d’Ovidio, F., Engelen, S., Ferrera, I., Gasol, J. M., Guidi,
+L., Hildebrand, F., ... Velayoudon, D. (2015). Structure and function of the global
+ocean microbiome. Science, 348(6237). https://doi.org/10.1126/science.1261359
+
+Tan, A. P., & Hedreyda, C. (2020). Sequence analysis and cloning of alkane 1-
+monooxygenase and catechol 1,2-dioxygenase genes from Acinetobacter
+baumannii isolated from the Philippine Pasig River. Philippine Journal of Science,
+149(1). https://doi.org/10.56899/149.01.16
+
+Tarkington, J., & Zufall, R. A. (2021). Temperature affects the repeatability of
+
+93
+
+evolution in the microbial eukaryote Tetrahymena thermophila. Ecology and
+Evolution, 11(19), 13139-13152. https://doi.org/10.1002/ece3.8036
+
+Teaf, C., & Garber, M. (2011). Use of microbial source tracking in the legal arena:
+Benefits and challenges. (C. Hagerdorn, A. Blanch, & V. Harwood (eds.)).
+Springer Science+Business Media.
+
+Tessler, M., Neumann, J. S., Afshinnekoo, E., Pineda, M., Hersch, R., Velho, L. F. M.,
+Segovia, B. T., Lansac-Toha, F. A., Lemke, M., DeSalle, R., Mason, C. E., &
+Brugler, M. R. (2017). Large-scale differences in microbial biodiversity discovery
+between 16S amplicon and shotgun sequencing. Scientific Reports, 7(1), 6589.
+https://doi.org/10.1038/s41598-017-06665-3
+
+Unno, T., Jang, J., Han, D., Kim, J. H., Sadowsky, M. J., Kim, O.-S., Chun, J., & Hur,
+H.-G. (2010). Use of barcoded pyrosequencing and shared OTUs to determine
+sources of fecal bacteria in watersheds. Environmental Science & Technology,
+44(20), 7777-7782. https://doi.org/10.1021/es101500z
+
+Votypka, J., Modry, D., Obornik, M., Slapeta, J., & Luke, J. (2016). Apicomplexa. In
+Handbook of the Protists (pp. 1-58). Springer International Publishing.
+https://doi.org/10.1007/978-3-3 19-32669-6_20-1
+
+Wang, X., Ran, Y., Jia, S., Ahmed, S., Long, X., Jiang, Y., & Jiang, Y. (2022). Human
+disseminated protothecosis: The skin is the “window”? Frontiers in Immunology,
+13. https://doi.org/10.3389/fimmu.2022.880196
+
+Wang, Y., Zhang, W., Lin, Y., Cao, W., Zheng, L., & Yang, J. (2014). Phosphorus,
+nitrogen and chlorophyll-a are significant factors controlling ciliate communities
+in summer in the Northern Beibu Gulf, South China Sea. PLoS ONE, 9(7),
+
+€101121. https://doi.org/10.1371/journal.pone.0101121
+
+94
+
+Wang, Y., Zhang, W. P., Cao, H. L., Shek, C. S., Tian, R. M., Wong, Y. H., Batang, Z.,
+Al-Suwailem, A., & Qian, P.-Y. (2014). Diversity and distribution of eukaryotic
+microbes in and around a brine pool adjacent to the Thuwal cold seeps in the Red
+Sea. Frontiers in Microbiology, 5. https://doi.org/10.3389/fmicb.2014.00037
+
+Ward, T. L., Weber, B. P., Mendoza, K. M., Danzeisen, J. L., Llop, K., Lang, K.,
+Clayton, J. B., Grace, E., Brannon, J., Radovic, I., Beauclaire, M., Heisel, T. J.,
+Knights, D., Cardona, C., Kogut, M., Johnson, C., Noll, S. L., Arsenault, R., Reed,
+K.M., & Johnson, T. J. (2019). Antibiotics and host-tailored probiotics similarly
+
+modulate effects on the developing avian microbiome, mycobiome, and host gene
+expression. MBio, 10(5). https://doi.org/10.1128/mBio.02171-19
+Wardrop, N. A., Hill, A. G., Dzodzomenyo, M., Aryeetey, G., & Wright, J. A. (2018).
+Livestock ownership and microbial contamination of drinking-water: Evidence
+from nationally representative household surveys in Ghana, Nepal and
+Bangladesh. International Journal of Hygiene and Environmental Health, 221(1),
+33-40. https://doi.org/10.1016/j.ijheh.2017.09.014
+Wawrzyniak, I., Poirier, P., Viscogliosi, E., Dionigia, M., Texier, C., Delbac, F., &
+
+Alaoui, H. El. (2013). Blastocystis, an unrecognized parasite: An overview of
+
+pathogenesis and diagnosis. Therapeutic Advances in Infectious Disease, 1(5),
+
+167-178. https://doi.org/10.1177/20499361 13504754
+
+West, P. T., Probst, A. J., Grigoriev, I. V., Thomas, B. C., & Banfield, J. F. (2018).
+
+Genome-reconstruction for eukaryotes from complex natural microbial
+communities. Genome Research, 28(4), 569-580.
+https://doi.org/10.1101/gr.228429.117
+
+Whitlock, J. E., Jones, D. T., & Harwood, V. J. (2002). Identification of the sources of
+
+95
+
+fecal coliforms in an urban watershed using antibiotic resistance analysis. Water
+Research, 36(17), 4273-4282. https://doi.org/10.1016/S0043-1354(02)00139-2
+
+Wickham, H. (2016). ggplot2: Elegant graphics for data analysis. Springer-Verlag New
+York. Https://Ggplot2. Tidyverse. Org.
+
+Wiggins, B. A. (1996). Discriminant analysis of antibiotic resistance patterns in fecal
+streptococci, a method to differentiate human and animal sources of fecal pollution
+in natural waters. Applied and Environmental Microbiology, 62(11), 3997-4002.
+https://doi.org/10.1128/aem.62.11.3997-4002.1996
+
+Wilhelm, S. W., Farnsley, S. E., LeCleir, G. R., Layton, A. C., Satchwell, M. F.,
+DeBruyn, J. M., Boyer, G. L., Zhu, G., & Paerl, H. W. (2011). The relationships
+between nutrients, cyanobacterial toxins and the microbial community in Taihu
+(Lake Tai), China. Harmful Algae, 10(2), 207-215.
+https://doi.org/10.1016/j.hal.2010.10.001
+
+Wilks, S., & Sleigh, M. (2008). Feeding by Euplotes mutabilis (Ciliophora,
+Hypotrichida). Denisia, 23, 383-388.
+
+Worden, A. Z., Nolan, J. K., & Palenik, B. (2004). Assessing the dynamics and ecology
+of marine picophytoplankton: The importance of the eukaryotic component.
+Limnology and Oceanography, 49(1), 168-179.
+https://doi.org/10.4319/10.2004.49.1.0168
+
+Wu, P.-F., Li, D.-X., Kong, L.-F., Li, Y.-Y., Zhang, H., Xie, Z.-X., Lin, L., & Wang,
+D.-Z. (2020). The diversity and biogeography of microeukaryotes in the euphotic
+zone of the northwestern Pacific Ocean. Science of The Total Environment, 698,
+134289. https://doi.org/10.1016/j.scitotenv.2019.134289
+
+Wuertz, S., Wang, D., Reischer, G., & Farnleitner, A. (2011). Library-Independent
+
+96
+
+Bacterial Source Tracking Methods (C. Hagedorn, A. Blanch, & V. Harwood
+(eds.)). Springer.
+
+Yang, C., Li, Y., Zhou, B., Zhou, Y., Zheng, W., Tian, Y., Van Nostrand, J. D., Wu,
+L., He, Z., Zhou, J., & Zheng, T. (2015). Illumina sequencing-based analysis of
+free-living bacterial community dynamics during an Akashiwo sanguine bloom in
+Xiamen sea, China. Scientific Reports, 5(1), 8476.
+https://doi.org/10.1038/srep08476
+
+Yang, W., Chen, P., Villegas, E. N., Landy, R. B., Kanetsky, C., Cama, V., Dearen, T.,
+Schultz, C. L., Orndorff, K. G., Prelewicz, G. J., Brown, M. H., Young, K. R., &
+Xiao, L. (2008). Cryptosporidium Source Tracking in the Potomac River
+Watershed. Applied and Environmental Microbiology, 74(21), 6495-6504.
+https://doi.org/10.1128/AEM.01345-08
+
+Zerveas, S., Mente, M. S., Tsakiri, D., & Kotzabasis, K. (2021). Microalgal
+photosynthesis induces alkalization of aquatic environment as a result of H+
+uptake independently from CO2 concentration — New perspectives for
+environmental applications. Journal of Environmental Management, 289, 112546.
+https://doi.org/10.1016/j.jenvman.2021.112546
+
+Zhang, C., Li, H., Zeng, Y., Ding, H., Wang, B., Li, Y., Ji, Z., Bi, Y., & Luo, W. (2022).
+Diversity and assembly processes of microbial eukaryotic communities in Fildes
+Peninsula Lakes (West Antarctica). Biogeosciences, 19(18), 4639-4654.
+https://doi.org/10.5194/bg-19-4639-2022
+
+Zhang, N., Luo, Y.-J., Chen, X.-Y., Li, Q., Jing, Y.-C., Wang, X., & Feng, C.-H. (2018).
+Understanding the effects of composition and configuration of land covers on
+
+surface runoff in a highly urbanized area. Ecological Engineering, 125, 11-25.
+https://doi.org/10.1016/j.ecoleng.2018.10.008

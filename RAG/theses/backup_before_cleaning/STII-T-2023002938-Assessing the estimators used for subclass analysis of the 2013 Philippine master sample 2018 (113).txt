@@ -1,0 +1,1748 @@
+ASSESSING THE ESTIMATORS USED FOR SUBCLASS ANALYSIS OF THE 2013 PHILIPPINE MASTER SAMPLE
+
+CLIFFORD B. LESMORAS
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+Master of Science in Statistics
+
+DECEMBER 2018
+
+ABSTRACT
+
+The Philippine Statistics Authority has shifted to a new design of the master sample,
+which caters to all the household-based surveys it conducts. These surveys are generally
+used as basis from which evidence-based policies are derived. While domain level analysis
+is also of great importance, policies are usually crafted to target certain subclasses, whose
+estimators are known to be ratios since sampling units at these levels are almost intractable.
+To determine the appropriate method for estimating the subclasses, this paper presents a
+comparative analysis of the ratio estimators and their corresponding standard errors
+computed using the Taylor Series Linearization and Random Group methods. It was
+theoretically shown that for a simple random sample, TSL performs better than RG in terms
+of bias and precision, hence lower mean squared error. These properties are then verified
+using the LFS 2016 data where unemployment rate at the domain level are computed.
+Moreover, this comparison is extended to the subclass level where the validity of the variance formulas is expected to weaken due to smaller sample sizes.
+
+CHAPTER 1
+
+INTRODUCTION
+
+1.1 Background of the Study
+
+Motivated by the availability of a more updated basis for the construction of the
+sampling frame and the need to produce reliable estimates at the subnational levels, the
+Philippine Statistics Authority (PSA) has shifted to a new master sample design. The
+master sample is being used by all the household-based surveys conducted by the PSA. By
+design, replicated samples are formed such that each replicate is able to provide a reliable
+estimate of a population parameter at the domain level. Through replication, the design
+also facilitates easier dropping of a replicate or two whenever budget allocation for a survey
+is reduced while still providing reliable estimates at the domain level. Computationally, the
+estimation of the variance is also straightforward using replicated samples since the
+formula only entails the estimation of the quantity of interest at the replicate level.
+
+Since results of many PSA surveys are also used for policy analysis, the profile of
+the subdomains is essential in the decision-making. For example, youth unemployment
+rates are important to local government units (LGUs) to monitor how many of the youth,
+who are the country’s future, are economically active. Also, unemployment rates of men
+and women are also critical to identify gender disparity, if any. These are just two examples
+of data requirements to support policy from one survey, the Labor Force Survey (LFS),
+which is the most frequent survey the PSA conducts. There are many other surveys,
+
+however, that make use of the master sample, like the Family Income and Expenditure
+
+Survey (FIES), the Annual Poverty Indicators Survey (APIS), and the National
+Demographic and Health Survey (NDHS). In these surveys, subdomain analysis is
+important since policy research highly demands reliable statistics about the granular
+classes. Moreover, since standard errors are essential to statistical inference, appropriate
+estimation of the standard errors at the lower levels is of high importance.
+
+Estimation at the subdomain level employs ratio estimation [14]. To consider this
+in addition to the complex master sample design, the derivation of exact forms of the
+variances is too great a task. And while a number of variance estimation (approximation)
+procedures are available for use, the question now is to determine which among these
+methods is the most reliable. In one landmark paper, Kish and Frankel (1974) conjectured
+based on their empirical analysis that Taylor Series Linearization (TSL) performs better
+than the Balanced Repeated Replication (BRR) and Jackknife Repeated Replication (JRR)
+when estimating the variance of simple statistics like ratio means.
+
+Thus, this study confronts the question: Is it more appropriate to use the replicated
+samples formula for the variance of an estimator for the master sample, or is it better to use
+
+the TSL variance approximation?
+
+1.2 Statement of the Problem
+
+As a multi-purpose sample catering to multiple surveys with different objectives,
+the replicated design of the master sample offers great ease in survey operations for the
+PSA. Surveys desiring more precise estimates may now easily increase the number of
+
+replicates to sample per domain as opposed to when the sample design is not replicated.
+
+Since replicates are constructed by design, one can expect that variance estimates will be
+computed using the RG method — not the Taylor series linearization which the PSA uses.
+Hence, it is be imperative to investigate these variance estimation procedures since a good
+measure of precision is required of estimates coming from the many surveys the PSA
+conducts.
+
+In this paper, primary emphasis was given on the theoretical comparison of two
+variance estimation procedures, the Random Group (RG) and the Taylor Series
+Linearization (TSL) methods, and their application to the master sample based on the most
+recent LFS data. More specifically, this paper focused on:
+
+1. deriving the theoretical properties of the estimates obtained using RG and TSL,
+and discussing the implications of using these procedures; and
+
+2. undertaking an empirical comparative analysis of two variance estimation
+methods — the RG and TSL methods by applying them to compute the precision
+of employment rate at the domain levels and also for the three subclasses: the
+
+unpaid workers, female, and youth.
+
+1.3 Significance of the Study
+
+The theoretical properties of the RG and TSL methods that were derived in this
+paper will contribute to the literature of variance estimation in sampling. More importantly,
+this study offers better insights in the estimation procedure using the master sample,
+
+especially for subclass analysis. In addition, the lessons learned in this study can be an
+
+invaluable guide to the consultants of PSA in improving the design of the future master
+
+sample.
+
+1.4 Methodology
+
+The following were the steps undertaken to achieve the objectives of this study:
+
+Step 1: The sampling scheme of the 2013 MS was considered. The bias and variance of the
+RG estimators for ratio estimates in the case of non-independent random groups were
+then derived, and these properties were compared to their TSL counterparts.
+
+Step 2: For the comparative analysis of RG and TSL, data cleaning was done to ensure
+data accuracy and reliability. In the context of the LFS which uses 2013 MS, the
+implementation of the replicated sample design was verified. In particular, the
+following were done: (1) check if correct survey weights were applied to the sampling
+units, (2) made sure that there is consistency in the labelling of the PSUs across the
+planned domains as reported by PSA, (3) designated the employment status of the
+respondents based on the given definition, and (4) corrected coding errors through
+manual checking of the microdata given.
+
+Step 3: From the validated data, the following statistics were computed: current domain
+level employment rates and their corresponding standard errors using RG and TSL,
+and also some quantities at the subclass level: proportion of unpaid workers among
+employed persons; and female and youth employment rates. All these computations
+
+were done using the ‘survey’ package of R.
+
+Step 4: Verified if the conclusions based on the derived theory are consistent with the
+
+computations done using the LFS data at hand.
+
+CHAPTER 2
+
+PRELIMINARIES
+
+This chapter contains the preliminary concepts needed for a better understanding
+of the study. The basic results herein are gathered from various sampling books as cited
+
+and are presented without proof.
+
+2.1 LFS Concepts and Definitions [7, 17]
+
+Definition 2.1.1 A barangay is the smallest political subdivision in the country, several of
+which comprise one city or municipality. For purposes of enumeration in the LFS, a
+
+barangay is considered the basic geographic enumeration area.
+
+Definition 2.1.2 A household is an aggregate of persons, generally but not necessarily
+bound by ties of kinship, who sleep in the same dwelling unit and have common
+arrangements for the preparation and consumption of food. Members include the head of
+the household, relatives living with him, and other persons who share the community life
+
+for reasons of work or other consideration.
+
+Remark 2.1.3 A person who lives alone is considered a separate household.
+
+Definition 2.1.4 A person is in the labor force if he/she is at least 15 years old, either
+
+employed or unemployed in accordance with the definitions described as follows.
+
+Definition 2.1.5 Employed persons include all those who, during the reference period are
+
+15 years old and over as of their last birthday and are reported as either:
+
+7
+At work. Those who do any work even for one hour during the reference period
+for pay or profit, or work without pay on the farm or business enterprise operated
+by a member of the same household related by blood, marriage or adoption; or
+With a job but not at work. Those who have a job or business but are not at work
+because of temporary illness or injury, vacation or other reasons. Likewise,
+persons who expect to report for work or to start operation of a farm or business
+enterprise within two weeks from the date of the enumerator’s visit are
+
+considered employed.
+
+Definition 2.1.6 Underemployed persons include all employed persons who express the
+
+desire to have additional hours of work in their present job, or an additional job, or to have
+
+a new job with longer working hours. Visibly underemployed persons are those who work
+
+less than 40 hours during the reference period and want additional hours of work.
+
+Definition 2.1.7 Unemployed persons include all those who, during the reference period,
+
+are 15 years old and over as of their last birthday and reported as:
+
+1.
+
+2.
+
+Without work, i.e., had no job or business during the reference period;
+Currently available for work, i.e., were available and willing to take up work in
+paid employment or self-employment during the reference period, and/or would
+be available and willing to take up work in paid employment or self-employment
+within two weeks after the interview date; and
+
+Seeking work, i.e., had taken specific steps to look for a job or establish a
+business during the reference period, or not seeking work due to the following
+
+reasons: (1) tired or believed there is no work available (discouraged worker),
+
+8
+(2) awaiting results of previous job application, (3) temporary illness or
+
+disability, (4) bad weather, and or (5) waiting for rehire or job recall.
+
+2.2 Some Basic Concepts in Sampling [3, 9,14]
+
+Let the finite population, or universe, of N units be indexed by U = {1,2,...,N}, and
+suppose it is desired to obtain a representative subset, denoted by S, of size n from this
+population. This representative subset is called a probability sample, whose mechanism of
+selection requires that the probability of a unit to be included in the sample is known in
+advance and that the selection of these units is randomized based on the known selection
+probabilities. Some elementary types of probability samples include simple random
+sample, systematic sample, stratified sample, and cluster sample. In this section, we briefly
+introduce the basic concepts of these sample types.
+
+Let 7; > 0 be defined as the known probability that unit i is included in the sample,
+and that Diey 7 = YM, mj = n. Also let 7; be a characteristic of population unit i, which
+is inherent to i, and is assumed to be fixed. Suppose it is of interest to estimate a population
+
+quantity t by 7, whose value is based on the sample obtained.
+
+Definition 2.2.1 The sampling distribution of a statistic is defined as the probability
+distribution of the different values of the statistic obtained by taking all possible samples
+
+from the population.
+
+Definition 2.2.2 The expected value of 7, E[#], is the mean of the sampling distribution
+
+oft:
+
+E[é] = yy ts P(S), (2.1)
+
+Ss
+
+where fs is the estimate of t based on sample S and P[S] is the probability of choosing the
+sample S. 7 is said to be unbiased of t if E[#] = tT; otherwise, the bias of ¢ is computed as
+
+Bias[t] = E[#] —t.
+
+Definition 2.2.3 An estimator f is consistent if E[¢] approaches t as n approaches N, or in
+
+other words, if 7 = tT whenn = N.
+
+Definition 2.2.4 The variance of 7 is defined as
+Varlt] = ECE - Elé])?] = ) "és - El#)? PIS]. (2.2)
+Ss
+
+The mean squared error (MSE) of f is defined as
+
+MSE[#] = E[(¢ — 1)?], (2.3)
+and it can be shown that MSE[#] = Var[#] + (Bias[@])?. The MSE is more often used to
+describe 7 since it takes into account both precision and accuracy of 7@, in terms of the
+
+variance and the bias, respectively.
+
+Definition 2.2.5 Other concepts used in reporting statistics are
+1. The standard error (SE) of ¢, denoted by SE[#], which is the square root of the
+variance of f.
+2. The covariance of two estimators t, and ¢, is a bilinear function which is
+
+defined as Cov[?#,, #2] = E[(¢, — El#1]) (#2 — El#2])].
+
+10
+
+3. The coefficient of variation of an estimator f is defined as CV[#] = coe [é]
+
+This can be estimated by cv[7] = ¥ varlt}/
+
+tT
+
+Definition 2.2.6 A simple random sample (SRS) is the simplest form of probability sample.
+Under this method, the units are selected with equal chances. Hence, for an SRS of size n,
+
+T= "/y for all unit i, and the probability of selecting units i and j in the sample at the
+
+n-1
+
+same time is 7; = 7
+
+zs
+
+Proposition 2.2.7 The sample mean Ysps = n~* Vics yj obtained in an SRS of size nis
+unbiased for the population mean Y. As a consequence, the estimated total Ysa5 = NVsrs
+
+is also unbiased for the population total Y.
+
+Proposition 2.2.8 The sample variance s? = —Dies(¥j a srs) is an unbiased
+. s\2 . :
+estimator of S? = ray - Y) . Hence, the estimated variance of the
+
+mean var[Ysrs] = (1 - =) n-1s? is also unbiased for Var[Vsps] = (1 - 9) n-18?,
+
+Definition 2.2.9 The quantity (1 — f) = 1 a is called the finite population correction
+
+(fpc). For large-scale samples, this quantity is often assumed to be negligible.
+
+Proposition 2.2.10 A SRS of size n = n, + n2 with mean Yeps is drawn from a finite
+
+population with variance S?. A simple random subsample of size n, is drawn from it with
+
+11
+
+mean Ysrs,- Similarly, we denote the mean of the remaining subsample as Ysps,- Then
+
+Var[Ysrs, | = S$? (= - =) and Cov[sas,,Ysrs,] = —-N718?,
+
+Theorem 2.2.11 For characteristics of interest that are Bernoulli distributed, the following
+
+results follow:
+_ , 1
+1. Ysrs = P= es! and E[p =p=15" y
+n jz ”
+
+1
+2. S? = 7 (NP ~ NP?)
+
+3. var[p] = (1 ~ pee?) is unbiased for Var[p] = (1 — Ay N re
+
+Definition 2.2.12 A systematic sample of size n is taken if from an ordered list of
+population units, the sample is gathered such that the first element is chosen at random and
+every k'" element, where k = N/ ns thereafter is included in the sample. The number k is
+
+called the sampling interval which is the inverse of the sampling fraction f = Ly N:
+
+Theorem 2.2.13 If N = nk and ¥; is the mean of the i'" systematic sample, then
+
+1 k(n -1)
+Var[¥ey] = Ns? ~ Shisy:
+
+1
+
+—\2 P . 5
+ma Daly — Ji) such that j = 1,2,...,n andi = 1,2,...,k, is the
+
+where Siisy =
+
+variance among units that are in the same systematic sample.
+
+Corollary 2.2.14 The mean based on a systematic sample is more precise than the mean
+
+of a simple random sample if and only if Si.y > S?.
+
+12
+Definition 2.2.15 For a systematic sample, the sample variance is not an unbiased estimate
+
+of the population variance. To estimate Var[Fsy|, the following formulas are employed:
+
+1- . .
+
+: ; - =f Dr? (Yna — Yaw)”, if nis even
+
+1. Paired selections: var[¥,,] = pn a
+Lh=1Vna — Yaw)”, if n is odd
+
+n(n+1)
+where m’ = = such that one of the sampled elements is selected at random to
+
+be chosen twice.
+
+1-f -1 2
+2n(n-1) Lg=1(%9 ~ Yge1) .
+
+2. Successive difference: var[¥,y] =
+
+Definition 2.2.16 In a stratified sample, the population is divided into homogeneous,
+mutually exclusive subgroups called strata, and independent samples from each stratum
+are obtained to improve the precision of the estimates. In obtaining a stratified sample of
+size n, different sample allocation methods, each with an advantage over the others, may
+be employed. Moreover, the sampling designs may, or may not, be different among the
+strata.
+
+Let there be H strata in the population, and attach the subscript h to signify that a
+certain quantity is associated with stratum h. Sample allocation is said to be proportionate
+if the design uses a sampling rate that is equal across all strata, ie., f = f, for all stratum
+
+h. Otherwise, the design employs a disproportionate allocation.
+Let the stratum weights W, = Nn/ n be known for all stratum h. In stratified
+sampling, the mean Y = Y, WpYp is estimated by Yee = Ln Wp Yn. Additionally,
+
+Varlse] =) Wi VarlFn] 24)
+h
+
+13
+is estimated by var[¥,.] = ©, W/? varl¥,], where var[y,] is computed based on the
+
+sampling design used in stratum h.
+
+Definition 2.2.17 The design effect, D*[Fcomptex| is the relative measure of precision of
+
+an estimator f under a complex design with respect to its corresponding precision for a
+
+Var[?comptex]
+
+SRS of the same size. That is, D?[t-omptex] = Valent
+‘SRS.
+
+Proposition 2.2.18 If the sample is allocated proportionally among the strata, then
+
+2
+Varl¥ge] = (1 — f) °"/p, where 52, = Dy Wy S2.
+
+Corollary 2.2.19 The design effect of the stratified mean, under proportional allocation, is
+
+2
+D* [se] = Sw).
+
+Theorem 2.2.20 (Neyman-Pearson/Optimum Allocation) Given a cost function C = cy +
+Ya ChNp and Var[¥,_] in (2.4),
+
+men WrSn/Cr
+n Ln WrSh/Cr
+
+can be chosen for all h so that Var[¥,_] is minimized subject to the constraint C.
+
+Definition 2.2.21 Cluster sampling is the sampling method wherein observation units in
+the population are aggregated into larger sampling units, called clusters. Under this
+method, sampling can be done in multiple stages where the first-stage sampling units are
+called the primary sampling units (PSUs), and the units sampled within the selected PSUs
+
+are called the secondary sampling units (SSUs). Although sampling can still be done in
+
+14
+
+further stages, only the PSU and SSU are introduced since sampling is usually done only
+
+up to the second stage.
+
+Theorem 2.2.22 (One-Stage Equal Clusters) Let there be A equal-sized clusters with B
+elements each. If an SRS of a clusters is drawn, and b elements from each of the chosen
+clusters are drawn by SRS, then
+
+1 a ob 1 AB
+i Yer ==) >! yep is unbiased for Y => yep and
+
+a=1B=1 a=1B=1
+
+2
+
+ay s2 bys,
+ii, var(Vo.) = (1 a 7) = + (1 os z) a is also an unbiased estimator for
+
+ay S2 by S?
+Vara) = (1-5) + (1-5) ap
+
+where
+
+1 AL =
+Sz = —). (Yq — Y)? is the variance between clusters
+A-1Lug-1
+
+1 4 8 —
+Spa EN oe Dipalet —¥,)° is the element variance within clusters
+
+1
+a-1
+
+a
+sz= > (Va — ¥)* is the estimator of $2
+a=1
+
+1 a b 2
+sz = > » — Yq) is the estimator of S?.
+2 = Gb) Luger pe? Ya) °
+
+Definition 2.2.22 Clustering induces a correlation between the elements in the same
+cluster. This measure of homogeneity is called the intraclass correlation coefficient,
+
+denoted by p.
+
+15
+Proposition 2.2.23 For single-stage equal-sized cluster sampling, the design effect can be
+
+expressed as a function of p, D?(¥,.) = 1+ (B—-1)p.
+
+2(F))—
+Corollary 2.2.24 The intraclass correlation may be estimated by p= ooo
+
+Conversely, the design effect may be estimated by d?(¥,,) = 1+ (b—1)p.
+
+Theorem 2.2.25 (Two-Stage Unequal Clusters with Unequal Probabilities) Suppose that
+an SRS of a from A unequal-sized PSUs were selected, and an SRS of b; elements (SSUs)
+
+from the i" selected cluster of size B; were sampled. A natural estimator for the population
+
+mean Y would be y, = Xies "ly B; Moreover, its variance is estimated by
+ies?
+
+1 Q\S2 1 A b\ si?
+
+=b (1-2) LY aa(1— 2)
+varl¥r] ral a) a + AB? La ‘ B;/ ab;
+t
+
+1 - - 5 1 1 —\2
+where Sq” = — Dies(Bili — Bid)”, B = = Dies Bi, and s;? = par Lies (Vi -ji)-
+
+Remark 2.2.26 The denominator of ¥, varies when sampling is repeated several times.
+These types of estimators are called ratio estimators which will be introduced in Section
+
+3.2.
+
+Definition 2.2.27 For a two-stage sample, the inclusion probability of observing af is
+defined as P[aB] = P[a]P[B|a], where P[a] is the probability of observing PSU a@ and
+P[B|a] is the probability of observing SSU f in PSU a. In addition, the base weight wag
+
+is the inverse of the probability of selection, that is, wag = 1/P[af].
+
+16
+Definition 2.2.28 When estimating the population total for unequal probability samples,
+
+the Horvitz-Thompson (HT) estimator is employed, which is given as
+
+Dur = » » WapYap-
+
+a BESg
+
+Similarly, the HT estimator for the population mean is
+Sur = Ya Lpese WapYap
+ur La LpesyWap
+
+2.3 Other Concepts in Statistics
+
+Definition 2.3.1 [5] Let {X,}?_, be a sequence of random variables and {a,}7_, be a
+sequence of real numbers. {X,,} converges in probability to the random variable X,
+
+expressed as p lim X, = X, if given € > 0, then lim P[|X, — X| > €] = 0.
+ns
+
+Definition 2.3.2 [5] The sequence X,, is said to be of smaller order in probability than ay,
+
+or simply of order gn, expressed as X, = 0(a,), if p lim X, = ay.
+
+Definition 2.3.3. [5] X,, is at most of order in probability a, (or bounded in probability by
+Qn) and write X, = O(a,) if for every € > 0, there exists a positive real number M, that
+
+is dependent on € such that P[|X,| => Man] < € forall n.
+
+CHAPTER 3
+
+REVIEW OF RELATED LITERATURE
+
+3.1 The 2013 Master Sample of the Philippines [17]
+
+The Philippine Statistics Authority (PSA) is mandated to conduct surveys to report
+official statistics of socio-economic indicators like employment rate, poverty incidence,
+consumer price index, and others. To produce these statistics, data are gathered through
+national household-based surveys such as the Labor Force Survey (LFS), Family Income
+and Expenditure Survey (FIES), and Annual Poverty Indicators Survey (APIS), which are
+carried out on a regular basis. However, with the limited resources available and the
+increasing costs of data collection, the conduct of these surveys have become more difficult
+to sustain. This motivated the development of a master sample design.
+
+A master sample is a general sample from which subsamples can be drawn to serve
+the needs of multiple surveys. By integrating the target populations, sampling designs, and
+field operations of multiple surveys, the development and maintenance of sampling frames
+can be performed more easily. Moreover, this also simplifies the sampling process of the
+individual surveys thereby promoting efficiency in terms of costs and operations. In the
+Philippines, the 2013 Master Sample (MS) is a remake of the 2003 MS, which was a two-
+stage replicated sample with the administrative regions as its domains. However, precise
+estimates from PSA’s various household-based surveys are needed at the subnational or
+
+provincial level. Also, the 2003 MS frame needed to be updated since the availability of
+
+18
+the 2010 Census of Population and Housing and the 2012 Census of Agriculture and
+Fisheries. For these reasons, the redesigning of the 2003 MS became necessary.
+
+The 2013 MS is a two-stage replicated cluster sampling design which defines 117
+major domains to provide precise estimates at the subnational levels: 81 provinces, 33
+highly urbanized cities (HUCs), and 3 other areas namely, Pateros, Isabela, and Cotabato
+City. Each domain consists of non-overlapping and well-delineated geographic areas called
+primary sampling units (PSUs). Each PSU consists of 100 to 400 households; it could either
+be a barangay/enumeration area (EA), a portion of a barangay, or a combination of adjacent
+small barangays. A 2x2x2 implicit stratification scheme was utilized for each of the
+domains. All PSUs within each domain are arranged according to North-South geographic
+location, decreasing proportion of households with OFW members cut at the median, and
+decreasing wealth index also cut at the median. From this ordered list of PSUs, replicates
+are formed by systematically sampling a number of PSUs per domain. These replicates are
+again sorted at random such that a number of replicates are selected for each survey round.
+For the LFS, which is the most frequently conducted survey of PSA, four replicates were
+deemed sufficient to produce reliable subnational estimates.
+
+The secondary sampling units (SSU) of the MS design are the housing
+units/households within the PSUs. For the LFS, which adopted the MS design only in its
+April 2016 round, the sampling frame at this stage is constructed based on the results of
+the 2015 Census of Population (CP) with the EA Reference File (EARF) of the CP used as
+the frame for the PSUs and the list of households for each of the PSUs as the frame for the
+SSUs. At the second stage of the sampling process, the total number of SSUs are allocated
+
+with probability proportional to the size of the PSU. That is, larger PSUs would have more
+
+19
+SSUs compared to smaller PSUs. In total, 42,768 households are sampled (rounds with
+Batanes sample) for each survey round. In sum, the 2013 MS is somewhat a rolling sample
+design but is not a perfect one because of the varying number of rotations needed for the
+PSUs to cover all of the domains. Smaller domains may get fully covered earlier compared
+
+to larger domains where there are more PSUs.
+3.2 Ratio Estimators
+
+Some variables of interest just cannot be accommodated by linear estimators. For
+example, in agriculture, crop yield is computed as total crop production divided by total
+crop area. In the LFS, the employment rate is the proportion of employed persons among
+those qualified to be in the labor force. The commonality of these examples is that they are
+both expressed as a ratio of two variables, and the appropriate estimators for these variables
+are the ratio estimators.
+
+Let y; and x; be two characteristics of interest measured on each unit i in the
+
+population with finite size N. If an SRS, say S, of size n is taken, the ratio quantity R =
+
+Ny. es Vi y
+oy ; is estimated by r = Lies Yi = Ve. Since both variables x and y
+
+Lies Yi
+
+are random, the exact distribution of r remains unknown. That is why much of the major
+results in ratio estimation are based on large samples (Cochran, 1977):
+
+1. The bias of the ratio estimator is known to be of order 1/n. This implies that r
+
+is asymptotically unbiased, which means that its bias becomes negligible in large
+
+samples. However, Hartley and Ross (1954) derived the exact form of the bias
+
+of the ratio which is
+
+20
+
+Cov{[r, x] G.1)
+Bias[r] = -———.
+
+ias[r] XY
+Since the formula for the bias is not computable based on a sample, Kish and
+Hess (1985) showed that the bias can be adequately estimated by
+
+; r var[x] — cov[y, x] (3.2)
+Bias[r] « —————-_-.
+
+x2
+As a consequence of (3.1), it can be shown that an upper bound for the relative
+bias of r is the coefficient of variation of x. Thus, if CV(x) is small, say less
+than 0.10, one can say that the ratio estimation is acceptable. This is a common
+practice in survey sampling to determine the adequacy of the estimate.
+
+2. Building on the previous result, the mean squared error of rcan be validly
+
+approximated by its sampling variance
+
+Var[r] =
+
+1— f [OM,0%4 — Rx)? (3.3)
+nxX2 N- .
+
+David and Sukhatme (1974) wrote an expository paper justifying the usual
+approximations of the bias and the mean squared error of r.
+
+3. Thirdly, the limiting distribution of r is the normal distribution. This result
+allowed the construction of confidence intervals for variables linearly derived
+from r in large samples.
+
+In addition to variables that are inherently ratio in form, linear variables, like the
+mean or total, can also be estimated using ratio by leveraging auxiliary information to
+improve the precision of the estimates. This technique is a common cost-cutting practice
+in survey sampling. The ratio equivalent of the linear estimators mean y and total Y = Ny
+
+can be derived based onr. Respectively, these are ¥, =rX and¥, =rX, and their
+
+21
+corresponding variance formulas follow easily from (3.3). It can be noted that these
+estimators require the availability of the mean and total of the characteristic x. In this
+context, x is now used as an auxiliary variable exploited to improve the precision of the
+estimates. In comparison, for positive R, a sufficient condition for the ratio estimators to
+be more precise than their linear counterparts is when the coefficient of variation of x is
+
+less than twice the correlation of x and y multiplied by the coefficient of variation of y.
+
+That is, under SRS, if 2p > VEY vty then Var[P,] < Var[?].
+
+3.3 Subclass Analysis
+
+The general key to obtaining sufficiently precise estimates is to control the size of
+the sample. The level of disaggregation at which the sample sizes are determined depends
+on the objectives of the surveys. These levels are referred to as domains. However, there
+are cases when important indicators need to be measured at a lower level of disaggregation
+that is finer than the domain level, in which case the sample size at this level has not been
+planned to satisfy a certain level of precision. These classes can be challenging to track in
+the population so controlling their size in the sample poses a great challenge for the
+statistician. Also, to forcefully pursue these subpopulations would be very demanding in
+terms of time and effort in the operations. Although authors of some prominent books in
+sampling also refer to these subpopulations as domains, these subpopulations shall be
+called as subclasses or subdomains for consistency in the nomenclature of this paper. For
+complex surveys, Kish and Frankel (1974) used the term crossclasses to denote the
+
+subclasses that cut across strata in the population.
+
+22
+It should be noted that estimation of subclass means and totals is a special case of
+the ratio estimation. Let the j" subdomain, denoted by U;, in the population be of size Nj.
+Suppose that an SRS of size n is obtained and n;(< n) units in the sample belong to Uj.
+Then the mean ¥; of the j subdomain is estimated by 9; = nj~* Lies, ¥i- Similarly, its
+domain total is estimated by yj = N;,y;. Although both estimators seem to take the same
+linear form as Ysgs and Ysgs in Proposition 2.2.7, the important difference is the
+randomness of the subclass sample sizes n; in the denominator. In taking the SRS, only the
+sample size n is fixed by the design. In effect, if the sampling procedure is repeated several
+times, the quantity n, will vary from sample to sample, therefore, 7; and y are both ratio
+estimators. Consequently, the properties of ratio estimators mentioned in the previous
+section also apply to y; and Yj. Hence, the variance estimator of the domain mean is given
+by
+
+_ ny n (nj -1)s;”
+van i= (1- Rana
+
+,
+
+where s;” is the estimated standard error of the jth subdomain.
+
+For large subclass sample sizes, the variance estimator above approximately
+2
+simplifies to varz [x] (1 - *) L, which is the variance formula in the SRS case given
+J
+in Proposition 2.2.8. However, for small samples, the quantities — and a are both
+ji =
+
+approximately equal 1. Based on the formula, the disparity between both estimators is
+
+caused by the multiplier a 7 mart a quantity that is always less than one. Thus, subdomain
+Jd
+
+estimation should not be complacently approximated by SRS formulas since var [¥;]
+
+23
+overestimates var; [¥;]. However, for large samples, the difference of these variances is
+
+considerably negligible.
+3.4 Variance Estimation
+
+It is a general observation that the mathematical structure of variance formulas
+mainly depend on the complexity of both the estimator and the design on which sampling
+is based. This is reflected by how congested the literature of sampling statistics is for simple
+estimators, like means and totals under simple designs like simple random sampling (SRS)
+and stratified random sampling; and the opposite for nonlinear estimators under complex
+designs. All components that make a survey complex, e.g. stratification, clustering, unequal
+probabilities, and weighting adjustments due non-sampling errors, must be reflected on the
+variance formula, which make it more difficult for theorists to derive its closed form.
+
+Many practicing statisticians still do not realize the significance of variance
+estimation in making statistical inferences. For example, when standard errors of
+differences of two subpopulations are seriously underestimated, shorter confidence
+intervals are constructed about the parameters. As a dual, hypothesis tests about the
+differences of subpopulations will more likely become significant; a detrimental mistake
+which will eventually ripple to misinformed policy interventions.
+
+Research on this area was pioneered by Kish and Frankel (1974) when they
+conducted an empirical comparative analysis of three variance estimation procedures
+namely, Taylor Series Linearization (TSL), Balanced Repeated Replication (BRR), and
+
+Jackknife Repeated Replication (JRR), under a stratified single-stage cluster design where
+
+24
+two clusters were selected with replacement (epsem) from each stratum. This study raised
+more problems on variance estimation, opening a lot of research opportunities for others.
+Among the notable researches that followed were done by Krewski and Rao (1981), Rao
+and Wu (1985), Rao and Wu (1988), and Rao ef al. (1992). An excellent review on
+comparison of variance estimation procedures was done by Rust (1985). At present,
+empirical and theoretical studies are still encouraged especially now that data-driven
+
+decisions are the norm.
+
+3.4.1 Random Group Method
+
+Variance estimation formulas become more cumbersome as the sampling design of
+surveys gets more complex, that is, when the survey design employs stratification,
+clustering, and/or unequal selection probabilities. To provide a simpler estimation
+procedure for the complex variance formulas, Mahalanobis (1940, 1958) proposed that
+estimates based on subsets of the complete sample should be computed and the desired
+estimate and its corresponding variance is derived from these computed values. In these
+pioneer papers, the author referred to these subsamples as interpenetrating samples or
+replicated networks of units. Later on, several alternative terms such as replicated samples,
+ultimate clusters, and random groups, were coined by different authors but still pertain to
+the same method.
+
+Under this method, the random groups (RG) are constructed by independently
+replicating a general sampling design G(= 2) times in the population. The independence
+
+of the RG is based on the notion that a sampling scheme is repeatedly applied G times to
+
+25
+the population of interest while replacing the chosen units in the population every time a
+RG is formed. Moreover, since the various groups have a common sampling design, the
+resulting G estimates are independent and identically distributed (iid), and have the same
+estimation procedures. Although replicated samples and random groups use the same
+estimation procedure, a particular distinction between these two has now been established
+to avoid confusion. Replicated samples are formed by design such as the 2013 MS
+described in Section 3.1, whereas random groups can be designated after the design has
+been implemented. This was done when computers are still rare so that random groups
+became an approach merely for variance computation. In this paper, these two terms are
+used with caution.
+In the notations of Lohr (2009), let @ be the parameter of interest and 0; be the
+estimate of 9 computed from the i" random group. Then the following results describe the
+
+random group estimator of @ and its corresponding variance.
+
+Theorem 3.4.1 [23] Let 9,,62,...,8¢ be uncorrelated random variables with common
+
+expectation E(4;] =u. Let 6 be defined 6 = ; @ ,9;. Then E[8] = p and an unbiased
+
+estimator of Var[6] is given by var[6] = on ¢ (6, — 6)?.
+
+Corollary 3.4.2 [23] If the estimators 6;,i = 1,2,...,G, are unbiased for @, then @ is also
+
+unbiased for 6.
+
+The above results provide exact theory for parameters — usually linear — whose
+
+unbiased estimators are available. These parameters and their corresponding variances can
+
+26
+be unbiasedly estimated using the formulas above. However, such is generally not the case
+especially for parameters taking nonlinear forms, like the ratio and regression coefficients.
+No matter how slightly, bias incurred in the random groups cause the estimators under this
+method to be biased as well.
+
+In actual practice, most surveys fail to satisfy the assumption of independence
+among the random groups. Survey samples are usually drawn as a single sample and the
+formation of the random groups follow afterward. The challenge here is to divide the
+complete sample into G random groups such that each possesses the same statistical
+properties as the whole sample. Wolter (2007) outlined some techniques in forming these
+groups from various sampling designs and combinations of these techniques can be
+employed for complex designs. For this case of non-independent RG, if the population is
+large and the sampling rate is small, the random groups may be treated as though they are
+independent and the formulas in Theorem 3.4.1 can be used to compute for the desired
+estimate and its corresponding estimated variance. Clearly, the variance estimator for this
+case is not unbiased; the following theorem shows the effect of non-independence on the
+variance estimator.
+
+Theorem 3.4.3 [23] Let 9, be defined as above and let ug = E[8,]. Then
+
+G
+. 1
+w= E[6] = =), Has
+a=1
+
+and the expectation of the random group estimator of Var[6] is given by
+
+G 6 G
+P P 1 2 AA
+E [var[4]]| = Var[4] + wea 2 — 4) - Woy 2 Cov[8q, 4].
+a= a=1B>a
+
+27
+Further, if each random group is the same size, then uy = u(a = 1,...,G), and
+E [var[6]| = Var[6] — Cov[6,, 4].
+
+The method of random group possesses remarkable computational advantage to
+other variance estimation techniques. It can be used to estimate the variances of complex
+estimators without the need for computer software provided that random group estimates
+are available. However, this advantage has become less meaningful at present mainly
+because fast computers now enable easier computation of variance estimates even when
+dealing with large amounts of data. Also, when designing surveys of national coverage,
+especially a master sample, the replicates are determined at the design stage; applying
+random groups design for the purposes of easier computations, after the survey data have
+been collected is challenging and is impractical since other variance approximation
+
+methods can be used.
+3.4.2 Taylor Series Linearization (TSL) Method
+
+In analytical surveys, parameters of interest commonly take nonlinear forms as
+opposed to descriptive surveys where population means and totals are mostly desired.
+Examples of nonlinear parameters include ratio, difference of ratios, regression and
+correlation coefficients, and many others. While these are essential in various statistical
+analyses, the prevailing predicament when dealing with parameters of this type is that, their
+estimators take nonlinear forms as well. And as a usual consequence, the variance of these
+estimators does not have known closed forms, which makes it more difficult to find simple
+
+unbiased estimators for the variance.
+
+28
+The Taylor Series Linearization approach provides an effective solution to the
+problem brought about by the nonlinearity of the estimators. By its name, this method
+
+employs the Taylor’s Theorem, which is stated below
+
+Theorem 3.4.4 [23] (Taylor’s Theorem) Let g(Y) be a real-valued function defined on p-
+dimensional Euclidean space with continuous partial derivatives of order 2 in an open
+
+sphere containing Y,, and a. Then,
+
+F (3.4)
+a(n) = 9(a) +) 9S + ena),
+ma?
+
+a7 g(3 0 A A
+where R,(Y,,a) = Dyes Doon gover, (Yin — Yj) Yin — Yd, IO) yy is the partial
+
+derivative of g(Y) with respect to the j element of Y evaluated at Y=a, and
+07g(a) . : ee .
+ay,a¥, is the second partial derivative of g(Y) with respect to Yj and Y; evaluated
+
+at Y = 4, and 4 is on the line segment joining Y, and a.
+
+It aims to linearize the estimators to facilitate easier variance approximations. In
+this method, the original nonlinear estimator is first approximated as a finite sum of
+estimators (whose variance formulas are preferably available) using Taylor’s expansion
+and use the variance of the obtained sum to estimate the variance of the original estimator.
+Also, another result in large-sample theory describing the consistency of TSL estimators is
+
+stated below.
+
+Theorem 3.4.5 [23] Let ¥, = a+ O,(%), where 7%, > 0 as n > 0. Then g(Y,) may be
+
+expressed as in (3.4), where R,(¥n,a) = Op(r7?).
+
+29
+
+Let Y = (¥%,...,¥,)’ be a p-dimensional vector of population parameters and let
+
+Y=(%, we Vp)! be a vector of natural estimators corresponding to the components of Y.
+Suppose that @ = g(Y) is a well-defined nonlinear function that satisfies the assumptions
+in Theorem 3.4.4. Then the Taylor series expansion of 6 = 9(¥) about @ can be easily
+computed. In survey applications, the remainder in the series expansion is discarded and
+the retained linear terms are given priority in the development of the variance
+approximation. One will notice that this practice simply reduces the variance of the
+nonlinear estimator @ to a sum of variances and covariances of the estimators Y;s if the
+linearization is only up to the second order. Moreover, if these variance-covariance terms
+are consistent, it directly follows from Theorem 3.4.5 that the estimator of the variance is
+consistent as well. Several empirical studies have pointed out that this first-order
+approximation is satisfactory in estimating the desired variance, especially for large-scale
+sample surveys where the bias using this method essentially becomes negligible (Rust,
+1985).
+
+The linearization method in variance estimation has been extensively used by
+survey practitioners especially when complex nonlinear estimators with continuous
+derivatives are of interest. With the recent technology, packages for various Statistical
+softwares, e.g., SAS, STATA, and R, are made available and use this method as default in
+
+estimating variances.
+
+30
+
+3.4.3 Example: Variance Estimation of
+the Simple Ratio
+
+In this section, TSL and RG are illustrated using this estimator. Suppose that it is
+desired to estimate the ratio quantity g(Y,X) = R= Vly, where Y and X are the
+
+population totals of some characteristics x and y. Suppose that based on a sample S of size
+
+n from a finite population of size N, the estimator gf, x) =r= P/ ep where Y and X are
+the usual estimators for Y and X tivel loyed. Since % = + and % = —4
+usual estimators for Y and X, respectively, is employed. Since = = 7 and 5 = — y;
+
+then the first-order linear approximation of r is
+1, ae
+reR+>(%-Y)- p(k -%).
+Hence, the TSL variance estimator of r is
+
+var[?] , varl’} ry
+cn Cs 62 :
+
+varrs_[r] =r (ae
+
+The estimates of the variance and covariance terms above depend on the sampling design.
+Now, suppose that exhaustive and mutually exclusive subsamples 5;,i = 1,...,G,
+
+of sizes m = "To are formed, where m is assumed to be a positive integer. Hence, the
+sample 5 = Ue, Si and S; NS; = @,i # j. Let qi = ", to be the ratio estimator based
+
+on S;. Then the RG estimator is G = a qi and its corresponding estimated variance is
+varro lq] = Cam © 4(4i — Grc)?. In particular, if S is a SRS and S,,...,S¢ are simple
+
+random subsamples, it follows from Theorem 3.4.3 and Proposition 2.2.10 that
+
+Bias[vargc[q]] = N~1S?, where S? is the population variance.
+
+CHAPTER 4
+
+RESULTS AND DISCUSSION
+
+4.1 Properties of the RG and TSL Estimators
+for the Variance of the Ratio
+
+This section presents some essential properties in the comparison of the estimators
+of RG and TSL for the ratio quantity R = YIy, where Y and X are the population totals of
+some characteristics y and x, respectively. For easier derivation, the 2013 MS design was
+simplified while retaining the non-independence but identical distributions of the replicates
+and attach the subscript i to refer to the i" replicate. Consider G mutually exclusive SRS,
+denoted by Sj,i = 1,2,...,G each with size equal to m = "Io: Let y; and x; be the usual
+estimators for the characteristic totals of y and x based on S;. Then an estimator for R based
+on this sample is q; = y;/x; whose corresponding standard error can be computed directly.
+
+Since each S; is an SRS by itself, the pooled sample S = UE, S; is also an SRS of
+size n. Let Y and X be the usual estimators for Y and X, respectively, and r = *e be the
+estimator of R computed from S. Notice that these follow the same notations as in the
+example in Subsection 3.4.3 but with a slight difference in the construction of the samples.
+From here on, the theory that will follow pertains to the design briefly described. Prior to
+the derivation, note that the identical distribution of the replicates allows us to assert that
+
+Var[q,] = Var[q;] and that Cov[qy,q2] = Cov[qi, q)] for any fixed replicate i and j.
+
+32
+Theorem 4.1.1. Bias[vargc[4]] = —Cov[qy, 42].
+Proof:
+
+Note that
+
+G
+1 1 1
+vargcl@] = cz} », Varlail +) ) Covlaaj]} = 3 Varlail + (1-5) Covlas. ae
+i=1
+
+i j#i
+
+Also,
+
+G G
+>. Gi- 9 = YG Re -GG- Ry.
+i=1 i=1
+
+Then
+
+G
+-#[e ay GEL@-R)?]
+
+[Ye - 9)’
+
+G
+>, MSElai] - G - MSE[4]
+
+t=1
+
+G+ MSE[q,] — G « MSE[q]
+= G (MSE[q,] — MSE[@] )
+since the q,s are identically distributed. Also, note that MSE[A] = Var[A] + (Bias[A])?
+
+and that Bias[q] = Bias[q,] since the replicates have equal sizes. Hence,
+Z 1 A
+E[varge[4]] = Gay Vala] — Var[q])
+
+and
+
+33
+Bias{vargcl4]] = <> CVarlas] ~ Varl@]) ~ Varta]
+= a Warlaa] ~ Varta] - 6 - Varta)
+- wv G+ Varlq
+= 5 (Varlas] - 6 -Varla)
+
+1
+= Gq WVarlaa] — Varlaa] — (G — 1)Covlas, a2))
+= —Cov[q1,42]. =
+
+The above result extends the case in Theorem 3.4.3 by taking nonlinear estimators
+into consideration. Notice that both biases are equal to the negative covariance of the
+estimators of the replicate samples. Hence, the bias of the RG variance estimator is only
+affected by the non-independence of the replicates, and not by whether the replicate
+estimators are unbiased. In addition, the result above also holds true for estimating other
+nonlinear quantities so long as the assumption of identically distributed random groups is
+
+satisfied.
+Proposition 4.1.2. |Bias[Gz¢]| = |Bias[r]|
+
+Proof:
+
+G G
+1 a 1 .
+ElGeel =) Elai] imply that Bias(@ec) = >) Biaslai.
+t=1 i=1
+
+Since the bias of the simple ratio estimator is of order 1/7, it follows that the bias tends to
+zero in larger samples. Hence,
+
+[Bias[4,]| = |Bias[r]|
+
+34
+for any replicate i. Now, Bias(q;) have the same sign for all i since the q;s are identically
+
+distributed. Consequently,
+
+G G
+
+G- [Bias[Gaell = > [Biaslail > > iBiastr = G- [Bias[r]].
+
+i=1 i=1
+
+The desired result then follows. =
+Lemma 4.1.3. Let Var[r|5] be the variance of r based on S and Var[q;|5;] be the
+variance of q; based on S;. Then
+1
+Var[r|S] = g vara)
+
+for all replicate i if the replicates are constructed with equal sizes.
+
+Proof:
+Ignoring finite population correction,
+Var[r|S] = a Vart7IS] + R2Var[X|S] — 2R Cov[X, y|S]}
+“7 ae + ee —2R Se},
+and similarly,
+
+1 (S53? Sz? Sez?
+
+By assumption, n = Gm for all replicate i. Thus,
+
+1 (Ss po Sz Sey") _ 1
+Var[r|S] = Plant Gm — 2R —— am = G VarlailSi). =
+
+35
+Proposition 4.1.4. Var[q] > Var[r].
+Proof:
+Since the replicates are identically distributed by design, it is safe to expect that the
+qis have a positive, or even high, correlation, i.e., Pg,,g, is close to 1. As an empirical
+
+evidence for this assertion, refer to Appendix L. Thus,
+
+. 1 1
+Varl@ne] = = Varlas) + (1 - =) Covlan dal.
+
+= 5 Varlan) + (1-5) ba,aV Varta ly Vartan)
+
+from Lemma 4.1.3.
+
+Theorem 4.1.5. MSE[Gg¢] = MSE[r].
+4.2 TSL vs RG Based on the LFS
+
+Since the Labor Force Survey (LFS) adopted the MS design in April 2016, the
+Philippine Statistics Authority uses the Taylor Series Linearization (TSL) in estimating the
+variance of employment rate. While the TSL has its merits in estimating non-linear
+estimators like employment rate, which is a ratio estimator, the RG variance estimation
+procedure may be more appropriate for the MS design as it is a replicated sample. These
+two variance estimation methods are already introduced in Chapter 3. Thus, this section
+primarily presents a comparative analysis in the use of TSL and the RG methods in
+
+estimating the standard errors (SE) of employment rate based on the LFS 2016 data. The
+
+36
+derived properties of estimators in the previous section were then evaluated if they are
+consistent using the empirical data of the study.
+
+The PSA has generously shared the data of the LFS for four quarters for the
+purposes of this study. All the domain level TSL and RG standard error estimates of
+employment rate for four (4) quarters/rounds of the LFS were collated for April 2016, July
+2016, October 2016, and January 2017. Moreover, the subclass employment rate estimates
+in each domain were examined. Since the MS design has 117 domains in total and the LFS
+is gathered on a quarterly basis, 466 (117*4-2) SE estimates were considered. This
+excludes the estimates from the two rounds (April 2016 and October 2016) when the
+
+province of Batanes was not included in the sample.
+
+domain
+
+25
+
+20
+
+15
+
+10
+
+Figure 4.2.1: Histograms of the SE estimates of employment rate per domain using RG
+and TSL.
+
+37
+
+Preliminary inspection of the distributions of the standard error estimates at the
+
+domain level using RG and TSL in Figure 4.2.1 showed that the SEs using RG are more
+
+varied than using TSL. To explore the performance of TSL and RG on the estimation of
+
+the variable of interest, the differences of corresponding SE estimates of RG and TSL per
+
+domain per quarter were also inspected. That is, if SE;;,xg denotes the estimated standard
+
+error of employment rate of domain i for quarter j using RG and SEj; 7s, is its
+
+corresponding estimate using TSL, then their difference is given as SEdiff;; = SEijrg —
+
+SEij,7si
+
+Table 4.2.1: Distribution table of the differences of SE estimates of employment rate
+
+per domain computed using RG and TSL.
+
+~ | NUMBER OF
+SEDIFF NeNape PERCENT OF ESTIMATES
+<-0.015 3 0.64 } 15
+[-0.015, -0.01) 4 0.86
+[-0.01, -0.005) 42 9.01
+[-0.005, 0) 168 36.05 }
+[0, 0.005) 180 38.63 74.68 95.28
+[0.005, 0.01) 54 11.59
+[0.01,0.015) 9 1.93
+>0.015 6 1.29 oes
+TOTAL 466 100.00
+
+*SEdiffi; = SEijac — SEy-rs.
+
+Table 4.2.1 shows the distribution of the differences of the standard errors using
+
+RG and TSL, whereas Figure 4.2.2 shows its corresponding histogram. Based on the
+
+histogram, the SE differences are approximately normal in distribution whose mean is close
+
+to zero. On the other hand, Table 4.2.1 shows that about 75% of the differences of the
+
+standard error estimates are within +0.005, and about 95% of the SE estimates are within
+
+38
++0.01 difference. Moreover, the TSL has higher SE for only 1.5% of the estimates by at
+least 0.01, while there is at least 0.01 SE difference for about 3.22% of the estimates. From
+this table, a similar conclusion can be inferred as in Figure 4.2.1, that the SE estimates are
+
+slightly smaller using TSL than using RG.
+
+domain
+
+20
+n
+
+15
+
+10
+
+-.02 -.01 0 4 02
+Difference in SE
+
+Figure 4.2.2: Histogram of the differences of SE estimates of employment rate per
+domain computed using RG and TSL.
+
+The performances TSL and RG in estimating the standard errors of the proportion
+of unpaid workers among the employed, and the employment rates of finer subclasses, the
+female and the youth, were also investigated. Figure 4.2.3 is an overlay of the distribution
+histograms of the SE estimates of the proportion of unpaid, and female and youth
+employment rates using the RG and TSL. In terms of granularity, the subclasses can be
+
+ordered as unpaid, female, and youth, with the last being the most granular.
+
+39
+
+unpaid female
+
+GB rc Crs | _—e
+
+youth
+
+30
+
+20
+
+10
+
+Figure 4.2.3: Histograms of RG and TSL SE estimates of female and youth employment
+rates, and proportion of unpaid workers.
+
+Ocular inspection of the histograms above suggests that the standard error estimates
+using RG get more varied as the population of interest gets more granular. This is
+characterized by the less peaking and the spreading of the histograms as the subclass sizes
+become smaller. On the contrary, the standard error estimates using TSL seem to get more
+peaked as the population gets finer, which suggests that the SEs have less variability for
+finer subclasses. However, the SEs are also more spread so no definite conclusion can be
+drawn about the behaviour of the TSL SE estimates with respect to the granularity of the
+subclasses based on Figure 4.2.3. Although, the prominent observation from Figure 4.2.3
+
+is about the disparity of the variability of the SEs using RG and TSL as the population gets
+
+40
+finer. RG and TSL estimates seem to have the same variability in the first subclass but they
+get more different in the second and third subclasses. Thus, as the population of interest
+gets finer, the disparity of the SE estimates using RG and TSL becomes more prominent,
+with TSL SEs seeming to consistently have less variation.
+
+To assess the precision of RG and TSL estimates for the subclasses of interest, the
+differences of the estimated SEs at these subclasses were also computed. The distribution
+of the differences in SEs for the proportion of unpaid workers among the employed is
+presented in Figure 4.2.4 and Table 4.2.2. It can be seen in the histogram in Figure 4.2.4
+that outlying differences of SEs are present. Based on Table 4.2.2, about 60% of the
+estimates have difference not more than 0.005, and almost 90% are within +0.01 bounds.
+Hence, for the estimation of this variable, the SEs are generally smaller using RG compared
+
+to TSL.
+
+unpaid
+
+25
+
+20
+
+15
+
+10
+
+-.04
+
+i}
+Difference in SE
+
+Figure 4.2.4: Histogram of the differences of SE estimates of the proportion of unpaid
+workers computed using RG and TSL.
+
+41
+
+Table 4.2.2: Distribution table of the differences of SE estimates of the proportion of
+unpaid workers computed using RG and TSL.
+
+SEDIFF* | NUMBER OF PERCENT OF ESTIMATES
+ESTIMATES
+<0.015 10 214
+[-0.015, -0.01) 3 4.94 } 7.08
+*[-0.01, -0.005) 63 13.52
+[-0.005, 0) 145 31.12 }
+[0, 0.005) 149 31.97 63.09 86.7
+[0.005, 0.01) 47 10.09
+[0.01,0.015) 21 451
+20.015 8 171 ee
+TOTAL 466 100.00
+
+*SEdiffi; = SEij.rg — SEiyrse
+
+Figure 4.2.5 and Table 4.2.3 describe the distribution of the differences of the SEs
+of female employment rate using RG and TSL. Based on Figure 4.2.5, there is an
+observable deviation in the distribution from normality and that outlying SE differences
+are also present, but larger compared to what was seen in Figure 4.2.4. Similarly, Table
+4.2.3 also shows slightly more negative SE differences that are within +0.005. However,
+the larger SE differences seem to numerically favour TSL. For absolute differences that
+are greater than 0.005, there are more positive SE differences compared to negative ones.
+
+Hence, for this level of estimation, TSL has arguably more precise estimates.
+
+42
+
+female
+
+25
+
+20
+
+15
+
+10
+
+-.02 to) 02 04 06
+Difference in SE
+
+Figure 4.2.5: Histogram of the differences of SE estimates of female employment rate
+computed using RG and TSL.
+
+Table 4.2.3: Distribution table of the differences of SE estimates of female
+employment rate computed using RG and TSL.
+
+* NUMBER OF
+SEDIFF ESTIMATES PERCENT OF ESTIMATES
+<-0.015 5 1.07
+[-0.015, -0.01) 17 3.65 } 4.72
+[-0.01, -0.005) 50 10.73
+[-0.005, 0) 145 31.12 } AMG
+[0, 0.005) 140 30.04 ; 88.2
+0.005, 0.01) 76 16.31
+[0.01,0.015) 23 4.94
+20.015 10 2.14 us
+TOTAL 466 100.00
+
+*SEdiffi; = SEijng — SEij,rsi
+Finally, the last subclass of interest is the youth group. The behaviour of RG and
+TSL for this level of estimation is similar to the female subclass. The histogram in Figure
+
+4.2.6 shows that large outlying SE differences are present on both the positive and negative
+
+43
+sides, which strongly suggests the SEs have higher variability now that the subclass of
+
+interest is the finest among the three.
+
+youth
+
+25
+
+20
+
+15
+
+i?)
+Difference in SE
+
+Figure 4.2.6: Histogram of the differences of SE estimates of youth employment rate
+computed using RG and TSL.
+
+Table 4.2.4: Distribution table of the differences of SE estimates of youth employment
+rate computed using RG and TSL.
+
+NUMBER OF
+
+*
+SEDIFF ESTIMATES
+
+PERCENT OF ESTIMATES
+
+*SEdiffi; = SEizRc - SEijtst
+Table 4.2.4 also shares some similarities with Table 4.2.3. Based on the table, about
+
+80% of the SE differences are within 0.02 in width. Among these SE differences, there are
+
+44
+slightly more negative differences. However, the opposite is the case for SE differences
+that are absolutely greater than 0.02. For larger absolute SE differences, there are more
+positive differences which suggests that TSL SE estimates are smaller compared to RG SE
+estimates.
+
+In summary, the computed means and standard deviations of the SE estimates of
+RG and TSL, and their corresponding differences, for all levels that the estimation was
+conducted is shown in Table 4.2.5. As expected, the means of the standard deviation of the
+SEs generally become larger as the population of interest gets finer, thereby supporting the
+claim of the study that standard errors indeed get larger for finer subclasses. Additionally,
+for all domains of estimation, the TSL SE estimates have consistently lower standard
+deviation compared to RG. Hence, TSL as a variance estimation procedure provides more
+robust SE estimates compared to RG. Finally, the increasing standard deviation of the SE
+differences in the table below seems to contradict the variability that can be observed based
+on the shapes of the histograms in Figures 4.2.2, 4.2.4, 4.2.5, and 4.2.6. Parallel to the
+increasing peak of the histograms are the increasing outlying differences as the population
+gets finer. Hence, in the next section, the domains where the outlying differences occurred
+
+were inspected.
+
+Table 4.2.5: | Means and standard deviations of the SEs computed using RG and TSL,
+
+and their corresponding differences, for all levels of estimation.
+
+45
+
+MEAN SD
+RG 0.011952 0.006989
+
+DOMAIN TSL 0.01148 0.004965
+RG 0.015645 0.010799
+
+UNPAID TSL 0.016169 0.009300
+RG 0.016924 0.010073
+
+emma TSL 0.016059 0.007595
+RG 0.037504 0.021397
+
+wos TSL 0.036357 0.015035
+
+Domain 0.000472 0.004975
+
+Unpaid 0.00052 0.006977
+
+SEDIEY Female 0.000866 0.007046
+
+Youth 0.001148 0.015141
+
+4.3 Effect of Sample Size on the
+
+Differences of SEs
+
+In the previous section, it was observed that as the populations of interest becomes
+
+finer, the incidence of larger outlying differences of standard errors generally increase.
+
+Thus, in this section, the performance of RG with respect to TSL, and vice versa, was
+
+related to the captured size of the domain. It was also observed how their performances
+
+were affected as the population of interest gets more granular. The sample sizes of domains
+
+at all levels of estimation for all quarters are given in Appendices N and O. Similar to the
+
+previous section, the sample sizes of the domains for all quarters were collated. As a
+
+preliminary result, Table 4.3.1 below shows the frequency distribution of domains
+
+according to sample size. At each level of estimation, five intervals were formed for the
+
+sample sizes so that the domains can be described as very small, small, medium, large, and
+
+very large, according to size.
+
+46
+
+Table 4.3.1: | Frequency distribution table of all domains in all four quarters according to
+sample size.
+
+LEVELS Description Domain Size Frequency
+very small 0-550 59
+small 550 - 650 130
+DOMAIN medium 650 — 700 118
+large 700 — 750 101
+very large 750 — above 58
+very small 0-400 41
+small 400 — 600 111
+UNPAID medium 600 — 650 127
+large 650 — 700 112
+very large 750 — above 75
+very small 0-150 43
+small 150 - 235 108
+FEMALE medium 235 —270 148
+large 270 - 310 104
+very large 310 — above 63
+very small 0-75 49
+small 75-110 94
+YOUTH medium 110 - 135 110
+large 135 - 150 88
+very large 150 — above 69
+
+Two main observations, based on Table 4.3.2, can be made about the relative
+performances of RG vs. TSL in estimating the standard errors. First, for the estimation of
+the subclasses, the outlying SE differences indicate that RG usually has larger SE estimates
+compared to TSL. Furthermore, there is an apparent increase in the difference between the
+number of positive and negative SE differences as the subclass becomes finer. In the
+estimation of the proportion of unpaid workers, there are almost an equal number of
+positive and negative outlying SE differences. However, for the female and youth
+employment rates, the decreasing number of negative SE differences is paralleled by the
+
+increasing number of positive SE differences.
+
+47
+
+The second major observation is the tendency of the SE differences to cluster
+among the domains that are at most medium in size. This is expected since the estimation
+of subclasses entails the decrease of the sample size thereby compromising the validity of
+the variance estimates. Taking a closer look at the SE estimates revealed that large SE
+differences as presented in Table 4.3.2 are mostly present in the domains that are either
+very small or small. Specifically, for the estimation of domain level employment rate, the
+largest SE differences occurred in Camiguin, Davao del Sur, and Lanao del Sur; for the
+unpaid subclass, tremendous differences were observed in Apayao and Oriental Mindoro;
+for the female subclass, the same were observed in Sulu, Dinagat Islands, Apayao, San
+Juan City, and Camiguin; and lastly for youth employment rate, major differences were
+found in Pateros, Camiguin, and Zamboanga City. Interesting enough, although some of
+these domains are large on the average, the outlying SE differences occur only on the
+quarters when only a small size of the subclass of interest was captured during sampling.
+This highlights the importance of sample size in estimating variation. Furthermore, caution
+must always be observed when conducting statistical inferences for small-sampled
+
+domains.
+
+48
+
+Table 4.3.2: Number of outlying SE differences in all levels of estimation according to
+the captured sample sizes of the domains.
+
+DOMAIN SAMPLE SIZE
+
+LEVELS OF | op iyee y
+ESTIMATION Mey Small Medium Large ery TOTAL
+Small Large
+Domai <-001 ] 2 1 2 2 0 [7 } 0
+oman > 0.01 6 4 4 1 0 15
+Unpaid < -0.015 2 2 2 2 1 9 } 17
+>0.015 | 0 7 0 0 1 8
+Female <-0.015| 2 2 1 0 0 5 } 15
+> 0.015 6 2 1 0 1 10
+<-0.03 | 1 1 0 1 0 3
+Youth >0.03 | 5 4 4 3 0 | 16 } 19
+
+
+49
+CHAPTER 5
+
+SUMMARY AND RECOMMENDATIONS
+
+5.1 Summary
+
+Multipurpose surveys have become the norm especially in developing countries
+where very limited resources are available. In the Philippines, the 2013 Master Sample
+employed as a cost-efficient mechanism in integrating all household-based surveys
+conducted by PSA. That is, all these household-based surveys now follow the same design
+in obtaining the sample, and employ the same estimation procedure in obtaining the desired
+statistics. By accommodating numerous surveys that are conducted for research purposes,
+the primary function of the MS now becomes the collection of data for measuring
+indicators that are essential for economic planning. However, these indicators usually
+require adequate estimates for certain subclasses, which poses another problem since the
+precision of the standard error estimates are now uncontrolled.
+
+This study investigated which method of estimation, i.e., TSL or RG, is more
+appropriate for subclass analysis for the 2013 MS. Based on a specific design to simplify
+the 2013 MS that was discussed in Chapter 4, the following conclusions were forwarded:
+
+1. The bias of the RG variance estimator has a bias equal to the negative covariance
+of the estimators of any two fixed replicates;
+Bias(vargglGre]) = —Cov(qy, q2) (Theorem 4.1.1)
+From this result, it easily follows that an upper bound for the bias is the variance of the
+
+estimator of any fixed replicate.
+
+50
+2. The absolute bias of the RG estimator is greater than the absolute bias of the TSL
+estimator;
+|Bias(Gr¢)| = |Bias(r)| (Proposition 4.1.2)
+3. The variance of the RG estimator is greater than the variance of the TSL estimator,
+Var(Gr¢) = Var(r) (Proposition 4.1.4)
+and in consequence,
+4. TSL generally performs better than RG;
+MSE[Gg¢] = MSE[r]. (Theorem 4.1.5)
+These theoretical properties were shown to be consistent with the results obtained
+in Section 4.2 where the corresponding differences of the standard error estimates of TSL
+and RG of a certain domain at a particular quarter were computed. In section 4.3, the
+behaviour of the estimated SEs using both variance estimation procedures were
+investigated in relation to the number of samples obtained per domain. It was observed that
+greater disparity in the estimated SEs tend to occur in small-sampled domains. Moreover,
+it was also observed that as the level of estimation gets lower, the disparity between RG
+
+and TSL estimates becomes more apparent.
+
+5.2 Recommendations
+
+Based on the results of this study, several research opportunities can be looked into
+by other researchers who are also interested in improving the master sample:
+1. Strong assumptions about the replicates were made in the derivation of the
+
+theoretical properties in Section 4.1; replicates must have equal sizes and possess
+
+51
+identical distributions (94,4, > 0). However, these assumptions may not be
+realistic hence, properties that relax these assumptions can be more practicable.
+Moreover, some other behaviour of the RG and TSL estimates with no underlying
+theory were observed based on the LFS 2016 data. Thus, a generalized or extended
+theory of what had been shown in this study is encouraged by the proponent;
+Although a computational formula for the bias of the ratio is already given in
+equation 3.2, the bias for RG and TSL were not computed due to computational
+incapacities. Hence, it would provide additional evidence for or against the theory
+developed in this study if the bias for both variance estimation procedures were
+computed;
+
+The computations in Section 4.2 only considered the weighted ratio in producing
+domain and replicate level estimates. Although this entails very large computations,
+it would be interesting to verify if the same conclusion, as to which method, i.e.,
+TSL or RG, is more appropriate if bias-corrected ratio estimators that are available
+in the literature are also considered; and finally
+
+Since there is now evidence that TSL generally performs better than RG in
+estimating the standard errors for the subclasses, the PSA should continue using
+this procedure for this purpose. With the decreasing costs of fast computers and
+statistical software package having TSL as the default variance estimation
+procedure, TSL arguably has computational advantages over RG especially for
+large-scale surveys. Finally, it is encouraged that data from other surveys that use
+
+the MS design be used to verify if results are similarly consistent.
+
+2]
+
+3)
+
+4]
+
+[5]
+6]
+
+[7]
+
+[8]
+
+[9]
+
+BIBLIOGRAPHY
+
+BARCENAS, MLL. (2004, October). The Development of the 2003 Master Sample
+(MS) for Philippine Household Surveys. In 9th National Convention on Statistics.
+
+BINDER, D.A. (1983). On the Variances of Asymptotically Normal Estimators from
+Complex Surveys. International Statistical Review/Revue Internationale de
+Statistique, 279-292.
+
+COCHRAN, W.G. (1977). Sampling Techniques: 3d Ed. New York: Wiley.
+
+DAVID, I.P., & SUHATME, B.V. (1974). On the Bias and Mean Square Error of
+the Ratio Estimator. Journal of the American Statistical Association, 69(346), 464-
+466.
+
+FULLER, W.A. (2011). Sampling statistics (Vol. 560). John Wiley & Sons.
+
+HARTLEY, H.O., & ROSS, A. (1954). Unbiased ratio estimators. Nature,
+174(4423), 270.
+
+INTERNATIONAL LABOUR ORGANIZATION (2017). Decent Work Country
+Diagnotics: Philippines 2017. Retrieved from
+https://www.ilo.org/wcemsp5/groups/public/---asia/---ro-bangkok/---ilo-
+manila/documents/publication/wems_588875.pdf
+
+KEYFITZ, N. (1957). Estimates of Sampling Variance where Two Units are Selected
+from Each Stratum. Journal of the American Statistical Association, 52(280), 503-
+510.
+
+KISH, L. (1965). Survey Sampling. In Survey sampling. John Wiley & Sons.
+
+[10] KISH,L., & FRANKEL, M. R. (1974). Inference from Complex Surveys with
+
+Discussion. Journal Royal Statistical Society B, 36(1), 1-37.
+
+[11] KISH, L., & HESS, I. (1959). On variances of ratios and their differences in multi-
+
+stage samples. Journal of the American Statistical Association, 54(286), 416-446.
+
+[12] KREWSKI, D., & RAO, J.N.K. (1981). Inference from Stratified Samples:
+
+Properties of the Linearization, Jackknife and Balanced Repeated Replication
+Methods. The Annals of Statistics, 1010-1019.
+
+[13] LEHTONEN, R., & PAHKINEN, E. (2004). Practical Methods for Design and
+
+Analysis of Complex Surveys. John Wiley & Sons.
+
+53
+14] LOHR, S.L. (2009). Sampling: Design and Analysis. Nelson Education.
+
+15] MAHALANOBIS, P.C. (1940). A Sample Survey of the Acreage Under Jute in
+Bengal. Sankhya: The Indian Journal of Statistics, 511-530.
+
+16] MAHALANOBIS, P.C. (1958). Recent Experiments in Statistical Sampling in the
+Indian Statistical Institute. Sankhya: The Indian Journal of Statistics (1933-1960),
+20(3/4), 329-398.
+
+17] PHILIPPINE STATISTICS AUTHORITY (2012). Technical Notes on the Labor
+Force Survey (LFS). Retrieved from https://psa.gov.ph/content/technical-notes-
+labor-force-survey-lfs
+
+18] RAO, J.N.K., & WU, C.F.J. (1985). Inference from Stratified Samples: Second-
+Order Analysis of Three Methods for Nonlinear Statistics. Journal of the American
+Statistical Association, 80(391), 620-630.
+
+[19] RAO, J.N., & WU, C.F.J. (1988). Resampling Inference with Complex Survey Data.
+Journal of the American Statistical Association, 83(401), 231-241.
+
+[20] RAO, J.N.K., WU, C.F.J., & YUE, K. (1992). Some Recent Work on Resampling
+Methods for Complex Surveys. Survey methodology, 18(2), 209-217.
+
+(21] RUST, K. (1985). Variance estimation for complex estimators in sample surveys.
+Journal of Official Statistics, 1(4), 381.
+
+[22] VALLIANT, R. (2007). An Overview of the Pros and Cons of Linearization versus
+Replication in Establishment Surveys. In Proceedings of the Third International
+Conference on Establishment Surveys (pp. 929-940).
+
+[23] WOLTER, K. (2007). Introduction to Variance Estimation. Springer Science &
+Business Media.
+
+[24] WOODRUFF, R:S. (1971). A Simple Method for Approximating the Variance of a
+Complicated Estimate. Journal of the American Statistical Association, 66(334),
+411-414,

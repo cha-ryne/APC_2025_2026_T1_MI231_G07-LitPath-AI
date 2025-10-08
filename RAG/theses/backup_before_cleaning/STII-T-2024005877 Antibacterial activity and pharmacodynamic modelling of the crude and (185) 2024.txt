@@ -1,0 +1,3478 @@
+Antibacterial Activity and Pharmacodynamic Modelling of the Crude and Semi-Purified Fractions of Psidium guajava Ethanolic Leaf Extracts against Biofilm-Forming Staphylococcus epidermidis (ATCC 12228)
+
+Leeland Anthony L. dela Luna
+
+University of the Philippines Manila
+
+Masters of Science in Pharmacology
+
+July 2024
+
+ABSTRACT
+
+Background: Catheter related bloodstream infection (CRBSI) is considered to be
+the most common cause of nosocomial bacteremia and is the third leading cause
+of hospital acquired infections. Sixty-four percent (64%) of documented cases of
+catheter-related bloodstream infections (CRBSI) were attributed to the presence
+of coagulase-negative Staphylococcus epidermidis, which colonized the catheter.
+Numerous herbal sources exhibit antimicrobial properties, including Psidium
+guajava, whose leaves have been traditionally used by healers for addressing
+diverse skin infections. Research has evidenced the antibacterial efficacy of crude
+leaf extracts against a broad spectrum of gram-positive bacteria. Despite
+substantial supportive evidence from numerous studies, no pharmaceutical
+formulation based on this plant has been introduced to the market. Thus, exploring its development as a potential plant-derived antimicrobial is warranted.
+Objectives: This study aimed to determine the antibacterial activity and
+pharmacodynamic functions of the crude and semi-purified fractions of the
+ethanolic leaf extracts of Psidium guajava on biofilm-forming Staphylococcus epidermidis (ATCC 12228).
+Methods: Minimum Inhibitory Concentration (MIC) and the Minimum Bactericidal
+Concentration (MBC) were determined using the agar dilution method. Time-kill
+curves were determined using the time-kill assay. Pharmacodynamic functions,
+specifically the maximal bacterial growth rate in the absence of antimicrobial (Ψ max), minimal bacterial growth rate at high concentrations of antimicrobial (Ψ min), hill coefficient (κ) and pharmacodynamic MIC (zMIC) were determined using the
+pharmacodynamic model proposed by Regoes. Lastly, Minimum Biofilm
+Eradication Concentration (MBEC) and the Minimum Biofilm Inhibitory
+Concentration (MBIC) were determined using the crystal violet biomass staining assay.
+Results: The Minimum Inhibitory Concentration (MIC) against S. epidermidis
+(ATCC 12228) was found to be 2500 μg/mL for both the crude and the three semi-
+purified fractions. The Minimum Bactericidal Concentration (MBC) was determined
+for the crude and semi-purified alkaloid fraction to be 5000 μg/mL, whereas for the
+semi-purified flavonoid and phenolic fraction, it is the same with its MIC, which is
+2500 μg/mL. In a 24-hour time-kill assay, the crude and semi-purified alkaloid
+fraction exhibited 93% inhibition of bacterial density at 1250 μg/mL, compared to
+the semi-purified flavonoid and phenolic fraction, which required a concentration
+of 2500 μg/mL to achieve the same level of % inhibition of bacterial density. The
+crude and the three semi-purified PGELE fractions all exhibited inhibition of
+bacterial density even at sub-MIC concentrations after 24-hours incubation. At MIC
+concentrations and above, there was no significant difference in the rate at which
+the crude and the three semi-purified PGELE fractions decreased the growth rate
+of S. epidermidis during its exponential phase. Time-kill curves revealed
+bacteriostatic activities for the crude and PGELE fractions, indicating a time-
+dependent bacterial inhibitory effect rather than concentration-dependent against
+S. epidermidis. For the pharmacodynamic functions, the growth rate of S. epidermidis in the absence of any of the treatments (Ψ  max) was determined to be 0.2557 hr-1 + 0.002. The minimal bacterial growth rate at high concentrations (Ψ
+min) values of the crude and the three semi-purified PGELE fractions showed no
+significant difference between them. The analysis of the Hill coefficient (κ) for the
+crude and three semi-purified fractions indicated that a 1 log unit increase in their
+concentration at the MIC is associated with a 6-7% reduction in the growth rate of
+S. epidermidis. The pharmacodynamic MIC (zMIC) values were determined to be
+3,633 g/mL for the crude and 5,740 μg/mL for the semi-purified alkaloid fraction,
+closer to their respective MBC values. However, the semi-purified flavonoids and
+phenolics did not reach a Ψ value of 0, making computation of their zZMIC not
+possible. The dose-response curve of the crude and semi-purified PGELE
+fractions exhibited a linear pattern rather than a sigmoidal one, indicating that an
+increase in PGELE concentration proportionally decreased the growth rate of S.
+epidermidis. Furthermore, the crude and the three semi-purified PGELE fractions
+demonstrated the ability to inhibit biofilm formation at 625 μg/mL, which was four
+times lower than their MIC. However, all the extracts did not possess biofilm-eradicating properties.
+Conclusion: The crude and semi-purified alkaloid, flavonoid and phenolic
+fractions of PGELE showed antibacterial activity. Time-kill curves revealed
+bacteriostatic activities for the crude and the three PGELE fractions, indicating a
+time-dependent bacterial inhibitory effect rather than concentration- dependent
+effect against S. epidermidis. The dose-response curve of the crude and semi-
+purified PGELE fractions exhibited a linear pattern rather than a sigmoidal one, indicating that an increase in PGELE concentration proportionally decreased the growth rate of S. epidermidis. Furthermore, the crude and semi-purified PGELE
+fractions demonstrated the ability to inhibit biofilm formation but did not show biofilm- eradicating properties.
+
+Keywords: Psidium guajava, Catheter related infections, Anti-bacterial agent,
+
+Staphylococcus epidermidis
+
+CHAPTER I
+Introduction
+
+Background of the Study
+
+In the past decades, antimicrobial resistance (AMR) has become a major
+issue to public health causing health crisis and persistence of diseases. AMR has
+been declared as one of the top 10 global public health threats facing humanity
+today. Antibiotics are steadily becoming ineffective as antimicrobial resistance
+spreads worldwide leading to more difficult to treat infections and higher mortality
+from said infections (WHO-Antimicrobial Resistance, 2021). The cost of AMR has
+been shown to be as high as $55 billion per year overall: $20 billion in excess for
+direct healthcare costs, with additional society costs for lost productivity as high as
+$35 billion a year (CDC, 2013). In the Philippines, AMR is a critical, yet most often
+an overlooked threat to public health. Many Filipinos have misconceptions about
+the indication, use and side effects associated with antibiotic use (Robredo et.al,
+2022). These misconceptions can lead to the misuse and overuse of antimicrobial
+drugs, which have been identified by WHO as the main driver of the development
+and spread of drug-resistant pathogens. In 2022, there was a 24.1% increase in
+reported resistant isolates as compared to the 2021 report (DOH — AMR
+Surveillance Program, 2022). Philippines is considered to be a low to middle
+income country where patients are resource-constrained, thus significantly
+affected by the high health burden caused by AMR (Robredo et.al, 2022; Ayobami
+
+et.al, 2022).
+
+One of the most affected areas of AMR is in Health Care Facilities, more
+prominently, in hospitals (Ayobami et.al, 2022). Healthcare Acquired Infections
+(HAls) have been associated with devices used in medical procedures such as
+catheters or ventilators, and among the different types of HAls, one of the most
+common and significant HA! would be the Catheter Related Bloodstream Infection
+(CRBS!) (CDC-Types of Healthcare Acquired Infections, 2014). CRBSI is
+considered to be the most common cause of nosocomial bacteremia which is often
+lethal and costly. A meta-analytical study done at the John Hopkins University
+stated that blood stream infections are the third leading cause of hospital acquired
+infections and has an attributable mortality rate of 12% to 25%. 60% of reported
+CRBSI cases were caused by microorganisms from the patient's skin that
+transferred to their catheter (Soufir, 1999, Gahlot et.al, 2014, Pitiriga et.al, 2020).
+
+Coagulase-negative staphylococci, particularly Staphylococcus epidermidis
+is part of the normal microbiota of human skin and mucosa, and is one of the main
+pathogens in catheter-related bloodstream infections (Becker et.al, 2007). Many
+evidences support that nosocomial genotypes of S. epidermidis can colonize
+medical devices and cause a substantial proportion of health care-associated
+infections (Kahl et.al, 2016; Baddour et.al, 2015; Rosenthal et.al, 2012). A major
+challenge in managing S. epidermidis is due to its ability to adhere and create
+biofilms on indwelling medical devices, giving it resistance to available antibiotics
+(Becker et.al, 2014). When compared to methicillin-resistant Staphylococcus
+aureus (MRSA), little is known about the epidemiology and transmission of S.
+
+epidermidis in healthcare settings mainly because of the lack of studies and
+
+attention given to this pathogen (Widerstrém, 2016). In the Philippines, the top
+leading reported resistant isolate found in the blood is Staphylococcus, which is
+often S. epidermidis followed by Staphylococcus aureus, and third would be
+Klebsiella pneumoniae (DOH — AMR Surveillance Program, 2022).
+
+It has been reported that one of the best measures that could be used to
+prevent CRBSIs is the effective use of cutaneous anti-sepsis, and preventive
+strategies based on inhibiting microorganisms originating from the skin or catheter
+hub from adhering to the catheter (Surapat et.al, 2020). There is no single
+identified process to stop the spread of AMR. It needs to be approached in
+multifaceted way, in multiple discipline due to its complex nature (Prestinaci et.al,
+2015). Information dissemination and improving awareness among people is one
+way to address the issue (Robredo, 2022). Another is developing new antibiotics.
+
+Many parts of the world, especially in developing countries, believe in herbal
+medicines. 70-95% of people continue to depend on plants as a source of
+medicine, especially in underserved communities (Vandebroek, 2013; RBG and
+Willis, 2017). Many Filipinos seek first line treatment from traditional healers, who
+provides them with herbal treatments (Mallah et.al, 2021). Leading the way in the
+field of herbal medicine, the National Integrated Research Program of the
+Philippines (NIRPROMP), conducted initial studies on 10 scientifically validated
+medicinal plant, also known as the sampung halamang gamot, which the Philippine
+Department of Health fully endorsed in the 90s. Among these 10 medicinal plants,
+one is shown to possess antimicrobial properties; and that is the Philippine variety
+
+of Psidium guajava, more commonly known as “bayabas”. The leaves of Psidium
+
+guajava is often used as an oral or skin antiseptic and has been proven in many
+countries, as well as in the Philippines to possess antimicrobial properties against
+a wide array of pathogens (Patel et.al, 2019; Biswas et.al, 2013; Oncho et.al, 2021;
+Raj, 2020; Penecilla et.al, 2011). Presence of bioactive compounds such as
+terpenoids (phenolic compounds), tannins, flavonoids, glycosides and alkaloids
+have been found in the leaves of Psidium guajava, which is well known to possess
+antimicrobial properties (Naseer et.al, 2018; Raj et.al, 2020, Oncho et.al, 2021).
+The complex mixtures of bioactive compounds in plants can act in synergy, further
+enhancing their medicinal property (Gilbert and Alves, 2003). Most often than not,
+plant extracts lose their activity once they are fractionated (Inui et al., 2012; Abreu
+et al., 2017).
+
+There are many medicinal plants with antimicrobial properties, yet there are
+no herbal preparations out in the market intended to be marketed as an
+antimicrobial agent. With the advent of AMR and the emergence of pathogens
+resistant to available antibiotics, it is imperative to find new sources of antibiotics
+that are sustainable and effective. The Philippine variety of Psidium guajava may
+prove to be a good source of a new antimicrobial agent that could help address
+the growing threat of AMR.
+
+In most cases, when developing rational antibiotic treatment regimens, only
+the Minimum Inhibitory Concentration (MIC) is used as a pharmacodynamic
+parameter to determine the effectiveness of an antibiotic against certain pathogens
+(Barclay et.al, 2001). However, the quantitative relationship between the
+
+concentration of an antimicrobial agent and the growth or death rates of bacteria
+
+is complex. Antibiotics with similar MIC may vary greatly in terms of their
+pharmacodynamic function. The pharmacodynamics of antibiotics are often
+studied in vitro by using time-kill kinetics, where an exponentially growing bacteria
+is exposed to varying concentrations of an antibiotic. The changes in the optical
+density of viable microbial cells will then be monitored over time, thus generating
+the time-kill curve (Bosswell et.al, 1999). The data generated from the time-kill
+kinetics can be further used to determine the growth or death rates of bacteria at
+different concentrations of the antibiotic, thus making it possible to estimate the
+pharmacodynamic relationship between antibiotic concentration and bacterial
+growth or death rates. Regoes et.al, 2004 developed a mathematical model based
+on a Hill function - which is referred to by the author as the pharmacodynamic
+function and which is also related to published Emax models - to describe the
+relationship between the bacterial net growth rates and the concentrations of
+antibiotics. The differences in pharmacodynamic parameters, such as the
+steepness of the Hill function and the minimum bacterial net growth rate attained
+at high antibiotic concentrations can be profound, thus showing the differences in
+the microbiological efficacy of antibiotics with identical MICs.
+
+Determining the pharmacodynamic function of a medicinal plants with
+antimicrobial property, using a pharmacodynamic model based on Hill function, is
+novel and will further describe the antimicrobial property of the said medicinal plant
+in a much more comprehensive way. Thus, when determining antimicrobial
+efficacy of certain agents, it would be ideal to determine not only the MIC but other
+
+pharmacodynamic function as well.
+
+Catheter-related bloodstream infections are the most common cause of
+nosocomial bacteremia and rank as the third leading cause of hospital-acquired
+infections. Given that numerous herbal sources, including Psidium guajava, exhibit
+antimicrobial properties, investigating its potential as a plant-derived antimicrobial
+against biofilm-forming Staphylococcus epidermidis is warranted.
+
+Therefore, this study aimed to assess the antibacterial activity of the crude
+and semi-purified fractions of the ethanolic leaf extracts of Psidium guajava against
+biofilm-forming Staphylococcus epidermidis (ATCC 12228). Specifically, we
+determined the minimum inhibitory concentration (MIC), minimum bactericidal
+concentration (MBC), time-kill curves, and pharmacodynamic parameters such as
+the maximal bacterial growth rate in the absence of antimicrobial (yw max), minimal
+bacterial growth rate at high antimicrobial concentrations (wy min), Hill coefficient
+(k), and pharmacodynamic MIC (zMIC). Additionally, the minimum biofilm
+eradication concentration (MBEC) and minimum biofilm inhibitory concentration
+(MBIC) were also evaluated. This research is part of the Psidium guajava Product
+Development Project led by Dr. Cecilia C. Maramba of the Institute of Herbal
+
+Medicine.
+
+Statement of the Problem
+
+Numerous studies have stated that AMR is a global threat to public health
+and that despite the numerous actions done to help curb down its upward trend, it
+shows no signs of decreasing anytime soon. One of the most affected areas of
+
+AMR is in Health Care Facilities, leading to Healthcare Acquired Infections (HAI).
+
+Emergence of AMR in HAI complicates treatment of patients and prolongs hospital
+stay. Catheter Related Blood Infections (CRBSIs), which is often caused by
+Staphylococcus epidermidis is considered to be the most common HAI which
+
+causes nosocomial bacteremia. It is often lethal and costly.
+
+There is no single identified process to stop the spread of AMR. It needs to
+be approached in multifaceted way, in multiple discipline due to its complex nature.
+As mentioned by WHO, one of the ways we can address AMR is by identifying and
+developing new antimicrobials with novel mechanism of action. There are many
+medicinal plants with antimicrobial properties, yet there are no herbal preparations
+out in the market intended to be marketed as an antimicrobial agent. Many
+literatures support that the Philippine variety of Psidium guajava has antimicrobial
+properties and has been used traditionally for skin problems. It contains various
+secondary metabolites that have been identified to possess antimicrobial
+properties. These secondary metabolites may be working synergistically, leading
+to its antibacterial activity. Findings of this research may be a stepping stone,
+providing a foundational data in the development of a drug product from Psidium
+
+guajava that could address CRBSIs.
+
+Research Question
+What is the antibacterial activity and pharmacodynamic functions of the
+crude and semi purified fractions of the Philippine variety of Psidium guajava
+
+Ethanolic Leaf Extracts (PGELE) compared to Vancomycin on Biofilm-Forming
+
+Staphylococcus epidermidis (ATCC 12228) after 24 hours of growth incubation in
+
+an in vitro experimental design?
+
+Objectives of the Study
+
+The general objective of this study is to determine the antibacterial activity
+and pharmacodynamic functions of the crude and semi-purified Fractions of
+PGELE against Biofilm-Forming Staphylococcus epidermidis (ATCC 12228).
+
+Specifically, the study aims to:
+
+1. Determine the Minimum Inhibitory Concentration (MIC) and the
+Minimum Bactericidal Concentration (MBC) of the crude and semi-
+purified Fractions of PGELE.
+
+2. Determine the time-kill curves of the crude and semi-purified Fractions
+of PGELE using time-kill assay.
+
+3. Determine the pharmacodynamic functions of the crude and semi-
+purified Fractions of PGELE using the Pharmacodynamic model
+proposed by Regoes with the following parameters:
+
+a. Maximal bacterial growth rate in the absence of antimicrobial (w
+max) — hr?
+
+b. Minimal bacterial growth rate at high concentrations of
+antimicrobial (y min) - hr’
+
+c. Hill coefficient (k)
+
+d. Pharmacodynamic MIC (zMIC) — ug/mL
+
+4. Determine the Minimum Biofilm Eradication Concentration (MBEC) and
+the Minimum Biofilm Inhibitory Concentration (MBIC) of the crude and
+semi-purified PGELE against S. epidermidis using crystal violet biomass
+
+staining assay.
+
+Significance of the Study
+
+The findings of this research could prove to be significant for drug product
+development (i.e. an antiseptic to be applied to the skin prior to IV insertion) of an
+antimicrobial agent from PGELE, specifically addressing the prevention and
+management of catheter-related bloodstream infections caused by biofilm-forming
+S. epidermidis. Determining the pharmacodynamic functions of a medicinal plant
+with antimicrobial property is still novel. The findings of this research can serve as
+a basis for future researches wanting to comprehensively determine the
+antimicrobial property of medicinal plants or when developing rational antibiotic
+treatment regimens.
+
+The use of endemic plants as an alternative source of medication gives
+people a source of accessible, safe and affordable medicines. Not only that, it
+empowers people in a community and give them self-reliance in managing their
+illness. The use of herbal plants in the synthesis of antibiotics can help address
+the growing threat of AMR since herbal medicines contain many phytochemicals,
+which can mostly possess antibacterial property. Because of this, the various
+
+phytochemicals may work synergistically with each other in killing bacteria, and the
+
+bacteria will have difficulties in developing resistance against the various
+
+phytochemicals that are in herbal plants.
+
+10
+
+CHAPTER Il
+Theoretical Background
+A comprehensive reading on related literature regarding antimicrobial
+resistance, Catheter-related bloodstream infection (CRBSI), Staphylococcus
+epidermidis, plant products as antimicrobial agents, Psidium guajava, time-kill
+assay, and pharmacodynamic modelling were gathered to meet the objectives of
+
+this research study.
+
+Review of Related Literatures
+Antimicrobial Resistance
+
+The World Health Organization have reported how much of a global threat
+AMR is to health and requires an urgent multisectoral action to help achieve the
+sustainable development goals. The World Health Organization (WHO) has
+identified AMR as one of the top 10 global public health treat that humanity is
+facing. Drug resistant pathogens are emerging and spreading to the point where
+existing antimicrobial medicines could no longer be used to treat it. The WHO has
+identified that misuse and overuse of antimicrobial are the main cause and driver
+in the development of drug resistant pathogen. In 2019, the WHO identified 32
+antibiotics in clinical development that address the WHO list of priority pathogens,
+of which only six were classified as innovative. Without effective antimicrobials, the
+successful treatment of infections would be at risk (WHO — Antimicrobial
+Resistance, 2019). As shown in this report, we can see how much of a problem
+
+antimicrobial resistance truly is. Emergence of resistant strains of bacteria leads
+
+11
+
+to major threats to public health to the point where common infections are
+becoming harder to treat, despite the fact that actions have been taken to help stop
+the emergence of AMR. The search for newer antibiotics has been difficult. There
+is a need to look for new sources of antibiotics.
+
+The public health cost of AMR is difficult to estimate given that there are
+only few studies addressing this issue. However, CDC conservatively estimated
+that in the US, about 2 million people are affected by AMR each year and at least
+23,000 die due to the infection. The European Center for Disease Prevention and
+control stated in 2013 that the crude economic burden of AMR was estimated to
+be at least 1.5 billion euros with more than 900 million euros corresponding to
+hospital costs. Productivity loss due to absence from work or death from infection
+accounted for 40% of the total estimated cost. The US CDC on the other hand in
+2013 estimated the cost of AMR as $55 billion per year overall: $20 billion in excess
+for direct healthcare costs, with additional society costs for lost productivity as high
+as $35 billion a year. These numbers simply show how costly it is for the economy
+on a global scale AMR is and should be addressed. The review also highlighted
+the four antibiotic-resistant pathogens of global concern, namely: Staphylococcus
+aureus, Klebsiella pneumoniae, non-typhoidal Salmonella (NTS) and
+Mycobacterium tuberculosis. Resistance among these bacteria have been shown
+to be significant should be addressed. Also, as reported in the review, one of the
+most common causes of nosocomial infections where AMR is prominent is with
+Staphylococcus infections, namely Methicillin Resistant Staphylococcus aureus
+
+(MRSA). On a Global scale, MRSA proportions exceed 20% in all WHO regions,
+
+12
+
+and in some countries exceed 80% (Prestinaci et.al, 2015). The review shows how
+much of a burden AMR can be to healthcare in terms of cost and how detrimental
+it is to the health of people in terms of the productivity lost and lives. It is very
+evident that steps must be made in order to mitigate the impact of AMR.
+
+Dadgostar, 2019 showed that globally, issues arising from AMR and its
+cause varies from country to country and is complex in nature. As to the impact of
+AMR, it can be divided into 3 levels, namely impact on the patient, the healthcare
+and the economy. Despite the many programs and steps being done to understand
+and address AMR, there are still major gaps in knowledge and there is no clearly
+understood progress to put an end to the persistent trends of AMR. This review
+helps support the claims of Prestinaci, 2015 in terms of the burden of AMR to
+patients, the healthcare system and the economy. It could also be noted based on
+the review that there is no single identified process to stop the spread of AMR. It
+needs to be approached in multifaceted way, in multiple discipline because AMR
+is a very complex issue.
+
+AMR is a problem worldwide. The next step is to determine the situation
+here in the Philippines in terms of the burden AMR is causing and what are the
+teported organisms causing AMR.
+
+In the Philippines, AMR is a critical, yet most often an overlooked threat to
+public health. Filipinos have cultural misconceptions and inadequate regulation
+and enforcement of antibiotic use has led to the spread of AMR. According to
+Barbara et.al, 2017, 31-66% of Filipinos self-medicate, especially with antibiotics.
+
+Mallah et.al, 2021 noted that many Filipinos seek first line treatment from traditional
+
+13
+
+healers, who provides them with unknown herbal treatments containing suboptimal
+levels of antibiotics. This in turn may enhance pathogen resistance. Lastly, 29-95%
+of Filipinos have misconceptions about the indication, use and side effects
+associated with antibiotic use. Thus, educating the public is a must (Robredo et.al,
+2022). Many Filipinos do not understand the full impact of AMR and fail to realize
+the role of the improper use of antibiotics in the emergence of AMR. Due to lack of
+data, we cannot have a clear overview of the situation of AMR in the Philippines.
+One thing to note on the report is that many Filipinos believe in herbal medicines.
+Thus, it can be inferred that majority of Filipinos still believe in herbal treatments.
+Based on the Antimicrobial Resistance Surveillance Program - Annual
+Report Summary 2021, 70,951 isolates were reported and analyzed for 2021. This
+is a 15.32% increase as compared to the reported 61,527 isolates in 2020. Finding
+showed that among the resistant isolates, Klebsiella pneumoniae isolates had the
+highest number of reports (10876 isolates). 56.57% of the K. pneumoniae isolates
+were from respiratory, 14.4% from urine and 12.59% were from wounds. 59.72%
+of the cases were community acquired infections. E.coli (7404 isolates),
+Pseudomonas aeruginosa (6271 isolates) and Acinetobacter baumannii (4672
+isolates) were the other most reported isolates. With the given data, it must be
+noted that all of the reported resistant isolates can all equally be a threat to public
+health. As stated in the limitations of the report, it must be noted that there may be
+unreported cases of resistant isolates, thus reducing the total number of reports
+for the said isolates. The report contained many information regarding the current
+
+trends of AMR here in the Philippines. | will be referring to this article continually
+
+14
+
+as a source of information for this literature review when it comes to determining
+the situation of AMR here in the Philippines.
+
+It is crucial to identify in which sector of the healthcare system is most
+affected by AMR and who are at risk.
+
+One of the areas where AMR is very significant would be in health care
+facilities, specifically hospitals. And the burden of AMR greatly affects healthcare-
+acquired infections (HAIs). The burden of AMR in HAls is further compounded in
+Low Middle-Income countries due to a lack of resources. The review reported that
+pooled resistance proportions for Gram-negative pathogens were higher in low to
+middle income countries than regional and national estimates from high income
+countries. As stated, patients in resource-constrained regions are particularly
+affected by AMR (Ayobami et.al, 2022). With the data provided, it can be
+concluded that a major area of concern when it comes to AMR are infections
+acquired in hospitals since it is a significant cause of mortality and morbidity, and
+can have a large financial impact on the patient and the health care system. If the
+pathogen causing HAls become resistant, then it becomes harder to treat and
+further compounds the burden it imposes. Thus, addressing AMR in HAIs
+significant. Another thing worth noting is that the Philippines is considered to be a
+low to middle income country, thus it can be assumed that the health burden of
+HAls caused by resistant strains is high in the Philippines.
+
+CDC defines healthcare-acquired infections as nosocomial acquired
+infections that develop upon receiving treatment at a healthcare facility such as a
+
+hospital. It usually manifests 48 hours after admission to a hospital. HAls can be
+
+15
+
+associated with the devices used in medical procedures such as catheters or
+ventilators. These healthcare-associated infections (HAlIs) include central
+line/catheter-related bloodstream infections, catheter-associated urinary tract
+infections, and ventilator-associated pneumonia. Infections may also occur at
+surgery sites, known as surgical site infections (CDC - Types of Healthcare-
+associated Infections, 2014). Among the different type of HAls, one of the most
+common and significant HAI would most likely be the Catheter Related
+Bloodstream Infection (CRBSI) since people who are hospitalized often are given
+intravenous lines as an access when giving most medications (mostly peripheral
+IV lines). Urinary catheters, ventilators, or surgery are utilized for specific
+
+conditions.
+
+Catheter-related bloodstream infection (CRBSI)
+
+Catheter-related bloodstream infection (CRBSI) is defined as the presence
+of bacteremia originating from an intravenous catheter. Based on this review, it is
+considered to be the most common cause of nosocomial bacteremia which is often
+lethal and costly. CRBS! accounts for 10%-20% of HAI in the UK and is associated
+with increased ICU stay and mortality. It usually arises as a complication with
+central venous catheterization. The use of IV catheters is often integral in the
+practice of modern medicine since is used for administering fluids, nutrition, blood
+products, and so on. Compared to other medical devices, Intravascular catheters
+pose a greater risk for infection. The review highlighted a meta-analytical study
+
+done at the John Hopkins University regarding blood stream infection. It stated that
+
+16
+
+blood stream infections are the third leading cause of hospital acquired infections
+and has an attributable mortality rate of 12% to 25%. Another research mentioned
+in this review stated that 60% of CRBSIs were caused by microorganisms from the
+patient's skin (Soufir, 1999). CRBSIs are more common in central venous
+catheters compared to peripheral venous catheter. The relative risk for bacteremia
+increases by 64 times when central venous catheter is used. In preventing CRBSI,
+the review showed many measures that could be used, such as: use of maximal
+barrier, precautions during catheter insertion, effective cutaneous anti-sepsis, and
+preventive strategies based on inhibiting micro-organisms originating from the skin
+or catheter hub from adhering to the catheter (Gahlot, 2014). As seen in the review,
+CRBSIs accounts for a large portion of HAls that causes high rates of mortality
+and high cost of treatment. And the use of IV catheters in hospitals cannot be
+avoided. It must also be noted that majority of the CRBSls are due to the use of
+central venous catheter as compared to peripheral catheters. However, there are
+still risks associated with the use of peripheral catheters in causing CRBSIs. One
+such risk is phlebitis caused by peripheral IV catheter infection, which could
+progress to CRBSI. It was also noted in the review that duration of use of peripheral
+IV catheter is another major risk for CRBSIs, therefore it is advised that peripheral
+IV catheters should be replaced every 72 to 96 hours (Mulugeta, 2021). Another
+thing to take note of in the review is that CRBSIs are commonly caused by bacteria
+found in the skin. As for the prevention of CRBSls, one thing that caught my
+attention was the recommendation of effective cutaneous anti-sepsis, and
+
+preventive strategies based on inhibiting micro-organisms originating from the skin
+
+17
+
+or catheter hub from adhering to the catheter. This means that an antimicrobial
+agent that is effective at killing microorganism whose flora is in the skin and
+microorganisms that can adhere to IV catheters is indeed needed, just as what
+WHO recommended in their annual report regarding AMR; that there is a need to
+develop new sources of antibiotics.
+
+Phlebitis is a problem often associated with the use of peripheral IV
+catheter, and that CRBSls is a recognized complication of phlebitis. The findings
+of the research showed that developing phlebitis were twofold higher in patients
+with catheter-in situ >96 hours as compared to those with catheter dwell time < 72
+hours (Lulie et.al, 2021). The results of this study further strengthen the findings of
+Gahlot, et.al, 2014 that showed that peripheral IV catheter can be a risk to having
+CRBSI, but not as much as central IV catheters. Another thing to note is that the
+length of time of IV catheter use is a risk factor for having phlebitis.
+
+The most common pathogen identified to cause CRBSI were Pseudomonas
+aeruginosa (22.0%), Klebsiella pneumoniae (16.7%), and Stenotrophomonas
+maltophilia (13.4%). Catheter retention was the only risk factor identified to be
+strongly associated with relapse. It was also stated in the study that in the past,
+the most common pathogens of CRBSI were gram postive bacteria (coagulase-
+negative staphylococci and Staphylococcus aureus). However, more recent global
+data shows a shift towards gram negative bacteria such as Pseudomonas
+aeruginosa, Klebsiella spp., or Acinetobacter spp. as the causative pathogen
+(Surapat, 2020). It can be noted from the study that the causative agents for CRBS!
+
+are generally gram-negative bacteria. However, the main causative agents may
+
+18
+
+still vary in terms of geographical location. The findings of the study were done in
+Thailand. Based on the findings of the Antimicrobial Resistance Surveillance
+Program - Annual Report Summary 2021 here in the Philippines, Staphylococcus,
+coagulase negative, Staphylococcus aureus and Klebsiella pneumoniae ss.
+pneumoniae are the top 3 most common isolates in the blood.
+
+Based on the findings of Gahlot et.al 2014, Surapat et.al, 2020 the major
+cause of CRBSIs are gram negative bacteria and staphylococcus sp. found in the
+skin. Global trends show that most CRBSI are caused by gram negative bacteria.
+However, the 2021 Antimicrobial Resistance Surveillance Program of the
+Department of Health here in the Philippines stated that the top leading reported
+resistant isolate found in the blood is still Staphylococcus, coagulase negative,
+followed by Staphylococcus aureus, and third would be Klebsiella pneumoniae ss.
+
+pneumoniae.
+
+Staphylococcus epidermidis
+
+Coagulase-negative staphylococci, particularly Staphylococcus
+epidermidis, have been recognized as an important cause of health care-
+associated infections. It is a part of the normal microbiota of human skin and
+mucosa, and can become virulent once inside its host. However, many evidences
+support that nosocomial genotypes of S. epidermidis can colonize patients,
+medical devices and health care personnel and cause a substantial proportion of
+health care-associated infections (Becker et.al, 2007). Kahl et.al, 2016, Baddour
+
+et.al, 2015, and Rosenthal et.al, 2012 have reported that S. epidermidis is one of
+
+19
+
+the main pathogens in catheter-related bloodstream infections and early-onset
+neonatal sepsis and is also a frequent cause of prosthetic joint infections,
+prosthetic valve endocarditis, and other biomedical device-related infections. A
+major challenge in managing S. epidermidis is its ability to become resistant to
+antibiotic treatment. The type of infections it causes are chronic in nature, due to
+its ability to adhere and create biofilms on indwelling medical devices (Becker et.al,
+2014). When compared to methicillin-resistant Staphylococcus aureus (MRSA),
+little is known about the epidemiology and transmission of S. epidermidis in
+healthcare settings mainly because of the lack of studies and attention given to
+this pathogen (Widerstrém, 2016). As stated in the article, S. epidermidis is one of
+the main pathogen causing CRBSIs due to the fact that it can adhere in indwelling
+medical devices like IV catheters. Its ability to become resistant through biofilm
+formation makes it more difficult to manage. Despite being recognized as a
+significant nosocomial pathogen for over 30 years, most attention is given to MRSA
+infections.
+
+Based on the ATCC website, Staphylococcus epidermidis (ATCC 12228) is
+a freeze-dried bacteria with a strain designation of FDA strain PCI 1200. The strain
+is a whole-genome sequence bacterial strain that was deposited by FDA. The
+culture has applications in bioinformatics, food testing, media testing, and quality
+control, and it is a microbiome standard component. It is usually stored in a
+refrigerator at 2-8 degrees Celsius. Its biosafety level is 1 and it is often used as a
+
+test system for searching for anti-biofilm agents.
+
+20
+
+Biofilms are produced by bacteria capable of producing polymer matrix,
+which is mostly composed of polysaccharides, secreted proteins and extracellular
+DNA. Ina healthcare setting, biofilms are seen to persist in the surfaces of medical
+devices such as catheters, prosthetic heart valves, breast implants, pacemakers,
+cerebrospinal fluid shunts, contact lenses, etc. and on patient's tissues leading to
+chronic infections which prolongs the stay of patients in hospitals (Dongari-
+Bagtzoglou, 2008; Percival et al., 2015). Biofilms can complicate the treatment of
+certain microorganisms since biofilms protect the bacteria against the host's
+immune system, increasing their virulence as well as their resistance to certain
+antibiotics. The review also reports that most frequently reported strain of bacteria
+that develops biofilms on the surfaces of medical devices causing healthcare issue
+are Staphylococcus aureus, Staphylococcus epidermidis and Pseudomonas
+aeruginosa (Hall-Stoodley et al., 2004; Shokouhfard et al., 2015; Khatoon et al.,
+2018; Pakharukova et al., 2018), and about two-thirds of in-dwelling devices
+related infections are caused by Staphylococcal infections (Khatoon et al., 2018).
+This supports the claim that S. epidermidis is a microorganism that must be given
+
+attention.
+
+21
+
+Plant Products as Antimicrobial Agents
+
+Since ancient times, plants have always been used as a source of medicine.
+Traditional healers have long used plants to treat various conditions and western
+medicine is trying to duplicate their success. Despite the fact that 25-50% of
+pharmaceuticals are derived from plants, none are used as antimicrobials despite
+the fact that so many studies have been done on the antimicrobial properties of
+various plants. Many plants have multiple secondary metabolites that have been
+found in vitro to have antimicrobial properties. Example of these secondary
+metabolites are tannins, terpenoids, alkaloids, phenolics, essential oils, lectins,
+polyacetylenes and flavonoids (Cowan, 1999). The use of plants as a source of
+antibiotics seems very practical due to the fact that many plants produce
+secondary metabolites that possess antimicrobial property. Yet despite of this
+knowledge, no plant based antimicrobial product is available currently in our
+market. Another thing to consider here is the attitude of people towards plant
+based medicinal products. As mentioned by Robredo et.al, 2022, many Filipinos
+prefer and believe in the healing effects of herbal, plant-based medicines. By
+having a plant based antimicrobial product, which will most likely be cheaper than
+western medicine, many Filipinos might patronize such products.
+
+Many parts of the world, especially in developing countries that have
+integrated traditional plant-based medicines, believe in herbal medicines. 70-95%
+of people continue to depend on plants as a source of medicine, especially in
+
+underserved communities (Vandebroek, 2013; RBG and Willis, 2017). This further
+
+22
+
+supports the need for us to explore more on plant-based medicines and make them
+part of the main stream treatment of certain condition.
+
+Lamiaceae, Fabaceae and Asteraceae were the plant families that were
+most represented in the various antimicrobial studies, while Cinnamomum verum,
+Rosmarinus vulgaris and Thymus vulgaris were the most studied species. The
+most widely used extraction method was crude extraction using methanol and
+leaves were the mostly used plant tissues. The most targeted pathogen in the
+reviewed studies were S.aureus. It was also noted in the review that complex
+mixtures of bioactive compounds in plants can act in synergy, further enhancing
+their medicinal property. It is believed that due to the diversity of compounds in
+plants, they can target multiple receptors, facilitating transport to a target,
+protection from degradation and modification of resistance (Gilbert and Alves,
+2003). Most often than not, plant extracts lose their activity once they are
+fractionated (Inui et al., 2012; Abreu et al., 2017). It was also recommended in the
+review that studies regarding the interaction of plant extracts in combination with
+existing antibiotics should also be studied to see if a synergistic effect will also be
+observed (Chassagne et.al, 2021). Things to take note of in the review was that
+the most widely use solvent for extraction of plant sample is methanol. It stands to
+reason that methanol is widely used because this type of solvent is ideal when
+isolating specific compounds in plants. However, methanol is toxic and thus great
+precaution is needed when handling this solvent. For biological assay or for animal
+studies, ethanol is more preferred as the extracting solvent for plant samples due
+
+to the fact that it is safer than methanol and have comparable extracting property
+
+23
+
+(Do et.al, 2014). Leaves were often used for antimicrobial studies. Using leaves as
+a source of active constituents is more sustainable than using the roots or stems
+of plants since leaves can be harvested in large quantities and it can grow back
+after harvesting it.
+
+Republic Act 8423 - Traditional and Alternative Medicine Act of 1997 was
+enacted to create the Philippine Institute of Traditional and Alternative Health Care
+(PITAHC) in order to accelerate the development of traditional and alternative
+healthcare in the Philippines. It was through this Act that the Philippine Department
+of Health presented 10 scientifically validated medicinal plant, also known as the
+sampung halamang gamot. They are as follows: Lagundi (Vitex negundo),
+Sambong (Blumea balsamifera L.), Ampalaya (Momordica charantia L.), Garlic
+(Allium sativum), Guava (Psidium guajava), Tsaang-gubat (Carmona cetusa),
+Yerba-Buena (Mentha arvensis), Niyug-niyogan (Quisaualis indica), Acapulco
+(Cassia alata) and Ulasimang-bato (Peperomia pellucida). Among the 10
+scientifically validated medicinal plants, only guava (Psidium guajava) has been
+shown to possess antimicrobial property. Often it is used as an oral or skin
+
+antiseptic.
+
+Psidium quajava
+
+Psidium guajava is a plant that grows in the tropics and is widely cultivated
+for its fruits. It is an evergreen shrub like tree which reaches to the height of 6 to
+25 feet. It belongs to phylum Magnoliophyta, class Magnoliopsida and Myrtaceae
+family (Dakappa et.al, 2013). All parts of Psidium guajava has been studied and
+
+24
+
+used for its medicinal property (Nwinyi et.al, 2008). This review article mentioned
+many of the medicinal uses of guava, however, for the purpose of this study, | will
+be focusing more on the antibacterial property of guava. Guava leaf extracts have
+shown to possess antimicrobial properties. Its activity is high against gram positive
+bacteria, such as S. aureus, and moderate against gram negative bacteria. Plant
+leaves and bark extracted using methanol have shown to possess significantly
+higher antimicrobial activity as compared to other extracting solvent as it can also
+inhibit species of Bacillus and Salmonella (Joseph et.al, 2011). Aqueous and
+ethanol guava leaf extracts have shown to have lower antimicrobial property when
+compared to methanolic extracts (Nair 2007).
+
+Patel et.al, 2019 tried to determine the method of extraction that will yield
+better antimicrobial activity for the guava leaf extracts. Both water as well as the
+hydroalcoholic extract of guava leaves could attenuate virulence of all the test
+pathogens (except S. pyogenes) towards C. elegans. Hydroalcoholic extract
+exhibited 10-15% better antimicrobial activity against S. aureus than the water
+extract. The research further proved the traditional use of guava as a medicinal
+plant. The findings of the study made sure highlighted the importance of choosing
+the most appropriate extraction method and solvent in the preparation of bioactive
+compounds in guava leaf extracts. Based on the findings, hydroalcoholic extracts
+yielded better results as compared to aqueous extracts.
+
+According to Biswas et.al, 2013, both the methanol and ethanolic extracts
+of guava leaves showed inhibitory properties against gram positive bacteria
+
+(Staphylococcus aureus and Bacillus cereus) but not on gram negative bacteria
+
+25
+
+(Escherichia coli and Salmonella enteritidis). The research also showed that
+methanolic extracts have better inhibiting property than ethanolic extracts. With the
+this in mind, it would seem that using methanol as an extracting solvent would yield
+better results than ethanol when it comes to the antimicrobial property of guava
+leaf extracts.
+
+Based on the reviews, it can be concluded that methanolic extracts of the
+guava leaves seem to produce better antimicrobial property as compared to
+aqueous and ethanolic extracts, as supported by Biswas et.al, 2013. However, as
+pointed out by Do et.al, 2014, ethanolic extracts are safer for human consumption
+than methanolic extracts. If the future goal is for the leaf extracts to be used on a
+commercial level and be utilized by humans, then it only stands to reason that
+ethanolic extracts be used during the start of experimentations.
+
+Phytochemical analysis helps in identifying the presence of various
+bioactive compounds such as alkaloids, flavonoids, phenolic compounds,
+terpenoids, and others in plant extracts (Mujeeb, 2014). Phytochemical analysis of
+Psidium guajava showed presence of terpenoids, tannins, steroids, flavonoids,
+saponins, alkaloids and highest amount of phytocompounds was seen with
+methanol, ethanol and acetone extract. Total phenolic and flavonoid content was
+found to be highest in acetone extract (256.32 + 4.56 mg/g GAE) and n-butanol
+extract (198.64 + 1.23 mg/g RE) respectively (Raj et.al, 2020). Here we can see
+that guava leaves contains terpenoids (phenolic compounds), tannins, flavonoids
+and alkaloids which according to Cowan, 1999 are secondary metabolites well
+
+known to possess antimicrobial properties.
+
+26
+
+Oncho et.al, 2021 showed that guava leaves from different locations may
+possess different secondary metabolites. Qualitative phytochemical analysis
+showed the presence of alkaloids, saponin, steroids and tannin, but the absence
+of flavonoid and phlobatannin in all Babile and Gursum leaf and bark extracts
+according to their findings. The research concluded that guava extracts from
+different locations may vary in composition and content but still prove to be a good
+source of antimicrobial agents. This study simply proves that the composition of
+the same plant may vary from the geographical location they were cultivated in.
+Depending where the plant will be sourced, it is important as well to first determine
+their composition.
+
+The following medicinal plants were shown to possess highly positive
+activity against S. aureus, E. coli, and P. aeruginosa: Psidium guajava (guava),
+Eucalyptus globulus, Mangifera indica (\ndian mango), Nasturtium officinale
+(Watercress), Pterygospermum oleiferum (Moringa), Carmona retusa (Wild tea),
+Citrus aurantifolia (Lemon), Citrus sinensis (Orange), Allium sativum (garlic), and
+Allium cepa (onion). As for their phytochemical screening, it revealed the presence
+of flavonoids, tannins, alkaloids, glucosides, saponins and steroids/terpenes in all
+of the medicinal plants which all have antimicrobial properties and validates the
+ethno-medicinal use of these plants. It was also noted on the study that many of
+these plants have varying activities depending on certain conditions (Penecilla
+et.al, 2011). This research supports the claim that in the Philippines, guava has
+been used for their medicinal property and there are many studies supporting this
+
+claim, both local and international. One thing that | noticed in this is that during the
+
+27
+
+preliminary phytochemical screening, the guava shoots/leaves contain all of the
+secondary metabolites with antimicrobial property (flavonoids, glycosides, tannins,
+terpenoids and saponins), except alkaloids. It should also be noted that the plants
+used in this study came from various places in lloilo City and Province, Philippines
+during the period June to September 2010.
+
+Based on the findings of the research of Arollado et.al, 2017, it has been
+shown that bioactives such as glycosides, reducing substances, flavonoids and
+alkaloids found in the ethanolic extracts of five plants with known antimicrobial
+activities (Psidium guajava, Premna odorata, Mimosa pudica, Allium sativum and
+Zingiber officinale) can indeed inhibit the growth of microorganisms like
+Escherichia coli and Staphylococcus aureus. These plants can be an alternative
+source of preservative with antimicrobial and antioxidant properties. This study on
+the other hand, showed that upon phytochemical screening of guava leaves from
+the grounds of Fine Arts Building, University of the Philippines Diliman, it showed
+the presence of glycosides, reducing substances, saponins, flavones, flavonoids
+and alkaloids. There were no detected alkaloids in the guava leaves derived from
+the lloilo province (Penecilla et.al, 2011). This simply supports the claim of Oncho
+et.al, 2021 regarding the differences in secondary metabolites produced the same
+
+plant in different geographical locations.
+
+28
+
+62
+
+70 SaUeTOAU JED
+
+“AE
+ojueBbowjed-nue
+(sue6oujed oF
+
+pesXe
+2012 yyw sed Ye)
+yseubiy ey) ssessod
+©} Puno} eM 3719
+‘aijoyoojequpéy eu
+*Apnis stu) ut pauodes
+
+ieIK uoRDeWxe
+somo} oun evidseq
+
+snaune 's jsue6e
+‘Aungpe seN64 %S1
+0} PavqyKe ese
+2y}oyeoieorp Ay
+
+eu ng
+
+“euewed elqndeosns
+ie isuebe
+
+‘fovouje olusbowjed
+
+“foroye
+djueBoujed-nue sy
+BuyAyepun suisiueyoow
+
+$} J9A9| ewiojduosueN,
+2j04M un Je
+
+Buejeg o1UeB0y}ed UO
+yoye s.379 Supseber
+‘uopebjsenul seyung
+
+‘Aunoew
+(Guisues wosond)
+(erep Buvepun SO leusped 8
+Lyeserea ‘Z eunBid) | Wim exepeyut 0) Ange
+sueBol@ '9 SpJeMo} ‘AINR BAHDAIU
+(seus6ofd 's | -que s)! sexo y) YoU sueBoje snipqewoused
+vdeoxe) | Bros swsiueysow $804 epojewau yA
+sueGowed ise} ou Ie ‘@)aissod ain jo eu ur sneune snoooo0fyders
+‘sjse66ns pue sesodind euewed 21Ve60med
+JPUP|peW Jo} sene9} nIpqeyOUeD seuowopnesd jsule6e peed ysurebe
+enen6 jo pesxe | enen6 jo esn jeuonipen neooo0IAydeIS fesse ‘Auntpe enpayur nue sonea| "7 enefen’
+H0YooIBOUpAY OU 2\y ayepiren pms ue esouiGnuse | lepow sueBele snipqeyoueed Lu} senea) erefenb wnipised Ont te | wniprse jo koeowe | ozoz
+sejemsesejem og | _ ywaseud ain jo siinsex ‘seuoWiopnes wom epojeweu | (a0) Aisuep ied | jo swenxe seem evedwod | yeweuuedxa | 1 "d ‘ieled enewurauy | JW
+‘enyoadsa
+‘wel s'9 pue 'g ‘91 J0
+(SOIWW) SuogesueoUCD
+(Aynppe jevepeqque | Aoyqiyu! wn yr (ye00L
+peHAIUXe suOUIPISd | — 'SG} ow sneWBoUS 201%) | pereifozueq-o jo Ssewonueus
+wnue—egooAW 9g} Zw spewbews (21) Jo suled am) peyejos}
+ue ‘sipruepide unuepeqookn Aynipe jeuepeqnue
+snoodooyfydelg ‘seine pue (ezzzb voRReLIIp ABIX pur saneo}
+iam sououeney | sroocoo|Aydeis isuee | 90.) sipUepIde 'S ‘Aunqoe jeuepeqque enefen6 whips
+pajeifozueq ‘Aunyoe jeuepeqque “(ezesz Jo uoneaueauco equejod euluuelep pus ogu-u | (e 9 ‘wr yosjuemasucs | 1z0z
+-9 ouawonueUe 2104 ¥Semo!) OW | _UORBIOS! UEIMIySUOD Weld feoIWeUuDd
+
+Poliqiyxe euoUIpIsg
+
+‘sunsow
+
+Qo.) snaune'S
+
+___ureisks ys04
+
+enefenB wnipisd jo Ayedoid jerqosoiwjue ay} uo saipnys yo Avewwins }'Z a1qeL
+
+oe
+
+qwén
+‘sque/d joupjpew euiddiiud
+a
+enro Wye pnd E
+onnmiposww | — Bujiyy own puB J0 sopingoe jevepeqque ony-ut fe | jovewge jo soname | st0z
+(ezz6z 99.1¥) snaines | waa ‘poyew uolssryp xsiG_| _enmeA DEW ‘SIN. ain eyeyseauion | tewowuedcs | 10 "0 'sIA weuepeqguy | unr
+[wr o00F
+enoge ennoeu}
+ue “w/6rl
+005 0} 0004 wo
+Bem “w/6rl
+001 01 005 wow,
+eyBiopow “jw/6r
+00} mo1eg
+(ecvee DO4¥) snuugos oe
+Jo-Dy-us-44-uyos pus snaooo\dang senjen SIN UY
+“euaulies-g ‘@prKo Pus (9gS01 991) 006 peeprsuoo
+‘euespuepewioue siuinduss snaocooidang (0q ue AyAROR
+‘ouainwny ‘(@sv8 994v) (9002 leqoow ue
+=P ‘euajAydokies 00z = DIW) SAI ‘spluu snadcoojdans: 1S 79) seveidoxojw j18m-96 ‘aun ‘(Z00z)
+“dup | swt 00z=9IN) | (64157 DOL¥) sueMW | U1 poYreW! LoNNIPARIU Nog 1 Z9)0H
+jodwoo |  susinw snaocoo\dans ‘sraccoo\dens © Bulpiocow,
+sujeb_ Awe “61652 991¥) OnA-Ul e a10z
+snuenies srancooidans | jenuesse jo srsfveue je2) ‘IW pepeanue fpnig | _veweuvedxs | yo “a ‘eau 22W
+veunyeu renuejod
+8 5} BAeNG OI
+(s19y) sprouoney “eUBIQWIEW 1160 @4) JO
+‘soneo| BAeN6 pos pue | uoNoUTy pue eunns
+4719 @VUM J0 1UETUCD ‘ig Aansep 01sen | “(261 201) SeueBokd
+ue uonisodwoo ey) | evepeq ennebouwer6
+Ur seousieyp ©
+20 punoy Apmis,
+yBnou peshjeus
+wWaroyp aiom EXE wsiveyoew! ievereqaue ai
+pee ul apisoued vvonouny pue sueoseoiew eneLies
+uneoenb pue eunpnas euequew ue “yeaniro peusey pal (wed 09
+episoxeu-uneovenb 180 eum uondrusip | (eg9z DOL) wnEoBIOW 8 40 spBUXe plouoney jee| “enafend wnpsd)
+JO yueiUco pus fq sem sneune iunvepeqowous PVE I Senjer esoy) ‘aené ouWA
+uowodaid eg ing | “s pue 00 "3 U0 410M jo sulens jueisises 40 Uosyedusoo etn pus sosyed weep
+‘seprsoofiB-unecienb | jo wsiveysow ein pue Srupninw 6upnpasd JBAg|TO BARNS psusuepew
+quemie speaxe | — ‘AyNTDe oneisoueneg esewrper-eieq eno teuepeqque
+any} Jo swueuodwico O08 pemous ‘ ‘O7dH Pue SW/SW-IS3-O71dH own pue ont ue spunodwioo | 910z
+sprouoney eenig iy | snesne snoocoorAydeis ‘28W ‘OI spiovarey en Aynuep! | ewewuedes | “iM youoreis | 0
+sje ueeq see
+sey spenxe @an2e019
+jouoneeded
+
+
+TE
+
+~WneuB ysupeBe Auo NG —T
+UH “a ueWn JeBuoNs
+ueREQ onnisod-weL6
+eu suje6e LOE "urpey Ayunusw0s
+‘ALoqiyul peounouad 0) suonED]IdWu
+Pepexe easfend ‘annans snipeg ‘sneane seyiy Boudng
+‘d ‘swsiueBiooju srooeoo}Aydeis se yons ue ensfonB
+1801 48 e4f 0} vORIINU eyepeq Jno} suleBe SLIY wnypfse ‘siueid
+Jo seauBop (er seuowopnesd eiqioudng pus enefend feupypow eurdduiud
+pepexe sued om out “yoo eyoueuss3 unppssd Jo speaXe eprD ‘om Jo spesKe
+30 SpesXe BpnD oun ‘sgans snioeg onIgIUt Teopuouedns jo A\Ane 1818 | _piny reamouedns jo
+Jew pemous sunsey | _‘snaune sroocdoudeIS powgewi 2810 eded Jel ssoerBep | reiqo.ouwnue eu) eujuuerep ‘w'eunse | Ame wiganwauy | ero
+‘semedad
+Weoi6ojooeueud
+Je\jo eye6yseauy pue
+Burpuersuepun oynuens
+sopiaoud Apmis SILL
+quobe jeiqaziwque
+pue snaveo g jsue6e
+ww 0'F) PUB 11°940
+Uvoniqiyut jo euoz Ueew
+ey ese joueyNeW!
+eu, ‘spBNXE WEAIOS
+919 18 0} uRystses exe
+‘uej2eq eaneBou-wes8
+eueped enlysod-Wes8 Om)
+ue ( BUOUIES eePpeG eANIsod
+oueLps3) “ures pue eaneOon
+nen ain jo speaKe eue}eq exneGau-wel6 URI Om UO (7
+ousyje pus jousyiew omy jsuleBe siregxe Jeo} enefen6 whips)
+eg ‘Aesse jevepeqnue (enofend wnyprs) even exeng Jo spe
+ein jo S6uipuy 40 (BQuatod jeiqa.o1WAUE ee 4207 )0 sonIADY | LOZ
+‘tn 01 Bulpyocoy 019 ULE OL ‘g'semsia reigoniwaury | Aine
+
+
+ce
+
+TOMI Menmpedser ‘ehaine erascoo nudes
+“wy6 s'z pue 0 Sev9}08) IU queysisou
+iwy6n zg 6q 0) punoy seyosd | (Yaw) weisisex Brupninw Srupninw jo sejej0s!
+‘sem sjoesX@ snoenbe epndedAiod jeio. ysuie6e sorvey encfond eolUIp U0 ENE
+pue sjjouewjeus Buyyosd WhIpB Jo SPegXe 2U8810 yee) uur eae/end
+‘epndedijod pio, /e6eq SOS enung, ue snoenbe jo AyAnoe ‘OnU-U re WAP ESd Jo KAO
+SUIUUB) pIOUOARL Su fesse uy ewit | 4. 98W/OIN. Teuepeqnue eienieng | ‘Iuownedes | 10H 'seuy | reemeqHuE CNA UI | dt 4
+Et
+‘ows wpiyn ‘suuuR) pue
+‘spI0.0}s ‘sprouoney
+‘88 uns spunodwioo
+ envfenB
+WnIp Sd Jo EIKO
+FR9{ Doueyjew
+‘OaJA Ul puB UORISodWCS OnA-U 118 go upe | 1402
+powgew uojsnyip osip seded owes en euwexo 0) | eweuweda | “y vewuia | iigopunueagAU | JW
+
+wos Aq peyodes se
+
+oye Buiseaounejeieid
+
+se upns onye
+
+Jewjo su
+Jeuyry haw Apnis ino
+Ut pejensuowep BUY
+
+upIUm joojueydwesolyp
+‘onoiqque psepuEis
+
+84 UWA pareduico
+ays eve}eg eAnisod
+-wei6 ysulebe eye
+lepoyepeq JeGuans
+pemous pesxe erelen’
+‘d‘seyuny ‘sepeds
+Gury pue engeBou
+-weu6 ysuebe Peyo
+
+uepDeq eANIsod
+
+
+€€
+
+UB SZ1 ‘00S=SOIN)
+ssneune sna0000/AydeIS.
+Buapeg anpssod-wesb
+‘ouy isuje6e anne asm
+
+easfen’
+
+Wipes 10 SOMUATOR
+Jans snyKOe ogn-u reie'N feyepeqnue
+
+“ez6sz D9.v) sneune’s Apes UONTIIDOOIN, DIN | fevepeqque ey erenjena | ‘ieweweds | ‘seipueS J0 vogesnjens uy
+
+souediewy ‘prouonels
+
+Borg
+
+Ye UoAe sisjoweey
+Jo eoussqe pemous
+‘esse onijoweey peseq
+
+0ib0p yBiu © 0
+39Vvd-Sas Aq
+reue}eq jo
+
+184) poyeeaau Aesse
+thew 9608 Aq ures
+WOW J0 UUnaL6 OLN
+eniqiquy uoRBsjuEoUeD
+leppyemeg whwjuw
+1B PEM sHoUELNEW
+‘Aexnpadses juy6w
+SZ} pus sz't sem
+‘speaxe snoenbe pue
+‘syoUeyIeus Jo} papi0oe) eyev0y (uo1Be: seqeIeW)
+(OgW) vonemuscuco weypou uy se1ds04 sneune
+leppuened. woy pepeiicn suless sneoooorkyders
+
+
+ve
+
+pase
+
+Bye}8q OUN IP 405
+‘@nROBUI SEM JaLOISOIS-a
+‘wy6W $z 40 SIN UR
+sneune 's Uo AINE
+006 pamous esnpaw
+Plouonel, “(iasersous
+-@) joueis pue (uukwe
+-d pue -e) seuedien.a
+“eunpnus plouoney
+Sujpioye uonevomexs
+popinB-Aesseoiq
+
+8 UI AydesBoyewosp
+wusnjoo 168
+
+
+Quality Control of Bacteria
+
+Precise characterization of test microorganisms is essential for upholding
+the integrity, reproducibility, safety, and relevance of experimental investigations
+within the domain of microbiology and associated fields prior to starting an
+experiment (Microbiological Analysis of Food and Water, 1998). The CLSI
+guideline used to do quality control on obtained bacteria is CLS| Document M100:
+Performance Standards for Antimicrobial Susceptibility Testing. While primarily
+focused on antimicrobial susceptibility testing, this document includes standards
+for quality control and identification of bacteria to ensure accurate and reliable
+
+testing.
+
+MIC / MBC
+
+The agar dilution method was used to determine both MIC and MBC. This
+was the preferred method for determining the MIC and MBC of an extract that
+could mask the detection of microbial growth in a liquid medium with its coloring
+(Balouiri et al., 2015). PGELE produced a strong green color, hence the broth
+dilution method was not advisable. Not only that, the PGELE had insoluble
+particles that could interfere with spectrophotometric reading, hence the use of
+
+agar dilution method.
+
+Time-kill Assay
+The determination of Minimum Inhibitory Concentration (MIC) and Minimum
+
+Bactericidal Concentration (MBC) for antimicrobial agents holds theoretical
+
+35
+
+significance and has proven to be a valuable tool in research settings (CLSI, 1998).
+However, this process is strongly influenced by numerous biological,
+methodological, and technical variables, which can introduce complexities and
+potential biases into the obtained results, thereby complicating their interpretation.
+Consequently, evaluating the clinical applicability of MBC determination has posed
+considerable challenges (Pfaller et.al, 2004). Relying solely on MIC and MBC
+assessments may insufficiently characterize the antibacterial effectiveness of an
+antimicrobial agent and its potential relevance in clinical contexts.
+
+The Time-Kill Assay (TKA) has been extensively used in assessing novel
+antimicrobial agents, enabling the differentiation between concentration-
+dependent killing (where higher drug concentrations result in increased killing) and
+time-dependent killing (where killing only continues when drug concentrations
+exceed the MIC). It also offers insights into the rate and extent of bacterial
+eradication over time, enabling researchers to evaluate both the bactericidal
+(lethal) and bacteriostatic (growth inhibitory) effects of antimicrobial agents (CLSI,
+1998). It is also a strong tool for obtaining information about the dynamic
+
+interaction between the antimicrobial agent and the microbial strain (Pfaller, 2004).
+
+Percent inhibition using time-kill assay
+Calculating the percentage inhibition using a time-kill assay provides
+valuable insights into the effectiveness of antimicrobial agents in inhibiting bacterial
+
+growth over time. This metric allows researchers to quantitatively assess the ability
+
+36
+
+of the antimicrobial agent to control bacterial proliferation and determine the extent
+
+of its inhibitory effect (Hossain, 2024).
+
+Pharmacodynamic Modelling
+
+While the time-kill assay provides insight into the efficacy of antimicrobial
+agents by assessing their impact on microbial populations over time, their stand-
+alone usefulness in predicting pathogen dynamics is limited. This limitation arises
+from the non-linear correlation between bacterial killing and drug concentration
+(Nielsen et al., 2013). Consequently, pharmacodynamic (PD) models are used in
+conjunction with time-kill assays to characterize the sigmoidal relationship
+between the (effective) drug concentration and the net growth rate of the pathogen
+population (Regoes et.al, 2004).
+
+In most cases, when developing rational antibiotic treatment regimens, only
+the Minimum Inhibitory Concentration (MIC) is used as a pharmacodynamic
+parameter to determine the effectiveness of an antibiotic against certain pathogens
+(Barclay et.al, 2001). However, the quantitative relationship between the
+concentration of an antimicrobial agent and the growth or death rates of bacteria
+is complex. Antibiotics with similar MIC may vary greatly in terms of their
+pharmacodynamic function. The pharmacodynamics of antibiotics are often
+studied in vitro by using time-kill kinetics, where an exponentially growing bacteria
+is exposed to varying concentrations of an antibiotic. The changes in the optical
+density of viable microbial cells will then be monitored over time, thus generating
+
+the time-kill curve (Bosswell et.al, 1999). The data generated from the time-kill
+
+37
+
+kinetics can be further used to determine the growth or death rates of bacteria at
+different concentrations of the antibiotic, thus making it possible to estimate the
+pharmacodynamic relationship between antibiotic concentration and bacterial
+growth or death rates. Regoes et.al, 2004 developed a mathematical model based
+on a Hill function - which is referred to by the author as the pharmacodynamic
+function and which is also related to published Emax models - to describe the
+relationship between the bacterial net growth rates and the concentrations of
+antibiotics. The differences in pharmacodynamic parameters, such as the
+steepness of the Hill function and the minimum bacterial net growth rate attained
+at high antibiotic concentrations can be profound, thus showing the differences in
+
+the microbiological efficacy of antibiotics with identical MICs.
+
+MBIC / MBEC
+
+MBIC and MBEC assays provide essential information about the
+susceptibility of biofilms to antimicrobial agents. Biofilms are notoriously resistant
+to traditional antibiotic treatments, and determining the minimum concentrations of
+antimicrobial agents needed to inhibit biofilm formation or eradicate preformed
+biofilms is critical for developing effective therapeutic strategies (Khan et.al, 2023).
+A common method of assessing both MBIC and MBEC is through a crystal violet
+assay. Crystal violet, a dye capable of staining both microbial cells and
+extracellular matrix, was utilized as a biomarker. Its staining capacity facilitated the
+assessment of biomass within biofilms. The quantification of total biofilm mass
+
+relied on the ability of CV dye to bind to extracellular polymeric substances (EPS)
+
+38
+
+present in both live and dead bacterial cells. Based on literatures, the MBIC and
+MBEC of a compound depends on the strain of bacteria it targets. Both the MBIC.
+and MBEC can be lower or higher than the MIC of the antibacterial compound
+
+(Seddiki et.al, 2015; Kart et.al, 2021; Cruz et.al, 2018).
+
+Conceptual Framework
+
+==>
+
+SAPONINS
+
+Figure 2.1 Conceptual framework of the study
+
+The graphic shows that the antibacterial activity of the crude PGELE and
+the semi-purified PGELE fractions are due to the bioactive compounds they
+possess and is significantly influenced by the concentration of the treatment and
+
+the length of exposure the S. epidermidis receives from these treatments.
+
+39
+
+Operational Definition of Terms
+
+Psidium_gquajava Leaf Ethanolic Extracts (PGELE) — The ethanolic leaf
+
+extracts contain the crude components of the guava leaves in a more concentrated
+form.
+
+Minimum Inhibitory Concentration (MIC) - the lowest concentration of the
+
+crude and semi-purified fractions of PGELE which prevents visible growth of a
+bacterium or bacteria after 24 hours of incubation at 37°C. Determining this is
+necessary to establish the concentrations to be used for the other antibacterial
+activity assays.
+
+Minimum Bactericidal Concentration (MBC) - the lowest concentration of
+the crude and semi-purified fractions of PGELE required to kill 99.9% of S.
+epidermidis.
+
+Time-Kill Kinetics Assay - assay that will be used to study the activity of the
+crude and semi-purified fractions of PGELE against S. epidermidis to determine
+whether or not the treatments possess bactericidal or bacteriostatic activity over
+time. The assay will determine the change in the number of bacteria (in terms of
+CFU/mL) and the growth (or death rate) of the bacteria in a given treatment
+concentration at varying time points during 24 hours of incubation at 37°C.
+
+Pharmacodynamic Model - it is a mathematical model based on a Hill
+function developed by Regoes. For this study, it will be used to describe the
+relationship between the bacterial net growth rates of S. epidermidis and the
+concentrations of the crude and semi-purified fractions of PGELE. There are 4
+
+pharmacodynamic parameters/functions that can be derived from this model:
+
+40
+
+Maximal bacterial growth rate (w max) — refers to the growth rate of S.
+
+epidermidis in the absence of any of the treatments with antibacterial properties.
+This will be determined using the (-) control. The unit to be used will be hr’.
+
+Minimal bacterial growth rate (w min) — refers to the growth (or death) rate
+
+of S. epidermidis in the presence of the highest concentration of the treatments.
+The unit to be used will be hr’. The equation N(t) = No x e “ will be used to
+determine both maximal and minimal bacterial growth rates.
+
+Hill coefficient (k) - denotes the Hill slope, which describes the steepness of
+the sigmoid relationship between bacterial growth and antimicrobial concentration.
+
+Pharmacodynamic MIC (zMIC) — refers to the concentration where the
+bacterial growth rate is equal to zero. The unit to be used will be g/mL.
+
+Pharmacodynamic functions - it refers to the functional relationship between
+bacterial growth (or death) and the concentration of the antibiotic. For this study,
+the pharmacodynamic function of the crude and semi-purified fractions of PGELE
+will be used in combination with the time-kill kinetic data to investigate its efficacy
+as an antibiotic treatment. The equation that will be used to show the relationship
+
+of the 4 pharmacodynamic function is:
+K
+Ch max — min) (arc)
+a_\* ymin
+(aac) ~ (Gmax)
+
+Minimum Biofilm Eradication Concentration (MBEC) - is an in vitro estimate
+
+pa) = pmax —
+
+of the lowest antimicrobial concentrations of the crude and semi-purified fractions
+of PGELE that will kill 99.9% of the S. epidermidis entrapped in a biofilm after 24
+
+hours of incubation at 37°C.
+
+41
+
+Minimum Biofilm Inhibitory Concentration (MBIC) - is an in vitro estimate of
+
+the lowest concentration of the crude and semi-purified fractions of PGELE
+required to inhibit the formation of biofilms after 24 hours of incubation at 37°C.
+
+Time-dependent Killing - refers to a characteristic where the efficacy of the
+crude and semi-purified fractions of PGELE is primarily dependent on the duration
+of time that the drug concentration remains above the minimum inhibitory
+concentration (MIC) of S. epidermidis. For time-dependent antimicrobials, the
+extent of bacterial killing is maximized when the drug concentration exceeds the
+MIC for an extended period, rather than the peak concentration achieved.
+
+Concentration-dependent_killing - refers to a characteristic where the
+
+efficacy of the crude and semi-purified fractions of PGELE in killing or inhibiting the
+growth of microorganisms is primarily influenced by the peak concentration of the
+drug in the body rather than the duration of exposure.
+
+Percent Inhibition - refers to the percentage reduction in the growth of S.
+epidermidis in the presence of crude and semi-purified PGELE fractions compared
+to the negative control (untreated) over a 24-hour period. It quantifies the
+effectiveness of the PGELE in inhibiting S. epidermidis growth.
+
+Bactericidal activity — refers to the ability of the crude and semi-purified
+fractions of PGELE to kill bacteria. This activity is quantitatively defined as the
+ability of an agent to reduce the bacterial population by 299.9% (a 3-log10
+reduction) within a specified period, typically 24 hours, when compared to the initial
+
+inoculum.
+
+42
+
+Bacteriostatic activity - refers to the ability of the crude and semi-purified
+fractions of PGELE to inhibit the growth and replication of bacteria without
+necessarily killing them. This activity is typically indicated by a substantial
+reduction in the growth rate of bacteria, maintaining the bacterial population at a
+
+steady state, but does not achieve a 299.9% reduction in viable bacterial count.
+
+43
+
+CHAPTER III
+Methodology
+Study Design
+This study is an experimental, in vitro evaluation of the antibacterial activity
+and pharmacodynamic functions of five dose levels of the crude and semi-purified
+fractions of PGELE against Biofilm-Forming Staphylococcus epidermidis (ATCC
+12228). Specifically, the minimum inhibitory concentration (MIC), the Minimum
+Bactericidal Concentration (MBC), the time-kill curves, the pharmacodynamic
+functions (maximal bacterial growth rate in the absence of antimicrobial (wy max),
+minimal bacterial growth rate at high concentrations of antimicrobial (wy min), hill
+coefficient (k) and pharmacodynamic MIC), the Minimum Biofilm Eradication
+Concentration (MBEC) and the Minimum Biofilm Inhibitory Concentration (MBIC)
+of the crude and semi-purified PGELE was determined against Biofilm-Forming
+
+Staphylococcus epidermidis (ATCC 12228).
+
+Institutional Reviews
+
+This research was registered with the University of the Philippines — Manila
+(UPM) Research Grants Administration Office (RGAO) (code RGAO-2022-0954)
+and underwent review and approval process by the UPM Institutional Biosafety
+and Biosecurity Committee (IBBC) with protocol number 2023-013. The biosafety
+precautions followed can be seen in the appendix (Pathogen safety data sheet of
+
+S. epidermidis). The research was submitted for ethical review by the UP-Manila
+
+44
+
+Review Ethics Board and was granted Exemption from Ethical Review with code
+
+UPMREB 2023-0089-EX.
+
+Study Site
+
+Sample preparation (extraction) and microbiological assays were done at
+the Bioanalytical & Toxicology Laboratory - 3rd floor, Salcedo Hall, Department of
+Pharmacology & Toxicology, College of Medicine, University of the Philippines
+
+Manila.
+
+Biosafety Considerations
+
+The Risk Group classification of S. epidermidis in both humans and animals
+is Risk Group 1 (RG1), indicating that it poses the lowest risk to individuals and the
+environment. It is a microorganism that is unlikely to cause disease. The
+tesearcher made sure to wear lab coat, face mask and gloves at all times while
+handling the S. epidermidis. All procedures that could have produced aerosols, or
+involved high concentrations or large volumes, were conducted in a biological
+safety cabinet (BSC). In cases where a spill could have occurred, the researcher
+first allowed aerosols to settle. While wearing protective clothing, the spill was
+gently covered with absorbent paper towel and applied with suitable disinfectant
+(1% sodium hypochlorite), starting at the perimeter and working towards the
+center. Sufficient contact time with the disinfectant was given before cleanup. All
+wastes that contained or had come in contact with S. epidermidis were
+decontaminated by autoclave (moist heat at 121°C, 15 psi for 30 minutes).
+
+45
+
+The S. epidermidis was stored in appropriately labeled leak-proof, impact-
+resistant containers and was kept either in locked storage equipment or within an
+area with limited access. During the conduct of the experiments, the researcher
+was under the supervision of a qualified microbiologist. The researcher also
+attended a short course on biosafety and biosecurity and skill enhancement with
+a microbiologist. The laboratory setting needed for RG1 organisms like S.
+epidermidis typically consisted of research taking place on benches without the
+use of special contaminant equipment (Containment level 1 - CL1). A Biosafety
+Level (BSL)-1 lab was used for this study. All of the following standard microbial
+practices were done in the laboratory: (1) Mechanical pipetting only (no mouth
+pipetting allowed), (2) Safe sharps handling, (3) Avoidance of splashes or
+aerosols, (4) Daily decontamination of all work surfaces when work is complete,
+(5) Hand washing, (6) Prohibition of food, drink, and smoking materials in the lab
+setting, (7) Personal protective equipment, such as eye protection, gloves, and a
+lab coat or gown, (8) Biohazard signs, and (9) Immediate decontamination after
+
+spills.
+
+Equipment and Materials
+
+The following equipment and materials were used in this study: For
+chemicals and reagents, Mueller Hinton agar and broth, crystal violet, USP grade
+vancomycin standard, distilled water, analytical grade ethanol and normal saline
+solution (NSS) was procured from a local supplier. The Staphylococcus
+
+epidermidis ATCC 12228 was procured from CBC Link of Manila, Incorporated.
+
+46
+
+The bacteria arrived in two KWIK-STIK formats (with lot number 371-459-4), each
+containing lyophilized S. epidermidis (ATCC 12228) pellet, ampoule of hydrating
+fluid and inoculating swab. Standard laboratory equipment such as
+spectrophotometer (Thermo Scientific GENESYS UV-Vis Spectrophotometer),
+absorbance microplate reader (BioTek 800 TS), rotary evaporator (DLAB RE100-
+Pro), incubator (Lab Companion) and autoclave (Lab Companion) was used in the
+conduct of the experiment. Laboratory wares such as beakers, erlenmeyer flask,
+culture plates/petri dish, amber bottles, filter paper, inoculator, Eppendorf tubes,
+micropipettes, 96 well microdilution plate and test tubes were secured and was
+
+available in the Bioanalytical & Toxicology Laboratory.
+
+Plant Collection
+
+Fresh Psidium guajava leaves, specifically the Philippine variety, collected
+and harvested during the month of November 2023 were provided by the Institute
+of Herbal Medicine (IHM). The powdered Psidium guajava leaves were obtained
+from the IHM/National Integrated Research Program on Medicinal Plants
+(NIRPROMP) farm at the University of the Philippines-Los Bafios with a lot number
+of 231026-LB-BaC. It was stored in the laboratory at the Department of
+Pharmacology and Toxicology, University of the Philippines, Manila. A sample was
+brought to UP Diliman for authentication. The plant samples were washed with tap
+water and air-dried for 3 days. The leaves were stored at room temperature,
+shaded from sunlight. The leaves were ground to gather fine powders for extraction
+
+and further stored in an oven at 50 degrees Celsius for 2 days to prevent molds,
+
+47
+
+bacteria or fungal growth in the dried leaves. The powdered leaves were then
+
+stored in air-tight plastic bags until use.
+
+Plant Quality Control
+Organoleptic Test and Macroscopic Description
+
+The aroma of the obtained Philippine variety of Psidium guajava leaves was
+typically mild and slightly aromatic. The Psidium guajava leaves obtained showed
+simple, opposite, and ovate to elliptic in shape. The leaves have a smooth texture
+with slightly wavy margins and a glossy surface and typically 5-15 cm in length and
+3-7 cm in width. The upper surface of the leaves was dark green, while the lower
+surface was lighter green and had prominent veins. Leaf venation was pinnate,
+with prominent midribs and secondary veins branching off toward the margins. The
+leaves had a characteristic aroma when crushed, releasing volatile compounds
+
+that contributed to its distinct scent.
+
+Moisture Content
+
+Before pulverization of the dry leaves, some of the dried samples was tested
+using the Infrared moisture analyzer to determine if the sample will fit to the
+specification that the average of three moisture analysis trial of the leaves must
+
+not be more than 12%. All trials showed a moisture content of less than 10%.
+
+48
+
+Preparation of Crude Extract
+
+The powdered Psidium guajava leaves were weighed and soaked in 95%
+ethanol for 24 hours at room temperature, ensuring that all of the powdered leaves
+were completely submerged. The solvent-to-sample ratio was 4:1. The mixture
+was then filtered using Whatman filter paper, with the aid of a vacuum flask, and
+the filtrates were subjected to a rotary evaporator at 50 °C to remove the ethanol.
+The obtained crude extract was further subjected to water bath at 50°C until the
+extract dried to insipient dryness. Further drying was done by placing the crude
+extract inside a desiccator until a powdered form of the extract was recovered. The
+gathered crude ethanolic extracts were referred to as Psidium guajava ethanolic
+leaf extract (PGELE). The resulting powder were then stored at -18°C until further
+
+analysis.
+
+Preparation of the semi-purified fractions of Psidium guajava
+The semi-purified fractions that were utilized in this study were phenolic
+compounds, flavonoids and alkaloids and were prepared as follows:
+
+Preparation of the semi-purified phenolic fraction from PGELE
+
+Powdered Psidium guajava leaves were macerated using a mixture of
+ethanol and water (50:50 v/v) as the solvent, in a 4:1 solvent-to-sample ratio for 24
+hours. Afterwards, the extracts were filtered using Whatman filter paper No. 4, and
+then the filtrates were concentrated using a rotary evaporator at 50°C. The
+resulting filtrates were then dried using a freeze drier and stored at -18°C until
+
+further analysis (Seo et al., 2014; Wakeel et al., 2019).
+
+49
+
+Preparation of the semi-purified flavonoid fraction from PGELE
+
+Powdered Psidium guajava leaves were macerated using a mixture of
+ethanol and water (10:90 v/v) as the solvent, in a 4:1 solvent-to-sample ratio for 24
+hours. Afterwards, the extracts were filtered using Whatman filter paper No. 4, and
+then the filtrates were concentrated using a rotary evaporator at 50°C. The
+resulting filtrates were then dried using a freeze drier and stored at -18°C until
+further analysis (Seo et al., 2014; Wakeel et al., 2019).
+
+Preparation of the semi-purified alkaloid fraction from PGELE
+
+Powdered Psidium guajava leaves were macerated using a mixture of
+ethanol and water (90:10 v/v) as the solvent, in a 4:1 solvent-to-sample ratio for 24
+hours. Afterwards, the extracts were filtered using Whatman filter paper No. 4, and
+then the filtrates were concentrated using a rotary evaporator at 50°C. The
+obtained semi-purified alkaloid fraction from the rotavap was further subjected to
+water bath at 50°C until the semi-purified fraction dried to insipient dryness. Further
+drying was done by placing the semi-purified alkaloid fraction inside a desiccator
+until a powdered form of the semi-purified fraction was recovered. The resulting
+powder were then stored at -18°C until further analysis (Seo et al., 2014; Wakeel
+
+et al., 2019).
+
+50
+
+Figure 3.1 Flow diagram of the PGELE extraction and semi-purification
+
+Plant Constituent Identification
+
+A sample of the crude and semi-purified fractions of PGELE was sent to the
+Terrestrial Natural Products Laboratory of the Institute of Chemistry, College of
+Science, UP Diliman, Quezon City for Phytochemical Analysis. Thin layer
+chromatography (TLC) was used to separate and analyze the mixtures of bioactive
+compounds in the crude and semi-purified PGELE fractions. Thin Layer
+Chromatography was done at the Research and Analytical Services Laboratory
+(Natural Products and Peptidomics Laboratory) - GAB 202, 2nd floor, Gusaling
+Andres Bonifacio, College of Arts and Sciences, University of the Philippines
+
+Manila.
+
+51
+
+Quality Control
+
+In this study, the S. epidermidis strain (ATCC 12228) underwent a series of
+examinations to verify the characteristics and purity of the obtained S. epidermidis.
+It was carried out using the specifications and recommended tests issued by CLSI
+M100 - Performance Standards for Antimicrobial Susceptibility Testing, 34th
+Edition, 2024. The tests used were gram staining, catalase test, coagulase test
+and biochemical test. The growth curve of the S. epidermidis was also constructed
+to establish fundamental growth parameters, enable comparative analysis, ensure
+methodological integrity, and identify any irregularities in the bacteria obtained. To
+teplicate the known MIC of vancomycin against S. epidermidis, the MIC was also
+determined prior to use of vancomycin and S. epidermidis for subsequent assays.
+Sterility controls were implemented to check for contamination. The tests were
+performed in triplicate to confirm reproducibility. A negative control was included
+to validate the test. The procedure used in determining the MIC was based on the
+
+CLSI guideline and for the zMIC, the procedures used by Regoes, et.al was used.
+
+Determination of the MIC and MBC
+
+Preparation of stock solutions and working concentrations of the PGELE and
+semi-purified fractions
+
+Based on literature, the MIC of Psidium guajava against common gram-
+Positive bacteria ranged from 625 yg/mL to 5000 yg/mL. Thus, five (5)
+concentrations were prepared for the crude and the 3 semi-purified fractions
+(phenolic compounds, flavonoids, and alkaloids) of PGELE using serial two-fold
+
+$2
+
+dilutions: 5000 pg/mL, 2500 pg/mL, 1250 pg/mL, 625 pg/mL, and 312.5 pg/mL. All
+stock and working concentrations of the extracts were tested for pH and showed
+a pH of 5-7. The standard treatment for S. epidermidis is usually vancomycin, with
+an MIC of 1 ug/mL - 2 pg/mL (de la Maria et al., 2015; Lee et al., 2022). Hence,
+the use of the positive control for this study was vancomycin at a concentration of
+2 yg/mL. For the negative/vehicle/growth control, sterile water was used. To check
+for microbial contamination in the crude and semi-purified fractions of PGELE, a
+plant control! was utilized. Plant control was prepared at 5000 pg/mL of the crude
+and the 3 semi-purified fractions, incorporated into the agar medium and incubated
+without inoculum.
+Preparing the inoculum
+
+The S. epidermidis (ATCC 12228) used in the study was supplied in Kwik-
+Stik formats, which included a lyophilized bacterial pellet, a hydrating fluid
+reservoir, and a swab. The internal ampoule was activated to release the hydrating
+fluid, saturating the lyophilized S. epidermidis pellet. The Kwik-Stik was gently
+shaken to ensure thorough mixing and then left at room temperature for 15 to 30
+minutes to fully rehydrate the bacterial pellet. Following rehydration, the moistened
+swab was used to streak a prepared sterile nutrient agar plate to promote the
+formation of isolated colonies, which were then incubated for 24 hours. After
+incubation, a single colony was selected and transferred to a prepared Mueller-
+Hinton broth (MHB), which was subsequently incubated for another 24 hours. This
+culture served as the stock for preparing fresh, actively growing inoculums for the
+
+microbiological assays.
+
+53
+
+The fresh inoculum was prepared by transferring biofilm-forming
+Staphylococcus epidermidis (ATCC 12228) from the stock culture to a prepared
+Mueller Hinton broth (MHB). The turbidity of the inoculum was adjusted to 0.1
+©D600, which was equal to approximately 1 x 108 CFU/mL; a standard number of
+bacteria for microbial testing (CLSI, 2024). The turbidity of the inoculum was
+adjusted by adding more S. epidermidis (ATCC 12228) to the MHB to increase
+turbidity, or further diluting the MHB by adding more MHB to reduce the turbidity.
+A spectrophotometer set at 600 nm absorbance (OD600) was used to achieve an
+OD600 reading of 0.1.
+
+Determination of the MIC
+
+The varying concentrations of the crude and 3 semi-purified fractions of
+PGELE were incorporated into 20 mL of molten Mueller Hinton agar
+(approximately 50°C in temperature) prior to placing the agar in petri dishes. After
+the plates containing the various concentrations of PGELE cooled down, the
+prepared inoculum was then streaked on each plate and incubated for 24 hours at
+37 °C. The MIC endpoint was recorded as the lowest concentration of the crude
+and the 3 semi-purified fractions of PGELE where no colonies of the bacteria grew
+on the agar plates. All concentrations of the crude and 3 semi-purified fractions of
+PGELE were replicated three (3) times.
+
+Determination of the MBC
+
+After determining the MIC, the plates with the MIC for the crude and 3 semi-
+
+purified fractions of PGELE, as well as the plates with concentrations higher than
+
+the MIC, were swabbed using a sterile single-use inoculating loop and streaked
+
+54
+
+onto fresh Mueller Hinton agar plates. The plates were then incubated for 24 hours
+at 37 °C. The MBC endpoint was recorded as the lowest concentration of the crude
+and the 3 semi-purified fractions of PGELE where no colonies of the bacteria grew
+
+on the agar plates.
+
+Time-Kill Assay
+
+Five (5) concentrations were prepared for the crude and the 3 semi-purified
+fractions (phenolic compounds, flavonoids, and phenols) of PGELE using serial
+two-fold dilutions based on the determined MIC: 0.25 x MIC, 0.5 x MIC, MIC, 2 x
+MIC, and 4 x MIC. The positive control was vancomycin at a concentration of 0.5
+ug/mL (0.25 x MIC), 1 yg/mL (0.5 x MIC), 2 g/mL (MIC), 4 yg/mL (2 x MIC), and
+8 ug/mL (4 x MIC). The derived pharmacodynamic functions for vancomycin, the
+crude and the other 3 semi-purified fractions (phenolic compounds, flavonoids, and
+alkaloids) of PGELE were then compared. For the negative/vehicle control, MHB
+was used. All treatments were done in triplicates.
+Determination of the % inhibition and time-kill curve
+
+The time-kill assay was conducted using the BioTek 800 TS Microplate
+reader. The assay was performed with the following settings: the temperature was
+set to 37°C, and the absorbance readings were taken at a wavelength of 600 nm
+(full plate reading). The assay runtime was set to 24 hours, with readings taken at
+15-minute intervals, resulting in a total of 97 readouts. The plate was subjected to
+constant shaking, with a frequency of 567 cycles per minute (3 mm). The
+
+experimental setup followed a predefined plate layout as shown in figure 3.2.
+
+55
+
+PGELEt | PGELE1 | PGeLe1 | PGELE1 | PGELE1 | PGELES | PGELES | PGELES | PGELES | PGELES | POS BLK
+625 1250 2500 5000 | 10000 625 1250 2500 5000 [40000 5 aim
+
+woime | porme | pome | wom | ome | gmt | poimt_| nomi _|_ugimt_|_pg/mt
+
+| pceve: | pcever | pceLer | pceLe1 | PGeLe: | PGELEs | PGELEs | PGELES | PGELEs | PGELES | Pos BLK
+
+625 1250 2500 5000 | 10000 5 1250 2500 5000 [10000 | § vom
+
+vom | pom. | yom | wom | gmt _| gmt | gmt _| gmt | pgimt | pgimt
+
+| pceter | pceve | poeLer | PoeLE: | PceLe1 | PGeLes | PGELEs | PGELES | PGELES | PGELES | Pos BLK
+
+625 4250 | 2500 5000 | 10000 | 625 1250 2500 5000 [10000 15 pam
+
+vom | pom | pom | wom | oii | pom | git | pgimt_|pgimt_| _po/mt
+
+PGELE2 | PGELE2 | PGELE2 | PGELE2 | PGELE2 | PGELE4 | PGELE4 | PGELE4 | PGELES | PGELES | GRT NEG
+65 7250 | 2500 5000 | 10000 | 625 7250 2500 5000 | 10000
+
+pom | yom. | wom | wom | gmt} g/m | oi} yo/mt | g/mL g/ml
+
+PGELE2 | PGELE2 | PGELE2 | PGELE2 | PGELE2 | PGELE4 | PGELE4 | PGELE4 | PGELES | PGELES | GRT NEG
+625 7250 | 2500 5000 | 10000 | 625 7250 | 2500 5000 | 10000
+
+voime | pot | pom | pom | gmt | aime | gmt | pom | pgimt | pgimt
+
+PGELE2 | PGELE2 | PGELE2 | PGELE2 | PGELE2 | PGELE4 | PGELE4 | PGELE4 | PGELES | PGELES | GRT NEG
+625 4250 | 2500 5000 | 10000 | 625 1250 | 2500 5000 [10000
+
+wom | yom | yom | pom | yoimt | pom | ygimt_| om | _poymt | ya/mt.
+
+Pos Pos Pos POs POs Pos Pos POs Pos Pos Pos Pos
+ne os OS fF tuaimt | tygime | tpoime | 2 ume | 2ugime | 2poime | 4yome | 4 ygime | 4 ygimt
+pa/mt. pg/mL g/ml Le La Li M M us us ws
+
+spipct | spLpci | spLpG1 | spLPG2 | sPLPG2 | sPLPG2 | sPLPG3 | sPLPG3 | sPLPG3 | SPLPG4 | SPLPG4 | SPLPG4
+10000 | 10000 | 10000 | 10000 | 10000 } +0000 | 10000 | 10000 | 10000 | 10000 | 10000 | 10000
+
+Figure 3.2 Time-Kill Assay plate layout with labels
+
+In figure 3.2, the labels correspond to specific samples and controls utilized
+
+in the experiment. PGELE1 denotes the crude extract, while PGELE2, PGELE3,
+
+and PGELE4 represent the semi-purified alkaloid, flavonoid, and phenolic
+
+fractions, respectively. POS designates the positive control (vancomycin), while
+
+NEG denotes the negative control. GRT serves as the growth control. Additionally,
+
+SPLPG labels are utilized for sterility controls associated with the semi-purified
+
+PGELE fractions, where SPLPG1 corresponds to the crude extract, SPLPG2 to
+
+the semi-purified alkaloid fraction, SPLPG3 to the semi-purified flavonoid fraction,
+
+and SPLPG4 to the semi-purified phenolic fraction.
+
+56
+
+A volume of 100 uL of the freshly prepared inoculum, adjusted to 0.1
+©D600, was dispensed into each designated well. Concurrently, 100 pL of the
+treatment concentrations prepared in MHB was dispensed into their respective
+assigned wells. Following the preparation of the 96-well plate, it was placed inside
+the absorbance microplate reader and initiated according to the predetermined
+experimental parameters. To generate the time-kill curve, the growth rates of S.
+epidermidis post-exposure to varying treatment concentrations were monitored at
+identified time points spanning from 0 to 24 hours. These data points were
+subsequently plotted on a semi-logarithmic scale using Microsoft Excel. The
+CFU/mL readings of S. epidermidis were plotted on the ordinate (Y axis) in a
+logarithmic scale, while the corresponding time intervals were plotted on the
+abscissa (X axis) in an arithmetic scale.
+
+Percent inhibition was determined by comparing the growth of S.
+epidermidis treated with the crude and semi-purified PGELE fractions and
+vancomycin to the untreated (negative control) samples every 15 minutes. At each
+time point, the formula used was:
+
+CFU/mL in treated sample
+% Inhibition = 1 — ————_—___—___
+AE ase CFU/ml in untreated sample Ea
+
+The percent inhibition values were then plotted against time to visualize the
+antimicrobial activity of the crude and semi-purified PGELE fractions over the
+duration of the assay.
+
+Growth or mortality rates were quantified via linear regression analysis to
+determine the slope of the growth curve at the log phase of the bacterial growth.
+
+Bactericidal activity was operationally defined as achieving a reduction of 299.9%
+
+57
+
+in the initial bacterial population, corresponding to a 3-log10-unit decrease in
+colony-forming units per milliliter (CFU/mL). Conversely, bacteriostatic activity was
+interpreted as a reduction of less than 99.9% in the initial bacterial population.
+Furthermore, the time-kill assay served to discriminate between concentration-
+dependent killing, characterized by enhanced lethality at higher drug
+concentrations, and time-dependent killing, where continued bacterial suppression
+occurred only when drug concentrations exceeded the minimum inhibitory
+concentration (MIC) threshold (CLSI, 1998).
+
+The time kill assay enabled the determination of growth parameters (lag
+time, log phase duration, stationary phase) and decline phase of the S. epidermidis
+using the growth control. This analysis facilitated the monitoring of the activity of
+the various concentrations of semi-purified PGELE fractions on S. epidermidis
+
+growth stages (lag, exponential, stationary phase).
+
+Conversion of OD600 to Colony Forming Units (CFUs)
+
+The conversion of OD600 to colony forming units (CFUs) was adapted from
+Rutten, 2019 and was used to convert OD600 readings to CFU/mL, which are
+known to be directly relatable to cell concentration of the culture (viable cell counts
+per mL). This procedure assumes that 1 bacterial cell can give rise to 1 colony.
+The OD600 readings in the time-kill kinetics were converted to CFU/mL using this
+
+conversion protocol.
+
+58
+
+Inoculum Preparation
+
+Twenty-five microliter (25 wL) of freshly prepared biofilm-forming
+Staphylococcus epidermidis (ATCC 12228) was added to 175 uL of Mueller Hinton
+broth (MHB). It was placed in a 96-well plate and done in triplicate. It was labeled
+as A1 to A3. Additionally, blank media was prepared in triplicate by adding 200 pL
+to the 96-well plate, labeled as B1 to B3. The A1 to A3 samples were diluted to an
+OD600 = 0.1 in 1 mL of MHB. To calculate the dilutions, the formula C1V1 = C2V2
+was used, where C1 is the starting OD600, C2 is the target OD600 (which is 0.1),
+V1 is the unknown volume in wL, and V2 is the final volume (1000 uL). When
+calculating C1, the OD600 reading of A1 to A3 had to be subtracted by the average
+OD600 of the blank (B1 to B3), then multiplied by the dilution factor (8 in this case).
+After obtaining C1, the data was substituted into the formula C1V1 = C2V2 to
+obtain V1, which is the volume of the culture to be used and should be diluted with
+MHB to make 1000 yL. The OD600 of the prepared sample was checked to be
+0.1. This served as the "starting sample."
+
+Dilution Series of the prepared inoculum
+
+Serial dilutions were executed for the triplicate starting samples previously
+prepared. The starting sample underwent successive dilutions until achieving a
+dilution factor of 8 x 10°. Throughout the dilution process, the Eppendorf tube was
+subjected to agitation for 5 seconds to ensure uniform distribution of the bacterial
+suspension within the Mueller Hinton Broth (MHB) medium.
+
+Subsequently, the final three dilutions were inoculated onto Mueller Hinton
+
+Agar plates. Specifically, 100 \L of each of the final three dilutions was aseptically
+
+59
+
+spread onto petri dishes containing 12 mL of Mueller Hinton Agar. These plates
+were then subjected to incubation at 37 °C for a duration of 24 hours to facilitate
+
+bacterial growth.
+
+StartingSample Dilution 1 Dilution 2 Dilution 3 Dilution 4 Dilution 5
+t ,
+| MHB MHB MHB MHB MHB MHB
+10 dilution f ilution
+Final Dilution Factor: | 8x 104 8x 105 8x 10°
+Mueller Hinton Agar Plates
+
+Figure 3.3 Dilution sequence for the conversion of OD600 to CFU/mL
+OD600 to CFU/mL Calculation
+
+After incubating the plates, the number of colonies that formed in plates
+containing fewer than 300 colonies was counted. The number of colonies counted
+was then multiplied by the reciprocal of the final dilution factor on each plate to
+obtain the CFU/mL. This resulting value represented the CFU/mL for every 0.1
+OD600. Consequently, for every OD600 determined, the CFU/mL could also be
+determined using ratio and proportion, as both OD600 and CFU/mL are directly
+
+proportional.
+
+60
+
+Estimating Bacterial Growth Rates
+
+The bacterial growth rates were calculated based on changes in viable
+bacteria density (CFU/mL) during the log phase of the time-kill tests. It is assumed
+that bacterial populations grow and die at a constant pace, resulting in an
+exponential increase or decrease in bacterial density:
+
+N(t)=Noxet
+Where: N is bacterial density (CFU/mL)
+w is bacterial growth rate (hr')
+t is time (hr).
+
+The growth rate was computed using the logarithm of the colony counts as
+the coefficient of a linear regression. To accommodate for the censored data,
+maximum likelihood estimation will be used (values below the limit of detection).
+The geometric mean of all measurements at zero hours will be utilized as the first
+data point for a given treatment. The bacterial doubling time can be determined
+using the growth rate:
+
+T (1/2) "2
+
+The bacterial growth/death rate was determined during the exponential (log)
+phase of the S. epidermidis. Two identified bacterial density (CFU/mL) points in
+the log phase was used to determine the wy. The bacterial density (CFU/mL) in the
+3rd and 10th hour was used since it falls within the log phase of the S. epidermidis.
+Using the model proposed by Regoes, the equation used was:
+
+_ In(X1) - In(X2)
+~ t2—-t1
+
+61
+
+Where X71 is the first identified bacterial density in the log phase, X2 is the
+2nd bacterial concentration in the log phase and t2 and t1 are the time points for
+each bacterial density. A positive w indicates bacterial growth, while a negative
+
+indicates bacterial death, which also means that growth is being inhibited.
+
+Pharmacodynamic Modelling
+
+For this study, the pharmacodynamic model designed by Regoes, et.al,
+which is equivalent to an Emax model was used. It was used to estimate the
+parameters of the pharmacodynamic function of the crude and semi-purified
+PGELE fractions against S. epidermidis (ATCC 12228).
+
+The growth/death rate (slope of the logarithm of the bacterial density as a
+function of time) for every concentration of the crude and semi-purified PGELE
+fraction was estimated using data from the time-kill curve, and the functional
+telationship between bacterial growth (or death) and the concentration of the
+antibiotic can thereby be determined. Regoes, et.al refer to this relationship as the
+pharmacodynamic function. The pharmacodynamic function can then be used in
+combination with time-kill data to investigate the efficacy of antibiotic treatment.
+
+For the various treatments in this study, Microsoft Excel was used to
+estimate the parameters of the pharmacodynamic model where the equation of the
+
+line can be derived.
+
+62
+
+Determination of the MBIC and MBEC
+
+MBIC and MBEC assays were performed using the broth microdilution
+method in a 96-well flat bottom microplate format, adapted from the Clinical &
+Laboratory Standards Institute (CLSI) guidelines. The determination of both the
+MBEC and MBIC was carried out using the Crystal Violet (CV) assay.
+
+For the MBIC and MBEC, five (5) concentrations were prepared using MHB
+as diluent for the crude and the semi-purified fractions (phenolic compounds,
+flavonoids and alkaloids) of PGELE using serial two-fold dilutions: 0.25 x MIC, 0.5
+x MIC, MIC, 2 x MIC and 4 x MIC. The positive control used for the MBIC and
+MBEC was vancomycin at 10 wg/mL (LaPlante et.al, 2009). For the
+negative/vehicle control, MHB was used. All treatments were done in triplicates.
+Preparing the inoculum
+
+Fresh inoculum was prepared by transferring _ biofilm-forming
+Staphylococcus epidermidis (ATCC 12228) from the stock culture to a prepared
+Mueller Hinton broth. The turbidity of the inoculum was adjusted to 0.1 OD600.
+Determination of the MBIC
+
+The MBIC assay utilized the same setting used in the time-kill assay since
+it also used the same spectrophotometric analysis. The MBIC assay also used the
+same plate lay out with the time-kill assay, but reduced the number of wells for
+vancomycin since only 1 concentration was used for the positive control (10
+pg/mL).
+
+One hundred (100) uL of the prepared inoculum (adjusted to 0.1 OD600)
+
+was placed in each of the wells. Additionally, 100 wl of the treatment
+
+63
+
+concentrations in MHB was added to their respective assigned wells containing
+the inoculum. The bacterial suspension and treatments were thoroughly mixed
+within the plate and then incubated for 24 hours at 37 °C to facilitate biofilm
+formation inside the wells. Following incubation, the bacterial culture was removed
+by overturning the plate and shaking out the liquid. The wells were subsequently
+washed three times with phosphate-buffered saline (PBS, pH = 7.4) to eliminate
+any remaining planktonic cells. The formed biofilm in the wells was then stained
+with 200 uL of 1% (w/v) crystal violet solution, and the stain was allowed to set at
+toom temperature for 20 minutes. Afterward, the wells were washed three to four
+times with PBS to remove excess dye. The microtiter plate was inverted and left
+to air dry for several hours. Once dried, 125 uL of a 30% acetic acid solution was
+added to each well to solubilize the crystal violet dye, followed by incubation for 10
+minutes at room temperature to elute the stain. The absorbance of each well (de-
+stained acetic acid solution) was then measured on a spectrophotometer at 600
+nm using a microplate reader, with 30% acetic acid solution serving as the blank.
+The optical density of the de-staining solution reflected the biofilm mass.
+
+The mean absorbance (OD600) of the sample was calculated, and the
+tesults were expressed as percentage inhibition using the equation:
+
+OD negative control — OD s. I
+Percent (%)Inhibition = ( e ~ ample) x 100
+OD negative control
+
+The crude and semi-purified PGELE fractions demonstrating % inhibition
+exceeding 50% were interpreted as exhibiting strong antibiofilm (ABF) activity (++),
+while those showing % inhibition between 0 and 50% were interpreted as indicating
+
+moderate ABF activity (+). Values less than 0 (-) were interpreted as reflecting no
+
+64
+
+inhibition. The MBIC was identified as the minimum concentration resulting in 0%
+inhibition, representing the lowest concentration effectively hindering biofilm
+formation (Olawuwu et.al, 2022).
+Determination of the MBEC
+
+The step-by-step process used in determining the MBIC was also utilized
+for MBEC determination. The only variation lay in allowing biofilms to develop
+initially after transferring 100 pL of the prepared inoculum into each well. Plates
+were then incubated at 37 °C for 24 hours before applying the various treatments.
+Subsequent to incubation and biofilm formation along the well sides, the bacterial
+culture was removed by overturning the plate and shaking out the liquid. Wells
+were subsequently washed three times with phosphate-buffered saline (PBS, pH
+= 7.4) to eliminate any remaining planktonic cells. Treatments were then dispensed
+into their designated wells in the microplate to expose the biofilm, followed by
+another 24-hour incubation at 37 °C. The staining procedure utilized crystal violet.
+The MBEC was defined as the lowest concentration of each treatment resulting in
+a 0% inhibition. It represents the lowest concentration effectively eradicating
+
+formed biofilms.
+
+65
+
+—_—
+
+Prepare
+bacteria
+culture
+
+Read
+absorbance
+
+Crystal violet staining
+
+Rinse wells to
+remove
+planktonic cells
+
+—_— —_——_—>
+Dispense ~ Expose
+bacteria in penabate pe ) biofilm to test
+microplate acter eee solution
+Wash and
+Wash and let dry
+let dry un
+_— _——
+Destain with ) Stain biofilm with
+acetic acid “5 erystal violet
+
+Figure 3.4 Diagram for MBEC and MBIC determination using crystal violet assay
+
+Statistical Analysis
+
+One-way ANOVA was applied to analyze the significance of difference of
+
+percent inhibition and growth rates at various time intervals, as well as the hill
+
+slope. Post hoc Scheffe test was used to determine the pairwise significance of
+
+difference in the means if the differences across the time intervals were statistically
+
+significant. All the analyses were carried out using Statext version 1.8 and the
+
+statistical significance was tested at a 1% level.
+
+66
+
+CHAPTER IV
+
+Results
+
+The MIC and MBC, the MBIC and MBEC, as well as the pharmacodynamic
+function of the crude and semi-purified PGELE fractions against Staphylococcus
+epidermidis (ATCC 12228) were determined in this study. Preliminary procedures
+such as quality control of microorganism and quality control of the plant material
+
+were also tested and presented.
+
+Preliminary Testing
+Thin Layer Chromatography
+
+Based on the TLC plate observations, Psidium guajava ethanolic leaf
+extract (PGELE), both the crude and semi-purified fractions displayed similar spot
+characteristics (including shape, color, and Rf values), albeit with varying degrees
+of intensity. The results of the TLC of the crude and semi-purified PGELE fractions
+
+can be seen in Appendix D.
+
+Phytochemical Analysis
+
+Consistent with the TLC findings, the results of the phytochemical screening
+indicate that the crude and semi-purified fractions of Psidium guajava ethanolic
+leaf extract (PGELE) contain identical bioactive compounds, namely tannins,
+
+terpenoids, flavonoids, cardiac glycosides and phenolic compounds (Appendix C).
+
+67
+
+Quality Control
+
+The Staphylococcus epidermidis (ATCC 12228) exhibited characteristics
+consistent with a gram-positive bacterium, displaying a purple hue when observed
+under the microscope. Moreover, colonies are in clusters, adopting configurations
+reminiscent of grape-like arrangements. The microorganism had positive results in
+catalase test, and negative results in both coagulase and biochemical test. These
+characteristics are consistent with S. epidermidis. The determined MIC of
+vancomycin against S. epidermidis ATCC 12228 was 2 ug/mL. For the zMIC, it
+was determined to be 1.79 yg/mL, which is close to the established MIC of
+vancomycin against S. epidermidis. Thus, establishing the conformance of the
+positive control (vancomycin) used in this study against established QC ranges of
+
+vancomycin against S. epidermidis.
+
+OD600 to CFU/mL Results
+
+The determined number of colonies was 256 colonies in the plate with a
+dilution factor of 20°5 (5th plate in the dilution series). It was determined that for
+every 0.130 OD600 reading of the S. epidermidis, the bacterial concentration is
+
+equal to 1.6384 x 101° CFU/mL.
+
+Growth Control Curve
+The growth curve of S. epidermidis was constructed to establish
+
+fundamental growth parameters, enable comparative analysis, ensure
+
+68
+
+methodological integrity, and identify any irregularities. Figure 4.1 shows the
+
+growth characteristics of S. epidermidis.
+
+1800
+
+eel
+
+1350
+
+900
+
+% CFU/mL
+
+450
+
+Time (hours)
+
+Figure 4.1 Staphylococcus epidermidis (ATCC12228) Growth Curve
+
+The lag phase, during which bacterial cells undergo maturation without
+active division, persisted for approximately 1-2 hour. Subsequently, the log
+(exponential) phase, marked by rapid and exponential proliferation of the bacterial
+culture, spanned approximately 8-10 hours, followed by the stationary phase,
+where the rates of bacterial growth and death reach equilibrium, until the
+completion of the experiment. In the case of the aforementioned S. epidermidis
+strain, the computed growth rate is 0.2663/hr + 0.0005, corresponding to a
+
+doubling time of 2.6 hours + 0.006.
+
+69
+
+Determination of MIC and MBC
+
+Minimum Inhibitory Concentration (MIC) and Minimum Bactericidal
+Concentration (MBC) of the crude and semi-purified fractions of PGELE against S.
+epidermidis using 2-fold agar dilution method, ranging between 312.5 g/mL to
+
+5000 pg/mL showed the following results (Table 4.1).
+
+Table 4.1 MIC and MBC of the crude and semi-purified PGELE fractions against
+
+S. epidermidis
+
+PGELE Fraction MIC MBC MBC/MIC Ratio | Interpretation
+Crude 2500 pg/mL 5000 pg/mL 2 Bactericidal
+Alkaloid 2500 pg/mL 5000 pg/mL. 2 Bactericidal
+Flavonoid 2500 pg/mL 2500 pg/mL i Bactericidal
+Phenolics 2500 pg/mL. 2500 pg/mL. 1 Bactericidal
+
+The Minimum Inhibitory Concentration (MIC) for the crude and semi-purified
+fractions of PGELE is observed to be 2500 g/mL, showing their ability to inhibit
+the growth of S. epidermidis at this concentration.
+
+The Minimum Bactericidal Concentration (MBC) for the crude and semi-
+purified alkaloid fraction was found to be 5000 yg/mL, whereas for the semi-
+purified flavonoid and phenolic fractions, it was 2500 pg/mL. This suggests that
+the crude and semi-purified alkaloid fractions are capable of achieving a 299.9%
+reduction in the bacterial population of S. epidermidis at a concentration of 5000
+g/mL after 24-hours incubation. The semi-purified flavonoid and phenolic fraction
+require a concentration of 2500 yg/mL, which is equivalent to its Minimum
+
+Inhibitory Concentration (MIC), to achieve the same bactericidal effect.
+
+70
+
+As illustrated in table 4.1, the crude and semi-purified PGELE fractions
+exhibited bactericidal properties, with the semi-purified flavonoid and phenolic
+
+fraction displaying the lowest MBC/MIC ratio.
+
+71
+
+Time-Kill Assay
+Figure 4.2 shows the % inhibition of the crude and semi-purified PGELE
+
+fractions and that of the positive control (vancomycin) against S. epidermidis
+
+plotted against time.
+
+Crude PGELE
+
+| Semi-purified Flavonoid Fraction Semi-purified Phenolic Fraction
+
+Vancomycin
+
+Tine hours)
+
+Figure 4.2 Percent inhibition of the crude and semi-purified PGELE Fractions
+
+against S. epidermidis
+
+72
+
+Table 4.2 shows the % inhibition of the various concentrations of the crude
+and semi-purified PGELE fractions, as well as the positive control - vancomycin
+
+against S. epidermidis (ATCC 12228) after the 24-hour assay.
+
+Table 4.2 Percent inhibition of the crude and semi-purified PGELE fractions
+against S. epidermidis after 24-hour assay
+
+Crude Alkaloid Flavonoid Phenolic
+Concentration | PGELE PGELE PGELE poeiE | (") controls
+. . . a ancomycin
+Fraction Fraction Fraction Fraction
+81.49% + | 85.03%+ | 86.00%+ | 88.97%+ | -297%+
+ESL US 4.98 4.07 2.50 0.05 714
+93.09% + | 9329%+ | 9085%+ | 9159%>
+SLL 0.83 0.58 0.85 0.13 RO ea
+a 94.56%+ | 9456%+ | 9347%+ | 93.84%+ | 9734%4
+| 0.29 0.78 0.04 0.27 0.03
+PAT 95.53%+ | 9443%+ | 9366%+ | 94.04%+ | 97.32%+
+1.12 0.12 0.03 0.51 0.34
+Fara 96.01% + | 97.38%+ | 93.34%+ | 94.33%+4 | 97.10%+
+2.63 0.55 0.14 1.23 0.80
+
+* MIC of PGELE fractions is 2500 pg/mL. MIC for vancomycin is 2 ugimL.
+
+Even at the lowest tested concentration of the crude and semi-purified
+PGELE fractions, they all inhibited the growth of S. epidermidis significantly, as
+compared to vancomycin. The maximum % inhibition of the crude and semi-
+purified PGELE fractions, regardless of the concentration, peaked at around 4 to
+6 hours, and remained relatively constant throughout the 24-hour assay period.
+Vancomycin showed its inhibiting action on S. epidermidis at MIC (2 pg/mL) and
+above its MIC (2 x MIC and 4 x MIC). The crude and alkaloid fractions showed
+inhibition of S. epidermidis growth at a concentration of 1250 pg/mL (0.5 x MIC),
+which is 2-fold lower than the determined MIC from the agar dilution method. On
+the other hand, the semi-purified flavonoid and phenolic fractions showed inhibition
+
+of S. epidermidis growth starting at concentrations of 2500 g/mL (MIC) and higher
+
+73
+
+(2 x MIC and 4 x MIC), consistent with the determined MIC from the agar dilution
+method.
+
+Statistical analysis revealed that there was no significant difference in the
+% inhibition of S. epidermidis growth after 24 hours incubation between the crude
+and semi-purified fractions of PGELE at 0.25 x MIC (p = .067), at MIC (p = .352),
+at 2 x MIC (p = .030), and at 4 x MIC (p = .042). However, at 0.5 x MIC, the crude
+and semi-purified alkaloid fractions significantly inhibited S. epidermidis growth
+after 24 hours incubation compared to the semi-purified flavonoid fraction (p =
+.005). Additionally, at 0.5 x MIC, no significant differences were observed in the %
+inhibition between the crude and semi-purified phenolic fractions (p = .131),
+between the semi-purified alkaloid and phenolic fractions (p = .081), and between
+the semi-purified flavonoid and phenolic fractions (p = .612) after 24 hours
+incubation.
+
+When the crude and semi-purified PGELE fractions were compared to the
+positive control vancomycin, the following was observed: the crude and semi-
+purified PGELE fractions significantly inhibited the growth of S. epidermidis
+compared to vancomycin at 0.25 x MIC (p < .001) and 0.5 x MIC (p < .001) after
+24 hours incubation. However, vancomycin significantly inhibited the growth of S.
+epidermidis compared to the crude and semi-purified PGELE fractions at MIC (p <
+.001) after 24 hours incubation. At 2 x MIC, vancomycin significantly inhibited S.
+epidermidis growth after 24 hours incubation compared to the semi-purified
+alkaloid, flavonoid, and phenolic PGELE fractions (p < .001). However, there was
+
+no significant difference in the % inhibition between vancomycin and the crude
+
+74
+
+PGELE fraction at 2 x MIC (p = .044) after 24 hours incubation. At 4 x MIC, there
+was no significant difference in the % inhibition between vancomycin and the crude
+
+and semi-purified PGELE fractions (p = .019) after 24 hours incubation.
+
+Time Kill Curve
+Figure 4.3 illustrates the time-kill curves of the crude and semi-purified
+PGELE fractions against S. epidermidis (ATCC 12228) using 2-fold dilution of the
+
+concentrations of the crude and semi-purified PGELE fractions.
+
+Figure 4.3 Time-kill curves of the crude and semi-purified PGELE Fractions
+
+against S. epidermidis.
+
+75
+
+The black line represents the growth curve of the negative control (i.e.
+microbial growth in the absence of antimicrobial agents), while the red line signifies
+the time-kill curve of the MIC of the crude and semi-purified PGELE fractions, and
+the orange line represents the time-kill curve of the MIC of vancomycin (2 g/mL).
+Notably, the crude and semi-purified PGELE fractions hindered/slowed down the
+growth of S. epidermidis during its lag phase, even at the lowest concentration
+tested (625 jig/mL). Complete inhibition of growth was observed at a concentration
+of 2500 g/mL for the crude and semi-purified PGELE fraction, consistent with the
+MIC determined via agar dilution. It is noteworthy that the time-kill curves for the
+semi-purified flavonoid and phenolic PGELE fractions at MIC exhibited no change
+in initial bacterial concentration (CFU/mL) after 24 hours, even at concentrations
+exceeding 2 times and 4 times the MIC (5000 wg/mL and 10000 yg/mL,
+respectively). This indicates a time-dependent killing mechanism for both fractions.
+Conversely, the crude and semi-purified alkaloid fractions of PGELE exhibited a
+decline in bacterial concentration proportional to increasing concentrations,
+indicative of a potential concentration-dependent killing mechanism for these
+fractions.
+
+In this study, the bacterial growth/death rate was determined during the
+exponential (log) phase of the S. epidermidis. Table 4.3 show the effect of the
+various concentrations of the crude and semi-purified PGELE extracts, as well as
+the positive control-vancomycin against the growth rate of S. epidermidis at its log
+
+phase of growth.
+
+76
+
+Table 4.3 Growth / death rate of S. epidermidis during its log phase after
+
+exposure to the crude and semi-purified PGELE fractions
+
+Crude Alkaloid Flavonoid Phenolic
+Concentration} PGELE PGELE PGELE PcELE | {*) Control -
+5 5 A ycin
+Fraction Fraction Fraction Fraction
+0.25 x MIC 0.0507/hr 0.0513/hr 0.0502/hr 0.0459/hr 0.2812/hr
+: + 0.02 +0.00 + 0.00 +0.00 +0.01
+0.5x MIC 0.0129/hr 0.0133/hr 0.0242/hr 0.0250/hr 0.2219/hr
+: +0.01 + 0.00 + 0.00 + 0.00 + 0.02
+mic 0.0035/hr 0,.0078/hr 0.0077 0.0068/hr -0.0427/hr
++ 0.00 + 0.00 + 0.00 + 0.00 +0.01
+2x MIC -0.0030/hr 0.0052/hr 0.0082/hr 0.0149/hr -0.0364/hr
++0.01 + 0.00 + 0.00 +0.02 + 0.00
+4x Mic -0.0168/hr -0.0214/hr 0.0124/hr 0.0098/hr -0.0324/hr
++0.05 + 0.01 + 0.00 + 0.01 + 0.01
+
+It can be observed from the table (as well as in figure 4.3) that as the
+concentration of the crude and semi-purified PGELE fractions increases, the
+growth rate of the S. epidermidis starts to slow down. Statistical analysis showed
+that there was no significant difference in the reduction of the growth rate of S.
+epidermidis during its log phase after exposure to the crude and semi-purified
+PGELE fractions at 0.25 x MIC (p = .932), 0.5 x MIC (p = .014), MIC (p = .273), 2
+
+x MIC (p = .275) and at 4 x MIC (p = .217).
+
+When the crude and semi-purified PGELE fractions were compared to the
+positive control vancomycin, the following was observed: the crude and semi-
+purified PGELE fractions significantly reduced the growth rate of S. epidermidis
+during its log phase as compared to vancomycin at 0.25 x MIC (p < .007) and at
+0.5 x MIC (p < .007). However, at MIC, vancomycin significantly reduced the
+growth rate of S. epidermidis during its log phase as compared to the crude and
+semi-purified PGELE fractions (p < .001). At 2 x MIC, vancomycin significantly
+
+reduced the growth rate of S. epidermidis during its log phase as compared to the
+
+77
+
+semi-purified alkaloid, flavonoid and phenolic PGELE fractions (p <.007), but there
+was no significant difference between the crude PGELE fraction and vancomycin
+at 2 x MIC (p = .036). At 4 x MIC, there was no significant difference in the growth
+rate reduction of S. epidermidis during its log phase when exposed to the crude
+
+and semi-purified PGELE fractions and vancomycin (p = .122).
+
+78
+
+Pharmacodynamic Modelling
+
+Using the data derived from the time-kill assay (growth and death rate), the
+pharmacodynamic function was then fitted to the estimated bacterial net growth
+tates shown in Figure 4.4, and estimates of the four parameters: y max (growth
+rate of the bacterial population in the absence of antibacterial agent), y min (growth
+tate of the bacterial population at high antibacterial concentrations), « (Hill
+coefficient), and ZMIC (Pharmacodynamic MIC) were obtained as shown on table
+
+4.4.
+
+Figure 4.4 Dose-response curve of the crude and semi-purified PGELE fractions
+
+79
+
+Table 4.4 Estimated parameters of pharmacodynamic functions of the crude and
+
+semi-purified PGELE fractions against S. epidermidis
+
+Treatment w max ymin kK zMIC MIc*
+Crude 0.2557 hr?+ | -0.0168 hr?+ -0.0679 + 3633.03 2500
+Fraction 0.002 0.051 0.019 g/mL pg/mL
+Alkaloid 0.2557 hr?+ | -0.0214 hr?+ -0.0688 + 5739.65 2500
+Fraction 0.002 0.013 0.554 pg/mL. g/mL
+Flavonoid | 0.2557 hr?+ | 0.0124 hr’ + -0.0607 + : 2500
+Fraction 0.002 0.001 0.001 undetermined | aim
+Phenolic | 0.2557hr’+ | 0.0098 hr?+ -0.0627 + : 2500
+Fraction 0.002 | 0.007 0.002 undetermined | aim
+| 0.2557 hr'+ | -0.0324 hr'+ -0.9702 + 2
+Vancomycin 0.002 0.009 0.041 1.79 pgImML | aim
+
+MIC* is the MIC derived from the 2-fold agar dilution method
+
+The w max, which is the growth rate of S. epidermidis in the absence of any
+of the treatments was determined to be 0.2557 hr’ + 0.002. The w min on the other
+hand represents the minimal bacterial growth rate observed at high antimicrobial
+concentrations, which is 4 x MIC for this study. Statistical analysis revealed no
+significant differences in the inhibition of bacterial growth rates at the highest
+treatment concentration (4 x MIC) among the crude extract and the semi-purified
+PGELE fractions against S. epidermidis (p = .218). When compared to
+vancomycin, it showed that there were no significant differences in the inhibition
+rates of bacterial growth at the highest treatment concentration (4 x MIC) among
+the crude extract, the semi-purified PGELE fractions and vancomycin against S.
+epidermidis (p = .123).
+
+The Hill coefficient k is a measure of how strongly the death rate changes
+in response to changes in the concentration of the antibiotic around the MIC.
+Statistical analysis showed that there was no significant difference in the x of the
+
+crude and semi-purified PGELE fractions (p = 0.5154) indicating that the change
+
+80
+
+in the death rate of S. epidermidis as the crude and semi-purified PGELE fractions’
+concentration increases is similar. However, when the x of the crude and semi-
+purified PGELE fractions was compared to the k of vancomycin, significant
+difference was observed (p < .007), indicating a significantly stronger change in
+the death rate of S. epidermidis as vancomycin concentration increases as
+compared to the crude and semi-purified PGELE fractions. By using the k values
+of the crude and semi-purified PGELE fractions, it becomes possible to ascertain
+the percentage reduction in bacterial growth per 1 log unit increase in their
+concentration at the MIC. Regarding the semi-purified flavonoid and phenolic
+fractions, it is deducible that with every 1 log unit rise in their concentration at the
+MIC, there is a corresponding decrease in S. epidermidis growth rate by 6.07%
+and 6.27% per hour, respectively. Similarly, in the case of the crude and semi-
+purified alkaloid fractions, each 1 log unit augmentation in their concentration at
+the MIC correlates with a reduction in S. epidermidis growth rate by 6.79% and
+6.88% per hour, respectively. For the positive control, each 1 log unit augmentation
+in its concentration at the MIC correlates with a reduction in S. epidermidis growth
+rate by 97.02 %.
+
+As seen in figure 4.4, the dose-response relationship between the log
+concentration and rate of bacterial growth for the crude and semi-purified PGELE
+fraction appears to be linear, while for vancomycin, it appears to be sigmoidal.
+
+The ZMIC is the concentration in which the bacterial growth rate is 0 (w =
+0). Among the crude and semi-purified PGELE fractions, the crude fraction had the
+
+lowest zMIC of 3633.03 pg/mL, followed by the semi-purified alkaloid fraction
+
+81
+
+which is 5739.65 yg/mL. For the semi-purified flavonoid and phenolic fraction, the
+ZMIC could not be determined since the bacterial growth rate (wy) did not reach 0
+for both of them. The computed ZMIC of vancomycin (1.79 g/mL) is similar to the
+claimed MIC (2 g/mL) of vancomycin against S. epidermidis. This therefore
+
+confirmed that the vancomycin used in this study is of good quality.
+
+82
+
+Determination of MBIC and MBEC
+
+Minimum Biofilm Inhibitory Concentration (MBIC)
+
+Table 4.5 shows the percent Biofilm Inhibition of the crude and semi-purified
+PGELE fractions, as well as the positive control-vancomycin. As shown in table
+4.5, even at sub-MIC concentrations (4-fold below MIC), the crude and semi-
+purified PGELE fractions inhibited the formation of biofilm. Among the semi-
+purified PGELE fraction, the semi-purified phenolic fraction yielded a strong
+antibiofilm activity, while the semi-purified alkaloid fraction yielded a strong
+
+antibiofilm activity at MIC and 2 x MIC.
+
+Table 4.5 Percent biofilm Inhibition of the crude and semi-purified PGELE
+
+fractions against S. epidermidis after 24-hour exposure
+
+Crude Alkaloid Flavonoid Phenolic Positive
+Concentration PGELE PGELE PGELE PGELE Control —
+Fraction Fraction Fraction | Fraction Vancomycin
+35.03%+ | 49.26%+ | 35.37%+ | 5245%+
+0.25 x MIC 11.5 11 6.8 1.8 NIA
+(+) (+) (+) (a)
+45.20 %+ 44.00 %+ 39.54 % + 56.40 % +
+0.5 x MIC 8.8 15.2 44 1.4 NIA
+(+) (+) (+) +4
+34.23%+ | 5069%+ | 35.14%+ | 50.00%+ 39.31 %+
+MIC 44 2.0 5.4 13.1 11.4
+(+) (++) (+) (++) (+)
+36.97 %+ 53.31 %+ 35.37 % + 55.25 % +
+2x MIC 47 3.1 16.6 0.9 N/A
+(+) (++) (+) {__(+#)
+34.00 % + 51.03 % + 33.94 % + 43.49 %+
+4x MIC 2.8 3.2 5.0 3.7 NIA
+(+) (iad) (+) (+)
+
+* MIC of PGELE fractions is 2500 pg/mL. MIC for vancomycin in inhibiting biofilm formation is 10 pg/mL.
+
+83
+
+Minimum Biofilm Eradication Concentration (MBEC)
+
+Table 4.6 shows the result of the percent biofilm eradication of the crude
+and semi-purified PGELE fractions, as well as the positive control-vancomycin. As
+shown in table 4.6, only the positive control vancomycin has biofilm eradicating
+property among the treatments. None of the crude and semi-purified PGELE
+
+fraction elicited biofilm eradicating property.
+
+Table 4.6 Percent biofilm eradication of the crude and semi-purified PGELE
+
+fractions against S. epidermidis after 24-hour exposure
+
+Crude Alkaloid Flavonoid Phenolic Positive
+Concentration PGELE PGELE PGELE PGELE Control —
+Fraction Fraction Fraction Fraction Vancomycin
+42.80% + | -18.03%+ | -23.21%+ | -869%+
+0.25 x MIC 7.5 8.3 5.7 4.0 N/A
+) z () z © () 7
+“17.89% + | -22.05%+ “24.12 % +
+0.5 x MIC 94 85 6.04% 47.2 24 NIA
+Qo Q_ a :
+-35.41 %+ -55.38 % + -23.09 % + -35.80 % +
+MIC 76 8.4 5.4 46 pa ee
+(-) () () ()
+-21.27 %+ -81.97 %+ 43.58 % + 69.78 %+
+2xMiICc 13.7 36.2 74 10.7 NIA
+() © () (-)
+-54.35 % + -244 % + -99.87 %+ -159 % +
+4xMiIc 14.1 24.4 68 55.2 N/A
+(-) () (-)
+
+* MIC of PGELE fractions is 2500 g/mL. MIC for vancomycin in eradicating biofilm formation is 10 pg/mL.
+
+The result of this study showed that the crude, alkaloid, flavonoid and
+phenolic fractions of PGELE showed antibacterial activity with an MIC of 2,500
+ug/mL and MBC of 5,000 for crude and alkaloid g/mL and 2,500 g/mL for
+flavonoid and phenolic fractions. Time-kill curves revealed bacteriostatic activities
+for the crude and PGELE fractions. The dose-response curve of the crude and
+
+84
+
+semi-purified PGELE fractions exhibited a linear pattern rather than a sigmoidal
+one. Furthermore, the crude and semi-purified PGELE fractions demonstrated the
+ability to inhibit biofilm formation at 625 g/mL, however, all the PGELE extracts
+
+did not possess biofilm- eradicating properties
+
+85
+
+CHAPTER V
+
+Discussion
+
+The Philippine variety of Psidium guajava is a promising candidate for
+antibiotic development due to its rich bioactive compounds, such as tannins,
+terpenoids, flavonoids, and phenolic compounds, which can inhibit antimicrobial
+resistance by targeting multiple pathways. The intricate mixtures of bioactive
+compounds in guava leaves may exhibit synergistic effects, further enhancing their
+medicinal properties. It is believed that the diversity of compounds in plants
+enables them to target multiple receptors, facilitate transport to specific targets,
+protect from degradation, and modify microbial resistance mechanisms (Gilbert
+
+and Alves, 2003).
+
+MIC and MBC Findings
+
+The MIC for the crude and semi-purified PGELE fractions is 2500 yg/mL
+(Table 4.1). This finding is consistent with previous studies investigating the MIC
+of Psidium guajava against Staphylococcus bacteria, which have reported values
+ranging from 625 pg/mL to 7500 pg/mL (Yabes et al., 2023; Pereira et al., 2023;
+Anas et al., 2008). It is important to highlight that despite semi-purification using
+various ratio of water and ethanol as solvent, the semi-purified fractions retained
+the presence of the bioactive constituents found in the crude extract, albeit in
+varying intensities as revealed by the phytochemical assay and Thin-layer
+
+chromatography (TLC). This could possibly explain the uniformity observed in the
+
+86
+
+Minimum Inhibitory Concentration (MIC) across the crude and semi-purified
+fractions.
+
+The determination of Minimum Inhibitory Concentration (MIC) and Minimum
+Bactericidal Concentration (MBC) for antimicrobial agents holds theoretical
+significance and has proven to be a valuable tool in research settings (CLSI, 1998).
+However, this process is strongly influenced by numerous biological,
+methodological, and technical variables, which can introduce complexities and
+potential biases into the obtained results, thereby complicating their interpretation.
+Consequently, evaluating the clinical applicability of MBC determination has posed
+considerable challenges (Pfaller et.al, 2004). Relying solely on MIC and MBC
+assessments may insufficiently characterize the antibacterial effectiveness of an
+antimicrobial agent and its potential relevance in clinical contexts.
+
+To determine the bactericidal potential of the crude and semi-purified
+PGELE fractions relative to its inhibitory effects, the ratio between the Minimum
+Bactericidal Concentration (MBC) and Minimum Inhibitory Concentration (MIC) of
+each fraction against S. epidermidis was calculated. It is postulated that an
+MBCI/MIC ratio <4 signifies bactericidal activity, whereas an MBC/MIC ratio >4
+indicates bacteriostatic effects (Pitucha et al., 2016; CLSI, 2024). Based on the
+MBC/MIC ratio, the crude and semi-purified PGELE fractions can be interpreted to
+exhibit bactericidal properties, with the crude and semi-purified alkaloid fraction
+showing and MBC/MIC ratio of 2, while the semi-purified flavonoid and phenolic
+fraction showed an MBC/MIC ratio of 1. However, based on the findings of the
+
+time-kill assay, specifically on the % inhibition, the crude and semi-purified PGELE
+
+87
+
+fractions are bacteriostatic. The bacteriostatic property of Psidium guajava
+reported in this study is consistent with other published literatures stating that
+Psidium guajava possesses bacteriostatic properties based on time-kill assays
+(Shetty et.al, 2021; Biswas et.al, 2013; Pereira et.al, 2023). An antimicrobial might
+have a low MIC/MBC ratio indicating bactericidal activity, but the time-kill assay
+could reveal that it kills bacteria very slowly. If the 3-log reduction (99.9% kill)
+criterion is not met within 24 hours, TKA might categorize it as bacteriostatic
+despite MIC/MBC results suggesting it is bactericidal. While MIC/MBC and time-
+kill assays are generally complementary, they can occasionally yield different
+tesults due to their differing methodologies and what they measure. MIC/MBC
+tests provide essential information about inhibitory and bactericidal concentrations,
+but TKA provides a more detailed picture of the antimicrobial's activity over time,
+
+including the rate of kill and potential for regrowth.
+
+Percent Inhibition of S. epidermidis growth
+
+Even at the lowest tested concentration of the crude and semi-purified
+PGELE fractions, they all inhibited the growth of S. epidermidis compared to
+vancomycin (Figure 4.2). This indicates that at sub-MIC levels, the crude and semi-
+purified PGELE fractions inhibits the growth of S. epidermidis compared to the sub-
+MIC levels of vancomycin.
+
+The crude and alkaloid fractions still exhibited inhibition of S. epidermidis
+growth at a concentration of 1250 g/mL, which is 2-fold lower than the determined
+
+MIC from the agar dilution method. This means that at a concentration of 1250
+
+88
+
+ug/mL, both the crude and semi-purified alkaloid fractions already inhibited S.
+epidermidis growth. In contrast, the semi-purified flavonoid and phenolic fractions
+demonstrated inhibition of S. epidermidis growth, starting at concentrations of 2500
+g/mL. This is consistent with the determined MIC from the agar dilution method.
+
+Based on these findings, the crude and semi-purified alkaloid fraction is
+more potent in inhibiting the growth of S. epidermidis (ATCC 12228) after the 24-
+hour incubation, achieving 93% inhibition at a concentration of 1250 g/mL,
+compared to the semi-purified flavonoid and phenolic fraction, which achieves the
+same level of inhibition (93%) at a higher concentration of 2500 yg/mL. Also, at
+sub-MIC levels, PGELE had more activity than the sub-MIC % inhibition of
+vancomycin.
+
+In this study, the crude and semi-purified PGELE fractions are bacteriostatic
+against S. epidermidis (ATCC 12228). This finding coincides with other published
+literatures stating that Psidium guajava possesses bacteriostatic properties based
+on time-kill assays (Shetty et.al, 2021; Biswas et.al, 2013; Pereira et.al, 2023).
+
+As observed with the PGELE fractions, all of them inhibited the growth of S.
+epidermidis even at sub-MIC concentrations without causing the bacteria to regrow
+within the 24-hour assay period. This effect can significantly reduce the risk of
+resistance development, and enhances overall infection control. This also means
+that it is possible that even after the PGELE concentration drops below the MIC, it
+can continue to suppress bacterial growth and prevent the resurgence of resistant
+strains. One of the main problems with exposing bacteria at sub-MIC
+
+concentrations of an antibiotics is that sub-MIC levels of antibiotics can exert a
+
+89
+
+selective pressure on bacterial populations. This can lead to the selection of
+resistant mutants, as bacteria with even slight resistance mechanisms can survive
+these low concentrations. It can induce the expression of certain resistance
+mechanisms, such as efflux pumps, which actively remove the antibiotic from the
+bacterial cell, or biofilm formation, which provides a protective environment for
+bacteria. Exposure to sub-MIC levels may lead to heteroresistance, where a
+subpopulation of bacteria exhibits resistance while the rest of the population
+femains susceptible. This can complicate the treatment as the resistant
+subpopulation can expand under antibiotic pressure (Flores-Vargas. 2023; Chow,
+
+2021, Spiegelman, 2006).
+
+Time-Kill Curve
+
+The determined growth / death rates of the various concentrations of the
+crude and semi-purified PGELE fractions, as well as the positive control-
+vancomycin supports the findings in the % inhibition that at concentrations below
+the MIC, the crude and semi-purified PGELE fractions prevented the growth of S.
+epidermidis compared to the sub-MIC concentrations of vancomycin. This finding
+implies that even at concentrations 4-folds lower than the MIC, the crude and semi-
+purified PGELE fractions can inhibit the growth of S. epidermidis (ATCC 12228).
+This supports the initial finding in the TLC and phytochemical assay that the crude
+and semi-purified PGELE fractions contained similar bioactive compounds, hence
+similar results.
+
+The findings of the time-kill assay showed that as the concentrations of both
+
+the crude and semi-purified PGELE fractions increase, the growth rate of S.
+
+90
+
+epidermidis decreases. However, once the MIC (2500 pg/mL) is reached, further
+increases in concentration do not significantly affect the growth rate of S.
+epidermidis. This indicates that the inhibitory effect of the crude and semi-purified
+PGELE fractions on S. epidermidis growth is time-dependent rather than
+concentration-dependent. For time-dependent antibiotics, maintaining drug
+concentrations above the MIC for an extended period is crucial. This often
+necessitates more frequent dosing intervals to ensure continuous bacterial
+suppression (Levison, 2009). Therefore, if a drug product is made from PGELE, it
+should be administered more frequently to ensure continuous bacterial
+suppression. Also, continuous suppression of bacterial growth minimizes the
+opportunities for bacteria to develop resistance mechanisms, therefore ultimately
+preventing AMR.
+
+The findings of the time-kill assay have some clinical implications on the
+possible use of PGELE as an antimicrobial agent. Having a time-dependent killing
+mechanism would mean that if PGELE is used as an antibiotic, it is less likely to
+tequire extremely high peak concentrations, reducing the risk of dose-related
+toxicity. As long as the drug concentration is maintained above the MIC, the
+
+PGELE will be effective.
+
+91
+
+Pharmacodynamic Functions
+
+The differences in pharmacodynamic parameters, such as the steepness of
+the Hill function and the minimum bacterial net growth rate at high antibiotic
+concentrations (wy min), can be significant, indicating variations in the
+microbiological efficacy of antibiotics with identical MICs (Regoes et al., 2004).
+
+The wy min values of the crude, semi-purified PGELE fractions and
+vancomycin are identical, indicating they produce the same effect at high
+concentrations. However, the x values differ. Vancomycin has a significantly higher
+k than the crude and semi-purified PGELE fractions. This means vancomycin more
+effectively inhibits the growth rate of S. epidermidis around its MIC (k = -0.97)
+compared to the crude and semi-purified PGELE fractions (k = -0.06). The
+similarity in the « of the crude and semi-purified PGELE fractions could be due to
+the fact that all the crude and semi-purified PGELE fractions still have the same
+bioactives and did not undergo complete purification. However, looking at the
+zMIC, only the crude and semi-purified alkaloid was able to reach a y min <0, and
+the crude PGELE gave the least ZMIC among the fractions.
+
+The relationship between the logarithm of concentration and bacterial
+growth rate adheres to a linear model for the crude and semi-purified PGELE
+fractions, while for vancomycin, it conforms to a sigmoidal pattern, thus aligning
+with a sigmoid curve model (Figure 4.4). The linear characteristic of the dose-
+response curve for the crude and semi-purified PGELE fractions facilitates a more
+straightforward interpretation of PGELE efficacy. With increasing concentration,
+
+the extent of bacterial inhibition rises steadily, aiding in the determination of the
+
+92
+
+optimal concentration to achieve the desired effect, rendering it more predictable.
+The linear dose-response curve contributes to the interpretation of the "linear, non-
+threshold" hypothesis (Bond et al., 1995). In contrast, with a sigmoidal dose-
+response relationship, the response initially increases slowly at low doses, then
+rapidly at moderate doses, and eventually levels off at high doses. This indicates
+a threshold effect, where there is a minimum effective dose required to elicit a
+fesponse, and a maximum response that is reached beyond a certain dose.
+However, it's important to note that many biological systems inherently exhibit
+sigmoidal dose-response curves due to mechanisms such as receptor binding
+saturation and allosteric effects. Sigmoidal curves often provide a more accurate
+representation of the underlying biology, capturing phenomena like the threshold
+effect and maximum efficacy, which are not depicted by linear models (Calabrese
+
+et.al, 1999).
+
+MBIC and MBEC Findings
+
+Even at the lowest concentration, the crude and semi-purified PGELE
+fractions can prevent the formation of biofilms made by S. epidermidis. This
+property of the crude and semi-purified PGELE fractions may be of relevance in
+managing chronic wounds, such as diabetic ulcers and pressure sores, which are
+often complicated by biofilm formation of local skin bacteria (i.e. S. epidermidis),
+which can impede wound healing and increase the risk of secondary infections
+(Alfonso et.al, 2021). Topical applications of the crude and semi-purified PGELE
+
+can aid in the management of chronic wounds by preventing biofilm development
+
+93
+
+and promoting wound healing. A topical application of the crude and semi-purified
+PGELE can also aid in addressing central catheter site hygiene, thus reducing the
+tisk of catheter related bloodstream infections (CRBSIs) by preventing microbial
+colonization and biofilm formation in the catheter site.
+
+However, the PGELE did not show any biofilm eradicating property. There
+are several reasons that could explain why PGELE can inhibit the formation of
+biofilms, but not eradicate formed biofilms. One reason may be because PGELE
+may target specific pathways or processes involved in biofilm formation, such as
+microbial adhesion, initial attachment, or biofilm matrix production. By interfering
+with these early stages of biofilm development, the PGELE can prevent biofilm
+formation without affecting established biofilms, which may have different
+metabolic and physiological characteristics (Kalia et.al, 2022). Another could be
+that PGELE may have limited ability to penetrate the dense extracellular matrix of
+mature biofilms, making it difficult to reach and effectively target the microbial cells
+within the biofilm structure. As a result, while the PGELE may inhibit biofilm
+formation by acting on surface-attached or planktonic cells, it may not be able to
+teach and eradicate the cells within mature biofilms (Asma et.al, 2022). Future
+directions in understanding the antibiofilm activity of PGELE should focus on
+determining its mechanism of action.
+
+In this study, we demonstrated that the Philippine variety of Psidium guajava
+exhibits antimicrobial activity against Staphylococcus epidermidis (ATCC 12228).
+Often, plant extracts lose their efficacy upon fractionation (Inui et al., 2012; Abreu
+
+et al., 2017). Consistent with the findings of this study, the use of crude Psidium
+
+94
+
+guajava leaf extract (PGELE) is more advantageous than the semi-purified
+extracts as shown in the zMIC and the % inhibition. Psidium guajava could serve
+as an affordable and widely accepted alternative antimicrobial source in countries
+like the Philippines, where traditional herbal remedies are commonly used
+(Robredo et al., 2022; Vandebroek, 2013). Moreover, it has the potential to be
+developed into an effective topical antiseptic to prevent microbial adhesion and
+biofilm formation on the skin or catheter hubs, which is crucial in reducing the risk
+
+of catheter-related bloodstream infections (Surapat et al., 2020).
+
+Study Limitations
+
+A comprehensive analysis of the thin layer chromatography (TLC) plates
+was not feasible due to the absence of a reference library containing the retention
+factor (Rf) values for the bioactive compounds present in the semi-purified PGELE
+sample and lack of reference standards at the Research and Analytical Services
+Laboratory (Natural Products and Peptidomics Laboratory).
+
+In a time-kill curve, presenting CFU/mL as a percentage of CFU/mL is not
+a conventional practice. Typically, CFU/mL values are expressed as absolute
+counts rather than percentages. This is because CFU/mL represents the actual
+number of colony-forming units per milliliter of sample, providing direct information
+about the bacterial population's density at specific time points during the assay
+(CLSI, 1998). The rationale behind normalizing the CFU/mL values to the initial
+bacterial population at time zero and subsequently expressing values as a
+
+percentage of that initial population is rooted in the research objective of
+
+95
+
+determining and comparing the relative changes in bacterial density over time
+across the crude and semi-purified PGELE fractions using time-kill curves. Utilizing
+percentage values facilitates a better and clearer visual interpretation of changes
+in bacterial population density through graphical representation, as it establishes
+a consistent reference point for the crude and semi-purified fractions—the initial
+bacterial population. This approach enables straightforward comparison of the
+relative changes in bacterial density over time.
+
+Furthermore, it is important to acknowledge the presence of insoluble
+PGELE extract in each well, particularly at higher crude and semi-purified PGELE
+fraction concentrations, which may influence the OD600 reading. Throughout the
+research, it was revealed that there is a direct association 83 between the
+antibacterial efficacy of PGELE and the presence of insoluble particles suspended
+in PGELE extracts. Removing the particles through filtration diminishes the
+antibacterial property of the PGELE, hence in this study, the particles were
+included. Higher crude and semi-purified PGELE fraction concentrations yielded
+higher OD600 readings, given the fact that they had more insoluble particles
+suspended in them. This may potentially lead to the misperception that the semi-
+purified fractions with higher concentrations possess higher initial bacterial
+densities compared to those with lower concentrations. Normalizing the CFU/mL
+values using the initial OD600 reading mitigates this effect, allowing for a clearer
+assessment of the relative changes in bacterial density over time.
+
+It is worth mentioning that based on the findings of the time-kill assay, even
+
+with the escalation in the concentration of the crude and semi-purified PGELE
+
+96
+
+extracts and the (+) control vancomycin, a noticeable decrease in the rate of
+bacterial population decline, along with an unchanging percent inhibition, becomes
+apparent upon reaching the minimum inhibitory concentration (MIC). This is
+despite vancomycin's established bactericidal efficacy against S. epidermidis at
+concentrations above MIC (Pinheiro et.al, 2014). One possible explanation for this
+phenomenon is derived from the findings of Regoes et al. during their
+pharmacodynamic modeling utilizing time-kill curve data. They observed that once
+the minimal net growth rate (wy min) is reached, the influence of increasing drug
+concentration on bacterial growth diminishes. This characteristic is observable in
+time-kill curves determined via OD600 measurements, where quantification of y
+min <0 poses challenges. Another explanation for this is that spectrophotometric
+analysis is based on turbidity and indirectly measures all bacteria (cell biomass),
+dead and alive (Lewis et.al, 2014). Meaning, a spectrophotometer does not
+discriminate living and dead cells. You may have a reading that does not change
+throughout the entirety of the assay, but the number of viable cells may already be
+zero at the end of the assay. On the other hand, studies using plating assays,
+which entail exposing the bacteria in various concentrations of an antibacterial
+agent and then transferring bacteria onto agar plates at specified intervals and
+quantifying resultant colonies, have demonstrated considerable variability in y min
+among different antimicrobials (Regoes et al., 2004).
+
+Getting an accurate ZMIC, especially if the w min did not reach 0 (since
+determining ZMIC requires a y min < 0), may prove to be difficult. As such, this
+
+may be a limitation of the zMIC determination of this study. As suggested in the
+
+97
+
+time kill assay, using plating assays might be a better choice than OD600-based
+assays, especially if you're trying to find a w min <0 or determine the exact rate of
+bacterial death beyond the minimum inhibitory concentration (MIC). But it's worth
+noting that OD600-based time-kill assays offer more detailed time-kill curves, are
+
+less work, and use fewer resources compared to plating assays.
+
+98
+
+CHAPTER VI
+Conclusion and Recommendations
+
+Summary
+
+The Minimum Inhibitory Concentration (MIC) of the crude and the three
+semi-purified PGELE fractions (alkaloids, flavonoids and phenolics) against S.
+epidermidis (ATCC 12228) is 2500 yg/mL. The Minimum Bactericidal
+Concentration (MBC) is 5000 yg/mL for the crude and semi-purified alkaloid
+fraction, whereas for the semi-purified flavonoid and phenolic fraction, it is 2500
+
+yg/mL.
+
+In the time-kill assay, the crude and semi-purified alkaloid fraction
+demonstrated inhibition of the growth of S. epidermidis (ATCC 12228), achieving
+a 93% reduction in bacterial density at a concentration of 1250 g/mL. The semi-
+purified flavonoid and phenolic fraction achieved a comparable level of inhibition
+(93%) but required a higher concentration of 2500 g/mL. Furthermore, at sub-
+MIC levels, PGELE exhibited better activity in inhibiting the growth of S.
+epidermidis compared to the sub-MIC inhibition of vancomycin. Upon assessing
+the % inhibition of growth after 24 hours, it was observed that neither the crude nor
+the semi-purified fractions attained a % inhibition exceeding 99.9%, even at the
+highest tested concentration (10000 g/mL), indicating the bacteriostatic property
+of the PGELE extracts. Moreover, analysis of the time-kill curve revealed that as
+the concentrations of both the crude and semi-purified PGELE fractions increased,
+the growth rate of S. epidermidis decreased. However, upon reaching the MIC
+
+(2500 pg/mL), further increases in concentration did not significantly decrease the
+
+99
+
+growth rate of S. epidermidis. This suggests that the inhibitory effect of the crude
+and semi-purified PGELE fractions on S. epidermidis growth is time-dependent
+
+rather than concentration-dependent.
+
+The growth rate of S. epidermidis in the absence of PGELE (y max) was
+calculated to be 0.2557/hr. Understanding this parameter is crucial for assessing
+the extent of reduction in bacterial growth rate in the presence of crude and semi-
+
+purified PGELE fractions at different concentrations.
+
+At MIC concentrations and above, there was no significant difference in the
+tate at which the crude and semi-purified PGELE fraction decreased the growth
+tate of S. epidermidis at high concentrations (wy min) during its exponential phase.
+The crude and semi-purified alkaloid fractions decreased the growth rate of S.
+epidermidis by approximately 2% per hour, whereas the semi-purified flavonoids
+
+and phenols decreased it by around 1% per hour.
+
+Utilizing the hill coefficient (k) values of the semi-purified flavonoid and
+phenolic fractions allows us to infer that for every 1 log unit increase in their
+concentration near the MIC, there is an associated decrease in the growth rate of
+S. epidermidis by approximately 6.07% and 6.27% per hour, respectively.
+Similarly, for the crude and semi-purified alkaloid fractions, each 1 log unit increase
+in their concentration near the MIC is linked with a reduction in the growth rate of
+S. epidermidis by about 6.79% and 6.88% per hour, respectively. The dose-
+
+response curve of the crude and semi-purified PGELE fractions exhibited a linear
+
+100
+
+pattern rather than a sigmoidal one, indicating that an increase in PGELE
+
+concentration proportionally decreased the growth rate of S. epidermidis.
+
+The zMIC values, indicating the concentration at which bacterial growth rate
+is zero, were found to be 3633 g/mL for the crude and 5740 g/mL for the semi-
+purified alkaloid fraction, aligning closely with their respective MBC values.
+However, the semi-purified flavonoids and phenolics failed to attain a y value of 0,
+
+rendering the computation of their ZMIC impractical.
+
+The crude and semi-purified PGELE fractions exhibited the capacity to
+prevent biofilm formation at a concentration of 625 g/mL, which was four times
+lower than their MIC. Nonetheless, they did not demonstrate biofilm-eradicating
+
+properties.
+
+Conclusion
+
+Based on the findings of this study, it can be concluded that overall, both
+the crude and semi-purified fractions exhibit antimicrobial activity, as well as biofilm
+inhibiting property. The crude, semi-purified alkaloid, flavonoid and phenolic
+fractions of PGELE showed antibacterial activity with an MIC of 2,500 pg/mL and
+MBC of 5,000 g/mL for crude and semi-purified alkaloid and 2,500 yg/mL for
+semi-purified flavonoid and phenolic fractions. Time-kill curves revealed
+bacteriostatic activities for the crude and PGELE fractions, indicating a time-
+dependent bacterial inhibitory effect rather than concentration- dependent against
+S. epidermidis. The dose-response curve of the crude and semi-purified PGELE
+
+fractions exhibited a linear pattern rather than a sigmoidal one, indicating that an
+
+101
+
+increase in PGELE concentration proportionally decreased the growth rate of S.
+epidermidis. Furthermore, the crude and semi-purified PGELE fractions
+demonstrated the ability to inhibit biofilm formation at 625 g/mL, which was four
+times lower than their MIC. However, all the extracts did not show biofilm-
+
+eradicating properties.
+
+Recommendations
+
+1. As seen in the time-kill assay, at sub-MIC concentrations, the PGELE inhibited
+the growth of S. epidermidis while vancomycin at sub-MIC levels did not. It is
+worth studying for how long can PGELE inhibit the growth of S. epidermidis
+and compare it with a positive control (i.e. vancomycin).
+
+2. In future researches, utilizing plating assays may be favored over OD600-
+based assays, particularly when aiming to achieve a y min <0 or to ascertain
+a more precise rate of bacterial death beyond the minimum inhibitory
+concentration (MIC). However, it is important to acknowledge that time-kill
+assays utilizing OD600 readings afford more detailed time-kill curves compared
+to plating assays, less labor intensive and utilizes lesser resources. Ultimately,
+the selection between OD600 readings and plating assays for time-kill curves
+depends on the specific research objectives.
+
+3. A 10-fold dilution series in the concentration of PGELE may offer enhanced
+resolution compared to a 2-fold dilution series, facilitating precise determination
+of the dose-response relationship and the detection of subtle variations in
+
+antimicrobial activity across a broad concentration spectrum.
+
+102
+
+4. Given the complex mixtures of bioactive compounds present in Psidium
+guajava leaves, it is possible that they may potentiate the effects or synergize
+with a wide range of commercially available antibiotics. Therefore, it is
+imperative to conduct studies examining the interactions between plant
+extracts and existing antibiotics to determine if a synergistic effect can be
+
+achieved.
+
+103
+
+REFERENCES
+
+Anas, K., Jayasree, P. R., Vijayakumar, T., & Manish Kumar, P. R. (2008). In
+vitro antibacterial activity of Psidium guajava Linn. leaf extract on clinical
+isolates of multidrug resistant Staphylococcus aureus. Indian journal of
+experimental biology, 46(1), 41-46.
+
+Andrews J. M. (2001). Determination of minimum inhibitory concentrations. The
+Journal of antimicrobial chemotherapy, 48 Suppl 1, 5-16.
+https://doi.org/10.1093/jac/48.suppl_1.5
+
+Afonso AC, Oliveira D, Saavedra MJ, Borges A, Simées M. Biofilms in Diabetic
+Foot Ulcers: Impact, Risk Factors and Control Strategies. Int J Mol Sci.
+2021 Jul 31;22(15):8278. doi: 10.3390/ijms22158278. PMID: 34361044;
+PMCID: PMC8347492.
+
+Antimicrobial Resistance Surveillance Program Annual Report 2023. Manila,
+Philippines. Antimicrobial Resistance Surveillance Reference Laboratory
+2024
+
+Arollado, E., Bucog, L., Manalo, R. A., Sampang, I.-L., & Cariscal, J. J. (n.d.).
+Selected Philippine Plant Extracts as Alternative Preservatives for a
+Pharmaceutical Liquid Preparation. DOST. Retrieved September 5, 2022,
+from https://philjournalsci.dost.gov.ph/home-1/52-vol-146-no-1-march-
+2017/635-selected-philippine-plant-extracts-as-alternative-preservatives-
+for-a-pharmaceutical-liquid-preparation
+
+Asma ST, Imre K, Morar A, Herman V, Acaroz U, Mukhtar H, Arslan-Acaroz D,
+
+Shah SRA, Gerlach R. An Overview of Biofilm Formation-Combating
+
+104
+
+Strategies and Mechanisms of Action of Antibiofilm Agents. Life (Basel).
+2022 Jul 23;12(8):1110. doi: 10.3390/life12081110. PMID: 35892912;
+PMCID: PMC9394423.
+
+Ayobami, O., Brinkwirth, S., Eckmanns, T., & Markwart, R. (2022). Antibiotic
+resistance in hospital-acquired Eskape-e infections in low- and lower-
+middle-income countries: A systematic review and meta-analysis.
+Emerging Microbes & Infections, 11(1), 443-451.
+https://doi.org/10.1080/22221751.2022.2030196
+
+Baddour, L. M., Wilson, W. R., Bayer, A. S., Fowler, V. G., Jr, Tleyjeh, |. M.,
+Rybak, M. J., Barsic, B., Lockhart, P. B., Gewitz, M. H., Levison, M. E.,
+Bolger, A. F., Steckelberg, J. M., Baltimore, R. S., Fink, A. M., O'Gara, P.,
+Taubert, K. A., & American Heart Association Committee on Rheumatic
+Fever, Endocarditis, and Kawasaki Disease of the Council on
+Cardiovascular Disease in the Young, Council on Clinical Cardiology,
+Council on Cardiovascular Surgery and Anesthesia, and Stroke Council
+(2015). Infective Endocarditis in Adults: Diagnosis, Antimicrobial Therapy,
+and Management of Complications: A Scientific Statement for Healthcare
+Professionals From the American Heart Association. Circulation, 132(15),
+1435-1486. https://doi.org/10.1161/CIR.0000000000000296
+
+Becker, K., Heilmann, C., & Peters, G. (2014). Coagulase-negative
+staphylococci. Clinical microbiology reviews, 27(4), 870-926.
+
+https://doi.org/10.1128/CMR.00109-13
+
+10S
+
+Ben-David, A., Davidson, C.E. (2014) Estimation Method for Serial Dilution
+Experiments. Journal of Microbiological Methods 107:214-221.
+
+Biswas, B., Rogers, K., McLaughlin, F., Daniels, D., & Yadav, A. (2013).
+Antimicrobial activities of leaf extracts of guava (Psidium guajava L.) on
+two gram-negative and gram-positive bacteria. International Journal of
+Microbiology, 2013, 1-7. https://doi.org/10.1155/2013/746165
+
+Bremmer DN, Bauer KA, Pouch SM, Thomas K, Smith D, Goff DA, Pancholi P,
+Balada-Llasat JM. Correlation of Checkerboard Synergy Testing with
+Time-Kill Analysis and Clinical Outcomes of Extensively Drug-Resistant
+Acinetobacter baumannii Respiratory Infections. Antimicrob Agents
+Chemother. 2016 Oct 21;60(11):6892-6895. doi: 10.1128/AAC.00981-16.
+PMID: 27527089; PMCID: PMC5075101.
+
+Case C, Funke B, Tortora G (2010). Microbiology An Introduction (Tenth ed.).
+ISBN 978-0-321-55007-1.
+
+Centers for Disease Control and Prevention. (2014, March 26). Types of
+healthcare-associated infections. Centers for Disease Control and
+Prevention. Retrieved September 5, 2022, from
+https:/www.cdc.gov/hai/infectiontypes. htm!
+
+Chassagne, F., Samarakoon, T., Porras, G., Lyles, J. T., Dettweiler, M.,
+Marquez, L., Salam, A. M., Shabih, S., Farrokhi, D. R., & Quave, C. L.
+(2021). A systematic review of plants with antibacterial activities: A
+taxonomic and phylogenetic perspective. Frontiers in Pharmacology, 11.
+
+https://doi.org/10.3389/fphar.2020.586548
+
+106
+
+Chow, L. K. M., Ghaly, T. M., and Gillings, M. R. (2021). A survey of sub-
+inhibitory concentrations of antibiotics in the environment. J. Environ. Sci.
+99, 21-27. doi: 10.1016/j.jes.2020.05.030
+
+Clinical and Laboratory Standards Institute (CLS!) M100 - Performance
+Standards for Antimicrobial Susceptibility Testing, 34th Edition, 2024.
+
+CLSI, Methods for Determining Bactericidal Activity of Antimicrobial Agents.
+Approved Guideline, CLSI document M26-A. Clinical and Laboratory
+Standards Institute, 950 West Valley Roadn Suite 2500,Wayne,
+Pennsylvania 19087, USA, 1998.
+
+Cowan, M. M. (1999). Plant products as antimicrobial agents. Clinical
+Microbiology Reviews, 12(4), 564-582.
+https://doi.org/10.1128/cmr.12.4.564
+
+Cruz, C. D., Shah, S., & Tammela, P. (2018, November 3). Defining conditions
+for biofilm inhibition and eradication assays for gram-positive clinical
+reference strains - BMC Microbiology. BioMed Central. Retrieved
+September 5, 2022, from
+https://bmemicrobiol.biomedcentral.com/articles/10.1186/s12866-018-
+1321-6
+
+Dadgostar, P. (2019). antimicrobial resistance: Implications and costs. Infection
+and Drug Resistance, Volume 12, 3903-3910.
+https://doi.org/10.2147/idr.s234610
+
+De La Maria, C. G., Cervera, C., Pericas, J. M., Castafieda, X., Armero, Y., Soy,
+
+D., Almela, M., Ninot, S., Falces, C., Mestres, C. A., Gatell, J. M., Moreno,
+
+107
+
+A., Marco, F., & Mird, J. M. (2015). Epidemiology and Prognosis of
+Coagulase-Negative Staphylococcal Endocarditis: Impact of Vancomycin
+minimum inhibitory concentration. PloS One, 10(5), 0125818.
+https://doi.org/10.1371/journal.pone.0125818
+
+Davies, J., Spiegelman, G. B., and Yim, G. (2006). The world of subinhibitory
+antibiotic concentrations. Curr. Opin. Microbiol. 9, 445-453. doi:
+10.1016/j.mib.2006.08.006
+
+Flores-Vargas, G., Korber, D. R., & Bergsveinson, J. (2023). Sub-MIC antibiotics
+influence the microbiome, resistome and structure of riverine biofilm
+communities. Frontiers in Microbiology, 14.
+https://doi.org/10.3389/fmicb.2023.1194952
+
+Foerster, S., Unemo, M., Hathaway, L.J. et al. Time-kill curve analysis and
+pharmacodynamic modelling for in vitro evaluation of antimicrobials
+against Neisseria gonorrhoeae . BMC Microbiol 16, 216 (2016).
+https://doi.org/10.1186/s12866-016-0838-9
+
+Gahlot, R., Nigam, C., Kumar, V., Yadav, G., & Anupurba, S. (2014). Catheter-
+related bloodstream infections. International Journal of Critical Illness and
+Injury Science, 4(2), 161. https://doi.org/10.4103/2229-5151.134184
+
+Garcia de la Maria, C., Cervera, C., Pericas, J. M., Castafieda, X., Armero, Y.,
+Soy, D., Almela, M., Ninot, S., Falces, C., Mestres, C. A., Gatell, J. M.,
+Moreno, A., Marco, F., & Miro, J. M. (2015). Epidemiology and prognosis
+
+of coagulase-negative staphylococcal endocarditis: Impact of vancomycin
+
+108
+
+minimum inhibitory concentration. PLOS ONE, 10(5).
+https://doi.org/10.1371/journal.pone.0125818
+
+Gilbert, B., & Alves, L. F. (2003). Synergy in plant medicines. Current medicinal
+chemistry, 10(1), 13-20. https://doi.org/10.2174/0929867033368583
+
+Gottenbos, B., van der Mei, H. C., & Busscher, H. J. (2000). Initial adhesion and
+surface growth of Staphylococcus epidermidis and Pseudomonas
+aeruginosa on biomedical polymers. Journal of biomedical materials
+research, 50(2), 208-214. https://doi.org/10.1002/(sici)1097-
+4636(200005)50:2<208::aid-jbm16>3.0.co;2-d
+
+Hossain, T. J. (2024). Methods for screening and evaluation of antimicrobial
+activity: A review of protocols, advantages, and limitations. European
+Journal of Microbiology & Immunology.
+https://doi.org/10.1556/1886.2024.00035
+
+Kalia, V. C., Patel, S., & Lee, J. (2023). Bacterial biofilm inhibitors: An overview.
+Ecotoxicology and Environmental Safety, 264, 115389.
+https://doi.org/10.1016/j.ecoenv.2023.115389
+
+Kart, D., Regber, T., Nemutlu, E., & Sagiroglu, M. (2021). Sub-inhibitory
+concentrations of ciprofloxacin alone and combinations with plant-derived
+compounds against P. aeruginosa biofilms and their effects on the
+metabolomic profile of P. Aeruginosa biofilms. Antibiotics, 10(4), 414.
+https://doi.org/10.3390/antibiotics10040414
+
+Kahl, B. C., Becker, K., & Léffler, B. (2016). Clinical Significance and
+
+Pathogenesis of Staphylococcal Small Colony Variants in Persistent
+
+109
+
+Infections. Clinical microbiology reviews, 29(2), 401-427.
+https://doi.org/10.1128/CMR.00069-15
+
+Khan MA, Celik |, Khan HM, Shahid M, Shahzad A, Kumar S, Ahmed B.
+Antibiofilm and anti-quorum sensing activity of Psidium guajava L. leaf
+extract: In vitro and in silico approach. PLoS One. 2023 Dec
+19;18(12):e0295524. doi: 10.1371/journal.pone.0295524. PMID:
+38113217; PMCID: PMC10729950.
+
+Lee, E., & Anjum, F. (n.d.). Staphylococcus epidermidis - statpearls - NCBI
+bookshelf. NCBI. Retrieved September 4, 2022, from
+https:/Awww.ncbi.nim.nih.gov/books/NBK563240/
+
+Lewis CL, Craig CC, Senecal AG. Mass and density measurements of live and
+dead Gram-negative and Gram-positive bacterial populations. Appl
+Environ Microbiol. 2014 Jun;80(12):3622-31. doi: 10.1128/AEM.00117-14.
+PMID: 24705320; PMCID: PMC4054131.
+
+Levison ME, Levison JH. Pharmacokinetics and pharmacodynamics of
+antibacterial agents. Infect Dis Clin North Am. 2009 Dec;23(4):791-815,
+vii. doi: 10.1016/j.idc.2009.06.008. PMID: 19909885; PMCID:
+PMC3675903.
+
+LaPlante KL, Mermel LA. In vitro activities of telavancin and vancomycin against
+biofilm-producing Staphylococcus aureus, S. epidermidis, and
+Enterococcus faecalis strains. Antimicrob Agents Chemother. 2009
+Jul;53(7):3166-9. doi: 10.1128/AAC.01642-08. Epub 2009 May 18. PMID:
+
+19451302; PMCID: PMC2704672.
+
+110
+
+Lulie, M., Tadesse, A., Tsegaye, T., Yesuf, T., & Silamsaw, M. (2021). Incidence
+of peripheral intravenous catheter phlebitis and its associated factors
+among patients admitted to University of Gondar Hospital, Northwest
+Ethiopia: A prospective, observational study. Thrombosis Journal, 19(1).
+https://doi.org/10.1186/s12959-021-00301-x
+
+Manglicmot-Yabes, Ailyn & Ramos, Monica. (2023). Metabolic perturbations in
+methicillin-resistant Staphylococcus aureus induced by Psidium guajava
+ethanolic leaf extract. Life Sciences, Medicine and Biomedicine. 7.
+10.28916/Ismb.7.1.2023.118.
+
+Masood, S., Saleem, I., Smith, D., & Chu, W. K. (2020). Growth Pattern of
+Magnetic Field-Treated Bacteria. Current microbiology, 77(2), 194-203.
+https://doi.org/10.1007/s00284-019-01820-7
+
+Microbiological analysis of food and water. (1998). In Elsevier eBooks.
+https://doi.org/10.1016/b978-0-444-8291 1-5.x5016-4
+
+Muhammad, M. H., Idris, A. L., Fan, X., Guo, Y., Yu, Y., Jin, X., Qiu, J., Guan, X.,
+& Huang, T. (2020). Beyond risk: Bacterial biofilms and their regulating
+approaches. Frontiers in Microbiology, 11.
+https://doi.org/10.3389/fmicb.2020.00928
+
+Mujeeb F, Bajpai P, Pathak N. Phytochemical evaluation, antimicrobial activity,
+and determination of bioactive components from leaves of Aegle
+marmelos. Biomed Res Int. 2014;2014:497606. doi:
+10.1155/2014/497606. Epub 2014 May 11. PMID: 24900969; PMCID:
+PMC4037574.
+
+111
+
+National Committee for Clinical Laboratory Standards. 1998. Methods for
+determining bactericidal activity of antimicrobial agents. Approved
+guideline M26-A. National Committee for Clinical Laboratory Standards,
+Wayne, Pa.
+
+Naseer, S., Hussain, S., Naeem, N., Pervaiz, M., & Rahman, M. (2018,
+December 12). The phytochemistry and medicinal value of Psidium
+guajava (guava) - clinical phytoscience. SpringerOpen. Retrieved
+September 5, 2022, from
+https://clinphytoscience.springeropen.com/articles/10.1186/s40816-018-
+0093-8
+
+Nielsen El, Friberg LE. Pharmacokinetic-pharmacodynamic modeling of
+antibacterial drugs. Pharmacol Rev. 2013;65:1053-—1090. doi:
+10.1124/pr.111.005769.
+
+Oncho, D. A., Ejigu, M. C., & Urgessa, O. E. (2021, April 12). Phytochemical
+constituent and antimicrobial properties of guava extracts of East
+Hararghe of Oromia, Ethiopia - clinical phytoscience. SpringerOpen.
+Retrieved September 5, 2022, from
+https://clinphytoscience.springeropen.com/articles/10.1186/s40816-021-
+00268-2
+
+Olawuwo, O. S., Famuyide, |. M., & McGaw, L. J. (2022). Antibacterial and
+antibiofilm activity of selected medicinal plant leaf extracts against
+pathogens implicated in poultry diseases. Frontiers in Veterinary Science,
+
+9. https://doi.org/10.3389/fvets.2022.820304
+
+112
+
+Patel, P., Joshi, C., Birdi, T., & Kothari, V. (2019). Anti-infective efficacy of
+Psidium guajava L. leaves against certain pathogenic bacteria.
+F1000Research, 8, 12. https://doi.org/10.12688/f1 000research.17500.2
+
+Pelletier LL Jr. Lack of reproducibility of macrodilution MBCs for Staphylococcus
+aureus. Antimicrob Agents Chemother. 1984 Dec;26(6):815-8. doi:
+10.1128/AAC.26.6.815. PMID: 6570083; PMCID: PMC 180030.
+
+Penecilla, G., & Magno, C. (n.d.). Antibacterial activity of extracts of twelve
+common medicinal plants ... Retrieved September 4, 2022, from
+https://academicjournals.org/article/article1380713010_Penecilla%20and
+%20Magno.pdf
+
+Pereira GA, Chaves DSdA, Silva TMe, Motta REdA, Silva ABRd, Patricio TCdC,
+Fernandes AJB, Coelho SdMdO, Ozarowski M, Cid YP, et al.
+Antimicrobial Activity of Psidium guajava Aqueous Extract against
+Sensitive and Resistant Bacterial Strains. Microorganisms. 2023;
+11(7):1784. https://doi.org/10.3390/microorganisms1 1071784
+
+Peterson, L. R., and C. J. Shanholtzer. 1992. Tests for bacteridical effects of
+antimicrobial agents: technical performance and clinical relevance. Clin.
+Microbiol. Rev. 5:420-432.
+
+Pfaller MA, Sheehan DJ, Rex JH. Determination of fungicidal activities against
+yeasts and molds: lessons learned from bactericidal testing and the need
+for standardization. Clin Microbiol Rev. 2004 Apr;17(2):268-80. doi:
+10.1128/CMR.17.2.268-280.2004. PMID: 15084501; PMCID:
+
+PMC387411.
+
+113
+
+Pitiriga, V., Kanellopoulos, P., Bakalis, |., Kampos, E., Sagris, |., Saroglou, G., &
+Tsakris, A. (2020, December 1). Central venous catheter-related
+bloodstream infection and colonization: The impact of insertion site and
+distribution of multidrug-resistant pathogens - antimicrobial resistance &
+infection control. BioMed Central. Retrieved September 5, 2022, from
+https://aricjournal.biomedcentral.com/articles/10.1186/s13756-020-00851-
+1
+
+Pinheiro L, Brito Cl, Pereira VC, Oliveira Ad, Camargo CH, Cunha Mde L.
+Reduced susceptibility to vancomycin and biofilm formation in methicillin-
+resistant Staphylococcus epidermidis isolated from blood cultures. Mem
+Inst Oswaldo Cruz. 2014 Nov;109(7):871-8. doi: 10.1590/0074-
+0276140120. Epub 2014 Oct 21. PMID: 25410990; PMCID: PMC4296491.
+
+Pitucha, M.; Wos, M.; Miazga-Karska, M.; Klimek, K.; Mirostaw, B.; Pachuta-
+Stec, A.; Gtadysz, A.; Ginalska, G. Synthesis, antibacterial and
+antiproliferative potential of some new 1-pyridinecarbonyl-4-substituted
+thiosemicarbazide derivatives. Med. Chem. Res. 2016, 25.
+doi:10.1007/s00044-016-1599-6.
+
+Prestinaci, F., Pezzotti, P., & Pantosti, A. (2015). Antimicrobial resistance: A
+global multifaceted phenomenon. Pathogens and Global Health, 109(7),
+309-318. https://doi.org/10.1179/2047773215y.0000000030
+
+Raj, A., Menon, V., & Sharma, N. (2020, September 2). Phytochemical
+screening, antimicrobial, antioxidant and cytotoxic potential of different
+
+extracts of Psidium guajava leaves - vegetos. SpringerLink. Retrieved
+
+114
+
+September 5, 2022, from https://link.springer.com/article/10.1007/s42535-
+020-00151-4
+
+Regoes RR, Wiuff C, Zappala RM, Garner KN, Baquero F, et al.
+Pharmacodynamic functions: a multiparameter approach to the design of
+antibiotic treatment regimens. Antimicrob Agents Chemother.
+2004;48:3670-3676. doi: 10.1128/AAC.48.10.3670-3676.2004.
+
+Robredo, J. P., Eala, M. A., Paguio, J. A., Salamat, M. S., & Celi, L. A. (2022).
+The challenges of combatting antimicrobial resistance in the Philippines.
+The Lancet Microbe, 3(4). https://doi.org/10.1016/s2666-5247(22)00029-5
+
+Rolfe MD, Rice CJ, Lucchini S, Pin C, Thompson A, Cameron AD, Alston M,
+Stringer MF, Betts RP, Baranyi J, Peck MW, Hinton JC. Lag phase is a
+distinct growth phase that prepares bacteria for exponential growth and
+involves transient metal accumulation. J Bacteriol. 2012 Feb;194(3):686-
+701. doi: 10.1128/JB.06112-11. Epub 2011 Dec 2. PMID: 22139505;
+PMCID: PMC3264077.
+
+Rosenthal, V. D., Rodriguez-Calderén, M. E., Rodriguez-Ferrer, M., Singhal, T.,
+Pawar, M., Sobreyra-Oropeza, M., Barkat, A., Atencio-Espinoza, T.,
+Berba, R., Navoa-Ng, J. A., Duefas, L., Ben-Jaballah, N., Ozdemir, D.,
+Ersoz, G., & Aygun, C. (2012). Findings of the International Nosocomial
+Infection Control Consortium (INICC), Part Il: Impact of a multidimensional
+strategy to reduce ventilator-associated pneumonia in neonatal intensive
+care units in 10 developing countries. Infection control and hospital
+
+epidemiology, 33(7), 704—710. https://doi.org/10.1086/666342
+
+115
+
+Rybak MJ. Pharmacodynamics: relation to antimicrobial resistance. Am J Infect
+Control. 2006;34(5 Suppl 1):s38-45. [discussion: s64—73]
+
+Shetty S, Shetty RM, Rahman B, Reddy MS, Shetty SR, Vannala V, Desai V,
+Halkai R. Comparison of Time-kill Assay to Evaluate the Antimicrobial
+Efficacy of Garlic (Allium sativum) and Guava (Psidium guajava) Extracts
+on Periodontal Pathogens. Contemp Clin Dent. 2021 Oct-Dec;12(4):389-
+395. doi: 10.4103/ccd.ccd_731_20. Epub 2021 Dec 21. PMID: 35068838;
+PMCID: PMC8740802.
+
+Soufir, L., Timsit, J. F., Mahe, C., Carlet, J., Regnier, B., & Chevret, S. (1999).
+Attributable morbidity and mortality of catheter-related septicemia in
+critically ill patients: a matched, risk-adjusted, cohort study. Infection
+control and hospital epidemiology, 20(6), 396-401.
+https://doi.org/10.1086/501639
+
+Surapat, B., Montakantikul, P., Malathum, K., Kiertiburanakul, S., Santanirand,
+P., & Chindavijak, B. (2020). Microbial Epidemiology and risk factors for
+relapse in gram-negative bacteria catheter-related bloodstream infection
+with a pilot prospective study in patients with catheter removal receiving
+short-duration of antibiotic therapy. BMC Infectious Diseases, 20(1).
+https://doi.org/10.1186/s12879-020-05312-z
+
+Vandebroek |. (2013). Intercultural health and ethnobotany: how to improve
+healthcare for underserved and minority communities. Journal of
+ethnopharmacology, 148(3), 746-754.
+
+https://doi.org/10.1016/.jep.2013.05.039
+
+116
+
+Wayne PA. “Methods for Dilution Antimicrobial Susceptibility Tests for Bacteria
+That Grow Aerobically”. Clinical and Laboratory Standards Institute
+Approved Standard-Ninth Edition, M07-A9 (2012).
+
+Widerstrém, M. (2016). Commentary: Significance of Staphylococcus epidermidis
+in health care-associated infections, from contaminant to clinically relevant
+pathogen: This is a wake-up call! Journal of Clinical Microbiology, 54(7),
+1679-1681. https://doi.org/10.1128/jcm.00743-16
+
+Willis K. J. (2017). State of the World’s plants, 2017. Kew, London: England:
+Royal Botanic Gardens.
+
+World Health Organization. (n.d.). Antimicrobial resistance. World Health
+Organization. Retrieved September 5, 2022, from
+https:/www.who.int/news-room/fact-sheets/detail/antimicrobial-
+resistance#:~:text=Antimicrobial%20Resistance%20(AMR)%20o0ccurs%20
+
+when,spread%2C %20severe%20iliness%20and%20death.

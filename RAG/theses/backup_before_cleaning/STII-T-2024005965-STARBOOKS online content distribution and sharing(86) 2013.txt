@@ -1,0 +1,1253 @@
+STARBOOKS Online Content Distribution and Sharing
+
+ALFON B. NARQUITA
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+MASTER IN INFORMATION TECHNOLOGY
+
+April 2013
+
+Abstract
+This proposal helped develop an online system for the stand-alone kiosks to address the
+challenges in content distribution and monitoring, and in preparation for establishing a
+community of stakeholders. The online version serves not only as an online kiosk for registered stakeholders, but most importantly it would serve as a venue for resource sharing and sourcing. Areas of implementation focused on the uploading and downloading features of the
+online version, the security of updates in transit, simplification of report generation and submissions, and the platform for communication among stakeholders. PHP was used in developing the front-end and the back-end, together with MYSQL for
+database. Various open sourced software were also integrated to achieve system requirements
+like Gpgraph for reporting, Flex Paper for viewing full text files, Sparkweb for online chat, and SWFTools for auto convertion of uploaded PDF materials.
+
+The Problem Domain
+DOST’s information arm Science and Technology Information Institute (STII), has
+recently launched the STARBOOKS program. The program aims to have a wider public use of
+the S&T materials housed and collected in the STII library by providing stand alone terminals
+dubbed as “STARBOOKS Kiosks”. Installation of these kiosks basically extends the STII library
+to privileged recipients, most especially those from remote areas where resources are scarcely
+
+available.
+
+The STARBOOKS kiosk consists of a standard computer set containing digitized
+materials from the STII library packaged in a specially designed frame. It requires no
+
+subscription, no internet connection.
+
+As to date, there are over 130 sites installed all over the country since its launch last July
+
+2011. And still, more are lined-up for requests.
+
+According to its Library Section, The STII library has in its collection around 150,000
+materials in science and technology composed of books, journals, serial publications, reference
+materials, annual reports, thesis and dissertations, technical and project reports, directories, and
+even non-print materials in video and audio format acquired in local and international sources
+including full text articles from subscriptions. Some of which are public domain, and most are
+
+still covered by proprietary laws.
+
+Selected by a core group composing of librarians and information officers, STII is giving
+away these collections for free. Materials covered by proprietary laws are cleared from their
+respective owners. These proprietary materials are distributed under terms that they can only be
+
+shared with non-profit and non-distributing stakeholders. Stakeholders are prohibited from
+
+2
+
+copying, transferring and distributing these materials by any means without prior notice and
+
+approval from STII.
+
+And in implying such restrictions, all STARBOOKS servers are locked in a designed
+frame, accessible only to a designated administrator, Full texts viewable from the kiosk terminals
+are also converted to SWF format in a per page basis. This is in an effort to load the materials
+
+fast, and create a complex structure to discourage, if not prevent downloading from the kiosks.
+
+With all these conditions in proprietary content, we arrive at our most important security
+
+concern, the distribution of updates.
+
+Because STARBOOKS servers and kiosks are not connected to the internet, updates have
+to be sent via CDs/DVDs through couriers. These CDs contains the compressed SWFs and
+instructions on how to manually upload them in the stand-alone server. An implementation of
+password protected ZIP and RAR files has been considered. But based on tests, ZIP and RAR
+passwords can be easily removed by password cracking softwares readily available through
+“googling”. Moreover so, we send the administrators the passwords via email, assuming these
+
+passwords are for their eyes only.
+
+The risks of attaining full text copies are high in mailing CDs. It risks potential
+distribution and profiteering from certain individuals, risking breach of terms with proprietary
+
+owners and risking possible fine and law suits.
+
+Also, equally pressing is keeping track of these updates whether they have reached their
+designated stakeholders, and the technical support that follows. Library and Technical Support
+staffs are assigned in tracking these updates and assist them in manually updating their kiosk via
+call or SMS, and that incurs communication cost. Email was a cheaper alternative, but that
+
+3
+
+consumes time as some stakeholders have limited access to internet, and would only be able to
+
+reply at some time.
+
+In short, the problem was how to send the updates securely with less cost and efficient
+
+ISTARBOOKS
+Dipolog
+STAREOOKS
+Davao,
+
+SiAREOOKS
+leyte
+
+STARBOOKS
+
+Zamboanga
+
+Downloading and updating needs to be as seamless as a single click with less human
+
+monitoring?
+
+STi staff
+
+=o = G
+
+Monitoring
+
+Figure 1. Flow of the manual system for update distribution and monitoring.
+
+intervention as possible. Most administrators assigned to manage STARBOOKS are not systems
+and software experts. They are normally teachers with intermediate computer backgrounds (these
+
+are the best staff they could assigned to manage the server and kiosks).
+
+With over 130 installed sites, we can clearly see the need to manage update distribution
+and monitoring. We can also see the potential for outsourcing content from these sites. By the
+end of 2013, the number of installed sites are expected to increase at least by fifty percent (50%).
+The STARBOOKS project has already laid out the foundation for a possible research-based
+community. And only by providing these stakeholders, up-to-date content, and efficient service
+would keep them interested in patronizing and adopting STARBOOKS.
+
+STARBOOKS
+
+om
+
+ISTARBOOKS)
+Stakeholder
+
+ISTARHOOKS)
+Stakeholder
+
+STARBOOKS STARBOOKS!
+Online Stakeholder
+Version:
+
+STARBOOKS)
+Stakeholder
+
+ISTARBOOKS)
+
+ISTAREOOKS! Stakeholder
+
+Stakefolden
+ISTAREOOKS)
+
+Stilsholder
+
+Figure 2. Proposed STARBOOKS Community model. The online version will facilitate content sharing. A
+‘messaging system can also be served for collaboration among stakeholders.
+
+Review of Existing Alternatives
+As for the problem of update distribution, we are sending the CDs via couriers. Prior to the
+installation of STARBOOKS, the stakeholders accomplish a copy of a memorandum of
+understanding (MOU). This MOU serves both as a contract and a futile attempt for discouraging
+illegal copies, distribution, and modification of the software and the content of the whole
+
+package. (Please see Appendix A for MOU sample template.)
+
+In the case of monitoring, aside from the SMS and calls, we have also tried group mailing.
+This may have been a good alternative if we are cutting the cost in distributing updates. But
+confirmation takes a while. It also requires that we assign one staff for follow-ups. In the current
+number of stakeholders, two staffs are assigned. These staff could have been more productive if
+utilized for content build-up or digitization instead.
+
+It is clear that these solutions are not efficient, and a new system or way of doing things
+
+should be changed.
+
+Approach taken in this project
+
+Theoretical Framework.
+
+Digital Rights Management (DRM).
+
+Previously, Digital Rights Management (DRM) focused on security and encryption as a
+means of solving the issue of unauthorized copying, that is, lock the content and limit its
+distribution to only those who pay. This was the first-generation of DRM, and it represented
+a substantial narrowing of the real and broader capabilities of DRM. The second-generation
+of DRM covers the description, identification, trading, protection, monitoring and tracking of
+all forms of rights usages over both tangible and intangible assets including management of
+rights holders relationships. Additionally, it is important to note that DRM is the “digital
+management of rights" and not the "management of digital rights". That is, DRM
+
+manages all rights, not only the rights applicable to permissions over digital content.
+
+Because of STARBOOKS? nature dealing with copyrighted digital content. The model
+used for this proposal is closely or partly related to the implementation of DRM. As seen in
+Figure 2, we intend to serve the content to only those who have rightful access. And these
+
+contents can only be updated to the kiosk assigned to the downloading account.
+
+Software Requirement Specifications
+
+a. SCOPE OF THE SYSTEM
+This system will address the challenges in STARBOOKS content/update
+distribution, data security in transit, content sharing and sourcing, simplifying report
+
+generation and submissions and building of stakeholders’ community.
+b. OVERALL DESCRIPTION
+A. Product functions
+The STARBOOKS Online aims to develop the following:
+
+1, Online Content Distribution
+The system will provide two means of downloading updates: through the
+
+Notifications Section and through the Search Page.
+
+Through the Notifications Section, updates will be listed and grouped by
+month as they are uploaded by content partners. The source of the material
+will also be displayed to give stakeholders some sense of accountability and
+
+ownership.
+
+Through the Search Page, the user will type keywords of desired material
+and may download content by viewing one of the results. This feature enables
+
+the stakeholder to create customized content for their offline STARBOOKS.
+
+2. Data Security and Encryption
+
+This script will add security to the downloaded content wherein the
+materials will be encrypted and repacked as a zip file. The first part of the
+filename represents the type of files this particular zip file holds. The
+Institution Code represents the account used to download this update. The
+Additional authentication will be used to compare this file with the configured
+code within the Offline STARBOOKS. This determines if this material will be
+uploaded to the Offline Kiosk or not. The Holdings ID represents a unique ID
+
+used to identify this material in the database.
+
+3. Content Sharing
+
+The system will provide an uploading facility that will enable stakeholders
+to share their materials with other stakeholders. This may include local school
+papers, compiled investigatory projects, academic researches, videos, and
+others. Uploading of materials include the creation of metadata using standard
+fields (Dublin Core). The uploaded materials shall be categorized into Books,
+Thesis, and Serials. To be make the uploaded materials available for others to
+download, fulltext shall have to be attached to the created metadata. The
+system will automatically convert PDF files into SWF files. It is converted to
+SWF format to be used with the Flex Paper application embedded for the
+
+fulltext viewing.
+
+4, Reports Submission and Monitoring.
+
+The STARBOOKS Offline has been modified to log all users’
+activities automatically. The Site Administrator will just have to click a button
+to generate a transmittal file of these logs and repacked into a zip file. The
+STARBOOKS Online will then provide venue for Site Administrators to send
+
+or upload the transmittal file.
+
+5. Stakeholders’ Community
+The system will utilize a free open-sourced web chat engine called
+SPARKWEB. This is an enhancement for the OPENFIRE project running on
+web-based messenger clients through XMPPs. An OPENFIRE server shall be
+configured and setup in a publicly accessible server. Stakeholders can either
+connect through the web-based facility or use an XMPP client. Either way,
+this will connect them to the central chat server wherein they can interact and
+
+collaborate with their fellow stakeholders.
+
+B. User characteristics
+This section identifies all the intended users of this system as well as the
+expected skills that may be required from them. The information in this section
+will help identify possible training and support to be given to the users upon
+
+deployment of this system.
+
+The system will provide the following access levels:
+
+10
+
+. Super User
+The Super User shall be the overall technical and web
+
+administrator of STARBOOKS Online. He/She shall be responsible to:
+
+|. Administer/Monitor the different users by giving them different levels of
+
+interaction to the system.
+
+. Administer STARBOOKS databases and servers.
+
+. STI Administrator
+
+STII Administrator will be the overall project manager. Moreover,
+
+this user will be required to perform the following:
+
+a. Facilitate standard and advanced report generation.
+b. Perform QA and integrity check with the uploaded contents.
+c. Administer the monitoring of report submissions of stakeholders and
+
+provide STII management with relative data analysis.
+
+. Site Administrator
+
+The site administrators are the staff assigned to manage the offline
+STARBOOKS kiosk. The administrators must have enough knowledge
+about the system. For the online version, their privileges include. They
+will also have access to the online STARBOOKS messenger for technical
+
+support and collaboration works.
+
+1
+
+Site administrator functions:
+
+a. Responsible for maintaining the integrity and timely submission of
+reports to STII.
+b. Perform online downloading of updates, uploading content, report
+generation and submission.
+c. Access online STARBOOKS messenger for technical support
+requests and collaboration works.
+4. Cluster Administrator
+The cluster administrator, also called as the Regional
+‘Administrator, is a support to the STI Administrator. Moreover, this user
+
+will likely be required to perform the following:
+
+a. Manage stakeholders located in their respective regions.
+b. Administer the monitoring of report submissions of stakeholders
+within their cluster and provide Regional office with relative data
+
+analysis.
+
+C. General constraints
+The factors that may somehow affect or constrain the development of this
+system are identified as follows:
+1, User Constraints
+It is expected that some Site Administrators will have limited computer
+
+skills which may not conform to user requirements of this system. However,
+
+12
+
+proper training and support will be given to them upon the deployment of the
+system to be able to familiarize themselves with the functions of the system.
+2. System Performance
+Since STARBOOKS Online is internet connection dependent, it is
+expected that the data center will experience some degree of lag and downtime
+when several sites will be downloading and uploading their files at the same
+time. Performance is also affected by the quality of connection site administrators
+
+will use.
+
+D. Assumptions and dependencies
+The STARBOOKS Online System shall be web-based and will be browser
+
+independent.
+
+It will ensure that the design specifications set for this project conform to
+
+the needs of its users.
+
+c. SPECIFIC REQUIREMENTS
+
+A. Interface requirements
+
+1, User interfaces
+
+a. The system shall require entering of valid username and password from
+
+the user to access the different components/modules of the system.
+
+B
+
+b. The system shall allow the Super Users to limit the access rights of the
+
+administrators to the system.
+c. The system shall provide Sections for downloading of content updates.
+
+d. The system shall allow Site Administrators to upload their contents to
+
+STARBOOKS Online.
+
+e. The system shall allow Site and Cluster Administrators to upload their
+
+transmittal to STARBOOKS Online.
+
+f. The system shall provide venue for stakeholders’ community and
+
+collaboration activities.
+
+g. The system shall allow the Administrators to view statistical reports of
+
+their respective sites/cluster.
+
+h. The system shall provide links to different components/modules of the
+
+system for the identified/assigned users,
+
+2. Hardware interfaces
+
+a. Data center and application servers should run on high speed processor.
+b. The servers should have at least Dual Core processor or higher with at
+least 268 of RAM.
+
+c. It must have at least 1 7B hard disk space to handle large amount of
+
+data.
+
+14
+
+d. The system will best run on the client-side workstation with at least 256 MB of RAM
+
+and at least Pentium-class processor.
+
+3. Software interfaces
+1. The application server and STARBOOKS data center shall be required to
+run on Apache 1.3.26 server under Linux or Window based operating
+
+system.
+
+2. Software that will be used for the system shall be PHP, and MySQL 5.
+
+3. Communication interfaces
+
+1. The network connecting computers from STARBOOKS stakeholders
+to application server should be provided with at least 1.0 Mbps for
+
+downloading.
+
+8. Functional requirements
+This section defines the data and process requirements for the system.
+
+1. Information storage and retrieval
+There will be available forms to allow the user to manage the information
+to be entered and retrieved from the data center. Furthermore, list boxes will
+
+be made available to speed up data entry and ensure data accuracy. Moreover,
+
+15
+
+functional buttons will be made available to enable the users generate and
+
+submit transmittal files, and viewing of reports.
+
+2. Process description
+
+This section discusses the required process that shall be performed by the
+
+system. The system shall enable the users to access and perform the following
+
+system components/modules: Online Content Distribution, Data Security and
+
+Encyrption, Content Sharing, Simplified Reports Submission and Monitoring
+
+and Stakeholders’ Community modules.
+
+Table: Use Case 1: Downloading Updates
+
+Use Case Online Content Distribution: Downloading updates
+Name:
+Actor: Site Administrator, Cluster Administrator
+Description: The Site administrator and Cluster Administrator downloading the
+update from the Online STARBOOKS.
+‘Normal a. Site Administrator logs in to the system, using the account
+with site administrator access level.
+Course: b. Site administrator click on the Notifications button.
+c. Select update from the list.
+d. Download and save the file to an auxiliary device.
+Alternate @. Site administrator logs in to the system, using the account
+with site administrator access level.
+Course: b. Site administrator clicks in the Download/Browse button.
+c. Type keyword in the search box.
+d. View desired result.
+e. Click on the download link to download the material.
+f. Save file to auxiliary device.
+
+16
+
+
+Pre-
+Condition:
+
+The administrator should have logged in successfully.
+
+Post-
+Condition:
+
+An update file is downloaded.
+
+Table2: Use Case 2: Material Upload
+
+Use Case | Online Content Distribution: Material Upload
+Name:
+Actor: ‘Site Administrator, Cluster Administrator, STI Administrator
+Description: _ | The Site Administrator, Cluster Administrator, STII Administrator
+uploading the material to the Online STARBOOKS.
+‘Normal a. Logs in to the Online STARBOOKS
+b. Click on the Create Material button.
+Course: c. Fill-up the metadata form.
+d. Click on the Upload Full text button.
+e. Select the metadata record.
+£._Upload the pdf file associated with the metadata.
+Alternate
+Course:
+Pre- The administrator should have logged in successfully.
+Condition:
+Post- ‘A new file is uploaded and marked as new update ready for
+Condition: downloading by other stakeholders.
+Table3: Use Case 3: Using the Update
+Use Case Data Security: Using the Update
+Name:
+Actor: Site Administrator, Cluster Administrator, STII Administrator
+
+7
+
+
+Description:
+
+The Site Administrator, Cluster Administrator, STII Administrator
+uploading the material to the Online STARBOOKS.
+
+Normal a. Logs in to the Online STARBOOKS:
+b. Click on the Notification button.
+Course: c. Select update from the list.
+d. Download and save the file to an auxiliary device.
+e. Go to the Offline Kiosk
+f. Login to the Admin Interface of the Offline STARBOOKS.
+g. Click on the upload button.
+h,_ Select the update downloaded from the Online Kiosk.
+Alternate
+Course:
+Pre- The administrator should have logged in successfully.
+Condition:
+Post- Offline STARBOOKS has been updated
+Condition:
+
+Table4: Use Case 4: Report Submission
+
+Use Case Report Submission
+Name:
+Actor: Site Administrator, Cluster Administrator
+Description: The Site Administrator, Cluster Administrator submitting the report
+to the Online STARBOOKS.
+Normal a. Logs in to the Admin Interface on Offline STARBOOKS
+b. Click on the Generate Transmittal button.
+Course: c. Download and save the file to an auxiliary device.
+d. Logs in to the Online STARBOOKS.
+e. Click on the Submit Report Button.
+f._ Select the downloaded report file from the Offline Kiosk.
+Alternate
+Course:
+
+Pre-Condition:
+
+The administrator should have logged in successfully.
+
+18
+
+
+Stakeholder has submitted a report.
+
+Table5: Use Case 5: Online Community
+
+Use Case Online Community
+
+Name:
+
+Actor: Site Administrator, Cluster Administrator, STI Administrator, Librarian
+and IT technical support staff from STII.
+
+Description: The Site Administrator, Cluster Administrator submitting the report to
+the Online STARBOOKS.
+
+Normal a. Logs in to Onine STARBOOKS
+
+'b. Click on the Online Chat button.
+
+Course: ©. Login to the Online Chat Room.
+
+Alternate
+
+Course:
+
+Pre- The administrator should have logged in successfully.
+
+Condition:
+
+Post- Stakeholder can interact with other online stakeholder.
+
+Condition:
+
+19
+
+
+3. Data construct specification
+
+acco TwiPrvinee Taitegion
+a oar +] inegion nevonvame
+imiserteve intety ae
+
+ted dtmaddes 14
+
+‘intCategory a +
+a thiMultimedia. teiCluser
+AY emait ‘tbiRecord tbIMultimedi usta
+ICSF ‘SubTitle ‘teType
+varUserName ‘VolumeNo
+InsCode ‘Author jas ~
+a
+a Publication
+3 Hs
+a
+os 1
+
+Figure 3 .Data Requirement
+
+Figure 3 shows fourteen classes or tables to be made available for
+STARBOOKS Online. Table Account will contain information about the
+registered user accounts. Table Institution will store stakeholders’ institutional
+profile. Table Record will contain all information about a record; this includes the
+title, material type, Author, etc. Table Multimedia, however, will indicate how
+many multimedia/fulltext is attached to each records; this table has fields such as
+FileName, FileLocation, FileType, etc. Logs, CSF, Log Book and Keywords
+
+20
+
+tables will have the user logs to be used on reporting and monitoring. Table
+Transmit will hold the generation of transmittal file logs. Cluster, Institution type,
+Region, Province and City Tables shall serve as lookup tables for some fields in
+
+the table Institution.
+
+Performance requirements
+
+The application server should have enough capacity to handle all the files coming
+
+from stakeholders.
+
+Design constraints
+
+The Web UI shall be made to be user-friendly.
+
+Software system attributes
+Below are the non-functional requirements for all components of STARBOOKS
+
+Online System which are categorized as follows.
+i Reliability
+The system shall ensure that site/cluster monitoring shall be
+
+managed by the legitimate administrators alone.
+
+The system shall come up with accurate reports regarding the
+
+Downloading/uploading of updates.
+8. Availability
+
+Although the STARBOOKS Online may be needing time for
+
+maintenance and upgrading, the system needs to be functional at least six
+
+21
+
+days a week and will be available 24 hours a day. This will give enough
+time for the administrators to download/upload updates with a maximum
+
+possible time.
+©. Security
+
+The system shall provide different access levels for its users to
+
+ensure that only authorized personnel will be allowed to
+
+The system shall be managed by the administrators who will
+
+monitor the security levels of the system.
+
+The system shall be providing username and passwords to its
+
+users to control access rights in the system.
+
+Downloadable updates should be ecrypted and packed in a zip file.
+
+Portability
+
+The system should run in all device capable of running a web browser.
+
+The system shall be browser independent. It shoud run in any
+
+browser supporting Flash.
+
+E. Usability
+The system shall enable the site/cluster administrators to manage
+
+their sites effectively.
+
+22
+
+The system shall present online help and provide proper
+
+documentations, such as user’s manual
+
+The system shall conduct proper training to its users upon the
+
+deployment of the system.
+
+23
+
+Methodologies
+A. Content Distribution
+The target of putting up an online distribution scheme is to minimize if not totally
+eliminate operation cost. Available updates both produced by STII or the stakeholder are to be
+
+hosted in a web location available through access levels.
+
+owas (2)
+| >; >
+
+OnlineVersion) Q
+
+Download
+
+| E>
+Dovnload 2
+
+Figure 4. Updates are provided online as downloads
+
+The online version focuses primarily on the backend part of the system. Because content
+have yet been weeded of proprietary materials. For the meantime, STII management has
+approved the deployment of the backend and frontend to offline site administrators only.
+
+The site is available via access levels. They are the following:
+
+Super User. The overall technical and web administrator of STARBOOKS Online.
+Privileges includes everything that is in the system including administration of user levels,
+databases and servers.
+
+STII Administrator. The overall project manager. Privileges includes standard and
+advanced report generation and content uploading. This account will be used only to monitor
+
+report submissions and provide STII management with relative data analysis.
+
+Site Administrator. The site administrators are the staff assigned to manage the offline
+STARBOOKS kiosk. They are responsible for maintaining the integrity ang timely submission
+of reports to STII. For the online version, their privileges includes downloading updates,
+uploading content, report generation and submission. They will also have access to the online
+STARBOOKS messenger for technical support and collaboration works.
+
+Cluster Administrator. The cluster administrator is a support to the STII Administrator.
+They will manage stakeholders located in their respective regions. Also called the Regional
+‘Administrators. They have the same privileges as the STII administrator, only that their report
+generations are limited only to that of their cluster.
+
+Users. These are the average users and researchers. They have no administrative
+functions. All they do is access the system to browse and go through its contents. As for this
+implementation, each Site Administrator is also provided with a User level account. This is in
+place to allow them to cater the STARBOOKS online kiosk to their local users.
+
+Download privileges will be available only for Cluster and Site administrators. They will
+
+be responsible for updating their offline STARBOOKS.
+
+25
+
+Figure 5. Screenshot: STARBOOKS Online Login Screen.
+
+Wilcome to 0ST Soence Dg! Libra!
+
+]
+Re ee |
+
+Figure 6. Screenshot: Online User interface for the Site Administrator.
+
+Downloads are available in two ways. One is through the Notifications Section.
+
+26
+
+ea
+ery
+
+ase fie LF |
+‘Admin teens i = oa feo faraaeneee
+
+a = my
+
+Figure 7. Screenshot: STARBOOKS Online, Notification Section.
+
+Here, updates are listed as they are uploaded by content partners. The materials are listed
+and grouped by month. Figure 7 shows the list of updates available within three months. The
+source of the material is displayed to give stakeholders some sense of accountability and
+ownership. Materials uploaded will be subjected to studies and verification by STII if itis freely
+
+shareable or if it is covered by proprietary laws.
+
+27
+
+Figure 8. Screenshot: STARBOOKS Online, Search page.
+
+The other way for downloading updates is through the Search Page. Here you can type
+
+keywords for your desired material.
+
+Figure 9, Screenshot: STARBOOKS Online, Results page.
+
+By viewing one of the results, Site Administrators and Cluster Administrators will have
+
+28
+
+an option for download. This feature enables the stakeholder to create customized content for
+
+their offline STARBOOKS.
+
+rapasagngrasugng ano Tse foes
+
+Figure 10. Screenshot: STARBOOKS Online, Video view page. A download link is available for Site and
+Cluster Administrators only.
+
+In sync with the online update downloading, we have also updated the back-end for the
+Offline STARBOOKS. A feature to upload updates with one button click has been added. We
+use to call the stakeholders one by one to help them with the instruction and deployment of the
+new updates. PDF files contained in the DVDs are manually copied to the Offline
+STARBOOKS'’ system folders by the Site Administrators and the SQL files are manually loaded
+through PHPMYADMIN interface to update the database. This is both risky and tedious. Risky,
+because not all Site Administrators are computer savvy and technically knowledgeable with
+systems and databases. Tedious, since most non computer savvy administrators cannot follow
+with the instructions. In cases like these, we employ the help of the DOST regional offices.
+
+Technical staffs are sent from the DOST regional offices to assist problematic sites.
+
+29
+
+SECURITY AND ENCRYPTION
+
+Concerns over sending the updates via DVDs have been raised by management. Not only
+is it costly but it also poses risk of theft. Some materials are still classified as proprietary and are
+shared through STARBOOKS only in the condition that it will not be used for profit. These
+
+materials can get duped or compromised during transit.
+
+As a measure, the Online STARBOOKS eliminates the use of DVDs for distribution.
+Updates are now freely available at the Online STARBOOKS. To add security to the
+
+downloaded content, the materials are encrypted and repacked as a zip file.
+
+Additional
+Authentication
+
+S 6dHf_11-03_qp6mm5g_qp6mm5umng.zip
+Ud a
+
+1
+
+Holdings 1D
+
+File Type
+
+Institution
+Code
+
+Figure 12, File name composition of downloaded ZIP file,
+
+The first part of the filename represents the type of files this particular zip file holds. The
+Institution Code represents the account used to download this update. The Additional
+authentication is used to compare this file with the configured code within the Offline
+STARBOOKS. This determines if this material will be uploaded to the Offline Kiosk or not. The
+
+Holdings ID represents a unique ID used to identify this material in the database.
+
+30
+
+(HOO B28
+
+=a
+
+fultent
+Matera
+
+sau fie
+
+Figure 13. Composition of the downloaded ZIP file.
+
+The zip file composes of the actual fulltext materials, in the case of digitized reading
+materials. And will consist of a flash movie in the case of video materials. An additional SQL
+file is also inserted in the package to provide reference for updating the database in the Offline
+STARBOOKS. The SQL file, along with filename is grabbled using combinations of text ordinal
+values and secret key ordinal values encrypted with base64 encryption. It is a pity that the ZIP
+library in PHP does not support password protected zip files. That could have improved the
+protection of the material. This may not be the most sophisticated encryption available, but still,
+
+it provides additional layer of protection.
+
+The Offline STARBOOKS? backend has been modified as well to interpret such
+encryption. Authentication takes place after decrypting the information in the zip file, And based
+on this authentication, the Offline STARBOOKS will decide whether this file is legitimate or
+
+not. In case that the material is not intended for this machine, the STARBOOKS Offline will not
+
+31
+
+extract and unscramble the payload.
+
+Download STARBOOKS
+mmm 2 ia ee Dipsiee
+STARBOOKS
+PEVER)
+pana pra STAREOOKS
+Teyte’
+x STARBOOKS
+Zamboanga
+
+Figure 14. Downloadable updates will only work on stakeholder's kiosk
+
+STARBOOKS
+
+OnlineVersion}
+
+A concern has been raised regarding this security setup. Since the STARBOOKS Offline
+is written in PHP, it is possible to crack and decipher the encryption by viewing the source code.
+In a client-server setup this can be secured using access restrictions. But in STARBOOKS
+Offline kiosks where the server and client is the same machine, this is not acceptable. We may
+require stakeholders to provide and use servers in all installation. Nonetheless, plans for
+developing a compiled version of STARBOOKS Offline has been greatly considered. Using a
+compiler to develop the new interface will deviate the project from the advocacy of using open-
+
+source softwares and will translate cost in software licenses.
+
+Figure 15. Encryption in the STARBOOKS Online, and decryption in the STARBOOKS Offline.
+
+32
+
+CONTENT SHARING
+
+For content sharing we included in our STARBOOKS Online an uploading facility. The
+uploading facility will enable stakeholders to share their materials with other stakeholders. This
+may include local school papers, compiled investigatory projects, academic researches, videos,
+
+and others.
+
+Figure 16. Encryption Page for creating new material (metadata)
+
+Included in the uploading page is the creation of metadata. These are standard fields
+(Dublin Core) for creating metadata. It can be categorized into Books, Thesis, and Serials.
+Creating the metadata is the first step in sharing content. These fields are used for data mining
+
+and possible computation of relevance.
+
+33
+
+es
+
+ame a]
+
+Figure 17, Attachment of fultext or video to the metadata
+
+Creating the metadata will append the record in the database. But it is yet to be available
+for others to download or to be included in the search results. You have to attach a full text
+material or a video to your created metadata. PDF files uploaded this way are automatically
+converted by the Online STARBOOKS into SWF files. It is converted to SWF format to be used
+with the Flex Paper application embedded for the fulltext viewing. SWF are preferred because its
+faster than the standard PDF in terms of loading. The average PDF will first load the entire PDF
+file into memory before rendering it to your browser. Whilst the SWF format displays the current
+page right away while the rest of the file are loading. For a 100 page material, it is practical and
+
+faster to load it as FLASH rather than PDF.
+
+The uploading facility will allow for sustainability in terms of content. Each stakeholder
+will now become a content partner as well as a marketing arm for material promotions and
+
+dissemination.
+
+34
+
+REPORT AND MONITORING
+The team together with some senior staff carefully analyzed the existing processes for the
+report submission. It turns out that one process in the user registration greatly affects the
+
+administrators’ productivity.
+
+In STARBOOKS Offline version 1.0°s process, before a normal researcher can use the
+STARBOOKS kiosk, they will need to fill up a registration form. This registration form includes
+basic information only, which can be used to gauge our STARBOOKS users and therefore can
+be used as a basis for targeting new contents. All users are required to fill this form which piles
+up to the administrators. The submitted forms are to be encoded periodically to the
+STARBOOKS Offline backend. This would give the STARBOOKS Offline baseline data for
+generating reports which should be printed by the administrator at the end of the month. These
+printed reports are to be sent to STII for data analysis. The added encoding work discourages the
+
+administrator to come up with a productive report.
+
+In the midst of November to December 2012, we have rolled out STARBOOKS Offline
+version 2.0 which answered this problem. In this version, user will have to pass a one-time
+registration only. This will allow them to create an account to the system. In their succeeding use
+to the STAROOKS Offline, they will only need to login. With this system, forms will no longer
+be submitted to the administrator, and the administrator will no longer pile them up in stacks.
+Reports are also no longer required to be printed for submission. The STARBOOKS Offline has
+been modified to log all activities automatically. The report is now repacked into a zip file we
+call, transmittal file. Administrators now need only to send or upload the transmittal file to the
+
+STARBOOKS Online.
+
+35
+
+1@
+
+Stakeholder
+
+Online
+
+Figure 18. Submission of transmittal file (reports) to the STARBOOKS Online.
+
+The Zip file consists of the files containing SQL commands that will update the online
+
+database with the stakeholder’s data.
+
+Piwamay ea en =]
+
+Figure 19. Content of the generated transmittal fie.
+
+STAKEHOLDER'S COMMUNITY
+The upload and download feature of the STARBOOKS Online already supports the
+
+proposed content sharing among stakeholders. To further enhance and solidify this community, a
+
+36
+
+communication media is established.
+
+Fs or or
+eM ey atten sn Bint
+STARBOOKS 2, |
+
+Figure 20. STARBOOKS Online Messenger.
+
+For communication, we utilized the free open-sourced web chat engine called
+SPARKWEB. This is an enhancement for the OPENFIRE project running on web-based
+messenger clients through XMPPs. An OPENFIRE server has to be configured and setup in a
+publicly accessible server. Stakeholders can either connect through the web-based facility or use
+an XMPP client. Either way, this will connect them to our central chat server wherein they can
+interact and collaborate with their fellow stakeholders. Online technical support will be available
+through this online messenger as well as Library Staff support for content inquiries and requests.
+
+With this system, collaborative projects with stakeholders among clusters are now possible.
+
+37
+
+Content Distribution
+
+RESULTS
+
+Through update downloads, we eliminated the cost incurred during update distribution.
+
+The following table shows the expense per quarter during update distribution:
+
+Table 6. Computation for the update distribution using couriers.
+
+Courrier Rate ‘Communication | DVD per pe Number of | TOTAL
+(small parcel) (Cell Cards) Sites in 2012
+PHP 70.00 PHP 100.00 PHP 100.00 Spes@PHP | 114 PHP 30,780.00
+
+20.00 each
+
+The table above is computed with the 114 sites established as of December 2012. The
+
+Php70 for courier is a standard 1-2kg package from LBC. Cell cards are also allocated for
+
+technical support, monitoring, and tracking of updates. We pack the updates in five DVDs giving
+
+us a total of 20Gb worth of updates.
+
+expenses will relatively rise.
+
+Clearly, with the increasing number of Stakeholders,
+
+With the updated backend in the Offline STARBOOKS, it is now capable of updating
+
+itself with only a click of a button. Human intervention in updating are now limited to the
+
+selection of materials only. Database and system files are automatically extracted, processed, and
+
+updated by the Offline STARBOOKS backend.
+
+38
+
+Stakeholder
+
+and uploads it the Offline STARBOOKS kiosk.
+
+Figure 21. Site Administrator downloads the update as a zip file from the Online STARBOOKS,
+
+Table 7. Comparison of tasks and elapsed time to update the Offline Kiosk..
+
+Size of Preparation of Elapsed | Elapsed | Technical support
+Update updates time for | time for rendered to
+updates to | updating the | stakeholder. (Data
+reach | kiosk using | are based from
+stakeholder the technical support
+packaged rendered to
+update Zamboanga
+regional office ona
+test update)
+With 20go — S| Select Tto2days | 1 to 2 days.| © Call
+DVDs DVDs materials to Transfer of Region IX,
+include in 20gb from that
+update. DVD a updates
+© Create Kiosk will be
+MYSQL file sent.
+for use in averages 10) Assist
+updating the 30min — Ihr kiosk
+kiosks depending admin in
+database. on CPU and copying the
+* Group and memory full texts.
+a in speed. . ey
+ios!
+DVD. Database admin in
+* Send DVD update updating
+via courier. averages to the
+lomin = - database
+30min through
+depending PHPMAdm
+on size of in or SQL
+command
+
+39
+
+
+SQ file through
+generated DOS
+for this prompt.
+cea Iferrors are
+batch encountere
+. 4, assist
+admin in
+debugging.
+With Smb = + Loginto | 5-30 30sec Confirm
+Online 50mb per system. | minutes} 2min per with
+Downloads | material © Check | per material, Region IX
+Notification | download. | depending ithe)
+s for : performed
+(Tested on size.
+updates. ; an update.
+© Download | With Globe
+the update. | and
+SMART
+broadband)
+Download
+time
+depends on
+size and
+user
+bandwidth
+
+REPORT AND MONITORING
+
+Since STARBOOKS Offline’s debut in 2011, only few stakeholders have submitted their
+
+reports. Turning the STARBOOKS Offline version 1.0 a monitoring nightmare. STARBOOKS
+
+Online has greatly improved report submission and monitoring
+
+40
+
+
+yan arm] an
+
+Figure 22. Submitted report by cluster.
+
+This pilot test shows that stakeholders with a green check has submitted their report for
+that corresponding month. The red crosses means that there were no reports submitted for that
+month. This report significantly shows the active sites. And the clusters that greatly adheres and
+patronize project. The report has become a basis for an upcoming project to gather all
+
+stakeholder into a convention-like program these coming months.
+
+a1
+
+e= =
+
+Figure 23. Sample Statistical reports
+
+The statistical reports can now serve its purpose. We now have data for analysis and
+content targeting. Keywords here that shows zero (0) results are now prioritized by STII’s
+content development team. Subscriptions have been named and deals have been forged with
+Encyclopedia Britannica for the inclusion of their software in all STARBOOKS Offline kiosks.
+
+These are all made possible from the statistics gathered from these reports.
+
+42
+
+[GG sees tor eran
+
+oe nn 7 tg te gpd sent
+2012 Top 2 eo Rel Keron
+
+Figure 24 Sample Statistical reports. Table showing keywords with zero results.
+
+SECURITY AND ENCRYPTION
+
+The effect of having the updates encrypted has yet been measured quantitatively. We
+currently have no baseline number for measuring frequency of attacks in the offline kiosks.
+From all the STARBOOKS installations since 2011, there has only been one reported incident of
+breach of the MOU. One school from Leyte, configured the offline kiosk with a public IP
+address and linked it to their School website. This automatically called for an administrative
+response, since we do not allow hosting of the materials from any online means. The school was
+given a warning, and they immediately complied.
+
+In their part, they were only trying to propagate the use of STARBOOKS material to an
+
+even bigger audience. This actually initiated the idea that STARBOOKS should be pushed
+
+43
+
+online. This project actually helped the design process in gearing the STARBOOKS project
+
+towards becoming an online resource center.
+
+44
+
+CONCLUSIONS
+
+With STARBOOKS Online, update distribution has been easier to manage. Distribution
+expense has been trimmed down to a minimum, and report monitoring and submission has been
+more convenient and active. Through update and resource downloading, Kiosks can now be
+customized according to stakeholder’s requirements. Content can now be sustained through
+collaborative resource sharing. The development of the STARBOOKS Online compliments the
+exhaustive rollout of the Offline version. Providing room and avenue where all materials and
+efforts can be organized in a single venue and create a sustainable content sharing environment.
+
+The STARBOOKS project greatly fulfills STII’s mandate in the area of disseminating
+S&T related information. It has been considered by the DOST as one of its “Ramdam ni Juan”
+projects because of its appeal to help promote government livelihood programs in the rural areas.
+
+It can still grow and has many more rooms for improvement to better serve our stakeholders.
+
+45
+
+REFERENCES
+Php.net — www.php.net, for all PHP syntax and programming references.
+
+W3schools — www.w3schools.com, for PHP and CSS how tos and ZIP library
+
+functions.
+Stackoverflow.com — www.stackoverflow.com, for sample programming scripts.
+Koha - www.koha.org, for digital library concepts.
+
+Flexpaper — flexpaper.devaldi.com, code.google.com/p/flexpaper, for pdf viewer
+
+solutions.
+Dublincore — dublincore.org, for library metadata standards.
+
+http://www.media.utah.edu/MODwiki for Digital Rights Management concepts

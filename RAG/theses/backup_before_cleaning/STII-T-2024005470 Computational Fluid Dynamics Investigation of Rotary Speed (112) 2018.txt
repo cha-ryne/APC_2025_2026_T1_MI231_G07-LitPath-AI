@@ -1,0 +1,3542 @@
+COMPUTATIONAL FLUID DYNAMICS INVESTIGATION OF ROTARY SPEED AND PARTICLE SIZE ON MUD CAKE THICKNESS FOR PLASTERING EFFECT IN CASING WHILE DRILLING OPERATIONS
+
+JAYSON DELOS REYES SANTOS
+
+Universiti Teknologi PETRONAS
+
+Master of Science in Petroleum Engineering
+
+September 2018
+
+ABSTRACT
+
+The emergence of the Casing While Drilling (CWD) for the simultaneous borehole
+drilling and installation of the casing pipe has brought into attention one of its inherent
+benefits which is the plastering effect. This effect involves the smearing of the mud cake
+and cuttings into the surrounding formation as the rotating casing pipe hits the surface of the
+borehole, thus creating an impermeable layer which prevents fluid loss. This warrants further
+investigation on parameters that affect the formation of the mud cake as it plays a crucial
+role on plastering effect. This study utilizes computational fluid dynamics (CFD)
+simulations that implements a Eulerian-Eulerian two-fluid model using ANSYS CFX-18.2
+to observe the effects of the particle size distribution (45 µm to 5000 µm) of the cuttings
+produced during casing while drilling together with the rotation speed (0 rpm to 80 rpm) of
+the casing pipe. A total of 20 simulations was made having different combinations of particle
+sizes and rotation speeds. The formation of the mud cake which is the main material
+used during plastering effect is the response that was observed from the contributions of
+different particle sizes and rotation speeds together with their interactions. It was found that
+the particle size distribution is a significant factor in the formation of the mud cake with a
+p-value of 0.048, showing that increasing particle size tends to increase the response. Results
+have shown that the 2000 µm particle size produced the highest average mud cake thickness.
+On the other hand, rotation speed was not found to be a significant contributor to the
+formation of the mud cake with a p-value of 0.134. It was also found that the interaction
+between the particle size and rotation speed was not a significant factor in the formation of
+the mud cake with a p-value of 0.945. The average mud cake thickness obtained from the simulations and the regression equation showed a spread of values within a ±5% range.
+
+CHAPTER 1
+
+INTRODUCTION
+
+1.1 Background of the Study
+
+The advancement of research and technology gave birth to new methods of drilling,
+one of which is Casing While Drilling or CWD. It is a drilling technique where drilling and
+casing the borehole are done simultaneously, thus eliminating several steps necessary to
+accomplish conventional drilling methods where drilling pipes are used, and boreholes are
+
+cased after drilling (figure 1.1).
+
+casing = |;
+drill shoe
+
+Figure 1.1: A conventional drill shoe and a casing drill shoe side by side comparison
+
+(OMV)
+
+The numerous benefits and advantages of employing Casing While Drilling
+techniques over conventional drill pipe methods are already well documented with
+numerous studies and literatures on the subject (Grijalva, et al., 2017, Meza, et al., 2017).
+One benefit is termed as the “plastering effect”, where drill cuttings ground to finer particles
+are smeared or hammered onto the borehole wall by the rotating casing. Plastering effect is
+therefore considered as a benefit directly associated with Casing While Drilling which
+contributes to wellbore strengthening and reduced fluid loss (Meza et al. 2017, Karimi,
+Ghalambor, Montgomery, & Moellendick, 2011, Kabir & Gamwo, 2011, Karimi,
+Moellendick, & Holt, 2011).
+
+Several factors were found to be directly associated with the occurrence of plastering
+effect. Numerous studies show that a certain range of Particle Size Distributions (PSD)
+found of solids suspended in drilling mud plays a vital role in plastering effect (Karimi,
+Ghalambor, Montgomery, & Moellendick, 2011). Drilling Rotational Speed was also
+mentioned to be a factor in the occurrence of plastering effect on studies made by several
+papers (Meza, et al., 2017, Kiran, Salehi, & Karimi, 2014, Karimi, Ghalambor,
+Montgomery, & Moellendick, 2011, Karimi, Petrie, Moellendick, & Holt, 2011, Karimi,
+Moellendick, & Holt, 2011).
+
+A quantitative study on the effects of rotational speed and PSD can be very complex
+because of the interactions between the numerous parameters involved. The past studies
+about this specific matter are limited to the range of inputs that the experimental setup
+affords which limits the study to what is physically available. This can be solved using
+Computational Fluid Dynamic (CFD) methods by allowing researchers to go beyond the
+physical confines of laboratory setups and be able to simulate almost every possible
+
+condition.
+
+1.2 Problem Statement
+
+Numerous studies have already been made on mud rheology, particle size
+distribution, and their effects on the formation of filter cake in relation to fluid loss and
+plastering effect. The contributions of rotary speed, particle size, and their interactions to
+the build-up of the mud cake which is necessary for plastering effect to occur, have not been
+
+studied especially in terms of computational fluid dynamics.
+
+As reported in studies made by Watts et al. and Kiran et. al, the advantages of Casing
+While Drilling are well documented however, the mechanism on how CWD and plastering
+effect results to a significant reduction in lost circulation and increased wellbore strength
+has not been studied comprehensively. These studies were designed to work towards the
+establishment of methods on how to get repeatable results, however, it could only be based
+on available field tests and was subject to physical limitations of experimental equipment.
+To be able to further investigate a wider range of values for the different parameters involved
+in CWD and plastering effect, computer simulations using Computational Fluid Dynamics
+
+should provide the necessary flexibility without requiring expensive field tests.
+
+2
+
+1.3 Objectives
+
+The objectives of this study are to investigate the significance of the particle size and
+rotation speed and to describe the relationship between these two parameters to the
+
+formation of the mud cake through the use of a regression model.
+
+1.4 Scope of the Study
+
+This study investigates the formation of the mud cake due to the rotation of the casing
+
+string and the size of the particles or cuttings created during casing while drilling.
+
+The effects of drilling mud filtration with respect to the properties of the porous
+
+media is not considered in this study.
+
+A vertical well model using one casing diameter to hole diameter ratio, one fluid
+type, concentric casing pipe rotation, with a fixed amount of solids (cuttings) is used for all
+
+simulations.
+
+1.5 Justification of the study
+
+Review of related literature highlights the absence (gap) of a detailed study of
+Plastering effect in Casing While Drilling Operations in relation with rotary speed and
+
+particle size using computational fluid dynamics.
+
+Results of this study can serve as a basis to justify investment in further studies
+
+involving laboratory or field tests.
+
+Being able to confirm the effects of varying rotary speed and particle size during
+casing while drilling operations can help maximize the advantages and benefits afforded by
+having control over plastering effect especially along problematic zones concerning heavy
+
+fluid losses.
+
+CHAPTER 2
+
+REVIEW OF RELATED LITERATURE
+
+2.1 Casing While Drilling (CWD)
+
+The use of the casing pipe instead of the traditional drilling pipe for drilling and
+casing the well simultaneously has been considered an industrial revolution in terms of
+
+technological advancement (Grijalva et al. 2017).
+
+The method was developed with the goal of reducing the number of “flat time” such
+or non-productive time and other time-consuming drilling activities. CWD involves using
+the casing string instead of a drill string using a drillable casing bit or drill shoe (figure 2.1),
+which is then left in the hole upon reaching the target depth. This eliminates the need to trip
+out of the hole and a separate trip in for the installation of the casing which ultimately saves
+companies time and money, especially with offshore rigs (Karimi, Moellendick, & Holt,
+2011, Guna, Won, & Tan, 2008).
+
+According to Grijalva et al., Casing While Drilling can be classified according to
+type of casing string and type of drilling method used. The first group classifies CWD as
+either Rotating Casing string which uses a top drive, and a non-rotating string which uses a
+downhole motor (figure 2.2).
+
+Figure 2.1: 4-bladed 13 %-inch x 17-inch Drill shoe (Guna et al. 2008)
+
+Non-Rotating _
+String
+
+Rotating Casing
+String
+
+(Top Drive) (Downhole Motor);
+
+Figure 2.2: Casing Drilling Classification according to casing point of view (Grijalva et al.,
+2017)
+
+Another way of classifying CWD methods is by the type or method of drilling
+process used (figure 2.3). The first group is by use of the rotary method where the casing
+string itself is being rotated to drill. The next group is by drill-in method where the casing
+string is being displaced by a mud motor. The last group is under the liner drilling method
+
+which can be considered as a precursor to CWD.
+
+Rotary Method :
+Drill-In method Liner Drilling
+
+(Casing is rotated)
+
+Figure 2.3: Casing Drilling Classification according to drilling process (Grijalva et al.,
+2017)
+
+2.1.1 Advantages of CWD
+
+The momentum gained by research and development of CWD technology can
+primarily be attributed to the inherent advantages and benefits afforded by its use. As listed
+
+and discussed in a paper by Grijalva et al. (2017), the following are found to be advantages
+
+given by using CWD:
+
+° Total drilling times are reduced by minimizing the time spent in connecting
+tubular strings and removes the need for tripping the drill string in and out of the
+hole.
+
+° Protects the wellbore geometry from consequences of unstable zones and
+mitigate total mud losses downhole.
+
+° Reduces risks naturally associated with tripping out the drill string from the
+
+wellbore such as “swabbing effect” since the casing is already set as drilling is being
+
+done.
+e CWD are recommended to be used on the following situations (Buntoro et
+al., 2008):
+
+o Shallow gas
+o Formation unstabilities
+o Abnormal pressure zones
+o Risk of formation swelling
+e Removes the possibility of using remedial tubulars which ultimately reduces
+
+overall costs (Maggi et al., 2006)
+
+Studies also show that during CWD, the plastering or smearing action produces an
+impermeable mud cake which contributes to the ability of the formation to resist the inflow
+of drilling fluids, therefore, wellbore strengthening. This provides a wider operational mud
+weight window through the increase in formation fracture gradient produced by the
+strengthened wellbore. (Ezeakacha, Salehi, Ghalambor, & Karimi, 2016, Karimi,
+Ghalambor, Montgomery, & Moellendick, 2011, Karimi, Moellendick, & Holt, 2011,
+Karimi, Petrie, Moellendick, & Holt, 2011)
+
+2.2 The Plastering or Smearing Effect
+
+During the Casing while drilling process, the suspended solids such as
+
+drilling mud particles and cuttings are forced to adhere to the wellbore well through the
+
+rotation of the casing during drilling, thus the term “smearing effect” (figure 2.4). This effect
+also contributes to better wellbore stability and strength. During this process, the fine
+particles produced from drilling the formation can plug the pore spaces along weak and
+unstable formations. This makes Casing While Drilling methods very uscful in deep water
+projects where both control of drilling time and unwanted drilling problems such as lost
+
+circulation is critical (Meza et al., 2017).
+
+Casing contact
+grinds cuttings »
+
+Plastering Effect
+
+Figure 2.4: Graphical representation of plastering effect (Weatherford)
+
+In Casing While Drilling, the annulus is smaller due to the larger diameter casing
+pipes used, as compared to conventional drill pipes. As the casing rotates, it grinds and
+pulverizes the cuttings travelling up the annulus which produces the finer-sized cuttings
+produced. These cuttings are then smeared onto the wellbore wall which creates a low
+permeability mud cake that significantly if not totally prevent fluid loss especially across
+
+high permeability formations (Karimi et al., 2011).
+
+Watts et al. (2010) considers the effect as either the plastering or smearing of the
+drill cuttings onto the wellbore wall or the consequential increase in wellbore hoop stress as
+cracks are filled with particles during the CWD process. This in turn increases the effective
+fracture gradient. Field data shows that CWD is responsible for stopping fluid loss that are
+usually an expected occurrence across formations with natural fractures having an average
+
+radial aperture of 1.0 mm.
+
+As plastering effect is associated with wellbore strengthening, the use of contingency
+casing strings could possibly be avoided and that fewer casing strings will be necessary for
+
+mature fields, thus lowering the costs (Watts et al., 2010).
+
+2.3 Plastering effect Parameters
+
+Several parameters that serve as the focus of the study are as follows:
+
+2.3.1 Rotary Speed
+
+A study was made by Askew et al. (2011) on surface hole Casing While Drilling
+activities in Gabon, West Africa, highlighting numerous observations made on the field ina
+five-year span. The study was aimed to consolidate all the data acquired and be able to come
+up with specific adjustments and improvements on the benefits afforded by employing
+CWD.
+
+Despite using CWD, there still has been some degree of mud losses observed on 63%
+of the 50 wells drilled, 48% of which are total losses. It was also observed that CWD is
+associated with low values on flow rates, bit HS] and casing RPM, while annular velocities
+exhibited high values.
+
+The study included a summary of the drilling parameters as observed during the five-
+year study period where it can be highlighted that the range of rotation speed used was 40
+
+to 90 rev/min as shown in the table 2.1:
+
+Table 2.1: Drilling Parameter ranges by hole size (Askew et al. 2011)
+
+Bit size TFA Bit SPP Flow RPM WOB Torque MW
+(in) (in?) HSI (psi) Rate (klbsf) = (kft- (ppg)
+(hp/in’) (gpm) Ibs)
+
+12-1/4 0.99 0.003— Oto 174 92 to 40 to 85 2to28 0.2 to 9.2 9.0 to
+0.092 277 10.1
+
+12-3/4 0.99 0.008 — 0 to 435 132 to 40 to 90 2 to 18 2.6 to 8.3 to
+0.356 520 10.3 10.8
+
+16 0.66 to 0.008 0 to 349 208 to 40 to 80 0 to 35 0.4 to 8.6 to
+1.49 0.508 396 10.7 10.1
+
+17-1/2 1.04 to 0.005 — 0 to 200 208 to 40 to 80 2 to 25 0.2 to 8.3 to
+1.84 0.046 300 10.1 8.9
+
+
+Askew et al. observed that the TFA in all CWD bit designs were large (0.99 to 1.84
+in) and was coupled with lower flow rates as compared to conventional drilling. therefore
+giving low bit HSI which was on the range of 0.003 to 0.508 hp/in’. Stand Pipe Pressure
+were consistently low which can be attributed to the large drilling casing used in CWD. The
+smaller annular clearance afforded by CWD also enables the use of low flow rates for hole
+cleaning to minimize borehole washouts. Low RPM’s in the range of 40 to 90 have been
+used to limit equipment fatigue. Both WOB and Drilling Torque are based on recommended
+values depending on the equipment used, while the mud used on the wells are basic water-
+based mud mixed with bentonite/polymer since total mud losses were anticipated. A study
+published by Te Gussinklo, Hepp, Swart, & Wingate in 2010 supports the rpm range of 40
+to 80 as it was used to achieve successful CWD application results in a vertical exploration
+
+well located onshore in the Netherlands.
+
+Other relevant studies (Meza et al. 2017, Karimi et al. 2011) reports that drilling mud
+thickens as casing revolutions increases and translates into a thicker mud cake due to an
+increase in cutting volumes fraction. It is also mentioned that high rotational speeds have
+the potential to damage the mud cake and therefore it is advisable to maintain lower speeds
+to avoid such event from occurring. Salehi, Aladsani, Shahri, Karimi, & Ezeakacha in 2013
+also agrees with this finding as they gave observed using CFD simulations that the pipe
+rotation especially above 80 RPMs affected the pressure drop negatively for multipe CWD
+pipe diameter ratios and concluded that reducing pipe rotation can enhance the drilling
+
+performance.
+
+The experiment done by Meza et al. (2017) utilized a test station with an artificial
+borehole capable of performing both conventional drilling and casing while drilling
+methods, with the objective of simulating and investigating mud smearing and plastering
+effects. Most of the parameters and specifications were set and chosen to simulate those
+commonly used in the field, with the said test operating on pipe rotation set at 46 rpm. The
+study concluded having been produced a testing assembly which allows future studies that
+
+take into account various RPM speeds.
+
+2.3.2 Particle Size Distribution (PSD)
+
+Plastering effect is said to involve the casing drilling process itself as a main
+mechanism in producing drill cuttings by grinding, producing a large particle size
+distribution profile (PSD) as compared to the ones observed in conventional drilling. The
+fine sized cuttings are then adhered to the wellbore, creating a high quality, thin, low
+permeability mud cake on the wellbore wall. It was also observed that cement forms a good
+bond to the mud cake made this way (Karimi et al., 2011). Salehi et al. (2013) also showed
+that mud PSD together with the cuttings are crucial to increase the potential of the plastering
+
+effect including that of wellbore strengthening through plugging of wellbore fractures.
+
+On a paper authored by Watts et al. (2010), they studied the Particle Size Distribution
+to be able to determine necessary mud additives during CWD operations in the hopes of
+getting the plastering effect results in a consistent and repeatable manner. They observed
+that in the addition of particles to the mud to achieve a desired PSD, the expected fluid losses
+along natural fractures were stopped during CWD in the Piceance Basin of Colorado. The
+study concluded that the best results were produced using a wide PSD of LCM between 100
+and 2000 microns, but other PSDs may be necessary depending on many factors such as the
+mud system, size of drill cuttings produced, and the fracture morphology. As observed, the
+authors are led to believe that a wide PSD is not needed to achieve wellbore strengthening
+and claims that it may even be less effective in some cases. Karimi et al. (2011) confirms
+this observation on a separate study focused on pipe size diameter and its role in plastering
+effect during CWD. Watts et al. have concluded that based on previous wellbore
+
+strengthening methods, courser particles for LCM generated optimal results.
+
+Several papers published their observations regarding CWD and the role of
+plastering effect in the solution of loss circulation problems. Lopez et al. (2010) in the Cira
+Infantas field of Colombia, Dawson et al. (2010) in Angsi field in Malaysia, Gallardo et al.
+(2010) in the Cashiriari field in the Peruvian jungle, and Beaumont et al. (2010) in the
+Peruvian fields, claim that evidence suggests that the fine cuttings produced during drilling
+played a key role in producing the plastering effect and/or that the effect gave the
+problematic areas much needed wellbore strengthening to combat fluid losses. Another
+paper made by Vos et al. (2013) also reported the benefits of the small cuttings produced by
+
+drilling using CWD, claiming that these cuttings serve as a good coarse LCM. However, no
+
+10
+
+clear conclusion could be made on the exact mechanics regarding the degree of contribution
+
+to the observed plastering effect.
+
+2.3.3 Annular Clearance
+
+Watts et al. (2010) stated on their paper that annular clearance was apparently a key
+factor to the successful utilization of plastering effects in CWD operations and mentioned
+that the same observation was at that time still not fully understood. This was based on a
+field trial using CWD in the Alaskan Tarn Field where an open hole leak off resistance was
+said to have been improved by as much as 3.0 ppg with the use of 7-inch casing. Four wells
+were then drilled in the Kaparuk field and another four in the Tam field of North Alaska
+based on the success of the field trial. The results show that wellbore strengthening was
+significant on the wells using 7 and 7.625-inch casings but not on the wells with 5.5-inch
+
+casings.
+The casing to hole diameter ratios of the drilled wells are compared as follows:
+
+Table 2.2: Casing to hole diameter ratio comparison of drilled wells (Watts et al. 2010)
+
+Wells Casing to hole diameter ratio
+Piceance 0.86
+
+Tam test well and second Kuparuk 0.80
+
+well
+First Kuparuk well 0.77
+Third and fourth wells (Tarn) 0.73
+
+With the third and fourth wells having the smallest casing to hole ratio, Leak Off
+Tests showed that both wells failed to produce the same level of improvements in terms of
+wellbore strength as compared to the other wells with higher casing to hole diameter ratios
+despite using the same rotary speeds, mud type, and LCM. Apparently, Wellbore geometry
+is seen to be a significant factor in achieving the desired plastering effect. The authors
+concluded that using casing to hole diameter ratios below 0.8 produced less results in terms
+
+of wellbore strengthening. Figure 2.5 illustrates the difference between the casing diameter-
+
+11
+
+to-hole size ratio of conventional drilling methods (left) and casing while drilling methods
+(right).
+
+/Hole Size [Hole Size
+
+0.4 Ratio 0.8 Ratio
+
+Figure 2.5: Illustration of casing diameter to hole size ratio (OMV)
+
+Karimi et al. (2011) also published a paper focused on the contribution of pipe size
+to plastering effect during Casing While Drilling. The study confirms that the casing to hole
+diameter ratio can be considered a primary factor for the occurrence of plastering effect, and
+that the successful application of the plastering effect is observed with ratios in the range of
+0.75 to 0.9 as summarized in table 2.3.
+
+Table 2.3: Summary of successful field plastering effect applications (Karimi,
+Moellendick, & Holt, 2011)
+
+‘Fontenot, 2004
+
+Lopez, 2010 7 8 3/4 0.80
+Dawson, 2010 13 3/8 17 1/2 0.76
+Gallardo, 2010 20 24 0.83
+9 5/8 12 1/4 0.79
+
+18 5/8 22 0.85
+
+Beaumont, 2010 13 3/8 17 1/2 0.76
+9 5/8 12 1/4 0.79
+
+Watts, 2010 75/8 97/8 0.77
+| 8 1/2 0.82
+
+7 5/8 8 7/8 0.86
+
+Sanchez, 2010 13 3/8 17 1/2 0.76
+
+12
+
+18 5/8 22 0.85
+Rosenberg, 2010 7 8 1/2 0.82
+Torsvoll, 2010 7 8 1/2 0.82
+9 5/8 12 1/4 0.79
+Kunning 9 5/8 10 5/8 0.91
+2.3.4 Mud Rheology
+
+A research paper published by Kabir & Gamwo on 2011 studied filter cake formation
+on a vertical well under high pressure and temperature using computational fluid dynamics
+modeling. The objective of the study to help develop solutions to overly high drilling fluid
+losses into the formation and help optimize the formation of the mud cake through the
+
+development of simulations.
+
+The research method treated the drilling fluid as a two-phase system consisting of
+the solid particles suspended in a non-Newtonian fluid (Power Law fluid properties) with
+
+the following conditions:
+
+e Liquid density: 999 kg/m?
+e Consistency (k): 0.1238 Pa:s"
+
+e Power-law index: 0.67
+
+A related research paper by Fisher, Wakeman, Chiu, & Meuric in 2000 used the
+
+same consistency and power-law index values to simulate non-Newtonian muds.
+
+2.3.5 Mud Cake Thickness
+
+Mud cake is formed after the drilling mud enters a porous and permeable formation
+with contributions from many other factors. As the drilling mud flows through the rock, the
+
+liquid phase (continuous phase) passes through and the mud additives along with the
+
+13
+
+suspended solids created by the drill bit or casing bit gets “filtered” out and left on the surface
+of the borehole wall. This forms a layer of solid particles hence; the thickness of the formed
+
+filter cake can show how much fluid is lost in the formation.
+
+A recent study (Meza et al. 2017) shows that conventional drilling samples formed
+a relatively thicker layer of mud cake on the borehole wall (Figure 2.6) as compared to a
+thinner mud cake observed on CWD drilled samples (Figure 2.7). The study also illustrates
+the effect of “smearing” as the casing compresses and forces the mud cake into the formation
+as it hits the borehole wall, clogging the pore spaces with cutting materials and mud
+
+particles. This in turn forms a low permeability layer that produces the plastering effect.
+
+Figure 2.6: Cross section of test borehole using conventional drilling showing (A) top
+view, (B) side view. (Meza et al. 2017)
+
+Figure 2.7: Cross section of test borehole using CWD showing (A) top view, (B) side
+view. (Meza et al. 2017)
+
+14
+
+Karimi, Petrie, Moellendick, & Holt (2011) also reported in their study that the
+casing while drilling methid produces a thin, low-permeability, and low-porosity filter
+
+cake which prevents drilling fluid loss as shown in Figure 2.8.
+
+Conventional Drilling
+
+Reservoir
+
+Casing Drilling
+
+Figure 2.8: Comparison of the filter cake formed from conventional drilling and casing
+drilling (Karimi, Moellendick, & Holt, 2011)
+
+2.4 Computational Fluid Dynamics
+
+Numerous studies on modelling solid-liquid flow in annular geometries have
+
+achieved accurate results using CFD methods while following their respective objectives.
+
+These studies highlight the advantages of using CFD techniques in the flexibility of the
+
+model in using an almost unlimited range of values to test cases and scenarios.
+
+In the various studies, a 3D model of a pipe, annulus, boundaries, fluids, and solid
+
+particles were simulated with the following general components and governing equations:
+
+15
+
+. Multiphase flow solution— a multiphase flow with dispersed solid particles is
+required to be able to compute and simulate the parameters being studied. Either a
+Lagrangian approach where each particle is observed and studied, or a Eulerian
+approach where a velocity/property field is used to study a large number of particles
+at once, can be taken for CFD solutions. Hence the Inhomogeneous (Eulerian-
+Eulerian or two-fluid) model is chosen because it can model the required high solid
+volume fractions, solid particle to particle interactions, and turbulence needed for the
+study. It is important to note however that complex closure relationships are required
+due to this selection. (Ofei 2016, Ofei & Ismail 2016, Ofei, Irawan, & Pao, 2014,
+Kabir & Gamwo, 2011)
+
+Continuity Equations — a governing equation is required for the simulation and
+solution of computational fluid dynamics for fluid and solid particle mass. The
+Navier-Stokes continuity equations, in the solids fractions form, with the assumption
+of having an isothermal flow condition for both the solid and fluid phase continuity
+equations are used for the simulation. (Ofei 2016, Ofei & Ismail 2016, Ofei, Irawan,
+& Pao 2014, Zhu et al. 2013)
+
+. Momentum Equations — forces acting on both solid and liquid phases are modeled
+using the Navier-Stokes momentum equations which models the interphase
+momentum transfer for the interaction between each phase are needed for the study.
+(Ofei 2016, Ofei & Ismail 2016, Ofei, Irawan, & Pao 2014, Zhu et al. 2013)
+
+. Interphase Drag Force Model — the drag force calculations should be modeled using
+the Wen and Yu drag coefficient model if the solid volume fraction of densely
+distributed solid particles is less than 0.2, and the Gidaspow drag model is used if
+the solid volume fraction is greater than 0.2. (Ofei 2016, Ofei & Ismail 2016, Ofei,
+Irawan, & Pao 2014)
+
+. Interphase Gravity (Lift Force) Model — the Saffman and Mei lift force model is used
+
+for spherical solid particles (Ofei 2016, Ofei & Ismail 2016, Ofei, Irawan, & Pao,
+2014)
+
+16
+
+6. Turbulence in multiphase flow — Calculations of turbulent flow uses the standard k-
+£ model due to its robustness and reasonable accuracy for a wide range of cases. It
+was found out however that separation prediction on non-equilibrium boundary
+layers are not predicted accurately. The SST turbulence model which is available in
+ANSYS-CFX can effectively be used for non-equilibrium turbulent boundary layer
+applications. The SST approach used in CFX also enables the use of relatively lower
+
+grid resolutions due to the near-wall treatment of equations (ANSYS, 2004).
+
+The turbulent flow is modeled using the Shear Stress Transport (SST) model
+which is found to be accurate and comprehensively applicable for applications
+requiring advanced near-wall treatments even for grids with reduced near-wall
+spacing. The model is based on transport equation to estimate turbulent length and
+velocity scale coming from turbulent energy () and the frequency (w) and has been
+studied in many cases. (ANSYS 2004, Bardina, Huang, & Coakley 1997, Menter
+1993)
+
+7. CFD Numerical Solution — The required governing equations for the CFD modeling
+and simulations were solved using packages included in commercial CFD software.
+FLUENT CFD was used by Kabir & Gamwo (2011), and Zhu, Sun, & Tong (2012),
+while ANSYS CFD was used by Ofei (2016), Ofei & Ismail (2016), and Ofei,
+Irawan, & Pao (2014).
+
+Time discretisation was done using first-order implicit method, while conservation
+law equations were solved using second-order implicit methods. Algorithms were
+used to solve pressure-velocity coupling for the momentum equations. For the
+convective terms, a high resolution discretisation scheme was used. The simulation
+used a constant time-step of 0.001 seconds to run for a total time of 20 seconds.
+Convergence of the solution was assumed for a root mean square (RMS) of the
+normalized residual error of 1.07 (Ofei 2016, Ofei & Ismail 2016, Ofei, Irawan, &
+Pao, 2014).
+
+8. Model Geometry - In 2011, Kabir & Gamwo published a paper entitled: “Filter cake
+formation in the vertical well at high temperature and high pressure: Computational
+fluid dynamics modeling and simulations”. The main objective of the paper was to
+
+optimize the formation of the filter cake to help reduce large losses of drilling mud
+
+17
+
+into the formation. This was done by simulating the conventional drilling method
+using a 2D model under high and moderate temperatures and pressures. The 2D
+
+models used in the study are shown on the following figures:
+
+Multiphase Drilling Fluid
+Cwculation
+
+Fitter Cake
+
+MH 4
+t
+. Well Formation
+Filter Cake ' Filter Cake
+‘ Drilling Pipe
+1
+'
+Porous Rock Formation \ Porous Rock Formation
+Rock Cuttings/Debris
+
+Figure 2.9: Schematic Diagram - Drilling Fluid Circulation in the Drilling Zone as used by
+Kabir & Gamwo (2011)
+
+Porous media Outkt Inlet. Outlet aaa
+
+Inlet rock debris. —_
+
+tat
+
+A B
+
+Figure 2.10: 2D Wellbore Model as used by Kabir & Gamwo (2011) where (A) is the full
+wellbore model and (B) is the half wellbore model
+
+18
+
+9. Initial conditions, fluid/formation properties — The modeled borehole wall was given
+ano-slip condition for passing liquids, and a free slip condition was imposed for the
+surface of the particles (Ofei 2016, Ofei & Ismail 2016, Ofei, Irawan, & Pao, 2014).
+A set of conditions and properties were utilized for the simulation (Kabir & Gamwo,
+
+2011):
+
+Table 2.4: Values for the initial conditions with fluid and formation properties (Kabir
+
+& Gamwo, 2011)
+: Parameter Values
+Inlet pressure (drilling fluid/top), MPa 13.8
+Pressure (bottom), MPa 13.8
+Outlet pressure, MPa 10.3
+Formation Pressure (porous media), MPa 10.3
+Particle size, um 45
+Formation porosity 0.2
+Temperature, °C 30
+Solids fraction (drilling fluid/top) 0.2
+Solids fraction (rock/bottom) 0.8
+Particle density, kg/m? 2350
+Fluid density, kg/m? 999
+
+2.5 Summary of Parameters
+
+With the support of the literature review, the following table summarizes all the
+
+parameters and concepts necessary to achieve the objective of this study along with the
+common values used in papers:
+
+19
+
+Table 2.5: CFD Governing Equations and Models with the Supporting Literature
+
+Two-Fluid Model Solution
+
+Continuity Equations
+
+Momentum Equations
+
+Interphase Drag Force
+Model
+
+Gravity (Lift Force) Model
+
+Turbulence Model
+
+Eulerian-Eulerian model
+
+Navier-Stokes continuity
+equations (solids fractions
+
+form)
+
+Navier-Stokes momentum
+equations (momentum
+balance of solids and
+liquids form)
+
+Gidaspow
+
+Saffman and Mei lift force
+
+model
+
+Shear Stress Transport
+
+Ofei 2016
+Ofei & Ismail 2016
+Ofei, Irawan, & Pao, 2014,
+Kabir & Gamwo, 2011
+Ofei 2016
+Ofei & Ismail 2016
+Ofei, Irawan, & Pao 2014,
+Zhu et al. 2013
+Ofei 2016 Ofei & Ismail
+2016, Ofei, Irawan, & Pao
+2014, Zhu et al. 2013
+
+Ofei 2016
+Ofei & Ismail 2016
+Ofei, Irawan, & Pao 2014
+Ofei 2016
+Ofei & Ismail 2016
+Ofei, Irawan, & Pao 2014
+ANSYS, 2004
+Bardina, Huang, & Coakley
+1997
+
+Menter, 1993
+
+Table 2.6: Summary of Parameters and Common Values with Supporting Literature
+
+Rotary Speed
+
+40 — 80 rev/min
+
+20
+
+Meza, et al., 2017
+Kiran, Salehi, & Karimi,
+
+2014
+
+
+Particle Size Distribution
+
+Annular Clearance
+
+Mud Rheology
+
+Initial conditions
+
+Salehi, Aladsani, Shahri,
+Karimi, & Ezeakacha, 201 i
+Askew, Phillips, &
+Wongate, 2011
+100 microns — 2000 Karimi, Ghalambor,
+microns Montgomery, &
+Moellendick, 2011
+0.8 average casing diameter Karimi et al. 2011
+to borehole diameter ratio Watts et al. 2010
+Non-Newtonian (power law Kabir & Gamwo, 2011
+
+properties) Fisher, Wakeman, Chiu, &
+Meuric, 2000
+See table 2.4 Kabir & Gamwo, 2011
+
+21
+
+CHAPTER 3
+
+METHODOLOGY
+
+3.1 Method
+
+ANSYS-CFx 18.2 student version software was utilized for the Computational Fluid
+Dynamics of the project. As the model involves the flow of two phases where the solid phase
+is suspended in the liquid phase, the inhomogeneous model, also known as the Eulerian-
+Eulerian model is employed as available in ANSYS-CFx. The model is known to be able to
+handle high solid volume fractions with turbulence calculations and particle to particle
+interaction, so it is preferred over the Lagrangian Particle Tracking model as mentioned from
+
+the previous chapter.
+
+The simulation should be able to incorporate the following requirements to generate
+
+the intended results:
+
+e Governing equations
+a. continuity equations
+b. momentum equations
+e Other closure models
+a. interphase drag force model
+b. lift force model
+c. turbulence model
+e boundary and initial conditions
+
+e geometry and mesh model
+
+The proceeding sections provides more details regarding these requirements.
+
+3.1.1 Governing Equations
+
+The following governing equations are set with a solid-liquid flow with the
+assumption of both isothermal, laminar, and at transient state:
+
+22
+
+3.1.1.1 Continuity Equations
+
+The Navier-Stokes models for the solid and liquid phases, having transient, constant
+temperature, solid-resist, and capacity-medianed conditions, volume-averaged, and where
+
+mass exchange between two phases under combustion reaction are neglected are given:
+
+2 (hg) + V(hgUs) = 0 (3.1)
+0
+5g uw) + V(h,U;) = 0 (3.2)
+Where:
+
+h, = solid volume fraction
+
+h, = liquid volume fraction
+
+U, = solid velocity vector
+
+U, = liquid velocity vector
+
+3.1.1.2 Momentum Equations
+
+Setting both solid and liquid phases under equilibrium conditions, thus in balance of
+momentum or impetus equilibrium, we have the interphase momentum connecting both
+
+phases as shown by the Navier-Stoke Models in the following forms:
+
+psh,[S8+ U, VU] = —h.Vp + h.V-t) ++ — VP; + hspsg + M (3.3)
+au; =
+pak, |<! + Uy WU;] = —kiVp + kV t+ kipig + M (3.4)
+
+For the shear stress tensors of the solid and the liquid phase, are given respectively:
+T= (CB + 5Us)I + ms {IVY + (VU,)"] 2 (V- Us)I} (3.5)
+
+1 = MV, + (VU,)"] -2(V- U,)I (3.6)
+
+23
+
+Where:
+
+g = acceleration due to gravity
+
+p = thermodynamic pressure
+
+ay = liquid density
+
+Ds = solid density
+
+M = total interfacial force (with drag and lift)
+
+Ts = shear stress tensor for solid phase
+
+Ty = shear stress tensor for liquid phase
+
+Us = shear viscosity of solid phase
+
+My = shear viscosity of liquid phase
+
+Gs = bulk viscosity of solid phase with granular particle resistance
+
+Given that the bulk viscosity of the solid phase takes into consideration the
+resistance of the particle grains against compression and expansion we have:
+
+4, (3)
+fs = 3 hsPsdpGo(1 +e) = (3.7)
+
+The pressure of the solid phase pressure P, represents the normal force acting
+
+between the solid particles as shown by:
+
+P, = psh,O, + 2h2p;0,(1 +)9o (3.8)
+
+Where p,h,O, represents particle velocity inclusive of fluctuations, and
+
+2h2p,©,(1 + €)go represents the collisions the solid particles experience.
+
+We also have the total shear viscosity of the solid phase 1, coming from both kinetic
+and collisional factors shown by:
+Us = Usckin) + Us(col) (3.9)
+
+Where:
+
+Sv _ Psdp
+
+i = 3.10
+Us(kin) = “48 wel + ate, [+4 + ue + e)Gohs | vo ( )
+
+24
+
+4 0
+Hs(col) = = NSPsdpGo(1 + of (3.11)
+
+3.1.2 Interphase Models
+
+3.1.2.1 Drag Force Model
+
+Drag force model for spherical particles:
+
+3Cp
+
+Ma = qp-
+
+k,p,|Us — U,|(Us — U;) (3.12)
+
+It is noted that the Wen and Yu drag coefficient, Cp is used when the volume fraction
+
+(cuttings fraction) k, is less than 0.2.
+
+The following equation is then selected in the ANSYS-CFx Software which takes
+
+into consideration a limiting factor in the inertial regime:
+
+24
+Cy = kz**Smax|—— (1 + 0.15Nj25°”) 0.44 (3.13)
+Nrey “
+where:
+Nrey = kiNrey (3.14)
+and
+d,
+Ney = pulUs ~ Usl = (3.15)
+1
+
+As for the case of high solid volume fraction k, greater than 0.2, the drag model
+
+would then be the Gidaspow drag equation as shown:
+
+- 150(1 — ky)? my + 7 (1 — ky) pilU, — UI (3.16)
+
+M.
+a ky d2 4 d,
+
+25
+
+3.1.2.2 Gravity (Lift Force) Model
+
+Spherical solid particles are subject to gravitational forces thus, the Saffman and Mei
+
+model is chosen to represent the interaction in the ANSYS-CFx as given below:
+
+3 v
+= 3 ve Ci hsp,(U, — U,)(V x U, + 20) (3.17)
+2nd, J|V x U,|
+
+Where:
+Ci = 6.64 if 0 < Nrep < Nre, <1
+For different values of Nre,» the following equations are then used:
+
+For Nrep < 40
+
+Ci = 6.46: f (Nee, Nrew ) (3.18)
+
+For 40 < Ne, < 100
+
+1
+Ch = 6.46 - 0.0524 - (BNpe,) (3.19)
+Where
+2
+Nne, = Cees (3.20)
+My
+
+@, = |Vx Uj (3.21)
+
+f (Nrep» rey ) = (1— 0.331489) « e~°NFep + 0.331489 (3.22)
+p=05 (Fe) (3.23)
+
+Nrey
+
+3.1.2.3 Turbulence Model
+
+The Shear Stress Transport (SST) turbulence model which is based on the Baseline
+
+(BSL) k- model. The following set of equations are then presented:
+
+26
+
+e Ul
+Ont a (Ujk) = alc +e) Se | + Pe Bioko + Pao (3.23)
+
+1 Ok do
+ow 2W Ox; Ox;
+
+— B3pw? +
+
+(3.24)
+
+90) | #) aw
+ry oF (pUjw) == Z|+ -)32]4- F,)2p —
+
+Pup
+
+The model has coefficients that are a linear combination of the corresponding
+
+coefficients of the model below:
+
+©, = F,0,+ (1-F,)®, (3.25)
+Where:
+
+B’ = 0.09
+a, = 5/9
+
+Bi = 0.075
+On, =1.176
+Oy1 =2.0
+
+a2 = 0.44
+Bz = 0.0828
+Onn =1.0
+Our. = 1/0.856
+
+The proper transport behavior to account for the transport of the turbulent shear stress can
+
+be calculated using a limiter to the eddy-viscosity as shown by the equation below:
+
+a,k
+= ———__. 3.26
+vt * Tax(a,, SF) (3.26)
+Where
+= ue/p (3.27)
+
+27
+
+The term F> is a function that restricts the limiter to the wall boundary and S is a
+
+strain rate invariant measure. We also note that the production in terms of « is given by:
+
+P, = a) Py (3.28)
+
+3.1.3 Mesh Geometry and Model
+
+A three-dimensional model using ANSYS Workbench Design Modeler is created
+with concentric vertical circular pipes with the casing having three nozzles at the bottom is
+
+created using to represent a CWD bottom hole environment with the following dimensions:
+
+Table 3.1: Dimensions of the Model Geometry
+
+Model height (borehole) 1000 mm
+Casing length 810 mm
+Borehole diameter 400 mm
+Casing pipe outer diameter 320 mm
+Casing shoe (bit) nozzle diameter 40 mm
+Casing shoe (bit) nozzle height 50 mm
+
+The following equation is utilized to compute the hydrodynamic entrance length to
+
+make sure that the model will simulate a fully developed flow:
+a
+L, = 4.4 X Nr x Dn (3.29)
+
+Where:
+Lh = length of hydrodynamic entrance
+Nee = Reynold’s number
+
+Dn = Hydraulic diameter
+
+28
+
+The dimensions of the 3D model are illustrated by figures 3.1-4:
+
+|
+Nozzles |
+
+Figure 3.1: Isometric view and basic components of the 3D model
+
+Borehole wall
+
+Casing pipe wall
+
+Figure 3.2: Top view of the 3D model
+
+29
+
+Ansys
+R18.2
+
+| Academic
+
+|
+Ei
+|
+
+e
+0.00 400,00 (mm) ae x
+—k—=
+
+200.00
+
+Figure 3.3 Profile, inlet and outlet components of the 3D model
+
+ANSYS
+
+R18.2
+Academic
+
+Figure 3.4: Isometric view with inlet and outlet
+
+30
+
+Grid cells for the vertical pipe 3D geometry used an unstructured tetrahedral mesh,
+with the boundaries of the pipe having inflation layers. The design also allows further
+adjustment and refinement of the number of elements until a desired undisturbed outcome
+is established based on a grid independence study. This is done using steady state
+simulations with 300 timesteps where the average pressure drop is taken for different
+numbers of elements. The figures from the grid independence study is presented in table 3.2
+
+and is shown graphically in figure 3.1.
+
+Table 3.2: Grid independence study pressure loss vs number of elements
+
+9.20 164,472 1.60e-02
+11.08 177,159 1.55e-02
+9.45 190,346 1.50e-02
+9.56 209,131 1.45e-02
+9.60 231,363 1.40e-02
+
+Average pressure loss vs number of elements
+
+12
+
+Body/Element
+_ 1s Size (m)
+N
+5 14
+N
+G Re A 1.60e-02
+— 1.55e-02
+e010
+% @ 1.50e-02
+© 95
+2 1.45e-02
+Seg) .
+o
+1.40e-02
+8.5 "
+8 a — — dees el -_
+1.50E+05 1.70E+05 1.90€+05 2.10E+05 2.30£+05 2.50E+05
+
+Number of elements
+
+Figure 3.5: Graph of average pressure loss vs number of elements
+
+31
+
+Based on the grid independence study, the optimum number of elements is at
+190,346 (figure 3.5) where any increase would not result to significant changes in average
+pressure loss. The mesh geometry is then constructed using 190,346 elements as shown in
+
+figure 3.6.
+
+ANSYS
+
+R18.2
+
+Academic
+
+0.100 (m)
+
+=)
+oo 0.300 (m) pS ae
+=) uv x
+
+Figure 3.6: Mesh geometry of the 3D model
+
+3.1.4 Initial and Boundary Conditions
+
+The following set of initial and boundary conditions are used for the simulations as
+
+based on reviewed literature:
+
+Table 3.3: Initial and boundary conditions
+
+Drilling Fluid Properties
+Fluid density, kg/m? 999
+
+Non-Newtonian viscosity model Otswald de Waele
+
+Viscosity consistency 0.1238 Pa:s
+
+32
+
+Power law index 0.1
+Particles (Cuttings) Properties
+Particle density, kg/m? 350
+Particle sizes, 4m 4, 1000, 200, 5000
+Slip condition Free-slip
+
+Cuttings bed properties (input as custom expressions in CF'X)
+
+Bed porosity 0.2
+Initial cuttings bed height, mm 10
+Max packing 1-bed porosity
+Volume Fraction (VFrac) Max
+
+packing* step((Initialbedheight-
+
+y)/Imm)
+Fluid domain
+Fluid turbulence model Shear Stress Transport
+Drag force model Gidaspow
+Non-drag force model Saffman Mei
+Restitution coefficient 0.9
+Initial fluid velocity, m/s? 0
+Initial cuttings velocity, m/s? 0
+Initial fluid volume fraction 1-VFrac
+Initial cuttings volume fraction VFrac
+Inlet Boundary Conditions
+Boundary type Inlet
+Inlet velocity, m/s* 16.69
+Initial cutting volume fraction 0
+Initial fluid volume fraction 1
+Outlet Boundary Conditions
+Boundary type Outlet
+Outlet pressure, Pa 0
+Initial cutting volume fraction 1
+Initial fluid volume fraction 0
+Rotating Casing Pipe
+Boundary type wall
+
+33
+
+
+Frame type rotating
+Angular velocity, rpm 0, 20, 40, 60, 80
+
+Wall roughness Smooth wall
+
+Wellbore (wall surface)
+
+Boundary type wall
+
+Slip condition No-slip wall
+
+Wall roughness** 45 microns
+
+*inlet velocity is calculated given: Fluids rate (q) = 1000gal/min At = 5.8432in?
+
+_ 0.32qgal/min _ (0.32)1000gal/min _ 54.7645ft
+SS ES
+sec
+
+in? = = 16.69 m/sec
+rin 5.8432in
+
+**wall roughness is set as rock with ~25% porosity, converted to roughness using the
+
+Correlation between roughness and porosity in rocks by Robello, Hogert, Albano, Raffo, &
+Gaggioli.
+
+Porosity (%)
+
+10 15 20 25 30 35 40 45 50 35
+Roughness (jm)
+
+Figure 3.7 Correlation between roughness and porosity (Robello, Hogert, Albano, Raffo,
+& Gaggioli, 1996)
+
+34
+
+3.1.5 Numerical Solution
+
+The simulation is done using ANSYS CFx Solver working with the Navier-Stokes
+models along with all the necessary terms and conditions. Discretization of the mass and
+momentum equations are done using the control volume method as previously mentioned,
+where the time parameter is discretized using the first-order implicit method, while the space
+parameter is discretized using the second-order implicit method for preservation law
+
+conditions.
+
+The approach is simplified for the calculation of the pressure-velocity coupling
+involved in momentum equations. On the other hand, the convective terms require a more
+
+detailed approach as high resolution discretization conspire is used.
+
+An adaptive timestep option has been used with a maximum of 3000 timesteps.
+Convergence of the solution for all simulations are deemed to be reached upon having a
+
+standardized error with a root mean square of 1.0x10~.
+
+3.2 Design of Experiment
+
+The experiment is based on a multilevel factorial design using two factors, one
+having four levels (particle size) and another with five levels (rotation speed). There is a
+
+total of 20 simulations, one for each pair of factors.
+
+The experiment is set having the particle size and rotational speed as the two factors
+and the response being optimized is the mud cake thickness. The factors and their respective
+
+levels are shown in table 3.4.
+
+Table 3.4: Experimental factors and level values
+
+A -— Particle Size (um) 1000 2000 5000
+
+B— Rotation Speed
+20 40 60
+(rpm)
+
+35
+
+Using the factors and their levels, a design table is generated with randomization
+
+using the Minitab 18 software as shown in table 3.5.
+
+Table 3.5: Experimental design table
+
+Standard Runorder Particle Rotation
+order Size (um) Speed
+(rpm)
+
+20 ] 5000 80
+3 2 45 40
+6 3 1000 0
+
+8 4 1000 40
+11 5 2000 0
+
+13 6 2000 40
+7 ) 1000 20
+Lif, 8 5000 20
+12 9 2000 20
+15 10 2000 80
+1 11 45 0
+
+16 12 5000 0
+
+14 13 2000 60
+19 14 5000 60
+4 15 45 60
+10 16 1000 80
+18 17 5000 40
+2 18 45 20
+5 19 45 80
+9 20 1000 60
+
+After the simulation runs are completed and results obtained, the average mud cake
+thickness for every run will be tabulated as the response and analyzed to determine the
+significance of the contribution of the factors and their combinations using the p-values with
+a confidence level of 95% and alpha value of 0.05.
+
+36
+
+3.3 Methodology Flow Chart
+
+3D Geometry model construction
+Identify governing equations
+
+Input initial and boundary conditions
+Grid independence study
+Mesh size fine tuning
+
+Convergence achieved?
+
+yes
+Parametric Study: Rotational Speed and Particle
+Size
+Data Analysis, Conclusions, and
+Recommendations
+Documentation and Presentation
+
+Figure 3.8: Methodology Flow Diagram
+
+37
+
+no
+
+3.4 Gantt Chart
+
+Table 3.6: Gantt Chart
+
+No. | Content / Activity
+
+Literature Review
+
+Geometry and Meshing
+
+Grid Independence Study
+Model Setup Validation
+Parametric Study
+
+Data Collection and Analyses
+Report Writing
+
+NID) NO) BR][ WLM}
+
+87-77 Aine
+
+€d-L] eung
+O€-pz ounr
+b ONY-67 AlN
+
+[ 9T-O1 oun
+
+38
+
+CHAPTER 4
+RESULTS AND DISCUSSION
+
+4.1 Preliminary Results
+
+The mud cake thickness and average equilibrium solids volume fractions are
+measured from the results of every combination of particle size and rotation speed with
+results shown in tables 4.1-4.20. The thickness is determined using the following equations
+
+(Usher, Krestser, & Scales 2001, Kabir & Gamwo 2011):
+
+Vine = Vi - Ve (3.30)
+
+V; =—D*h, (3.31)
+4
+Ve = TD7he (3.32)
+ho
+h, = (=) ay (3.33)
+AV,
+_ 2_ mec
+d D 7m = he) (3.34)
+D-d
+hie = (3.35)
+Figure 4.1: Initial condition (A), Equilibrium (B)
+Where:
+V; = initial volume of cuttings bed ae = average equilibrium solid
+eens . volume fraction
+Ve = equilibrium volume of cuttings
+bed Ay = initial solid volume fraction
+Vnc = Volume of mud cake D = annular diameter
+he = equilibrium suspension height d = inner diameter of mud cake
+hy = initial suspension height Ame = thickness of mud cake
+h; = initial cuttings bed height
+
+39
+
+An imaginary plane (Figure 4.2) which cuts through the center of the model is made
+and lines are created the plane for every 0.1m starting from the bottom of the casing up to
+near the outlet to represent data taken at different points along the wellbore. This is done at
+
+both sides of the plane separated by the space taken up by the casing (Figure 4.3).
+
+gutings. Volume Fracton ANSYS
+Contour t mia?
+1.000 Nae
+
+Ay
+
+Figure 4.2: Imaginary plane cutting through the model
+
+ANSYS
+R18.2
+Academic
+
+cuttings. Volume Fraction
+Contour 1
+
+1.000
+0.900
+0.800
+0.700
+0.600
+0.500
+0.400
+0.300
+0.200
+0.100
+0.000
+
+left
+
+oor 0225
+
+Figure 4.3: Data location points on the wellbore at the 2D plane
+
+40
+
+4.1.1 Mud cake thickness using 5000 microns PSD with varying rotation speeds
+
+Here we use a Particle Size Distribution of 5000 microns in five different runs under
+varying rotation speeds of 0, 20, 40, 60, and 80 rpm. For figures 4.4, 4.7, 4.10, 4.13, and
+4.16, (A) shows the cuttings volume fraction profile for the respective rotation speed
+indicated while (B) shows some of the streamlines the fluids and particles follow as the mud
+flows from the inlet towards the outlet for the respective rotation speed. We note the
+difference in the streamlines as the rotation speed increases from 0 to 80 rpm, where the
+
+rotation of fluids and particles become more pronounced.
+
+Figures 4.5, 4.8, 4.11, 4.14, and 4.17 (left-side as per figure 4.3) and figures 4.6, 4.9,
+4.12, 4.15, and 4.18 (right side as per figure 4.3) shows the cuttings volume fraction profile
+of the right-side observation. The cuttings volume fraction profiles for both left and right
+sides shows a general increase in cuttings volume fraction as we get closer to the borehole
+
+wall, indicating the presence of mud cake.
+
+4.1.1.1 5000 microns PSD, 0 rpm
+
+cuttings. Volume Fraction ANSY  water.Velocity in Stn Frame ANSYS
+‘Contour 1 R18. Streamline 1 ' R18.2
+1000 | A Keates wr 17.105 \N Keatemte
+
+12.629
+
+Figure 4.4: 5000 microns & 0 rpm - (A) Cuttings Volume Fraction Profile, (B) Streamlines
+Profile
+
+41
+
+S
+io
+
+Cuttings Volume Fraction
+ooogofoo9 9
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —@—h = 0.1 —@—h = 0.2 —®—h = 0.3 —-@—h = 0.4
+—@—h = 0.5 —O—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.5: Cuttings Volume Fraction for 5000 microns PSD at 0 rpm (left side)
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —O—h = 0.1 —O—h = 0.2 —@—h = 0.3 —@—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.6: Cuttings Volume Fraction for 5000 microns PSD at 0 rpm (right side)
+
+42
+
+Table 4.1: Mud cake thickness and average equilibrium solids volume fraction for 5000
+
+microns PSD at 0 rpm
+
+[Height (m) Solids Volume Fraction, %
+oe Left Right
+00 38.4981 30.3218
+0.1 42.4387 30.2960
+0.2 28.4734 33.5083
+0.3 30.3449 14.8667
+0.4 30.0846 15.5849
+0.5 23.8759 24.7929
+0.6 20.1633 17.9419
+0.7 15.3073 21.0271
+0.8 53.6605 28.0861
+Average (a,) 31.4274 24.0473
+Mud Cake Thickness 16.3261 mm
+4.1.1.2 5000 microns PSD, 20 rpm
+gutings Volume Fraction ANSYS — yatecyolotyin Si Frame
+
+‘Contour 1 R18.2
+1.000 Keademic 17.216
+0.900
+
+———_
+0.150
+
+12.912
+
+ANSYS
+
+R182
+Keadarnic
+
+Figure 4.7: 5000 microns & 20 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+43
+
+1.0
+
+0.9
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+Oy = 0.0 -@—y = 0.1—-@—y = 0.2 -@—y = 0.3 -@ y= 0.4
+Oy = 0.5 Oy = 0.6 -@-y = 0.7 -@-y=0.8
+
+Figure 4.8: Cuttings Volume Fraction for 5000 microns PSD at 20 rpm (left side)
+
+1.0
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+
+Cuttings Volume Fraction
+
+0.1
+
+O10 Se oeartencaee Be
+0.0300 0.0400 0.0500
+
+0.0001 0.0100 0.0200
+Distance from Wellbore Wall (m)
+
+—@—y = 0.0 —@—y = 0.1 —-@—y = 0.2 —® y= 0.3—-@—y=0.4
+—O— y = 0.5 Oy = 0.6 —O—y = 0.7 Oy = 0.8
+
+Figure 4.9: Cuttings Volume Fraction for 5000 microns PSD at 20 rpm (right side)
+
+44
+
+Table 4.2: Mud cake thickness and average equilibrium solids volume fraction for 5000
+
+microns PSD at 20 rpm
+0.0 ~~ 48.0826 51.5552
+0.1 21.4435 54.0055
+0.2 23.5657 29.8866
+0.3 25.2729 35.0324
+0.4 28.6464 23.9454
+0.5 23.4102 17.8459
+0.6 15.5868 17.0838
+0.7 12.3379 18.2097
+0.8 35.9158 33.1511
+Average (a) 26.0291 31.1906
+_Mud Cake Thickness == ‘16.2441 mm
+
+4.1.1.3 5000 microns PSD, 40 rpm
+
+tings Volume Fraction ANSYS ater Velocity in Stn Frame ANSYS
+1.000 Kextenle 17278 Kewtenic
+0.700 ee
+0.600
+0.500 8.651
+0.400
+0.300
+oo 4.338
+0.100
+0.000 0.025
+
+Im 81]
+
+Figure 4.10: 5000 microns & 40 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+45
+
+Cuttings Volume Fraction
+
+0.0000
+
+0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@®—h = 0.0 —@—h = 0.1 —-@—h = 0.2 —O—h = 0.3 —O—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —-@—h = 0.8
+
+Figure 4.11: Cuttings Volume Fraction for 5000 microns PSD at 40 rpm (left side)
+
+Cuttings Volume Fraction
+
+0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —@—h = 0.1 —@—h = 0.2 —O—h = 0.3 —B—h = 0.4
+—O@—h = 0.5 —@=—h = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.12: Cuttings Volume Fraction for 5000 microns PSD at 40 rpm (right side)
+
+46
+
+Table 4.3: Mud cake thickness and average equilibrium solids volume fraction for 5000
+
+microns PSD at 40 rpm
+e Fraction, %
+“0.0 39.3177 38.3334
+0.1 25.5647 39.9351
+0.2 17.7283 38.0718
+0.3 22.0550 35.8743
+0.4 22.7850 34.1609
+0.5 14.7120 10.7329
+0.6 13.0203 10.9696
+0.7 17.2536 13.4871
+0.8 52.2735 70.1463
+Average (a) 24.9678 32.4124
+Mud Cake Thickness ——- 16.2360 mm
+
+4.1.1.4 5000 microns PSD, 60 rpm
+
+ANSYS Water Volociy in Sin Frame ANSYS
+Tararle pg 17.443
+
+13.082
+
+0.000
+Ims*-1]
+
+be.
+
+° 0.300 gmp
+———_
+
+Figure 4.13: 5000 microns & 60 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+47
+
+Cuttings Volume Fraction
+
+0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —O—h = 0.1 —@—h = 0.2 —@—h = 0.3 —@—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.14: Cuttings Volume Fraction for 5000 microns PSD at 60 rpm (left side)
+
+1.0
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+
+Cuttings Volume Fraction
+
+0.1
+0.0
+
+0.0000
+
+0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —@—h = 0.1 —@—h = 0.2 —®—h = 0.3 —-8—h = 0.4
+—O—h = 0.5 —@—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.15: Cuttings Volume Fraction for 5000 microns PSD at 60 rpm (right side)
+
+48
+
+Table 4.4: Mud cake thickness and average equilibrium solids volume fraction for 5000
+
+microns PSD at 60 rpm
+Fraction, %
+bs Right
+
+37.2451 36.1821
+
+0.1 33.1786 37.7843
+
+0.2 33.7756 36.5445
+
+0.3 31.7452 40.8744
+
+0.4 28.1473 18.8317
+
+0.5 24.9018 20.9169
+
+0.6 12.7853 13.9740
+
+0.7 18.4100 19.1473
+
+0.8 186.1725 118.1175
+Average (a,) 45.1513 38.0414
+
+| Mud Cake Thickness ==—«*15.0029 mm e|
+
+4.1.1.5 5000 microns PSD, 80 rpm
+
+guttings Volume Fraction ANSYS ater Velocity in Stn Frame ANSYS
+1.000 Kexdenie gy 17.858 Keatenie
+0.900 oa 7
+one
+0.700 13.168
+0.600
+0.500 8777
+0.400
+0.300
+ane 4.389
+0.100
+0.000 0.000
+
+ImsA1]
+
+tad
+
+Figure 4.16: 5000 microns & 80 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+49
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@®—h = 0.0 —@—h = 0.1 —@—h = 0.2 —8—h = 0.3 —-O—h= 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —@—h = 0.8
+
+Figure 4.17: Cuttings Volume Fraction for 5000 microns PSD at 80 rpm (left side)
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —@—h = 0.1 —@—h = 0.2 —@—h = 0.3 —-@—h = 0.4
+—O@—h = 0.5 Oh = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.18: Cuttings Volume Fraction for 5000 microns PSD at 80 rpm (right side)
+
+50
+
+Table 4.5: Mud cake thickness and average equilibrium solids volume fraction for 5000
+
+microns PSD at 80 rpm
+
+Height (m) Solids Volume Fraction
+Left Right
+
+0.0 46.3182
+0.1 38.9498
+0.2 26.8642
+0.3 22.1075 26.3369
+0.4 25:2325 25.8831
+0.5 16.9939 17.4502
+0.6 17.8740 15.5062
+0.7 17.4564 17.1193
+0.8 51.8123 196.8921
+
+Average (d,) 29.2899 45.1427
+
+Mud Cake Thickness 15.4204 mm
+
+4.1.2 Mud cake thickness using 2000 microns PSD with varying rotation speeds
+
+Here we use a Particle Size Distribution of 2000 microns in five different runs under
+varying rotation speeds of 0, 20, 40, 60, and 80 rpm. For figures 4.19, 4.22, 4.25, 4.28, and
+4.31, (A) shows the cuttings volume fraction profile for the respective rotation speed
+indicated while (B) shows some of the streamlines the fluids and particles follow as the mud
+flows from the inlet towards the outlet for the respective rotation speed. We note the
+difference in the streamlines as the rotation speed increases from 0 to 80 rpm, where the
+
+rotation of fluids and particles become more pronounced.
+
+Figures 4.20, 4.23, 4.26, 4.29, and 4.32 (left-side as per figure 4.3) and figures 4.21,
+4.24, 4.27, 4.30, and 4.33 (right side as per figure 4.3) shows the cuttings volume fraction
+profile of the right-side observation. The cuttings volume fraction profiles for both left and
+right sides shows a general increase in cuttings volume fraction as we get closer to the
+
+borehole wall, indicating the presence of mud cake.
+
+51
+
+4.1.2.1 2000 microns PSD, 0 rpm
+
+gultings Volume Fraction ANSYS — waterVelocity in Stn Frame ANSYS
+aad R182 Streamline 1 R182
+r Keateate q7A71 Keabenre
+0.774 —_
+0602 12078
+
+0.430 ases
+
+0.344
+
+0.258
+
+0.172 4293
+
+0.086
+
+0.000 ou
+[ms%1)
+
+° _0:300 (m) ° 2.300 (mm)
+0.180 0150
+
+Figure 4.19: 2000 microns & 0 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —®—h = 0.1 —-@—h = 0.2 —®—h = 0.3-—-O—h = 0.4
+—O—h = 0.5 —@—h = 0.6 —O—h = 0.7 -@—h = 0.8
+
+Figure 4.20: Cuttings Volume Fraction for 2000 microns PSD at 0 rpm (left side)
+
+52
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —O—h = 0.1 —-@—h = 0.2 —@—h = 0.3—-@—h= 0.4
+—O—h = 0.5 Oh = 0.6 —O—h = 0.7 -O—h = 0.8
+
+Figure 4.21: Cuttings Volume Fraction for 2000 microns PSD at 0 rpm (right side)
+
+Table 4.6: Mud cake thickness and average equilibrium solids volume fraction for 2000
+
+microns PSD at 0 rpm
+
+0.0 46.6550 25.9119
+
+0.1 21.8412 27.9020
+0.2 22.7661 28.6119
+0.3 38.9606 30.9110
+0.4 28.2892 22.7196
+0.5 14.6197 18.1161
+0.6 18.8859 16.3364
+0.7 13.3696 17.1388
+0.8 26.3471 37.0927
+
+Average (@,)
+
+25.7483
+
+ae
+
+24.9712
+
+53
+
+4.1.2.2 2000 microns PSD, 20 rpm
+
+gultngs. Volume Fraction ANSYS water.Velocity in Sin Frame ANSYS
+0.674 sam 17239 =
+ademic Katee
+0.787 _
+0.612 12.830
+0.525
+0.437 8.620
+0.350
+0.262
+on 4.310
+0.087
+0.000 0.000
+[ms*1}
+
+Figure 4.22: 2000 microns & 20 rpm - (Left) Cuttings Volume Fraction Profile, (Right)
+
+Cuttings Volume Fraction
+
+Streamlines Profile
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —®—h = 0.1 —@—h = 0.2 —8—h = 0.3 —@—h = 0.4
+—O—h = 0.5 —@—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.23: Cuttings Volume Fraction for 2000 microns PSD at 20 rpm (left side)
+
+54
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —-O—h = 0.1—-@—h = 0.2 —8—h =0.3—@—h=0.4
+
+—O@—h = 0.5 Oh = 0.6 Oh = 0.7 -O—h= 0.8
+
+Figure 4.24: Cuttings Volume Fraction for 2000 microns PSD at 20 rpm (right side)
+
+Table 4.7: Mud cake thickness and average equilibrium solids volume fraction for 2000
+
+microns PSD at 20 rpm
+
+0.0 21.5738 56.2312
+0.1 20.0253 52.2101
+0.2 28.9298 53.7918
+0.3 21.1522 45.0469
+0.4 18.0309 20.0918
+0.5 18.8150 15.5619
+0.6 19.9974 18.2089
+0.7 12.4884 18.5950
+0.8 55.9151 28.1117
+Average (a,) 24.1031 34.2055
+
+55
+
+4.1.2.3 2000 microns PSD, 40 rpm
+
+ey yun Fn ANSYS spate smran ans
+0.859 Kaden 17.359 sande
+0.73 _
+aon 13.019
+0.516
+0.430 8679
+0.344
+0.258
+0.172 ee
+0.086
+0.000 0.
+Ims*1]
+oe a
+° 0.300 (m) ° 0.300 (m)
+— el ———
+
+Figure 4.25: 2000 microns & 40 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+1.0
+0.9
+0.8
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —@—h = 0.1 —@—h = 0.2 ——h = 0.3 —@—h = 0.4
+—O@—h = 0.5 —O—h = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.26: Cuttings Volume Fraction for 2000 microns PSD at 40 rpm (left side)
+
+56
+
+1.0
+0.9
+
+Cuttings Volume Fraction
+
+0.0 — Sree
+0.0001 0.0100 0.0200 0.0300 0.0400 0.0500
+
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —@—h = 0.1 —@—h = 0.2 —@—h = 0.3 —-@—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.27: Cuttings Volume Fraction for 2000 microns PSD at 40 rpm (right side)
+
+Table 4.8: Mud cake thickness and average equilibrium solids volume fraction for 2000
+
+microns PSD at 40 rpm
+
+0.0 37.8528 39.7984
+
+0.1 16.8230 29.1183
+0.2 20.2832 30.3834
+0.3 25.1766 34.2586
+0.4 22.8606 28.3872
+0.5 20.0785 11.2794
+0.6 17.3550 11.0200
+0.7 18.3914 13.2182
+
+0.8 76.8901 79.4454
+Average (a,) 28.4123 30.7677
+
+57
+
+4.1.2.4 2000 microns PSD, 60 rpm
+
+ANSYS alae Volocty in Sin Frame ANSYS
+headene Ser an et
+om [8]
+
+000
+[msA1}
+
+EE
+0.10 0180
+
+Figure 4.28: 2000 microns & 60 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+1.0;
+0.9 |
+
+0.8
+
+0.6
+0.5
+0.4
+
+Cuttings Volume Fraction
+
+0.2
+
+0.1
+
+0.0
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —@—h = 0.1 —@—h = 0.2 ——h = 0.3 —O—h = 0.4
+—O—h = 0.5 —@—h = 0.6 —O—h = 0.7 —-@—h = 0.8
+
+Figure 4.29: Cuttings Volume Fraction for 2000 microns PSD at 60 rpm (left side)
+
+58
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —-@—h = 0.1 —@—h = 0.2 —@—h = 0.3 —-@—h = 0.4
+—O—h = 0.5 Oh = 0.6 —O—h = 0.7 -O—h= 08
+
+Figure 4.30: Cuttings Volume Fraction for 2000 microns PSD at 60 rpm (right side)
+
+Table 4.9: Mud cake thickness and average equilibrium solids volume fraction for 2000
+
+microns PSD at 60 rpm
+
+0.0 27.6862 49.7225
+0.1 28.9663 36.9335
+0.2 25.3481 23.6410
+0.3 24.7084 15.1043
+0.4 26.2373 16.9942
+0.5 10.9064 18.6001
+0.6 11.4408 18.5277
+0.7 16.7920 16.9454
+0.8 186.1720 186.1720
+Average (a,) 39.8064 42.5156
+
+59
+
+4.1.2.5 2000 microns PSD, 80 rpm
+
+sing youre rman ANSYS mutes ane ansys
+0.853 Aeadenie 17.588 Kaden
+0.768 —_
+en 13.191
+0.512
+0.427 8.794
+0.341
+0.256
+0.171 4397
+0.085
+0.000 0.000
+[ms™1)
+be ES
+° 0.300 (m) m
+—— ° = 0.300 (m)
+
+Figure 4.31: 2000 microns & 80 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —@—h = 0.1 —@—h = 0.2 —@—h = 0.3 —@—h = 0.4
+—@—h = 0.5 —@—h = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.32: Cuttings Volume Fraction for 2000 microns PSD at 80 rpm (left side)
+
+60
+
+1.0
+
+0.9
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —@—h = 0.1 —-@—h = 0.2 —8—h = 0.3 —-@—h= 0.4
+
+—O—h = 0.5 Oh = 0.6 —O—h = 0.7 -O—h = 0.8
+
+Figure 4.33: Cuttings Volume Fraction for 2000 microns PSD at 80 rpm (right side)
+
+Table 4.10: Mud cake thickness and average equilibrium solids volume fraction for 2000
+microns PSD at 80 rpm
+
+0.0 43.5930 42.6325
+0.1 30.2506 24.0435
+0.2 29.9102 30.1144
+0.3 34.3571 35.5713
+0.4 15.5116 23.9327
+
+0.5 14.9521 11.0871
+0.6 16.9070 11.5315
+0.7 18.4660 15.7693
+0.8 68.6412 183.8223
+Average (a,) 30.2877 42.0561
+
+61
+
+4.1.3 Mud cake thickness using 1000 microns PSD with varying rotation speeds
+
+Here we use a Particle Size Distribution of 1000 microns in five different runs under
+varying rotation speeds of 0, 20, 40, 60, and 80 rpm. For figures 4.34, 4.37, 4.40, 4.43, and
+4.46, (A) shows the cuttings volume fraction profile for the respective rotation speed
+indicated while (B) shows some of the streamlines the fluids and particles follow as the mud
+flows from the inlet towards the outlet for the respective rotation speed. We note the
+difference in the streamlines as the rotation speed increases from 0 to 80 rpm, where the
+
+rotation of fluids and particles become more pronounced.
+
+Figures 4.35, 4.38, 4.41, 4.44, and 4.47 (left-side as per figure 4.3) and figures 4.36,
+4.39, 4.42, 4.45, and 4.48 (right side as per figure 4.3) shows the cuttings volume fraction
+profile of the right-side observation. The cuttings volume fraction profiles for both left and
+right sides shows a general increase in cuttings volume fraction as we get closer to the
+
+borehole wall, indicating the presence of mud cake.
+
+4.1.3.1 1000 microns PSD, 0 rpm
+
+ANSYS | cuttings.veloci ANSYS
+Someone Fracton Ris? Startins ead R182
+0.827 Keademe 17.616 Kaden
+0.744
+0661 A 13.212
+
+0.670
+0.496
+0.413 8.808
+0.331
+0.248
+0.165
+0.083
+
+0.000 0.000
+
+[m 541]
+
+bs
+
+—
+—. 1%
+0.180 0
+
+Figure 4.34: 1000 microns & 0 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+62
+
+1.0
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+
+Cuttings Volume Fraction
+
+Sg
+ro)
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —®—h = 0.1 —@—h = 0.2 —O—h = 0.3 —@—h = 0.4
+
+—O@—h = 0.5 —O—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.35: Cuttings Volume Fraction for 1000 microns PSD at 0 rpm (left side)
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —@—h = 0.1 —@—h = 0.2 —-@—h = 0.3 —-@—h= 0.4
+—O—h = 0.5 Oh = 0.6 —@—h = 0.7 —-@—h = 0.8
+
+Figure 4.36: Cuttings Volume Fraction for 1000 microns PSD at 0 rpm (right side)
+
+63
+
+Table 4.11: Mud cake thickness and average equilibrium solids volume fraction for 1000
+
+microns PSD at 0 rpm
+
+0.0 53.9523 39.7050
+0.1 33.0696 19.4412
+0.2 18.3600 29.1261
+0.3 29.5439 28.2024
+0.4 26.2717 26.4851
+0.5 20.1605 18.4382
+0.6 13.1444 17.5513
+0.7 16.9702 15.9942
+0.8 17.7644 17.2903
+Average (a) 25.4708 23.5815
+Mud Cake Thickness 16.6296 mm
+4.1.3.2 1000 microns PSD, 20 rpm
+ANSYS guages ran ansys
+
+Keademie 17.292 Kaden
+
+{m s1]
+
+ie
+
+0180 awe,
+
+Figure 4.37: 1000 microns & 20 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+64
+
+1.0
+
+0.9
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —O—h = 0.1 —@—h = 0.2 —8—h = 0.3 —O—h = 0.4
+—O—h = 0.5 —@—h = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.38: Cuttings Volume Fraction for 1000 microns PSD at 20 rpm (left side)
+
+1.0
+0.9
+
+Cuttings Volume Fraction
+
+0.0 ——______
+
+0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+0.0000 0.0100
+
+—@—h = 0.0 —@—h = 0.1 —-@—h = 0.2 —-@—h = 0.3 -8—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —-8—h = 0.8
+
+Figure 4.39: Cuttings Volume Fraction for 1000 microns PSD at 20 rpm (right side)
+
+65
+
+Table 4.12: Mud cake thickness and average equilibrium solids volume fraction for 1000
+
+microns PSD at 20 rpm
+
+Fraction, %
+
+Riot
+Might —
+
+20.8824
+
+0.0 51.7554
+0.1 18.9826 42.9185
+0.2 29.6701 38.6246
+0.3 36.0609 39.5874
+0.4 30.8343 25.9818
+0.5 23.7148 15.1660
+0.6 17.5309 16.6831
+0.7 15.1698 15.2536
+0.8 19.9938 20.8785
+Average (@,) 23.6488 29.6499
+Mud Cake Thickness 16.4291 mm
+
+4.1.3.3 1000 microns PSD, 40 rpm
+
+Kader 17.389 Kadam
+8.694
+4347
+0,000
+Ims*1]
+bee Ls
+° ____9300 om nn 0.300 (m)
+
+0150
+
+Figure 4.40: 1000 microns & 40 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+66
+
+1.0
+
+0.9
+
+0.8
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —@—h = 0.1 —-@—h = 0.2 —@—h = 0.3 —-O—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.41: Cuttings Volume Fraction for 1000 microns PSD at 40 rpm (left side)
+
+1.0
+0.9
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —®—h = 0.1 —-@—h = 0.2 -@~—h = 0.3 -8—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.42: Cuttings Volume Fraction for 1000 microns PSD at 40 rpm (right side)
+
+67
+
+Table 4.13: Mud cake thickness and average equilibrium solids volume fraction for 1000
+
+microns PSD at 40 rpm
+
+Solids Volume Fraction, %
+
+© sete
+
+0.0 ~~ 403753 38.1978
+0.1 24.3315 24.5729
+0.2 21.6209 24.9396
+0.3 24.9024 26.0619
+0.4 21.8233 20.4694
+0.5 16.9175 13.4933
+0.6 16.3394 12.6334
+0.7 17.2247 12.7354
+0.8 19.9822 27.8315
+Average (a,) 22.6130 22.3261
+Mud Cake Thickness 16.8226 mm 5
+
+4.1.3.4 1000 microns PSD, 60 rpm
+
+ANSYS alee Volonty in Sin Frame ANSYS
+Kewdemic 17.488 Kean
+43.125
+0.763
+4.400
+0.038
+ims]
+cs is,
+° mt 0.300 (m) — 0.300 (m)
+
+Figure 4.43: 1000 microns & 60 rpm - (Left) Cuttings Volume Fraction Profile, (Right)
+Streamlines Profile
+
+68
+
+1.0
+
+0.9
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —@—h = 0.1 —@—h = 0.2 —O—h = 0.3 —O—h = 0.4
+
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 -O—h = 0.8
+
+Figure 4.44: Cuttings Volume Fraction for 1000 microns PSD at 60 rpm (left side)
+
+1.0
+0.9 |
+0.8
+
+0.7 |
+0.6
+0.5
+0.4
+0.3
+0.2
+
+Cuttings Volume Fraction
+
+0.1
+
+0.0000 0.0200 0.0400
+
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —®—h = 0.1 —@—h = 0.2 -@~—h = 0.3 —-@—h = 0.4
+—O—h = 0.5 Oh = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.45: Cuttings Volume Fraction for 1000 microns PSD at 60 rpm (right side)
+
+69
+
+Table 4.14: Mud cake thickness and average equilibrium solids volume fraction for 1000
+
+microns PSD at 60 rpm
+
+0.0 ~ 37.2567 60.3549
+0.1 29.4852 28.5274
+0.2 20.8544 19.6404
+03 23.4399 15.5799
+0.4 27.1867 20.1481
+0.5 10.7942 19.7718
+0.6 12.7699 15.8765
+0.7 13.5262 16.0369
+0.8 56.2077 22.1956
+Average (ae) 25.7245 24.2368
+Mud Cake Thickness 16.5869 mm
+
+4.1.3.5 1000 microns PSD, 80 rpm
+
+ANSYS
+R182
+Karten
+
+cuttings. Volume Fraction
+Contour 1
+
+0.736
+0.654 A
+
+0180 0150
+
+Figure 4.46: 1000 microns & 80 rpm - (A) Cuttings Volume Fraction Profile, (B)
+Streamlines Profile
+
+70
+
+1.0
+
+0.9
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—@—h = 0.0 —@—h = 0.1 —@—h = 0.2 —®—h = 0.3 —@—h = 0.4
+
+—O—h = 0.5 Oh = 0.6 —O—h = 0.7 -@—h = 0.8
+
+Figure 4.47: Cuttings Volume Fraction for 1000 microns PSD at 80 rpm (left side)
+
+1.0
+0.9
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+
+Cuttings Volume Fraction
+
+0.1
+
+0.0 so = — -
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O@—h = 0.0 —@—h = 0.1 —O—h = 0.2 —O— h = 0.3 —-@—h = 0.4
+—O@—h = 0.5 —O—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.48: Cuttings Volume Fraction for 1000 microns PSD at 80 rpm (right side)
+
+71
+
+Table 4.15: Mud cake thickness and average equilibrium solids volume fraction for 1000
+
+microns PSD at 80 rpm
+Height (m) Solids Volume Fraction, %
+Left Right
+
+0.0 52.1006 55.0270
+
+0.1 39.3528 23.8205
+
+0.2 29.9587 26.6705
+
+0.3 28.6650 32.7512
+
+0.4 13.9619 24.9899
+
+0.5 15.3475 10.5730
+
+0.6 15.5994 12.6434
+
+0.7 14.5693 13.5435
+
+0.8 18.4051 37.5649
+Average (a) 25.3289 26.3982
+
+Mud Cake Thickness 16.5038 mm
+
+4.1.4 Mud Cake Thickness Using 45 microns PSD with varying Rotation Speeds
+
+Here we use a Particle Size Distribution of 45 microns in five different runs under
+varying rotation speeds of 0, 20, 40, 60, and 80 rpm. For figures 4.49, 4.52, 4.55, 4.58, and
+4.61, (A) shows the cuttings volume fraction profile for the respective rotation speed
+indicated while (B) shows some of the streamlines the fluids and particles follow as the mud
+flows from the inlet towards the outlet for the respective rotation speed. We note the
+difference in the streamlines as the rotation speed increases from 0 to 80 rpm, where the
+
+rotation of fluids and particles become more pronounced.
+
+Figures 4.50, 4.53, 4.56, 4.59, and 4.62 (left-side as per figure 4.3) and figures 4.51,
+4.54, 4.57, 4.60, and 4.63 (right side as per figure 4.3) shows the cuttings volume fraction
+profile of the right-side observation. The cuttings volume fraction profiles for both left and
+right sides shows a general increase in cuttings volume fraction as we get closer to the
+
+borehole wall, indicating the presence of mud cake.
+
+72
+
+4.1.4.1 45 microns PSD, 0 rpm
+
+ANSYS — water.Vetocity in Stn Frame ANSYS
+R182 Streamine 1 " R18.2
+Kaden 17.291 fate
+12.968
+8.645
+4323
+0.000
+{m s*-1]
+ES a
+° 0300 (m) ° 2.300 «m)
+oe =
+O15 ois
+
+Figure 4.49: 45 microns & 0 rpm - (Left) Cuttings Volume Fraction Profile, (Right)
+Streamlines Profile
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —®—h = 0.1 —-@—h = 0.2 —®—h = 0.3-@—h = 0.4
+—O—h = 0.5 Oh = 0.6 —-O—h = 0.7 —-@—h=0.8
+
+Figure 4.50: Cuttings Volume Fraction for 45 microns PSD at 0 rpm (left side)
+
+73
+
+1.0
+0.9
+
+0.8 |
+
+Cuttings Volume Fraction
+
+0.0 + —— —
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+—O@—h = 0.0 —@—h = 0.1—-@—h = 0.2 —8—h = 0.3 —-@—h = 0.4
+
+—O—h = 0.5 —O—h = 0.6 —@—h = 0.7 —O—h = 0.8
+
+Figure 4.51: Cuttings Volume Fraction for 45 microns PSD at 0 rpm (right side)
+
+Table 4.16: Mud cake thickness and average equilibrium solids volume fraction for 45
+microns PSD at 0 rpm
+
+0.0 55.2332 31.3986
+0.1 26.1782 21.5973
+0.2 26.1782 29.0836
+0.3 51.7799 33.7959
+0.4 46.5324 33.1148
+
+0.5 48.0012 36.3466
+0.6 32.9453 19.6489
+0.7 237271 19.7034
+
+0.8 12.4228 14.1335
+Average (a) 35.8888 26.5358
+
+74
+
+4.1.4.2 45 microns PSD, 20 rpm
+
+ANSYS
+guttings. Volume Fraction ANSYS water Velocity in Stn Frame Me
+0.800 Keademle 17.344
+
+ow
+ew 13.008
+
+Le
+
+Q 9.300 (mm) ° 0.300 (m)
+
+ca
+
+0150 0180
+
+Figure 4.52: 45 microns & 20 rpm - (A) Cuttings Volume Fraction Profile, (B) Streamlines
+
+Cuttings Volume Fraction
+
+Profile
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —®—h = 0.1 —-@—h = 0.2 —@—h = 0.3 —-O—h=0.4
+—O—h = 0.5 Oh = 0.6 —O@—h = 0.7 —@—h = 0.8
+
+Figure 4.53: Cuttings Volume Fraction for 45 microns PSD at 20 rpm (left side)
+
+75
+
+1.0
+0.9
+0.8
+
+0.7 |
+0.6 |
+0.5 |
+0.4 |
+0.3 1
+0.2
+
+Cuttings Volume Fraction
+
+0.1
+
+0.0 — ~o —--
+0.000 0.0100 0.0200 0.0300 0.0400 0.0500
+
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —@—h = 0.1 —-@—h = 0.2 —-O—h = 0.3 —-@—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.54: Cuttings Volume Fraction for 45 microns PSD at 20 rpm (right side)
+
+Table 4.17: Mud cake thickness and average equilibrium solids volume fraction for 45
+microns PSD at 20 rpm
+
+0.0 16.0736 54.3516
+0.1 18.7594 50.2774
+0.2 28.6050 92.5841
+0.3 61.8309 43.0566
+0.4 70.8848 29.3945
+
+0.5 33.7724 23.8259
+0.6 24.4247 12.7894
+O17. 18.6206 12.8555
+0.8 15.6726 18.4546
+
+Average (ae) 32.0716 37.5100
+
+ae
+
+76
+
+4.1.4.3 45 microns PSD, 40 rpm
+
+ANSYS  water.Vetocity in Sin Frame ANSYS
+R182 Streamline 1 R18.2
+
+kadenie 17.478 : Acade
+13.109
+8.739
+4370
+
+0.000
+[ms*1]
+
+us
+
+° ___0.300 (m) c 0.300 (m)
+
+Figure 4.55: 45 microns & 40 rpm - (A) Cuttings Volume Fraction Profile, (B) Streamlines
+Profile
+
+Cuttings Volume Fraction
+
+0.0 . a JE ——
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —@—h = 0.1 —®—h = 0.2 —@—h = 0.3 —@—h=0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —-8—h = 0.8
+
+Figure 4.56: Cuttings Volume Fraction for 45 microns PSD at 40 rpm (left side)
+
+77
+
+Cuttings Volume Fraction
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —@—h = 0.1 —@—h = 0.2 —8—h = 0.3 -—-@—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.57: Cuttings Volume Fraction for 45 microns PSD at 40 rpm (right side)
+
+Table 4.18: Mud cake thickness and average equilibrium solids volume fraction for 45
+
+microns PSD at 40 rpm
+
+0.0 51.4669 61.6628
+0.1 37.7174 65.2940
+0.2 30.4568 47.0270
+0.3 22.3255 25.2600
+0.4 20.5844 17.0446
+0.5 16.6523 19.8290
+
+14.0259
+
+10.6376
+0.7 10.9695 14.3517
+0.8 11.4045 16.3615
+Average (ae) 23.5794 31.2063
+
+ery
+
+0.6
+
+78
+
+4.1.4.4 45 microns PSD, 60 rpm
+
+ANSYS waterVelocity in Sin Frame ANSYS
+R182 Streamline 1 nt
+
+Keademie 17.529 ade
+13.147
+8.765
+4.382
+0.000
+
+[ms*1}
+ES ‘oa
+° 0.300 (m) o 0.300 (m)
+0.150 aa 0.150
+
+Figure 4.58: 45 microns & 60 rpm - (A) Cuttings Volume Fraction Profile, (B) Streamlines
+Profile
+
+1.0
+0.9 |
+0.8
+0.7 |
+0.6
+0.5
+0.4
+
+0.3
+
+Cuttings Volume Fraction
+
+0.2
+0.1
+
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —O—h = 0.1 —®—h = 0.2 —@—h = 0.3 —O8—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.59: Cuttings Volume Fraction for 45 microns PSD at 60 rpm (left side)
+
+79
+
+1.0
+0.9 |
+0.8 |
+0.7 |
+0.6 |
+0.5
+0.4
+
+0.3 |
+
+Cuttings Volume Fraction
+
+0.2 ¢
+
+0.1
+
+0.0000 0.0100 0.0200 0.0300 0.040 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —®—h = 0.1 —@—h = 0.2 —8—h = 0.3 —-O—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —O—h = 0.8
+
+Figure 4.60: Cuttings Volume Fraction for 45 microns PSD at 60 rpm (right side)
+
+Table 4.19: Mud cake thickness and average equilibrium solids volume fraction for 45
+
+microns PSD at 60 rpm
+
+0.0 50.3626 78.9890
+0.1 21.2186 50.7424
+0.2 30.7067 27.4998
+0.3 41.3854 19.7483
+0.4 27.9734 30.2603
+
+0.5 25.8680 21.2839
+0.6 12.8942 10.7103
+0.7 15.2719 10.4911
+0.8 14.1031 11.3763
+Average (a,) 26.6426 29.0113
+
+80
+
+4.1.4.5 45 microns PSD, 80 rpm
+
+ANSYS — water.Velocity in Stn Frame ANSYS
+R182 Streamline 1 R18.2
+Keadere 17.655 Keates
+
+13.241
+
+8.827
+
+4Ai4
+
+0.000
+
+{msA1}
+ot io
+° 0.300 (m) ° 0.300 (m)
+= — = ——_
+0150 010
+
+Figure 4.61: 45 microns & 80 rpm - (A) Cuttings Volume Fraction Profile, (B) Streamlines
+Profile
+
+S
+wo
+
+0.7
+0.6
+0.5
+0.4
+0.3
+
+Cuttings Volume Fraction
+
+0.2
+
+0.1
+
+0.0 —
+0.0000 0.0100 0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+—O—h = 0.0 —O—h = 0.1 —@—h = 0.2 —@—h = 0.3 —@—h = 0.4
+—O—h = 0.5 —@—h = 0.6 —O—h = 0.7 —-8—h = 0.8
+
+Figure 4.62: Cuttings Volume Fraction for 45 microns PSD at 80 rpm (left side)
+
+81
+
+1.0
+0.9
+
+0.8
+
+Cuttings Volume Fraction
+
+0.0200 0.0300 0.0400 0.0500
+Distance from Wellbore Wall (m)
+
+0.0000 0.0100
+
+—@—h = 0.0 —O—h = 0.1 —-@—h = 0.2 —@—h = 0.3—-@—h = 0.4
+—O—h = 0.5 —O—h = 0.6 —O—h = 0.7 —-O—h = 0.8
+
+Figure 4.63: Cuttings Volume Fraction for 45 microns PSD at 80 rpm (right side)
+
+Table 4.20: Mud cake thickness and average equilibrium solids volume fraction for 45
+
+microns PSD at 80 rpm
+
+0.0 73.0981 74.4290
+0.1 47.3534 23.7863
+0.2 44.5933 47.3501
+0.3 24.5986 52.9658
+0.4 15.0294 39.3327
+0.5 19.7597 16.8093
+0.6 13.0112 12.1179
+0.7 10.2233 14.7666
+0.8 10.7853 14.4202
+Average (de) 28.7169 - 32.8864
+
+82
+
+4.2 Results Summary and Discussion
+
+The responses for each of the interactions between particle size and rotation speed
+are presented in the table below:
+
+Table 4.21: Mud Cake thickness for each simulation
+
+2000 40 16.8226
+2000 0 16.6296
+2000 60 16.5869
+1000 0 16.5512
+2000 80 16.5038
+2000 20 16.4291
+5000 40 16.3586
+
+45 0 16.3261
+5000 60 16.3185
+
+45 20 16.2441
+
+45 40 16.2360
+1000 20 16.1912
+1000 40 16.1517
+5000 80 16.0366
+5000 0 15.9964
+5000 20 15.6566
+1000 80 15.5226
+
+45 80 15.4204
+1000 60 15.0457
+
+45 60 15.0029
+
+Results show that the combination of 2000 um PSD and 40 rpm produced the highest
+mud cake thickness and the lowest was with the 45 um PSD and 60 rpm. We can also see
+that most of the results with the highest mud cake thickness came from the 2000 um PSD.
+
+Figure 4.64 further illustrates the summary of the results obtained from all the
+simulations:
+
+83
+
+17-5)
+
+a
+N
+
+16.5
+
+a
+a
+
+15.5
+
+ay
+un
+
+14.5
+
+Mud Cake Thickness (mm)
+is
+
+13.5
+
+0 1000 2000 3000 4000 5000 6000
+Particle Size (um)
+
+—*—ORPM —t—20RPM —@—40RPM ——60RPM —@®=—80RPM
+
+Figure 4.64: Line Graph of the Results in Mud Cake thickness vs PSD
+
+a
+9
+©
+
+16.594
+
+»
+9
+a
+
+an
+bad
+b
+
+b
+a
+wv
+
+16.073
+
+45 1000 2000 5000
+Particle Size (m)
+
+ra
+a
+
+15.893
+
+15.846
+
+Average Mud Cake Thickness (mm)
+an
+[)
+
+ay
+bt
+a
+
+a
+nt
+b
+
+Figure 4.65: Average Mud Cake Thickness per Particle Size
+
+Figure 4.64 shows that the mud cake thickness generally increases as the particle
+size increases, as shown by the responses going from the 45 um to 2000 um. This trend
+however decreases as the particle size further increases to 5000 pm as highlighted by figure
+4.65.
+
+84
+
+80 RPM
+
+60 RPM
+
+40 RPM
+
+20 RPM
+
+Rotation Speed (rpm)
+
+ORPM
+
+15.6 15.8 16 16.2 16.4 16.6
+Mud Cake Thickness (mm)
+
+45%
+
+wn
+b
+
+Figure 4.66: Average mud cake thickness per rotation speed
+
+The effects of rotation speed to the mud cake thickness show a general downward
+
+trend as the rotation speed increases from 0 rpm to 80 rpm as shown in figure 6.66.
+
+4.3 Statistical Analysis
+
+A basic statistical analysis of the results is done using the Minitab 18 software with
+the goal of identifying effects that have a statistically significant influence on the response
+
+variable, which in this case is mud thickness.
+
+Using an alpha value of 0.05 and a confidence level of 95%, in the analysis of factors
+
+we have:
+If p-value < 0.05 (significant)
+p-value > 0.05 (insignificant)
+
+Table 4.22: P-Values of the factors and their interactions
+
+Particle Size
+
+Rotation Speed
+PSD-RPM interaction
+
+85
+
+We can see from table 4.22 that particle size has the most significant influence in the
+formation of the mud cake, followed by the rotation speed and the interaction between the
+two factors, with the particle size being the only significant factor in the formation of the
+mud cake.
+
+Pareto Chart of the Standardized Effects
+(response is Mud Cake Thickness, a = 0.05)
+
+Tem 2179
+H Factor Name
+PSD
+B RPM
+
+0.0 0s 1.0 15
+Standardized Effect
+
+Figure 4.67: Standardized effects of PSD and RPM
+
+Pareto Chart of the Standardized Effects
+(response is Mud Cake Thickness, a = 0.05)
+
+Term 2365
+
+Factor Name
+A PSD
+8 RPM
+
+00 0s 10 15 20 25
+Standardized Effect
+
+Figure 4.68: Standardized effect of the PSD and RPM interaction
+
+With the alpha value set at 0.05 and confidence level at 95%, only the particle size
+distribution factor was able to exceed the standardized effect (influence/contribution)
+threshold, with the PSD and RPM interaction showing very low levels of significance as
+shown by figures 4.67 and 4.68.
+
+86
+
+This means that the interaction between the particle size and rotation speed does not
+
+significantly to the formation of the mud cake.
+
+A regression equation as a model of the mud cake thickness in terms of particle size
+
+and rotation speed is generated:
+
+ThicknesSymc = 16.1015 — 0.256A — 0.209B + 0.493C — 0.028D + 0.274E + 0.029F +
+
+0.291G — 0.363H — 0.2311 (3.35)
+Where:
+
+A = 45m PSD F =20 RPM
+
+B = 1000um PSD G = 40 RPM
+
+Cc = 2000um PSD H = 60 RPM
+
+D = 5000nm PSD I = 80 RPM
+
+E =0 RPM
+
+Table 4.23 Specific factors and their corresponding regression coefficients
+
+Factor Coefficient
+2000 um 0.493
+40 rpm 0.291
+
+0 rpm 0.274
+20 rpm 0.029
+5000 um -0.028
+1000 tm -0.209
+80 rpm -0.231
+45 um -0.256
+60 rpm -0.363
+
+From table 4.23 we can see that the factor that has the most significant contribution
+is the particle size of 2000 um followed by the 40-rpm rotation speed. When combined,
+these two makes up the greatest mud cake thickness recorded as previously shown in table
+4.21. We can also see that the 60-rpm setting gives the least contribution to mud cake
+
+thickness followed by the 45 um. When combined, these two form the lowest recorded mud
+cake thickness.
+
+87
+
+We also notice the negative values starting from the 5000 pm particle size, denoting
+an inversely proportional predicted contribution. This means that the increase in particle size
+from 2000 jm is not expected to increase mud cake thickness but decrease it instead. This
+
+supports the initial observations made from the data.
+
+We do note however that the interactions between the particle size and rotation speed
+or its different combinations does not show any observable trends, hence its significance on
+
+the mud cake formation was found to be low.
+
+17.5 7
+4
+4
+4
+4
+
+= 4
+§ 17 z 6
+a vA
+M4 a
+vo
+iS +5% 7
+fy 7 . ,
+= 16.5 rae 7
+4 ’ > o¢ EA
+E 4 Coo ¢ aa
+o oo . oo 4
+a 16 7
+© 7 % oa
+8 an ° @ 4% 5%
+5 c o* ’ :
+
+7 7
+2 155 a 3
+o id 4.
+i) ¢ 7
+© 4
+oO 7
+
+4
+qz 15 ,
+A
+a
+a
+4
+14.5 7.
+14.5 15 15.5 16 16.5 17 17.5
+
+Average mud cake thickness (simulation)
+
+Figure 4.69: Scatter plot of the simulation vs regression equation values for the average
+mud thickness
+
+Figure 4.69 shows a plot of all the values calculated from the simulations and those
+that are obtained using the regression equation. It can be observed from the scatter plot that
+
+the values obtained from both methods fall within a range of +5%.
+
+88
+
+CHAPTER 5
+
+CONCLUSIONS AND RECOMMENDATIONS
+
+5.1 Conclusions
+
+In lieu of the first objective, a parametric study was done and produced results that
+show that the particle size is the most significant factor in the formation of the mud cake
+with a p-value of 0.043. Data shows that average mud thickness across all rotation speeds
+tends increase as the particle size increases to 2000 microns, then tapers down when the
+particle size is set at 5000 microns. The increase of mud cake thickness observed with the
+increase of particle size to 2000 microns agree with the results of related literature (Watts et
+al, 2010, Kabir and Gamwo 2011). On the other hand, the observed decrease in mud cake
+thickness as the particle size is further increased to 5000 may reflect the drag and lift forces
+that were modeled in the simulations, where particles larger than 2000 microns could easily
+be blown away by the flowing mud. We do note however that the exact mechanics behind
+
+this observation may require further investigation as reported by Vos et al (2013).
+
+Also in lieu of the first objective, results of the parametric study show that the
+rotation speed is not a significant factor in the formation of the mud cake with a p-value of
+0.134. We note that the results show a general decreasing trend in the mud thickness as the
+rotation speed increases from 0 to 80 rpm. This observation agrees with Ofei et al. (2014)
+where a non-Newtonian carrier fluid is subjected to an increase in rotation speed, the cuttings
+volume fraction decreases as the rotation effect sweeps the cuttings into the annular
+mainstream and transports them to the surface (outlet). This observation also reflects the
+observations Meza et al. (2017) and Karimi et al. (2011) made in their papers that high
+rotational speeds have the potential to damage the mud cake and advices to maintain lower
+
+speeds (<80 rpm) to avoid such event from happening.
+
+In lieu of the second objective, a regression model was formulated and suggests that
+the interaction between the particle size and rotation speed does not contribute any
+significant (p-value of 0.945) additional effects on the mud cake formation. It can be
+concluded that the contributions of both parameters to the mud cake formation are
+
+Statistically independent of each other.
+
+89
+
+5.2 Recommendations
+
+Based on the results and the scope and limitations of this study, several
+recommendations are made for future undertakings regarding the formation of the mud cake
+
+for plastering effect in casing while drilling operations.
+
+The effects of the porous media on the formation of the formation of the mud cake
+should be considered. The formation of a filter cake due to the filtration effects across a
+porous medium is well documented and should therefore be included as a parameter to be
+
+studied.
+
+Other configurations and settings in the modeling and simulation phases should be
+considered such as eccentered wells with orbital rotation, non-vertical well geometry,
+different drilling fluid types, and factor in the effects of the rotation speed to the number of
+cuttings generated or the rate of penetration. This is to better simulate the actual drilling
+scenario and produce more detailed results with the interactions and significance of multiple
+
+factors in plastering effect.
+
+90
+
+REFERENCES
+
+Ahmed, R. M., & Miska, S. Z. (2008). Experimental Study and Modeling of Yield Power-
+Law Fluid Flow in Annuli with Drillpipe Rotation. Society of Petroleum Engineers,
+doi:10.2118/112604-MS.
+
+ANSYS. (2004). Innovative Turbulence Modeling: SST Model in ANSYS CFX. ANSYS
+Technical Brief, 1-2.
+
+Askew, B., Phillips, A., & Wongate, J. H. (2011). Surface Hole Casing While Drilling
+(CwD); A Review of 5 Years Experience in Gabon, West Africa. Society of
+Petroleum Engineers, doi:10.2118/140133-MS.
+
+Bardina, J. E., Huang, P. G., & Coakley, T. J. (1997). Turbulence Modeling, Validation,
+Testing and Development. NASA Technical Memorandum 110446, AIAA Paper
+97-2121.
+
+Bjérn, A., Segura de La Monja, P., Karlsson, A., Ejlertsson, J., & Svensson, B. (2012).
+Rheological Characterization, Biogas Sunil Kumar. IntechOpen, DOI:
+10.5772/32596.
+
+C, K. V., R, M., C, T., & Y, A. (2006). Optimal determination of rheological parameters
+for Herschel—Bulkley drilling fluids and impact on pressure drop, velocity profiles
+and penetration rates during drilling. Journal of Petroleum Science and
+Engineering, Volume 53, Issues 3-4, pages 203-224.
+
+Ezeakacha, C., Salehi, S., Ghalambor, A., & Karimi, M. (2016). An Integrated Study of
+Mud Plastering Effects for Reducing Filtrate’s Invasion. Society of Petroleum
+Engineers, doi:10.2118/179016-MS.
+
+Fisher, K. A., Wakeman, R. J., Chiu, T. W., & Meuric, O. F. (2000). Numerical Modelling
+of Cake Formation and Fluid Loss from Non-Newtonian Muds During Drilling
+Using Eccentric/Concentric Drill Strings With/Without Rotation. Chemical
+Engineering Research and Design, 707-714.
+
+Grijalva, O., Holzmann, J., Oppelt, J., Perozo, N., Paz, C., & Asgharzadeh, A. (2017).
+OCTG Advancements in Casing Drilling: Where We Have Been and Where Are
+We Going? Society of Petroleum Engineers, doi:10.2118/185102-MS.
+
+Guna, S., Won, S. W., & Tan, M. Z. (2008). Continual Advancement of Casing-While-
+Drilling Technology. Society of Petroleum Engineers, doi:10.2118/115375-MS.
+
+Kabir, M. A., & Gamwo, I. K. (2011). Filter cake formation in the vertical well at high
+temperature and high pressure: Computational fluid dynamics modeling and
+simulations. Journal of Petroleum and Gas Engineering, 146-164.
+
+Kabir, M. A., & Gamwo, I. K. (2011). Filter cake formation on the vertical well at high
+temperature and high pressure: Computational fluid dynamics modeling and
+simulations. Journal of Petroleum and Gas Engineering, Vol. 2 (7) pg 146-164.
+
+91
+
+Karimi, M., Ghalambor, A., Montgomery, M., & Moellendick, T. E. (2011). Formation
+Damage and Fluid Loss Reduction due to Plastering Effect of Casing Drilling.
+Society of Petroleum Engineers, doi:10.2118/143656-MS.
+
+Karimi, M., Moellendick, T. E., & Holt, C. (2011). Plastering Effect of Casing Drilling; a
+Qualitative Analysis of Pipe Size Contribution. Society of Petroleum Engineers,
+doi:10.2118/147102-MS.
+
+Karimi, M., Petrie, S. W., Moellendick, E., & Holt, C. (2011). A Review of Casing
+Drilling Advantages to Reduce Lost Circulation, Augment Wellbore Strengthening,
+Improve Wellbore Stability, Mitigate Drilling-induced Formation Damage. Society
+of Petroleum Engineers, doi:102118/1485654.
+
+Kiran, R., Salehi, S., & Karimi, M. (2014). Finite Element Analysis of Casing Drilling
+Smearing Effect. Society of Petroleum Engineers, doi:10.2118/170314-MS.
+
+Maggi, P., Brister, R., & Beattie, S. (2006). Advancing the Learning Curve in Drilling
+With Casing Technology. Offshore Technology Conference, doi:10.4043/18270-
+MS.
+
+Maglione, R., Robotti, G., & Romagnoli, R. (2000). In-Situ Rheological Characterization
+of Drilling Mud. Society of Petroleum Engineers, doi:10.2118/66285-PA.
+
+Menter, F. (1993). Zonal Two Equation k-w Turbulence Models For Aerodynamic
+Flows23rd Fluid Dynamics, Plasmadynamics, and Lasers Conference, Fluid
+Dynamics and Co-located Conferences. 23rd Fluid Dynamics, Plasmadynamics,
+and Lasers Conference, Fluid Dynamics and Co-located Conferences,
+https://doi.org/10.2514/6.1993-2906.
+
+Meza, O. G., Yaqoob, T., Bello, O., Boulakhrif, F., Holzmann, J., & Oppelt, J. (2017).
+Combined Investigation of Effects of Contact Stresses, Pore Size and Rotary
+Dynamics on Mud Plastering in Prevention of Lost Circulation in Weak Zones
+during Casing Drilling. Society of Petroleum Engineers, doi:10.2118/188182-MS.
+
+MokKhtari, M., Ermila, M. A., Tutuncu, A. N., & Karimi, M. (2012). Computational
+Modeling of Drilling Fluids Dynamics in Casing Drilling. Society of Petroleum
+Engineers, doi:10.2118/161301-MS.
+
+Naveen, V., & Babu, V. (2014). Experimental Study of Plastering Effect During Casing
+While Drilling. Society of Petroleum Engineers, doi:10.2118/171997-MS.
+
+Ofei, T. N. (2016). Effect of Yield Power Law Fluid Rheological Properties on Cuttings
+Transport in Eccentric Horizontal Narrow Annulus. Journal of Fluids, 10 pages.
+
+Ofei, T. N., & Ismail, A. Y. (2016). Eulerian-Eulerian Simulation of Particle Liquid Slurry
+Flow in Horizontal Pipe. Journal of Petroleum Engineering, 10 pages.
+
+Ofei, T. N., Irawan, S., & Pao, W. (2014). CFD method for predicting annular pressure
+losses and cuttings concentration in eccentric horizontal wells. Journal of
+Petroleum Engineering, Article 486423 16 pages.
+
+92
+
+Robello, M. A., Hogert, E. N., Albano, J., Raffo, C. A., & Gaggioli, N. G. (1996).
+Correlation between roughness and porosity in rocks. Optics & Laser Technology,
+Vol 28 pp. 21-23.
+
+Salehi, S., Aladsani, A., Shahri, M. P., Karimi, M., & Ezeakacha, C. (2013). All in One for
+Casing while Drilling Technology: Numerical, Analytical, and Experimental
+Results and Field Observations. Society of Petroleum Engineers, doi:10.2118.
+
+Te Gussinklo, R., Hepp, B. A., Swart, D., & Wingate, J. H. (2010). Spud to Reservoir--
+With Casing While Drilling (CWD)/Polycrystalline Diamond Compact (PDC)
+Drillout Technology Using an Automated Drilling Rig. Society of Petroleum
+Engineers, doi:10.2118/128219-MS.
+
+Usher, S. P., Krestser, R. G., & Scales, P. J. (2001). Validation of a new filtration
+technique for de-waterability characterization. AIChE J, 47(7): 1561-1570.
+
+Vos, A., Kamyani, I., Hilditch, R. A., & Sanchez, F. J. (2013). A Brownfield Well Re-
+Design with Casing While Drilling. Society of Petroleum Engineers,
+doi:10.2118/166678-MS.
+
+Watts, R. D., Greener, M. R., Mckeever, S. O., Scott, P. D., & Beardmore, D. H. (2010).
+Particle Size Distribution Improves Casing-While-Drilling Wellbore-Strengthening
+Results. Society of Petroleum Engineers, doi:10.2118/128913-MS.
+
+Zhu, X. H., Sun, C., & Tong, H. (2013). Distribution features, transport mechanism and
+destruction of cuttings bed in horizontal well. Journal of Hydrodynamics, vol. 25,
+no. 4, pp. 628-638, 2013.

@@ -21,8 +21,7 @@ works; and MIDI music networks - are collected and analyzed. Known models for
 each of the networks are simulated and network parameters for both small-sized
 real-world networks and simulated model networks are compared.
 
-PACS: 89.75.He (Networks and gencalogical trecs), 89.75.Fb (Structurcs and or-
-ganization in complex systems)
+PACS: 89.75.He (Networks and gencalogical trecs), 89.75.Fb (Structurcs and organization in complex systems)
 
 
 Chapter 1
@@ -227,10 +226,8 @@ net in December 1998 4,389 8,256 t
 
 Net of operating ” autonomous
 
-15
 systems” in Internet th 13,641
 Router level of the Internet in 3,888 5,012 {6
-1995
 Router level of the Internet in 150,000 200,000 16)
 Citation of the ISI databasc 783,339 6,716,198 17]
 
@@ -273,7 +270,6 @@ small networks used in this research are - influence and friendship networks; Ho
 
 of Representatives co-authorship networks; and MIDI music networks. The net-
 
-8
 
 works are constucted and the network parameters are computed for each them.
 Chapter V discusses famous models of large complex networks that are imple-
@@ -312,7 +308,6 @@ represent students while edges represent the influence or friendship one student
 has to the other. The number of nodes and the number of edges of each network
 are shown in Table 2.1. The weight of the edges represent the degree of influence
 
-10
 
 or friendship one student has to another which have values that are inverse of the
 value written in the survey (written in the survey: 1, 2, 3, ...:weight in network:
@@ -340,7 +335,6 @@ with each other. The nodes and edges are colored and sized according to their
 betweenness centrality, degree and weights as shown in the legend located at the
 top of the figure.
 
-12
 
 a
 Node color Low BC High BC
@@ -371,7 +365,6 @@ computed and plotted in Figure 2.3 and 2.4. All networks for the influence and
 friendship systems are observed to have a degree distribution that spreads over a
 particular value of k, which appears to be near the average degree for the network.
 
-13
 
 This means that in all networks, there is a common value for the degree of each
 
@@ -396,7 +389,6 @@ Frequency
 ene
 aertuen!
 
-2008
 
 Figure 2.3: Degrce distribution for influence networks for 2008, 2009, 2010 and
 2011.
@@ -410,7 +402,6 @@ Friendship Network | Average Degree
 
 2011 10.792
 
-4
 
 Frequency
 
@@ -436,7 +427,6 @@ have low betweenness centrality and that as the betweenness centrality increases
 
 there are lesser nodes in the network having that value.
 
-15
 
 Table 2.4: Average Betweenness Centrality of Influence Networks
 Influence Network | Average Betweenncss Centrality
@@ -463,7 +453,6 @@ Friendship Network | Average Betweenness Centrality
 2010 21.895
 2011 18.104
 
-16
 
 =
 
@@ -494,7 +483,6 @@ Influence Network | Average Clustering Coefficient
 2010 0.497
 2011 0.485
 
-17
 
 Figure 2.7: Clustering coefficient distribution for influence networks for 2008, 2009,
 2010 and 2011.
@@ -510,7 +498,6 @@ Friendship Network | Average Degree
 Figure 2.8: Clustering coefficient distribution for friendship networks for 2008,
 2009, 2010 and 2011.
 
-18
 
 The CC distribution for all the networks follow a binomial distribution with
 shifting peaks around the average clustering coefficient. Moreover, the average
@@ -519,7 +506,6 @@ first three years and this is due to the network structure having more edges as 
 
 students in the system ercatc morc conncctions as time pass by.
 
-19
 
 Chapter 3
 
@@ -551,7 +537,6 @@ as congressmen and cdges as co-authorship. An cxample of converting bipartite
 
 graphs to networks is shown in Figure 3.1.
 
-20
 
 Figure 3.1: Converting bipartite graphs into networks.
 
@@ -576,7 +561,6 @@ Network Vertices | Edges
 13** Congress 2004-2007 | 213 26494
 14** Congress 2007-2010} 267 34024
 
-21
 
 Figure 3.2: House of Representatives co-authorship network for the 8th to 14th
 Congress where nodes represent congressmen and edges represent co-authorship of
@@ -592,7 +576,6 @@ The degree distribution for all the co-authorship networks for the House of
 Representatives arc obtained and compared as shown in Figure 3.3 and the average
 degree for each network is shown in Table 3.2. It is observed to have an increasing
 
-22
 
 degree distribution for higher values of k. This is a reflection of the co-authorship
 network being a highly and fully-connected network with average k ranging from
@@ -622,7 +605,6 @@ of the nodes in the network appear to have very low betweenness centrality with
 values ranging from 0-0.20. This distribution reflects the property of the co-
 authorship network of being highly-connected. The tendency of nodes to act as
 
-23
 
 “bridges” that connects components of the network are very low because even if
 
@@ -654,7 +636,6 @@ for BC as seen with the presence of a peak in their BC plots. On the other hand,
 the BC distribution for the 10%, 11%, and 12 Congress is seen to have equal
 number of nodes having different BC values.
 
-24
 
 3.3.3 Clustering Coefficient
 
@@ -692,7 +673,6 @@ custo
 Figure 3.5: Computed clustcring coefficicnt distribution for the House of Repre-
 sentatives co-authorship network for 8th to 14th Congress.
 
-25
 
 Chapter 4
 MIDI Music Networks
@@ -725,7 +705,6 @@ Tuning Standard, Sample Dump Standard, File Dump, and many others [31]. For
 example, when a sound ends, a NoteOff message is sent and executed. An example
 of a simplified form of a MIDI file is seen in Table 4.1.
 
-26
 
 Table 4.1: Simplified sample of the contents of a MIDI file.
 
@@ -767,7 +746,6 @@ nodes are adjacent or not. A flowchart of the construction of the music network
 
 is found in Figure 4.1.
 
-27
 
 Figure 4.1: Flowchart of the MIDI analysis and an example of co-occurence net-
 work construction.
@@ -781,7 +759,6 @@ differences in the chronology the notes are played.
 Figure 4.2: Sample of music networks for different tracks of the MIDI song
 MeanMister Mustard of TheBeatles.
 
-28
 
 4.3. Characterization of Music Networks
 
@@ -797,7 +774,6 @@ structure of Country music is bigger and more complex than that of Rock and
 
 Pop music.
 
-29
 
 1999 2000 2001 2002 200.
 
@@ -814,7 +790,6 @@ computed. It was observed that Classical music networks arc found to have the
 lowest betweenness centrality with a mean BC of 0.012+0.040. This was fol-
 lowed by Jazz music networks with 0.027+0.063 and Rock music networks with
 
-30
 
 0.06340.114. Graphs with high betweenness centrality suggests that it contains
 more nodes that acts as bridge that usually connect communities. This means
@@ -866,7 +841,6 @@ fewer notes, fewer set of chords involved and more repeating chords in the chord
 
 progressions.
 
-31
 
 Chapter 5
 
@@ -891,7 +865,6 @@ ponents. A transition occurs at K = N/2, where these small clusters form a singl
 
 giant component.
 
-32
 
 Figure 5.1: An example of a Erdos-Renyi graph with a giant component repre-
 sented by red nodes|http://linbaba. files. wordpress.com/2010/10/erdos-renyi.png].
@@ -950,7 +923,6 @@ same functional form at all scales comparcd to regular latticcs or random graphs
 
 that have degree distributions that follows a binomial or Poisson.
 
-34
 
 Figure 5.3: An example of a scale-free network generated by the Barabasi-Albert
 model through preferential attachment.
@@ -982,7 +954,6 @@ our influence and friendship nctworks and the nctwork propcrtics observed were
 
 compared in all cases. Simulations were done up to 50 trials with different rewiring
 
-35
 
 probability from p=0.1 to p=1. The distributions of the simulated network with
 the highest correlation were obtained and plotted.
@@ -990,7 +961,6 @@ the highest correlation were obtained and plotted.
 The degree distribution of the influence networks and the WS netwokrs for
 different years are shown in Figure 5.4, 5.5, 5.6 and 5.7.
 
-03
 
 @ 2008 Influence
 | Watts-Strogatz (p = 0.26)
@@ -1002,14 +972,12 @@ Frequency
 Figure 5.4: Degree distributions for the influence network for 2008 and Watts-
 Strogatz network with a rewiring probability of p=0.26.
 
-03
 
 2009 Influence
 Watts-Strogatz (p 23)
 
 Correlation = 0.6980
 
-02
 
 Frequency
 °
@@ -1023,7 +991,6 @@ Degree
 Figure 5.5: Degree distributions for the influence network for 2009 and Watts-
 Strogatz network with a rewiring probability of p=0.23.
 
-36
 
 @ 2010 Influence
 |] Watts-Strogatz (p = 0.30)
@@ -1041,7 +1008,6 @@ Watts-Strogatz (p .29)
 oa Correlation = 0.7552
 
 Frequency
-5
 
 ae” a6" ne” 20" 22
 
@@ -1054,7 +1020,6 @@ Observations were made for the degree distribution of the friendship net-
 works and the WS netwokrs for different years - these are shown in Figure 5.8,
 5.9, 5.18 and 5.19.
 
-37
 
 cry
 
@@ -1063,7 +1028,6 @@ cry
 
 Correlation = 0.6732
 
-03
 
 Frequency
 °
@@ -1079,14 +1043,12 @@ Correlation = 0.7504
 Figure 5.9: Degree distribution for the friendship network for 2009and Watts-
 Strogatz network with a rewiring probability of p=0.28.
 
-38
 
 Cry
 
 @ 2010 Friendship
 | Watts-Strogatz (p = 0.20).
 
-03
 
 Correlation = 0.8348
 
@@ -1107,7 +1069,6 @@ Strogatz network with a rewiring probability of p=0.20.
 Correlation = 0.7567
 
 Frequency
-5
 
 10" 12" 16 16" 18° 20° 22° 24 26 28° 30° 32 36
 Degree
@@ -1126,7 +1087,6 @@ The plots for the influence networks and the WS networks are shown in Figure
 5.12, 5.13, 5.14 and 5.15 while the plots for the friendship networks and the WS
 netwokrs are shown in Figure 5.16, 5.17, 5.18 and 5.19.
 
-39
 
 2008 Influence
 WS (p -24)
@@ -1158,7 +1118,6 @@ te below 0.13448275062069
 Figure 5.13: Betweencss centrality distribution for the influence network for 2009
 and Watts-Strogatz network with a rewiring probability of p=0.20.
 
-40
 
 @ 2010 Influence
 | WS @ = 0.27)
@@ -1183,9 +1142,7 @@ correlation = 0.1621
 “0
 
 Frequency
-8
 
-10
 
 te below 0.13448275862069
 
@@ -1232,7 +1189,6 @@ No below 0.13448275862069
 Figure 5.17: Betwecnness centrality distribution for the fricndship nctwork for
 2009 and Watts-Strogatz network with a rewiring probability of p=0.20.
 
-42
 
 i 2010 Friendship
 WS (p = 0.28)
@@ -1274,7 +1230,6 @@ power-law form while the simulated networks seem to have peaks at higher values
 of BC. This can be explained by the real network's decreasing number of nodes
 and its system retaining the same set of people. There is a possibility of values of
 
-43
 
 betweenness centrality to fall because of the people getting to know more of each
 other across time making the network more connected.
@@ -1347,7 +1302,6 @@ Clustering Coefficient
 Figure 5.23: Clustering coefficient distribution for the influence network for 2011
 and Watts-Strogatz network with a rewiring probability of p=0.22.
 
-45
 
 2008 Friendship
 WS (p 0)
@@ -1372,7 +1326,6 @@ Clustering Coefficient
 Figure 5.25: Clustering coefficient distribution for the friendship network for 2009
 and Watts-Strogatz network with a rewiring probability of p=0.28.
 
-46
 
 wy
 
@@ -1412,7 +1365,6 @@ set of people, the increasing interactions of these people, and the ”cliques�
 through time. The network have more varieties of ”cliques” or formation of im-
 mediate neighborhood compared to that of the ones generated by the WS models
 
-47
 
 thus making the CC distribution of the real networks spread wider compared to
 its simulated Watts-Strogatz network.
@@ -1443,7 +1395,6 @@ Degree
 Figure 5.28: Degrce distributions for the 8th Housc co-authorship nctwork and
 simulated ER networks with p = 0.976.
 
-48
 
 Figure 5.29: Degree distributions for the 9th House co-authorship network and
 simulated ER networks with p = 0.991.
@@ -1472,7 +1423,6 @@ Figure 5.33: Degree distributions for thc 13th Housc co-authorship nctwork and
 simulated ER networks with p = 0.975.
 
 Bran correlation = 0.2310
-5
 
 ES
 
@@ -1498,7 +1448,6 @@ There are more varying authorship sizes in the real network compared to that of
 
 the simulated networks.
 
-51
 
 The betweenness centrality distribution were computed for the all the co-
 authorship networks and the networks simulated from the Erdos-Renyi or ER
@@ -1526,7 +1475,6 @@ Betweenness Centrality
 Figure 5.36: Betweenness centrality distributions for the 9th House co-authorship
 network and simulated ER networks with p = 0.993.
 
-52
 
 Figure 5.37: Betwecnness centrality distributions for the 10th House co-authorship
 network and simulated ER networks with p = 0.940.
@@ -1573,7 +1521,6 @@ clustering coefficient, they appear to have isolated distribution of lower clust
 
 coefficient.
 
-55
 
 Figure 5.42: Clustering coefficient distributions for the 8th House co-authorship
 network and simulated ER networks with p = 0.970.
@@ -1587,7 +1534,6 @@ network and simulated ER networks with p = 0.945.
 Figure 5.45: Clustering coefficient distributions for the 11th House co-authorship
 network and simulated ER networks with p = 0.974.
 
-57
 
 Figure 5.46: Clustering cocflicient distributions for the 12th House co-authorship
 network and simulated ER networks with p = 0.910.
@@ -1633,7 +1579,6 @@ plotted. The cumulative degree distributions were obtained for all the music
 networks - both real and simulated networks - and the comparison is shown in
 Figure 5.49.
 
-59
 
 ‘e 100 oxo 3200
 
@@ -1654,7 +1599,6 @@ is shown in Figure 5.50.
 @ Random Networks
 [MB Watts-Strogatz Network
 
-10
 
 “HULLTTTTATLUTUNTVUTUAAMGALA
 
@@ -1665,13 +1609,11 @@ the WS and a randomized version of the MIDI music network.
 
 One can note that the music networks have higher clustering coefficient
 
-60
 
 values compared to its randomized version. This is characteristic to a small-world
 
 network generated by the Watts-Strogatz model.
 
-61
 
 Chapter 6
 
@@ -1707,7 +1649,6 @@ to increase during the first three years but decrease during their fourth year.
 
 The Watts-Strogatz simulated networks (with connecting probability p =
 
-62
 
 0.20.3) matched the influence and friendship networks degree distribution with
 correlation coefficients ranging from 0.6 to 0.8. The betweenness centrality distri-
@@ -1750,7 +1691,6 @@ and nodes can easily cluster by forming connections to its neighboring nodes.
 
 The second data set is used to compute network properties to be compared
 
-63
 
 over time. Country music is observed to have a large radius over time compared
 to Rock and Pop music suggesting that its network has consistently have more
@@ -1771,7 +1711,6 @@ network a small-world network.
 
 0)
 
-64
 
 Bibliography
 
@@ -1816,13 +1755,10 @@ A. Broder, R. Kumar, F. Maghoul, P. Raghavan, S. Rajagopalan, A. Tomkins,
 and J. Wiener, “Graph structure of the web,” Proceedings of the 9th WWW
 Conference, Amsterdam, 2000.
 
-65
 
-12
 
 13)
 
-14
 
 15)
 
@@ -1832,7 +1768,6 @@ Conference, Amsterdam, 2000.
 
 18)
 
-19
 
 20)
 
@@ -1887,13 +1822,10 @@ Review of Modern Physics, 2002.
 M. Newman, “The structure and function of complex networks,” SIAM Re-
 view, 2003.
 
-66
 
 25)
 
-26
 
-27
 
 [28
 
@@ -1939,5 +1871,4 @@ networks,” Proceedings of the National Academy of Sciences, 2000.
 A. Barabasi and R. Albert, “Emergence of scaling in random networks.”
 Science, 1999.
 
-67
 

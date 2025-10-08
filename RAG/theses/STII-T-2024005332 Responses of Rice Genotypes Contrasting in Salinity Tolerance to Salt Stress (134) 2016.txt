@@ -61,7 +61,6 @@ growth by impairing metabolic processes and nutritional imbalance caused by redu
 
 nutrient uptake and/or transport to the shoot (Arzani 2008; Munns and Tester 2008;
 
-2
 Deinlein et al. 2014; Roy et al. 2014). The water deficit effect imposed by salt accumulation
 hinders plants’ normal metabolic processes. Stress-induced cellular and metabolic changes
 result in enhanced accumulation of toxic compounds in cells including reactive oxygen
@@ -88,7 +87,6 @@ correlated with its reproductive-stage tolerance (Moradi et al. 2003; Singh and 
 
 2010). Salinity has in fact independent effects at these two critical stages, and tolerance at
 
-3
 the seedling stage is not necessarily associated with tolerance at the reproductive stage
 (Palao et al. 2013). The reproductive stage seems to be more relevant for grain yield
 because it is within this stage that fertilization and formation of grains occurs
@@ -177,7 +175,6 @@ SOIL DEPTH asm) (4S m") (dS m") (dS m") SALINE
 60-120 cm <4 4-8 8-16 16-24 >24
 
 
-7
 
 As early as 2400-1700 B.C., written accounts of salt lands were recorded in the
 Tigris-Euphrates alluvial plains of lraq (Jacobsen and Adams 1958). Soil salinization
@@ -205,7 +202,6 @@ is caused by human interventions such as inappropriate irrigation practices, e.g
 
 rich irrigation water and/or insufficient drainage (Rengasamy 2014).
 
-8
 
 Under natural conditions, dominant sources of salt are rainfall-induced mineral
 weathering of parental rocks as it releases soluble salts of many types such as chlorides of
@@ -233,7 +229,6 @@ the accumulated salts are not flushed out to the drainage system, salts can quic
 
 levels that are injurious to salt-sensitive species (Taiz et al. 2015). In the Philippines, the
 
-9
 worsening climate change events led to difficulties in sustaining rice production in some
 areas. Since most farmers cannot rely on the seasonal rainfall to irrigate their paddy fields
 anymore, farmers have opted to pump groundwater onto the field — about 5, 000 liters are
@@ -260,7 +255,6 @@ particular, generates an external osmotic potential that can prevent or reduce t
 
 water into the root. Increased soil salt concentrations decrease the ability of plant to take
 
-10
 up water, which is similar to drought conditions and is additionally compounded by the
 presence of Na* ions (Deinlein et al. 2014).
 
@@ -318,7 +312,6 @@ soil and the toxic effect of high concentrations of salts within the plant itsel
 
 Tester (2008) proposed a two-phase model describing the response of plant to salinity
 
-12
 stress. They suggested that the reduction in shoot growth occurs in two phases: a rapid
 response to the increase in external osmotic pressure, and a slower response due to the
 accumulation of Na* in leaves.
@@ -346,7 +339,6 @@ water potential environments caused by salinity versus soil desiccation. During 
 
 desiccation, a finite amount of water can be obtained from the soil profile by the plant,
 
-13
 causing ever decreasing water potentials. In most saline environments, a large (essentially
 unlimited) amount of water at a constant, low water potential is available (Taiz et al. 2015).
 
@@ -375,7 +367,6 @@ For most species, Na* appears to reach a toxic concentration before Cl does, and
 
 so most studies have concentrated on Na* exclusion and the control of Na* transport within
 
-14
 the plant. To date, most experimental work on salinity tolerance in cereals has focused on
 Na* exclusion due in part to its ease in measurement. However, for some dicotyledonous
 species, like soybean, citrus, and grapevine, Cl’ is considered to be the more toxic ion
@@ -402,7 +393,6 @@ a greater degree of tolerance (Gupta and Huang 2014). The detrimental effects of
 
 plants are a consequence of both water scarcity resulting in osmotic stress and the excess
 
-15
 of sodium ions on critical biochemical processes (Munns and Tester 2008; Deinlein et al.
 2014).
 
@@ -429,7 +419,6 @@ photosynthates to younger leaves die, and the younger leaves undergo reduction o
 
 while production of new leaves slowed down (Gupta and Huang 2014).
 
-16
 
 Observed changes in plant growth include inhibition of lateral shoot development,
 apoptosis in root meristematic cells, early flowering, reduced number of florets, and
@@ -457,7 +446,6 @@ on Na* exclusion and the regulation of its transport within the plant (Shabala a
 
 does not accumulate to toxic concentrations within leaf blades. In cereal crops like rice,
 
-17
 durum wheat, bread wheat and barley, Na’ exclusion from leaves (Genc et al. 2007; James
 et al. 2011; Adem et al. 2014) is a key feature for salinity tolerance.
 
@@ -484,7 +472,6 @@ ROS scavenging system (Munns and Tester 2008; Gupta and Huang 2014; Roy et al. 2
 
 Other than physiological responses, anatomical adaptations have evolved in halophytes.
 
-18
 Salt-induced increase in cell size due to increases in vacuole volume (succulence) and the
 excretion of Na* and Cl by salt glands (modified trichomes) or bladders (modified
 epidermal cells) are examples of halophytes’ adaptations to saline conditions (Flowers and
@@ -510,7 +497,6 @@ Arabidopsis (Shi and Zhu 2002) and rice (Fukuda et al. 1999). However, in a rece
 
 of Biswas et al. (2015), the effect of the vacuolar Na*/H* antiporter transgene in a rice
 
-19
 landrace and a commercial rice cultivar, after its insertion by crossing, were significantly
 less tolerant than its transgenic parent at both seedling and reproductive stages.
 
@@ -537,7 +523,6 @@ Another osmolyte, glycinebetaine, acts to balance the osmotic potential of intra
 
 under salinity. In addition, it is involved in protecting major enzymes and membrane
 
-20
 structures and has been reported to have a central role in maintaining the activities of ROS
 scavenging systems (Ashraf and Foolad 2007).
 
@@ -562,7 +547,6 @@ and a variety of peroxidases. Catalase catalyzes the decomposition of hydrogen p
 
 to water and oxygen.
 
-21
 
 Screening Rice for Salinity Tolerance
 
@@ -591,7 +575,6 @@ conditions are faced with high spatial and temporal variability problems. It is 
 
 assess due to stress heterogeneity, variations in chemical and physical soil properties,
 
-22
 temperature, relative humidity, and solar radiation (Gregorio et al. 1997; Munns et al. 2006;
 Arzani 2008), hence, screening large number of genotypes under field conditions is
 difficult.
@@ -620,7 +603,6 @@ Microplots are likened to mini-fields in dug-out concrete tanks filled with prep
 
 or natural soil transported from affected areas and with varying amounts of desired salinity
 
-23
 and sodicity. Microplots are filled with artificially prepared soil that is uniform throughout
 the profile. Desired levels of salinity and sodicity are maintained in the same manner with
 that of field conditions minus soil heterogeneity. These microplots are used to screen
@@ -644,7 +626,6 @@ test entries and check varieties. Phenotypic responses are observed after 7, 14 
 
 of salt stress (Gregorio et al. 1997; Singh et al. 2010a).
 
-24
 
 Screening Criteria
 
@@ -669,7 +650,6 @@ rice that found higher soil exchangeable sodium percentage (ESP) and salinity to
 
 reduce germination (Singh et al. 2010a).
 
-25
 
 Salt Injury
 
@@ -697,7 +677,6 @@ as proline in response to salt stress has been assessed (Vaidyanathan et al. 200
 
 and Turkan 2005; Chunthaburee et al. 2015).
 
-26
 
 Under salinity stressed conditions, since ROS are formed, ROS scavenging systems
 are measured in sensitive and tolerant rice cultivars. Activities of peroxidases, catalase and
@@ -725,7 +704,6 @@ number of unfilled grains, total dry matter (g), percent fertility and grain yie
 
 (Mohammadi-Nejad et al. 2010; Rubell et al. 2014). Other studies include spikelet number
 
-27
 per panicle, fertility (percentage of filled spikelets) (Zeng et al. 2002; Palao et al. 2013)
 
 spikelet sterility and 1000-grain weight (Clermont-Dauphin et al. 2010).
@@ -753,7 +731,6 @@ rice, only a few salt-resistant varieties were released (Gregorio et al. 2002). 
 
 because of the following limitations: (1) variability in phenotypic responses of rice plants
 
-28
 at different growth stages; (2) complicated physiological mechanisms; (3) limited
 knowledge of the genetics of salinity tolerance; and (4) lack of reliable and reproducible
 
@@ -785,7 +762,6 @@ styrofoam seedling float with dimensions of 28 x 32 x 1.25 cm having 100 holes (
 
 with nylon net bottom. Two seeds were sown per hole, with ten holes per entry. The
 
-30
 
 radicles of the pre-germinated seeds were inserted carefully through the nylon mesh. The
 seedling floats were first suspended in distilled water for three days, after which a nutrient
@@ -800,10 +776,8 @@ OSGaeeeeese
 
 s
 Ss
-6
 ®
 @
-6
 e
 @
 e
@@ -814,7 +788,6 @@ Figure 1. Screening of six rice cultivars for salinity tolerance at seedling sta
 (A-B) Seedling floats: top and bottom views; (C) Seedling set-up; (D) Test entries
 after 21 d of salinization.
 
-31
 
 Six days after sowing, salinization was started by adding NaCl to the nutrient
 medium. Two levels of salinity were introduced corresponding to electrical conductivities
@@ -851,7 +824,6 @@ dry; some plants dying
 9 Almost all plants dead or dying Highly sensitive
 
 
-32
 
 Plant Material Handling and Salinization at Reproductive Stage
 
@@ -864,7 +836,6 @@ Figure 2. Screening of six rice cultivars for salinity tolerance at reproductive
 (A) EC meter: (B) Plastic pots filled with fertilized soil; (C-D) Reproductive
 stage set-up.
 
-33
 (43% clay, 44% silt and 13% sand) were used for seeding. These pots were kept in concrete
 tanks. Tap water was added to fill the tanks to about soil level. Figure 2 shows the screening
 of six rice cultivars for salinity tolerance at reproductive stage.
@@ -883,7 +854,6 @@ Using four primary tillers, rice cultivars were scored for flag leaf symptoms ev
 
 weeks after the start of salinization (Table 2).
 
-34
 
 Plant Samplings
 
@@ -915,7 +885,6 @@ were determined following the method described by Moradi and Ismail (2007). Drie
 
 samples were cut into approximately 0.25 cm. Twenty milligrams of the dried sample was
 
-35
 transferred to a 15 mL tube containing 10 mL of 0.1 N acetic acid, and heated in a water
 bath at 85°C for two hours. The extracted tissue was cooled at room temperature left
 overnight, and then filtered using Whatman filter paper # 1. An aliquot of 1 mL filtrate was
@@ -948,7 +917,6 @@ to wrapping with labelled aluminum foil. Samples were immediately frozen in liqu
 
 and stored in -80°C until processed. Prior to assay, all samples were freeze-dried for 72 h
 
-36
 at -88°C. Dried samples were cut into approximately 0.5 cm and a 10 mg subsample was
 transferred into a new tube. For chlorophyll extraction, 95% (v/v) ethanol in water was
 used in a ratio of 1.0 mg dry leaf material to 1 mL 95% (v/v) ethanol and incubated
@@ -977,7 +945,6 @@ transferred to 2 mL microcentrifuge tube. The fine powder was homogenized with 2
 
 ice-cold 50 mM potassium phosphate buffer (pH 7.0), vortexed at maximum speed for four
 
-37
 seconds, and centrifuged at 4°C for 30 min at 22 000 g. Solutions (0.5 mL) with or without
 thiobarbituric acid (+TBA or -TBA, respectively) were added to a screw-capped glass tube
 containing 0.5 mL plant extract. The -TBA solution contained 50% (w/v) trichloroacetic
@@ -1007,7 +974,6 @@ based on the method of Shigeoka et al. (1979) using subsamples from the same lea
 
 panicles used for MDA measurements. About 0.2 g of fine powder was homogenized with
 
-38
 ice-cold 6% trichloroacetic acid (TCA), vortexed at maximum speed for 4 s, and
 centrifuged at 4°C for 20 min at 24 000 g. Prior to assay, ascorbic acid standards of 0-200
 ppm in 6% TCA were prepared. Two assays were done at the same time for each sample:
@@ -1034,7 +1000,6 @@ Actual wt. of sample (g)
 
 Total AsA (nmol g™' f.wt.) = x 1000
 
-39
 
 8 oxidized AsA ENCE)
 xVol. of extractant (ml
@@ -1062,7 +1027,6 @@ Ortenberg, Germany) using toluene as reference. Proline concentration was calcul
 
 using the formula:
 
-40
 
 ™I proline of tol (mb)
 —— x Vol.of toluene (mL) x5
@@ -1092,7 +1056,6 @@ total number of pollen observed *
 
 % pollen viability = 100
 
-41
 
 Panicle Length, Panicles per Plant, and Filled
 and Unfilled Grains per Panicle
@@ -1149,7 +1112,6 @@ CSR28 47 5.3
 
 Pokkali 3.3 5.3
 
-43
 
 At reproductive stage, SES scores of all genotypes increased with longer days of
 exposure to salt stress (EC=10 dS m’!) (Fig. 3). After 42 d of salinity exposure, Re222,
@@ -1176,7 +1138,6 @@ Plants were designated score of 1 (normal growth, no leaf symptoms) to 9 (plants
 or dying). Scoring was done at 14, 28, and 42 d after salinization. Values are means
 from three replications and bars indicate standard errors.
 
-44
 
 Jon Concentrations
 
@@ -1206,7 +1167,6 @@ Table 4. Na” K" ratio of vegetative and reproductive parts of six rice cultiva
 
 measured at booting. flowering. milk stage and mature grain stages.
 
-45
 
 RATIO
 iL 30 28 PS BS
@@ -1261,7 +1221,6 @@ Cultiwatc) 1.08 149 3.68 131 149 3.78
 panicle main stalk, BS-branches with spikelets, C-control condition, S-saline condition (EC=10 dS m')
 
 
-46
 
 At flowering stage, measuring the same parameters revealed that Na*/K* ratios in
 vegetative and reproductive parts were essentially similar to those observed at booting
@@ -1288,7 +1247,6 @@ and Pokkali showed comparably the same low response. Sadri showed the highest in
 
 in both the Na*/K* ratios of branches with spikelets and panicle main stalk.
 
-47
 
 At mature grain stage, Na*/K* ratios of vegetative and reproductive parts increased
 significantly under saline condition. Under salinity, however, Na*/K* ratios of all tissues
@@ -1316,7 +1274,6 @@ sufficiently between these cations, excess external Na* not only impairs K* acqu
 
 also leads to accumulation of Na* in plant cells, and as Na* is toxic to cells, this is
 
-48
 undesirable. Ion homeostasis during salinity stress requires maintenance of stable K*
 acquisition and distribution to counterbalance the toxic effects of Na* accumulation.
 Present results on the analysis of Na*/K* ratios of leaves of rice cultivars differing in salt
@@ -1343,7 +1300,6 @@ in the capacity of the leaf sheath to extract and sequester Na* as it entered th
 
 (Davenport 2005). The low Na*/K** ratio in IR670 and Pokkali may be due to the higher
 
-49
 capacity to exclude Na* and sequester this ion before it enters the leaf. This variation in the
 degree of accumulation in the different parts of vegetative tissue can be explained partly
 by the formation of parenchyma tissues with large vacuoles in between the lysigenous
@@ -1370,7 +1326,6 @@ extremely sensitive to sodium, even small changes in sodium concentration can se
 
 affect the developing reproductive organs (Abdullah et al. 2001). Two different pathways
 
-50
 of uptake into the panicle exist for sodium, one is independent of transpiration and the other
 one is driven by panicle transpiration (Asch et al. 1999). In wheat and barley, the control
 of salt transport to the reproductive apex is exerted by the loading of the phloem (Munns
@@ -1443,12 +1398,10 @@ and 27%, respectively. The concentrations of chlorophyll a and 5 were also simil
 I 5) Ei
 g
 Laan
-5
 8 an
 EXER
 =a
 Lo}
-0
 4, B. Second leaf 4, E. Second leaf
 g I 3 I
 5 Be?
@@ -1494,7 +1447,6 @@ i
 I
 
 g
-2
 &
 
 Fr
@@ -1543,7 +1495,6 @@ photosynthetic capacity in plants. Degradation of chlorophyll has been reported 
 
 indicator of salt stress in mustard (Mittal et al. 2012), sugarcane (Cha-um et al. 2012) and
 
-54
 
 A First leaf a5 , D.Firstleaf
 
@@ -1585,7 +1536,6 @@ changes in the ultrastructure of cells, especially the photosynthetic apparatus,
 
 damages caused by excessive Na* accumulation. Moreover, it was suggested that the
 
-55
 structure of thylakoids and grana stacking is dependent on ion homeostasis in chloroplast.
 High concentrations of Na* and CI" could be injurious to thylakoid membranes. The present
 results showed that chlorophyll a and 5 concentrations in older leaves decreased more
@@ -1612,7 +1562,6 @@ MDA concentration was measured in flag leaves and developing panicles of the six
 
 cultivars at booting, flowering, milk stage and mature grain stages. Figure 8 shows
 
-56
 
 so pA 7
 $40
@@ -1621,7 +1570,6 @@ Q bw
 25 20
 E10
 
-0
 RC222 IR686 SADRI CSR28 IR670 POK RC222 IR686 SADRI CSR28 IR670 POK
 1500 -B 800 ¢ S
 3 I 3 ao | I
@@ -1669,7 +1617,6 @@ booting stage. Correlations of MDA with (D) reduced AsA and with (E) total AsA i
 and developing panicles (1, J). Data are mean values of three replicates and vertical bars indicate
 LSDopos. *, ** significant at P<0.05 and 0.01. ns, not significant.
 
-57
 concentrations of MDA, total and reduced ascorbate in the flag leaves and developing
 panicles of rice cultivars under control and salinized conditions at booting stage.
 Correlations of MDA with reduced AsA and with total AsA are also shown. There was
@@ -1695,13 +1642,11 @@ developing panicles, significant differences were observed between treatments in
 
 cultivars, with more effects on the salt-sensitive cultivars. MDA measured in flag leaves at
 
-58
 
 so pA is pF = Control
 x
 40 3 I @ECIO
 S10
-5
 °
 
 MDA
@@ -1756,7 +1701,6 @@ at flowering stage. Correlations of MDA with (D) reduced AsA and with (E) total 
 flag leaf and developing panicles (I, J). Data are mean values of three replicates and vertical bars
 indicate LSD gos. *, ** significant at P<0.05 and 0.01.
 
-59
 booting stage correlated with total AsA and with reduced AsA. There was a moderate
 negative correlation between MDA and reduced AsA (r= -0.49) and strong negative
 correlation between MDA and total AsA (r = -0.70). Conversely, MDA measured in
@@ -1784,7 +1728,6 @@ peroxidation in developing panicles in Rc222 and Sadri was significantly higher 
 
 subjected to 10 dS m'!. Total AsA in flag leaves at flowering stage decreased significantly
 
-60
 in Re222, IR686, Sadri and CSR28. Conversely, a slight decline was observed in [R670
 and Pokkali. The highest percentage reduction relative to that under control condition was
 noted in IR686, followed by Sadri, in which total AsA decreased by about 67% and 66%,
@@ -1830,19 +1773,15 @@ MDA
 RC222 IR686 SADRI CSR28 IR670 POK
 
 1500 , B
-1000
 
 suiull
 
-500
 RC222 IR6S6 SADRICSR28 IR670 POK
 
 600 ©
-400
 
 tlh
 
-200
 RC222 IR6S6 SADRICSR2S IR670 POK
 
 70 -D
@@ -1883,22 +1822,13 @@ MDA
 
 $00
 
-600
 
-400
 
-200
 
-0
 
-500
-400
-300
-200
 
 C) 100
 
-61
 
 RC222 IR6S6 SADRI CSR28 IR670 POK
 G
@@ -1915,7 +1845,6 @@ r=-0.6081°*
 200 300
 Reduced AsA (nmol g" f. wt.)
 
-400
 
 y= -0.0076x = 10.31
 ry 1=-0.6282"*
@@ -1931,7 +1860,6 @@ at milk stage. Correlations of MDA with (D) reduced AsA anid with (E) total AsA 
 and developing panicles (I, J). Data are the mean values of three replicates and vertical bars
 indicate LSD 99s. *. ** significant at P<0.05 and 0.01.
 
-62
 
 Figure 10 shows the concentrations of MDA, total and reduced ascorbate in the flag
 
@@ -1960,7 +1888,6 @@ When measured in developing panicles at milk stage, total AsA decreased in all
 
 rice cultivars under salt stress. Total AsA differ significantly in the panicles of the breeding
 
-63
 lines IR686 and IR670, where it decreased considerably in IR686, from 481 to 55, a 74%
 decrease under salt stress, whereas in IR670 the reduction was much lower (30%). Reduced
 AsA in flag leaves at milk stage declined under salinity. Under control conditions, reduced
@@ -1987,7 +1914,6 @@ showed similar increase in MDA as that of IR670. Similar increase in MDA was obs
 
 in the developing panicles measured at maturity. MDA in developing panicles increased in
 
-64
 
 sop A is pF aeara
 Zo ] ej I ECIO
@@ -2006,7 +1932,6 @@ $ & 1000
 zh
 SS soo
 e&2s t
-3
 0 0
 RC222 IR6S6 SADRICSR2S IR670_ POK RC222 IR6S6 SADRI CSR2S IR670 POK
 600 -
@@ -2021,7 +1946,6 @@ RC222 IR6S6 SADRICSR28 IR670 POK
 -) " 0.744288
 4 <
 5 a
-2
 o 50 100 150, 200-250 0 100 200 300
 Reduced AsA (nmol g? f. wt.) Reduced AsA (umol g" f. wt.)
 yey y=-0.027x ~ 38.188 Eised y=-0.0113x~ 10,849
@@ -2044,7 +1968,6 @@ replicates and vertical bars indicate LSDg os. *. * significant at P<0.05, 0.01,
 respectively.
 
 
-65
 Rc222, IR686, Sadri and CSR28, but showed no significant change in IR670 and Pokkali.
 This indicates that the extent of lipid peroxidation in IR670 and Pokkali is low even under
 salt stress. Total AsA of flag leaves at mature grain stage decreased significantly in Re222,
@@ -2071,7 +1994,6 @@ In plants, ROS are always formed by the inevitable leakage of electrons unto O2
 
 from the electron transport activities of chloroplasts, mitochondria and plasma membranes
 
-66
 or as a byproduct of various metabolic pathways localized in different cellular
 compartments (Sharma et al. 2012). ROS play a dual role in response to abiotic stresses,
 both as toxic by-products of stress metabolism and as signal transduction molecules.
@@ -2097,7 +2019,6 @@ concentration of lipid peroxidation of salt-tolerant cultivars relative to salt-
 
 cultivars under salt stress suggests that it may have better protection against ROS. This
 
-67
 improved protection may reflect a more efficient antioxidant system as evident by higher
 levels of reduced AsA. According to Qin et al. (2010), MDA content in rice cultivars
 grown in non-flooded field were increasing as the developmental stages were advancing
@@ -2124,7 +2045,6 @@ tolerance (Dionisio-Sese and Tobita 1998; Moradi and Ismail 2007). Ascorbic acid
 
 is an important metabolite with vital role as an antioxidant. AsA can directly scavenge ROS
 
-68
 through enzymes of the ascorbate-glutathione cycle involving the enzyme ascorbate
 peroxidase, or non-enzymatically by reducing H2O> directly to water. Apart from its role
 as an antioxidant, AsA acts as an electron donor for violaxanthin-epoxidase, an enzyme
@@ -2150,7 +2070,6 @@ developmental stages and for all rice cultivars. At booting stage, proline conce
 
 the flag leaf significantly increased in Rc222, IR670 and Pokkali under salt stress. Under
 
-69
 control conditions, proline accumulation in flag leaves was highest in IR670 and lowest in
 CSR28. Proline concentration of two breeding lines, IR686 and IR670, showed different
 trends of increase under salt stress. Proline concentration in IR686 slightly increased from
@@ -2176,17 +2095,11 @@ percentage increase relative to that under control conditions was exhibited in t
 
 Pokkali, in which proline concentration increased by about 207%. In contrast, the lowest
 
-70
 
 A Flag leaf 2 2 E Panicle ican
-8
 | 3 BECIO
-5
 g
 °
-8
-2
-3
 z
 Oe
 RC222 IR6S6 SADRI CSR28 IR670 POK RC222 IR6S SADRICSR2S$ IR67 POK
@@ -2245,7 +2158,6 @@ and salinized conditions. Data are mean values of three replicates and vertical 
 
 LSDoas-
 
-71
 percentage increase was observed in the breeding line IR686, in which it increased by only
 
 23% when subjected to 10 dS m"'.
@@ -2273,7 +2185,6 @@ varying extents depending on the rice cultivar. The increase was highest in IR67
 
 salt stress.
 
-72
 
 Another well-known adaptive mechanism of most plants to cope with salinity stress
 
@@ -2302,7 +2213,6 @@ panicles at reproductive stage, with stronger induction in the developing panicl
 
 and Pokkali. Proline appears to play a pivotal role in sexual reproduction of angiosperms.
 
-73
 Proline is the most abundant free amino acid in pollen and may constitute up to 70% of the
 free amino acid pool in pollen grains of angiosperms. During microsporogenesis, the
 tapetum layer supplies nutrients and metabolites including proline to the developing
@@ -2315,7 +2225,6 @@ accumulation of proline in developing panicles may be due to its function as com
 
 osmolyte protecting cells from dehydration, in addition to its role in pollen development.
 
-74
 
 Effect of Salinity on Pollen Viability
 
@@ -2353,9 +2262,7 @@ orange).
 
 Bars = 20pm.
 
-75
 
-100
 
 Pollen viability (%)
 8 3
@@ -2379,7 +2286,6 @@ tolerant Cheriveruppu. Greater reduction in pollen viability under salt stress w
 
 low seed-set and poor grain yield.
 
-77
 
 Effects of Salinity on Yield Components
 
@@ -2413,7 +2319,6 @@ number of panicles per plant, where it decreased by 29%, 53%, and 57%, respectiv
 
 under salt stress. Lower reductions in number of panicles per plant were observed in
 
-78
 CSR28, IR670, and Pokkali. The number of panicles per plant was reduced by 17% in both
 1R670 and Pokkali and only by 4% in CSR28. The number of filled and unfilled grains per
 panicle were the most seriously affected yield components because of salt stress. Filled
@@ -2444,7 +2349,6 @@ grains per panicle, respectively. Correlation coefficients among yield component
 
 pollen viability at reproductive stage are presented in Table 8. Pollen viability showed
 
-79
 strong positive correlation with filled grains per panicle (r=0.79) and with grain yield
 
 (r0.80), but negatively correlated with unfilled grains per panicle (r=-0.67).
@@ -2471,7 +2375,6 @@ material (Wang et al. 1995). Abdullah et al. (2001) demonstrated that starch syn
 
 key enzyme involve in starch metabolism, is significantly inhibited in both primary and
 
-80
 secondary branches of the rice panicle due to higher accumulation of Na* and lower
 concentration of K* in floral parts. The pronounced increase in unfilled spikelets per
 panicle in Rc222 and IR686 may be due to the reduction in pollen viability as reported
@@ -2498,7 +2401,6 @@ parenchyma cells of leaf sheath that decrease in size as the distance from the b
 
 tissue, as well as recirculation of sodium back to roots and enhanced retrieval of Na* from
 
-81
 xylem stream to avoid accumulation of toxic concentrations in the cytoplasm through
 activities of transporters that withdraw sodium out of the xylem vessels during transport
 up the plant. Also, salinity caused total chlorophyll concentration to decrease in all sampled
@@ -2547,7 +2449,6 @@ was the only parameter assessed at seedling stage, while physiological responses
 
 and developing panicles together with growth and yield were investigated at four
 
-83
 developmental stages during reproduction (booting, flowering, milk stage and mature grain
 stages). Vegetative and reproductive parts were collected and analyzed for changes in
 Na‘/K" ratio, chlorophyll, malondialdehyde, ascorbate, proline, pollen viability, and yield
@@ -2574,7 +2475,6 @@ reproductive parts of rice cultivars subjected to an EC of 10 dS m’' revealed 
 
 ratio decreased as you move towards the reproductive apex. The greater tolerance of the
 
-84
 known salt-tolerant landrace Pokkali and the breeding line IR670 seems to be associated
 with greater capability to exclude Na‘, as reflected in lower Na*/K* ratio, lower
 concentration of MDA under salt stress, and higher concentrations of reduced ascorbate.
@@ -2631,7 +2531,6 @@ CARILLO P, ANNUNZIATA MG, PONTECORVO G, FUGGI A, WOODROW P. 2011.
 Salinity stress and salt tolerance. Abiotic Stress in Plants-Mechanisms and
 Adaptations, 21-38.
 
-86
 
 CARILLO P, MASTROLONARDO G, NACCA F, PARISI D, VERLOTTA A, FUGGI
 A. 2008. Nitrogen metabolism in durum wheat under salinity: accumulation of
@@ -2675,7 +2574,6 @@ Environmental and Experimental Botany 53, 247-257.
 DIONISIO-SESE ML, TOBITA S. 1998. Antioxidant responses of rice seedlings to
 salinity stress. Plant Science 135, 1-9.
 
-87
 
 DIONISIO-SESE ML, TOBITA S. 2000. Effects of salinity on sodium content and
 photosynthetic responses of rice seedlings differing in salt tolerance. Journal of
@@ -2722,7 +2620,6 @@ GREGORIO GB, SENADHIRA D, MENDOZA RD, MANIGBAS NL, ROXAS JP,
 GUERTA CQ. 2002. Progress in breeding for salinity tolerance and associated
 abiotic stresses in rice. Field Crops Research 76, 91-101.
 
-88
 
 GUPTA B, HUANG B. 2014. Mechanism of salinity tolerance in plants: physiological,
 biochemical, and molecular characterization. International Journal of Genomics
@@ -2770,7 +2667,6 @@ Journal of Agriculture and Biology 15, 113-118.
 
 IRRI. 2006. Bringing Hope, Improving Lives: Strategic Plan 2007-2015. Manila.
 
-89
 
 ISMAIL AM, HEUER S, THOMSON MJ, WISSUWA M. 2007. Genetic and genomic
 
@@ -2817,7 +2713,6 @@ MICKELBART, MV, HASEGAWA PM, BAILEY-SERRES J. 2015. Genetic
 mechanisms of abiotic stress tolerance that translate to crop yield stability. Nature
 Reviews Genetics 16, 1-15.
 
-90
 
 MITSUYA S, YANO K, KAWASAKI M, TANIGUCHI M, MIYAKE H. 2002.
 Relationship between the distribution of Na* and the damages caused by salinity in
@@ -2863,7 +2758,6 @@ MUNNS R, RAWSON HM. 1999. Effect of salinity on salt accumulation and reproducti
 development in the apical meristem of wheat and barley. Australian Journal of
 Plant Physiology 26, 459.
 
-91
 
 MUNNS R, TESTER M. 2008. Mechanisms of salinity tolerance. Annual Review of Plant
 Biology 59, 651-681.
@@ -2910,7 +2804,6 @@ RAHNAMA A, JAMES RA, POUSTINI K, MUNNS R. 2010. Stomatal conductance as a
 screen for osmotic stress tolerance in durum wheat growing in saline soil.
 Functional Plant Biology 37, 255-263.
 
-92
 
 RAJENDRAN K, TESTER M, ROY SJ. 2009. Quantifying the three main components of
 salinity tolerance in cereals. Plant, Cell and Environment 32, 237-249.
@@ -2958,7 +2851,6 @@ SHARMA P, JHA AB, DUBEY RS, PESSARAKLI M. 2012. Reactive oxygen species,
 oxidative damage, and antioxidative defense mechanism in plants under stressful
 conditions. Journal of Botany 2012, 1-26.
 
-93
 
 SHIH, ZHU J-K. 2002. Regulation of expression of the vacuolar Na*/H’* antiporter gene
 AtNHX1 by salt stress and abscisic acid. Plant Molecular Biology 50, 543-550.
@@ -3005,7 +2897,6 @@ and use efficiency in soybean. Field Crops Research 69, 267-277.
 WANG HL, PATRICK JW, OFFLER CE, WANG X-D. 1995. The cellular pathway of
 photosynthate transfer in the developing wheat grain III. A structural analysis and
 
-94
 
 physiological studies of the pathway from the endosperm cavity to the starchy
 endosperm. Plant, Cell and Environment 18, 389-407.
@@ -3050,7 +2941,6 @@ of rice. Crop Science 40, 996.
 ZENG L, SHANNON MC, GRIEVE CM. 2002. Evaluation of salt tolerance in rice
 genotypes by multiple agronomic parameters. Euphytica 127, 235-245.
 
-95
 
 ZHANG J, JIA W, YANG J, ISMAIL AM. 2006. Role of ABA in integrating plant
 responses to drought and salt stresses. Field Crops Research 97, 111-119.

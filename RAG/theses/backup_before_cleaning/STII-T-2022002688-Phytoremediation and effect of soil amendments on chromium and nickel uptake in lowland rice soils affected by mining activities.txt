@@ -1,0 +1,4351 @@
+PHYTOREMEDIATION AND EFFECT OF SOIL AMENDMENTS ON CHROMIUM AND NICKEL UPTAKE IN LOWLAND RICE SOILS AFFECTED BY MINING ACTIVITIES
+
+VENUS OTADOY SAZ
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+DOCTOR OF PHILOSOPHY in SOIL SCIENCE
+
+JUNE 2018
+
+ABSTRACT
+
+The presence of Cr and Ni in agricultural land particularly in rice paddies as affected by
+mining activities represents a major risk to the environment and human health. Thus, remediation
+techniques such as the application of soil amendments and vetiver as phytoremediator are very
+important to remove or minimize the concentration of these heavy metals. The study was
+conducted to evaluate various remediation techniques to reduce the absorption and translocation
+of Cr and Ni in lowland rice in Barangay Lomboy, Santa Cruz Zambales and at the same time
+increase rice productivity in the area. The experimental set-up was conducted in two (2) cropping
+seasons, phytoremediation using vetiver and application of different soil amendments to NSIC
+Rc 160 rice seed variety at a rate of 10t ha⁻¹ combined with inorganic fertilizer were used. Each
+plot has a dimension of 4m x 5m and spaced at 0.50 m from each other. All agronomic, soil and
+tissue parameters were laid out in Randomized Complete Block Design with four replications
+except for the vetiver set-ups. The use of vetiver significantly reduced the amount of total Cr by 4.3%, available Cr by
+8.53%, total Ni by 9.86% and available Ni by 14.26% in the soil. When grown for 3 months, the
+roots were able to accumulate 3.83 kg Cr ha⁻¹ and 3.66 kg Ni ha⁻¹ with only 0.03 kg Cr ha⁻¹ and
+0.07 kg Ni ha⁻¹ in shoots. After 8 months, the amount of Cr accumulated in the roots and shoots
+increased to 6.36 and 0.04 kg Cr ha⁻¹ respectively. For Ni, it only increased to 4.12 and 3.66 kg
+Ni ha⁻¹ . Measured in terms of bioaccumulation factor (BAF), vetiver had a BAF of 0.97 for Cr
+and 1.07 for Ni after 3 months of growth and 1.48 for Cr and 1.38 for Ni after 8 months,
+indicating higher concentration of Cr and Ni in the plant than in the soil. The translocation
+factors at both 3 and 8 months were below 0.2 mg kg⁻¹ which is the prescribed limit given by
+the Codex Standard and European Union, suggesting that vetiver accumulates Cr and Ni in the
+roots and very small amount of Cr and Ni are translocated to the shoots, making the plant safe
+for forage purposes. Aside from the beneficial effects in mitigating soil ‘pollutants, vetiver also
+improved soil pH and percent organic matter. The Cr and Ni content in rice grains after planted
+the area with 3 months vetiver, were efficiently reduced to below detection limits. Also, growing
+vetiver before rice reduced grain yield since vetiver is also a good accumulator of nutrients. The use of vermicast, carbonized rice hull, bagasse ash and zeolite combined with
+inorganic fertilizer increased grain yield and at the same time reduced the uptake of Cr and Ni in
+grains. Total and available Cr and Ni in the soil were markedly reduced as compared to the
+control. Higher yield was obtained with the addition of vermicast. Zeolite was the most effective
+soil amendment in mitigating total and available Cr, available Ni while carbonized rice hull for
+total Ni in the soil. Highest return on investment was realized with the application of bagasse ash
+due to its cheaper/free cost while lowest ROI was observed with zeolite due to its relatively
+higher cost.
+
+CHAPTER I
+
+INTRODUCTION
+
+Background of the Study
+
+Rice is most widely consumed as staple food by a large part of the world's human
+population, especially in Asia. With regards to human nutrition and caloric intake, rice
+provides more than one-fifth of the calories consumed worldwide by humans. It is the
+agricultural commodity with the third-highest worldwide production, after sugarcane and
+maize, according to (FAOSTAT, 2012).
+
+In the Philippines, rice is considered as the major food and is the source of income
+for over 12 million Filipino farmers (FAO, 2007). Thus, the country ranks as the 8th largest
+rice producer in the world, accounting for 2.8% of global rice production and world’s largest
+rice importer in 2010 (FAOSTAT, 2011).
+
+Rice production in the Philippines is largely under lowland rice culture, either rainfed
+or irrigated. More than 90% of global rice harvest comes from irrigated or rainfed lowland
+rice fields. This is contributed by the major rice producing parts of the country such as Central
+Luzon, Western Visayas, Cagayan Valley, Ilocos region, SOCCSKSARGEN and Bicol region
+(Ricepedia, 2012).
+
+In Central Luzon, Zambales province is considered to be one of the rice producing
+areas with a total land area of 371,440 hectares. It is composed of thirteen (13) municipalities,
+
+one (1) city and two hundred thirty (230) barangays (CLUP, 2002; BSWM, 1988).
+
+The municipality of Santa Cruz composed of 25 barangays has a rich arable lands
+that are conducive for farming. It has a land area of 43, 846 hectares which is 11.14% of the
+total land area of the province. The municipality is primarily an agricultural town and out of
+the total land area devoted to agriculture which is 5,082.85 hectares 3, 503.85 hectares are
+planted to rice. This shows that slightly less than three-fourths of the agricultural land is for
+rice farming, the main agricultural or primary crop of the municipality (SDMP, 2013).
+
+However, mining industry has recently been booming in the area of Santa Cruz
+where there is an abundant deposit of nickel and chromite minerals. As of 2015, mine permit
+for nickel and chromite operations covers about 9, 791.8084 hectares operated by four large-
+scale mining companies (Environmental Justice Atlas, 2015).
+
+The processing of metals in the municipality has become a major source of farmland
+heavy metal contamination (Navarro et al., 2008). The mining activities, by their nature,
+cause disturbance of the natural environment in and around the area where the minerals are
+located. Environmental problems such as landslides, flooding, pollution of water, air and soil
+due to siltation of river systems, and farmlands create destruction of the irrigation system in
+the area, severely reducing palay production. Before the mining operation started, the Santa
+Cruz River could irrigate up to 2,000 rice fields, but now it can only accommodate 800 fields
+losing 8,000 tons of palay (rice paddy) production annually worth Php 200-million
+(Environmental Justice Atlas, 2015). In 2016, DA-RFU III reported that the soil in Barangay
+Lomboy, Santa Cruz, Zambales was already contaminated with these metals (Cr and Ni),
+thus it requires remediation.
+
+With rice being an important staple crop in the Philippines, it becomes a matter of
+
+urgency to reduce the concentrations hazardous chemicals such as Cr, and Ni particularly in
+
+paddy soil and rice grains. Therefore, to ensure food safety, measures are needed to be taken
+in mitigating metal pollution and subsequent uptake by crops. Some of the cost-effective
+remediation techniques used in minimizing metal uptake by crops grown in contaminated
+soils include the application of raw or processed agro-industrial wastes like vermicast,
+bagasse ash and carbonized rice hull.
+
+The use of these organic amendments are recognized as beneficial in several
+different ways to the enhancement of crop production (Chiu et al., 2006), and is often
+practiced in immobilization of heavy metals and soil amelioration of contaminated soils
+(Clemente et al., 2005).
+
+Other remediation techniques include using low cost and locally available natural
+mineral-based approach like zeolite and a potential phytoremediator like vetiver grass which
+is more efficient in absorbing certain heavy metals and chemicals due to the capacity of its
+root system to reach greater depths and widths.
+
+Based on the identified problems in Santa Cruz, Zambales, there is an urgent need to
+determine cost effective techniques in mitigating heavy metals in a contaminated rice field
+and at the same time increase the yield safely without compromising the environment and
+human health. Accumulation of heavy metals like Cr and Ni, particularly in an agricultural
+soil brings disorder of soil function which, in turn, affects crop growth. The heavy metals can
+be transferred to crops thus posing a risk to human health.
+
+The study was conducted based on the hypothesis that the accumulation of
+chromium (Cr), and nickel (Ni) in the rice field of Santa Cruz, Zambales has greatly affected
+
+rice production in the area as a result of the mining industry and the removal of these metals
+
+will result to improve growth and yield of lowland rice. The results of this study can serve as
+
+a basis for mitigating heavy metal pollution in the affected area.
+
+Objectives of the Study
+
+Generally, the study aimed to identify remediation techniques to effectively reduce
+the content of soluble Cr and Ni in lowland rice paddies in barangay Lomboy, Santa Cruz,
+Zambales. The specific objectives were:
+
+1. To determine the heavy metal profile of selected lowland rice farm on the
+basis of Cr and Ni concentration;
+
+2. To determine the effect of phytoremediation and some soil amendments
+(vermicast, carbonized rice hull, bagasse ash and zeolite) on the accumulation
+of Cr and Ni by lowland rice grown in contaminated soil;
+
+3. To determine the effect of phytoremediation and some soil amendments
+(vermicast, carbonized rice hull, bagasse ash and zeolite) on the translocation
+and accumulation of Cr and Ni in rice at various growth stages of the crop;
+
+4. To compare the efficiency of the different remediation techniques in heavy
+
+metal mitigation and rice production;
+
+Methodological Framework
+
+Heavy metal contamination (Figure 1) in agricultural soil is a potential environmental
+threat to the safety of agricultural food crops such as rice which is consumed by majority.
+Soils polluted with heavy metals have become common across the globe due to increase in
+geologic and anthropogenic activities like mining. Plants growing on these soils suffer metal
+toxicity as shown in the reduction of growth performance, and yield as a result of changes in
+physiological and biochemical processes in plants. Continued decline in plant growth reduces
+yield which eventually leads to food insecurity. Soil rehabilitation using phytoremediator or
+application of organic soil amendment is a practical and low-cost measure that can be used to
+inhibit the uptake of heavy metals by crops grown on contaminated agricultural soils.
+Immobilizing agents, such as Ca, P and Si containing materials (Violante et. al.,2010) in the
+different soil amendments can selectively reduce the availability or mobility of heavy metals
+in the soil by adsorbing, complexing or precipitating heavy metals. Li et. al., (2016) reported
+that soil amendment like carbonized rice hull / biochar treated in Pb contaminated paddy
+soils resulted in 54 and 94 % decreases in the acid soluble and CaClz -extractable Pb. This
+organic amendment contains high amount of Si that might impede Pb translocation from root
+to shoot and subsequently reduce Pb accumulation in rice grain. This could also immobilizes
+
+lead thus reduces its phytoavailability.
+
+Heavy Motal Contamination
+
+(Cr und Ni)
+Contamination
+Soi] Amendments
+Phytoremediation Polite
+(veliver) ici,
+
+*Carhumi ced rice hull
+sPhayzaset ash
+
+v¥_ Reduce heavy metal concentration in the
+soil
+
+v Prevent the absorption and translocation
+of heavy metals in rice grains
+
+¥Y Maintain soil fertility to support rice
+productivity, achieving food security,
+
+Figure 1. The methodological framework of the study
+
+CHAPTER II
+REVIEW OF RELATED LITERATURE
+Heavy Metals: Sources and Effects in the Environment
+
+Heavy metals are conventionally defined as elements with metallic properties
+and an atomic number >20. The most common heavy metal contaminants in the mining
+sites are chromium (Cr) and nickel (Ni). Metals are natural components in soil (Lassat,
+2000) and some of these metals including Zn, Cu, Mn, Ni, and Co, are micronutrients
+necessary for plant growth, while others, such as Cd, Cr, Pb, and Hg have unknown
+biological functions (Tangahu et. al., 2011).
+
+Brown et. al., (1987) proved that nickel is a nutritionally essential trace metal for
+several animal species, microorganisms and plants, and is the 24 most abundant
+element in the earth’s crust. Moreover, increased levels of Ni are encountered in highly
+industrialized and mined areas (Cempel & Nickel, 2006). Too little or too much of this
+element may cause a number of either deficieny or toxicity symptoms on plants (Molas,
+2004).
+
+Chromium is mined in different countries around the world including Philippines
+(Sneddon, 2012) as the naturally occurring form, chromite ore (FeCr20s). These heavy
+metals are released into the environment by both natural and anthropogenic sources. With
+the exception of soils derived from the physical and chemical weathering of parent
+
+materials containing elevated levels of trace elements (e.g. black shales and basic igneous
+
+rocks), the presence of elevated metal concentrations in the environment is related to
+man's activities (Jung, 2001). Mining, smelting, and the associated activities are
+important sources by which soils, plants, and surface waters are contaminated (Thomton
+et. al; 1980).
+
+Metal pollution has a harmful effect on biological systems; these metals do not
+undergo biodegradation. Toxic heavy metals such as Cr, and Ni can be differentiated
+from other pollutants, since they cannot be biodegraded. However, they can be
+accumulated in living organisms, thus causing various diseases and disorders even in
+relatively lower concentrations (Pehlivan et. al., 2009). Heavy metals, with soil residence
+
+times of thousands of years, pose numerous health dangers to higher organisms.
+
+They are also known to have effect on plant growth, ground cover and have a
+negative impact on soil microflora (Roy, 2005). It is well known that heavy metals cannot
+be chemically degraded and need to be physically removed or be transformed into
+
+nontoxic compounds (Gaur and Adholeya, 2004).
+
+Effects of Mining in the Philippines
+
+The Philippines has an estimated USD840 billion worth of untapped mineral
+resources, according to the Mines and Geosciences Bureau of the Philippines (2015).
+Large-scale mining is destructive, as it uses the open-pit method which entails clearing
+thousands of hectares of rainforests and agricultural lands, making deep excavations to
+
+extract minerals, using of toxic heavy metals and chemicals to process mineral ores, and
+
+consuming millions of liters of water. All of these negatively impact the lives of the
+Filipino citizens with the grave disregard for their right to health, life, food security,
+
+livelihood, and a clean environment.
+
+Mining companies contribute to the massive siltation of the rivers, poisoning the
+waterways and agricultural fields with toxic chemicals and rendering communities more
+vulnerable to flooding. At the same time, local communities affected by mining bewail
+the loss of their former livelihood in fishing, agriculture and forestry, (Salamat, 2013).
+Heavy metals from mining operations find their way into streams and rivers and percolate
+into ground water. Contamination of a high level may cause destruction of farm crops
+with resultant injuries to humans (Iddrisu & Akabzaa, 1996).
+
+The impact of mining in Benguet had a devastating effect according to Cordillera
+Peoples Alliance (2007). As proven by the experience of the people in Benguet, mining
+could lead to dislocation of indigenous people from ancestral land and traditional
+livelihoods, land destruction, subsidence and water loss, pollution of water and soil,
+siltation of rivers, lakes and other water system, serious health problems due to water,
+soil, and air pollution, loss of flora, fauna, biodiversity, and food insecurity. These
+impacts have not only violated the collective rights of the indigenous people but have also
+caused serious environmental destruction and suffering in the affected communities
+especially the farmers.
+
+However, its impact on Santa Cruz, Zambales is the dissolution and transport of
+
+metals and heavy metals, particularly Cr and Ni from the mining sites by run-off and
+
+ground water that leads to soil quality degradation and reduction of the capacity of the
+soil to grow healthy plants. Crops and vegetables cultivated in soils with heavy metal
+contamination or irrigation water with Acid Mine Drainage (AMD) accumulate a greater
+quantity of heavy metals than those cultivated in uncontaminated soil and water.
+
+Agricultural soils may be contaminated by heavy metals through practices such
+as irrigation and use of heavy metals containing agrochemicals such as pesticides,
+herbicides and fertilizers. The greatest risk of contamination has been reported in soils
+around mining operations (Simon et. al., 2016). Plants have a natural tendency to absorb
+toxic substances including heavy metals which are eventually transferred from the mining
+industry. Their high solubility in the aquatic environment is the main reason for the
+decrease in the production of food grains and vegetables as well as the adverse effect on
+the health of human beings.
+
+The Center for Environmental Concerns (CEC, 2015) reported that agricultural
+production in the municipality of Santa Cruz has been affected since mining operations
+started in 2006. People attribute the diminishing production to the nickel laterite, which
+had contaminated their rice fields, waterways and coastline. Farmers’ harvest had gone
+down from an average of 100 to 120 cavans per hectare in 2009, to only 75 to 80 cavans
+because the nickel laterite-laden soil was hard to till, and water was hard to permeate,
+thus the rice plants growth were stunted because high Ni concentrations retard shoot and
+root growth, deform various plant parts, decrease biomass production, disturb mitotic root
+tips, and produce Fe deficiency that leads to chlorosis and foliar necrosis. Additionally,
+
+excess Ni also affects nutrient absorption by roots, impairs plant metabolism, inhibits
+
+photosynthesis and transpiration (Ahmad & Ashraf, 2011). Farmers tried to remedy this
+by applying more fertilizer, which jacked up their production costs, but hardly made a
+
+difference.
+
+Fate of Heavy Metals in the Soil
+
+Heavy metals such as Cr and Ni are the most common toxic metals with a
+density at least five times greater than water (Sardar et. al., 2013). They are persistent,
+non-biodegradable and non- thermodegradable that lead to their accumulation to toxic
+levels (Chopra et. al., 2009). Naturally, all soils contain trace levels of metals that vary in
+concentration depending on the geology of the parent material from which the soil was
+formed (McLean et. al., 1992).
+
+Acceptable limit of heavy metals in the soil and rice grain samples have been
+cited by Kabata-Pendias (2011). Heavy metals concentrations above the Trigger Action
+
+Value (TAV) require remediation (Tables | and 2).
+
+Table |. Total heavy metals in paddy soils [mg/kg].
+
+CHROMIUM NICKEL
+(Cr) (Ni)
+
+MAC* 50-200 20-60
+
+TAV* 200 - 450 60 - 150
+
+maximum allowable concentration
+igger action value
+
+
+12
+
+Table 2. Heavy metals concentration in rice grain samples (mg/kg)
+
+CHROMIUM NICKEL
+
+(Cr) Ni)
+Normal 0.03-14 0.02-5
+Critical 14-30 6-100
+
+Chromium. Chromium is a trace element in most natural environments where it
+occurs as Cr (III). The potential for Cr (III) to oxidize to form Cr (VI) is a function of the
+concentration of high valence manganese oxides, the redox conditions and increased
+
+dissolved oxygen and microbial oxidation (Oze et. al., 2003). Cr (VI) is considered the
+
+most toxic form of Cr, which usually occurs associated with oxygen as chromate (C1047)
+F 2. B
+or dichromate (Cr2O7" ) oxyanions.
+
+Shanker et. al., (2005) discussed the effects of chromium toxicity to plant growth
+and development as well as on the physiological processes. They concluded that
+chromium compounds are highly toxic to plants and are highly detrimental, which
+includes alterations in the germination process as well as in the growth of roots, stems
+and leaves which may affect total dry matter production and yield. The toxic effects of Cr
+are primarily dependent on the valence state: Cr (VI) is highly toxic and mobile whereas
+Cr (III) is less toxic. Since plants lack a specific transport system for Cr, thus it is taken
+up by carriers of essential ions such as sulfate or iron. Most of the Cr is located in
+
+refractory primary minerals (pyroxene, garnet and spinels), a minor part is found in
+
+13
+
+secondary Fe oxides; therefore, Cr tends to accumulate in the upper mineral part of the
+
+soil profiles and is generally less mobile than Ni.
+
+Nickel. Nickel is an essential nutrient for plants. However, the amount of Ni
+required for normal growth of plants is very low (Polacco, 1977). The essentiality of
+nickel as a micronutrient in plants has been established because it is part of the active site
+
+of the enzyme urease, which hydrolyzes urea in plant tissues (Eskew et. al., 1983, 1984).
+Ni * has been identified as a component of a number of enzymes, including
+
+glyoxalases (family 1), peptide deformylases, methyl-CoM reductase and ureases, and a
+few superoxide dismutases and hydrogenases. Therefore, Ni plays a role in various
+important metabolic processes, including ureolysis, hydrogen metabolism, methane
+biogenesis and acitogenesis. It was shown in rice (Oryza sativa) that Ni may also activate
+glyoxalase I enzyme in plants (Mustafiz et. al., 2014). Studies tracing the origin of metal
+ion requirement of glyoxalase J in plants suggested that gene expansion led to multiple
+two-domain Ni-Glyoxalase I and different forms of the enzyme have evolved to help
+plants adapt to stress (Kaur et. al., 2013).
+
+The uptake of Ni* in plants is carried out mainly by root systems via passive
+diffusion and active transport (Mulrooney et. al., 2003). Soluble Ni compounds can be
+absorbed via the cation transport system. However, addition of Cu-* and Zn”" inhibit
+Ni” uptake competitively, these three soluble metal ions seem to be absorbed by the
+
+same transport system (Alloway, 1995). In addition, soluble Ni compounds could also be
+
+ligand complexes and proteins that specifically bind Ni (Ahmad et. al., 2007).
+
+Excess in Nickel availability leads to plant toxicity and interfere with Fe uptake
+and metabolism causing chlorosis and necrosis, reduced growth of roots and shoots, poor
+branching, deformation of various plant parts, decreased yield, leaf spotting abnormal
+flower shape, mitotic root tip disturbance, germination inhibition (Canadian Council of
+Ministers of the Environment, 1999).
+
+According to Rabie et. al., (1992), Ni phytotoxicity varies with the concentration
+of Ni in soil solution as well as with the plant species. The highest Ni" was found in
+horizons with C characteristics (AiC, BC and C) which had a relatively high pH (in CaCl2
+= 5.6). In these horizons, Ni was likely to adsorb onto phyllosilicates; however, an
+adsorption of a part of the Ni onto Fe oxides cannot be excluded (Ni adsorption edge at
+pH >S, as cited in Schwertmann & Taylor 1989). Ni released from serpentinitic parent
+material is more mobile than Cr within the parts of the soil profile where lower pH values
+prevail (in CaCl2 .5.0). As pH increases with soil depth, Ni is retained by adsorption in
+
+the lower part of the soil profiles.
+
+Effects of Heavy Metals on Human Health
+
+Rice is widely cultivated globally, especially in southeastern Asia, and is a staple
+food for many people. It has been shown that rice accumulates considerable amounts of
+heavy metals in its grains (Singh et. al., 2010). Therefore, rice is assumed to be an
+important source of dietary heavy metal intake for people who consume it regularly.
+Heavy metal toxicity and the danger of their bioaccumulation in the food chain represent
+
+one of the major environmental and health problems of modem society. Primary sources
+
+15
+
+of pollution are the burning of fossil fuels, mining and melting of metallic ferous ores,
+municipal wastes, fertilizers, pesticides, and sewage sludge (Peng et. al., 2006; Xiong,
+1998). The most common heavy metal contaminants are: cadmium (Cd), chromium (Cr),
+copper (Cu), mercury (Hg), lead (Pb), nickel (Ni) and zinc (Zn) (Lasat et. al., 2001;
+USEPA, 1997). At high concentrations, these metals exhibit toxic effects on cells (Baker
+& Walker, 1989).
+
+Heavy metals have been used by humans for thousands of years. Although
+several adverse health effects of heavy metals have been known for a long time already,
+exposure to heavy metals continues, and is even increasing in some parts of the world.
+Some heavy metals have bio-importance as trace elements but the biotoxic effects of
+
+many of them in human biochemistry are of great concern (www.granthalayah.com).
+
+Chromium. Numerous industrial applications have raised the consideration of
+chromium to that of being a very important economic element. At the same time, with the
+development of its uses, the adverse effects of chromium compounds in human health
+have been defined. Trivalent chromium is an essential trace element in humans and in
+animals. Chromium as pure metal has no adverse effect. Little toxic effect is attributed to
+trivalent chromium when present in very large quantities. Both acute and chronic toxicity
+of chromium are mainly caused by hexavalent compounds. The most important toxic
+effects, after contact, inhalation, or ingestion of hexavalent chromium compounds are the
+following: dermatitis, allergic and eczematous skin reactions, skin and mucous membrane
+
+ulcerations, perforation of the nasal septum, allergic asthmatic
+
+16
+
+reactions, bronchial carcinomas, gastro-enteritis, hepatocellular deficiency, and renal
+oligo anuric deficiency (Burrows, 1983).
+
+Excessive chromium can lead to stomach problems and low blood sugar
+(hypoglycemia), can damage the liver, kidneys, and nerves, and may cause irregular heart
+
+rhythm (De Mattia, Bravi et. al., 2004).
+
+Nickel. Is a compound that occurs in the environment only at very low levels. It
+is moderately soluble in soil water and is typically true for metals, increases at low pH
+(McGrath, 1995). Humans use nickel for many different applications. The most common
+application of nickel is an ingredient of steel and other metal products. It can be found in
+common metal products such as jewelry. Foodstuffs naturally contain small amounts of
+nickel. Chocolate and fats are known to (Social Issues and Environmental Problems:
+September 2015) contain severely high quantities.
+
+Nickel uptake is boosted when people eat large quantities of vegetables from
+polluted soils (Das et. al., 2009). Plants are known to accumulate nickel and as a result,
+the nickel uptake from vegetables will be eminent. Aquino et. al., (2009) cited that
+humans may be exposed to nickel by breathing air, drinking water, eating food or
+smoking cigarettes. Inhalation of nickel during refining of ore produces respiratory tract
+cancer and teeth disorder; allergic contact dermatitis to nickel alloys is also common
+(Goyer and Clarkson, 2001).
+
+Skin contact with nickel-contaminated soil or water may also result in nickel
+
+exposure. In small quantities nickel is essential, but when the uptake is too high, it can be
+
+a danger to human health. An uptake of too large quantities of nickel has the following
+consequences: Higher chances of developing lung cancer, nose cancer, larynx cancer and
+prostate cancer, sickness and dizziness after exposure to nickel gas, respiratory failure,
+lung embolism, birth defects, asthma and chronic bronchitis, allergic reactions such as
+skin rashes.
+
+Nickel fumes are respiratory irritants and may cause pneumonitis. Exposure to
+nickel and its compounds may result in the development of a dermatitis known as “nickel
+
+itch” in sensitized individuals (Chervona et. al., 2009).
+
+Soil Amendments for Rice Production
+on a Contaminated Field
+
+Brady and Weil (1999) described soil amendment as any substance other than
+fertilizers that is used to alter the chemical or physical properties of a soil, generally to
+make it more productive. Amendments may contain important fertilizer elements, but the
+term commonly refers to added materials other than those used primarily as fertilizers.
+
+The presence of heavy metals in agricultural land particularly in rice paddies
+represents a major risk to human health. It is therefore important to find materials to
+
+remove or minimize the concentration of these pollutants.
+
+18
+
+Natural Mineral-Zeolite
+
+Zeolites. Zeolites are microporous and_ naturally-occurring hydrated
+aluminosilicate minerals commonly used as commercial adsorbents and catalysts. They
+belong to the class of minerals known as “tectosilicates”. Most common natural zeolites
+are formed from the alteration of glass-rich volcanic rocks (tuff) with fresh water in lakes
+or with seawater (Almaraz et. al., 2003). The structures of zeolites consist of three-
+dimensional frameworks of SiO« and AlOs tetrahedra. The aluminum ion is small enough
+
+to occupy the position in the center of the tetrahedron of four oxygen atoms. The
+. 4+ cd + . 5
+
+isomorphous replacement of Si. by AI produces a negative charge in the lattice. The
+net negative charge is balanced by the exchangeable cation (sodium, potassium, or
+
+calcium). These cations are exchangeable with certain cations in solutions such as lead,
+
+cadmium, zinc, and manganese (Barer, 1987).
+
+According to the pioneer producer of natural zeolite in the Philippines (Saile
+
+Industries, Inc.), zeolites have a porous structure that can accommodate a wide variety of
+
+2- 2+ see .
+cations, such as Na’, K’, Ca’, Mg’, and others (Table 3). These positive ions are
+
+rather loosely held and can readily be exchanged for others in a contact solution.
+
+Table 3. Typical analysis of zeolite (Saile Industries, Inc.)
+
+CHEMICAL COMPOSITION WT. PERCENTAGE
+SiOz 73.20
+AkO3 10.72
+Na2O 0.99
+CaO 3.84
+Fe203 4.05
+TiO2 0.45
+MgO 4.34
+bso) 0.36
+CEC (meq/100g) ------------ 45.00*
+pH---------- 7.8 to 8.2
+
+It displays an excellent affinity for metal cations and adsorption of catalytic
+properties. In addition, cations of sodium, calcium, and potassium that are typically
+present in the channels of the zeolite structure can be replaced by other metal cations,
+including lead, cadmium, zinc, copper, nickel, iron, and manganese (Barakat, 2011;
+Apreutesei et. al., 2008; Dursun & Pala, 2007).
+
+Sanchez and Francisco (2010) found out the potential use of Philippine natural
+zeolites for treating acid mine drainage (Cu, Ni, As, Pb and Zn) in Rapu-Rapu. The
+authors reported that the heavy metal uptake of zeolite was 35.88% for Cu; 35.36% for Ni;
+95.79% for As; 99.03 for Pb; and 33.91% for Zn. Addition of this mineral increases pH,
+that causes precipitation of hydrous ferric oxides and decrease in dissolved metal
+concentrations (Wingenfelder et. al., 2005). Thus, it has been widely used for its effective,
+
+efficient, adsorptive property, low cost and local availability for mitigating heavy metals.
+
+20
+
+It possesses a net negative structural charge resulting from the isomorphic substitution of
+cations in the crystal lattice that gives zeolites little or no affinity for anions.
+
+Moreover, zeolite can produce the same yield from less fertilizer applied because
+of the reduction of volatilization and leaching losses. It is particularly suitable for
+banding under drip irrigation planting where it will assist water infiltration, distribution
+and retention. When fertigation is practiced it will actively hold the nutrients in the
+rootzone (Kavoosi, 2007). Sepaskhah & Barzegar (2010) also concluded that by
+decreasing N application rates, higher zeolite application rate is needed to improve grain
+yield of rice. The higher N retention in soil, improved grain yield quality, nitrogen-use
+efficiency (NUE), and nitrogen recovery efficiency (NRE) could be obtained at under the
+
+zeolite application rate of 8 t hee and N application rate of 80 kg ha? or more.
+
+Moreover, it was found that at higher N application rates, lower Z application rates were
+
+needed to effectively retain soil residual mineral nitrogen. Furthermore, at N application
+rates of 80 kg ha__ or more, Z application increased soil water retention and resulted in
+
+lower seasonal water use and higher water productivity. In general, it was concluded that
+the effect of Z application in retaining soil N was also effective.
+
+Organic Amendments
+
+Another technique to clean up pollutants in the soil is the use of organic
+
+amendments from agro-industrial waste such as vermicast, carbonated rice hull, and
+
+21
+
+sugarcane mill ash/ bagasse ash. These are abundant abandoned biomass resources from
+
+cellolusic residues of agricultural production and processing in our country.
+
+Vermicast. Vermicomposting constitutes a special form of composting in which
+earthworms metabolize and excrete a mixture of soil and organic matter. In the digestive
+system of these worms, microorganisms transform organic species (proteins, nucleic
+acids, fats, carbohydrates, etc.) into more stable products in the form of vermicast
+(Bianchina, 2009). Vermicast is usually a finely divided peat-like product from
+vermicomposting with excellent structure, porosity, aeration, drainage and moisture
+holding capacity (Edwards, 1988). It can be used to remediate metal-contaminated sites
+because it binds metals and increases uptake by providing nutrients such as sodium,
+magnesium, iron, zinc, manganese and copper that can serve as a natural fertilizer, giving
+high biomass yield and the microbial consortium helps the overall growth of the plant. It
+is a rich source of beneficial microorganisms and nutrients (Paul, 2000) and is used as a
+soil conditioner or fertilizer (Elcock and Martnes, 1995; Hattenschwile and Gaser, 2005).
+It also enhances the quality of growing plants and increases biomass which could suggest
+that more metal can be taken up from the contaminated growth media and the tolerance to
+the metal toxicity is improved (Tang et. al., 2003). This promotes our agricultural
+development in a more efficient, economical and environmentally- friendly manner
+representing an excellent treatment method for contaminated soils, not only for waste
+
+reduction but also soil reconditioning.
+
+22
+
+Application of vermicast in contaminated soil is reported to improve soil
+fertility and physical properties (Zheljazkov and Warman, 2004; Jadia and Fulekar
+2008a). Several researchers have demonstrated that earthworm castings (excretory pellets)
+have excellent aeration, porosity, structure, drainage, and moisture-holding capacity.
+Nuhaa et. al., (2015) reported that vermicast caused significant reduction in Cd (43.3—
+73.5%), Cr (11.3-52.8%), Cu (18.9-62.5%), Co (21.4-47.6%), Zn (34.6%) and Ni (19.9—
+49.6%). It has been considered as a soil additive for reducing the use of mineral fertilizers
+because it provides required nutrient amounts, increases cation exchange capacity and
+improves water- holding capacity (Tejada and Gonzales, 2009). It is not only increases
+yield of rice but can also substitute chemical fertilizers to some extent (Sharma et. al.,
+2008; Guera, 2010).
+
+Vermicast has a positive effect on the performance of crops in terms of higher
+
+number of branches and fruits (Singh et. al., 1997). Tomar et. al., (1998) recorded the
+highest yield (97 gplant |) through vermicast in eggplant (Solanum melongena L.).
+
+Kalembasa and Deska (1998) obtained significantly higher yield of sweet pepper
+
+(Capsicum annum L. var. grossum) with vermicast. Reddy et. al., (1998) recorded
+
+- wo
+maximum plant height at harvest, days to first flowering, and branches plant — with the
+
+application of vermicast (10tha '). Similarly, Tomar et. al., (1998) reported that the
+
+application of vermicast significantly increased leaf area in carrot (Daucus carota L.)
+
+plants.
+
+23
+
+Ferreras et. al., (2006) observed that addition of 20 t ie of vermicast alone to
+
+an agricultural soil in two consecutive years significantly improved soil porosity and
+
+aggregate stability. The number of large, elongated soil macropores increased
+significantly after a single application of a dose of vermicast (equivalent to 200 kg ha’ of
+N) to a corn field (Marinari et. al., 2000). Similarly, Gopinath et. al., (2008) reported a
+significant decrease in soil bulk density and a significant increase in soil pH and total
+organic carbon after application of vermicast for two consecutive growing seasons, at a
+rate equivalent to 60 kg ha! of N. Together these changes in soil properties improve the
+availability of air and water, thus encouraging seedling emergence and root growth.
+Highest rice grain and straw yields were obtained in crops treated with 50%
+recommended fertilizer application along with 10 t ha? vermicast; this was significantly
+higher than in crops under 100% recommended NPK fertilizers (Kumar et. al.,2006). As
+per production economics, the highest gross retum was achieved from 50%
+recommended dose of fertilizer with 10t vermicompost ha’, significantly higher than the
+
+treatments with 75% or 50% recommended dose of fertilizer along with 10 tonnes/ha
+
+farmyard manure.
+
+Carbonized Rice Hull. Rice hull is another potential organic soil amendment for
+bioremediation. Rice hull is a processing by-product of rice milling and accounts for
+about 20% of the rice yield. It is mostly used as a fuel in the boiler furnaces of various
+industries to produce energy. In some areas, rice hull constitutes a severe disposal
+
+problem (Naiya et. al., 2009; Srivastava et. al., 2006). Rice hull consists mainly of crude
+
+24
+
+protein (3%), ash (including 17% silica), lignin (20%), hemicellulose (25%), and
+cellulose (35%), rendering it suitable for metallic cation fixation (Krishnani et. al., 2008).
+It can be a good bio adsorbent for the individual removal of Pb(II) and Cu(II) ions from
+metal-containing effluents. The maximum sorption found for both ions was 0.0561 and
+
+0.0682 mmol metal g "of carbonized rice hull, respectively (Vieira et. al., 2012) . It is
+
+indicated that the Pb adsorption process is exothermic and spontaneous, while Cu
+adsorption is endothermic and spontaneous. The physical characterization of rice hull in
+nature, before and after adsorption of metal ions, points to properties such as the presence
+of functional groups (carboxyl, silanol, hydroxyl, etc.), amorphous silica and a fibrous
+and longitudinal structure of this material.
+
+The use of rice hull in the field has been practiced for some time (Ponamperuma,
+1982). Research has shown that rice hull can significantly improve soil properties by
+decreasing soil bulk density, enhancing soil pH, adding organic carbon, increasing
+available nutrients and removing heavy metals from the system, ultimately increasing
+crop yields (Williams et. al., 1972) as cited in FFTC, 2001. According to Muthayya
+(2014), rice hull constitutes about 20 wt % of the paddy production and is an abundantly
+available biomass. The carbonized rice hull usually contains more than 60% silica (SiO2),
+10%—40% carbon, potassium and other minor mineral components and nutrients that have
+great potential for amending soil. It consists of very light material with a micro-porous
+
+structure and a bulk density of about 0.150 g ene (Haefele et. al., 2009). The
+
+carbonization process also improves the water-holding capacity of the rice hull (Oshio et.
+
+al., 1981). Additionally, the widespread old practice of burning rice hull
+
+25
+
+indicates that black carbon from incompletely burned (i.e. carbonized) rice residues could
+be an important source of organic matter in rice soils (Schmidt and Noack, 2000).
+Masulili et. al., (2010) reported that application of carbonized rice hull at 10 to
+
+15 tons ha? with NPK fertilizer significantly improved some properties of the acid
+
+sulfate soil, decreased soil bulk density, soil strength, exchangeable Al, and soluble Fe,
+and increased soil pH, soil organic matter, total P, CEC, exchangeable K, and
+exchangeable Ca. The improvement of soil properties with this organic soil amendment
+applications resulted in an improvement of rice growth as shown by an increase in plant
+
+height, number of tillers, and dry biomass.
+
+Bagasse Ash. Another agro-industrial waste for mitigating heavy metals is
+bagasse ash. It is a major biomass waste produced and mostly utilized in the boilers of the
+
+sugar mills, which has amounted to more than 5.9 million metric tons per year. Bagasse
+production is 643,900 t ha! (321,950 t ha’, dried). Bagasse ash is one of the important
+
+organic wastes capable of supplying sufficient amounts of plant nutrients such as, Mg, S,
+P, K, Fe, Mn, Zn and Cu to soil (Anguissola et. al., 1999). In the data of SRA-OPSI
+(2004), bagasse ash contains 0.02% N, 4.52% P2Os and 8.00% K2O on a dry weight
+basis. When applied to fields as an organic amendment, its favorable effects on soil-water
+holding capacity and aeration have also been proven. Sugarcane straw and bagasse are
+lignocellulosic agro-industrial residues, wastes generated by the sugar and alcohol
+production processes, respectively. Inappropriate dumping method of bagasse ash creates
+
+soil pollution and also causes air pollution and allergy problems to humans
+
+26
+
+(Cancado et. al., 2006 and Andrade et. al., 2010). It has been reported that bagasse ash
+obtained from heaps of open-air burnt straw in the vicinity of a sugar factory showed a
+high pozzolanic activity (Martirena et. al., 1998). It also contains aluminosilicates glass,
+mullite and quartz that have a high potential of being developed as an efficient low cost
+adsorbents. Thus, it contributes to the mitigation of environmental problems and turns this
+biomass waste of the sugar industry into an attractive and useful material, which will be
+used in the future as an ion exchanger in removing pollutants. Nasim Ahmad Khan (2004)
+studied the adsorption of Cd (II) and Pb (II) into functionalized formic lignin from
+bagasse ash. It was reported that the removal of Cd (II) and Zn (II) increases as pH
+increases beyond 2 and at pH > 8.0, the uptake is 100%. Increase in adsorption capacities
+
+towards metal ions were multiplied by around 2.0 for zn* and 2.3 for ca’* (Osnick et.
+
+al., 2009).
+
+Dotaniya et. al., (2016) reported that bagasse ash improves the soil chemical,
+physical, and biological properties and enhance the crop quality and yield. In general,
+bagasse contains cellulose as a major portion at 47-52% while hemicellulose, and lignin
+are 25-28%, and 20-21 %, respectively. Apart from this 0.8-3 %, other compounds and
+ashes are pre-dominantly found (Rocha et. al., 2011). It contains sugar, which is
+responsible for fast bio-degradable within 3 months. The application of bagasse ash in
+agricultural crop production system can reduce the application rate of fertilizers. It
+produces organic acids, which mobilizes the insoluble P from soil to soil solution in
+
+labile form and enriches it with utilizable plant nutrients associated with enhanced yield
+
+27
+
+of wheat crop. Amending the soil with bagasse ash at 2.0% was found to be the most
+
+appropriate dose for higher yield of wheat crop in a calcareous soil (Jamil et. al., 2004).
+
+Phytoremediation
+
+Vetiver. Another technique in remediating heavy metals is by using Vetiver
+grass (Vetiveria zizanioides L.) as phytoremediator. This is one of a few plant species
+meeting all the criteria required for phytoremediation. Vetiver grass is a new and
+innovative phytoremedial technology for environmental protection due to its
+effectiveness and low-cost natural method. It has been used in many countries worldwide
+such as Australia, Brazil, Philippines, Thailand and Vietnam as slope stability and
+phytoremediation technique due to its high tolerance to adverse climatic conditions,
+elevated levels of heavy metals, and submergence. Its phytoremediation application has
+been actively used for treating and disposing polluted waste water, mining wastes and
+contaminated lands in Australia, Asia, Africa and Latin America (Truong, 1999a).
+
+Vetiver has neither stolons nor rhizomes but a massive, finely structured root
+system, reaching 3-4 m in the first year. This massively thick root system reinforces the
+soil and makes it very difficult to be dislodged under high velocity flows
+(Hengchaovanich, 1999; Hengchaovanich and Nilaweera, 1998). This has high tolerance
+to Al, Mn, As, Cd, Cr, Ni, Pb, Hg, Se and Zn in the soil (Truong 1999a; Truong & Baker
+1998). It has high efficiency in absorbing dissolved N, P, Hg, Cd and Pb in polluted water
+
+(Pinthong et. al., 1998; Sripen et. al., 1996). Thus, vetiver has played an important role in
+
+28
+
+the retention and decontamination of soil pollutants, preventing them from contaminating
+and accumulating in the soils and crops. It has been successfully used to stabilize and
+rehabilitate a highly erodible acid sulphate soil on the coastal plain in tropical Australia,
+where actual soil pH is about 3.5 and oxidized pH is as low as 2.8 (Truong & Baker
+1996, 1998).
+
+Research conducted in cabbage crops grown on steep slope (60%) in Thailand
+indicated that vetiver hedges had an important role in the process of captivity and
+decontamination of agrochemicals, especially pesticides such as carbofuran,
+monocrotophos and anachlor, preventing them from contaminating and accumulating in
+the soils and crops (Pinthong et. al., 1998; Sripen et. al.,1996).
+
+Truong (1999a) reported that very little of the arsenic, cadmium, chromium and
+mercury absorbed by vetiver was translocated to the shoots (1 to 5%); a moderate
+proportion of copper, lead, nickel and selenium was translocated (16 to 33%); and zinc
+was almost evenly distributed between shoot and root (40%). The important implication
+of these findings is that when vetiver is used for the rehabilitation of sites contaminated
+with high levels of arsenic, cadmium, chromium and mercury, its shoots can be safely
+grazed by animals or harvested for mulch, as very little of these heavy metals is
+translocated to the shoots. As for copper, lead, nickel, selenium and zinc, their uses for
+the above purposes are limited to the thresholds set by the environmental agencies and
+the tolerance of the animal concerned. In addition, although vetiver is not a hyper-
+accumulator, it can be used to remove some heavy metals from the contaminated sites to
+
+be disposed off safely elsewhere, thus gradually reducing the contaminant levels,
+
+29
+
+because vetiver roots and shoots can accumulate more than five times the chromium and
+zinc levels in the soil.
+
+In Australia, vetiver grass is highly successful in the rehabilitation of old
+quarries and mines, where very few species can be established due to the hostile
+environment. Vetiver is able to stabilize the erodible surface first so that other species can
+colonize the area between hedges later. After two years, the site was completely re-
+vegetated with vetiver and local species (Truong et. al., 1995).
+
+In Queensland, vetiver has been successfully used to stabilize mining
+overburden, highly saline, sodic and alkaline tailings of coal mines (Radloff et. al., 1995)
+and highly acidic (pH 3.5) tailings of a gold mine. Recently, vetiver was used to
+rehabilitate bentonite mines, and tailing dam walls of major bauxite and copper mines and
+an alumina refinery in northern Australia (Truong, 1999a).
+
+In China, similar results were obtained in Guangzhou, where rehabilitation was
+quickly achieved with vetiver planting. The effectiveness of vetiver in purifying urban
+garbage leachate was compared with that of Alternanthera philoxeroides, Paspaulum
+notatum and Ejichhornia crassipes. On the whole, the results showed that the growth of
+vetiver in highly concentrated leachate (HCL) and its purification of HCL were much
+better than those of the other species. In addition, vetiver showed a quite high purification
+rate for phosphorus (more than 74%) (Xia et. al., 1997). Similarly, in Thailand, vetiver
+was successfully used to rehabilitate a landfill site near Bangkok.
+
+In the United States, researchers have recently reported that vertical flow
+
+wetland and horizontal flow wetland cells planted with vetiver, respectively removed 98
+
+30
+
+and 96% of total suspended solids, 91 and 72% of total chemical oxygen demand (COD)
+and 81 and 30% of dissolved COD from sludge derived from a trout farm. Both wetland
+types removed most (82-93%) of the dissolved phosphate, total Kjeldahl nitrogen and
+total phosphate.
+
+Danhl et. al., (2009) showed that vetiver grass can produce high biomass (>100t
+
+ha year ) and can highly tolerate extreme climatic variation. Thus, it can accumulate
+
+heavy metals, particularly lead (shoot 0.4% and root 1%) and zinc (shoot and root 1%).
+The majority of heavy metals are accumulated in its roots, thus it suitable for
+phytostabilization, and for phytoextraction with addition of chelating agents. It can also
+absorb and promote biodegradation of organic wastes (2,4,6-trinitroluene, phenol,
+ethidium bromide, benzo[a]pyrene, atrazine). Furthermore, it was found to be highly
+tolerant to an extremely adverse condition. Thus, it can be used for rehabilitation of mine
+tailings, garbage landfills and industrial waste dumps that are often extremely acidic or
+alkaline, and high in heavy metals (Roongtanakiat et. al., 2010). All these special
+characteristics make vetiver a choice plant for phytoremediation of heavy metals and
+organic wastes.
+
+Amount of Cr and Ni in the Soil and Plant
+Samples as Affected by Mining
+
+Mohanty et. al., (2011) reported mean Cr levels of 11,170 mg/kg in the surface
+
+soils (0-20 cm) of an Indian mine area. It was found out also that Cr accumulation was
+
+significantly high in surface soils (0-20 cm) with a mean value of 11,170 mg ke! but it
+
+decreased significantly after the crop harvest. About 70% to 90% reduction of cr’® levels
+
+31
+
+were observed in irrigated mine wastewater when passed through successive rice plots.
+High bio-concentration of Cr in leaves with values ranging from 125-498 mg kg! as
+compared to stem (25-400 mg kg) and grain (5-23 mg kg ') was noticed. The
+reduction of cr’é levels is related to plant age, high biomass and area of water passage
+and was attributed to rhizofiltration technique.
+
+Marwa et. al., (2012) showed that soil samples in Tanzania contain up to 136.8
+mg ke! of Ni, which exceeds the maximum tolerance level set by the European
+Economic Community. ni* concentration is increasing in certain areas due to human
+activities such as mining works, emission of smelters, burning of coal and oil, sewage,
+and use of phosphate fertilizers and pesticides (Gimeno-Garcia et. al., 1996). ni*
+concentration in polluted soil may range from 20- to 30- fold (200-26,000 mg ke)
+higher than the overall range (10-1,000 mg ke!) found in natural soil (Izosimova, 2005).
+Denkhaus & Salnikow (2002) reported that farm soils contain approximately 3-1,000 mg
+kg! Ni soil, but the Ni concentration can reach up to 24,000 mg Lee Ni in soils near
+metal refineries and 53,000 mg kg? Ni in dried sludge and mining. It was also reported
+
+that the mean concentrations of heavy metals in brown rice grown near a mining area
+
+were Cd 0.325, Cr 0.109, and Ni 0.610, mg/kg, respectively.
+
+CHAPTER III
+
+MATERIALS AND METHODS
+
+Time and Place of the Study
+
+Ocular survey was conducted in the vicinity of a mining area in Santa Cruz,
+Zambales. The basic criterion for the selection of the study site was the presence of an
+irrigated rice field.
+
+The field experiment was conducted from June 2017 to February 2018 in
+Barangay Lomboy, Sta. Cruz, Zambales. The geographical location of the study area is
+
+15°46'38.1"N latitude and 119 °5614.1"E longitude with elevation of 11.8 m above sea
+
+level (Figure 2).
+
+33
+
+The study site
+
+MAP OF
+
+MUNICIPALITY OF STA. CRUZ
+PROVINCE OF ZAMBALES
+
+Figure 2. Map showing the location of the study site.
+
+
+34
+Experimental Design and Treatments
+Treatments
+
+2017 WS. For the first cropping season (2017 WS), the area was divided into two
+large blocks. One block was planted with a phytoremediator (vetiver) while the other block
+was planted with rice. The rice area was treated with soil amendments (vermicast,
+carbonized rice hull, bagasse ash, and zeolite). All cultural management practices
+(fertilizer rate, weeding, pest control) were based on the Rice Crop Manager (RCM). Soil
+
+amendments were applied at a rate of 10 t ha’, Each block was randomly divided into 20
+
+plots, each having a dimension of 4m x 5m and spaced at 0.50m from each other. All plots
+were separated by small bunds and canals to avoid contamination of treatments. All
+agronomic and soil parameters were laid out in Randomized Complete Block Design
+(RCBD) (Gomez and Gomez, 1984) with four replications. NSIC Rc160 (Tubigan 14) rice
+seed variety was used for all treatments. The experimental layout is shown in Figure 3. The
+details of the treatments were as follows:
+
+T1- Control (No soil amendment)
+
+T2- Vermicast (10t ha”)
+
+T3- Carbonized rice hull (10t ha”)
+
+T4- Bagasse ash (10 t ha!)
+
+T5- Zeolite (10 tha”)
+
+All plots received 82-16-16 kg N- P20s - K20 ha! which was based on Rice Crop
+
+-1
+Manager (IRRI, 2013). During basal application, 2.3 bags (116.66 kg ha) of 14-14-14
+
+35
+
+(complete fertilizer) was used. Second application was on July 18, 2017 at 21-25 DAT
+with 1.3 bag (66.67 kg ha”) of urea (46%N) and 3 application was on July 30, 2017 at
+
+35-39 DAT with 1.5 bags (76.66 kg ha’) of urea (46% N). Plots grown to vetiver did not
+
+receive fertilizer and soil amendments.
+
+2018 DS. During the second cropping season (2018 DS) the area previously
+planted with vetiver plant was divided into two (2) sub-block. One sub-block was grown
+with rice using farmer’s practice of fertilization while the other sub-block remained
+planted with vetiver. (Figure 4). The other block of the field, was planted again with rice
+treated with the same soil amendments except that higher rates of NPK were applied. The
+
+experimental layout is shown in Figure 4. The details of the treatments were as follows:
+
+TI - Farmer’s Practice (129-36-46 kg ha! N-P20s-K20, respectively) based on
+Rice Crop Manager procedure.
+Basal: 5.07 bags (253.33 kg ha’) of 14-14-14 (complete fertilizer)
+2"4 application: 21-25 DAT: 1.93 bag (96.67 kg ha” ) of 46-0-0 (urea)
+3° application: 35-39 DAT: 2.13 bags (106.67 kg ha’) of 46-0-0 (urea)
+0.33 bag (16.67 kg ha’) of 0-0-60 (muriate of potash)
+T2- Farmer’s Practice + 10 t ha”! vermicast
+T3- Farmer's Practice + 10 t ha”! carbonized rice hull
+T4- Farmer's Practice + 10 tha’! bagasse ash
+
+TS5- Farmer's Practice + 10 tha’ zeolite
+
+V-  * vetiver (phytoremediator)
+
+36
+
+Experimental Field Layout
+
+2017 WS
+
+VETIVER RICE
+
+4m 4m 4m 4m 4m 4m 4m 4m
+Rep 4 Rep3 Rep2_ Repl Rep 4 Rep3 Rep2 Rep]
+
+Sm
+
+Sm
+
+5m
+
+Figure 3. Experimental lay-out of the first cropping (2017 WS)
+
+Legend:
+11- Control (No soil amendment) T4- Bagasse ash (101 ha!)
+12- Vermicast (10t ha) 13-Zeolite (10 tha)
+
+13 Carbonized rice hull (10t ha”')
+
+2018 DS
+
+VETIVER RICE RICE-RICE
+4m 4m 4m 4m 4m 4m 4m 4m
+Rep 4 Rep3 Rep2 Rep | Rep 4 Rep 3 Rep2_ Rep!
+
+Figure 4. Experimental lay-out of the second cropping (2018 DS)
+
+Legend:
+T1- Control (No soil amendment)
+T2-  Vermicast (10 tha”) “1
+T3-  Carbonized rice hull (1 Otha )
+T4- Bagasse ash (10 tha)
+TS- Zeolite(10tha )
+
+V- Vetiver (phytoremediator)
+
+37
+
+38
+
+Cultural and Management Practices
+
+The experimental field was tilled before planting with a moldboard plow, and then
+two passes with a leveling disk were done. The first one was done soon after the
+moldboard plow tillage and the second one shortly before transplanting. Bunds and
+drainage canals were constructed around the experimental field. Final leveling was done
+
+after puddling the soil. Sprouted rice seeds at 60 kg ha! NSIC Rc160 (Tubigan 14) seed
+
+variety was sown on a nursery seedbed to raise the seedlings.
+Fertilizers were applied based on the recommended rate of the Rice Crop Manager
+
+(RCM) for both first (WS) and second cropping (DS). Organic soil amendments were
+
+applied 7 days before transplanting at a rate of 10t hal.
+
+F -1 = or
+For the first cropping, 82-16-16 kg N P20s K20 ha was applied. Basal fertilizer
+was applied at a rate of 2.3 bags (116.66kg ha’) of 14-14-14 prior to transplanting.
+
+Another 1.3 bag (66.67kg ha’) of 46-0-0 were applied at 21-25 DAT and 1.5 bag (76.66kg
+ha-1) of 46-0-0 at 35-39 DAT.
+
+For the second cropping, 129-36-46 kg N P20s K20 ha! was applied. Basal
+application of 5.07 bags (253.33 kg) of 14-14-14 (complete fertilizer) ha! prior to
+transplanting and second application at 21-25 DAT with a rate of 1.93 bag (96.67 kg) of
+46-0-0 (urea) ha! and third fertilizer application at 35-39 DAT with a rate of 2.13 bags
+(106.67 kg) of 46-0-0 (urea) ha! and 0.33 bag (16.67 kg) of 0-0-60 (muriate of potash) ha’
+1
+
+Seventeen to twenty-day old seedlings were transplanted in the field on June 2017
+
+(wet season) and November 2017 (dry season) at 0.20m x 0.20m planting distance with 2-3
+
+39
+
+tice seedlings per hill. Missing hills were replanted during the first two weeks after
+transplanting to ensure uniform crop stand.
+
+All plots were kept weed-free during the growing season, particularly before each
+fertilizer application. Pests and insects were controlled according to the best management
+standard for irrigated rice production at the farm. The crop was supplemented with
+irrigation water if required. Excessive water and water deficit that could affect the growth
+and yield of the crop were avoided. Intermittent or controlled irrigation system was
+employed. Water depth of 3-5 cm was maintained at every irrigation time from early
+tillering until 1-2 weeks before crop maturity or harvest. However, rainfall during first
+cropping from July to August 2017 were high as 585.0 mm to 879.9 mm thus no irrigation
+was done.
+
+Harvesting was carried out when the crops reached physiological maturity (85%
+of the spikelets in a panicle were yellow) by cutting the culms close to the ground and
+threshing immediately. Yield samples were taken from 5.0 ma (2.5 m x 2.0 m) sampling
+area. Samples were cleaned and sundried then oven dried until 14% moisture content (MC)
+was attained.
+
+Soil samples were collected before and after harvesting for two (2) cropping
+seasons. Before planting, about one kilogram of composite soil sample was collected from
+the top 20cm layer using soil auger and was placed in a properly labeled plastic container.
+After planting, soil samples (composite) were collected per treatment from the top 20 cm
+layer using soil auger and were placed in a properly labeled plastic container. Two (2)
+metal ions were considered to be investigated in this study namely: Chromium (Cr) and
+
+Nickel (Ni).
+
+40
+
+Data Gathered
+
+Soil Characteristics
+
+Soil sampling was conducted before and after planting and samples were analyzed
+for various soil properties, as follows: Soil texture (Hydrometer Method), pH in water
+(Potentiometric Method), organic matter (Walkley-Black Method), total N (Kjeldahl
+Method), available P (Bray No. 2 Method), exchangeable K (Flame Spectrophotometer
+Method), and cation exchange capacity (NH4OAc Method). Heavy metal (Total Cr and Ni)
+and (Available Cr and Ni) concentrations in the soil were analyzed using acid digestion on
+Microwave plasma-Atomic Emission Spectrometer Method (ICP-AES). All the analyses
+were conducted at the Regional Soils Laboratory-Department of Agriculture in Caraga
+Region. The available Cr and Ni concentrations in the soil were represented in the
+availability of these metals in the field for plant absorption. Also, the analytical results
+served as a guide in identifying constraints for agricultural crop production in the area, and
+
+in formulating recommendations for rehabilitation/mitigation.
+
+Growth and Agronomic Parameters
+
+The following agronomic parameters were determined:
+1. Plant height (cm). Plant height from 10 sample plants at random per treatment
+were measured from the base of the plant to the tip of the longest leaf
+
+(14DAT) vegetative stage, (SODAT) panicle initiation stage, and 80-85%
+
+41
+
+maturity. Plant height was measured, at the same time, the tillers were
+counted.
+
+2. Number of tillers per hill. The number of tillers per hill was counted from 10
+sample plants at random, which was done during the measurement of plant
+height.
+
+3. Panicle per hill. The number of panicles per hill was counted from 10 sample
+plants at random during harvest.
+
+4. Spikelets per panicle. The number of spikelets per panicle were determined from
+10 randomly selected panicle samples representing each of the treatments.
+
+5. Numbers of filled and unfilled spikelet. At harvest, filled and unfilled spikelets
+were counted from 10 randomly selected samples treatment. These were
+obtained from the same plant samples used in the determination of other yield
+components.
+
+Percent filled spikelets was calculated using the formula:
+Number of filled spikelets
+
+Percent Filled Spikelets = ------------------
+Total number of spikelets
+
+6. Weight of 1,000 grains (g). It was determined by measuring the weight of 1000
+grains and moisture content (MC) from each plot/ treatment after harvest. The
+weight of 1000 grains were adjusted to 14% MC.
+
+7. Harvest index (HI). \t refers to the efficiency of translocation of assimilates to the
+desired sink or the coefficient of effectiveness on the movement of dry
+
+matterto the grains. The HI was determined from the grain yield samples
+
+42
+
+(2.5 m x 2 m). Straw and grain weight measurements were taken and HI was
+computed as the ratio of economic to biological yield.
+
+Total dry weight of grains
+
+Total Plant Dry weight
+
+8. Grain yield. It was taken from 5 mm (2.5 m x 2.0 m) sampling area located at the
+
+center of each plot. Grain yield was adjusted to 14% MC, and at per hectare basis
+
+using the formula:
+
+2
+1 Yield sample (kg) 10,000 m 100-MC
+Yield (kg ha’) = --------- _
+Sampled area (m’)
+
+Economic Analysis
+
+Return on investment. This was calculated using this formula.
+
+Net Profit
+ROI = ------- —o
+Total Investment
+
+Tissue Analysis
+
+Plant samples were collected at 14 DAT (vegetative stage), 50 DAT (panicle
+
+initiation stage), and at maturity. Samples were cleaned from dusts and soil particles or any
+
+contamination, then oven-dried at 70° C to minimize loss of soluble constituents and to
+
+43
+
+avoid thermal decomposition of the material. Oven-dried tissue samples were ground and
+placed in a properly labelled coin envelope and stored in a desiccator.
+
+The root and straw of rice from 14 DAT (vegetative stage), 50 DAT (panicle
+initiation stage) in two croppings were analyzed separately for Cr and Ni, while at harvest,
+root, straw and rice grain were segregated for N, P, K, Cr, and Ni analyses. However, for
+vetiver plants only root and shoot were determined for N, P, K, Cr, and Ni. Analyses were
+determined using Kjeldahl N analyzer, Spectrophotometer and acid digestion using
+Microwave plasma- Atomic Emission Spectrometer Method (ICP-AES) at the Regional
+
+Soils Laboratory-Department of Agriculture in Caraga Region.
+
+Bioaccumulation Factor
+
+The bioaccumulation factor (BAF), is an indicator of the ability of a plant to
+
+accumulate a specific metal and was calculated using the formula (Codex 1995).
+
+where the heavy metal concentration C in the edible parts of the plant and the soil are
+
+represented by Cplant and Csoil, respectively.
+
+44
+
+Translocation Factor
+
+To establish the relative translocation of metals from the soil to grains, the
+
+Translocation Factor (TF) or mobilization ratio was calculated (Codex 1995) using the
+
+formula:
+
+Conc. of metal in grains
+
+Conc. of metal in soil
+
+Meteorological Data
+
+Monthly averages of rainfall, and temperature were obtained from PAG-ASA weather
+
+station at Iba, Zambales.
+
+Data Analysis
+
+The data collected (except meteorological parameters) were analyzed using
+
+standard statistical procedures such as ANOVA in RCBD (Gomez and Gomez, 1984) with
+repeated measures for plant and soil parameters a* and ond cropping). If significance
+were detected, post-hoc analysis was done. Average parameter means as comparison using
+Least Significant Difference (LSD) and group means comparisons. The software Statistical
+Procedures for Agricultural Research (STAR Nebula, 2013 version) was used in data
+
+analysis.
+
+CHAPTER IV
+
+RESULTS AND DISCUSSION
+
+General Description of the Study Area
+
+Field experiments were conducted during 2017 WS (June — September) and 2018
+DS (November 2017 — February 2018) in Barangay Lomboy, Sta. Cruz, Zambales. Sta. Cruz,
+is the first class municipality of Zambales. It has a rich arable land that is conducive for
+farming, particularly rice. However, the area is suffering from devastating effects of mining
+industry because of its abundant deposit of chromite and nickel minerals (Environmental
+Justice Atlas, 2015) causing a major source of farmland heavy metal contamination together
+with other inorganic materials deposited by surface run-off and or percolation from higher
+topographic position in the landscape. Besides, heavy laterite siltation of river systems, and
+
+farmlands were observed in the area which severely reduced the palay production.
+
+Meteorological Condition
+
+Figure 5 shows the total monthly rainfall and average temperature at different growth
+stages of rice. Higher rainfall was observed during the first cropping season from July to
+August (450 to 650 mm), while no rainfall was detected during the second cropping between
+
+November 19 to December 8 and December 10 to January 12, 2018. This is the typical
+
+46
+
+weather condition in areas under Climate Type 1 which is characterized by two pronounced
+seasons, dry from the month of November to April and wet during the rest of the year.
+
+In 2017 WS, there was a remarkable increase in the amount of rainfall during the
+critical growth stages (57 to 87 DAT) of NSIC Rc160, which is an early maturing variety.
+The crop received the highest rainfall (650 mm) during the booting stage (60 DAT). Due to
+frequent and high amount of rainfall, average temperature ranged from 27.90 to 28.30 all
+throughout the first cropping season. However, rice planted during 2018 DS received low
+amount of rainfall (83.8mm) at vegetative stage then gradually declined from reproductive
+
+stage until harvesting (<0.1mm) thus irrigation was supplied throughout the cropping season.
+
+5 5 0 0
+Due to decreasing amount of rainfall the average temperature ranged from 27.15 C to 28 C.
+
+sappquing ‘Dgy-uonorg audouds YSYOVd P4I :224n0¢
+“Sq 810Z PUR SM L10Z BuLNp 2011 Jo soBEIs YMo4d JUAJAYyIP 1e aINyeraduta} UeOUT pu [TeFUTEI [e}O} ATMO *¢ aunty
+
+(90) aumesadwayueaw © (wi) jpeyurey AjyUoW,
+#9.
+(8107) uoseas Aug (2102) uoseas 19M
+Aumew uonentuy ajsiued angeyaian ‘mojied AumeW uoneniul aiued paneyasa/
+“
+3 szqey etuer | zruer 628d | 899d 8TAON | ZTAON ©8390: | 4190 veanv | Ezsnv GT INE | vz euNr
+: 0
+3
+BSlt
+z oot
+3 gz o0z
+8
+5 oot 5
+S8z 3
+8 oor 3
+oos 3
+009 =
+3
+3
+
+6
+
+eJep [e300] a
+
+
+48
+
+Soil Characteristics
+
+The soil type in the study area is Bani silty clay with initial soil characteristics are presented
+in Table 4. It appears that, the area has an adverse soil fertility condition as indicated by its
+
+extremely to strongly acidic pH (4.38 to 5.1), low OM (1.52 to 1.76 %), low total N content
+
+(0.15 %), low CEC (11.32 cmol kg”), extremely low available P (2.7 mg ke), and low
+
+exchangeable K (0.14 cmole ke). The soil also contains very high concentrations of total
+-1 . 5
+
+(4314 to 4520 mg kg_) and available Cr (1875 to 1925 mg kg 4. and total (2648 to 2783 mg
+
+kg) and available Ni (1689 to 1725 mg kg”) that may have resulted from the weathering of
+
+parent material composed of ultramafic rocks rich in mineral resources such as Ni, chromite,
+Fe and Mn (Sevilla, 2011). The improper disposal of mining waste from chromite and nickel
+
+mines also resulted in groundwater contamination or seepage in the area. Moreover, the
+continuous use of irrigation water contaminated with Cr (<0.05 mg kg") and Ni (0.019 mg
+ke!) has also aggravated the situation.
+
+Soil organic matter content was higher on the surface horizon (0-20 cm) compared
+to the sub-surface horizon (20-40 cm) probably due to its higher amount of moisture, plant
+litter and temperature received that favor the decomposition process. When these variables
+are put together, percent organic matter increases (Antonladis et al., 2008).
+
+Cation exchange capacity (CEC) was higher on the surface compared to the sub-
+surface soil. This is attributed by higher OM content on the surface than sub-surface (Table
+4). It is usually means that high CEC soils have a greater nutrients and water holding
+
+capacity than those with low CEC.
+
+49
+
+It was also observed that the experimental area contains higher concentration of
+heavy metals such as chromium and nickel. This might be due to the improper disposal of
+mining waste causing groundwater contamination / seepage from chromite and nickel mines
+in the area resulting to soil acidity, low organic matter content and CEC. It was also agreed
+by many other researchers that the availability of heavy metals in soil is associated with
+several environmental soil factors including pH, soil organic matter content (SOM), and
+(CEC) cation-exchange capacity (Antonladis, et al. 2008). It was also found out that the
+higher nickel content on the surface than the sub-surface soil might be due to runoff and
+deposition to the top soil/ surface. However, chromium was present in higher amounts in the
+subsoil/sub-surface, this might be attributed to the weathering of ultramafic rocks as parent
+
+material.
+
+Table 4. Initial soil properties of the experimental area
+
+50
+
+RATING / CRITICAL LEVEL
+SOIL PROPERTY VALUE DESCRIPTION” RANGE
+Particle size Analysis
+% sand 7.0 - -
+% silt aS - :
+% clay 49.7 F ;
+Textural class silty clay
+Soil pH (H20,1:1) 5.1 Strongly acidic 5.1-5.5
+0-20 cm
+20-40 cm 4.38 Extremely acidic 3.5-4.4
+ce sms 1.76 Low 1.0-2.0
+-20 cm
+20-40 cm 1,52 Low 1.0-2.0
+Total N (%) 0.15 Low 0.1-0.15
+; 4 5.0 (acid soils)
+Available P (mg kg) 27 Low >25.0 (calcareous soils)
+Exchangeable K 4 0.14 Tow <0.1
+(cmolckg )
+Cation exchange | 11.32 Low <5.0
+capacity (cmole kg )
+Total Cr Content
+(mg kg-') 4314 Very high >240
+0-20 cm
+20-40 cm 4520 Very high >240
+Total Ni Content
+(mg kg) 2648 Very high >720
+0-20 cm
+20-40 cm 2783 Very high >720
+Available Cr Content
+(mg kg”) 1875 Very high 50-450
+0-20 cm
+20-40 cm 1925 Very high 50-450
+Available Ni Content
+(mg kg’) 1725 Very high 75-150
+0-20 cm
+20-40 cm 1689 Very high 75-150
+Soil type Bani silty clay
+
+Ne eee Eee
+Source: DOBERMANN, A AND T. FAIRHURST, 2000. Rice Nutrient Disorders and Nutrient Management. 1"!
+Ed. International Rice Research Institute, Los Banos, Laguna Philippines. 191 pp.
+
+Kabata -Pendias (2011).
+
+51
+
+Use of Vetiver in the Phytoremediation of Chromium
+and Nickel in Contaminated Soils
+
+Dry Matter Yield, NPK Concentration
+and Uptake of Vetiver
+
+Dry matter yield, NPK concentration and uptake of vetiver used are presented in
+
+Table 5. Vetiver grass grew very well in the field. Just after 3 months, it was able to produce
+a root and shoot biomass of 2,320 and 5,701 kg ha’, respectively. A notable characteristic of
+vetiver is the large root dry matter that is produced resulting in a high root to shoot ratio
+(1:2.5). When grown up to 8 months, root and shoot dry matter yield increased to 3,125 and
+7,810 kg ha).
+
+NPK concentration in roots and shoots of vetiver grass were relatively high. This
+result was in agreement with Patra (2011) and Singh et al., (2010) because this type of plant
+needs higher amounts of nutrients for shoot production. These nutrients are incorporated into
+their system for their growth and development for higher biomass. Truong and Truong (2011)
+also reported that vetiver has a very high capacity for uptake of nutrients particularly nitrogen,
+phosphorus and potassium.
+
+Because of the massive and deep roots of vetiver, it was able to take up large amounts
+of NPK (Figure 6). In 3 months, a total uptake of 35.95 kg N ha’, 20.54 kg Pha”! and 43.94
+ke K ha! was accumulated in the shoot and 10.44 kg N ha', 3.25kgP ha’ and 6.50 kg K
+ha’! in the roots. NPK uptake significantly increased after 8 months with 53.89 kg N ha’',
+33.89 kg P ha’! and 72.64 kgK ha’! inthe shoot and 17.19 kg Nha, 10.31 kg Pha! and
+
+17.50 kg K ha’ Hengchaovanich & Nilaweera, (1998) reported that vetiver grass is good for
+
+52
+
+phytoextraction of heavy metals and as well as prevent soil erosion due to its massive, finely
+
+structured root system reaching 3-4 m in the first year.
+
+Table 5. Dry matter yield, NPK concentration and uptake of vetiver grown in the field for 3
+and 8 months
+
+DRY CONCENTRATION UPTAKE
+GROWTH PLANT MATTER (%) kg ha’
+
+DURATION PART YIELD
+(kgha') ON PK ON P K
+
+Shoot 5107 0.63. —S0.36-0.77 35.95 20.54 43.94
+3 months Root 2320 0.45 0.14 0.28 1044 3.2565
+
+Shoot 7810 0.69 ~—-0.43.«0.93 53.89 33.58 72.64
+Smonths Root 3125 0.55033 0.56 «17.19 1031 17.5
+
+0
+
+Shoot Root Shoot Root |
+
+2017 WS 2018 DS
+
+=N mp omK
+
+Figure 6. Nutrient partitioning in vetiver grown in the field for 3 and 8 months
+
+53
+
+Cr and Ni Concentration and Uptake in Vetiver
+
+A different trend in Cr and Ni concentration and uptake in vetiver are shown in Table 6
+
+and Figure 7. More Cr and Ni were accumulated in the vetiver roots compared to the shoots.
+
+After growing for 3 months, the vetiver roots were able to accumulate 3.83 kg Cr hats and
+
+a. | 7 - -
+3.66 kg Niha while only 0.03 kg Cr ha L and 0.07 kg Ni ha L were measured in the shoots.
+After 8 months, the amount of Cr accumulated in the roots and shoots increased to 6.357 and
+
+0.04 kg Cr ha", respectively. For Ni, it only increased to 4.12 kg Ni ha”! and 3.66 kg Ni ha”
+
+. Results implied the importance of vetiver in extracting these metals from the soil and
+
+accumulating them in their roots keeping the shoots safe for animal consumption as forage.
+Due to their extensive rooting system, they can take up considerable amount of heavy metals
+using ion channels and metal transport proteins in their roots. This type of plant is suited in
+polluted soils due to its metal accumulating ability coupled with metal tolerance and high
+
+shoot biomass (Randloff, et al., 1995; Truong and Baker, 1998; Chen 2000).
+
+Table 6. Cr and Ni concentration and uptake in vetiver after 3 and 8 months
+
+CONCENTRATION UPTAKE
+DRY (mg kg‘) (mg ha”)
+CROPPING PLANT MATTER
+SEASON PART. YIELD Cr Ni Cr Ni
+(kg ha)
+2017 WS Shoot 5706.5 6 12.6 34.24 19
+Root 2320 1650 1576 3828 3656.32
+2018 DS Shoot 7810.25 5 5 39.05 39.05
+
+Root 3125 2102 1319 6568.75 4121.88
+
+
+54
+
+7000
+6000
+
+~ 5000
+
+4000
+
+2000
+
+1000
+
+0
+
+Shoot Root Shoot Root
+2017 WS 2018 DS
+=Cr oMNi
+
+Figure 7. Heavy metal partitioning in vetiver after 3 and 8 months
+
+Table 7 shows the effect of vetiver plant as phytoremediator on soil pH, organic
+
+matter. total and available Cr and Ni. After 3 months, soil pH increased to 6.21 and soil
+organic matter content to 2.6%. Total Cr and Available Cr were reduced by 186 mg ke”!
+(4.3%) and 160 mg ke! (8.53%), respectively. Total and available Ni on the other hand were
+reduced by 261 mg kg! (9.86%) and 246 (14.26%) mg kg, respectively.
+
+Results indicate that vetiver is very efficient in increasing soil organic matter content
+due to the unique characteristics of its root system. It has been considered an ideal plant to
+build up organic matter in poor or degraded soils (Truong 2007). Moreover, vetiver also
+significantly reduced the amount of total and available Cr and Ni indicating its potential in
+
+the phytoremediation of heavy metals.
+
+55
+
+IIs- 896 9be- 6Lr1 StLI G By Bul) IN o]quireay
+L87- SZ 09I- SILI SL81 (By Bw) 1D a]QeTEAW
+LEs- Oss 197- L8EZ 8797 Ca Sut) IN [210L
+LOE- IZ8e 981- 8ZIb bier (34 But) 1D [RIOL,
+v0"! sz +8°0 097 9L'1 — (%) 4onew o1UeBI0 [10g
+207 ae orl 179 ors (O¢H) Hd [og
+
+SHLNOW 8 YaLAv SHLNOW SHLNOW € Ya.LAV SHLNOW ¢
+
+ASVAMOSC/ASWAUONI «8 UALYW =ASVANOSC/ASVAUONI UaLAV TETSU EME AM AN  Ta etd
+
+s1ojourvied [10s Uo JOWWIpotUoAOLdyd se JURA AANA JO 9ANIF *LAIGLL
+
+56
+
+Bioaccumulation and Translocation
+Factors of Vetiver
+
+The bio-accumulation factor (BAF) of vetiver, which is the ratio of the concentration
+of the heavy metal in the shoot to the soil, is presented in Table 8. Based on the guidelines of
+Dixit et al., (2001), the BAF of vetiver after 3 months is 0.97 for Cr and 1.07 for Ni which
+means that vetiver has the capacity to absorb Cr and Ni from the soil and store them in their
+system, particularly in the roots. Allowing vetiver to grow for 8 months increased BAF to
+1.48 for Cr and 1.38 for Ni indicating higher concentration in the plant than in the soil. This
+further shows the potential of vetiver in mitigating heavy metal pollution in soils.
+
+The translocation factor (TF) of vetiver, which is the ratio of the shoot heavy metal
+concentration to the root heavy metal concentration, is also presented in Table 8. TF at 3 and
+8 months are very low, indicating that vetiver accumulates Cr and Ni in the roots and very
+small amount of Cr and Ni were translocated to the shoots, making them safe for forage
+purposes. Higher TF was obtained for Ni as compared to Cr both at 3 and 8 months of
+
+growth. These values are below 0.2 mg kg” which is the prescribed limit given by the Codex
+
+Standard and European Union (EU Standards).
+
+Table 8. Bioaccumulation and translocation factors of vetiver after 3 and 8 months of growth
+
+AFTER 3 MONTHS _ AFTER 8 MONTHS DIFFERENCE
+Cr Ni Cr Ni Cr Ni
+
+Bioaccumulation 0.97 1.07 1.48 1.38 0.51 0.31
+
+Translocation 0.004 0.008 0.002 0.004 -0.002 -0.004
+
+
+57
+
+Agronomic Characteristics of Rice
+Grown after Vetiver
+
+Yield and yield components of rice grown after vetiver are presented in Table 9.
+
+Number of tillers and panicles/hill were very low and % filled grains was only 73% resulting
+in a very low grain yield of only 3.54 t ha, An unbalanced distribution of assimilates
+
+resulted in higher biological yield than economic yield with a harvest index of 0.45.
+
+Dry Matter Yield and NPK Concentration
+and Uptake in Rice
+
+Dry matter yield, NPK concentration and uptake in rice grown after vetiver during
+
+2018 DS are presented in Table 10 and Figure 8. As expected root biomass, NPK
+
+concentration and uptake were lowest in roots. Straw dry matter yield was 3396 kg ha’
+while grain yield was 3540 kg he Higher N and P concentration and consequently uptake
+were recorded in grain with 45.67 kg N ha! and 15.22 kg P ha? compared to 26.49 kg N ha
+' and 7.47 kg P ha’! in straw. On the other hand, K concentration (1.28%) and uptake (43.47
+
+kg ha!) was found in rice straw. The lower translocation of K to the grain resulted in a lower
+
+grain yield as shown in Table 9. K is very important in dry matter production and is involved
+in active translocation of assimilates during grain filling. This also contributed to lighter
+weight of 1000 seeds, which are less filled and with smaller grain size (Table 9). Results
+indicate that the nutrients naturally found in the soil were fully utilized by vetiver for their
+
+higher biomass since vetiver was not fertilized.
+
+58
+
+v8 w7si L9°Sb £70 €r'0 671 Ops ureip,
+9v'z 19° ses 670 610 £90 6¢8 100y
+(LVd88-8s) Amey
+Ly'ey Lyl 6b'97 87'1 70 80 96€E Mens
+W d N x d N ) —
+YALLV a AOVLS HLMOUD
+mad INV1d
+
+( ey 8y) ayWLdN (%) NOILVULNAONOD
+——_—_—_{_— eee
+
+SC 8102 Surnp
+JOAOA Joye UMOIS dol Jo UIeIS puke MENS JOOI UT JWOLINU Jo UONNQINSIp aye}dn pue UONeNUIOUOS YAN ‘PIPIA JaneW Aq ‘O] 3192.
+
+SPO PSE 9G6EE 68 10'PZI SB LOL zor Tel Tol ws 986 ST‘08 Zo've
+meng Jooy anne1989A @ eae) eel Lvdzs) ea) eae
+xapuy “UM (%) (ajotuedou) you) _ SUN00g aANeIoA Isaarey SuNoog aanriado~
+ee (24) aa SNIVUD ianay LINNOO 5 tL
+A aS dS a1
+CTaIA ( ey aati ATOINVd (wo) LHOIIH LNV 1d
+aun (248%) ssWWOIE nant Ol COPECO L LNV
+
+(@dUI-J9ANPA) SG 8107 BuLNp JBANDA JayJe UMOIT DOL Jo s}UdUOdWOD PIAIK pur siojoureied o1tuouosy “6 9198
+
+
+59
+
+90
+80
+70
+60
+50
+
+40
+
+30
+
+20
+
+10
+
+N re K
+Straw m Root mGrain
+
+Figure 8. Nutrient partitioning in rice grown after vetiver during 2018 DS
+
+Distribution of Cr and Ni in Rice Grown
+after Vetiver (2018 DS)
+
+Cr and Ni concentration and uptake in rice grown after vetiver during 2018 DS at
+
+various growth stages is shown in Table || and Figure 9. During the vegetative stage, roots
+
+had the highest Cr concentration (456.5 mg kg!) and uptake (0.05 kg ha!) compared to
+straw with a concentration of 21.5 mg kg”! and an uptake of 0.01 kg ha’'. At panicle
+initiation, more Cr still concentrated in the roots (322 mg kg"), resulting to an uptake of
+
+0.25 kg ha’, At maturity, Cr was only detected in the roots and straw and was not
+translocated to the grain. A similar trend was observed for Ni. At vegetative stage, roots had
+
+the highest Ni concentration (339.5 mg kg") and uptake (0.04 kg ha!) compared to straw
+with a concentration of 15 mg kg! and an uptake of 0.01 kg ha’. During panicle initiation,
+
+more Ni still concentrated in the roots (359.5 mg kg!) resulting
+
+60
+
+to an uptake of 0.28 kg ha’. At harvest, Ni was only detected in the roots and straw and was
+
+not translocated to the grain. Results imply that at the vegetative stage, the rice plant was so
+active in absorbing nutrients including these heavy metals. Through time and as the growth
+of plant progresses, nutrient uptake also increases, particularly at reproductive stage wherein
+uptake is higher for growth stabilization. The grains were below detection limit in both Cr
+and Ni because these metals were immobilized by the roots. Some of the Cr and Ni could
+
+have been present in the rice bran and in unfilled grains.
+
+61
+
+WUT UoHOIEg MO}>E=10d
+
+qaq qaqa Jaq qaqa Ovse ueig,
+S10 810 6LI S917 6r8 100%
+(Lvags-8s) Amen
+100 10°0 sz sz 96€€ mens
+870 sz‘0 S'6SE we 79°68L 100Y
+(LvdO0s) vonentut sjorueg
+z0'0 z0'0 $ S COE meng
+v0'0 $00 S'6EE S9Sb ce7 1004
+(LV pI) eaneieda,
+100 10°0 $I SIZ 89'S 1S MENS
+IN Fe) IN re) A ey 34) -
+‘ Luvd
+ALLY FOVLS HLMOUD
+AUG INV1d
+
+C4 Sw) aAVLdN
+
+(34 Sw) NOLLVULNSONOD
+
+sadeis YIMOIT SNOLIRA IP SQ BIO SuLNp AdANNDA JOYJe UMOIB DOL JO UTPIS pur MI
+
+JOO1 UL IN pure 1D Jo uoNnqu
+
+Id “11 M1qeL
+
+62
+
+06 |
+
+Straw Root Straw Root Straw Root Grain
+Vegetative (14 DAT) Panicle Initiation (SODAT) Maturity (87DAT)
+mCr Ni
+
+Figure 9. Heavy metal partitioning in rice grown after vetiver during 2018 DS (vetiver-rice)
+at various growth stages
+
+Bioaccumulation and Translocation Factors
+of Rice after Vetiver (2018 DS)
+
+The bio-accumulation and translocation factors of rice grown after vetiver are shown
+in Table 12. Bio-accumulation factor has been calculated for the transfer of heavy metals
+from the soils to the different parts of rice. For Cr, BAF was only 0.14 and 0.18 for Ni
+indicating that rice absorbs Cr but does not store it. When BAF is <1 or =1, it indicates that
+the plant only absorbs but does not store heavy metals. However, if BAF is >1, it is an
+indication that the plant stores metals. The transfer of metals from the soil to plant is one of
+
+the key elements of human exposure to metals via the food chain (Dixit et al; 2001).
+
+63
+
+Translocation factors for both Cr and Ni were below the detection limit (BDL),
+indicating that these metals were not translocated to the edible portion of the plant,
+particularly the rice grain. The translocation factor reflects the transfer of metals from the
+roots to the edible parts, wherein different plants display different properties with regard to
+its root activities and exudates. The roots contribute greater impact on the solubility and
+phyto-availability of metals in the soil, thus Cr and Ni levels were below the detection limit
+
+in the grain.
+
+Table 12. Bio-accumulation and translocation factors of rice grown after vetiver
+
+during 2018 DS
+
+FACTOR CHROMIUM NICKEL
+Bio-accumulation Factor 0.14 0.18
+Translocation Factor BDL BDL
+
+BDL=Below Detection Limit
+
+Effect of Vetiver-Rice Rotation on Soil Properties
+
+Table 13 shows the soil parameters as affected by growing rice after vetiver during
+2018 DS. Soil pH increased to 6.53 and organic matter content improved significantly (48%
+
+increase) which is due to the unique characteristics of the vetiver roots. Total Cr was reduced
+
+by 353 mg kg! (8.18 %) and available Cr by 282 mg ae (15.04%) while total Ni declined
+
+by 742 mg ke! (28.02) and available Ni by 723 mg kg! (41.91 %). Results implied that
+
+64
+
+vetiver plant grown for a short duration (3 months) has the capability to phytoremediate Cr
+and Ni- contaminated soil. This is one of the most cost-effective green technologies and most
+useful method for decontaminating the soil, wherein Cr (VI) are converted into non-toxic
+Cr(III) according to Chaney et al., 1997, Bolan et al., 2011b. Dalton et al. (1996) reported
+that vetiver grass that has high root biomass can accumulate a significant amount of Cr. This
+plant tends to reduce metal toxicity by converting highly toxic and readily mobile metals into
+
+less toxic ones.
+
+65
+
+€7L- LLy- 700 09b7- 6Ltl SzLl C4 Bur) IN 9]QeTRAY
+
+787- @I- £61 09I- SILI SL8I (34 Bul) 1D s]qeyeAy
+
+@pL- 18p- 9061 197- L8&Z 8197 (34 Buy) IN TPIOL
+
+€Se- L9I- 196€ 98I- 8ZIP vith CA Bul) 1D [BIOL
+
++60 10 Lz 8'0 97 9L'| (%) saneur o1ueB10 [10g
+
+er z€0 €5°9 Wl 179 (07H) H4 Tros
+
+Eee Z aorysd $a. 8107
+aeapaa! S10e NAL NSALSA beara SH ALLaA ‘IVILINI SUALANVUVd TOS
+aaa ARON om /ASVIMONI YaLIV
+
+TVLOL
+
+st ao
+
+(20U-I9ANAA) SQ 8IOZ SuLnp JoANAA Jaye UMOIT dOLI Aq poyoayye se slajatuvied [10g “¢] 9192.1.
+
+66
+
+Economic Analysis
+
+Retum on investment describes the ratio of net income with total expenses. In
+economic view, this means that as much as Php0.50 can be gained for every peso
+investment when planting rice after vetiver for one (1) cropping season. The vetiver plant
+did not receive fertilizer or any soil amendments. However, after harvesting vetiver, rice
+
+was planted and fertilized using rice crop manager (RCM) as shown in Table 14.
+
+Table 14. Economic analysis of rice production as affected by phytoremediation
+management in Lomboy Sta. Cruz, Zambales
+
+GRAIN TOTAL FERTILIZER GROSS NET
+YIELD EXPENSES APPLIED INCOME* INCOME piv
+kgha! = (Pha!) (Pha”) (Pha!) = Pha!)
+Vetiverrice 3540 42.4625 ‘11. 762.25 63720 2125750.
+
++ Computed based on the prevailing price of palay in the area @18.00 kg
+**ROI-Return on Investment ha”
+
+67
+
+Use of Soil Amendments to Remediate
+Cr and Ni Contamination
+
+Growth and Yield Parameters of Rice (2017 WS)
+
+Plant height. Plant height is an important trait related to plant status and yield
+potential. Increase in plant height reflects growth and development and at the same time
+increase in cell size and mass. The plant height was significantly affected by each
+treatment at three growth stages (Table 15). At vegetative stage (14 DAT), the tallest
+plants in the plots applied with vermicast were measured and an average of 38.40 cm was
+obtained. The same plot with tallest plant were measured at the panicle initiation and at
+harvest stage with 83.56 and 110.86 cm obtained, respectively. Plants under the farmers’
+practice had the shortest heights, with a mean average of 33.19 cm. The same trend was
+observed at the panicle initiation stage (50 DAT) and at harvest. The data presented
+shows that application of vermicast, bagasse ash, carbonized rice hull and zeolite
+increases the height of the plant significantly. It can be explained that combining organic
+fertilizer/material with inorganic fertilizer which was applied to all treatments can
+
+enhance plant growth.
+
+Tiller count. The production of tillers by the rice plant is an important agronomic trait
+that can estimate grain production. The number of tillers at two growth stages are shown
+in Table 15. The same trend of results was observed at two different growth stages, the
+
+most number of tillers at 14 DAT were from the plots applied with vermicast with an
+
+68
+
+average of 5.65 tillers/hill and at 50 DAT with 12.75 tillers/hill. Mirza et al. (2010)
+reported an increase in the number of tillers in rice plants due to the influence of different
+fertilizer combinations. In fact, addition of organic sources offers more balanced nutrition
+
+to the plants, especially micro nutrients, which positively affect number of tillers (Miller,
+
+2007).
+
+Biomass (kg ha ).Results in Table 15 indicate that the amount of biomass is
+significantly affected by the different treatments. Plants under the farmer’s practice
+
+produced the lowest biomass at 643.70 kg ha! (vegetative stage), 3 712.80 kg ha?
+
+(panicle initiation), 3, 887.0 kg ha”! (harvest stage). However, all the treatments applied
+
+with organic amendments showed increase in biomass yield at the three growth stages as
+
+presented in Table 15. Vermicast application resulted in the highest amount of biomass
+produced among all treatments, at 785.73kg ha? (vegetative stage), 4903.0 kg ha!
+(panicle initiation) and 6569.0 kg ha! (harvest stage). Both percent filled spikelets and
+
+shoot biomass were strongly correlated with grain yield and were substantially enhanced
+
+by the addition of organic soil amendments.
+
+69
+
+“AST Aq Jona] %E Ie WaJAJJIp ApUBoIIUBIS JOU ose (s)soy9] OURS 94) Aq poMos]oj SUBD “ULIN]OD B UT
+
+quRayIUds AYSY=44 TULIYIUBIS =,
+
+v'spsp SL'S08
+ayzEs qs66
+POl6r 9998
+2 66Sb S18
+B spes ¥ peo!
+9 6rsE P 609
++ **
+
+mes 100%
+
+SOAR,
+
+S00fb
+
+9 60bb
+
+2 00>
+
+PLSIb
+
+B 8g8r
+
+Pelle
+
+Eo
+
+uonentyy
+ajotued
+
+LeL vil Lyy 9ESOL 9L'08 ESSE ues] pueID
+4 6bL 90071 Gees wesoll ees EF ROLE SN]09Z
+> POL 20011 asty Gefeol FSLI8 THOSE
+
+PLLO IST I 20S> 27666 Q616L PAZHEE — [[MY 9911 poziuOqued
+Bo8L BcLZl «= BSOS VOSOll "OSES FOPRE YSROIWLIDA,
+3969 PoOOl = PEBsE PIT96 dLL OEE ee)
+Ec * * x * *
+
+aanewdeA ~=LVC 0S Lvd +l womeH Lvdos Lvdrl
+
+ALNAWLVSAL
+
+(2431) SSVNOIE
+
+LNNOD UATTLL (wo) LHOIAH LNW 1d
+
+(SAA L10Z) SluoWpuauLe [TOs jUaIaZJIP Aq poyajje se dd11 Jo siojotURIed OIWIOUOIBY *¢] 9192)
+
+70
+
+Panicle count. Fageria et. al., (2006) reported that the number of panicles was
+the most variable parameter for rice although it was related to grain yield. Based on the
+results, the average number of panicles per hill at harvest ranged from 9 to 9.65 (Table
+16). The application of vermicast produced the highest average number of panicles, at
+9.65 panicles/hill. Plots applied with carbonized rice hull, bagasse ash and zeolite had
+increased number of panicles compared to those under the farmer’s practice. However,
+there were no significant differences between the three treatments. The results were
+further explained by Hasanuzzaman, et. al., (2010) in that the increase in panicle count,
+particularly those treated with vermicast, was due to enough nutrition. It possibly
+increased the nutrient absorption capacity of the plant as a result of better root
+development and translocation of carbohydrates from source to growing points (Singh
+
+and Agarwal, 2001).
+
+Spikelets per panicle. The average number of spikelets per panicle was similar
+to that of grain yield, where its number substantially increased by with the application of
+organic soil amendments (Table 16). Number of spikelets ranged from 99 to 117,
+application of vermicast and zeolite produced the highest spikelets with 117 and 116
+spikelets per panicle. On the other hand, addition of zeolite and carbonized rice hull
+produced higher spikelets compared to those in the control. Naing et. al., (2010) stated
+that the potential number of spikelet/panicle was influenced by the plants nutritional
+
+status by combining organic and inorganic sources of nutrients.
+
+71
+
+Percent filled grains. The average percent filled grains per panicle ranged from
+69.75- 83.25%. The application of vermicast resulted in 83.25 % filled grains as
+compared to the control with 69.75% (Table 16). This implies that, among the
+amendments, vermicast is a rich source of nutrients for grain production. Results revealed
+that addition of vermicast provided a rich source of nutrients as well as beneficial
+microorganisms (Paul, 2000). Vermicast is often used as a soil conditioner or fertilizer
+(Elcock and Martnes, 1995; Hattenschwile and Gaser, 2005). Apparently, the addition of
+soil amendments significantly improves plant growth and development for grain filling
+
+compared to inorganic fertilizer alone.
+
+1000 seed weight. Weight of 1000 filled seeds is an important parameter to
+farmers because it is among the most stable components of yield in rice. As expected, the
+highest 1000 seed weight is 27.60g in plots applied with vermicast as shown in Table 16.
+Addition of soil amendments significantly increased the weight of 1000 seeds whereas
+those plants treated with inorganic fertilizer only (farmer's practice) showed the least
+1000 seed weight with 23.57 g. A significant difference in 1000 -grain weight of rice as
+affected by variation in fertilizer combination was also observed by Mirza et. al., (2010).
+The increase in 1000 grain weight with the application of chemical fertilizer along with
+
+organic soil amendments is supported by Yang et. al., (2004).
+
+72
+
+Grain yield (t ha”). Grain yield is the function of biomass accumulation during
+ripening and translocation of biomass accumulated in the grains before flowering (Yang
+
+et. al., 2008). Maximum grain yield of 6.6 t ha? was observed in plots treated with 10 t
+-1 : +
+ha vermicast as shown in Table 16. The plants treated with inorganic fertilizer alone
+
+(farmer’s practice) had the lowest yield of 3.83 t ha’ The increase in grain yield could
+
+be due to the increase in yield attributes (plant height, number of tillers per hill, panicle
+count, spikelet per panicle, percent filled grains, biomass, harvest index and 1000 grain
+weight). The increase in grain yield components can be due to the fact that available
+water enhanced nutrient availability that improved macro and micro elements absorption
+as well as enhanced the production and translocation of the dry matter content from
+source to sink Ebaid et. al., (2007). Similar results were reported El-Weheishy and Ebd
+El-Hafez (1997), Awad (2001) and El-Reface et al., (2006) providing additional evidence
+that organic fertilizers have a significant influence on growth and productivity in lowland
+
+rice. Organic soil amendments can be a good supplement to inorganic fertilizer to
+produce better growth and yield. All the treatments applied with 10t ha! organic material
+resulted in significant improvement in the growth and productivity of rice. From the
+economic point of view farmers, can use the combination of organic fertilizer and
+
+reduced rates of inorganic fertilizers to boost the yield of rice as well as to maintain and
+
+improve soil health.
+
+Harvest index. Harvest index reflects the efficiency of photosynthetic
+
+partitioning between vegetative parts and economic yield or grains in rice. This
+
+73
+
+proportion can be enhanced by increasing the number of reproductive tillers, spikelets per
+panicle as well as the amount of assimilate partitioned to grains (number of filled grains
+and average grain weight). These were significantly affected by the combined application
+of inorganic and organic fertilizers (Table 16). As with other parameters, the response to
+vermicast was observed with highest HI of 50.0 percent due to the increased number of
+spikelets per panicle, 1000 seed weight, percent filled grains and reduced partitioning of
+dry matter to unfilled grains while the lowest HI was observed in the control (farmer’s
+practice) with 48.0 percent. Efficient partitioning of photosynthates and assimilates to the
+grains particularly during the grain filling stage is an important trait associated with the
+remarkable yield increase in rice (Fageria et. al., 2006). Although variations in HI are
+highly influenced by inherent crop or varietal characters, there were numerous studies
+that showed that agro-climatic conditions, such as water/rainfall, solar radiation, and high
+
+nitrogen fertilization could also affect the partitioning efficiency of the rice crop.
+
+74
+
+“AST Aq Jaaa] %g Ie UaJaJJIP AfuRdYj!UBIs you aue (s)1a}}2] owes ay) Xq pamojjoy SueDW ‘UUIN]OD B u,
+
+queoyrudis <yTiy=_4 WUEDyTUTIS =,
+
+ages rSPer $508 80 “gee sL09 88'L0T zo unayy puns
+
+qooss a vzes ase6 2Lb0 asr9z oss = F0N911 «= 1 OF autj00z
+
+2 00S POl6y 9798 q8r 0 20r'ST 200°9L 4 00°SOI 2€06 ysv assedeg
+
+; . . . . wey
+
+POOIS —-.66Sb as18 2 6r0 PSehe —-9G7'SL_—-200'Z0I 2£06 sou paztuoaies)
+
+0099 BSH8s eycol 8 6r0 BOOLe = ESTER = BODLII & 596 seOIULID A
+
+2008 —-6HSE P 609 asv0 aLseZ —-PSL'69 =~ P0066 2006 jonuoy
+
++ “ e * a ‘ * *
+(2459) mens yooy @) (%) (ou) (qiyjou)
+)X4QNI
+
+on (2489) ISHAUVH HOTU = SNIVYD —ATOINYd = ,LNN0Q FNAL
+
+\ivup —- TISIAWALLVN A aaasoo0l dad = /LaTAMIdS  ATOINVd
+
+(SAA L10Z) SWoWIpUdUTE [IOs JUDIAYJIP Aq payoajye Sv dOLI Jo sJUSUOdWO,D PIPIA “9] 9QUL
+
+75
+
+Cr and Ni Concentration and
+Uptake in 2017 WS Rice
+
+The concentration and uptake of Cr and Ni during vegetative stage, panicle
+initiation and at harvest are presented in Table 17 - 19. Control plants had the highest
+metal uptake in almost all plant parts except Ni uptake at vegetative stage. In general,
+addition of soil amendments led to lower accumulation of Cr in the different plant parts
+compared to the control (farmer’s practice). Application of carbonized rice hull resulted
+in the lowest accumulation of Cr in roots, straw and grain, followed by zeolite. For Ni,
+the lowest accumulation in roots, straw and grain were obtained from the application of
+zeolite followed by carbonized rice hull. Slightly higher levels for Cr than Ni were also
+
+detected in the different plant parts (Figure 10-11).
+
+76
+
+1ST Aq Janay 965 18 taHOYyIp AjruEDLyIUBYs r0U axe (s)soHa} aules ay} Aq pamojjoy SuEDUE “UUIN}OD e UI,
+qUROLIUBIS AIYTIY=_~ TULOYTUIS =,
+
+67°96 ZO 78 06091 O9'LET rLe09 = 9ES9 or 08s 00 0&9 upay puv._y
+P87sL P90°8S 20081 P0016 POSTE F86EZ POS98T  7F009IT OM[OOZ -SL
+20618 207 6L POS9EL 7 00°7E1 27O'SS =IPTBS 10067S 700°095 yse ossedeg -pL
+
+q v7 L6 q97S8 = 1 0S'°99T = 1 00° 9bT P66 Ib PCSLp FOS TSh POOTIS TINY 291 paztuogied -¢ 1
+
+41596 AGES §—-P.00'SPI_-- 009 «= «49869 A ITSL GOS*PBS —_4.00'7E9 ISLOIULIOA -ZL
+BovOEl BLSSOl FOSREC FONE! FOO'POI BLEIZI ¥%OSOSOI ¥OD'IEZI Jonuog - LL
+* * Eo * “ cs * ee
+IN Ee) IN Ee) IN 9 IN EP)
+(34 su) (ED) (Py su) ( By aw) SINANLVSUL
+wIVLdn NOLLVULNAONOD axyvidn NOLLVULNIONOD
+AVULS LOOU
+
+(SM LIOZ) 2914 Jo aFe\s DATLJOTOA Je MENS pue OO! UT ayeIdn pur VONeIUDOUOD IN pur ID “L] 91qQUL
+
+77
+
+is £q Jaa] 465 ve wOHQYsIP ApyuEdyIUBIs tou axe (s)s9n9] sures 941 Aq Pomoyjoj SuEOU“uLINIOD & UT
+quvoypludis A[YSIYy=,.4. WUBoUSIs =,
+
+CH8'TITZ ply sel CC6S 66°8E CHVEls = CID LES 06°S0ZI OO LPTI uray PueID
+P E9'8hl 2 78°0S1 P Or or 1001 ISv'008 ==FSEES9 = POS9601 P00'S68 ON[OSZ
+OE OLT Bcc rs 207 LD Bsris G6E8P8 =AETHI6 §=YOO9TZI =A 00'IZEL ysv assedeg
+
+P6cIST 25568 PSv ey 209°ST PS9PLL = F8TLOR = FOSSLIL =F. OO'SZZT [NY 9911 poztuoques
+
+BSTPOE  —PESOOI  ASTEL 207PZ «=F HG'STH EOO'RIOL FOSISTL O0'L8EI ISLOTULID A,
+G1L68Z 106991 00°26 BOOES  ABTOIL PHTSEL FON'OLZI FO0OIPI Jonuoa
+* ** * * + ** * **
+IN Ee) IN EP) IN Ee) IN Ee)
+(TED) ( S1su) SLNSWLVEUL
+(24 Bu) ayedy, (, 34 Bur) uonenuaouo) aavLdn NOILVYLNIONOD
+MVULS LOOU
+
+(SAM LIOZ) 2914 JO (LV 0S) 28es uoNeNtut ajorued ye Mes pur JOO] Jo ayeId-] puke UONeUDOUOD IN pur ID “g] 91qQRL,
+
+78
+
+1S Aq Janay 96s 18 wa1ayyp AjuedtyuBys you axe (S)soH.a] awies 241 Aq pamo}}oy suz=dus“uUN}OD e Uy,
+quroytudis A[ySty—_4 TuEdy TUBS =,
+
+1g cle “er 08 oor ces Lee “i €L£789 LE ILL Tres Ltte ua pubs
+POTZ 207 POY 20% P6t PHT PIs Ptr PLSI9 PSBLZ7I PS8S9 AS ILO SUOSTZ -S.L
+Teh —AOLT q08 q0s aso 40s 20%1 QZOl 918669 AZZ'LES 40018 910696 Yseassedeg -pL
+
+pny 201
+
+LSE = >P0T 20L 207 2009 «28 tr oer £6 2L709 = 2S060L PFOTHL FO OLE paziuoqie) -¢ 1
+
+QL7 =64OEE qs6 qos q168 4eLs aest 286 ereos ALETES FOLLL PSO ySeIUHIA -7L
+
+BOTSI FOES  FOOP BOT ELIPZ EL88 FISD  FO'ST 40069 REISS FOECIT ¥O'R6E JonuoD -1L
+xIN- #40 sIN 64D IN 4D +IN Pee) +IN Fee) xIN eet
+(248m) (34 8u) ( 31au) (ey 8u) (avau)
+SLNSWLVSUL
+AAVIdN __NOWLVYLNSONOD _-TAVIdN NOILV¥LNAONOO avidn NOLLVYLNIINOD
+NIVUD AVULS LOOY
+
+(SM L10Z) 9914 JO (LV Lg) IseArey ye urleI3 pue Meds ‘Joos Jo ayejdn pue UONeIUDDUOD IN puk AD “G] 9192.1,
+
+79
+
+(SM L10Z) SwoWpusUUe [los jusJAYJIP Aq paroayse se ILI Jo saBeys yMoId snouea ye ayeydn 1D “Q] amary
+
+MNOOZ “SL YsvosseBeg-pL mI |INt| 9911 pazuogueD ¢~
+
+mM SeOIUOA -ZL mM [ONUOD-[
+
+(LVdZ8) seareH (L¥dos) won; o1ueg (LV-P1) eaneiade
+meng aeang y00y Meng J00y
+| | | :
+002
+Q
+oor g
+e
+009 >
+3
+&
+og &
+
+0001
+
+ZI
+
+80
+
+(SM LI0Z) Suewpusue [ros yUaIayyIp Aq Payoayye SB adi Jo sades YIMOIT sNOUwA Je ayeidn IN *[ | andi
+
+PU100Z “SLM YSPasseaeG -p Lm |INY 2011 pazuogieD E-L mM ISLOTWA-ZL mM [ONNUOD-| | mE
+
+(Lvdzg) saareH (Lvqos) vonenuy ajotueg (Lva-b1) eaneiaia,,
+
+MAIS meng, meng yooy
+
+0
+
+oot
+
+00z
+
+wr 2
+
+oor -S
+5
+g
+
+oos =
+3
+&
+
+009
+
+002
+
+008
+
+006
+
+001
+
+81
+
+Cr and Ni Uptake in 2017 WS Rice
+
+The uptakes of Cr and Ni during vegetative stage, panicle initiation stage and
+during harvest are shown in Figures 12 to 15. Results were significantly affected by
+different treatments in all growth stages. The control shows more Cr and Ni uptake
+compared to plants added with soil amendments. In fact, the root absorbs more Cr and Ni
+at panicle initiation stage and then reduced during harvest. This may be due to nutrients
+absorption together with these metals at panicle stage since rice needs more nutrients for
+grain filling. However, the uptake and concentration were decreased at maturity due to
+the dilution effect of the plant. Among those treatments, plants applied with zeolite had
+the lowest metal concentration in all growth stages. Taylor (1997) and Matschei et. al.,
+(2007) reported that soil amendments containing high silica and carbon are effective
+sorbents for organic compounds and contaminants. When reacted with water, they create
+highly alkaline solutions and form complex mixture of hydroxides, mainly Ca(OH)2 and
+other amorphous calcium silicate hydrate phases. It was also used to raise the pH of
+acidic soils, reducing leaching or phytoavailability of metal cation contaminants that
+probably results from simple adsorption to oxide and silicate minerals as pH is increased.
+
+Metal cations tend to form strongly bound, inner-sphere surface complexes with
+soil minerals. Such that desorption is suppressed under typical soil conditions as long as
+pH remains high. These organic amendments are strongly adsorbed by high-surface-area
+amendments. Although adsorption can be an effective in immobilizing mechanism for
+metal contaminants, this may undergo changes in speciation but do not degrade. Some of
+
+these amendments react with soil and water and minerals to alter the composition, pH of
+
+82
+
+the soil system causing dissolution of solids and precipitation of new phases that
+incorporate contaminants.
+
+Same trend with the previous results on roots that zeolite had the lowest amount
+of Cr and Ni on rice straw compared to control (farmers practice). Generally, all plots
+received soil amendments show a decreased in the amount of metals during harvest. The
+amount of chromium and nickel on the roots decreases as soil amendments applied
+
+compared to control (farmers practice).
+
+300
+200
+150
+100
+50
+0
+
+T1-control T2-Vermicast T3-Carbonized _T4- Bagasse ash —_—T5- Zeolite
+rice hull
+
+Root Cr MRoot Ni mStrawCr Straw Ni
+
+Figure 12. Effect of different soil amendments on Cr and Ni uptake at vegetative stage
+(2017 WS)
+
+83
+
+2000
+
+1000
+500
+0
+
+Tl-control_ -T2-Vermicast_ T3-Carbonized T4- Bagasse ashT5- Zeolite
+rice hull
+
+a
+a
+Z
+3
+
+mCrRoot MNiRoot CrStraw mNi Straw
+
+Figure 13. Cr and Ni uptake in rice as affected by different soil amendments at panicle
+initiation (2017 WS)
+
+1200
+
+1000
+800
+> 600
+3
+& 400
+~ 200
+e 5
+Tl-control] — T2- 73. |T4- Bagasst T5- Zeolite
+Vermicast |Carbonized| ash
+rice hull
+
+mCrroot m@Crstraw GCrGrain
+
+Figure 14. Cr uptake in rice as affected by different soil amendments at harvest (2017
+WS)
+
+84
+
+1200
+
+1000
+
+800
+600
+400
+200
+
+0
+
+T1-control T2-Vermicast T3-
+Carbonized T4- Bagasse ash
+rice hull
+
+Ni root MNi straw MNi grain
+
+Figure 15. Ni uptake in rice as affected by different soil amendments
+at harvest (2017 WS)
+
+Dry Matter Yield, NPK Concentration
+and Uptake in 2017 WS Rice
+
+As expected root NPK concentration was lower than straw and grain yield but
+grain yield was higher than straw yield in all treatments (Table 20 - 22 and Figure 16).
+There was highly significantly difference among treatments in terms of NPK
+concentration and uptake in all plant parts. Vermicast had the highest amount of N (0.60)
+and P (0.20) concentration and percent K was obtained in zeolite. This is due to the high
+composition of N and P in vermicast (Chaudhary, 2006) and high K present in zeolite
+mineral (Ippolito et. al., 2011). However, control had the least amount of all nutrients
+with 0.51 % N. 0.15 % P and 0.42% K as well as root uptake because it did not receive
+soil amendments. It was also observed that highest concentration of K in all treatments
+are more on the straw compared to other plant parts. The imbalance distribution of this
+
+nutrient results to low yield (Table 16). On the other hand, N and P were concentrated
+
+85
+
+more on grains. Generally, the presence of these organic amendments in combination
+with inorganic fertilizer enhanced the availability of nutrients in the soil, because these
+
+serves as natural fertilizer that can improve soil quality and enhance plant uptake.
+
+Table 20. Dry matter yield, root concentration and uptake in rice as affected by different
+soil amendments (2017 WS)
+
+Matveg ROOT CONCENTRATION ROOT UPTAKE
+
+TREATMENTS _ (kg ha’) (%) (kg ha")
+
+Root N P K N P K
+
+5 . 5 rr r a c
+
+TI-control 609e 051d 015d 042e 311d O9le 256d
+T2-Vermicast 1034a 0.60a_0.20a-0.76e€ = 6.20a-2.07a_ 7.86 a
+Peavonized 815d 0.53c = O.18b Td 4S8C «16D 5.79.
+rice hull
+T4-Bagasseash  864e = 0.55b_ 0.17 O.81b -4.48e 139d 6.60
+T5- Zeolite 935b 0.55bO.16e 84a SSB SOE 7.858
+Grand Mean 8514 055 017 0.70 470 «148 «6.13
+‘Significant highly significa’ SS SSSOS~—SSSSSSS
+
+‘Ina column, means followed by the same letter(s) are not significantly different at 5% level by LSD
+
+86
+
+Table 21. Dry matter yield, straw concentration and uptake in rice as affected by
+different soil amendments (2017 WS)
+
+es
+
+DRY
+MATTER ROOT CONCENTRATION ROOT UPTAKE
+
+TREATMENTS _ (kg ha’) (%) (kg ha’)
+
+Straw N P K N P K
+
+- + * * : * *
+
+T1-control 3549e 0.54d 0.12d 1.96d 19.164 4.29d 69.56d
+T2-Vermicast 5845 a 0.63a 0O.21a 2.35b 36.82a 12.27a 137.36b
+T3- i
+ae ee 4599d 0.61b0.16b -2.34b 28.05e 7.36 ~—*107.62e
+rice hull
+
+T4- Bagasse ash 4910¢ 0.6b 0.17b 2.08¢ 29.46¢ 8.35b 102.13¢
+T5- Zeolite 5324 b 0.58¢ 0.15¢ 2.8a  30.88b 7.99b 149.07
+Grand Mean 4845.4 0.59 0.16 2.31 28.88 8.04 113.15
+
+= significant, **=highly significant
+
+‘ina column, means followed by the same letter(s) are not significantly different at 5% level by LSD
+
+87
+
+Table 22. Dry matter yield, grain concentration and uptake in rice as affected by
+different soil amendments (2017 WS)
+
+Kx
+
+DRY
+MATTER GRAIN CONCENTRATION GRAIN apse
+TREATMENTS _ (kg ha) (%) (kg ha")
+Grain N
++ * * ¥ * + *
+Tl-control 3800e 1.03 d 04d 0.31d = 39,14d15.2e 11.78d
+T2-Vermicast 6600a 13b 06a 04a 85.8a 39.6a 26.4a
+
+T3-Carbonized
+rice hull
+
+5100d 1.24¢ 049¢ 0.38b 63.24e 24.99d = 19.38¢
+T4- Bagasse ash 5400 1.2le 0.55b 0.35e 65.34 = 29.7b 18.9¢
+T5- Zeolite 5500b 1.27a — 0.49¢ 04a 69.85b 26.95¢ 22b
+
+Grand Mean 5280 1.21 0.51 0.37 64.67 27.29 19.69
+
+highly significant
+'\n a column, means followed by the same letter(s) are not significantly different at 5% level by LSD
+
+200
+180
+160
+140
+120
+100
+
+60
+
+‘ots
+u
+Grai
+Straw
+KOO
+
+Sale £ 2
+2 Ged x
+
+Straw
+Grain
+
+T2-Vermicast |T3-Carbonnized|T4- Bagasse ash} TS- Zeolite
+
+tice hull
+
+1-Control
+
+mN @P SK
+
+Figure 16. Nutrient uptake in rice as affected by different soil amendments in 2017
+WSs
+
+88
+
+Bioaccumulation and Translocation Factor
+In Rice 2017 WS
+
+Table 23 shows the bioaccumulation factor (BAF) of Cr and Ni in rice grain at
+harvest as influenced by the different soil amendments. For Cr, BAF was lowest with
+zeolite (0.401), followed by vermicast (0.473), carbonized rice hull (0.504), bagasse ash
+(0.562) and control (0.748). For Ni, BAF was lowest with carbonized rice hull (0.484),
+followed by zeolite (0.401), vermicast (0.504), bagasse ash (0.527) and control (0.711).
+All BAF values were below 1 indicating that rice absorbs but not stores Cr and Ni. The
+amount of Cr and Ni transferred from the soil to the plant is one of the key elements in
+the human exposure to metals via the food chain (Zhuang et al., 2009). Translocation
+factors are also very low, particularly with the application of soil amendments. For Cr
+translocation factor are 0.005 for carbonized rice hull and bagasse ash, 0.006 for zeolite
+and vermicast which are significantly lower than TF of the control (0.016). For Ni lowest
+TF was for zeolite (0.006) followed by carbonized rice hull (0.009), bagasse ash (0.010),
+
+vermicast (0.012) and control (0.034).
+
+89
+
+Table 23. Bio-accumulation and translocation factor in rice as affected by different soil
+amendments in 2017 WS
+
+BIO-ACCUMULATION TRANSLOCATION
+TREATMENTS FACTOR FACTOR
+Cr Ni Cr Ni
++e ¥** * er
+Control 0.748 a 0.71la 0.016a 0.034 a
+Vermicast 0.473 d 0.504 ¢ 0.006 b 0.012 b
+Carbonized rice hull 0.504 ¢ 0.484 d 0.005 ¢ 0.009 d
+Bagasse ash 0.562 b 0.527 b 0.005 ¢ 0.0l¢
+
+Zeolite 0.401 0.488 0.006 b 0.006
+*= significant, **=highly significant
+Ina column, means followed by the same letter(s) are not significantly different at 5% level by LSD
+
+90
+
+Agronomic Characteristics of 2018 DS Rice
+
+Plant height. Application of soil amendments significantly influenced plant
+height at various growth stages of rice (Table 24). At vegetative stage (14 DAT), the
+tallest plants from the plots applied with vermicast were measured and obtained an
+average of 40.40 cm. Plants under farmers’ practice (control) had the shortest
+measurements with a mean average of 30.75 cm. The same trend of results was observed
+at panicle initiation stage (50 DAT) and at harvest. Plots applied with vermicast had the
+highest average plant height at panicle initiation and at harvest with 82.65 cm and 112.20
+cm respectively. Application of vermicast bagasse ash, zeolite and carbonized rice hull in
+
+combination with inorganic fertilizer can enhance plant growth.
+
+Tiller count. The same trend in number of tillers was observed at 14 DAT and 50
+DAT (Table 24). The most number of tillers were from the plots applied with vermicast
+with an average of 6.00 tillers/hill at 14 DAT and 16.63 tillers/hill at 50 DAT. Higher
+number of tillers/hill were recorded in 2018 DS compared with that in 2017 WS due to
+higher temperature in 2018 DS that favored tillering. The plants subjected to long-day
+conditions received more radiation than those subjected to short-day conditions. Thus,
+the difference in the effect of temperature on tillering between a short day and a long day
+light condition could result from the difference in the amount of radiation. In fact,
+shading impairs tillering according to Hanada (1964) and high tillering rate is related to
+high solar radiation (Mizuochi et. al., 1969). It was also found out by Tanaka et. al.,
+
+(1965) that carbohydrate is necessary as an energy source for tiller development whereby
+
+91
+
+higher amount of rainfall leads to less sunlight that could trigger production of
+
+carbohydrates.
+
+Panicle count. Fageria et. al., (2006) reported that the number of panicles was the
+most variable for rice although it is related to grain yield. Based on the results, the
+average number of panicles per hill at harvest ranged from 10 to 16.25. The application
+of vermicast produced the highest average number of panicles at 16.25 panicles/hill
+(Table 24). Plots applied with carbonized rice hull, bagasse ash and zeolite had increased
+the number of panicles compared to those under farmer’s practice. However, there was
+no significant differences between the three treatments. The data also show that between
+the two cropping seasons, the higher number of panicle was observed during 2018 DS at
+50 DAT due to less amount of rainfall (1.6 mm) (Figure 5) during second cropping due
+
+to enhance production of tillers.
+
+Number of spikelet/panicle. The number of spikelets per panicle were
+substantially increased by application of organic soil amendments (Table 24). Spikelets
+ranged from 102 to 130, with the application of vermicast, producing the highest number
+of spikelets per panicle (130). Addition of zeolite and carbonized rice hull also produced
+more panicles compared with the control. It was also observed that 2018 DS had higher
+number of spikelets compared to 2017 DS due to the influence of meteorological
+conditions during the growing period. This implies that panicle production is most likely
+reduced under high rainfall condition. This could be due to the carry over effect of
+
+rainfall on tillering since panicles emerged from the tillers. However, spikelet formation
+
+92
+
+as a yield-determining process occurs during the reproductive stage. In fact, optimum
+meteorological condition within 2 to 4 weeks before flowering is critical for the
+
+development of spikelets.
+
+Percent filled grains. Meteorological conditions may have favored the
+development of filled grains. The average percent filled grains per panicle ranged from
+75.25 to 86.50 (Table 24). The application of vermicast resulted in highest percentage
+(86.5%) of filled grains, followed by carbonized rice hull (82.50 %), bagasse ash (81.75)
+and zeolite (81.5%) suggesting that among the amendments, vermicast is a rich source of
+
+nutrients for grain production.
+
+Weight of 1000 seeds. Weight of 1000 filled seeds is an important parameter to
+farmers because it is among the most stable components of yield in rice. The highest
+1000 seed weight of 28.60 g resulted from the application of vermicast (Table 24). The
+use of soil amendments significantly increased the weight of 1000 seeds over the control.
+
+Plants under farmer’s practice (control) had the lowest 1000 seed weight at 24.92 g.
+
+93
+
+ST 4q J209] 966 19 uasaffip <puvoyfiuB}s rou 2.40 (s)4oys0] ans ay) Aq pomoppof supa. ‘uwunfos D Uf ‘juvdYiutIs =»
+ee SS SSS ee a eee ee eee
+
+8°97 618 TOM Ss'el er 6L'9 €'SO1 08 9€ upay pur.
+29°97 ao18 0811 q0sl asst a's eri = Bez ese OM[O9Z -S.L
+2697 28°18 40971 4671 291 ars 7801 «= BSI8 =A BOE ~—seasseBeg-p]
+. . . : . . . . . Tray e011
+qt as‘ PO'SOI aLel 29°rI ass 9686 A EBL PATHE sruogiws-¢1,
+29°87 e598 ®O'0EI reo] B99] B09 BTU BLE POF ISLOIULIDA-ZL
+P6be PELL PO'ZOI POO! PeOl Pry P 096 TLL «=—- BOE Jonuo5-1L
+* * * * * * * * x
+(3) (%) (ou) (mou) —Lvaos = LWGrl seme lvdos =LVaPl
+HOA SNIVUD |ATOINVd ~~, LNNOO
+v ' t wd
+daasoo0l ‘aaa /lataalas dtoinva = ENN100 NATL (wo) LHOISH LNW 1d ININLVIaL
+(sa 8102)
+
+(Sq 8102) stuoupuowe [Ios sJ9]JIp £q poroayye sv dO Jo SI}OUMINd PIOLA pur oHOVOITY “7 >142L
+
+94
+
+Biomass. Results indicate that biomass is significantly affected by different
+
+soil amendments. Plants under the farmer’s practice (control) produced the lowest
+
+A -1 P . -
+biomass of 649 kg ha during vegetative stage, 3990 kg ha i at panicle initiation and
+
+4160 kg ha” at maturity, However, all the treatments added with organic amendments
+showed increased biomass yield at three growth stages as presented in Table 25. At
+maturity, vermicast-treated plants produced the highest total biomass of 8.27 t ha. .
+Higher biomass accumulation was observed during 2018 DS than 2017 WS due to
+favorable temperature exposure that would give greater amounts of assimilates that
+were diverted for spikelet filling (Peng and Ismail, 2004). Both percent filled spikelets
+
+and shoot biomass were strongly correlated with grain yield and were substantially
+
+enhanced by addition of organic soil amendments.
+
+Grain yield. Grain yield is the function of biomass accumulation during
+
+ripening and translocation of biomass accumulated before flowering to grains (Yang
+
+et. al., 2008). Maximum grain yield of 6.88 t ha! was observed in plots treated with
+10t ha? vermicast as shown in Table 25. The plants treated with inorganic fertilizer
+alone (control) got the lowest yield of 4.11 tha . Results also revealed that addition
+
+of soil amendments at 10 t ha — significantly increased grain yield. The increase in
+
+grain yield could be due to the increase in yield attributes (plant height, number of
+tillers per hill, panicle count, spikelet per panicle, percent filled grains, biomass,
+harvest index and 1000 grain weight). Generally, all the treatments added with 10t ha-
+' showed significant influence on growth and productivity of rice. Higher grain yield
+was obtained during 2018 DS due to high contribution of solar radiation, as it suggests
+
+its significant role in improving crop productivity as the crucial factor in
+
+95
+
+photosynthesis. Thus, available solar radiation within the optimum level will ensure
+
+high crop productivity.
+
+Harvest index. Harvest index reflects the efficiency of photosynthates
+partitioning between vegetative parts and economic yield or grains in rice. This
+proportion can be enhanced by increasing the number of reproductive tillers, spikelets
+per panicle as well as the amount of assimilate partitioned to grains (number of filled
+grains and average grain weight). Harvest index in both cropping seasons were
+significantly affected by the combination of soil amendments and inorganic fertilizer.
+Similar to the other parameters, highest HI (50%) was obtained with vermicast
+application due to increased number of spikelets per panicle, 1000 seed weight,
+percent filled grains and reduced partitioning of dry matter to unfilled grains, while
+the lowest HI was observed at farmer’s practice (control) with 49.7 %. Higher HI was
+also observed during 2018 DS due to positive influence of solar radiation to these
+important yield-determining parameters and to grain yield. Efficient partitioning of
+photosynthates and assimilates to the grains particularly during the grain filling stage
+is an important trait associated with the remarkable yield increase in rice (Fageria et.
+
+al., 2006).
+
+96
+
+“1s71 Aq jona] 965 18 wOHRYyIP AuBDy!UAIs YoU axe (s)1ova] ures 9yF Kq paMojTOy SUEOUI “uUINIOD w UT, WOYIUAS KUT y4 WWEDYUAIS »
+
+?
+
+L6r'0 oss opsh 178 6'99Sb £769 ueayy puri
+29640 44919 qoszes — G0's€6 4 S'E98P as'teL amjooz -SL
+2 S6r'0 20195 20016 —-.0'598 2 sbE9p 2 0°r69 yse asseeg-pL
+. . . . . Tiny
+4 66¢'0 P ols Poo ——PS'SI8 PeSLeb PETI9 says portuoquea-e4
+e0s'0 ® 389 eosess 8 0'SEOI ® e'b96b e 6 ELL SeOTWLIDA -Z]
+2 L640 20llb aoosse 0019 2 0'066€ P 16r9 jonuog -1L
+. ro Ee a * Pe
+MES yoo
+uonentyy ajiued == aarjeyaBo,a,
+qSOAIeY]
+\XaaNI C=) (2039) sswwola SASL ER
+LSAYVH |G1aIA NIVUD we
+(sd 8102)
+
+(SC 810Z) suswIpUaUTe [Ios JuasaJFIP Aq payoayye SB 9911 Jo s}uauoduuod pjalc pue plaiA “SZ AGEL
+
+97
+
+Dry Matter Yield, NPK Uptake and
+Concentration of 2018 DS Rice
+
+Dry matter yield, nutrient concentration and uptake in rice as affected by soil
+amendments in 2018 DS are shown in Table 26-28 and Figure 17. Nutrient concentration
+and uptake were significantly affected by different treatments although all the nutrients
+were found on the upper biomass compared with lower biomass. More N and P were
+found in grains and K was more concentrated on the rice straw resulting to a low yield
+due to the unbalanced partitioning of assimilates. On the other hand, higher uptake of
+nutrients was observed with application of soil amendments particularly vermicast
+
+(Figure 17).
+
+98
+
+Table 26. Dry matter yield, nutrient concentration and uptake in roots as affected by
+different soil amendments in 2018 DS
+
+DRY
+MA’ z
+
+Ep. CONCENTRATION (%) UPTAKE (kg ha”)
+TREATMENTS an
+
+(kgha_)
+
+Root N P K N Pp K
+¥ ¥ + ¥ ¥ ¥ ¥
+
+T1-Control 610.0e O.7ld O.15be 031d 433¢ 092d 1.894
+T2-Vermicast 1035.0a 0.84b 0.19a 049b 869a 1.97a 5.07b
+Para ones 815.54 0.77¢ O17b 0.40¢ 628b 1.39b 3.26¢
+rice hull
+T4-Bagasseash 865.0¢ —0.74e-0.16e 0.36 640b 1.38b 3.1le
+TS- Zeolite 935.0b 0.91a 0.15be 0.64a 851a 4c 5.98a
+Grand Mean 852.1 0.79 0.16 0.44 6.84 1.41 3.86
+
+¥= significant, **=highly significant
+
+Ina column, means followed by the same letter(s) are not significantly different at 5% level by LSD
+
+99
+
+Table 27. Dry matter yield, nutrient concentration and uptake in straw as affected by
+different soil amendments in 2018 DS
+
+TREATMENTS
+
+T1-Control
+T2-Vermicast
+
+T3-Carbonized
+rice hull
+
+T4- Bagasse
+ash
+
+T5- Zeolite
+
+Grand Mean
+
+MAIER
+
+CONCENTRATION (%) UPTAKE (kg ha’')
+YIELD
+(kg ha!)
+Straw N P K N P K
+* * * * * * ¥
+
+3550e 066d 0.16c¢ 1.32d 23.43d S5S.68d 46.86d
+
+5845a 1.13a 0.25a 2.34a 66.05a 146la 136.77a
+
+4600d 0.76c 0.22b 1.71b 34.96¢ 10.12b 78.66¢
+
+4910c O0.7le 0.20b 1.67c¢ 34.86¢ 9.82¢  82.00¢
+
+5325b O81b 0.18¢ 2.10a 43.13b 9.59e¢ 111.83b
+
+4846 0.81 0.20 1.83 40.49 9.96 91.22
+
+*= significant, "highly significant
+‘ina column, means followed by the same letter(s) are not significantly different at 5% level by LSD
+
+100
+
+Table 28. Dry matter yield, nutrient concentration and uptake in grain as affected by
+different soil amendments in 2018 DS
+
+MBER
+
+TREATMENTS CONCENTRATION (%) UPTAKE (kg ha’)
+
+YIELD
+
+(kg ha)
+
+Grain N P K N ¥ K
+T1-Control 4110e 138d 0.38¢ 0.18¢ 56.72d  15.62¢ TAC
+T2-Vermicast 6884 a 153 a 0.54a 0.23 a 105.33a 37.17a 15.834
+T3-Carbonized rice
+hull 5410d 146b 0.44b 0.21b 78.99¢ 23.80b 11.36b
+T4- Bagasse ash 5670 ¢ 14le 0.39 ¢ 0.20b 79.95¢ 22.11b 11.34b
+TS- Zeolite 6164b 1.56a 0.38 ¢ 0.24a 96.16b 23.42b 14.79a
+Grand Mean 5647.60 1.47 0.43 0.21 83.43 24.42 12.14
+
+ignificant, **=highly significant
+
+‘In a column, means followed by the same letter(s) are not significantly different at 5% level by LSD
+
+101
+
+Uptake (kg ha.)
+
+Grain Straw Roots}
+
+T1-Control T2-Vermicast T3-Carbonized | T4-Bagasse ash T5- Zeolite
+rice hull
+
+aN mP mk
+
+Figure 17. Nutrient uptake in rice grain, straw and roots as affected by soil amendments
+in 2018 DS
+
+102
+
+Cr And Ni Concentration and Uptake
+in 2018 DS Rice
+
+Table 29 shows the influence of the different soil amendments on Cr and Ni
+
+concentration and uptake. Cr concentration in roots was lowest with the application of zeolite
+(335 mg kg”), followed by carbonized rice hull (354.5 mg kg”), bagasse ash (362 mg ke”),
+vermicast (390 mg kg”) and control (409.5 mg kg”). In straw, Cr concentration was below
+the detection limit with zeolite and bagasse ash, 5 mg kg” in carbonized rice hull and
+vermicast and 10 mg kg’ in control. Cr concentration in grain was significantly reduced
+(BDL) with all soil amendments while in the control, 9.5 mg kg! Cr was still detected which
+is beyond the allowable limit of 0.02 mg/kg (Codex Standard, 1995).
+
+In general, the concentration of Ni was lower in all plant parts as compared with
+
+Cr. In the roots, lowest Ni concentration was recorded with zeolite (220 mg kg”),
+followed by carbonized rice hull (227 mg ke"), vermicast (235.5 mg ke”), bagasse ash
+(242 mg kg) and control (286 mg kg”). In straw, 5 mg ke! was detected with all the
+soil amendments and 10 mg kg! in the control. Ni concentration in grain was markedly
+reduced with the application of zeolite and carbonized rice hull but 5 mg kg" was still
+
+ll.
+detected with vermicast and bagasse ash and 7.5 mgkg with the control.
+
+Partitioning of the uptake and concentration of Cr and Ni in rice during harvest of
+DS 2018 using different soil amendments are presented in Figure 18 and 19 and
+summarized in Table 29 - 32. The presence of these amendments with the inorganic
+fertilizer decreases the amount of Cr and Ni in the straw to the grains. This may be due to
+the binding capacity of these material in association with the roots. Wingenfelder et. al.,
+
+(2005) reported that addition of organic amendments increases pH that causes
+
+103
+
+precipitation of hydrous ferric oxides and decreased dissolved metal concentrations.
+Thus, the amount of Cr content on rice grains were not detected on treatments with
+vermicast, carbonized rice hull, bagasse ash and zeolite during dry season or continuous
+addition of these soil amendments. On the other hand, Ni concentration was below the
+detection limit on treatments applied with zeolite and carbonized rice hull while
+treatments with vermicast and bagasse ash had low Ni concentration compared to
+farmers practice. Results imply that with the addition of organic amendments to a
+contaminated soil, the metals were adsorbed by the roots to minimize or prevent the
+transport of the metals to the grains. Plants under farmers practice (control) had the
+highest amount of Cr 9.5 ppm and Ni 7.5ppm in grain which are beyond the allowable
+
+limit of 0.02 mg/kg (Codex Standard, 1995).
+
+104
+
+Jiu] uonza1eg Moj9g=7104
+
+SEE 8VbL LL'96 6'807 LE IBLE una PUDAD
+9781 S0'8Lz 0'02z see Se6 sj00y
+
+$7997 jaa o's qaqa sze's mens SMO9Z -S.L
+qaqa Jaa a4 qaqa v91'9 ures
+€€°607 er'ele O'%z 79 S98 s100y
+
+Ssve aa os jaa ole'r meng yse ossefeg py
+Se87 Jaq o's qaqa oug9s uel
+S8II'S81 60°687 Lt PSE s's18 S100y
+
+x4 & os os 009r MENS Tiny aou paziuogien-¢ 1,
+Jaq qaqa qaqa Jaa ols rely
+StbL'EbZ S9'E0b S'SEZ 06€ SEO S}00y
+
+Stet €T'6z os 0s sbe's MENS ISeOTULIaA-Z,L
+Uh've qaqa 0s qaqa r8s'9 urelp)
+Cazal 8'6b7 987 $'60P 019 S}00Y
+
+Sse ssc O01 On oss‘€ MENS Jonuod-1L
+S78'‘0e S0°6€ SL s6 Olly ures
+
+IN ER) IN EP)
+(rE) Lavd
+(, Pq Sun) (, 34 3a) aTaIA LNV1d SLNANGNaNY TOS
+avian NOLLVULNAONOD WALLY
+Aud
+
+SC 810Z UI SluoUpUoULe [los UOIAJJIP Aq poyoaJe Sv ISOA.ICY 1B DOL UL oyeidn pur uonenuddsuos IN pur 1D “67 9198L.
+
+105
+
+500
+
+450
+400
+350
+300
+250
+200
+150
+100
+50
+0
+T1- Control T2- Vermicast T4- bagasse ash T5- Zeolite
+cute rice
+hull
+
+MRoot mStraw mGrain
+
+Figure 18. Partitioning of Cr uptake in rice harvest as affected by different soil
+
+amendments (2018 DS)
+350
+300
+250
+200
+100
+50
+0
+T1-Control —_T2- Vermicast - T4- bagasse ash —_TS- Zeolite
+Cc rie rice
+hull
+MRoot = Straw = mGrain
+
+re 19. Partitioning of Ni uptake in rice at harvest as affected by different
+soil amendments (2018 DS)
+
+
+106
+
+Uptake and Distribution of Cr And Ni
+Concentration in Rice at Various Growth Stages
+
+At the vegetative stage (Table 30), Cr concentration and uptake in root were highly
+
+significantly as affected by the different treatments. The control plants had the highest metal
+concentrations, at 1268.5 mg Cr kg”! and 1042.5 mg Ni kg”! and uptake of 125.58 mg Cr
+ha’ and 103.21 mg Ni ha! while the least concentration of metals was found in plants
+treated with zeolite with 154.5 mg Cr kg”! and 222 mg Ni ke”! while uptake was 17.23 mg
+Gr ha! and 24.75 mg Ni ha! . On the other hand, the same pattern as in the root was
+observed in the amount of Cr and Ni in straw. The control plants had the highest
+concentration of metals in straw with 54.5 mg Cr kg! and 91.5 mg Ni kg with an uptake of
+29.69 mg Cr hey 49.84 mg Ni hae Plants treated with zeolite had the lowest Cr and Ni
+concentrations in both root and straw. The heavy metal concentration root was 154.5 mg Cr
+rae and 222 mg Ni ke? while it decreased in straw at 19 mg Cr ha! and 403 mg Ni ha
+The lower concentration of Cr and Ni in zeolite resulted to a lower uptake in both root and
+straw at an amount of 19.0 mg Cr ke? and 40.3 mg Ni kg! in the root, with12.15 mg Cr ha
+| and 25.77 mg Ni ha’‘in the straw.
+
+During panicle initiation as presented in Table 31, roots in all treatments were observed
+
+to have higher levels of Cr and Ni as well as the amount of uptake compared with straw. Same
+
+trend was observed from vegetative stage, where the control plants had the highest concentration
+
+of metals in the roots, at 677 mg Cr kg’! and 627.5 mg Ni kg” resulting to a highest uptake of
+381.83 mg Ni ha”! and 353.91 mg Ni ha” . On the other hand, zeolite-treated plants had the
+
+. -1
+lowest concentration and uptake, with 319 mg Crkg and 416
+
+107
+
+mg Ni kg” resulting to the lowest uptake at 233.03 mg Cr ha”! and 303.89 mg Ni ha,
+However, the concentration and uptake in straw decreased in all treatments although Cr and
+Ni levels were more concentrated in the control plants, at both 10.0 mg kg? with an uptake
+of 31.49 mg Cr ha’! and 31.49 mg Ni ha, The lowest concentration of both metals in all
+treatments added with soil amendments were observed at 5.0 mg kg” Although it shows
+different uptake in straw, the lowest uptake was found in plants with carbonized rice hull,
+with the same amount of 17.49 mg ha’! for both Cr and Ni.
+
+At harvest (Table 32) generally, the Cr and Ni concentrations decreased in all
+treatments compared with the vegetative and panicle initiation stages. More Cr and Ni were
+still detected in the control in both roots and straws compared with plants treated with soil
+amendments. It was found out that Cr concentration and uptake in straw was below the
+
+detection limit in plants treated with bagasse ash and zeolite. However, Ni concentration in
+
+plants with soil amendment was lower at 5 mg Ni ha’ for all treatments while the control
+plants had 10 mg Ni kg! Although the lowest Ni uptake in straw was observed in plants
+with carbonized rice hull at 23.0 mg Ni ha”! , the control plants had the highest straw uptake
+
+of 35.5 mg Ni hae
+
+Table 32 also emphasizes the importance of soil amendments in controlling the transport of
+
+Cr and Ni into the grains. Cr levels below detection limit were found in grains treated with soil
+. -l .
+
+amendments compared to control plants with 9.5 mg Cr kg. Likewise, Ni concentration below
+
+detection limit was observed in plants treated with carbonized rice hull and zeolite while control
+
+plants had 7.5 mg Ni kg? In addition to this, the Cr uptake in grain was also below the detection
+
+limit in all soil amendment treatments, while the control plants had 39.05 mg Cr ka! . This is
+
+very alarming since this amount is beyond the acceptable limit
+
+108
+
+of 0.02 ppm Cr (Codex, 2001). Ni uptake in carbonized rice hull and zeolite were observed
+
+as below the detection limit while plants treated with bagasse ash (28.35 mg Ni ha”),
+
+vermicast (5.0 mg Ni ha ) and control (30.83 mg Ni ha 1) shows higher uptake in grains
+
+which means it is not safe for food consumption since the levels are beyond the acceptable
+
+limit of 0.02 ppm Ni (Codex, 2001).
+
+Generally, Table 30 and 31 show the significant effects of the different treatments
+applied in all rice stages. At the vegetative stage, particularly the root, more metal is
+absorbed and then absorption slowly decreased with time from panicle initiation until
+maturity due to the dilution effect in the plant. Plants under farmers practice had the highest
+amount of Cr and Ni concentration and uptake from root to grain compared with plants that
+received soil amendments particularly zeolite. According to Taylor (1997) and Matschei et.
+al., (2007), the addition of soil amendments containing high amount of silica and carbon
+make them effective sorbents for organic compounds and contaminants. When reacted with
+water, they create highly alkaline solutions and form complex mixtures of hydroxides,
+mainly Ca(OH)2 and other amorphous calcium silica hydrate phases. They are also used to
+raise pH of acidic soils, reducing leaching and phytoavailability of metal cation
+contaminants that probably result from simple adsorption to oxide and silicate minerals as
+pH is increased. Thus, the metals present in the soil are immobilized/ complexed with the
+soil amendments added. They have the binding capacity to associate with the roots resulting
+to a decrease in the bioavailability of the contaminants, minimizing the transport of Cr and
+
+Ni into the grains.
+
+109
+
+ST Aq Jara] %g 18 uoLOYJ1p ApueoypIUBIs you ae (s)rond| autes a4] Aq panro|foj SUBDUE ‘UUINJOD v UT “JUEOLLUAIS A[YTIY yy TULOYIUTIS =»
+
+Ip9€ 88L'61 9L09 = OE 94609 vEZPS 9060S LZZS Beh £501 uray pues
+DLLST PSTZL PLO F061 APOED PSL HT FETLI PTZ ASPs! ASIII OUH108Z -SL
+BIOLy 26861 46L FOE 29709 hh GHEE FS%H FTE >HO] se asseBeg -p]
+' 7 ac F “ 2 5 Tay 9011
+PSOT PITZI Sy PSOZ PHSOS PSI6E PLESZT FIZ PSOE £6 pozwoqie>-¢ 1
+GEEZ GOST PSBP ASLE L999 GORGES A9BGP AEDS A6lh F6II ILOILO A-ZL
+Byer B696T FS16 BSPS POLS BITEOL BRSSTl BSZPOL BS8IZ1 P66 [onuoD-1.L
+* * * * * ** ** * 1 ok
+IN Fe) IN Fie) 23 IN Fie) IN Ea) ua
+(, 24 Bw) (34 3u) aTalA (24 Bu) (, 34 Sur) Tala
+avLan NOLLVULNEONOD = -YALLVW avidn NOLLVULNGONOD WALLY SUNAWLVARL
+Ad
+MVULS Loou
+
+(SC 8107 ‘2aneraaa) LV pI] 18 901 UL UOReNUEDUOD IN pue 19 Jo LoNNgmnsiq pur axedn “Og M1981,
+
+110
+
+ST Aq [aaa] %E 3 WasaJIP AjUBdIyIUSIs you oe (s)9y9] auIeS 4} Aq pamoljo} SUBaUI ‘UUIN]OD & LA
+quvoyudis A[yFiy=,4 uvdyrUsI
+
+=*
+
+BET IZ 8ET'1Z 09 09 «= SLIDE ZSSELE BOT'ZEE  6LOS oos 1919 uray pues
+P81 P81 q0S 40S TOLIE POSEOE PEOEET PIP  F6I1f KS OEL DNJO9Z -SL
+20°81 => HOST qos O'S €809E FOLLLE ESB'SIb AS'SHS 45009 95769  — YsvosseBeg -py
+[ 7 4 5 7 5 . . Tiny 2011
+>6rLI PP 6FLI qos GOS TROVE PUCIE PLII6Z 29Lb PSIhh 5659 peemoqieste
+QLL0Z = ALL'02 qos 10'S = SHSIh PRT RHE PITEEE PSPLy > Zh BPEL YSPOTULIOA-ZL.
+eevle Forle FOOT FOO sBrle AIGESE AEIBE BSLZI BLL9 PHOS Jonuod-1L
+* * * * + * + * ** *
+
+IN ce) IN 19 mall 3y IN ce) IN ce) al By
+
+(, 24 Su) (, 31 3u) aTaIA (24 3u) (, 343w) aTaIA
+ayeidg, NOLLVYLNFONOD YSLLVN avian NOLLVYLNAONOD YALLVA SLNGWLVANL
+
+Aud Aud
+
+MVULS LOOU
+
+(Sd 8102 ‘Yonentur aforued) LY 0S 1e SOL Ur UONeNUDDUOD IN pue ID Jo UoINqiNsiq pur oyeidy “T¢ 9192.
+
+111
+
+ST Aq [ana] %g 18 waLayIp AlyUED
+
+is 70u az8 (S)s0n9] ures atp Aq pomoyioy Sueour “uUUN|OD BU,
+
+WILOMIUTIS ATYTIY =e TUCOYIUTIS =
+
+87 67 9 L OP8b 6Ly OLL CHT OLE TSB uvoy puein
+aeooz PIdd = =64S += TK zESOL'GOZ AETEIE POT PSEE 4566 aut]o2Z -L
+Sch PICA % 21 OLGY GEEGOT AEI'EIE AZZ FZ9E 9598 Yseossefieg -py
+20% EZ as 4S P00 PZI'S8I 26068 PLZZ >S>PSE PS'SIB es
+
+£ P poziuoqiea-¢ 1
+Gero AEH «=—««AS_— ASR GHRS ERTIZOIROLPROZ FS'SEC 06E BSED] _asvorUOA-zZ]
+Bose RSSE = BOT «= BOT OSSE ~POFHLI. PREZ eB 9BZ LS GOP 019 jonuod-[.L
+: : . rs : . . rs a
+IN Efe) 'N Ee) Py 8y IN Be) IN Ee) aH
+(,-ey Bu) (%) aTalA (1-ey Sur) (%) aTalaA
+ANVLAN —-NOILVYINSONOD YALLWN = Wd ~—NOLLVYINSONOD WALLVW SINGIWLVSAL
+‘AWG
+AG
+MVULS LOOu
+
+(8107 ‘SC ‘ISOAIeY) LV GLE 8 9911 UT UONR.WUDDUOD IN puk ID JO UONNINsIg pue oyeidy *ZE aIQUL
+
+112
+
+ST Aq [ana] %g ve 1UaLAJIp Aj UEdYLUBIS you axe (s)san9] Oures au Aq paniojjo} SUDUE
+qULoYIUBIS AyYTIY=_4 STUROYTUaIS =,
+
+moo e UT
+
+1S =
+
+617
+P1daq
+qSE87
+P 1aq
+90S
+
+PES OE
+
+SO'6E
+qaqa
+q1aa
+qaqa
+q1aq
+
+BSO6E
+
+aavldn
+
+ees
+
+971d
+qos
+o1dd
+qos
+
+eoL
+
+IN
+
+SNIVUD
+
+0s°6 8'9P9S uray pueln
+q1da 9 p919 OMJOIZ -SL
+qaqa 2 0L9S yse ossefeg -py
+ada POlps Tray 2011 paztuogie)-¢ 1,
+q1da 2 0889 YSBOIULIDA-Z,L
+eo6 20lIb JonuoD- TL
+
+* ee
+9
+(%) ey 3)
+SINFWLVIUL
+
+NOILLVYLNAONOD YALLVA AUG
+
+ooo
+
+HOD “TE AI
+
+
+113
+
+Bio-accumulation and Translocation
+Factors in rice (2018 DS)
+
+The bioaccumulation factor of Cr is very low (BDL) in all treatments except in the
+control at 0.24 (Table 33) indicating that the soil amendments were very efficient in
+preventing the bioaccumulation of Cr. The transfer of metals from the soil to the plant is
+one of the key elements in the human exposure to metals via the food chain (Zhuang et.
+al., 2009). Zeolite and bagasse ash were also very efficient in preventing translocation of
+Ni from the soil to rice resulting in very low BAF (BDL). BAF of Ni in bagasse ash and
+vermicast were 0.25 since Ni was still detected in straw. Nevertheless, the BAF values
+were all less than | indicating that rice only absorbs Cr and Ni but does not store them.
+
+Translocation factors for Cr in all soil amendments were very low (BDL). Some Cr
+levels were detected in the grain of control plants, hence a TF value of 0.04. Presence of
+
+Ni in grains with vermicast and bagasse ash was also detected, hence the TF valuesof
+
+0.02 compared to 0.03 with the control.
+
+114
+
+Table 33. Bio-accumulation and translocation factors in rice as affected
+by different soil amendments in 2018 DS
+
+BIO-ACCUMULATION TRANSLOCATION
+
+TREATMENTS FACTOR FACTOR
+
+Cr Ni Cr Ni
+
+* * * *
+T1-Control 0.24 0.29 0.04 0.03
+T2-Vermicast BDL 0.25 BDL 0.02
+T3-Carbonized rice hull BDL BDL BDL BDL
+T4- Bagasse ash BDL 0.25 BDL 0.02
+T5- Zeolite BDL BDL BDL BDL
+
+* significant since, p value 0.0002 < 0.005
+
+Impact of Soil Amendments on Soil Properties, 2018 DS
+
+Table 34 shows the effect of soil amendments on soil pH and organic matter
+content after growing rice for two consecutive seasons. Soil pH remained unchanged in
+the control (5.4) but increased with the application of organic amendments particularly
+vermicast which increased soil pH to 7.0, followed by zeolite and carbonized rice hull
+(6.9), and bagasse ash (6.8). This is maybe due to the liming effect of organic materials
+(Narambuye & Haynes, 2006).
+
+There was a build-up in the soil organic matter content after applying the
+various soil amendments for two cropping seasons. Among the soil amendments, the
+application of vermicast resulted in the highest soil organic matter content (3.1%),
+followed by carbonized rice hull (2.8%), bagasse ash (2.7%), zeolite (2.6%). Soil organic
+
+matter content in the control also increased to 2.5%. In addition to providing nutrients
+
+115
+
+and habitat to organisms living in the soil, organic matter also binds contaminants in the
+
+soil.
+
+116
+
+AST Aq Jans] %g 18 qUoLayIp AIjuROIsIUTIS OU Oue (s)JoND] dUIeS a4) kg Pom:
+
+suvaul ‘uuinjoo @ Uy
+I
+
+Lex VUBOITUSIS,.
+moe ET 169 99'9 aMO9Z -S.L
+9L7 IST 289 a9 yse osseBeg -p 1
+agz alt 469 v9 [iny 2011 paziuogies-¢.1
+Ble F6T BTL BLO JSBOIULIOA-ZL
+PSZ Pr? prs Prs JonuoD- TL
+* * 9L * * Vs
+(%) LNALNOD
+gor gor
+gor sa YALLVNW god SM Hd
+8107 YALAV pais oinvowo S94 8197iggyauay Tviint «= SHNAWEVaRL
+YaLIV YaLdIV
+‘TWILINI
+S]USUIPUaUUE [10s JUDJAJJIP Aq paouon|ul se yUDIUOS JoyeUl o1ULT.IO puke HA [IOS “pE 9IGRL
+
+
+117
+
+Changes in total and available Cr in soil are presented in Table 35. Total Cr was
+
+significantly reduced with the application of soil amendments. Application of zeolite
+
+reduced total Cr by 22.5 % (974 mg kg"), carbonized rice hull by 10% (432 mg kg"),
+bagasse ash by 6.9 % (298 mg ke”), vermicast by 6.7 % (289 mg ke"). Total Cr in
+control was reduced by only 1.2 %( 54 mg kg). Available Cr was likewise significantly
+reduced by soil amendments. Zeolite reduced availabel Cr by 5.8 % (484 mg kg),
+carbonized rice hull by 23.6% (442 mg kg"), vermicast by 17% (295 mg kg!) and
+bagasse ash by 13.9% (261 mg kg”). Available Cr in control was also reduced by 3.2%
+(61 mg ke").
+
+Total and available Ni in soil was also significantly influenced by the
+
+application of soil amendments (Table 36). Application of carbonized rice hull reduced
+
+total Ni by 43.6 % (1155 mg kg"), zeolite by 31.3 % (828 mg kg’), bagasse ash by 27.8
+% (735 mg kg’), and vermicast by 27.1 % (718 mg kg”). Total Ni in the control was
+reduced by only 0.7% (18 mg kg"). A large reduction in the available Ni in the control
+was observed, with a reduction of 38.8% (677 mg ke. Available Ni was reduced by
+47.8 % (825 mg kg"), 43.3 % (748 mg kg”) in carbonized rice hull and vermicast, and
+
+42.7% (736 mg ke!) in bagasse ash. The potential use of zeolites for treating acid mine
+drainage in Rapu —Rapu has been found by Sanchez and Francisco (2010). These
+amendments can remediate because they can bind metals due to their aluminosilicate
+
+content (Martirena, et. al.,1998).
+
+118
+
+ST Aq Jona] 96 ve uLAYIP ApuCoys!
+
+Jou aie (s)1ona] autes ayy £q pon
+
+OUI “UUNJOD B UT
+TUMIYUSIS APYBI yy “TUDIYIUT IS,
+
+$8h- 2 16€1 P £691 bLo- 2 OEE 2 698E aq]ooZ
+197 qvi91 QSL 86c- 2910b POsOr yse osseseg
+tr P cert Q7sLt cer P 788e 2061p TINY 9914 poztuoqie+)
+S6z- 2 08ST 9 SELI 68¢- qSz0r 481th JSBOTULID A,
+19° eyisl ®Of61 oS 809th & 79th JonuoD
+1 * SL81 ** ** bier
+(3 Bui) Ca sw) C34 un) C4 3ul) (34 3u) CAA Sul) CA Sur) Ca sw)
+gor
+1
+° ra 8 a mae “ anay AV. 3 .LNI Saale he sat IO TVLOL we
+@ONVHO UAaLdV YaLAV TWLLIN] JONVHO YaLAV WL TVILINI
+
+s]UOUIpUdUle [IOs JuarayyIp Aq paouonyul se 1D 91q)
+
+Bury “SE NGL
+
+IRAv pur PIO} [10S
+
+119
+
+a 2006 ~~ PELEI 878- Powel 9 $6zz anyjoaz
+oa 4886 0851 Sel- qel6l ——-t0sz yse asseBeg
+np 2816 ELSI SslI- 2 e6rl_— SOG [Iny 9011 poztuogre3
+8bl- 9846 © 9.6851 B1L- 40661 —-4.60sz seotuns9 9,
+re p01 BSHLI gi- Bost —-BSEOT jonuog
+
+, * sz P P 8h92
+
+(34 3u) C3 sw) (3 ul) C3 3) CH 3u) (34 Sut) (4 Bw) (# Bul)
+
+if
+
+NI Se LN) IN Bre gory Sat IN SINFWLV IAL
+
+NI sasioz L102 aIVAV‘1v sasioc OL
+AONVHO WaLdV_UALAV WLOLNT  yalay anes
+4VILINI JONWHO Walav—WILINI
+s]UOUIpUSUe 10s JUSJaJJIP Aq paouoNyu se IN o]QRIIeAe pur eYD “OE O1qRL
+
+
+120
+
+Economic Analysis of Rice Production
+
+Table 37 shows the ROI for the 2017 WS and the 2018 DS rice production.
+Return on investment (ROI) describes the ratio of net income with total expenses. In both
+season, the highest ROI was realized from the application of bagasse ash followed by the
+application of carbonized rice hull. The application of bagasse ash produced an ROI of
+1.24 in the 2017WS, indicating that for every peso spent by the farmer he gains Php 1.24.
+This was increased to Php 1.30 during the 2018 DS. A lower ROI was obtained with the
+application of carbonized rice hull, only Php 0.29 in 2017 WS and Php 0.34 in 2018 DS.
+Application of vermicast appeared to be unprofitable in 2017 WS because of a negative
+ROI ( -0.02) and break even (0.01) in 2018 DS. This practice can become profitable if the
+
+farmer produces his own vermicast. Zeolite produced high yields in both seasons but
+because of the additional cost (Php 10/kg) of zeolite, applying 10 t hay was not
+
+profitable.
+
+1-24 IUSUNSOAMT TO WIM
+84 g1@ ware Apnys ayy wr Avjed jo aod Surjreaaid oy uo paseq payndwios »
+
+£F0 SS9L91 C9101 e918 S798FB oF9'S upay
+270 S78SIE- —O880II SZ9LZ11 S79bTh1 091°9 aM[O9Z -SL
+rel $LOSLS 090701 SZ9Lb1 S@9bbb 0L9'S yse ossedeg -p 1
+260 SLI6PZ —-OBELE $29L@b SU9P7L Olr's Tiny 9011 poziuuogred-¢.L
+P100 SLLEI Ov8EzI $'79L%6 S'79b77I 088°9 yeoluLlaA-Z,
+4610 SLISIE — O86EL SZ9L71 S79PTy Olly Jonuoo =|,
+(Arenageq
+~ AWQWIBAON) SC 8107
+Z£0 POET oF0S6 OSEOES OSELES 08's upay
+PE0- 6SEE%H 00066 6'SE9011 6'SEEIPI o0s‘s SNORT -SL
+all T'p98es 0076 6'SE9ZI osEeey o0r's yse ossefeg ~pL
+2670 Tp9p0z 00816 6'S€90b 6SEEIL oor's Iny e011 paziuuoqred-¢.1,
+270'0- 6SEST- —-0088TT 6'S£906 6'SEEIZI 009°9 SEOUL A-ZL
+9590 1'p90<7 0089 6'S€901 OSEEly 008‘¢ Jonuos -1 1,
+Pry (49q0390 -9uNL) SA LIOZ
+(low) (eu d) Ca d) (4 d) C4 d) C4 3y)
+INGNLSAANI AWOONI $gwoont al TddV  SASNAdXA TAA INSWLVaYL
+
+NONUAMITY JIN ‘ggoyg WAZA = ‘WLOL = NIVUD
+
+suoseas Surddoss om) Joy s}uaWpusWe [10s JUaayjIp Aq payoayye se uoONpo.d dou Jo siskjeur s1woUOdg “L¢ 9IQUL
+
+122
+
+CHAPTER V
+
+SUMMARY AND CONCLUSION
+
+Rice is most widely consumed as staple food for a large part of the world's human.
+population, especially in Asia. In the Philippines, rice is considered as the major food and is
+the source of income for over 12 million Filipino farmers (FAO, 2007). The major rice
+producing parts of the country include Central Luzon, Western Visayas, Cagayan Valley,
+Ilocos region, SOCCSKSARGEN and Bicol region (Ricepedia, 2012). In Central Luzon,
+Zambales province is considered to be one of the rice producing areas with a total land area
+of 371,440 hectares. One of its thirteen (13) municipalities, is Santa Cruz which has a total
+land area of 5,082.85 hectares that is devoted to agriculture with 3, 503.85 hectares planted to
+rice.
+
+However, mining industry has recently been booming in Santa Cruz where there
+is abundant deposit of nickel and chromite minerals. As of 2015, mine permit for nickel and
+chromite operations covers about 9, 791.8084 hectares operated by four large-scale mining
+companies (Environmental Justice Atlas, 2015). Before the mining operation started, Santa
+Cruz river can irrigate up to 2000 rice fields, now it can only accommodate 800 fields losing
+8,000 tons of palay (rice paddy) production annually worth Php 200-million (Environmental
+Justice Atlas, 2015). In 2016, DA-RFU III reported that the soil in barangay Lomboy, Santa
+Cruz, Zambales was already contaminated with Cr and Ni. Thus, there is an urgent need to
+
+develop cost effective techniques in mitigating heavy metals in a contaminated rice field and
+
+123
+
+at the same time increase the yield safely without compromising the environment and human
+health.
+
+The study was conducted to evaluate various remediation techniques to reduce the
+plant absorption and translocation of Cr and Ni in lowland rice in Barangay Lomboy, Santa
+Cruz Zambales and at the same time increase rice productivity in the area. It is the goal of
+this study to contribute to the growing knowledge of managing and mitigating heavy metals
+in lowland rice fields along with generating information on the best combination of
+inorganic, and organic fertilizers for sustainable rice production.
+
+The first part of the study focused on evaluating the potential of vetiver as a
+phytoremediator. Vetiver was allowed to grow in the field for 3 months before growing rice
+in the succeeding season (2018 DS). In an adjacent field, vetiver was allowed to grow
+continuously for 8 months. The second part of the study evaluated the effect of different soil
+amendments (vermicast, carbonized rice hull, bagasse ash and zeolite), applied at a rate of 10
+
+t ha’, in mitigating Cr and Ni in soil and reducing their uptake in rice. NSIC Rc160
+
+(Tubigan 14) rice variety was grown for two consecutive seasons, 2017 WS and 2018 DS.
+Cultural and fertilizer management were applied based on the recommended rate of the Rice
+Crop Manager (RCM). The effect of the various treatments on soil properties were also
+evaluated.
+
+Soil samples were collected before the start of the field experiments and at the end
+of each growing season of vetiver or rice. Soil parameters such as pH, texture, OM, total N,
+Available P, exchangeable K, CEC, total and available Cr and total and available Ni were
+determined at the Regional Soils Laboratory, Department of Agriculture, Caraga Region.
+
+Growth and agronomic parameters like plant height, number of tillers per hill, panicle per
+
+124
+
+hill, spikelets per panicle, percent filled grains, weight of 1000 grains, harvest index, grain
+yield were also determined. Plant samples were collected for Cr and Ni analysis in rice root
+and straw at vegetative stage (14DAT), panicle initiation (SODAT) and in root, straw and
+grain at harvest. N, P and K in straw and grain was also determined at maturity.
+
+Vetiver grass significantly reduced the amount of total and available Cr and Ni in
+the soil Total Cr and available Cr were reduced by 4.3% to 8.53% while total Ni and
+available Ni were reduced by 9.86% and 14.26%, respectively. Results indicate that vetiver
+is very efficient in reducing heavy metal content due to the unique characteristics of its root
+system and has a potential in the phytoremediation of heavy metals particularly Cr and Ni in
+lowland rice paddies. The shoot of this plant can be a good source as forage for animal
+
+consumption since it contains less amount of metal. Based on the result, when this plant was
+
+1 . 1
+grown for 3 months, the roots were able to accumulate 3.83 kg Cr ha- and 3.66 kg Ni ha-
+while only 0.03 kg Cr ha-' and 0.07 kg Ni ha-! in shoots. After 8 months, the amount of Cr
+accumulated in the roots and shoots increased to 6.357 and 0.04 kg Cr ha? respectively. For
+
+Ni, it only increased to 4.12 and 3.66 kg Ni hal, Results implied the importance of vetiver
+
+in extracting these metals from the soil and accumulating them in their roots keeping the
+shoots safe for animal consumption. Due to their extensive rooting system, they can take up
+considerable amount of heavy metals using ion channels and metal transport proteins on
+their roots. Aside from the beneficial effects in mitigating pollutants in the soil, vetiver also
+improved soil pH and percent organic matter due to its root interaction in the soil giving
+niche for the microbes.
+
+It was found out that vetiver has the capacity to absorb Cr and Ni from the soil and
+
+store them in their system particularly in the roots since it has a BAF of 0.97 for Cr and 1.07
+
+125
+
+for Ni in 3 months growth and 1.48 for Cr and 1.38 for Ni after 8 months indicating higher
+concentration in the plant than in the soil. On the other hand, the translocation factors in both
+3 and 8 months are very low indicating that vetiver accumulates Cr and Ni in their roots and
+very small amount of Cr and Ni were translocated to the shoots making them safe for forage
+
+purposes. Higher TF was obtained for Ni as compared to Cr both 3 and 8 months of growth.
+These values are below 0.2 mg kg a which are prescribed limit given by the Codex Standard
+and European Union (EU standards).
+
+Distribution of Cr and Ni in rice grown after 3 months growth of vetiver, showed
+that during vegetative stage, roots had the highest Cr and Ni concentrations and uptake
+compared to straw. At panicle initiation, more Cr and Ni still concentrated in the roots
+resulting to higher uptake. At maturity, Cr was only detected in the roots and straw and was
+not translocated to the grain. Results implied that at vegetative stage, the rice plant was so
+active in absorbing nutrients including metals. Through time as the growth of plant increased
+nutrient uptake also increased particularly at reproductive stage wherein uptake was higher
+for growth stabilization. The grains were below detection limit in both Cr and Ni because
+these metals were immobilized by the roots. Some of the Cr and Ni could have been present
+in the rice bran and unfilled grains. The bio-accumulation factor was found 0.14 Cr and 0.18
+Ni which are < 1 indicated that rice plant only absorbs but does not store heavy metals,
+resulting to a below detection limit of the grains. The roots of vetiver had contributed a
+greater impact on the solubility and phytoavailability of metals in the soil thus Cr and Ni
+were found below detection limit on the grain.
+
+The soil amendments significantly increased the pH of the soil, percent organic
+
+matter, N, P and K after two (2) cropping seasons resulting in an increase in grain yield ha
+
+126
+
+particularly with the application of vermicast as compared to the farmers practice (control).
+More nutrients (N and P) were observed in rice grains while K was found more on the straw
+in both wet and dry season. The imbalanced of this nutrient partitioning limits grain yield.
+However, temperature also affects the photosynthates, in fact higher yield was observed
+during dry season compared to wet season in all treatments including the control. Cr and Ni
+were observed more on the roots compared to straw in all treatments in three sampling
+period (14 DAT, 50 DAT and at harvest). Highest amount of concentration and uptake of
+metals was found in farmers practice (control) whereas plants receiving soil amendment
+showed a lower concentration and uptake of metals in the plant system particularly zeolite.
+Below detection limits of Cr was found in grains in all treatments with soil amendments
+while BDL for Ni in grains receiving carbonized rice hull and zeolite. Vermicast and bagasse
+ash showed a small amount of Cr and Ni in grains compared to control (farmers practice).
+
+All soil amendments significantly decreased the amount of total and available Cr
+and Ni in the study area, with zeolite showed the highest deceased followed by carbonized
+rice hull and bagasse ash. This indicates that addition of soil amendments was very efficient
+in preventing the bioaccumulation of Cr and Ni in rice, due to its binding capacity of these
+material that helps decreased the dissolved metal concentrations.
+
+Growth and agronomic parameters were significantly affected by treatments in
+both wet and dry season. At vegetative stage (I4DAT) and panicle initiation (50 DAT),
+highest plant height, biomass, and number of tillers were observed at treatments with
+vermicast while the lowest parameters were found in farmers practice (control). Generally,
+all treatments with soil amendments were obtained higher growth parameters compared to
+
+farmers practice in both wet and dry season. At harvest, highly significantly difference
+
+127
+
+between treatments were observed from biomass, 1000 seed weight, grain yield and retum
+on investment while significant difference was observed on percent filled grains, panicle
+count, spikelet/panicle and harvest index. Highest yield and yield parameters were obtained
+from treatments with vermicast followed by zeolite, bagasse ash and then carbonized rice
+hull. Lowest yield and yield components were found on farmers practice both wet and dry
+season. Treatments applied with vermicast had the heaviest weight of 1000 seed with 27.60
+(WS, 2017) and 28.60 g (DS, 2018) while the lighest weight were obtained at farmers
+
+practice (control) with 23.57 (WS, 2017) and 24.92g (DS, 2018). Same trend with the grain
+
+yield, plots applied with vermicast had the highest yield with 6.6 t ha’! (WS, 2017) and 6.88
+t ha? (DS, 2018) while farmers practice (control) had the lowest yield with 3.8 t ha? (WSs,
+
+2017) and 4.11 t pe (DS, 2018). However, highest return on investment was obtained in
+plots added with bagasse ash with 124% (WS) and 130% (DS) due to its cheaper cost while
+lowest ROI was obtained in plots added with zeolite with -30% (WS) and -22% (DS)
+because the material cost at 10.00 kg”! at 10t ha’! recommendation rate,
+
+For the total uptake and distribution of Cr and Ni concentration in root, straw and
+grain at various growth stages of rice, showed significant differences in all treatments in both
+wet and dry seasons at vegetative stage (14DAT) and at maturity (87DAT) DS, 2018. All
+treatments showed highest metal uptake on the roots than in straw and grain had the least
+uptake in two croppings. At panicle initiation it was also observed that more metals were
+consumed by rice compared to other growth stages then slowly decreased at maturity. With
+continuous application of soil amendments, grain was observed below detection limit (BDL)
+on Cr in the plots applied with vermicast, carbonized rice hull, bagasse ash and zeolite while
+
+carbonized rice hull and zeolite only showed below detection limit on Ni. However, control
+
+128
+
+(farmers practice) showed highest metal (Cr and Ni) on the grains in both croppings with
+0.088 Cr and 0.149 Ni kg ha’ (WS) and 0.04 and 0.97 kg ha’! (DS). These values indicate
+that the grain in control (farmers practice) are contaminated with Cr and Ni which are not
+safe for consumption because it is beyond the allowable limit of 0.02 mg/kg.
+
+Nutrient uptake in both wet and dry seasons were significantly affected by
+treatments, although N and P were consumed more on the grains while K was observed on
+the straw. More nutrients were found to plants added with vermicast while least amount at
+farmers practice (control).
+
+It was found out that plants grown in the control plots had the highest amount of
+accumulated metals compared to plants in plots with soil amendments. Also, plants with soil
+amendments had the lowest translocated amount of Cr and Ni from the roots going to the
+grains compared to the control in both cropping season. On the other hand, BAF of vetiver in
+both wet and dry seasons are greater or equal to 1 which means that vetiver plants have the
+capacity to absorb and store metals on their system particularly the roots. With the
+
+continuous cultivation of vetiver in the field, dry season (DS, 2018) contains higher bio-
+
+S -1 a
+accumulated Cr (1.48) and Ni (1.38 mg kg) compared to wet season (WS, 2017) with 0.97
+Cr and 1.07 mg kg! Ni respectively due to its increasing biomass. The translocation factor
+
+in both seasons (WS and DS) show that it is below 0.02 mg kg as prescribed limits fixed
+
+by the Codex Standard and European Union (EU Standards). Result indicates that vetiver
+plant had a lower translocated Cr and Ni to their shoots to make it safe for forage purposes.
+Another mechanism of vetiver in mitigating heavy metals were affected by time duration. It
+was observed that the longer the time of vetiver in the field the lower is the translocation
+
+factor because it shows a negative cumulative difference between the two
+
+129
+
+seasons. This may be due to that fact that vetiver has high capacity to store and uptake
+
+metals according to its bio-availability.
+
+Based on the results obtained, the following conclusions are drawn:
+
+The study area was highly contaminated with Cr and Ni due to its naturally
+occurring mineral from the parent material and the presence of mining activities.
+Remediation techniques including addition of soil amendments and phytoremediation
+(vetiver) were ideal and sustainable alternative on the permanent removal or recovery to rice
+paddies. These were significantly increased soil pH and percent organic matter with
+decreased amount of total and available Cr and Ni.
+
+The use of phytoremediation (vetiver) implied on the bio-accumulation of Cr
+and Ni that this plant has the capacity to absorb and store metals on their system particularly
+the roots. With the continuous cultivation of vetiver in the field higher bio-accumulated
+metals were observed due to its increasing biomass. However, the translocation factor in
+
+both seasons (WS and DS) show that it is below 0.02 mg kg” as prescribed limits fixed by
+
+the Codex Standard and European Union (EU Standards). Vetiver plant had a lower
+translocated Cr and Ni to their shoots thus it is safe for forage purposes. It was observed that
+the longer the time of vetiver in the field the lower is the translocation factor due to that fact
+that vetiver has high capacity to store and uptake metals according to its bio-availability.
+
+The use of rice after one cropping of vetiver (vetiver-rice) in mitigating Cr and Ni
+indicate that the plant only absorbs (Cr and Ni) particularly more on the roots. The
+
+translocated amount was reduced to grain because the roots contribute greater impact on the
+
+130
+
+solubility and phyto-availability of metals in the soil thus Cr and Ni were below detection
+limit on the grain.
+
+Rice plant applied with different soil amendments has significantly decreased
+the amount of accumulated metals with lower translocated amount compared to plants with
+inorganic fertilizer only (control).
+
+Plants applied with zeolite had the highest decrease in available Cr and Ni and
+total Cr while carbonized rice hull obtained the highest decreased on the amount of total Ni
+after the two cumulative cropping’s on the addition of soil amendments. It was followed by
+vetiver (phytoremediation), although vetiver was also effective in remediating metals
+however large amount of nutrients were also utilized resulted to nutrient competition with
+rice. Generally, all the soil amendments and phytoremediation (vetiver) significantly
+decreased the amount of available and total Cr and Ni compared to farmers practice
+
+(control).
+
+131
+
+LITERATURE CITED
+
+AHMAD, K. and D. CARBOO. 2000. Speciation of As (III) and As(V) in some Ghanaian
+gold tailings by a simple distillation method. Water Air Soil Pollut. 122:317-326.
+
+AGARWAL, SK.1985. Effect of moisture regime and fertility levels on the yield and
+nutrient uptake of rice. Indian Agric. Res. 19 (1):35-39.
+
+AGUSALIM, MASULILI. 2010. Rice husk biochar for rice-based cropping system in acid
+soil.1. The characteristics of rice husk biochar and its influence on the properties of
+acid sulfate soils and rice growth in West Kalimantan, Indonesia. Vol.2 (1).
+
+ALLOWAY, B.J. 1995a. Soil processes and the behavior of heavy metals. In, Heavy Metals
+in Soils, Second Edition (B.J. Alloway, ed.) Blackie, New York. Pages 11-37.
+
+ALLOWAY, B.J. 1995b. Heavy Metals in Soils, Blackie Academic and Professional,
+London, UK, 2nd edition.
+
+ALMARAZ, B.V., TROCELLIER, P., and R.I. DAVILA. 2003. Nucl Instrum Methods Phys
+Res B 210:424-432.
+
+ANDRADE, S.J., CRISTALE, J., SOARES, S.F.S., ZOCOLO, G.J., and M.R.R. MARCHI.
+2010. Contribution of sugar-cane harvesting season to atmospheric
+contamination by polycyclic aromatic hydrocarbons (PAHs) in Araraquara city,
+such showed Southeast Brazil. Atmos. Environ. (44) 2913-2919.
+
+ANGUISSOLA, S., SILVA, S. and G. BOTTESCHI. 1999. Effect of fly ash on the
+availability of Zn, Cu, Ni and Cd to chicory. Agri. Ecosystems and Environ.
+72: 159-163.
+
+ANTONLADIS, V.; TSADILAS, C.D. 2008. Sorption of cadmium, nickel and zinc in mono
+and multimetal systems. Applied Geochemistry, v.22, p.2375-2380.
+
+APREUTESEI, R.E.; CATRINESCU,C., andC. TEODOSIU. 2008.
+Surfactant-modified natural zeolites for environmental applications in water
+purification. Environ. Eng. Manag. J. (7) 149-161.
+
+AQUINO, L.D..MORGANA, M.CARBONI,M.A.,STAIANO, M.,ANTISARI, M.V. M. LO
+RITO, M. RE., VINALE, F., ABADI, K.M., and S.L. WOO. 2009. Effect of
+
+132
+
+some rare earth elements on the growth and lanthanide accumulation in different
+Trichoderma strains Soil Biol. Biochem., 41 pp. 2406-2413
+
+BAKER, AJ.M and R. R. BROOKS. 1989.“Terrestrial higher plants which
+hyperaccumulate metallic elements: a review of their distribution, ecology and
+phytochemistry,” Biorecovery, vol. 1, pp. 81-126.
+
+BAKER, A.J.M. and P.L. WALKER. 1990. Ecophysiology of metal uptake by tolerant
+plants, heavy metal tolerance in plants. In: Shaw AJ (ed) Evolutionary aspects,
+CRC, Boca Raton, pp 155-177.
+
+BARAKAT, M.A. 2011. New trends in removing heavy metals from industrial wastewater,
+Arabian Journal of Chemistry, Volume 4, Issue 4, Pages 361-377.
+
+BARER, R.M. 1987. Zeolites and clay minerals as sorbent and molecular sieves, In: Water
+Reuse Conference Proceedings, Academic Press, New York p:187.
+
+BERNARD, A. 1979. Cadmium & its adverse effects on human health. Indian J Med
+Res.128(4):557-64.
+
+BIANCHINA, J.N. (2009). Development of a flow system for the determination of Cd in
+fuel alcohol using vermicompost as bio absorbent. Talanta, 78: 333-336.
+
+BLACK, CA (Ed). 1965. Methods of soil analysis. Part 2. Chemical and Microbiological
+properties. American Society of Agronomy Monograph No. 9. Madison, Wisconsin.
+1572 pp.
+
+BRADY, N. C. and R. R. WEIL. 1999. The Nature and Properties of Soils. Twelfth Edition.
+Prentice-Hall, Inc.881 pp.
+
+BURROWS, D. 1983. In: Burrows, D. Ed. Chromium: Metabolism and Toxicity. CRC Press,
+Inc., Boca Raton, FL. p. 137-163.
+
+CANGADO, J.E., SALDIVA, P.H., PEREIRA, L.A., LARA, L.B., ARTAXO, P.,
+MARTINELLI, L.A., ARBEX, M.A., ZANOBETTI, A., and A.L. BRAGA. 2006.
+The Impact of Sugar Cane—Burning Emissions on the Respiratory System of
+Children and the Elderly. Environ. Health Perspect.(114)725-729.
+
+CCME (Canadian Council of Ministers of the Environment) 1999. Canadian soil quality
+guidelines for the protection of environmental and human health. Canadian Council
+of Ministers of the Environment, Winnipeg.
+
+133
+
+CHERVONA, Y., ARITA, A., and M. COSTA. 2009. Carcinogenic metals and the
+
+epigenome: Understanding the effect of nickel, arsenic, and chromium.
+Metallomics. 4:619-627.
+
+FULEKAR, M.H. (2009). Phytoremediation of heavy metals: Recent techniques. Afr. J.
+Biotechnol., 8(6): 921-928.
+
+CHIU, K. K., YE, Z. H. and WONG, M. H. 2006. Growth of Vetiveria zizanioides and
+Phragmities australis on Pb/Zn and Cu mine tailings amended with manure
+compost and sewage sludge: A greenhouse study. BioresourceTechnol.,97: 158—
+170.
+
+CHOPRA, R.N., CHOPRA, LC., HANDA, K.L., and L.D. KAPUR. 2009.
+Calcutta: Academic Publishe; Chopra's indigenious drugs of India; 2nd en. Vol. 198.
+pp. 46-64.
+
+CLEMENTE, R., WALKER, D.J. and M.P. BERNAL. 2005. Uptake of heavy metals and
+As by Brassica Juncea grown in a contaminated soil in Amalcollar (Spain):
+The effect of soil amendments: Environmental Pollution 136, 46-58.
+
+CODEX STANDARD- CODEX GENERAL STANDARD for CONTAMINANTS and
+TOXINS. 1995. In: Food and Feed. Zambales.
+
+DANHL, L., TRUONG, P., MAMMUCARI, R., TRAN, T., and N. FOSTER. 2009. Vetiver
+grass, Vetiveria zizanioides: a choice plant for phytoremediation of heavy metals
+and organic wastes. International Journal of Phytoremediation. Vol.8.
+
+DAS, P., MUKHERJEE, S., and R. SEN. 2009. Biosurfactant of marine origin exhibiting
+heavy metal remediation properties. Bioresour Technol. 100:488—90.
+
+DENKHAUS, E., and K. SALNIKOW. 2002. Nickel essentiality, toxicity, and
+carcinogenicity. Crit Rev Oncol Hematol 42: 35-56.
+
+MATTIA, G., BRAVI, MC, LAURENTI, O., DE LUCA, O., PALMERI, A.,
+SABATUCCI, A., MENDICO, G., and A. GHISELLI.2004. Impairment of cell and
+plasma redox state in subjects professionally exposed to chromium. Am J Ind
+46(2):120-125.
+
+134
+
+DEPARTMENT OF AGRICULTURE REGIONAL FIELD UNIT III. 2016. Soil Analyses
+Project for Irrigated Rice Field in Santa Cruz, Zamabales.
+
+DOTANIYA, M.LL., DATTA, S.C., BISWAS, D.R., MEENA, B.L., REGAR, K.L., and M.
+LATA. (2016). Use of sugarcane industrial by-products for improving sugarcane
+productivity and soil health. International Journal of Recycling of Organic waste in
+Agriculture. Vol.5 (3), pp 185-194.
+
+DU, Y., HU, X.F., WU, X.H., SHU, Y., JIANG, Y., and X.J. YAN. 2013. Effects of mining
+activities on Cd pollution to the paddy soils and rice grain in Hunan province,
+Central South China. Environ. Monit. Assess. 185:9843-9856.
+
+DURSUN, S., AND A.PALA. 2007. Lead pollution removal from water using a natural
+zeolite. J. Int. Environ. Appl. Sci. 7, 11-19. 72.
+
+EBAID, R. A. and I.S. EL-REFAEE. 2007. Utilization of rice husk as an organic
+fertilizer to improve productivity and water use efficiency in rice fields
+Afr Crop Sci Conf Proc, 8, pp. 1923-1928.
+
+EDWARDS, C.A. AND I. BURROWS. 1988. The potential of earthworm composts as plant
+growth media. In: C.A. Edwards and E.J. Newhauser (Eds.) Earthworms in Waste
+and Environmental Management. (Pp.211-219). SPB Academic Publ. Co. The
+Hague, Netherlands.
+
+ELCOCK, G.E. AND J. MARTANS.1995. Composting with red wiggler worms. In: City
+farmer Canada. 1-6.
+
+EL-WEHEISHY, M. M., AND A.G. ABD EL-HAFEZ. (1997). Response of flooded rice to
+water deficit. J. Agric. Res. Tanta Univ., 23:273-288.
+
+ESKEW, D. L., WELCH, R. M., and E.E. CARY. 1983. Nickel: an essential micronutrient
+for legumes and possibly all higher plants. Science 222, 621-623.
+
+ESKEW, D. L., WELCH, R. M., and W.A. NORVELL. 1984. Nickel in higher plants:
+further evidence for an essential role. Plant Physiol. 76, 691-693.
+
+FAGERIA, N.K., BALIGAR,V.C., CLARK R.B. 2006.Physiology of Crop Production
+Haworth Press, New York
+
+FAO. Guidelines for soil description. 2006. An edition. Rome, Italy.
+
+135
+
+FAO. FAOSTAT, FAO Statistical Databases. http:// apps.fao.org.2007.
+FAO Stat: 2009 Crop Production Statistics.FAO Statistics. Retrieved 30 March 2011.
+
+FAOSTAT: Production-Crops, 2012 data. 2014. Food and Agriculture Organization of the
+United Nations. Archived from the original on September 6, 2015.
+
+FERRERAS, L., GOMEZ, E., TORESANI, S., FIRPO, I. and R. ROTONDO. 2006. Effect
+of organic amendments on some physical, chemical and biological properties in a
+horticultural soil. Bioresource Technology 97, 635-640.
+
+FFTC. 2001: Application of Rice Husk Charcoal. FFTC Leaflet for Agriculture No. 4. Food
+and Fertilizer Technology Center, Taipei.
+
+FRIBERG, L., PISCATOR, M., NORDBERG, G.F. and T. KIELLSTROM. 1974. Cadmium
+in the environment, 2nd edition, Chemical Rubber Company Press, Cleveland,
+Ohio, 248 pp.
+
+GAUR, A. and A. ADHOLEYA. 2004. Prospects of arbuscular mycorrhizal fungi in
+phytoremediation of heavy metal contaminated soils. Current Science., 86(4): 528—
+534.
+
+GB15201-1994. 1994. The China National Standards: tolerance limit of cadmium in foods
+in China.
+
+GB15618-1995. 1995. The China National Standards: the environmental quality standards
+for soils in China.
+
+GIMENO, G.E., ANDREU, V., AND R. BOLUDA. 1996. Heavy metals incidence in the
+application of inorganic fertilizers and pesticides to rice farming soils. Environ
+Pollu 92:19-25.
+
+GOMEZ, K. A., AND A. A. GOMEZ. 1984. Statistical procedures for agricultural research.
+John Wiley & Sons, Inc.
+
+GOPINATH, K.A., SUPRADIP, S., MINA, B.L., PANDE, H., KUNDU, S. and H.S.
+GUPTA. 2008. Influence of organic amendments on growth, yield and quality
+production. Nutrient Cycling in Agroecosystems, 82 (1), 51-60.
+
+GOYER, R.A. AND T.W. CLARKSON. 2001. Toxic effects of metals. In, Casarett and
+Doullis Toxicology: The Basic Science of Poisons, Sixth Edition (C.D. Klaassen,
+ed.) Mc-Graw-Hill, New York. Pages 811-867.
+
+136
+
+GUERA, RD. 2010. Vermicompost production and its use for crop production in the
+Pailippines. International Journal of Global environmental Issues 10(3-4):378-
+
+GUPTA,N., TRIPATHI, S. and C. BALOMAJUMDER. 2011. Characterization of
+pressmud: A sugar industry waste. Fuel 90 (2011) 389-394. Retrieved from
+https://www.academia.edu on March 17, 2017.
+
+HAEFELE, S.M, KNOBLAUCH, C., GUMMERT, M., KONBOON, Y., and S. KOYAMA.
+2009. Black carbon (biochar) in rice-based systems: Characteristics and
+opportunities. In: Woods, W.I., Teixeira, W.G., Lehmann, J., Steiner, C., Prins,
+A.W. & Rebellatods, L. (Eds.). Amazon dark earths: Wim Soembrok’s vision (pp
+445-463). Amsterdam: Springer.
+
+HATTENSCHWILE, S., and P. GASER. 2005. Soil animals after plant litter diversity
+effects on decomposition. Proceedings of the National Academy of Sciences.USA.
+102.1519-1524.
+
+HASANUZZAMAN, M., AHAMED, K.U.N.,RAHMATULLAH, M., AKHTER, N.,
+NAHAR, K., RAHMAN, M.L. 2010.Plant growth characters and productivity of
+wetland rice (Oryza sativa L.) as affected GY application of different manures.
+Emir J Food Agric, 22 (1), pp. 46-58.
+
+HENGCHAOVANICH, D. 1998. Vetiver grass for slope stabilization and erosion control,
+with particular reference to engineering applications. Pacific Rim Vetiver Network
+Technical Bulletin, 2.
+
+HENGCHAOVANICH, D. and N.S. NILAWEERA. 1999. An assessment of strength
+properties of vetiver grass roots in relation to slope stabilization. February4— 8,
+Chiang Rai, Thailand. Proc. First Int. Vetiver Conf. (ICV-1)
+
+HUTTON, M. 1983. Sources of cadmium in the environment. Ecotoxicology and
+Environmental Safety, 7: 9-24.
+
+HUAN, YY., CHUANPING, L., JISHU, Z., FANGBAI, L., DONG-MERI, D., and W. QI.
+2016. Cadmium availability in rice paddy fields from mining area: Environmental
+pollution (209) pp. 38-45.
+
+http://www.bswm.da.gov.ph. 1988. Retrieved 07 January 2017.
+
+http://www. Center for environmental concerns.2015. Retrieved 20 December 2016.
+
+http:/Avww. Cordillera people’s alliance.2007. Retrieved 20 December 2016.
+
+http://www. Environmental justice atlas. 2015. Retrieved 20 December 2016.
+
+137
+
+http://www.granthalayah.com. Retrieved 20 December 2016.
+
+http://www.mines and geosciences bureau of the Philippines. 2015. Retrieved 20 December
+2016
+
+http://www.rice production in the Phils., 1959. Retrieved 27 January 2017.
+http://www.ricepedia. 2012. Retrieved 27 January 2017.
+http://www.saile industries, Inc. Retrieved 04 May 2017.
+
+http://www.social issues and environmental problems; September 2015. Retrieved 04 May
+2017.
+
+IDDRISU, A.Y. AND T. AKABZAA. 1996, Environmental and social impact of mining.
+Final report for the minerals commission board.
+International Soil Reference and Information Center (ISRIC). 1995. Procedures for soil
+analysis. (L.P. Van Reuwjk, editor) Wageningen, The Netherlands. 106 pp.
+
+IZOSIMOVA A. 2005. Modelling the interaction between calcium and nickel in the soil-
+plant system. FAL Agric Res Special issue 288:99
+
+JACKSON, M. L. 1956. "Soil Chemical Analysis", Prentice-Hall, Inc.
+
+JADIA, C.D. and M. H. FULEKAR. 2008. “Phytotoxicity and remediation of heavy metals
+by fibrous root grass (sorghum),” Journal of Applied Biosciences, vol. 10, no. 1, pp.
+491-499.
+
+JAI, K., AND J. SINGH. 2004. Modulating of fly ash induced genotoxicity in vica faba by
+vermi-composting. Ecotoxicol. Environ. Saf. 59: 89-94.
+
+JAMIL, M., QASIM, M., AND M.S. ZIA. 2004. Utilization of press mud as organic
+amendment to improve physico-chemical characteristics of calcareous soil under
+two legume crops. J Chem Soc Pak 3(1):145-150
+
+JUNG, M.A. 2001. Heavy metal contamination of soils and waters in and around the
+Imcheon Au—Ag mine, Ko. Applied Geochemistry 16: 1369-1375.
+
+KABATA-PENDIAS. 2011. Trace elements in soils and plants, fourth ed., CRC Press,
+Florida, USA, 106-118.
+
+KALEMBASA, D. 1996. “The effects of vermicompost on the yield and chemical
+composition of tomato,” Zeszyty Problemowe Postep6w Nauk Rolniczych, vol. 437,
+pp. 249-252.
+
+138
+
+KALEMBASA, S. AND J. DESKA. 1998. “The possibility of utilizing vermicompost in the
+
+cultivation of radish and paprika,” Annals of Agricultural University of Poznan, vol.
+27, pp. 131-136.
+
+KAUR, C., VISHNOI, A., ARIYADASA, T. U., BHATTACHARYA, A., SINGLA-
+PAREEK, S. L., AND S.K. SOPORY. 2013. Episodes of horizontal gene-transfer
+and gene-fusion led to co-existence of different metal-ion specific glyoxalase I. Sci.
+Rep. 3:3076.
+
+KAVOOSI, M. 2007. Effects of zeolite application on rice yield, nitrogen recovery and
+nitrogen use efficiency. Communications in Soil Science and Plant Analysis
+Journal. 69-76.
+
+KHAN, M. S., A. ZAIDI, and P. A. WANI. 2007. Role of phosphate-solubilizing
+microorganisms in sustainable agriculture: a review. Agron. Sustain. Dev. 27 29-43,
+DOI: 10.1051/agro:2006011
+
+KHAN, M. J. and M. QASIM. 2008. Integrated use of boiler ash as organic fertilizer and soil
+conditioner with NPK in calcareous soil. Songklanakarin J. Sci. Technol. 30 (3),
+281-289.
+
+KJELLSTROM, T. 1980. Exposure and accumulation of cadmium in populations from
+Japan, the United States, and Sweden. Environ. Health Perspect., 25, 169-197.
+
+KRISHNANI, K. K., MENG, X., CHRISTODOULATOS, C. and V.M. BODDU. 2008.
+Biosorption mechanism of nine different heavy metals onto biomatrix from rice
+husk. J. Hazard. Mater., 153, 1222-1234.
+
+KUMAR, A; ARINDAM D; GIRI A; and G. CHATTOPADHYAY. 2006. Effect of
+integrated plant nutrient management on growth, yield, and production economics
+of wet season rice (Oryza sativa). Institute of Agriculture, West Bengal.
+
+LASAT, M.M. 2000. “Phytoextraction of metals from contaminated soil: a review of
+plant/soil/metal interaction and assessment of pertinent agronomic issues,” Journal
+of Hazardous Substances Research, vol. 2, pp. 1-25.
+
+LAUWERYS, R. AND P. DE WALS. 1981. Environmental pollution by cadmium and
+mortality from renal diseases. Lancet, 1, 383.
+
+139
+
+MARINARI, S.,G. MASCIANDARO, B. CECCANTI and S. GREGO. 2000. Influence of
+organic and mineral fertilizers on soil biological and physical properties.
+Bioresource Technology, 72, 9-17.
+
+MARTIRENA-HERNANDEZ, J.F., MIDDENDORF, B., GEHRKE, M., and H.
+BUDELMANN. 1998. Use of wastes of the sugar industry as pozzolana in
+lime-pozzolana binders: study of the reaction., Cement and Concrete Research,
+
+Vol. 28, N° 11, pp. 1525 - 1536.
+
+MARWA, EM., MEHARG, A.A., AND C.M. RICE. 2012. Risk assessment of potentially
+toxic elements in agricultural soils and maize tissues from selected districts in
+Tanzania. Sci. Total Environ. 416:180-186.
+
+MCGRATH, S.P. 1995. Chromium and nickel. In, Heavy Metals in Soils, Second Edition
+(B.J. Alloway, ed.). Blackie, New York. Pages 152-178.
+
+MCLEAN, J.E., AND B.E. BLEDSOE. 1992. Behavior of metals in soils. Office of solid
+waste and emergency Response. USEPA.
+
+MIRZA, N., MAHMOOD, Q., PERVEZ, A., and RASHID, M. 2010. Phytoremediation
+potential of Arundo donax in arsenic-contaminated synthetic wastewater.
+Bioresource Technology 101(15):5815-9.
+
+MILLER, R. W. and R. L. DONAHUE. 1995. Soils in our Environment. Seventh Edition.
+Prentice-Hall Inc. 649 pp.
+
+MILLER, H. B. (2007). Poultry litter induces tillering in rice. J. Sustain. Agric., 31:1-12.
+
+MIRZA HASANUZZAMAN, K. U., AHAMED, N. M., RAHMATULLAH, N., AKHTER,
+K.N., AND M. L. RAHMAN.(2010). Plant growth characters and productivity of
+wetland rice (Oryza sativa L.) as affected by application of different manures, Emir.
+J. Food Agric., 22 (1): 46-58.
+
+MOHANTY, M., PATTNAIK, M.M., MISHRA, A.K., AND H.K. PATRA. 2011.
+
+Chromium bioaccumulation in rice grown in contaminated soil and irrigated mine
+
+wastewater—A case study at South Kaliapani chromite mine area, Orissa,
+India. Int. J. Phytoremediation. 13:397-409.
+
+MUSTAFIZ, A., GHOSH, A., TRIPATHI, A. K., KAUR, C., GANGULY, A. K., and N.S.
+BHAVESH. 2014. A unique Ni2+-dependent and methylglyoxal-inducible rice
+glyoxalase I possesses a single active site and functions in abiotic stress response.
+Plant J. 78, 951-963.
+
+140
+
+MUTHAYYA, S; SUGIMOTO, J.D.; MONTGOMERY, S; MABERLY, G.F. 2014. An
+
+overview of global rice production, supply, trade and consumption. Ann. N.Y.
+Acad. Sci. 1324,7-14.
+
+NAING, A., BANTERNG, P., POLTHANEE, A. AND TRELO-GES, V. 2010.The effect of
+different fertilizers management strategies on growth and yield ofupland black
+glutinous rice and soil property. Asian Journal of PlantSciences,9: 414-422 .
+
+NAIYA, T. K., BHATTACHARYA, A. K., MANDAL, S. and S.K. DAS. 2009. The
+sorption of lead(II) ions on rice husk ash. J. Hazard. Mater., 163, 1254-1264.
+
+NASIM AHMAD KHAN.2004. Elimination of heavy metals from wastewater using
+agricultural wastes as adsorbents. Review paper for Malaysian journal of Science
+23:43-51.
+
+NAVARRO, M.C., PEREZ-SIRVENT, C., MARTINEZ-SANCHEZ, MJ., VIDAL, J.,
+TOWAR, P.J., and J. BECH. 2008. Abandoned mine sites as a source of
+contamination by heavy metals: A case study in a semi-arid zone. J. geochem.
+Explor.96, 183-193.
+
+NOGAWA, K., KOBAYASHI, E. AND F. KONISHI. 1981. Comparison of bone lesions in
+chronic cadmium intoxication and vitamin D deficiency. Environ. Res., 24, 233-
+249.
+
+NUHAA, S; MOHEE, R. AND V.K. GRAG. 2015. Comparative assessment of heavy
+metals content during the composting of vermicomposting of municipal solid waste
+employing Eudrilus eugeniae.Waste management 39,
+
+OLSEN, S.R. and L.E. SOMMERS.1982. Methods of Soil Analysis, Part 1. American
+Society of Agronomy-Soil Science Society of America, 677 South Segoe
+Road, Madison, WI 53711, USA>
+
+O'NEILL, P. 1995. Arsenic. In, Heavy Metals in Soils, Second Edition (B.J. Alloway, ed.).
+Blackie, New York. Pages 105-121.
+
+OSHIO, H., NII, F., AND H. NAMIOKA. 1981. Characteristics of Kuntan (rice hull
+charcoal) as medium of soilless culture. J. Jpn. Soc. Hort. Sci. 50, 231-238.
+
+141
+
+PARMAR P, KUMARIN AND V. SHARMA. 2013. ‘Structural and functional alterations in
+
+photosynthetic apparatus of plants under cadmium stress'. Botanical Studies, 54:45-
+Sie
+
+PAUL, FH. 2000. Earthworms. In: Sumner M(Ed). Hand book of Soil Science. CRC. Press,
+Boca raton. FL.pp C77-C85.
+
+PAUL, GC., BOKHTIAR, SM., REHMAN, H., KABIRAJ, RC, and A.M. RAHMAN. 2005.
+Efficacies of some organic fertilizers on sustainable sugarcane production in old
+Himalayan piedmont plain soil of Bangladesh.Pak Sugar J 20(1):2-5.
+
+PCARR, 1980. Standard Methods of Analysis for Soil, Plant Tissue, Water and Fertilizers.
+Farm Resource and System Research Division, Los Banos, Laguna, 5-60pp.
+
+PEHLIVAN, E.A., OZKAN, M., DING, S. and S. PARLAYICI. 2009. “Adsorption of Cu*
+
+and pb ion on dolomite powder,” Journal of Hazardous Materials, 167 (1-3), pp.
+1044-1049,
+
+PENG, K., LI, X., LUO, C., and Z. SHEN. 2006. Vegetation composition and heavy metal
+uptake by wild plants at three contaminated sites in Xiangxi area, China, Journal of
+Environmental Science and Health Part A, 40, 65-76.
+
+PHILRICE. 2014. Simplified Keys to Soil Series of Negros Occidental. Soil Series
+Guidebook ISBN 978-971-9081-90-6. Philippine Rice Research Institute.65 p.
+
+PINTHONG, J., IMPITHUKSA, S., and A. RAMLEE. 1998. The capability of vetiver
+hedgerows on the decontamination of agro-chemical residues. Proc. ICV-1, pp. 91-
+98.ORDPB, Bangkok.
+
+POLACCO, J. C. 1977. Nitrogen metabolism in soybean tissue culture: II. Urea utilization
+and urease synthesis require Ni. Plant Physiol. 59, 827-830.
+
+PONAMPERUMA, F.N. 1982. Straw as source nutrient for wetland rice. In S. Banta & C.V.
+Mendoza (Eds.), Organic matter and rice (pp 117-136). Los Banos, the Philippines:
+IRRI.
+
+RABIE, M. H., ABDEL LATIF, E. A., ASY, K. G. and M.E. ELEIWA. 1992. The effect of
+nickel on plants (iii) The effect of foliar nickel on yield and elemental content of
+some crops. Journal of King Abdulaziz University: Science, (4): 15-21.
+
+142
+
+REDDY, M. VIKRAM. 1988. The effects of casts of Pheretima alexandri (Beddard) on the
+growth of Vinca rosea, and Oryza sativa L. In: Edwards, C.A. and Neuhauser,
+E.F. “Earthworms in waste and environmental management” SPB Academic
+Publishers, The Hague, Netherlands. Pp 241-248.
+
+ROONGTANAKIAT, N., OSOTSAPAR, Y., and C. YINDIRAM. 2010.Vetiver
+(Chrysopogon zizanioides) Phytoremediation for Heavy Meatal
+Decontamination.Kasetsart J. (Nat.Sci.) 43: 37-49.
+
+ROY, S. 2005. Influence of toxic heavy metals on activity of acid and alkaline phosphatase
+enzymes in metal contaminated landfill soils. Aust. J. Soil Res. 42. 335-344.
+
+SALAMAT. 2013.The destructive impacts of corporate mining in the Philippines: The
+Tampacan Copper-Gold mining project in Mindanao. Global research.
+
+SANCHEZ, E.,AND P., FRANCISCO. 2010. Potential Use of Philippine Natural Zeolites
+for Treatment of Acid Mine Drainage.
+
+SARDAR, S., ILYAS, S.U., MALIK, S.R., and K. JAVAID. 2013. Compost fertilizer
+production from sugar press mud (SPM). Intl J Microb Res 1(2):20-27.
+
+SCHMIDT, M.W.L, and A.G. NOACK. 2000. Black carbon in soils and sediments: analysis,
+distribution, implications, and current challenges. Global Biogeochemical Cycles
+14, 777e793.
+
+SCHWERTMANN, U. and R.M. THYLOR. 1989. Iron oxides in J. B. Dixon and S. B.
+Weed, eds. Minerals in soil environments. Book Series 1. Soil Science Society of
+America, Madison, WI.Pages 379-438.
+
+SCHMIDT,U. 2003.“Enhancing phytoextraction: the effect of chemical soil manipulation
+on mobility, plant accumulation and leaching of heavy metals,” Journal of
+Environmental Quality, vol. 32, no. 6, pp. 1939-1954.
+
+SEPASSKHAH, A.R., AND M. BARZEGAR. 2010. Yield, water and nitrogen- use
+response of rice to zeolite and nitrogen fertilization in a semi-arid environment.
+Agricultural and water management vol. 98 (1) pp. 38-44.
+
+SHANKER, A.K., CERVANTES, C., LOZA-TAVERA,  H., andS.
+AVUDAINAYAGAM. 2005. Review Article on Chromium Toxicity in Plants.
+Environment International 739-753.
+
+143
+
+SHARMA, D.K., PRASAD, K., and S.S. YADAV. 2008. Effect of integrated nutrient
+management on the performance of dwarf scented rice (Oryza sativa L.) growth in
+rice wheat sequence. International journal of Agricultural Sciences 4 (2)660-662.
+
+SIEDLECKA, A. and Z. KRUPA. 1999. Cd/Fe interactions in higher plants Its
+
+consequences for the photosynthetic apparatus’. Photosynthesis Research,
+36:321-331.
+
+SIMON, F., KELVIN, MM., and K. MARTIN. 2016. Heavy metals contamination in
+agricultural soil and rice in Tanzania: A review. International Journal of
+Environmental Protection and Policy. ISSN:2330-7528.
+
+SIMMONS, R.W., PONGSAKUL, P., SAITYASITPANICH, D., and S. KLINPHOKLAP.
+2005. Elevated levels of cadmium and zinc in paddy soils and elevated levels of
+cadmium in rice grain downstream of a zinc mineralize area in Thailand:
+implications for public health. Environ Geochem Health. 27:501-511.
+
+SINGH, R.,AND AGARWAL, S.K. 2001.Analysis of growth and productivity of wheat
+in relation to levels of FYM and nitrogen.Ind J Plant Physiol, 6, pp. 279-283
+
+SINGH, J., UPADHYAY, SK., PATHAK, RK., and V. GUPTA. 2010. Accumulation of
+heavy metals in soil and paddy crop (Oryza sativa), irrigated with water of
+Ramgarth Lake, Gorakpur, UP India. Toxicol. Environ. Chem. 93 (3):462-472.
+
+SINGH, V., and A.N. GARG. 1995. Availability of essential trace elements in Indian cereals,
+vegetables and spices using INAA and the contribution of spices to daily dietary
+intake. Food Chemistry 94: 81-89.
+
+SINGH, D. P. et al., 2015. Microbial inoculants in sustainable agricultural productivity:
+functional application (vol, II). Springer New Delhi Heidelberg New York Dordrecht
+London, Springer India, DOI 10.1007/978-81-322-2644-4.
+
+SOCIAL DEVELOPMENT AND MANAGEMENT PROGRAM (SDMP) 2013. Santa
+Cruz nickel mining project.
+
+SRA-OPSI. 2004. Sugarcane Production Manual. Sugar Regulatory Administration, La
+Granja Agricultural Research and Extension Center, La Carlota City, Negros
+Occidental. 205 pp.
+
+SRIPEN, S.; KOMKRIS, T.; TECHAPINYAWAT, S.; CHANTAWAT, S.; MASUTHON,
+S.; and M. RUNGSUK. 1996. Growth potential of vetiver grass in relation to
+
+144
+
+nutrients in wastewater of Changwat Phetchaburi. Paper presented at ICV-1. In:
+Abstracts of papers presented at ICV-1, p. 44. RDPB, Bangkok.
+
+SRIVASTAVA, V. C., MALL, I. D. and ILM. MISHRA. 2006. Characterization of
+mesoporous rice husk ash (RHA) and adsorption kinetics of metal ions from
+aqueous solution onto RHA. J. Hazard. Mater., 134, 257-267.
+
+SUZUKI, N., and H.K.N. SANO. 2001. “Screening of cadmium-responsive genes in
+Arabidopsis thaliana”, Plant Cell Environment, 24, pp 1177-1188.
+
+TANG, P., LEE, C.K., LOW, K.S., and Z. ZAINAL. 2003. Sorption of Cr (VI) and Cu (II)
+in aqueous solution by ethylenediamine modified rice hull.
+
+TEJADA, M., and J.L. GONZALES. 2009. Agricultural use of leachates obtained from two
+different vermicomposting processes. Bioresource Technology, 99,6228-6232.
+
+THORNTON, I and J.S WEBB. 1980. Trace elements in soils and plants. In: Food chains
+and Human Nutrition (K.L. Blaxter (ed). Applied Science Publishers Ltd. London,
+pp 273-312.
+
+TRAN, T.A., and L.P. POPOVA. 2013. Functions and toxicity of cadmium in plants: recent
+advances and future prospects’. Turkish Journal of Botany, 3.
+
+TAYLOR MP, WINDER C, LANPHEAR BP. 2010. Eliminating childhood lead toxicity in
+Australia: a call to lower the intervention level. MJA. 197(9):493.
+
+TRUONG, P. 1999. Vetiver grass technology for mine rehabilitation. PRVN Technical
+Bulletin No. 2. Office of the Royal Development Projects Board, Bangkok,
+Thailand.
+
+TRUONG, P.N. 1999a. Vetiver Grass Technology for mine tailings rehabilitation. Proc.
+First Asia Pacific Conference on Ground and Water Bio-engineering for Erosion
+Control and Slope Stabilization. Manila.
+
+TRUONG, P.N. 1999b. The Impact of Vetiver Grass Technology at the Ground and Water
+Bioengineering Conference, Manila. A report to The Vetiver Network, Leesburgh,
+Virginia, USA.
+
+TRUONG, P.N. and D. BAKER. 1996. Vetiver grass for the stabilization and rehabilitation
+of acid sulphate soils. Proc. 2nd Nat. Conf. Acid Sulphate Soils, pp. 196-198. Coffs
+Harbour, Australia.
+
+TRUONG, P.N. and D. BAKER. 1998. Vetiver Grass System for Environmental Protection.
+PRVN Tech. Bull. No.1. ORDPB, Bangkok.
+
+145
+
+URAGUCHI, S., MORI, S., KURAMATA, M., KAWASAKI, A., ARAO, T., and S.
+ISHIKAWA. 2012. Root to shoot Cd translocation via the xylem is the major
+process determining shoot and grain cadmium accumulation in rice. J Exp Bot
+60:2677-2688.
+
+USEPA. 1997. “Recent developments for in situ treatment of metal contaminated soils,”
+Tech. Rep. EPA-542-R-97-004, USEPA, Washington, DC, USA.
+
+VIEIRA, M.G.A., DE ALMEIDA NETO, A.F., CARLOS DA SILVA, M.G., NOBREGA,
+C.C., and A.A. MELO FILHO. 2012. “Characterization and Use of In Natura and
+Calcined Rice Husks for Biosorption of Heavy Metals Ions from Aqueous
+Effluents”, Brazilian Journal of Chemical Engineering, Vol. 29 (3), pp. 619 — 633.
+
+WALKLEY, A and I. A. BLACK. 1934. An examination of Degtsaruf method for
+determining soil organic matter and a proposed modification. pp. 29-38.
+
+WILLIAMS, N.A., MORSE, N.D., and J.F. BUCKMAN. 1972. Buming vs. incorporation of
+rice crop residues. Agronomy J. 64, 467- 468.
+
+WINGERFELDER, U., HANSEN, C., FURRER, G., and R. SCHULLIN. 2005. Removal of
+heavy metals from mine waters by natural zeolites. Environmental Science and
+Technology. 39 (12) pp.4606-4613.
+
+XIA, H. LIU, S. and H. AO. 1997. Study on purification and uptake of garbage leachate by
+vetiver grass, pp. 394-406. In Proc. ICV-2. Cha-am, Phetchaburi, Thailand.
+
+XIONG, Z.T. 1998. Lead uptake and effects on seed germination and plant growth in a Pb
+hyperaccumulator Brasssica pekinensis Rumpr.Bulletin of Environmental
+Contamination and Toxicology. 60 (2): 285-291.
+
+YANG, XUE-MING, LENTZ, D.R. & CHI, GUOXIANG (2004): Petrochemistry of Lake
+George granodiorite stock and related Au mineralization, York County, New
+Brunswick. Geol. Surv. Can., Current Res. 2002-D7, 1-10.
+
+ZHAO, K., FU, W., YE, Z., and C. ZHANG. 2015. Contamination and spatial variation of
+heavy metals in the soil-rice system in Nanxun County, Southeastern China. Int. J.
+Environ. Res. Public Health. 12:1577-1594.
+
+ZHELJAZKOV, V., and D. JEKOV. 1994. Heavy metal content in some essential oils and
+plant extracts. In: ISHS Acta Horticulturae 426: International Symposium on
+Medicinal and Aromatic Plants. Acta Horticulture 426: 427-434.

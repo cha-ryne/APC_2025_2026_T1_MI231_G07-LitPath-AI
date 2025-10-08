@@ -231,7 +231,6 @@ large roots and even in their foliage, branches and fine roots (Unwin and Kriede
 
 weight of the biomass (Johnson and Coburn, 2010; IPCC, 2006). The net carbon
 
-10
 
 sequestration in forest trees was discussed by Unwin and Kricdemann (2000) in three
 components: (1) carbon uptake and assimilation through photosynthesis and respiration;
@@ -286,7 +285,6 @@ yield. It also increases the cation exchange capacity of the soil (Tisdale and N
 
 could directly affect the plant growth by stimulating root initiation and root cell wall
 
-12
 
 clongation leading to accelerated water and nutricnt uptake, enhancing seed germination
 and overall growth of plant shoots and roots (Brady, 2002). In addition, SOM provides
@@ -339,7 +337,6 @@ of pride for the country by its declaration as the 33 ASEAN Heritage Park (Villa
 
 2013). The five important roles of MMFR (Abraham as cited by Pulhin and Tapia) are (1)
 
-14
 
 protective services and influence; (2) education and scientific services; (3) psycho-
 physiological influence; (4) consumption of plants, animals and derivatives; and (5)
@@ -367,7 +364,6 @@ environmental tags are the reasons why exclusive subdivisions, plantation estate
 
 haciendas of fruit orchards fetch very high market values. Water pumping facilities
 
-15
 
 supplying domestic water also increase their interests of trees due to these regulatory
 benefits. But viewing the overall impacts of landuse change and encroaching informal
@@ -394,7 +390,6 @@ enumerated various ecosystems services of forests which are complex in nature an
 
 highly site-specific in which society is benefitted but the ecosystem is not paid which is
 
-16
 
 seen on the degree of degradation.
 
@@ -440,7 +435,6 @@ stand improvement, agroforestry, reforestation and afforestation (Lal, 2005), an
 
 regeneration of natural stand to increase biomass production. Aforementioned activities
 
-18
 
 are sources of organic matter supply and some other activities on tree plantations could
 be fire protection (Lal, 2005; Marks et.al, 2009), crop residue management, mulching and
@@ -468,7 +462,6 @@ factor to be included in measuring soil health and quality in establishing these
 
 it is better to put it in an equation (Liu, et al., 2006) wherein, soil quality is affected by
 
-19
 
 distinct management scheme, environmental considerations to a specific location and
 explicit considerations factoring in the social, economic, biological and other value
@@ -494,7 +487,6 @@ out of this area, a total of 183.30 hectares are already tappable. The National 
 
 Program (NGP) of DENR also funded rubber plantation establishments and in 2015,
 
-20
 
 2,346 hectares was the reported accomplishment in the region. However, Castillo (2016)
 stressed out that these areas planted with rubber trees need further monitoring to assure
@@ -522,7 +514,6 @@ effort of the government and private individuals. Together with the internationa
 
 local linkages the industry could prosper and would contribute to socio-economic growth
 
-21
 
 (Castillo, et.al, 2014) and with rubber forest ecosystem (Zeng, et.al, 2010) and rubber-
 based agroforestry systems (Paelmo, ct.al, 2014) social and environmental benefits could
@@ -550,7 +541,6 @@ pruning, branch induction, intercropping and stand protection against pest and d
 
 conservation measure, part of weed management, for protection against pest and diseases
 
-22
 
 and partly for income generation (Igot, 2006). This activity if done in rubber plantation
 could add up soil organic matter and could be a pool for carbon, nitrogen, phosphorus
@@ -577,7 +567,6 @@ how to manage the farm activities could either enhance soil carbon storage or em
 
 to the atmosphere.
 
-23
 
 Allometric Equations and Forest Conservation
 
@@ -603,7 +592,6 @@ determining tree biomass is time consuming, costly and sometimes illegal and bey
 
 goals of forest conservation (Yuen et.al, 2016). For these reasons, allometric equations
 
-24
 
 are favourable even with limitations, initially because of being non-destructive. Second,
 there are equations that are useful in estimating forest biomass whose structures are very
@@ -691,7 +679,6 @@ plots of 20m x 20m were randomly established on each study site, covering a tota
 
 plots of 1m x Im were randomly established | meter away from a rubber tree and within
 
-28
 
 each plot 0.5m x 0.5m frames were randomly laid. These plots were geotagged for future
 
@@ -714,7 +701,6 @@ Legend: | 20m x 20m plot; {illfim x Im plot; fillf0.5m x 0.5m plot
 
 Figure 3. Sampling layout for the old stand.
 
-29
 
 Assessment of Supporting Services
 
@@ -740,7 +726,6 @@ Exchangeable K Rapid Assessment
 Nitrogen % based on SOM
 
 
-30
 
 Assessment of Regulatory Services
 
@@ -761,7 +746,6 @@ soil is multiplied by 4%, then the mean percentage of 12 frames represented the 
 
 covered in | hectare.
 
-31
 
 Climate Regulation
 
@@ -796,7 +780,6 @@ used:
 
 Crt: = TBD ons") 2S
 
-32
 
 2. Understorey. The understory (UH) were mainly seedlings, shrubs, grasses
 
@@ -835,7 +818,6 @@ includes all fallen debris like leaves, branches, twigs, fruits, flowers, seeds 
 
 total of 12 0.5m x 0.5m plots were established within the | ha study area both for the
 
-33
 young and old stand. The total fresh weight was measured then 300g was retained and
 was brought to IRNR-Soils Laboratory. Samples were oven-dried at 80°C until constant
 weight was attained (for 24 hrs or longer). The total dry matter of litter (LBD) from the
@@ -844,7 +826,6 @@ sampling plot was computed by:
 
 total fresh weight (kg) _ subsample dry weight (g)
 
-2
 LBDayin = Sosample fresh weight (@) lot area (m?)
 
 To get the litter biomass density in a hectare, the litter biomass density in
@@ -871,7 +852,6 @@ and for understorey biomass density (UHBDagn’)) with the following equation:
 
 RBDuni = exp[-1.0587 + 0.8836 *Ln (UHBD)].
 
-34
 
 To get the root biomass density in a hectare, the root biomass density in kilogram
 
@@ -902,7 +882,6 @@ representative rooting depths:
 
 Total Soil C (agnay = Soil C at 0-20cm + Soil C at 20-50cm
 
-35
 The total belowground biomass carbon stock (BGCS) was computed with the
 
 following equation: ~BGCS = Croors + Csont
@@ -928,7 +907,6 @@ Biophysical Features of the Sampling Sites
 
 Figure 4. Location map of study sites ( @)
 
-37
 
 Figure 4 shows the site location of the study and the sampling sites. Site 1 is
 located on the buffer zone between the Learning Laboratory for Agroforestry (CFNR)
@@ -959,7 +937,6 @@ According to climate-data.org (http://www climate-data.org), the province of
 
 Laguna, specifically the town of Los Bafios, has a tropical monsoon climate (Koppen-
 
-38
 
 Geiger). The climate is tropical and rainfall is significantly distributed all year due to the
 short dry season. The average temperature is 27.1°C, the warmest month is May with
@@ -991,7 +968,6 @@ April 46.6
 May 45.5
 
 
-39
 
 Based on the Table 2, the period of the study was covered by dry season. During the
 month of February 2016, site visitation and plot establishment were done. March 2016
@@ -1020,7 +996,6 @@ violation of some conditions in the agreement. In 2009, the plantation received
 
 rehabilitation efforts and since then, tapping started again and monitored by CFNR-
 
-40
 
 MCME. This plantation is a significant source of seeds and wildlings of RIMM 600. It is
 also a demo area for short courses on rubber technologies like tapping and an area that
@@ -1031,7 +1006,6 @@ Figure 5 shows old rubber trees, understorey and regenerants of other species.
 
 Figure 5. Mixed mature stand of rubber trees in MMFR (May 2016).
 
-41
 
 Table 3. List of tree species in the old stand with corresponding standing biomass and
 carbon stock (Jan-Mar 2010).
@@ -1082,7 +1056,6 @@ NM 12 0.19 0.08
 NM = not mentioned in the report
 
 
-42
 
 B. The Young Stand. This stand was established in 2012 through the research
 grant of DA-BAR and UPLB-CFNR to determine the early growth performances of
@@ -1101,7 +1074,6 @@ were paper mulberry (Broussonetia papyrifira), igyo (Dysoxylum gaudichaudranum),
 
 ipil-ipil (Leuceana leucocephala) and lipang kalabaw (Dendrocnide meyeniana), At
 
-43
 
 present, the plantation serves as a laboratory area for CFNR students. The stand during
 data collection is shown in Figure 4 with indigenous trees intercropped and lush
@@ -1129,7 +1101,6 @@ division. At 0-20 cm, both plantations have Clay Loam textural class (medium-tex
 
 on the assessment and Philippine Recommends (PCARRD, 1997), the areas conformed to
 
-44
 
 the needs of rubber plantations in terms of physical properties of the soil. However, there
 are areas in the plantation that is less than | m depth especially those that are located in
@@ -1159,7 +1130,6 @@ calculated based on the dry weight of the soil divided by its volume in g/cc. It
 
 by soil texture, amount of organic matter and soil aggregation (USDA, 2008; Brady,
 
-45
 
 2002) affecting soil functions on regulating water and solute flow and physical stability
 
@@ -1193,7 +1163,6 @@ for Sandy Clay Loam (20-50 cm depth) (USDA, 2014), this result is still favorabl
 
 within the range of optimum root growth, water infiltration and solute flow. In general,
 
-46
 
 bulk density increases with soil depth due to reduced organic matter, aggregation and root
 penetration and also with the weight of the overlying top soil (Brady 2002) but based on
@@ -1214,7 +1183,6 @@ are good physical soil quality indicators (USDA) affecting soil fertility and ec
 
 services.
 
-47
 
 Ecosystems Services of the Rubber Plantations in MMFR
 
@@ -1244,7 +1212,6 @@ reduces cost for laboratory tests, providing results available in just an hour w
 
 accompanying fertilizer recommendation for rubber trees at various ages. The amount of
 
-48
 
 organic matter in the soil is also another way by which soil fertility could be assessed
 (Karlen, et. al, 1997) because its amount could be used to estimate the amount of
@@ -1278,7 +1245,6 @@ Nitrogen (rapid 0-20 Low High
 
 assessment) 20-50 Low Medium,
 
-49
 
 Based on the chemical analysis shown in Table 6, soil organic matter was
 significantly higher in the young stand than in the old stand. This might be attributed to
@@ -1317,7 +1283,6 @@ soil 12 12 162 140 0.44 «= (0.70013 0.20
 
 Independent t-test result Statistically not significant
 
-50
 
 To compare the significance of organic matter in the sub-soil, independent t-test
 was also conducted but found no significant difference between the young stand (1.62%)
@@ -1349,7 +1314,6 @@ YOUNG STAND OLD STAND
 
 Figure 7. Mean %SOM of the young and old stand with corresponding soil depths (May 2016).
 
-51
 
 Figure 7 shows the significant mean differences of SOM between the two stands
 at the topsoil (0-20 cm). The mean % SOM of 5.84 found the young stand could
@@ -1374,7 +1338,6 @@ contributing nitrogen, sulfur and phosphorus for plants from organic matter conv
 
 (Brady, 2002; USDA 1998).
 
-52
 
 Table 8. Mean differences betwcen the soil pH of the young and old stands.
 
@@ -1415,7 +1378,6 @@ subsoil pH of the two stands were not statistically different. The soil pH in th
 
 both in the surface and sub-surface soil were almost uniform which might be attributed to
 
-53
 
 the depth of rooting zones of the trees (deeper than in the young stand) and the
 microclimate affected by the close canopy against the open canopy of the young stand
@@ -1443,7 +1405,6 @@ www.nres.usda.gov). So, the differences of microclimate that affects the soil mo
 
 the two stands might attribute to the differences of P and K levels in the two stands which
 
-54
 
 was not investigated in this study. Another possibility of having less P and K levels in the
 juvenile stand could also be attributed to the condition of tree cover transition (van
@@ -1480,7 +1441,6 @@ soil
 Independent t-test result Statistically not significant
 
 
-55
 
 Nitrogen level based on the percentage of organic matter present in the soil,
 young stand has 0.29% at the top soil and 0.08% at the subsoil while in the old stand, it
@@ -1506,7 +1466,6 @@ stages of forest cover transition and presence of soil microorganisms capable of
 
 decomposing organic matter affects the amount of available N for plant use.
 
-56
 
 Based on this, the results of rapid assessment for NPK suggest that
 microorganisms in the young stand has not yet been stabilize to mutually work with the
@@ -1532,7 +1491,6 @@ YOUNG STAND OLD STAND |
 
 Figure 8. The qualitative amounts of NPK between the two plantations (May 2016).
 
-57
 
 The presence of favorable amount of soil organic matter in the two rubber
 plantation indicates that plantations could sustain themselves even left unfertilized as
@@ -1554,7 +1512,6 @@ and Waters, 2013). This study focuses on (1) erosion regulation and (2) climate
 
 regulation.
 
-58
 
 Erosion regulation according to Layke (2009), deals mainly on the effect of
 vegetative cover that regulate rainfall interception and reducing the velocity and intensity
@@ -1589,7 +1546,6 @@ aun
 Mean 1.17 1.23 0.44 0.50 17.80 39.12 5.84 4.46
 
 
-59
 
 Table 10 shows the soil bulk density as affected by soil compaction, root penetration and
 solute flow (USDA, 2015); the presence of vegetation cover that is directly in contact
@@ -1615,7 +1571,6 @@ coverage of vegetative mat (mean 0.50 ha) than the young stand (mean 0.40 ha) al
 
 their difference were not statistically significant.
 
-60
 
 Table 11. Mean differences between the vegetative mats on the soil surface of young and
 old stands.
@@ -1649,7 +1604,6 @@ Old stand 12 39.12 11.74 339
 
 Statistical result = significantly different at p=0.02
 
-61
 
 One factor that contributed to the amount of litter in the old stand is initially the
 age of the trees and the presence of other tree species deciduous species like the big-
@@ -1677,7 +1631,6 @@ removed, a plantation may have a hundred times more erosion than in natural fore
 
 about 53v/ha/year (Nasi, et.al, 2002). These benefits coming from the combination of
 
-62
 
 monocots and dicots (Zuazo and Pleguezuelo, 2008) clothe the soil and making it a
 complex ecosystem with rubber plantations. This shows that rubber trees combined with
@@ -1704,7 +1657,6 @@ area and understorey biomass growing in the plantation, litter biomass, root bio
 
 soil carbon. To assess this service the aboveground and belowground biomass and carbon
 
-63
 
 stock of the two rubber plantations were assessed using both allometric cquations and
 
@@ -1737,7 +1689,6 @@ Using Brown's (1997) allometric equation in estimating the aboveground
 
 biomass, the 3 year-old stand has a standing biomass of 41.58 ton/ha, 52.93% was
 
-64
 
 contributed by the aboveground biomass of standing trees. The tree population measured
 
@@ -1769,7 +1720,6 @@ to remove the understorey vegetation (grasses, shrubs and re-growth of paper mul
 
 to free the rubber trees from competition. Weeding will allow the desired species of
 
-65
 
 rubber trees, malapapaya and batino to grow freely and will reach their desired girth for
 rubber so that they can be tapped when they reached their fifth year from establishment
@@ -1788,7 +1738,6 @@ to address the issue of carbon sequestration and emission (Lal, 2002)
 
 Figure 9. The young stand showing thick weeds in May 2016.
 
-66
 
 Conservation of the old stand (Nasi, et., al, 2002) is a good consideration as a
 management scheme for this area because most of the carbon stock is stored in the tree
@@ -1811,7 +1760,6 @@ help store carbon in their biomass and may help in mitigating carbon emission as
 
 plantation aged.
 
-67
 
 2. Belowground carbon stock. The root biomass densities of trees and
 undergrowth were estimated using the allometric equation developed by Cairns et.al
@@ -1845,7 +1793,6 @@ In a 3-year old stand, there is about 4.2 tons/ha of roots below the soil surfac
 
 time, it can help in regulating the climate from local up to global scale by storing an
 
-68
 
 estimated amount of 1.89 tons/ha of carbon. After 50 years, as shown by the estimates of
 the old stand, the root biomass density and carbon stock could increase to 95% or even
@@ -1876,7 +1823,6 @@ Old stand 12 92.33 28.87 8.33
 
 Statistical result = not significant at p=0.02
 
-69
 
 Soil organic carbon stored in the two rubber plantations were not statistically
 
@@ -1925,7 +1871,6 @@ attributed to the management schemes that were applied in these areas. The old p
 
 is a mixed rubber plantation that resembles the secondary forest of more than 50 years
 
-70
 
 due to secondary succession that allowed other species to exist together with the rubber
 trees, while the young stand experienced land cover changes for the same length of time.
@@ -1955,7 +1900,6 @@ The old rubber plantation has a higher belowground carbon stock than the young,
 
 stand for about 13.38%. The young stand has a total of 112.91 ton/ha, SOC contributes
 
-7
 
 98.32% on this total amount. On the other hand, the old stand has 130.34 ton/ha
 belowground carbon stock. 70.84% of this came from SOC. The result of this assessment
@@ -1983,7 +1927,6 @@ other hand, has a total carbon stock of 131.62 tons/hectare, in which belowgroun
 
 85.79% higher than aboveground.
 
-72
 
 Table 18. Total estimates of carbon stock on the two rubber plantation in MMFR.
 
@@ -2018,7 +1961,6 @@ grasses and paper mulberry that is being cut yearly and served as mulch. Annuals
 
 back and decompose annually which is one of reason why grasslands have higher soil
 
-73
 
 organic carbon than trees whose carbon are tied up in their biomass (USDA, 2014; Brady,
 2002). The age gaps of the two stands explain their main differences that affect their
@@ -2051,7 +1993,6 @@ YOUNG STAND OLD STAND
 
 Figure 10. Differences of carbon stock percentages of the various plantation components.
 
-74
 
 Data gathered also shows how management and conservation schemes must be
 done on both plantations. The findings would tell that since the young stand hold higher
@@ -2093,7 +2034,6 @@ exchangeable potassium and high amount of nitrogen while the young stand had
 
 sufficient exchangeable potassium, low amount of available phosphorus and nitrogen.
 
-76
 
 2. Soil organic matter, It was found out that based on the assessment of SOM
 
@@ -2122,7 +2062,6 @@ the old stand vegetative mat were about 95% surficial root mats and 5% vine stem
 
 the young stand was composed of 75% grass runners, 20% vine stems and 5% surficial
 
-7
 root mats. The differences in terms of top soil retention of these components were not
 evaluated in this study. In terms of forest litter, the old stand provided significant amount
 of litter at 39.12 tonshha while the young stand only produced 17.80 tons/ha. Their
@@ -2149,7 +2088,6 @@ overall belowground carbon stock of the two stand was found higher in the old st
 
 (130.34 tons/ha) than in the young stand (112.91 tons/ha).Finally, the total estimated of
 
-78
 carbon stock of the two stands was found higher in the old stand at 375.69 tons/ha against
 
 the young stand at 131.62 tons/ha.
@@ -2168,7 +2106,6 @@ rubber plantation aged, its ecosystem services could developed and could reach a
 
 stage that could provide opportunity for both economic and environmental.
 
-79
 
 Recommendation
 
@@ -2196,7 +2133,6 @@ adoptability in marginal lands and its nature as a pioneer species could post pr
 
 outcome for economic and environmental benefits. Choosing between monocropping,
 
-80
 compartmentalized plantation or an agroforestry rubber-based must depend on the
 plantation owner objectives and as recommended, always think of the best combination
 
@@ -2222,7 +2158,6 @@ beneficial undergrowth like leguminous cover crops could build-up litter layer t
 
 eventually produces organic matter that will help in storing carbon in the soil, produces
 
-81
 nutrient supply and even modify some of the physical and chemical properties of the soil
 that will enhance the rubber trees’ growth and productivity. Trees are living conduits and
 barriers between the soil and the atmosphere. Evans, et.al (2013) summarizes the
@@ -2250,7 +2185,6 @@ multi-canopy cropping system with ground cover cropping (Lasco and Visco, 2003).
 
 type of cropping pattern however is identified under the state of forest cover transition
 
-82
 (van Noordwijk, 2014) due to the fact that once forested areas were denuded, their
 functions were also lost and when rehabilitated to cultivated areas dominated by
 perennial crops these lost functions could not be restored at once. These are some of the
@@ -2277,7 +2211,6 @@ provide combined effects on the soil and in return, soil could provide the neces
 
 the plants, The presence of rubber trees and intercrops of fruit-bearing and timber-
 
-83
 producing trees intercept rainfall, reducing the impact of raindrops through their canopy
 and stemflow. The agricultural crops, cover crops preferably legumes, mulch (as input for
 agricultural crops) and surface litter, reduce the velocity and density of falling water from
@@ -2337,7 +2270,6 @@ Development Studies. Retrieved from:
 
 BOWDEN, R.K. (1996). Earth retention using vegetation. Vancouver, British Colombia.
 
-85
 
 BOYD, J. (2006). Practical Measurement of Ecosystem Services: Can we standardize the
 way we count nature’s benefit? National Center for Environmental
@@ -2383,7 +2315,6 @@ and VELASCO., E.R., (2014). Rubber development program: Promoting
 rubber production in the indigenous people’s community in Davao
 Region, Philippines. Paper presented in IRRDB International Rubber
 
-86
 
 Conference and Annual Meetings. 24-28 November 2014. Hyatt Regency
 Hotel, Manila, Philippines.
@@ -2429,7 +2360,6 @@ matter. Geoderma 130: 229-239. Doi: 10.1016/.geoderma, 2005.01.019
 DONOVAN, P. (2013). Measuring soil carbon change. A flexible, practical, local
 method. Retrieved from: http://soilcarboncoalition.org.
 
-87
 
 EPA. United States Environmental Protection Agency. Global greenhouse gas emissions
 data. Retrieved from:
@@ -2472,7 +2402,6 @@ FEINTRENIE, L. and LEVANG, P. (2009). Sumatra’s Rubber Agroforest: Advent,
 rise and fall of a sustainable cropping system, small-scale forestry. doi
 10.1007/s1 1842-009-9086-2
 
-88
 
 FENTON, M., ALBERS, C. and KETTERINGS, Q. (2008). Soil organic matter.
 ‘Agronomy Fact Sheet 41. Cornell University Cooperative Extension.
@@ -2518,7 +2447,6 @@ KONGSAGER, R. (2013). Carbon sequestration in tropical tree crop systems -
 especially in rubber plantations (heveabrasiliensis). International Rubber
 Conference 2013. London, United Kingdom, 24/06/2013
 
-89
 
 LAL, R. (2005). Forest soils and carbon sequestration. Forest Ecology and Management
 220; 242-258.
@@ -2564,7 +2492,6 @@ PAELMO, R.F., CASTILLO A.S.A., VISCO, R.G., CABAHUG, R.D., CASTILLO,
 A.K.A., and CANILAN,G.N. (2014). Rubber-based agroforestry systems
 in two climatic types in the Philippines. Paper presented in IRRDB
 
-90
 
 International Rubber Conference and Annual Meetings. 24-28 November
 2014. Hyatt Regency Hotel, Manila, Philippines.
@@ -2607,7 +2534,6 @@ use types of Boot Subwatershed at Makiling Forest Reserve. USM R&D
 UNEP (2015). Year Book. The benefits of soil carbon. Managing soils for multiple
 economic, societal and environmental benefits. Retrieved from:
 
-91
 
 (Undated).Ecosystems and Their Services. Retrieved from:
 unep.org/maweb/documents/document papal. Date retrieved:
@@ -2654,7 +2580,6 @@ Philippines.
 
 ‘WOOMER, P.L. KARANJA, N.K., and MURAGU, E.W. (2001). Estimating total
 
-92
 
 system carbon in smallhold farming systems of the East African
 highlands. In: Assessment methods for soil carbon. R. Lal, J.M., Kimble,
@@ -2697,7 +2622,6 @@ PULHIN and TAPIA, (Undated). History of a legend: Managing the Makiling Forest
 Reserve. Retrieved from:
 
 
-93
 
 soilquality.org.au. Soil nitrogen supply by J. Carson and L. Phillips.
 www.environment.org. Tress and Ecosystem Service

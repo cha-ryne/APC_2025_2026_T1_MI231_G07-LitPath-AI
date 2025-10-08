@@ -1,0 +1,3443 @@
+DETERMINANTS OF COMPLIANCE TO FORMAL CHOICE RULES AMONG ARTISANAL FISHERS IN CALAMBA CITY, PHILIPPINES
+
+NOLAN FEDERICO TAN MONSERATE
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+Master of Science in Environmental Science
+
+JUNE 2017
+
+ABSTRACT
+
+The behavior of resource users within common pool resources (CPRs), such as
+coastal fisheries, is directly influenced by the characteristics of the resource, the resource
+users themselves, and the rules that gover the use of the resource. The primary aim of
+this study is to identify the determinant factors influencing the cooperative behavior of
+Barangay Bucal artisanal fishers, measured as consistent compliance to the formal choice
+rules, within the coastal fishery of Calamba City. In this study, formal choice rules refer
+to the enacted prescriptions of actions the fishers must, must not, or may take in the city’s coastal fishery. A questionaire survey was conducted last August 2015 using items previously
+proposed by Agrawal as recurrent factors associated with cooperative behavior in CPRs.
+The mode of the fishers’ compliance to the formal choice rules was also evaluated in the survey. Based on the skewness of their Compliance Index (CD), it was discovered that the
+consistent compliance to the formal choice rules among the artisanal fishers is moderate
+despite the existence of an alternative set of informal choice rules. Using phi, the fishers' level of wealth, age, educational attainment, mode of utilizing Laguna de Bay catfish, and membership status in the local fishermen’s association were found to be strongly
+associated with the consistency of their compliance to the formal choice rules.
+Specifically, through simple logistic regression it was revealed that the odds for
+consistent compliance is higher if a fisher a) has medium to high number of household
+fixtures, b) is more than 50 years old in age, c) has finished highschool, d) markets his
+Laguna de Bay catfish catch, and e) is a member of the organisation Barangay Bucal
+Fisheries and Aquatic Resources Management Council/Sagisag ng Mangingisda ng Barangay Bucal (BFARMC/SAMBBU). As such, these results show that increasing cooperation among the artisanal
+fishers in using the formal choice rules, which can potentially improve the conservation
+of the Calamba City-coastal fishery, is possible. Specifically, this can happen a) if the
+fishers are not experiencing survival constraints; b) if they have the necessary set of
+cognitive skills, interest, and knowledge of the political and ecological issues surrounding
+the management of the coastal fishery; and, c) if they have developed strong moral norms in favour of following the formal choice rules.
+
+CHAPTER I
+
+INTRODUCTION
+
+The concept of institutions suggests rules in the form of “in case of X do Y” that
+are customary or shared, normative and have the eventual effect of influencing human
+interactions (Hodgson, 2006; Ostrom, 2005; Basurto ef al., 2010). As it is, institutions
+include norms, conventions, and legal rules (Vatn, 2006). Institutional arrangements,
+which are set of related institutions or rules that establishes “the relationships between
+individuals in relation to things” (Schlagger, 1990; Polski & Ostrom, 1999), act as
+mechanisms for adjusting and ordering behavior, and eventually individual interactions.
+As such, institutional arrangements are necessary in situations that require coordination
+of two or more individuals, or groups of individuals (Polski & Ostrom, 1999). Such
+situation is prevalent when it comes to the management of natural resources primarily in
+the management of common pool resources (CPR) where the constant threat of “free
+rider problem” can act as a major disincentive for their users to invest in their
+
+management (Thomson & Freudenberger, 1997; Thomson, 1992; McGinnis, 2010).
+
+Management of CPRs is important since their exploitation is always a “commons
+situation” (Gardner, Ostrom & Walker, 1994 as cited in ICLARM and NSC, 1996;
+Schlager, 1990; Wade, 1994) that can become a “commons dilemma” when their non-
+excludability and subtractable benefit-characteristics are joined with scarcity. This results
+
+in joint users interfering with each other’s use producing rent dissipation (Baland &
+
+Platteau, 1996) that if left unchecked could realize what Hardin called “Tragedy of the
+Commons” (Ostrom, 1990). In coastal fisheries, commons dilemma takes the form of
+provision problems and allocation problems, such as stock externality, technological
+
+externality and assignment problems (Schlager, Blomquist, & Tang, 1994).
+
+Indeed, institutional arrangements are vital in the management of CPRs including
+
+coastal fisheries. It must be emphasized that compliance to in:
+
+tional arrangements by
+the resource users or technically their cooperation in terms of allowing the said set of
+rules to coordinate their actions is structured by the attributes of the resource being
+exploited, the resource users themselves, and the local resource management institutional
+arrangements which are collectively called the contextual variables or exogenous factors
+(ICLARM & NSC, 1996). It must also be emphasized based on the comparative work of
+Agrawal (2002) on the book-length studies of Wade (1988), Ostrom (1990), and Baland
+and Plateu (1996), that there is no single widely accepted list of conditions of the above-
+mentioned attributes that automatically makes institutional arrangements designed for
+CPR management sustainable. Rather, it was shown that under some frequently occurring
+combinations of conditions, members of small groups can design and comply with
+institutional arrangements that help in the sustainable management of their CPRs. These
+recurrent conditions are later summarized by Agrawal into a list of 32 critical enabling
+
+conditions (Appendix B).
+
+Agrawal (2002), despite conceding to the impossibility of creating a universal list
+of critical enabling conditions, nevertheless subscribed to the notion that a list of them,
+
+such as the one in his study, can rather serve as starting point in the search for a
+
+compelling explanation for the sustainability of a given CPR. Overall, Agrawal
+concluded that instead of focusing on lists of factors or conditions that can be applied to
+all sustainably-managed commons, it is more productive to focus instead on
+
+configurations of local conditions that are responsible for such sustainability.
+
+Statement of the Problem
+
+Resource management is occurring in the municipal waters of Calamba City. This
+is evident in the involvement of its fisherfolks, the City Government of Calamba, and
+other government and non-government agencies in the integrated process of information
+
+gathering, analysis, planning, consultation, decision-making, allocation of resources, and
+
+formulation and implementation with enforcement mechanism built-in) of rules
+
+which coordinate fishing acti s inside the coastal fishery (FAO, 1997). As such, it
+must then be emphasized that the said management is in effect a case of CPR
+
+management since all coastal fisheries are essentially CPRs (Gardner et al., 1990).
+
+This classification of Calamba City’s coastal fishery as CPR is also evident on the
+nature of the physical characteristics - excludability and subtractability - of the
+appropriated fishes and other lake species which are the primary interest of the artisanal
+fishers in their ulitzation of the fishery and whose increased productivity and sustainable
+exploitation are the objectives of the fishery management taking place (McGinnis, 2010;
+Ostrom, E & Ostrom, V, 1977 as cited in Thomson & Freudenberger, 1997; Appendix
+
+B). In relation to this, it is pointed out that the said resource units are non-excludable, as
+
+any open-lake fishers in Laguna de Bay can potentially harvest the fishes, and that they
+are subtractable, for once the fishes are appropriated they will no longer be available to
+
+other fishers.
+
+In light of the classification of the management of Calamba City’s coastal fishery
+as a case of CPR management, its common users must therefore coordinate their
+behavior, or cooperate with each other within the existing management regime.
+Otherwise, freerider problems will set in or be aggravated to the point of fostering the
+adoption of shutdown practices among themselves. This can lead to the collapse of the
+management regime and the persistence of the commons dilemma as they likely exist in
+
+the fishery already.
+
+Thus, with respect to the need of fostering cooperation among the artisanal fishers
+in the form of their consistent compliance to the formal choice mules, it becomes
+imperative that the factors or “configuration of local conditions” positively influencing
+such compliance be elucidated. Emphasis is given to formal choice rules since 83.33% of
+the rules formally instituted in the said fishery are choice rules in type. Aside from this,
+formal choice rules can also have the most direct effect on the fishery’s sustainability as
+they are the written prescriptions of actions the artisanal fishers must, must not, or may
+
+take in various circumstances of their open-lake fishing activities (Cole, n.d.).
+
+Since the consistent compliance to the formal choice rules does not have a
+universal blueprint (Agrawal, 2002), Agrawal’s list of critical enabling conditions
+provided the scope of the socioeconomic and exogenous factors used in the study.
+
+Furthermore, as the study requires at least a population of artisanal fishers of moderate
+
+size from the coastal area of Calamba City, the population of artisanal fishers in
+
+Barangay Bucal is selected.
+
+Significance of the Study
+
+The conduct of institutional analysis on the cooperative behavior of Brgy Bucal’s
+artisanal fishers has reaffirmed that as an approach, institutitonal analysis can be a useful
+critical first step in evaluating community-level fishery management systems for the
+
+purpose of providing information on their essential features, operations and impacts.
+
+‘As this study used the institutional analysis approach, the set of socio-economic
+and exogenous factors and cooperation indicators that were used can be transferred and
+employed in the analysis of the cooperative behaviors of other fishery groups, such as the
+artisanal fishers in the other nine coastal barangays of Calamba City. The data collected
+for Barangay Bucal can therefore serve as a first entry in the systematic and comparative
+analysis of the cooperative behavior of the different fisher groups within the context of
+
+the existing fishery management in Calamba City.
+
+More importantly, the study can provide directions for the formulation of actions
+to further improve the conservation of the fishery, specifically the part appropriated by
+the artisanal fishers of Barangay Bucal. Particularly, the results of this study can indicate
+what conditions can bring about successful, long-enduring, and locally sustainable
+implementation of the formal choice rules which can be used by the barangay’s fishery
+
+users and stakeholders through the Fisheries and Aquatic Resources Management
+
+Council (FARMC) as well as the City Government of Calamba as basis in their
+
+policymaking and planning.
+
+Objectives of the Study
+
+Generally, this research aims to asses the determinants influencing the compliance
+
+to the formal choice rules within the fishery management of Calamba City.
+
+Specifically, this study intends to:
+
+a. assess the socioeconomic characteristics of the artisanal fishers affected by the
+management of the open-lake fishery in Calamba City, Laguna;
+
+b. assess the charateristics of the exogenous factors in the management of the open-
+lake fishery in Calamba City, Laguna;
+
+c. evaluate the compliance to the formal choice rules among the artisanal fishers of
+Calamba City, Laguna; and,
+
+d. examine the relationship of the artisanal fishers’ socio-economic characteristics
+and their perceptions of the exogenous factors with their compliance to the formal
+
+choice rules.
+
+Research Hypothesis
+
+Based on the conceptual framework and related studies reviewed, the following
+
+hypotheses are formulated in this study:
+
+1. The configuration of socio-economic characteristics determining the compliance
+to the formal choice fules among the open-lake fishers is not consistent to the
+configuration formulated by Agrawal.
+
+2. The configuration of the exogenous factors determining the compliance to the
+formal choice rules among the open-lake fishers is not comparable to the
+configuration formulated by Agrawal.
+
+3. Majority of the open-lake fishers are in complete compliance to the formal choice
+tules.
+
+4. The compliance to the formal choice rules among the open-lake fishers is
+determined by the following socio-economic characteristics and exogenous
+factors: size of fish catch, fishing gears used, age, educational attainment, family
+size, level of relative wealth, level of dependence on the resource, moral norms,
+characteristics of leaders, price level of the harvested species, involvement of the
+state in the management, monitoring, adjudication, and sanctioning mechanisms,
+
+and simplicity of the rules.
+
+Conceptual Framework
+
+As emphasized above, institutional arrangements influence individual interactions
+in CPR managements. However, its presence does not immediately lead to coordination
+and collective action of CPR users. Alternatively, in order to achieve desired outcomes in
+
+CPR managements, other factors, specifically the resource and resource users, should be
+
+considered.
+
+As it is, these factors do not act independently of each other. Instead, causal
+relationships exist among them aside from the one that exists between them and the
+resulting cooperation situations within CPR management systems. In this scheme, local
+institutional arrangements, structured by the characteristics of the other factors including
+those from its own, affect the actions of resource users by shaping the incentives and
+disincentives they face in the different cooperation situations. In other words, individual
+user’s choice of behavior in cooperation situations will depend on how he or she weighs
+the benefits and costs of cooperation and non-cooperation. This is in turn based on how
+
+he or she percieves the characteristics of the different exogenous factors.
+
+Figure 1 below summarizes the exogenous factors and their hypothesized
+relationships under the study. In the said figure, modes of fishing refer to the decisions
+made by the artisanal fishers of Barangay Bucal on whether or not to consistently observe
+the formal choice rules when they harvest from the fishery once granted access. As such,
+
+these situations include whether they should:
+
+EXOGENOUS FACTORS
+RESOURCE FACTORS RESOURCE USER FACTORS INSTITUTIONAL
+© Physical factors © Demographic factors [ARRANGEMENT FACTORS
+© Biological factors © Social factors "ol Compatioahty factor
+© Technological factors, © Economic factors I>) enforcement factor
+© Cultural factors
+mM iaenatiscer ‘© Compliance factor
+© Exeternal assistance
+factor
+
+© CONSISTENT COMPLIANCE TO THE
+
+CHARACTERISTICS
+
+Ge FORMAL CHOICE RULES
+SOCIOECONOMIC
+
+EXOGENOUS FACTORS ‘© INCONSISTENT COMPLIANCE TO
+
+‘THE FORMAL CHOICE RULES
+
+BARANGAY BUCAL ARTISANAL
+
+Fig 1. Schematic diagram showing the process of the formation of the artisanal fishers’
+behavior within the coastal fishery in Calamba City
+
+L
+2.
+
+3.
+
+Inhibit from fishing inside the sanctuary;
+Inhibit from using electrofishing gears;
+Inhibit from using dredge;
+
+10
+
+4, Inhibit from using motorized push-net;
+5. Inhibit from using tibog; and,
+
+6. Inhibit from using fine mesh net.
+
+For the resource-related factors, physical factors refer to the size and general
+condition of the fishery as well as the observability of its boundaries. Biological factors,
+on the other hand, pertain to the size and composition of the fishers’ catch as well as the
+visibility and predictability of conditions of the fish stocks in the fishery. Meanwhile
+technological factors cover the composition of fishing vessels and gears used in the
+fishery, number of vessels and gears owned by the fishers, and monitorability of banned
+
+gears in the fishery.
+
+For the resource user-related factors, demographic attributes pertain to the
+population size of fishers inside the fishery as well as their age, gender, educational
+attainment, family size, ethnicity, religion, length of residence in the barangay, length of
+fishing experience and past-experience in non-fishing occupation. Social attributes on
+the other hand pertain to the presence of communication avenues among fishers, the
+frequency of such communication, boundaries and interdependencies between fishers,
+characteristics of their leaders, any successful past experience in cooperation, and
+membership in fishermen’s associations. Meanwhile, economic attributes encompass the
+relative wealth of fishers, their level of dependence on the fishery, orientation of their
+fishing activities, and fairness in the allocation of benefits from the fishery. Lastly,
+cultural attributes refer to the fishers’ moral norms, while market attributes pertain to the
+
+stability of market as well as the value of resource units.
+
+nu
+
+For the institutional arrangement-related factors, complexity attribute pertains to
+the knowledge of fishers about fishing rules. On the other hand, compatibility attributes
+pertain to the kind of decision-making process available as well as the general
+compatibility of rules to local conditions. Meanwhile, enforcement attributes pertain to
+the level of rule violation, the sanctioning and adjudication mechanisms available, and
+accountability of monitors and other officials. Lastly, the external assistance attributes
+pertain to the level of involvement of the government in the fishery management as well
+
+as the amount of external aid given to support it.
+
+CHAPTER I
+
+REVIEW OF RELATED LITERATURE
+
+Contextual Variables and Collective
+Action of Users
+
+Although the experience of commons dilemma or rent dissipation is necessary for
+institutional arrangements to be subscribed, it is nevertheless insufficient. In theory, the
+action arena for the collective actions of the resource users is structured by exogenous
+factors or contextual variables that characterize key attributes of the resource, the
+resource users and the local resource management institutional arrangements.
+Specifically, these contextual variables are a) the community institutional and
+organizational arrangements variable, b) the biological, physical and technological
+variable, c) the market variable, d) the resource user, stakeholder and community
+variable, e) the external institutional and organizational arrangements variable, and f) the
+
+exogenous variable (ICLARM & NSC, 1996).
+
+In this case, the institutional arrangements, structured by the contextual variables,
+affect the actions of the resource users by shaping the incentives and disincentives they
+face to coordinate and cooperate in resource governance, management and use. The
+
+incentives in turn, shape the patterns of interaction that result when resource users select
+
+13
+
+and implement resource use strategies. These interactions result in outcomes which may,
+
+in tum, affect other outcomes (ICLARM & NSC, 1996).
+
+Effects of Exogenous Attributes
+‘on Collective Action
+
+Resource Scarcity and Survival Constraints
+
+The success of institutional arrangements governing CPRs such as fisheries are
+more likely if there is great demand (i.e. up to a limit) for it and the more vital its role in
+the survival of the users (Wade, 1994). If appropriators do not obtain a major part of their
+income from the resource or value it highly for some other purposes (i.e. source of
+insurance or credit) (Baland & Platteau, 1996), the high costs of organizing and
+maintaining a self-governing system may not be worth their effort (Lawry, 1990; Gibson,
+
+2001).
+
+In societies where resources are abundant, people who are dependent on the latter
+typically do not see their finite nature. In such resource systems, the presence of flexible
+rules and the absence of conservation rules are usually observed. However, as
+productivity lowers due to enhanced competition between the users or from enhanced
+competition and the erosion of the environmental capital stock, strict access rules come
+about, and if conditions warrant, strict conservation rules too (Baland & Platteau, 1996).
+
+Ostrom (2005), in relation to this kind of observation, posits that appropriators find little
+
+reason to invest costly time and effort in organizing if the resources are abundant; instead
+self-organization is likely to occur only after they observe substantial scarcity. Wade
+(1994) in addressing the possibility if whether the Kottapalle type of irrigation
+organization can be adopted elsewhere in India concluded the same that it is not likely
+since such organization is only found where the net collective benefit is relatively high as
+
+exhibited in villages with increased water stress.
+
+However, too much resource scarcity is also detrimental for collective action.
+
+During times when individual incomes extracted from the resource fall below the
+subsistence level without compensation from alternative sources of income, the
+temptation to violate conservation rules becomes irresistible. This is since, owing to the
+survival constraint, the discount rate of future incomes becomes infinite and free riding
+
+behavior appears as a natural weapon in the struggle for sheer subsistence (Baland &
+
+Platteau, 1996).
+
+In general, subsistence-constrained users have much greater incentives than more
+well-off users to seek to conserve their resource base, since they have limited alternative
+income resources. Nevertheless, if the resource base is initially degraded, they may be
+unable, owing to the low level of their wealth and to severe credit imperfections, to build
+it up to the level where it can be optimally maintained (Baland & Platteau, 1996). Thus,
+just like during periods of severe scarcity, segments of the population cannot be forced to
+contribute to the conservation of a resource if they are desperately poor since their
+concern for sheer survival in the short run may lead them to heavily discount the future
+
+benefits of conservation strategy and to overweigh the present costs. Such is not the case,
+
+15
+
+however, with the richer resource-dependent users who can safely adopt a more
+conservative use of the resource as they believe that with their level of wealth, the total
+gain from following conservationist strategies would outweigh its total cost (Baland &
+
+Platteau, 1996).
+
+Group Size, Group Communication,
+Moral Norms, and Leadership
+
+According to Schlagger (1990) aside from the expected collective benefit
+suggested by Wade (1994) as the main factor explaining the presence or absence of
+collective organization in the villages he studied, other factors - noticeability and
+measurability of the problem; number of involved users; and the possibility to devise
+enforceable rules - are also critical. Incidentally, Baland and Plateau (1996), in their
+review of important literatures on cooperation in CPRs, came up with a similar list of
+
+factors.
+
+The size of the user group is preferable to be small (Wade, 1994; Baland &
+Plateau, 1996; Schlager, 1990). If individuals know one another, can observe one
+another’s behaviors, and are in continuous interaction with one another such as in small-
+group settings, any pattem of collective behavior, including cooperation, can be
+sustained, which will make each individual better off than under universal defection. The
+ability to observe directly or indirectly the actions of others is advantageous for
+
+cooperative actions since it increases assurance from being cheated as the users can base
+
+16
+
+their actions on the past actions of others; which means they can immediately defect
+during repeated interactions if the possibility of being suckered arises. This assurance is
+furthered if the appropriators” interrelationships is continuous or intertwined in which
+their interaction with respect to resource management could not be isolated from other
+interests thus giving them incentive, just like with easy observability, to consider the
+more indirect and long-term consequences of their choices instead of paying exclusive
+attention to immediate costs and benefits (Baland & Platteau, 1996). Furthermore, with
+respect to the profusion of equilibria that may exist in repeated collective interactions,
+small groups may be at an advantage since they allow the possibility for pre-play
+communication wherein individuals, the users, can reveal and signal their intended plans
+
+of actions thus enabling them to choose good equilibria (Baland & Plateau, 1996).
+
+Small group size is important in sustaining the trust or assurance needed in the
+cooperation between individuals, it is also critical in the development of moral norms.
+Moral norms are internalized behavior patterns that are maintained even in the absence of
+external monitoring and sanctioning since the conformity of the act becomes a motive of
+its own as it is intrinsically rewarding or because deviation is intrinsically costly (Weber,
+1971; Opp, 1979; Jones, 1984; Taylor, 1987 as cited in Baland & Plateau, 1996). As
+
+such the main function of moral norms vis-a-
+
+is availability of resource units, which are
+borne during times of scarcity or low productivity as brought by critical pressure (i.e.
+depletion, degradation) on natural resources, is to ensure that the latter remains viable for
+the group. As it is, well established moral norms sustained by primary and secondary
+socialization can make collective actions successful since users tend a) to adopt others’
+
+viewpoint when making decisions that may harm others’ interests and to feel internally
+
+7
+
+rewarded when behaving in other-regarding, ways; b) to be confident that others will
+abide by the same code of good behaviors as themselves; c) to cling to this code even
+when they had unpleasant experiences in which they were stickers; d) to feel guilty after
+they have (perhaps mistakenly) deviated from the moral rule; and e) to feel vengeful and
+willing to punish detectable free-riders including those who refuse to do so and continue
+
+to entertain good relations with free-riders (Baland & Platteau, 1996).
+
+According to Goette, Huffman, and Meier (2006), another way in which moral
+norms for cooperation are also developed is through membership in an organization. An
+important feature of organizations is that they constitute a social boundary, or group
+determining with which people an individual interacts on a daily basis. For Goette, et. al.
+(2006) this social aspect of organizations has an important benefit of transforming
+individuals, leading to internalized roles, norms and values that affect behavior. In their
+study involving Swiss Army trainee-officers assigned to different platoons, Goette, ef. al.
+(2006) found that group membership has a strong impact on underlying preferences for
+cooperation, so that subjects prefer to cooperate with their own group as opposed to the
+out-group. This, according to them, is due to the direct impact of group membership on
+the beliefs of individuals that members of their own group are more likely to be
+cooperative. This is vital since cooperation, as pointed above, is conditional and increases
+with the belief that others will also cooperate. Furthermore, Goette, ef. al. (2006) also
+found that group membership increases willingness to enforce a norm of cooperative
+behavior towards fellow group members as they observed that punishment by a selected
+subject was much stronger when defection affects an in-group member as opposed to an
+
+‘out-group member.
+
+18
+
+‘As mentioned above, communication between users is important in establishing
+assurance, and as such its frequency should be increased since its impact is rather short-
+lived. Moral norms also improve through communication especially when promise-
+making is involved. According to Ostrom (2005) the advantage of communication is that
+not only does it transform players from mere strangers into real people, thus shifting the
+bases for decision making for cooperation from reason to emotion (Frank, 1988 as cited
+in Baland & Plateau, 1996), it also provides an opportunity for individuals to offer and
+extract promises of cooperation for non-enforceable contracts. This is salient since, aside
+from clearly signaling one’s intention which raises assurance, “promise-keeping” is a
+moral norm in itself that is more fundamental than “cooperation per se” and which would
+lead to people, when violations are observable, to make violent reproaches when
+someone is breaking a promise, is being uncooperative or is taking advantage of others
+who are keeping a promise (Ostrom, ef. al., 1994 as cited by Baland & Plateau, 1996).
+These possible outcomes would provide additional disincentive to cheating when the
+
+group size is small and therefore more reason to trust the other users.
+
+But even if communication as well as promise-making is not explicit, provided
+relevant moral norms are established and strong, group members can make their
+decisions to cooperate straightaway since their mutual expectations are sufficiently
+structured. This is why in large groups where relationships are largely anonymous and
+where private sanctioning activities are certain to bring no future reward to the punishing
+agent, the self-policing mechanisms provided by moral norms becomes relevant as a
+
+practical way of solving collective action problems, even besting options of using a
+
+19
+
+central agency to act as an external norm enforcer and the users themselves inflicting
+
+sanctions upon one another in a decentralized manner (Baland & Platteau, 1996).
+
+The same commitment to cooperation, when normative considerations (moral
+norms) such as fairness are present, is also obtained even if individuals who are
+anonymous to each other play an equivalent of a one-shot game. Although cooperation is
+more likely to happen when interactions will be repeated infinitely or indefinitely,
+interactions occurring in finite number of periods including those that are rather short can
+still produce cooperation since a) people probably do not use such a sophisticated device
+as the backwards-induction argument when they reason about their strategic choice, and
+b) people may well cooperate until near the end of finitely repeated games or in short
+they follow a tit-for-tat strategy if they entertain some slight doubts about the type of
+
+strategy followed by their opponents (Baland & Plateau, 1996).
+
+Another advantage of small group size when it comes to producing cooperation
+among its members is its lesser vulnerability to the problems of incentive dilution (Olson,
+1982 as cited by Baland & Platteau, 1996) and diffusion-of-responsibility (Frank, 1988 as
+cited by Baland & Platteau, 1996). In incentive dilution, cooperation is discouraged since
+as more idividuals make up the group the incentive that an individual gets from
+cooperating is reduced while its cost remains constant. On the other hand, when there is
+diffusion-of-responsibility, the problem of fostering cooperation comes from lessened
+pressure to cooperate since it is not focused on anyone and the responsibility is shared
+among all of the users. Hence, the incentive to free-ride decreases as the group size
+
+becomes smaller since the collective income is less and less shared and the responsi
+
+
+20
+
+to cooperate becomes more and more focused. But aside from these, and as implied also
+by the relative ease in which small groups can conduct pre-play communication, the
+smallness of the group size also allows for agreements among the members to be reached
+at low negotiation costs. This would include the costs of communication and bargaining,
+as well as, possibly, those of creating and maintaining a formal organization (Olson, 1982
+
+as cited in Baland & Platteau, 1996).
+
+Role models also have important function in peoples’ decision to exhibit other-
+regarding behavior which is necessary to foster cooperation. In this, role models are
+viewed as privileged agents who reactivate emotional capacities associated with primary
+socialization processes. That means that political leaders as well as other forms of role
+models reactivate cooperation-fostering moral norms when they publicly behave in
+
+cooperative ways (Baland & Platteau, 1996).
+
+Aside from this, leaders are important in fostering cooperation since they can
+lower the cost of sustaining the institutional arrangement by creating the necessary
+consensus or, at least, to drive enough resource users to adopt cooperative behavior. For
+effective leadership, traditional ones seems to be particularly welcome in so far as it
+
+entails no set-up costs since it is already in existence (Baland & Platteau, 1996).
+
+2
+
+User Heterogeneity
+
+Users exhibiting heterogeneity in ability and yield may have difficulty in
+willingly organizing themselves for specific regulations. That is, regulations that pose
+disproportionate constraints on some users will be opposed by those that will be
+adversely affected. Indeed, if users have equal abilities and yields, the net gains from
+effort controls would be evenly spread, and given large estimates of rent dissipation, rules
+governing effort would be quickly adopted (Johnson & Libecap, 1982 as cited in Baland
+& Platteau, 1996). For example, total effort in a coastal fishery could be restricted
+through uniform quotas for eligible fishermen. But if the fishermen are heterogeneous,
+uniform quota will be costly to assign and enforce because of opposition from more
+productive fishermen. Thus, without side payments to those who will be
+disproportionately constrained, uniform quotas could leave more productive fishermen
+worse off, hence the opposition (Johnson & Libecap, 1982 as cited in Baland & Platteau,
+1996). Thus, the main implication one can draw from the analysis, is that where agents
+are heterogencous, regulating the commons efficiently may cause conflicts of interests to
+
+erupt (Baland & Platteau, 1996).
+
+In many instances, regulation through the individual reduction of each agent’s
+level of effort alone is not possible. In those cases, regulation must take place through the
+exclusion of some users, the remaining ones being then in a position to reap and share
+amongst themselves the benefits of such a measure through the increased productivity of
+their resource appropriations; in fact, exclusion may well be a necessary step before any
+
+other efficiency-improving measure is contemplated. However, on this it must be
+
+2
+
+emphasized that if the uscrs are risk-averse, such method of regulation will not be
+acceptable. That is, if the selection of the members to be excluded will be uniformly
+random, meaning all of them are candidates for exclusion, and that no side payments or
+alternative source of the benefit in question is offered, exclusion will not be opted by the
+group. Therefore, one may expect that, when regulation through exclusion must take
+place, exclusion will not be random but will be invariably directed towards a definite
+subgroup of members of the community. One may also expect that, when the group is
+homogeneous, exclusion will not always be resorted to and, as a result, overpopulation of
+
+productive units is likely (Baland & Platteau, 1996).
+
+Regulation in the CPR can also be done via designing a tax schedule. However,
+such an instrument can be difficult to obtain if everything relevant to the problem is not
+known to everybody. For starters, in order for a taxation scheme to work the proceeds of
+the taxes should not be siphoned off by the central state, since every productive member
+of the community will be worse off then; instead, the proceeds should be redistributed to
+the members of the taxed community. Second, the members should receive a share of the
+tax proceed proportional to the amount of variable factor they were applying in the initial
+situation, which is one characterized by overexploitation (Baland & Platteau, 1996).
+However, in many instances, the community or the traditional authority is not in a
+position to have all the information relevant to the problem. Here, the phenomena of
+“private information” may be encountered. Typically, preferences and private
+endowments are likely to be private information; that is, only the agent concerned knows
+exactly his preferences, skills and endowment. It is important that these information are
+
+known by a central authority, which must be neutral and credible, so that they can be
+
+23
+
+processed and an allocation for the proceeds be proposed. The critical question in this
+case however, is if whether or not there exists some way of passing from the announced
+preference and endowments to an allocation that provides the proper incentives for agents
+to tell the truth. Hence, in the presence of private information, if an efficient allocation
+has to be achieved, then some agents will be hurt, and were they allowed to do so, they
+would veto the regulation scheme. However in the case that the users are identical in their
+endowments, skills and preferences, the private information problem disappears (Baland
+
+& Plateau, 1996).
+
+Educational Attainment
+
+High educational attainment has been widely argued to positively affect civic
+engagement. In here civic engagement takes various forms including but not limited to
+voting, interest group membership and activity, volunteering, and being involved in local
+groups, such as committees and commissions, churches or citizen’s coalition and
+movements (Young, 2011). As such, it can also be argued that resource-user cooperation
+in the management or conservation of a resource (i.e. specifically public and CPR) is also
+Positively affected by higher educational attainment as it is another form of civic
+engagement in the form of volunteering in the activites of an interest group or local
+groups. According Young (2011), cooperation among resource users with higher
+educational attainment is increased as they have greater understanding of not only
+
+political but also ecological happenings, history and how these events could impact them
+
+24
+
+Specifically, Milligan, Moretti and Oreopoulos (2003), pointed out that such
+enhancement and broadening of civic participation could be due to education equipping
+the resource users with cognitive skills that enable them to select able leaders, understand
+the issues upon which they will vote, act as a check on the potential excesses of the
+government, and recognize corruption in leaders. At the same time, education can also
+improve citizen’s interest and knowledge of political and ecological issues, their
+
+involvement in the political process, and ultimately, the effectiveness of their political
+
+participation.
+
+Age, Values and Cooperative Behavior
+
+Values are defined as desirable, trans-situational goals, varying in importance,
+that serve as guiding principles in people’s lives (Schwartz, n.d.). They differ from moral
+norms as they can be ordered by importance relative to one another. Values affect
+behavior only if they are activated (Verplanken & Holland, 2002 as cited in Schwartz,
+n.d.). As such, the more important values are, the more they become accessible or easily
+come to mind, and the more they relate to behavior (Shwartz, n.d). Based on the
+motivational goal they express, ten basic values are derived: self-direction, stimulation,
+hedonism, achievement, power, security, conformity, tradition, benevolence, and
+
+universalism.
+
+Life circumstances make the pursuit or expression of different values more or less
+
+rewarding or costly. Typically, people adapt their values to their life circumstances. They
+
+25
+
+upgrade the importance they attribute to values they can readily attain and downgrade the
+importance of values whose pursuit is blocked (Schawrtz, & Bardi, 1997 as cited in
+‘Schawrtz, n.d.). Upgrading attainable values and downgrading thwarted values applies to
+most, but not to all values. The reverse occurs with values that concern material well-
+being (power) and security. When such values are blocked, their importance increases;
+when they are easily attained their importance drops. People’s age is one of the
+characteristics that largely determine the life circumstances to which they are exposed
+
+(Schawrtz, n.d.).
+
+With age, strength, energy, cognitive speed, memory, and sharpness of the senses
+decline. As such, security values maybe more important because a safe and predictable
+environment is more critical as capacities to cope with change wane. Conformity and
+tradition values may also be more important with age because accepted ways of doing
+
+thing are less demanding and threatening (Shwartz, n.d.).
+
+Rule Legitimacy, Monitoring and
+Sanctioning, and Rule Clarity
+
+In deciding how to behave in the CPR, users do not only take cues coming from
+the size of the group or the existing relevant moral norms, the importance of which are
+pegged in their capacity to provide the user-players assurance from becoming suckers, or
+from role models and leaders, to influence them into cooperating, they also assess the
+
+degree of legitimacy of rules and institutions. It must be emphasized that the users”
+
+26
+
+compliance with a rule is indeed strongly influenced by the extent to which they think
+that the rule and the enforcing agency are legitimate. By legitimate, the rule and the
+enforcing authority must be appropriate and consistent with the users’ internalized norms
+of faimess. But more than this, the rule and enforcing authority must be able to provide
+favorable or positive outcomes for the users to perceive that latter as legitimate, that is for
+the users to willingly comply to them (Baland & Plateau, 1996).
+
+Another comerstone in sustaining institutional arrangements in CPRs would be
+the monitoring and sanctioning mechanism that is put in place to see to it that they arc
+complied with. Basically, this component is another tool that provides assurance to the
+interacting users that they will not be suckers if they will follow the rules. Monitoring and
+sanctioning are able to do this by breaking the logic of the backward-induction argument
+underlying the non-cooperative outcome of the finitely repeated game which is the result
+when penalties are meted to defectors thus making defection less beneficial than
+cooperation in whatever period of the game (Baland & Plateau, 1996). As such,
+monitoring and sanctioning is especially important in the context of large groups since in
+the absence of the advantages of a small group, such as easy observability of actions,
+continuity of interactions, and easy communication of the members, or the strong
+influence of moral norms, coercion (i.e. in the form of monitoring and sanctioning) is the
+only device that can make rational, self-interested individuals act in their common
+
+interest (Olson, 1965 as cited by Baland & Platteau, 1996).
+
+On sanctioning, to foster cooperation, penalties must be meted gradually,
+especially in cases involving imperfect information. This is done especially for first time
+
+offenses in consideration of the possibility that the supposed offender might not have
+
+27
+
+committed the offense; thus avoiding raising resentment from those who are indeed
+unfairly punished and their subsequent unwillingness to follow rules in the future.
+However, as repetition of the same offense is attributed to the same individual,
+
+application of harsher and harsher penalties becomes justified. But even if information is
+
+perfect, graduated sanctioning is still ideal since more than punishing offenders, the
+purpose of sanctions is to remind or warn individuals of the importance of compliance.
+Again, just like with imperfect information, graduated sanctioning in this case avoids
+raising resentment and unwillingness to conform to rules in the future resulting from
+meting large fine or harsh punishment on a person facing an unusual problem (Ostrom,
+1990). Thus, according to Ostrom (1990) graduated punishments ranging from
+insignificant fines all the way to banishment, applied in settings in which sanctioners
+know a great deal about the personal circumstances of the other appropriators and the
+potential harm that could be created by excessive sanctions, may be far more effective
+
+than a major fine imposed on a first offender.
+
+Apparently, detection of free-riding in many field settings is difficult and costs
+have to be incurred to make it possible. As such, the task of monitoring and imposing
+sanctions could be entrusted to an external authority. But as already pointed above, when
+there is imperfect information or imperfect monitorability, the sanctioners, which in this
+case is the external authority, cannot avoid making errors in imposing punishments. If
+this is what is happening, the dominant strategy of the users can revert back to defection
+or violation of the imposed rules especially if there is a high chance that the external
+authority will impose sanctions incorrectly, meaning there is a high probability for
+
+violators to escape punishments. To make monitoring effective in this case or when there
+
+28
+
+is imperfect monitorability, high amounts of penalties or severe punishments should be
+meted out to violators; that is, the more costly the monitoring, the higher the penalty must
+be to induce rule compliance. But considering that high or harsh penalties can produce
+resentment and non-compliance of rules, not to mention the weakening of social pressure
+against violators when they are perceived to be unfair or unjustified, lessening the
+imperfectability of the monitoring process is more advisable. This is since it can lower
+the cost of monitoring when it is conducted and therefore decrease the degree of penalty
+needed to sanction violators. To do this, it is advisable whenever viable that the group
+size be taken advantage of for monitoring. Which means that if applicable, the
+monitoring this function be delegated to the community itself or to its local authorities.
+Monitoring costs can also be reduced by shifting to methods of resource conservation that
+are relatively easy to check out (Baland & Platteau, 1996). An example of this would be
+using the less costly to monitor “gear restriction method” over the highly contestable and
+therefore more costly “control of individual vessel quotas method” or “minimum-
+
+size/weight restrictions” (Sutinen, ef. al., 1990 as cited in Baland & Platteau, 1996).
+
+But even if monitoring will be delegated to the community, imperfect
+monitorability is still expected to happen resulting in what is pointed out above as a
+resurgence of cheating as a viable strategy. This is so since monitoring by the users is a
+positive function of the relative cost of monitoring with respect to the expected benefits,
+while cheating is a positive function of its benefit relative to its expected cost. Thus, the
+striking result is that, at equilibrium, cheating always occurs with positive probability,
+and yet the cheaters themselves are not monitored. This happens as monitoring is only
+
+profitable if there is a positive chance to prevent a cheating event; if no cheating occurs,
+
+29
+
+the costs of monitoring outweighs its benefit thus producing the imperfect monitorability
+in this case. On the other hand, cheating is always profitable if no monitoring occurs
+
+(Weissing & Ostrom, 1991 as cited by Baland & Platteau, 1996).
+
+If the users will employ the service of specialized guards, the resource system
+might become efficient, although this is not always the case, due to the rates of cheating
+and monitoring being decreased. However, due to the presence of the specialized agents,
+the incentive of the users to monitor each others’ behavior may also be reduced thus
+changing the monitoring game being played by the users from being an assurance game
+
+into a chicken game (Weissing & Ostrom, 1991 as cited by Baland & Platteau, 1996).
+
+If monitoring is solely tasked to the users, cheating rate may increase as a result of
+an increase in the number of group members. Basically produced by incentive dilution
+problem, this happens since the total benefit of detection of a cheating event is evenly
+spread among all users, whether they monitor or not. As a result, the individual benefit
+from monitoring and detection decreases with the number of users thus creating the
+incentive, when the group size is big, to shirk or free-ride (Weissing & Ostrom, 1991 as
+cited by Baland & Platteau, 1996). However, large group size is not the only condition
+that triggers cheating rate movement; in fact it can be decreased if a) the detection
+probability of monitoring is increased such as when conservation methods that are easy to
+monitor are used; b) the cost of monitoring, which is a function of the first condition, is
+decreased; c) the size of penalty, which is a function of the second condition, is also
+decreased; and d) when the loss of benefit due to undetected cheating is reduced (Baland
+
+& Plateau, 1996).
+
+30
+
+Users who willingly follow rules are assumed to do so because they perceive that
+the latter enhance their benefits from the CPR. Thus, it is necessary that the rules need
+not be unclear and ambiguous since these creates misunderstanding about the policy and
+distrust on its implementors which can account for non-cooperative behavior among
+individuals even in the contexts where they could apparently benefit from the resource
+policy (Baland & Platteau, 1996). However, it must be emphasized that this realization of
+the benefits of a policy can happen ex ante; which means, that the users could be against
+the regulation and actively oppose it ex ante due to perceived uncertainty on how it will
+affect them, even though such rules are really beneficial and in fact will be supported by
+majority of the users ex post. It can also happen that the users may perceive that a
+regulation is beneficial ex ante only to find out ex post that it is not resulting in the retum
+
+of the original situation (Baland & Platteau, 1996).
+
+Type of Societies in CPR Management
+
+As had already been pointed above, some communities are characterized
+simultaneously by the presence of flexible access rules and the absence of conservation
+mechanisms. These are those communities which live amidst abundant natural resources
+defined as resources for which there is no competition and which cannot be threatened
+with the risk of degradation even when they are openly accessible. A state of resource
+abundance may be related to three main kinds of circumstances which are a) population
+
+size is restricted compared to the amount of available resources, b) technology is
+
+31
+
+primitive with the result is quite low and or the cost of exploiting a certain range of the
+available resources tends to infinity, and c) the users are not profit-maximizers because
+they produce mainly for subsistence purposes and have a marked preference for leisure or
+
+leisurely activities (Baland & Plateau, 1996).
+
+In this type of community, conservation rules would not flourish considering that
+the resource at stake is not under strain thus defeating any conservation effort by its
+unnecessary cost. On the part of the access rules, which are flexible, they are devised
+irrespective of the degree of pressure on those resources; instead their presence largely
+depends on whether control of access to localized resources is feasible at a reasonable
+cost. Nonetheless, the degree of flexibility of such rules is very much a function of the
+extent of resource availability. That is, they tend to be highly flexible and to be applied in
+a liberal way when pressure on the resource is low while they tend to be more narrowly
+interpreted and more strictly applied when pressure on the resource heightens. In fact, the
+purpose of access rules in this case is to manifest and symbolize the social identity of the
+group which first colonized the area where these resources are located as well as
+articulate its corporate ownership structure as well as to establish political intergroup
+
+boundaries (Baland & Platteau, 1996).
+
+When low productivity is experienced by the users, a change in the characteristic
+of the community will manifest. In some communities this change will be that the access
+
+tules will become strict but still no rules pertaining to conservation are devised.
+
+As mentioned above, the decline in the average product or the increase in the
+
+average cost resulting from the pressure of a growing number of resource harvesters,
+
+32
+
+assuming constant technology, may be due a) only to the enhanced competition for the
+resource that this growing pressure entails, or b) both of this enhanced competition and to
+the erosion of the environmental capital stock. The first situation points to a purely
+distributive problem caused by the very scarcity: since the resources are increasingly
+difficult or costly to harvest, there arises the question as to how the cost of extracting it is
+to be shared among the various claimants. Such a situation therefore requires well-
+defined sharing rules which are obviously tantamount to access rules. The second
+situation involves both a distribution problem and a genuine resource management
+problem. Consequently, it calls not only for sharing rules but also for conservation
+mechanisms in case the pressure on the resource, other things being equals, should
+become stronger in the future than in the present (Baland & Platteau, 1996). But because
+societies, especially those hunter-gatherer type, are prone to misunderstand or not
+correctly perceive the nature of the problem at stake, not to mention the collective action
+problem that can arise when the members interact, they may not optimally adjust to the
+evolving challenges that they face (McNicoll, 1990 & Lane, 1991 as cited in Baland &
+Plateau, 1996). What this means is that, in some societies it is a natural inclination for
+the members to think that, when their income derived from the exploitation of CPRs
+happens to fall, this must be entirely caused by the encroachments of new producers,
+especially so, of course, if the latter are strangers endowed with superior techniques,
+whose activities have the effect of diminishing the share of the current resource flows
+available to the existing users. In this context, the idea that decreasing incomes can also
+follow from reduced stock of the resource as a result of over exploitation and
+
+mismanagement by all producers involved does not readily come to people’s mind. When
+
+33
+
+this condition happens, the community therefore tends to adopt strict access rules while
+
+neglecting to evolve conservation devices (Baland & Platteau, 1996).
+
+Therefore, in this type of society, where the understanding and perception of the
+problem only reaches the level wherein low productivity is caused by enhanced
+competition for the resource, and not caused by the lowering of the stock due the users
+action, the spontaneous reaction of the local community is a) to tighten the rules of access
+so as to make it more and more difficult for outsiders to use the CPR, and b) to design
+more precise rules for the sharing of access and the avoidance of conflicts among the
+growing number of insider users; the latter process may involve de facto privatization of
+
+use rights or some sort of rotation (Baland & Platteau, 1996).
+
+However, it is not always the case that a user community’s level of understanding
+of scarcity or low productivity is pigeonholed to that level as described above. In fact,
+some kinds of communities lean better or more quickly than others on how to adjust to a
+changing environment. Agricultural communities, in which members can have
+perceptions of their relationships with the surrounding environment that are more
+conducive to resource management practices, represent such. And because such
+communities have CPR resources that are not anymore abundant and at the same time
+have members that perceive themselves as important determinants of ecological change
+when resources are liable to degradation, strict access rules and conservation rules are
+
+characteristically adopted (Baland & Platteau, 1996).
+
+But in order for these conservation rules to be devised and adopted, the users
+
+themselves must first become aware of the ecological problems created by their actions.
+
+34
+
+However, even the latter is not enough since if the users become aware of the problem
+too late, that is, only when the appropriate incentives to conservation measures have
+already disappeared, effective resource management responses are unlikely to succeed
+(although still possible with the help of special incentives provided by an external
+agency). Thus it is important that the awareness of the users must not be too slow, which
+is unfortunately its usual pace. To remedy this, what is required is for the users to have a)
+concrete, visible experiences of depletion or degradation in order to be stimulated, b) an
+understanding of the situation wherein the connection between their behavior and the
+level of the stock is made evident, and c) a “sense of limits” in their minds coming from
+previous experiences of scarcity. In other words, the problem effects must be highly
+visible in order for the people to realize what is happening; words, abstract reasoning and
+explanations do not have much impact here. This is the reason why the emergence of
+such awareness depends on the physical and geographical nature of the resource. It will
+thus more easily emerge with respect to localized, visible, and predictable resources than
+in the case of a resource that stretches over vast and seasonally changing geographic
+
+areas, is largely unpredictable, and hardly visible (Baland & Platteau, 1996).
+
+In the case of coastal fisheries what needs to be stressed, however, is that if
+communities of inshore fishermen are frequently found to have regulation regarding
+fishing gear, fishing season and the rotation or assignment of a favored fishing location,
+they typically fail to regulate the total pressure on the stock of fish by restricting
+harvesting efforts itself. This failure can be ascribed to both informational problems,
+being that it is easier to monitor a vessel’s gear and location or whether a closed-season
+
+regulation is violated than to monitor the individual catches of many vessels, and to the
+
+35
+
+heterogencity of fishermen communities regarding endowments (Schlager, 1990 as cited
+
+in Baland & Platteau, 1996).
+
+CHAPTER III
+
+METHODOLOGY
+
+Description of the Study Area
+
+Laguna de Bay is the largest and most important lake in the Philippines. It is
+located in the southern part of the island of Luzon entrenched in the most populous
+region of the country, which includes the provinces of Rizal, Laguna, most parts of Metro
+Manila, and parts of Cavite, Batangas and Quezon (Barril & Tumlos, 2010; Quintos,
+2007). It has a total surface area of 900 km? and a watershed of 2,920 km?, There are 29
+municipalities and cities that are surrounding the lake (Quintos, 2007) and the total
+
+population in its watershed is estimated to be close to 20 million (LLDA, n.d.).
+
+Calamba City, which is located in the southem side of Laguna de Bay, is a first
+class city in the Second District of the province of Laguna. It is located 54 km south of
+Manila (City profile, 2015) and has a land area of around 144 km? making it the second
+largest city in the province next to San Pablo City. It has 54 barangays with a total
+
+population of 389, 377 as of 2010.
+
+The current study was conducted in Barangay Bucal of Calamba City (Figure 2).
+
+The barangay, which is one of the ten coastal barangays of the city and has an artisanal
+
+37
+
+fisher-population of moderate size, was chosen primarily because of its accessibility, the
+availability of secondary data on its artisanal fishing, industry, and the presence of the
+
+city’s fish sanctuary in its offshore area.
+
+Barangay Bucal (14°11'8"N, 121°10'13"E) has a total land area of 2.65 km? and is
+divided into six puroks. It is classified as urban and is bounded by Barangay La Mesa in
+the West, Laguna de Bay in the East, Barangay Pansol in the South and Barangay Halang,
+in the North. It is 57 km south of Manila and is reachable using chartered bus via the
+
+South Luzon Expressway. As of 2010, Barangay Bucal has a total population of 11, 346.
+
+Figure 2. Terrain map showing Barangay Bucal, Calamba City, Laguna,
+Philippines
+
+38
+
+Based on a fishing industry study, Barangay Bucal has 22 inland fish-pond
+farmers occupying a total area of 1.041 ha, four fish farmers engaged in fish-caging using
+a total area of 1.03 ha, and 73 fishers engaged in artisanal fishing (CASD, 2012).
+However, as of 2014, the number of artisanal fishers has decreased to 56 fishers (CASD,
+
+2014)
+
+The fish sanctuary situated in the barangay’s water is a 5 ha-offshore area within
+the 300 m-protected zone of Barangay Bucal (Appendix D). The said protected area had
+already been inspected by LLDA and is considered as “strategic” as small fishes are
+
+observed to retreat it
+
+it. There is also an abundance of submerged aquatic plants like
+digman (Hydrilla verticillata) and sintas (Vallisnaria gigantia) in the said area which
+could indicate that it still enjoys relatively clean waters (Appendix D). At the same time,
+the sanctuary is also supplied with fresh water coming from onshore natural springs
+(CASD, 2014). Bamboo poles had been put up every 1.5 m along its perimeter (Appendix
+D) to delineate the area it covers in the fishery. This provides a well-defined boundary
+that is easy to observe by both artisanal fishers and Bantay Lawa fishwardens. At the
+same time, the bamboo pole-fence also serves as physical barrier against errant fishers
+who wishes to harvest within the protected area. This, however, is not the case for the
+perimeter of the 300 m-protected zone extending the entire coastline of Calamba City, on
+
+which no physical markers are put in place.
+
+Aside from the fish sanctuary, the offshore area in Barangay Bucal also holds the
+Calamba City Fish Garden and Sanctuary. This installation has two components
+
+(Appendix D). The first is the sanctuary described above that is classified as an
+
+39
+
+“exclusive protected area”. The second component is the Yankaw Fish Garden which is
+the livelihood component of the project. In the latter, yankaws, which are forms of bubo
+or fish shelters composed of cut branches of Camachile tree (Pithecellobium dulce), are
+strategically placed inside the “garden”. The fish garden, similar to the fish sanctuary, has
+a total area of 5 ha. Thus, the total area covered by the Calamba City Fish Garden and
+
+Sanctuary add up to 10 hectares (CASD, 2014).
+
+For its political boundary, the fishery used by the artisanal fishers of Barangay
+Bucal falls under the jurisdiction of the LLDA being the lead government agency that has
+an unequivocal mandate to manage the Laguna de Bay watershed (Santos-Borja, n.d.)
+However, equally comprehensive in its ability to affect the general welfare of the fishery,
+but limited in its territorial reach, are the Provincial Government of Laguna, the City
+Government of Calamba, and the Barangay Government of Barangay Bucal each of
+which has vested power to oversee and decide on environmental concems under Republic
+
+Act 7160 or the 1991 Local Government Code of the Philippines (Gomez, 2014).
+
+Research Design
+
+The study is divided into two phases. The first phase is the preliminary
+investigation phase wherein background data pertaining to the artisanal fishing industry
+of Barangay Bucal was taken. Following this is the formal survey phase where data on
+
+the socioeconomic characteristics of the fishers, their perceptions of the different
+
+exogenous factors, and perceptions of their consistency in complying with the formal
+
+choice rules were collected.
+
+In the preliminary investigation phase, semi-structured interview method was
+used to get valuable information from key informants. This was used in producing,
+together with the information coming from the analysis of collected secondary data and
+reconnaissance survey, a quick but preliminary profile of the artisanal fishing activity in
+the study area. Key informants from the community and local government were identified
+and interviewed pertaining the spatial (e.g. fishing grounds and protected area locations),
+temporal (e.g. species and gear seasonality), flow (e.g. policy making, adjudication and
+marketing of fish catch) and decision (e.g. organization of the fishers, formal and
+
+informal rules, overall compliance to the rules) patterns involved in the said activity.
+
+However, in the formal survey phase, the collection of data was done primarily
+through structured interviews of all the artisanal fishers in Barangay Bucal which were
+identified using a master list from CASD. Interviews on both phases were conducted in
+Tagalog and responses were recorded in the same language. The unit of analysis for this
+
+study is the artisanal fishers of Barangay Bucal.
+
+41
+
+Research Instrument
+
+Semi-structured interview schedules were used in gathering data during the
+preliminary investigation phase. In the formal survey phase, structured interview
+schedules were used to collect data on all three primary topics: the fishers’ socio-
+economic characteristics, their perceptions regarding the exogenous factors, and their
+perceptions regarding their compliance to the formal as well as to the informal choice
+
+rules. The aforementioned interview schedules were developed in Tagalog.
+
+In the interview schedule for the formal survey, questionnaire items that were
+designed to elicit socioeconomic characteristics of the fishers were followed by prepared
+sets of possible objective responses from which the respondents can choose options that
+best suggest their socio-economic characteristics. The rest of the questionnaire items
+however were Likert items that used Likert-type scales having an ordered continuum of
+response categories. As these items primarily focus on perceptions rather than attitudes,
+the Likert-type scales in this case did not use the traditional strongly disagree to strongly
+agree response continuum; instead frequency, intensity and quantity response categories
+
+were used.
+
+Furthermore, aside from using an ordered continuum of response categories, the
+study’s Likert-type scales also presented a balanced number of positive and negative
+options. At the same time, descriptive labels were assigned to each category in the scale.
+
+However, the numeric values of the response categories for the mode of compliance to
+
+42
+
+each of the formal and informal choice rules, which were used during the analysis part,
+
+did not appear in the research instruments.
+
+Definition of Terms
+
+Socioeconomic Factors
+
+Age refers to the age of the artisanal fishers as of their last birthday. Respondents
+(artisanal fishers) are categorized as follows, “young” (30 years and below), “middle” (31
+to 50 years), “old” (51 years and above).
+
+Ethnicity refers to the place from which the respondents originated. The places of
+origin are: Barangay Bucal, other towns in Laguna, Quezon, Batangas, Albay, other
+
+places outside of Laguna but within Luzon, Visayas Island.
+
+Duration of residency in the barangay refers to the number of years the respondents
+have been living permanently in the barangay. The different periods are categorized into:
+“minimal” (15 to 30 years), “short” (31 to 45 years), “long” (46 to 60 years), “very long”
+
+(61 years and above).
+
+Household size refers to the number of persons in the houschold operating jointly
+for the welfare of the unit, whether the household has less than 3 persons, has 3 persons,
+
+has 4 persons, has 5 persons, has 6 persons, or has 7 and above persons.
+
+43
+
+Brood size, refers to the number of children the respondents have. This is
+categorized into: “small” (1 to 3 children), “medium” (4 to 6 children), and “large” (7 to
+
+9 children).
+
+Educational attainment is the level of education the respondents reached. This is
+categorized into: “elementary drop-outs” (have not finished the | to 6 grades of the
+elementary level), “elementary graduates” (have finished the 1 to 6 grades of the
+elementary level but have not continued into high school), “high school drop-outs” (have
+not finished the | to 4-year levels of high school), “high school graduates” (have finished
+the 1 to 4-year levels of high school but have not enrolled into college), “college drop-
+
+outs” (have enrolled in college but have not finished any degree).
+
+Duration of engagement in artisanal fishing refers to the number of years the
+respondents have been engaged in artisanal fishing as an occupation. The variable is
+categorized into: “minimal” (14 years and below), “short” (15 to 30 years),
+“intermediate” (31 to 45 years), “long” (46 to 60 years), “very long” (61 years and
+
+above).
+
+House structure type refers to the level of wealth the respondents have as indicated
+by the types of materials that make up their houses. The house structures are categorized
+into: “minimal” (a house made up entirely of light materials, such as bamboo, cogon and
+nipa, including the frames), “low” (a house that consists of light materials for the walls
+and roofs but the frames are made of wood or lumber), “medium” (a house structure that
+combines lumber and concrete for the walls and frames but uses nipa or cogon for the
+
+roof), “high” (a house structure that has either a roughly or completely finished external
+
+surface and painted or cemented inner walls, along with galvanized iron sheets for the
+
+roof).
+
+Number of household fixtures refers to the level of wealth the respondents have as
+indicated by the quantity of house fixtures/facilities they have in their households. This
+variable is categorized into: “minimal” (there are | to 3 furnishings in the households),
+“low” (there are 4 to 6 furnishings or facilities in the household), “medium” (there are 7
+to 9 furnishings in the household), “high” (there are 10 and above furnishings in the
+household). Included in the list of furnishing or facilities are such assets as indoor-CR,
+indoor-bathroom, television, refrigerator, landline telephone, cell phone, vehicles,
+
+washing machine, microwave, oven, and computer.
+
+Land ownership refers to the level of wealth the respondents have as indicated by
+the size of land they own, whether his owned land is 0 sqr.m, | to 100 sqr.m, 101 to 200
+
+sqr.m, 201 to 300 sqr.m or 301 sqr.m and above.
+
+Motorboat ownership refers to the level of wealth the respondents have as indicated
+
+by the number of motorized banca they own, whether it is 0 or | motorized banca.
+
+Exogenous Factors
+
+Resource-related factors. Open-lake fishery condition refers to the satisfaction the
+respondents perceived about the physicochemical condition of the fishery. This is
+
+categorized int
+
+“very bad” (the derioration of the open-lake fishery is significant and
+could no longer be reversed), “bad” (the deterioration of the open-lake fishery is
+
+significant but could still be reversed), “good” (the deterioration of the open-lake fishery
+
+45
+
+is not significant), and “very good (there is no deterioration affecting the open-lake
+fishery).
+
+Size of the open-lake fishery refers to the extent of the open-lake fishery that can be
+seen by the respondents. The respondents’ perception is categorized into: “small” (all
+parts of the fishery can be seen easily), “intermediate” (all parts of the fishery can be seen
+
+but with difficulty), “large” (not all parts of the fishery is observable).
+
+Observability of the artisanal fishers refers to the ease with which the respondents
+can see all of the artisanal fishers using the fishery at any one time. This is categorized
+into: “difficult” (most of the fishers using the fishery at any one time cannot be
+
+observed), “easy” (most of the fishers using the fishery at any one time can be observed).
+
+Observability of the fish sanctuary’s boundary refers to the ease with which the
+respondents observe the boundary of the fish sanctuary. The respondents’ perception is
+categorized into: “difficult” (the boundary cannot be easily distinguished), “easy” (the
+
+boundary can be easily determined).
+
+Species catchers refers to fishers that had been able to harvest a given species (i.e.
+tilapia, Laguna de Bay catfish, milkfish, gourami, catfish, bighead carp, snakehead,
+silverperch, white goby, shrimp) from the fishery at least once whether intentionally or
+not. This is categorized into: “yes” (the fisher has caught the given species), “no” (the
+
+fisher has not caught the given species).
+
+Frequent species catchers refers to fishers that are able to harvest a given species
+
+(ie. tilapia, Laguna de Bay catfish, milkfish, gourami, catfish, bighead carp, snakehead,
+
+46
+
+silverperch, white goby, shrimp) every time they engage in artisanal fishing in the
+fishery. This is categorized into: “yes” (the fisher is able to frequently catch the given
+
+fishes), “no” (the fisher is not able to frequently catch the given species).
+
+Species sellers refers to fishers that catch and, more often than not, sell a given
+species (i.e. tilapia, Laguna de Bay catfish, milkfish, gourami, catfish, bighead carp,
+snakehead, silverperch, white goby, shrimp) from the fishery. This is categorized into:
+“yes” (the fisher catch and sell the species), “no” (the fisher does not catch and sell the
+
+species).
+
+Gear users refers to fishers that had used a particular gear (i.e. gill net, screen, tibog,
+pole and line, fish pot, harpoon, manual seine, electrofishing gear, yankaw, drift long line,
+
+fish corral, air rifle, dredge, motorized push net) at least once in his artisanal fishing in
+
+the fishery. This is categorized into: “yes” (the fisher had used the particular gear), “no”
+
+(the fisher had not used the particular gear).
+
+Vessel users refers to fishers that had used a particular type of fishing vessel (i.e.
+motorized banca, /unday) at least once in his artisanal fishing in the fishery. This is
+categorized into: “yes” (the fisher had used the particular fishing vessel), “no” (the fisher
+
+had not used the fishing vessel).
+
+Frequent gear users refers to fishers that uses a particular fishing gear (i.e. gill net,
+screen, tibog, pole and line, fish pot, harpoon, manual seine, electrofishing gear, yankaw,
+
+drift long line, fish corral, air rifle, dredge, motorized push net) every time he engages in
+
+a7
+
+artisanal fishing in the fishery. This is categorized into: “yes” (the fisher frequently uses
+
+the particular gear), “no” (the fisher does not frequently uses the particular gear),
+
+Frequent vessel users refers to fishers that uses a particular type of fishing vessel
+(ie. motorized banca, lunday) every time he engages in artisanal fishing in the fishery.
+This is categorized into: “yes” (the fisher frequently uses the particular fishing vessel),
+
+“no” (the fisher does not frequently uses the particular fishing vessel).
+
+Gear owners refers to fishers that own one or more units of a particular type of
+fishing gear (i.e. gill net, screen, tibog, pole and line, fish pot, harpoon, manual seine,
+electrofishing gear, yankaw, drift long line, fish corral, air rifle, dredge, motorized push
+net). This is categorized into: “yes” (the fisher owns the particular gear), “no” (the fisher
+
+does not own the particular gear).
+
+Vessel owners refers to fishers that own one or more units of a particular type of
+fishing vessel (i.e. motorized banca, lunday). This is categorized into: “yes” (the fisher
+
+‘owns the particular vessel), “no” (the fisher does not own the particular vessel).
+
+Observability of the banned fishing methods refers to the relative number of types
+of illegal fishing methods under the present fishery management regime, as perceived by
+the respondents, which can be easily observed by the artisanal fishers. This is categorized
+into whether the fishers find: “none of the banned methods are observable”, “some of the
+
+banned methods are observable”, or “all of the banned methods are observable”.
+
+Sufficiency of fish catch refers to the capacity, as perceived by the respondents, of
+
+the size of their fish catch (from the fishery) meeting their purpose for it, whether it is for
+
+selling or for household consumption. This is categorized into: “not enough” (the fisher
+finds that on average the size of his fish catch from the fishery does not meet his need for
+it), “just enough” (the fisher finds that on average the size of his fish catch meets his need
+for it), “more than enough” (the fisher finds that on average the size of his fish catch from
+
+the fishery more than meets his need for
+
+Resource user-related factors. Level of ecological knowledge refers to the
+
+respondents’ perception of their capability to come up with educated explanations on the
+
+variation in the productivity of the species harvested from the fishery. This is categorized
+
+int
+
+: “low” (the respondent cannot come up or has difficulty in coming up with his own
+explanations for the various conditions of the harvested species), “high” (the fisher can
+readily come up with his own explanations for the various conditions of the harvested
+
+species).
+
+Diversity of interest in the management of the fishery refers to degree, as perceived
+by the respondents, to which the artisanal fishers share similar views in the way the
+fishery is to be managed. This is categorized into: “homogeneous” (the fishers in general
+have similar views on the way the fishery is to be managed), and “heterogeneous” (the
+
+fishers in general have differing views on the way the fishery is to be managed).
+
+Number of artisanal fishers using the fishery refers to the relative number of
+artisanal fishers, as perceived by the respondents, who are using the same fishery used by
+
+the artisanal fishers of Barangay Bucal. This is categorized into: “small” (the fisher finds
+
+the fishery to be not crowded by artisanal fishers), “intermediate” (the fisher finds the
+
+49
+
+fishery to be appropriated by just enough number of artisanal fishers), and “large” (the
+
+fisher finds the fishery to be overcrowded by artisanal fishers).
+
+Availability of communication mechanism among the artisanal fishers refers to the
+availability, as perceived by the respondents, of activity/s through which the artisanal
+fishers can share with each other their concems related to the management of the fishery.
+This is categorized into: “none” (the fisher finds that such avenue is non-existent), and
+
+“present” (the fisher finds that such mechanism is existent).
+
+Level of ease in gathering the artisanal fishers refers to average turnout of artisanal
+fishers estimated by the respondents to be attending the fishery management-related
+gatherings whenever they are called. This is categorized into: “difficult” (less than one
+half of the fishers attend these gatherings whenever they are called), and “easy” (half or
+
+more than half of the fishers attend these gatherings whenever they are called).
+
+Frequency of fishery management-related gatherings refers to the regularity, as
+perceived by the respondents, of the holding of the gatherings of the fishers. This is
+categorized into: “infrequent” (the gatheimgs rarely happen), and “frequent” (the
+
+gatherings are commonly held).
+
+Attendance of the respondent in gatherings refers to the rate, as perceived by the
+respondent, that he has been attending the gatherings of the fishers. This is categorized
+into: “always absent” (have never attended or have sought to not attend the gatherings),
+
+“occasionally present” (have intermittently attended the gatherings), and “commonly
+
+present” (have always attended the gatherings or have proportionately more appearances
+
+than absences during the called gatherings).
+
+Acceptability of the open-access status of the fishery refers to the respondent’s
+
+perception of whether the open-access characteristic of the fishery is satisfactory for his
+own artisanal fishing or not. This is categorized into whether the respondents find such
+
+characteristic “acceptable” or “not acceptable”.
+
+Degree of other-regarding behaviour of fellow artisanal fishers refers to the degree,
+as perceived by the respondents, of consideration for their personal wellbeing shown to
+them by other fishers using the fishery. This is categorized into: “1” (care from other
+fishers is not felt), “2” (care from other fishers is mildly felt), “3” (care from other fishers
+is moderately felt), “4” (care from other fishers is strongly felt), “5” (care from other
+
+fishers is very strongly felt)
+
+Degree of other regarding behaviour of the respondent refers to the degree, as
+perceived by the respondents, of consideration they have shown for the wellbeing of
+other fishers using the fishery. This is categorized into: “I” (does not show care for other
+fishers), “2” (mildly shows care for other fishers), “3” (moderately shows care for other
+fishers), “4” (strongly shows care for other fishers), and “S” (very strongly shows care for
+
+other fishers).
+
+Level of adhesion to rules during severe free riding episodes refers to the potential
+behaviour of the respondents as perceived by them during a hypothetical scenario in
+
+which rule violation in the fishery has become rampant. This is categorized into: “Will
+
+51
+
+also completely ignore rules”, “Will adhere to rules sometimes”, and “Will continue to
+
+completely adhere to rules”.
+
+Leader respectability refers to degree in which the respondents perceive the
+chairman of the BFARMC/SAMBBU to be respectable. This is categorized into: “Not
+respectable” (the leader is not a decent person) and “Respectable” (the leader is a decent
+
+person).
+
+Leader efficiency refers to degree in which the respondents perceive the chairman
+of the BEARMC/SAMBBU to be effecient. This is categorized into: “Not effecient” (the
+leader is not able to perform mosvall of his duties) and “Effecient” (the leader is able to
+
+perform mosvall of his duties).
+
+Leader legitimacy refers to degree in which the respondents perceive the chairman
+of the BFARMC/SAMBBU to be legitimate. This is categorized into: “Not legitimate”
+(the leader has not assumed his position through the proper process) and “Legitimate” ”
+
+(the leader has assumed his position through the proper process).
+
+Equality of harvesting in the fishery refers to the degree, as perceived by the
+respondents, that harvesting by open-lake fishers in the fishery is proportionately or
+
+disproportionately distributed among them. This is categorized into:
+
+“Fair” (harvesting is
+deemed to be not monopolized by a few fishers) and “Unfair” (harvesting is deemed to be
+
+monopolized by a few fishers).
+
+Future artisanal fishing plan refers to the foresight of the respondents as to whether
+
+or not they will still be engaged in artisanal fishing in the same fishery five years from
+
+52
+
+the present. This is categorized into: “Will still be in the same fishery in five year’s time”,
+
+and “Will leave the fishery in five year’s time”.
+
+Job satisfaction refers to the inclination of the respondents of retaining artisanal
+fishing as an occupation within the context of two conditions; first, if they are given the
+chance to live their lives all over again, in which case the categories are: “Will take up
+artisanal fishing again” and “Will not take up artisanal fishing again”; and second, if
+whether at the present they are highly favourable of taking another occupation in
+exchange of artisanal fishing where the categories are: “Open to replacing, artisanal
+
+fishing” and “Not open to replacing artisanal fishing”.
+
+Proportion of household income from artisanal fishing refers to the proportion of
+the respondents’ household income that is derived from artisanal fishing regardless of the
+contributor, whether it is none of the total income, less than ¥4, exactly %, more than
+but less than %, exactly ‘4, more than ¥2 but less %, exactly %, more than % but less than
+
+the whole income, or all of the household income.
+
+Non-artisanal fishing occupation of the respondent refers to whether the
+respondents are taking up other occupation/s besides artisanal fishing as a source of
+household income. This is categorized into: “yes” (the respondent has other source/s of
+income besides artisanal fishing), and “no” (artisanal fishing is the only source of income
+
+of the respondent).
+
+Non-artisanal fishing occupation of other household members refers to whether
+
+other members of the respondents’ household are the taking up other occupation/s besides
+
+53
+
+artisanal fishing as a source of the household’s income. This is categorized into: “yes”
+(other members’ have other source/s of income besides artisanal fishing), and “no”
+
+(artisanal fishing is the only source of income of the other members).
+
+Proportion of household income from non-artisanal fishing occupation refers to the
+proportion of the respondents’ household income that is derived from non-artisanal
+fishing occupations (i.e. excluding remittances) regardless of the contributor, whether it is
+none of the total income, less than %, exactly %, more than % but less than %, exactly %,
+more than % but less %4, exactly %, more than % but less than the whole income, or all of
+
+the household income.
+
+Availability of remittances refers to whether the respondents’ households receive
+income from remittances sent to them. This is categorized into: “yes” (the respondent’s
+household get income from remittances), and “no” (the household do not get income
+
+from remittances).
+
+Proportion of household income from remittances refers to the proportion of the
+respondents’ household income that is derived from remittances, whether it is none of the
+total income, less than %, exactly 4, more than % but less than 4, exactly /, more than
+% but less %, exactly %, more than % but less than the whole income, or all of the
+
+household income.
+
+Number of membership in fishermen’s association refers to the number of
+fishermen’s association the respondents are officially affiliated with. This is categorized
+
+into: “O” (no membership in any fishermen’s organization), “1” (membership in only one
+
+fishermen’s organization), and >2 (membership in more than one fishermen’s
+
+organization).
+
+Degree of involvement in fishermen’s organization refers to the state, as perceived
+by the respondents, of their active involvement in the operation of the fishermen’s
+organization/s they belong to. This is categorized into: “not active” (the respondents have
+no significant inclination of responding to the needs of any organization), and “active”
+(the respondents have significant inclination of responding to the needs of the
+
+organization in which they are a member of).
+
+Proportion of fish catch marketed refers to the proportion of the respondents” fish
+catch reserved to be sold, whether it is none of the total fish catch, less than %, exactly %,
+more than % but less than ¥%, exactly ¥, more than ¥ but less %, exactly %, more than %
+
+but less than the whole fish catch, or all of the fish catch.
+
+Destination of marketed fish catch refers to the market area in which the proportion
+of the respondents’ fishcatch reserved for marketing is brought to be sold. This is
+categoized into: “none” (all of the respondent’s fishcatch is consumed fresh by the
+
+household), “Barangay Bucal”, “Calamba City”, and “Manila”.
+
+Predictability of the price of the fish catch refers to the degree, as perceived by the
+respondents, which the prices of the fish species marketed by them could be determined
+prior to their being sold. This is categorized into: “difficult” (the prices are hard to
+
+determine) and “easy” (the prices are immediately determined).
+
+5S
+
+Stability of the price of the fish catch refers to the degree, as perceived by the
+respondents, of the regularity in the fluctuations of the prices for the fish species he sells.
+This is categorized into whether “the prices do not change at all”, “the prices change
+regularly” (the prices have a regular high-low cycle), and “the prices change erratically
+
+(there is no pattern in the fluctuation of the prices).
+
+Level of price of fish catch refers to the degree, as perceived, by the respondents of
+the economic competitiveness of the prices of fish species that are being marketed. This
+is categorized into: “low” (the prices are not competitive), “moderate” (the prices are
+
+adequately competitive), and “high” (the prices are exorbitant).
+
+Level of demand for fish catch refers to the degree, as perceived by the respondents,
+of the market demand for the species of fishes they are selling. This is categorized into:
+“low” (the market demand is not economically viable), “moderate” (the market demand
+
+is adequately viable), and “high” (the market demand is steep).
+
+Institutional arrangement-related factors. Level of rule knowledge refers to the
+respondents’ perception of their capability to enumerate the rules pertaining to the
+management of the fishery. This is categorized into: “low” (the respondent scan only
+enumerate less than half of all the rules), “intermediate” (the respondents can enumerate
+around half of all the rules), and “high” (the respondents can readily enumerate more than
+
+half of all the rules).
+
+56
+
+Rule complexity refers to the degree, as perceived by the respondents, of the
+understandability of the rule statements. This is categorized into whether “the rules are
+
+difficult to understand” and the “the rules are easy to understand”.
+
+Participatoriness of decision-making process refers to the degree, as perceived by
+the respondents, to which all relevant stakeholders are included in the decision-making
+process in the management of the fishery. This is categorized into: “non-participatory”
+(only the officers of the fishermen’s association are involved in the decision-making
+process), and “participatory” (the officers and members of the fishermen’s association are
+
+involved in the decision-making process).
+
+Rule violation tolerance refers to the degree that the respondents find violation to
+the fishery management rules as acceptable. This is categorized into whether “it is
+unacceptable to violate the rules in all situations” and “it is acceptable to violate the rules
+
+in some situations”.
+
+Scope of rule change needed refers to the degree, as perceived by the respondents,
+by which rules in the management of the fishery need changing. This is categorized into
+whether “all of the rules need to be changed”, “only some of the rules need to be
+
+changed”, and “all of the rules need not be changed”.
+
+Level of rule violation refers to the degree, as perceived by the respondents, by
+which violations of the fishery management rules are exhibited by the artisanal fishers
+using the fishery. This is categorized into: “low” (only a few or less than half of the
+
+artisanal fishers are involved in violating the rules), “intermediate” (around half of the
+
+s7
+
+artisanal fishers are involved in the violation of the rules) and “high” (more than half or
+
+almost all of the artisanal fishers are involved in the violation of the rules).
+
+Level of rule enforcement refers to the size of fishery management rules, as
+perceived by the respondents, which are actively enforced by the fishwardens. This is
+categorized into whether “none of the rules are enforced”, “some of the rules are
+
+enforced”, and “all of the rules are enforced”.
+
+Level of rule monitoring refers to the consistency, as perceived by the respondents,
+that monitoring for rule violations is conducted by the fishwardens in the fishery. This is
+categorized into whether “no monitoring is done”, “monitoring is done irregularly”
+
+(monitoring is not done all the time), and “monitoring is done regularly” (monitoring is
+
+done all the time).
+
+Mode of sanctioning refers to the manner, as perceived by the respondents, that rule
+violators are sanctioned under the fishery management regime. This is categorized into:
+“harsh” (steep sanctions are doled out regardless of the severity of the violation) and
+
+“graduated” (sanctions are doled out based on the severity of the violation).
+
+Ease in dispute adjudication refers to the accessibility, as perceived by the
+respondents, of the mechanism in resolving conflicts between stakeholders in the
+management of the fishery. This is categorized into: “difficult” (in general disputes take a
+
+long time to be resolved) and “easy” (in general disputes are immediately settled).
+
+Accountability of officers refers to the answerability, as perceived by the
+
+respondents, of the officers of the fishermen’s association in the performance or non-
+
+58
+
+performance of their functions in the management of the fishery. This is categorized into
+whether “the fishwardens and other officers are not held accountable for their actions”
+
+and “the fishwardens and other officers are held accountable for their actions”.
+
+Performance of officers refers to the degree, as perceived by the respondents, by
+which the officers of the fishermen’s association are performing their functions in the
+management of the fishery. This is categorized into whether “the fishwardens and other
+officers are not performing their functions”, “the fishwardens and other officers are only
+
+performing some of their functions”, and “the fishwardens and other officers are
+
+performing all of their functions”.
+
+State intervention refers to the mode, as perceived by the respondents, of the
+government's intervention in the management of the fishery. This is categorized into
+whether “the goverment is not participating in the management of the fishery”, “the
+government is participating in the management of the fishery”, and “the government is
+
+just needlessly nterfering in the management of the fishery”.
+
+Level of aid received refers to the sufficiency, as perceived by the respondents, of
+the aid received by the artisanal fishers of Barangay Bucal in support of the management
+of the fishery. This is categorized into whether “no aid is received”, “the aid received was
+
+not sufficient”, and “the aid received was sufficient”.
+
+59
+
+Mode of Compliance to the Formal Choice Rules
+
+Artisanal fishing inside the fish sanctuary refers to the frequency by which the
+respondents are fishing inside the fish sanctuary. This is categorized into: “never”,
+“occasionally” (the respondents do this in less than half of their total fishing trips in a
+year), and “frequently” (the respondents do this in more than half of their total fishing
+
+trips in a year).
+
+Use of electrofishing gears refers to the frequency by which the respondents use
+electrofishing gears in their artisanal fishing anywhere in the fishery. This is categorized
+into: “never”, “occasionally” (the respondents do this in less than half of their total
+
+fishing trips in a year), and “frequently” (the respondents do this in more than half of
+
+their total fishing trips in a year).
+
+Use of dredge refers to the frequency by which the respondents use dredge in their
+artisanal fishing anywhere in the fishery. This is categorized into: “never”, “occasionally”
+(the respondents do this in less than half of their total fishing trips in a year), and
+“frequently” (the respondents do this in more than half of their total fishing trips in a
+
+year).
+
+Use of motorized push net refers to the frequency by which respondents use
+motorized push net in their artisanal fishing anywhere in the fishery. This is categorized
+imto: “never”, “occasionally” (the respondents do this in less than half of their total
+fishing trips in a year), and “frequently” (the respondents do this in more than half of
+
+their total fishing trips in a year).
+
+Use of tibog refers to the frequency by which respondents use tibog in their
+artisanal fishing anywhere in the fishery. This is categorized into: “never”, “occasionally”
+(the respondents do this in less than half of their total fishing trips in a year), and
+“frequently” (the respondents do this in more than half of their total fishing trips in a
+
+year).
+
+Use of fine-mesh net refers to the frequency by which respondents use fine-mesh
+net in their artisanal fishing anywhere in the fishery. This is categorized into: “never”,
+“occasionally” (the respondents do this in less than half of their total fishing trips in a
+year), and “frequently” (the respondents do this in more than half of their total fishing
+
+trips in a year).
+
+Catching of fingerlings refers to the frequency by which respondents catch
+
+fingerlings in their artisanal fishing anywhere in the fishery. This is categorized into:
+
+“never
+
+‘occasionally” (the respondents do this in less than half of their total fishing
+tips in a year), and “frequently” (the respondents do this in more than half of their total
+
+fishing trips in a year).
+
+Methods of Analysis
+
+‘After the survey was conducted, frequency counts and percentages were used to
+summarize the socio-economic characteristics of the fishers, the characteristics of the
+
+different exogenous factors, the fishers’ compliance to the formal and informal choice
+
+61
+
+tules, and the different forms of incompliance to these. In quantitatively describing the
+prevailing characteristics of the socioeconomic and exogenous factors, primary
+characteristics were identified for each of the factors. In this case, primary characteristics
+are understood as the response category in a given factor with majority corresponding
+
+respondents or the configuration of response categories that can first reach majority.
+
+Bar graphs were used to compare the number of catchers, frequent catchers, and
+sellers of the different species harvested, as well as the number of users, frequent users
+and owners of the different fishing gears and vessels used in the fishery. Line graphs on
+the other hand were used to compare the observability of the different banned methods of
+
+artisanal fishing.
+
+The equivalent numerical values of the respodents” mode of compliance to each
+of the six formal choice rules covered in the study were summed to determine their
+respective Compliance Index (Cl) to the formal choice rules. As such the following
+
+formula was used:
+
+Cl= Livi
+
+Where:
+
+Cl = Compliance Index
+
+V = Numerical value of the respondents mode of compliance to a
+given formal/informal choice rule
+
+62
+
+Considering that never breaking a formal choice rule has a numerical value of
+three, occasionally breaking a formal choice rule gets a numerical value of two, and
+frequently breaking a formal choice rule gets a numerical value of one, a CI of 18
+therefore signifies that a respondent has never broken any of the formal choice rules,
+while an index below this indicates some configuration of incompliance. Consequently, a
+
+Cl of six indicates frequent incompliance to all of the formal choice rules.
+
+The population Cl mean, median and skewness were then used to describe the
+asymmetry of the CI data for the population of Barangay Bucal artisanal fishers. To
+graphically represent the said asymmetry, the distribution of probability functions of the
+Cl was used. For comparison of the different types of choice rules, the respondent’s Cl
+for the informal choice rules were also derived using the same procedure. Similarly,
+skewness along with the population Cl mean and median was also used to describe the
+
+asymmetry in the distribution of the latter.
+
+Phi (g) was used in determining the socio-economic and exogenous factors that
+were strongly associated with the fishers’ consistent compliance to the formal choice
+rules. In proceeding with the correlation analysis, some of the nominal and ordinal data
+for the socioeconomic and exogenous factors have to be collapsed and dichotomized to
+fit 2x2 contingency tables. The fishers’ modes of compliance to the formal choice rules
+were also dichotomized wherein those having a Cl of 18 were classified as consistenly
+complying with the said rules while those having less than 18 were classified as being
+inconsistenly complying. Furthermore, simple logistic regression was utilized to
+
+determine how the strongly associated factors (i.e. those with g > 0.3) identified were
+
+63
+
+associated with the fishers’ consistent compliance to the formal choice rules as well as
+
+their odds ratios of doing so.
+
+Pairwise association using phi was then used to determine the degree of
+associations between the identified factors. After which, simple logistic regression was
+again used to determine how the strongly associated factors were associated with cach
+
+other.
+
+CHAPTER IV
+
+RESULTS AND DISCUSSION
+
+Characteristics of the Socioeconomic and
+Exogenous Factors used in the Study
+
+Socioeconomic Characteristics of the
+Artisanal Fisher Community
+
+The number of artisanal fisher population in Barangay Bucal appears to be on a
+state of decline. In 2012, the population totaled 73 fishers (CASD, 2013). This dropped to
+56 in 2014 (CASD, 2014) and 42 in 2015. The lack of interest of the younger generation
+in artisanal fishing as suggested by a low number of young fishermen (< 30 years old)
+fishing with older artisanal fishers could be causing such a decline. Table | shows that
+majority of the artisanal fishers (52.38%) are old (2 51 years old) while in Appendix A
+middle-aged artisanal fishers (31 to 50 years old) are shown to comprise 42.86% of the
+population; this leaves only 4.76% of the population that is composed of young
+fishermen. Consistent with this, only very few artisanal fishers (11.91%) were also found
+to be engaging in artisanal fishing for minimal number of years (< 14 years) as compared
+
+to those who have been in the industry for a short (15 to 30 years) and intermediate (31 to
+
+65
+
+45 years) number of years which comprise 38.10% and 28.60% of the population
+
+respectively.
+
+Low immigration of artisanal fishers into Barangay Bucal could also be
+contributing to the said decline. This is underscored by the results showing that majority
+of the fishers (76.19%) are native to the barangay and a total of 80.96% of the fishers
+have resided there for an extended (31 to 45 years), long (46 to 60 years) and very long
+(© 60 years) periods of time as compared to only 19.05% that have lived there for
+
+minimal number of years (15 to 30 years).
+
+In terms of their wealth, most of the fishers (66.67%) exhibit minimal (1 to 3
+household furnishings) to low (4 to 6 household furnishings) wealth levels as indicated
+by the number of household furnishings they have. This is consistent with the results of
+the other wealth indicators used in the study except for house structure type. As such,
+most of the fishers also do not own a parcel of land (83.33%) or motorized banca
+
+(73.81%).
+
+Table 1. Primary socioeconomic characteristics of artisanal fishers in Barangay
+
+Bucal (N=42)'
+PRIMARY CHARACTERISTIC FREQUENCY %
+Age*
+Old aged (>50) 2 52.38
+Ethni
+Originated from Barangay Bucal 32 76.19
+Duration of residency in the barangay*
+Minimal-time residents (15-30) 8 ee)
+Long-time residents (46-60) 21 50.00
+Household size
+Household has 3 persons 8 19.02
+Household has 4 persons 10 2381
+Household has > 6 persons 10 23.81
+Brood size”
+‘Small brood size (1-3) 26 62.00
+Educational attainment
+Elementary graduate 9 21.43
+High school drop-out 9 21.43
+High school graduate 1s 35.71
+Duration of engagement in artisanal fishing*
+Short period (15-30) 16 38.10
+Intermediate period (31-45) 2 28.60
+House structure type
+Medium to High 32 76.20
+Number of household fixtures
+Minimal to Low 28 66.67
+Land ownership
+‘Owns 0 sq. m of land 35 83.33
+Motor-boat ownership
+Owns 0 motorized banca 31
+Tapecat anno oye
+
+‘SE xpressed as nos. of children
+"See Appendix A for complete data
+
+67
+
+Characteristics of the Exogenous Factors
+
+Characteristics of the resource-related factors. Table 2 shows that most of the
+artisanal fishers (61.91%) perceived the physicochemical condition of the open-lake
+fishery as bad. As such, these fishers regarded the physicochemical deterioration of the
+open-lake fishery as serious but considered its rehabilitation possible. Many of the fishers
+blamed this condition to the pollution occurring in the lake while some attributed it to the
+reduction and shallowing of the open-lake fishing area. In general, the fishers’ open-
+ended responses on the factors underlying such bad condition are consistent with
+previous literatures and observations indirectly showing deterioration of the
+physicochemical condition of the water in Barangay Bucal.
+
+In relation to pollution, the LLDA has classified the lake water of the barangay as
+Class C based on DAO 1990-34 (Herrera, ef. al., 2011; LLDA, n.d.). This makes it
+inviable for primary contact recreational activities and as a source of water supply.
+Barangay Bucal though is not highly exposed to pollution loading being in the South Bay
+of Laguna de Bay unlike the heavily industrialized North-West sub-basins (PEMSEA, et.
+al., 2013). Still, domestic wastes find their way into the fishery through the tributaries
+which are used as receptacles by the residents for their kitchen and other household
+wastes (Appendix D). As indicated by the fishers and reflected in their community-based
+risk maps (Concepcion, ef. al., 2014), the loading of pollutants into the fishery is most
+pronounced at the outset of the dry season, around the month of April, continuing into the
+
+wet season, particularly after episodes of heavy rain, until the month of August. The
+
+fishers call the rain-induced flush of dirty black water that characterize pollution loading
+
+during this time as burak (Appendix D).
+
+In terms of congestion of the fishing area, CASD (2012) recorded 153.88 ha of
+fishpens and fishcages within the municipal waters of Calamba City, aside from the 10-ha
+
+Fish Sanctuary/Fish Garden withii
+
+it. However, most of these structures including the
+sanctuary are located in the barangay waters of Barangay Sucol, Pansol, Bucal, Lecheria,
+Paglingon and Linga which covers the fishing grounds comprising the open-lake fishery
+
+of the artisanal fishers of Barangay Bucal. These structures are hampering the harvesting
+
+of artisanal fishers. In the study of Concepcion, et. al. (n.d.), it is shown that fish catches
+of artisanal fishers in the unoccupied fishing grounds of Calamba City are almost double
+
+to those in occupied ones.
+
+In terms of shallowing of the fishing area, LLDA and the University of the
+Philippines (1999) as cited by Ynares (2006) had shown that in the past 45 years, 65.00%
+of the Laguna de Bay area have already underwent shoaling, especially the west and
+central lobes. Romeo Tappalla (personal communication, July 18, 2015), a long-time
+artisanal fisher and the chairman of the Barangay Fisheries and Aquatic Resources
+Management Council (BFARMC) in Barangay Bucal, estimated that the water in their
+area could have already shoaled from around 9 m in the 1970's to around 3 m at the
+present. Accordingly, a water and sediment sampling of the fish sanctuary and its nearby
+fishing grounds by the City Fisheries and Aquatic Resources Management Council
+(CFARMC) has found that the mean depth of the fishery is at 2.25 m with the maximum
+
+and minimum depths at 3.3 m and 1.3 m respectively (Concepcion, ef. al., 2014).
+
+69
+
+A strong general trend of declining fish catch in all types of fisheries in Laguna de
+Bay has occurred in the last 20 years (Santos-Borja & Nepomuceno, 2006). Although,
+there is no previous study specifically analyzing the decline of fish catch in Barangay
+Bucal, its artisanal fishers have indicated of experiencing such in the past. According to
+them, their fish catch had decreased so severely by the year 2008 to 2010 that they only
+had enough volume of fish catch immediately after typhoon occurrences which usually
+happen in the months of June to November (Lacanilao, 1987; Concepcion, ef. al., 2014).
+Accordingly, CASD (2012), has estimated that the catch of the city’s artisanal fishers had
+sunk to I kg per fishing trip in the past before it had improved in the recent years. In the
+study, 50.00% of the fishers perceived that they are still able to harvest sufficient fish
+catch from the fishery, with a few (11.91%) even indicating that their catch is more than
+enough. The fishers had reported that at the present, the volume of their fish catch per
+
+fishing trip ranges from | to 10 kg.
+
+As described above, the open-lake fishery of the artisanal fishers in Barangay
+Bucal is composed of the contiguous fishing grounds of Barangay Linga, Paglingon,
+Lecheria, Bucal, Pansol, and Sucol, aside from the fishing ground around Pulo ng
+Calamba (i.e.”Wonder Island”) which is only accessible by those with motorized banca
+(Appendix D). As such, 50.00% of the artisanal fishers has found the total size of the
+open-lake fishery to be large while more than a quarter (31.00%) indicate it to be
+imermediate. Such result could therefore explain why for most of the artisanal fishers
+(69.10%), observing the activities of all the fishers using the fishery at any one time is
+difficult. This is because according to Schlager (1990) and Wade (1988), as cited in
+
+Baland and Platteau (2006), large ecological resources with its greater dimension
+
+70
+
+constrains the senses of its users from directly detecting the actions of the other resource
+users. However, almost all of the artisanal fishers (95.24%) find it relatively quick and
+easy to observe the perimeter of the Fish Sanctuary. This is expected since the 5-ha
+sanctuary within the 300-m protected zone of Barangay Bucal is demarcated by bamboo
+
+poles set at 1.5 m from each other.
+
+Currently, five methods of artisanal fishing are considered to be prohibited in the
+fishery. These are: the use of tibog in catching fish; the use of dredge in catching snails;
+the use of motorized push net; and, the use of fine mesh net and electrofishing gears.
+About 57.24% of the respondents indicated that all of these banned methods are
+observable, while almost two-thirds indicated that only some are. Further analysis
+indicates that most of the 15 respondents that perceived incomplete observability
+suggested the use of electrofishing gears as the most difficult to observe while the use of
+tibog as the easiest. This result is consistent with reports of the Bantay Lawa Task Force.
+‘A quick scan of their log records from September 10, 2014 to September 15, 2015
+revealed that tibog-use was the most frequently reported violation. In the said period, the
+use of tibog had been reported not less than 26 times whereas the use of electrofishing
+
+gears had only been reported once. Many fishers indicated that the use of ribog is easiest
+
+to observe because it involves striking the water with bamboo rods creating loud noises
+that can be heard from a distance. Electrofishing gears on the other hand are difficult to
+monitor since they are largely used in the peripheral, marshy littoral parts of the lake and
+other inland inundated areas, including creeks, which are far removed from other fishers
+
+and Bantay Lawa fishwardens. The fact that electrofishing can also be done at night also
+
+adds to the difficulty of it being observed.
+
+n
+
+Artisanal fishing in Barangay Bucal is largely focused on catching tilapia
+(Oreochromis sp.). All of the species included in the survey were found to have catchers
+among the artisanal fishers (Appendix A); however, only tilapia (73.81%), Laguna de
+Bay catfish (Arius manilensis; 57.14%) and to some extent, white shrimp
+(Macrobrachium sp.; 26.19%) have significant number of frequent catchers. As it is,
+these three species are all perennial, considered abundant in the fishery and, except for
+Laguna de bay catfish, have high market values (Appendix C). Laguna de bay catfish’s
+high number of frequent catchers could be due to its susceptibility of being
+unintentionally caught along with tilapia as the two species are found in the same area in
+the fishery, exist during the same time of the year, and are caught using the same type of
+fishing gears (Appendix C). Incidentally, however, there is a comparatively low fishing
+demand for Laguna de Bay catfish as shown by the fact that despite of it being one of the
+species with the most number of frequent catchers, it is also one of those with the least
+number of sellers (28.57%). Many of the artisanal fishers attribute this to the strong.
+ramish taste of Laguna de Bay catfish that they usually just give it away or return it to the
+lake when it happens to be included in their catch. On the other hand, the result also
+shows that only a quarter of the fishers (26.19%) are frequently catching white shrimps
+despite its availability in the fishery throughout the year and high market price due to its
+
+capital and labour intensiveness.
+
+Among the different fishing gears used, gillnet, which is the primary gear for
+catching tilapia, has the most number of frequent users (83.33%) along with non-
+motorized banca (64.29%). Gillnet is followed by tibog with a little over one-fifth of the
+
+respondents (21.43%) indicated of frequently using it (Appendix A). This underscores the
+
+2
+
+close relationship between the two gears. According to the fishers, all ribog users are also
+gillnet users, since the former is used to scare fishes into gillncts; however, not all gillnet
+users are tibog users. According to the respondents, the most important utilization of
+tibog happens in the months of May and June when catching fish using gillnet becomes
+very difficult as the level of water in the fishery is at its lowest. However, frequent tibog
+users, or those that use the said gear in more than half of their total fishing trips in a year,
+
+represent a slight majority of the entire tibog users in Barangay Bucal (Table 6).
+
+Table 2. Primary characteristics of resource-related factors included in the study
+according to the population of artisanal fishers in Barangay Bucal (N=42)'
+
+PRIMARY CHARACTERISTIC FREQUENCY %
+
+Open-lake fishery condition
+
+Bad 26 61.91
+Sufficiency of fish catch
+
+Just enough 21 50.00
+Size of the open-lake fishery
+
+Intermediate iG 3100
+
+Large 21 50.00
+Observability of the artisanal fishers
+
+Difficult 29 69.10
+Observability of the fish sanctuary’s boundary
+
+Easy 40 95.24
+Observability of the banned fishing methods
+
+All of the banned methods are observable 24 57.14
+Number of species catchers
+
+Tilapia (Oreochromis sp.) 4l 97.62
+
+Laguna de Bay catfish (Arius manilensis) 40 95.24
+
+wee Appendix A Tor complete data
+
+Table 2. Continued .....
+
+73
+
+PRIMARY CHARACTERISTIC FREQUENCY
+
+Milkfish (Chanos chanos) 36
+
+Gourami (Osphronemus sp.) 36
+
+Catfish (Clarias macrocephalus) 32
+
+Bighead carp (Hypothalmichthys nobilis) 28
+
+Snakehead/Mudfish (Ophicephalus striatus) 27
+Number of frequent species catchers
+
+Tilapia 31
+
+Laguna de Bay catfish 24
+
+White shrimp ih
+Number of species sellers
+
+Tilapia 33
+
+Milkfish 28
+
+Gourami 23
+Number of gear users
+
+Gill net 38
+Number of vessel users
+
+‘Non-motorized banca 35
+Number of frequent gear users
+
+Gillnet 35
+Number of frequent vessel users
+
+Non-motorized banca 27
+Number of gear owners
+
+Gillnet 37
+Number of vessel owners
+
+Non-motorized banca 31
+
+%
+85.71
+85.71
+76.19
+
+66.67
+65.85
+
+73.81
+S714
+26.19
+
+78.57
+66.67
+54.76
+
+90.48
+
+83.33
+
+83.33
+
+88.10
+
+73.81
+
+ee
+‘see Appendix A Tor complete data
+
+Characteristics of the resource user-related factors. Table 3 shows that majority of
+
+the fishers (59.52%) perceived their ecological knowledge of the open-lake fishery as low
+
+despite that most of them have been fishers in the area for about 15 years to more than 60
+
+74
+
+years (Appendix A). In the context of the deterioration that has happened in Laguna de
+Bay over the years (Santos-Borja & Nepomuceno, 2006), such result is consistent with
+previous literature showing that in resources that have changed rapidly during recent
+decades, their users are likely to be imperfectly informed about its ongoing processes of
+depletion and degradation (Baland & Plateau, 1996). In terms of the similarity of their
+interests in the management of the fishery, most of the artisanal fishers (54.76%)
+indicated heterogeneity of views. In relation to this, the most commonly noted polarizing,
+issues included the need to follow management rules and the establishment of the fish
+sanctuary in the barangay’s water. Such heterogeneity is to be expected since previous
+literature has shown that low levels of understanding and perception of ecological
+problems could make it difficult for the acceptance and adoption of conservation rules
+(Baland & Platteau, 1996). Nevertheless, most of the artisanal fishers claimed sufficient
+other-regarding behavior among themselves as shown in the results where most of them
+felt sufficient care from other fishers (85.71%) and most of them sufficiently care for the
+well-being of other fishers (76.19%). Moreover, most of them have also indicated of
+continued complete adhesion to the present rules even if there is rampant violation of it
+(90.48%). This could indicate the existence of a sufficient set of moral norms among the
+fishers. This is consistent with previous literature showing that when moral norms are
+well-established and sustained by primary and secondary socialization, resource users
+tend to a) to adopt others’ viewpoint when making decisions that may harm others’
+interests and to feel internally rewarded when behaving in other-regarding ways; b) to be
+
+confident that others will abide by the same code of good behaviors as themselves; and c)
+
+75
+
+to cling to this code even when they had unpleasant experiences in which they had been
+
+suckered (Baland & Platteau, 1996).
+
+In terms of the size of the fishery-users, majority (66.67%) of the respondents
+perceived a large number of fishers is using “their” fishery. ‘These fishers related such
+perception to the intrusions of “outsiders”. These outsiders include artisanal fishers from
+Barangays Masili, Sucol, Pansol, Lecheria, and Sampiruhan as well as Sitio Rongot and
+Aplaya, Barangay Lingga and from as far as Binangonan, Rizal. With the absence of any
+working physical boundary that specifically delineates an exclusive fishery for the
+artisanal fishers of Barangay Bucal, they will have to share their fishing grounds with
+other fishers. However, almost all of the fishers (97.62%) find such arrangement
+acceptable with 39.02% in this group indicated that all of the fishers should be allowed
+entry into the fishery since they are just trying to earn a living while 26.83% cited that
+access should be given to all since inevitably every artisanal fisher has to move around
+the fishery due to the fact that the fishes themselves are not stationary to a single fishing
+ground. In light of the previous result whereby majority of the fishers are still able to
+harvest sufficient fish catch from the fishery, and that majority (73.81%) also perceived
+no unfair harvesting happening in the fishery, the observed general favorability to the
+open-access condition of the fishery could therefore imply that most of the fishers find
+the fishes within the said resource as still abundant. Baland and Platteau (1996), defined
+abundant natural resources as resources for which there is no competition and which
+
+cannot be threatened with the risk of degradation even when they are openly accessible.
+
+76
+
+In terms of the availability of a communication mechanism among the artisanal
+fishers, almost all of the respondents (92.86%) indicated that such mechanism is present
+with 74.16% citing the meetings of Barangay Fisheries and Aquatic Resources
+Management Council/Sagisag ng mga Mangingisda ng Barangay Bucal
+(BFARMC/SAMBBU) as a form of this mechanism. These meetings of the
+BFARMC/SAMBBU are conducted on a monthly basis. The first of these is the meeting
+between the officers of the association scheduled every first Sunday of the month. The
+second meeting is a general assembly to be attended by all bonafide members of
+BFARMC/SAMBBU scheduled every last Sunday of the month. This is the avenue
+where the fisherfolks in the barangay, including the artisanal fishers, are given the chance
+to voice their concems and opinions regarding the fishery. It is also in these meetings
+where suggestions are given and plans are formed for programs and projects that could be
+pursued by the fisherfolks through FARMC in conjunction with the City Government of
+Calamba. Aside from these, any member of the fisherfolk association can call an
+emergency meeting when there is a project that needs to be done or an issue that needs
+immediate attention (CASD, 2014). Notices of meetings are disseminated to the member
+fisherfolks through official invitation from the PIO of the association or through text
+
+messages (Romeo Tapalla, personal communication, July 18, 2015).
+
+However, despite the perceived access to a communication mechanism, majority
+of the respondents (73.81%) still find that gathering the fishers into these fishery-related
+meetings as difficult. Since most of the respondents perceived a large number of fishers
+using the fishery, this result is consistent with previous literature showing that pre-play
+
+communication among actors in large groups tend to be relatively difficult, hence the
+
+7
+
+higher communication and bargaining costs in such groups (Olson, 1982 as cited in
+Baland & Platteau, 1996). In terms of the frequency of meetings, the study found that
+majority of the artisanal fishers (66.67%) perceived the meetings to be infrequent despite
+the regularly scheduled BFARMC/SAMBBU general assembly. As for their personal
+attendance during these scheduled meetings, 45.24% of the artisnal fishers have only
+occasional presence while around one-fifth (21.43%) are always absent or have never
+attended any of the meetings. This result therefore supports the above observation that
+
+gathering the fishers into their meetings is indeed difficult.
+
+An analysis of the data on the proportion of the respondents’ household income
+coming from artisanal fishing shows that majority (57.14%) have low dependence (i.e.
+less than one-half of total household income) on artisanal fishing as an income source.
+The high level of occupational multiplicity among the open-lake fishers and their other
+household members is indicative of this. As it is, majority of the respondents (73.81%)
+are shown to have non-artisanal fishing occupations. The most commonly noted of which
+are farming and working in construction sites. The same is also true for the other
+household members of most of the respondents (78.57%) of which the most commonly
+noted occupation is working in factories. The analysis of the proportion of the
+respondents’ household income derived from non-artisanal fishing also shows that
+majority of the households (52.38%) are more highly dependent on non-artisanal fishing
+occupations as source of income. This result supports the above-observation of the
+majority of the respondents indicating that their household incomes have low dependence
+on artisanal fishing and are therefore more dependent on their non-artisanal fishing
+
+occupations excluding remittances. Remittances are not a major source of income for the
+
+78
+
+artisanal fishers as almost all (85.71%) indicated of not having access to it. Of those that
+
+do, most indicated low dependence only.
+
+Almost all of the respondents (92.86%) perceived that they would still be engaged
+in artisanal fishing within the same fishery five years from the present. Majority of them
+(66.67%) also express desire to retain artisanal fishing if given the chance to live their
+lives all over again. The most commonly noted reasons for this include: the ability of
+artisanal fishing to guarantee food for the family; its ability to improve the well-being of
+the fishers; it is the livelihood they are used to; and that artisanal fishers serve no
+employer. As for an inclination of changing at the present their artisanal fishing
+‘occupation to something else, a much lower number of the respondents (52.38%)
+indicated that they will not. In the case of those that are open to scrapping artisanal
+fishing, most would opt to because they perceived that it cannot guarantee them a stable
+income. However, the willingness of some is conditional. That is, they will only abandon
+artisanal fishing if any of the following conditions are met: the new job provides a bigger
+income; if they are still capable of performing the new job; and if the new job does not
+make them part from their families. These responses to the two questions - one
+hypothetical (future) and the other current — indicate some slight ambivalence on the part
+of the respondents pertaining to their satisfaction derived from artisanal fishing as an
+occupation (Katon, ef. al., 1997). As seen in the results, more than three-fifth of the open-
+lake fishers indicated they would still choose artisanal fishing if they were to live their
+lives all over again. Yet only half of the respondents would like to stay in artisanal
+fishing at the present. An examination of the underlying reasons indicates that although
+
+the artisanal fishers of Barangay Bucal are satisfied with the economic and psychological
+
+benefits of fishing as an occupation, they are open to other possibilities that can improve
+their economic condition at the present. This could have been the result of their exposure
+
+to other options over time and their willingness to try other options (Katon, et. al., 1997).
+
+At the present, artisanal fishing in Barangay Bucal is largely done for income
+generation with most of the fishers (66.67%) selling their fish catch directly in the
+barangay. However, white-shrimp catchers sell their catch in Calamba City as a viable
+market for white shrimp is not yet established in the barangay. Selling of fish catch in the
+barangay is largely done through peddling either by other household members of the
+fishers or by local wholesalers. White shrimp on the other hand is largely sold to
+wholesalers in the city. Overall, the current price situation for the fish catch is satisfactory
+with most of the fishers finding the prices to be easy to predict (92.86%), regularly
+changing (80.95%), and intermediate (59.52%). As it is, pricing is standardized for the
+different species based on size. Regular fluctuation of the prices is linked to the annual
+occurrence of algal blooms and typhoons. Meanwhile, intrusions of outsider fish peddlers
+coming from Barangays Sucol, Masili and Bay, Laguna into Barangay Bucal are largely
+blamed for low prices of fishes according to those few who indicated it. As for the level
+of demand for their fish catch, almost all of the artisanal fishers in Barangay Bucal
+
+(92.86%) find that it is high as their supply of fish are almost always sold out.
+
+80
+
+Table 3. Primary characteristics of the resource user-related factors included in the
+
+study according to the artisanal fishers in Barangay Bucal (N=42)'
+
+PRIMARY CHARACTERISTIC FREQUENCY %
+
+Level of ecological knowledge
+
+Low 25 59.52
+Diversity of interest in the management of the fishery
+
+Heterogeneous 2B 54.76
+Number of artisanal fishers using the fishery
+
+Large 28 66.67
+Availability of communication mechanism among the
+artisanal fishers
+
+Present 39 92.86
+Level of ease in gathering artisanal fishers
+
+Difficult 31 B81
+Frequency of fishery management related gatherings
+
+Infrequent 28 66.67
+Attendance of the respondent in gatherings
+
+Occasionally present 19 45.24
+
+Commonly present 14 33.33
+Acceptability of the open-access status of the fishery
+
+Acceptable 4 97.62
+Degree of other-regarding behavior of fellow
+artisanal fishers
+
+Moderately to very strongly felt 36 85.71
+Degree of other regarding behavior of the respondent
+
+Moderately to very strongly shows 32 76.19
+Level of adhesion to rules during severe free
+episodes
+
+Will continue to completely adhere to rules 38 90.48
+Leader respectability
+
+Respectable 33 78.57
+Leader efficiency
+
+Efficient 28 66.67
+
+‘ee Appendix A Tor complete data
+
+Table 3. Continued .
+
+81
+
+PRIMARY CHARACTERISTIC FREQUENCY %
+Leader legitimacy
+Legitimate 38 90.48
+Equality of harvesting in the fishery
+Fair 31 B81
+Future artisanal fishing plan
+Will still be in the fishery in 5 years time 39 92.86
+Job satisfaction: Inclination of respondent to choose
+fishing again as an occupation if given the chance to
+live one’s life all over
+Will not take up artisanal fishing again 28 66.67
+Job satisfaction: Inclination of respondent to
+changing fishing with another occupation at the
+present
+Not open to replacing artisanal fishing 2 52.38
+Proportion of household income from artisanal
+fishing
+Less than one-half of total household income 24 $7.14
+Proportion of household income from non-artisanal
+fishing occupation/s
+More than one-half of total household income 22 52.38
+Proportion of household income from remittances
+None of the total household income 36 85.71
+Number of membership in fishermen’s association
+Membership in one association 32 76.19
+Degree of involvement in fishermen’s organization
+Not active 2 50.00
+Active 2 50.00
+Proportion of fish catch marketed
+Markets more than one-half of total fish catch 31 73.81
+volume
+Destination of fish catch
+Barangay Bucal 28 66.67
+
+Gee Appendix A for complete data
+
+82
+
+Table 3. Continued .....
+
+PRIMARY CHARACTERISTIC FREQUENCY %
+Predictability of the price of the fish catch
+
+Easy 39 92.86
+Stability of the price of the fish catch
+
+Prices change regularly 34 80.95
+Level of the price of the fish catch
+
+Intermediate 25 59.52
+Level of the demand for the fish catch
+
+High 39 92.86
+
+—————————————
+‘see Appendix A for complete data
+
+Characteristics of the institutional arrangement-related factors. Rule dissemination
+among the artisanal fishers of Barangay Bucal could be difficult. While majority of the
+fishers (90.48%) find the rules easy to understand, most of them (61.90%) however have
+only intermediate knowledge of the fishery management rules (Table 4). As regards the
+policy choice level, majority of the fishers (78.57%) perceived the decision-making
+process as inclusive with many of them citing the meetings of BEARMC/SAMBBU as
+the venue where they can participate in policy-making (Appendix C). However, despite
+this perceived inclusivity of the decision-making process, a slight majority of the fishers
+(52.38%) still feel that violation of the rules should be allowed in some cases particularly
+during difficult periods of the year. Consistent with this, a slight majority of the fishers
+(52.38%) also perceived that there is a need to change the rules. These last two results
+support the previous findings that while the fishers have a channel through which they
+
+can all participate in matching the rules to the local condition of the fishery in the form of
+
+83
+
+BFARMC/SAMBBU meetings, such channel is however not optimally used since
+gathering the fishers into these meetings appears to be difficult. As such, this could have
+resulted in the observed intermediate rule knowledge of most of the fishers as well as the
+potentially mismatched operational rules which most of the fishers want to rectify by
+
+allowing some forms of violations and changes to it.
+
+Rule violation was perceived by majority of the fishers (73.81%) to be low. As
+such, these respondents perceived that only less than half of the total artisanal fishers
+using the fishery are involved in any form of rule violation. This is supported by the
+results shown in Figure 3 and Figure 4 indicating that majority of the respondents are
+consistently complying with the informal and formal choice rules. On the different forms
+of rule violations observed, the use of tibog and the use of electrofishing gears are the
+most known to the fishers although the use of fine mesh nets, dredging within the
+protected zone, and fishing inside the sanctuary were also cited. Enforcement of the rules
+was also seen by almost all of the fishers (97.62%; Appendix A) to be happening
+
+although most (66.67%) perceived selective enforcement. Consistent with the forms of
+
+violations observed, the rules on the use of electrofishing gears, dredge, fine-mesh nets
+
+and tibog were cited as the most unenforced.
+
+Table 4. Primary characteristics of the institutional arrangement-related factors
+included in the study according to the artisanal fishers in Barangay Bucal
+
+(N=42)'
+PRIMARY CHARACTERISTIC FREQUENCY
+Level of rule knowledge
+Intermediate 26
+Rule complexity
+The rules are easy to understand 38
+Participatoriness of decision-making process
+Participatory 33
+Rule violation tolerance
+It is acceptable to violate the rules in some situations 22
+Scope of rule change needed
+The rules need to be changed 2
+Level of rule violation
+Low 31
+Level of rule enforcement
+Intermediate 28
+Level of rule monitoring
+Monitoring is done regularly 25
+Mode of sanctioning
+Graduated 34
+Ease in dispute adjudication
+Easy 26
+Accountability of officers
+The fishwardens and other officers are not held
+accountable for their actions 29
+Performance of officers
+The fishwardens and other officers are only
+; 25
+performing some of their functions
+State intervention
+The government is participating in the management
+38
+of the fishery
+Level of aid received
+The aid received is not sufficient 26
+
+%
+
+61.90
+
+90.48
+
+78.57
+
+52.38
+
+52.38
+
+73.81
+
+66.67
+
+59.52
+
+80.95
+
+61.90
+
+69.05
+
+59.52
+
+61.90
+
+see Appendix A for complete data
+
+85
+
+‘Compliance to Choice Rules
+among Artisanal Fishers
+
+In this study, compliance to the formal choice rules represents cooperative
+behavior of the artisanal fishers in the context of their CPR, the coastal fishery. To
+indicate the varying degrees of the fishers’ compliance, each were given a CI which is the
+sum of the numerical values of their mode of compliance to each of the six formal choice
+rules. Considering that never breaking a formal choice rule has a numerical value of
+three, occasionally breaking a formal choice rule gets a numerical value of two, and
+frequently breaking a formal choice rule gets a numerical value of one, a Cl of 18
+signifies that a respondent has never broken any of the formal choice rules and is
+therefore consistently compliant. On the other hand, an index below 18 indicates some
+configuration of incompliance, while a CI of six would indicate frequent incompliance to
+all of the formal choice rules. As it is, those with Cls below 18 are deemed to be
+
+inconsistently complying to the formal choice rules.
+
+With a population CI mean of 17.857, a median of 18 and a skewness of -3.105, it
+was found that the distribution of the CI for the informal choice rules, as listed in
+‘Appendix B, is highly skewed (Figure 3). This is to be expected as most (88.09%) of the
+artisanal fishers of Barangay Bucal are consistent compliers to the informal choice rules,
+whereas only very few (i.e. Cl 17, 9.52%; Cl 16, 2.38%) had shown some forms of
+incompliance to them (Figure 4). Specifically, of the five identified to have committed
+inconsistent compliance to the informal choice rules, three violated the informal choice
+
+rule on the use of electrofishing gears, one on fishing inside the Fish Sanctuary, and
+
+86
+
+another one on the use of fine mesh net. Specifically, of those that violated the rule on the
+use of electrofishing gears, two out of the three have committed the violation only
+
+occasionally while the remaining one admitted of frequently doing it.
+
+Based on follow up interviews conducted, those that occasionally use
+electrofishing gears revealed that they only do so when it becomes difficult for them to
+fish in the open-lake. This, according to them, usually happens during the transition of
+the dry and wet seasons when the water level in the lake drops to its lowest. Difficult
+periods are known to be critical for rule compliance as shown by previous literature since
+severe scarcity or low productivity of resource units during these times lowers discount
+rates of the CPR users which can result in a rapid exploitation of the resource (Baland &
+Platteau, 1996). On the other hand, the sole violator of the rule against fishing inside the
+Fish Sanctuary revealed that his incompliance happened after a strong typhoon washed
+off the bamboo poles marking the boundary of the sanctuary. This violation of the rule
+due to undefinable sanctuary boundary is consistent with previous literature showing that
+cooperation could unlikely be fostered if rules are unclear and ambiguous as users could
+
+not directly appreciate its legitimacy (Baland & Platteau, 1996).
+
+Probability Density
+eofRERERSES.
+
+155 16 165 7 7s 8 185
+Compliance index
+Figure 3. Probability distribution of the Compliance Indices of
+
+the artisanal fishers of Barangay Bucal with respect to
+their compliance to the informal choice rules
+
+18
+
+Figure 4. Distribution of CI for the informal choice rules in the
+artisanal fisher population of Barangay Bucal
+
+Table 5. Forms of incompliance to the informal choi
+identified rule breakers from Barangay Bucal.
+
+rules as exhibited by the five
+
+FORM FREQUENCY %
+Occasional use of electrofishing 2 40.00
+gears
+
+Frequent use of electro fishing, 1 20.00
+gears
+
+Occasional fishing inside the 1 20.00
+Fish Sanctuary
+
+Occasional use of fine mesh net 1 20.00
+
+Despite the existence of the informal choice rules in the managemet of the coastal
+fishery of Calamba City, it is interesting to note that the artisanal fishers’ rate of
+compliance to the formal choice rules remains relatively high. Figure 6 shows that in
+terms of the formal choice rules, 54.76% of the respondents have the Cl of 18 while only
+23.81% got an index of 16, 19.05% got an index of 17, and only 2.38% got an index of
+15. With these indices, the population CI mean of the artisnal fishers is a slightly lower
+17.261 while the median is still 18. Although the skewness of the Cl is lower, at - 0.761,
+compared to that in the informal choice rules, its asymmetry is still skewed moderately
+(Figure 5) which supports the aforementioned observation on the rate of the fishers’
+
+compliance to the formal choice rules.
+
+Probability Density
+ehebekebebe
+
+>.
+&
+s
+S
+S
+&
+
+Figure 5. Probability distribution of the Compliance Indices of the
+artisanal fishers of Barangay Bucal with respect to their
+compliance to the formal choice rules
+
+Figure 6. Distribution of CI for the formal choice rules in the
+artisanal fisher population of Barangay Bucal
+
+Pertaining to the formal choice rules, it was found in the same survey that the
+most prevalent form of incompliance is the use of tibog which is in violation of DAO
+No.3 Series of 1998 (Sec.90) (Appendix B). Of the 19 identified violators of the formal
+choice rules, nine or 47.36% are engaged in the frequent use of tibog while seven or
+36.84% use it occasionally. Aside from this, the use of electrofishing gears in violation of
+DAO No.3 Series of 1998 (Sec.88) also exists as already discussed above. However,
+compared to the former, this form of violation of the formal choice rules has much lower
+prevalence as only 10.52% and 5.26% of the 19 are occasionally and frequently engaged
+in the use of electrofishing gears respectively. Similarly, occasional fishing inside the
+Fish Sanctuary which is a violation of City Ordinance 495 Series of 2011 and the use of
+fine mesh net which is a violation of DAO No.3 Series of 1998 (Sec.89) also has lower
+frequency among the identified violators with only 5.26% being engaged in these
+
+activities respectively.
+
+The prevalence of violation of the formal choice rule through the use of tibog
+could be indicative of the heterogeneity of the fishers in terms of their endowments and
+the subsequent unwillingness of the tibog users to accept the said regulation as they are
+unequally constrained by it (Johnson & Libecap, 1982 as cited in Baland & Platteau,
+1996). This possible explanation is supported by the observations of CASD officers
+assigned to the open-lake fishery, that in general the artisanal fishers in Calamba City
+would agree with introduced conservation rules just as long as they are not the ones being
+inhibited by them (Cynthia Buen, personal communication, August 4, 2015).
+Furthermore, as there is high number of tibog users in Barangay Bucal, their non-
+
+cooperation could have been agravated by the problem of “diffusion-of-responsibility”,
+
+91
+
+This means that the relatively widespread use of tibog happens as there is lessend
+pressure to follow the rule against tibog-use as it does not focus on anyone and the
+responsibility is shared among all of the users (Frank, 1988 as cited by Baland &
+
+Plateau, 1996).
+
+Table 6. Forms of incompliance to the formal operational rules as exhibited by the
+19 identified rule breakers from Barangay Bucal
+
+FORM FREQUENCY
+
+Frequent use of tibog 9 4736
+Occasional use of tibog 7 36.84
+Occasional use of electrofishing 2 10.52
+gears
+
+Frequent use of electro fishing 1 5.26
+gears
+
+Occasional fishing inside the 1 5.26
+Fish Sanctuary
+
+Occasional use of fine mesh net 1 5.26
+
+‘Among the violators of the formal choice rules, only two committed multiple
+forms of incompliance. Specifically, these violations are the occasional fishing inside the
+Fish Sanctuary coupled with the frequent use of ribog for one of the violators and the
+‘occasional use of tibog coupled with the occasional use of fine mesh net for the other. As
+
+for the rest, only one form of rule incompliance is committed.
+
+92
+
+Relationships of Socioeconomic and Exogenous
+Factors and Mode of Compliance to
+Formal Choice Rules
+
+Relationship of Socioeconomic Factors and Mode of
+Compliance to Formal Choice Rules
+
+Table 7 shows that a strong association exists between the artisanal fishers’ mode
+of compliance to the formal choice rules and their age, educational attainment, and
+number of household fixtures. These three critical factors are here respectively
+dichotomized as: a) whether the fishers are < 50 years of age or older; b) whether they
+have finished high school or not; and c) whether the number of their household fixtures
+are classified as minimal to low or medium to high. Meanwhile, mode of compliance to
+formal choice rules is dichotomized as whether the artisanal fishers are consistenly
+
+complying, in which case their Cl = 18, or inconsistenly complying, with Cl < 18.
+
+Table 7. Measure of association between socioeconomic factors and the mode of
+compliance to the formal choice rules
+
+FACTORS PHI-COEFFICIENT
+Age - 0.3786" _
+Household size 0.2390
+Educational attainment 0.4175"
+
+Exhibits sirong association to mode of compliance to formal choice rules
+
+93
+
+Table 7. Continued.
+
+FACTORS PHI-COEFFICIENT
+Duration of residency in the Barangay 0.1212
+Duration of engagement in artisanal fishing 0.1435
+Houses structure type 0.2781
+Size of houschold fixtures 0.4397*
+Motorboat ownership 0.0026
+
+"*Exhibits strong association to mode of compliance to formal choice rules
+
+Considering that these factors, as explanatory variables in the simple logistic
+regression, have positive regression coefficients (Table 11), their associations with the
+fishers’ mode of compliance are therefore all “positively” oriented. As such, holding
+other factors constant, the odds for a consistent compliance to the formal choice rules (i.¢.
+having a CI of 18) was found to be 4.9524 times higher when an artisanal fisher is > 50
+yrs. old than when he is < 50 yrs. of age; 6.9333 times higher when he has finished high
+school than when he has not; and 9.2727 times higher when he has medium to high
+number of household fixtures than when he possesses minimal to low number of
+
+household fixtures.
+
+The result above showing a strong “positive” association between relative wealth
+(ie. as represented by the fishers’ number of household fixtures) and mode of compliance
+to the formal choice rules lend support to the notion that more economically well-off
+
+resource users are more free to follow resource management rules compared to those who
+
+are very poor. This could be because resource users that are hard-pressed by survival
+constraints tend to heavily discount the future benefits of conservationist strategies and
+overweigh its present costs due to concerns about sheer survival in the short run. As such,
+they are highly likely to credibly precommit to non-cooperation when asked to contribute
+in the conservation of the resource they are using. In contrast, richer resource users can
+safely adopt a more conservative use of the resource since they believe that with their
+
+level of wealth, the total gain from following the management rules would outwei
+
+total cost (Baland & Platicu, 1996).
+
+Based on the result of the pairwise association showing strong association
+between the artisanal fishers’ age and number of household fixtures, as well as the result
+of the subsequent simple logistic regression showing higher odds for the acquisition of
+medium to high number of household fixtures when the artisanal fishers are > 50 yrs. old
+than when they are not (Appendix B), it is conjectured that the strong “positive”
+association between consistent compliance to the formal choice rules and the fishers
+being > 50 years old could be due to the said group being much wealthier compared to
+those that are younger. If this is the case and consistent with what is discussed above,
+being more privileged has therefore allowed the > 50 years old artisanal fishers to adopt
+more conservative use of the coastal fishery. However, aside from this possible
+explanation, old age can also be positively linked to cooperative behaviour as it
+influences security values (Shwartz, n.d.). According to Schwartz (n.d.), strength, energy,
+cognitive speed, memory and sharpness of the senses decline with age. As such, security
+values become more important since capacities to cope with change wane. Therefore, it is
+
+further conjectured that the > 50 years old artisanal fishers in Barangay Bucal have higher
+
+95
+
+odds of complying with the formal choice rules since their heightened security values
+underlined by their slowed-down capacities to respond to any shut-down practices
+necessitate the safe and predictable environment of a formal rule-dominated coastal
+
+fishery.
+
+The strong “positive” associations between the respondents” status of having been
+
+able to finish high school and their membership in BFARMC/SAMBBU (Appendix B) as
+
+well as their consistent compliance to the formal choice rules indicate that education
+could be having a positive effect on their civic participation (Milligan, et. al., 2003) or
+civic engagement (Young, ef. al., 2011). According to Young, ef. al. (2011), civic
+engagement takes various forms including, but not limited to voting, interest group
+membership and activity, volunteering, and being involved in local groups, such as
+committees and commissions, churches, or citizens’ coalition and movements. As such,
+the social benefits of education which in here take the forms of the fishers’ membership
+in BFARMC/SAMBBU and their consistent compliance to the formal choice rules may
+have accrued as a result of either their education equipping them with cognitive skills that
+enhanced their ability to understand the salient fishery management issues in the
+municipal water of Calamba City, or their education increasing their interest and
+
+knowledge of environmental and political issues, their involvement in the political
+
+process, and the effectiveness of their political participation (Milligan, ef. a/., 2003).
+
+96
+
+Relationship of Exogenous Factors and
+Mode of Compliance to Formal Choice Rules
+
+Relationship of Resource-related Factors and
+Mode of Compliance to Formal Choice Rules
+
+Mode of compliance to the formal choice rules has also been found to be strongly
+associated with the fishers’ mode of utilizing their Laguna de Bay catfish catch (Table 8).
+Specifically, the odds for an artisanal fisher consistently complying to the formal choice
+rules is 6.5385 higher when he is into marketing or selling his caught Laguna de Bay
+catfish than his odds for the same when he does not sell the said species (Table 11).
+Interestingly, it was also found during the pairwise correlation analysis and its subsequent
+simple regression analysis that marketing Laguna de Bay catfish has a strong and
+
+“positive” association with medium to high number of household fixtures (Appendix B).
+
+Table 8. Measure of association between resource-related factors and the mode of
+compliance to the formal choice rules
+
+FACTOR PHI-COEFFICIE!
+Open-lake fishery condition 0.2706
+Size of the open-lake fishery 0.0912
+Sufficiency of fish catch 0.2205
+Able to catch silverperch from the fishery 0.0389
+
+“Exhibits strong association to mode of compliance to formal choice rules
+
+7
+
+FACTOR PHI-COEFFICIENT
+Able to catch snakehead from the fishery 0.0338
+Able to catch white goby from the fishery 0.1647
+Able to catch catfish from the fishery 0.0535
+Able to catch white shrimp from the fishery 0.2981
+Able to catch bighead carp from the fishery 0.1353
+Able to catch milkfish from the fishery 0.0391
+Able to frequently catch tilapia from the fishery ona
+Able to frequently catch Laguna de Bay from 0.2071
+the fishery
+
+Able to frequently catch white shrimp from the 0.2150
+fishery
+
+Sells Laguna de Bay catfish caught from the 0.3630*
+fishery
+
+Sells snakehead caught from the fishery 0.1664
+Sells white shrimp caught from the fishery 0.0454
+Sells bighcad carp caught from the fishery 0.1212
+Sells milkfish caught from the fishery 0.1353
+Sells gourami caught from the fishery 0.2494
+Uses screen in the fishery 0.1276
+Uses pole and line in the fishery ond
+Uses motorized boat in the fishery 0.2202
+Frequently uses non-motorized boat in the 0.1212
+fishery
+
+Owns a screen ond
+
+“Exhibits strong association to mode of compliance to formal choice rules
+
+98
+
+Table 8. Continued.
+
+FACTOR PHI-COEFFICIENT
+Owns a pole and line 0.1664
+Owns a motorized boat 0.0588
+‘Owns a non-motorized boat 0.2202
+
+‘Observability of banned fishing methods 0.0302
+
+“*Exhibits strong association to mode of compliance to formal choice rules
+
+In this case, artisanal fishers who are compliant are deduced as able to do so for
+the additional income from selling Laguna de Bay catfish augments their income from
+artisanal fishing. Specifically, their decision to shun the use of tibog, even though it is
+allowed by the informal rules, could have been costly in the short term as it can further
+decrease the size of their fish catch especially during the months of May to June when the
+water level in the fishery is at its lowest. But while Laguna de Bay catfish is one of the
+least marketed species and one with the lowest market price owing to its strong ramish
+taste, the fact that it is also one of the easiest to catch in the fishery, just next to tilapia,
+could mean that the income derived from its marketing could be high enough to support
+
+the conservationist strategy of some of the artisanal fishers.
+
+Relationship of Resource User-related Factors and
+Mode of Compliance to Formal Choice Rules
+
+For resource user-related factors, it was found that the number of fishermen’s
+association joined by the artisanal fishers is strongly associated with their mode of
+compliance to the formal choice rules (Table 9). However, since BFARMC/SAMBBU is
+the only fishermen’s association in Barangay Bucal, the above factor has become a
+representation on how the artisanal fishers’ perceived their state of membership in the
+said association. As such, the odds of an artisanal fisher consistently complying to the
+formal choice rules is 9.4500 higher when he considers himself a member of the
+BFARMC/SAMBBU as compared to his odds for the same when he no longer sees or
+
+does not see himself to be a part of the association (Table 11).
+
+Table 9. Measure of association between resource user-related factors and the mode
+
+of compliance to the formal choice rules
+FACTOR PHI-COEFFICIENT
+
+Level of ecological knowledge 0.1276
+Diversity of interest in the management of the 0.0572
+
+fishery
+
+Number of artisanal fishers using the fishery 0.0338
+
+Level of ease in gathering the artisanal fishers 0.2150
+Frequency of fishery management related 0.0338
+gatherings
+
+Attendance of the respondent in gatherings 0.2367
+
+"Exhibits strong association to mode of compliance to formal choice rules
+
+Table 9. Continued ...
+
+100
+
+PHI-COEFFICIENT
+
+FACTOR
+
+Degree of other-regrading behaviour of the 0.0389
+respondent
+
+Degree of other-regarding behaviour of fellow 0.0676
+artisanal fishers
+
+Leader efficiency 0.0677
+Equality of harvesting in the fishery 0.0026
+Proportion of household income from artisanal 0.1795
+fishing
+
+Non-artisanal fishing occupation of the 0.1062
+respondent
+
+Proportion of houschold income from non- 0.0605
+artisanal fishing occupation
+
+Job satisfaction: inclination of respondent to 0.1353
+
+choose fishing again as an occupation if given
+
+the chance to live one’s life all over
+
+Job satisfaction: inclination of respondent to 0.1003
+
+changing fishing with another occupation at the
+
+present
+
+Number of membership in fishermen’s 0.4378*
+organization
+
+Proportion of fish catch marketed 0.1062
+
+Destination of fish catch 0.1062
+
+Level of price of fish catch 0.0123
+
+“Exhibits strong association to mode of compliance to formal choice rules.
+
+As discussed above, the strong “po:
+
+ive” associations of both membership in
+
+fishermen’s association and consistent compliance to the formal choice rules with
+
+101
+
+educational attainment are indicative of the enhancing and broadening effect of education
+on the artisanal fishers’ civic participation (Young, ef. al., 2011). However, the strong,
+association observed between the respondents’ mode of compliance to the formal choice
+rules and number of membership in fishermen’s association (Table 9), as well as the
+higher odds ratio for consistent compliance when a respondent perceives that he is a
+member of BFARMC/SAMBBU (Table 11) could also indicate the positive impact of
+group membership on cooperation. In Goette, ef. al. (2006), it was shown that group
+membership can have a strong effect on the willingness of members to act unselfishly in
+the service of the group in terms of them preferring greater cooperation with fellow group
+members and having enhanced willingness to engage in altruistic punishment when
+fellow group members are the victim of defection. Thus, if such effect characterizes
+BFARMC/SAMBBU, it can be deduced that membership in it has increased the rate of
+cooperation among its members as they believe more that other artisanal fishers,
+specifically the other members of the group, will also consistently comply with the
+formal choice rules, and that freeriders will eventually be punished, also by their fellow
+
+association members (Goette, et. al., 2006).
+
+Relationship of Institutional Arrangement-related Factors and
+Mode of Compliance to Formal Choice Rules
+
+As shown in Table 10, none of the institutional arrangement-related factors
+included in the study exhibited strong association with the fishers’ mode of compliance to
+
+the formal choice rules. However, the respondents’ perception of the scope of rule-
+
+102
+
+change needed in the current institutional arrangement has a phi-coefficient of 0.2919
+
+which is near the threshold value of > 0.30.
+
+Table 10. Measure of association between institutional arrangement-related factors
+and the mode of compliance to the formal choice rules
+
+FACTOR PHI-COEFFICIENT
+Rule violation tolerance 0.1003
+Scope of rule-change needed 0.2919
+Level of rule violation 0.0026
+Level of rule enforcement 0.1946
+Level of rule monitoring 0.1276
+Mode of sanctioning rule violations 0.0464
+Ease in dispute adjudication 0.0751
+Accountability of officers 0.1158
+Performance of officers 0.0302
+State intervention 0.0605
+
+Table 11. Summary of simple regression coefficients and odds ratios of
+socioeconomic and exogenous factors exhibiting strong association with
+mode of compliance to the formal choice rules
+
+REGRESSION
+FACTOR COEFFICIENT ODDS RATIO
+Age 1.5999 4.9524
+
+Educational attainment 1.9363 6.9333
+
+
+Table 11. Continued
+
+103
+
+REGRESSION
+FACTOR COEFFICIENT ODDS RATIO
+Size of household fixtures 2.2271 9.2727
+Selling of Laguna de Bay nea 6.5385
+catfish
+Number of membership in Pa ary
+
+fishermen’s association
+
+
+CHAPTER V
+
+SUMMARY, CONCLUSIONS AND POLICY IMPLICATIONS
+
+Summary and Conclusions
+
+The study provides an assessment of the compliance of the fishers of Barangay
+Bucal to the formal choice rules enacted for artisanal fishing in the municipal waters of
+Calamba City. It also evaluated the different socioeconomic characteristics of the
+artisanal fishers, and the exogenous factors stemming from the said resource users, the
+coastal fishery, and the institutional arrangement used in the management of the fishery.
+Furthermore, it identified the factors influencing the consistent compliance of the fishers
+to the aforesaid choice rules.
+
+The artisanal fishers of Barangay Bucal composed the primary respondents of
+the study. Semi-structured and Structured interview schedules were respectively used in
+gathering data for the preliminary investigation phase and the formal survey phase.
+
+Based on the result of the survey, it was found that consistent compliance to the
+formal choice rules among the artisanal fishers of Barangay Bucal is moderate.
+Nevertheless, this indicates that despite the existence of an alternative set of informal
+choice rules, a slight majority of the fishers are still able to consistiently comply with the
+
+formal choice rules. As such, this disproves the notion that the formal choice rules, which
+
+105
+
+are directly adopted from RA 8550, are unimplementable in its entirety. The use of tibog
+comprises most of the incompliance to the formal choice rules; here, a slightly higher
+number of fishers use tibog frequently compared to those who use it only occasionally.
+This underscores the vital function of tibog in the use of gillnet which is the most widely
+used fishing gear among the Barangay Bucal fishers. In the quantitative analysis that
+followed, it was found that consistent compliance to the formal choice rules is
+“positively” influenced if a) a fisher has medium to high number of household fixtures, b)
+is >50 years old in age, c) has completed highschool, d) is into marketing his Laguna de
+Bay catfish catch, and ) is a member of BFARMC/SAMBBU. These factors comprise
+what Agrawal called “configuration of local conditions” that tipped decision nodes faced
+by the artisanal fishers in favour of the consistent compliance to the formal choice rules.
+Consequently, these results support the view that the artisanal fishers’ cooperation in
+using the formal choice rules, which could lead to an improvement of the conservation of
+the coastal fishery of Calamba City, could be increased a) if artisanal fishers are not
+
+experi
+
+icing survival-constraints that can prevent them from absorbing the cost inherent
+in the consistent compliance to the formal choice rules; b) if they have the necessary set
+of cognitive skills, interest, and knowledge of the political and ecological issues
+surrounding the management of the coastal fishery which would enhance and broaden
+their participation in the collective action necessary for it; and c) if they have developed
+‘strong moral norms that would allow them to trust that other artisanal fishers would
+reciprocate their cooperative behaviour of consistently complying to the formal choice
+
+rules.
+
+106
+
+In order to improve the conservation of the coastal fishery through increased
+cooperation among its artisanal fishers in using the formal choice rules, certain changes
+to the current institutional arrangement affecting conservation efforts should be
+
+considered.
+
+Firstly, to increase the rate of consistent compliance to the formal choice rules,
+the formal institutional arrangement structuring artisanal fishing in the coastal fishery of
+Calamba City should be augmented. As of the present, only six formal rules make-up the
+said institutional arrangement. Of this number, five are choice rules while one is
+classified as boundary rule. Except for the formal choice rule against the use of motorized
+push-net, all of the other formal rules have been converted into alternative and less
+stringent informal rules or social norms (Appendix B). Based on field observations made
+and in line with the work of Cole (n.d.) on the typologies of relationship between formal
+rules and “working rules”, it is deduced that such structure of the institutional-
+arrangement has resulted in a very limited enforcement of the formal choice rules. Thus,
+the artisanal fishers of Barangay Bucal, with respect to their choice of artisanal fishing
+mode, could not be expected to include in their calculation of total pay-offs the
+sanctioning components of the formal choice rules as long as the informal choice rules
+persist. Guided by the findings of this study that medium to high wealth level positively
+influences consistent compliance to the formal choice rules, city ordinance/s that are pay-
+
+off rule/s by nature should be enacted by the Calamba City Sanggunian Bayan in addition
+
+107
+
+to the five formal choice rules already existing. These pay-off rules should aim for the
+giving of side-payments to incompliant artisanal fishers experiencing severe survival-
+constraints in exchange for their consistent compliance to the formal choice rules until
+such time they gain a more lucrative secondary employment. To achieve collective
+action, the side-payments should be more than the violators’ present income from the
+
+banned fishing methods (Baland & Platteau, 1996).
+
+Thus, it is deduced that the present “absence” of disincentives for non-compliance
+to the formal choice rules will be countered by the incentives for consistently following
+them as will be realized by the pay-off transfer associated with the suggested pay-off
+rules when enacted. RA 8550 provides the necessary constitutional basis for the
+enactment of such pay-off rule/s. Specifically, these bases are found in, but not limited to,
+DAO No.3 Series of 1998 (Sec. 2; Objective 2), DAO No.3 Series of 1998 (Sec. 16; Rule
+
+16.7) and DAO No.3 Series of 1998 (Sec. 109).
+
+Secondly, revision of the boundary-rules of the program “Training and Capal
+
+ty
+
+Building”, which is one of the recurent projects of Calamba City aimed at strengthening
+the management of its coastal fishery, should be undertaken. Based on the result of the
+study that higher educational attainment has strong positive associations with
+membership in BFARMC/SAMBBU as well as consistent compliance to the formal
+choice rules; thus, all of the barangay’s artisanal fishers should be made eligible to
+participate in the said project and not only the FARMC leaders. As it is, the project is
+spearheaded by the Calamba City Goverment, CFARMC and CENRO. It provides
+
+paralegal trainings as well as trainings on leadership, team building, preparation of
+
+108
+
+project proposals, deputation of Bantay Lawa fishwardens, and parliamentary procedures
+to FARMC leaders (CASD, 2014). By allowing the artisanal fishers to participate in it, it
+is expected that their cognitive skills as well as their interest and knowledge of the many
+political and ecological issues surrounding the management of the fishery will be
+increased. By doing so, it is deduced that there will be an enhancement and broadening of
+the artisanal fishers’ civic participation in the form of increased preference for
+membership in BFARMC/SAMBBU and ultimately more consistent compliance to the
+
+formal choice rules.
+
+But more than remedying the present institutional arrangement to improve
+cooperation among the artisanal fishers of Barangay Bucal, it is further recommended
+that studies similar to this one should be conducted in the future. Specifically, these
+studies should assess the other nine coastal barangays of Calamba City. This must be
+done as the artisanal fishers of these other barangays also harvest from the same
+municipal water and are therefore exposed and at liberty of exposing other artisanal
+fishers to both negative and positive externalities coming from their activities in the said
+CPR. Thus, a more sustainable institutional arrangement could be formulated if the
+determinants of compliance to the formal choice rules among all groups of artisanal
+
+fishers using the municipal water of Calamba City could be assessed.
+
+LITERATURE CITED
+
+AGRAWAL, A. 2002. Common resources and institutional sustainability. In: Ostrom, E.,
+Dietz, T., Dolsak, N., Stern, P.C., Stonich, S. and Weber, E.U. (ed) The drama of
+the commons. National Academy Press, Washington, DC, pp. 41-86
+
+BALAND, J. AND PLATTEAU. 1996. Halting degradation of natural resources: Is there
+a role for rural communities? Clrendon Press, Oxford, England
+
+BARRIL, C.R. AND TUMLOS, E.T. 2010. Water quality trends and trophic state
+assessment of Laguna de Bay, Philippines. Aquatic Ecosystem Health and
+Management 5:2: 115-126. Retrieved from
+http /www.tandfonline.com/doi/pdf/10.1080/14634980290031811
+
+BASURTO, X., KINGSLEY, G., MCQUEEN, K., SMITH, M., AND WEIBLE, C.M.
+2010. A systematic approach to institutional analysis: Applying Crawford and
+Ostrom’s grammatical syntax. Political Research Quarterly 63(3): 523-537.
+Retrieved from http://prq.sagepub.com/conten/63/3/523
+
+CITY AGRICULTURAL SERVICES DEPARTMENT. 2012. Calamba City FARMC
+Profile. Calamba City, Laguna. Author
+
+CITY AGRICULTURAL SERVICES DEPARTMENT. 2013. Calamba City FARMC
+Profile. Calamba City, Laguna. Author
+
+CITY AGRICULTURAL SERVICES DEPARTMENT. 2014. Calamba City FARMC
+Profile. Calamba City, Laguna. Author
+
+CITY AGRICULTURAL SERVICES DEPARTMENT. 2015. Calamba City FARMC
+Profile. Calamba City, Laguna. Author
+
+City profile. 2015. Retrieved from http://Awww.calambacity.gov.ph/index.php/ct-menu-
+
+item-3/city-profile
+COLE, D.H., n.d. Formal institutions and the [AD framework: Bringing the law back in.
+Retrieved from
+
+https://ostromworkshop.indiana.edu/pdf/seriespapers/2015s_c/Cole_paper.pdf
+
+CONCEPCION, R.N., GAON, B., BANALO, R., BUEN, C., AND GUERRERO, E.
+2014. Project component 2: RIHN, Kyoto, Japan-funded managing environmental
+risks to food and health security in Asian watersheds [Powerpoint slides].
+Unpublished manuscript.
+
+110
+
+CONCEPCION, R.N., KADA, R., GAON, B.F. AND BANALO, R. n.d. Community-
+based, trans-sectoral validation research and development - Yaman ng Lawa
+Yankaw Fish Garden Sanctuary Pilot Project. Manuscript in preparation
+
+FOOD AND AGRICULTURE ORGANIZATION (FAO). 1997. Section 1.2: The
+fisheries management process. In: Fisheries and Aquaculture Department (ed)
+FAO technical guidelines for fisheries - fisheries management. Rome, Italy.
+Retrieved from http://www. fao.org/docrep/003/w4230e/w4230e05.htm#bm05.2
+
+HERRERA, E.C., NADAOKA, K., BLANCO, E.C. AND HERNANDEZ, E.C. 2011. A
+partnership for sustainable lake development: collaborative monitoring and
+research on Laguna de Bay, Philippines for management of resource use and
+ecosystem conservation. Lakes and Reservoir: Research and Management. 16:
+137-148.
+
+HODGSON, G.M. 2006. What are institutions? Journal of Economic Issues XL: 1-25.
+
+Retrieved from http://www.geoffrey-
+hodgson. info/user/bin/whatareinstitutions.pdf
+
+INTERNATIONAL CENTER FOR LIVING AQUATIC — RESOURCES
+MANAGEMENT (ICLARM) and North Sea Center (NSC). 1996. Analysis of
+fisheries co-management arrangements: A research framework. Retrieved from
+https://dlc.dlib. indiana.edw/dlc/bitstrean/handle/10535/4874/Pomeroy.pdf?sequen
+ce=l
+
+KATON, B.M., POMEROY, R.S., AND SALAMANCA, A. 1997. The marine
+conservation project for San Salvador: A case study of fisheries co-management
+in the Philippines. Naga, Philippines. ICLARM and Haribon Foundation.
+
+LACANILAO, F. 1987. Managing Laguna Lake for the small fishermen. SEAFDEC
+Asian Culture. 9(3): 3-4, 8, 12.
+
+LAGUNA LAKE DEVELOPMENT AUTHORITY (LLDA) n.d. 2009 to 2012 Annual
+water quality report on the Laguna de Bay and its tributary rivers. Taytay, Rizal.
+‘Author
+
+MCGINNIS, M.D. 2010. An introduction to IAD and the language of the Ostrom
+Workshop: A simple guide to a complex framework for the analysis of institutions
+and their development. Retrieved from
+
+http://php.indiana.edu/~mcginnis/iad_guide.pdf
+
+MILLIGAN, K., MORETTI, E., AND OREOPOULOS, P. 2003. Does education
+improve citizenship? Evidence form U.S. and the U.K. Retrieved from
+http://eml.berkeley.edu/~moretti/citizen.pdf
+
+11
+
+OSTROM, E. 1990. Governing the commons. Cambridge University Press, Cambridge,
+England
+
+OSTROM, E. 2005. Understanding Institutional Diversity. Princeton University Press,
+Princeton, New Jersey
+
+PARTNERSHIPS IN ENVIRONMENTAL MANAGEMENT FOR THE SEAS OF
+EAST ASIA (PEMSEA), DEPARTMENT OF ENVIRONMENT AND
+NATURAL SCIENCES (DENR) & THE LAGUNA LAKE DEVELOPMENT
+AUTHORITY. 2013. Total pollutant loading study in the Laguna de Bay-Pasig
+River-Manila Bay watershed. Quezon City. Author.
+
+POLSKI, M.M. AND OSTROM, E. 1999. An institutional framework for policy analysis
+and design. Retrieved from
+https://mason,gmu.edu/~mpolski/documents/PolskiOstromIAD.pdf
+
+QUINTOS, C.R. 2007. Basic facts on Laguna de Bay: “the lake of Bay” [Powerpoint
+slides).
+
+SANTOS-BORIJA, L.C. 2005, May. Aquaculture development and management in
+Laguna de Bay. Paper presented at First Living Lake African Regional
+Conference. Kisumu-Mbita, Kenya.
+
+SANTOS-BORJA, A. AND NEPOMUCENO, D.N. 2006. Laguna de Bay: Institutional
+development and change for lakebasin management. Lakes and Reservoirs:
+Research and Management | 1: 257-269.
+
+SCHLAGER, E. 1990. Model specification and policy analysis: The governance of
+coastal fisheries (Doctoral dissertation). University of Indiana, Bloomington,
+Indiana
+
+SCHLAGER, E., BLOMQUIST, W. AND TANG, S.Y. 1994. Mobile flows, storage, and
+self-organized institutions for governing common-pool resources. Land
+Economics 70(3): 294-317. Retrieved from
+http://search.proquest,com/docview/206730043?accountid=47253
+
+SHWARTZ, S.H. n.d. Basic human values: An overview. Retrieved from The Hebrew
+of Jerusalem Online: hitp://segr-
+did2.fmag.unict.iV/A llegati/eonvegno%207-8-10-05/Schwartzpaper.pdf
+
+THOMSON, J.T. 1992. A framework for analyzing institutional incentives in community
+forestry. Retrieved from http://www. fao.org/docrep/006/u7150e/u7150e00.htm
+
+
+12
+
+THOMSON, J.T. AND FREUDENBERGER, K.S. 1997. Crafting institutional
+arrangements for community forestry. Retrieved from
+
+http://www. fao.org/docrep/w7483e/w7483c00.htm
+VATN, A. 2006. Institutions. http://isecoeco.org/pdf/Institutions_Arild_Vatn.pdf
+
+WADE, R. 1994. Village republics: Economic conditions for collective action in South
+India. Institute for Contemporary Studies, San Francisco, California
+
+YNARES, C.A. 2006, November. The state of Laguna de Bay: conditions, trends, and
+interventions [Powerpoint slides}
+
+YOUNG, E. 2011. The impacts of educational attainment, professional interests, and
+residency on community involvement and civic engagement. Colonial Academic
+Alliance Undergraduate Research Journal: 2 (4): 1-18. Retrieved from:
+http://publish.wm.edu/caaurj/vol2/iss 1/4

@@ -1,7 +1,4 @@
-import re
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
-
+# Controlled vocabulary for main subjects
 MAIN_SUBJECTS = [
     "AGRICULTURE",
     "ANTHROPOLOGY",
@@ -43,45 +40,82 @@ MAIN_SUBJECTS = [
 ]
 
 def extract_thesis_metadata(text):
+    import re
+    from sentence_transformers import SentenceTransformer
+    from sklearn.metrics.pairwise import cosine_similarity
 
-    # New format: fixed lines for metadata
-    meta = {"title": "", "author": "", "degree": "", "university": "", "call_no": None, "discipline": "", "abstract": "", "publication_year": "", "subjects": []}
-    lines = [l.strip() for l in text.splitlines() if l.strip()]
-    # Extract by fixed line numbers (1-based)
-    meta["title"] = lines[0] if len(lines) > 0 else ""
-    meta["author"] = lines[2] if len(lines) > 2 else ""
-    meta["university"] = lines[4] if len(lines) > 4 else ""
-    meta["degree"] = lines[6] if len(lines) > 6 else ""
-    meta["publication_year"] = lines[8] if len(lines) > 8 else ""
-    # Abstract: from line 10 (index 10) until next header (e.g., 'CHAPTER', 'INTRODUCTION', etc.)
-    abstract_lines = []
-    header_pattern = re.compile(r'^(chapter|introduction|background|review|statement|objectives|scope|significance|summary|conclusion|references|acknowledgments?)', re.I)
-    for l in lines[10:]:
-        if header_pattern.match(l.strip().lower()):
+    meta = {}
+    lines = text.splitlines()
+
+    # Title: first non-empty line
+    for l in lines:
+        if l.strip():
+            meta["title"] = l.strip()
             break
-        abstract_lines.append(l)
-    meta["abstract"] = " ".join(abstract_lines).strip()
-    # Subjects/keywords: if not present, generate from abstract (simple heuristic: top 3 significant words)
-    if not meta["subjects"] or len(meta["subjects"]) == 0:
-        # Basic keyword extraction: take top 3 most frequent non-stopword words from abstract
-        import collections
-        stopwords = set([
-            'the','and','of','in','to','a','for','is','on','with','as','by','an','at','from','that','this','be','are','was','it','or','which','has','have','but','not','were','their','can','its','also','these','such','may','had','been','will','more','than','other','into','between','using','used','study','studies','results','showed','found','based','among','after','during','all','one','two','three','four','five','six','seven','eight','nine','ten','each','per','within','over','under','both','most','some','first','second','third','new','our','we','they','he','she','his','her','them','who','what','when','where','why','how','do','does','did','so','if','no','yes','because','due','up','out','about','very','there','those','like','just','get','got','make','made','many','much','even','still','should','could','would','being','through','such','then','now','see','seen','known','well','however','therefore','thus','i','you','your','us','me','my','mine','own','etc'
-        ])
-        words = re.findall(r'\b\w+\b', meta["abstract"].lower())
-        words = [w for w in words if w not in stopwords and len(w) > 2]
-        freq = collections.Counter(words)
-        top_keywords = [w for w, _ in freq.most_common(3)]
-        meta["subjects"] = top_keywords
-    return meta
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) < 2:
-        print("Usage: python extract_metadata.py <textfile>")
-        sys.exit(1)
-    with open(sys.argv[1], 'r', encoding='utf-8') as f:
-        text = f.read()
-    meta = extract_thesis_metadata(text)
-    import json
-    print(json.dumps(meta, indent=2, ensure_ascii=False))
+    # Author: look for a line with all uppercase or title case, not matching section headers
+    for l in lines[1:10]:
+        if l.strip() and not re.match(r'^(chapter|introduction|background|review|statement|objectives|scope|significance|summary|conclusion|references|acknowledgments?)', l, re.I):
+            meta["author"] = l.strip()
+            break
+
+    # Degree: look for 'Master', 'Doctor', etc.
+    for l in lines:
+        if re.search(r'(Master|Doctor|Bachelor|Philosophy|Science|Arts|Engineering)', l, re.I):
+            meta["degree"] = l.strip()
+            break
+
+    # University: look for 'University'
+    for l in lines:
+        if 'university' in l.lower():
+            meta["university"] = l.strip()
+            break
+
+    # Publication year: look for a line with a 4-digit year (e.g., 2018)
+    for l in lines[1:20]:
+        m = re.search(r'(19|20)\d{2}', l)
+        if m:
+            meta["publication_year"] = m.group(0)
+            break
+
+    # Abstract: text between 'ABSTRACT' and the next major section header
+    abstract = []
+    in_abstract = False
+    for l in lines:
+        if not in_abstract and l.upper().startswith("ABSTRACT"):
+            in_abstract = True
+            continue
+        if in_abstract:
+            # Stop at major section headers or numbered section headers with a word (e.g., '1. Introduction', '2. Theoretical Background')
+            if re.match(r'^(CHAPTER|INTRODUCTION|BACKGROUND|REVIEW|STATEMENT|OBJECTIVES|SCOPE|SIGNIFICANCE|SUMMARY|CONCLUSION|REFERENCES|ACKNOWLEDGMENTS?)', l, re.I):
+                break
+            if re.match(r'^\d+\.\s+\w+', l):
+                break
+            if l.strip().lower().startswith("keywords:") or l.strip().upper().startswith("PACS:"):
+                break
+            abstract.append(l)
+    meta["abstract"] = " ".join(abstract).strip()
+
+    # Subjects/keywords: look for a line starting with 'Keywords:' or 'PACS:' (multi-line)
+    keywords = []
+    i = 0
+    while i < len(lines):
+        l = lines[i]
+        if l.lower().startswith("keywords:") or l.strip().upper().startswith("PACS:"):
+            key_lines = [l]
+            i += 1
+            while i < len(lines):
+                next_line = lines[i]
+                if not next_line or re.match(r'^(CHAPTER|INTRODUCTION|BACKGROUND|REVIEW|STATEMENT|OBJECTIVES|SCOPE|SIGNIFICANCE|SUMMARY|CONCLUSION|REFERENCES|ACKNOWLEDGMENTS?)', next_line, re.I):
+                    break
+                key_lines.append(next_line)
+                i += 1
+            key_text = ' '.join(key_lines)
+            if key_text.lower().startswith("keywords:"):
+                key_text = key_text[len("keywords:"):]
+            keywords = [k.strip() for k in key_text.split(",") if k.strip()]
+            break
+        i += 1
+    meta["subjects"] = keywords
+
+    return meta

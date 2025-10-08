@@ -268,7 +268,6 @@ Kato—Katz technique or Formalin-Ether Concentration Technique (FECT) (Belizari
 
 2004).
 
-10
 
 Fish-borne trematodiasis in animals
 
@@ -294,7 +293,6 @@ data yet on the prevalence of infection in animals in the Philippines. Such data
 
 for better understanding of the infection dynamics and for improved intervention strategies.
 
-11
 
 Socioeconomic determinants
 
@@ -321,7 +319,6 @@ also a socioeconomically-linked factor. Households were found to obtain fish in 
 
 parasite-contaminated river instead of buying in the market for consumption (Moendeg et
 
-12
 
 al., 2021). Further, proximity to bodies of water denotes high risk for fecal contamination,
 
@@ -351,7 +348,6 @@ Nonetheless, Lee et al. (2012) have found that minute surface ridges on Metagoni
 
 H. continua, H. nocens, and S. falcatus eggs, vary with C. sinensis in terms of prominence.
 
-13
 
 However, using these morphological distinctions would be less accurate than molecular
 diagnosis. The eggs of H. heterophyes and M. yokogawai, as well as those of Clonorchis
@@ -377,7 +373,6 @@ on immunological principles (i.e. enzyme-linked immunosorbent assay (ELISA) have
 
 made. However, cross-reactions may occur (Ehrhardt and Burchard, 2008; Hegazy, 2020).
 
-14
 
 Along with other intestinal helminths, FBTs can be treated with praziquantel. It is
 an effective and easy to manage anti-helminthic drug. However, the duration of
@@ -405,7 +400,6 @@ economically and logistically difficult to implement in developing countries (Ni
 
 2014). Despite the challenges, parasite infection in animals should also be taken into
 
-15
 
 consideration when control programs are to be established (Nissen et al., 2013, 2014).
 Identification of barriers and challenges in parasite control through incorporating the
@@ -434,7 +428,6 @@ nucleotide acid difference. Different yields of amplicons were generated among s
 
 and no cross-reaction occurred. Multiplex assay has also been utilized for Opisthorchiids
 
-16
 
 and Heterophyids using metacercaria isolated from fish in single reaction, which is rapid
 and cost effective, compared with inefficient and expensive PCR and sequencing-based
@@ -461,7 +454,6 @@ NADH dehydrogenase subunit 1 (nad1), cytochrome C oxidase subunit 1 (cox1), 18S 
 
 28S ribosomal RNA (rRNA) gene sequence analyses (Dao et al., 2017). Similarly,
 
-17
 
 molecular phylogeny of trematodes in family Heterophyidae based on cox] and ribosomal
 transcription units (rTU) 18S, ITS1, 5.8s, 28S rRNA genes (Chontananarth et al., 2014; Le
@@ -514,7 +506,6 @@ was computed using a predicted prevalence of intestinal helminth infection of 50
 
 confidence level of 95%, an accuracy of 5%, an average household size of 5, and 10%
 
-19
 
 adjustment for noncompliance. The households were randomly selected from each
 municipality with the assistance of the Municipal Social Welfare and Development Office
@@ -540,7 +531,6 @@ any time without implication were also ensured. Samples were also assigned with 
 
 ensure confidentiality of the participants.
 
-20
 
 Collection and processing of fecal samples
 
@@ -568,7 +558,6 @@ participate in the interview as decision-makers of the family, usually the fathe
 
 where both parents decide in the family, whoever is available was interviewed.
 
-21
 
 Questionnaires were translated to Cebuano as the local dialect and pre-tested before
 administration. The data were transcribed and summarized in Excel. Respondents were
@@ -601,7 +590,6 @@ likelihood ratio testing. A p-value of less than 0.05 was also considered signif
 
 other hand, the KAP data generated from the interview were analyzed using descriptive
 
-22
 
 statistics. All statistical analysis was done using STATA version 13 (STATA 13 ®, Stata
 
@@ -629,7 +617,6 @@ by agarose gel electrophoresis (FisherBrand) at 100v for 30min and the bands wer
 
 and photographed using UV transilluminator (Maestrogen). All positive amplicons for ITS
 
-23
 
 2 were then packaged for outsourced Sanger sequencing (Apical Scientific Sequencing,
 
@@ -641,7 +628,6 @@ et al., 2010).
 Primer Name Sequence Length (bp) Target
 ITS2F Reverse CTTGAACGCACATTGCGGCCATGGG 25
 
-530
 ITS2R Forward GCGGGTAATCACGTCTGAGCCGAGG 25
 
 Table 2. Polymerase chain reaction master mix for identifying fish-borne trematodes
@@ -670,7 +656,6 @@ End hold 4 co
 
 ee
 
-24
 
 DNA sequence analysis and phylogenetic tree construction
 
@@ -735,7 +720,6 @@ Subtotal 586 37 (6.3) 5-9 142 63.8
 Overall 1,152 4.1% 3-5 214 85.6
 
 
-26
 
 A total of 1,152 participants belonging to 386 households were selected. Overall, 47
 individuals (4.1%) were positive with FBT eggs. A higher parasite prevalence was
@@ -755,7 +739,6 @@ sf
 
 = 6
 
-3
 
 e
 
@@ -768,7 +751,6 @@ rj a
 ‘ wi
 
 5 Ios 101493
-0
 
 Male Female Child Adult
 (Ages 10-17) (Ages 18
@@ -779,7 +761,6 @@ Kato-Katz analysis of human fecal samples from Northeastern Mindanao (n=1,152).
 
 Potential risk factors of fish-borne trematodes
 
-27
 
 Fish-borne infections are mainly linked to consumption of contaminated fish foods,
 
@@ -822,7 +803,6 @@ No idea 7 114.3)
 
 *Significant, p<0.05
 
-28
 
 Results show that exposure to cats and dogs were a significant factor, as presence
 of cats or dogs around the households were observed to have higher infection than those
@@ -849,7 +829,6 @@ Scombridae, local name: Bariles) and Flying fish (Family Exocoetidae, local name
 
 Bangsi). Others also mentioned eating raw pork and squid.
 
-29
 
 Sinugba
 Both Kinilaw and Sinugba Mm
@@ -884,7 +863,6 @@ Carp Cyprinus spp.** Karpa 0 6
 
 *marine; **freshwater
 
-30
 
 Statistically significant demographic and risk factors presented previously were
 used in the logistic regression model to determine its association to FBT infection. Results
@@ -913,7 +891,6 @@ Count of dog !2! 1.02 79-132 0.87
 [2] N=386; LR chi?(2)=5.64; Prob>chi?=0.06; Pseudo R=0.02
 *Significant at ps0.05
 
-31
 
 Households in Mainit, Surigao del Norte are 20.05 times more likely to have FBT
 infection, and households in Claver are 15.54 times more likely to get infected (p=0.01)
@@ -941,7 +918,6 @@ mentioned contact with soil, water and animals as causative factors. Furthermore
 
 abdominal pain and vomiting (39%), as well as diarrhea and bloody stool (21%) were the
 
-32
 
 top-most perceived health effects of FWBH — such symptoms that are also related to STH
 
@@ -986,7 +962,6 @@ Others 36 (18.7)
 
 Table 8. Continued
 
-33
 
 Knowledge n (%)
 No idea 7 (3.6)
@@ -1024,7 +999,6 @@ In their knowledge on the capacity of health centers to address FWBH, more than
 
 half are aware of the availability of medication (64%) but only 50% know about the
 
-34
 
 availability of diagnosis for food and waterborne parasites. Overall, there is a positive
 attitude towards seeking treatment and prevention against FWBH. Majority of the
@@ -1048,7 +1022,6 @@ of parasite eggs isolated from fecal samples of humans (Figure 4). Two distinct 
 
 were observed: ~350bp and 480bp.
 
-35
 
 Figure 4. Photograph of UV-illuminated agarose gel showing PCR products from
 trematode eggs isolated from human fecal samples with Lanes 1-2: Haplorchis taichui.
@@ -1067,7 +1040,6 @@ ITS2 regions, except for O. viverrini and S. falcatus. which have a similar band
 
 ~350bp.
 
-36
 
 Table 9. Summary of the significant BLAST hits or top alignments using the trematode
 DNA isolated from human fecal samples in Northeastern Mindanao, Philippines.
@@ -1092,7 +1064,6 @@ falcatus
 94.31% S. falcatus 2e-155 99% Thailand KU753591.1
 
 
-37
 
 Phylogenetic analysis
 
@@ -1132,7 +1103,6 @@ substitution: K2: Kimura 2 Parameter, G: gamma distribution) and nodal support e
 bootstrap resampling. Bootstrap values: >90% strongly supported, 70-90% well supported, 50-70%
 weakly supported, <50% not supported.
 
-38
 
 Overall, the topology of the phylogenetic tree inferred from 21 sequences in this
 study generally agreed well with previous studies (Le et al., 2017; Thaenkham et al., 2011).
@@ -1172,7 +1142,6 @@ pockets of endemicity with geographical distribution. Access to nearby fishing s
 
 sources of fishes, and cultural practices such as consumption of infected fish predispose
 
-40
 
 communities in acquiring FBTs (Chai and Jung, 2017; Moendeg et al., 2021). A higher
 prevalence was observed in Claver, Surigao del Norte. However, higher parasite intensity
@@ -1200,7 +1169,6 @@ In terms of sociodemographic factors, males and older individuals were found to 
 
 higher infection rates than females and young individuals. Previous studies found that
 
-41
 
 social factors affect habits of eating raw fish. For instance, fishermen in Vietnam tend to
 share and to enjoy raw fish together, which enabled the habit to pass from person to person,
@@ -1227,7 +1195,6 @@ during sample collection and thus, low parasite egg count. Nonetheless, environm
 
 contamination with animal feces containing eggs of FBTs increases the risk of infection in
 
-42
 
 the area, especially households that acquire their fish foods in nearby bodies of water such
 
@@ -1256,7 +1223,6 @@ potentially fatal, some still kept the habit of eating raw food because of insuf
 
 wrong knowledge. Because of that, many people could underestimate its harmfulness and
 
-43
 
 show poor preventive measures. Evidently, most of the infected individuals from this study
 were those with poor treatment seeking behaviors. On another note, even individuals that
@@ -1283,7 +1249,6 @@ in the Philippines (Africa and Garcia, 1935; Belizario et al., 2004). Based on t
 
 amplicons, the predominant parasite among the study sites is Haplorchis taichui, which is
 
-44
 
 also the most reported FBT in the country. Detection of seldomly reported FBTs such as
 S. falcatus and O. viverrini suggests that these parasites still circulate and therefore pose
@@ -1337,7 +1302,6 @@ where eating raw fish is culturally-rooted. Use of data on risk factors are also
 
 the development of education and public health campaigns regarding safe food practices
 
-46
 
 and access to improved sanitation. Furthermore, recovering adult worms from the study
 areas is recommended to connect both morphological and molecular data for Philippine
@@ -1394,7 +1358,6 @@ Heterophyidae) in the southern Philippines. Journal of Parasitology. 90:1165—1
 BELIZARIO, V.Y. JR. AND DE LEON, W.U. 2015. Medical parasitology in the
 Philippines.
 
-48
 
 BELIZARIO, V.Y. JR, DELOS TRINOS J.P.C., EDUARDO S., GATMAITAN J.K.,
 BERTUSO A., MISTICA M., LUMANGAYA C. (2022). Burden of foodborne
@@ -1441,7 +1404,6 @@ New York, USA: Springer;. pp. 53-115.
 CHAI, J.Y., SHIN E.H., LEE S.H., RIM H.J. 2009. Foodborne intestinal flukes in
 Southeast Asia. Korean Journal of Parasitology. 47:S69-S 102.
 
-49
 
 CHAI, J.Y. 2013. Praziquantel in treatment of trematode and cestode infections. Journal
 of Infection and. Chemotherapy. 45:32-43.
@@ -1486,7 +1448,6 @@ https://doi.org/10.3238/arztebl.2008.0801
 EL-AZAZY O, ABDOU N, KHALIL A, AL-BATEL M, MAJEED Q, HENEDI A, &
 TAHRANI L. (2015). Potential Zoonotic Trematodes Recovered in Stray Cats from
 
-50
 
 Kuwait Municipality, Kuwait. The Korean Journal Of Parasitology, 53(3), 279-287.
 doi: 10.3347/kjp.2015.53.3.279
@@ -1533,7 +1494,6 @@ HOTEZ, P.J., BUNDY, D.A., BEEGLE, K., BROOKER, S., DRAKE, L., DE SILVA, N.,
 MONTRESOR, A., ENGELS, D., JUKES, M., CHITSULO, L., CHOW, J.,
 LAXMINARAYAN, R., MICHAUD, C., BETHONY, J., CORREA-OLIVEIRA,
 
-51
 
 R., SHUHUA, X., FENWICK, A., SAVIOLI, L., JAMISON, D., BREMAN, J.,
 MEASHAM, A.R., ALLEYNE, G., CLAESON, M., EVANS. D., JHA, P., MILLS,
@@ -1580,7 +1540,6 @@ human stools in the republic of Korea. The Korean journal of parasitology, 50(3)
 LIN, R.Q., TANG, J.D., ZHOU, D.H. SONG, H.Q., HUANG, S.Y., CHEN, J.X., CHEN,
 M.X., ZHANG H., ZHU, X.Q., ZHOU, X.N. (2011). Prevalence of Clonorchis
 
-52
 
 sinensis infection in dogs and cats in subtropical southern China. Parasites
 Vectors 4, 180. https://doi.org/10.1186/1756-3305-4-180
@@ -1627,7 +1586,6 @@ Microscopy and Microanalysis. Res. 34, 1-8.
 OWADA, K., LAU, C.L., LEONARDO, L., CLEMENTS, A.C.A., YAKOB, L.,
 NIELSEN, M., CARABIN, H., MAGALHAES, R.J.S. 2018. Spatial distribution and
 
-53
 
 populations at risk of A. lumbricoides and T. trichiura co-infections and infection
 intensity classes: an ecological study. Parasites Vectors11, 535.
@@ -1674,7 +1632,6 @@ Bithynia siamensis sensu lato (Gastropoda: Bithyniidae) in Thailand and Southeas
 Asia. Infection, Genetics and Evolution. 397:105182. doi:
 10.1016/j.meegid.2021.105182. Epub 2021 Dec 10. PMID: 34902557.
 
-54
 
 SANTOS, C.P., & BORGES, J.N. (2020). Current Knowledge of Small Flukes (Digenea:
 Heterophyidae) from South America. The Korean Journal of Parasitology, 58, 373 -
@@ -1721,7 +1678,6 @@ International;61:90-3.
 THAENKHAM, U., PHUPHISUT, O., PAKDEE, W., HOMSUWAN, N., SA-
 NGUANKIAT, S., WAIKAGUL, J., DUNG, D.T. (2011). Rapid and simple
 
-55
 
 identification of human pathogenic heterophyid intestinal fluke metacercariae by
 PCR-RFLP. Parasitology International, 60(4), 503-
@@ -1768,7 +1724,6 @@ for Clonorchis sinensis Infection in Residents of Binyang, Guangxi: A Cross-
 Sectional and Logistic Analysis Study. Frontiers in public health, 9, 588325.
 https://doi.org/10.3389/fpubh.202 1.588325
 
-55
 
 identification of human pathogenic heterophyid intestinal fluke metacercariae by
 PCR-RFLP. Parasitology International, 60(4), 503-
@@ -1815,6 +1770,5 @@ for Clonorchis sinensis Infection in Residents of Binyang, Guangxi: A Cross-
 Sectional and Logistic Analysis Study. Frontiers in public health, 9, 588325.
 https://doi.org/!10.3389/fpubh.2021.588325
 
-56
 
 ZAJAC, A.Z., CONBOY, G.A. 2012. Veterinary Clinical Parasitology 8th Edition, 8-11.

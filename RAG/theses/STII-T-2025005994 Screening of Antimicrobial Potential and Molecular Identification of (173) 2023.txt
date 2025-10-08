@@ -297,7 +297,6 @@ incentives to industry and academia to encourage innovation to discover and
 
 develop novel antimicrobials (Aminov, 2017; Nicolaou & Rigol, 2018).
 
-10
 
 In conclusion, the research for novel microbial metabolites is a key point
 amongst the strategies for combatting antimicrobial resistance (Durand et al.,
@@ -325,7 +324,6 @@ biochemical probes and their notable diversity of activities and structures (Dem
 
 1999).
 
-11
 
 The search for bioactive microbial metabolites and novel antimicrobials for
 potential pharmaceutical, industrial, and agricultural applications is still important
@@ -353,7 +351,6 @@ compounds were just analogues of existing compound (Bérdy, 2005; Durand et
 
 al., 2018; Krause & Tobin; 2013). Moreover, deforestation, environmental
 
-12
 
 pollution, and climate change are the threats impacting the gradual deterioration
 of sources of natural products (Krause & Tobin, 2013). Likewise, discovery
@@ -383,7 +380,6 @@ proteins, polysaccharides, and nucleic and fatty acids, are needed for the growt
 
 and maintenance of cellular functions and are similar across all biological systems
 
-13
 
 (Bérdy, 2005; Goodfellow et al., 2012). On the other hand, secondary metabolites
 (e.g., antimicrobials) are the end products of primary metabolism that are
@@ -411,7 +407,6 @@ mechanisms, an enormously diverse range of chemical structures are formed
 
 (Bérdy, 2005; Rokem et al., 2007; Tyc et al., 2017). In bacteria, secondary
 
-14
 
 metabolites production is affected by different environmental factors, which
 includes temperature, moisture, pH, light, and nutrients. Frequently, secondary
@@ -440,7 +435,6 @@ production of antimicrobials by actinomycetes. Simple and inorganic sources of
 
 nitrogen typically decrease antimicrobial production whereas complex sources of
 
-15
 
 nitrogen sources such as yeast extract, soybean meal, and casein increase
 antimicrobial production because of slow breakdown of these compounds that is
@@ -470,7 +464,6 @@ Several habitats have been screened for microorganisms with antimicrobial
 
 capabilities (Gould, 2016). However, most of the antimicrobials discovered were
 
-16
 
 isolated from soil-living microorganisms, with fungi and bacteria being the chief
 producers (Durand et al., 2018). Furthermore, most of the novel antimicrobials are
@@ -498,7 +491,6 @@ same ecosystems only resulted to repeated discovery of known antimicrobials (von
 
 Bubnoff, 2006; Wadetwar & Patil, 2013; Watve et al., 2001).
 
-17
 
 Despite the discovery of many new antimicrobial compounds, there were
 fewer new type of structures being discovered as compared to the previous
@@ -528,7 +520,6 @@ all bioactive microbial metabolites (Baral et al., 2018; Bérdy, 2005; Leelakris
 
 & Palaniswamy, 2012; Tanaka & Omura, 1990). Moreover, 70-75% of all bioactive
 
-18
 
 metabolites from actinomycetes exhibit antimicrobial properties (Bérdy, 2005).
 Thus far, over 8,000 antimicrobials have been discovered from actinomycetes
@@ -556,7 +547,6 @@ share of actinomycetes in all microbial products being discovered is currently o
 
 the declining interest in actinomycetes, the largest portion of the currently available
 
-19
 
 bioactive microbial metabolites were still discovered from several species of
 actinomycetes (Bérdy, 2005; Matsumoto & Takahashi, 2017). Other antimicrobial
@@ -587,7 +577,6 @@ Streptomycetaceae. They are characterized by mycelial growth with more than
 
 both their life cycle and quickly changing environmental conditions leading to
 
-20
 
 mutation pressure (Atta, 2015; Goodfellow et al., 2012; Maleki et al., 2013; Muto
 & Osawa, 1987; Urem et al., 2016).
@@ -614,7 +603,6 @@ as Streptomyces antibiotic regulatory proteins (SARPs) (Baral et al., 2018;
 
 Donadio et al., 2002; Tyc et al., 2017).
 
-21
 
 2.6.2. Streptomyces and antimicrobial production
 
@@ -643,7 +631,6 @@ ability to produce 150,000 chemically distinct antimicrobial agents (Baral et al
 
 2018; Watve et al., 2001). Since only 1-3% of all antimicrobials from Streptomyces
 
-22
 
 species have been discovered, there remains 97-99% yet to be discovered
 (Bérdy, 2005; Clardy et al., 2006; Velho-Pereira & Kamat, 2011). Therefore,
@@ -674,7 +661,6 @@ techniques for antimicrobial activity screening includes diffusion and agar or b
 
 dilution techniques (Balouiri et al., 2016).
 
-23
 
 Table 2.2. Methods for screening of antimicrobial potential of bioactive
 microorganisms
@@ -733,7 +719,6 @@ screening potentially bioactive microorganisms (Balouiri et al., 2016; Jenkins &
 
 Schuetz, 2012).
 
-25
 
 LEGEND
 Zone of Inhibition
@@ -762,7 +747,6 @@ test microorganisms. However, flow cytofluorometric techniques are not widely
 
 utilized since they are cost-ineffective and require special instrumentation.
 
-26
 
 Moreover, even though they can provide rapid results of the effects of the
 secondary metabolites produced by the microorganisms, further evaluations of
@@ -792,7 +776,6 @@ pure culture of test organisms through a single streak perpendicular or at a 90�
 
 angle to the strain of interest. Ruled paper that acts as a template may also be
 
-27
 
 used to facilitate streaking. Plates may be incubated at room temperature or 37 °C
 for 24 hours for bacterial test organisms and 48 hours for fungal test organisms.
@@ -820,7 +803,6 @@ Lalitha, 2004; Sapkota et al., 2020). Plates should also be incubated based on t
 
 optimum incubation temperature of the organisms since deviation from this will
 
-28
 
 lead to inaccurate growth of organisms and inaccurate inhibition zones (Hewitt,
 2012). Similarly, pH of the culture medium should be near to neutrality since
@@ -849,7 +831,6 @@ Streptomyces or other organisms cannot be declared without genetic analysis
 
 based on 16S rRNA gene sequencing (Barka et al., 2016).
 
-29
 
 Current advancement in genetics and molecular biology significantly
 increased the available evolutionary information for Streptomyces classification
@@ -878,7 +859,6 @@ drug discovery and development research (Kataoka et al., 1997; Law et al., 2018)
 
 Still, a polyphasic taxonomic approach (i.e., phenotyping techniques in
 
-30
 
 combination with molecular genotyping methods) is important to accurately
 identify, characterize, and better understand Streptomyces taxonomy (Anderson
@@ -908,7 +888,6 @@ bacteria with large amount of polysaccharide, while EDTA disrupts the stability 
 
 cells through binding with divalent cations (e.g., Mg2*, Mn?*) (Moore et al., 2004).
 
-31
 
 These chelating agents also reduce contamination with protein and humic acid,
 thus leading to higher DNA yield (Herrera & Cockell, 2007; Miller et al., 1999;
@@ -936,7 +915,6 @@ and EtBr is potentially teratogenic and carcinogenic (Moore et al., 2004; Shin,
 
 2018). On the other hand, chloroform-phenol extraction is a technique known to
 
-32
 
 significantly increase DNA yield that involves vigorous mixing of lysed bacterial
 cells and chloroform-phenol by centrifugation, which separates the bacterial
@@ -964,7 +942,6 @@ absorbance ratio lower than 1.7 indicates protein contamination and should be
 
 subjected to further alcohol precipitation, while absorbance ratio over 2.0 indicates
 
-33
 
 presence of RNA and should be treated with DNase-free RNase and further
 
@@ -995,7 +972,6 @@ and complementarity at the 3’ ends to reduce the possibility of nonspecificall
 
 priming GC-rich sequences and primer-dimer artifact formation respectively (Bej
 
-34
 
 et al., 1991; Lo & Chan, 2006). Commonly used primers for DNA amplification of
 bacteria are the universal primers 27F and 1492R (Frank et al., 2008).
@@ -1021,7 +997,6 @@ cycling ensures the accuracy of temperatures at each phase of amplification (Bej
 
 et al., 1991; Lo & Chan, 2006).
 
-35
 
 2.9.3. DNA sequencing technology
 
@@ -1051,7 +1026,6 @@ Biosystems, USA) (Crossley et al., 2020; Yoon et al., 2011). DNA analysis
 
 equipment have detectors that determine the DNA sequence based on the
 
-36
 
 electrophoretic migration of the fluorescently labelled bases in capillary tubes (Ban
 & Song, 2014; Tipu & Shabbir, 2015; Yoon et al., 2011) Similarly, various DNA
@@ -1080,7 +1054,6 @@ submitted to public sequence database such as GenBank
 
 (http://www.ncbi.nim.nih.gov/genbank) (Law et al., 2018; Sayers et al.,
 
-37
 
 2019; Wright et al., 2012). Similarly, submitted sequences should be free of
 chimeras (i.e., sequences with two or more sequences from different
@@ -1108,7 +1081,6 @@ maximizes consistency among all pairs based on quality scores, but
 
 analysis time using consistency-based algorithms are slower compared to
 
-38
 
 progressive algorithms (Kapli et al., 2020). Lastly, progressive algorithms
 (e.g., CLUSTAL W, MUSCLE) are the most commonly used alignment
@@ -1135,7 +1107,6 @@ CLUSTAL W, T-Coffee, and MAFFT that are more computationally complex
 
 (Edgar, 2004a, 2004b; Kapli et al., 2020).
 
-39
 
 2.9.4.2. Phylogenetic Tree-building Techniques.
 
@@ -1165,7 +1136,6 @@ In distance-based tree building techniques (e.g., NJ and UPGMA),
 
 phylogenetic trees are constructed based on the evolutionary distance
 
-40
 
 between aligned sequences (Kapli et al., 2020; Law et al., 2018; Sardaraz
 et al., 2012). Neighbor-joining (NJ) technique determines the difference
@@ -1193,7 +1163,6 @@ of sequences to explain the data, which might be misleading since
 
 mutational pathway in the evolutionary tree is unknown and mutational
 
-41
 
 changes across all branches of the tree is unlikely to be equal leading to
 systematic error or the selection of the inaccurate tree (Holder & Lewis,
@@ -1221,7 +1190,6 @@ specific phylogenetic group among all the generated phylogenetic trees
 
 from replication of the data indicates the confidence level of that specific
 
-42
 
 clade in a tree or its bootstrap value (Felsenstein, 1985; Hedges, 1992; Law
 et al., 2018; Russo & Selvatti, 2018). Computation time and number of
@@ -1250,7 +1218,6 @@ statistical program that selects the best-fit nucleotide substitution model for
 
 a given set of sequences based on Bayesian information criterion (BIC) and
 
-43
 
 2.10.
 
@@ -1273,7 +1240,6 @@ As shown in Table 2.3, there are abundant literatures characterizing
 
 Streptomyces in various Philippine environments.
 
-44
 
 Table 2.3. Streptomyces research involving The Philippines
 
@@ -1312,7 +1278,6 @@ humans (Whitfield et al., 1955). In 1985, researchers from Tokyo Research
 
 Center, Japan discovered a strain of Streptomyces hygroscopicus No. J296-21
 
-45
 
 (ATCC 39150) from a soil sample collected from the Philippines capable of
 producing the aminoglycoside antibiotic called inosamycin (Tsunakawa et al.,
@@ -1340,7 +1305,6 @@ at least one of the test organisms used in their study. Similarly, Azcuna et al.
 
 isolated four actinomycin compounds from a marine sponge-associated
 
-46
 
 Streptomyces. In collaboration with foreign researchers, new antimicrobials were
 also isolated from different strains of Streptomyces. Pulicatins were isolated in
@@ -1368,7 +1332,6 @@ the compounds derived from different strains of Streptomyces. |In 2015,
 
 researchers reported the potential grain growth promoting abilities of a
 
-47
 
 Streptomyces mutabilis strain and an unidentified Streptomyces strain (Cruz et al.,
 2015). Another strain of Streptomyces mutabilis was also reported to contribute to
@@ -1394,7 +1357,6 @@ conclusion, studies with regards to the local isolation of Streptomyces for
 
 discovering new antimicrobials from soil habitats are insufficient.
 
-48
 
 2.11. Enhanced isolation of Streptomyces from different soil habitats in
 Calamba City, Laguna, Philippines using a modified integrated
@@ -1429,7 +1391,6 @@ The color of the isolated Streptomyces colonies varied as depicted in Figure
 
 2.3, although more than half are gray and white. Melanin production was seen on
 
-49
 
 14 Streptomyces colonies, notably from dumpsite, garden, and riverside soils.
 Barka et al. (2016) suggest that melanin production has a vital role in enhancing
@@ -1461,7 +1422,6 @@ Forest 121°07'45°E 41m 71 32.6 °C 6.20 x 10° 2.2 x 108 11
 
 *Geographic coordinates and altitude were based on Google Maps.
 
-50
 
 nonmotite ‘Streptomyces
 (a= 103) (n= 103)
@@ -1499,7 +1459,6 @@ Figure 2.3. Percentage distribution of Streptomyces isolates according to
 
 colony color as observed on starch casein agar
 
-51
 
 Microscopic examination revealed all 103 isolates are Gram-positive,
 filamentous with branching mycelia (Figure 2.4) and the majority possesses
@@ -1519,7 +1478,6 @@ Figure 2.4. Representative photomicrograph of Gram stain of isolated
 
 Streptomyces (1000x magnification)
 
-52
 
 Table 2.5. Biochemical characteristics of the Streptomyces isolates
 
@@ -1559,7 +1517,6 @@ higher number of Streptomyces were isolated compared to similar studies (Table
 
 2.6). Up to 10X more Streptomyces were isolated in this study compared to
 
-53
 
 Table 2.6. Number of Streptomyces isolated in comparison to previous
 
@@ -1596,7 +1553,6 @@ antimicrobial activity and to identify the isolates at the species level through
 
 molecular methods.
 
-54
 
 2.12. Maintenance of isolated Streptomyces strains
 
@@ -1626,7 +1582,6 @@ Waksman & Henrici, 1948). In contrast to storage on solid culture media,
 
 Streptomyces preserved on glycerol stocks are still viable and can be stored for
 
-55
 
 several years. However, isolates may lose viability after numerous freeze thaw
 cycles (Shepherd et al., 2010).
@@ -1651,7 +1606,6 @@ identified at the species level using molecular techniques such as 16S rRNA
 
 sequencing and phylogenetic analysis.
 
-56
 
 Potential antimicrobial
 = Soll Habitats
@@ -1703,7 +1657,6 @@ McFarland standards and (2) Streptomyces isolates and test organisms were
 
 incubated according to their growth requirement.
 
-57
 
 2.14. Operational definition of variables
 
@@ -1735,7 +1688,6 @@ Philippines Los Bafios (BIOTECH-UPLB) used as organism control because of its
 
 antimicrobial potential.
 
-58
 
 Streptomyces isolates — soil Streptomyces isolated from diverse soil habitats in
 Calamba City, Laguna, Philippines (Antido & Climacosa, 2022).
@@ -1743,7 +1695,6 @@ Test organisms — selected microorganisms used to determine the potential
 
 antimicrobial activity of the Streptomyces isolates.
 
-59
 
 CHAPTER Ill
 
@@ -1775,7 +1726,6 @@ Streptomyces species isolated from our previous study (Antido &
 
 Climacosa, 2022) were used in the current experiments. Briefly, a total of 25 soil
 
-60
 
 samples were collected from five diverse locations in Calamba City, Laguna,
 Philippines (i.e., dumpsite, garden, grassland, forest, riverside). Five soil samples
@@ -1802,7 +1752,6 @@ level was done using a polyphasic method that includes cultural, morphological
 
 (i.e., Gram stain appearance), and biochemical characteristics (i.e., catalase,
 
-61
 
 motility, nitrate reduction, urea hydrolysis, H2S production, indole production,
 methyl red, Voges-Proskauer, citrate utilization, utilization of carbon sources [e.g.,
@@ -1829,7 +1778,6 @@ pneumoniae ATCC 13883, extended-spectrum beta-lactamase
 
 isolate), Trichophyton rubrum (wild isolate)
 
-62
 
 3.5. Optimization of antimicrobial control strips
 
@@ -1857,7 +1805,6 @@ positive controls and blank disk as negative control. Optimization was performed
 
 in triplicates and mean values were considered for analysis.
 
-63
 
 3.6. Screening of antimicrobial potential of Streptomyces isolates
 Screening of potential antimicrobial activity of the Streptomyces isolates
@@ -1883,7 +1830,6 @@ fluconazole for fungal test organisms were used as positive controls. Plates wit
 
 isolates, blank filter paper strips, and plates with Salmonella typhi ATCC 19430,
 
-64
 
 which was reported to have no antimicrobial production (Chua, 2020), were used
 
@@ -1914,7 +1860,6 @@ precipitates were further purified by adding 50 ul 3M sodium acetate (NaOAc)
 
 solution. DNA precipitates were rinsed with 500 yl 75% ice-cold absolute ethanol
 
-65
 
 to remove traces of salt, followed by incubation at -20 °C for 1 hr and centrifugation
 at 13,000 rpm for 1 min. Supernatants were discarded and DNA precipitates were
@@ -1943,7 +1888,6 @@ Laboratories, Inc., USA). The thermal cycling conditions were as follows: initia
 
 denaturation at 95 °C for 5 min; 30 cycles of denaturation at 95 °C for 1 min,
 
-66
 
 annealing at 60 °C for 45 s, and extension at 70 °C for 1 min; final extension at 72
 °C for 10 min and hold at 4 °C to avoid sample degradation until further use. The
@@ -1972,7 +1916,6 @@ Formamide. The 16S rRNA gene sequence of the purified sequencing product was
 
 acquired using BigDye® Terminator v3.1 Cycle Sequencing Kit (Applied
 
-67
 
 Biosystems™, USA). The 3730x/ DNA Analyzer (96-capillary array, 50cm)
 (Applied Biosystems™, USA) and 3730xI Data Collection Software v3.1 (Applied
@@ -2001,7 +1944,6 @@ was previously described as a species under the genus Streptomyces but was
 
 correctly identified as a different organism (Labeda et al., 2012). Bootstrap values
 
-68
 
 (1000 replicates) were calculated to validate the robustness of the tree
 (Felsenstein, 1985). The sequences were submitted to GenBank with accession
@@ -2032,7 +1974,6 @@ antimicrobial activity and closely related Streptomyces species were shown as
 
 percentage. Phylogenetic analysis was conducted on MEGA 11.
 
-69
 
 3.10. Ethical and biosafety considerations
 
@@ -2060,7 +2001,6 @@ Likewise, cultures and contaminated materials were autoclaved at 121 °C for 15�
 
 30 min before disposal as regular waste materials.
 
-70
 
 3.11. Flow diagram of the study
 
@@ -2101,7 +2041,6 @@ Streptomyces l|solates
 
 Figure 3.1. Flow diagram of the study
 
-71
 
 CHAPTER IV
 
@@ -2136,7 +2075,6 @@ Fluconazole*
 5 A(vs. S. aureus) 1: 5yg/ml; 2:10 ug/ml; 3:
 B (vs. E. coli) 4:5 ygiml; 2:10 ygiml, 3: 2
 C(vs.MRSA) 1: 15 ig/ml; 2:30 ug/ml; 3:60 ug/ml; 4: 100 pigiml; 5: 120 ugiml
-34
 
 20 yg/mi; 4: 40 ug/ml; 5: 100 pg/ml
 0 ugiml; 4:40 ug/ml; 5: 100 g/ml
@@ -2160,7 +2098,6 @@ R Resistant
 
 ‘SDD (susceptible-dose dependent): 14-16 mm
 
-72
 
 el
 
@@ -2198,7 +2135,6 @@ D2C6, D4C28, D4C30, and GL5C13 are hydrogen sulfide-producers. Lastly, only
 
 isolate D4C24 produces melanin on starch casein agar.
 
-74
 
 Streptomyces albidus
 BIOTECH 1564
@@ -2230,7 +2166,6 @@ controls; G-I: negative controls.
 
 9: Trichophyton rubrum
 
-75
 
 Table 4.2. Morphological and biochemical characteristics of Streptomyces
 isolates with antimicrobial activity
@@ -2327,7 +2262,6 @@ against Gram-negative bacteria. Isolate D2C6 is closely related to Streptomyces
 
 malachitofuscus strain NBRC 130597 (99.63%). Isolates D4C28 and G1C18 are
 
-78
 
 closely related to Streptomyces griseoflavus strain NBRC 13044", while isolate
 G1C44 is closely related to Streptomyces griseoloalbus strain NBRC 13046
@@ -2337,7 +2271,6 @@ of these bioactive Streptomyces isolates were deposited in GenBank with
 
 accession numbers shown in Table 4.4.
 
-79
 
 Table 4.4. Sequence similarity of Streptomyces isolates and closely related
 Streptomyces species
@@ -2451,7 +2384,6 @@ using neighbor-joining (Saitou & Nei, 1987) and maximum parsimony methods
 outgroup. Values at the nodes represents bootstrap support from 1,000
 replications (Felsenstein, 1985).
 
-81
 
 CHAPTER V
 
@@ -2481,7 +2413,6 @@ produce metabolites that can inhibit the growth of the test organisms with the
 
 methods used in this study and perhaps produce metabolites with biological
 
-82
 
 activities not tested in this study (i.e., antiviral, antitumor, or anti-inflammatory
 activities). In addition, genome analysis revealed that each Streptomyces species
@@ -2508,7 +2439,6 @@ biology strategies (i.e., genome mining; metabolomics; engineering of regulatory
 
 networks such as ribosome, transcription factors, and promoters; heterologous
 
-83
 
 expression such as direct cloning, biosynthetic pathway reconstruction, and
 chassis strain engineering) (Becerril et al., 2018; Choi et al., 2018; Liu et al., 2021;
@@ -2538,16 +2468,13 @@ Streptomyces species. The Streptomyces species clustered into one major clade
 
 in the phylogenetic tree. Presented on Table 5.1 are the reported secondary
 
-84
 
 metabolites produced by the Streptomyces species closely related to the
 Streptomyces isolates with antimicrobial activity as well as their other
 
 biotechnological applications.
 
-85
 
-98
 
 es
 
@@ -2629,7 +2556,6 @@ et al., 2021), and environmental applications (e.g., bioremediation) (Desjardin 
 
 al., 2003; Padri et al., 2002; Terahara et al., 2014).
 
-87
 
 The grassland isolates GL3C6 and GL5C13 formed a clade with the
 riverside isolate R5C7. These isolates have different antimicrobial activity against
@@ -2656,7 +2582,6 @@ produce the metabolite actinomycin D, which showed activity against
 
 mycobacteria, Escherichia coli, MRSA, and other Gram-positive bacteria (Chen et
 
-88
 
 al., 2012; Dos Santos et al., 2022; Kulkarni et al., 2017; Perry & Kelly, 1970;
 Qureshi et al., 2021). Similarly, Streptomyces hydrogenans has been reported to
@@ -2683,7 +2608,6 @@ secondary metabolites by Streptomyces (Law et al., 2018; Oskay, 2009; Sapkota
 
 et al., 2020).
 
-89
 
 Isolates D4C28 and G1C18 displayed similarity to soil streptomycete
 Streptomyces griseoflavus strain NBRC 13044'. Both isolates inhibited Gram-
@@ -2711,7 +2635,6 @@ bacteria and Escherichia coli. Similar to the study of Mikulik and colleagues (2
 
 who reported the antimicrobial activity of Streptomyces griseoloalbus against
 
-90
 
 MRSA. Streptomyces griseoloalbus has also been shown to produce the
 antibacterial albomycin (Bauer & Hérmansdorfer, 2001; Wang et al., 2022) and
@@ -2733,7 +2656,6 @@ antimicrobial activity of bioactive isolates considering their diverse phylogene
 
 characteristics.
 
-91
 
 CHAPTER VI
 
@@ -2763,7 +2685,6 @@ discover antimicrobial-producing microorganisms from Calamba City, Laguna,
 
 Philippines and other locations with similar characteristics. Moreover, additional
 
-92
 
 molecular (i.e., multilocus sequence analysis, DNA-DNA hybridization) and
 chemotaxonomic (i.e., fatty acids analysis, cell wall composition, whole-cell
@@ -2780,7 +2701,6 @@ novel biosynthetic gene clusters responsible for biosynthesis of cryptic microbi
 
 metabolites.
 
-93
 
 REFERENCES
 
@@ -2812,7 +2732,6 @@ Process Biochemistry, 44(3), 327-333.
 
 https://doi.org/10.1016/j.procbio.2008.11.009
 
-94
 
 Antido, J. A., & Climacosa, F. M. (2022). Enhanced isolation of Streptomyces from
 different soil habitats in Calamba City, Laguna, Philippines using a modified
@@ -2842,7 +2761,6 @@ antimicrobial activity: A review. Journal of Pharmaceutical Analysis, 6(2),
 
 71-79. https://doi.org/10.1016/j.jpha.2015.11.005
 
-95
 
 Ban, E., & Song, E. J. (2014). Capillary electrophoresis methods for microRNAs
 assays: A_ review. Analytica Chimica Acta, 852, 1-7.
@@ -2873,7 +2791,6 @@ J. A., & Méndez, C. (2018). Uncovering production of specialized
 
 metabolites by Streptomyces argillaceus: Activation of cryptic biosynthesis
 
-96
 
 gene clusters using nutritional and genetic approaches. PLoS One, 13(5),
 e0198145. https://doi.org/10.1371/journal.pone.0198145
@@ -2903,7 +2820,6 @@ Streptomyces. The Joumal of Antibiotics, 40(7), 953-960.
 
 https://doi.org/10.7164/antibiotics.40.953
 
-97
 
 Brockmann, H., & Schmidt-Kastner, G. (1951). Resistomycin, a new antibiotic from
 actinomycetes. Naturwissenschaften, 38(20), 479-480.
@@ -2938,7 +2854,6 @@ characterization of a thermostable endo-type B-xylanase produced by a
 
 newly-isolated Streptomyces thermocarboxydus subspecies MW8 strain
 
-98
 
 from Jeju Island. Process Biochemistry, 48(11), 1736-1743.
 https://doi.org/10.1016/j.procbio.2013.07.024
@@ -2965,7 +2880,6 @@ Standards for Antifungal Susceptibility Testing of Yeasts, (2"4 ed). Clinical
 
 and Laboratory Standards Institute, Wayne, PA.
 
-99
 
 Clinical and Laboratory Standards Institute (CLSI) (2022). Performance Standards
 for Antimicrobial Susceptibility Testing, (32"4 ed). Clinical and Laboratory
@@ -2995,7 +2909,6 @@ Philippine strain of Streptomyces sp. PCS3-D2. Asia-Pacific Journal of
 
 Molecular Biology and Biotechnology, 27(2), 56-63.
 
-100
 
 Davies, J. (2006). Are antibiotics naturally antibiotics? Journal of Industrial
 Microbiology and Biotechnology, 33(7), 496-499.
@@ -3030,7 +2943,6 @@ actinomycetota from Portuguese beach sediments. Microorganisms, 10(7),
 
 Article 1471. https://doi.org/10.3390/microorganisms10071471
 
-101
 
 Douady, C. J., Delsuc, F., Boucher, Y., Doolittle, W. F., & Douzery, E. J. (2003).
 Comparison of Bayesian and maximum likelihood bootstrap measures of
@@ -3062,7 +2974,6 @@ reduced time and space complexity. BMC Bioinformatics, 5, Article 113.
 
 https://doi.org/10.1186/1471-2105-5-113
 
-102
 
 Efimtseva, E. V., & Mikhailov, S. N. (2004). Disaccharide nucleosides. Russian
 Chemical Reviews, 73(4), 401-414.
@@ -3095,7 +3006,6 @@ of bacterial 16S rRNA genes. Applied and Environmental Microbiology,
 
 74(8), 2461-2470. https://doi.org/10.1128/AEM.02272-07
 
-103
 
 Franco-Duarte, R., Cernakova, L., Kadam, S., S Kaushik, K., Salehi, B.,
 Bevilacqua, A., Corbo, M., Antolak, H., Dybka-Stepien, K., Leszczewicz, M.,
@@ -3126,7 +3036,6 @@ bioactive potential of soil actinomycetes from different ecological habitats.
 
 African Journal of Microbiology Research, 6(10), 2265-2271.
 
-104
 
 Goodfellow, M., Kampfer, P., Busse, H. J., Trujillo, M. E., Suzuki, K. |., Ludwig, W.,
 & Whitman, W. B. (2012). The Actinobacteria. In Bergey's Manual of
@@ -3158,7 +3067,6 @@ Gurung, T. D., Sherpa, C., Agrawal, V. P., & Lekhak, B. (2009). Isolation and
 
 characterization of antibacterial actinomycetes from soil samples of
 
-105
 
 Kalapatthar, Mount Everest Region. Nepal Joumal of Science and
 Technology, 10, 173-182. https://doi.org/10.3126/njst.v10i0.2957
@@ -3190,7 +3098,6 @@ Zeitschrift fir allgemeine Mikrobiologie, 15(6), 411-421.
 
 https://doi.org/10.1002/jobm.19750150604
 
-106
 
 Hayakawa, M. (2008). Studies on the isolation and distribution of rare
 actinomycetes in soil. Actinomycetologica, 22(1), 12-19.
@@ -3220,7 +3127,6 @@ exceptionally complex bacterial signaling metabolite. Chemistry & Biology,
 
 18(3), 381-391. https://doi.org/10.1016/j.chembiol.2010.12.018
 
-107
 
 Holder, M., & Lewis, P. O. (2003). Phylogeny estimation: Traditional and Bayesian
 approaches. Nature Reviews Genetics, 4(4), 275-284.
@@ -3250,7 +3156,6 @@ chimeric sequences in multiple sequence alignments. Bioinformatics,
 
 20(14), 2317-2319. https://doi.org/10.1093/bioinformatics/bth226
 
-108
 
 Hitter, R., Keller-Schierlein, W., & Zahner, H. (1961). Zur Systematik der
 Actinomyceten: 6. Die Produzenten von Makrolid-Antibiotica. Archiv fur
@@ -3279,7 +3184,6 @@ cyclization beyond linear and angucyclic patterns. Journal of the American
 
 Chemical Society, 126(8), 2298-2299. https://doi.org/10.1021/ja0390698
 
-109
 
 Jenkins, S. G., & Schuetz, A. N. (2012, March). Current concepts in laboratory
 testing to guide antimicrobial therapy. Mayo Clinic Proceedings, 87(3),
@@ -3309,7 +3213,6 @@ identification in the genus Streptomyces. FEMS Microbiology Letters, 151,
 
 249-255. https://doi.org/10.1 11 1/j.1574-6968.1997.tb12578.x
 
-110
 
 Kaur, T., & Manhas, R. K. (2014). Antifungal, insecticidal, and plant growth
 promoting potential of Streptomyces hydrogenans DH16. Journal of Basic
@@ -3341,7 +3244,6 @@ Intemational Journal of Systematic and Evolutionary Microbiology, 48(1),
 
 59-68. https://doi.org/10.1099/002077 13-48-1-59
 
-111
 
 Kizito,
 
@@ -3387,7 +3289,6 @@ Kumar, S., Stecher, G., Li, M., Knyaz, C., & Tamura, K. (2018). MEGA X: Molecula
 
 Evolutionary Genetics Analysis across computing platforms. Molecular
 
-112
 
 Biology and Evolution, 35(6), 1547-1549.
 https://doi.org/10.1093/molbev/msy096
@@ -3419,7 +3320,6 @@ Rohde, M., Martin, K., Stadler, M., & Wink, J. (2018). Taxonomic analyses
 
 of members of the Streptomyces cinnabarinus cluster, description of
 
-113
 
 Streptomyces cinnabarigriseus sp. nov. and Streptomyces davaonensis sp.
 nov. International Journal of Systematic and Evolutionary Microbiology,
@@ -3451,7 +3351,6 @@ Li, P., Du, R., Wang, Y., Hou, X., Wang, L., Zhao, X., Zhan, P., Liu, X., Rong, 
 
 & Cui, Q. (2020). Identification of chebulinic acid and chebulagic acid as
 
-114
 
 novel influenza viral neuraminidase inhibitors. Frontiers in Microbiology, 11,
 Article 182. https://doi.org/10.3389/fmicb.2020.00182
@@ -3482,7 +3381,6 @@ Zeitschrift fur Physiologische Chemie, 313, 117-123.
 
 https://doi.org/10.1515/bchm2.1958.313.1.117
 
-115
 
 Liu, C. M., Hermann, T. E., Prosser, B. L. T., Palleroni, N. J., Westley, J. W., &
 Miller, P. A. (1981). X-14766a, a halogen containing polyether antibiotic
@@ -3514,7 +3412,6 @@ identification of Streptomyces spp. with antibacterial activity from northwest
 
 of Iran. Biolmpacts, 3(3), 129-134. https://doi.org/10.5681/bi.2013.017
 
-116
 
 Matsumoto, A., & Takahashi, Y. (2017). Endophytic actinomycetes: Promising
 source of novel bioactive compounds. The Journal of Antibiotics, 70(5),
@@ -3547,7 +3444,6 @@ Han, C., Bisignano, C., Rao, P., Wool, E., Johnson, S. C., Browne, A. J.,
 
 Chipeta, M. G., Fell, F., Hackett, S., Haines-Woodhouse, G., Kashef
 
-117
 
 Hamadani, B. H., Kumaran, E. A., McManigal, B., ... Naghavi, M. (2022).
 Global burden of bacterial antimicrobial resistance in 2019: A systematic
@@ -3580,7 +3476,6 @@ Nihei, Y., Hasegawa, M., Suzuki, K., Yamamoto, S., Hanada, M., Furumai, T.,
 
 Fukagawa, Y., & Oki, T. (1993). Lagunamycin, a novel 5-lipoxygenase
 
-118
 
 inhibitor: |. Taxonomy, fermentation, physico-chemical properties and
 biological characteristics. The Journal of Antibiotics, 46(6), 900-907.
@@ -3612,7 +3507,6 @@ Chemistry, 38(5), 899-906.
 
 https://doi.org/10.1080/00021369.1974.10861273
 
-119
 
 Onaka, H. (2017). Novel antibiotic screening methods to awaken silent or cryptic
 secondary metabolic pathways in actinomycetes. The Journal of Antibiotics,
@@ -3643,7 +3537,6 @@ culture of microalga Chlorella sorokiniana with syntrophic Streptomyces
 
 thermocarboxydus in cassava wastewater for wastewater treatment and
 
-120
 
 biodiesel production. Bioresource Technology, 347, Article 126732.
 https://doi.org/10.1016/j.biortech.2022.126732
@@ -3676,7 +3569,6 @@ substitution. Systematic Biology, 50(4), 580-601.
 
 https://doi.org/10.1080/10635150118469
 
-121
 
 Qadrie, Z. L., Jacob, B., Anandan, R., Rajkapoor, B., & Ulla, M. R. (2009). Anti-
 bacterial activity of ethanolic extract of Indoneesiella echioides (L) nees.
@@ -3707,7 +3599,6 @@ Rashad, M., Fathy, H. M., El-Zayat, A. S., & Elghonaimy, A. M. (2015). Isolation
 
 and characterization of multifunctional Streptomyces species with
 
-122
 
 antimicrobial, nematicidal and phytohormone activities from marine
 environments in Egypt. Microbiological Research, 175, 34-47.
@@ -3738,7 +3629,6 @@ phylogenetic analyses. Molecular Biology and Evolution, 35(9), 2327-
 
 2333. https://doi.org/10.1093/molbev/msy118
 
-123
 
 Rutledge, P. J., & Challis, G. L. (2015). Discovery of microbial natural products by
 activation of silent biosynthetic gene clusters. Nature Reviews Microbiology,
@@ -3769,7 +3659,6 @@ isolation and properties. The Joumal of Antibiotics, 41(7), 855-861.
 
 https://doi.org/10.7164/antibiotics.41.855
 
-124
 
 Saitou, N., & Nei, M. (1987). The neighbor-joining method: A new method for
 reconstructing phylogenetic trees. Molecular Biology and Evolution, 4(4),
@@ -3801,7 +3690,6 @@ Journal of Bioinformatics Research, 2(1), 21-26.
 
 https://doi.org/10.5923/j.bioinformatics.20120201.04
 
-125
 
 Sayers, E. W., Cavanaugh, M., Clark, K., Ostell, J., Pruitt, K.D., & Karsch-Mizrachi,
 |. (2019). GenBank. Nucleic Acids Research, 47(D1), D94-D99.
@@ -3833,7 +3721,6 @@ Streptomyces sp. SB-Alls. International Research Joumal of Biological
 
 Science, 2(10), 43-50
 
-126
 
 Shen J., & Bartha, R. (1996). Metabolic efficiency and turnover of soil microbial
 communities in biodegradation tests. Applied and Environmental
@@ -3864,7 +3751,6 @@ Streptomyces griseoflavus. Journal of Asian Natural Products Research,
 
 2(2), 121-132. https://doi.org/10.1080/10286020008039901
 
-127
 
 Shiono, Y., Shiono, N., Seo, S., Oka, S., & Yamazaki, Y. (2002). Effects of
 polyphenolic anthrone derivatives, resistomycin and hypericin, on apoptosis
@@ -3896,7 +3782,6 @@ Lucas, K. D., Patungan, J. U., Siping, A. O., Cruz, J. A., Cabral, M. J., &
 
 Niones, J. M. (2018). Enhanced root system developmental responses to
 
-128
 
 drought by inoculation of rhizobacteria (Streptomyces mutabilis) contributed
 to the improvement of growth in rice. Philippine Journal of Science, 147(1),
@@ -3927,7 +3812,6 @@ Genetics Analysis version 11. Molecular Biology and Evolution, 38(7),
 
 3022-3027. https://doi.org/10.1093/molbev/msab120
 
-129
 
 Tanaka, Y., & Omura, S. (1990). Metabolism and products of actinomycetes — an
 introduction. Actinomycetologica, 4(1), 13-14.
@@ -3959,7 +3843,6 @@ Thrum, H., Eckardt, K., Bradler, G., Figner, R., Tonew, E., & Tonew, M. (1975).
 
 Streptovirudins, new antibiotics with antibacterial and antiviral activity |.
 
-130
 
 culture taxonomy, fermentation and production of streptovirudin complex.
 The Journal of Antibiotics, 28(7), 514-521.
@@ -3989,7 +3872,6 @@ production in Streptomyces. Molecular Microbiology, 102(2), 183-195.
 
 https://doi.org/10.1111/mmi.13464
 
-131
 
 Usuki, H., Nitoda, T., Okuda, T., & Kanzaki, H. (2006). Screening and partial
 characterization of inhibitors of insect B-N-acetylglucosaminidase. Journal
@@ -4022,7 +3904,6 @@ actinomycetes from soil in and around Nagpur. /nternational Journal of
 
 Pharmaceutical Sciences and Research, 4(4), 1428.
 
-132
 
 Waksman, S. A., & Henrici, A. T. (1948). Family Ill. Streptomycetaceae Waksman
 and Henrici. In Breed, R. S., Murray, E. G., & Hitchens, A. P. (eds),
@@ -4055,7 +3936,6 @@ Williams, S. T., & Vickers, J. C. (1986). The ecology of antibiotic production.
 
 Microbial Ecology, 12(1), 43-52. https://doi.org/10.1007/BF02153221
 
-133
 
 Williams, T. L., & Moret, B. M. (2003). An investigation of phylogenetic likelihood
 methods. In Proceedings of Third IEEE Symposium on Bioinformatics and
@@ -4087,7 +3967,6 @@ salvarsan to cephalosporins. Journal of Investigative Surgery, 25(2), 67—
 
 77. https://doi.org/10.3109/08941939.2012.664099
 
-134
 
 Zhang, Z., Schwartz, S., Wagner, L., & Miller, W. (2000). A greedy algorithm for
 aligning DNA sequences. Journal of Computational Biology, 7(1-2), 203—

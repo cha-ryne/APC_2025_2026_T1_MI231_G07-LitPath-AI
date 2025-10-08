@@ -294,7 +294,6 @@ neural network is trained with an extended loss function enforced with the physi
 
 of baryon conversion efficiency and the Kullback-Liebler divergence metric [32].
 
-10
 
 Chapter 3
 
@@ -322,7 +321,6 @@ also utilize the use of GRACKLE [36] for the radiative cooling, photoionization
 
 heating, metal cooling, and non-equilibrium evolution of primordial elements, and
 
-11
 
 3.1. Overview of SIMBA
 
@@ -373,7 +371,6 @@ formation), and is the HI gas column density for star formation. The larger the
 
 atomic-molecular complex (larger s), the larger the amount of dust that can absorb
 
-12
 
 3.1. Overview of SIMBA
 
@@ -393,7 +390,6 @@ ae > (0.02) (3.4)
 where fy, is taken per gas element and tgyn is the local dynamical time for star
 
 formation given by
-1
 
 tan = =
 m= JGp
@@ -421,7 +417,6 @@ translate to poorer prediction of the star formation rate, and vice versa.
 What separates SIMBA from its predecessor MUFASA is its inclusion of black hole
 growth and seeding in the simulation. In SIMBA, black hole growth is a product
 
-13
 
 3.1. Overview of SIMBA
 
@@ -472,7 +467,6 @@ accretion disc, are numerically implemented within SIMBA as the total black hole
 accretion rate given by
 Men = (1 —1)(Mr + Meonas) (3.9)
 
-14
 
 3.2. SIMBA runs
 
@@ -511,7 +505,6 @@ flagship run), 50h~! Mpc (the feedback variants run), and 25h7! Mpc (the high-
 
 Inttp://simba.roe.ac.uk/
 
-15
 
 3.3. Data from SIMBA
 
@@ -550,7 +543,6 @@ masses, we only include galaxies with stellar mass M, = 10°° Mo or log M, > 9.
 
 2https: //caesar.readthedocs. io/en/latest/running. html
 
-16
 
 3.3. Data from SIMBA
 
@@ -600,7 +592,6 @@ z=2 78 4,046
 12.0 10.2
 12.1 10.2
 
-17
 
 Chapter 4
 
@@ -629,7 +620,6 @@ which will then be applied to previously unseen data. Within supervised ML,
 
 there are a plethora of algorithms that have been previously used to map baryons
 
-18
 
 4.1. Supervised tree-based ML algorithms
 
@@ -668,7 +658,6 @@ RF and ERT are two distinct tree-based ensemble learning approaches which
 
 can be used to minimize the risk of overfitting when dealing with tree-based algo-
 
-19
 
 4.2. Machine learning set-up
 
@@ -705,7 +694,6 @@ torical properties of a DM halo:
 
 T= (Mu, {Mprogen,i}s {05}; Mas A, Ovel) (4.1)
 
-20
 
 4,2. Machine learning set-up
 
@@ -744,7 +732,6 @@ for the ERT models, as discussed in Sec. 4.1, the tuned max_features is None as
 
 it randomly chooses features from the entire dataset for splitting.
 
-21
 
 4.2. Machine learning set-up
 
@@ -760,7 +747,6 @@ RandomizedSearchCV class. Finally, the training of the ML algorithms was done
 
 using the built-in ExtraTreesRegressor and RandomForestRegressor classes.
 
-22
 
 Chapter 5
 Machine Learning vs SIMBA
@@ -788,7 +774,6 @@ across all redshifts z = 0, 1, and 2.
 
 For each galaxy property, we plot the relation with halo mass and compare
 
-23
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -829,7 +814,6 @@ instead of the separate masses of the neutral and molecular hydrogen gases, whic
 was done in Agarwal et al. (2018) and in this work. Additionally, Agarwal et al.
 (2018) were not able to consider the central black hole mass due to the limitations
 
-24
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -870,7 +854,6 @@ DM halo-only information are shown in Figures 5.1 and 5.2, and Table 5.2. We
 find, similar to previous work [9, 10, 32], that both RF and ERT model predictions
 for M, are able to reproduce the actual values from SIMBA well on average, but
 
-25
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -892,7 +875,6 @@ z=0, 1, and 2 (left to right panels). Distributions of ML predictions (RF:
 
 red, ERT: blue) are overlaid against SIMBA true values (gray).
 
-26
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -930,13 +912,11 @@ significantly over epochs. Driven by increased variability in evolution tracks o
 
 galaxies, the distribution becomes broader over time, as is also seen in Figure 5.4.
 
-27
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
 a
 
-13
 a
 t
 
@@ -953,7 +933,6 @@ mass Myy for z = 0, 1, and 2 (left to right panels). Distributions of ML
 predictions (RF: red, ERT: blue) are overlaid against SIMBA true values
 (gray).
 
-28
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -993,7 +972,6 @@ section, Sec. 5.1.2. Quantitatively, the performance metrics are relatively wors
 with R? ~ 0.4 and p ~ 0.6 across all epochs. This shows that ML was unable
 to capture the complex H>-based star formation of SIMBA. It is also worth noting
 
-29
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -1010,7 +988,6 @@ mass My for z = 0, 1, and 2 (left to right panels). Distributions of ML
 predictions (RF: red, ERT: blue) are overlaid against SIMBA true values
 (gray).
 
-30
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -1051,7 +1028,6 @@ match the full scatter. In particular, for SFR, there is a clear bimodal distrib
 for z = 1 (middle panel of Figure 5.8), while the predicted distribution is narrowly
 single-peaked.
 
-31
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -1073,7 +1049,6 @@ Figure 5.8: Kernel density estimate (KDE) plots for star formation rate
 predictions (RF: red, ERT: blue) are overlaid against SIMBA true values
 (gray).
 
-32
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -1113,7 +1088,6 @@ in previous work [9, 10] as well and attributed to the fact that similar to M,,
 
 Zgos is an accumulated quantity, albeit with a more complex evolution governed
 
-33
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -1165,7 +1139,6 @@ models for Zges. We also note that the Mp, predictions capture second-parameter
 correlations with stellar mass and SFR. This will be discussed in detail in Sec.
 5.2.2.
 
-35
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -1179,7 +1152,6 @@ Figure 5.12: Kernel density estimate (KDE) plots for black hole mass
 My, for z = 0, 1, and 2 (left to right panels). Distributions of ML predic-
 tions (RF: red, ERT: blue) are overlaid against SIMBA true values (gray).
 
-36
 
 5.1. Predicted galaxy properties vs SIMBA true values
 
@@ -1209,7 +1181,6 @@ ing train-test splits by changing the value of the random_state parameter (see
 Sec. 4.2) to 69 and 134. We note that these changes yield minimal variation in the
 performance metrics as listed in Table 5.9.
 
-37
 
 5.2. Consistency with second parameter correlations
 
@@ -1254,7 +1225,6 @@ relation has been observed, both observationally for local galaxies [59, 60] and
 
 simulations at the present time to z = 3 [61], and is commonly referred to as the
 
-38
 
 5.2. Consistency with second parameter correlations
 
@@ -1287,7 +1257,6 @@ are for the ERT predictions. Both ML models show similar scatter and accurately
 
 reproduce the mean scaling relations, shown as green dashed-dotted lines for SIMBA
 
-39
 
 5.2. Consistency with second parameter correlations
 
@@ -1314,7 +1283,6 @@ relation [58] at z = 0.
 
 Finally, we note that the FMR is also reproduced at z = 2 but is less evident
 
-40
 
 5.2. Consistency with second parameter correlations
 
@@ -1345,7 +1313,6 @@ predictions (middle panel: RF, right panel: ERT) is shown in Figure 5.15. Galaxi
 
 are color-coded according to their specific star formation rate (sSFR) equal to
 
-41
 
 5.2. Consistency with second parameter correlations
 
@@ -1374,7 +1341,6 @@ recent run than the initial runs used in Ref. [11] (as discussed in Secs. 3.2 an
 
 Interestingly, ML was able to recover the quenching (log sSFR < —11) of galax-
 
-42
 
 5.2. Consistency with second parameter correlations
 
@@ -1402,7 +1368,6 @@ with low neutral hydrogen fraction tends to host massive BHs and typically have
 
 suppressed star formation.
 
-43
 
 5.3. Relative importance of halo properties
 
@@ -1440,7 +1405,6 @@ in their models. The difference may stem from the fact that they report results
 for the combination of all galaxy properties. This result is not surprising, however,
 as based on simple galaxy formation models, high-spin halos are expected to host
 
-44
 
 5.3. Relative importance of halo properties
 
@@ -1460,7 +1424,6 @@ dependence of Myz2 on the halo environment. This may be related to the ram
 
 pressure stripping of gas off of galaxies, which arises due to the motion of a galaxy
 
-45
 
 5.3. Relative importance of halo properties
 
@@ -1480,7 +1443,6 @@ tant feature by both RF and ERT. As discussed earlier in Sec. 5.2.2, more massiv
 
 black holes are found in more massive galaxies and these galaxies are hosted in
 
-46
 
 5.3. Relative importance of halo properties
 
@@ -1516,7 +1478,6 @@ is more abundant at higher redshifts, off of galaxies brought by interacting wit
 high-density medium. It would be interesting to explore this stripping process on
 galaxies at higher redshifts.
 
-48
 
 Chapter 6
 
@@ -1544,7 +1505,6 @@ insights to processes that drive the galaxy-halo connection. One of the interest
 findings is the utilization of the nearby halo mass density around a 300-kpc radius
 by both models when predicting the molecular hydrogen mass My which might
 
-49
 
 be related to the ram pressure stripping of gas off of galaxies when moving through
 a high-density medium.
@@ -1562,7 +1522,6 @@ transformer models, which have been very successful in generative artificial int
 
 ligence (AI) applications, towards addressing this challenge.
 
-50
 
 Bibliography
 
@@ -1594,17 +1553,14 @@ M. Carrasco Kind and R. J. Brunner, “TPZ: photometric redshift PDFs and
 ancillary information by using prediction trees and random forests,” Monthly
 Notices of the Royal Astronomical Society 432, 1483-1501 (2013).
 
-51
 
 Bibliography
 
 ipa
 
-12
 
 13)
 
-14
 
 15)
 
@@ -1646,11 +1602,9 @@ A. Leauthaud et al., “New Constraints on the Evolution of the Stellar-to-dark
 
 Matter Connection: A Combined Analysis of Galaxy-Galaxy Lensing, Clus-
 
-52
 
 Bibliography
 
-17
 
 18)
 
@@ -1700,13 +1654,11 @@ sive Galaxies: BCGs and their DSC in the Magneticum Simulations,” Galaxies
 
 Y. Dubois et al., “Dancing in the dark: galactic properties trace spin swings
 
-53
 
 Bibliography
 
 {25}
 
-26
 
 27]
 
@@ -1752,11 +1704,9 @@ B. Moews, R. Davé, S. Mitra, S. Hassan, and W. Cui, “Hybrid analytic and
 machine-learned baryonic property insertion into galactic dark matter haloes,”
 Monthly Notices of the Royal Astronomical Society 504, 4024-4038 (2021).
 
-54
 
 Bibliography
 
-32
 
 33]
 
@@ -1764,9 +1714,7 @@ Bibliography
 
 35)
 
-36
 
-37
 
 [38]
 
@@ -1806,7 +1754,6 @@ kins, “Gravitational torque-driven black hole growth and feedback in cosmo-
 logical simulations,” Monthly Notices of the Royal Astronomical Society 464,
 2840-2853 (2017).
 
-55
 
 Bibliography
 
@@ -1814,13 +1761,10 @@ Bibliography
 
 [41]
 
-42
 
-43
 
 45,
 
-46
 
 47,
 
@@ -1862,7 +1806,6 @@ Astronomical Society 472, L109-L114 (2017).
 Planck Collaboration et al., “Planck 2015 results. XIII. Cosmological param-
 eters,” Astronomy & Astrophysics 594, A13 (2016).
 
-56
 
 Bibliography
 
@@ -1876,7 +1819,6 @@ Bibliography
 
 53]
 
-54
 
 55)
 
@@ -1918,7 +1860,6 @@ prints p. arXiv:1201.0490 (2012).
 B. Catinella, D. Schiminovich, G. Kauffmann, S. Fabello, C. Hummels, J.
 Lemonias, S. M. Moran, R. Wu, A. Cooper, and J. Wang, “The GALEX
 
-57
 
 Bibliography
 

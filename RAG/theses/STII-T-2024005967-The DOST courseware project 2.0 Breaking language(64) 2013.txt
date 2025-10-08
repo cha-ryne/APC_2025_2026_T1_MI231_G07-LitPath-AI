@@ -47,7 +47,6 @@ during the open forum was the alignment of the DOST modules to the Department of
 
 Education’s (DepEd) Order No. 74, s. 2009 ? dated July 2009, “Institutionalizing Mother
 
-1
 
 Tongue-Based Multilingual Education (MTB-MLE)”. MTB-MLE prescribes the use of
 the language learners speak at home in delivering lessons and in classroom discussions
@@ -144,7 +143,6 @@ c. Consultancy Fees for Language Experts
 
 12 consultants @ 1,500/module x 101 =P 1,818,000.00
 
-4
 
 Sub-total for translation project =P49,818,000.00
 Replication @ 765,500.00(10,000 copies) x 12 =P 9,186,000.00
@@ -307,7 +305,6 @@ Grade 3 and Mathematics Grades 1-3. However, only one lesson per subject per
 
 Grade was selected to apply the four localized languages of Iloko, Cebuano and
 
-10
 
 Maranao and Tagalog and that will compose the initial three (3) localized
 
@@ -350,7 +347,6 @@ specifically the audio, text and module assessment. The audio localization is
 
 limited only to mp3 format, the text localization is of pdf format while the module
 
-11
 
 
 assessment is of doc format. Localization materials can be accessed and
@@ -374,7 +370,6 @@ The prototype is designed such that it follows the basic web 3.0 standards in te
 
 of interactivity, layout and functionality.
 
-12
 
 Learn. Explore. Have Fun,
 
@@ -402,7 +397,6 @@ implemented after consultation with the courseware development group of SEI and
 
 ASTI.
 
-13
 
 C. Process Model
 
@@ -413,7 +407,6 @@ localization.
 
 Figure 7. Data Flow Diagram
 
-14
 
 D. Entity Relationship Diagram
 
@@ -466,7 +459,6 @@ ialect name =F Samoa
 
 Figure 8. Entity Relationship Diagram
 
-15
 
 E. Functional and Non-Functional Requirements
 1. Functional Requirements
@@ -498,7 +490,6 @@ the use of the local language in delivering lessons at home and in
 
 classroom.
 
-16
 
 . Failure rate is expected when the web server of the project is unavailable.
 Backup of the project can be performed either monthly or quarterly
@@ -508,7 +499,6 @@ is secured by mdS5 encryption.
 
 . User manual is available for ease of use of the system.
 
-7
 
 Results and Discussions
 To align the website to MTB-MLE requirements of DepEd, the project
@@ -536,7 +526,6 @@ can be uploaded to the courseware site. The localization administrator used the
 
 application Adobe Audition to convert the wav format to mp3 format.
 
-18
 
 0:001000)
 
@@ -556,7 +545,6 @@ equivalent localized text of the module. The localization administrator also
 
 uploaded a test/assessment file for each dialect per module to further assess the
 
-19
 
 comprehension or learning of the students for the localized module. After
 answering the test, the registered user can email the file to the courseware
@@ -589,7 +577,6 @@ fixed by changing the folder permission of the destination folder for the audio 
 
 text localization materials.
 
-20
 
 4. Uploading of localization materials was easy because after selecting module and
 dialect, the localization administrator can just browse for the directory
@@ -622,7 +609,6 @@ o For Science
 
 © For Mathematics
 
-21
 
 = Grade 1 - The Days in a Week
 = Grade 2 — Telling Time
@@ -644,7 +630,6 @@ Sothink SWF Decompiler. The decompiler produced the raw Flash file (FLA format)
 
 of the SWF file of modules.
 
-22
 
 Figure 12. Sothink SWF Decompiler Interface
 
@@ -656,7 +641,6 @@ ii, In the export section, tick the checkbox and then click Export FLA/FLEX
 
 The flash file was edited to accommodate audio localization material.
 
-23
 
 10.
 
@@ -690,7 +674,6 @@ dialect was selected, the volume is unmuted and played with the original English
 
 embedded audio of the module. .
 
-24
 
 11. The author tried embedding the localized audio in “The Days in a Week” module.
 Before embedding it in the module, the author repeatedly checked if the localized
@@ -721,7 +704,6 @@ o Cebuano - Ms. Jessamine Rosal, Registered Nurse, Cebu City
 
 HS, Central Mindanao Campus, Iligan City, Lanao del Norte
 
-25
 
 ° Tagalog - Ms. Josephine Feliciano, SRS II, SEI- DOST
 14. The English texts of the original four modules were captured by Ms. Josephine
@@ -757,7 +739,6 @@ hundred (100). Playing the localized audio was done by embedding the localized
 
 audio with the file type limitation of mp3.
 
-26
 
 2. After decompiling the swf files to its raw format, some fonts of the original file were
 not recognized by Adobe Flash CS4 that resulted to changing the fonts to the default
@@ -785,7 +766,6 @@ needed major cleaning because of noise background. A registered user commented
 
 that it seems the Iloko audio was recorded by a person who is not fluent in Iloko. The
 
-27
 
 original translator is attributing this observation to the below standard recording of
 the audio.
@@ -814,7 +794,6 @@ than in English at 9 and 8 respectively. The third pupil however, had the same s
 
 of 7 both for English and Tagalog tests. The pupil who took the test for Grade 3
 
-28
 
 Science lesson “Habitat” scored higher by one point in English than Tagalog with 9
 and 8 respectively.
@@ -844,7 +823,6 @@ They can also download module assessment per module that contains test questionn
 
 can answer.
 
-29
 
 (es) (seas (oesatea
 
@@ -871,7 +849,6 @@ excessive usage of bandwidth.
 
 the localized text.
 
-30
 
 To assist in the development of the Courseware Project 2.0, the author provided
 
@@ -893,7 +870,6 @@ Facebook and Twitter.
 
 Figure 16. Courseware social media module
 
-31
 
 In figure 16, we can see the social media plugin of the project. After clicking the
 social media available, the website will open a new tab or page redirecting to the
@@ -917,7 +893,6 @@ automatically download the bulk modules in rar file type. The user needs a winra
 
 extract the downloaded bulk module file.
 
-32
 
 YOU ARE DOWNLOADING ALL MODULES
 
@@ -952,7 +927,6 @@ images in the website are being cropped and resized using Paint.Net software.
 
 page for monitoring website activity for the period of testing.
 
-33
 
 Google
 
@@ -974,7 +948,6 @@ The users experienced dynamic interactivity, user-friendly interface and manipul
 
 of elements in the website.
 
-34
 
 V. Conclusions
 
@@ -1003,7 +976,6 @@ major functionalities flexible enough to accommodate user requests and adhere to
 
 mechanics of Web 3.0.
 
-35
 
 Vi. Recommendations
 
@@ -1038,7 +1010,6 @@ for the localization, there should be a training to guide them on the recording 
 
 to acceptable standards as well as the design of standard test assessment instrument.
 
-36
 
 Vil.
 

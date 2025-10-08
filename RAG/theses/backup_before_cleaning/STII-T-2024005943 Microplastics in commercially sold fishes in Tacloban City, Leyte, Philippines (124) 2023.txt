@@ -1,0 +1,2584 @@
+MICROPLASTICS IN COMMERCIALLY SOLD FISHES IN TACLOBAN CITY, LEYTE, PHILIPPINES
+
+Kenney D. Benaires
+
+University of the Philippines Tacloban College
+
+Master of Science in Environmental Science
+
+JULY 2023
+
+ABSTRACT
+
+Microplastic pollution poses a significant environmental challenge, causing
+damage to natural processes. Its widespread occurrence is attributed to the extensive
+use of plastics across various sectors. Effective measures to minimize plastic's
+environmental impact are lacking. Its extent remains to be evaluated to include risks
+to human health. Microplastic pollution was assessed by microscopy and FTIR
+techniques in gut fish samples from Tacloban City market. Data from this study is
+essential to assess microplastic human exposure. The study chose the top five highly
+purchased fish in the city, Chanos chanos, Sardinella spp., Decapterus spp.,
+Rastrelliger brachysoma, and Rastrelliger faughni. Results revealed that
+microplastics are present in all these fish. Among the 25 samples per fish species
+collected from three major markets in the city, 12±6.5 samples of Rastrelliger
+faughni, 9±2 samples of Chanos chanos, 8±1.53 samples Sardinella spp. 8±1.53
+samples of Decapterus spp., and 741.53 samples of Rastrelliger brachysoma contain
+microplastics in their guts. Raustrelliger faughni has the highest average number of
+10.67±2.9 microplastics, followed by Chanos chanos with 9.67±1.86, Sardinella spp.
+5±1, Decapterus spp. 3±0.57, and Rastrelliger brachysoma 2.33±0.46. The
+predominant types of microplastics identified were tibers, followed by film, pellets,
+and fragments. The FTIR analysis indicates that encountered polymers were cellulose
+propionate, HDPE, EPDM, and polyacetal. Various colors and shapes were observed,
+with elongated shapes being prominent and orange as the prevailing color. Tacloban
+City Market stands out for selling fish with the highest concentration of microplastics
+in the guts of its sold fishes followed by Caibaan Market and San Fernando having
+fish with the least detected microplastics. A KAP survey was done to provide insights into the knowledge, attitudes, and
+perceptions of local communities in Tacloban City regarding microplastics. The
+respondents, who were mostly young and educated adults, gained knowledge about
+microplastics from personal experiences. They had a positive attitude towards
+reducing plastic pollution and recognized the importance of coastal waters. With a
+significant number of people who are still willing to consume fish with microplastics,
+it is recommended to raise awareness about the potential health risks associated with
+consuming fish containing microplastics and promote sustainable practices to reduce
+plastic pollution in order to mitigate the ingestion of microplastics through seafood
+consumption.Future research should explore sustainable alternatives to single-use
+plastics, conduct broader social surveys, compare microplastics in sediments and
+water, and investigate the accumulation of microplastics in fish muscle tissues.
+
+Keywords: Microplastics, commercially sold fishes, FTIR, KAP
+
+CHAPTER 1
+INTRODUCTION
+
+1.1 Background and rationale
+
+Plastic pollution is one of the major environmental problems of our society.
+This issue continuously escalates some environmental processes that cannot be
+reversed. One of the major products that plastic pollution has brought about is
+microplastic pollution. Plastic has become widely popular due to its durability and
+cheap cost. Almost all aspects of the society rely on plastics, such as wraps, water
+bottles, and packaging of non-recyclable goods. With the increasing population that
+is almost dependent on plastics, plastic pollution has become rampant in our
+environment.
+
+Microplastics (MP) are tiny plastic particles with a size range of 1-15 cm
+(10-150 mm), >5 mm and anywhere from 2.5 to 100 cm (25-1,000 mm) (Hartman et
+al., 2019) that are formed either through human activities or exposure of larger
+plastics to natural elements. These minuscule particles can infiltrate various
+ecosystems, posing a potential threat to the organisms within those systems. The size
+can vary greatly, ranging from less than 0.2 inches to particles measured in
+nanometers There are two main types of microplastics: primary and secondary.
+Primary microplastics originate from commercial products like cosmetics,
+microfibers, and fishing nets, while secondary microplastics are formed when larger
+plastic items, such as water bottles, break down due to environmental factors
+(National Geographic, 2022).
+
+It is worth noting that microplastics smaller than Smm in size have a high
+dispersal capability (Horton, 2020). Over time, they have been discovered to
+
+accumulate in the seafloor, either by sinking through the water column or indirectly
+
+through ocean currents (Clark ef al., 2016). Interestingly, the proximity of a town or
+city to the seabed has been found to significantly influence the presence of
+microplastics in the seafloor (Clark ef al., 2016).
+
+The issue of microplastics extends beyond the marine environment and affects
+various ecosystems worldwide. They can enter freshwater systems, terrestrial habitats,
+and even the air we breathe. Additionally, microplastics have been found to adsorb
+and transport harmful chemicals further increasing the potential risks they pose to
+both wildlife and human health (Wright & Kelly, 2017). Understanding the sources,
+distribution, and impacts of microplastics is crucial for developing effective
+mitigation strategies and reducing their pervasive presence in our environment.
+
+Microplastics smaller than 1 micrometer in size can negatively impact the
+cellular system and tissues of organisms through irvitation due to their foreign
+presence (Lim, 2021). They closely resemble the size of zooplankton, causing marine
+life to mistake them for food. Consequently, the reproductive and photosynthetic
+processes of algae, which form the foundation of the food chain, can be disrupted
+(Mao ef al., 2018). This disruption can have far-reaching consequences, especially in
+regions like the Antarctic, where the ecosystem heavily relies on seasonal production
+of nutrients (Waller e al., 2017).
+
+Ingestion of larger microplastics poses a greater risk that could lead to
+intoxication. For instance, birds that feed on insects have been found to consume up to
+200 pieces of plastic per day (D’Souza ef a/., 2020), When these plastics are ingested,
+compounds such as plasticizers, stabilizers, and pigments present in the plastics can
+interfere with hormone production in the endocrine system (Lou ef al., 2022).
+
+Additionally, the ingestion of microplastics can result in reduced metabolic activity
+
+(Horton & Barnes, 2020). These harmful effects highlight the significant impact that
+microplastics can have on both individual organisms and broader ecosystems.
+
+The health impacts of consuming fish contaminated with microplastics is an
+emerging area of research, and our understanding of the specific effects is still
+evolving. However, some potential health concerns associated with the ingestion of
+microplastics through contaminated fish include chemical exposure. Microplastics can
+adsorb and concentrate toxic chemicals from the surrounding environment. When fish
+consume microplastics, these chemicals can be released and potentially enter the body
+of the consumer (Alberghini ef ai/., 2023). Some of these chemicals include
+polybrominated diphenyl ethers (PBDE), bisphenol A (BPA), nonylphenol (NP),
+octylphenol (OP), and potentially toxic elements, which may have adverse health
+effects when accumulated in the body over time.
+
+Microplastic ingestion can also cause tissue damage and inflammatory
+response. The presence of microplastics in fish tissues can trigger an immune
+response, leading to chronic inflammation. Prolonged inflammation may contribute to
+various health issues, including oxidative stress, consequent inflammatory, and other
+cytotoxic impacts (Bhuyan, 2022: Albergihini et al., 2023).
+
+Fish that are contaminated with microplastics may be consumed by larger
+marine organisms, including humans, and can transfer microplastics up the food
+chain. This can lead to the biomagnification of microplastics and their associated
+contaminants within the food chain, potentially increasing exposure and health risks
+for consumers at higher trophic levels (Miller ef a/., 2020).
+
+At a local perspective, research conducted by Cabansag et al. (2021) on
+microplastics found in several fish in Eastern Visayas, Philippines, showed that
+
+herbivores such as S. canaliculatus, are more prone to consuming more microplastics
+
+in comparison to detritivores like mullets, S. canaliculatus. Fibers are a form of
+microplastic that are frequently seen in both herbivore and omnivore species. The
+study also discovered that marine fish species consume food at a higher pace than
+freshwater fish species.
+
+According to the study's findings of Yu et al. (2022), microplastics are found
+in Perna viridis and Venerupis species, which are mostly polyamide fibers, high
+density polyethylene (HDPE), and polyvinylidene fluoride (PVDF). The survey
+interview also showed that the respondents lacked basic knowledge on MP. However,
+the respondents demonstrated a positive attitude toward reducing plastic pollution and
+valued coastal waters. The study also calculated an estimate of the amount of MP that
+can be transferred to humans through consumption of bivalves, which was found to be
+0.003 mg/day.
+
+Experts and scholars have voiced apprehension about the potential
+environmental repercussions of microplastics. They acknowledge that there remains a
+substantial knowledge gap, necessitating further in-depth examination and study. The
+increasing prevalence of microplastics in the ecosystem has instilled profound
+concern about its future implications and the welfare of forthcoming generations.
+Consequently, ongoing efforts are underway to explore and research the
+characteristics of plastics and their effects comprehensively.
+
+1.2 Statement of the Problem
+
+The Philippines highly rely on marine resources, especially fishes, as a main
+source of livelihood, income generation, and consumption. According to the United
+States Department of Agriculture (2022), with an annual per capita consumption of 40
+kgl, fish is the most consumed animal protein in the Philippines. This translates to a
+
+market demand for 4.4 million MT, which is worth $3 trillion. However, the
+
+Philippine oceans are facing environmental degradation due to mismanaged wastes
+from different sources.
+
+Philippines, including other Southeast Asian countries, is at the top five for the
+most plastic-polluting states (Garcia e/ al., 2019). With the ubiquity of plastics in the
+marine environment, this poses risk and other hazards to both the human society and
+the natural ecosystem. Macroplastics weather overtime into microscopic fragments
+sizing into <Smm through physical or chemical agents (Carber er al., 2018). These
+microscopic fragments of plastics are mistaken by fishes and other marine animals as
+a food source, consequently entering their bodies. Plastics are known to increase their
+toxicity levels through the adsorption of harmful chemicals, such as bisphenol A,
+polychlorinated biphenyls, polycyclic hydrocarbons, and polybromodiphenyl ethers.
+This process disrupts the immediate biota (Superio & Abreo, 2020).
+
+Microplastics is a global issue that exposes different risks to mankind and the
+environment. However, further research is still needed to fully understand its nature
+and effects. Specifically, there is no sufficient data about microplastics in fish sold in
+Tacloban City markets that one could fully circumscribe about its presence and
+effects.
+
+Considering the thriving fishing industry in Leyte, it is plausible that the
+general populace has been inadvertently ingesting microplastics through the
+consumption of commercially available marine products, including but not limited to
+fish, crustaceans, mollusks, and similar seafood items. Several research studies have
+indicated the occurrence of microplastics in certain marine resources. In the study of
+Cabansag et al. (2021), mullets and rabbitfishes collected in Cancabato Bay in
+Tacloban City are found to have microplastics in their guts in the forms of fibers,
+
+fragments, foam, pellets and microbeads. Additionally, the study of Yu ef al. (2022) in
+
+Perna viridis and Venerupis spp. also collected in Cancabato Bay are found to have
+ingested microplastics such as polyamide fibers, HDPE, and PVDF. The main
+distinction between this study and the ones previously stated is that it aims to
+determine the presence of microplastics in fish that are sold in Tacloban City's market
+where most of the populace buy fish for consumption. With the use of scientifically
+structured questionnaires the populace’s level of awareness, attitudes, and practices on
+
+microplastics and behavior towards plastic pollution is determined as well.
+
+1.3 Objectives
+The primary objective of this study is to determine the presence of
+microplastics in commercially sold fishes in Tacloban City and the awareness of the
+locals about microplastics and plastic pollution. Specifically, it aims:
+1. To examine gut contents of commercially sold fishes for the presence of
+microplastics;
+2. To determine which species of fish are with most microplastics in their guts;
+and
+3. To determine the level of knowledge and awareness of the locals about
+microplastics, their attitude towards plastic pollution, and their practices.
+1.4 Significance of the Study
+With the determination of microplastics in commercially sold fishes in the
+markets of Tacloban City, this study may help bolster the proper management of
+plastic wastes and consequently diminish cases of microplastic contamination. This
+study will contribute to the research community and provide recent information since
+there is minimal data regarding microplastic pollution in commercially sold fishes in
+
+the Philippines, specifically, Tacloban City.
+
+According to Macleod ef al. (2021), adverse effects of plastic pollution
+include irreversible alterations in the carbon and nutrient cycle, changes in the
+mechanics in the ecosystem, co-occurring biological consequences on endangered and
+keystone species, rise of toxicity in the environment, and other societal impacts.
+Through the KAP (Knowledge, Attitude, and Practices) survey this study will provide
+additional information for a better policy making and strengthened implementation of
+
+a proper plastic waste disposal in the city.
+
+1.5 Conceptual Framework
+
+Figure | shows the research paradigm which is geared on policy formulation
+with regards to human exposure to microplastics. This is obtained through the
+collection of fish samples originating from the markets of Tacloban City that are
+commercially sold for consumption.
+
+The samples are analyzed through microscopy and Fourier Transform Infrared
+Spectroscopy (FTIR). The microscopy method enables the determination of presence
+of microplastics in the guts of the collected fishes. The FTIR determines the type of
+microplastics found. The assessment of presence or absence provides an estimated
+human exposure to microplastics including but is not limited to toxicity. Additionally,
+the research utilizes a Knowledge, Attitude, and Practices (KAP) survey that tackles
+the knowledge, attitude, and perception of the locals about microplastics. It provides
+an overview of Tacloban City’s level of awareness on microplastics.
+
+With the increasing utilization of plastics in society, plastic pollution has
+become rampant in the environment. Through this research, additional data regarding
+the matter is crucial in the formulation of policies and other societal mechanisms to
+
+control the increase of microplastics and aid in the preservation of the environment.
+
+Tacloban City
+
+Market for Fishes
+
+it
+
+en | Commercially sold
+Microscopy ro hshes
+
+—_ Loe
+Fourier Transtorm Infrared.
+Spectoscopy
+
+Physico-chemical
+Analysis
+
+‘Survey Interview with
+the Locals
+
+—— Human Exposure
+
+Close-ended KAP survey
+about MPs
+
+Policy Recommendations
+
+Figure 1. The Conceptual Framework illustrating the research flow
+
+1.6 Scope and Limitation of the Study
+
+The scope of this study was limited to Tacloban City, focusing exclusively on
+fish available for consumption in its local markets. The survey involved residents
+currently residing in Tacloban City and those observed purchasing fish commodities
+from its markets. It is important to note that the study primarily explores probable
+sources of fish rather than tracing the precise origin of the samples, as they were
+collected from the markets. As a result, the study's findings should be interpreted with
+
+consideration for these specific constraints.
+
+CHAPTER 2
+REVIEW OF RELATED LITERATURE
+
+2.1 Macroplastics to microplastics
+
+In a study conducted by Jambeck e/ al. (2015), it was revealed that China
+ranked first in terms of global plastic waste generation, with Indonesia and the
+Philippines following in second and third place, respectively. The Philippines
+produced approximately 2.7 million metric tons of plastic waste in 2015, whereas
+China's plastic waste production during the same year was approximately 48.1 million
+metric tons. Despite China's higher overall plastic waste production, the Philippines is
+the country that contributes the most plastic waste to the world's oceans.
+
+This is primarily due to the fact that a significant portion of the Philippines’
+population resides in coastal regions and near rivers and canals. Coastal cities, such as
+Metro Manila, which have paved surfaces, urban drainage systems, and experience
+high levels of precipitation, have been identified as major sources of land-based
+plastic waste that ends up in the oceans. Meijer ef al. (2021) conducted a study and
+found that Pasig River, located in Metro Manila, contributes the largest amount of
+marine plastic waste. This river alone accounts for 6.43 percent of all plastic waste
+found in the oceans.
+
+Single-use plastics are widely prevalent in the Philippines, primarily because
+of their affordability, durability, easy accessibility, and efficient production process.
+This surge in plastic consumption has led to significant environmental concerns. A
+major contributing factor to this issue is the mass production of consumer goods
+packaged in plastic, which particularly affects low-income households. In order to
+
+afford essential items like shampoo, hair conditioner, and soap, these households often
+
+opt for purchasing them in small sachets rather than in bulk quantities, as the former is
+significantly cheaper and more affordable (del Pilar e/ a/., 2020)
+
+Furthermore, the use of single-use plastics extends to the food industry, where
+products are frequently packaged in disposable plastics or cellophane wrappers.
+Additionally, disposable cups, forks, spoons, and other utensils are commonly used
+for eating purposes (Bates, 2019). Such practices contribute to the mounting plastic
+waste in the country.
+
+The medical sector also heavily relies on plastic materials. Disposable gloves,
+wraps for medical equipment, plastic syringes and vials, face masks, face shields, and
+other items are extensively used in healthcare facilities (Leal Filho ef al., 2021). Due
+to the risk of contamination, these items cannot be reused and are immediately
+discarded after use, further exacerbating the plastic waste problem. The widespread
+use of single-use plastics in various sectors of the Philippines, including consumer
+goods, food packaging, and the medical industry, has resulted in a significant
+environmental challenge, as these plastics are often disposed of and cannot be reused
+due to contamination concerns.
+
+The Philippines has a significant problem with the excessive production and
+usage of plastics, coupled with ineffective waste management practices. As a result,
+these plastics have infiltrated various natural environments, including water systems
+like rivers, lakes, and oceans. Over time, the large plastic items exposed to UV rays
+and other environmental factors undergo degradation and break down into tiny
+particles known as microplastics measuring less than five millimeters in diameter
+
+(Nematdoost Haghi and Banaee, 2017; National Ocean Service, n.d.).
+
+10
+
+2.2 Impacts of microplastics to the environment
+
+Microplastics pose varying degrees of risks to both marine and freshwater
+ecosystems compared to macroplastics due to its pervasiveness and mainly to its size.
+The process of degradation makes plastics more readily available and exposes a
+greater variety of species in marine settings. This can be discerned in the presence of
+microplastics in various trophic levels, including fish (Neves ef a/. 2015; Bellas ef al.
+2016), crustaceans (Goldstein et a/., 2013), and zooplankton (Desforges et al. 2015)
+Additionally, biofouling—a process in which biofilms develop on plastic surfaces and
+change waste or other particles into a substance that trophic consumers mistake for
+food—led to an increase in the frequency of ingestion (Kooi et a/., 2017).
+
+Microplastics have tendencies to increase the toxicity level in the water
+through adsorption of chemicals such as bisphenol A, polychlorinated biphenyls,
+polycyclic hydrocarbons, polybromodiphenyl ethers that may affect the intermediate
+biota (Superio & Abreo, 2020). In the study of Avio ef al. (2015), showed that
+polyethylene and polystyrene microplastics in mussels absorb polycyclic
+hydrocarbons which then accumulate in its tissues. Due to the exposure of high
+concentration of pyrene, the mussels reportedly have changes in its immunological
+response and gene expressions. In addition, because microplastics obstruct
+photosynthetic processes through algal adsorption and aggregation, algae growth is
+often inhibited (Zhang et al., 2015)
+
+Distribution of microplastics in the natural environment is not only limited to
+marine and aquatic ecosystems, but can also be observed in atmospheric pathway
+distribution (Superio & Abreo, 2020; Dris e# al., 2015). This further means that
+microplastic pollution can occur even in remote areas. Far-reaching rivers and lakes
+
+may be contaminated with microplastics due to its nature of distribution.
+
+Studying microplastics is crucial for ensuring food security since freshwater
+and marine environments are significant sources of fish and other creatures that could
+serve as a food supply for inland settlements. The toxicology of microplastics
+demonstrates that, after ingestion, the toxins they produce eventually accumulate in
+the tissues (Avio ef al., 2015). It is also probable that trophic transfer will increase the
+biomagnification of plastics and the poisons emitted by plastics, making freshwater
+
+and marine fishes unfit for human food (Ziccardi ef al., 2016).
+
+2.3 Characterization of microplastics
+
+The characterization of microplastics involve sample collection, preservation
+of sample without contamination, digestion of samples with specific reagents to
+remove unwanted biomass and other interferences, incubation of samples, filtration of
+samples to extract microplastics, analysis of samples through microscopy and FTIR
+Spectrometry.
+
+In the study of Abijion et al. (2020), the characterization of microplastics from
+the sample follows the same pattern as stated above. Specifically, sample collection
+was done following the Rochman ef al. (2015) protocol through securing the fish
+samples in an aluminum foil, putting it in zip lock bags, and freezing it to avoid
+contamination. The guts were then extracted from the fish samples under the laminar
+flow cabinet and lab apparatuses were washed several times with distilled water to
+prevent contamination. The gastrointestinal tract of the fishes were isolated from the
+fish through cutting lengthwise from the belly to the anus and was weighed in a tared
+jar. Technical graded powdered NaOH (Sodium Hydroxide) and SDS (Sodium
+Dodecyl Sulphate) were dissolved in (5g/L) distilled water. Per 1 g of fish tissue, 10
+
+mL of NaOH and 5 mL of SDS 0.5% were added to the jar as part of the digestion
+
+12
+
+process. It is then incubated for 24 hours at 50°C in the oven, followed by another 24
+hours of incubation after the jars are gently shaken. The jars were rinsed three times
+with 95% ethanol and Milli-Q water after the incubation period, and the contents were
+vacuum filtered using a 0.45 m filter membrane. After 5 minutes, 10 mL of technical
+2M HCI was added, and the mixture was washed with distilled water. In the same
+manner as HCl, 30% hydrogen peroxide was used to remove any remaining organic
+compounds. A filter paper was used to contain the microplastics, which was then
+examined under a microscope. The stereomicroscope and the hot needle technique
+were used to identify and confirm the microplastics that were put in a petri dish
+coated with filter sheets. A suspected microplastic was pricked with a heated thin
+needle under a stereomicroscope as part of the hot needle process.
+
+In addition, in the study of Cabansag ef al. (2021) entitled Microplastics in
+some fish species and their environs in Eastern Visayas, Philippines, fish samples
+were placed in a sealed container and then iced and frozen within two hours to three
+hours from capture. All of the tools used to dissect, digest, and prepare samples were
+constructed of glass or ceramic to reduce sample contamination. Laboratory supplies
+were properly cleaned, rinsed with distilled water several times, air dried inverted,
+and stored inverted when not in use. Fish guts were immediately placed in clean
+graduated cylinders for volume measurement after being removed from various fish
+species. As a control experiment, the experimental procedure without any
+gastrointestinal tissues was also carried out. The whole digestive system, including
+the esophagus, stomach, and intestines, was dissolved in three times the volume of
+each GI tract's 10% KOH (Potassiwn Hydroxide) solution and incubated for 12 to 24
+hours at 60°C. The displacement method was used to calculate the digestive system's
+
+volume. The remaining material was then filtered through a series of sieves,
+
+13
+
+measuring 4000 m, 250 m, and 150 m, before being put into the oven. The residual
+
+components were then transferred to clean petri plates after being filtered through a
+
+125 m filter paper by washing it with minimal distilled water. A Wild Heer-Brugg
+
+MSA stereomicroscope was used to visually check the particles that had been
+
+retained.
+
+Qualitative and quantitative methodologies work jointly in the characterisation
+
+of microplastics. Hidalgo-Ruz ef al. (2012) claim that there is a vast variety of
+
+microplastics with different forms, sizes, and origins because of the diversity of
+
+sources. The following table summarizes the characterization and description of
+
+microplastics adapted from Hidalgo-Ruz et al. (2012).
+
+Table 1. Characterization of Microplastics (Hidalgo-Ruz er al., 2012)
+
+Characterization Description
+
+Sources consumer product fragments (e.g fishing net)
+and raw industrial pellets
+
+Type plastic fragments, pellets, filaments, plastic
+films, foamed plastic, granules, and styrofoam
+
+Shape for pellets: cylindrical, disks, flat, ovoid,
+spheruloids
+for fragments: rounded, subrounded, subangular,
+angular
+general: irregular, elongated, degraded, rough,
+and broken edges
+
+Erosion fresh, unweathered, incipient alteration, and
+
+level of crazing (conchoidal fractures),
+weathered, grooves, irregular surface, jagged
+fragments, linear fractures, subparallel ridges,
+and very degraded
+
+Color transparent, crystalline, white,
+clear-white-cream, red, orange, blue, opaque,
+black, gray, brown, green, pink, tan, yellow, and
+pigmentation
+
+In the study of microplastics, microscopy does not necessarily provide the
+reliability and precision in identifying the type of plastic present. Thus, a
+much-advanced technology to correctly identify the microplastic is needed. The FTIR
+Spectroscopy is a commonly used equipment for the detection of the microplastics
+identity (Veerasingam, 2020). It is useful and trustworthy for identifying polymers
+and evaluating the quality of plastic products. The changes in the chemical bond
+structures of microplastics (hydroxyl, carbonyl groups, and carbon-oxygen atoms) as
+a result of various weathering processes are also studied using the FTIR technique
+(Veerasingam, 2020). Additionally, the FTIR approach is employed to comprehend
+the cellular-level biochemical alterations caused by ingested microplastics, their
+
+related contaminants, and their ecological impacts (Veerasingam 2020).
+
+2.4 Microplastics in the Philippines
+
+Microplastics have become one of the most pressing environmental issues.
+However, it is also one of the most understudied aspects concerning environmental
+preservation. The effects of microplastics on different aquatic life and other
+environmental components needs to be further studied (Arcadio ef al., 2022)
+especially its mechanisms and varying movements in the ecosystem. Additionally,
+there are very few or no publications regarding microplastics in the freshwater
+
+ecosystem which raises further concerns considering that the pollution levels in rivers,
+
+15
+
+streams, and lakes are almost comparable to that in marine settings (Superio & Abreo,
+2020)
+
+Furthermore, some studies show that microplastics can pose different risks to
+organisms exposed to it. Microplastics with a size smaller than 1 mm may cause an
+adverse effect on an organism's reproductive system and may irritate an organism's
+cellular system and tissues merely by being present especially when exposed to
+plasticizers, stabilizers, and pigment while larger microplastics are more likely to
+harm by ingesting and being intoxicated (Jin et al., 2021; Lim, 2021).
+
+Arcadio ef al. (2022) first documented evidence on the largest lake in the
+Philippines, demonstrated that Laguna Lake is contaminated with microplastics
+especially in study sites festered with human activities. Additionally, all microplastics
+that have been observed originated from the surrounding communities mostly being
+polypropylene, ethylene-vinyl acetate copolymer, and polyethylene terephthalate. The
+microplastics present pose high risks in decreasing water quality and contaminate
+aquaculture by entering the food chain which consequently exposes humans to the
+effects of microplastics.
+
+The study of Abifion ef al. (2020), showed that microplastics are ubiquitous in
+commercially sold fishes in the public wet market of Cebu. Chanos chanos,
+commonly known as milkfish or “bangus” are more susceptible to microplastic
+ingestion with an average of 11.6 pieces ingested per individual, followed by the
+bullet tuna (Auxis rochei) with 6.6 pieces ingested per ingested, and mackerel
+(Rastrelliger kanagurta) with an average of 5.3 pieces. The study showed that
+transparent microfibers type of microplastic comprising 91% of the total sample is
+predominant with the blue color (48%) being mostly observed followed by red (39%),
+
+black (8%), and white (5%).
+
+The study of Cabansag ef al. (2021) regarding the microplastics present in
+some fishes and their environs in Eastern Visayas, Philippines, demonstrated that
+herbivores represented by S. canaliculatus is more susceptible to ingesting larger
+amounts of microplastics compared to detritivore such as mullets. The type of
+microplastics that is commonly present are fibers which are observed in both
+herbivore and detritivore species which also includes fibers, fragments, foam, pellets
+and microbeads. Additionally, the study found that the marine fishes species have
+higher ingestion rate compared to freshwater fishes.
+
+The results of the study by Yu ef a/. (2022) show that microplastics are present
+in Perna viridis and Venerupis species, along with polyamide fibers, HDPE, and
+PVDF. The interview portion of the survey revealed that the respondents lacked
+fundamental knowledge about microplastics. The respondents did, however, show a
+favorable attitude about lessening plastic pollution and appreciated coastal waters.
+The study also estimated that bivalves can transmit 0.003 mg/day of microplastic to
+humans, which was shown to be the quantity that can be transferred.
+
+The escalating global problem of microplastic pollution has gained significant
+attention as an environmental concern. Expanding research efforts in the field of
+microplastics holds the potential to unlock substantial knowledge and insights for
+future investigations. Moreover, delving deeper into the study of microplastics
+specifically in the context of the Philippines can shed light on an additional dimension
+of this issue. Such research can uncover unique aspects, including the sources,
+distribution patterns, impacts, and mitigation strategies specific to the Philippines,
+thereby contributing to a more comprehensive understanding of microplastic pollution
+
+on a global scale.
+
+2.5 Microplastics and the human society
+
+The effects of microplastics are still to be fully understood (Jin e¢ al., 2021;
+Lim 2021; Abifion ed al., 2020, Veerasingam, 2020). However, some studies have
+exhibited that microplastics are capable of intoxication through adsorption and higher
+tendencies of biomagnification through ingestion in the food chain. (Avio ef al.,
+2015).
+
+Only a few social survey researches have delved at plastic use and pollution in
+the Philippines. The Social Weather Stations (SWS) conducted a survey on plastic
+pollution in 2018 that covered how single-use plastics are used and discarded, how
+likely respondents are to support a ban on non-biodegradable plastic bags, and and
+who are the entities in-charge of reducing plastic pollution. Out of 1,500 respondents
+nationwide, the results showed that 66% used SUP as a container for food items, 34%
+said they disposed of SUP in trash bins with other types of waste, 79% supported a
+proposed bill on a non-biodegradable plastic bag ban, 65% believed that people's
+carelessness in throwing and disposing of their garbage is the cause of plastic
+pollution, and 69% believed that Filipino citizens are more responsible in reducing
+plastic pollution.
+
+Plastic pollution is a significant issue in the Philippines. The Philippines,
+along with China, Vietnam, and Indonesia, are usually named as the world's worst
+offenders, particularly when it comes to marine plastic pollution. The report created
+by the NGO GAIA as part of a campaign to gather information on the use of plastic as
+environmentalists advocate for government action to minimize plastic waste, features
+startling statistics, such as the nearly 48 million shopping bags used daily nationwide
+
+in the Philippines, or more than 17 billion annually (Pathak, 2023).
+
+18
+
+A study by Schachter & Karasik (2022) stated that of the 2.7 million metric
+tons of plastic trash produced annually, the Philippines is the third-largest producer of
+plastic waste in the world . Furthermore, it is believed that 20% of this plastic garbage
+leaks into marine habitats. In open dumps close to susceptible rivers, over 74% of
+plastics that leak into the ocean were previously collected but escaped. The issue of
+plastic pollution in the Philippines has worsened due to the expansion of the "sachet
+economy," wherein numerous consumer products are imported, packaged, and sold in
+disposable containers that are difficult or impossible to recycle. Reports suggest that
+the Philippines consumes approximately 60 billion sachets each year. Despite efforts
+made by lawmakers and activist groups, as of 2021, there is no comprehensive
+national policy or strategy in place to address plastic pollution. While a few cities and
+municipalities have implemented regulations to control the usage of plastic bags and
+other single-use plastics within their jurisdictions, a review of these laws reveals
+significant variations in how they target and enforce compliance. Instead of regulating
+all types of plastic throughout their life cycles, these local ordinances primarily focus
+on restricting the use and sale of plastic bags and other disposable plastics.
+
+With the Philippines. being a country that relies on marine resources for food
+and survival such as fishes, clams, crustaceans, and the like, the possibility of
+microplastic contamination to these resources are highly likely. According to the
+Philippine Statistics Authority (2019), the following are the most commonly
+purchased fishes based on Leyte’s Fishery Production: flying fish (bangsi), indian
+mackerel (buraw), goatfish (timbungan), Sardinella spp. (tamban) snapper
+(maya-maya), slipmouth (sapsap), big-eyed scad (matambaka), roundscad
+
+(galunggong), tilapia, and milkfish (bangus). Consequently, this may pose various
+
+19
+
+risks to the health of the consumers due to exposure of microplastics through indirect
+ingestion from marine resources.
+
+First-hand experience on marine litter problem seemed to alter the behavior of
+people which coincidentally imbibed and valued the fact that marine debris affects
+communities all around the world and is not just a problem for coastal areas (Hartley
+et al., 2018). Seeing trash along the coast was linked to more worry and behavioral
+intentions which may contribute to capitalizing on people's strong affinities for coastal
+habitats to inspire action on land to address the causes of marine litter. Additionally,
+there is a lack of study on the psychological and sociodemographic variables that
+influence people's worry about marine litter and readiness to take action to address the
+
+issue (Hartley et al., 2018).
+
+2.6 Microplastics in Food and the Implications to Human Health
+
+The impact of microplastics on human health depends on the concentrations of
+exposure. Owing to limited data in the field of microplastic research, there is a lack of
+sufficient information to accurately gauge the actual levels of microplastics that
+individuals might encounter through their food consumption (Smith er a/., 2018). An
+approximated total of 37 particles per individual annually enters the human body via
+salt intake (Mato ef al., 2001: Lusher er a/., 2017; Lithner, 2017; Van Cauwenberghe
+& Janssen, 2014)
+
+Microplastics potentially pose a threat to human well-being through physical
+and chemical routes (Smith ef a/., 2018). Microplastics can interact with the airway or
+gastrointestinal epithelium through various pathways, such as endocytic processes and
+persorption (Wright & Kelly, 2017). The medical literature on the consequences of
+
+micro- and nanoplastics from surgeries and inhalation offers insights into the dynamic
+
+20
+
+movement of plastics in the human body (Lusher ef al., 2017). For instance, micro-
+and nanoplastics released during surgeries mimic the effects of absorbed particles in
+the bloodstream and tissues and inhaled particles also interact with the same epithelial
+tissue involved in ingestion. Microbes on ingested microplastics may serve as carriers
+for harmful bacteria, potentially causing direct physiological impacts (Wright &
+Kelly, 2017).
+
+Chemical additives within plastic may induce toxicity, and the potential for
+microplastics to accumulate persistent organic pollutants (POPs) raises concerns
+about the transfer of these hazardous substances to marine animals and, consequently,
+humans (Smith ef al., 2018; Lusher et a/., 2017). One of the major POPs are
+polychlorinated biphenyls (PCB). The European Food Safety Authority monitors six
+indicators for non-dioxin-like PCBs in food to assess overall dietary exposure, with
+fish, meat, and dairy recognized as significant sources (Smith ef a/., 2018; ATSDR,
+2017). Although the role of microplastics in this exposure is uncertain, these findings
+highlight a persistent route of exposure to animal tissues and trophic level transfer
+(Smith ef al., 2018). Total PCB intake ranges from 1 to 83 ng PCB/kg body weight
+per day, and the average PAH intake, using benzo[a]pyrene as a reference, varies from
+
+4 to 10 ng/kg body weight per day (FAO/WHO, 2016; ATSDR, 2017).
+
+21
+
+CHAPTER 3
+MATERIALS AND METHODS
+
+3.1 Study site
+
+The study was conducted in the city of Tacloban (Figure 2). Tacloban is a
+coastal city with a dense population located in the Eastern Visayas region. Despite
+serving as the provincial capital, the city operates autonomously from the province of
+Leyte. The city has a land area of 77.88 square miles or 201.72 square kilometers.
+251,881 people were living there as of the 2020 Census (PSA, 2021) which accounted
+for 5.54% of the region's total population in Eastern Visayas. According to these
+numbers, the population density is calculated to be 1,249 people per km’, or 3,234
+
+people per mi? (PSA, 2021).
+
+Figure 2. Map of the location of the three wet markets in Tacloban City as sampling
+source for commercial fish
+
+22
+
+3.2 Sample collection
+
+The study employed a purposive type survey among the fish vendors as to
+what fishes were the highly sold in their stalls. Additionally, the vendors were also
+asked where they obtained the fish that were being sold. After obtaining such data, the
+researcher used a ranking system to determine the top five most purchased species of
+fish. Twenty-five samples per each species were collected and analyzed.
+
+During the sample collection, the size of the fishes was determined by
+measuring from the furthest forward point of the head with the mouth closed to the
+furthest tip of the tail with the tail compressed or squeezed (Florida Fish and Wildlife
+Conservation Commission, 2022). Additionally, the habitat of each fish was
+accounted for by determining which of the different oceanic zones (i.e. pelagic,
+benthopelagic, pelagic neritic, demersal, bathypelagic) it came from (Abifion e/ al.,
+2020). Furthermore, the weight of the fish was determined with its guts intact.
+
+Similarly, the guts of the fish were weighed separately.
+
+3.3 Characterization of microplastics
+
+To prevent potential contamination, all fish samples were tightly wrapped in
+aluminum foil and ziploc bags before being placed in an ice chest box. The sampling
+location and fishing information were then noted. To prevent microplastic
+contamination, all beakers and equipment used in the analysis were likewise
+thoroughly cleaned with distilled water. To isolate the gastrointestinal system of the
+animal, a lengthwise cut in the fishes' bellies from head to anus was performed. To
+avoid contamination, the GI tract was removed from the animal and weighed in a
+sizable jar covered in aluminum foil (Abiiion ef al., 2020). Before initiating the
+
+aforementioned procedure, the jars were weighed, and the weighing scale was reset to
+
+23
+
+zero. Following that, the entrails were deposited into the jar, thus determining their
+weight.
+
+For the analysis of microplastics, a strong base such as NaOH was used. As
+part of the digestion procedure, the guts of the fish were subjected to three times the
+volume of 1M NaOH solution. Subsequently, the samples were incubated in an oven
+at 60 degrees Celsius for 24 hours. After the incubation period, the contents
+underwent vacuum filtration using Whatman filters with a pore size of 10
+micrometers (um). To address possible contamination, the analysis included a
+procedural blank, following Vandermeesch ef al. (2015) study. The filters were then
+air dried for a minimum of 12 hours. After it was dried, the filter sheets were
+examined under an Olympus CX23 compound microscope to identify microplastic
+particles, noting their quantity, type, color, and shape. For confirmation of relatively
+small microplastics, magnifications of 40x or 100x were employed. Microplastics
+were visually documented and qualitatively evaluated. To provide qualitative
+descriptions, a table adapted from Hidalgo-Ruz ef al. (2012) study was utilized. The
+size of microplastics was determined using ImageJ software, based on Cabansag ef al.
+(2021) method. The suspected microplastics were then sent to the Department of Pure
+and Applied Chemistry (DOPAC), Visayas State University (VSU), where an FTIR
+spectrometer was used to identify the composition of any potential plastic polymers
+
+present.
+
+3.4 Survey interview
+Before the actual survey, a pre-test survey was conducted. Prior to the survey's
+execution, all participants—in the pre-test as well as the real survey— signed a
+
+volunteer consent form.
+
+24
+
+A purposive sampling was employed for the selection of respondents for the
+KAP survey, specifically, targeting the fish consumers in Tacloban City. The primary
+research tool employed was a face-to-face interview, accompanied by a printed survey
+questionnaire. The questions used in the Knowledge, Attitude, and Practices Survey
+were adapted from the study carried out by Yu ef al. (2022). The questionnaire was
+structured into four sections, covering various aspects. Firstly, it captured the
+sociodemographic profile of the respondents. Secondly, it assessed the respondents’
+knowledge regarding access to information about microplastics and plastics, including
+the sources of information they rely on. The third section delved into policies related
+to plastic waste management. Lastly, the attitude section focused on the respondents’
+sense of responsibility, motivation, and capability to reduce microplastic and plastic
+
+pollution, while the perception section examined their behavioral intentions.
+
+3.5 Data Analysis
+
+A statistical analysis was carried out for the characterization of the
+microplastics using the PAST Statistical Software. Pearson r correlation was used to
+determine the correlation between dimensions of the fish and the presence of
+microplastics. Similarly, Analysis of Similarity was employed to determine the
+dissimilarity or similarity of microplastics found in the gut samples from each fish
+species. In addition, the Test for Equal Means is utilized to determine the difference
+between the sizes of microplastics found. The Spearman's rho correlation coefficient
+was employed to establish the significance and measure the correlation between the
+
+variables of knowledge, attitude, and perception.
+
+25
+
+CHAPTER 4
+RESULTS AND DISCUSSION
+
+4.1 Fish Sample Identification
+
+Chanos chanos or locally known as “‘bangus” is the highly purchased fish
+(Figure 3). It is followed by Sardinella spp. known as “tamban”., Decapterus spp.
+“burot”, Rastrelliger brachysoma “buraw”, and Rastrelliger faughni “hasa-hasa”,
+
+respectively.
+
+=Chanos chanos  Sardinella spp. ® Decapterus spp. @Rastrilleger bracinsoma — @ Rastrilleger faughni
+
+Figure 3. Top 5 highly purchased fish in the three major wet markets in Tacloban
+City, Philippines
+4.2 Source of Fish Supplies in the Market
+
+Based on the interviews conducted with the 54 fish vendors, it was revealed
+that the Tacloban City Fish Port serves as the primary source of fish supplies for fish
+vendors, amounting to 68% of their stock for resale. Babatngon constitutes only 7%,
+whereas Catbalogan, Samar, Sagkahan, Tacloban City, and Marabut, Samar each
+contribute 5%. Guiuan has the lowest percentage at 3%, followed closely by Tanauan
+
+at 2% (Figure 4).
+
+26
+
+Tanauan m2
+
+Samar
+
+a]
+Sagkahan SN s
+Marabut
+
+ee
+
+Guian
+Tacoban Fish Port SERS Ro a eR T ETT 6S
+Catbalogan
+
+bi]
+Babamgon SRM 7
+
+Percentage (%)
+Figure 4. Sources of fish sold by Fish vendors in the three major wet markets in
+Tacloban City. Note: Details of sources of fish in Tacloban Fishport are found in
+Figure 5.
+
+Upon conducting further research, it was discovered that the fish supplies at
+the Tacloban City Fish Port originate from various locations shown in Figure 5.
+According to Ben Pido, a monitoring officer at the port, the fish supplies are sourced
+from the following areas: (a) General Santos City in the SOCCKSARGEN Region,
+(b) Guiuan in Eastern Samar, (c) San Juanico Strait in the Eastern Visayas Region, (d)
+Catbalogan City in Samar, (e) Babatngon in Leyte, (f) Basilan in the Bangsamoro
+Autonomous Region, (g) Davao City in Mindanao, (h) Palapag in Northern Samar,
+and (i) Rambulan in Sorsogon City. Notably, the highly sought-after bangus fish is
+sourced from the aquaculture ponds/ system from Babatngon, tamban and burot from
+Catbalogan City and Rambulan, Sorsogon, while buraw and hasa-hasa are obtained
+from General Santos City. These findings also indicate that the water bodies in these
+locations are contaminated with microplastics, raising concerns about potential
+contamination in other resources as well. This also underscores the need for
+comprehensive measures to address and mitigate the pervasive presence of
+microplastics in these environments, safeguarding not only the fish supplies but also
+
+the entire ecosystem.
+
+27
+
+Figure 5. Sources of fishes sold by fish vendors in the Tacloban City Fish Port:
+(a)General Santos City in SOCCKSARGEN Region, (b)Guiuan in Eastern Samar,
+(c)San Juanico Strait in the Eastem Visayas Region, (d)Catbalogan City in Samar,
+(e)Babatngon in Leyte, (f)Basilan in Bangsamoro Autonomous Region, (g)Davao
+City in Mindanao, (h)Palapag in Northern Samar, and (i)Rambulan in Sorsogon City.
+4.3 Fish Characterization
+
+Shown in Table 2 is the mean dimensions of the fishes needed in the study
+namely, the mean length of fish, mean weight of fish, mean weight of guts, and mean
+weight of fish without guts intact. The habitat or environment of the fish species is
+also accounted for.
+
+Among the fishes studied, Chanos chanos is the largest having the longest
+
+mean length of 32.4+3.2cm and heaviest at 302.0+98.6g. On the other hand,
+
+28
+
+Sardinella spp. is the smallest among the fish species, with an average length of
+13.8+0.6g and weight of 18.7+1.4g.
+
+Table 2. Fish sample characterization of the five most purchased fish in the three
+‘Major wet markets of Tacloban City, Philippines
+Fish Species Mean Mean Mean Habitat/ Environment
+Length of Weight of Weight of
+Fishincm Fishing Gutsing
+Chanos chanos 32.443.2 302.0498.6 28.4+77.4 Pelagic from 2-3 weeks;
+(FishBase, 2022)
+Pelagic (FishBase, 2022
+
+Sardinella s 13.840.6 _18.741.4 1,940.8
+
+16.3+1.1 39.8+7.2 2.740.7 _ Pelagic (FishBase, 2022
+R. brachysoma 22.7+2.1 109.6+32_ 8.4+3.99 Pelagic (FishBase, 2022
+
+R. faughni 20.441.8 84.8425  6.742.7  Pelagic-neritic (FishBase,
+
+2022
+
+Fish populations consist of individuals with diverse genetic traits, including
+variations in growth rates, body structures, and maximum sizes. Genetic differences
+contribute to the natural variation in fish sizes within a species (Skibinski, 1994;
+
+Ward, 2000).
+
+4.4 Microplastic Analysis
+
+4.4.1 Number of Microplastics
+
+The amount of microplastics in the fish samples is shown in Figure 6 and 7 by
+fish species. It shows that Rastrelliger faughni exhibits the highest concentration of
+microplastics found in the guts. It is followed by the Chanos chanos, Sardinella spp.,
+Decapterus spp., Rastrelliger brachysoma, respectively.
+
+Raustrelliger faughni has the highest average number of 10.6742.9
+microplastics found in the guts, followed by Chanos chanos with 9.67+1.86,
+
+Sardinella spp. 5+1, Decapterus spp. 3+0.57, and Rastrelliger brachysoma 2.33+40.46.
+
+29
+
+Figure 6. Sum of microplastics found in the five most purchased fish in the three
+major wet markets of Tacloban City, Philippines
+
+9.67 $s 3 2,33 10.67
+
+F
+Figure 7. Average number of microplastics found in the five most purchased fish in
+the three major wet markets of Tacloban City, Philippines
+
+This study showed that S. canaliculatus and K. rupestris (Cabansag et al.,
+2021), exhibited higher levels of microplastic contamination compared to the five fish
+samples analyzed. S. canaliculatus displayed the presence of 85 microplastics, while
+Valamugil speigleri had 33 microplastics. Chanos chanos, Sardinella spp., Decapterus
+
+spp., Rastrelliger brachysoma, and Rastrelliger faughni showed lower levels with
+
+30
+
+2941.86, 1541, 940.57, 740.46, and 3242.9 microplastics detected, respectively.
+These findings emphasize the elevated microplastic contamination levels observed in
+the fish species from Cancabato Bay and Lawaan River, signifying the urgency to
+address and mitigate microplastic pollution in these areas.
+
+Table 3 displays the rankings of the studied fish species based on the number
+of detected microplastics per fish. Among these species, Chanos chanos, commonly
+known as bangus from Cebu, takes the top position with the highest number of
+microplastics found in the guts per fish.Following closely in second place is 4uxis
+rochei, commonly referred to as bullet tuna, with an average of 6.6 microplastics per
+fish. Sardinella fimbriata, also known as fringe scaled sardine, holds the third
+position, followed by Atule mate, recognized as yellowtail scad.
+
+Table 3. Comparison of number of microplastic in fish guts in this study with
+
+previous studies. already studied with detected microplastics in their guts
+
+Rank Fish Species Source Location Average No. of Source
+MPs Detected
+per fish
+1 Chanos chanos Cebu 11 Abiiion et al.
+(2020)
+2 Raustrelliger General Santos 10.67 this study
+Saughni City
+3 Chanos chanos Babatngon 9.7 this study
+4 Auxis rochei Cebu 6.6 Abifion et al.
+(2020)
+5 Sardinella spp. Northwest 6.5 Foo et al.
+Peninsular (2022)
+Malaysia
+6 Atule mate Northwest 63 Foo et al. (2022
+Peninsular
+Malaysia
+7 Rastrelliger Northwest 6.2 Foo et al. (2022
+brachysoma Peninsular
+
+31
+
+Malaysia
+
+8 Sardinella spp. Catbalogan City; 5.1 this study
+Rambulan,
+Sorsogon
+9 Rastrelliger Cebu 5.3 Abifion et al.
+kanagurta (2020)
+10 Sardinella sp. Northern 3.74 Palermo and
+Mindanao Labrador (2020)
+al Decapterus spp. Catbalogan City; 3 this study
+Rambulan,
+Sorsogon
+12. Rastrelliger General Santos 2.33 this study
+brachysoma City
+13 Decapterus sp. South Maldives 2.19 Shiyana e¢7 al.
+(2022)
+14 Siganus Lawaan River in 1.24 Cabansag ef al.
+canaliculatus Eastern Samar; (2021)
+Cancabato Bay in
+Tacloban City
+15 Kuhlia rupestris — Lawaan River in 0.62 Cabansag et al.
+Eastern Sama (2021)
+
+Table 3 also implies that fishes sold in the Tacloban City market in
+comparatively less polluted bodies of water. Chanos chanos sourced from Babatngon,
+Leyte, exhibits a lower microplastic content in the guts, measuring 9.67 microplastics
+per fish, in contrast to the ones from Cebu, where the count stands at 11 microplastics
+per fish. Similarly, Sardinella sp in the Northwest Peninsula of Malaysia records a
+higher microplastic count per fish, amounting to 6.5, compared to Sardinella spp.
+sourced from either Catbalogan City or Rambulan, Sorsogon. Raustrelliger
+brachysoma sourced from General Santos City have lesser microplastics per fish with
+only 2.33 compared to the same species found in the Northwest Peninsula of Malaysia
+
+which is found to have 6.2 microplastic per fish. However, the Decapterus spp. from
+
+32
+
+Catbalogan City or Rambulan, Sorsogon have slightly higher microplastics count per
+fish which is 3 per fish compared to the ones found in the South of Maldives is 2.19
+
+The eating habits of fish have a substantial impact on their consumption of
+microplastics. With the rise in plastic manufacturing over the years, this dietary
+behavior has emerged as a prominent contributor to the pollution of fish by
+microplastics. The cleanliness of the surrounding environment is also a pivotal factor
+influencing the presence of microplastics in fish. Given that a substantial portion of
+the world's plastic waste finds its way into adjacent water bodies, a considerable
+portion of macroplastics break down into microplastics.
+
+Among the 25 samples per fish species collected from the three stations
+1246.5 samples of Rastrelliger faughni was found to contain microplastics in their
+guts, 942 samples of Chanos chanos, 8+1.53 samples Sardinella spp., 8+1.53 samples
+of Decapterus spp., and 741.53 samples of Rastrelliger brachysoma contain
+microplastics in the guts (Figure 8). Based on the aforementioned statement,
+Rastrelliger faughni has the highest number of individual samples containing
+microplastics in the guts. Followed by, Chanos chanos, Sardinella spp., Decapterus
+spp., and Rastrelliger brachysoma, respectively. Additionally, Abiiion et al. (2020)
+found that the commercially available bangus in Cebu had a considerably higher
+presence of microplastics, with an average count of approximately 11.3 pieces per
+individual fish. In Northern Mindanao, a study by Palermo and Labrador (2020)
+revealed that Sardinella sp. contained around 3.74 microplastic pieces per individual
+fish, which is comparatively higher than the count of 0.56 pieces per individual fish
+found in Sardinella sp. obtained from Catbalogan and Sorsogon in the Tacloban
+market. The Decapterus spp., observed in the South Maldives (Shiyana ef al., 2022),
+
+exhibited an average of 2.19 pieces of microplastic per individual fish, whereas
+
+33
+
+Decapterus sp. sourced from Catbalogan only contained 0.36 pieces per individual
+fish, indicating a significantly lower quantity. Furthermore, commercially sold
+Rastrelliger sp. in the markets of Cebu City were found to have 5.3 pieces per
+individual fish (Abiiion ef a/., 2020), which is higher compared to the commercially
+
+sold ones in the Tacloban City market, where the count was 1.28 pieces per fish.
+
+Figure 8. Number of the five most purchased fish in the three major wet markets of
+Tacloban City, Philippines detected with microplastics in their guts
+
+Among the three markets studied, Tacloban City Market stands out for having
+the highest concentration of microplastics in the guts of its sold fishes as shown in
+Figure 9. Fishes sold at the Tacloban City Market were directly sourced from the
+Tacloban Fish Port. This suggests that the origins of the studied fishes, including
+locations such as Sagkahan, Tacloban City, General Santos City, Guiuan in Eastern
+Samar, San Juanico Strait in the Eastern Visayas Region, Catbalogan City in Samar,
+Babatngon in Leyte, Basilan in the Bangsamoro Autonomous Region, Davao City in
+Mindanao, Palapag in Northern Samar, and Rambulan in Sorsogon City, are likely to
+
+be already contaminated with microplastics.
+
+34
+
+Figure 9. Total amount of microplastics collected in the guts of the five most
+purchased fish in the three major wet markets of Tacloban City, Philippines
+
+Fish samples obtained from San Fernando Market exhibit the lowest levels of
+detected microplastics, closely followed by those from Caibaan Market. These results
+provide additional evidence that the areas where the fish are sourced experience
+comparatively lower levels of microplastic contamination which may include Marabut
+
+in Eastern Samar.
+
+Shown in Table 4 is the Pearson Correlation among the fish dimensions and
+types of microplastics found using the PAST Statistical Software. The table suggests
+that the weight of the fish and the weight of its guts also influenced its length.
+
+The size of a fish, measured by its length and weight, typically increases in
+proportion to its gut size, as indicated by a high and positive correlation coefficient of
+0.9. This suggests a strong relationship between the size of the fish and the size of its
+gut. However, when examining the number of microplastics found in the fish's guts,
+
+there is no significant correlation with the length and weight of the fish, with
+
+35
+
+correlation coefficients ranging from 0.1 to negative values. This implies that the
+presence of microplastics in the guts of the fish is more likely due to random chance
+rather than being influenced by specific size-related factors.
+
+Table 4. Pearson r correlation between the five most purchased fish in the three major
+wet markets of Tacloban City, Philippines and types of microplastics found in the guts
+
+Fish Gut
+
+Length Weight Weight Fiber Film Pellet Fragment
+Length 0.96235 0.94925 0.10281 -0.063164 0.15606 -0.08919
+Fish
+Weight 0.96235 0.96532 0.11929 -0.065582 0.11244 -0.0854
+Gut
+Weight 0.94925 0.96532 0.10372 -0.046331 0.18205 -0.05326
+Fiber 0.10281 0.11929 0.10372 -0.1761 -0.14325 -0.14325
+Film .063164 -0.06558 -0.04633 -0.1761 .050061 -0.05006
+Pellet 0.15606 0.11244 0.18205 -0.14325 -0.050061 -0.0407
+
+Fragment -0.089194 -0.08548 -0.05326 -0.14325 -0.050061 -0.040724
+
+Among the fish species studied, Decapterus spp. has the largest average
+microplastic size (Table 5), signifying a notably higher presence of larger-sized
+microplastics compared to the other species. Chanos chanos ranks second in
+microplastic size, followed by Sardinella spp., Rastrelliger faughni, and Rastrelliger
+brychysoma, respectively.
+
+Table 5. Mean Size of the five most purchased fish in the three major wet markets of
+Tacloban City, Philippines
+
+Fish Species Mean Size in mm STDdev
+Chanos chanos 97 +108
+Sardinella spp. 75 +101
+Decaplerus spp. 167 +201
+Rastrelliger brachysoma 25 +19
+Rastrelliger faughni 48 +45
+
+
+Genetic differences play a significant role in the natural variation observed in
+fish sizes within a species (Ward & Robert, 2000). Some individuals may carry genes
+that predispose them to grow faster or reach larger sizes compared to others. These
+genetic variations can lead to differences in growth rates, where some fish individuals
+may exhibit rapid growth and achieve larger sizes earlier in their lives, while others
+
+may have slower growth rates and reach smaller sizes.
+
+4.5 Microplastic Characterization
+
+43.1 Type
+
+There is a significant dominance of fibers, comprising 84% among the
+identified microplastics as illustrated in Figure 10. Pellets contribute to 7% of the
+total, while films and fragments constitute 5% and 4%, respectively, of the overall
+
+microplastic composition.
+
+Fiber «Film © Pellet © Fragment
+
+Figure 10. Types of Microplastics found in the guts of the five most purchased fish in
+the three major wet markets of Tacloban City, Philippines using the Characterization
+of Microplastics (Hidalgo-Ruz et al., 2012)
+
+The fiber type microplastics are mainly released during use and wear of
+
+synthetic textile products during laundry, becoming the main source of secondary
+
+37
+
+microplastics in the environment (Chen ef al., 2022). Microfibers are also released
+when fishnets are torn due to old age and exposure to different environmental factors
+(Montarsolo ef al., 2018).
+
+The Analysis of Similarities test (ANOSIM) through the PAST Statistical
+Software, suggests a lack of statistical significant dissimilarity in the microplastics
+found (p=0.7618; r=-0.02762). It indicates that the dissimilarity is minimal and not
+practically significant. This further suggests that the majority of the microplastic
+found among the fish samples is the same, which is fiber constituting 84%
+
+microplastics that are found.
+
+4.3.2 Shape
+A portion comprising 73% of the microplastics discovered in the gut samples
+
+of the fish exhibit elongated shapes (Figure 11).
+
+*Elongated ®Iiregular * Rounded
+
+Figure 11. Shape of microplastics found in the guts of the five most purchased fish in
+the three major wet markets of Tacloban City, Philippines
+
+This particular shape is linked to the fibers that were identified that may have
+
+come from fish nets and textiles. Rebelein ef al. (2021) also observed that due to their
+
+38
+
+elongated structure, fibers could potentially resemble microscopic plankton and other
+marine substances. Irregular shapes were also identified, which are typical of
+fragments and film. In the study conducted by Piyarwadhana et al. (2021) studying
+commercially sold marine dried fishes in Asian countries, revealed that fibers
+constituted the highest percentage, accounting for 79.8% of all microplastics.
+Fragments and films, on the other hand, comprised 11.4% and 8.8% respectively.
+Meanwhile, in the study of Foo ef al. (2022) on commercial marine fishes of
+Northwest Peninsular Malaysia, the most commonly encountered microplastic type
+was fragments, constituting 49.5% of the total. Fibers followed at 41.9%, while
+pellets accounted for 7.6%. The least frequently observed microplastic type was film,
+
+representing only 0.9% of the total.
+
+4.3.3 Color
+
+A variety of microplastic colors were observed in the collected fish samples.
+However, orange emerged as the dominant color, accounting for 46% of all colors
+observed. The second most prevalent color was blue, making up 16% of the observed
+colors. Dark blue and white shared an equal percentage of 6%, while faded blue, light
+brown, and black each accounted for 5% (Figure 12).
+
+In the study of Cabansag ef al. (2021), blue is the most dominant color found
+in the guts of the fishes that were studied. Similarly, Abifion et al. (2020), also found
+that blue microplastics were the most common color group among all the fish,
+comprising 48% of the samples. Red followed closely behind at 39%, while black and
+white accounted for 8% and 5% respectively. Meanwhile, another study by
+Piyarwadhana ef al. (2021), found that transparent and white particles comprised the
+
+dominant type of plastic particles, accounting for 70.2%. The remaining plastic
+
+39
+
+particles had color variations, with red, blue, and black+brown representing 5.5%,
+
+15.8%, and 8.6%, respectively.
+
+46%
+
+"Orange "Blue *DarkBlue White © Faded Blue © Light Brown ® Black
+Figure 12. Color of microplastics found in the guts of the five most purchased fish in
+the three major wet markets of Tacloban City, Philippines
+
+When plastics are exposed to the natural environment, they go through various
+aging processes such as sunlight exposure, the impact of waves and wind, physical
+wear, heat-induced oxidation, and biodegradation (Zhao et al., 2022). Among these
+processes, sunlight exposure is considered the main factor that causes plastic aging. It
+triggers reactions in the polymer chains, leading to their breakage and the formation
+of microplastics. This photoaging also brings about changes in the colors of plastic
+polymers. Conversely, the color of plastics themselves has a significant impact on
+how they absorb sunlight, with different colors absorbing light of varying
+wavelengths and energy levels.
+
+In the study of Chen ef al. (2020), microplastics exhibit a diverse range of
+
+colors in both environmental matrices and aquatic organisms, which can be attributed
+
+40
+
+to variations in their manufacturing purposes. For instance, the addition of pigments
+to polymers is a common practice in the industry. Marine application plastics, for
+example, may contain alkyd resins of different colors, while toys with yellow to
+orange hues might incorporate lead chromate pigments. Furthermore, the process of
+environmental weathering can result in color degradation, causing the original color to
+
+fade or take on a yellowish tint (Chen ef al., 2019).
+
+4.6 Fourier Transform Infrared Spectroscopy (FTIR) Analysis
+
+Figure 13 depicts the Fourier-Transform Infrared spectra of the suspected
+microplastics, as well as the negative control, and the FTIR Spectra reference.
+
+The polymer types identified are Cellulose Propionate, HDPE (High Density
+Polyethylene), Sealing Ring EPDM (Ethylene Propylene Diene Monomer), and
+Polycetal. The spectrum matching process was conducted using the open-source
+spectral classification software, Open Specy (Cowger ef al., 2020). Differences were
+observed between the actual and reference spectra, which can be influenced by the
+polarity of the solvent used (Parlak and Ramasami, 2020).
+
+As noted in the study of Yu ef al. (2022), the interaction between the solvent
+and the sample can affect infrared absorption bands, particularly those involving
+hydrogen bonding between the solvent's O-H group and the sample-solvent bond in
+
+the same environment.
+
+41
+
+Figure 13. FTIR Spectra of microplastics found in the guts of the five most purchased
+fish in the three major wet markets of Tacloban City, Philippines (From right to left)
+Photo of samples; FTIR Spectra; FTIR Spectra of Suspected Microplastic; (From Top
+to Bottom) A. Blank Sample Vinylidene chloride acetonitrile, B. Cellulose
+Propionate, C. HDPE (High Density Polyethylene); D. sealing ring EPDM (Ethylene
+Propylene Diene Monomer); E. Polyacetal
+
+Exposure of plastics to ultraviolet irradiation can result in chemical alterations
+that ultimately lead to the fragmentation of the materials (Parlak and Ramasami,
+2020). Additionally, using the Open Specy spectral classification software, the
+Pearson correlation was revealed to be relatively low. However, according to the study
+
+of Cowger ef al. (2020), this might be attributed to poor quality spectra and/or of a
+
+material type not currently available in the reference library. It is advisable to conduct
+
+42
+
+additional research, exploring alternative digestants that may enhance spectral
+readings.
+
+Various studies have employed other digestants aside from using a strong base
+like NaOH. A strong nitric acid solution was used in the study of microplastics in
+Chanos chanos (Priscilla and Patria, 2020), potassium hydroxide (KOH) in
+Decapterus spp. (Shiyana et al., 2022), nitric acid (HNO )and perchloric acid (HCIO,)
+in a 1 to 5 ratio in the Sardinella spp. (Efadeswarni, 2019), and nitric acid in a 4:1
+ratio was employed for Rastrilliger spp. (Syafitri, 2021). Furthermore, the Open
+Specy spectral classification software has the potential for more precise results in
+
+microplastic research (Cowger et al., 2020).
+
+4.7 Fish Feeding Patterns Contributing to Microplastic Ingestion
+
+The majority of the fish species included in the study inhabit the pelagic zone,
+except for Chanos chanos, which is known to regularly venture into estuaries and
+freshwater environments (Animal Diversity Web, 2006). There is an observed
+difference in the feeding habits among the fish species. Chanos chanos has
+omnivorous feeding habits whose diet consist mainly of phytoplankton, zooplankton,
+and including detritus (Hiatt, 2011). Caged Chanos chanos, however, can acquire
+microplastics through the irrigation system and cleanliness of the surrounding waters
+(Sanabila ef al., 2022).
+
+Microplastics may enter from already contaminated waters and stay in the
+aquaculture ponds. Additionally, cleanliness of aquaculture ponds will also determine
+the occurrence of microplastics. Plastic debris coming from ropes, discarded fish nets,
+and among others will later on degrade into microplastics. Sardinella spp. are
+
+primarily herbivorous eaters whose diet consists mainly of phytoplanktons but also
+
+43
+
+consume zooplankton as part of their diet (Shah ef a/., 2019). Decaplerus spp. are
+opportunistic feeders (Rajesh, 2017). Their diet consists mainly of planktonic
+organisms such as copepods, krill, and other small crustaceans. They also eat small
+fishes, fish larvae, and other various types of zooplankton. Rastrilliger spp. are active
+hunters whose diet primarily consists of small fishes and crustaceans (Hajisamae,
+2022). They also feed on zooplanktons such as copepods and shrimp larvae.
+
+The feeding behavior of fish plays a significant role in their ingestion of
+microplastics. As plastic production has increased over time, this behavior has
+become a major factor in the contamination of fish with microplastics. It is estimated
+that around 20% of this plastic waste finds its way into marine habitats (Schachter &
+Karasik, 2022). Alarmingly, in proximity to vulnerable rivers, over 74% of the plastic
+waste that eventually reaches the ocean was initially collected but managed to escape
+from open dumps.
+
+The mistaken identity of microplastics as food by fish is a consequence of
+their size, shape, and color, which can mimic natural prey items such as zooplankton
+or small fish (Botterell, 2019). For many species of fish that rely on visual cues to
+locate their food, microplastics can be easily mistaken as a viable food source. This
+can have detrimental effects on the health and well-being of these marine organisms.
+When fish ingest microplastics, several negative consequences can occur. The
+ingestion of microplastics can lead to physical blockages or obstructions in the
+digestive system of the fish, potentially impairing their ability to consume and digest
+real food (Priya, 2023). This can result in reduced nutrient absorption, malnutrition,
+
+and overall poor health.
+
+44
+
+4.8 Knowledge, Attitude, Perception Survey
+
+KAP surveys help identify gaps in knowledge and misconceptions, allowing
+for targeted educational campaigns and awareness programs to address them. It can
+help integrate more appropriate interventions and foster positive changes towards
+mitigating the impacts of microplastics on the environment and human health (Yu ef
+al., 2022).
+
+4.8.1 Socio-demographic profile of respondents
+
+A total of only 150 respondents were willing to be interviewed for the
+knowledge, attitude, and perception survey. The majority of the individuals
+interviewed fell within the age range of 21-25 years old, accounting for half of the
+total participants. The majority of the willing participants were primarily college
+students, a factor that significantly contributed to the overall participant demographic
+(Figure 14A). Among them, females constituted 55.7% of the respondents, while
+males made up the remaining 44.3% (Figure 14B).
+
+A.
+
+@ 1520
+@ 21-25
+@ 26-30
+@ 31-35
+@ 3640
+@ 4145
+@ 4650
+@ 51-55
+
+Va
+Ng
+
+wz
+
+@ Male
+@ Female
+
+Figure 14. (A) Age; and (B) Sex of respondents in the survey conducted for their
+Knowledge, Attitude, and Perception towards microplastics
+
+45
+
+The highest educational attainment for 65.5% of the respondents was college,
+followed by senior high school and high school, each with a percentage of 12.8%. See
+figure 15A. Approximately half of the respondents reported no income, which can be
+attributed to their status as either students or unemployed individuals. Furthermore,
+19.5% of the respondents earned between Php1,000 and Php5,000 per month, while
+
+14.8% earned between Php6,000 and Php10,000 (Figure 15B).
+
+A.
+
+@ Elementary
+
+@ High Schoo!
+
+jenlor High Schoo!
+© College
+
+@ Post Graduate
+
+© Masters
+
+© Doctorate
+
+@o
+
+@ <1,000-5,000>
+© 6,000-10,000>
+@ 11,000-15,000>
+@ 16,000-20,000>
+© 21,000-25,000>
+@ 26,00-30,000>
+© 31,000>
+
+Figure 15. (A) Highest educational attainment; and (B) Estimated monthly income of
+respondents in the survey conducted for their Knowledge, Attitude, and Perception
+towards microplastics
+
+4.8.2 Knowledge
+
+The findings from the knowledge test assessing respondents’ understanding of
+microplastics are presented in Table 6. The test consisted of five questions focusing
+on various aspects, including the definition, classification, sources, and effects of
+microplastics. The results indicate that a majority of the respondents, specifically
+
+68.7%, demonstrated knowledge regarding microplastics as tiny plastic particles.
+
+46
+
+Moreover, 90.7% of the participants were aware that microplastics originate from the
+breakdown of larger plastic materials. Additionally, 90% of the respondents were
+knowledgeable about common everyday items such as food packaging, cosmetics,
+textiles, and similar products being significant sources of microplastics. Furthermore,
+62.7% recognized that fishing nets used in the fishing industry can contribute to
+microplastic pollution. However, despite understanding the issues surrounding
+microplastic pollution and its impact on fish supply, a notable portion of the
+respondents (21.3%) indicated their willingness to consume fish containing
+microplastics.
+
+Table 6. Results of knowledge test of respondents with survey conducted for their
+knowledge about microplastics (n=150)
+KNOWLEDGE CORRECT WRONG
+
+1. Microplastics are small plastics with size less 68.7% 7.3%
+than 5 mm smaller than the size of sea salt.
+
+2. Microplastics are a result from the breakdown of 90.7% 4.7%
+larger plastics.
+
+3. Primary sources of microplastics come from 90% 2.7%
+food packaging, cosmetics, and other land-based
+sources.
+
+4. Fish nets used for fishing are potential 62.7% 14%
+
+contributors to microplastic pollution.
+
+5. Microplastics are absent in the bodies of fishes. 21.3% 48%
+
+The results revealed that people's comprehension of microplastics appeared to
+be shaped by their personal life encounters, resulting in limited familiarity with
+certain technical aspects of microplastics. This finding is consistent with the research
+carried out by Deng er al. (2020) and Yu et al. (2022), which also emphasized that the
+general public's knowledge about plastics typically relies on common sense and
+
+personal experiences, rather than a comprehensive grasp of the physical and chemical
+
+47
+
+properties of plastics. However, most people have an awareness of the environmental
+consequences of plastic, yet the precise magnitude of these effects remains uncertain
+
+(Schultz, 2002; Deng ev al., 2020).
+
+4.8.3 Attitude
+
+The statements aimed at assessing the respondents’ attitude focus on their
+willingness to take action regarding microplastics is presented in Table 7. A
+significant majority, around 71.3%, consider microplastics pollution as an urgent issue
+that requires immediate attention. Moreover, only 38% believe that they have a
+responsibility to reduce microplastic pollution, while 31% believe they are not
+accountable for mitigating it, and 30% remain uncertain. It is worth noting that the
+number of respondents who feel responsible is almost equal to those who do not.
+Additionally, more than 90% express their willingness to comply with strict
+regulations on proper waste disposal to minimize microplastic pollution. They also
+show a positive attitude towards initiatives that promote the preservation of marine
+life, such as coastal cleanups and appropriate waste management. Furthermore, a
+majority of respondents, specifically 65.3%, indicate their reluctance to consume fish
+contaminated with microplastics, which further confirms their awareness of
+microplastics' presence in fish bodies.
+
+Table 7. Results of attitude test of respondents with survey conducted for their
+
+attitude towards microplastics (n=150)
+
+ATTITUDE POSITIVE NEGATIVE NOT
+SURE
+1. Microplastic pollution is not a 23.3% 113% 5.3%
+
+pressing issue that requires
+immediate attention.
+
+2. Ido not believe that I am 31.3% 38% 30.7%
+
+48
+
+accountable for minimizing
+microplastic pollution.
+
+3. Instead of just discarding trash 95.3% 0.7% 4%
+anywhere, I am willing to adhere to
+stringent rules about proper waste
+disposal to minimize microplastic
+pollution.
+
+4. Tam in favor of efforts that promote 94% 2.7% 3.3%
+the protection of marine life such as
+coastal clean up and proper waste
+management.
+
+5. T will continue to eat fish that 16.7% 65.3% 18%
+contain microplastics in their
+bodies.
+
+According to research conducted by Pickens (2005), attitude refers to a
+person's inclination to behave in a particular manner based on their experiences and
+personality. Attitude and the environment interact reciprocally: a person's attitude can
+be influenced by the social world around them, while their attitude, in turn, has the
+potential to impact the social environment. The aforementioned statement indicates
+that the respondents perceive microplastic pollution as an environmental concer that
+requires the collective attention of society to implement effective countermeasures
+and mitigation strategies. They demonstrate environmentally friendly attitudes, as
+they believe that their individual actions have a significant impact on both the
+problem itself and their overall quality of life. By adopting these environmentally
+conscious attitudes, they are actively contributing to solving the issue of microplastic
+pollution, recognizing the importance of their personal responsibility in creating a
+
+sustainable environment.
+
+49
+
+4.8.4 Perception
+
+Table 8 illustrates the participants’ perceptions of microplastics, emphasizing
+
+their awareness of the significance of marine resources, the importance of reducing
+
+single-use plastics, concerns regarding the enforcement of waste management
+
+regulations, and the shared responsibility between the government and individuals in
+
+addressing this environmental issue.
+
+Table 8. Results of perception test of respondents with survey conducted for their
+
+perception towards microplastics (n=150)
+
+PERCEPTION
+POSITIVE
+
+STRONGLY POSITIVE NEUTRAL NEGATIVE
+
+1. Marine 82%
+Tesources are
+essential to
+the survival
+of the
+community.
+
+17.3%
+
+STRONGLY
+NEGATIVE
+
+0% 0.7% 0%
+
+2. Iwill not use 36.7% 34%
+single use
+
+plastics to
+
+reduce plastic
+
+pollution
+
+thereby also
+
+reducing
+
+microplastic
+
+pollution.
+
+3. The 29.3%
+
+24.7% 3.3 1.3%
+
+14.7% 8%
+
+23.3%
+Ecological
+Solid Waste
+Management
+Act of 2000
+is not well
+implemented
+that is why
+microplastic
+pollution is
+rampant.
+
+4. The careless 63.3% 26.7%
+behavior of
+
+people
+
+24.7%
+
+8% 2% 0%
+
+50
+
+towards the
+use of plastics
+is the main
+reason why
+microplastic
+pollution is
+rampant
+
+5. Itis the duty 43.3% 28.7% 14.7% 9.3% 4%
+of the
+government
+to effectively
+manage
+microplastic
+pollution.
+
+6. Itis the duty 78.7% 16.7% 2.7% 2% 0%
+of the people
+to effectively
+manage
+microplastic
+pollution.
+
+A significant majority, around 82%, recognize the crucial importance of
+marine resources for the community's survival. This recognition reflects an
+understanding of the significance of preserving these resources and underscores the
+potential motivation to take action. Additionally, a majority of respondents express
+their agreement with the notion of avoiding single-use plastics as a means to reduce
+plastic pollution, considering its significant contribution to the problem of
+microplastics. Furthermore, the respondents believe that the implementation of the
+Ecological Solid Waste Management Act of 2000 is inadequate, leading to the
+widespread prevalence of microplastic pollution. They attribute the rampant issue of
+microplastic pollution to the shortcomings in enforcing the legislation effectively.
+This perception highlights the need for stronger measures and improved waste
+
+management practices to combat the problem more effectively. About 72% of
+
+51
+
+respondents place the responsibility for effectively managing microplastic pollution
+on the government, while 95.4% believe that it is a collective duty shared by the
+people to control and address this environmental issue. This indicates an expectation
+for government agencies to play a proactive role in addressing the issue and
+implementing effective policies and regulations. This finding also emphasizes the
+importance of individual action and a collective effort in tackling this environmental
+challenge.
+
+According to Pickens' (2005), being conscious of and embracing a particular
+situation plays a crucial role in the perception process. This provides additional
+insight into why a larger proportion of individuals perceive marine resources as a vital
+aspect of society. However, it is crucial for the government to further enhance the
+implementation of RA 9003 since they possess the authority to create, enact, enforce,
+and allocate resources for these policies (da Costa et al., 2020; Yu ef al., 2022).
+Selective perception is a common occurrence, influenced by an individual's beliefs,
+experiences, and attitudes, leading to the subjective interpretation of information
+(Pickens, 2005). Consequently, as integral members of society, it becomes the
+
+responsibility of individuals to actively contribute to resolving this issue.
+
+4.8.5 Spe: rh relation fficien ng knowl itude and
+perception: General Result Interpretation
+
+Table 9 displays the variables that exhibit a significant relationship using the
+PAST Statistical Software, as indicated by a Spearman rho correlation coefficient of at
+least 0.5 (Jeremias and Fellizar, 2019; Yu ef al., 2022). This coefficient suggests a
+
+moderate level of association between the compared variables while coefficients
+
+52
+
+ranging 0.8 to 1 suggests a strong positive relationship (Jeremias and Fellizar, 2019;
+
+Yu ef al., 2022).
+
+Table 9. Spearman rho correlation coefficients among knowledge, attitude, and
+
+perception of respondents towards microplastics (n=150; p=0.05)
+
+Variable 1
+
+Microplastics are small
+plastics with size less than 5
+mm smaller than the size of
+sea salt.
+
+Variable 2
+
+Microplastics are a_ result
+from the breakdown of larger
+plastics
+
+Primary sources of
+microplastics come from food
+packaging, cosmetics, and
+other land-based sources.
+
+I do not believe that I am
+accountable for minimizing
+microplastic pollution.
+
+Microplastic pollution is not a
+pressing issue that requires
+immediate attention.
+
+Fish nets used for fishing are
+potential contributors to
+microplastic pollution.
+
+Spearman rho
+
+correlation
+coefficient
+
+0.86603
+
+It is the duty of the people to
+effectively manage
+microplastic pollution.
+
+0.5
+
+Marine resources are
+essential to the survival of
+the community.
+
+0.5
+
+I am in favor of efforts that
+promote the protection of
+marine life such as coastal
+clean up and proper waste
+management.
+
+The Ecological Solid Waste
+Management Act of 2000 is
+not well implemented that is
+why microplastic pollution is
+rampant.
+
+I will not use single use
+plastics to reduce plastic
+
+pollution thereby also
+reducing microplastic
+pollution.
+
+I will not use single use
+
+plastics to reduce plastic
+pollution thereby — also
+reducing microplastic
+pollution.
+
+The careless behavior of
+people towards the use of
+plastics is the main reason
+why microplastic pollution is
+Tampant.
+
+It is the duty of the people to
+effectively manage
+microplastic pollution.
+
+0.5
+
+Microplastics are absent in
+the bodies of fishes.
+
+I will continue to eat fish that
+contain microplastics in their
+bodies.
+
+53
+
+The data reveals a strong and direct link between respondents’ understanding
+of microplastics originating from the breakdown of larger plastic items, resulting in
+the production of microplastics smaller than 5mm, and their comprehensive
+knowledge of the sources of microplastics. Furthermore, there is a significant positive
+correlation between people's awareness of the presence of microplastics in fish and
+their decision to still consume fish. This suggests that a substantial portion of their
+diet and livelihood relies heavily on fish consumption, making it challenging to give
+up this practice.
+
+Moreover, a moderate positive association is observed between individuals’
+sense of responsibility to reduce microplastic pollution and their commitment to
+effectively address it. However, a strong positive correlation exists between
+irresponsible plastic usage and the inadequate enforcement of RA 9003, contributing
+to the widespread prevalence of microplastic pollution. Despite the perceived lack of
+enforcement of Ecological Solid Waste Management, individuals still perceive
+themselves as integral to effectively managing microplastics and minimizing their
+
+impact.
+
+4.8.6. Comparing the Spearman rho correlation among the KAP variables with
+
+th ndents” highest educational attainment
+
+Based on Table 10, the respondents demonstrated knowledge of microplastics
+and their origins, regardless of their highest level of education. However, their
+understanding of microplastics appears to be based more on personal experiences
+rather than technical expertise. This finding aligns with Deng ez al.'s (2020) study,
+
+which revealed that the general public's knowledge of plastics tends to stem from
+
+54
+
+common sense and personal encounters, rather than an understanding of the
+physico-chemical properties of plastics.
+
+While individuals are aware of existing and proposed policies conceming
+plastics, they lack basic information about microplastics. Furthermore, irrespective of
+educational background, a moderate to high correlation was observed between
+individuals’ efforts to protect the environment and their perception of themselves as
+active participants in resolving the microplastics issue. Additionally, a moderate to
+highly positive correlation was found between people's awareness of microplastics in
+fish and their decision to continue consuming fish. This indicates that a significant
+portion of their diet and livelihood relies heavily on fish consumption, posing
+challenges to altering this behavior.
+
+Table 10. Comparing the Spearman rho correlation among variables with the
+respondents’ highest educational attainment with survey conducted for their
+
+Knowledge, Attitude, and Perception towards microplastics(n=150; p=0.05)
+
+Variable 1 Variable 2 Elementary High Senior College
+School High
+School
+Microplastics are Microplastics 0.5 0.86603 0.5 0.5
+small plastics area result from
+with size less the breakdown
+than 5 mm of larger
+
+smaller than the plastics.
+size of sea salt.
+
+Primary sources Fish nets used -0.5 0.86603 1 0.5
+of microplastics for fishing are
+
+come from food potential
+
+packaging, contributors to
+
+cosmetics, and microplastic
+
+other land-based pollution.
+
+sources.
+I do not believe It is the duty of 0.86603 -0.8660 0.5 0
+that I am the people to 3
+
+accountable for effectively
+
+minimizing manage
+
+microplastic microplastic
+
+55
+
+pollution. pollution.
+
+Microplastic Marine -0.5 0.5 0 0
+pollution is nota resources are
+
+Pressing issue essential to the
+
+that requires survival of the
+
+immediate community.
+
+attention.
+
+I am in favor of I will not use 1 0.5 0.86603 0.8660
+efforts that single use 3
+promote the plastics to
+
+protection of reduce plastic
+
+marine life such pollution
+
+as coastal clean thereby also
+
+up and proper reducing
+
+waste microplastic
+
+management. pollution.
+
+The Ecological The careless 0.5 0 0.5 0.5
+Solid Waste behavior of
+
+Management Act people towards
+
+of 2000 is not the use of
+
+well plastics is the
+
+implemented that main reason
+
+is why why
+
+microplastic microplastic
+
+pollution is pollution is
+
+rampant. rampant.
+
+I will not use Itis the duty of 0.86603 0.86603 1 0.8660
+single use the people to 3
+plastics to reduce effectively
+
+plastic pollution manage
+
+thereby also microplastic
+
+reducing pollution.
+
+microplastic
+
+pollution.
+
+Microplastics are 1 will continue 0.86603 1 0.5 0.5
+
+absent in the
+bodies of fishes.
+
+to eat fish that
+contain
+microplastics in
+their bodies.
+
+
+4.8.7. Comparing the Spearman rho correlation among the KAP variables with
+
+the respondents’ age
+
+The same with the previous results on Table 10, the respondents in the study
+showed knowledge of microplastics and their origins, regardless of their education
+level. However, their understanding of microplastics seemed to be based more on
+personal experiences rather than technical expertise. While people are aware of
+plastic-related policies, they lack basic information about microplastics. Regardless of
+educational background, there was a correlation between individuals’ efforts to protect
+the environment and their perception of themselves as active participants in
+addressing the microplastics issue. Moreover, there was a notable correlation between
+people's awareness of microplastics in fish and their decision to continue consuming
+fish, indicating that changing this behavior presents challenges due to its significant
+
+impact on their diet and livelihood.
+
+Table 11. Comparing the Spearman rho correlation among the variables with the
+respondents’ age with survey conducted for their Knowledge, Attitude, and
+Perception towards microplastics (n=150; p=0.05
+
+Variable 1 Variable 2 18-20 21-25. 26-30 = 31-50 = 51-60+
+
+Microplastics Microplastics 0.5 0.5 1 0.5 0.866
+are small are a result from
+
+plastics with the breakdown
+
+size less than 5 of larger
+
+mm smaller plastics.
+
+than the size of
+
+sea salt.
+
+Primary sources Fish nets used 0.866 1 0.866 1 1
+of microplastics for fishing are
+
+come from food potential
+
+packaging, contributors to
+
+cosmetics, and microplastic
+
+other land-based pollution.
+
+sources.
+
+I do not believe It is the duty of -0.5 0 0.5 -0.5 0
+
+57
+
+that I am
+
+the people to
+
+accountable for effectively
+minimizing manage
+microplastic microplastic
+pollution. pollution.
+Microplastic Marine 0 0 0.5 -0.5 0
+pollution is not resources are
+a pressing issue essential to the
+that requires survival of the
+immediate community.
+attention.
+T am in favor of I will not use 1 1 0.5 1 0.5
+efforts that single use
+promote the plastics to
+protection of reduce plastic
+marine life such pollution
+as coastal clean thereby also
+up and proper reducing
+waste microplastic
+management. pollution.
+The Ecological The careless 0.5 1 1 0 0.866
+Solid Waste behavior of
+Management people towards
+Act of 2000 is the use of.
+not well plastics is the
+implemented main reason
+that is why why
+microplastic microplastic
+pollution is pollution is
+rampant. rampant.
+I will not use It is the duty of 1 0.866 0.5 0.866 0.86603
+single use the people to
+plastics to effectively
+reduce plastic manage
+pollution microplastic
+thereby also pollution.
+reducing
+microplastic
+pollution.
+Microplastics I will continue -0.5 0.5 1 0.866 0.5
+are absent inthe to eat fish that
+bodies of fishes. contain
+microplastics in
+their bodies.
+
+58
+
+CHAPTER 5
+CONCLUSION AND RECOMMENDATIONS
+
+To assess the extent of microplastic pollution, microscopy and FTIR
+techniques were employed to determine the presence and type of microplastics in fish
+samples from three public markets in Tacloban City. This analysis adds to the data on
+potential human exposure. Additionally, a KAP survey provides insights into the
+knowledge, attitudes, and perceptions of local communities regarding microplastics,
+contributing to a better understanding of awareness levels in Tacloban City.
+
+The study findings indicate that microplastics are present in all of the top five
+most highly purchased fish species in Tacloban City's market. Among the 25 samples
+per fish species collected from the three stations 1246.5 samples of Rastrelliger
+faughni, 942 samples of Chanos chanos, 8+1.53 samples Sardinella spp., 8+1.53
+samples of Decapterus spp., and 7+1,53 samples of Rastrelliger brachysoma contain
+microplastics in the guts. Raustrelliger faughni has the highest average number of
+10.6742.9 microplastics found in the guts, followed by Chanos chanos with
+9.67+1.86, Sardinella spp. 5+1, Decapterus spp. 3+0.57, and Rastrelliger brachysoma
+2.3340.46.
+
+The identified types of microplastics are predominantly fibers, followed by
+film, pellets, and fragments which is further supported by Fourier Transform Infrared
+Spectroscopy (FTIR) analysis. Additionally, a variety of colors and shapes were
+observed, with elongated shapes being prominent and orange as the prevailing color.
+
+The results of the social survey revealed that respondents' knowledge about
+microplastics likely originates from their personal life experiences. The respondents
+exhibited a positive attitude towards reducing plastic pollution, and a significant
+
+majority also recognized the significance of coastal waters to them.
+
+59
+
+With a significant number of people who are still willing to consume fishes
+with microplastics, it is recommended to raise awareness about the potential health
+tisks associated with consuming fishes containing microplastics and promote
+sustainable practices to reduce plastic pollution in order to mitigate the ingestion of
+microplastics through seafood consumption.
+
+In future research, it would be valuable to explore sustainable alternatives to
+single-use plastics through a comprehensive cost-benefit analysis, considering the
+widespread presence of microplastics in marine environments and organisms.
+Additionally, conducting social surveys involving households, local government
+officials, and students would provide a broader understanding of perspectives and
+attitudes towards microplastics. Furthermore, investigating the comparison of
+microplastics in sediments and water would enable estimation of the deposition of
+microplastics in the bottom layers of water bodies. To gain scientific insights into the
+direct human exposure to microplastics, it is crucial for microplastic research to focus
+on the accumulation of microplastics in the muscle tissues of fish. This will provide
+valuable information regarding the extent of microplastic contamination in fish and its
+potential impact on human consumption.
+
+To promote effective management of microplastic pollution, regulatory
+authorities can offer incentives to barangays (local communities) that demonstrate
+exemplary practices. In addition, it is crucial to conduct targeted information,
+education, and communication campaigns, focusing on technical details regarding
+microplastics and the potential health risks associated with their ingestion, to educate
+barangays and local government units. The government, particularly the Local
+Government Unit, should take a proactive stance in safeguarding consumer interests
+
+and ensuring food safety, acting as leaders in this endeavor.
+
+60
+
+REFERENCES
+
+61
+
+LITERATURE CITED
+
+A. Journals
+
+Abifion, B. S. F., Camporedondo, B. S., Mercadal, E. M. B., Olegario, K. M. R.,
+Palapar, E. M. H., Ypil, C. W. R., ... & Garces, J. J. C. (2020). Abundance and
+characteristics of microplastics in commercially sold fishes from Cebu Island,
+Philippines. /nternational Journal of Aquatic Biology, 8(6), 424-433.
+
+Alberghini, L., Truant, A., Santonicola, S., Colavita, G., & Giaccone, V. (2022).
+Microplastics in fish and fishery products and risks for human health: A review.
+International Journal of Environmental Research and Public Health, 20(1), 789.
+
+Arcadio, C. G. L. A., Navarro, C. K. P., Similatan, K. M., Inocente, S. A. T., Ancla, S.
+M. B., Banda, M. H. T., ... & Bacosa, H. P. (2023). Microplastics in surface water of
+Laguna de Bay: First documented evidence on the largest lake in the Philippines.
+Environmental Science and Pollution Research, 30(11), 29824-29833.
+
+Avio, C. G., Gorbi, S., Milan, M., Benedetti, M., Fattorini, D., d'Errico, G., Pauletto,
+M., Bargelloni, L., & Regoli, F. (2015). Pollutants bioavailability and toxicological
+risk from microplastics to marine mussels. *Environmental Pollution*, 198, 211-222..
+
+Azizah, N., & Saragih, G. S. (2019, December). Microplastics in digestive tracts of
+fishes from Jakarta Bay. In JOP Conference Series: Earth and Environmental Science
+(Vol. 407, No. 1, p. 012008). IOP Publishing.
+
+Bates, A. (2019). Transforming Plastic: From Pollution to Evolution. GroundSwell
+Books
+
+Barrett, J., Chase, Z., Zhang, J., Holl, M. M. B., Willis, K., Williams, A., Hardesty,
+B.D., & Wilcox, C. (2020). Microplastic pollution in deep-sea sediments from the
+Great Australian Bight. Frontiers in Marine Science, 7, 808.
+
+Bellas, J., Martinez-Armental, J., Martinez-Camara, A., Besada, V, &
+Martinez-Gomez, C. (2016). Ingestion of microplastics by demersal fish from the
+Spanish Atlantic and Mediterranean coasts. Marine pollution bulletin, 109(1), 55-60.
+
+Bhuyan, M. S. (2022). Effects of microplastics on fish and in human health. Frontiers
+in Environmental Science, 10, 250.
+
+Botterell, Z. L., Beaumont, N., Dorrington, T., Steinke, M., Thompson, R. C., &
+Lindeque, P. K. (2019). Bioavailability and effects of microplastics on marine
+zooplankton: A review. Environmental Pollution, 245, 98-110.
+
+Bucol, L. A., Romano, E. F., Cabcaban, S. M., Siplon, L. M. D., Madrid, G. C.,
+Bucol, A. A., & Polidoro, B. (2020). Microplastics in marine sediments and rabbitfish
+(Siganus fuscescens) from selected coastal areas of Negros Oriental, Philippines.
+Marine Pollution Bulletin, 150, 110685.
+
+62
+
+Cabansag, J. B. P., Olimberio, R. B., & Villanobos, Z. M. T. (2021). Microplastics in
+some fish species and their environs in Eastern Visayas, Philippines. Marine Pollution
+Bulletin, 167, 112312.
+
+Carbery, M., O'Connor, W., & Palanisami, T. (2018). Trophic transfer of microplastics
+and mixed contaminants in the marine food web and implications for human health
+Environment international, 115, 400-409.
+
+Chen, Y., Chen, Q., Zhang, Q., Zuo, C., & Shi, H. (2022). An Overview of Chemical
+Additives on (Micro) Plastic Fibers: Occurrence, Release, and Health Risks. Reviews
+of Environmental Contamination and Toxicology, 260(1), 22.
+
+Chen, Q., Zhang, H., Allgeier, A., Zhou, Q., Ouellet, J. D., Crawford, S. E., .. &
+Hollert, H. (2019). Marine microplastics bound dioxin-like chemicals: model
+explanation and risk assessment. Journal of hazardous materials, 364, 82-90.
+
+Chin, K. K. C., Mahanta, J., & Nath, T. K. (2022). Knowledge, Attitude, and Practices
+towards Plastic Pollution among Malaysians.
+https://doi.org/10.20944/preprints202209.0315.v1
+
+Clark, J. R., Cole, M., Lindeque, P. K., Fileman, E., Blackford, J., Lewis, C., ... &
+Galloway, T. S. (2016). Marine microplastic debris: a targeted plan for understanding
+and quantifying interactions with marine life. Frontiers in Ecology and the
+Environment, 14(6), 317-324.
+
+Cowger, W., Gray, A. & Hapich, H. (2020). Open  Specy.
+https://wincowger.shinyapps.io/OpenSpecy
+
+del Pilar, E. C., Alegado, J., & Bongo, M. F. (2020). Structural relationships among
+critical failure factors of microbusinesses. Journal of Small Business and Enterprise
+Development, 27(1), 148-174.
+
+Da Costa, J. P.. Mouneyrac, C., Costa, M., Duarte, A. C., & Rocha-Santos, T. (2020).
+The role of legislation, regulatory initiatives and guidelines on the control of plastic
+pollution. Frontiers in Environmental Science, 8, 104.
+
+Deng, L., Cai, L., Sun, F., Li, G., & Che, Y. (2020). Public attitudes towards
+microplastics: Perceptions, behaviors and policy implications. Resources,
+Conservation and Recycling, 163, 105096.
+
+Desforges, J. P. W., Galbraith, M., & Ross, P. S. (2015). Ingestion of microplastics by
+zooplankton in the Northeast Pacific Ocean. Archives of environmental contamination
+and toxicology, 69, 320-330.
+
+Dris, R., Imhof, H., Sanchez, W., Gasperi, J., Galgani, F., Tassin, B., & Laforsch, C.
+
+(2015). Beyond the ocean: contamination of freshwater ecosystems with (micro-)
+plastic particles. Environmental chemistry, 12(5), 539-550.
+
+63
+
+D’Souza, J. M., Windsor, F. M., Santillo, D., & Ormerod, S. J. (2020). Food web
+
+transfer of plastics to an apex riverine predator. Global change biology, 26(7),
+3846-3857.
+
+Espiritu, E. Q., Dayrit, S. A. S., Coronel, A. S. O., Paz, N. S. C., Ronquillo, P. I. L.,
+Castillo, V. C. G., & Enriquez, E. P. (2019). Assessment of quantity and quality of
+microplastics in the sediments, waters, oysters, and selected fish species in key sites
+along the bombong estuary and the coastal waters of ticalan in San Juan, Batangas.
+
+Evaluation of certain food additives and contaminants: eightieth report of the Joint
+FAO/WHO Expert Committee on Food Additives. WHO Technical Report Series.
+2016;(995):I.
+
+Foo, Y. H., Ratnam, S., Lim, E. V., Abdullah, M., Molenaar, V. J., Hwai, A. T. S., ... &
+Zanuri, N. B. M. (2022). Microplastic ingestion by commercial marine fish from the
+seawater of Northwest Peninsular Malaysia. PeerJ, /0, 13181.
+
+Garcia, B., Fang, M. M., & Lin, J. (2019). Marine plastic pollution in Asia: All hands
+on deck!. Chinese Journal of Environmental Law, 3(1), 11-46.
+
+Goldstein, J. S., Morrissey, E. M., Moretti, E. D., & Watson III, W. H. (2017). A
+comparison of the distribution and abundance of European green crabs and American
+lobsters in the Great Bay Estuary, New Hampshire, USA. Fisheries Research, 189,
+10-17.
+
+Hajisamae, S., Soe, K. K., Pradit, S., Chaiyvareesajja, J.. & Fazrul, H. (2022).
+Feeding habits and microplastic ingestion of short mackerel, Rastrelliger brachysoma,
+in a tropical estuarine environment. Environmental Biology of Fishes, 105(2),
+289-302
+
+Hantoro, I., Lohr, A. J., Van Belleghem, F. G., Widianarko, B., & Ragas, A. M.
+(2019). Microplastics in coastal areas and seafood: implications for food safety. Food
+Additives & Contaminants: Part A, 36(5), 674-711.
+
+Hartley, B. L., Pahl, S., Veiga, J.. Viachogianni, T., Vasconcelos, L., Maes, T., ... &
+Thompson, R. C. (2018). Exploring public views on marine litter in Europe:
+Perceived causes, consequences and pathways to change. Marine Pollution Bulletin,
+133, 945-955.
+
+Hartmann, N. B., T. Hiiffer, R. C. Thompson, M. Hassellév, A. Verschoor, A. E.
+Daugaard, S. Rist, T. Karlsson, N. Brennholt, and M. Cole. 2019. Are we speaking the
+same language? Recommendations for a definition and categorization framework for
+plastic debris. ACS Publications.
+
+Hiatt, R. W. (1947). Food-chains and the food cycle in Hawaiian fish ponds.—Part I.
+The food and feeding habits of mullet (Mugil cephalus), milkfish (Chanos chanos),
+and the ten-pounder (Elops machnata). Transactions of the American Fisheries
+Society, 74(1), 250-261.
+
+64
+
+Hidalgo-Ruz, V., Gutow, L., Thompson, R. C., & Thiel, M. (2012). Microplastics in
+the marine environment: a review of the methods used for identification and
+quantification. Environmental science & technology, 46(6), 3060-3075
+
+Horton, A. A., & Barnes, D. K. (2020). Microplastic pollution in a rapidly changing
+world: Implications for remote and vulnerable marine ecosystems. Science of The
+Total Environment, 738, 140349.
+
+Jambeck, J. R., Geyer, R., Wilcox, C., Siegler, T. R., Perryman, M., Andrady, &
+Law, K. L. (2015). Plastic waste inputs from land into the ocean. Science, 347(6223),
+768-771.
+
+Jeremias, H. I., & Fellizar, F. M. D. (2019). Knowledge, Awareness, Perceptions, and
+Practices on Solid Waste Management of Households in Selected Urban Barangays in
+Sorsogon City, Sorsogon, Philippines. Journal of Human Ecology, 8(1)
+
+Jin, H., Ma, T., Sha, X., Liu, Z., Zhou, Y., Meng, X., & Ding, J. (2021). Polystyrene
+microplastics induced male reproductive toxicity in mice. Journal of Hazardous
+Materials, 401, 123430.
+
+Kooi, M., Nes, E. H. V., Scheffer, M., & Koelmans, A. A. (2017). Ups and downs in
+the ocean: effects of biofouling on vertical transport of microplastics. Environmental
+science & technology, 51(14), 7963-7971.
+
+Kim, T. K. (2015). T test as a parametric statistic. Korean journal of anesthesiology,
+68(6), 540-546.
+
+Lim, X. (2021). Microplastics are everywhere—but are they harmful. Nature,
+593(7857), 22-25.
+
+Lithner, D. (2011). Environmental and health hazards of chemicals in plastic polymers
+and products.
+
+Leal Filho, W., Salvia, A. L., Minhas, A., Pago, A., & Dias-Ferreira, C. (2021). The
+COVID-19 pandemic and single-use plastic waste in households: A preliminary study.
+Science of the Total Environment, 793, 148571.
+
+Luo, H., Liu, C., He, D., Sun, J., Li, J., & Pan, X. (2022). Effects of aging on
+environmental behavior of plastic additives: Migration, leaching, and ecotoxicity.
+Science of The Total Environment, 849, 157951.
+
+Lusher, A., Hollman, P., & Mendoza-Hill, J. (2017). Microplastics in fisheries and
+aquaculture: status of knowledge on their occurrence and implications for aquatic
+organisms and food safety. FAO.
+
+MacLeod, M., Arp, H. P. H., Tekman, M. B., & Jahnke, A. (2021). The global threat
+from plastic pollution. Science, 373(6550), 61-65.
+
+65
+
+Mao, Y., Ai, H., Chen, Y., Zhang, Z., Zeng, P., Kang, L., ... & Li, H. (2018)
+Phytoplankton response to polystyrene microplastics: perspective from an entire
+growth period. Chemosphere, 208, 59-68.
+
+Mato, Y., Isobe, T., Takada, H., Kanehiro, H., Ohtake, C., & Kaminuma, T. (2001).
+Plastic resin pellets as a transport medium for toxic chemicals in the marine
+environment. Environmental science & technology, 35(2), 318-324.
+
+Meijer, L. J., Van Emmerik, T., Van Der Ent, R., Schmidt, C., & Lebreton, L. (2021).
+More than 1000 rivers account for 80% of global riverine plastic emissions into the
+ocean. Science Advances, 7(18), eaaz5803.
+
+Miller, M. E., Hamann, M., & Kroon, F. J. (2020). Bioaccumulation and
+biomagnification of microplastics in marine organisms: A review and meta-analysis
+of current data. PloS one, 15(10), e0240792.
+
+Montarsolo, A., Mossotti, R., Patrucco, A., Caringella, R., Zoccola, M., Pozzo, P. D.,
+& Tonin, C. (2018). Study on the microplastics released from fishing nets. 7he
+European Physical Journal Plus, 133(11), 494.
+
+Mukaka, M. M. (2012). A guide to appropriate use of correlation coefficient in
+medical research. Malawi medical journal, 24(3), 69-71.
+
+Murray, J. E. (2002). Height and weight of early 20th century Filipino men. Annals of
+Human Biology, 29(3), 326-333.
+
+Nematdoost Haghi, B., & Banaee, M. (2017). Effects of micro-plastic particles on
+paraquat toxicity to common carp (Cyprinus carpio): biochemical changes.
+International Journal of Environmental Science and Technology, 14(3), 521-530.
+
+Neves, D., Sobral, P., Ferreira, J. L., & Pereira, T. (2015). Ingestion of microplastics
+by commercial fish off the Portuguese coast. Marine pollution bulletin, 10](1),
+119-126.
+
+Palermo, J. D. H., Labrador, K. L., Follante, J. D., Agmata, A. B., Pante, M. J. R.,
+Rollon, R. N., & David, L. T. (2020). Susceptibility of Sardinella lemuru to emerging
+marine microplastic pollution. Global Journal of Environmental Science and
+Management, 6(3), 373-384.
+
+Parlak, C. & Ramasami, P. (2020). Theoretical and experimental study of infrared
+spectral data of 2-bromo-4-chlorobenzaldehyde. SN Applied Sciences, 2, 1-9.
+
+Pathak, G. (2023). ‘Plastic pollution and plastics as pollution in Mumbai, India.
+ethnos, 88(1), 167-186.
+
+Philippine Statistics Authority. (2019). Leyte fishery production increased by 24.25
+percent in the 2nd quarter of 2019. Philippine Statistics Authority. Leyte.
+
+66
+
+Pickens, J. (2005). Understanding the role of attitude in influencing behaviors. Journal
+of Social Psychology, 32(4), 489-502.
+
+Piyawardhana, N., Weerathunga, V., Chen, H. S., Guo, L., Huang, P. J., Ranatunga, R.
+R. M.K. P., & Hung, C. C. (2022). Occurrence of microplastics in commercial marine
+dried fish in Asian countries. Journal of Hazardous Materials, 423, 127093
+
+Priscilla, V., & Patria, M. P. (2020). Comparison of microplastic abundance in
+aquaculture ponds of milkfish Chanos chanos (Forsskal, 1775) at Muara Kamal and
+Marunda, Jakarta Bay. In JOP conference series: earth and environmental science
+(Vol. 404, No. 1, p. 012027). IOP Publishing.
+
+Priya, K. K., Thilagam, H., Muthukumar, T., Gopalakrishnan, S., & Govarthanan, M.,
+2023. Impact of microfiber pollution on aquatic biota: A critical analysis of effects
+and preventive measures. Science of The Total Environment, 163984.
+
+Rajesh, K. M., Rohit, P., Thomas, S., Supraba, V., Nataraja, G. D., & Sampathkumar,
+G. (2017). Food and feeding habits of the narrow barred Spanish mackerel
+Scomberomorus commerson (Lacepede, 1800) off Karnataka, south-west coast of
+India. Indian Journal of Fisheries (Sp. Iss.), 64, 182-185.
+
+Rebelein, A., Int-Veen, I., Kammann, U., & Scharsack, J. P. (2021). Microplastic
+fibers—underestimated threat to aquatic organisms?. Science of the Total
+Environment, 777, 146045.
+
+Rochman, C. M., Tahir, A., Williams, S. L., Baxa, D. V., Lam, R., Miller, J. T., ... &
+Teh, S. J. (2015). Anthropogenic debris in seafood: Plastic debris and fibers from
+textiles in fish and bivalves sold for human consumption. Scientific reports, 5(1),
+1-10.
+
+Sanabila, A. I., Hadi, M. I., & Zummah, A. (2022). Identification Of Microplastics
+Content in Sediment, Water and Digestive Channel of Milkfish (Chanos chanos) in
+Sidoarjo Pond. Al-Hayat: Journal of Biology and Applied Biology, 5(1), 11-24.
+
+Schachter, J., & Karasik, R. Plastic Pollution Policy Country Profile: Costa Rica. N/
+PB, 22-03.
+
+Schultz, P. W. (2002). Knowledge, information, and household recycling: Examining
+the knowledge-deficit model of behavior change. New tools for environmental
+protection: Education, information, and voluntary measures.
+
+Shah, T. H., Chakraborty, S. K., Kumar, T., Sadawarte, R. K., & Sandhya, K. M.
+(2019). Food and feeding habits of oil sardine Sardinella longiceps from Ratnagiri
+coast off Maharashtra India.
+
+Shiyana, F., Buyong, F., Shareef, A., Hirzin, R. S. F. N., & Ismail, A. (2022, July).
+
+The presence of microplastics in fishes of South Maldives. In JOP conference series:
+Earth and environmental science (Vol. 1055, No. 1, p. 012015). IOP Publishing.
+
+67
+
+Skibinski, D. O. (1994). The potential of DNA techniques in the population and
+evolutionary genetics of aquatic invertebrates. Genetics and evolution of aquatic
+organisms, 177-199.
+
+Smith, M., Love, D. C., Rochman, C. M., & Neff, R.A (2018). Microplastics in
+atone and the implications for human health. Current environmental health reports,
+3, S E
+
+Superio, M D. A., & Abreo, N. A. S. (2020). Plastic in freshwater ecosystems: a
+looming crisis in the Philippines. Philipp. Sci. Lett, 13, 1-5.
+
+Syafitri, J, Hamdani, H., Pratama, R. I., & Ismail, M. R. (2021). Microplastics
+accumulation in gastrointestinal tract of sea fish landed at TPI Gaung Pandang, West
+Sumatera. Global Scientific Journals, 9(9), 509-19.
+
+Veerasingam, S., Ranjani, M., Venkatachalapathy, R., Bagaev, A., Mukhanov, V.,
+Litvinyuk, D., ... & Vethamony, P. (2021). Contributions of Fourier transform infrared
+spectroscopy in microplastic pollution research: A review. Critical Reviews in
+Environmental Science and Technology, 51(22), 2681-2743.
+
+Van Cauwenberghe, L., & Janssen, C. R. (2014). Microplastics in bivalves cultured
+for human consumption. Environmental pollution, 193, 65-70.
+
+Vandermeersch, G., Van Cauwenberghe, L., Janssen, C. R., Marques, A., Granby, K.,
+Fait, G., Kotterman, M. J. (2015). A critical view on microplastic quantification in
+aquatic organisms. Environmental Research, 143, 46-55.
+
+Waller, C. L., Griffiths, H. J., Waluda, C. M., Thorpe, S. E., Loaiza, I., Moreno, B., ...
+& Hughes, K. A. (2017). Microplastics in the Antarctic marine system: an emerging
+area of research. Science of the total environment, 598, 220-227.
+
+Ward, R. D. (2000). Genetics in fisheries management. Hydrobiologia, 420(1),
+191-201.
+
+Wright, S. L., & Kelly, F. J. (2017). Plastic and human health: a micro issue?.
+Environmental science & technology, 51(12), 6634-6647,
+
+Yu, A. J. G., Yap-Dejeto, L. G., Parilla, R. B., & Elizaga, N. B. (2023). Microplastics
+in Perna viridis and Venerupis species: assessment and impacts of plastic pollution.
+International Journal of Environmental Science and Technology, 1-12.
+
+Zhang, K., Su, J., Xiong, X., Wu, X., Wu, C., & Liu, J. (2016). Microplastic pollution
+of lakeshore sediments from remote lakes in Tibet plateau, China. Environmental
+pollution, 219, 450-455.
+
+Zhao, X., Wang, J., Yee Leung, K. M., & Wu, F. (2022). Color: an important but
+
+overlooked factor for plastic photoaging and microplastic formation. Environmental
+Science & Technology, 56(13), 9161-9163.
+
+68
+
+Ziccardi, L. M., Edgington, A., Hentz, K., Kulacki, K. J., & Kane Driscoll, S. (2016).
+Microplastics as vectors for bioaccumulation of hydrophobic organic chemicals in the
+marine environment: A state-of-the-science review. Environmental toxicology and
+chemistry, 35(7), 1667-1676.
+
+B. Websites
+
+Agency for Toxic Substances & Disease Registry. ATSDR—public health statement:
+polychlorinated biphenyls (PCBs). 2015: Available at:
+https://www.atsdr.cdc.gov/phs/phs.asp?id=139&tid=26.
+
+Animal Diversity Web.2006. Chanos chanos). Retrieved from
+https://animaldiversity.org/accounts/Chanos_chanos/#:~:text=mainly%20lives%20in
+%2Woceans%2C%20seas, other %20bodies%200f%20salt%20water.&text=animal%20
+constituent%20of%20plankton%3B%20mainly,(Compare%20to%20phytoplankton.)
+
+Carrington, D. May 2020. Microplastic pollution in oceans vastly underestimated —
+study. Retrieved from https://www.theguardian.com/environmentNational/2020/may
+/22/microplastic-pollution-in-oceans-vastly-underestimated-study
+
+Ecostandard. 2021. (Not so) biodegradable - there is no such thing as
+environmentally friendly plastic. Retrieved from https://ecostandard.org/not-so-
+biodegradable-there-is-no-such-thing-as-environmentally-friendly-plastic/
+
+Florida Fish and Wildlife Conservation Commission. 2022. Fish Measurement
+Retrieved from https://myfwc.com/fishing/saltwater/recreational/measurement/
+
+Fish Base. 2022. The Species Table. Retrieved from
+https://www.fishbase.se/summary/110
+
+Lim, X. May 2021. Méicroplastics are everywhere. Retrieved from
+https://www.nature.com/articles/d4 1586-02 1-01143-3
+
+National Geographic 2022 Microplastics. Retrieved from
+https://www. national geographic. org/encyclopedia/microplastics/
+
+Schachter J., & Karasik R.(February 2022). Plastic Pollution Policy Country Profile:
+Philippines. Nicholas Institute for Environmental Policy Solution Duke University.
+Retrieved from: https://nicholasinstitute.duke.edw/sites/default/files/
+projects/Plastic-Pollution-Policy-Country-Profile-Philippines.pdf
+
+Philippine Statistics Authority. 2021. Highlights of the Region VIII (Eastern Visayas)
+Population 2020 Census of Population and Housing (2020 CPH). Retrieved from
+https://psa.gov.ph/content/highlights-region-viii-eastern-visayas-population-2020-cens
+us-population-and-housing-2020#:~:text=The%20population%200f%20Region%20V
+II],the%20Philippine%20population%20in%202020.
+
+Phys.org. March 2019. Philippines Survey shows “shocking” plastic waste. Available
+at https://phys.org/news/2019-03-philippines-survey-plastic.html
+
+69
+
+Social Weather Stations (SWS). 2018. Survey report on plastic pollution. Retrieved
+from https://www.greenpeace.org/static/planet4-philippines-
+Stateless/2019/01/ad34 191 e-swr-2018-iii-survey-report-on-plastic-pollution_final.pdf
+
+Thompson, A. November 2018. Solving Microplastic Pollution Means Reducing,
+Recycling - and Fundamental Rethinking. Retrieved from
+https://Awww.scientificamerican.com/article/solving-microplastic-pollution-means-red
+ucing-recycling-mdash-and-fundamental-rethinking]/
+
+United States Department of Agriculture - Foreign Agricultural Services. (28 Apr
+2022). Seafood Products Market Brief. Retrieved from
+https://apps.fas.usda.govat/newgainapi/api/Report/DownloadReportByFileName?file
+Name=Seafood%20Products%20Market%20Brief_Manila_Philippines_RP2022-0023
+-pdf

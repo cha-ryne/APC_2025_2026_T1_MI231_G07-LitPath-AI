@@ -1,0 +1,1485 @@
+CONCHOLOGICAL FEATURES OF GOLDEN APPLE SNAIL (Pomacea canaliculata {Lamarck, 1822]) IN SELECTED RICE FIELDS OF DAVAO CITY
+
+PAUL DAVE C. PANZO
+
+UNIVERSITY OF SOUTHEASTERN PHILIPPINES
+
+MASTER OF SCIENCE IN BIOLOGY
+
+June 2022
+
+ABSTRACT
+
+A study to determine the conchological features of golden apple snails (Pomacea
+canaliculata [Lamarck, 1822]) was conducted in selected rice fields of Davao City. Five
+sites were selected as sampling areas: Buhangin, Tugbok, Calinan, Baguio, and Marilog.
+Sampling was done between January and February 2022. The method used to collect
+golden apple snails was the handpicking method, with a 30 mm lower limit on size for
+samples collected to exclude juveniles. A total of 23 specimens were randomly collected
+from each site. The physicochemical parameters measured were within normal ranges and
+suitable for the growth of rice and P. canaliculata. The correlation between the variables
+was determined using Bayesian correlation analysis. Among the relationships studied, shell
+width-salinity, aperture length-salinity, number of whorls-salinity, shell dry weight~
+salinity, shell length-salinity, shell length-temperature, shell width-temperature, and
+number of whorls-temperature reported a positive correlation with BF₊₀ values greater than
+3.000, indicating that there is substantial evidence in favor of the alternative hypothesis
+that there is an association between the variables. The increased activity of the golden apple
+snail as the temperature rises, as well as its high salinity tolerance, are suggested to be
+contributing factors to the positive correlations. It is recommended that a more extensive
+correlation study of P. canaliculata in the Davao Region be conducted using Bayesian statistics.
+
+CHAPTER I
+INTRODUCTION
+Background of the study
+
+Aquatic invertebrates that populate the soil-floodwater ecosystem of wetland rice
+fields are considered significant as nutrient recyclers, rice pests, biological control agents,
+food items, and vectors of human and animal diseases. One of the most common and
+serious type of invasive organisms is the golden apple snail (Pomacea canaliculata
+[Lamarck, 1822]). The voracious herbivore can devastate rice seedlings, resulting in rice
+production losses of up to 40% (Bambaradeniya & Amerasinghe, 2004). Golden apple
+snails do, however, have several well-known advantages. The snail's high protein content
+makes it a suitable addition to the rural poor's low-protein diet (Food and Agriculture
+Organization [FAO], 1998). Moreover, local farmers in Southeast Asia used this invasive
+snail to control weeds in rice fields (Tiirke et al., 2012).
+
+Macroinvertebrates are frequently used as markers of various environmental
+conditions. They are reliable indicators because they spend most of their lives in water, are
+easy to gather, and have different levels of pollution tolerance (Ueno, 2013). P.
+canaliculata is considered ecologically important, persistent, and possesses biomonitor
+characteristics: (a) they are large enough to provide enough material for analyses, (b) they
+are easy to handle, collect, and culture, (c) they live long, (d) they are abundant, (e) they
+are sedentary, (f) they can survive for long periods without food, and (g) they can be found
+in almost any freshwater ecosystem in many countries (Pefia et al., 2017). Knowing all
+these necessitate a thorough investigation for ecological management and its potential as a
+
+biomarker.
+
+Plant growth, crop nutrition management, and soil and water management all
+benefit from physicochemical examination of soil and water in agriculture. To properly
+evaluate and manage deficiencies and improve rice production, physicochemical
+conditions are taken into account when implementing organic cultivation practices (Harun
+et al., 2020). The study on the correlation between physicochemical parameters and shell
+morphology of golden apple snails (P. canaliculata) in selected rice fields of Davao City
+will generate information for the farm owners and the farmers about the potential of these
+organisms as bioindicators, based on shell morphology, of various environmental
+parameters. Moreover, agriculturists can use this data to manage the rice crop's nutrient
+input during cultivation.
+Objectives of the study
+
+The study examined the conchological features of golden apple snails (P.
+canaliculata) in selected rice fields of Davao City. Specifically, it:
+
+1. determined shell morphometric data (shell dry weight, shell length, shell width,
+width of the aperture, length of the aperture, band width per shell, number of bands,
+and number of whorls) of collected P. canaliculata;
+
+2. determined the physicochemical parameters (depth, temperature, pH, salinity,
+dissolved oxygen (DO), total dissolved solids (TDS), total hardness, and nitrate
+concentration) of selected rice paddies of Davao City; and
+
+3. determined statistical correlation between physicochemical parameters of selected
+
+rice paddies and shell morphology of collected samples.
+
+Significance of the study
+
+There is a gap of information on studies in the rice fields of Davao City concerning
+P. canaliculata. Thus, this study provides preliminary data about its potential as a
+bioindicator of environmental fluctuations in rice fields. Moreover, it provided information
+for the Department of Agriculture-Regional Office XI and the City Agriculturist Office
+about the present condition of the city’s rice field areas. The results of the study also serve
+as an important reference for evaluating future soil and water quality changes as well as
+providing new insights on how to develop farming techniques and maintain biodiversity
+(Amaoudov et al., 2015). Furthermore, the use of macroinvertebrates as indicator
+organisms can provide the community awareness to reconsider what is truly "ecological"
+and so-called “eco-friendly” farming from the viewpoint of biodiversity conservation
+(Ueno, 2013). It is the priority of the Harmonized National Research and Development
+Agenda-Agriculture, Aquatic and Natural Resources sector to develop soil health, nutrient
+and water management, and to develop eco-friendly diagnostic kits, techniques, and
+strategies for agriculture (Department of Science and Technology [DOST], 2017).
+Scope and Limitation of the Study
+
+The study investigated the correlation between physicochemical parameters of
+water and conchological features of golden apple snails (P. canaliculata) in selected rice
+fields of Davao City. Other physicochemical parameters of water and conchological
+features of golden apple snails not specified in the objectives are beyond the scope of this
+study. Furthermore, other extrinsic factors that could influence the conchological features
+
+of P. canaliculata were not discussed in this research.
+
+CHAPTER II
+REVIEW OF RELATED LITERATURE
+Shell morphology of Pomacea canaliculata
+
+Pomacea canaliculata (Lamarck, 1822), or commonly known as golden apple
+snail, was introduced in Taiwan and the Philippines in the early 1980s from Florida and
+Latin America by private snail farmers with the goal of exporting it to Europe. Since it is
+easy to raise and can successfully breed in warm tropical freshwaters, it thrived and adapted
+well in the country. Unfortunately, the exportation venture was not a success, and although
+they were initially expensive, their market value eventually dropped. Golden apple snails
+that had escaped or been discarded rapidly spread in streams and irrigation canals. When
+they arrived in the rice fields, they found an ideal environment, eating on young succulent
+plants such as newly transplanted rice crops and weeds at night and dawn. The snails
+quickly became a severe pest in many regions of cultivated rice land in Asia, with only a
+few natural enemies to keep them in check. Their rapid development and reproduction
+(females lay up to 500 eggs once a week) results in population levels that can wipe out
+entire rice crops (FAO, 1998; Joshi et al., 2017). This organism is one of the 100 world’s
+worst invasive alien species, according to the International Union for Conservation of
+Nature (IUCN) in 2021.
+
+Gastropods are primarily identified by their shell. The entire shell is termed the
+conch and is normally composed of several layers, one to several minerals like calcium
+carbonate in the form of aragonite or calcite, and one outermost (periostracum) layer
+composed mostly or entirely of organic material and usually pigmented. The shell is
+
+basically a coiled tube around a central pillar, termed an axis. One complete coil or tum is
+
+called a whorl. The first one or two whorls are created before the snail egg hatches and are
+termed embryonic or nuclear whorls that collectively make up the protoconch. Coiling and
+surface morphology of embryonic whorls differ from those that follows and are termed as
+postembryonic or teleoconch whorls (Frest & Johannes, 1999). Shell features are often
+adaptive in relation to habitat, locomotion, feeding, and defense from predators.
+Gastropods invest large amounts of energy in specializing and strengthening the shell
+(Salgeback, 2006).
+
+Pomacea canaliculata is characterized by its large-sized shell (up to 75 mm in
+height), deeply channeled suture, rounded aperture, wide and deep umbilicus, and shell
+color that varies from bright green to orange-brown with reddish spiral bands. The interior
+of the shell is yellowish with a suffusion of purple and marked with strong spiral bands
+(Ponder et al., 2016). Through the process of biomineralization, P. canaliculata shells are
+formed by calcium carbonate and other trace minerals found in the environment. Shell
+material is layered by a series of strips with cells that run along the outer fold and the
+extended mantle of the epithelium. This process starts at the mantle and on the lip and coils
+in forward form. Most of the coiling is right-handed although there are examples of left-
+handed coiling in some cases. In most cases, growth rings (transverse stria) are observed
+that translate to an approximate year of growth, however climate and other factors can
+impact this process (Marin et al., 2012). According to Jubaedah et al. (2018), the golden
+apple snail shell is made up of 91.62% calcium oxide and 1.66% magnesium oxide.
+
+The band pattern is highly variable among individuals from the same population of
+P. canaliculata. This variation involves color, intensity, number (up to 30 bands) and width
+
+of bands. The pigment of the bands in P. canaliculata is deposited in the periostracum
+
+though this is not common among gastropods, in which the pigments are formed by
+specialized cells in the mantle margin and deposited in the outer calcareous layer or
+periostracum. In P. canaliculata, the bands are included within the calcareous shell matrix,
+as proven by acid dissolution of the shell, which left only a homogeneously brownish-
+colored periostracum. On the other hand, the chemical digestion of the periostracum only
+fades the general shell coloration, leaving the bands unaltered. The band pattern difference
+shows ontogenetic and ecophenotypic mechanisms. The color strength of the bands in P.
+canaliculata increases during post-hatching development and the shells of hatchlings have
+no bands (Estebenet et al., 2006). Whelan (2021) proposed that, in order for observations
+to be replicable by other studies, shell morphological features should be measured using
+geometric morphometrics or other quantifiable approaches rather than subjective and
+
+ambiguous descriptions.
+
+Number bands
+
+2 Number
+ot whorls
+
+Figure 1. Shell characters of P. canaliculata (Rama Rao et al., 2018; Galan et al.,
+2015; Conchological Society of Great Britain and Ireland, 2021)
+
+Environmental factors affecting gastropod shell morphology
+
+Conchological characters in gastropods are primarily useful in identifying
+taxonomic groups. However, there are also findings that show these traits have observable
+relationships with environmental variables. Water parameters such as ammonia, nitrite,
+nitrate, pH, hardness, alkalinity, and temperature are known to be essential for gastropod
+
+growth and development. Gastropods should be kept in systems with low levels of
+
+ammonia, nitrite, and nitrate (less than 10 ppm), a neutral pH, and moderate alkalinity and
+hardness. Since this is a key source of calcium and magnesium for developing gastropods,
+hardness is also considered a crucial physicochemical parameter (Zachariah & Mitchell,
+2009).
+
+There have been observations that reveal conchological features have direct
+correlations with environmental conditions, affecting the organism's development and
+resulting in a better understanding of a species. For instance, a study on the Roman snail
+(Helix pomatia) showed that heavy metal accumulation in the hepatopancreas could affect
+shell height, relative shell height and whorl number (Nica et al., 2012). Similarly, a study
+on the shell morphology of micro-land snails (genus Plectostoma) revealed several aspects
+of the predator-prey interactions between the Atopos slug and Plectostoma snails in the
+limestone habitats of Borneo. Despite having several distinct anti-predation traits, such as
+protruding radial ribs and distorted coiling of the shell, Plectostoma snails have low
+resistance against predation by the slug with its two predatory strategies (shell-apertural
+entry and shell-drilling). Lastly, the effectiveness of the snail’s anti-predation traits is
+probably limited by trade-offs imposed by ontogenetic constraints (Liew & Schilthuizen,
+2014).
+
+Anderson et al. (2007) reported that differences in shell size among populations of
+the gastropod Oreohelix cooperi are strongly related to mean annual temperature (and the
+highly correlated variable elevation) and population density (measured as shell density). In
+addition, shell size varies among populations, despite an apparent lack of population
+genetic differentiation. As mean annual temperature and shell density affect adult shell
+
+size, they also indirectly affect reproductive behavior. The results suggested that a large
+
+portion of the life history variation in O. cooperi is environmentally induced. Results in the
+study conducted on giant African land snail (Achatina fulica) showed how the different
+populations varied. Variability between the populations was observed to be due to
+variations in meristic measurements and analysis of shell shapes within each of the
+populations. While similarities were observed, the differences between the populations
+were attributed to the existence of individuals that are distinct for the populations where
+they were collected. Population differences cannot be attributed to geographical distance
+alone but could also be due to differences in habitats. Variations in the availability of food
+plants and other ecological conditions in the collection areas plus genetic predisposition to
+variable selection pressures may have contributed to the great potential of survival and
+adaptation of this species thus its invasiveness (Madjos & Demayo, 2018).
+
+Furthermore, Schilthuizen et al. (2006) studied Opisthostoma concinnum on
+scattered limestone outcrops within a small area of lowland rainforest in Borneo using shell
+morphometrics, mitochondrial and nuclear DNA sequences, and marks of predation to find
+the factors involved in allopatric divergence. It was found that a striking geographic
+divergence exists in shell morphology, which is partly associated with neutral genetic
+divergence. Geomorphic differentiation in the behavior of the snails’ invertebrate predator
+and evidence of an evolutionary interaction between aspects of shell shape and predator
+behavior was also found. The study showed that adaptation to biotic aspects of the
+environment may have a more significant part in allopatric speciation than previously
+suspected. A study on genetic variation of the shell morphology in Acanthina monodon in
+habitats with different wave exposure conditions showed that shell morphology is an
+
+adaptive trait with an important genetic basis and a plastic potential (Solas et al., 2013).
+
+10
+
+The genetic and environmental factors affecting shell shape in the freshwater snail
+Semisulcospira reiniana at Takahashi in Kyoto, central Japan, were studied by means of a
+rearing experiment and field observations, Phenotypic modulation by the environment may
+cause a large amount of shell variation in many gastropod species, taking account of both
+a high plasticity in shell formation and environmental heterogeneity (Urabe, 1998).
+According to Cuadrado (2015), gastropod species are among the most biologically
+used bioindicators to assess the quality of any water impoundment. A bioindicator should
+have the following characteristics: (1) can accumulate high levels of pollutants without
+dying; (2) lives in a sessile style, thus accurately representing local pollution; (3) is
+abundant and widely distributed to allow for repeated sampling and comparison; (4) lives
+long enough to allow for age comparisons. (5) can provide a good target tissue or cell for
+future microcosmic research; (6) easy sampling and cultivation in the lab; (7) keeps alive
+in water; (8) occupies a key level in the food chain; and (9) a well-observed dose-effect
+connection. As a major feature of any biomarker, it is critical that the expected interactions
+can be linked to a specific endpoint (molecular, physiological, or morphological) and then
+proved to be repeatable across studies and sites (Michalak & Chojnacka, 2014; Nikinmaa,
+2014). A study on the edible marine snail (Buccinanops globulosus) concluded that the
+shell shape could be used in environmental monitoring programs to analyze the tributyltin
+(TBT) coastal pollution through collection of shells on the intertidal (Primost et al., 2015).
+Gastropods are primarily distinguished by their shells. Shells protect the organism, are used
+to classify and identify species, and are intricately tied to many aspects of gastropod
+
+biology and development (Whelan, 2021).
+
+Shell morphological variations in Pomacea canaliculata
+
+Phenotypic plasticity refers to the ability of many gastropod species to change their
+physiology, behavior, morphology, and/or development in response to environmental cues
+(Whelan, 2021). When a genotype is exposed to varied environmental conditions, it can
+display a variety of phenotypes (Fox et al., 2019). Various studies have found phenotypic
+variations among P. canaliculata populations which were linked to differences in
+environmental factors. A study on distances of morphological shell shape patterns of P.
+canaliculata from Japan and the Philippines revealed that P. canaliculata shells vary in
+shape and that geography contributes to shaping the structure of the populations. Using
+correlation analysis based on distances, it was found that geographic distance was a factor
+that contributed to the differences in the shell shape when viewed from all aspects (i.c.,
+apertural, dorsal, and whorl; Moneva et al., 2012).
+
+Furthermore, in a study on phenotypic variation in populations of P. canaliculata
+using morphometric parameters, it was observed that significant differences in the body
+shape of collected samples exist among three different rice fields in Mindanao Island,
+Philippines. Variations in the shells of P. canaliculata snails were attributed to the
+cumulative environmental effects on different shell views (aperture, dorsal, and whorls).
+The study was able to determine that geologic distance is a factor of phenotypic variations
+(Madjos et al., 2015). Mahilum and Demayo (2014) conducted a study on sexual
+dimorphism in shell shape of P. canaliculata in three lakes of Mindanao, Philippines (Lake
+Lanao, Lake Dapao, and Lake Wood). Geometric morphometric analysis made in the shell
+of P. canaliculata found variations in shape of dorsal and ventral portions of the shell
+
+between male and female individuals based on landmark-based analysis. The study,
+
+12
+
+therefore demonstrated the effectiveness of geometric morphometric methods in describing
+morphological variation. The uncontrollable variation existing in P. canaliculata could
+have been affected by its successful selection and acclimation to various types of
+environments. In a study conducted by Darrigran et al. (2011), it was suggested that
+variations in annual temperature and precipitation in northern Patagonia, caused by global
+climatic changes, is possibly beneficial for the settlement of populations of P. canaliculata
+in the new area, where precipitation is increased to reach values similar to those in the
+southernmost area of distribution of this species.
+
+A study conducted on the histological responses of P. canaliculata to copper paved
+the way to its possible role as a biomarker for copper contamination. Results showed that
+age and copper concentration had an effect on the feeding rate, while copper concentration
+and days of exposure to copper had an effect on the growth of snails. Uptake rate,
+bioaccumulation and biotransference factors, and assimilation efficiency implicated that P.
+canaliculata was a good copper accumulator. Copper accumulation was visible even at low
+concentrations, but there was a behavioral regulation at lethal concentrations (Pefia et al.,
+2017). A study conducted by Attademo et al. (2018) on metabolic stress and shell thinning
+of P. canaliculata in rice agroecosystems of Argentina concluded that the insecticides
+bifenthrin and imidacloprid had a possible effect on the shell thickness of the snails. In
+addition, exposure to pesticides resulted in neurotoxic resistance and oxidative stress in P.
+canaliculata, which is probably responsible for the alteration in its shell development. Shell
+variation in P. canaliculata populations supplied not just information about the species but
+also insights that could be used to develop effective management strategies and boost
+
+conservation efforts for other gastropod species. Therefore, comparative studies among
+
+13
+
+freshwater gastropod lineages should be explored, especially those that examine the
+adaptive potential of shell variation. Furthermore, genomic tools should also be used to
+further our knowledge of phenotypic plasticity (Whelan, 2021).
+
+Rice agroecosystem
+
+Asia accounts for over 90% of the world’s production of rice and almost 90% of
+the world’s rice land areas. The greatest levels of productivity are found in irrigated rice
+fields, the most intensified production system. Approximately 45% of the rice area in
+Southeast Asia is irrigated, with the largest areas being found in Indonesia, Vietnam,
+Philippines, and Thailand. In the irrigated rice ecosystem, the rice fields have assured water
+supply for one or more crops a year. Irrigated lands cover over half of the world’s rice
+lands and produce about 75% of the world’s rice supply (Redfem et al., 2012). Rice fields
+are economically important and ecologically valuable. Rice is the most important staple
+crop in the Philippines that ensures food security and alleviates poverty.
+
+The progress of Davao City is primarily invested to agriculture. The City
+Government of Davao identified agriculture as one of the ten priority investment areas
+indicated in the Davao City Investment Incentive Code. Grain production is one of the
+monitored and inventoried crops, as part of the 2012-2021 Sustainable Agriculture
+Development Plan of the City Agriculturist Office. Currently, 1,599 farmers are involved
+in the cultivation of rice in Davao City and according to the Japan Infrastructure
+Cooperation Agency (JICA), the estimated employment in the agriculture sector by 2054
+will be 43,547 (Davao City Investment Promotion Center [DCIPC], 2016; City
+
+Agriculturist Office, 2021).
+
+14
+
+Davao City is an agriculture center with an agricultural area consisting of 51,009
+ha, 21% of its overall land area. However, the Davao City Agriculturist Office reported a
+decrease in rice production, mainly caused by urbanization and damaged irrigation
+systems. At present, there is a total of 1,415.24 ha rice fields dispersed in six districts, only
+63% from the reported total rice field area in 2016. Calinan district has the largest irrigated
+Tice field area with a total of 392.22 ha. The Tugbok clay, Calinan district's soil
+composition, is suitable for agriculture due to its rich nutrient content and capacity to retain
+plenty of moisture required for a healthy plant growth (DCIPC, 2016; City Agriculturist
+Office, 2021). Advancements and development are being made to improve quality and
+yield of rice crops in the country (Bordey et al., 2016). Furthermore, in response to growing
+concerns about environmental contamination caused by the use of chemical fertilizers,
+various initiatives have been launched to replace chemical fertilizers with organic
+fertilizers (Harun et al., 2020).
+
+‘A wide range of plant and animal species exist in rice fields. Rice fields are among
+the biggest ecosystems that can be found in the tropics. They accumulate large amounts of
+water, become a source of groundwater, and help keep the environment healthy by
+lowering temperature and reducing pollution (Halwart & Gupta, 2004). Rice
+agroecosystem is subject to a variety of anthropogenic activities that can differ significantly
+within a country and can have consequences on macroinvertebrate composition. They are
+primarily due to the source and the consistency of water supply, soil permeability, and
+diverse environmental factors. It must not be disregarded that the natural water cycle in
+rice fields is altered because paddies are flooded during the rice growing period and dry up
+
+in harvesting period. The absence of water in rice field during this period is unfavorable to
+
+15
+
+the development of many species, including the golden apple snail. Water level variations
+can affect the survival of species with longer life cycles (Bazzanti et al., 2003; Caramujo
+& Boavida, 2010). Water in rice fields is also subject to rapid physical and chemical
+changes, which can affect existing flora and fauna (Panizzon et al. 2012). For instance,
+thermal fluctuations can directly affect various morphological and physiological traits of
+rice plants. A study reported the influence of agronomic practices on water level,
+temperature, dissolved oxygen, pH, conductivity, phosphate and nitrate of water in a
+tropical rice field ecosystem. As a result, they concluded that rice agroecosystem is a very
+complex environment and all small modifications can have direct effects on its
+
+macroinvertebrate communities (Al-shami et al., 2010).
+
+CHAPTER III
+MATERIALS AND METHODS
+
+Entry protocol
+
+Before the conduct of the study, necessary communications, legal actions, and
+requirements were established. Communication with the Department of Agriculture-
+Regional Office XI and the Davao City Agriculturist Office was made to ask for permission
+and assistance in the conduct of this research. A formal letter of intent was also sent to each
+district agriculturist or agriculture officer. Accordingly, the barangay office of each district
+was contacted, and a formal letter of intent signed by the researcher and research adviser
+was given to the respective owners of the rice fields. The schedule, method of collection,
+and purpose of the study were explained to the owners. The comments, responses, and
+recommendations set out by the concerned authorities and individuals are documented and
+attached in the appendices of this paper (Appendix D).
+Study area
+
+The study was conducted in selected rice fields of Davao City (Figure 2),
+geographically situated in the southeastern part of Mindanao, that lies 7.1907° N and
+125.4553° E. Davao City has a total land area of 244,400 ha and 1,415.24 ha of rice field
+areas are distributed in six districts: Buhangin, Paquibato, Tugbok, Calinan, Baguio, and
+Marilog. Figure 3 shows the rice field distribution of each district. Calinan district has the
+largest irrigated rice field area consisting of 392.22 ha, about 2% of its total land expanse.
+Meanwhile, Marilog district has the largest actual physical rice field area with 599.75 ha,
+about 42.4% of the city’s total rice field area. The study was located in five agricultural
+
+districts planted entirely of rice. The common varieties of rice planted in the study sites are
+
+17
+
+NSIC RC 214 (TUBIGAN 16), NSIC RC 224 (TUBIGAN 19), NSIC RC 238 (TUBIGAN
+21), NSIC RC 9 (APO), and NSIC RC 11 (CANLAON). The planting month and harvest
+period differ in every district, but all cultivate rice five times every two years. The study
+sites are all treated with inorganic fertilizers, primarily Ammonium phosphate 16-20-0,
+Urea 46-0-0, and ATLAS PERFECT GRO 14-14-14. The most common pesticides used
+are, Lorsban 3E, Decis, Dithane M-45, and Malathion. The soil is warm, muddy or
+submerged in freshwater, suitable for the growth of rice. The area coverage of each
+
+sampling site was recorded using the Global Positioning System (GPS) receiver.
+
+9
+
+>
+(Google Maps, 2021) (Google Maps, 2021)
+Figure 2. Sampling site at Davao City
+
+mBuhangin mPaquibato ~ Tugbok Calinan =Baguio = Marilog
+
+Figure 3. Distribution of rice field areas in Davao City (City Agriculturist Office,
+2021)
+
+Collection and examination of specimen
+
+Buhangin, Tugbok, Calinan, Baguio, and Marilog are the five districts that were
+sampled. The sampling visits took place between January and February 2022. Collection
+of P. canaliculata was accomplished using the handpicking method (Dillon, 2006; West
+Virginia Department of Environmental Protection [WVDEP], 2018). A total of 23
+specimens were randomly collected from each site. The lower limit of size for samples
+collected was 30 mm to exclude juveniles (Cowie, 2005; Centre for Agriculture and
+Bioscience International [CABI], 2019). Collected samples were placed in labeled plastic
+zip-lock bags. Subsequently, the specimens were boiled for easier meat extraction and the
+shells were cleaned. Collected samples were washed with tap water, dabbed dry, and then
+preserved in 70% neutralized ethanol to prevent the calcium carbonate in the shells from
+dissolving and were labeled with location and date of collection (Dillon, 2006; Rios-Jara
+et al., 2009). Protective gloves were used throughout the collection, preparation, and
+preservation procedures. Shell morphometric data include shell dry weight, shell length,
+shell width, width of the aperture, length of the aperture, band width per shell, number of
+bands, and number of whorls. Measurements were done to the nearest millimeter (mm).
+Shell dry weight was recorded after the shells were dried in a desiccator. Figure 4 shows
+
+the step-by-step procedure for data collection.
+
+Collection of P. canaticulata
+(23 individuals per site),
+
+sment of physicochemical > i Cleaning and preservation of
+mewsursparaneters and Boiling and meat extraction -—>} iis in 70% neutralized ethanol
+
+collection of water sample for
+further tests
+
+v
+
+Measurement of shell Statistical analysis of collected
+‘morphometric data > data
+
+Figure 4. Step-by-step procedure for data collection
+
+Measurement of physicochemical parameters
+
+Table 1 shows the geographical locations of the five sampling sites as well as the
+collection schedules for physicochemical data, samples, and specimens. The data sheet for
+physicochemical parameters also included information about the weather and rainfall
+events that occurred during the sample and data collection. The rice fields’ water was
+analyzed for physicochemical parameters, specifically depth, temperature, pH, salinity,
+dissolved oxygen (DO), total dissolved solids (TDS), total hardness, and nitrate
+concentration, using standard analytical methods. The water depth was measured using a
+plastic ruler. The water temperature was measured on-site using an alcohol thermometer.
+The pH and dissolved oxygen (DO) were measured using pH paper and a DO meter,
+respectively. The measurements of each on-site variable were replicated three times, and
+the mean values were recorded. Water samples were collected in 1-liter plastic bottles for
+further tests. Salinity and total dissolved solids (TDS) were analyzed in the DOST RO-XI
+
+Regional Standards and Testing Laboratory, while total hardness and nitrate concentrations
+
+
+20
+
+were measured and analyzed in the Davao Analytical Laboratories, Inc. Moreover,
+laboratory analysis of water samples was also conducted in the DOST RO-XI Regional
+
+Standards and Testing Laboratory to get a more accurate reading of the pH level.
+
+Table 1. Geographical locations and schedule of collection of the five study sites
+
+Study Site Geographical Location | Schedule of Collection
+ee 7° ABN, 125° 33' E January 13, 2022
+Tape oath SoS 7° 9'N, 125° 29'E January 20, 2022
+Calman, Calinan Det PAIN, 125°27E| January 27, 2022
+ae eae Se 7° 13'N, 125° 24' E February 3, 2022
+Nee Dee 7° 1S'N, 125° 23' B February 10, 2022
+
+Statistical analysis
+
+To evaluate the relationship between the different variables, the collected data were
+subjected to Bayesian Correlation Analysis. It is a statistical technique that can be used to
+determine whether, and how strongly, two variables are related. In comparison to p values,
+the Bayesian technique produces more intuitive conclusions and is less prone to
+misinterpretation. Same with frequentist correlation, both parametric (Pearson’s) and non-
+parametric (Kendall’s tau-b) correlation coefficients were reported. However, Bayes
+factors (BF) and credible intervals replace p values and confidence intervals (Schisterman
+et al., 2003; Nuzzo, 2017). Quintana and Williams (2018) emphasize that in the use of p
+values, it is difficult to determine whether non-significance is due to data insensitivity or
+evidence of no association between the two variables. While the p value is commonly used
+
+in different research disciplines, the Bayes factor has a number of advantages, including.
+
+21
+
+the ability to draw a conclusion about the alternative hypothesis rather than only the null
+hypothesis (Jarosz & Wiley, 2014).
+
+The strength of the relationship between two variables is measured by Pearson's
+correlation coefficient (r). The correlation coefficient formula is used to determine the
+strength of a relationship between two sets of data. The formula produces a number
+between -1 and 1, with 1 indicating a strong positive relationship, -1 indicating a strong
+negative relationship, and 0 indicating no relationship at all. The correlation coefficient's
+absolute value indicates the strength of the relationship. The stronger the relationship, the
+higher the number (Echem, 2017). When the data has failed one or more of the assumptions
+of this test, Kendall's tau-b correlation coefficient (tb) provides a nonparametric alternative
+to Pearson's correlation coefficient (Miot, 2018).
+
+Bayesian Correlation Analysis determines whether the data are more likely to occur
+under the null hypothesis (Ho), which asserts that there is no linear relationship between
+the two variables, or the alternative hypothesis (Hi), which asserts that there is an
+association between the two variables. Afterward, Bayes' theorem is used to calculate the
+posterior probability of both hypotheses after observing the data. The data were analyzed
+using Jeffreys’ Amazing Statistics Program (JASP) software version 0.16.1, released
+
+February 16, 2022 (Schisterman et al., 2003; Nuzzo, 2017).
+
+CHAPTER IV
+RESULTS AND DISCUSSION
+Shell morphometrics of Pomacea canaliculata
+There were 115 golden apple snails collected from the five study sites. Each
+individual was identified morphologically using peer-reviewed journal articles (Cowie,
+2005; Hayes et al., 2012). Figure 5 shows the shells of P. canaliculata collected from the
+five study sites.
+
+%2e
+@ &
+
+Figure 5. Apertural view of Pomacea canaliculata shells collected from the five
+study sites. A, Buhangin; B, Tugbok; C, Calinan; D, Baguio; E, Marilog
+
+Baguio district recorded the highest mean values for all measured conchological
+characters. Lowest mean values for shell dry weight, shell length, shell width, aperture
+width, and aperture length were recorded in Calinan district. Moreover, Tugbok district has
+
+the lowest mean value for the number of bands, with 16.22. Marilog district had the lowest
+
+23
+
+mean values for band width per shell and number of whorls, with 0.83 mm and 4.09,
+respectively. Table 2 shows the shell morphometric measurements of P. canaliculata
+
+collected from the five sampling sites.
+
+Table 2. Shell morphometrics of Pomacea canaliculata from the five study sites
+
+Shady [Shel] Shl | Apenire [Ape] Band wih
+wee | terzh | wan | “San | “inp” | eran” | Manterot | Nonberof
+() (mm) (eam) (rom) (mam) (mm)
+
+Buhangin 1.95 | 35.26 | 31.38] 17.18] 24.88 0.94} 17.30 4.27
+Tugbok 2.04 |_34.98 | 30.45 18.11 24.08 1.06, 16.22 4.48
+Calinan 1.40 | 31.42 | 27.31 16.08 | 21.46 1.02 17.61 4.14
+Baguio 2.73 | 40.13 | 35.16] 19.84] 27.22 117, 18.35, 4.59
+Marilog 1.77 | 33.10 | 28.25 16.60 | 22.75 0.83 17.65 4.09
+
+Physicochemical parameters
+
+The physicochemical parameters of water were measured using analytical methods.
+A total of two I-liter samples were collected for each study site. During the conduct of the
+study, the weather in Buhangin and Tugbok was sunny; the weather in Baguio District was
+rainy; and the weather in Calinan and Baguio, meanwhile, was gloomy or cloudy. The
+highest average water depth was recorded in Calinan district, with a depth of 6.75 cm,
+while the lowest was observed in Marilog district, with an average depth of 2.20 cm. The
+highest mean temperature was recorded in Baguio district, 27.70 °C. Marilog district has
+the lowest mean temperature, with only 24.93 °C. The highest pH level was recorded in
+Baguio district, with a value of 7.43, while the lowest was recorded in Buhangin district,
+with a value of 6.83. The districts of Buhangin, Tugbok and Baguio measured similar
+salinity values of 1 ppt. Also, the districts of Calinan and Marilog recorded similar salinity
+values of 0 ppt. The highest dissolved oxygen (DO) level was observed in Baguio district,
+with a value of 14.23 mg/L. Meanwhile, the lowest DO level was measured in Calinan
+
+district, with a value of 5.31 mg/L. The highest measurement of total dissolved solids
+
+24
+
+(TDS) was recorded in Tugbok district, with a value of 230 ppm, while the lowest TDS
+level was measured in Calinan district, with a value of only 39 ppm. The highest total
+hardness level was measured in Marilog district, with a value of 152.0 mg CaCOs/L, while
+the lowest was recorded in Calinan district, with a value of only 47.3 mg CaCOs/L. The
+highest nitrate concentration level was measured in Calinan district, with a value of 1.80
+mg/L, while the lowest was observed in Marilog district, with a value of only <0.50 mg/L.
+
+Table 3 shows the measured physicochemical parameters of each study site.
+
+Table 3. Physicochemical parameters of each study site
+
+Toul
+
+Dinoted Wen
+
+(|S | mt | em” | our | Petar’ | eet” | een
+Buhangin | 5.58 26.67 | 6.83 1 6.88 224 61.6 0.66
+Tugbok _| 5.75 26.33 | 6.84 1 6.12 230 84.1 0.50
+Calinan__| 6.75 26.00 | 7.36 0 5.31 39 47.3 1.80
+Baguio 2.53 27.70 | 7.43 1 14.23 146 72.7 0.80.
+Marilog | 2.20 24.93 | 6.86 0 8.01 127 152.0 <0.50
+
+Bayesian correlation analysis
+
+In Bayesian correlation analysis, two models are compared: the null hypothesis (Ho)
+that there is no correlation between the two variables, i.e., p = 0, and the alternative
+hypothesis (H:) that there is an association between the two variables, or p 4 0. Bayesian
+inferencing tests how the observed data updates the prior distribution with the posterior
+distribution. The classification scheme for analyzing Bayes factors proposed by Lee and
+Wagenmakers in 2003 was used in this study (Lee & Wagenmakers, 2005). This
+classification scheme, which has been adopted in JASP, generates descriptive labels for
+interpreting a range of Bayes factors. Table 4 shows the interpretation scheme of the Bayes
+
+factor.
+
+25
+
+Table 4. Interpretation of the Bayes factor (Jeffreys, 1961, as cited in Quintana &
+Williams, 2018)
+
+Bayes factors (BFie) Interpretation
+> 100 Decisive evidence for Hi
+30 = 100 Very strong evidence for Hi
+10 = 30 Strong evidence for Hi
+3 = 10 ‘Substantial evidence for Ht
+1 = 3 ‘Anecdotal evidence for Hi
+I No evidence
+1B = 1 ‘Anecdotal evidence for Ho
+V0 = 13 ‘Substantial evidence for Ho
+130 = 1/10 Strong evidence for Ho
+1/100 = 130 Very strong evidence for Ho
+< 1/100 Decisive evidence for Ho
+
+Descriptive analysis was done to check for data normality and the presence of
+outliers. Temperature, dissolved oxygen (DO), total hardness, nitrate concentration, shell
+dry weight, shell length, and number of bands were variables that showed deviation from
+normality. Since the assumption of normality was not met, Kendall's tau-b (1b) correlation
+analysis was used. Meanwhile, Pearson (r) correlation analysis was used for variables
+where the assumption of normality was met (Miot, 2018).
+
+Table Sa shows the Bayesian Kendall’s tau-b correlation matrix of shell features
+and physicochemical parameters. The Bayes factor (BFio) reported anecdotal evidence in
+favor of the alternative hypothesis for shell length, shell width, aperture length, number of
+whorls, and temperature, with BFio values greater than 2.000. Also, the BFio values for
+shell dry weight, shell length, and salinity are > 2.000, suggesting that there is anecdotal
+evidence for a correlation. Meanwhile, shell dry weight, aperture width, band width per
+shell, and temperature reported BF\o values of > 1.000, also suggesting anecdotal evidence
+in favor of the alternative hypothesis. Moreover, it is 1.205 times more likely that pH and
+
+the number of bands are related than not. Similarly, shell length, shell width, aperture
+
+26
+
+length, number of bands, and dissolved oxygen (DO) reported BFio values > 1.000. Lastly,
+the BFio of shell dry weight and total dissolved solids (TDS) also suggests anecdotal
+
+evidence in favor of the alternative hypothesis (BF 10 = 1.205).
+
+Table Sa. Bayesian Kendall’s tau-b correlation matrix of shell features and
+
+sicochemical
+Tar
+
+Dave Tout | Niwa
+Depa | Tempers | gti | satniy | Dee | paces | Taal | Nim
+Ouszen | Pissed | panes | comme
+Swe any | Real Toon ooo | OTs o20| 0000
+base BF wo 0.578. “0526 2.058 0578 0.526.
+sve | Kev [2400 | g09 | 0200 | _o778 00009200
+desety BEw 0.763. 2247 0.578 2.058 0526 0.578
+sre | Kemals 0400 oom | 0200
+ses! BFw 2.247 0.526 0578
+pera | Kentals 020 | 0000
+a) BFw 0.763, 0.578 0526
+‘pene | Keni 0800 oom | 0200
+length Br | oe 0506 | 0578
+Tang Renals aon
+
+width per | tau-b 000) 20)
+Sa are re ose] 0
+Number | Keml’s | 928 | oon a358 7700 oon | __o2t0
+oe BFw. 0.763, 0.526 0615, 0.763, 0.526 0578
+amber | Kemals osty 200 oom | 0200
+Coe BFw 2.247 0.578 0.526 0578,
+
+BE a> 2000 TE > 1.000
+
+Table Sb shows the Bayesian Pearson correlation matrix of shell features and
+physicochemical parameters. Band width per shell and pH reported a BFio value of 1.016,
+indicating that the altemative model is 1.016 more favored than the null model, given the
+data, Furthermore, shell width, aperture width, aperture length, number of whorls, and
+salinity also have BFio values of > 1.000, suggesting that there is anecdotal evidence in
+favor of the alternative model. Meanwhile, the Bayes factor values for the other paired
+variables were less than 1.000. This means that there is anecdotal evidence supporting the
+
+null hypothesis: that the paired variables are not correlated.
+
+27
+
+Table 5b. Bayesian Pearson correlation matrix of shell features and
+hysicochemical parameters
+
+Total
+pH Salinity | Dissolved
+Solids
+
+Pearson's r 0275 0.464
+Shell width Taro 0.583 0.701
+Aperture | Pearson's r 0311 0.415
+width BFio 0.598 0.660
+Aperture | Pearson’sr | 0.173, [0.536
+length BFio 0.552 0.778
+Band width | Pearson's r 0.564 0.033
+per shell 087 | 0.534
+Number of 0.261 0.492
+whorls 0.578 0.728
+
+BF o> 1.000
+
+Paired variables with BFio values that indicate anecdotal evidence in favor of the
+altemative hypothesis that p # 0 were further analyzed using the directional correlation
+hypothesis. Correlations between variables with BF1o > 1.000 were reported as having
+positive Kendall's tau-b and Pearson's r values in the correlation matrix. Therefore,
+correlations with a directional altemative hypothesis (correlated positively) were also done.
+Tables 6a and 6b show the Bayesian one-sided pairwise correlation table, with an
+alternative hypothesis that the correlation is greater than 0.
+
+In the Bayesian Pearson one-sided pairwise correlation table (Table 6a), three
+paired variables (shell width-salinity, aperture length-salinity, and number of whorls—
+salinity) reported a BFo value greater than 3.000, which indicates that there is substantial
+evidence in favor of the alternative hypothesis given the data. Not only does this provide
+evidence for Hi relative to Ho, but the Bayes factor also conveys the magnitude of this
+evidence. The remaining paired variables reported BF+o values that indicate anecdotal
+
+evidence in favor of the alternative model.
+
+28
+
+Table 6a. Bayesian Pearson one-sided pairwise correlations of shell features and
+
+physicochemical parameters
+Pearson's r BF.o
+
+Band width per shell — _| pH 0.667 1.730
+Shell width =_| Salinity 0.811 3.043
+Aperture width —_| Salinity 0.754 __ 2.347
+Aperture length —_| Salinity 0.824 3.242
+Number of whorls Salinity 0.842 3.603
+
+BF > 3.000
+Note. For all tests, the alternative hypothesis specifies that the correlation is positive.
+
+In the Bayesian Kendall's tau one-sided pairwise correlation table, six paired
+
+variables (shell length-temperature, shell width-temperature, aperture length-temperature,
+
+number of whorls-temperature, shell dry weight-salinity, and shell length-salinity)
+
+reported a BF. value greater than 3.000, which also indicates that there is substantial
+
+evidence in favor of the alternative hypothesis given the data. Meanwhile, the rest of the
+
+paired variables reported the same Bayes factor interpretation, indicating that there is
+
+anecdotal evidence in support of the alternative positive correlation.
+
+Table 6b. Bayesian Kendall's tau-b one-sided pairwise correlations of shell features
+
+_ and phy ical parameters _
+a BFo
+
+Shell dry weight mperauure | SOO | 2.175 |
+Shell length —__| Temperature 4.300
+Shell width — | Temperature 4.300
+Aperture width =| Temperature 2.175
+Aperture length =| Temperature 4.300.
+Band width per shell =| Temperature 2.175
+Number of whorls = Temperature 4.300
+Number of bands —_| pH 2.175
+Shell dry weight = _| Salinity 3.918
+Shell length =__| Salinity 3.918
+
+ell length ___|=_| Dissolved Oxygen 2.175
+
+ell _— issolved Oxygen 2.175
+Aperture length = 2.175
+Number of bands: = 2175
+Shell dry weight 2.175.
+
+‘oe > 3.000
+or alll tests, the alternative hypothesis specifies that the correlation is positive.
+
+
+29
+
+A scatterplot visualization of shell width-salinity, aperture length-salinity, and
+number of whorls-salinity suggests that there is a correlation between the variables (Figure
+6A, D, and G). Moreover, the posterior-prior plot for shell width-salinity, aperture length-
+salinity, and number of whorls-salinity (Figure 6B, E, and H), assuming a positive
+correlation, shows that the data is fully distributed to the right of p = 0, with median values
+of 0.608, 0.620, and 0.640, respectively. The credible interval range suggests that there is
+95% confidence that the true value of p is located within these bounds. Since the Bayesian
+framework uses the present data to determine the credible interval, such a conclusion is
+valid (Quintana & Williams, 2018). The dashed line depicts the uniform prior distribution,
+while the solid line depicts the data-based posterior distribution. At the 0.0 effect size, each
+distribution has a gray dot. The Bayes factor is more supportive of the alternative
+hypothesis if the dot on the prior distribution is higher than the dot on the posterior
+distribution. The posterior-prior plot also reports BFso and BFo+ values, with the latter
+being the inverse of the former.
+
+Figure 6C, F, and I are illustrations of the effects of assigning a range of different
+prior distributions; i.e., a Bayes factor robustness check. The robustness analysis allows
+one to inspect what Bayes factor would be obtained if the alternative model were specified
+differently. It shows the outcomes of specifying a range of different prior values from 0 to
+2. JASP has a default prior width of 1.0. The Bayes factor should be stable if the results
+are insensitive to changes in the prior width. The Bayes factors are relatively stable, except
+for very small prior widths, confirming the analysis’ robustness. In a study conducted by
+Galan et al. (2015) on golden apple snails in selected aquatic habitats (Central Mindanao
+
+University campus and vicinities in Bukidnon, Philippines), no significant correlation was
+
+30
+
+found between aperture length-salinity and number of whorls-salinity. However, it is
+
+difficult to determine whether the non-significance is due to data insensitivity or evidence
+
+of no association between the two variables (Quintana & Williams, 2018).
+
+— 0
+t Evidence for H. Mosterate
+A eee soci
+10 ea 2 yell .
+
+. ee rare {Evidence for, ‘song
+
+dence tors ‘stong
+"1 enoncs tr | awn
+
+G Number of wher H Pearson's p I “Stretoned beta prot width «
+
+Figure 6. Bayesian correlation analysis (Pearson’s p). A-C, Shell width-Salinity; D-F, Aperture
+length-Salinity; G-1, Number of whorls-Salinity
+
+A scatterplot visualization of shell length-temperature, shell width-temperature,
+aperture length-temperature, and number of whorls-temperature also indicates that the
+
+variables are related (Figure 7A, D, G, and J). Furthermore, the posterior-prior plots (Figure
+
+31
+
+7B, E, H, and K) also reported a Bayes factor that is in favor of the alternative positive
+correlation, with all having a median value of 0.452. The Bayes factors are also relatively
+stable, except for very small prior widths, confirming the analysis’ robustness (Figure 7C,
+F, I, and L). Correlation between temperature and shell features has also been observed in
+several studies. In a study conducted by Bondarev (2013), the main factor influencing the
+formation of the thick-walled shell of Rapana venosa (Valenciennes, 1846) was the
+amplitude of the temperature fluctuations in the locality. It was shown that a high
+temperature gradient is one of the most important factors in forming a thick shell.
+Moreover, a study on the morphological properties of gastropod shells, Nassarius nitidus
+(Jeffreys, 1867) exhibited lower shell density and thickness and a higher porosity when the
+pH was reduced at ambient temperature, but the combination of reduced pH and increased
+temperature did not have a noticeable effect in comparison to the control. Meanwhile, the
+shell of Columbella rustica (Linnaeus, 1758) was less dense, thinner, and more porous
+under acidic and warm conditions, but when the temperature was increased under ambient
+pH, the shells were thicker and denser than the control. However, under low pH and
+ambient temperature, shells showed no differences compared to the control
+(Chatzinikolaou et al., 2021). The study conducted by Tamburi et al. (2018) revealed that
+in female P. canaliculata, the monotonic relationship with temperature resulted in narrower
+shells in snails reared at lower temperatures and wider apertures, relative to the body whorl,
+in snails reared at higher temperatures. Galan et al. (2015) observed no significant
+correlation between shell length-temperature, aperture length-temperature, and number of
+whorls-temperature in golden apple snails in selected aquatic habitats (Central Mindanao
+
+University campus and vicinities in Bukidnon, Philippines). However, determining
+
+32
+
+whether the non-significance is due to data insensitivity or evidence of no relationship
+between the two variables is difficult (Quintana & Williams, 2018).
+
+The behavior of P. canaliculata in response to varied temperature ranges is one
+factor that could explain the positive correlation. Temperature is a known indicator of P.
+canaliculata activity. In a study conducted by Bae et al. (2021), it was observed that active
+behaviors of P. canaliculata, such as lung ventilation and food consumption, increased
+when the water temperature increased from 25 °C to 30 °C. Moreover, Heiler et al. (2008)
+corroborated the findings in a study on the effect of temperature on P. canaliculata activity,
+with water temperatures ranging from 20 °C to 32 °C. It was observed that activity, such
+as feeding habits and crawling, increased as the temperature increased. Furthermore,
+crawling velocity was also found to have a positive relationship with temperature. Seuffert
+et al. (2010) also observed that when the temperature was between 10 and 30 °C, the time
+spent active and feeding of P. canaliculata increased. Specifically, temperature
+significantly increased the percentage of time spent feeding, peaking at 25°C and
+decreasing at 30°C. The positive correlation between shell length-temperature, shell
+width-temperature, aperture length-temperature, and number of whorls-temperature can
+
+be attributed to increased active behaviors of the organism as temperature rises.
+
+33
+
+4 {pendence or, ‘ong
+ze os [canis [ones
+
+III teil erate ote
+
+Tanks oF Temperate
+
+Stetches beta prior with
+
+53
+7 Pevienee ory Yared
+G farke thot i H  _endates T_stetched beta por with «
+si ah Madians 0.452 oman BF 4.954 at x = 1.596
+/| Se @ aaecs|SEee
+- ia wel {fidence or He ‘tong
+{  Einoe or pret
+J Rarsscttunverotviors | K Karate Leeched beta per wth
+
+Figure 7. Bayesian correlation analysis (Kendall's t). A-C, Shell length—Temperature; D-F, Shell
+width—Temperature; G-I, Aperture length~Temperature; J-L, Number of whorls~Temperature
+
+A scatterplot visualization of shell dry weight-salinity and shell length-salinity also
+
+revealed that the variables were correlated (Figure 8A and D). The posterior-prior plots
+
+34
+
+(Figure 8B and E) also reported a Bayes factor that is in favor of the alternative positive
+correlation, with all having a median value of 0.441. The Bayes factors are also relatively
+stable, except for very small prior widths, confirming the analysis’ robustness (Figure 8C
+and F). Several studies have also found a correlation between salinity and shell
+characteristics. At the Acara River mangrove forest, Maia and Coutinho (2016) observed
+that the shell height of Me/ampus coffeus was positively correlated with salinity. Moreover,
+in a study on Littorina littorea (Linnaeus, 1758), shell size did not increase along the
+salinity gradient, as was expected, but rather showed a clear size transition between two
+salinity ranges, i.e., 10-20% and 21-30%. L. littorea reached its maximum size within a
+salinity range of 21-30%. However, relative shell weight did not vary consistently with
+salinity (De Wolf et al., 2001). Also, in a study on Indothais gradata (Jonas, 1846), shell
+weight varied independently of the co-varying acidity, salinity, and calcium levels
+experienced. In contrast, shell length and a semi-quantitative variable based on shell
+sculpturing (shell erosion rank, SER) were significantly correlated with these water
+chemistry variables (Marshall et al., 2008). Galan et al. (2015) found no significant
+relationship between weight-salinity and shell length-salinity in golden apple snails in
+selected aquatic habitats (Central Mindanao University campus and vicinities in Bukidnon,
+
+Philippines). However, since the study used null hypothesis significance testing (NHST),
+
+it is difficult to determine whether the lack of significance is due to data insensitivity or
+evidence of no association between the two variables (Quintana & Williams, 2018).
+P. canaliculata is considered to be well-adapted to living in rice paddies, taro
+
+patches, and other similar habitats where aquatic crops are grown (Cowie, 2005). Fujio et
+
+al. (1991) identified variations in salinity tolerance among three strains of P. canaliculata,
+
+35
+
+suggesting that the strains have different genotypes. According to Cowie (2002), P.
+canaliculata is sufficiently tolerant of seawater just enough to be carried by currents from
+one stream mouth to another, thus expanding its distribution. In a study conducted by Qin
+et al. (2020), it was found that after a 30-day exposure, P. canaliculata was shown to be
+able to tolerate salinity levels ranging from 0 to 6 psu (practical salinity unit) with a survival
+rate of more than 72%. Moreover, the lethal time leading to 50% mortality decreased from
+71 days at 0 psu to 27 days at 6 psu. P. canaliculata can feed and breed normally in
+salinities ranging from 0 to 4 psu. Salt stress tolerance was also observed by Yang et al.
+(2018), suggesting an invasive threat to estuaries. During a 1-month trial, it was observed
+that P. canaliculata grew better at a 5 ppt salinity treatment than at other lower or higher
+salinity treatments. P. canaliculata’s high salinity tolerance is suggested to be a factor in
+the positive correlation between shell width-salinity, aperture length-salinity, number of
+
+whorls-salinity, shell dry weight-salinity, and shell length-salinity.
+
+Dena
+
+B end C____seeienod beta pro with
+
+Ranks of Shat length E Kendal’ F steed bots prior width
+
+Figure 8. Bayesian correlation analysis (Kendall's t). A-C, Shell dry weight-Salinity; D-F, Shell
+
+length-Salinity
+
+CHAPTER V
+SUMMARY, CONCLUSION, AND RECOMMENDATION
+Summary
+
+Calinan district had the highest average water depth and nitrate concentration level,
+whereas Baguio district had the highest mean temperature, pH level, and dissolved oxygen
+level (DO). Tugbok district had the highest total dissolved solids (TDS) measurement,
+whereas Marilog district had the highest total hardness measurement. Similar salinity
+readings were recorded in the districts of Buhangin, Tugbok, and Baguio. The districts of
+Calinan and Marilog also recorded similar salinity values. In terms of shell morphometric
+data, Baguio district had the highest mean values for all conchological characters that were
+measured.
+
+Bayesian directional (positively correlated) correlation analysis revealed that there
+was a positive correlation for shell width-salinity, aperture length-salinity, and number of
+whorls-salinity (r = 0.811, 0.824, and 0.842, respectively). These were accompanied by
+Bayes factor values greater than 3.000, which indicate that there is substantial evidence in
+favor of the alternative hypothesis given the data. Furthermore, BF+o values greater than
+3.000 were also reported for shell length-temperature, shell width-temperature, number of
+whorls-temperature, shell dry weight-salinity, and shell length-salinity (x = 0.800, 0.800,
+0.775, and 0.775, respectively), indicating that there is substantial evidence in favor of the
+alternative hypothesis given the data. Scatterplot visualization showed that the variables
+were correlated. The posterior-prior plots also revealed a Bayes factor that is in favor of
+the alternative positive correlation. The Bayes factors are also relatively stable, except for
+
+very small prior widths, as confirmed by the Bayes factor robustness check.
+
+37
+
+‘Conclusion
+
+In conclusion, the shell morphometric data of P. canaliculata and physicochemical
+parameters of water in the selected rice fields of Davao City were determined. Baguio
+district recorded the highest mean values for all measured conchological characters (shell
+dry weight, shell length, shell width, width of the aperture, length of the aperture, band
+width per shell, number of bands, and number of whorls). As for the physicochemical
+parameters, the highest average water depth and nitrate concentration level were recorded
+in Calinan district, while Baguio district had the highest mean temperature, pH level, and
+dissolved oxygen (DO). The highest measurement of total dissolved solids (TDS) was
+recorded in Tugbok district, while the total hardness level was measured in Marilog district.
+The districts of Buhangin, Tugbok, and Baguio measured similar salinity values, whereas
+the districts of Calinan and Marilog also recorded similar salinity values. Moreover, among
+the relationships studied, shell width-salinity, aperture length-salinity, number of whorls-
+salinity, shell dry weight-salinity, shell length-salinity, shell length-temperature, shell
+width-temperature, and number of whorls—temperature reported a positive correlation with
+BF yo values greater than 3.000, indicating that there is substantial evidence in favor of the
+alternative hypothesis given the data. The golden apple snail's increased activity as
+temperature rises and its high salinity tolerance are suggested factors for the positive
+correlations.
+Recommendation
+
+Based on the findings of the study, the following are recommended:
+1, that more individuals should be used in future correlation studies of P.
+
+canaliculata;
+
+e
+
+2
+
+38
+
+. that further studies establishing correlation analysis should also incorporate sex
+
+(as shells of males and females are morphologically distinct in many gastropod
+
+species) and seasons (or quarterly documentation) as important variables;
+
+. that geographical and chronological influences should also be considered,
+
+especially if the study site is quite extensive;
+
+}. that a more extensive correlation study of P. canaliculata in the Davao Region
+
+be conducted;
+
+. that there should be references on correlation analysis among species-specific
+
+gastropod shells that use Bayesian statistics to analyze collected data; and
+
+. that the data presented be further analyzed using multiple regression analysis
+
+to test the relationship between a single dependent or outcome variable and
+
+several independent or predictor variables.
+
+REFERENCES
+
+Al-shami, S. A., Che Salmah, M. R., Siti Azizah, M. N., & Abu Hassan, A. (2010). The
+influence of routine agricultural activities on the quality of water in a tropical rice
+field ecosystem. Applied Ecology and Environmental Research, &(1), 11-18.
+Retrieved from http://www.aloki.hu/pdf/0801_011018.pdf
+
+Anderson, T. K., Weaver, K. F., & Guralnick, R. P. (2007). Variation in adult shell
+morphology and life-history traits in the land snail Oreohelix cooperi in relation
+to biotic and abiotic factors. Journal of Molluscan Studies, 73(2), 129-137.
+doi:10.1093/mollus/eym006
+
+Amaoudoy, V., Sibayan, E. B., & Caguioa, R. C. (2015). Adaptation and Mitigation
+Initiatives in Philippine Rice Cultivation. United Nations Development
+Programme. Retrieved from
+https://unfece.int/sites/default/files/amia_philippines.pdf
+
+Bae, M.-J., Kim, E.-J., & Park, Y.-S, (2021). Comparison of invasive apple snail
+(Pomacea canaliculata) behaviors in different water temperature gradients.
+Water, 13(9), 1-12, doi:10.3390/w13091149
+
+Bambaradeniya, C. N. B., & Amerasinghe, F. P. (2004). Biodiversity Associated with the
+Rice Field Agroecosystem in Asian Countries: A Brief Review. International
+Water Management Institute. Retrieved from
+hittps://www.researchgate.net/publication/42765555_Biodiversity_Associated_wit
+h_the_Rice_Field_Agro-ecosystem_in_Asian_Countries_A_Brief Review
+
+Bazzanti, M., Della Bella, V., & Seminara. M. (2003). Factors Affecting
+Macroinvertebrate Communities in Astatic Ponds in Central Italy. Journal of
+Freshwater Ecology, 18(4), 537-548. doi:10.1080/02705060.2003.9663994
+
+Bondarev, I. P. (2013). Ecomorphological analyses of marine mollusks’ shell thickness of
+Rapana venosa (VALENCIENNES, 1846) (Gastropoda: Muricidae).
+International Journal of Marine Science, 3(45), 368-388.
+doi:10.5376/ijms.2013.03.0045
+
+Bordey, F. H., Moya, P. F., Beltran J. C., & Dawe, D. C. (2016). Competitiveness of
+Philippine Rice in Asia. International Rice Research Institute. Retrieved from
+https://www. philrice.gov.ph/wp-
+content/uploads/2016/08/Book_CPRA_22June2016_3.pdf
+
+Caramujo, M. J., & Boavida, M. J. (2010). Biological diversity of copepods and
+cladocerans in Mediterranean temporary ponds under periods of contrasting
+rainfall. Journal of Limnology, 69(1), 64-15. doi:10.3274/3L10-69-1-06
+
+7
+
+Centre for Agriculture and Bioscience International (CABI). (2019). Pomacea
+canaliculata (golden apple snail). Retrieved from Invasive Species Compendium:
+https://www.cabi.org/isc/datasheet/68490#todescription
+
+Chatzinikolaou, E., Keklikoglou, K., & Grigoriou, P. (2021). Morphological properties of
+gastropod shells in a warmer and more acidic future ocean using 3D micro-
+computed tomography. Frontiers in Marine Science, &(645660), 1-14.
+doi:10.3389/fmars.2021.645660
+
+City Agriculturist Office. (2021). 202! Production Monitoring Accomplishment Report
+as of November, 2021. Davao City: City Agriculturist Office.
+
+Conchological Society of Great Britain and Ireland. (2021, March 29). Counting shell
+whorls, Retrieved April 14, 2022, from The Conchological Society:
+https://conchsoc.org/aids_to_id/whorls.php
+
+Cowie, R. H. (2002). Apple snails (Ampullariidae) as agricultural pests: their biology,
+impacts and management. In G. M. Barker, Molluscs as Crop Pests (pp. 145-192).
+New York: CABI Publishing.
+
+Cowie, R. H. (2005). The Golden Apple Snail: Pomacea species including Pomacea
+canaliculata (Lamarck, 1822) (Gastropoda: Ampullariidae). Honolulu, Hawaii,
+USA: Center for Conservation Research and Training, University of Hawaii.
+
+Cuadrado, J. T. (2015). Preliminary assessment of freshwater gastropods in the selected
+rivers in Esperanza, Agusan del Sur, Philippines. The Journal of Zoology Studies,
+2(4), 13-20. Retrieved from
+https://www journalofzoology.com/volume2/v2i4/pdf/2. | pdf
+
+Darrigran, G., Damborenea, C., & Tambussi, A. (2011). Pomacea canaliculata
+(Mollusca, Gastropoda) in Patagonia: potential role of climatic change in its
+dispersion and settlement. Brazilian Journal of Biology, 71(1), 8-13.
+doi:10.1590/S1519-6984201 1000100004
+
+Davao City Investment Promotion Center (DCIPC). (2016). Industry Profile
+Agribusiness: Davao City. Davao City: Davao City Investment Promotion Center.
+
+De Wolf, H., Blust, R., & Backeljau, T. (2001). Shell size variation in Littorina littorea in
+the western Scheldt estuary. Journal of Shellfish Research, 20(1), 427-430.
+Retrieved from
+https://www.tesearchgate.net/publication/276027679_Shell_size_variation_in_Lit
+torina_littorea_in_the_western_Scheldt_estuary
+
+nr
+
+Department of Science and Technology (DOST). (2017). Harmonized National Research
+and Development Agenda. DOST. Retrieved from
+http://dost.gov.ph/phocadownload/Downloads/Journals/Approved%20Harmonize
+4%20National%20RD%20Agenda%20%202017-2022.pdf
+
+Dillon, R. (2006). Chapter 21: Freshwater Gastropoda. In C. P. Sturm, The Mollusks: A
+Guide to Their Study, Collection, and Preservation (pp. 251-259). Los Angeles
+and Pittsburgh: American Malacological Society.
+
+Echem, R. T. (2017). Morphometric relations of gastropod species: Nerita albicilla and
+Patella nigra. World News of Natural Sciences, 7(1), 30-36. Retrieved from
+https://www.researchgate.net/publication/319313843_Morphometric_Relations_o
+f Gastropod_Species Nerita_albicilla_and_Patella_nigra
+
+Estebenet, A. L., Martin, P. R., & Burela, S. (2006). Conchological variation in Pomacea
+canaliculata and other South American Ampullariidae (Caenogastropoda,
+Architaenioglossa). Biocell, 30(2), 329-335. Retrieved from
+https://www.researchgate.net/publication/6817651_Conchological_variation_in_P
+omacea_canaliculata_and_other_South_American_Ampullariidae_Caenogastropo
+da_Architaenioglossa
+
+Food and Agriculture Organization (FAO). (1998, April 30). The golden apple snail in
+the rice fields of Asia. Retrieved April 14, 2022, from FAO News & Highlights:
+https://www.fao.org/News/1998/rifili-e.htm
+
+Fox, R. J., Donelson, J. M., Schunter, C., Ravasi, T., & Gaitan-Espitia, J. D. (2019).
+Beyond buying time: the role of plasticity in phenotypic adaptation to rapid
+environmental change. Philosophical Transactions of the Royal Society B,
+374(20180174), 1-8. doi:10.1098/rstb.2018.0174
+
+Frest, T., & Johannes, E. (1999). Field Guide to Survey and Manage Freshwater Mollusk
+Species (1 ed.). Portland: USFWS Regional Ecosystem Office. Retrieved from
+http://www.blm.gov/or/plans/surveyandmanage/files/0-aquatic_guide.pdf.
+
+Fujio, Y., Kurihara, H., & von Brand, E. (1991). Differences metric traits among three
+strains of apple snail, Pomacea canalicualta. Tohuku Journal of Agricultural
+Research, 41(3-4), 61-68. Retrieved from
+https://www.researchgate.net/publication/32878071_Differences_Metric_Traits_a
+mong_Three_Strains_of Apple Snail_Pomacea_canaliculata
+
+Galan, G. L., Porquis, H. C., & Bulasa, M. A. R. (2015). Shell band pattem of golden
+apple snail (Pomacea cancaliculata, Lamarck) in selected aquatic habitats.
+International Journal of Environmental Science and Development, 6(8), 625-628.
+doi:10.7763/JESD.2015.V6.670
+
+73
+
+Google Maps. (2021). Davao City, Davao del Sur. Retrieved November 15, 2021, from
+Google Maps:
+https://www.google.com/maps/place/Davao+City,+Davaotdel+Sur/@7.2532789,
+125.1708753,10z/data=!3m1!4b1!4m5!3m4! 1s0x32f96d9f5 19e327F.0xbS3a2458
+979c573!8m2!3d7.190708!4d125.455341
+
+Google Maps. (2021). Map of Mindanao, Philippines. Retrieved November 15, 2021,
+from Google Maps:
+https://www.google.com/maps/place/Mindanao/@7.6908896,122.0076668,7z/dat
+a=!3m1!4b1 !4m5!3m4!1s0x3255e40590d9b7¢3:0xe7b91264ecd3efb4!8m2!3d8.4
+9613!4d123.3034062
+
+Halwart, M., & Gupta, M. V. (2004). Culture of fish in rice fields. FAO and The
+WorldFish Center. Retrieved from http://www.fao.org/3/a-a0823e.pdf
+
+Harun, N. S., Hanafiah, M. M., Nizam, N. U. M., & Rasool, A. (2020). Water and soil
+physicochemical characteristics of different rice cultivation areas. Applied
+Ecology and Environmental Research, 18(5), 6775-6791. doi:
+http://dx.doi.org/10.15666/aeer/1805_67756791
+
+Hayes, K. A., Cowie, R. H., Thiengo, S. C., & Strong, E. E. (2012). Comparing apples
+with apples: clarifying the identities of two highly invasive Neotropical
+Ampullariidae (Caenogastropoda). Zoological Journal of the Linnean Society,
+166(4), 723-753. doi:10.1111}.1096-3642.2012.00867.x
+
+Heiler, K. C. M., von Oheimb, P. V., Ekschmitt, K., & Albrecht, C. (2008). Studies on
+the temperature dependence of activity and on the diurnal activity rhythm of the
+invasive Pomacea canaliculata (Gastropoda: Ampullariidae). Mollusca, 26(1),
+73-81. Retrieved from
+https://www.researchgate.net/publication/228479913_Studies_on_the_temperatur
+e_dependence_of activity and_on_the_diumal_activity_rhythm_of the invasive
+_Pomacea_canaliculata_Gastropoda_Ampullariidae
+
+International Union for Conservation of Nature (IUCN). (2021). Global Invasive Species
+Database. Retrieved from Invasive Species Specialist Group (ISSG):
+http://www iucngisd.org/gisd/100_worst.php
+
+Jarosz, A. F., & Wiley, J. (2014). What are the odds? A practical guide to computing and
+reporting Bayes factors. Journal of Problem Solving, 7(1), 2-9. doi:10.7771/1932-
+6246.1167
+
+Joshi, R. C., Cowie, R. H., & Sebastian, L. S. (2017). Biology and Management of
+Invasive Apple Snails. Science City of Mufioz, Nueva Ecija, Philippines:
+Philippine Rice Research Institute (PhilRice). Retrieved from
+https://www.researchgate.net/publication/320560199_Biology_and_management_
+of_invasive_apple_snails
+
+4
+
+Jubaedah, D., Wijayanti, M., Marsi, & Rizaldy, N. (2018). Utilization of golden apple
+snail (Pomacea canaliculata) shells as liming materials for Pangasius sp culture
+in swamp fish pond. 3S Web of Conferences, 68(04016), 1-6.
+doi:10.1051/e3sconf/20186804016
+
+Lee M. D., & Wagenmakers E.-J. (2005). Bayesian statistical inference in psychology:
+comment on Trafimow (2003). Psychological Review, 112(3), 662-668.
+doi:10.1037/0033-295X.112.3.662
+
+Liew, T. S., & Schilthuizen, M. (2014). Association between shell morphology of micro-
+landsnails (genus Plectostoma) and their predator’s predatory behaviour. PeerJ,
+2(1), 1-29. doi:DOI10.7717/peer}.329
+
+Madjos, G. G., & Demayo, C, G. (2018). Macro-geographic variations of the invasive
+giant African snail Achatina fulica populations in Mindanao, Philippines.
+Transactions on Science and Technology, 5(2), 143-154. Retrieved from
+http://tost.unise.org/pdfs/vol5/no2/5x2x143x154.pdf
+
+Madjos, G. G., Demetillo, M. T., Baguio, M. L., & Torres, M. A. J. (2015). Phenotypic
+variation in populations of Pomacea canaliculata (golden apple snail): a case of
+agroecotypes? AES Bioflux, 7(3), 432-441. Retrieved from
+https://www.researchgate.neUpublication/309421595_AES_BIOFLUX_Advances
+_in_Environmental_Sciences_-
+
+international_Joumnal_of the Bioflux_Society_Phenotypic_variation_in_populat
+
+ions_of_Pomacea_canaliculata_golden_apple_snail_a_case_of_agroecotypes
+
+Mahilum, J. J.M., & Demayo, C. G. (2014). Sexual dimorphism on shell shape of
+Pomacea canaliculata Lamarck thriving in lakes using the geometric
+morphometric approach. International Journal of Bioscience, Biochemistry and
+Bioinformatics, 4(4), 284-289. doi:10.7763/IJBBB.2014.V4.357
+
+Maia, R., & Coutinho, R. (2016). The effects of salinity on the density, shell size and
+survival of a mangrove gastropod: Laboratory and field evidence. Journal of the
+Marine Biological Association of the United Kingdom, 96(6), 1191-1199.
+doi:10.1017/S0025315415000715
+
+Marin, F., Le Roy, N., & Marie, B. (2012). The formation and mineralization of mollusk
+shell. Frontiers in Bioscience, 4(3), 1099-1125. Retrieved from
+https://www.researchgate.net/publication/S1925970_The_formation_and_minerali
+zation_of_mollusk_shell
+
+Marshall, D. J., Santos, J. H., Leung, K. M. Y., Chak, W. H. (2008). Correlations
+between gastropod shell dissolution and water chemical properties in a tropical
+estuary. Marine Environmental Research, 66(4), 422-429.
+doi:10.1016/j.marenvres.2008.07.003
+
+75
+
+Michalak, I., & Chojnacka, K. (2014). Effluent Biomonitoring. In P. Wexler,
+Encyclopedia of Toxicology (3rd Edition ed., pp. 312-315). Waltham, MA:
+Academic Press, Imprint of Elsevier. doi:https://doi.org/10.1016/B978-0-12-
+386454-3.01008-3
+
+Miot, H. A. (2018). Correlation analysis in clinical and experimental studies. Jornal
+Vascular Brasileiro, 17(4), 275-279. doi:10.1590/1677-5449.174118
+
+Moneva, C. S. O., Torres, M. A. J., Wada, T., Joshi, R., & Demayo, C. G. (2012).
+Relative warp and correlation analysis based on distances of the morphological
+shell shape pattems of Pomacea canaliculata Lamarck from Japan and the
+Philippines. AES Bioflux, 4(1), 12-21. doi:10.1109/ICEEA.2010.5596099
+
+Nica, D. V., Bura, M., Gergen, I., Harmanescu, M., & Bordean, D. M. (2012).
+Bioaccumulative and conchological assessment of heavy metal transfer in a soil-
+plant-snail food chain. Chemistry Central Journal, 6(1), 1-15. doi:10.1186/1752-
+153X-6-55
+
+Nikinmaa, M. (2014). Chapter 12- Bioindicators and Biomarkers. In M. Nikinmaa, An
+Introduction to Aquatic Toxicology (pp. 147-155). Academic Press.
+doi:https://doi.org/10.1016/B978-0-12-41 1574-3.00012-8
+
+Nuzzo, R. L. (2017). An Introduction to Bayesian Data Analysis for Correlations. PM R,
+(12), 1278-1282. doi:10.1016/j.pmrj.2017.11.003
+
+Panizzon, J. P., Macedo, V. R. M., Machado, V., & Fiuza, L. M. (2012). Microbiological
+and physical-chemical water quality of the rice fields in Sinos River’s basin,
+Southern Brazil. An International Journal Devoted to Progress in the Use of
+Monitoring Data in Assessing Environmental Risks to Man and the Environment,
+185(3), 2767-2775. doi:10.1007/s10661-012-2747-1
+
+Pefia, S. C., Pocsidio, G. N., & Co, E. L. (2017). Histological responses of golden apple
+snail (Pomacea canaliculata) to copper. Philippine Journal of Science, 146 (3),
+315-321. Retrieved from http://philjournalsci.dost.gov.ph/55-vol-146-no-3-
+september-2017/656-histological-responses-of-golden-apple-snail-pomacea-
+canaliculata-to-copper
+
+Ponder, W. F., Hallan, A., Shea, M., & Clark, S. A. (2016). Pomacea canaliculata
+(Lamarck, 1822). Retrieved October 5, 2019, from Australian Freshwater
+Molluscs:
+https://keys. lucidcentral.org/keys/v3/freshwater_molluscs/Freshwater_Oct18/Med
+ia/Html/pomacea_canaliculata.htm
+
+Primost, M. A., Bigatti G., & Marquez, F. (2015). Shell shape as indicator of pollution in
+marine gastropods affected by imposex. Marine and Freshwater Research,
+67(12), 1-7. doi:DOI: 10.1071/MF15233
+
+76
+
+Qin, Z., Yang, M., Zhang, J.-E., & Deng, Z. (2020). Effects of salinity on survival,
+growth and reproduction of the invasive aquatic snail Pomacea canaliculata
+(Gastropoda: Ampullariidae). Hydrobiologia, 847, 3103-3114. Retrieved from
+https://doi.org/10.1007/s10750-020-04320-z
+
+Quintana, D. S., & Williams, D. R. (2018). Bayesian alternatives for common null-
+hypothesis significance tests in psychiatry: a non-technical guide using JASP.
+BMC Psychiatry, 18(178), 1-8. doi:10.1186/s12888-018-1761-4
+
+Rama Rao, S. R., Liew, T. S., Yow, Y. Y., & Ratnayeke, S. (2018). Cryptic diversity:
+Two morphologically similar species of invasive apple snail in Peninsular
+Malaysia. PLoS ONE, 13(5), 1-16. Retrieved from
+https://journals.plos.org/plosone/article?id~10.1371 journal.pone.0196582
+
+Redfern, S. K., Azzu, N., & Binamira, J. S. (2012). Rice in Southeast Asia: Facing Risks
+and Vulnerabilities to Respond to Climate Change, Retrieved from
+http://www. fao.org/fileadmin/templates/agphome/documents/climate/Rice_South
+east_Asia.pdf
+
+Rios-Jara, E., Navarro-Caravantes, C. M., Galvan-Villa, C. M., & Lépez-Uriarte, E.
+(2009). Bivalves and gastropods of the Gulf of Tehuantepec, Mexico: A checklist
+of species with notes on their habitat and local distribution. Journal of Marine
+Biology, 20094), 1-12. doi:10.1155/2009/176801
+
+Salgeback, J. (2006). Functional Morphology of Gastropods and Bivalves. Digital
+Comprehensive Summaries of Uppsala Dissertations from the Faculty of Science
+and Technology, pp. 1-31.
+
+Schilthuizen, M., Van Til, A., Salverda, M., Liew, T. S., James, S. S., Bin Elahan, B., &
+Vermeulen, J. J. (2006). Microgeographic evolution of snail shell shape and
+predator behavior. Evolution, 60(9), 1851-1858. doi:10.1554/06-114.1
+
+Schisterman, E. F., Moysich, K. B., England, L. J., & Rao, M. (2003). Estimation of the
+correlation coefficient using the Bayesian approach and its applications for
+epidemiologic research. BMC Medical Research Methodology, 3(5).
+doi:10.1186/1471-2288-3-5
+
+Seuffert, M. E., Burela, S., & Martin, P. R. (2010). Influence of water temperature on the
+activity of the freshwater snail Pomacea canaliculata (Caenogastropoda:
+Ampullariidae) at its southernmost limit (Southern Pampas, Argentina). Journal
+of Thermal Biology, 35(2), 77-84.
+doizhttps://doi.org/10.1016)jtherbio.2009.1 1.003,
+
+Solas, M. R., Sepilveda, R. D., & Brante, A. (2013). Genetic variation of the shell
+morphology in Acanthina monodon (Gastropoda) in habitats with different wave
+exposure conditions. Aquatic Biology, 18(1), 253-260. doi:10.3354/ab00508
+
+77
+
+Tamburi, N. E., Seuffert, M. E., & Martin, P. R. (2018). Temperature-induced plasticity
+in morphology and relative shell weight in the invasive apple snail Pomacea
+canaliculata, Journal of Thermal Biology, 74, 331-336.
+doi:https://doi.org/10.1016/j,jtherbio.2018.04.008
+
+Turke, M., Blattmann, T., Knop, E., Kindermann, A., Prestele, J., Marquez, L.,
+Eisenhauer, N., & Fischer, C. (2012). Weeds and endangered herbs have
+unforeseen dispersal helpers in the agrienvironment: gastropods and earthworms.
+Renewable Agriculture and Food Systems, 28(4), 380-383.
+doi:10.1017/$1742170512000415
+
+Ueno, T. (2013). Bioindicators of biodiversity and farming practice in rice paddies.
+International Journal of Chemical, Environmental & Biological Sciences, I(1),
+84-87. Retrieved from
+http://www .isaet.org/images/extraimages/IJCEBS%200101119.pdf
+
+Urabe, M. (1998). Contribution of genetic and environmental factors to shell shape
+variation in the lotic snail Semisulcospira reiniana (Prosobranchia:
+Pleuroceridae). Journal of Molluscan Studies, 64(3), 329-343.
+doi:10,1093/mollus/64,3.329
+
+West Virginia Department of Environmental Protection (WVDEP). (2018). Watershed
+Assessment Branch 2018 Field Sampling Standard Operating Procedures.
+Charleston: Division of Water and Waste Management- Watershed Assessment
+Branch. Retrieved from
+http://dep.wv.gov/WWE/watershed/wqmonitoring/Documents/SOP%20Doc/WA
+BSOP/2018%20FINAL%20WAB%20Field%20Sampling%20SOP.pdf
+
+Whelan, N. V. (2021). Phenotypic plasticity and the endless forms of freshwater
+gastropod shells. Freshwater Mollusk Biology and Conservation, 24(2), 87-103.
+doi:https://doi.org/10.31931/fmbc-d-20-00015
+
+Yang, S., Zhong, J., Zhao, L., Wu, H., Du, Z., Liu, Q., Zhang, J., Yan, T., & Huang, X.
+(2018). The salinity tolerance of the invasive golden apple snail (Pomacea
+canaliculata). Molluscan Research, 38(2), 90-98. Retrieved from
+https://doi.org/10.1080/13235818.2017.1386260
+
+Zachariah, T., & Mitchell, M. A. (2009). Chapter 3- Invertebrates. In M. T. Mitchell,
+Manual of Exotic Pet Practice (1st Edition ed., pp. 11-38). Saunders.
+doi:https://doi.org/10.1016/B978-1-4160-0119-5.X5001-X
+

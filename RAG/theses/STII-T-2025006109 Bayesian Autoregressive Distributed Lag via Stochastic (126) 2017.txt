@@ -641,7 +641,6 @@ Xap is
 a
 —- Slog P(x) =1-5=2. (3.12)
 
-2
 ox Evo nate
 
 Thus the estimate of the posterior is given by a Gaussian distribution with mean
@@ -685,19 +684,14 @@ Posterior
 Laplace
 
 s
-3
 —
 x
 g
-5
 &
-2
 +
 
 gs
 g
-3
-3
 é
 
 Figure 3.5: Laplace’s Approximation on x?-Distribution.
@@ -876,7 +870,6 @@ and P(y) is the normalizing factor. The likelihood is given by
 
 _a(yi et) @.17)
 
-1
 P(ylw) = U Vit exp
 
 = (g)" exp - Y atyi = Wixi)” se) 5 (3.18)
@@ -893,7 +886,6 @@ that w has the following prior distribution
 
 P(w) = -5w'plw], (3.20)
 
-1
 Venera p|-3
 
 implies that the posterior has the following form:
@@ -1312,7 +1304,6 @@ The Hamiltonian dynamics is related to MCMC using the fact that the total
 energy is related to the probability distribution of the parameter of interest using
 
 the concept of canonical distribution from the Statistical Mechanics. That is,
-1
 PP) = zor [-E(P)], (4.13)
 
 where E is the total energy. Therefore, E in this case, is H(w, p). Further, the three
@@ -1580,7 +1571,6 @@ denotes the autoregressive term, while the second double-summation,
 the constant and the error term, respectively. If the error term is centered on 0, then
 m 4
 
-7
 Ely(t)] = wo + )my(t-K) + YY) Wepamaxilt - 1. (437)
 k=1
 
@@ -1736,7 +1726,6 @@ Proposition 5.1.3. The gradient of the potential energy needed for Hamiltonian M
 
 Carlo is given by
 
-1
 -a Yow —w"2(t))z(t) + Bw. (5.21)
 
 t=1
@@ -1793,9 +1782,7 @@ L 1
 Gross Domestic Product
 
 a
-1
 
-2
 L
 
 Peso/US Dollar Exchange Rate
@@ -1841,7 +1828,6 @@ Figure 5.1; the weights, w;,i € {0,1,--- , 10) are assumed to have the followi
 distribution: let w * [wp w, «++ Wyo)", then
 w ~ Nio(0, BI). (5.22)
 From Proposition 5.1.2, the gradient noise of the posterior distribution is given by
-1
 - CO) —w'z(t))z(t)+Bw+é, &~N(0,2(w)). (5.23)
 t=1
 
@@ -1880,7 +1866,6 @@ chains), each with dimension 1,000 by 8 (e.g. for the first case). The columns
 
 are the corresponding parameters and the rows are the sampled estimate from
 
-57
 
 §5.2
 
@@ -1982,7 +1967,6 @@ Chain Values
 
 § 5.2 60
 
-0
 n 1 1
 
 L
@@ -2029,13 +2013,8 @@ ERATE(t-1) ‘SPI(t-1)
 
 GIR(t)
 
-8
-2
 $
 =
-3
-2
-6
 
 GDP(t-1)
 
@@ -2051,13 +2030,8 @@ GIR(E1) BOP(t-4)
 
 SPI(t-1)
 
-8
-8
-3
 s
 =
-3
-2
 &
 
 SPi(t)
@@ -2127,7 +2101,6 @@ of the Gelman-Rubin statistic, and this is also the reason for the test statisti
 
 §5.2
 
-67
 
 Variables Stationarity Test Halfwidth Test
 Status Start p-value [ Status Mean Halfwidth
@@ -2290,8 +2263,6 @@ Case 1 (y = .09 for 1000 Iterations).
 
 1 f 1
 Metropolis-Hasting
-34
-2
 Ae L
 o4 is
 a4 g
@@ -2301,24 +2272,18 @@ o 77 r
 £
 e Hamiltonian Monte Carlo
 - 4 3
-8
 €
 by 4 rz
-5
 a 4 ri
 g
 Ss 4 fo
-5
 2 4 rt
 Hi
 a 4 + 2
-5
 > | t-3
 3 Stochastic Gradient Hamiltonian Monte Carlo
 5°] r
-3
 > 24
-14
 o4 L
 as
 2 Sampled Forecast E
@@ -2349,7 +2314,6 @@ Mean Forecast
 GDP Growth Rate
 
 T
-2006
 Time
 
 Figure 5.10: Forecasts of BADL(1, 1) using different MCMCs under the Training Dataset
@@ -2366,32 +2330,21 @@ Stochastic Gradient Hamiltonian Monte Carlo
 
 °
 eS
-2
 A
 FI
 Oo
 fe
-3
-8
 z
-5
-2
 Ff
 a
 3g
 a
-8
-4
 a
-2
 és
 &
-5
 =
 fe
 $
-3
-4
 fs
 eS
 
@@ -2400,7 +2353,6 @@ Sampled Forecast
 — _ GDP Growth Rate
 
 T
-2005
 
 Figure 5.11: Forecasts of BADL(1, 1) using different MCMCs under the Testing Dataset
 Case 1 (y = .09 for 1000 Iterations).
@@ -2413,31 +2365,19 @@ Metropolis-Hasting
 Hamiltonian Monte Carlo
 
 Me
-3
 E
-5
 Fs
 Oo
-4
 A
-8
 e
-2
 a
 a
-4
-8
 iJ
-4
 Hy
 e
 5s
-8
-5
 ha
 g
-3
-3
 $
 
 Sampled Forecast
@@ -2445,19 +2385,16 @@ Sampled Forecast
 — _ GDP Growth Rate
 
 T
-2005
 
 Figure 5.12: Forecasts of BADL(1, 1) using different MCMCs under the Testing Dataset
 Case 2 (y = .009 for 10000 Iterations).
 
 §5.2 7
 
-1
 Metropolis-Hasting
 
 Hamiltonian Monte Carlo
 
-2
 &
 €
 S
@@ -2468,25 +2405,18 @@ i)
 s
 <
 Fo
-2
 oS
 a
 ot
-3
 N
-2
 S
-3
 &
 &
 a
-5
 o
 =
 S
 g
-2
-8
 o
 >
 
@@ -2495,7 +2425,6 @@ Sampled Forecast
 — GDP Growth Rate
 
 T
-2005
 
 Figure 5.13: Forecasts of BADL(1, 1) using different MCMCs under the Testing Dataset
 Case 3 (y = .0009 for 100000 Iterations).
@@ -2654,7 +2583,6 @@ national convention on statistics.
 Metropolis, N., Rosenbluth, A. W., Rosenbluth, M. N., Teller, A. H., & Teller, E.
 (1953). Equation of state calculations by fast computing machines. The Journal
 
-81
 
 of Chemical Physics, 21(6), 1087-1092. Retrieved from http://dx.doi.org/
 10.1063/1.1699114 doi: 10.1063/1.1699114

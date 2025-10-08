@@ -1,0 +1,1820 @@
+PREVALENCE AND MOLECULAR CHARACTERIZATION OF FISH-BORNE TREMATODES IN ENDEMIC COMMUNITIES IN CARAGA REGION, MINDANAO, PHILIPPINES
+
+JASMINE RENETTE D. JIMENEZ
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+Master of Science in Zoology
+
+JUNE 2023
+
+ABSTRACT
+
+Fish-borne trematodes (FBT) is a group of parasitic flatworms infecting a wide
+range of snail, fish, and terrestrial vertebrate hosts including humans, and infection are
+common in countries where eating raw food is practiced such as the Philippines. Limited
+investigation in endemic areas along with misdiagnosis makes it challenging to address
+FBT infections. Therefore, this study aimed to evaluate the prevalence, identify risk
+factors, and characterize FBTs infecting some endemic communities in Agusan del Sur and
+Surigao del Norte, Mindanao. A household-based sampling was employed. Collected fecal
+samples were processed and examined microscopically, then the molecular diagnosis of
+microscopy-positive fecal samples was done using standard polymerase chain reaction
+(PCR) targeting the internal transcribed spacer 2 region (ITS2). A total of 1,152 human
+and 92 dog and cat fecal samples were examined. Overall prevalence of infection in
+humans among the sites is 4.1% with higher incidence of infection in Surigao del Norte
+than in Agusan del Sur (p=0.00). High prevalence was observed in municipalities of Mainit
+(8.8%) and Claver (11.1%) in Surigao del Norte, where fish is popularly eaten raw or
+undercooked (as kinilaw and sugba). Males were found to be more vulnerable to infection
+than females (6.4% and 2% respectively [p=0.00]) due to social factors affecting the habit
+of raw fish consumption. Adults have a higher risk than children (5.5% and 2% respectively
+[p=0.00]), relating to the longer exposure of adults with the parasite. Furthermore, only 2%
+of animals were positive, all of which are dogs. Molecular findings revealed the following
+species: Haplorchis taichui, Stellenthchasmus falcatus, and Opisthorchis viverrini. This is
+the first molecular research on FBTs in the country. This study identified susceptible
+groups and underlying risk factors, and utilized more accurate diagnostic tools to help take
+steps forward in breaking the cycle of infection through providing specific areas for a more
+targeted FBT control.
+
+Keywords: Philippines, Caraga Region, Fish-borne trematodes, Fish parasite, Neglected Tropical Diseases
+
+CHAPTER I
+INTRODUCTION
+
+Fish-borne trematode (FBT) is a parasitic flatworm or helminth that uses fresh or
+brackish water fish as an intermediate host. It comprises of a diverse group of helminths
+infecting the liver and intestines in humans and constitute a major public health concern.
+They infect a wide range of snail, fish, and terrestrial vertebrate hosts, in particular,
+companion animals such as dogs and cats. The terrestrial vertebrate hosts shed the parasite
+eggs, and then develop inside the first intermediate host (a snail). The parasite then emerges
+and swims towards the second intermediate host (a fish) where it encysts as a larva.
+Humans and other definitive hosts ultimately get infected through ingestion of metacercaria
+larva lodged in raw or improperly cooked freshwater or brackish water fish (Chai, 2007;
+Mahdy et al., 2021), and environmental contamination through improper disposal of fecal
+waste is the common source of transmission. Some major FBTs of medical importance
+include the liver flukes (Family Opisthorchiidae) — Opisthorchis viverrini, Opisthorchis
+felineus, Clonorchis sinensis, and intestinal flukes (Family Heterophyidae) — Heterophyes
+heterophyes, Haplorchis taichui, Centrocestus formosanus, Metagonimus yokogawai, and
+
+Stellanthchasmus falcatus.
+
+Around 7 million people worldwide are believed to be infected with FBTs (World
+Health Organization [WHO], 2021), but most of the infected are in Southeast Asia
+including the Philippines, particularly in areas where eating raw food is practiced (Chai et
+
+al., 2009; Trung Dung et al., 2007). Infection with FBTs may have various manifestations
+
+such as indigestion, abdominal pain, diarrhea, or constipation (Centers for Disease Control
+and Prevention [CDC], 2019). Chronic infections involve symptoms associated with the
+organ to which the adult worm is located. For instance, obstructive jaundice, hepatomegaly
+are observed in individuals with severe case of liver fluke (Keiser and Utzinger, 2009),
+whereas symptoms associated with intestinal flukes are similar to peptic ulcer (Belizario et
+al., 2004). Although usually asymptomatic, migration to other organs (e.g., brain and heart)
+and even death has been reported in individuals that are heavily infected (i.e.,
+heterophyids). Coinfection with other parasites in human and animal hosts may also occur
+
+(Fried and Abruzzi, 2010).
+
+Diagnosis of FBTs is still an ongoing problem because of the inadequacy in using
+morphological approach in discriminating parasite eggs, especially with closely-related
+species of superfamily Opisthorchoidea (Dung et al., 2007). Coupled with low awareness
+of the community and health workers in this group, its true burden is thus underestimated.
+Limited molecular research has also been conducted, and updated epidemiological data and
+intervention efforts have been more difficult to achieve as recognition is the first and
+important control point for addressing intestinal parasitosis (Chai and Jung, 2017; Eduardo,
+
+2001).
+
+As one of the contributing agents in the decline of health and economic alleviation,
+lack of updated knowledge on FBT infections due to misdiagnosis and slow progress in its
+taxonomic characterization, makes it challenging to address years long of intestinal
+helminth problem, especially in endemic areas such as in Mindanao, Philippines.
+
+Furthermore, deep-rooted influence of socioeconomic and sociocultural aspects pose a
+
+great obstacle in controlling such infections. Up to date, there has been limited attempt to
+determine possible risk factors of FBT infection in northeastern Mindanao. This will also
+
+be the first molecular identification of FBT in the country.
+
+Unspecified FBT infections and underappreciation of its socioeconomic relevance
+push the neglect in addressing such infections. This study investigated the occurrence of
+FBTs infecting some endemic communities in Caraga Region in Mindanao. The specific
+
+objectives of this study were to:
+
+1.) determine the prevalence of human and animal FBT infection;
+
+3.) associate some knowledge, attitude and practices as possible risk factors of FBT
+infections in the communities; and
+
+2.) characterize the FBT isolates through molecular and phylogenetic analysis using
+
+internal transcribed spacer 2 (ITS2) marker.
+
+CHAPTER II
+
+REVIEW OF LITERATURE CITED
+
+Fish-borne trematode (FBT)
+
+Fish-borne trematodes are parasitic flatworms or helminths that use fresh or
+brackish water fish as intermediate host. FBTs are among the most common parasitic
+infections in humans and animals but are less associated with mortality than many other
+parasites. Due to this, FBTs are deemed as one of the Neglected Tropical Diseases (NTD)
+despite the risk to human health. Infection is caused by liver flukes (including Clonorchis,
+Opisthorchis) or intestinal flukes (Heterophyid and Gymnophallids). Approximately 59
+species of fish-borne trematodes have been reported to infect humans (Hung, Madsen &
+Fried, 2013). Furthermore, out of all FBTs, Opisthorchiids and Heterophyids are the closest
+in terms of phylogeny, life cycle, as well as egg morphology. This brings about issues not
+
+only on a public health stance, but also with its diagnosis and taxonomy.
+
+Currently, Opisthorchiids have 20 species, and three of the major ones are
+Opisthorchis viverrini, Opisthorchis felineus, and Clonorchis sinensis. On the otherhand,
+intestinal helminth Heterophyids include 28 species, 15 are considered zoonotic. Some of
+the medically important species include: Metagonimus yokogawai, Heterophyes nocens,
+Heterophyes heterophyes, Centrocestus formosanus and Haplorchis taichui (Chai et al.,
+
+2013; Chai and Jung, 2020).
+
+Fish-borne trematodiasis is the infection caused by FBTs. Infections are usually
+asymptomatic or mild, however, this emerging disease could cause complications
+especially with high worm burden. Liver flukes, particularly O. viverrini, increases the risk
+for diabetes mellitus and cholangiocarnicoma or cancer of the bile duct (Thinkhamrop et
+al., 2021). Clonorchis sinensis has been documented to cause pancreatitis (Choi et al.,
+2015) and acute shock (Wang et al., 2019). In addition, although intestinal trematodes are
+generally considered not as clinically important as the liver flukes, it can cause ulceration,
+excessive secretion of mucus and necrosis of the intestinal epithelium, chronic diarrhea,
+nausea, and weight loss. Eggs of heterophyids sometimes enter the bloodstream and cause
+serious pathology to the heart, brain and spinal cord (Africa and Garcia, 1935). In 1997, it
+is believed that 15% of the cases of fatal myocarditis in the Philippines are caused by
+
+heterophyid infection (Garcia and Bruckner, 1997).
+
+Biology and transmission routes
+
+FBTs follow a similar indirect life cycle which requires three hosts — a snail, a fish,
+and a bird or mammalian host. The general life cycle of FBTs is shown on Figure 1. The
+first intermediate host of Clonorchis belongs to the genera: Parafossarulus, Bulinus,
+Semisulcospira, Alocinma, Thiara, and Melanoides. Opisthorchiids on the otherhand
+require snails belonging to the Bithynia genus (Belizario and Ciro, 2020), and Batillaria,
+Cerithideopsilla, Melania, Pironella, Semisulcospira, and Tympanotomus (Eduardo, 2001)
+for heterophyids. The aquatic snail host ingests the mature eggs containing the ciliated
+
+larval stage (miracidia). The miracidia emerges from the eggs and penetrate the snail’s
+
+small intestine. The parasite develops to its free-swimming larval stage (cercaria) and is
+released from the snail host. The cercaria is then transmitted to its second intermediate host
+
+by skin penetration, and encysts as metacercaria in the fish host tissue.
+
+Second TH: Definitive host:
+freshwater or brackish fish CAN Mammal
+
+Led
+
+mn refs
+
+JRDJIMENEZ
+
+ay First IH: Snail Miracidium
+(l g
+prey
+
+Figure 1. General life cycle of fish-borne trematodes. Definitive hosts are infected by ingesting
+uncooked or inadequately cooked fish with encysted metacercaria. Metacercaria excysts in the small
+intestine wherein they develop as adult flukes. Embryonated eggs are deposited in the water via feces
+and miracidium hatches, infecting the first intermediate host. The miracidia develop into sporocysts,
+
+then rediae. The rediae emerge as cercariae which penetrates the second intermediate fish host.
+
+The second intermediate host may be a freshwater or brackish water fish. In the
+Philippines, many common food fishes have been shown to harbor the infective
+
+metacercariae of these trematodes, including but not limited to dalag (Channa striata),
+
+bangus (Chanos chanos), hito (Clarias batrachus), lapu-lapu (Epinephelus corollicola),
+and tilapia (Oreochromis niloticus) (Eduardo, 2001; El-Seify et al., 2021; Mahdy et al.,
+2021). Liver flukes share some species of second intermediate host with intestinal flukes,
+particularly freshwater cyprinids (Belizario and Ciro, 2020). Mode of infection of the
+definitive host is through ingestion of fish encysted with metacercaria, and the parasite
+
+excysts and attach either to the liver or the intestine.
+
+The snail is deemed the critical host because of its specificity, while the parasite is
+less selective regarding the second intermediate host, which can be one of a number of fish
+species found in fresh, brackish, or salt water (Pan American Health Organization [PAHO],
+2003). Depending on the parasite species, the definitive hosts may be fish-eating birds
+(Farahnak, 2004), or mammalian hosts such as rodents, dogs, cats, and humans.
+Environmental contamination with human or animal feces ensures completion of the
+
+parasite’s life cycle.
+
+The geographical range of the infection are expanding because of the rapid growth
+of the fish industry, improved transportation systems, and population movements (Chai et
+al. 2005), culture exchange, environmental modification and sanitation problems, and
+especially the inadequate food safety monitoring in the market, also contributes to the
+increase in transmission of such parasites. Granting all this, complete biology and
+distribution for some species remain unknown (Chai and Jung, 2020). Further
+investigations are required to determine intermediate hosts for some species and elucidate
+
+transmission modalities.
+
+Epidemiology of fish-borne trematodes in Asia
+
+More than 160 million people worldwide are said to be at risk for FBT infections
+(Chai, 2009; Keiser and Utzinger, 2009). An estimate of 10 million are infected with
+Opisthorchis spp. and 15.3 million with Clonorchis spp. (Nithikathkul et al., 2021; Qian et
+al., 2012) and 50 million infected with intestinal flukes (Chai et al., 2009). Occasional cases
+have been reported in other countries but FBTs are mostly endemic to the Southeast Asia
+and the Far East, primarily in China, India, Indonesia, Korea, Malaysia, the Philippines or
+Thailand. Clonorchis is predominantly found in Vietnam and China with 1.23 million
+people infected (Furst et al., 2012). Opisthorchis is highly endemic in Laos, Cambodia,
+and Thailand, with prevalence reaching up to 90% in Laos (Sithithaworn et al., 2012).
+Similarly, heterophyids have the highest prevalence recorded in East and Southeast Asia
+(Dung et al., 2007), with 65% infected in Thailand and Vietnam (Dung et al., 2007; Sohn
+et al., 2014), and 55% in the Philippines (Belizario et al., 2001). Although most infections
+are in Asian countries, population migration and tourism may expand the geographical
+
+distribution of infections of these parasites.
+
+It is believed that a higher number of individuals are infected with intestinal flukes
+than liver flukes, although their true burden is underestimated due to the similarity of its
+eggs with some of the more pathological species of FBTs (Hung et al., 2015). Difficulty
+of differentiating eggs from those of the liver flukes in human fecal examinations may
+
+cause inaccurate estimates of the prevalence of both trematode groups. Updated surveys
+
+and a more sensitive detection are urgently required for better understanding of the global
+
+status and public health significance of FBTs.
+
+Infection status in the Philippines
+
+To the extent of this review, there are currently 10 FBT species recorded in the
+Philippines: C. sinensis, O. felineus, O. viverrini, Haplorchis taichui, H. vanissima, H.
+taihoku, H. yokogawai, Procerovum calderoni, Stellanthchasmus falcatus and
+Diorchitrema pseudocirrata (Balderia and Belizario, 2012; Belizario, 2022; Chai and Jung,
+2017; Eduardo, 2001). Heterophyid incidence have been recorded in provinces Negros
+Oriental, Bukidnon, Compostela Valley in Mindanao. Belizario et al. (2001) reported 55%
+prevalence, and 36% in 2004, while recent reports by Moendeg et al. (2021) and Belizario
+
+et al., (2022) showed an overall prevalence ranging to 2% to 10%.
+
+With the exemption of the survey done by Belizario et al. in 2022, most reports on
+FBT focused on Southern Mindanao where the custom of eating raw fish is common.
+Moreover, reports have yet specified species identity due to low specificity diagnosis using
+Kato—Katz technique or Formalin-Ether Concentration Technique (FECT) (Belizario et al.,
+
+2004).
+
+10
+
+Fish-borne trematodiasis in animals
+
+Animals play an important role in the transmission cycle as they can contaminate
+the environment with various parasites and hence, determining their infection status is also
+crucial. Prevalence of intestinal helminths in various hosts have been determined in some
+
+areas (El Seify, 2020; Farahnak et al., 2004; Lahmar et al., 2017; Nissen et al., 2014).
+
+Infection of Opisthorchis viverrini in dogs and cats have been recorded
+(Tangkawattana and Tangkawattana, 2018), with a prevalence of 35% in Thailand, and up
+to 60% in southern Vietnam (Sithithawom et al., 2012). Dogs infected with C. sinensis
+were as high as 42% in China (Lin et al., 2011). In Tunisia, North Africa, 1.47% of stray
+dogs are also infected with H. heterophyes (Lahmar et al., 2017), which was the first record
+of the parasite in the country. Moreover, a study in Vietnam noted that within 3 months
+after treatment, 50% of dogs sampled have been reinfected with FBTs due to easy access
+to raw fish (Nissen et al., 2014). In Kuwait, 59 (24.6%) stray cats were found to be infected
+with 14 species of FBTs and all recovered trematodes are considered zoonotic (El-Azazy
+2015). Artificial infection has also demonstrated that cats were more susceptible to
+infection, and showed more severe pathological signs compared with rats (El Seify, 2020).
+These results highlight the importance of animals as carriers of FBTs. There is no available
+data yet on the prevalence of infection in animals in the Philippines. Such data is crucial
+
+for better understanding of the infection dynamics and for improved intervention strategies.
+
+11
+
+Socioeconomic determinants
+
+Risk behaviors are often mediated by various socioeconomic determinants such as
+limited access to treatment, safe water source and latrine coverage (Bardosh et al., 2014).
+For parasites such as Soil Transmitted Helminths (STH) and Schistosoma, infections have
+been mostly associated with poor sanitation and low socioeconomic status, specifically the
+lack of access to clean and safe water and latrine (Hotez et al., 2006; Pasaribu et al., 2019).
+As a result, some resort to open defecation. Helminth infections are thus maintained due to
+continuous contamination in the environment. Similarly in the case of FBTs,
+
+socioeconomic status also plays a role.
+
+As earlier discussed, FBT infections in humans are mainly caused by eating raw or
+undercooked fish. Such practice may be traditionally rooted, consumed in a religious
+context, or simply a personal taste preference (Bardosh et al., 2014). In terms of
+demographics, Xu et al. (2021) found an association among gender, age, ethnic group,
+education level and occupation for risk of acquiring FBT. Moendeg et al. (2021) reported
+a higher heterophyid infection rate in males than females, and in ages 45-60, although
+Parija et al. (2003) found that children were more susceptible to severe symptoms. Also in
+contrast with schistosomiasis and STH infections, nonfarmers such as drivers and soldiers
+showed the highest percentage of FBT infection. Proximity of the households to rivers is
+also a socioeconomically-linked factor. Households were found to obtain fish in the
+
+parasite-contaminated river instead of buying in the market for consumption (Moendeg et
+
+12
+
+al., 2021). Further, proximity to bodies of water denotes high risk for fecal contamination,
+
+ensuring continuity of parasite life cycle.
+
+There has only been one study on risk factors for FBT infection in the country,
+specifically on Heterophyids in Southern Mindanao (Moendeg et al., 2021). Further study
+of other possible risk factors in other parasite-endemic areas in the country are also needed
+
+to address the biosocial complexities of helminth control.
+
+Diagnosis and treatment
+
+In spite of the need for more sensitive diagnosis, the Kato-katz technique (Katz,
+1972) remains the standard method for intestinal helminth detection worldwide. It is widely
+used in epidemiological surveys and monitoring of intervention programs for STH and
+schistosomiasis (Turner et al., 2017). It is cheaper and more accessible, although this type
+of coprological assessment is reliable only when the intensity of infection is high and
+
+accurate diagnosis highly depends on the familiarity of the microscopist with the parasite.
+
+There has been a lack of standardization and quality assurance in diagnosis. Since
+the eggs and larvae of FBTs are highly similar, acquiring adult worms through purgation
+is one of the options used for definitive diagnosis and confirmation of species. However,
+this approach is not amenable for determining infection prevalence (Johansen 2010).
+Nonetheless, Lee et al. (2012) have found that minute surface ridges on Metagonimus spp.,
+
+H. continua, H. nocens, and S. falcatus eggs, vary with C. sinensis in terms of prominence.
+
+13
+
+However, using these morphological distinctions would be less accurate than molecular
+diagnosis. The eggs of H. heterophyes and M. yokogawai, as well as those of Clonorchis
+and Opisthorchis, are all virtually indistinguishable (PAHO 2003). The surface structure
+of the eggs is found to be a more reliable criterion than traditional morphology, but it is
+more difficult to visualize using standard microscopy. In Metagonimus spp., H. continua,
+H. nocens, and S. falcatus eggs, minute surface ridges were recognizable though less
+prominent compared with C. sinensis (Lee et al., 2012). Field surveys reporting human
+infections in the Philippines (Belizario 2001, 2004; Moendeg et al., 2021), and other
+endemic countries in East Asia and Southeast Asia utilize fecal detection using Kato-Katz
+technique, although some studies also performed purgation to recover adult worms
+
+(Belizario, 2022; Chai et al., 2014; Nguyen et al., 2009).
+
+Quantifying eosinophilia in blood tests is also used an indication of parasite
+infection, which is commonly employed for travelers and migrants. In case of moderate to
+severe eosinophilia, patients are advised to take stool samples for examination if other risk
+factors (such as travel to an endemic region and eating raw fish) are present (Ehrhardt and
+Burchard, 2008). Serological assays may have potential for the diagnosis of infection when
+eggs cannot be detected at all times in the fecal samples while antibodies release within a
+few days of parasitic infections (El-Seify et al., 2011). Attempts to develop detection based
+on immunological principles (i.e. enzyme-linked immunosorbent assay (ELISA) have been
+
+made. However, cross-reactions may occur (Ehrhardt and Burchard, 2008; Hegazy, 2020).
+
+14
+
+Along with other intestinal helminths, FBTs can be treated with praziquantel. It is
+an effective and easy to manage anti-helminthic drug. However, the duration of
+administering the drug differs depending on the trematode present. The dosage is 75mg per
+kg body weight taken in three doses (of 25mg/kg) administered for one day (for
+heterophyids) or two to three days (for Opisthorchiids) (Belizario and de Leon, 2015; Parija
+et al. 2003). Trematodes are directly killed by praziquantel and the worms are easily
+discharged along with feces. Mass drug treatment (MDA) is usually administered twice a
+year in endemic communities such as in Mindanao, Philippines (Mationg et al., 2021),
+although non-compliance defeats the purpose of such intervention strategy and allows local
+transmission to prevail (Bardosh et al., 2014). Aside from preventive chemotherapy,
+countermeasures such as educating the public about the danger of eating raw or
+undercooked fish or meat is done (Hong and Yong, 2020). On another note, the recent
+COVID-19 pandemic affected the MDA campaign in the Philippines and hence, it is
+expected that parasite infections will increase and more sustainable control strategies are
+
+needed (Mationg et al., 2021).
+
+FBTs have never been a target of deworming on public health stance (Hong and
+Yong, 2020) and much less attention has been given to parasite control for the animal
+reservoir hosts. Regular deworming of animals are recommended, although such an
+approach requires huge funds. Parasite control is particularly challenging for stray animals.
+Other approaches are fertility control and use of praziquantel baits, which are both
+economically and logistically difficult to implement in developing countries (Nissen et al.,
+
+2014). Despite the challenges, parasite infection in animals should also be taken into
+
+15
+
+consideration when control programs are to be established (Nissen et al., 2013, 2014).
+Identification of barriers and challenges in parasite control through incorporating the
+
+underlying socioeconomic factors is also needed.
+
+Molecular studies and phylogenetic position
+
+As one of the neglected tropical diseases, there has also been limited reliable data
+on the epidemiology and characterization of FBTs, especially in the Philippines. For
+instance, the systematic position and the most recent morphological studies on various
+Philippine heterophyid metacercaria was way back in the 1940s (Vasquez-Colet & Africa,
+1940). Meanwhile in nearby Southeast Asian countries such as in Vietnam and Thailand,
+FBTs have well been described epidemiologically and morphologically, but molecular data
+
+useful for identification and taxonomy are also limited, particularly for intestinal flukes.
+
+Molecular studies on FBTs primarily focused on detection of different species and
+molecular differentiation, since misdiagnosis is a common occurrence on this group of
+parasites. In Myanmar, the use of molecular-based methods enabled the identification of
+O. viverrini for the first time in 2017 (Aung et al., 2017). Among liver flukes, different
+techniques were developed to efficiently distinguish Opisthorchis and Clonorchis eggs.
+Sun et al. (2011) optimized a Polymerase Chain Reaction (PCR)-based multiplex ligation-
+dependent probe amplification (MPLA), which is a rapid and specific detection of single
+nucleotide acid difference. Different yields of amplicons were generated among species
+
+and no cross-reaction occurred. Multiplex assay has also been utilized for Opisthorchiids
+
+16
+
+and Heterophyids using metacercaria isolated from fish in single reaction, which is rapid
+and cost effective, compared with inefficient and expensive PCR and sequencing-based
+methods (Caffara et al., 2020). Serological tools have also been developed to screen
+Opisthorchis and Clonorchis, and among the recent advances include the use of
+Immunoglobulin G (IgG) antibodies from human blood (Sadaow et al., 2022). This enables
+rapid detection in areas that are endemic for Opisthorchiasis. On the other hand, there is
+still no successfully developed antigen that would distinguish heterophyids from other food
+borne parasites. This is essential due to differential treatment depending on the parasite
+(i.e. heterophyid and opisthorchiid flukes would require different doses of praziquantel
+treatment). Possible cross-reactivity between heterophyid Pygidiopsis geneta and blood
+fluke Schistosoma spp. has also been noted by Hegazy (2020).
+
+More importantly, development of markers to identify species has also progressed.
+Although a lot of markers were developed for detection, it has been found that 28S
+ribosomal DNA (rDNA) and nuclear ribosomal internal transcribed spacer (ITS) regions
+are more reliable than mitochondrial DNA as markers for heterophyids and some
+opisthorchiids (Santos and Borges, 2020). Molecular tools allowed some ecological
+research such as the detection of Haplorchis taichui in field-collected snails
+(Chontananarth & Wongsawad, 2010), tracking life cycle stages of heterophyids in fishes
+(both molecular and morphometric methods (Skov et al., 2009). Furthermore, DNA data
+has also enabled revision and updates on the phylogenetic status of Opisthorchiids using
+NADH dehydrogenase subunit 1 (nad1), cytochrome C oxidase subunit 1 (cox1), 18S and
+
+28S ribosomal RNA (rRNA) gene sequence analyses (Dao et al., 2017). Similarly,
+
+17
+
+molecular phylogeny of trematodes in family Heterophyidae based on cox] and ribosomal
+transcription units (rTU) 18S, ITS1, 5.8s, 28S rRNA genes (Chontananarth et al., 2014; Le
+et al., 2017), although it has been noted that reevaluation of phylogenetic tree using both
+molecular and morphological approach is needed (Le et al, 2017) and data from additional
+FBT species are necessary to create a higher resolution phylogeny (Dao et al., 2017).
+
+Because of the diversity and variability of FBTs in terms of pathogenicity, detection
+methods are also highly variable among different species. More pathogenic organisms also
+receive a lot of attention in terms of molecular aspect, however some FBTs still lack
+primers and reference sequence for other species (Duflot et al., 2021). Improved diagnostic
+tools are urgently needed, especially those that can differentiate the various species.
+
+As this group still requires substantial re-evaluation using a combination of
+morphological and molecular data (Le et al., 2017), this study aims to detect sequences that
+could aide in the better understanding of these neglected fish-borme parasites. Endemic
+communities need better management and disease prevention instruments starting with the
+appropriate surveillance. The use of molecular approaches will provide new insights for
+the development of diagnostic tools, as well as future research such as drug development.
+Generated data will also give light to the real status of infection and updates on Philippine
+isolates will hopefully find clues on the taxonomy and phylogenetic status of this phyla,
+
+together with the isolates from other countries.
+
+CHAPTER III
+
+MATERIALS AND METHODS
+
+Study site
+
+The study was conducted in the northeastern part of Mindanao, specifically in
+Region 13 (Caraga). It is composed of five provinces: Agusan del Norte, Agusan del Sur,
+Surigao del Norte, Surigao del Sur, and Dinagat Islands. The agriculture, fishery and
+forestry sector is Caraga’s economic banner, particularly in Agusan del Sur (agro-forestry
+center and food basket) and Surigao del Norte (major ecotourism destination and fishery
+producer). Agusan del Sur and Surigao del Norte also remain endemic for soil transmitted
+helminthiasis, schistosomiasis, and food borne helminthiasis (Mationg et al., 2021; Owada
+et al., 2018). Four municipalities from each province were selected as recommended by the
+Department of Health (DOH). Selection was based on endemicity or high parasite infection
+status, cooperation of the local government unit, accessibility of the communities and peace
+
+and order situation.
+
+Sampling design
+
+A household-based sampling was employed, using a cross-sectional mixed method
+approach. To determine heterophyid infection status in each chosen municipality, a
+minimum number of 188 participants from 38 households were calculated. The sample size
+was computed using a predicted prevalence of intestinal helminth infection of 50%, a
+
+confidence level of 95%, an accuracy of 5%, an average household size of 5, and 10%
+
+19
+
+adjustment for noncompliance. The households were randomly selected from each
+municipality with the assistance of the Municipal Social Welfare and Development Office
+(MSWDO). Participants of ages 10-59 were selected for diagnosis. Mentally and physically
+challenged individuals and pregnant women were excluded to participate in the study. The
+target number of samples is 1,504, however, the actual number of participants for this study
+is 1152; distributed as follows: 168 in Bunawan, 145 in Trento, 120 in Bayugan, 133 in
+Esperanza, 181 in Mainit, 169 in San Isidro, 126 in Claver, and 110 in Gigaquit.
+Companion animals owned by the participating household or their neighbors were also
+included to determine possible transmission. A total of 92 animal fecal samples (72 dogs
+
+and 20 cats ) were collected non-invasively.
+
+Ethical clearance
+
+Prior to the collection of samples, approval permits from selected Local
+Government Units (LGUs) and Gratuitous Permit (GP) from the Department of Agriculture
+(DA) were secured. Ethical clearance was obtained from the University of the Philippines
+Manila Research Ethics Board (UPMREB 2019-084-01) (ANNEX A) and Institutional
+Animal Care Use for Research Committee (CAS 2018-020) (ANNEX B). Consent and
+assent forms were secured and voluntary participation and withdrawal from the study at
+any time without implication were also ensured. Samples were also assigned with codes to
+
+ensure confidentiality of the participants.
+
+20
+
+Collection and processing of fecal samples
+
+Fecal samples from human participants from the municipalities were obtained with
+the assistance of DOH and barangay health workers. Approximately 20g of fecal samples
+were collected from each participant. Samples were labelled and stored in 60mL fecal
+containers, and were transported to the designated field laboratory for processing. Human
+fecal samples were analyzed using the Kato-Katz method (Katz, 1972). Animal fecal
+samples were collected non-invasively and processed using McMaster technique (Zajac
+and Conboy, 2012). Suspected FBT eggs were counted and multiplied by a factor of 24 to
+approximate the number of eggs present per gram (epg) of feces for Kato-Katz, and
+multiplied by a factor of 50 for McMaster. Quality control was done to ensure accurate
+diagnosis of parasite eggs. All fecal samples were then preserved in absolute ethanol for
+
+transport and molecular analysis.
+
+Survey administration
+
+Interviews were conducted to determine the potential risk factors of FBT infection.
+Questions include demographic profiles, exposure and practices, as well as knowledge,
+attitude, and perception (KAPs) related to food and water borne helminthiasis which
+include the FBTs. Prevention and treatment seeking behavior were also included to
+determine gaps for effective intervention strategies. Household heads were chosen to
+participate in the interview as decision-makers of the family, usually the father. In cases
+
+where both parents decide in the family, whoever is available was interviewed.
+
+21
+
+Questionnaires were translated to Cebuano as the local dialect and pre-tested before
+administration. The data were transcribed and summarized in Excel. Respondents were
+
+also assigned codes to ensure data privacy.
+
+Analysis for parasitological assessment and interview data
+
+From the results of the parasitological assessment, the parasite prevalence and mean
+
+intensity were computed using the following formula:
+
+Prevalence (%) = Number of infected_x100
+Number of examined
+
+Mean Intensity= Number of parasites
+Number of infected
+
+The intensity of infection was classified as follows: Light infection (1-100 epg), Moderate
+
+infection (101-1000 epg), and Heavy infection (>1000 epg) (Belizario et al., 2001).
+
+To compare parasite egg prevalence and intensity among location, sex, and age, a
+Chi-square test was done at p-value < 0.05 significance. Chi-square test of independence
+was also performed to identify any significant association between questionnaire responses
+and parasitological results. Subsequently, factors which had a p-value < 0.05 were included
+in a logistic regression model to measure the strength of association among risk factors,
+with the parasitological results as an outcome. Model fit was evaluated by means of
+likelihood ratio testing. A p-value of less than 0.05 was also considered significant. On the
+
+other hand, the KAP data generated from the interview were analyzed using descriptive
+
+22
+
+statistics. All statistical analysis was done using STATA version 13 (STATA 13 ®, Stata
+
+Corp, Texas, USA).
+
+Molecular detection using standard PCR
+
+Molecular detection was used to screen positive samples and to obtain the sequence
+for species identification. It was also employed to assess possible presence of the parasite
+which was undetected through microscopy. DNA from the stool samples was isolated using
+a DNA isolation kit (QIAGEN DNeasy® PowerSoil® Pro), following the manufacturer’s
+protocol. Pre-extraction was done by homogenizing the stool sample transferred in the kit’s
+zirconium bead tube for three minutes using a beadbeater (Benchmark D2400-E
+BeadBlaster). A standard polymerase chain reaction was done to amplify the ITS regions
+of the parasite DNA. ITS region was selected as it is highly conserved and allows
+characterization of digeneans such as liver flukes and minute intestinal flukes, at different
+category levels. ITS2 is said to be highly conserved at species level, whereas the variability
+(Waikagul and Thaenkham, 2014). A pre-made PCR master mix (1‘t Base exTEN® 2X )
+was used to amplify the ITS2 regions. The primers used are shown on Table 1, and the
+computed PCR cocktail is indicated on Table 2.
+
+A standard PCR was conducted using a thermocycler with the conditions set on
+Table 3. The PCR reaction was run for 35x cycles. The generated amplicons were resolved
+by agarose gel electrophoresis (FisherBrand) at 100v for 30min and the bands were viewed
+
+and photographed using UV transilluminator (Maestrogen). All positive amplicons for ITS
+
+23
+
+2 were then packaged for outsourced Sanger sequencing (Apical Scientific Sequencing,
+
+Malaysia).
+
+Table 1. Primers for the amplification of ITS 2 sequences of fish-borne trematodes (Sato
+et al., 2010).
+
+Primer Name Sequence Length (bp) Target
+ITS2F Reverse CTTGAACGCACATTGCGGCCATGGG 25
+
+530
+ITS2R Forward GCGGGTAATCACGTCTGAGCCGAGG 25
+
+Table 2. Polymerase chain reaction master mix for identifying fish-borne trematodes
+targeting the ITS2 region.
+
+PCR reaction set up
+
+Reagent 1x reaction (uL) 13x reaction (uL)
+exTen® mastermix 10 130
+Forward primer 1 13
+Reverse primer 1 13
+Water 6 78
+DNA template 2 26
+Total reaction volume 20 260
+
+Table 3. PCR protocol utilized for PCR identifying fish-borne trematodes.
+
+Step Temp (°C) Time
+Initial denaturation 95 30s
+Denaturation 95 30s
+Annealing 60 60s
+Extension 72 60s
+Final extension 72 5 min
+
+End hold 4 co
+
+ee
+
+24
+
+DNA sequence analysis and phylogenetic tree construction
+
+The sequences of amplicons were cleaned and concatenated using MEGA X
+software and inferred to those sequences available in molecular repositories online (i.e.,
+GenBank). BLAST search was conducted for species identification and selection of other
+
+sequences for phylogenetic analysis.
+
+Sequences from this study and from other representatives under the superfamily
+Opisthorchoidea were aligned using ClustalW. The alignment file in FASTA format was
+imported to MEGA X software, and a tree was constructed to determine the phylogenetic
+position of Philippine FBTs relative to other trematodes. The evolutionary history was
+inferred by using the Maximum Likelihood method and Kimura 2-parameter model
+(Kimura, 1980). The bootstrap consensus tree inferred from 1000 replicates is taken to
+represent the evolutionary history of the taxa analyzed (Felsenstein, 1985). The rate
+variation model allowed from some sites to be evolutionarily invariable (I). Echinostoma
+
+miyagawai (MH796365) was chosen as the outgroup.
+
+CHAPTER IV
+
+RESULTS
+
+Prevalence and intensity
+
+Epidemiological surveys on food-borne trematodes are given less regard compared
+to other parasitic infections such as soil-transmitted helminths and schistosomiasis.
+Limited case-finding and non-specific detection of FBTs hinder the realization of its status
+and public health significance, especially in the Philippines. Therefore, this study
+conducted a survey to estimate the prevalence of FBTs in Northeastern Mindanao. Kato
+Katz method was performed to determine the infection status among selected sites in the
+provinces Agusan del Sur (ADS) and Surigao del Norte (SDN). The results are shown
+
+below (Table 4).
+
+Table 4. Prevalence and mean intensity of fish-bome trematode eggs detected using Kato-
+Katz analysis of human fecal samples from Northeastern Mindanao (n=1,152).
+
+Province Municipality No. No. positive Confidence Mean Standard
+
+examined (%) Interval Intensity Deviation
+(95%) _ (epg)
+
+Agusan Bunawan 168 1 (0.6) 0-3 456 85.6
+
+del Sur Trento 145 6 (4.1) 2-9 396 119.7
+(ADS) Bayugan 120 1 (0.8) 0-5 36 33
+
+Esperanza 133 2 (1.5) 0-5 984 168.6
+
+Subtotal 566 10 (1.8) 0-3 484 103.5
+
+Surigao Mainit 181 16 (8.8) 5-14 240 108.8
+del Norte san Isidro 169 0 0-20 - 0
+
+(SDN) Claver 126 14 (11.1) 6-18 88 39.6
+Gigaquit 110 7 (6.4) 3-13 24 65
+
+Subtotal 586 37 (6.3) 5-9 142 63.8
+
+Overall 1,152 4.1% 3-5 214 85.6
+
+
+26
+
+A total of 1,152 participants belonging to 386 households were selected. Overall, 47
+individuals (4.1%) were positive with FBT eggs. A higher parasite prevalence was
+observed in the province of Surigao del Norte, particularly in municipalities Mainit and
+Claver (X?=34.50, p=0.00), although a higher parasite burden was observed in Agusan del
+Sur, particularly in Esperanza. There is a significant difference in heterophyid infections
+between provinces (X?=10.30, p=0.00) and among municipalities (X7=34.50, p=0.00).
+Furthermore, more males (6.4%) are infected with FBT eggs than females (2%) (X7=14.21,
+p=0.00), and adults were highly infected (5.5%) than children (2%) (X*=9.02, p=0.00)
+(Figure 2). A light to moderate infection was also observed across all sites. On another
+note, out of 92 animal fecal samples examined, only two animal fecal samples were
+positive with FBT eggs (2%). Specifically, one dog from Trento in Agusan del Sur and one
+
+dog from Mainit, Surigao del Norte.
+
+sf
+
+= 6
+
+3
+
+e
+
+rj a
+
+5 4
+
+& 6 a
+
+‘ wi
+
+5 Ios 101493
+0
+
+Male Female Child Adult
+(Ages 10-17) (Ages 18
+and above)
+
+Figure 2. Prevalence of fish-bome trematodes based on sex and age group, detected using
+Kato-Katz analysis of human fecal samples from Northeastern Mindanao (n=1,152).
+
+Potential risk factors of fish-borne trematodes
+
+27
+
+Fish-borne infections are mainly linked to consumption of contaminated fish foods,
+
+although patterns of exposure vary among different communities. In this study, a household
+
+interview was conducted to identify possible risk factors associated with fish-bome parasite
+
+infection. A total of 386 household heads participated in the interview. Table 5 summarizes
+
+the potential risk factors in relation with the infection status.
+
+Table 5. Potential risk factors of fish-borne trematode infection and infection status among
+selected households in Northeastern Mindanao (n=386).
+
+A Number Number of
+Riskifactors responded infected (%) x? p-value
+Access to toilet facility
+Yes 368 38(10.3) 0.4 0.51
+No 18 1(5.6)
+Sighting of rodent
+Yes 337 34(10.1) 0.0 0.98
+No 49 5(10.2)
+Presence of cat/dog
+No 120 6(5.0) 5.0 0.03*
+Yes 266 33(12.4)
+Count of Cat 137 39(10.1) 3.9 0.70
+Count of Dog 228 39(10.1) 16.8 0.05*
+Eating raw/undercooked fish
+Never 276 32 (11.6) 1.7 0.43
+Seldom 87 6(6.9)
+Often 1 0
+Availed medication
+Yes 329 29(8.8) 3.8 0.15
+No 12 3(25.0)
+No idea 2 0
+Availed laboratory diagnosis
+Yes 223 19(8.5) 5.5 0.06
+No 51 10(33.3)
+No idea 7 114.3)
+
+*Significant, p<0.05
+
+28
+
+Results show that exposure to cats and dogs were a significant factor, as presence
+of cats or dogs around the households were observed to have higher infection than those
+without cats and dogs (12.4%, p=0.03). Presence of more dogs also has a higher infection
+(10.10%, p=0.05). It is also interesting to note that higher infection rates were observed in
+households who did not avail medication (25%) and laboratory diagnosis (33%) than those
+who availed both services, although no significant relationship was observed (p=0.15 and
+
+p=0.06, respectively).
+
+However, the frequency of eating raw or undercooked fish was not a statistically
+significant variable in acquiring the infection, i.e. 11.6% of the respondents who claim
+never to consume raw or undercooked fish were still infected (p=0.43) (Table 5). While so,
+respondents that eat raw fish identified ‘kilaw’ as the top food preparation practice, and
+
+some also answered ‘sugba’ or grilling fish over heated charcoal (Figure 3).
+
+Moreover, no significant relationship exists between infection status and the
+practice or method of cooking (X?= 2.25, p=0.32), as well as the frequency (X?=3.16,
+p=0.37) of having raw or undercooked fish dishes. Some of the fish that are mostly
+consumed raw are indicated in Table 6. The top fish consumed raw or undercooked is
+Sardine (Sardinella spp., local name: Tamban), followed by Skipjack tuna (Family
+Scombridae, local name: Bariles) and Flying fish (Family Exocoetidae, local name:
+
+Bangsi). Others also mentioned eating raw pork and squid.
+
+29
+
+Sinugba
+Both Kinilaw and Sinugba Mm
+
+126%
+
+Do not cat raw fish
+
+27%
+
+Kinilaw
+602%
+
+Figure 3, Fish-eating practices based on interviews in selected households in Northeastern
+Mindanao (n=192 households).
+
+Table 6. Fishes commonly consumed raw or undercooked in Northeastern Mindanao
+(n=192 households).
+
+Common ; i) Agusan pie Total
+pame Family/ Genus Local name del Sur Norte (n)
+Sardine Sardinella spp.* Tamban 40 21 61
+Skipjack tuna Scombridae* Bariles 26 8 34
+Flying fish Exocoetidae* Bangsi 0 28 28
+Milkfish Chanos chanos*** Bangus 12 13 25
+Anchovy Engraulidae* Bulinaw 3 20 23
+Mackerel Scombridae* Bolis/Alumahan 0 17 17
+Tuna Thunnus sp.* Tuna 12 3 15
+Tilapia Oreochromis spp.** Tilapia 2 9 11
+Snakehead Channa striata** Halwan 1 6
+Carp Cyprinus spp.** Karpa 0 6
+
+*marine; **freshwater
+
+30
+
+Statistically significant demographic and risk factors presented previously were
+used in the logistic regression model to determine its association to FBT infection. Results
+
+show that location, sex and age were all significant factors in having FBT infection (Table
+
+).
+
+Table 7. Risk factors associated with fish-bome infection in Northeastern Mindanao.
+
+Factor OR 95% CI p-value
+Location !"
+Trento 7.58 89-6438 0.06
+Bayugan 1.05 6-1711 0.97
+Esperanza 2.07 18-2326 0.56
+Mainit 20.05 259-15533 0.00*
+San Isidro 1 - 5
+Claver 15.54 199-12115 0.01*
+Gigaquit 7.01 80-6149 0.08
+Sex 0.30 150-590 0.00*
+Age ( 1.86 130-267 0.00*
+Presence of cats and dogs (1 2.60 97-698 0.05*
+Count of dog !2! 1.02 79-132 0.87
+
+[1] N=974; LR chi?(3)=60.93; Prob>chi*=0.00*; Pseudo R?=0.10
+[2] N=386; LR chi?(2)=5.64; Prob>chi?=0.06; Pseudo R=0.02
+*Significant at ps0.05
+
+31
+
+Households in Mainit, Surigao del Norte are 20.05 times more likely to have FBT
+infection, and households in Claver are 15.54 times more likely to get infected (p=0.01)
+than in other municipalities. Furthermore, males have 0.30 times higher risk, while there is
+1.86 times higher risk for adults in acquiring the infection. On the other hand, the presence
+of cats and dogs increases the risk of heterophyid infection by 2.60 times (p=0.05),
+although an increase in the number of dogs is not a significant factor in increasing the risk
+
+of humans getting FBT infection (Table 7).
+
+Knowledge, attitude, and perception on fish-borne trematodes
+
+For public health interventions to successfully encourage and sustain preventive
+behaviors among the endemic communities, evidence on factors associated with the
+behavior in the community is essential. At present, there is limited information on how
+such factors affect vulnerability to fish-borne trematodiasis, yet alone intestinal
+helminthiasis.
+
+In this study, the KAPs of participants were determined through household
+interviews and descriptive analysis. As shown in Table 8, nearly all of the respondents
+(80%) are aware of the food and water-borne helminthiasis (FWBH). Only 4% did not have
+an idea on how they can get infected with it. Although most respondents were able to
+identify that FWBH can be acquired by eating contaminated or raw food (19%), some
+mentioned contact with soil, water and animals as causative factors. Furthermore,
+
+abdominal pain and vomiting (39%), as well as diarrhea and bloody stool (21%) were the
+
+32
+
+top-most perceived health effects of FWBH — such symptoms that are also related to STH
+
+and SCH infections.
+
+Table 8. Knowledge, attitude, and perception on food and water-bome helminthiasis of
+households surveyed in Northeastern Mindanao (n=386 households).
+
+Knowledge n (%)
+Aware of food and water-bome helminths 307 (79.5)
+Transmission
+Drinking contaminated water 126 (32.6)
+Eating contaminated food 128 (33.2)
+Eating raw or uncooked food 73 (18.9)
+Frequent contact with soil 41 (10.6)
+Frequent contact with water 30 (7.8)
+Exposure to animals 7 (1.8)
+No idea 15 (3.9)
+Symptoms
+Common cold, cough, fever 28 (7.3)
+Difficulty in breathing 2 (0.5)
+Headache, nausea 35 (9.1)
+Weight loss, loss of appetite 23 (6.0)
+Abdominal pain, vomiting 146 (37.8)
+Diarrhea, bloody stool 81 (21.0)
+Fatigue, body pain, weakness 20 (5.2)
+Constipation, flatulence 30 (7.8)
+Pruritus ani, rashes 3 (0.8)
+Poor school performance 8 (2.1)
+Prevention and control
+Avoid dirty food, water, and utensils 30 (15.5)
+Deworming or medication 73 (37.8)
+Proper hygiene 18 (9.3)
+Avoid raw food 14 (7.3)
+Health awareness 5 (2.6)
+Avoid contact with contaminated soil and 6 (3.1)
+water
+Eat proper and healthy food 4 (2.1)
+
+Others 36 (18.7)
+
+
+Table 8. Continued
+
+33
+
+Knowledge n (%)
+No idea 7 (3.6)
+Availability of medicine in health center 248 (64.3)
+Availability of diagnostic test in health center 194 (50.3)
+Attitude and Perception n (%)
+Belief food and water-borne helminths are potentially
+fatal
+Yes 333 94.3
+No 9 2.6
+No Idea 10 2.8
+Belief food and water-borne helminths can be
+prevented and controlled
+Yes 254 (65.8)
+No 132 (34.2)
+Treatment seeking behavior
+Do nothing 84 (21.8)
+Self-medicate 8 (2.1)
+Herbal medicine/traditional healers 2 (0.5)
+Visit health centers/ hospital 278 (72.0)
+Others 14 (3.6)
+Reason for not seeking treatment
+No money for treatment 77 (87.5)
+No money for transportation 6 (6.8)
+Difficulty with transportation/far from health 1 (1.1)
+facility
+Others 3 (3.4)
+The severity of illness prior to seeking treatment
+Did not indicate 79 (20.5)
+Mild 210 (54.4)
+Moderate 78 (20.2)
+Severe 19 (4.9)
+
+In their knowledge on the capacity of health centers to address FWBH, more than
+
+half are aware of the availability of medication (64%) but only 50% know about the
+
+34
+
+availability of diagnosis for food and waterborne parasites. Overall, there is a positive
+attitude towards seeking treatment and prevention against FWBH. Majority of the
+respondents find FWBH as a potentially fatal infection (94%). As such, a relatively higher
+percentage (72%) say that they are willing to go to the health center or hospital for
+treatment if they experience symptoms. Only 5% claim that they would seek treatment
+upon experiencing severe symptoms. On the other hand, among the respondents that refuse
+to seek treatment when they get infected, 87% said that their refusal would be a result of
+
+not having enough money for the treatment.
+
+Molecular identification
+
+Molecular characterization is essential to differentiate parasites with identical egg
+morphology, as commonly observed among trematodes. In this study, the ITS markers
+were used to detect and confirm which species of FBTs are present in Northeastern
+Mindanao. Out of the 35 samples that were run on PCR, 19 were positive for ITS2
+molecular detection. In addition, no amplicons were detected from the two animal samples
+that were positive for FBT eggs in microscopy. The figure below shows the PCR products
+of parasite eggs isolated from fecal samples of humans (Figure 4). Two distinct band sizes
+
+were observed: ~350bp and 480bp.
+
+35
+
+Figure 4. Photograph of UV-illuminated agarose gel showing PCR products from
+trematode eggs isolated from human fecal samples with Lanes 1-2: Haplorchis taichui.
+Lanes 3,4: Opisthorchis viverrini, Lanes 5,6: Stellanthchasmus falcatus.
+
+Three different species of parasites shown on Figure 4 were revealed using Blast
+similarity search (Table 9). Based on sequencing results, the detected parasites were (1)
+Opisthorchis viverrini, which is a liver fluke and a fish borne parasite, and the heterophyids
+(2) Haplorchis taichui and (3) Stellanthchasmus falcatus. Among the species detected in
+previous study by Sato et al. (2010) in Laos, this is the first record of S. falcatus detected
+using the same primer set. Haplorchis taichui on the other hand, has been previously
+recorded and known to be endemic in the Philippines (Belizario, 2001).
+
+As observed in Figure 4, there is an evident difference between the band sizes for
+ITS2 regions, except for O. viverrini and S. falcatus. which have a similar band size of
+
+~350bp.
+
+36
+
+Table 9. Summary of the significant BLAST hits or top alignments using the trematode
+DNA isolated from human fecal samples in Northeastern Mindanao, Philippines.
+
+Isolated Percent . Query Accession
+trematode egg Similarity Identity AED cover Country Number
+Haplorchis 98.26% A. taichui 4e-105 100% ‘Tran MF043945.1
+
+taichui
+98.26% H. taichui 4e-105 100% Vietnam MZ964331.1
+98.26% Heterophyid 4e-105 100% Vietnam MT268132.1
+97.83% H. taichui 2e-103 100% China KC999100.1
+97.41% H. taichui 2e-102 100% Thailand MN902349.1
+Opisthorchis 99.08% O. viverrini 1e-157 100% Thailand MT002731.1
+viverrini
+99.08% O. viverrini_ le-157 100% Thailand MK886663.2
+98.78% O. viverrini \e-156 100% Vietnam ON652314.1
+98.78% O. viverrini 1e-156 100% Vietnam KT726408.1
+Stellanthchasmus 94.62% S.falcatus 1-158 100% Thailand KJ630833.1
+falcatus
+94.59% S.falcatus —_2e-156 99% Thailand KU753585.1
+94.31% S. falcatus 2e-155 99% Thailand KU753591.1
+
+
+37
+
+Phylogenetic analysis
+
+The amplification ITS 2 regions of the positive samples were successfully
+
+performed and the isolates were used to construct the phylogenetic tree (Figure 5).
+
+a O. viverrini (MK886663.2- Thailand)
+7 tL O. viverrini (MT002735.1- Thailand)
+wo L_;—— O. viverrini (KT726408.1- Viemam) $
+6 O. viverrini (ON652314.1- Vietnam) &
+300 (____ 9 viverrini (this study) 2
+O. fileneus (MG952281- Kazakhstan) e
+wo L__j—— © sana (EPH Rais .
+28 Ey C. sinensis (JNO34597.1- Korea)
+100 S. falcatus (KJ630833.1- Thailand)
+swf —L__ S. falcatus (KU753585- Thailand)
+S. falcatus (this study)
+a 2 M. yokogawai (KJ631734- China) _
+M. yokogawai (AB470521,1- Korea) =
+o H. heterophyes (KX431323.1- Kuwait) 3
+100 -——— H.. heterophyes (MW131526.1-Egypy Zz
+H. taichui (this study) Fa
+a H. taichui (MZ964331.1- Viemam)
+Ly _—— H. taichui (MF043945.1-Iran)
+
+" L_;——_ H. taichu (MT006055,1- Thailand)
+100 C. formosanus (MH991967.1- Thailand)
+
+Echinostoma miyagawai (MH796365- China)
+
+Figure 5. Phylogenetic analysis of fish-borne trematodes isolated from Caraga, Philippines and their
+relation to other trematodes under the superfamily Opisthorchoidea, isolated from different geographical
+locations. Echinostoma miyagawai is the outgroup. The tree used partial sequences of ITS2, and was
+inferred using Maximum Likelihood analysis with the K2+I model (best fit model of nucleotide
+substitution: K2: Kimura 2 Parameter, G: gamma distribution) and nodal support estimated using 1000
+bootstrap resampling. Bootstrap values: >90% strongly supported, 70-90% well supported, 50-70%
+weakly supported, <50% not supported.
+
+38
+
+Overall, the topology of the phylogenetic tree inferred from 21 sequences in this
+study generally agreed well with previous studies (Le et al., 2017; Thaenkham et al., 2011).
+Figure 4 shows that the sequences of all three species isolated in this study are grouped
+with those of the same species from published sequences with high bootstrap support (95-
+99%). Opisthorchis viverrini from the Philippines primarily grouped with the isolates from
+Thailand and Vietnam in a well-supported clade (84%). The haplorchiids on the otherhand
+clustered together in a single clade. This agrees with the reports on phylogenetic
+relationships of heterophyid trematodes based on ITS2 sequences (Thaenkham et al. 2011).
+However, Centrocestus formosanus, a close heterophyid relative of Haplorchis (Clausen
+and Murrel, 2014), consistently grouped within Haplorchis taichui from Thailand with
+
+strong bootstrap support (100%).
+
+CHAPTER V
+
+DISCUSSION
+
+Mindanao has been identified as an endemic region for soil-transmitted helminths,
+schistosomes, and food and water-borne trematodes. Among these, FBTs are considered to
+be the neglected amongst neglected tropical diseases. There is a patchy distribution of fish-
+bore parasites brought about by the nature of its transmission, as well as insufficient data
+on some endemic regions. To further understand the transmission dynamics, prevalence,
+and distribution of FBTs in the Philippines, this study attempted to determine the presence
+of FBTs infecting humans and animals in Northeastern Mindanao. Furthermore, some
+knowledge, attitude and practices of participants were investigated to infer possible factors
+involved in transmission. Finally, the DNA isolated from heterophyid-like eggs in human
+fecal samples were analyzed to confirm the species circulating in endemic regions in
+
+Northeastern Mindanao, particularly in Caraga region.
+
+The study found a relatively lower overall infection rate in humans compared with
+surveys done in other areas in Mindanao (Belizario et al., 2004, 2022; Moendeg et al.,
+2021). The conduct of the yearly mass drug administration (MDA) implemented by the
+Department of Health (DOH) could play a role. However, it was observed that there were
+pockets of endemicity with geographical distribution. Access to nearby fishing sites or
+
+sources of fishes, and cultural practices such as consumption of infected fish predispose
+
+40
+
+communities in acquiring FBTs (Chai and Jung, 2017; Moendeg et al., 2021). A higher
+prevalence was observed in Claver, Surigao del Norte. However, higher parasite intensity
+is observed among participants in Esperanza, Agusan del Sur. Surigao del Norte appeared
+to have higher odds of acquiring the infection possibly because of the source of fish foods.
+It was observed that infection occurs in three municipalities in Surigao del Norte: Mainit,
+Claver and Gigaquit, while no FBT infection was found in San Isidro, Surigao del Norte —
+which is located on a separate island. Surigao del Norte is a fishery producing province. In
+fact, Lake Mainit, which is the fourth largest lake in the Philippines and a valuable fishery
+resource (Bifia-de Guzman et al., 2013), is situated in Surigao del Norte province.
+Meanwhile, a high burden of fish-borne trematode infection was observed in Esperanza,
+Agusan del Norte. Since only two individuals were highly infected with FBT eggs, it could
+be due to inactive participation in deworming programs, or habitual consumption of raw or
+inadequately cooked fish, as well as visit in other areas that are endemic with FBTs.
+Furthermore, increased mobility and distribution of fishes sold outside the local community
+(Keiser and Utzinger, 2005; Phan et al., 2011) could also contribute to the spread of
+infection in non-endemic areas. There is also a wide range of marine and freshwater fish
+hosts of these trematodes (Clausen and Murrel, 2014; Romero-Alvarez, 2020). Therefore,
+the spatial distribution of these parasites will more likely increase. In addition, pickling or
+salting the fish may cause possible infection in non-endemic areas because of exportation
+
+of fishes.
+
+In terms of sociodemographic factors, males and older individuals were found to have
+
+higher infection rates than females and young individuals. Previous studies found that
+
+41
+
+social factors affect habits of eating raw fish. For instance, fishermen in Vietnam tend to
+share and to enjoy raw fish together, which enabled the habit to pass from person to person,
+as noted by Phan et al. (2011). He added that people enjoyed consuming raw fish with
+alcohol as a way to socialize. Similarly, males in the Philippines prefer to eat kinilaw
+together with alcoholic drinks as a form of relaxation (Moendeg et al., 2021). Meanwhile,
+the lower prevalence in younger individuals could be associated with less preference of
+children with raw foods, or that adults have a longer exposure of adults with the parasite,
+such that there is a cumulative exposure of adults through consumption of raw or
+undercooked fish. Araki et al. (2018) noted that consumption of raw fish among children
+in Laos depends on the mother’s preference for raw fish dishes, but it is also possible that
+the mother will prevent her child to eat raw fish if she thinks it will cause harm, thus
+
+lowering the risk of acquiring FBT infection among children.
+
+Households that own companion animals such as cats and dogs are also more likely to
+get infected. Along with humans, cats and dogs are definitive hosts for the parasite. They
+may acquire fish-borne parasites by also ingesting raw fish contaminated with the
+metacercaria, and serve as important links for the continuity of the parasite life cycle
+(Lahmar et al., 2017; Nissen et al., 2017). On a separate note, although animals were found
+to be important reservoirs of infection, only two dogs were positive for microscopy. This
+could be a result of low sensitivity of diagnosis, or low amount of fecal samples collected
+during sample collection and thus, low parasite egg count. Nonetheless, environmental
+
+contamination with animal feces containing eggs of FBTs increases the risk of infection in
+
+42
+
+the area, especially households that acquire their fish foods in nearby bodies of water such
+
+as rivers and lakes (Moendeg et al., 2021).
+
+On another note, results showed that consumption of raw fish dishes as an insignificant
+risk factor of FBT infection. Possible reasons include emotional bias of some of the
+respondents towards admitting that they practice raw food consumption (Nguyen et al.,
+2020). Sanitary practices of how the dish was prepared such as the use of utensils could
+also be an important factor aside from direct consumption of raw fish dishes. In countries
+where eating raw or undercooked fish is unpopular such as in Iran, infection is assumed to
+occur during gutting and scaling of the fish. The hands become contaminated with the
+metacercaria and infection occurs via oral transmission (Teimoori et al., 2019). Cross-
+contamination from using the same knife and chopping board for raw fish and other food
+
+products in kitchens and in restaurants may also occur (Clausen and Murrel, 2014).
+
+Intestinal worms did not rank highly in people's minds as an important health problem,
+although very high proportions of respondents knew of the problem. Majority of the
+participants know of food borne helminthiasis, but only a few identified eating raw food as
+a source of infection. Some mentioned unrelated causative factors such as wearing of
+protective footwear and close association with soil. Such sources of transmission are
+related to SCH and STH infections, which have long been the prevailing parasitic diseases
+in the provinces. Furthermore, although many perceive food bome helminthiasis as
+potentially fatal, some still kept the habit of eating raw food because of insufficient or
+
+wrong knowledge. Because of that, many people could underestimate its harmfulness and
+
+43
+
+show poor preventive measures. Evidently, most of the infected individuals from this study
+were those with poor treatment seeking behaviors. On another note, even individuals that
+participate actively in deworming programs can easily be reinfected with the parasite if
+they will not adapt preventive measures, or if they continue to practice eating raw food.
+These data can be useful in improving materials for information and education campaigns
+
+as well as for the implementation of parasite intervention programs.
+
+Detection and surveillance of FBTs remain a challenge in the Philippines. As pointed
+by Tatonova (2017), ITS2 might be a suitable and sensitive marker for species-level
+analysis. To some extent, use of ITS markers for screening/detection of FBT-positive fecal
+samples were effective. However, detection of FBTs in this study showed limitations as
+some species exhibit similar band size, and therefore cannot be used to discriminate some
+species, particularly between intestinal and liver flukes. Although the determination of
+diagnostic sensitivity between microscopy and ITS molecular detection is beyond the scope
+of this study, the reported prevalence of trematode eggs in the human population reported
+here may still be an underestimate considering that some samples were not successfully
+amplified using the ITS marker. Aside from the number of eggs might have been too low
+in some samples for DNA amplification to occur, or inhibitors in some fecal samples might
+have also blocked amplification (Teimoori et al., 2019). Nonetheless, three FBT species
+were successfully identified in this study and all of which have been previously reported
+in the Philippines (Africa and Garcia, 1935; Belizario et al., 2004). Based on the sequenced
+
+amplicons, the predominant parasite among the study sites is Haplorchis taichui, which is
+
+44
+
+also the most reported FBT in the country. Detection of seldomly reported FBTs such as
+S. falcatus and O. viverrini suggests that these parasites still circulate and therefore pose
+a health risk in the country. Presence of these parasites in poor areas connotes unceasing
+burden which not only have direct consequences to health but also to economy, which
+perpetuates the cycle of poverty. A more effective treatment (i.e. proper anthelminthic
+dosage) is also needed especially for individuals infected with different species of FBT,
+which is only possible through adapting a more accurate and species-specific diagnosis
+such as PCR. Furthermore, sequencing of the ITS2 locus revealed high percent similarity
+with the available sequences of FBTs isolated from fox, snail, cat, fish and humans from
+Thailand, China, Vietnam, and Iran. The high percent similarities of H. taichui, O. viverrini
+and S. falcatus from this study to the isolates from neighboring Asian countries may denote
+a close association or spread of parasites through its hosts. Considering that the Philippines
+houses popular tourist destinations and exports fishery products, spread of such parasites
+is more likely to increase; thus, close attention should be given to these control points i.e.
+
+food trade industry and food safety regulations and practices.
+
+Overall, the struggle to eradicate FBTs and other intestinal parasites results from the
+biosocial complexities of transmission and poor realization of its infection status as well as
+distribution. Although molecular-based techniques can now be applied in diagnosis and
+surveillance, the high cost and accessibility to facilities makes it unlikely to become a
+standard tool for routine diagnosis especially in rural areas. Nonetheless, adapting site-
+appropriate prevention and intervention strategies based on research is a step closer to the
+
+control of these neglected diseases.
+
+CONCULSION AND RECOMMENDATION
+
+This study looked into the occurrence of fish-bore trematodes in some endemic rural
+areas in Agusan del Sur and Surigao del Norte in Mindanao, Philippines. The presence of
+FBTs was confirmed with an overall prevalence of 4.1%. Pockets of endemicity were
+observed among the study sites, with relatively higher infection prevalence in Mainit and
+Claver in Surigao del Norte. Although human fondness for raw or lightly prepared fish
+foods remains a key determinant in acquiring heterophyid and other fish-borne trematode
+infection, presence of other hosts in the environment as well as community perception and
+thus, practices, also contribute in maintaining the infection. Furthermore, molecular
+diagnosis revealed the following species: Haplorchis taichui, Stellanthchasmus falcatus,
+and Opisthorchis viverrini. This is the first molecular identification of FBTs in the
+Philippines. Further studies should consider these preliminary detections to clarify the
+
+richness and abundance of trematodes.
+
+Examination of local fish species that were identified to be eaten as raw or lightly
+prepared, and snail intermediate hosts in the country need to be explored deeper to elucidate
+transmission routes, which are essential in formulating possible preventive measures. In
+terms of consumption of fish, studies on the viability of metacercaria in different food
+preparation procedures such as salting or pickling, season of eating, and source of fish
+would contribute to building sustainable preventive measures especially in communities
+where eating raw fish is culturally-rooted. Use of data on risk factors are also valuable in
+
+the development of education and public health campaigns regarding safe food practices
+
+46
+
+and access to improved sanitation. Furthermore, recovering adult worms from the study
+areas is recommended to connect both morphological and molecular data for Philippine
+
+isolates.
+
+FBT is one of the neglected among the neglected tropical diseases. Infected
+communities will continue to bear and possibly magnify the repercussions of the disease if
+its presence remain unrecognized. Contrariwise, preempting such food borne infection is
+workable with changes in the perception of what is delicious and safe to eat, as well as
+
+proper sanitation involving both hosts and environment.
+
+LITERATURE CITED
+
+AFRICA C.M., GARCIA E.Y. 1935. Two more new heterophyid trematodes from the
+Philippines. Philippine Journal of Science.57:443-450.
+
+ARAKI, H., ONG, K.I.C., LORPHACHAN, L., SOUNDALA, P., IWAGAMI, M.,
+SHIBANUMA, A., HONGVANTHONG, B., BREY, P.T., KANO, S., JIMBA, M.
+(2018). Mothers' Opisthorchis viverriniinfection status and raw fish dish
+consumption in Lao People's Democratic Republic: determinants of child infection
+status. Tropical Medicine and Health; 46:29. doi: 10.1186/s41182-018-0112-y.
+
+AUNG, W.P.P., HTOON, T.T., TIN, H.H., THINN, K.K., SANPOOL, O.,,
+JONGTHAWM, J., SADAOW, L., PHOSUK, I., RODPAI, R., INTAPAN, P.M.,
+MALEEWONG, W. (2017). First report and molecular identification of Opisthorchis
+viverrini infection in human communities from Lower Myanmar. PLoS One.
+12(5):e0177130. doi: 10.1371/journal.pone.0177130.
+
+BARDOSH, K., INTHAVONG, P., XAYAHEUANG, S., & OKELLO, A. L. (2014).
+Controlling parasites, understanding practices: the biosocial complexity of a One
+Health intervention for neglected zoonotic helminths in northern Lao PDR. Social
+science & medicine (1982), 120, 215-223.
+https://doi.org/10.1016/j.socscimed.2014.09.030
+
+BALDERIA, P.G. AND BELIZARIO, V.Y. JR. 2012. Review of food-bome trematodiases
+in the Philippines. Acta medica Philippina 46(1):45-53
+
+BELIZARIO JR, V.Y., CIRO, R.N.T., 2020. Liver Flukes. In: Belizario Jr, V.Y., De Leon,
+W.U. (Eds), Medical Parasitology in the Philippines. University of the Philippines
+Press, Diliman, Quezon City. pp. 262-276.
+
+BELIZARIO JR., V.Y., BERSABE, M.J., DE LEON, W.U., HILOMEN, V.Y., PALLER
+V.G., DE GUZMAN A.D. JR, BUGAYON, MG. 2001. "Intestinal
+Heterophyidiasis: an emerging food-borme parasitic zoonosis in southern
+Philippines." Southeast Asian Journal of Tropical Medicine and Public Health 32
+(Suppl 2): 36-42.
+
+BELIZARIO V.Y., JR., DE LEON W.U., BERSABE M.J.J., PURNOMO, BAIRD J.K.,
+BANGS M.J. 2004. A focus of human infection by Haplorchis taichui (Trematoda:
+Heterophyidae) in the southern Philippines. Journal of Parasitology. 90:1165—1169.
+
+BELIZARIO, V.Y. JR. AND DE LEON, W.U. 2015. Medical parasitology in the
+Philippines.
+
+48
+
+BELIZARIO, V.Y. JR, DELOS TRINOS J.P.C., EDUARDO S., GATMAITAN J.K.,
+BERTUSO A., MISTICA M., LUMANGAYA C. (2022). Burden of foodborne
+trematodiases and taeniasis in selected areas in southern Philippines. Phiippine
+Journal of Health Research and Development. Issue 2022 Vol.26 Suppl.1, S40-S50
+
+BINA-DE GUZMAN, A., UY, W. H., GOROSPE, J. G., & OPENIANO, A. E. (2013). A
+fisheries in crisis: Threatened biodiversity and fish production of Lake Mainit,
+northeastern Mindanao. In M. L. C. Aralar, A. S. Borja, A. L. Palma, M. M.
+Mendoza, P. C. Ocampo, E. V. Manalili, & L. C. Darvin (Eds.), LakeCon2011:
+Building on the pillars of Integrated Lake Basin Management (Second National
+Congress on Philippine Lakes) (pp. 314-315). Los Bafios, Laguna, Philippines:
+PCAARRD-DOST.
+
+BUATHONG S, PHAIPHILAI K, RUANG-AREERATE T, SITTHICHOT N, THITA T,
+MUNGTHIN M, SUWANNAHITATORN P. (2020). Genetic Differentiation
+of Opisthorchis-Like Eggs in Northern Thailand Using Stool Specimens Under
+National Strategic Plan to Control Liver Fluke Infection and Cholangiocarcinoma.
+American Journal of Tropical Medicine and Hygiene. Sep;103(3):1118-1124. doi:
+10.4269/ajtmh.20-0231. PMID: 32588808; PMCID: PMC7470534.
+
+CAFFARA, M., GUSTINELLI, A., MAZZONE, A., & FIORAVANTI, M. L. (2020).
+Multiplex PCR for simultaneous identification of the most common European
+Opisthorchiid and Heterophyid in fish or fish products. Food and waterborne
+parasitology, 19, e00081. https://doi.org/10.1016/j.fawpar.2020.c00081
+
+Centers for Disease Control and Prevention (CDC). 2019. Heterophyiasis. Accessed 20
+May 2023 on https://www.cdc.gov/dpdx/heterophyiasis/index.html.
+
+CHAI, J.Y., JUNG, B.K. (2017). Fishbome zoonotic heterophyid infections: an update.
+Food Waterborne Parasitol 8-9:33-63
+
+CHAI, J.Y., JUNG, B.K. (2020). Foodborne intestinal flukes: A brief review of
+epidemiology and geographical distribution. Acta Tropica. 2020 Jan;201:105210.
+doi: 10.1016/j.actatropica.2019.105210. Epub 2019 Oct 7. PMID: 31600520.
+
+CHAIJ.Y., MURRELL K.D., LYMBERY A.J. 2005. Fish-bome parasitic zoonoses: status
+and issues. International Journal of Parasitopgyl.35:1233-1254.
+
+CHAI, J.Y. (2007). Intestinal Flukes. In: Murrell KD, Fried B, editors. Food-borne
+Parasitic Zoonoses: Fish and Plant-borne Parasites. World Class Parasites. Vol. 11.
+New York, USA: Springer;. pp. 53-115.
+
+CHAI, J.Y., SHIN E.H., LEE S.H., RIM H.J. 2009. Foodborne intestinal flukes in
+Southeast Asia. Korean Journal of Parasitology. 47:S69-S 102.
+
+49
+
+CHAI, J.Y. 2013. Praziquantel in treatment of trematode and cestode infections. Journal
+of Infection and. Chemotherapy. 45:32-43.
+
+CHAI, J.Y. 2014. Epidemiology of trematode infections. In: Toledo R., Fried B.,
+editors. Digenetic Trematodes. Vol. 766. Springer. pp. 241-292.
+
+CHAI, J. & JUNG, B. (2020). Foodborne intestinal flukes: A brief review of epidemiology
+and geographical __ distribution. Acta Tropica, 201, 105210-
+-doi:10.1016/j.actatropica.2019.105210 Phylogenetic tree of food borne intestinal
+flukes, including heterophyids.
+
+CHONTANANARTH, T. & WONGSAWAD, C. 2010. Haplorchis taichui Infection of the
+Freshwater Snails and Molecular Identification. Trends research in Science and
+Technology 2(1),7-12.
+
+CLAUSEN, J. H., & MURRELL, D. (2014). Heminth-Nematode: Haplorchis.
+Encvclopedia of Food Safety, 99—103. doi:10.1016/b978-0-12-378612-8.00409-1
+
+DAO, T.T.H., NGUYEN, T.T.G., GABRIEL, S. BUI, K.L., DORNY, P., LE, T.H.
+2017. Updated molecular phylogenetic data for Opisthorchis spp. (Trematoda:
+Opisthorchioidea) from ducks in Vietnam. Parasites Vectors10, 575.
+https://doi.org/10.1186/s13071-017-2514-9
+
+DUNG, D. T., VAN DE, N., WAIKAGUL, J., DALSGAARD, A., CHAI, J., SOHN, W.,
+MURRELL, K. D. (2007). Fishborne Zoonotic Intestinal Trematodes,
+Vietnam. Emerging Infectious Diseases, 13(12), 1828-1833.
+https://doi.org/10.3201/eid1312.070554.
+
+DUELOT, M., SETBON, T., MIDELET, G., BRAUGE, T., & GAY, M. (2021). A review
+of Molecular Identification Tools for the opisthorchioidea. Journal of
+Microbiological Methods, 187, 106258. doi:10.1016/j.mimet.2021.106258
+
+EDUARDO S.L. 2001. Helminth zoonoses in the Philippines: public health problems
+associated with eating habits and practices. Transactions National Academy of
+Science and Technology 23:105-119
+
+EHRHARDT S & BURCHARD GD. (2008). Eosinophilia in returning travelers and
+migrants. Deutsches Arzteblatt international, 105(46), 801-807.
+https://doi.org/10.3238/arztebl.2008.0801
+
+EL-AZAZY O, ABDOU N, KHALIL A, AL-BATEL M, MAJEED Q, HENEDI A, &
+TAHRANI L. (2015). Potential Zoonotic Trematodes Recovered in Stray Cats from
+
+50
+
+Kuwait Municipality, Kuwait. The Korean Journal Of Parasitology, 53(3), 279-287.
+doi: 10.3347/kjp.2015.53.3.279
+
+EL-SEIFY MA, EL-BAHY N M, DESOUKY A Y, & BAZH E K. (2011). ELISA and
+some biochemical tests of heterophyidae infection in laboratory animals.
+Parasitology Research, 110(2), 679-687. doi:10.1007/s00436-011-2541-y
+
+EL-SEIFY MA, SULTAN K, ELHAWARY NM, SATOUR NS, & MAREY NM.
+(2020). Prevalence of heterophyid infection in tilapia fish “Orechromas niloticus”
+with emphasize of cats role as neglected reservoir for zoonotic Heterophyes
+heterophyes in Egypt. Journal of Parasitic Diseases, 45(1), 35-
+42. doi:10.1007/s12639-020-01277-7
+
+FARAHNAK, A., SETODEH, S. & MOEBEDI, I. (2005) A faunistic survey of cercariae
+isolated from Melanoides tuberculata and their role in transmission diseases.
+Archives of Razi Institute, 59, 113 - 119.
+
+FRIED B, & ABRUZZI A. (2010). Food-borne trematode infections of humans in the
+United States of America. Parasitology Research, 106(6), 1263-
+1280. doi:10.1007/s00436-010-1807-0
+
+FURST, T., KEISER, J., & UTZINGER, J. (2012). Global burden of human food-borne
+trematodiasis: a systematic review and meta-analysis. The Lancet. Infectious
+diseases, 12(3), 210-221. https://doi.org/10.1016/S1473-3099(1 1)70294-8
+
+GARCIA, L.S. AND BRUCKNER, D.A. (1997) Diagnostic Medical Parasitology. 3rd
+Edition, ASM Press, Washington DC.
+
+HEGAZY, A. H. A., GALAL, L. A., HASSAN, T. M., & KHALIFA, R. M. A. (2020).
+Reliability of heterophyid antigens in heterologous protection against human
+schistosomiasis. Journal of parasitic diseases : official organ of the Indian Society
+for Parasitology, 44(2), 349-354. https://doi.org/10.1007/s12639-020-01 195-8
+
+HONG S. J. (2000). A human case of Stellantchasmus falcatus infection in Korea. The
+Korean journal of parasitology, 38(1), 25-27.
+https://doi.org/10.3347/kjp.2000.38.1.25
+
+HONG, S.T., & YONG, T. S. (2020). Review of Successful Control of Parasitic Infections
+in Korea. Infection & chemotherapy, 52(3), 427-440.
+https://doi.org/10.3947/ic.2020.52.3.427
+
+HOTEZ, P.J., BUNDY, D.A., BEEGLE, K., BROOKER, S., DRAKE, L., DE SILVA, N.,
+MONTRESOR, A., ENGELS, D., JUKES, M., CHITSULO, L., CHOW, J.,
+LAXMINARAYAN, R., MICHAUD, C., BETHONY, J., CORREA-OLIVEIRA,
+
+51
+
+R., SHUHUA, X., FENWICK, A., SAVIOLI, L., JAMISON, D., BREMAN, J.,
+MEASHAM, A.R., ALLEYNE, G., CLAESON, M., EVANS. D., JHA, P., MILLS,
+A., MUSGROVE, P. (2006). Helminth Infections: Soil-Transmitted Helminth
+Infections and Schistosomiasis. Disease Control Priorities in Developing Countries.
+2 ed. Washington: World Bank.
+
+HUNG, N.M., DUNG, D.T., LAN ANH, N.T.,PHAN TV, THANH BN, NGUYEN VH,
+HOANG VH, LE XC. 2015.Current status of fish-borne zoonotic trematode
+infections in Gia Vien district, Ninh Binh province, Vietnam. Parasites Vectors 8,
+21. https://doi.org/10.1186/s13071-015-0643-6
+
+JOHANSEN, M.V., SITHITHAWORN, P., BERGQUIST, R., UTZINGER, J. 2010.
+Towards Improved Diagnosis of Zoonotic Trematode Infections in Southeast Asia.
+Advances in Parasitology.; 73:171-95.
+
+KEISER J, UTZINGER J. 2009. Food-borne trematodiases. Clinical Microbiology
+Reviews; 22:466.
+
+KATZ, N. (1972). A simple device for quantitative stool thick-smear technique
+in Schistosomiasis mansoni. Revisita do Instituto de Medecina Tropical de. Sao
+Paulo.14:397-400.
+
+KIMT, CHAI, J.Y., CHO S, LEE, S.H., OH, D.K., PARK, Y.K., HUH S, KONG Y, SOHN
+W, & HWANG S., LEE, J.K. (2009). A Nationwide Survey on the Prevalence of
+Intestinal Parasitic Infections in the Republic of Korea, 2004. The Korean Journal
+Of Parasitology, 47(1), 37. doi: 10.3347/kjp.2009.47.1.
+
+LAHMAR, S., ARFA, I., BEN, I. OTHMEN, S., JGUIRIM, W., SAID Y, DHIBI A,
+BOUFANA B. (2017). Intestinal helminths of stray dogs from Tunisia with special
+reference to zoonotic infections. Parasitology Open 3, e18, 1-9. https://doi.org/
+10.101 7/pao.2017.21
+
+LE, T.H., NGUYEN, K.T., NGUYEN, N.T., HUONG, T.D., DO, T.D. (2017). The
+ribosomal transcription units of Haplorchis pumilio and H. taichui and the use of
+28S rDNA sequences for phylogenetic identification of common heterophyids in
+Vietnam. Parasites and Vectors 10:17
+
+LEE, J. J., JUNG, B.K., LIM, H., LEE, M.Y., CHOI, S.Y., SHIN, E.H., & CHAI, J-Y.
+(2012). Comparative morphology of minute intestinal fluke eggs that can occur in
+human stools in the republic of Korea. The Korean journal of parasitology, 50(3),
+207-213. https://doi.org/10.3347/kjp.2012.50.3.207
+
+LIN, R.Q., TANG, J.D., ZHOU, D.H. SONG, H.Q., HUANG, S.Y., CHEN, J.X., CHEN,
+M.X., ZHANG H., ZHU, X.Q., ZHOU, X.N. (2011). Prevalence of Clonorchis
+
+52
+
+sinensis infection in dogs and cats in subtropical southern China. Parasites
+Vectors 4, 180. https://doi.org/10.1186/1756-3305-4-180
+
+MAHDY, O.A., ABDEL-MAOGOOD, S.Z., ABDELSALAM, M., SHALAAN, M.,
+ABDELRAHMAN, H. AND SALEM, M.A. (2021). Epidemiological study of fish-
+borne zoonotic trematodes infecting Nile tilapia with first molecular characterization
+of two heterophyid flukes. Aquaculture Research. 52(9): 4475-4488.
+
+MATIONG, M.S., TALLO, V.L., WILLIAMS, G.M. GORDON, C.A., CLEMENTS, A.,
+MCMANUS D., GRAY, D. 2021. The control of soil-transmitted helminthiases in
+the Philippines: the story continues. Jnfectious Diseases of Poverty 10, 85.
+https://doi.org/10.1186/s40249-021-00870-z
+
+MOENDEG, K. J., LEONARDO, L. R., ISORENA, T.G., HILOTINA, F., PATES, I.S, &
+CACAYORIN, N.O. (2021). Prevalence and spatial distribution of heterophyidiasis
+in Southern Philippines. Acta Tropica, 220, 105940. doi:10.1016/j.actatropica.2021
+
+NGUYEN, T.T.B, DERMAUW, V., DAHMA, H., BUI, D.T., LE, T.T.H., PHI, N.T.T.,
+LEMPEREUR, L., VANDENBERG, O., DO, D.T., DORNY, P. (2020) Prevalence
+and risk factors associated with Clonorchis sinensis infections in rural communities
+in northern Vietnam. PLoS Neglected Tropical Diseases 14(8): 0008483.
+https://doi.org/10.1371/journal.pntd.0008483
+
+HUNG, N., MADSEN, H. & FRIED, B. (2013). Global status of fish-borne zoonotic
+trematodiasis in humans. Acta Parasitologica, 58(3), 231-
+258. https://doi.org/10.2478/s11686-013-0155-5
+
+NISSEN, S., NGUYEN, L.A.T., THAMSBORG, S.M., DALSGAARD, A., JOHANSEN,
+M.V. (2014). Reinfection of Dogs with Fish-Borne Zoonotic Trematodes in Northern
+Vietnam following a Single Treatment with Praziquantel. PLoS Neglected Tropical
+Diseases 8(1): €2625. https://doi.org/10.1371/journal.pntd.0002625
+
+NISSEN, S., THAMSBORG, S.M., KANIA, P.W. LEIFSSON, P., DALSGAARD, A.,
+JOHANSEN, M. 2013. Population dynamics and host reactions in young foxes
+following experimental infection with the minute intestinal fluke, Haplorchis
+pumilio. Parasites Vectors 6, 4 . https://doi.org/10.1186/1756-3305-6-4
+
+NITHIKATHKUL, C., SUJAYANONT, P., PHYO MYINT, E.E., SEREEMASPUN, A.,
+SUANCHAROEN, P., PHALEE, A., NORADEE, S., CHUENKOMOL, S. (2021).
+Fish-borne parasitic zoonosis in lower Mekong Basin countries: Review.
+Microscopy and Microanalysis. Res. 34, 1-8.
+
+OWADA, K., LAU, C.L., LEONARDO, L., CLEMENTS, A.C.A., YAKOB, L.,
+NIELSEN, M., CARABIN, H., MAGALHAES, R.J.S. 2018. Spatial distribution and
+
+53
+
+populations at risk of A. lumbricoides and T. trichiura co-infections and infection
+intensity classes: an ecological study. Parasites Vectors11, 535.
+https://doi.org/10.1186/s13071-018-3107-y
+
+PAN AMERICAN HEALTH ORGANIZATION (PAHO). 2003. Zoonoses and
+communicable diseases common to man and animals. Third ed, 3(2), p.128
+
+PARIJA, SUBHASH ,C., MARRIE, THOMAS, J., KOIRALA, SHEKHAR. 2003.
+"Trematode Infection." eMedicine Journal 4/4. Accessed May 3, 2004
+<http://author.emedicine.com/MED/topic2301.htm>.
+
+PASARIBU A.P., ALAM A., SEMBIRING K. PASARIBU, S., SETIABUDI. D
+(2019).. Prevalence and risk factors of soil-transmitted helminthiasis among school
+children living in an agricultural area of North Sumatera, Indonesia. BMC Public
+Health 19, 1066. https://doi.org/10.1186/s12889-019-7397-6
+
+PHAN, V. T., ERSBOLL, A. K., DO, D. T., & DALSGAARD, A. (2011). Raw-Fish-
+Eating Behavior and Fishborne Zoonotic Trematode Infection in People of Northern
+Vietnam. Foodborne Pathogens and Disease, 8(2), 255—
+260. doi:10.1089/fpd.2010.0670
+
+QIAN, M. B., CHEN, Y. D., LIANG, S., YANG, G. J., & ZHOU, X. N. (2012). The global
+epidemiology of clonorchiasis and its relation with cholangiocarcinoma. Infectious
+diseases of poverty, 1(1), 4. https://doi.org/10.1186/2049-9957-1-4
+
+ROMERO-ALVAREZ, D., VALVERDE-MUNOZ, G., CALVOPINA, M., ROJAS, M.,
+CEVALLOS, W., KUMAZAWA, H., TAKAGI, H., SUGIYAMA, H. (2020) Liver
+fluke infections by Amphimerus sp. (Digenea: Opisthorchiidae) in definitive and fish
+intermediate hosts in Manab‘1 province, Ecuador. PLoS Neglected Tropical Diseases
+14(6): e0008286. https://doi. org/10.1371/journal.pntd.0008286
+
+SADAOW, L., RODPAI, R., JANWAN, P., BOONROUMKAEW, P., SANPOOL, O.,
+THANCHOMNANG, T., YAMASAKI, H., ITTIPRASERT, W., MANN, V.H.,
+BRINDLEY, P.J., MALEEWONG, W., INTAPAN, P.M. 2022. An Innovative Test
+for the Rapid Detection of Specific IgG Antibodies in Human Whole-Blood for the
+Diagnosis of Opisthorchis viverrini Infection. Tropical Medicine and Infectious
+Disease. 7(10):308. https://doi.org/10.3390/tropicalmed7 100308
+
+SAIJUNTHA, W., ANDREWS, R.H., SITHITHAWORN, P., PETNEY, T.N. 2022.
+Current assessment of the systematics and population genetics of Opisthorchis
+viverrini sensu lato (Trematoda: Opisthorchiidae) and its first intermediate host
+Bithynia siamensis sensu lato (Gastropoda: Bithyniidae) in Thailand and Southeast
+Asia. Infection, Genetics and Evolution. 397:105182. doi:
+10.1016/j.meegid.2021.105182. Epub 2021 Dec 10. PMID: 34902557.
+
+54
+
+SANTOS, C.P., & BORGES, J.N. (2020). Current Knowledge of Small Flukes (Digenea:
+Heterophyidae) from South America. The Korean Journal of Parasitology, 58, 373 -
+386.
+
+SATO, M., PONGVONGSA, T., SANGUANKIAT, S., YOONUAN, T., DEKUMYOY,
+P., KALAMBAHETI, T., KEOMOUNGKHOUN, M., PHIMMAYOI, I., BOUPHA,
+B., MOJI, K. AND WAIKAGUL, J. (2010). Copro-DNA diagnosis of Opisthorchis
+viverrini and Haplorchis taichui infection in an endemic area of Lao PDR. Southeast
+Asian Journal of Tropical Medicine and Public Health, 41(1), 28.
+
+SITHITHAWORN, P., ANDREWS, R. H., NGUYEN, V. D., WONGSAROJ, T.,
+SINUON, M., ODERMATT, P., NAWA, Y., LIANG, S., BRINDLEY, P. J., &
+SRIPA, B. (2012). The current status of opisthorchiasis and clonorchiasis in the
+Mekong Basin. Parasitology international, 61(1), 10-16.
+https://doi.org/10.1016/j.parint.2011.08.014
+
+SKOV, J., KANIA, P. W., DALSGAARD, A., JORGENSEN, T. R. & BUCHMANN, K.
+(2009) Life cycle stages of heterophyid trematodes in Vietnamese freshwater fishes
+traced by molecular and morphometric methods. Veterinary Parasitology, 160, 66 -
+75.
+
+SUN, J., XU, J., LIANG, P., MAO, Q., HUANG, Y. LV, X., DENG, C., LIANG, C.,
+HOOG, G.S., YU, X. 2011. Molecular identification of Clonorchis sinensis and
+discrimination with other opisthorchiid liver fluke species using multiple Ligation-
+depended Probe Amplification (MLPA). Parasites Vectors 4, 98.
+https://doi.org/10.1186/1756-3305-4-98
+
+TANGKAWATTANA, S., & TANGKAWATTANA, P. (2018). Reservoir animals and
+their roles in transmission of Opisthorchis viverrini. Asiatic Liver Fluke - From Basic
+Science to Public Health, Part A, 69-95.
+https://doi.org/10.1016/bs.apar.2018.05.003
+
+TEIMOORI, S., MOWLAVI, G., ARIMATSU, Y., SRIPA, B., MOBEDI, I.,
+SHARIFDINI, M., MASSOUD, J., NADDAF, S.R. 2019. Infection of the Jackal
+(Canis aureus) by Haplorchis taichui (Trematoda: Heterophyidae) in Southwestern
+Iran: A Clue for Potential Human Infection. [ran Jounal of Parasitology.;14(1):120-
+126.
+
+THAENKHAM, U., BLAIR, D., NAWA, Y., WAIKAGUL, J. 2011. Families
+Opisthorchiidae and Heterophyidae: Are they distinct? Parasitology
+International;61:90-3.
+
+THAENKHAM, U., PHUPHISUT, O., PAKDEE, W., HOMSUWAN, N., SA-
+NGUANKIAT, S., WAIKAGUL, J., DUNG, D.T. (2011). Rapid and simple
+
+55
+
+identification of human pathogenic heterophyid intestinal fluke metacercariae by
+PCR-RFLP. Parasitology International, 60(4), 503-
+506. doi:10.1016/j.parint.2011.09.0
+
+THINKHAMROP, K., KHUNTIKEO, N., LAOHASIRIWONG, W., CHUPANIT, P.,
+KELLY, M., SUWANNATRAI, A.T. (2021). Association of comorbidity
+between Opisthorchis viverrini infection and diabetes mellitus in the development of
+cholangiocarcinoma among a high-risk population, northeastern Thailand. PLoS
+Neglected Tropical Diseases 15(9): 0009741.
+https://doi.org/10.1371/journal.pntd.0009741
+
+TUBANGUI, M.A, AND AFRICA, C.M. (1938). The systematic position of some
+trematodes-reported from the Philippines. Philippine Journal of Science 67:117-125
+
+TURNER, H.C., BETTIS, A.A., DUNN, J.C., WHITTON, J.M., HOLLINGSWORTH,
+T.D., FLEMING, F.M., & , R.M. (2017). Economic Considerations for Moving
+beyond the Kato-Katz Technique for Diagnosing Intestinal Parasites As We Move
+Towards Elimination. Trends in parasitology, 33(6), 435-443.
+https://doi.org/10.1016/j.pt.2017.01.007
+
+VASQUEZ-COLET, A., AFRICA, C.M. (1940). Morphological studies on various
+Philippine heterophyid metacercariae with notes on the incidence, site, and degree of
+metacercarial infection in three species of marine fish. Philippine Journal of Science
+72:395-41
+
+WANG, N., TANG, B., HAO, Y. BAI X, WANG X, LIY, YANG Y, LIS, HAO S, WANG
+X, LIU M, LIU X. 2019. Acute shock caused by Clonorchis sinensis infection: a case
+report. BMC Infectious Diseases 19, 1014. https://doi.org/10.1186/s12879-019-
+4644-5
+
+WAIKAGUL, J., & THAENKHAM, U. (2014). Molecular Systematics of Fish-Borne
+Trematodes. Approaches to Research on the Systematics of Fish-Borne Trematodes,
+61-76. doi:10.1016/b978-0-12-407720-1.00005-4
+
+WONGSAWAD, C., NANTARAT, N., WONGSAWAD,, P., BUTBOONCHOO, P.,
+CHAI, J. (2019) Morphological and molecular identification of Stellantchasmus
+Dermogenysi n. sp. (Digenea: Heterophyidae) in Thailand. The Korean Journal of
+Parasitology, 57(3), pp. 257-264. Available at:
+https://doi.org/10.3347/kjp.2019.57.3.257.
+
+XU, M., JIANG, Y., YIN, J., CAO, S., SHEN, Y., & CAO, J. (2021). Risk Factors
+for Clonorchis sinensis Infection in Residents of Binyang, Guangxi: A Cross-
+Sectional and Logistic Analysis Study. Frontiers in public health, 9, 588325.
+https://doi.org/10.3389/fpubh.202 1.588325
+
+55
+
+identification of human pathogenic heterophyid intestinal fluke metacercariae by
+PCR-RFLP. Parasitology International, 60(4), 503-
+506. doi:10.1016/j.parint.201 1.09.0
+
+THINKHAMROP, K., KHUNTIKEO, N., LAOHASIRIWONG, W., CHUPANIT, P.,
+KELLY, M., SUWANNATRAI, A.T. (2021). Association of comorbidity
+between Opisthorchis viverrini infection and diabetes mellitus in the development of
+cholangiocarcinoma among a high-risk population, northeastern Thailand. PLoS
+Neglected Tropical Diseases 15(9): 0009741.
+https://doi.org/10.1371/journal.pntd.0009741
+
+TUBANGUI, M.A, AND AFRICA, C.M. (1938). The systematic position of some
+trematodes-reported from the Philippines. Philippine Journal of Science 67:117-125
+
+TURNER, H.C., BETTIS, A.A., DUNN, J.C., WHITTON, J.M., HOLLINGSWORTH,
+T.D., FLEMING, F.M., & , R.M. (2017). Economic Considerations for Moving
+beyond the Kato-Katz Technique for Diagnosing Intestinal Parasites As We Move
+Towards Elimination. Trends in parasitology, 33(6), 435-443.
+https://doi.org/10.1016/j.pt.2017.01.007
+
+VASQUEZ-COLET, A., AFRICA, C.M. (1940). Morphological studies on various
+Philippine heterophyid metacercariae with notes on the incidence, site, and degree of
+metacercarial infection in three species of marine fish. Philippine Journal of Science
+72:395-41
+
+WANG, N., TANG, B., HAO, Y. BAIX, WANG X, LI Y, YANG Y, LIS, HAO S, WANG
+X, LIU M, LIU X. 2019. Acute shock caused by Clonorchis sinensis infection: a case
+report. BMC Infectious Diseases 19, 1014. https://doi.org/10.1186/s12879-019-
+4644-5
+
+WAIKAGUL, J., & THAENKHAM, U. (2014). Molecular Systematics of Fish-Borne
+Trematodes. Approaches to Research on the Systematics of Fish-Borne Trematodes,
+61-76. doi:10.1016/b978-0-12-407720-1.00005-4
+
+WONGSAWAD, C., NANTARAT, N., WONGSAWAD,, P., BUTBOONCHOO, P.,
+CHAI, J. (2019) Morphological and molecular identification of Stellantchasmus
+Dermogenysi n. sp. (Digenea: Heterophyidae) in Thailand. The Korean Journal of
+Parasitology, 57(3), pp. 257-264. Available at:
+https://doi.org/10.3347/kjp.2019.57.3.257.
+
+XU, M., JIANG, Y., YIN, J., CAO, S., SHEN, Y., & CAO, J. (2021). Risk Factors
+for Clonorchis sinensis Infection in Residents of Binyang, Guangxi: A Cross-
+Sectional and Logistic Analysis Study. Frontiers in public health, 9, 588325.
+https://doi.org/!10.3389/fpubh.2021.588325
+
+56
+
+ZAJAC, A.Z., CONBOY, G.A. 2012. Veterinary Clinical Parasitology 8th Edition, 8-11.

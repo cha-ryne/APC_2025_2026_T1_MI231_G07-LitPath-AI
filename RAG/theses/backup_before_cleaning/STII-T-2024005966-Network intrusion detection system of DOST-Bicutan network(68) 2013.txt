@@ -1,0 +1,850 @@
+Network Intrusion Detection System of DOST-Bicutan Network
+
+MARLON DAVE S. REGOSO
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+MASTER IN INFORMATION TECHNOLOGY
+
+April 2013
+
+Abstract
+
+This project focused on open source tools to implement network intrusion
+detection system for DOST. Open source network intrusion detection systems like Snort,
+OSSEC, Suricata and Prelude were tested and evaluated using open source network
+intrusion detection testing tools like Pytbull, Scapy, Netcat, Hping, Nmap, Tepdump,
+Hydra and Apachebench. Installation procedures were presented for the readers to be
+guided accordingly for future use. Test simulations were done to evaluate the system for
+its usage, functionality and ability to detect network intruder. Using the selected open
+source network intrusion detection system’s ability to detect intruder, functionality, rules
+and database, a system was developed that shows a graphical representations of network
+intruders. Developed network intrusion detection system for DOST-Bicutan was tested
+using apachebench for its functionality. As a result, the experience gained from this
+endeavor can also be used to help other government agencies to review and assess their own network security.
+
+I. The Problem Domain
+
+A, Statement of the Problem
+
+As information systems have become more comprehensive and become a higher
+value asset of organizations, network intrusion detection systems have been available to
+the market. Although there are many vendors in the field, each with its own strategy for
+detecting network intruders, they are too focused on the equipment and appliance they
+sell. Thus, not all government agencies have enough budgets to purchase that equipment.
+
+Monitoring of a network intruder is rarely practiced in the local industry
+especially in the government sector. Department of Science and Technology (DOST) as.
+one of the leading agencies in the field of technology has never implemented network
+intrusion system in its infrastructure in Bicutan area. With the recent events and the rise
+of government web sites being defaced by unscrupulous intruders, it is time that the
+department reviews its own policies, strategies and security implementation in its own
+infrastructure.
+
+Intrusion detection involves determining that some entity, an intruder, has
+attempted to gain, or worse, has gained unauthorized access to the system. Intruders are
+classified into two groups. External intruders who do not have any authorized access to
+the system they attack. Internal intruders who have at least some authorized access to the
+
+system. Internal intruders are further subdivided into the following three categories "),
+
+1|Page
+
+1.Masqueraders - mere external intruders who have succeeded in gaining access
+
+to the system and are acting as an authorized entity.
+
+2. Legitimate intruders (misfeasor) - have access to both the system and the data
+
+but misuse this access.
+
+3. Clandestine intruders - have or have obtained supervisory (root) control of the
+
+system and as such can either operate below the level of auditing or can use
+the privileges to avoid being audited by stopping, modifying, or erasing the
+
+audit records.
+
+B. Background and Objectives of the Project
+
+The general objective of this project is to develop network intrusion detection
+
+system using open source tools that are available in the market. The said project will act
+
+as a monitoring tool to alert the network and system administrators of DOST-Bicutan and
+
+can also be a help to other government agencies to monitor their own network
+
+infrastructure. The following are the specific objectives of the project to:
+
+1.
+
+design and develop network intrusion detection system using open source
+
+tools available in the market;
+
+. develop a system that displays real-time network traffic of network intruders;
+
+and
+
+. inform the administrator regularly the summary of recorded malicious activity
+
+using open source tool.
+
+2| Page
+
+C. Significance and Scope of the Project
+
+The internet is a medium for fast, efficient communication and interchange of
+ideas. However, the limitless opportunities of the internet comes hand-in-hand with the
+risks of people who take malicious advantage of the openness of the internet. Enterprise
+networked systems are inevitably exposed to the increasing threats posed by hackers as
+well as malicious internal users in the network. With DOST-Bicutan network comprising,
+of twelve (12) autonomous local area networks interconnected together using fiber and
+wireless technology, it is very vulnerable with attacks from the outside and inside of its
+network. This project offers a new way to keep the infrastructure safeguarded from
+
+network intruders.
+
+D. Documentation of Existence and Seriousness of the Problem
+Many reports show defacing of government websites in the Philippines is on the
+tise, adding to the conflict between China and Philippines over Panatag shoal, Recto bank
+and Spratly islands adds to the problem. Intruding a network to have access over its
+network resources is the key in defacing those websites. According to ABS-CBN online
+news, government websites in the Philippines and China were defaced by hackers "!!218_
+Figure 1 shows a screenshot of a Chinese government website defaced by Anonymous
+Butuan "!_ Figure 2 shows a screenshot of a Philippine government website that belongs
+
+to DOST-PAGASA that is defaced by Team X-Fuck "!, Figure 3 shows a screenshot of a
+
+Philippine website that belongs to Colegio San Agustin that is defaced by Chinese ",
+
+3| Page
+
+Figure 1. Screenshot of a Chinese government website defaced by Anonymous Butuan.
+
+Ser Meer Genet Ie BO
+altars
+Dewmetticcindbemied ——Mamupsndaarrely
+
+ached Net wet Team fick Es GHVTE6@aa cen!
+
+Figure 2. Screenshot of a Philippine government website that belongs to DOST-PAGASA that
+is defaced by Team X-Fuck.
+
+Figure 3. Screenshot of a Philippine website that belongs to Colegio San Agustin that is
+defaced by Chinese.
+4|Pa
+
+
+With the Cybercrime law being implemented, many Filipinos use social
+networking sites like Twitter and Facebook to show their protest against the said law. But
+hackers have their own way of expressing their protest. They hacked and defaced several
+Philippine government websites to show that they are against the said law, thinking that
+in that way, their online voices can be heard. According to ABS-CBN online news,
+government and private websites in the Philippines were defaced by hackers as part of
+their protest to the anti-cybercrime law "ll. Figure 4 shows a screenshot of Philippine
+government and private websites that belongs to Bangko Sentral ng Pilipinas (BSP),
+Metropolitan Waterworks and Sewerage System (MWSS) and American Chamber of
+Commerce in the Philippines that were defaced by Anonymous Philippines “!. Figure 5
+
+shows a screenshot of Senator Tito Sotto’s website defaced by Anonymous Philippines
+
+15}
+
+Figure 4. Screenshot of Philippine government and private websites that belongs to Bangko
+‘Sentral ng Pilipinas (BSP), Metropolitan Waterworks and Sewerage System (MWSS) and
+American Chamber of Commerce in the Philippines that were defaced by Anonymous
+Philippines.
+5|Page
+
+Figure 5. Screenshot of Senator Tito Sotto’s website defaced by Anonymous Philippines.
+
+ll. Review of Existing Alternatives
+
+Firewall technology has not been able to successfully safeguard private data.
+Firewalls do a great job to filter or mask ports on a host system. However, most
+companies must open ports on their firewalls to provide web, email, FTP, domain name
+(DNS) and other services. As soon as an administrator opens ports on their firewall then
+those ports are no longer protected. A good analogy would be to lock every window in
+your house with the back door, the basement door, the sliding family room door; even the
+pet door locked, but leaves the front door open. Everything is very secure except the front
+door. An attacker would have little problem compromising your home. Leaving the front
+door open does not mean you cannot safeguard your house. You can monitor the people
+who enter and exit your door by logging their every move in your house while looking
+
+for any malicious activity.
+
+6|Page
+
+In the network side, implementing network intrusion detection system gives
+additional security to the network as it safeguards your network. Monitoring network
+intruders can be monitored through the use of network intrusion detection system. There
+are many ways to acquire network intrusion detection system. One way is to procure, as
+network intrusion detection system has many vendors, each with its own strategy for
+detecting network intruders and features but with the price on its side. Selecting an
+Intrusion Prevention System (IPS) can be a daunting task. While an independent
+assessment of available solutions is strongly recommended as a best practice before
+procurement and deployment, a good place to start a research effort is to look at the
+market leaders and to compare their offerings. According to Infonetics Research ""!,
+Cisco ranked highest among six top selling IPS solution providers -- the other five
+suppliers being McAfee, Juniper, IBM, Sourcefire and TippingPoint - based on
+assessments performed by large organizations on eight selection criteria, ranging from
+value and pricing to technology and the product's roadmap for the future. These same six
+providers also rank highest in terms of their effectiveness on the latest Gartner report,
+although Cisco and IBM are considered to be challengers to the market led by the other
+
+four vendors.
+
+7|Page
+
+Ill. Approach taken in this subject
+
+A. Theoretical Framework
+
+Intrusion attacks usually follow a logical sequence of events. The intruder will try
+first to discover as much public information (such as domain name, DNS tables, machine
+names, and FTP sites) about a network as possible without risking detection. Next, the
+intruder will attempt to scan for more information, run utilities, look for CGI scripts, ping
+to get machine status, etc. By the end of this stage, the intruder will know the operating
+system and applications running on the victim’s network. Once an intruder gets access to
+a user account or a machine, he/she tries to exploit possible vulnerabilities of the system
+by sending commands to CGI scripts, or malicious data to buffer-overrun holes. At this
+stage, the hacker may be able to gain control of the machine, and even crash the system.
+On gaining a foothold on a network, the intruder will cover tracks of the attack to delay
+discovery and install tools that displace the normal functioning of the system or vandalize
+the site, before moving to other connected networks. Enterprises are increasingly looking
+at tools that detect network security breaches to alert and protect networks from intrusion
+attacks. Detection is possible through Intrusion Detection System right from the time the
+intruder probes and tries to scan for information. Intrusion detection systems successfully
+detect and trap attacks at a premature stage and help enterprises avoid disruption in their
+
+systems and costs associated with the likely damage of successful attempts.
+
+8|Page
+
+B. Rationale for the framework
+
+Implementing an open source based Network Intrusion Detection System (NIDS)
+provides the DOST-Bicutan network the advantage of having a low cost system that can
+also provide the same ability and usage compared to other equipment-based NIDS in the
+
+market.
+
+C. Technologies used
+
+Implementing network intrusion detection system for DOST-Bicutan network was
+developed through the use of available open source operating system, open source
+network intrusion detection system and open source network intrusion detection tools in
+the market.
+
+Open source operating system Ubuntu 12.04 LTS server was used. Ubuntu is an
+ancient African word meaning ‘humanity to others’. It also means 'I am what I am because
+of who we all are’. The Ubuntu operating system brings the spirit of Ubuntu to the world
+of computers. Ubuntu is a computer operating system based on the Debian Linux
+distribution and distributed as free and open source software, using its own desktop
+environment. Ubuntu is hugely popular on Amazon's EC2 and Rackspace's Cloud, and is
+pre-installed on computers from Dell, Lenovo and other global vendors "71,
+
+Open source network intrusion detection systems like Snort, Suricata, OSSEC and
+
+Prelude was tested and evaluated for the development of DOST-NIDS.
+
+9|Page
+
+1. Snort is an open source network intrusion prevention and detection system
+(IDS/IPS) developed by Sourcefire. Combining the benefits of signature,
+protocol, and anomaly-based inspection, Snort is the most widely
+deployed IDS/IPS technology worldwide 9),
+
+2. Suricata is an open source Next Generation Intrusion Detection and
+Prevention Engine. This engine is not intended to just replace or emulate
+the existing tools in the industry, but will bring new ideas and
+technologies to the field #"!.
+
+3. OSSEC is anOpen Source Host-based Intrusion Detection System. It
+performs log analysis, integrity checking, Windows registry monitoring,
+rootkit detection, real-time alerting and active response. It runs on most
+operating systems, including Linux, OpenBSD, FreeBSD, Mac OS X,
+Solaris and Windows ™,
+
+4, Prelude is a Universal "Security Information & Event Management"
+(SIEM) system. Prelude collects, normalizes, sorts, aggregates, correlates
+and reports all security-related events independently of the product brand
+
+or license giving rise to such events; Prelude is "agentless" !"8),
+
+Open source network intrusion detection systems were tested using network
+intrusion detection testing tools such as; pytbull, scapy, netcat, hping, nmap, tcpdump,
+
+hydra and apachebench to test the detection capabilities of the NIDS.
+
+10|Page
+
+1. Pytbull is an Intrusion D etection/Prevention System (IDS/IPS) Testing
+Framework for Snort, Suricata and any IDS/IPS that generates an alert
+file. It can be used to test the detection and blocking capabilities of an
+IDS/IPS and to validate config "*!,
+
+2. Scapy is a powerful interactive packet manipulation program. It is able to
+forge or decode packets of a wide number of protocols, send them on the
+wire, capture them, match requests and replies, and much more. It can
+easily handle most classical tasks like scanning, tracerouting, probing, unit
+tests, attacks or network discovery (it can replace hping, 85% of nmap,
+arpspoof, arp-sk, arping, tcpdump, tethereal, pOf, etc.) '2),
+
+3. Netcat is a feature-packed networking utility which reads and writes data
+across networks from the command line. It uses both TCP and UDP for
+communication and is designed to be a reliable back-end tool to instantly
+provide network connectivity to other applications and users. Neat will not
+only work with IPv4 and IPv6 but provides the user with a virtually
+limitless number of potential uses '“),
+
+4. Hping is a command-line oriented TCP/IP packet assembler/analyzer. The
+interface is inspired to the ping(8) unix command, but hping isn't only able
+to send ICMP echo requests. It supports TCP, UDP, ICMP and RAW-IP
+protocols, has a traceroute mode, the ability to send files between a
+
+covered channel, and many other features ""!,
+
+11|Page
+
+5. Nmap is an open source tool for network exploration and security
+auditing. It was designed to rapidly scan large networks, although it works
+fine against single hosts. Nmap uses raw IP packets in novel ways to
+determine what hosts are available on the network, what services
+(application name and version) those hosts are offering, what operating
+systems (and OS versions) they are running, what type of packet
+filters/firewalls are in use, and dozens of other characteristics"),
+
+6. Tepdump a powerful command-line packet analyzer; and libpcap, a
+portable C/C++ library for network traffic capture 61,
+
+7. Hydra is a very fast network logon cracker which supports many different
+services. It is a paralyzed login cracker which supports numerous
+protocols to attack. New modules are easy to add, beside that, it is flexible
+and very fast 8),
+
+8. ApacheBench is a tool for benchmarking your Apache Hypertext Transfer
+Protocol (HTTP) server. It is designed to give you an impression of how
+your current Apache installation performs. This especially shows you how
+
+many requests per second your Apache installation is capable of serving
+
+16),
+
+12|Page
+
+IV. Project Methodology
+
+A. Concept
+
+The landscape of securing network infrastructure is different from the landscape
+of just five years ago. Companies are more connected than ever, with the promise that
+network expansion will only continue. As a result, companies have to keep up with how
+to keep their network safe, without sacrificing growth, productivity and services offered.
+
+Virtually, the first step of an organization takes to be protected from the internet is
+to install a firewall with good reasons. A firewall is used to help keep a network secure.
+Its primary objective is to control the incoming and outgoing network traffic by analyzing
+the data packets and determining whether it should be allowed through or not, based on a
+predetermined rule set.
+
+A network's firewall builds a bridge between an internal network that is assumed
+to be secured and trusted, and another network, usually an external network, such as the
+Internet, that is assumed not secured and trusted. It acts as a perimeter guard for a
+network, determining what traffic to allow or deny in and out. A firewall does this by
+applying a policy, comprised of “accept” and “deny” rules, and based on various criteria,
+such as a source, destination and protocols. By providing access control, firewalls do a
+good job of providing the first layer of defense. Most firewall polices allow protocols that
+
+enable organizations to do business on the Internet, such as SMTP, FTP, HTTP, SMTP.
+
+13|Page
+
+and DNS, and keep out traffic that may pose a threat to the internal systems. Figure 6
+
+shows a typical network safeguarded by firewall.
+
+Figure 6. Typical network safeguarded by a firewall.
+
+The second layer of defense is to detect the presence of attacks within the traffic
+
+allowed to flow within the network and to protect the network from those attacks. The
+
+14|Page
+
+most common belief today is that a Network Intrusion Detection System (NIDS) can
+protect an organization from these attacks. Unfortunately, the current DOST-Bicutan
+network does not have this system as an additional layer of defense from intruders.
+Figure 7 shows a typical network safeguarded by firewall with network intrusion
+
+detection system passively monitoring allowed traffic.
+
+Figure 7. Typical network safeguarded by firewall with network intrusion detection system
+passively monitoring allowed traffic.
+
+15|Page
+
+B. Methods
+
+In implementing the Network Intrusion Detection System (NIDS) for DOST,
+
+Ubuntu 12,04 LTS server as the operating system was used.
+
+1. Selecting Open Source NIDS for Developing DOST-NIDS
+
+In selecting what network intrusion detection system to be used, open source
+network intrusion detection systems available in the market were tested. Network
+intrusion detection systems like Snort, Suricata, OSSEC and Prelude were tested
+individually using open source network intrusion detection testing tools such as; Pytbull,
+Scapy, Netcat, Hping, Nmap, Tepdump, Hydra and Apachebench to test their ability to
+detect intruders. Figure 8 shows the process on how the open source network intrusion
+
+detection system was selected.
+
+(Gathering of open Installation of
+source network ‘open source
+
+Intrusion networkintrusion ‘Opensource
+detection systems || detection systems Network
+
+Testing open peat
+
+Snort, Suricata, Snort, Suricata, source Detection
+‘OSSECand OSSECand Prelude network
+Intrusion
+
+detection
+Tnstallation oF systems
+
+opensource usingopen
+intrusion networkintrusion ‘source
+detection testing detection testing. network
+tools tools intrusion
+detection
+Pytbull Scapy, Pytbull, Seapy, testing tools
+Neteat, Hing,
+Nmap, Ieadump,
+Hydra,
+ApacheBench
+
+DOST-NIDS
+
+Figure 8. Process on how the open source network intrusion detection system was selected.
+16|Page
+
+In evaluating open source NIDS, it was deployed passively monitoring the DMZ
+network of DOST-Central office. Attack generator-1 and attack generator-2 were placed
+on different sides of the firewall to attack the target host in the DMZ network. While the
+NIDS was placed in the DMZ network, its ethO was passively monitoring the mirrored
+port of the target host. The performance of the open source NIDS was tested according to
+its ability to identify as many attacks as possible. Figure 9 shows where the two attack
+generators, target host and network intrusion detection system were deployed during the
+
+tests.
+
+Bicutan Router
+Gi 10 Mbps
+a
+(—<7 jICom
+
+10 Mbps
+
+‘Attack
+Generator (1)
+
+Attack
+Generator (2)
+
+Figure 9. Locations of the two attack generators, target host and network intrusion detection
+system during the tests.
+
+17|Page
+
+2. Evaluating Developed DOST-NIDS
+
+After selecting which open source NIDS to be used, its ability to detect intruder,
+functionality, rules and database was used to create a system that shows a graphical
+representations of network intruders. Figure 10 shows that process on how DOST-NIDS
+
+was developed and tested.
+
+Using its ability
+todetect
+
+Selected open
+source
+
+Developed
+
+network intruders, funct DOST-NIDS
+intrusion ionsand data wastested
+detection base, adash using open ee
+system was [f board was source
+installed and developedto F network
+deployedto display the intrusion
+where itwill overview of its detection
+serveas network testing tools
+
+DOST-NIDS intruders
+
+Figure 10. Process on how the DOST-NIDS was developed and tested.
+
+In evaluating selected open source NIDS, it was deployed passively monitoring
+the DMZ network of DOST - Central Office. Attack generator-1 and attack generator-2
+were placed on different sides of the firewall to attack the target host in the DMZ
+network. The management port is placed facing the local area network of DOST-CO as to
+lessen the possibility of the system being compromised by intruders. One port monitors
+the DMZ network and the other one monitors ports connected to other agencies as to
+
+monitor the mirrored ports on both switches.
+
+18|Page
+
+Testing the ability of DOST-NIDS to detect intruder was tested using open source
+network intrusion detection tool. ApacheBench was used to test as it was successful in
+intruding and in the same way was detected by Snort while evaluating which open source
+NIDS to be used. Six target host were intruded which includes: one (1) from DMZ switch
+of DOST-ITD, one (1) from TAPI, one (1) from FNRI, one (1) from PTRI, one (1) from
+MIRDC and one (1) from STI. They were intruded by two (2) Attack generators. Figure
+11 shows the location of the six target hosts, two attack generators and DOST-NIDS
+
+during the test.
+
+DOST-Bicutan Network
+
+CE >— Bicutan Router DOSTTO CENTRAL OFFICE
+PLOT
+
+10 Mbps —
+10 Mbps
+snerator-1 =
+lal MIRDC
+C <
+fS SSost
+E = Res Rae
+coer WS sm
+eae
+ote a
+Bio cRo &
+pis a
+vonrsS f=
+vor coe owe @
+QMersore
+
+Figure 11. Locations of the six target hosts, two attack generators and DOST-NIDS during the
+tests.
+
+19|Page
+
+C. User testing and project assessment
+
+In assessing the DOST-NIDS developed, the management port of the network
+intrusion detection system is placed facing the LAN of DOST-CO. One port monitors the
+DMZ network and the other port monitors ports connected to other agencies as to monitor
+the mirrored ports on both switches. Testing its ability to detect network intruders in
+DMZ network and local area network of attached agencies, attack generators 1 and 2
+were placed on different sides of the firewall to attack the target hosts in DMZ, TAPI,
+
+FNRI, PTRI, MIRDC and STII (see Figure 11).
+
+V. Results and Discussions
+
+A. Selecting Open Source NIDS for Developing DOST-NIDS
+
+Pytbull
+
+Running Pytbull to test the ability of an open source NIDS to detect an intruder
+was a fail. After so many researches over the internet and using various installations
+process and configuration ended up only giving error on my side. The error message was:
+
+Error: FTP error, 550 failed to open file.
+
+20|Page
+
+Scapy
+
+Testing open source NIDS using scapy is not an easy task. If creating a rule to
+inspect intrusion from Scapy is easy, configuring Scapy is another story. After so many
+hours figuring what are the errors in lines on given files, I only ended up receiving error.
+
+The error message was: AttributeError: 'str’ object has no attribute ‘route!
+
+Netcat
+In using Netcat to test the ability of open source NIDS to detect intruder, Netcat
+successfully used its applications without even being detected by any of the NIDS. Netcat
+
+applications used are: http client, remote terminal, port scanning and file transfer.
+
+Hping
+
+Attacking open source NIDS using Hping did not record any intrusion. But with
+so many attempts to have a decent registered attack detected, I ended up hanging up the
+server every time I run the command either I was using the attack generator-1 or attack
+
+generator-2 attacking the NIDS server or the target host.
+
+Nmap
+
+In testing NIDS using Nmap, only Snort detected intrusion. Both Suricata and
+OSSEC did not record any intruder alert. Prelude is not included in the chart because of
+failure to install. Test result shows that using attack generator 2 produces more alert
+
+compared to attack generator 1. And attacking target host detects more intrusion alert
+
+21|Page
+
+compared when directly targeting the NIDS server. Figure 12 shows the number of
+registered attacks detected by open source NIDS using two attack generators attacking
+
+one host and NIDS server using Nmap.
+
+Attack Geni (NIDS)
+
+q 3000, ‘Attack Geni (Host) |
+1500 ‘Attack Gen’ (NIDS)
+
+= Attack Gent (NIDS)
+Snort Suricata ossec Attack Geni (Host) |
+
+= Attack Gen? (NIDS) |
+Attack Gen? (Host)
+
+Network intrusion Detection System
+
+Figure 12. Number of registered attacks detected by open source NIDS using two attack
+generators attacking one host and NIDS server using Nmap.
+
+Tepdump
+Sending hundreds of thousands of packets every test using attack generator-1 and
+
+attack generator-2 attacking NIDS and the target host generated no attacks detected. But
+running on attack generator-1 and attack generator-2 at the same time, the server hangs
+
+up for a while.
+
+Hydra
+There are many installation manuals of Hydra available in the internet, but
+unfortunately every manual that I have used to install Hydra did not work. Either the
+
+repository is not available or the tar file is not available.
+22|Page
+
+ApacheBench
+
+In testing NIDS using ApacheBench or Apache Benchmarking, Snort and OSSEC
+detected intrusions, but comparing registered number of alerts, Snort have higher number
+of alerts recorded. And in all of the tests done, OSSEC did not detect any intrusion when
+intruding the target host. Prelude is not included in the chart because of failure to install.
+Test results shows that attacking NIDS server and target host using attack generator 2
+shows more registered attacks compared to attack generator 1. And attacking target host
+detects more intrusion alert compared when directly targeting the NIDS server. Figure 13
+shows the number of registered attacks detected by open source NIDS using two attack
+
+generators attacking one host and NIDS server using ApacheBench.
+
+mAttackGen2 (NIDs) |
+‘@ Attack Geni (Host)
+1@ Attack Gen? (NIDS)
+m Attack Gen? (Host)
+= Attack Gent (NIDS)
+Attack Gent (Host)
+Attack Gen2 (NIDS)
+Attack Gen2 (Host)
+Attack Gend (NIDS)
+m Attack Geni (Host)
+Network intrusion Detection System 1 Attack Gen2 (NIDS)
+Attack Gen2 (Host)
+
+‘Number ofregisteredattacks
+
+Snort Suricata ossec
+
+Figure 13. Number of registered attacks detected by open source NIDS using two attack
+generators attaching one host and NIDS server using ApacheBench.
+
+23|Page
+
+B. Evaluating Developed DOST-NIDS
+
+In evaluating developed DOST-NIDS, test results shows that unlike other target
+hosts, only tests on target host in DOST-CO DMZ were detected by DOST-NIDS. I
+assume it is because of the location of the other target hosts. Although ports connected to
+agencies where the target hosts were located are monitored, the monitoring port of the
+NIDS is not directly monitoring their switches where the target hosts were directly
+terminated. Figure 14 shows the number of registered attacks detected by DOST- NIDS
+
+using two attack generators attacking six hosts using ApacheBench.
+
+10000 Attack Generator -1
+
+Attack Generator -2
+= Attack Generator -1
+Attack Generator ~
+Attack Generator
+1m Attack Generator ~
+
+Number of registered
+attacks
+
+Network ntrusion Detection System
+
+Figure 14. Number of registered attacks detected by DOST- NIDS using two attack generators
+attacking six hosts using ApacheBench.
+
+VI. Conclusions
+While there were plenty of Network Intrusion Detection Systems available in the
+
+market, we still have the option of implementing from an open source.
+
+24|Page
+
+Primarily, setting-up open source network intrusion detection system is not an
+easy task. On the other hand, installing and configuring the testing tools for NIDS is even
+more complicated. Even though only a few from open source NIDS and testing tools
+worked, we can still recommend for an open source NIDS solution that can be used in
+DOST-Bicutan network.
+
+By using open source NIDS available, it makes the implementation easy. You can
+also enhance their functions and abilities that they offer as you can edit the codes to suit
+your needs and likes, unlike other equipment-based NIDS that you are only limited to
+
+what they offer.
+
+Vil. Recommendations
+
+I would like to recommend that agencies in DOST-Bicutan area with spare servers
+and with minimum of two (2) Lan cards would implement an open source NIDS for their
+network as it can be a help to monitor their network and online resources from network
+intruders. Combination of open source NIDSs working together in monitoring network
+
+intruders as to enhance the functions and capabilities of DOST-NIDS.
+
+Vill. References:
+
+[1] ABS-CBN News: Hackers continue attacks on China websites. As retrieved from
+http://www.abs-cbnnews.com/-depth/04/30/12/hackers-continue-attacks-china-
+websites 11 September 2012
+
+[2] ABS-CBN News: PAGASA website hacked. As retrieved from http://www.abs-
+cbnnews.com/nation/05/09/12/pagasa-website-hacked 11 September 2012
+25|Page
+
+
+(3)
+
+ABS-CBN News: Chinese hackers attack more Philippine websites. As retrieved
+from http://www.abs-cbnnews.com/nation/05/12/12/chinese-hackers-attack-more-
+philippine-websites 11 September 2012
+
+[4] ABS-CBN News: Anti-cybercrime law protesters hack websites. As retrieved from
+http://www.abs-cbnnews.com/business/09/26/12/hackers-deface-bsp-website-
+
+protest-cybercrime-law 27 September 2012
+
+[5] ABS-CBN News: Sotto's website hacked as cybercrime law debate resumes. As
+retrieved from http://www.abs-cbnnews.com/nation/01/07/13/sottos-website-hacked-
+
+cybercrime-law-debate-resumes 15 January 2013
+
+[6
+
+Apache HTTP server benchmarking tool. As retrieved from
+http:/Mnttpd.apache.org/docs/2.2/programs/ab.html 2 October 2012
+
+(7
+
+Apache HTTP server benchmarking tool for apache stress test. As retrieved from
+hitp://www.debianhelp.co.uk/apacheab.htm 1 October 2012
+
+[8
+
+How to install Nmap into Ubuntu. As retrieved from
+http://namhuy.org/blog/32/how-to-install-nmap-into-ubuntu/ 2 October 2012
+
+9)
+
+How to install Scapy on Ubuntu 12.04. As retrieved from
+http://samiux. blogspot.com/2012/05/howto-scapy-220-on-ubuntu-1204-Its.htm! 1
+October 2012
+
+[10] Hping: Home. As retrieved from http://Awww.hping.org/ 2 October 2012
+
+[11] Hping3 on Ubuntu 9.04. As retrieved from
+http://w ww.compuhowto.com/linux/ubuntu/hping3-on-ubuntu-9-04/ 2 October 2012
+
+[12] Install THC-Hydra 6.4 in Ubuntu 11.04. As retrieved from
+http://ubuntuforums.org/showthread.php?t=1800683 2 October 2012
+
+[13] Intrusion Detection: Snort (IDS), OSSEC (HbIDS) And Prelude (HIDS) On Ubuntu
+Gutsy Gibbon. As retrieved from from http://www.howtoforge.com/snort-ossec-
+prelude-on-ubuntu-gutsy-gibbon 8 October 2012
+
+[14] Netcat — Netcat for the 21* Century. As retrieved from http://nmap.org/ncat/ 2
+October 2012
+
+[15] Netcat tutorial for beginners. As retrieved from http://www. binarytides.com/netcat-
+tutorial-for-beginners/ 2 October 2012
+26|Page
+
+[16] Nmap Network Scanning. As retrieved from http://nmap.org/book/man.html#man-
+description 2 October 2012
+
+17] OSSEC HIDS Manager/Agent Installation. As retrieved from
+http://www.ossec.net/doc/manual/installation/index.html 24 September 2012
+
+[18] Welcome to Prelude Universal Open-Source SIEM project. As retrieved from
+
+https://www.prelude-ids.org/ 22 October 2012
+
+19] Pytbull Installation Manual. As retrieved from
+http://pytbull sourceforge. net/index. php?page=documentation&version=2.0 1
+October 2012
+
+[20] Pytbull Wiki. As retrieved from http://sourceforge.net/p/pytbull/wiki/Home/ 2
+October 2012
+
+[21] Scapy installation. As retrieved from
+http://www. secdev.org/projects/scapy/doc/installation.htm! 1 October 2012
+
+[22] Scapy: About Scapy. As retrieved from http://www, secdev.org/projects/scapy/ 2
+October 2012
+
+[23] Snort: Home Page. As retrieved from http://www.snort.org/ 1 October 2012
+
+[24] Snort 2.9.3 and Snort Report 1.3.3 Installation Guide for Ubuntu. As retrieved from
+http://wiki.aanval.com/wiki/Community:Snort_2.9.3_and_Snort_Report_1.3.3_Instal
+lation Guide for Ubuntu 12.04 LTS 1 October 2012
+
+[25] Suricata — Ubuntu Installation. As retrieved from
+https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Basic_Setup 8
+October 2012
+
+[26] Tepdump: Home Page. As retrieved from http:/www.tepdump.org/ 2 October 2012
+
+[27] Tepdump Manual. As retrieved from
+http://manpages.ubuntu.com/manpages/lucid/man8/tepdump.8.html 2 October 2012
+
+[28] THC-Hydra: Home Page. As retrieved from http://www.the.org/the-hydra/ 2 October
+2012
+
+[29] Welcome to OSSEC’s documentation. As retrieved from http://www.ossec.net/doc/
+2 October 2012
+
+27|Page
+
+(30] What are the top selling IDS/IPS and what differentiates them from each other. As
+
+October 2012
+
+[31] What is Suricata - Suricata. As retrieved from
+https://redmine.openinfosecfoundation.org/projects/suricata/wiki/What_is Suricata 2
+October 2012
+
+[32] What is Ubuntu — The Ubuntu story As retrieved from
+http://www ubuntu.com/project/about-ubuntu 2 October 2012
+
+[33] Windows Security — Network Intrusion Detection Systems. As retrieved from
+http://www.windowsecurity.com/whitepapers/intrusion_detection/FAQ Network In
+trusion_ Detection Systems_.html 2 October 2012

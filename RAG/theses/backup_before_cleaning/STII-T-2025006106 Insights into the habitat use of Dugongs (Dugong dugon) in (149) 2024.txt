@@ -1,0 +1,3365 @@
+Insights into the Daylight Habitat Use of Dugongs (Dugong dugon) in the inshore waters of the Calauit Island Group, Philippines
+
+Erina Pauline V. Molina
+
+University of the Philippines Diliman
+
+Master of Science in Environmental Science
+
+May 2024
+
+ABSTRACT
+
+Dugong (Dugong dugon) populations are known to be declining throughout its range because
+of by-catch fishery, direct hunting, boat collisions, and rapid coastal development. It is
+categorized as Vulnerable in the IUCN Red List, indicating a high risk of extinction in the wild
+in the medium-term future. In the Philippines, dugongs are considered Critically Endangered
+based on DENR’s Administrative Order No. 2019-09. This study aimed to inform the
+conservation management of the dugongs in Calauit Island, Busuanga through identifying
+confirmed daylight space use (CDSU) and confirmed daylight core areas (CDCA) of dugongs
+based on sightings generated from simultaneous land-based monitoring surveys. Four two-day
+surveys were conducted in 2019 which resulted to 365 dugong sighting events across 30-32
+monitoring stations (most manned by local Indigenous Peoples) situated within the Calauit
+Island Group in Northern Busuanga, Philippines. Using Kernel Density Analysis (KDE), the
+95% Utilization Distribution (UD) was used to estimate the CDSU, while 50% UD reflects the
+CDCA. The total dugong CDSU (95% KDE) was approximately 4.6km² spanning across all
+survey areas, while the total CDCA (50%KDE) was approximately 0.7km² which represented
+15.2% of the CDSU. The nearby islands (hereinto referred as off-shore islands), Dimipac and
+Maltanobon, had the highest KDE ratio, characterized with a relatively high proportion of
+CDCA within its CDSU. These offshore islands also have the highest mean sighting duration
+of dugongs (19.82 min), and calves (22.73 min). Three pairs of mother and calf were seen in
+Dimipac 2 in May 2019 and in Maltanobon in June 2019. Aban-aban and Elhan 1, were notably
+frequented by dugongs with 30 and 23 sightings, respectively. Through opportunistic spot
+surveys, seagrass was observed in depths between 1.5 to 27 m, with deep-water seagrasses
+(15m) with the presence Halophila sp. observed in CDCAs off Aban-aban (23-27m) and
+Kawiren (18-20m). Fishers perception survey (n=58) on dugong population in Calauit Island
+revealed that all respondents ‘frequently’ see dugongs around the island, and that 52
+tespondents (89.66%) have seen dugongs ‘several times’ in the past year. Additionally, perceived important dugong areas include Aban-aban (n=25) and Kawiren (n=19). Furthermore, in this study, which aimed to elucidate space use patterns in a relatively small
+spatial scale, observations of shallow and deep-water seagrass patches off the coast of Kawiren,
+Aban-aban, Pagdukon and Dimipac indicate the potential spatial heterogeneity of foraging habitats, given the availability of both intertidal and subtidal seagrass beds. While space use fidelity within the Calauit Island Group has yet to be studied, the location
+appears to be an important dugong area in Palawan with calf sightings indicating a reproducing
+population. Expansion of monitoring stations within the region could therefore identify
+interconnectivity of space use and reveal movement and habitat use patterns of dugongs on a
+larger scale within the regional network. Ultimately, this study has shown that systematic
+surveys coupled with citizen science could generate useful data in developing conservation
+objectives for dugongs in Northern Busuanga and is an important strategy towards the monitoring of dugongs in localized populations.
+
+Keywords: Dugong (Dugong dugon), home range, spatial distribution, kernel density, land-based surveys
+
+CHAPTER I
+
+INTRODUCTION
+
+1.1 Background of the study
+
+Understanding spatial distributional patterns of a population provides insight to its ecology and
+how it utilizes space (e.g., Hooker et al. 2002). This has been conducted by estimating and
+characterizing space use and home ranges of species. Kernohan et al. (2001) considered the
+variability of space use at a temporal time scale and defined home range as “the extent of area
+with a defined probability of occurrence of an animal during a specified time period.
+Determining space use patterns of an animal can then illuminate aspects of an animal’s territory
+and describe its mating systems and foraging ecology (Hooker et al. 2002). Similarly, according
+to Borger et al. (2008), space use is determined by the interplay of individual traits of an animal
+and the external environment. Home range analysis or space use analysis has been widely used
+by different researchers to understand a population by defining its size, shape, and examining
+its overlap with various threats (Richard et al. 2014). Some studies have analyzed seasonal
+changes (Braham et al. 2015), while others determined the resources within the home range
+(Bowden et al. 2015; Quinton, 2016). Examining how an animal population utilize space can
+therefore be used as a guide in identifying critical habitat areas including important feeding
+areas which are important to manage for animals that are at risk from potential human-induced
+
+threats (Flores and Bazzalo, 2004).
+
+This study analyzed daily used areas of the dugongs and aimed to infer confirmed daylight
+space use (CDSU) patterns of the population in the inshore waters of the Calauit Island group
+
+in Busuanga Philippines.
+
+The dugong (Dugong dugon) is categorized as Vulnerable (VU) in the International Union of
+Conservation of Nature (IUCN) Red List (Marsh and Sobtzick, 2019). Globally, the dugong is
+facing such threats including incidental catches, habitat degradation, rapid coastal development,
+
+while some are injured in boat collisions (CMS, 2006). While sites in Australia support a large
+
+population, it is considered extinct in different regions including the Maldives, Taiwan, and
+Mauritius (Marsh and Sobtzick, 2019). Regional assessment conducted by Marsh et al. (2011)
+also concluded that the population in archipelagic Southeast Asia as ‘Data Deficient’ (Marsh
+and Sobtzick, 2019). In the Philippines, dugongs are considered Critically Endangered based
+on Section 2 (List of Threatened Fauna Species and their Categories) of DENR Administrative
+
+Order No. 2019-09.
+
+Dugongs are ecologically important because they enhance nutrient cycling by cultivating the
+substrate while grazing on seagrass beds. When foraging on seagrass in a serpentine manner, it
+has the capability of releasing the trapped minerals in the sediments into the water column,
+which consequently increases the productivity of the seagrass ecosystem (Preen, 1992;
+
+Aragones, 1996; Aragones and Marsh, 2000; Aragones et al. 2006; Aragones et al. 2012a).
+
+Conservation actions have been made to encourage the protection of dugongs globally,
+including those in the Philippines. This includes being covered in three international
+conservation conventions including the Convention on Biological Diversity (CBD), the
+Convention on the International Trade in Endangered Species of Wild Fauna and Flora (CITES)
+and the Convention on Migratory Species of Wild Animals (CMS). This species is also included
+in the goal five (Threatened species) of the Coral Triangle Initiative (CTI). All of these serve
+as basis in the development of legal frameworks that provide guidance on the protection and
+conservation of multiple threatened and endangered species, including the dugongs.
+Furthermore, its important seagrass habitats are also protected under the Convention on
+
+Wetlands (Ramsar Convention) (Marsh and Sobtzick, 2015).
+
+The continuing decline of seagrass beds of about 7% each year also threatens this species
+(Waycott et al. 2009; Short et al. 2011). Coastal development, among other threats, has caused
+a 30-40% decline in seagrass cover in the last 50 years (Fortes, 2013), threatening the remaining
+dugongs in the country that highly depend on seagrass as their source of food. The increasing
+intensity of coastal development is evident in the Palawan islands which is known to be an
+important feeding habitat of dugongs in the Philippines (Hines et al. 2012). In fact, Marsh et al.
+
+2
+
+(2002) has identified Calauit Island, Busuanga, located in the Palawan province, as one of the
+
+priority sites for dugong research and conservation.
+
+1.2 Statement of the Problem
+
+The dugong is already extinct in different island states while its population is significantly
+declining in at least a third of areas where it is found (Marsh and Sobtzick, 2015). Its status has
+been extensively assessed in Australia and Saudi Arabia, while information on its status in most
+of its range is unavailable or purely anecdotal. In the Philippines, there is limited to no data on
+how these dugongs utilize their seagrass habitat, and how it interacts with its changing
+environment which is possibly causing its decline throughout its range. Thus, there is a need to
+comprehensively examine the space use patterns of dugongs to determine ecologically
+important areas and infer risk based on the presence of human-induced disturbances such as
+
+fishing practices.
+
+Understanding the interaction of all these factors will lead to the formulation of appropriate
+conservation and management strategies such as the establishment of dugong conservation
+
+areas that are essential to the survival of the remaining dugong population.
+
+1.3 Objectives
+The general objective of the study is to inform the conservation management of the Dugong
+(Dugong dugon) in the inshore waters of the Calauit Island group, Busuanga by:
+
+1. Identifying and estimating the size of locations of confirmed daylight space use
+(CDSU) and the confirmed daylight core areas (CDCA) associated with these
+locations within the shores of the main islands;
+
+2. Characterizing how these important locations (CDSU and CDCA) vary
+seasonally;
+
+3. Characterizing the water depth and bottom type of the CDSU; and
+
+4, Assessing the perception of fishers regarding dugongs in these important
+
+locations.
+
+1.4 Significance of the study
+
+Dugongs are known to have an ecological importance, enhancing the nutrient cycling in the
+seagrass ecosystem through grazing and/or browsing (Preen, 1992; Aragones, 1996; Aragones
+and Marsh, 2000; Aragones et al. 2006; Aragones et al. 2012a). Moreover, there is no equivalent
+natural disturbance on seagrass beds that can replace the enhancing effects of grazing by
+dugongs. Thus, it is important to protect this species to maintain the productivity of the seagrass
+ecosystem. The information provided by this study was useful to better understand the activity
+space and space-use patterns of dugongs around the Calauit Island Group through
+characterizing these important locations. Ultimately, the systematic documentation of dugong
+sightings vis a vis important feeding areas are vital information in the science-based decision
+making in drawing conservation plans for the species, specifically for the establishment of
+
+Dugong Conservation Areas around Calauit Island, Busuanga.
+
+1.5 Conceptual framework
+
+The space use analysis of dugongs in Calauit Island was done within the context of the dugong
+conservation framework presented in Figure 1. The plus (+) and minus (-) symbols represent
+positive and negative relationships, respectively, among the dugongs, its seagrass habitat, and
+with indigenous peoples and local communities. The grazing of dugongs enhances nutrient
+cycling thereby increasing the productivity of the seagrass ecosystem (Preen, 1992; Aragones,
+1996; Aragones and Marsh, 2000; Aragones et al. 2006; Aragones et al. 2012a). Communities,
+on the other hand, benefit from this productivity since it is the spawning and breeding ground
+of economically important marine organisms (Jackson, 2009; Marsh et al. 2011; Honda et al.
+
+2013).
+
+Increase seagrass
+productivity
+
+Food/Diet
+
+(+)
+Dugong
+
+52)
+
+Anthropogenic threats
+
+bitat of economically
+important marine
+
+Cultural organisms
+
+importance
+
+Figure 1. Conceptual Framework of Dugong Conservation in Calauit Island.
+
+While the dugong is considered culturally significant in some communities, they are also
+vulnerable to anthropogenic threats such as fishing gear entanglement and boat collisions
+(Hines et al. 2012; Marsh et al. 2011). In Calauit Island, in lieu of the ongoing utilization of
+Sitio Aban-aban as a dugong watching area, it is also therefore important to involve local
+
+communities through citizen science for a holistic approach to dugong conservation.
+
+CHAPTER 2
+
+REVIEW OF RELATED LITERATURE
+
+2.1 Space use or Home range
+
+Home range is defined as an “area traversed by an individual for its normal activities like food
+gathering, mating and caring for young” (Burt, 1943). It represents an interplay between the
+environment and an animal’s understanding of that environment forming its own cognitive map
+(Borger et al. 2008; Peters, 1978; Powell, 2000; Spencer 2012). This cognitive map of the
+animal is therefore the space required by the animal to meet its needs under a given set of
+constraints such as resource availability (Flores and Bazzalo, 2004). It is also defined as the
+animal’s space use which is determined by the interaction of individual traits and its external
+environment (Borger et al. 2008) and could also vary during a specified time period (Kernohan
+et al. 2001). This is the reason why determining space use patterns can help understand an
+animal’s behavior while utilizing that important space, and at the same time understanding its
+foraging ecology, mating systems, how it communicates, and how it cares for the young
+
+(Hooker et al. 2002).
+
+Home range or space use analysis has been widely used by different researchers to understand
+a population by defining its size, shape, and examining its overlap with various threats (Richard
+et al. 2014). In most cases, an individual’s home range is estimated as the 95% utilization
+distribution of its sightings, which reflects an individual’s activity space over the tracking
+period (Deutsch et al. 2022). Some studies have analyzed regional variations in range size
+(Preen 1992; Campbell et al. 2010; Cleguer et al. 2020; Sheppard et al. 2006), seasonal changes
+(Nietschmann, 1984; Braham et al. 2015), within-season range fidelity, (Zeh et al. 2018;
+Sheppard et al. 2006; D’Souza et al. 2015; Udyawer et al. 2019) while some determined the
+
+resources within the home range (Bowden et al. 2015; Quinton, 2016).
+
+It has also been used to study the population of cetaceans such as understanding the influence
+
+of prey in their distribution (Flores & Bazzalo, 2004; Hung & Jefferson, 2004; Elwen et al.
+
+2006; Parra, 2006; Benoit-Bird et al. 2004; Lammers, 2004) such as that of spinner dolphins
+(Stenella longirostris) in Hawaii (Lammers, 2004) and Dusky dolphins (Lagenorhynchus
+obscurus) (Benoit-Bird et al. 2004). A study on the influence of seasons on the spatial
+distribution of tuxuci (Sotalia fluviatis) was also attributed to the distribution of prey (Flores
+
+and Bazzalo, 2004).
+
+2.2 The Dugong (Dugong dugon)
+
+2.2.1 Taxonomy and description
+
+The Dugong (Dugong dugon) belongs to the Family Dugongidae. It is listed as Vulnerable by
+the IUCN Red List of Threatened Species (Marsh and Sobtzick, 2019). It occurs in the Indo-
+West Pacific Ocean found mainly on coastal and island waters between East Africa and
+Vanuatu between latitudes of about 27° north and south of equator. The outlook for dugongs in
+countries with a small dugong population and/or low Human Development Index (HDI) is
+assessed as poor, which include countries such as Brunei, Cambodia, China, Egypt, Japan.
+Kenya, Papua New Guinea, Singapore, and Vietnam, among others (Marsh and Sobtzick.
+2019). Substantial populations of dugongs, on the other hand, can be found in four countries or
+territories with very high HDI including Australia, New Caledonia, Quatar and United Arab
+Emirates (Marsh and Sobtzick, 2019; Marsh et al. 2011), with the Australian population being
+the most substantial. A regional assessment conducted by Marsh et al. (2011) revealed that the
+population in the archipelagic East and Southeast Asia remains ‘Data Deficient’ (Marsh and
+
+Sobtzick, 2019).
+
+Their facial morphology, characterized of having a strong rostral deflection, is adapted to their
+bottom feeding strategy (Best, 1981; Domning, 1982; Colares and Colares, 2002; Marshall et
+al. 2003; Aragones et al. 2012a). It uses their bristles to crop the blades of aquatic vegetation
+and excavate the root system (below-ground biomass) and rhizomes from the substrate, leaving
+
+its signature “feeding trail” mark on the sea floor (Anderson and Birtles 1978; Preen 1995;
+
+Keith-Diagne et al. 2022). While studies show that they spend most of their time at water depths
+less than 3 meters (Chilvers et al. 2004), they are also reported to occur 58km from the coast
+with depth reaching up to 37 meters, and with feeding trails seen up to depths of 33meters
+(Marsh and Saafeld, 1990; Lee Long and Coles, 1997; Lee Long et al. 1996). According to
+Keith-Diagne et al. (2022), dugongs are found over deep-water seagrass beds in some parts of
+its range with dives recorded to more than 30 meters but no records beyond 40m, and with
+
+maximum reported dugong dive duration to 12 minutes.
+
+2.2.2 Diet
+
+The feeding biology of sirenians including dugongs is characterized as aquatic herbivory and
+that these animals spend much of their time accessing largely stationary food sources (Marsh
+et al. 2011). Studies on foraging behavior of dugongs have been based on visual observations
+(Anderson and Birtles 1978; Anderson 1998) and using a ‘blimp-cam’ (Hodgson, 2004), while
+diet studies have been based on gut analysis using direct observation (Johnstone and Hudson
+1981; Heinsohn and Birch 1972; Marsh et al. 1982; Preen 1995) and Near Infra-red Reflectance
+Spectroscopy (Andre and Lawler, 2003). Rasheed et al. (2017) also developed techniques using
+aerial photography and machine learning to study dugong feeding trails in intertidal seagrass
+beds. According to Marsh et al. (2011), dugongs consume approximately 26 species of
+seagrasses that occur within their range (Green and Short, 2003), marine algae as documented
+in Australia (Whiting, 2002a; Whiting, 2002b; Whiting, 2008) including in some environments
+when seagrass communities have been damaged by extreme weather events (Spain and
+Heinsohn 1973; Marsh et al. 1982), as well as on invertebrates to meet their nitrogen
+requirement (Keith-Diagne et al. 2022; Preen, 1995). According to Preen (1995), dugongs could
+be less omnivorous in the tropics due to the availability of young shoots with nitrogen content
+
+throughout the year.
+
+While plant species consumed by dugongs vary depending on the region, habitat type. and
+
+availability of food sources (Keith-Diagne et al. 2022), several studies suggest that dugongs
+
+8
+
+feed on Halophila ovalis, H. minor, H. spinulosa, H. decipiens, Halodule uninervis, H.
+pinifolia, Syringodium isoetifolium, Thalassia hemprichii, Zostera capricorni, Cymodocea
+serrulate, C. rotundata, and Enhalus acoroides (Table 1) (Adulyanukosol and Poovachiranon,
+2006; André et al. 2005; Aragones, 1994; De longh et al. 2007; Aragones et al. 2012). Dugongs
+have also been recorded to be cropping seagrass leaves of Enhalus acoroides (Anderson 1982;
+Nakanishi et al. 2008; Keith-Diagne et al. 2022) and that they do not eat the rhizomes of E.
+acoroides likely because these are extended deep into the sediment or too fibrous to process
+(Erftemeijer and Djunarlin 1993; André et al. 2005; Domning and Beatty 2007; Keith-Diagne
+etal. 2022). Based on stomach content analysis (Marsh et al. 1982) and on observations (Wake,
+1975; Anderson and Birtles, 1978; Preen, 1992; Aragones, 1994, 1996; Supanwanid, 1996), it
+was also found that the leaves of H. ovalis are important food for dugongs (Aragones et al.
+2012a). Some studies have inferred that low seagrass genera such as Halodule and Halophila
+are targeted by dugongs in preference to more fibrous plants such as Zostera or Thalassia
+(Keith-Diagne et al. 2022). In Australia, Halophila ovalis and Halodule uninervis were
+observed to be preferred by dugongs due to their high nitrogen content (Marsh et al. 2011;
+Preen, 1995; Sheppard et al. 2010) and was also found to be easily chewed and digestible
+(Domning, 2022). However, according to Keith-Diagne et al. (2022), these claims on diet
+selectivity are not supported by confirmatory data that takes into account the biomass of
+available seagrass and no food choice experiments have been conducted on dugongs (Keith-
+Diagne et al. 2022). In addition, other studies have also revealed that available seagrass species
+and biomass are also determining factors on the diet of dugongs (Tol et al. 2016). Keith-Diagne
+et al. (2022) cited that 7. hemprichii is likely an important food source in Torres Strait
+(Johnstone and Hudson 1981; André et al. 2005) which supports a substantial population of
+dugongs (Marsh et al. 2002). In Queensland, a study by Rasheed et al. 2017 revealed that the
+presence of feeding trails is positively correlated with increased percentage cover and biomass
+of a seagrass community dominated by Zostera muelleri. Moreover, inter-annual patterns in
+
+feeding trails in Balikpapan Bay in Indonesia showed positive correlation with seagrass
+
+biomass, above-ground/below-ground biomass ratio and wind speed (presumably due to the
+
+availability of shelter from the wind) (Budiarsa et al. 2021).
+
+Table 1. Summary of distribution, habitats, and diet of dugongs (Adapted from Aragones et
+
+al. 2012a)
+Species Distribution | Habitat Diet Source of
+Information
+Dugong Tropical and | Seagrass Seagrasses: Wake (1975);
+(Dugong dugon) | subtropical | meadows; Halophila ovalis, H. | Marsh et al.
+Indian and coastal waters | minor, H. spinulosa, | (1978); Keith-
+Pacific H. deciphiens, Diagne et al.
+Oceans Halodule uninervis, (2022); Anderson
+H. pinifolia, (1998); Preen
+Syringodium (1995)
+isoetifolium,
+Thalassia
+hemprichii, Zostera
+capricorni,
+Cymodocea
+serrulata, C.
+rotundata, Enhalus
+acoroides
+
+Algae(intermittently)
+
+Invertebrates:
+Botula vagina,
+Virgularia, Sycozoa
+pulchra
+
+Unidentified
+Chaetopterid worms
+
+In cases when other seagrass species have higher biomass, it was observed that dugongs may
+switch their feeding strategies (Aragones et al. 2012a). They are believed to follow an optimal
+feeding strategy wherein their feeding site selection is based on the maximum energy gained
+with minimum energy expended (Aragones et al. 2006; Preen, 1995; Sheppard et al. 2007).
+This means that dugong’s feeding preferences could vary depending on accessibility (Aragones
+et al. 2012a), seagrass availability and biomass (Tol et al. 2016; Rasheet et al. 2017), location,
+
+as well as time of the year within a location (Budiarsa et al. 2021; Keith-Diagne et al. 2022).
+
+10
+
+2.2.3 Factors affecting feeding site
+
+Physical characteristics of the marine environment such as depth, sediment type, water
+temperature, water currents, and biological factors such as seagrass species, biomass above and
+below ground, nutrient content, and digestibility (Aragones et al. 2006; Marsh et al. 2011;
+Preen, 1995; Keith-Diagne et al. 2022), may affect the feeding choice of the dugong. In Calauit
+Island, Philippines, the presence of dugongs were found in seagrass areas wherein biomass
+ranges from 172 to 1494 g wet wt/m?, with the most dugong sightings (n=15) in seagrass beds
+
+with a biomass of 172 g wet wt/m? (Aragones, 1994).
+
+Studies have suggested that dugongs prefer intertidal feeding areas. This is because intertidal
+seagrass has higher nutrient content and is said to be more digestible than subtidal plants
+(Sheppard et al. 2007; Sheppard et al. 2008). Moreover, foraging in deep waters is assumed to
+cost more energy and time than feeding in the shallows. This means that their habitat
+requirements force them to remain in areas subject to human activities making them vulnerable
+to anthropogenic impacts such as fishing gear entanglement and boat strikes. As a response,
+some dugongs also feed on subtidal areas wherein it is less disturbed from fishing activities,
+
+and tidal flows. Moreover, it offers 24-hour access to forage (Aragones, 1996).
+
+However, these studies also suggest that different dugongs may have different foraging
+strategies depending on circumstances i.e., low seagrass biodiversity and human disturbances.
+It is therefore important to understand the reason why dugongs feed in certain areas to determine
+
+which areas can be considered important dugong habitats.
+
+2.2.4 Role of Dugongs in the Ecosystem
+
+When dugongs graze, they uproot the whole plant, consume it and leave characteristic feeding
+trails (Heinsohn et al. 1977; Preen 1995). One individual can consume an estimated amount of
+28-40kg per day (Preen, 1992; Aragones, 1994; Aragones et al. 2012a), and has the ability of
+overturning 263-904 m? of seagrass each day (Marsh et al. 2005). In Moreton Bay, Australia,
+
+11
+
+it was estimated that a group of 200 dugongs were able to feed on a square kilometer of seagrass
+per week (Preen, 1992). They feed on large amounts of seagrasses allowing them to have the
+capacity of altering the nutritional quality and species composition in their feeding areas
+(Aragones et al. 2012a). This natural disturbance through herbivory can facilitate nutrient
+cycling by reducing the plant material that passes through the slow detrital pathway that will
+undergo decomposition. A more efficient nutrient cycling can then increase plant diversity and
+biological productivity (Aragones et al. 2012a). In different herbivory experiments, it was
+observed that biomass of H. ovalis, a preferred seagrass species of dugongs, increased 10
+months after intensive grazing (Aragones et al. 2006). In Australia, species composition in a
+seagrass meadow at Ellie Point, Queensland shifted from Zostera and Cymodocea to H. ovalis
+(Aragones and Marsh, 2000). In Moreton Bay, the seagrass meadow shifted from Zostera to
+Halophila and Halodule species after intensive grazing by dugongs (Preen, 1992). Table 2
+shows that H. ovalis has the fastest growth rate and shortest turn-over time as compared to both
+Z. capricorni and C. rotundata. This suggests that short and opportunisitc life histories of
+seagrass species such as that of H. ovalis makes them adaptable to disturbance such as grazing,
+
+allowing them to colonize areas grazed by dugongs (Hines et al. 2012).
+
+Table 2. Growth rates and turn-over time for some seagrass species (from Aragones and
+
+Marsh, 2000)
+Species Specific growth rate | Turn-over time | Source
+(% per day) (days)
+Halophila ovalis 4.0-9.0 11-24 Hillman and
+McComb (1998)
+Zostera capricorni__| 0.8-3.5 33-67 Kirkman et al. 1982
+Cymodocea 2.4-4.0 25-40 Brouns (1987)
+rotundata
+
+Studies have also suggested that continuous grazing of Halophila ovalis and Halodule uninervis
+led to increased nitrogen concentrations by 35 and 25%, respectively, but lower starch
+
+concentrations (Aragones et al. 2012a).
+
+12
+
+The physical action of grazing also has the capacity of introducting detritus and aeration into
+the sediment, which promotes the activity of the N-fixing bacteria (Aragones et al. 2012a),
+suggesting that nitrogen fixation rates are highest in grazed seagrass areas (Perry and Dennison,
+1999; Aragones et al. 2012a). Indeed, grazing by dugongs have been found to be important in
+maintaining the productivity of the seagrass community (Preen, 1992; Aragones, 1996;
+
+Aragones and Marsh, 2000; Aragones et al. 2006; Aragones et al. 2012a).
+
+2.2.5 Vulnerability of dugongs and human-induced threats
+
+In general, dugongs are vulnerable because of their reproductive biology coupled with
+anthropogenic disturbances. While they are long lived (~70 years) and slow to reach sexual
+maturity (4-17 years), their average offspring is only 1 individual, and they produce an offspring
+only every 3-7 years (Kwan, 2002). Moreover, the mother nurses her offspring with an average
+lactation period of about 14-18 months. This makes the calf dependent on the mother for its
+survival. All these intrinsic factors result to a slow rate of population increase of less than 5%
+
+per year (Marsh, 1995).
+
+Dugongs are also threatened because of anthropogenic influences. Being a coastal marine
+mammal, they are vulnerable to changes in the marine environment because of the increase in
+human population living near the coast (Marsh et al. 2003). They are mostly affected by their
+
+interaction with fisheries i.e fishing gear entanglement and boat collisions (CMS, 2006).
+
+Habitat modifications including the degradation of their seagrass habitat, acoustic and chemical
+pollution, and marine debris are also some of the threats to their survival (Marsh et al. 2003;
+Hooker and Gerber, 2004). Modifications in the quality of the habitat (i.e., reduced available
+forage) is also said to be a multiplier effect in the slow population increase because dugongs
+
+may respond by reducing fecundity (Kwan, 2002).
+
+13
+
+2.3 Dugongs in the Philippines
+
+In the Philippines, a series of studies and reports have suggested dugong occurrence in almost
+all regions in the country, including Zambales, Manila Bay, Isabela, Quezon, Mindoro,
+Romblon, Lubang Island, Bicol Region, Samar, Palawan Islands, Guimaras Strait, Panay Gulf,
+North, Eastern and Southern Mindanao, and the Sulu archipelago (Kataoka et al. 1995;
+
+Aragones, 1998; Baltazar and Yaptinchay, 1998; Marsh et al. 2002; Aragones, 2012) (Figure
+
+2.
+
+Dugong sightings were also reported in Northern Tafion Strait (Dolar et al. 2005), southern
+Panay Island (Aragones, unpublished data), Semirara Islands, Masbate Island, Guimaras Island,
+and Romblon Islands (Aragones, 2012). In 2007, dugong range was also elucidated from semi-
+structured interviews (n= 593 fishers; n= 680 non-fishers) around Guimaras Island, which
+suggested that the locals have a good knowledge of dugongs and thus indicate dugong-fisheries
+interaction (Aragones, 2007). Additionally, Aragones at al. (unpublished data) also predicted
+possible distribution in almost all islands in the Philippines based on anecdotal reports and
+
+stranding reports from 2005-2016.
+
+There have also been attempts to estimate the relative abundance of dugongs in different areas
+of the Philippines. In Northern Palawan, a population study was conducted from 1985 to 1992
+using aerial surveys. At least 4-8 dugongs were sighted in El Nido, more than 10 in Imorigue
+and Shark Fin Bay, 4-8 dugong sightings in Taytay Bay and 4-5 dugongs around Calauit Island.
+Busuanga. This study suggests that several dugongs occur in these areas (Pawikan Conservation
+
+Project-Protected Areas and Wildlife Bureau and DENR, 1995).
+
+A different study was also performed in Calauit Island, Busuanga from 1989-1990. Through
+simultaneous dugong monitoring using land-based survey techniques, the study suggested that
+
+the highest relative abundance of dugongs surrounding the island was 14 (Aragones et al. 1994).
+
+14
+
+Dugong populations in Davao Gulf, southern Mindanao were also estimated in 2009 (Lucero,
+2010). In this study, at least 12 dugongs were seen at one site (New Argao) and 2 dugongs were
+
+sighted in Talicud Island (Lucero, 2010).
+
+Dugong Occurrence in the Philippines N
+
+Legend
+
+Dugong strandings
+
+Anecdo
+Baltazar
+
+Marah etal, 2002; Aragones, 1998) Pay 1:8,000,000
+
+*Dugong occurence was based on
+reported sighting'srandings on a regional scale
+
+Kilometers
+100
+
+0 50100 200 300
+
+Figure 2. Dugong occurrence in the Philippines based on stranding events, sightings and
+anecdotal reports (Aragones et al. 2017; Aragones and Laggui, 2019; Baltazar and
+
+Yaptinchay, 1988; Marsh et al. 2002; Aragones, 1998)
+
+15
+
+A different study was also performed in Calauit Island, Busuanga from 1989-1990. Through
+simultaneous dugong monitoring using land-based survey techniques, the study suggested that
+
+the highest relative abundance of dugongs surrounding the island was 14 (Aragones et al. 1994).
+
+Dugong populations in Davao Gulf, southern Mindanao were also estimated in 2009 (Lucero,
+2010). In this study, at least 12 dugongs were seen at one site (New Argao) and 2 dugongs were
+
+sighted in Talicud Island (Lucero, 2010).
+
+Despite these attempts, relative population estimates in most of its range in the Philippines
+remains unknown (Marsh et al. 2002; Perrin et al. 2005) which means that there is still limited
+
+population data that can be used to update its conservation status in the country.
+
+2.4 Conservation of Dugongs in the Philippines
+
+In the Philippines, major threats to dugongs include habitat loss and degradation, direct and
+indirect taking of animals, and increasing pollution due to coastal developments (i.e., resorts)
+(Aragones et al. 2012; Hines et al. 2012). This increase in coastal development is evident in the
+Palawan islands which are also known to be important feeding habitats of dugongs (Hines et
+al. 2012). It is therefore important to understand their seagrass habitat to be able to identify
+
+important areas to protect for the continuous recovery of dugong populations.
+
+Legally, dugongs in the country are protected by the Philippine Wildlife Protection and
+Conservation Act of 2001 (Republic Act 9147), where killing, taking and the possession of any
+parts of the protected species is prohibited (Aragones, 2012; Hines et al. 2012). They are also
+considered Critically Endangered based on Section 2 (List of Threatened Fauna Species and
+their Categories) of DENR Administrative Order No. 2019-09. According to experts, several
+sites have been proposed to be protected mainly for dugongs, but unfortunately, have not been
+established. This includes Calauit Island, Taytay Bay, and Roxas Bay in the Palawan province
+
+(Marsh et al. 2002).
+
+16
+
+Based on available data, Marsh et al. (2002), also indicated priority sites for dugong
+conservation in the Philippines that can serve as a guide in species conservation planning. These
+sites include (1) Calauit Island, Busuanga, (2) Green Island Bay, Roxas, (3) Malita, Davao del
+Sur, (4) Sarangani Bay, Sarangani Province, and (4) Sulu Archipelago (Marsh et al. 2002).
+These priority areas, especially sites in the Palawan Islands, are considered to be the last
+remaining stronghold for dugongs in the Philippines, and thus essential for the survival of
+
+dugongs in the country (Aragones, 2012; Hines et al. 2012).
+
+Determining the relative abundance of dugongs in these areas is therefore important to
+understand the interaction of the remaining population with their environment, and to determine
+how it responds to changing environmental conditions to develop effective initiatives for the
+conservation of dugongs. It is also important to note that while the dugong mainly interacts
+with its seagrass habitat (Marsh et al. 1982; Marsh et al. 2011), the population is also affected
+
+with its interactions with coastal communities.
+
+2.5 Determining Dugong Distribution
+
+Dugong population numbers have been estimated in 20 countries using aerial surveys (Marsh
+et al. 2002; 2012). However, these conventional marine mammal survey techniques such as
+aerial surveys (including ship surveys) require sophisticated equipment, and therefore too costly
+to study (Aragones et al. 1997). This is one of the reasons why obtaining population estimates
+of long-lived and wide-ranging marine mammals like the dugong across large spatio-temporal
+scales is a challenge especially in developing countries such as the Philippines (Schipper et al.
+
+2008; O’shea and Odell, 2008; Lotze and Woem, 2009; Aragones, 1996).
+
+Different techniques appropriate for surveying marine mammals in developing countries are
+however emerging. This includes conducting interviews, land-based surveys. and carcass
+analysis (Aragones et al. 1997). Interviews have already been widely used in obtaining
+
+occupancy and distribution of species in different countries such as Papua New Guinea,
+
+17
+
+Philippines, Sri Lanka and Vanuatu (Aragones et al. 1997). Moreover, surveys were also used
+as a basis to design a land-based monitoring program at Calauit Island, Philippines (Aragones
+
+et al. 1997).
+
+In land-based survey techniques, it is important to note that the entire population is not
+enumerated by the survey like other survey techniques (i.e., aerial surveys) because of
+“visibility bias”. Land-based observers may potentially miss animals because of fatigue,
+weather conditions, and the general difficulty to sight the animal from the observer’s vantage
+point. For example, the animal might blend into the surroundings or may be too far to sight
+from the observer’s point of view (Pollock and Kendall, 1987; Aragones et al. 2012b). This
+means that different factors should therefore be considered, including good weather conditions,
+availability of elevated platform i-e., hilltops, cliffs, buildings, watchtower, and the density of
+stations, in designing a land-based monitoring program. As such, the survey technique has been
+used to monitor marine mammal species with nearshore distribution (Aragones et al. 1997;
+
+Krogman et al. 1989; Rugh et al. 1990).
+
+Krogman et al. (1989) used land-based surveys to estimate the abundance of migrating
+Bowhead whales in Alaska. Population of Gray whales were also monitored in California using
+this technique (Rugh et al. 1990). Moreover, Giacoma et al. (2013) also suggested that land-
+based surveys are indeed a useful tool for managing marine species within a coastal protected
+area since animal movements, their interactions with anthropogenic elements and group
+
+dynamics can be seen clearly from a good vantage point on land (Giacoma et al. 2013).
+
+Since dugongs are considered coastal marine mammals, land-based surveys have already been
+used to relatively estimate their population in different areas in the Philippines. In Calauit
+Island, a simultaneous land-based monitoring program was done from 8 different vantage
+points in Calauit Island in 1990 (Aragones, 1994). In 2017, 13 additional stations were
+identified which includes stations in the two nearby islands Dimipac and Maltanobon resulting
+
+to 21 monitoring stations. Seven more were added in 2018 resulting to a total of 28 stations
+
+18
+
+which further increased the survey coverage around the three islands(Aragones, unpublished
+
+data). (Figure 3).
+
+Similarly, relative abundance of dugongs was also estimated in Davao Gulf from an elevated
+facility in the shoreline wherein observations were also done simultaneously from 3 monitoring
+stations (Lucero, 2010). This technique in assessing the spatial distribution of dugongs is
+therefore proven to be viable in developing countries given the different factors that need to be
+considered such as the availability of elevated vantage points near the shore that could provide
+
+a good field of view during species monitoring.
+
+ay
+a
+A
+1x
+rn
+a 4
+a
+m "
+a aa A
+4 ararea
+“ a
+Aa
+
+Figure 3. Vantage points of the simultaneous dugong monitoring done in Calauit Island from
+
+previous studies (Aragones, 1994; Aragones, unpublished data).
+2.6 Assessing habitat and space-use patterns
+
+A habitat is an area that allows the occupancy, survival and reproduction of a given organism
+and is assessed based on physiographic conditions and the availability of resources. (e.g.,
+shelter, food, water, temperature) (Hall et al. 1997; Moraes-Arraut et al. 2012). Dugong home
+ranges which reflect the area used by the animal, have been widely studied in Australia with
+home range for individual dugongs estimated using Kernel Density Estimation (KDE) revealing,
+KDE home ranges (95% isopleths) varying from 0.5 to 733 km² (Sheppard et al. 2006), while
+
+De longh et al. (1998) recorded a mean home range (95%KDE) of 43 km² and core area
+
+19
+
+(50%KDE) of 4km² in Indonesia. The largest reported dugong home ranges (95% KDE) are
+those in Torres Strait between Australia and Papua New Guinea (Deutsch et al. 2022) ranging
+from 264-1358 km² based on six individually tagged dugongs and were mostly located in deep
+waters (5-15 m depth). According to Deutsch et al. (2022) Torres Strait has a large area of
+seagrass including more than 13,000 km² of deep-water seagrass which could potentially
+explain the large home range. In contrast, smaller and fragmented seagrass areas along the
+Queensland coast have resulted to a smaller home range size (Gredzens et al. 2014; Deutsch et
+al. 2022). Habitat topography (depth of key habitats, presence of reefs, and overall
+characteristics of seagrass beds) could therefore lead to space use variations across regions
+
+(Gredzens et al. 2014).
+
+The influence of physical factors such as winds and tides on home ranges have also been studied
+(Nietschmann and Nietschmann 1981; Nietschmann, 1984) revealing that local distribution and
+movement patterns of dugongs vary accordingly to avoid rough sea conditions (Nietschmann,
+1984; Marsh et al. 2011). In fact, it was found that there is a seasonal shift in core areas used
+by dugongs in Australia, spearing the summer and winter pattern (Holley, 2006). In addition,
+according to Deutsch et al. (2022), individual sirenians have also generally exhibited a
+characteristic of strong site fidelity to one or a small number of highly used core areas within
+
+their home range in a particular season.
+
+According to Moraes-Arraut et al. (2012), dugongs generally prefer (a) shallow to medium deep
+waters (usually between 0.5-60m), (b) warm waters with a minimum temperature of 17 degrees
+Celsius, (c) seagrass beds that contains their species preference, and (d) sites such as shallow
+bays that can protect them from rough seas and sharks during calving. All these factors govern
+species distribution, movement and abundance. With seagrass cover declining in the last 50
+years by 30 to 40% (Fortes, 2013), it is therefore important to determine important feeding
+grounds, and to understand how it utilizes a specific site (i.e., feeding and calving site) to help
+in identifying important dugong areas which will be recommended for inclusion in management
+
+plans.
+
+20
+
+CHAPTER 3
+
+MATERIALS AND METHODS
+
+3.1 Methodological framework
+
+Insights into the Daylight Habitat use of dugongs in the inshore waters
+
+of the Calawit Island Group, Busuanga
+
+Simultaneous land-based surveys
+(May, June, October, November)
+
++ Confirmed daylight space use (CDSU)
+and Confirmed daylight core area
+(CDCA)
+
+* Seasonal variation of CDSU and CDCA
+
+Direct dugong observations
+
+>]
+
+¢ General description of dugong
+behavior, dive times and surface
+interval
+
+Habitat assessment and validation
+
+|
+
+* Physical (depth and bottom type)
+and biological characteristics
+(seagrass habitat) of CDSU and
+CDCA
+
+Fishers perception survey
+
+| men
+
+« Perception of fishers on dugongs
+and on important dugong areas.
+
+1
+
+Conservation management of the Dugong population
+
+Figure 4. Methodological framework of the study
+
+The daylight habitat use patterns of dugongs was examined through the conduct of
+
+simultaneous land-based surveys, direct dugong observations, habitat assessment and
+
+validation, and fishers’ perception survey. Land-based surveys were employed to infer the size
+
+and locations of confirmed daylight space use area (CDSU) and confirmed daylight core area
+
+(CDCA) of dugongs in Calauit Island. It was conducted in May, June, October, and November
+
+2019 to infer the potential variation of CDSU and CDCA. On the other hand, direct dugong
+
+observations were conducted in select monitoring platforms outside of the survey period to
+
+21
+
+
+provide additional information on dugongs and support monitoring data. Moreover, habitat
+assessment and validation was done to investigate physical and biological characteristics of
+these important locations such as depth, and bottom type to further characterize CDSU and
+CDCA. Lastly, fishers’ perception survey aimed to determine the perceptions of fishers on
+dugongs on important locations. Ultimately, these insights on the daylight habitat use of
+
+dugongs could inform the conservation management of dugongs around the island (Figure 4).
+
+3.2 Limitations of the study
+
+Land-based surveys were only conducted during the day, from sunrise to sunset. No surveys
+were conducted at night, thereby results only represent daytime ranges referred to as daylight
+habitat use areas in this study. In addition, seasonal variation was assessed only based on two
+sampling periods reflecting pre-monsoon conditions in 2019 —during the mid-year in May and
+June. and in the latter part of the year in October and November. Moreover, direct dugong
+observations were recorded in sites where locals perceive to be frequented by dugongs, and
+conducted opportunistically during excellent water clarity which provides a clear view of the
+individuals observed. Further, in the habitat assessment and validation, due to the extent of the
+study area, only spot validation surveys at different random points around identified daylight
+habitat use areas were done to examine the substrate. Lastly, the fishers perception survey did
+
+not account the variability in visitation rates of fishers in different fishing locations.
+
+3.3 Study area
+
+The study area is in Northern Busuanga, Palawan, Philippines in the West Philippine Sea,
+covering three islands: Calauit Island, Dimipac Island, and Maltanobon Island. Historically,
+these areas are known to have reported sightings of dugongs with at least two dugongs
+frequently seen named Pingas and Aban, named after Sitio Aban-aban which is the only site
+utilized for dugong watching in the Philippines. Dugong watching in Calauit Island was
+
+established as a community-based ecotourism in March 2017 following a series of consultations
+
+22
+
+with members of the Indigenous Peoples community, tour operators, representatives from the
+
+Department of Environment and Natural Resources, and C3 Philippines (Veghel, 2018).
+
+Calauit Island is also known to be one of the last remaining strongholds for dugongs in the
+Philippines which makes it a priority site for dugong conservation (Aragones, 2012; Hines et
+
+al. 2012; Marsh et al. 2002) (Figure 2).
+
+Northern Busuanga,
+Palawan, Philippines
+sate image
+
+‘Sti Calawt Barangay Buluang
+Municipal of Busuanga
+
+Marlag, Orpac)
+
+Coornae sytem WS 1904 UTM Zone 51
+oats Source Geog Cxtyimage(Marar24. 2018)
+
+WB 2.4y0r N
+
+A
+
+Ad
+
+Figure 5. Satellite image of study area showing the three islands: Calauit, Dimipac and
+Maltanobon Island, and residential clusters namely: Proper, Aban-aban, Binalayan, Cadyes,
+
+Manlag and Dimipac.
+
+The area is composed of small island ecosystems characterized by clear and shallow waters.
+Landforms include plains, hills and valleys with the highest island elevation of 130 meters. All
+three islands are part of the ancestral domain of the Nurunutan Tagabanwa tung Calawit may
+Quezon (NTCQ) by virtue of their approved Certificate of Ancestral Domain Title (CADT) in
+2010. Barangay health workers in Calauit island indicated a total population of 1,362 in 2017
+
+(Onwesen interview, 2017). At the time of this study, latest documents from the health centers
+
+23
+
+suggested that there is a total of 304 households in Calauit located in 6 clusters- Proper, Aban-
+
+aban, Binalayan, Cadyes, Manlag and Dimipac, with fishing as a primary source of livelihood.
+
+The entire island of Busuanga, including Calauit is under the Type 1 modified Coronas
+climate classification. This climate type has two distinct seasons: dry from November to April
+
+and wet for the rest of the year.
+3.4 Data gathering
+3.4.1 Simultaneous land-based surveys
+
+A land-based survey technique was adapted from Aragones (1994) wherein monitoring was
+done from 8, 21, and 28 different vantage points around the island in 1990, 2017, and 2018,
+respectively (Aragones et al., unpublished data). The stations were carefully chosen and were
+situated in coastal hills and/or tall trees that could provide a better view and wider coverage to
+monitor dugong presence. This study expanded the survey area by adding four additional
+monitoring stations resulting to a total of 32 monitoring stations in 2019. Among these stations,
+27 stations are situated in Calauit Island, and 5 stations in nearby islands (herein referred to as
+offshore islands). Among the 27 stations in Calauit, there were 8, 8, and 11 coastal locations in
+the north, east and west coastal locations, respectively, which were classified according to the
+influence of winds or monsoons in the stations (Figure 6). For example, while Kiling-kiling
+station appears to be in the northern section of the island, the station is more exposed to the
+western winds similar to other monitoring stations on the western side of the island. Among the
+5 stations in the offshore islands, there were 3 stations in Dimipac and 2 stations in Maltanobon
+
+Island (Figure 6). Binoculars were also used to increase the detection rate.
+
+24
+
+Legend N
+study area (May
+
+study area (June, Oct, Nov)
+
+monitoring stations
+
+@ East Calawit
+
+1-Punta
+2-Cheey cheey 1
+
+oo
+
+25
+
+EEN
+
+§
+
+@ west Calawit :
+
+417-Kiling- Kling
+18-Binalayan 2
+
+{oe
+
+y
+(gd,
+
+gy —CultukeBay
+Sram
+
+3Cheey-cheey2  19-Binalayan 1 B
+4Diapnay 2 20-Dequera 2
+5-Diapnay 1 21-Dequera 1
+6-Dayongdong 22-Cadyes 2
+T-Punda 23-Cadyes 1
+8-Kawiren 24-Buctot
+25-Manlag
+
+@ Norn caiawit 26 Pinagkiyawan
+cae 27-Katmon
+10-Elhan 1 off-shore islands
+11-Pagdukon @
+12-Aban-aban 28-Dimipac 1
+43-Macachin 29-Dimipac 3 jane
+14-Dibulok 3 30-Dimipac 2
+45-Dibulok2 31-Maltanobon 1
+16-Dibulok 1 32-Maltanobon 2
+
+North Calawit
+|
+
+=
+fo]
+©
+.S)
+o East Calawit
+v
+=
+
+1:60,000
+
+Figure 6. Map showing location of the monitoring stations in Calauit Island, Busuanga.
+
+To assist citizen scientists in estimating the sighting distance, at least two predetermined
+reference points such as buoys were installed in each monitoring station. The sighting distance
+between the monitoring platform and each reference point was determined using a rangefinder
+and was included in the gridded map in the monitoring data sheet. For example, in Maltanobon
+
+2 monitoring station, there were three reference points with known sighting distance 208m,
+
+25
+
+250m, and 300m (Figure 7). Figure 8 shows a photo of the buoy with a known sighting distance
+of 208m and a sighting of a mother and calf. Observers will then use the reference point to
+
+estimate the sighting distance and sighting location in the gridded map.
+
+Simultaneous Dugong Monitoring Sighting Map Station Name: Mattanobon 2
+N
+
+Figure 7. Maltanobon 2 sighting map with reference points and distance indicated to serve as
+
+a guide.
+
+The survey was conducted for two (2) consecutive days from sunrise to sunset (6:00 — 18:00),
+in each monitoring period. Primary data collected included the frequency of dugong sightings,
+sighting distance, time of initial and last sighting, and presence/absence of calf. Sighting data
+was based on the same individual or pair which were singly observed. Environmental
+conditions during the survey, including Beaufort sea state (0-4), cloud cover (0-8), glare (low,
+medium high) and water clarity (poor, good, very good) were also recorded every hour (Figure
+
+9).
+
+26
+
+Figure 8. Field of view of Maltanobon 2 monitoring station showing buoy with 208-m
+
+sighting distance.
+
+To improve data due to perception bias -the bias due to animal presence but not seen, some
+stations overlap (Aragones et al. 2012b). Monitoring was also done simultaneously at multiple
+locations to reduce the double counting of animals. Moreover, multiple observers (at least 2)
+were present at each station to reduce visibility bias and increase the detection rate of potentially
+
+missed animals.
+
+This method employed a citizen science approach wherein volunteers were recruited from the
+community. All volunteers were trained prior to the survey to ensure that all methods employed
+
+were standardized. Training included how to use binoculars, how to estimate distance, and how
+
+27
+
+to fill out the monitoring form. A total of 106 trained local citizen scientists participated in the
+simultaneous dugong monitoring program in 2019. These volunteers spent a total of 24
+
+volunteer hours per monitoring period.
+
+DUGONG SIGHTING DATA SHEET (SIMULTANEOUS LAND BASED MONITORING)
+
+Station Name Date
+Observers: Time started:
+Recorders: Time ended:
+
+DUGONG SIGHTING DATA SHEET (SIMULTANEOUS LAND BASED MONITORING)
+Station Name
+
+Time (0-4) (0-8) med, (excellent, Time (0-4) (0-8) med, (excellen 3
+
+7:00 AM 7:00 AM al
+8:00AM T 8:00 AM 1
+10:00 AM | T wr 710:00AM— 1 coil iT
+
+12:00 PM ha a a aa
+
+01:00 PM 01:00PM —SO 7
+
+02:00 PM T i} 70200 PM Poe
+03:00 PM | T i 03:00 PM.
+
+04:00 PM | ij i 704.00 PM T fe
+05:00 PM y 05:00 PM
+
+06:00 PM | y | T T 06:00PM | ' [ T T 1
+
+Figure 9. Monitoring data sheet.
+
+To assess the seasonal variation of sightings, monitoring was done in multiple months: (a) May.
+(b) June, (c) October, and (d) November. The October and November fall in the lull period
+before the northeast monsoon. The sampling period was defined based on the local climatic
+conditions in Calauit characterized by better survey conditions in the island during pre-
+
+monsoon. The May and June sampling period was conducted before the southwest monsoon
+
+28
+
+affecting Calauit in the middle part of the year, while the October and November sampling
+period was conducted before the northeast monsoon affecting Calauit in the latter part of the
+
+year (Table 3).
+
+Table 3. Survey dates with corresponding sampling season.
+
+“Survey dates --—~«‘Timeofsurvey Sampling Period _
+May 29-30, 2019 6:00 am — 6:00 pm May-Jun
+June 26-27, 2019 6:00 am — 6:00 pm
+October 25-26, 2019 6:00 am — 6:00 pm Oct-Nov
+
+November 10-11, 2019 6:00 am — 5:30 pm.
+
+3.4.2 Direct dugong observations
+
+To complement the land based monitoring data, direct dugong observations on areas perceived
+to be frequented by dugongs were also conducted from monitoring platforms in Aban-aban,
+Dimipac 2, Maltanobon 2, and Elhan during April, May and June outside of the land based
+survey period. Dugongs were observed opportunistically during good to excellent water clarity
+while taking note of their behavior, dive times, and surfacing interval. A dive time is defined
+as the time a dugong spends below water (the time from when a dugong dives to the time it re-
+
+surfaces). A surfacing interval is the time a dugong spends above water.
+
+3.4.3 Habitat assessment and validation
+Depth
+
+Rapid habitat assessments were done including determining the bathymetry/depth in survey
+areas using the SDE-28S south single beam echosounder. Below are the specifications of the
+
+equipment used (Table 4).
+Table 4. Specifications of the SDE-28S South single beam echosounder.
+
+29
+
+Specifications Value
+
+Frequency 200kHz
+
+Beam Angle 7 degrees
+
+Depth Resolution 0.1f/0.01m
+
+Accuracy +lem+0.1%D (0.1% of depth value)
+Sound velocity 1300-1700m/s, resolution is 1m/s
+Depth range 0.3-300m/900ft
+
+Draft 0-9.9 meters
+
+Data acquisition using the echosounder was done following a zig-zag path to determine the
+
+variability of depth from the coast and perpendicular to the shore across the study areas (Figure
+
+10). Time and depth were recorded, while automatic track logging of the GPS (Garmin Montana
+
+680) was used to record the location with respect to time. To account for the variability of tides,
+
+echosounder depth data was corrected by subtracting the mean tide level obtained from
+
+Wxtide32. All tide-corrected data were interpolated using the Natural neighbor technique in
+
+ArcGIS 10.1 to produce a raster data set of the depth in survey areas.
+
+Northern Busuanga
+Philippines
+
+£ ¥
+f A
+
+Legend
+
+Sti,
+E
+
+= KIN > Ww .
+
+Wow Va
+\ 5 { .
+
+Figure 10. Tracks of echosounder around Calauit Island and adjacent offshore islands.
+
+30
+
+Substrate
+
+A pre-existing resource map was obtained from the Environmentally Critical Areas Network
+(ECAN) Resource Management Plan of the Municipality of Busuanga (2017-2022) for
+examination. This map was digitized and georeferenced to identify the extent of seagrass
+
+habitats in Northern Busuanga (Figure 11).
+
+MUNICIPALITY OF BUSUANGA
+PROVINCE OF PALAWAN,
+PHILIPPINES.
+
+7 Calauitisland |
+Resource Map|
+
+Figure 11. Resource map of Calauit Island based on ECAN Management Plan (2017-2022)
+
+Spot validation surveys were conducted at different random points around survey areas. Garmin
+GPS equipment was used to determine the location of each random point. A 0.5 x 0.5 meter
+quadrat was deployed along with a go-pro in each random point to check for the substrate. The
+depth was estimated using the rope attached to the quadrat. This rapid procedure was done to
+increase the number of random points to be surveyed in each area. For each photo obtained,
+type of substrate, the presence of seagrass species (Halophila sp., Halodule sp., Syringodium
+sp., Cymodocea sp., Enhalus sp.) as well as the dominant species in each quadrat were noted.
+
+Seagrass cover was estimated using the SeagrassWatch methodology (McKenzie et al. 2003).
+
+31
+
+When available, a grab sampler and a Trident underwater drone were also deployed to rapidly
+
+check the substrate.
+
+3.4.4 Fisher Perception Survey on Dugongs
+
+Face-to-face interviews were done to collect information about the respondents’ perception of
+the dugong population in Calauit Island, including frequency of dugong sightings, when
+dugongs were last seen, perceived dugong count and perceived important dugong areas. Fisher-
+related questions were also asked including main gear, target fish, and location of fishing
+activities. A two-stage sampling method was used wherein villages with a significant number
+of households were targeted followed by the snowball sampling of fishers. A total of 58 fishers
+were interviewed which belonged to 4 out of the 6 residential clusters in Sitio Calauit, which
+comprises 19.08% of the total number of households (Table 5). At the time of the survey. there
+was no data available on the estimated population in Calauit Island, and therefore the number
+of households were used as proxy information to estimate the coverage of the survey, using the
+assumption of one respondent per household. Variability in visitation rates of fishers in various
+
+areas vary and not accounted by the survey.
+
+Table 5. Sampling locations with number of households and total number of respondents.
+
+Sampling Location Number of Total number of Percentage (%)
+households (as of respondents
+2014)
+Calauit Proper 94 24 25.53
+Binalayan/Cadyes 64 18 28.13
+Aban-aban 70 16 22.86
+Manlag, 35 - -
+Dimipac 41 - -
+Total 304 58 19.08
+
+32
+
+3.5 Data analysis
+3.5.1 Data pre-processing
+
+The sighting records that were obtained from the simultaneous dugong monitoring were
+prepared for data analysis. A sighting is defined as an event an individual is seen within a certain
+time duration. Based on the recorded average dive time (5 minutes and 41 seconds, n=21) for
+dugongs in Calauit during the surveys, an individual sighted after a six (6) minute interval from
+the time of last sighting was considered another sighting event. Sighting events during poor
+environmental conditions were omitted for data analysis. These included sighting events when
+
+water clarity was poor and when glare was high.
+
+3.5.2 Spatial distribution of sightings
+
+A general overview of the variability of sightings was determined by assessing the frequency
+
+of sightings and the mean duration of sightings per monitoring period.
+
+To assess the spatial distribution, the frequency, group size, sighting duration, water depth and
+sighting distance were determined for each monitoring station. Similarly, dugong calf sightings
+
+were also assessed in each monitoring station. Sighting maps were created using ArcGIS 10.1.
+
+Sightings were divided into spatial groups: East Calauit, North Calauit, West Calauit, and
+offshore islands (Dimipac and Maltanobon) to further assess spatial variability. This was based
+on the initial assessment that these areas are unique based on topography and the influence of
+monsoons and prevailing winds in each cluster. The west coast has more coralline with
+extensive fringing reefs. The east shores with less extensive fringing reefs and sudden drop-off.
+The northern coast has more sandy bottoms with subtidal seagrass beds. The offshore islands
+are the smaller islands adjacent to Calauit and also covered by the ancestral domain title
+
+awarded to the NTCQ.
+
+33
+
+3.5.3 Space use examination
+
+The Geospatial modeling environment (GME) along with R-studio and ARC GIS Ver. 10.1
+were used for home range creation and analysis. Kernel Density Estimation (KDE) (Augliere,
+2012; Quinton, 2016), a non-parametric analysis wherein a kernel is known as the probability
+density, was used to estimate the activity space of dugongs around the Calauit Island Group.
+According to Deutsch et al. (2022), KDE is the most widely used technique to identify
+individual dugong space use. KDE techniques have been used to estimate home ranges of
+dugongs (Sheppard et al. 2010), Indo-Pacific humpback dolphins (Parra, 2006), and Hector’s
+dolphins (Rayment et al. 2010), among others. The home range defined by KDE refers to the
+likelihood of finding an animal at any given point within the home range (Seaman and Powell,
+1996). It produces a probability surface known as the utilization distribution (UD) which aims
+to provide an indication of the area's intensity of use (Urian et al. 2009; Seaman and Powell,
+1996). The unit of relative density estimates produced using the KDE method is number of
+
+dugongs/km².
+
+All kernels were calculated using the least squares cross validation (LSCV) method, a
+smoothing function determined to estimate the least biased smoothing factor (Sheppard et al.
+
+2006), which allowed the creation of isopleth contours with a 100m? cell size.
+
+A 95% KDE (density contour) describes the home-range, or the entire area used by the animal,
+hereinto referred as CDSU, while the 50% KDE (density contour) represents the core area
+(Hooge et al. 1999; Sheppard et al. 2006; Getz and Wilmers, 2004; Urian et al. 2009), hereinto
+referred as CDCA. According to Burt (1943), the areas visited outside the identified 95%
+
+contour may be considered exploratory in nature.
+
+Several studies noted that home ranges are appropriately referred to as a 95% UD or activity
+space over a tracking period considering that survey durations are typically short to characterize
+an individual’s true home range (Deutsch et al. 2022; Preen 1992; Campbell et al. 2010; Cleguer
+
+et al. 2020b).
+
+34
+
+The total area of the CDSU and CDCA was calculated using the Calculate Geometry function
+while the mean depth was calculated using the Zonal statistics spatial analyst tool in ArcGIS
+using the bathymetry raster data that was previously generated. Furthermore, KDE Ratio
+(50%/95%), the ratio of the 50% to 95% KDE was calculated to determine the proportional size
+
+of core area within its home range.
+
+35
+
+CHAPTER 4
+RESULTS
+
+4.1 Spatial Distribution of Sightings
+
+We collected data in 4 monitoring periods in 2019 (2 days each), corresponding to 95 monitored
+hours resulting in 365 sightings from 30-32 monitoring stations situated across the Calauit
+Island Group (Table 6; Figure 12). Sighting data with the best environmental conditions (Glare=
+Low or Medium; Water Quality= Good or Excellent) resulted in 279 sighting records (Table
+7). This group of records were used in all analyses to increase the confidence level in the data
+gathered. Data derived during poor environmental conditions (Glare = Poor; Water Quality =
+
+Poor) were excluded in the study.
+
+Table 6. Summary of details of survey per monitoring period (n=363)
+
+Survey dates Time of No. of No. of Num of Max num of dugongs
+
+survey survey monitor sighting sighted simultaneously
+hours ing s(n) across stations
+stations
+
+May 29-30, 2019 6:00 am — 24hours 30 94 4 pairs of mother and
+6:00 pm calf, 3 adult dugongs
+
+June 26-27, 2019 6:00 am — 24hours 32 77 3 pairs of mother and
+6:00 pm. calf, 2 adult dugongs
+
+October 25-26, 2019 6:00 am — 24hours 32 90 2 pairs of mother and
+6:00 pm calf, 4 adult dugongs
+
+November 10-11, 6:00 am — 23 hours 32 102 2 pairs of mother and
+
+2019 5:30 pm calf, 4 adult dugongs
+
+Table 7. Best data of sighting records (n=279)
+
+Water clarity/Glare Number of sightings
+Low Medium High ND
+Excellent 32 21 5
+Good 123 103 10
+Poor 13 32 10 2)
+
+ND 1 a
+Note: Sightings with poor environmental conditions were removed (when glare is high and
+water quality is poor)
+
+36
+
+The daily frequency of sightings ranged from 29-49 sightings, while frequency of calf sightings
+
+ranges between I-11 sightings per day. Group sizes range from 1-6 individuals observed per
+
+group. Moreover, mean sighting duration is between 12.89 — 22.32 minutes per sighting (Table
+
+8).
+
+Table 8. Summary of survey results per monitoring day (n=279)
+
+Frequency Frequency
+of dugong of calf pad
+aon eee Sighting
+Survey day sightings sightings Group size duration
+(sighting (sighting (minutes)
+interval interval
+>6 min) >6 min)
+Mean Range _ Mean Range
+May 29, 2019 49 1 1.7 1-6 13.0 1-102
+May 30, 2019 35 4 ll 1-4 14.2 1-55
+June 26, 2019 27 1 Ld 1-2 12.9 1-55
+June 27, 2019 35 3 13 1-6 16.5 1-87
+October 25, 2019 38 4 Ll 1-2 22.3 1-213
+October 26, 2019 37 iB 1.2 14 19.0 1-102
+November 10,
+2019 29 u oy Ue 21.9 1-6!
+November 11,
+2019 29 7 2 22.3 1175
+
+37
+
+N Legend
+
+© % monitoring station
+area (May
+re t. Nov)
+
+4 we) |
+
+f \
+i n) |
+x fe |
+a |
+
+4 #2)
+
+a .
+=
+x,
+}
+3
+—{ UE
+] 1 1 Klormtar
+
+Figure 12. Map of study area showing monitoring stations and estimated field of view from
+
+the station
+
+38
+
+Legend N
+
+© — dugong sighting (adult)
+© calf sightings
+
+Dimipac |
+
+: 160,000
+
+{ Maltanobon |
+
+North Calawit é
+
+East Calawit
+
+West Calawit
+°
+©
+
+1 Kilometers
+
+=H
+
+Figure 13. Map of dugong sightings in 2019 based on simultaneous land-based surveys in
+
+May, June, October and November 2019
+
+39
+
+
+All monitoring stations recorded sightings within the 4 monitoring periods ranges from 1-30
+
+sighting records with Aban-aban (n=30), Elhan 1(n=23), Kawiren (n=16), Maltanobon | (n=16)
+
+and Punta (n=15) with the highest frequency (Figure 13; Figure 14; Table 9). Group size ranges
+
+from 1-6 individuals with a maximum of 3 calves per sighting and dugongs were seen within a
+
+mean sighting distance ranging from 133 m to 467 m with mean sighting depth ranging from
+
+1-29.3 m. On the other hand, mean sighting duration was highest at Kiling-kiling
+
+(duration=108.0 min) and Elhan 2 (duration=49.6 min) (Figure 15).
+
+EAST
+NORTH
+WEST
+OFFSHORE
+
+Dugong Sightings
+30
+25
+2 20
+=
+&
+td
+3 15
+3
+e
+— 10
+2
+0 Lu Oo ee
+MIAN PE SAK EE eos PAT AKAN EBEE
+SSCS eee See eh exe eee ec une ges
+233 08 SSSS=EES gese
+ag 2ee ea s££ 38855 FSsssssae ek
+Seeee SUG RSEZEE Es eZ E88 °* 3°
+zpao az ace oD
+g8 & io 2aa°° g
+22 &
+OO
+
+Figure 14. Number of dugong sightings per monitoring station
+
+Maltanobon 1
+Maltanobon 2
+
+40
+
+
+Sighting Duration
+
+T
+og
+
+T
+os
+
+T T T
+Op of oz
+
+(suiw) uogeinp Buny6is
+
+T
+OL
+
+NORTH WEST OFFSHORE
+
+ST
+
+Cluster
+
+Cluster
+east
+norma
+I vest
+Bl orrstiore
+
+|
+dd L ed
+
+(suims)uoneunp Bugysis
+
+owe
+uemeAryBeuld
+
+oejuew
+
+bevonbag
+zeianbag
+
+vueqe-ueqy
+vuoynpted
+bueuia
+zueu3
+uaiMey
+epund
+Suopouoseg
+
+monitoring station
+
+Figure 15. Sighting duration per cluster and per monitoring station
+
+41
+
+Table 9. Summary of dugong sightings per monitoring station
+
+nana Group size Sightin; pon -
+Monitoring pad (no. of Duration Water depth (m) SO
+Station animals) (minutes)
+
+Total Mean Range Mean Range Mean _ Range Mean Range
+
+Aban-aban 30 1.0 1-1 3.5 1-16 6.0  0.7-18.1 386.7 25-600
+Binalayan | 12 1.0 1-1 10.7 1-45 1.5 1.5-1.5 206.7 140-320
+Binalayan 2 3 1.7 1-2 1.0 1-1 1.3 13-13 303.3. 225-350
+Buctot 8 1.0 1-1 8.5 2-20 48 4848 332.5 240-360
+Cadyes | 1 1.0 1-1 20.0 20-20 3.0 3.0-3.0 550.0 550-550
+Cadyes 2 5 1.6 1-2 1.2 1-2 2.0 1.7-3.0 450.0 300-500
+Cheey cheey 1 14 13 1-3 17.3 1-63 10.9 2.7-15.5 222.1 20-400
+Cheey cheey 2 10 1.0 1-1 24.7 4-75 2.7 2.7-3.4 306.5 200-500
+Dayongdong 8 Ll 1-2 5.9 1-21 2.8 1.2-13.8 340.0 270-400
+Dequera 1 8 1.0 1-1 19 3-17 11.5 —-1.5-13.0 200.0 100-300
+Dequera 2 2 1.0 1-1 1.5 1-2 1.5 1,5-1.5 185.0 170-200
+Diapnay 1 3 20 14 93 414 138 ia 466.7 400-600
+Diapnay 2 3 17 1-2 16.7 12-22 3.5 3.5-3.5 216.7 200-250
+Dibulok | 2 1.0 1-1 1.0 1-1 3.1 3.1-3.1 260.0 200-320
+Dibulok 2 3 1.0 1-1 3.0 1-5 3.1 3.1-3.1 350.0 350-350
+Dibulok 3 6 1.2 1-2 38.2 6-102 1.6 1.6-1.6 183.3. 150-250
+Dimipac | 3 1.3 1-2 2.3 1-5 21.3 1.8-36.9 336.0 329-350
+Dimipac 2 7 5.3 1-6 17.7 5-49 2.7 2.7-2.7 285.7. 250-350
+Dimipac 3 4 1.0 1-1 1.0 1-1 10.3 1.8-35.8 203.5 118-380
+Elhan 1 23 1.0 1-1 276 1-144 15.9 2.1-25.6 317.8 35-450
+Elhan 2 5 1,2 1-2 496 2-213 2.2 2.2-2.2 137.6 90-188
+Katmon 12 1.2 1-2 31.3 1-261 10.8 2.3-11.6 244.6 50-455
+Kawiren 16 1.0 1-1 26.7 1-75 6.4 2.5-23.1 383.4 150-550
+Kiling-kiling 2 2.0 2-2 108.0 us 1.0 1.0-1.0 350.0 350-350
+Macachin 9 1.0 1-1 37.4 1-102 4.6 0.7-8.9 133.3. 50-300
+Maltanobon | 16 19 1-6 31.1 1-58 29.3) 2.5-41.3. 224.9 120-320
+Maltanobon 2 4 13 1-2 10.5 5-13. 21.9 2.5-41.3 290.0 230-400
+Manlag 9 1.0 1-1 47 3-9 1.5 1.5-1.5 444.4 200-600
+Pagdukon 10 1.0 1-1 5.6 1-20 4.5 4.5-4.5 277.5 180-400
+Pinagkiyawan 13 1.0 1-1 val 1-25 9.0 9.0-9.0 415.4 250-500
+Punda 13 1.0 1-1 21.2 1-112 5.6 5.6-5.6 277.7 200-350
+Punta 15 1.3 1-2 16.0 1-30 14 1.4-1.4 211.3 140-300
+
+42
+
+4.2 Spatial analyses
+
+4.2.1 All dugongs
+
+Dugong sightings were more frequent in North Calauit followed by East Calauit. However,
+largest group size was observed in the offshore islands with 6 individuals sighted and with a
+mean duration of 19.8 minutes. The mean water depth of sightings in offshore islands were also
+
+the largest and have the lowest mean sighting distance of 252.4 m.
+
+In East Calauit, the highest number of individuals (n=4) sighted simultaneously was recorded
+in October. Mean sighting duration in June was 21.1 min and 15.4 min in May. In North Calauit,
+the number of sightings was highest in June with the greatest number of individuals sighted
+simultaneously occurred in May and October (n=2). The sighting duration was highest in
+
+October (35.2 min) and lowest in November (2.1 min).
+
+In West Calauit, sightings were highest in May and lowest in June and November, with the
+
+highest mean sighting duration in November (52.1 min).
+
+In the offshore islands (Dimipac and Maltanobon Island), sightings were highest in May and
+June, with the greatest number of individuals sighted simultaneously (n=6) also in May and
+
+June. Mean sighting duration was highest in June (26.1 min) and lowest in October (6.5 min).
+
+43
+
+May 2019
+
+Legend
+
+© done arte
+
+, cs
+
+June 2019 le
+
+Legend
+
+> 4
+
+4125000
+
+November 2019 Le”
+Legend a
+
+Figure 16. Map of dugong sightings in May, June, October and November 2019.
+
+Table 10. Summary of dugong sightings per cluster and per monitoring period
+
+Group size Sighting
+
+Sighting no. of Duration Water depth Sighting
+
+Cluster/Month frequency ee (minutes) (m) distance (m)
+
+Total Mea Rang Mea Rang Mea Range Mea Range
+n e n e i
+East Calauit 82 1.2 1-4 19.0 1-112 5.5 1.2-23.1_ 291.0 20-600
+May 14 1.07 1-2 15.4 1-75 4.2 1.2-15.5 266.4 180-400
+June 1 Ll 1-2 22.6 4-73 4.2 1.4-13.8 315.9 180-500
+October 21 12 14 21.1 1-112 7.3 1.2-23.1 346.0 200-550
+November 36 1.2 1-3 18.1 1-74 5.3 1.2-23.1 260.8 20-600
+North Calauit 88 1.0 1-2 18.4 1-213 7.6 _0.7-25.6 298.2 25-600
+May 27 1.0 1-2 16.2 1-102 9.2 0.7-25.6 287.8 25-450
+June 29 1.0 1-1 10.0 1-87 9.0  0.7-25.6 331.9 50-500
+October 25 1.0 1-2 35.2 1-213 4.8  0.7-25.6 275.3 35-600
+November 7 1.0 1-1 2.1 1-5 5.4 3.1-8.9 280.7 180-375
+West Calauit 75 11 1-2 13.6 1-261 5.7__—:1.0-13.0 318.1 50-600
+May 30 1.2 1-2 9.0 1-45 5.4  1.3-13.0 296.3 100-600
+June 9 Ld 1-2 5.4 1-37 5.8  1.3-13.0 231.7 140-500
+October 27 1.1 1-2 8.1 1-41 5.2 1.0-11.6 370.3 50-550
+November 9 1 1-2 53.1 3-261 8.8 —1.0-13.0 320.0 200-420
+Off-shore
+islands 34 2.4 1-6 19.8 1-58 20.0 1.8-41.3 252.4 118-400
+May 13 3.5 1-6 16.2 1-55 8.8  1.7-36.9 297.6 250-350
+June 13 1.9 1-6 26.1 1-58 925.1 -1.8-41.4 221.4 118-400
+October 2 1S 2655-8333 7% 268.5 208-329
+November 6 1.0 1-1 18.7 1-52. 27.2 1.8-41.4 216.0 120-380
+4.2.2 Calf Sightings
+
+Dugong calves were seen at 14 monitoring stations which ranges from 1-6 sighting records,
+and 1-3 calf per sighting (Figure 17; Table 11). Calf sighting frequency were highest at Cheey
+cheey 1, Dimipac 2 and Elhan | (n=6). The greatest number of calves sighted simultaneously
+were in Dimipac 2 and Maltanobon | monitoring station (n=3 calves). Calf sighting duration
+was highest at Maltanobon | (duration=38.7 min), Cheey cheey | (duration = 25.1 min) and
+Dimipac 2 (duration=19.7 min). Mean water depth where calves were sighted ranges from 0.7
+
+m to 41.4 m with individuals sighted within 25 m to 500 m.
+
+45
+
+Calf sightings were more frequent in East Calauit (n=21) while the greatest mean group size
+(4.7) and number of individuals sighted simultaneously was at off-shore islands (n=3) (Table
+
+12). Mean sighting duration was also highest in offshore islands (22.7 min).
+
+Dugong Calf Sightings
+7
+© EAST
+6 © NORTH
+© WEST
+$5 @ OFFSHORE
+=
+> 4
+3
+53
+3
+€
+2 2
+i mY | |
+0 —— a
+BrANT BE SArEserarparararggsegreara
+s ZzexEccone sss BeQee
+ePPPF Sst ssegSSSessssssse se S8RaS
+£faart ss GHZeSeaegR2oe88 32 ages 83
+sean sg x SSLAFSPDDEISS g2<EeEEeCe
+pRoOoR a220002c C8690 @ oOoo8s8
+33 & 2aa 2 33
+66 a 2s
+
+Figure 17. Number of dugong calf sightings per monitoring station
+
+In East Calauit, sighting was most frequently observed in November (n=15), and also had the
+highest sighting duration with a mean of 21.3 min in November. The number of individuals
+
+sighted simultaneously (n=3) also happened in November.
+
+In North Calauit, calves were only sighted in May and October, with 2 dugongs sighted
+simultaneously in May, and dugongs sighted longer in October with a mean sighting duration
+
+of 20.4 min.
+
+46
+
+Sighting Duration
+
+24
+
+8 °
+Es
+6
+B87
+& of t
+2&8
+5 °
+a .
+
+2 — -
+
+mL T T T T
+EAST NORTH WEST OFFSHORE
+Cluster
+E Cluster
+5 est
+5 NORTH
+4 Bi vcr
+2: BB orrstione
+, l
+a
+__ oe FE
+‘monitoring station
+
+Figure 18. Sighting duration of dugong sightings per cluster and monitoring station
+
+In West Calauit, dugongs were sighted only in May and October, with the greatest number of
+
+sightings and highest sighting duration recorded in October.
+
+In the offshore islands, dugongs were sighted in May, June and October, with the greatest
+
+number of sightings in May (n=7) and least in October (n=1). Most number of individuals
+
+47
+
+sighted simultaneously (n=6) was recorded in May and June. The highest mean sighting
+
+duration was also recorded in May (24.7 min).
+
+Table 11. Summary of dugong calf sightings
+
+Monitoring
+Station
+
+Aban-aban
+Binalayan 2
+Cadyes 2
+Cheey cheey |
+Cheey cheey 2
+Diapnay 2
+Dimipac |
+Dimipac 2
+Elhan 1
+
+Elhan 2
+Maltanobon 1
+Maltanobon 2
+Pinagkiyawan
+Punta
+
+Fed Group size Sightin; Peary 5
+fend (ae. of Duration Mons so Sl
+animals) (minutes)
+Total Mean Range Mean Range Mean Range Mean Range
+2 1 1-1 10.00 10-10 0.7 25.0 25-25
+2 1 1-1 1.00 1-1 1.3 342.5 335-350
+2 1 1-1 1.00 1-1 2.3 375.0 300-450
+7 1 1-1 25.14 7-63 11.8 2.7-15.5 177.1 20-400
+6 1 1-1 14.33 4-59 2.8 5 345.8 200-500
+3 1 1-1 16.67 12-22 3.5 3.5-3.5 216.7 200-250
+1 1 1-1 5.00 5-5 25.2 25.2-25.2 329.0 329-329
+6 3 3-3 19.67 5-49 2.7 2.7-2.7 275.0 250-300
+6 1 1-1 17.83 5-38 10.4 2.1-25.6 268.3 40-380
+1 1 1-1 7.00 7-7 2.2 2.2-2.2 150.0 150-150
+3 2 1-3 38.67 10-55 33.7 18.3-41.4 256.7 220-320
+1 1 1-1 11.00 11-11 41.4 41.4-41.4 400.0 400-400
+4 1 1-1 7.75 2-16 9.0 9.0-9.0 437.5 350-500
+5 1 1-1 13.80 9-15 14 1.4-1.4 198.0 140-250
+
+48
+
+May 2019 ae June 2019 ES
+
+Legend
+
+Legend
+2 é
+a.
+October 2019 November 2019 ime
+Legend Legend
+4
+
+Figure 19. Map of calf sightings in May, June, October and November
+
+49
+
+
+Table 12. Summary of dugong calf sightings per cluster and monitoring period
+
+Sightin
+
+Group size Sighting Aya
+Cluster/ frequen (no. of Dui ration Water depth (m) aeaey
+animals) (minutes)
+Month cy
+Total Mean a Mean Range Mea Range Mean’ Range
+pas 21.0 15 13 181 463 56 1415.5 236.0 20-500
+Calauit
+May 1.0 20 22 90 99 4 14-14 200.0 200-200
+June 1.0 20 2-2 15.0 15-15 1.4 14-14 — 180.0 180-180
+October 4.0 15 1-2 «9.3 4163.3 2.6-2.6 326.3. 200-200
+Novembe 15.0 15 13 213 463 67 1414 218.0 20-20
+North 90 Al s12«149 538) 7.3——(0.7-25.6 201.1 25-380
+Calauit
+May 4.0 13. 12 80 510 73 0.7-0.7 145.0 25-25
+June - - - - - - - - -
+October 5.0 10, I-l 204-838) 7.30 21-2.1 = 246.0 40-40
+Novembe
+wey 8.0 15 12 441-16 5.4 1.3-9.0 398.1 300-500
+Calauit
+May 3.0 20. #22 #10 Il 14 13-13 3283 300-300
+June - - - - - - - - -
+October 5.0 12. 12 641-16 7.8 = 3.0-3.0 440.0 350-350
+Novembe . . . . . . . . .
+r
+Offshore 149) 482-6 22.7 5516.7 2.7-41.4 286.3 220-400
+islands
+May 7.0 57 46 24.7 «5-55. 4.9 ~—2.7-2.7 281.4 250-250
+June 3.0 33. 2-6 24.0 10-51 41.4 41.3-41.3 283.3 220-220
+October 1.0 20 22 5.0 5-5 25.2 25.2-25.2 329.0 329-329
+Novembe
+
+Tr
+
+4.3 Direct Dugong Observations
+
+Twenty one (21) records of dive times in Aban-aban (n=5), Dimipac 2 (n=3), Maltanobon 2
+
+(n=8), and Elhan (n=5) resulted to an average dive time of 5 minutes and 41 seconds while
+
+11 records of surfacing interval in Aban-aban (n=5), Maltanobon 2 (n=4) and Elhan (n=2) had
+
+an average of 1 minute and 46 seconds.
+
+50
+
+4.4 Confirmed Daylight Space-use (CDSU) of Dugongs
+4.4.1 Overview of dugong CDSU
+
+The total CDSU (95% KDE) for the dugong population was 4.6 km² and ranged from 0.7 km²
+to 1.4 km² in each of the clusters. CDCA (50%KDE) ranged between 0.1 km² to 0.2 km² in
+each of the clusters with a total area of 0.7 km² in Calauit Island which represents 15.2% of
+the total CDSU (Table 13; Figs. 20,21). The CDSU and CDCA of dugongs appears to be
+dispersed across the three islands with CDCA in Dimipac 2 located offshore characterized
+
+with a high kernel density.
+
+On the other hand, the total CDSU (95% KDE) for the dugong calf population ranged
+between 0.4 km² to 1.0 km² with a total area of 2.7 km². CDCA (50% KDE) ranged between
+0.1 km²to 0.2 km² in each of the clusters with a total area of 0.3 km² which represents 11.1%
+
+of the total CDSU (Table 13; Figs. 22).
+
+The CDSU locations of calves were found in the east, southwest, southeast, north, and in the
+offshore islands, while CDCAs were identified in the east (Punta and Cheey cheey), west
+
+(Binalayan and Cadyes), and offshore (Dimipac and Maltanobon).
+
+The east cluster appeared to have the highest CDSU for both dugongs (1.4 km²) and calves
+(1.0 km²). Moreover, results show that the KDE ratio for both dugongs (28.6%) and calves
+
+(25%) was highest in the offshore islands.
+
+51
+
+Table 13. Home range size of dugongs in Calauit Island using the 95% and 50% Kernel
+
+density technique
+1% 195
+Group cimae Number of 95%KDE 50%KDE re s%
+Sightings (km²) (km²) ratio
+East 82 14 0.2 14.2
+Dugong North 88 1.2 0.2 16.7
+population West 75 1.3 0.1 17
+Off-shore 34 0.7 0.2 28.6
+Total 279 4.6 0.7 15.2
+East 21 1.0 0.1 10.0
+North 9 0.5 0.0
+Calf West 8 0.4 0.0 0.0
+Off-shore u 0.8 0.2 25.0
+Total 49 2.7 0.3 111
+
+195% Home range
+
+50% Core area
+
+SOUOONP IW
+
+|
+
+Area(km²)
+
+Tes
+
+East
+
+Cluster
+
+Figure 20. Mean home range size of dugongs in each cluster using the 95% and 50% Kernel
+
+density technique
+
+52
+
+Kernel Density (dugongs/km²) N
+Ealew-o Kee
+[Ba eau -(0-0 0065) ig
+
+HEB on oo0es.00% = >
+1:125,000
+
+HB very Hon (0.0128 -00131)
+
+C Core area (50% kere!)
+
+Figure 21. Kernel density estimates of dugong sightings showing CDSU (95% KDE), and
+
+CDCA (50% KDE)
+
+Kernel Density (dugongs/km²) N
+Loww-)
+y
+
+[Bi Medum(0 00486)
+HBB Hor (00486-00024)
+Vory High - (0.0824 -0.0973)
+
+} Core area (50% kere!)
+
+4:125,000
+
+@
+
+Figure 22. Kernel density estimates of calf sightings showing CDSU (95%KDE). and CDCA
+
+(50%KDE)
+
+53
+
+4.4.2 Seasonal Variation of Dugong Home ranges
+
+The total CDSU (95%KDE) of the dugong population in May-Jun ranged between 0.6 - 1.0
+km’ in each of the clusters with a total home range size of 3.2 km². Total CDCA (50%KDE)
+ranged between 0.1- 0.2 km² among clusters with a total of 0.4 km’ that represented 12.5% of
+the total CDSU (Table 14; Figs. 23-24). In Oct-Nov, total CDSU ranged between 0.4 to 1.9 km²
+with a total area of 4.9 km² while the total CDCA of 1.1 km² ranged between 0.3-0.5 km² in
+each of the clusters and represented 22.4% of the total CDSU (Table 14; Figs. 23-24).
+
+During the May-Jun sampling period, data revealed that the highest CDCA was in the off-shore cluster with 0.2
+km² while the highest CDCA during the Oct-Nov sampling period was in the east with 0.5 km’. This data also
+corresponds to the offshore cluster having the highest proportion of core area as shown by the KDE ratio during
+the May-Jun sampling period (33.33%) while the KDE ratio was highest in the eastern cluster (26.3%)
+
+during the Oct-Nov sampling period.
+
+Table 14. Home range size of dugongs in Calauit Island using the 95% and 50% Kernel
+
+density technique, by season
+
+CDSU CDCA 50%/95%
+
+Season _— Cluster SEE 95%KDE 50%KDE KDE
+(km’) (km²) ratio
+East 25 06 0.0 0.0
+North 56 10 0.1 10.0
+May-Jun = West. 39 1.0 0.1 10.0
+Off-shore 26 0.6 0.2 33.3
+Total 146 32 0.4 12.5
+East 37 19 0.5 263
+North 32 12 03 25.0
+Oct-Nov West 36 14 03 214
+Off-shore 8 04 0.0 0
+Total 133 49 Lt 22.4
+
+54
+
+95% Home range
+
+50% Core area
+
+aR
+
+Arealkm²)
+
+NRO
+
+Cluster
+
+Figure 23. Home range size of dugongs in Calauit Island using the 95% and 50% Kernel
+
+density technique, by season
+
+May-Jun
+Kernel Density (dugongs/km²)
+
+Cum. or
+[Bi Meaum -(0-0.0137)
+
+Han - (00137-00246)
+
+MHI ver) Hin - 00245-00273)
+
+(7 core ares (50% kemel)
+
+“] Representatve area (95% kemel)
+
+N
+
+A
+
+4:125,000
+
+Figure 24. Kernel density estimates of dugong sightings in May-Jun sampling period showing
+
+CDSU (95%KDE) and CDCA (50% KDE)
+
+55
+
+Oct-Nov TS N
+
+Kernel Density (dugongsiama) 47
+LA
+
+4:125,000
+
+Figure 25. Kernel density estimates of dugong sightings in Oct-Nov sampling period showing
+
+CDSU (95%KDE) and CDCA (50% KDE)
+
+On the other hand, total CDSU (95%KDE) for dugong calves in May-Jun was 0.6 km² and
+ranged between 0.1-0.3 km²(Table 14; Figure 27). Total CDCA (5S0%KDE) was less than 0.01
+km² during the May-Jun sampling period. In Oct-Nov, the total CDSU (95%KDE) was 3.0 km²
+and ranged between 0.2-1.8 km² among clusters, while the total CDCA (50%KDE) was 0.6
+km² which represented 20.0% of the total CDSU (Table 15; Figs. 26, 28). The core area
+
+proportion for calves during the Oct-Nov sampling period was highest in the east (30.87%).
+
+56
+
+Table 15. Home range size of dugongs (calf only) in Calauit Island using the 95% and 50%
+
+Kernel density technique, by season
+
+CDSU CDCA 50%/95%
+
+Season Cluster Sena 95%KDE 50%KDE KDE
+(km²) (km²) ratio
+East 2 0.1 0.0 0.0
+North 4 0.1 0.0 0.0
+May-Jun = West 3 0.1 0.0 0.0
+Off-shore 10 0.3 0.0 0.0
+Total 19 0.6 0.0 0.0
+East 19 1.8 0.5 27.8
+North 5 0.5 0.0 0.0
+Oct-Nov West 5 0.5 0.1 20.0
+Off-shore 1 0.2 0.0 0.0
+Total 30 3.0 0.6 20.0
+a pire
+
+RPO
+
+i
+L_.. a
+
+Figure 26. Home range size of dugongs (calf only) in Calauit Island using the 95% and 50%
+
+Kernel density technique, by season
+
+57
+
+May-Jun N
+Der-o
+[Ea meoum -(0-0.5386)
+
+GE Hon - (0.5304-1.0229)
+MMIII very High -1.0029- 4.0767)
+
+Representavve area (96% Kemet)
+
+1:125,000
+
+Figure 27. Kernel density estimates of dugong calf sightings in May-Jun sampling period
+
+showing CDSU (95%KDE) and CDCA (50% KDE)
+
+Oct-Nov N
+Kernel Density (dugongs/km²) ‘A S A
+[BB Hon -(0.0226-0 0430)
+
+HH ver Ha - (00430-00452)
+(core area (80% here) zp
+
+Representative area (95% kere)
+
+1:125,000
+
+Figure 28. Kernel density estimates of dugong calf sightings in Oct-Nov sampling period
+showing CDSU (95%KDE) and CDCA (50% KDE)
+
+4.4.3 Examination of Confirmed Daylight Space-Use (CDSU) and Confirmed Daylight Core
+
+Areas (CDCA)
+
+Depth
+
+The mean depth of dugong CDSU (95% KDE) was between 5.1 m to 22.5 m, while mean
+
+depth of core areas (50%KDE) ranged between 5.4 m to 22.4 m. The West cluster had the
+
+lowest mean depth while the offshore cluster had the highest. On the other hand, the CDSU of
+
+dugong calves, were within a mean depth ranging from 4.7m to 23.1 m while core areas
+
+ranged between 2.8 m to 3.6 m (Table 16; Fig 29-31)
+
+Table 16. Depth of Home range (95% and 50% KDE) of dugongs in Calauit Island
+
+Number of epsy cues
+Group Cluster Sightings 95%KDE 50%KDE
+Ave. depth (m) Ave. depth (m)
+
+East 82 72 6.5
+
+Dugong North 88 val 8.3
+population West 75 5.1 5.4
+Off-shore 34 22.5 22.4
+Average 10.5 10.6
+
+East 21 5.7 3.6
+
+North 9 9.1 -
+
+Calf West 8 47 2.8
+Off-shore i 23.1 19.6
+
+Average 10.7 8.7
+
+Chster
+
+Figure 29. Mean depth of dugong CDSU and CDCA. (Note: points represent minimum and
+
+maximum depth values)
+
+L
+
+59
+
+Figure 30. Depth range of CDSU and CDCA of the dugong population
+
+Figure 31. Depth range of CDSU and CDCA of the dugong calf population
+
+Seagrass
+
+Using available seagrass maps, total area of seagrass beds was derived (Table 17).
+
+Table 17. Total seagrass area (sqm) derived from known sources
+
+Seagrass Map Total area (sqm)
+Remote sensing (Morita and Sajol, 2018)
+
+Remote sensing and ECAN map overlay
+
+Out of the 128 random spot surveys, 80 sites revealed the presence of seagrass, of which 31
+(38.75%) were characterized as high biomass, 38 (47.50%) were of low biomass while 11
+
+(13.75%) were of medium biomass. Halophila sp. was present in 31 (38.75%) out of the 80
+sites. Among these, significant seagrass beds with Halophila sp. was observed in core areas
+
+Aban-Aban and Elhan and Kawiren (Figure 32). Other seagrass species observed include
+
+61
+
+Halodule sp., Syringodium sp., Cymodocea sp., and Enhalus sp. Depths of seagrass areas
+ranged between 1.5 m to 27 m, with deep-water seagrass beds (>15 m) observed in Diapnay
+(17-22 m), Dimipac (24 m), Kawiren (18-20 m), Aban-aban (23-27 m) and Pagdukon (24 m).
+During the spot validation surveys, one incidental sighting of a dugongs coincided with the
+presence of Halophila sp. such as in Macachin at 13.5 m, while another dugong was sighted
+
+in Cheey cheey | at 18 m depth characterized with sandy substrate.
+
+Legend
+
+Seagrass Cover Estimate
+high
+medium
+low
+
+1:125,000
+
+Halophila sp.
+
+Core area (50% kernel)
+
+Representative area (95% kemel)
+
+Seagrass (Morita and Sajol, 2018)
+
+1 Kilometers
+
+Figure 32. Remotely sensed seagrass cover (Morita and Sajol, 2018) and validated presence
+
+of Halophila sp. in identified CDSU and CDCA of the dugong population.
+
+62
+
+Legend
+
+Seagrass Cover Estimate
+* high
+° medium
+2 low
+
+1:125,000
+% — Halophila sp.
+
+Core area (50% kernel)
+
+Representative area (95% kernel)
+
+Seagrass (Morita and Sajol, 2018)
+
+T Kilometers
+
+Figure 33. Remotely sensed seagrass cover (Morita and Sajol, 2018) and validated presence
+
+of Halophila sp. in identified CDSU and CDCA of the dugong calf population.
+
+63
+
+4.5 Fishers’ Perception on Dugongs
+
+The main fishing gears of respondents interviewed is shown in Table 18 with hook and line
+having the highest percentage of 51.72%, jigger with 41.38% while gillnet fishers comprise
+6.90% of the total respondents. The main target fish of these fishers are reef associated species
+(74.14%) including groupers, emperors, jacks, breams, rabbitfish, and snappers, among others.
+The other 25.86% of respondents considered octopus as their target fish (Table 19). Figure 34
+shows the fishing intensity per gear type, while Figure 35 shows the spatial distribution of
+
+sightings vis a vis the type of reported fishing activity.
+
+Table 18. Main types of fishing gear of respondents
+
+Gear Type Number of fishers Percentage
+Hook and
+
+Line 30 51.72%
+Jigger 24 41.38%
+Gillnet 4 6.90%
+Total 58 100%
+
+Table 19. Target species of respondents
+
+Number of
+Target fish fishers Percentage
+Reef-associated
+species 43 74.14%
+Octopus 15 25.86%
+Total 58 100%
+
+All respondents in the perception survey stated that they “frequently’ see dugongs during their
+fishing trips. When asked about the degree of frequency in the past year, a total of 52
+respondents (89.66%) answered “several times” (Figure 36). All respondents also perceived to
+know where dugongs regularly occur while none of the respondents have ever seen dugong
+calving. Among the perceived dugong areas mentioned by respondents, Aban-aban appeared
+to have the highest frequency indicated (n=25), including Kawiren (n=19), Binalayan (n=19),
+
+Dibulok (n=16), and Dimipac (n=15) (Figure 37). Lastly, 35 respondents (60.34%) perceived
+
+that less than 10 dugongs inhabit the important dugong areas (Figure 38). Nine respondents did
+
+not provide an answer.
+
+(a) Hook and a]
+
+so
+
+(b) Octopus Jigger N
+
+1:180,000
+
+(c) Gillnet
+
+= Kilometers
+
+0 15 3 6
+
+Legend
+
+Number of fishers
+
+=: oo
+°
+
+© dugong sightings
+© calf sightings
+
+Figure 34. Fishing location (all year) based on 58 fishers using (a) hook and line, (b) octopus
+
+jigger, and (c) gillnet vis a vis dugong sightings.
+
+65
+
+Legend
+FisheryType
+(OE Hook and Live
+HB 23
+GN cavet
+TH caretars Hook ans Une
+GB oaretars seer
+HB Hook ars Line, Jager
+HB versrey
+Corl reets
+© calf signings
+© augong sightings
+Data based on 58 fishers
+
+1:80,000
+
+Figure 35. Dugong sightings vis a vis type of fishery (Note: Data is based on 58 fishers)
+
+66
+
+Frequency dugongs seen the past year
+
+60
+
+52
+
+50
+
+°
+=
+
+fa
+
+Anuanbai4
+
+g
+
+10
+
+Every day
+
+Every week
+
+Every month
+
+Several times
+
+Figure 36. Perception of fishers on how frequent dugongs were seen in the past year.
+
+Perceived dugong areas
+
+19 19
+
+16
+
+o =
+o
+os
+o—
+
+——
+
+Aouanbasy
+
+‘uedesdeul) sease 18430
+young
+uemeA!ySeulg
+owe,
+uoynp3ed
+Suopuoceg
+saAped
+ueyla
+sejuew
+Aeudeig
+Buy} BUND4
+eqund
+euianbag
+epund
+uiypesew
+uogoueyjew
+Aaayo-Aaayd
+sediwig
+yoinqia
+uekejeulg
+uasimey
+
+ueqe-ueqy
+
+Figure 37. Perception of fishers on where dugongs regularly occur.
+
+67
+
+Perceived dugong count
+
+35
+13
+= &
+0 ead
+
+One Less than 10 More than 10
+
+Frequency
+S be mt pe we fe 2
+5 & 8 8 $ & 8
+
+Figure 38. Perception of fishers on the number of dugongs inhabiting the important dugong,
+areas.
+
+68
+
+CHAPTERS
+
+DISCUSSION
+Spatial distribution of Dugong CDSU and CDCA
+
+The dugong sighting data and confirmed daylight space use (CDSU) areas indicated that
+Northern Busuanga remains an important area for dugongs in Palawan, Philippines, with
+sightings across all monitoring stations and a maximum of 4 dugong mother-calf pairs and
+3 adult dugongs sighted simultaneous from non-overlapping vantage points (Figure 3;
+Table S1). The results suggest a minimum relative population of 11 dugongs in the area,
+
+while the presence of at least 3 calves indicates a reproducing population.
+
+Monitoring stations including Aban-aban (n=30), Elhan | (n=23) and Kawiren (n-16) were
+found to be frequented by dugongs. This was also validated by the fishers’ perception
+survey wherein Aban-aban and Kawiren had the highest frequency among the perceived
+dugong areas. Aban-aban monitoring station covers the established dugong watching area
+which is a community-based ecotourism operated by the indigenous community while
+Kawiren is characterized with significant seagrass beds potentially utilized as a foraging
+
+area,
+
+Based on the analysis, the total CDSU (95% KDE) is approximately 4.6 km² spanning,
+across all survey areas, while the total confirmed daylight core area (CDCA; 50%KDE) is
+about 0.7 km² which represents 15.2% of the total home range. On the other hand, space
+use analysis revealed a total CDSU of calves around the island of 2.7 km², and a CDCA of
+0.3 km² which represents 11.1% of the total CDSU.
+
+These types of analyses on home range such as that on bottlenose whales in Canada have
+been used to infer an animal’s territory, describe foraging ecology and reveal spatio-
+temporal variations in distribution and home range (Hooker et al. 2002; Richard et al.
+
+2014). In this study, sighting distribution and space use analysis was used to infer important
+
+69
+
+dugong areas utilized which may be characterized as their feeding and nursery grounds.
+While no specific calving or nursery areas have been defined in the study site historically,
+identified CDCAs or core areas as defined by Dixon and Chapman (1980), are parts within
+the home range that are used intensively which could suggest important foraging and
+
+calving areas, among others.
+
+In Australia. home range estimates for individual dugongs ranged from 0.5 to 733 km²
+(Sheppard et al. 2006) while home range studies in Indonesia revealed a home range of 43
+km² and a core area of 4 km² (De Iongh et al. 1998). Furthermore, the largest reported
+dugong home range was observed in Torres Strait between Australia and Papua New
+Guinea ranging from 264 to 1358 km² which was based on six individually tagged dugongs
+(Deutsch et al. 2022). In comparison to these home ranges recorded in other countries, the
+CDSU and CDCAs in the Calauit Island Group revealed by this study appears to be small.
+As demonstrated by several studies, considering the complexity of movement behaviors
+across several spatial scales, it is therefore probable that the confirmed daily used area of
+dugongs indicated by this study could be a subset of a larger dugong space use around the
+waters of the Province of Busuanga and even the larger Palawan Region (Marsh and
+Rathbun 1990; De longh et al. 1998; Holley 2006; Sheppard et al. 2006; Gredzens et al.
+2014; Cleguer, 2015). Nevertheless, this study support claims that Calauit Island is an
+
+important area for dugong conservation (Marsh et al. 2002).
+
+The offshore-islands, Dimipac and Maltanobon, had the highest KDE ratio, which means
+that a major part of its home range in these areas function as a core area for dugongs. These
+offshore islands also revealed to have the highest mean sighting duration among dugongs
+(19.8 min), and calves (22.7 min), which means that dugongs spend time longer in these
+areas. This is similar to other field studies such as on Irrawaddy dolphins in the Cambodia
+and Vietnam border which has shown proximity to offshore islands (Verutes et al. 2021).
+This is further supported by sighting records of three pairs of mother and calf in Dimipac
+
+70
+
+2 in May 2019 and in Maltanobon | in June 2019. The high KDE ratio coupled with dugong
+sightings of larger groups in the offshore islands could then have implications on the area’s
+
+likelihood of importance.
+
+Space-use patterns
+
+Movement behaviors across several spatial scales is complex. As such, the likelihood of
+importance of an area could also potentially shift due to the influence of strong winds and
+low tides (Nietschmann and Nietschmann 1981; Nietschmann, 1984; Holler, 2006).
+Aragones (1994) also noted that the movement of dugongs can be affected by prevailing
+monsoons, suggesting seasonal variation of dugong distribution within the island. In this
+study, the highest number of sightings was recorded in East Calauit during the November
+sampling period, while the greatest number of individuals sighted simultaneously was
+recorded in the East and North Calauit during October. On the other hand, the highest mean
+sighting duration was recorded in the West during November. This suggests that dugongs
+
+stayed longer in the west during the November 2019 sampling period.
+
+Furthermore, while CDCAs were identified around the island in the May-Jun sampling
+season, analysis shows a significantly larger core area in the offshore islands during May-
+Jun sampling period than in the Oct-Nov sampling period in 2019. However, despite the
+the smaller core area in the offshore islands during the Oct-Nov 2019 sampling period,
+analysis revealed that core areas were more dispersed around the island. KDE ratio was
+also higher in Oct-Nov 2019 suggesting that during this time, the greater portion of the
+
+CDSU was also the core area.
+
+CDSU and CDCA of calves also appeared to be higher during Oct-Nov 2019 than in May-
+
+Jun 2019. Further, CDSU of calves was highest in the offshore islands during May-Jun and
+
+71
+
+highest in the east cluster during the Oct-Nov sampling period. This variability in
+movement behavior suggests that despite the perceived likelihood of importance of the
+offshore islands, other parts of the island such as the east side are also utilized and possibly
+
+considered important areas around the Northeast monsoon season.
+
+This complexity of movement patterns of dugongs can also then present to be challenging
+with identifying important areas, and thus, it also important to examine the sighting records
+and confirmed daylight space use areas along with other sources of variability of space use
+such as the site’s physical and biological characteristics (Cleguer, 2015; Aragones et al.
+
+2006; Marsh et al. 2012; Preen, 1995).
+
+As described above, the home range of dugongs could reflect their association with feeding
+areas, of which may also vary due to depth (Hooker et al. 2002) considering that dugongs
+are known to follow an optimal feeding strategy wherein their feeding site selection is
+based on maximum energy gained, with minimum energy expended (Aragones et al. 2006;
+
+Preen, 1995; Sheppard et al. 2007).
+
+The mean depth of dugong CDSUs and CDCAs among the clusters ranged from 5.1 to 23.1
+m with the offshore islands having the highest mean depth reaching up to 23.1 m.
+According to related literature, dugongs are generally found in shallow areas less than 15
+m but also occur on depths reaching up to 37 m (Marsh and Saafeld, 1990; Lee Long and
+Coles, 1997; Lee Long et al. 1996). Keith-Diagne et al. 2022 also noted that dugongs can
+be found over deep water seagrass beds in some parts of its range with dives recorded to
+more than 30 m but no records beyond 40 m. In this study, seagrasses were observed up to
+27 m with deep water seagrass beds at more than 15 m depth observed in Diapnay,
+Kawiren, Aban-aban, Pagdukon and in Dimipac which is located offshore.
+
+Studies suggested that dugongs feed predominantly on 12 species of seagrass while some
+indicated that, Halophila ovalis and Halodule uninervis were observed to be preferred by
+
+72
+
+dugongs due to their high nitrogen content and since these are easily digestible. (Marsh et
+al. 2011; Preen, 1995; Sheppard et al. 2010; Domning, 2022). In this study, 80 of 128
+random points revealed the presence of seagrass, with 31 sites with the presence of
+Halophila sp. Among the 31 sites, significant seagrass beds dominated by Halophila sp.
+were observed in CDCAs such as Aban-aban at 7 m depth, Elhan at 10.7 m and Kawiren
+at both shallow area at 1.5 m and deeper areas at about 18 m. These findings are supported
+by monitoring data which revealed that Aban-aban (n=30) and Kawiren (n=16) monitoring
+
+stations were frequented by dugongs.
+
+Sighting records in the offshore islands were also recorded in depths ranging between | m
+(located close to shore) to 41 m. While Dimipac Island which is located offshore appeared
+to have a relatively low seagrass biomass, spot validation surveys revealed the presence of
+Halophila sp. at 24 m depth within the CDCA. Patches of seagrass beds with Halophila
+sp. was also observed outside of the CDSU areas in Aban-aban with depth reaching up to
+27 m. These findings on the occurrence of deepwater seagrass beds that can be potentially
+accessed by dugongs in the study area are within the depth range of documented feeding
+scars which is up to 33 m (Marsh and Saafeld, 1990; Lee Long and Coles, 1997). An
+incidental sighting of a dugong in Macachin at 13.5 m depth, also coincided with the
+presence of Halophila sp. The Elhan (1 and 2) monitoring stations, on the other hand, had
+a high frequency of sightings (n=23), and relatively long sighting duration (213 min) of 3
+individuals with calf seen in the shallow area (<5 meters). In general, this area is
+characterized with spur and groove reef formation, wherein coral “spurs” are separated by
+narrow patches of sediment called “grooves”, which are channels potentially used by
+dugongs as pathways (Aragones, 1994; Storlazzi et al., 2003). Aragones (1994) also
+observed that dugongs stayed on the seaward sides of the spur and grooves in Elhan which
+could complement survey results in 2019 revealing seagrass beds dominated by Halophila
+sp. in the seaward side with depth reaching up to 10.7 m. This variability in seagrass depths
+in the Calauit Island Group reveals that dugongs can potentially access both shallow and
+
+73
+
+deep seagrass beds. This signifies the heterogeneity of available seagrass beds for these
+
+dugongs around the island.
+
+Previously, Aragones (1994) had identified Pinagkiyawan as an important area noting that
+it was where most dugongs were sighted simultaneously (n=14) and that despite having
+the lowest seagrass biomass, it had significantly higher biomass for Halodule uninervis, a
+seagrass species characterized with high nitrogen content (Marsh et al. 2011; Preen, 1995;
+Sheppard et al. 2010). During the 2019 survey, eight out of the 13 dugong sightings (four
+out of the eight were calves) in Pinagkiyawan happened in October, supporting
+implications that dugongs potentially utilize West Calauit during the Northeast monsoon.
+Dugongs sighted in Pinagkiyawan could potentially seek refuge in adjacent areas such as
+Katmon where depth ranges between 2.3-11.6 m and is located in Ilultuk Bay that could
+
+potentially provide better protection, especially for calves (Figure 6).
+
+The space-use patterns derived from this study also complement prior distribution
+knowledge based on historical land-based surveys in 2017, and 2018 (Aragones et al.
+unpublished) wherein large groups were observed in Cheey cheey (4 individuals), and
+Dimipac Island (5 individuals). In 2019, Cheey cheey 1 and 2 appeared to be mostly
+frequented by calves with 6 to 7 sightings and also part of the east cluster monitoring,
+stations that appeared to have the highest CDSU among the clusters. This could be
+explained by the availability of seagrass beds with shallow patches of Halophila sp.
+potentially used as nursery grounds. On the other hand, this study revealed that the largest
+core area identified for calves is located in Dimipac and is characterized with seagrass beds
+with the presence of Halophila sp. Based on these findings, these areas appear to have
+geographical adaptations such as the combination of physical and biological characteristics
+
+that could provide favorable conditions for dugong habitat use around the island.
+
+74
+
+Implications to Conservation Management
+
+Studies of dugongs in New Caledonia have previously identified “ecoregions” and
+attributed variability on the nature and intensity of anthropogenic influence and considered
+it as a driver to explain the variability of habitat use by dugongs (Derville et al. 2022).
+Similarly, dugong space use can be threatened by anthropogenic influences that could be
+a factor in site fidelity, and can influence detectability of sightings (CMS, 2006). During
+the 2019 survey, sighting records close to shore such as in Maltanobon Island, may be
+attributable to a relatively low human induced disturbance considering that the island
+
+remains uninhabited by people.
+
+Poonian and Lopez (2016) revealed dugong deaths in Busuanga were attributed to
+entanglement in the ropes of seaweed farms in 2013. It is however notable that while
+seaweed farms were observed in Punda and Aban-aban during the survey period, there
+have been no anecdotal reports of dugong mortality within the island due to seaweed
+farming. Gillnet, a high impact fishing gear for dugongs due to the possibility of
+entanglement, appeared to be a less prominent main fishing gear compared to hook and
+line, and jigger. Nevertheless, fishing activity is almost widespread around Calauit Island
+including in offshore areas based on the fishers’ perception survey. The management of
+fishing related threats as well as disseminating information regarding important dugong
+conservation areas to local communities could be essential in preventing dugong mortality.
+Existing ecotourism activities around the Calauit Island Group such as Dugong watching
+in Aban-aban and SCUBA diving in Dimipac 2 which also result to heavy boat traffic
+within the area, should also further be monitored and managed considering that these same
+
+areas were identified as CDCAs.
+
+According to Demaster et al. 2001, long range movements also increase the risk exposure
+of an animal to threats such as fishing gear entanglement which could affect the fecundity
+
+75
+
+and survival rate of the remaining dugong population. The proper management of CDSU
+and CDCAs could then be useful to minimize long range movements of animals and lessen
+the risk of mortality while traveling outside important areas. Other studies have shown that
+animals outside their home range may also increase the probability of exposure to
+chemicals that may have implications on the animal’s immune system and reproductive
+performance (O’Shea and Tanabe, 2003). Considering that the identified CDSU and
+CDCAs appear to be exposed to various human-induced threats, it is imperative to establish
+
+co-management areas with local communities for effective conservation and management.
+
+Critical evaluation of simultaneous land-based surveys using the citizen science approach
+
+Prior distribution knowledge has indicated the presence of dugongs in the island based on
+aerial surveys (1985 to 1992) and simultaneous land-based monitoring surveys (1989 to
+1990, 2017, 2018). (Pawikan Conservation Project-Protected Areas and Wildlife Bureau
+and DENR, 1995; Aragones, 1994). According to Dunshea et al. 2020, aerial surveys have
+shown that the probability of sighting was affected by environmental conditions (i.e., water
+clarity) while observer-related variables (perception bias) had substantial impacts on both
+duplicate sighting probabilities (dugongs vs dolphins) and the reliability of observations.
+These complications in survey conditions can be minimized by using simultaneous land-
+based surveys given a fixed survey area (<500m sighting distance from vantage point).
+Additionally, the citizen science approach utilizes local ecological knowledge which could
+enhance the reliability of observations since local observers have seen the animal multiple
+times prior to the survey. This could be during their trips around the island, during transport
+to and from place of residence, or during fishing activities. In this study, the majority of
+sightings were also found in relatively shallow waters, in depths less than 5 meters (62.7%),
+and between 5-10 meters (12.90%). Sightings in shallow water may have implications on
+
+water clarity, and may have greater chances of being seen, as well as enhancing the
+
+76
+
+reliability in the data, eliminating errors that can be due to visual/perception bias. In aerial
+surveys such as in Marsh and Sinclair (1989), 95.6% of dugong sightings were in water <5
+m deep where seagrass beds were clearly visible. Moreover, dugongs were also sighted for
+an extended sighting duration which may be a factor in assessing the reliability of the data.
+Furthermore, while missing dugongs in groups is probable, there is also a greater
+probability of missing calves during single sighting records, which could underestimate
+the number of calves in the data. To address these limitations on the detectability of
+sightings, the “visibility bias” as described in Pollock and Kendall (1987) and Aragones et
+al. (2012), was minimized by analyzing data with the best environmental conditions,
+therefore mimicking optimum weather conditions to detect an animal from each vantage
+
+point. This implies that data from this survey technique is a conservative approach.
+
+The conduct of land-based surveys is also limited by the availability of elevated monitoring
+platforms that can provide a good vantage point to at least minimize the perception and
+observer bias than can affect the level of confidence in the data gathered. Observer bias
+can be enhanced through continuous monitoring of dugongs. Aragones (1994) also
+acknowledged the potential bias in dugong sightings driven by uneven distribution of
+vantage points within the island, which can be addressed by increasing the number of
+monitoring sites and survey areas. While Aragones (1994) identified Pinagkiyawan as an
+important feeding area of dugongs with a high biomass of Halodule uninervis, which in
+2019 was also identified as part of the home range, the improvement of the methodological
+technique by adding monitoring stations around the island have revealed other key habitats
+
+for dugongs.
+
+Despite the limitations of the methodology, this research study has nevertheless
+demonstrated that the citizen science approach is a strategic tool that can be used to gather
+important baseline data to inform dugong management and at the same time educating
+
+local communities on the importance of conserving coastal species such as dugongs.
+
+77
+
+SUMMARY
+
+The CDSU of dugongs is approximately 4.6 km² with CDCA of about 0.7 km’, while
+CDSU of calves was 2.7 km² with CDCA of 0.3 km7. In terms of important locations, the
+study revealed that the CDSU of dugongs including calves was highest in the east and
+revealed the importance of the offshore islands as shown with a high KDE ratio. The May-
+Jun sampling period highlighted the importance of the offshore islands characterized with
+the highest CDCA and highest CDSU of calves. Further, the Oct-Nov sampling period
+highlighted the importance of the east side of the island which revealed to have the highest
+CDSU and CDCA for both dugongs and calves during this period in 2019. This
+demonstrated that the space use areas of mother and calves varied seasonally implying that
+
+there is potential seasonal variability of nursery grounds in the Calauit Island Group.
+
+The study also revealed that the daylight space use areas of dugongs ranged between 5.1-
+22.5 m with the highest mean depth in the offshore islands. Furthermore, in the east part
+of the island, which was revealed to be an important area, CDSU of calves were
+characterized with depth ranging from 1.4-15.5 m covering shallow areas of Punta, and
+both shallow and deeper areas of Cheey cheey and Diapnay. These depth ranges of dugong
+habitat use were supported by spot validation revealing the presence of shallow and deep
+seagrass beds between 1.5-27 m. These seagrass beds were characterized with a sandy
+substrate, with specific seagrasses found at more than 15m depth in Diapnay, Kawiren,
+Aban-aban, Pagdukon and Dimipac. The study also found the presence of halophila in 31
+out of the 80 sites, with significant seagrass beds dominated by Halophila sp. in Aban-
+aban, Elhan and Kawiren. Lastly, perception surveys validated important dugong areas
+
+including Aban-aban and Kawiren.
+
+78
+
+CONCLUSIONS
+
+Northern Busuanga remains an important stronghold for dugongs in the Philippines. This
+was demonstrated with sighting occurrences throughout the islands in each monitoring
+period, with mother and calf pairs sighted simultaneously. The presence of calves that
+intensively use core areas in the east and the offshore islands indicates a reproducing
+population and demonstrates the importance of these areas as nursery grounds. Moreover,
+the variability of sightings across sampling periods demonstrated by differences in
+confirmed daylight habitat use areas between May-Jun and Oct-Nov 2019 implies the
+importance of other areas such as in the east and west part of Calauit Island. However,
+questions remain about absolute population size and their whereabouts during the night.
+Furthermore, observations of both shallow and deep-water seagrass patches off the coast
+of Kawiren, Aban-aban, Pagdukon and Dimipac indicate the potential spatial heterogeneity
+
+of foraging habitats, given the availability of both intertidal and subtidal seagrass beds.
+
+The extent of dugong movements in the larger Busuanga Island, outside of the study area
+also remains to be seen. Nevertheless, considering that other studies have shown that
+individual sirenians also tend to have a strong site fidelity, the Calauit Island Group, could
+potentially be considered as a highly used core area within their home range in a regional
+scale. The proper management of identified important dugong areas could therefore be
+
+useful since these areas are also subjected to different anthropogenic threats.
+
+Moreover, the study demonstrated that improving the land-based survey technique by
+increasing the survey coverage resulted to broader observations on the habitat use of
+dugongs. This study has also shown that citizen science coupled with systematic surveys
+is an important strategy towards the continuous monitoring of dugongs in localized
+
+populations in Northern Busuanga.
+
+79
+
+Ultimately, to inform the conservation management of dugongs in the Calauit Island
+Group, the study recommends that the confirmed daylight space use area of dugongs
+(CDSU) of approximately 4.6km² be established as Dugong Conservation Areas wherein
+all activities should be managed, for example, the use fishing gears and navigational lanes,
+as well as regulating boat speed. Further, the study recommends that the core area or CDCA
+of approximately 0.7km² be established as no-touch zones wherein no human activities
+
+should take place.
+
+80
+
+RECOMMENDATIONS
+
+A long-term monitoring of dugongs should be done in collaboration with the Indigenous
+Peoples community to ensure the effective management of important areas. In addition,
+conducting a comprehensive analysis of seagrass habitats around the island is
+recommended which include the determination of species biomass (i.e Halophila sp. and
+Halodule sp.), as well as in-depth investigation of dugong-seagrass interaction. Further
+examination of anthropogenic threats from fishing and ecotourism activities vis a vis
+important dugong areas, is also highly recommended. Lastly, the expansion of study area
+to include mainland Busuanga would allow a better understanding of the movement
+
+patterns of dugongs in a larger scale.
+
+REFERENCES
+
+Adulyanukosol K, Poovachiranon S. (2006). Dugong (Dugong dugon) and seagrass in
+Thailand: present status and future challenges. In: Proceedings of the 3rd international
+symposium on SEASTAR2000 and Asian bio-logging science (The 7th SEASTAR2000
+workshop). Kyoto: Kyoto University, 41-50.
+
+Anderson P, Birtles A. (1978). Behaviour and Ecology of the Dugong, Dugong dugon
+(Sirenia): Observations in Shoalwater and Cleveland Bays, Queensland. Wildlife
+Research 5:1-23 DOI 10.1071/WR9780001.
+
+Anderson P. (1998). Shark Bay dugongs (Dugong dugon) in summer II: foragers in a
+Halodule dominated community. Mammalia 62:409-425.
+https://doi-org/10.1515/mamm.1998.62.3.409
+
+André J, Lawler IR. (2003). Near infrared spectroscopy as a rapid and inexpensive means of
+dietary analysis for the marine herbivore, dugong Dugong dugon. Mar Ecol Prog Ser
+257:259-266. https://doi.org/10.3354/meps257259
+
+Andre J, Gyuris E, Lawler IR (2005) Comparison of the diets of sympatric dugongs and green
+turtles on the Orman Reefs, Torres Strait, Australia. Wildlife Res 32: 53-62.
+
+Aragones L. (1994). Observations on dugongs at Calauit Island, Busuanga, Palawan,
+Phillipines. Wildlife Research 21:709-717 DOI 10.1071/WR9940709.
+
+Aragones, L. (1996). Dugongs and green turtles: graziers in the tropical seagrass ecosystem.
+PhD thesis, Department of Tropical Environment Studies and Geography. James Cook
+University. Townsville.
+
+Aragones, L, Jefferson TA, Marsh H. (1997). Marine Mammal Survey Techniques Applicable
+in Developing Countries. Asian Marine Biology. 14:15-39.
+
+Aragones, L. (1998). The fate of the charismatic dugong in the Philippines. Abstract. First
+National Dugong Seminar Workshop, 6-8 November, Davao City, Philippines. WWF-
+Philippines and DENR-PAWB, Philippines.
+
+Aragones, L and Marsh H. (2000). Impact of dugong grazing and turtle cropping on tropical
+seagrass communities. Pacific Conservation Biology. 5:277-88.
+
+Aragones L, Lawler I, Foley W, Marsh H. (2006). Dugong grazing and turtle crop- ping:
+grazing optimization in tropical seagrass systems?. Oecologia 149:635-647 DOI
+10.1007/s00442-006-0477-1.
+
+Aragones, L. (2007). Dugong Conservation in Guimaras Island, Philippines. 17th Biennial
+Conference on the Biology of Marine Mammals.
+
+Aragones, L.V, (2012). Dugongs in Asia: Philippines, pp. 68-70. In: E. Hines et al. (eds),
+Sirenian conservation: Issues and strategies in developing countries. University Press of
+Florida, Gainesville, FL, USA.
+
+Aragones, L, Lawler 1, Domning D, Marsh H, & Hodgson (2012a). Role of the sirenians in
+the aquatic ecosystem, pp 4-11, In: E. Hines et al. (eds), Sirenian conservation: Issues
+
+126
+
+and strategies in developing countries. University Press of Florida, Gainesville, FL,
+USA.
+
+Aragones, L, LaCommare K, Kendall S, Castelblanco-Martinez N, & Gonzales-Socoloske D
+(2012b). Boat and land-based surveys for sirenians, pp. 179-184. In: E. Hines et al. (eds),
+Sirenian conservation: Issues and strategies in developing countries. University Press of
+Florida, Gainesville, FL, USA.
+
+Augliere B. (2012). Home on the range: Spatial Ecology of Atlantic Spotted Dolphins
+(Stenella frontalis) in the Bahamas. Graduate thesis, Florida Atlantic University.
+
+Baltazar, R. and Yaptinchay AA. (1998). Current knowledge on dugong status and
+distribution in the Philippines based on hearing and aerial surveys, sighting and capture
+reports. Abstract. First National Dugong Seminar Workshop, 6-8 November, Davao City,
+Philippines. WWF-Philippines and DENR-PA WB, Philippines.
+
+Benoit-Bird, KJ, Wursig B, and Mfadden CJ. (2004). Dusky dolphin (Lagenorhynchus
+obscurus) foraging in two different habtiats: active acoustic detection of dolphins prey.
+Marine Mammal Science 20(2): 215-231.
+
+Best, R.C. (1981). Foods and feeding habits of wild and captive Sirenia. Mammal Review
+11:3-29,
+
+Borger, L., Dalziel BD, Fryxell JM. (2008). Are there general mechanisms of animal home
+range behaviour? A review and prospects for future research. Ecology Letters 1 1:637—
+650.
+
+Braham M, Miller T, Duerr A, Lanzone M, Fesnock A, LaPre L, Driscoll D, Katzner T.
+(2015). Home in the heat: Dramatic seasonal variation in home range of desert golden
+eagles informs management for renewable energy development. Biological
+Conservation. 186:225-232.
+
+Bowden T, Ferguson J, Ward R, Taper M, Willey D. (2015). Breeding Season Home Range
+and Habitat Use of Mexican Spotted Owls (Strix occidentalis lucida) Below the South
+Rim of Grand Canyon National Park. Wilson Journal of Omithology. 127(4):678-689.
+
+Briscoe D, Hiatt S, Lewison R, Hines E. (2014). Modeling habitat and bycatch risk for
+dugongs in Sabah, Malaysia. Endangered Species Research, 24(3), 237-247.
+https://doi.org/10.3354/esr00600
+
+Budiarsa A, De longh HH, Kustiawan W et al. (2021). Dugong foraging behavior on tropical
+intertidal seagrass meadows: the influence of climatic drivers and anthropogenic
+disturbance. Hydrobiologia. https://doi.org/10.1007/s10750-021-04583-0
+
+Burt W. (1943). Territoriality and home range concepts as applied to mammals. Journal of
+Mammalogy. 24.3 :346-352.
+
+Campbell R, Holley D and Bardi-Jawi RG. (2010). Movement behaviours and habitat usage
+of West Kimberley dugongs: a community based approach. Final Report to the National
+Marine Mammal Centre.
+
+https://data.marinemammals.gov.aw/common/documents/grants/0809/Holley_14.pdf
+
+Cleguer C. (2015). Informing dugong conservation at several spatial and temporal scales in
+New Caledonia. College of Marine & Environmental Sciences, PhD Thesis(July), 190.
+
+127
+
+Cleguer C, Garrigue C and Marsh H. (2020). Dugong (Dugong dugon) movements and
+habitat use in a coral reef lagoonal ecosystem. Endanger Species Res 43:167-181.
+https://doi.org/10.3354/esr01061
+
+Chilvers, BL., Delean S, Gales, NJ, Holley, DK., Lawler, IR, Marsh, H, Preen, AR. (2004).
+Diving behaviour of dugongs, Dugong dugon. Journal of Experimental Marine Biology
+and Ecology, 304, 203-224.
+
+CMS. (2006). The Ecology and Conservation of the Dugong (Dugong dugon), 1-12.
+papers3://publication/uuid/B9386C38-C713-42AD-BFD2-ECFB699B210C
+
+Colares, IG and Colares, EP. (2002). Food plants eaten by Amazonian manatees (Trichechus
+inunguis, Mammalia: Sirenia). Brazilian Archives of Biology and Technology 45:67-72.
+
+De Iongh, HH., Langveld P, Van der Wal M. (1998) Movement and home ranges of dugongs
+around the Lease Islands, East Indonesia. Marine Ecology, 19, 179-193.
+
+De Iongh H, Kiswara W, Kustiawan W, Loth P. (2007). A review of research on the
+interactions between dugongs (Dugong dugon Miiller 1776) and intertidal seagrass beds
+in Indonesia. Hydrobiologia 591:73-83 DOI 10.1007/s10750-007-0785-4.
+
+DeMaster, DP. (1981). Estimating the average age offirst birth in marine mam- mals.
+Canadian Journal of Fisheries and Aquatic Sciences, 38, 237-239.
+
+Department of Environment and Natural Resource Administrative Order No. 2019-09 (2019).
+https://bmb.gov.ph/downloads/WRD/WC/WC2020/stat_and_lists_of_wildlife/fauna/dao
+-2019-09.pdf
+
+Derville, S., Cleguer C and Garrigue C. (2022). Ecoregional and temporal dynamics of
+dugong habitat use in a complex coral reef lagoon ecosystem. Scientific Reports. 12(1):
+1-16.
+
+Deutsch CJ, Castelblanco-Martinez DN, Groom R and Cleguer C. (2022). Movement
+Behavior of Manatees and Dugongs: I. Environmental Challenges Drive Diversity in
+Migratory Patterns and Other Large-Scale Movements. In H. Marsh (eds) Ethology and
+Behavioral Ecology of Sirenia. Springer, Cham, Switzerland, pp. 155-231.
+
+Deutsch CJ, Castelblanco-Martinez DN, Cleguer C and Groom R. (2022). Movement
+Behavior of Manatees and Dugongs: II. Small-Scale Movements Reflect Adaptations to
+Dynamic Aquatic Environments. In H. Marsh (eds) Ethology and Behavioral Ecology
+of Sirenia. Springer, Cham, Switzerland, pp. 233-298.
+
+Dixon, KR., and Chapman JA. (1980). Harmonic mean measure of animal activity areas.
+Ecology 61:1040-1044.
+
+Dolar, MLL., Calumpong H., Perrin, WF., Estacion, J. (2005). Rediscovery of a dugong in the
+southem Visayan Sea. Poster presented at the 16" Biennial Conference on the Biology
+of Marine Mammals, 12-16 December 2005, San Diego, California.
+
+Domning, DP. (1982). Evolution of manatees: A speculative history. Journal of Paleontology
+56:599-619.
+
+128
+
+Domning DP, Beatty BL. (2007). Use of tusks in feeding by dugongid sirenians: observations
+and tests of hypotheses. Anat Rec 290:523-538. https://doi.org/10.1002/ar.20540
+
+D’Souza E, Patankar V, Arthur R et al. (2015). Seagrass herbivory levels sustain site-fidelity
+in a remnant dugong population. PLoS ONE 10:1-18.
+https://doi.org/10.1371/journal.pone.0141224
+
+Dunshea, G., Groom R and Griffiths AD. (2020). Observer performance and the effect of
+ambiguous taxon identification for fixed strip-width dugong aerial surveys. Journal of
+Experimental Marine Biology and Ecology, 526(January), 151338.
+https://doi.org/10.1016/j.jembe.2020.151338
+
+Elwen, S., Meyer MA, Best PB, Kotze PGH, Thorton M, Swanson S. (2006). Range and
+movements of female heaviside's dolphins (Cephalorhynchus heavisidii), as determined
+by satellite-linked telemetry. Journal of Mammalogy 87(5): 866-877.
+
+Erftemeijer PLA, Djunarlin MW. (1993). Stomach content analysis of a dugong (Dugong
+dugon) from South Sulawesi, Indonesia. Aust J Mar Freshw Res 44:229-233.
+https://doi.org/10.1071/MF9930229
+
+Flores, PAC., and Bazzalo M. (2004). Home range and movement patterns of the marine
+tucuxi dolphin, Sotaia fluviat in Baia Norte, southern Brazil. Latin American
+Journal of Aquatic Mammals, Rio de Janeiro, 3: 37-52.
+
+Fortes, MD. (2013). A review: Biodiversity, Distribution and conservation of Philippine
+seagrasses. Philippine Journal of Science, 142(3): 95-111.
+
+Getz, W., Wilmers C. (2004). A local nearest-neighbor convex hull construction of home
+ranges and utilization distributions. Ecography. 27:489-505.
+
+Giacoma, C., Papale E, Azzolin M. (2013). Are Land Based Surveys a Useful Tool for
+Managing Marine Species of Coastal Protected Areas?. Diversity. 5:15-25.
+
+Green EP, Short FT. (2003). World atlas of seagrasses. University of California Press,
+Berkeley, CA, UNEP World Conservation Monitoring Centre
+
+Gredzens, C., Marsh H, Fuentes MMPB, Limpus CJ, Shimada T, Hamann M. (2014).
+Satellite Tracking of Sympatric Marine Megafauna Can Inform the Biological Basis for
+Species Co-Management. PLoS ONE. 9(6): e98944.
+
+Hall, L., Krausman, PR, Morrison, ML. (1997). The habitat concept and a plea for standard
+terminology. Emerging Markets Case Studies Collection, 25(1): 173-182.
+https://doi.org/10.1108/20450621111110348
+
+Heinsohn GE and Birch WR. (1972). Food and feeding habits of the dugong, Dugong dugon
+(Erxleben),in North Queensland, Australia. Mammalia 36:414—422.
+https://doi.org/10.1515/mamm.1972.36.3.414
+
+Heinsohn G, Wake J, Marsh H, Spain A. (1977). The dugong (Dugong dugon (Milller)) in the
+seagrass system. Aquaculture 12:235—248 DOI 10.1016/0044-8486(77)90064-3.
+
+129
+
+Hines, E, Reynolds III, J, Aragones, L, Mignucci-Giannoni A, Marmontel, M. (2012).
+Sirenian conservation: Issues and strategies in developing countries. Sirenian
+Conservation: Issues and Strategies in Developing Countries.
+
+Holley, DK. (2006). Movement patterns and habitat usage of Shark Bay dugongs. Master of
+Science, Edith Cowan University.
+
+Hooge, PN, Eichenlaub WM, Solomon EK. (1999). The animal movement program. USGS,
+Alaska Biological Science Center, Fairbanks
+
+Hooker S.K., Whitehead H., Gowans S. and R.W. Baird. 2002. Fluctuations in distribution
+and patterns of individual range use 291 Mar Ecol Prog Ser 295: 279- 293, 2005 of
+northern bottlenose whales. Marine Ecology Progress Series 225: 287-297
+
+Hooker, S. K. and Gerber, L. R. (2004). Marine reserves as a tool for ecosystem- based
+management: the potential importance ofmegafauna. Bioscience, 54, 27-39.
+
+Hung, SK. and Jefferson TA. (2004). Ranging patterns of the Indo-Pacific humpback
+dolphins (Sousa chinensis) in the Pearl River estuary, People’s Republic of China.
+Aquatic mammals. 30(1): 159-174.
+
+IUCN. (2011). IUCN Red List of threatened species. Gland: IUCN (International Union for
+Conservation of Nature) Global Species Programme Red List Unit.
+
+Jaaman SA, Lah-Anyi YU, Pierce GJ. (2009). The magnitude and sustainability of marine
+mammal bycatch in fisheries in East Malaysia. J Mar Biol Assoc UK 89: 907-920
+
+Johnstone IM., Hudson BET. (1981). The dugong diet: Mouth sample analysis. Bull Mar Sci
+31:681-690
+
+Kataoka, T., Mori T, Wakai Y, Palma J, Yaptinchay AA, de Veyra R and Trono R. (1995).
+Dugongs of the Philippines: a report of the joint dugong research and conservation
+program. Toba Aquarium and the Pawikan Conservation Project, Japan.
+
+Krogman, B., Rugh D, Sonntag R, Zeh J and Ko D. (1989). Ice-based census of bowhead
+whales migrating past point barrow, Alaska, 1978-1983. Marine Mammal Science , 5
+(2), 116-138.
+
+Keith-Diagne, LW., Barlas ME, Reid, JP, Hogson A and Marsh H. (2022). Diving and
+foraging behaviors. In H. Marsh (eds) Ethology and Behavioral Ecology of Sirenia.
+Springer, Cham, Switzerland, pp. 67-100.
+
+Kernohan BJ, Gitzen RA, Millspaugh JJ. (2001). Analysis of animal space use and
+movements. In: Millspaugh JJ, Marzluff JM (eds) Radio tracking and animal
+populations. Academic Press, San Diego, CA, USA, pp 125-166.
+
+Kwan, D. (2002). Towards a sustainable indigenous fishery for dugongs in Torres Strait: a
+contribution of empirical data and process. PhD thesis, School of Tropical Environment
+Studies and Geography. James Cook University. Townsville.
+
+Lammers, MO. (2004). Occurrence and behavior of Hawaiian spinner dolphins (Stenella
+longirostris) along Oahu’s leeward and south shores. Aquatic mammals. 30(2): 237-250.
+
+130
+
+Lee Long, WJ., Coles RG. and McKenzie LJ. (1996). Deepwater seagrasses in northeastern
+Australia: how deep, how meaningful?. In Seagrass Biology: Proceedings of an
+International Workshop, Rottnest Island, Western Australia, 25-29 January 1996, J.
+Kuo, R. C. Phillips, D. I. Walker and H. Kirkman (eds), Perth: University of Western
+Australia, pp. 41-50.
+
+Lee Long, WJ. and Coles RG. (1997). Status of seagrasses in the Great Barrier Reef region.
+In: Wachenfeld, D., J. Oliver and K. Davis (eds). State of the Great Barrier Reef World
+Heritage Area Workshop: proceedings of a technical workshop held in Townsville,
+Queensland, Australia, 27-29 November 1995. Great Barrier Reef Marine Park
+Authority, Townsville, Australia. pp. 185-193.
+
+Locher, A and Lindenberg M. (2016). Home range creation and analysis using Geospatial
+Modeling Environment and ArcGIS software. Open Textbooks, 0-14.
+https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1011 &context=books
+
+Lotze HK, Worm B (2009) Historical baselines for large marine animals. Trends Ecol Evol
+24: 254-262.
+
+Lucero, R. (2010). Population Estimate and Foraging Niche of Dugong (Dugong dugon) in
+Davao Gulf . Proceedings of the Sth International Symposium on SEASTAR2000 and
+Asian Bio-logging Science (The 9th SEASTAR2000 workshop) , (pp. 59-62).
+
+Marsh, H., Gardner, BR., Heinsohn, G. (1978). Minireview: Physiology of the dugong.
+Comparative Biochemistry and Physiology. 61:159-68.
+
+Marsh, H., Channells, PW, Heinsohn GE. and Morrissey J. (1982). Analysis of stomach
+contents of dugongs from Queensland. Australian Wildlife Research, 9, 55-67.
+
+Marsh HD, Sinclair DF (1989) An experimental evaluation of dugong and sea turtle aerial
+survey techniques. Wildlife Res 16: 639-650.
+
+Marsh, H., Saafeld, WK. (1990). Distribution and abundance of dugongs in the Great Barrier
+Reef Marine Park south of Cape Bedford. Australian Wildlife Research. 17:511-24.
+
+Marsh, H. and Rathbun GB. (1990). Development and application of conventional and
+satellite radio tracking techniques for studying dugong movements and habitat use. Aust.
+Wild. Res. 17: 83-100.
+
+Marsh, H. (1995). The life history, pattern of breeding, and population dynamics of the
+dugong. In: Population and Biology of the Florida Manatee, Information and
+Technology Report | (Ed. O'Shea, T., Ackerman, B. B. & Pereival, H.), pp. 75-83.
+Washington DC: US Fish and Wildlife Service.
+
+Marsh, H., Eros C. and Hugues J. (2002). Dugong: Status Reports and Action Plans for
+Countries and Territories. Early warning and report series.
+https://doi.org/10.1109/JPHOT.2012.2215955
+
+Marsh, H., Arnold P, Freeman M, Haynes D, Laist D, Read A, Reynolds J. and Kasuya T.
+(2003). Strategies for conserving marine mammals. In: Marine Mammals: Fisheries,
+Tourism and Management Issues (Ed. Gales, N., Hindell, M. & Kirkwood, R.), pp. 1-19.
+Victoria, Australia: CSIRO Publishing.
+
+Marsh H (2008) Dugong dugon. In: IUCN 2009. IUCN Red List of threatened species. www.
+iucnredlist.org (acces - sed 18 September 2013)
+
+Marsh H, O’Shea TJ, Reynolds JE II (2011) Ecology and conservation of the Sirenia:
+Dugongs and manatees. Cambridge University Press, Cambridge, UK
+
+Marsh H, Sobtzick S (2019) Dugong dugon (amended version of 2015 assessment). The
+IUCN Red List of Threatened Species 2019: e.T6909A 160756767.
+https://doi.org/10.2305/IUCN.UK.2015-4.RLTS.T6909A 160756767.en
+
+McKenzie, L. (2003). Guidelines for the rapid assessment of seagrass habitats in the Western
+Pacific. Queensland: Department of Primary Industries, (July), 78.
+http://www.seagrasswatch.org/Methods/Manuals/Seagrass Watch_Rapid_Assessment_M
+anual.pdf
+
+Moore JE, Cox TM, Lewison RL, Read AJ, and others (2010) An interview-based approach
+to assess marine mammal and sea turtle captures in artisanal fisheries. Biol Con- serv
+143: 795-805
+
+Moraes-Arraut, E., Ortega-Argueta A, Olivera~-Gémez LD, Sheppard JK. (2012). Delineating
+and assessing habitats for sirenians. In: Sirenian Conservation: Issues and Strategies in
+Developing Countries (Ed. E.M. Hines, J.E. Reynolds III, L.V. Aragones, A.A.
+Mignucci-Gianninni, and M. Mormontel), pp. 157-167. University of Press Florida,
+Gainesville, Florida/United States of America.
+
+Nietschmann, B. (1984). Hunting and ecology ofdugongs and green turtles, Torres Strait,
+Australia. National Geographic Society Research Reports 17, 625-651. Available at
+http://cwis.org/GML/?post=572 [verified 16 June 2017}.
+
+Nietschmann, B., and Nietschmann J. (1981). Good dugong, bad dugong — bad turtle, good
+turtle. Natural History 90,5463.
+
+O’Shea, TJ. and Tanabe S. (2003). Persistent ocean contaminants and marine mammals: a
+retrospective overview. In Toxicology ofMarine Mammals, J. G. Vos, G. D. Bossart, M.
+Fournier and T. J. O’Shea (eds), London: Taylor and Francis, pp. 99-134.
+
+O’Shea TJ. and Odell DK (2008) Large-scale marine ecosystem change and the conservation
+of marine mammals. J Mammal 89: 529-533.
+
+Parra, GJ. (2006). Resource partitioning in sympatric delphinids: space use and habitat
+preferences of Australian snubfin and Indo-Pacific humpback dolphins. Journal of
+Animal Ecology. 75: 862-874.
+
+Perrin, WF., Reeves RR, Dolar MLL, Jefferson TA., Marsh H, Wang JY, Estacion J. (2005).
+Report of the Second Workshop on the Biology and Conservation of Small Cetaceans
+and Dugongs of South-East Asia. Convention on Migratory Species.
+
+Perry, CJ. and Dennison WC. (1999). Microbial nutrient cycling in seagrass sediments.
+AGSO Journal o fAustralian Geology and Geophysics, 17, 227-231.
+
+Peters, R. (1978). Communication, cognitive mapping, and strategy in wolves and hominids.
+In: Wolf and man: evolution in parallel (R. L. Hall and H. S. Sharp, eds.). pp. 95-108.
+Academic Press, New York.
+
+132
+
+Pollock, KH. and Kendall WL. (1987). Visibility bias in aerial surveys: a review of estimation
+procedures. Journal of Wildlife Management, 51, 502-510.
+
+Pollock, KH., Marsh H, Lawler I, Alldredge MW. (2006). Estimating animal abundance in
+heterogeneous environments: An application to aerial surveys of dugongs. Journal of
+Wildlife Management. 70:255-62.
+
+Poonian, CNS. and Lopez DD. (2016). Small-scale mariculture: A potentially significant
+threat to dugongs (Dugong dugon) through incidental entanglement. Aquatic Mammals,
+42(1), 56-59. https://doi.org/10.1578/AM.42.1.2016.56
+
+Powell, RA. (2000). Animal home ranges and territories and home range estimators. In:
+Research techniques in animal ecology: controversies and consequences (L. Boitani and
+T. K. Fuller, eds.). pp. 65-110. Columbia University Press, New York.
+
+Preen, AR. (1992) Interactions between dugongs and seagrasses in a subtropical
+environment. PhD thesis, James Cook University.
+
+Preen, A. (1995). Impacts of dugong foraging on seagrass habitats: observational and
+experimental evidence for cultivation grazing. Marine Ecology Progress Series, 124,
+201-213.
+
+Quinton, B. (2016). The Effect of Home Range Estimation Techniques on Habitat Use
+Analysis. (June), 62.
+
+Rasheed MA, O’Grady D, Scott E et al. (2017). Dugong feeding ecology and habitat use on
+intertidal banks of Port Curtis andRodds Bay—final report. Report produced for the
+ecosystem research and monitoring program advisory panel as part of Gladstone Ports
+Corporation’s ecosystem research and monitoring program. Centre for tropical water
+and aquatic ecosystem research (TropWATER) Publication 16/14, James Cook
+University, Cairns, p 68.
+
+Rayment, W., Fresne S, Webster T, Bropger S, Dawson S. and Slooten E. (2009). Kernel
+density estimates of alongshore home range of Hector's dolphins at Banks Peninsula,
+New Zealand. Marine Mammal Science 25: 537-556.
+
+Richard E, Said S, Hamann J, Gaillard J. (2014). Daily, seasonal, and annual variations in
+individual home-range overlap of two sympatric species of deer. Canadian Journal of
+Zoology. 92(10):853-859.
+
+Rogers, JS., Monismith SG, Feddersen F and Storlazzi CD. (2013). Hydrodynamics of spur
+and groove formations on a coral reef. Journal of Geophysical Research: Oceans.
+118(6): 3059-3073. https://doi.org/10.1002/jgrc.20225
+
+Rugh, D., Ferrero R and Dahlheim M. (1990). Inter-observer count discrepancies in a shore-
+based census of gray whales (Eschrichtius robustus). Marine Mammal Science, 6
+(2):109-120.
+
+Schipper J, Chanson JS, Chiozza F, Cox NA, Hoffman M, et al. (2008) The status of the
+world’s land and marine mammals: diversity, threat and knowledge. Science 322: 225-
+230.
+
+133
+
+Seaman, DE., and Powell RA. (1996). An evaluation of the accuracy of kernel density
+estimators for home range analysis. Ecology. 77:2075-2085.
+
+Short, FT, Polidoro B, Livingstone SR, Carpenter KE, Bandeira S, Bujang JS, Zieman JC.
+(2011). Extinction risk assessment of the world’s seagrass species. Biological
+Conservation. 44(7): 1961-1971. https://doi.org/10.1016/j.biocon.2011.04.010
+
+Sheppard, JK, Preen AR, Marsh H, Lawler IR, Whiting SD. and Jones RE. (2006). Movement
+heterogeneity of dugongs, Dugong dugon (Miller), over large spatial scales. Journal of
+Experimental Marine Biology and Ecology. 334(1): 64-83.
+https://doi.org/10.1016/j.jembe.2006.01.011
+
+Sheppard J, Lawler I, Marsh H. (2007). Seagrass as pasture for seacows: Landscape- level
+dugong habitat evaluation. Estuarine, Coastal and Shelf Science 71:117-132 DOI
+10.1016/j.ecss.2006.07.006.
+
+Sheppard J, Carter A, McKenzie L, Pitcher R, Coles R. (2008). Spatial patterns of sub- tidal
+seagrasses and their tissue nutrients in the Torres Strait, northern Aus- tralia:
+implications for management. Continental Shelf Research 28:2282-2291 DOI
+10.1016/j.csr.2008.03.033.
+
+Sheppard J, Marsh H, Jones R, Lawler I. (2010). Dugong habitat use in relation to seagrass
+nutrients, tides, and diel cycles. Marine mammal science 26:855-879 DOI
+10.1111/j.1748-7692.2010.00374.x.
+
+Spain AV, Heinsohn GE. (1973). Cyclone associated feeding changes in the dugong
+(Mammalia: Sirenia). Mammalia 37:678-680
+
+Spencer, WD. (2012). Home ranges and the value of spatial information. Journal of
+Mammalogy 93:929-947.
+
+Supanwanid, C. (1996). Recovery of seagrass Halophila ovalis after grazing by duong. In
+Seagrass Biology: Proceedings of an International Workshop, 25-29 January, Rottnest
+Island, Western Australia, ed. J. Kuo, RC Phillips, DI Walker, and H. Kirkman, 315-18.
+Nedlands: Faculty of Science, University of Western Australia.
+
+Quinton, B. (2016). The Effect of Home Range Estimation Techniques on Habitat Use
+Analysis. (June), 62.
+
+Udyawer V, Groom R, Griffiths A et al. (2019). Quantifying dive behaviour and three-
+dimensional activity space of dugongs in the Gulf of Carpentaria. Report prepared for
+The Department of Environment and Natural Resources, Northern Territory. Australian
+Institute of Marine Science, Darwin. Accessible at: https://hdl.handle.net/10070/756087
+
+Urian, KW., Hofmann S, Wells RS, and Read AJ. (2009). Fine-scale population structure of
+bottlenose dolphins (Tursiops truncatus) in Tampa Bay, Florida. Marine Mammal
+Science. 25(3):619-638.
+
+Veghel, I. (2018). Towards sustainable dugong (Dugong dugon, Lacépéde) observation
+practices in Busuanga, Palawan, Philippines. Master thesis, Radbound University,
+Netherlands.
+
+134
+
+Waycott, M., Duarte CM, Carruthers, TJB, Orth RJ, Dennison WC, Olyamik S, Williams, SL.
+(2009). Accelerating loss of seagrasses across the globe threatens coastal ecosystems.
+Proceedings of the National Academy of Sciences. 106(30):12377-12381.
+https://doi.org/10.1073/pnas.0905620106
+
+Wake, JA., (1975). A study of the habitat requirements and feeding biology of the dugong,
+Dugong dugon (Muller). Honours thesis, James Cooke University, Townsville,
+Australia.
+
+Whiting SD. (2002a). Dive times for foraging dugongs in the Northern Territory. Aust
+Mammal 23:167-168
+
+Whiting SD. (2002b). Rocky reefs provide foraging habitat for dugongs in the Darwin Region
+of Northern Australia. Aust Mammal 24:147—150.https://doi.org/10.1071/AM02147
+
+Whiting SD. (2008). Movements and distribution of dugongs (Dugong dugon) in a macro-
+tidal environment in northern Australia. Aust J Zool 56:215—-222.
+https://doi.org/10.1071/Z008033
+
+Zeh D, Heupel M, Hamann M et al (2018) Evidence of behavioral thermoregulation by
+
+dugongs at the high latitude limit to their range in eastern Australia. J ExpMar Biol Ecol
+508:27-34. https://doi.org/10.1016/j jembe.2018.08.004
+
+135
+

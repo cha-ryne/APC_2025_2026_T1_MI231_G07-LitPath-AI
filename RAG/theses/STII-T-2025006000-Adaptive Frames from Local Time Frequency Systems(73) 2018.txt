@@ -509,7 +509,6 @@ as required. Qo
 Chapter 1. Time-Frequency Analysis 12
 
 Corollary 1.10. For any (x,y) € R™, and f,9, 9 € L2(R4) with go #0,
-1
 Vo (2,9) = 75 Veo, Voom(, ¥)9)- (1-19)
 IIgoll
 Proof. Given (x,y) € R*4, and f,g,90 € L?(R¢) with go # 0. Letting fi = f,
@@ -1345,7 +1344,6 @@ Given a well selected covering for R™, we can think of a Quilted Gabor frame
 
 as the restriction of the sampling points in cach assigned frame to the region in
 
-28
 
 Chapter 2. Existence of General Adaptive Irregular Gabor Frames 29
 
@@ -1595,7 +1593,6 @@ any F € W(Co, L”)(R™), Fis € &(S) and
 ip
 IlFislleeis) = (x esr) $ CIF llwico.ry (2.8)
 
-265
 Proof. Recall that the amalgam space W(Cp, L?)(R™) has norm ||F|lyicy,er) =
 Domes IF » TenyXqll2.- Where Q is the unit box in R.
 
@@ -1610,7 +1607,6 @@ YD rteyreR(1+5) Tame
 
 TyE((k.n)+Q)NS-
 which implies
-1
 Drew sR(1+ 5) YI Tawxelt
 ES (kyn)ez24
 Hence the conclusion follows with O? := R(1+4)™. o
@@ -1946,10 +1942,8 @@ foo 9nult = ny — Terione-
 
 < Toate fg lYmP te) Wag 2,0 — pera
 
-2
 — VooGn(t = Ys = nero did)
 
-1
 Sye [f Woof (t, 0)?» [Voodun(t — 2, ws — y)erei-ae-d
 Igolle L Jee
 
@@ -2102,7 +2096,6 @@ Finally, the inequalitics (2.19) and (2.20) implies that
 
 ne@zid
 neze
-2
 < (a lal + As) Wie
 nez2d
 
@@ -2209,7 +2202,6 @@ AllPuvtIB S So MF Pew ADP S BILPy UB- (3.2)
 
 dea
 
-46
 
 Chapter 3. Adaptive Frames via Relevant Sampling 47
 
@@ -2369,7 +2361,6 @@ distribute. We now show that it is also bounded.
 
 ILel= >>
 
-2
 
 YE (exPrum (Ag. Siy (Pry (u)h))
 
@@ -2468,7 +2459,6 @@ List of References 65
 
 13)
 
-14
 
 17]
 

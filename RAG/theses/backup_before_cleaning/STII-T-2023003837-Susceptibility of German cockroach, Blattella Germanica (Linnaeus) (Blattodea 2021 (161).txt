@@ -1,0 +1,3018 @@
+SUSCEPTIBILITY OF GERMAN COCKROACH, Blattella germanica (Linnaeus) (BLATTODEA: ECTOBIIDAE) TO COMMONLY USED INSECTICIDES IN URBAN PEST CONTROL
+
+CARL JOHNJAY AQUINO AYEN
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+Master of Science in Entomology
+
+AUGUST 2021
+
+ABSTRACT
+The present study was designed to determine the susceptibility of nine (9) field-collected populations of German cockroach, Blattella germanica L. to five (5) different classes of insecticide: organophosphates, carbamates, synthetic pyrethroids, phenyl pyrazoles, and
+neonicotinoids. One representative chemical from each class was selected: Dichlorovinyl
+Dimethyl Phosphate (DDVP) from organophosphates, propoxur from carbamates, α-cypermethrin
+from synthetic pyrethroids, fipronil from phenyl pyrazoles and thiamethoxam from neonicotinoids.
+The six-week-old nymphs of German cockroach were bio-assayed against these insecticides using
+the WHO glass jar method, with slight modifications, to determine the LC₅₀ values and slope after conducting probit analysis. The two most toxic chemicals were fipronil and thiamethoxam. Propoxur was more toxic
+than a-cypermethrin. DDVP was consistently the least toxic against German cockroaches coming
+from all collection sites. This suggests that the older classes (OPs, carbamates and pyrethroids)
+which have been used through time have shown reduced efficacy against German cockroach compared to the newer compounds.
+
+Keywords: Blattella germanica, susceptibility, toxicity, urban pest control, insecticide
+resistance
+
+INTRODUCTION
+
+The German cockroach, Blatiella germanica (Linnaeus) (Blattodea: Ectobiidae) is an
+important household insect pest and is commonly found in bakeries, restaurants, and kitchens
+worldwide (Gadd and Raubenheimer 2000; Lee and Lee 2000). Aside from its economic
+importance, the German cockroach is a significant health hazard, serving as a mechanical vector
+and reservoir for pathogenic agents (Pridgeon et al. 2002). It contaminates food by carrying filth
+and microbial pathogens on body and legs (Watanabe et al. 2003; Fasulo et al. 2005). Examples
+of major allergic reactions in humans are asthma, itching, swelling of eyelids, dermatitis, and
+severe respiratory problems (Sarinho et al. 2004; Pechal et al. 2007). There is little information on
+incidence of cockroach-related diseases in the Philippines but Sia Su et. al (2016) reported that
+common parasite observed from the cockroach collected from the streets of Metro Manila, Pasay
+City and Quezon city was rhabditiform larvae - the major causative agent of strongyloidiasis in
+humans.
+
+Urbanization provides opportunity and favorable conditions for the rapid increase of B.
+germanica (Hill 2002). The proximity of living quarters in most urban centers allows German
+cockroach to spread easily. This is exacerbated by factors like overcrowding, inefficient waste
+disposal, and poor building structure. Thus, the need for urban pest control has come from a
+common realization that presence of B. germanica represents unhygienic condition causing
+problems for residents and commercial businesses.
+
+‘When one mentions pest control, the immediate reaction of many is to refer to chemical
+
+method of control or the use of chemical poisons to kill the German cockroach population. What
+
+as chemical pesticides especially when used together in an integrated pest management approach.
+There are five general categories of control methods practiced by non-professional individuals and
+the pest control operators (PCOs). These include the cultural control, physical control and
+mechanical control, biological control, and chemical control methods. Cleanliness and sanitation
+
+are results of good cultural practices. Valles (1996) discussed that by eliminating food and water
+
+sources and clutter, the infestation and population of German cockroaches decreased significantly.
+In physical and mechanical method, sticky traps and electrified traps can be used to monitor and
+reduce population size of B. germanica (Ballard and Gold 1984). Biological control is also gaining
+importance as one strategy against cockroaches. There are reports that B. germanica populations
+and other species of cockroach have been successfully reduced in certain locations by introducing
+parasitic wasp Aprostecetus hagenowii which oviposits in egg cases of pest organism (Cook
+Islands Biodiversity Database 2016).
+
+Although all these control methods are considered crucial components in the control of
+German cockroach, the use of insecticides is still the most popular and effective method so far
+(Lee and Robinson 2001). The review on B. germanica by Jacobs (2013) indicated that the use of
+baits containing hydramethylnon, fipronil, sulfluramid, boric acid or abamectin is an effective
+chemical method. Insecticidal dusts such as boric acid, silica aerogel and diatomaceous earth can
+provide additional contro! while residual sprays or aerosol foggers are of little value and may
+disperse B. germanica.
+
+In the Philippines, recommended insecticides against cockroaches belong to the following
+
+insecticide groups: organophosphates, carbamates, synthetic pyrethroids, neonicotinoids,
+
+avermectins, phenyl pyrazoles, oxadiazines and hydramethyInon. These are currently marketed
+
+and supplied by agrochemical companies whether as proprietary products or commodity products.
+Some household chemicals are displayed in groceries, hard wares, and drugstores as part of their
+marketing and promotion campaign. Moreover, these insecticides must be registered with the
+Philippine Food and Drug Administration (FDA) before offered for sale and use. As a requirement
+for the issuance of certificate of product registration (CPR) for household or urban pesticides, local
+bio-efficacy must be conducted to prove its effectivity against cockroaches. With the use of FDA-
+registered chemicals, regular insecticide application by the homeowners or hired pest control
+operators (PCO) is the common strategy for control of German cockroach. In most cases,
+treatments are applied to sites where cockroaches have been observed and where they are suspected
+to be living. Aside from CPR, PCOs'’ criteria in choosing chemicals for German cockroach control
+include the price of the product and safety to human and environment.
+
+However, problems or concems encountered to effectively eliminate the German
+cockroaches include their being closely associated with food and people, their rapid reproduction,
+and their tendency to gather in inaccessible places, The German cockroach has also been reported
+
+to have developed resistance against many groups of insecticides. This problem transcends
+
+geographical regions (Ladonni 2001; Pai et al. 2005) and different classes of insecticides
+(Holbrook et al. 1999). Moreover, Lee et al. (1996), Lee and Lee (2002) and Ahmad et al. (2009)
+reported that insecticide resistance is prevalent in Southeast Asia such as Singapore, Malaysia, and
+
+Indonesia. With these factors affecting efficacy of insecticides, the PCOs need more information
+
+to address the concerns of their clients on cockroach control.
+
+Much of the works on insecticide efficacy and insecticide resistance on the German
+
+cockroach were done in other countries and very little or no data are available in the Philippines.
+
+The only available literature was done by Mendoza (1976) who reported some chemical control
+on adult German cockroaches with notes on its biology. Furthermore, the separate studies
+conducted by Verdeprado (2008) and Jarilla (2010) focused on the effectiveness of commercial
+bait formulation containing indoxacarb as compared to regular diet inside bait station.
+
+Studies conducted in the laboratory usually use adult male cockroach (Koehler and
+Patterson 1988) but the late instar six-week-old B. germanica nymphs were also used. The latter
+had been found to be significantly more tolerant to insecticides, including pyrethroids, carbamates,
+and organophosphate than adult males and females in topical and residual bioassays (Koehler et
+
+al. 1993; Valles et al.1994; Qian et al. 2010).
+
+The present study sought to determine the susceptibility of the six-week-old German
+cockroach nymphs to five (5) commercially available insecticide with different active ingredients
+commonly used by local pest control operators. These five insecticides were selected to represent
+the five groups of insecticides: namely, organophosphates, carbamates, synthetic pyrethroids,
+phenyl pyrazoles, and neonicotinoids. The data generated by the biological assays can then be used
+to guide non-professional applicators and PCOs in their choice of pesticides against German
+cockroach and to serve as baseline information in future studies to detect possible resistance of
+German cockroach populations to these insecticide groups. Field monitoring is essential to
+
+determine whether tolerant or resistant in
+
+uals are already present in the field. Monitoring of
+
+local cockroach populations is essential for effective control of Blattella germanica by households
+
+and establishments with or without hiring PCOs and for insecticide resistance programs. The
+
+specific objectives of the study are:
+
+1) To determine the toxicity of five available commercial insecticides to nine populations
+
+of B. germanica collected from three towns of Laguna using LCso values,
+
+2) To establish the slope of different insecticides against field-populations of B.
+
+germanica in the laboratory using residual contact method and,
+
+3) To identify the most effective insecticide group used in the study against the nine field-
+
+collected populations of B. germanica.
+
+This research was conducted at the Toxicology Laboratory. Institute of Weed Science,
+Entomology and Plant Pathology, College of Agriculture and Food Science, University of the
+
+Philippines Los Bafios, Laguna from February 2019 to April 2020.
+
+REVIEW OF LITERATURE
+
+OVERVIEW
+
+This chapter is composed of six sections. The first one is the general background of the
+
+test insect, the German cockroach (Blattella germanica), its biology, and i
+
+life cycle; followed
+by its public health importance as nuisance and carrier of diseases. To help solve this pest problem,
+control measures are briefly discussed such as environmental management, physical and
+mechanical control methods, biological control method and the chemical control method. Under
+the last control method, different types of application were presented. There is also a section on
+specific approaches of pest control operators (PCOs) against cockroaches. The urban pest control
+industry is responsible in handling the German cockroach problem because of the expertise and
+professionalism of PCOs. However, PCOs face serious problem due to failure of control against
+B. germanica. One reason is the possible development of insecticide resistance, and this was
+described in the fifth section. Lastly, to investigate the possible resistance or susceptibility of
+
+German cockroaches, an appropriate bioassay technique was reviewed.
+
+German cockroach, Blattella germanica (Linnaeus)
+
+The German cockroach, Blattella germanica (Linnaeus) is one of the most common
+cockroach species. They are small, with adult measuring about 10-15 mm in length. They have
+flattened, boat-shaped body while possessing fully developed wings covering the abdomen. The
+wings are functional but usually used for downward flight. They are light yellowish brown with
+two dark longitudinal bands on their pronotum near the head. Their head is oriented downward
+and not much visible from above due to an extended pronotum covering the head. Their
+filamentous antennae are longer than their body (Capinera 2004).
+
+The German cockroach is a paurometabolous insect with three life stages: egg, nymph, and
+adult. The ootheca (egg capsule) which is produced by the accessory glands of female cockroaches
+encloses the eggs (Cochran 2003). The ootheca is light brown in color and about 7-9 mm in length.
+According to Mendoza (1976), sexually mature females produce the first ootheca in about 11 to
+12 days. They carry the ootheca for 10 to 17 days until the eggs are hatched. Ross and Mullins
+(1995) reported that females may also drop the egg capsule within a short time before hatch. After
+ootheca deposition, the females continue to copulate several times to produce additional ootheca.
+The observed shortest time in which two oothecae are laid is 22 days. Mendoza (1976) reported
+that on the average, females can produce six egg capsules throughout their life span. Each ootheca
+contains 30 to 48 eggs (Capinera 2004).
+
+After deposition, the egg capsule splits along the seam and then young cockroaches escape.
+The newly hatched cockroaches work their way out by pulling their antennae and legs free from
+
+individual eggshell. The young cockroaches are initially whitish in color but gradually turn brown
+
+after one to two hours. The nymphs go through a total of six molts to reach maturity wherein each
+stadium lasts for eight days, with a total of 48-day developmental period. Figure | shows the life
+
+cycle of B. germanica based on laboratory study done by Mendoza (1976)
+
+Egg Capsule
+
+10 days 30 days
+
+Nymphal
+hatch
+
+6 nymphat
+
+Figure 1. Life cycle of the German cockroach, Blattella germanica (Linnaeus) based on
+laboratory study by Mendoza (1976) and redrawn by the author.
+
+Public Health Importance
+
+Nuisance
+
+The German cockroach shares food, water, warmth, and shelter with humans. According
+to Capinera (2004), they consume same food with humans as well as dead plant or animal
+materials, leather, glue, wallpaper, fabrics, books, and feces. Contamination of the food is one of
+the damages caused by cockroach They contaminate food by crawling around and defecating on it
+or by leaving cast exuviae (insect’s old skin), empty egg cases or insect cadavers in foodstuffs or
+by regurgitating saliva and intestinal fluids from their mouths while feeding. They also discharge
+a rancid secretion from their mouths and gland opening on their body resulting to a long-lasting,
+
+offensive cockroach smell to areas or food visited by them.
+
+Carrier of Diseases
+
+German cockroaches also serve as vector of pathogens, cause allergic reactions and
+psychological distress (Brenner 1995). They are proven and suspected carriers of organism causing
+diarthea, dysentery, cholera, leprosy, plague, typhoid fever, and viral diseases such as
+poliomyelitis (WHO 2006). There were also accounts of cockroaches entering body orifices such
+as ears and nose. Moreover, inhalation of a few protein fractions found in cockroach secretions,
+body parts and excrement by sensitive individuals can cause asthma and allergic response such as
+skin rashes, watery eyes, and sneezing (Capinera 2004; Cochran 2003). There is little information
+on incidence of cockroach-related diseases in the Philippines but Sia Su et. al (2016) reported that
+
+common parasite observed from the cockroach collected from the streets of Metro Manila, Pasay
+
+10
+
+City and Quezon City was rhabditiform larvae - the major causative agent of strongyloidiasis in
+
+humans.
+
+Control Measures against German Cockroach
+
+Effective control is easier in temperate countries than in tropical areas because the
+cockroach populations cannot survive outdoors in winters in the former. The limiting factor for
+surviving appears to be cold temperature and B. germanica is unable to survive in locations away
+from humans or human activity (Valles 1996). Crucial to effective control is cleanliness since
+infestation of B. germanica is aggravated by poor hygiene. In Iran, Shahraki et al. (2011) stressed
+the importance of sanitation and sanitary factors against the infestation of B. germanica and
+discussed the effectiveness of educational program on sanitation. The use of pamphlets, posters,
+and lectures were utilized to describe the importance of sanitation which led to reduction of
+infestation. The major control measures against the German cockroach are listed below, and some
+
+are lifted from World Health Organization (2006).
+
+Environmental management
+
+Cleanliness and Hygiene. \t is the first step in cockroach prevention. Good and detailed
+sanitation are important components of successful pest control work. Hiding spots, food, and water
+available at night must be eliminated by cleaning the kitchen, reducing the clutter, throwing away
+
+dead cockroaches and cleaning the frass and areas where there are cockroaches with simple soap
+
+u
+
+and water. According to Valles (1996), the removal of food sources, debris and potential clutter
+
+lessen the B. germanica population and the risk of encouraging new infestations.
+
+Reduction of accessibility. \n this method, peeled wallpapers, shelf liners, cracks, and holes
+
+where cockroaches could get through must be sealed or fixed though use of silicone caulk, copper
+mesh, screens, and door sweeps. Jacobs (2013) noted that B. germanica are smaller than other
+cockroach species and can conceal themselves in many places inaccessible to larger species; thus,
+sealing cracks and crevices can be effective in reduction of harborage space and its population
+size. Consequently, openings for drain water and sewer pipes, drinking water and electricity cables
+
+should also be closed.
+
+Physical and Mechanical Controt
+The use of sticky traps and electrified traps can monitor and reduce the population size of
+B. germanica (Valles 1996). Vacuuming technique is another method on German cockroach
+
+control. Although vacuuming will not kill the insects but at least they will not be able to escape.
+
+Vacuuming up icant dent in B.
+
+ible cockroaches and in their hiding places will make sig
+
+germanica population providing increase chance of success during treatment. Kaakeh and Benneth
+(1997) reported that sticky traps and vacuuming technique were effective as monitoring devices
+and provided acceptable control of B. germanica. Moreover, thermal remediation treatment as one
+
+example of physical control method is gaining popularity against B. germanica. This method
+
+works by heating the residential or commercial properties up to 140 F and maintaining that
+
+temperature for up to four hours allowing the treatments to reach even the hard-to-reach areas.
+
+12
+
+Biological Control
+
+According to Suiter (1997), pathogens and in particular fungi appear to be the most
+promising biological control against B. germanica. The study of Ren et al. (2005) reported the
+successful infection of Metarhizium anisopliae against B. germanica under laboratory conditions.
+‘The infected cockroaches showed erratic movements while hyphae of the fungi were found in most
+body parts of B. germanica after 4-5 days of infection. Other reported symptoms of infection of
+M. anisopliae are sub-lethal effects such as reduction in mean number of oothecae laid by females,
+cothecal production, hatchability, and nymphal production (Quesada-Moraga et al. 2004).
+Meanwhile, the parasitic wasp Aprostocetus hagenowii have also been used as biological agent by
+laying its eggs in the egg cases of B. germanica and other species of cockroach (Cook Islands
+Biodiversity Database 2016). The recent study of Yuan Pan and Zhang (2020) highlighted the new
+directions of B. germanica control using Wolbachia or paratransgenes and the use of fungal
+
+insecticides with synergistic agents to enhance insecticidal efficacy.
+
+Chemical controt
+
+The judicious use of chemicals for the control of German cockroach can be a successful
+component of cockroach management. Table | lists a number of these insecticides and the
+percentage of active ingredients based on WHO (2006). In the Philippines, the Food and Drug
+Administration regularly publishes in its website the insecticidal products for cockroach control
+
+(Table 2).
+
+les commonly employed in the control of cockroaches (WHO 2006
+
+Insecticide Formulation Type Concentration (%)
+Synthetic pyrethroid a-cypermethrin ‘Spray 0.015
+betacy fluthrin Spray 125
+cyfluthrin Spray 5-10
+cyphenothrin Spray 0.125-0.25
+Aerosol 0.1-0.3
+deltamethrin Spray 0.0025
+Dust 0.05
+Aerosol 0.02
+permethrin Spray 0.125-0.25
+Dust 05
+Carbamate bendiocarb Spray 0.24-0.48
+Dust T
+Aerosol 0.75
+dioxacarb Spray 0.51.0
+propoxur Spray 1
+Bait 2
+Organophosphate chlorpyrifos Spray 05
+dichlorvos Spray 05
+Bait 19
+fenitrothion Bait 25
+Spray 0.5-1.0
+Aerosol 0.75
+jodfenphos Spray 1
+malathion Spray 3
+Dust 3
+pirimiphos methyl Spray 25
+Dust 2
+propetamphos Spray 0.5-1.0
+Dust 2
+Aerosol 2
+Insect growth regulator flufenoxuron Dust 0.001
+Electron transport hydramethyInon Aerosol 1-2
+
+inhibitor
+
+13
+
+
+Grow
+‘Organophosphates
+
+Carbamates
+
+Pyrethroids
+
+Neonicotinoids
+
+Phenyl Pyrazoles
+
+Avermectins
+
+Oxadiazines
+Hydramethyinon
+
+DDVP
+
+chlorpyrifos
+
+propoxur
+
+a-cypermethrin
+
+beta-cy luthrin
+cypermethrin
+imiprothrin, cypermethrin
+imiprothrin, cyfluthrin
+4d, trans-cyphenothrin
+deltamethrin
+
+deltamethrin, tetramethrin, pbo
+esfenvalerate
+
+bifenthrin, imidacloprid
+permethrin
+
+transfluthrin, cyfluthrin
+d-tetramethrin, cyphenothrin
+lambda-cyhalothrin
+
+imiprothrin, cyphenothrin
+imidacloprid
+
+dinotefuran
+
+smethoxam
+
+fipronil
+
+fipronil
+
+abamectin
+
+emamectin benzoate &
+denatonium benzoate
+indoxacarb
+hydramethyinon
+
+Concentration
+(%)
+
+25
+
+1
+
+18.7
+1S
+
+2.5
+
+5
+
+0.1,0.1
+
+0.1, 0.1
+3
+
+0.2
+
+10,10, 80
+5
+
+4,5
+
+10
+0.4, 0, 025
+0.01, 0.015
+25
+
+0.1, 0.0015
+215
+
+0.5
+21.6
+0.05
+2.6
+0.05
+0.1
+0.0002
+05
+0.0165
+
+14
+
+Formulation type
+
+‘emulsifiable concentrate (EC)
+gel bait
+
+emulsifiable concentrate (EC)
+suspension concentrate (SC)
+suspension concentrate (SC)
+emulsifiable concentrate (EC)
+Aerosol
+
+Aerosol
+
+emulsifiable concentrate (EC)
+chalk form
+
+suspension concentrate (SC)
+flowable concentrate (FL)
+suspension concentrate (SC)
+emulsifiable concentrate (EC)
+Aerosol
+
+Aerosol
+
+emulsifiable concentrate (EC)
+
+ready-to-use (RTU)
+gel bait
+
+gel bait
+
+‘suspension concentrate (SC)
+gel bait
+
+suspension concentrate
+
+gel bait
+
+gel bait
+
+paste bait
+gel bait
+
+
+15
+
+Currently, there are many cockroach insecticides sold in the form of liquid spray,
+insecticidal dust, aerosol, smoke, baits, and traps. The information below helps us to understand
+some advantages in using different pesticide formulations:
+
+Residual sprays. Residual sprays are usually applied using hand-held compression air
+sprayers. The insecticide can also be applied with a paint brush when other equipment is not
+available. The commonly used insecticides are the organophosphates, carbamates, synthetic
+pyrethroids and more recently insect growth regulators. Ameen et al. (2000) reported that residual
+sprays of chlorfenapyr provided 80% reductions in infested apartment at eight weeks post-
+treatment.
+
+Dusts. Dry powder formulations are made by mixing insecticide powder with talcum or
+another inert carrier powder. They are useful in treating hollow walls, false ceilings and other
+
+cockroach hiding places which cannot be easily reached. It is applied using hand-operated puff-
+
+duster or a plunger-type duster. Boric acid, silica aerogel and diatomaceous earth can provide
+
+control against B. germanica (Jacobs 2013).
+
+Aerosols. Aerosols are fine sprays of very small (0.1-0.50 1m) droplets of insecticide. They
+are not suitable for residual treatment, but they can be used for space spraying because droplets
+remain in air for some time killing insects by contact. Aerosol usually contains pyrethrins,
+pyrethroids or another irritant to drive cockroaches out of their hiding places. It causes quick
+reduction in cockroach numbers but no longer lasting control. The use of insect growth regulators
+
+(IGRs) in total release aerosol has been of interest due to its low mammalian toxicity. However,
+
+because of their modest efficacy against cockroaches, they have never gained acceptance. In a
+
+16
+
+study of Ameen et al, (2005), noviflumuron sprays applied in infested apartments provided up to
+90% reductions of German cockroaches.
+
+Smokes. They are clouds of insecticide particles produced by heat. The particle size (0.001-
+0.4m) is smaller than aerosols. Smokes can penetrate deep into hiding places particularly in
+basements of building, sewer, and drainage systems. The study on efficacy of smoke-generator
+containing pirimiphos-methy| and cypermethrin conducted by Aulicky et al. (2010) resulted to 100
+% mortality of B. germanica during first three (3) hours of exposure. Gas chromatography method
+confirmed the airborne concentration of active ingredients decreased significantly within 6 to 12
+hours after preparation release.
+
+Baits and Traps. Toxic baits are used without trapping device. They consist of a mixture
+of attractive food material and an insecticide. Commercially available toxic baits can be in the
+form of pellets or paste. In a review by Jacobs (2013), he indicated that the use of baits containing
+hydramethylnon, fipronil, sulfluramid, boric acid or abamectin is a successful method of chemical
+control. Also, in the study conducted by Verdeprado (2008), male and female German cockroaches
+preferred the regular food over bait stations containing indoxacarb as they tend to approach it first.
+They also had frequent visits to the regular diet compared to bait. However, once they approach
+the baited diet, they tend to stay fora longer period. In a follow-up study, Jarilla (2010) emphasized
+that to ensure the success of baiting program in controlling B. germanica, elimination of all
+alternative food sources by cleaning the area and covering the leftovers, garbage, and other food
+sources before placing the bait formulation is important.
+
+Repellents. \t is the use of different essential oils such as mint oil, spearmint oil and
+
+eucalyptus oil that are known to repel cockroaches. In the study conducted by Tabaru and
+
+7
+
+Mochizuki (2005), they discussed that B. germanica was repelled by ethanol extracts of some
+herbs under laboratory conditions. Herbs which showed repellent effects were Anetheum
+graveolens (dill), Apium graveolens (celery), Carum carvi (caraway), Cuminum cymimum
+(cumin), Coriandrum sativum, (coriander), Cinamomum zeylanicum (cinnamon), Myristica
+fragrans (mace) and Capsicum anuum (chili pepper). However, best results are obtained with the
+synthetic products that are easier to standardize such as dilutions of DEET (N, N-diethyl-3-
+toluamide) or DMP (dimethyl phthalate). This was proven by the study of Schultz et al. (2006)
+and reported that solutions with elemol and DEET exhibited greater significance in contact
+
+repellency compared to catnip essential oil.
+
+Urban Pest Control
+
+Global Urban Pest Control
+
+Global pest control is a growing industry at a rapid rate and was valued at USD 20.6 billion
+in 2019. Bilagi et al. (2021) forecast that the global pest control market is expected to reach USD
+30.0 billion by 2027.The key driving force influencing growth include the rise of urban
+developments, growing consumer awareness concerning health and other hygiene issues, changes
+in weather patterns, increasing demand for “green” and environment-friendly technology and a
+general rise in the intolerance for pests. There is an increasing number of customers relying on do-
+it-yourself techniques or the non-professional individuals in handling pest problems. However.
+professional pest control operators (PCOs) are predicted to continue to grow over the next several
+
+decades due to the need for experts who can handle pest populations quickly, effectively, and
+
+18
+
+humanely before things get out of hand. Pest control market based on place of application is
+classified into commercial, residential, agriculture, industrial and others. Among all, the
+commercial segment has the largest share in 2019 due to necessity in preventing pest infestation
+
+to protect the health of employees and customers in commercial buildings (Figure 2).
+
+Figure 2. Global pest control market based on application (Bilagi et al. 2021).
+
+Moreover, the global urban pest control market is driven by rising insurance-based pest
+control services, growing hospitality, pharmaceutical and food processing industries, and
+complexity of pest control procedures and safety protocols for chemicals used in pest control. Pest
+control market based on type is classified into chemical, mechanical, biological, and others. The
+chemical segment has the highest revenue generated in 2019 and expected even until 2027. This
+is because of its cost-effectiveness and practical use. Thus, the demand for chemicals is high
+
+compared to biological, mechanical, and other methods (Figure 3).
+
+19
+
+Figure 3. Global pest control market based on type (Bilagi et al. 2021).
+
+Philippine Urban Pest Control
+Philippines is one of the fastest growing urban pest control market next to Thailand and
+Malaysia in Southeast Asia. There is no latest survey or consolidated data available in the
+
+Phil
+
+pines for an estimate value of the present business. However, looking from various
+
+agrochemical industry suppliers, it could be estimated that annual market size is around 5 to 8
+million US Dollars. The client comprises pest control operators, private institutions, and local
+government units (LGU). Table 3 shows the USD 2.0 million estimated value of annual business
+
+for chemical manufacturers in the Philippines (Dhang 2012).
+
+20
+
+Table 3. Estimated annual business for chemical manufacturers in Philippines (Dhang 2012).
+
+Category of Pesticide Estimated Annual Business (2011)
+Termiticide USD 1.0 million
+
+Insecticide USD 750,000
+
+Rodenticide USD 500,000
+
+Total USD 2.25 million
+
+Table 4 shows the usage pattern of various categories of urban pesticides. Chlorpyrifos and
+DDVP are the two active ingredients most used by pest control operators. Both chemicals are the
+cheapest in the market compared to synthetic pyrethroids. Meanwhile, termite baits and insect
+
+baits are both becoming popular with 15% and 5% annual growth respectively.
+
+Table 4. Classification of various pesticides by usage (Dhang 2012)
+
+Category of Pesticide Classifications by volume
+Term Chlorpyrifos (50%)
+Repellent Termiticides (20%)
+Non repellents (15%)
+Baits (15%)
+Insecticides Residual spray (15%)
+Non residual spray. e.
+Space spray (50%)
+Baits (5%)
+Rodenticide Consumer market (60%)
+PCO (40%)
+
+DDVP (30%)
+
+In 1997, Mr. Bailey Yu, then President of Pest Control Association of the Philippines
+(PCAP), reported that the existing two hundred PCO companies at that time had estimated gross
+sales turnover of Php | billion. It came from the following breakdown: fumigation service 35%,
+
+structural pest control (SPC) 30%, and general pest control (GPC) 35%. Cockroaches ranked as
+
+a
+
+the most important pest concern in GPC while estimated market was at Php 220 million and Php
+
+235 million in 1996 and 1997 respectively (Faylona 1998),
+
+The use of chemical pesticides by the pest control industry is regulated by various state and
+federal authorities and must adhere to environmental laws. Pesticides should always be used in a
+lawful manner. consistent with the product’s label. Consequently, relevant authority should be
+consulted to determine which products are legally allowed in one country when considering
+chemical control. The agency regulating the approval of household and urban pesticides in the
+Philippines is the Food and Drug Administration (FDA). FDA-registered chemicals are the only
+pesticides that should be used by the individual non-professional homeowners or hired PCOs in
+the control of German cockroach and other urban pests. There is a perception that the stringent
+
+regulations of FDA hamper the registration of generic and generally cheaper pesticides.
+
+Specific Approaches of Professional Pest Control Operators
+against German Cockroach
+
+Cockroach control program is the “bread and butter” service offered by professional pest
+control operators as part of general pest control (GPC) service line. The target markets of the local
+PCOs are the commercial and industrial establishments like shopping malls, offices, food chains
+and outlets, drug factories, restaurants, ships, hotels, and banks along with class A and B residential
+subdivisions, condominiums, and villages. Prior to cockroach treatment, the professional PCO and
+the prospect client must agree with the written proposal submitted by the exterminator. This
+
+proposal includes the scope of work and the methods to be done, the cost of treatment, and the
+
+22
+
+terms of payment (Robin Pest Control, personal communication 2021). Once agreed, the local
+
+PCO may conduct the following operations:
+
+Cockroach inspection
+
+The first part of a successful cockroach control program is the inspection. It is necessary
+to identify the pest species in the area (German cockroach or American cockroach), their breeding
+sites and the degree of infestation. When looking for cockroaches, all senses must be used. If it is
+difficult to locate the German cockroaches, sense of smell can be used due to their distinctive odor
+caused by the presence of their feces and pheromones. Inspections should focus on pest-vulnerable
+area where food and water are present. The use of flashlights and mirrors are helpful to see German
+cockroaches in difficult to reach areas. Unsealed openings such as loose pipes, sinks and cabinets,
+wall-mounted electrical panels, mirrors, light fixtures, fire alarms or emergency lighting, and
+hollow-legged tables and chairs must be inspected. Equipment where heat is generated: behind
+refrigerators and freezers, ovens, stoves, and electrical junction boxes should also be examined.
+Cockroach observed during daytime maybe an indication of extremely large population. Table 3
+shows the common harborage of German cockroaches as lifted from National Pest Management
+
+Association (2019).
+
+23
+
+Table 5. Common harborage of German cockroaches (NPMA 2019).
+
+‘Area
+
+Type of Equipment
+
+Purpose
+
+Dishwashing
+area
+
+Food
+preparation area
+
+Miscellaneous
+
+Three Compartment Sink
+Dishwashing Unit
+
+Grease Trap/ Interceptor
+
+Garbage Disposal Unit
+
+Hand wash sink
+
+Prep Sink
+Ovens
+Soup Kettles
+
+Thermalizer
+
+Pantry/ Dry Storage
+
+Employee Lockers
+
+Cleaning and sanitizing, cooking, and serving tools
+Cleaning and sanitizing dishes, utensils, and glassware
+
+Device to intercept grease and solids prior to
+wastewater moving into sewer system
+
+Device used to shred solid food particles into small
+pieces to travel into wastewater stream
+
+‘Small sink designated for use by staff for washing
+hands.
+
+Sink used for washing foods for serving and cooking
+Used for baking and cooking of foods
+Used for cooking large batch soups
+
+Equipment which can be used for holding food to
+maintain serving temperature or for re-heating food.
+
+Areas where dry goods are stored without refrigeration.
+
+Areas where employees store personal belongings and
+take breaks
+
+Treatment selection
+
+After a thorough inspection and familiarization of the job site, the different control
+
+methods available for use must be reviewed (e.g., biological control, mechanical control, cultural
+
+control, chemical control) and will be determined which one would be the most applicable.
+
+Usually, integrated control procedures have a better effect than a single control procedure. It is
+
+24
+
+best to combine the sanitation program with some forms of mechanical control plus chemical
+control procedures.
+
+The sanitation and cleanliness of the area is primarily responsibility of the client prior to
+the pest control treatment. The collaboration between the pest control operators and the staff of
+establishment is essential for the successful cockroach control program. Cockroach control should
+include better storage of leftover food and proper collection and disposal of garbage to reduce
+amount of trash and garbage (Cariaso 2003). Food, water, and harborage must be eliminated to
+increase pest control success. Cleanliness and sanitation are requisites for a preventive action in
+cockroach control program.
+
+Meanwhile, determining the entry point or the source of pest is an important corrective
+action during the control program done by professional exterminator. Mechanical alteration such
+as sealing of cracks around wall-mounted electrical panels, light fixtures, bulletin boards, sinks
+and cabinets while repairing of door gaskets, or self-closing doors are necessary. The use of
+vacuum cleaners to remove heavy infestation provides immediate control and instant customer
+satisfaction. It also reduces the infestation into a manageable level.
+
+In the use of pesticides in managing German cockroaches, products shall be appropriately
+evaluated for the intended use and site. These pesticides may be residual, non-residual, in bait
+formulation or an insect growth regulator (IGR). In an area heavily infested with German
+cockroaches, the initial treatment is called a “clean-up treatment”. Spraying is done thoroughly to
+significantly reduce the cockroach infestation. It is necessary for regular and continuing follow-up
+treatments after the initial clean up. Residual chemicals are used for cockroach control due to its
+
+killing action which continues for about week thereby causing death of newly hatched nymphs.
+
+25
+
+Knockdown insecticides on the other hand works by irritating the cockroach and flushing them
+out from their hiding places. German cockroaches targeted by knockdown insecticides run wildly
+until killing effect of chemical causes death in about 5-10 minutes (Catan and Catan 1980).
+
+According to some PCOs, it is prescribed to use the combination of both residual and knockdown
+
+insecticides for clean-up and follow-up preventive treatments. In areas where spraying is not
+possible due to possible contamination of food or food utensils such as restaurants and food outlet,
+
+the preferred chemical method are insecticide baits and IGRs. Cockroach bait formulations can be
+
+gels, liquid or dry-flowable. The baits are placed where the cockroaches have been observed to be
+active during the night. German cockroaches will be attracted to the bait and will die several hours
+afier ingestion. It is advised to keep bait stored separately from other chemical products that might
+contaminate it resulting its unpalatability to B. germanica, Consequently, the IGRs mode of action
+is to prevent the normal development of immature cockroaches so they cannot reproduce as adults.
+Also, IGRs cause the ootheca to release prematurely (Oi et al. 2017). In warehouse or non-food.
+storage area, dusting may be utilized for cockroach control. In this method, insecticide powder can
+be blown into spaces with hand-operated puff-duster or a plunger-type duster (Jacobs 2013). Extra
+caution must be observed during application though since dusts easily floats in the air and may
+
+contaminate non-target areas.
+
+Monitoring
+Cockroach control is an ongoing process. The constant monitoring of the facility for the
+
+pest activity would be a great help to hired PCOs of one establishment. However, the pest control
+
+professionals most likely visit the facility on weekly or bi-weekly basis. Thus, the staff of the
+
+26
+
+establishment needs to report any signs of pest activity. Another monitoring device which can be
+used are the sticky traps. They can be the “eyes” of hired PCOs in the property and are working
+for 24/7.They are placed in dry areas along structural lines, adjacent to walls, and comer where
+cockroaches travel and close to suspected cockroach harborages. Monitors can give sufficient
+information to the professional pest control operators such as the presence of all life stages of
+German cockroaches indicates that they are dealing with an established infestation, while one to a
+few adults indicates that PCO is dealing with a new introduction (Oi et al. 2017). Moreover,
+monitors may suggest of which direction the cockroach came from to better focus the routine
+
+inspections.
+
+Documentation
+
+Reporting and documentation may be required as part of agreement between the hired
+PCOs and the client (personal communication). Important documents include a scope of service,
+pest activity reports, service reports, corrective action reports, trap layout maps, lists of approved
+pesticides, pesticide usage reports and applicator licenses. In the documentation, it should also
+include notes when corrective actions were implanted to determine which steps have been
+successful and should be integrated into part of cockroach control program. Up-to-date pest control
+documentation benefits the two parties either the PCOs or the client. For the client, it is a good
+sign to an auditor that the facility is taking pest control seriously. While for the hired PCOs, it can
+be used by the client as basis for the renewal of the contract since it can serve as tool to offer as
+
+part ofa quarterly or annual review prior to any scope of alteration (NPMA 2019).
+
+27
+
+A successful control program against the German cockroach has the four specific
+approaches mentioned above. Nevertheless, control failure is also possible if factors such as the
+close association of German cockroaches with people and food, their rapid reproduction, and their
+tendency to gather in inaccessible places are not taken into consideration. Control failure can also
+result if German cockroach has developed resistance. Scharf and Rollins (2020) discussed that B.
+germanica are becoming more difficult to eliminate as they developed cross-resistance to the pest
+
+management industry's insecticides in urban areas.
+
+In the Philippines, the history of insecticide resistance of German cockroach was not well
+documented. In fact, there is no published data on insecticide resistance of German cockroach to
+any novel and conventional insecticides. The only available literature is on chemical control of
+German cockroach by Mendoza (1976), Verdeprado (2008) and Jarilla (2010). Because of this
+dearth of information on cockroach resistance, many PCOs nowadays face this serious problem
+due to ineffective control against B. germanica in different establishments such as malls,
+supermarkets, restaurants, and bakeries. This problem results to negative effect to local PCO
+industry due to frequent complaints, “call-backs” and the worst case are the cancelled contracts.
+Gonzalez (1981) gave this challenge to those in academe and research to undertake studies in
+biology and control of pests found in urban areas which would be a big help for the pest control
+
+industry and the general public.
+
+28
+
+ide Resistance
+
+IRAC (2019) defined insecticide resistance as the heritable change in the sensitivity of a
+pest population which is reflected in the repeated failure of a product to achieve the expected level
+of control when used according to the label recommendation for that pest species. It arises because
+of artificial selection of insect populations with an insecticide. As a result of continued application
+over time, some naturally occurring traits that confer resistance are favored and thereby selected.
+Thus, the surviving insect population becomes increasingly difficult to control at the recommended
+rate and application interval, as individuals with these traits selectively thrive and proliferate.
+Insecticide resistance is an increasing problem faced by those who use insecticide for the control
+
+of medical, veterinary, and agricultural insect pests. On the contrary susceptibility is defined as the
+
+state of being likely to be harmed by exposure to a particular thing, in this case, exposure of test
+insects to an insecticide. Susceptible organisms are those who were killed after insecticidal
+
+exposure while tolerant individuals are who survived. The decreased susceptibility of a pest
+
+population to an insecticide that was previously effective at controlling the pestis called insecticide
+resistance (Heong et al. 2013).
+
+Resistance can lead to increased application rates, frequency of pesticide-use and ultimate
+loss of efficacy (Scott et al. 2000). Infinite supply of novel insecticides to replace current
+insecticide cannot be assumed due to the increased difficulty in discovering new compounds, high
+cost of product development and the loss of currently available materials because of the stricter
+policy of the government institution regulating the pesticides (Georghiou 1986; Hammock and
+
+Soderlund 1986). Operational factors in insecticide resistance are those related to application of
+
+les. These factors include the chemical nature of pesticides, the relationship of previously
+
+29
+
+used chemicals, the persistence of residues and formulations, the application and selection
+threshold, the life stage selected, the mode of application, space limiting selection and, the
+alternation selection (Georghiou and Taylor 1977). Operational factors are under man’s control
+
+and their manipulation may help to delay insecticide resistance
+
+Insecticide Resistance Mechanisms
+
+Yu (2008) explained that there are four possible types of resistance mechanisms to main
+insecticide groups in all insecticides to date. These are reduced penetration, target site insensitivity,
+metabolic resistance (simplified as physiological resistance) and behavioral resistance.
+Explanation of each type follows:
+
+Reduced penetration. \t is the situation in which toxins are incapable to penetrate the
+cuticle of insects. This can be explained by the binding protein or lipid reservoir that traps the
+insecticide in the cuticle; the degrading enzyme located in cuticle: and the high lipid & protein
+content which become impermeable cuticle.
+
+Target insensitivity. \t is mutation-based resistance mechanism and results to alteration of
+target sites. It occurs when the previously binding site protein is altered in the structure or
+conformation which leads to failure of the toxicant to bind to the target (Brooks 1976).
+
+Metabolic Resistance. tis the ability of the insect to increase detoxification of insecticides.
+
+This can be explained by three processes such as gene amplification, gene over-expression and
+
+increased enzyme activity. Gene amplification is the production of greater number of genes for
+resistance. Resistance via gene over-expression is when one gene can transcribe greater number
+while increased enzyme activity occurs when a detoxifying enzyme performs faster than the
+
+normal one. Examples of detoxifying enzymes that have been shown to be involved in insecticide
+
+30
+
+resistance are the cytochrome monooxygenases (CYP), hydrolases and esterases and the
+conjugating enzymes.
+
+In the control of German cockroach, provided that insecticides are an integral part of pest
+control programs, the potential for development of physiological resistance will be significant
+(Rust 2001). Strategies to rotate the use of different insecticides have often recommended
+counteracting this type of resistance.
+
+Behavioral resistance. \t is the development of ability of the insect to avoid a dose that
+would be lethal. It is stimulus-dependent and can be classified as hypersensitivity or hyper-
+irritability. Insect’s response once they have this mechanism is to move away from the affected
+area, avoidance of initially a phagostimulant or autotomy (the casting off a part of the body by an
+animal under threat), Aside from studies showing the existence of physiological resistance in
+German cockroach, there have been few examples of behavioral resistance. The study of Silverman
+and Bieman (1993) reported one strain of B. germanica was observed to have aversion to feeding
+on glucose in diet and did not consume toxic bait containing glucose. Moreover, strains collected
+from Republic of Korea and USA showed glucose aversion (Silverman and Ross 1994). These
+reports suggest that rotation of baits with different active ingredient will not be enough to prevent
+reduced performances of the toxicants. Also, monitoring of food preference and necessary changes
+should be evaluated to prevent avoidance. These scenarios are extremely important and should be
+considered in German cockroach control.
+
+The most important principle for resistance measurement is the dosage-montalily response.
+When the dose increases, the mortality of the tested population also increases. With some
+
+mathematical transformation (e.g., mortality to probits and dosage to logarithm), it is possible to
+
+31
+
+get a straight-line relating dosage and mortality. This line can help in estimating the dose expected
+to kill a certain proportion of the insect population. Commonly used levels are LDso, LDso and
+LDss (Cochran 1995). According to Yu (2008), LDsois a more sensitive index of toxicity than any
+other concentrations and is used as standard for comparing the relative toxicity of insecticides due
+to following reasons. First, LDso has narrower 95% confidence interval than other LD values.
+
+Added to this, according to normal distribution for the logarithms of tolerance concentration
+
+(Finney 1972), there are more individuals that respond at LDo levels (and is at maximal) compared
+
+with indivi
+
+luals with high tolerance or low tolerance. Lastly, the sigmoid curve is steepest in the
+region of 50% response so that small change in concentration in this region of the curve causes
+large change in percent mortality. Thus, LDso is more sensitive index of toxicity than any other
+dose. The LDso is commonly expressed as milligrams per kilogram (mg/kg). However, there are
+instances that exact dose initially administered to test insect cannot be determined thus, LCso is
+alternatively used. LCso is the concentration of the insecticide in the external media which can kill
+50% of the test population. The 95% confidence interval (upper and lower limits) on LCso are
+parameters to indicate whether the difference of toxicities of certain insecticide to a test population
+is significant if no overlapping is observed.
+
+The slope of log dose-probit straight line provides a useful information as well. Slope value
+is related to the variance of the population. If line is steep having high slope (b>2), population is
+
+relatively homogeneous while a flat line or shallow slope (b<I) indicates a heterogeneous
+
+population showing a large variance in response to the insecticide (Yu 2008).
+Although German cockroaches have been reported to have developed resistance against
+
+many groups of insecticides, it does not mean that all German cockroach populations are resistant
+
+32
+
+to all insecticides. Some populations of B. germanica that are resistant to some insecticides may
+be susceptible to other types of insecticides (Cochran 1995). The current challenge to
+entomologists and to pest control industry is to propose management strategies to delay or prevent
+the development of insecticide resistance in German cockroaches. Effective tactics can best be
+proposed when a complete field monitoring and status of its susceptibility to currently used
+
+insecticides are achieved.
+
+Bioassay Technique
+
+In the monitoring of insecticide resistance and bio-efficacy of different insecticides, the
+choice of the bioassay is essential. To date, a wide range of bioassay and biochemical tests are
+available, but results may not be comparable since different tests measure dissimilar parameters
+thus, leading to complicated analysis of monitoring data (IRAC 2019). In detecting insecticide
+resistance in the German cockroach, there are two commonly used types of tests: the topical
+application test and the jar test. Topical application had been used to monitor resistance in
+numerous insect species (Ffrech-Constant and Roush 1991), whereas the jar test (Keller et al.
+1956) was specifically developed for the use with the German cockroach. Several researchers
+
+studied these two methods in tests with numerous insecticides such as propoxur, diazinon,
+
+chlorpyrifos, cypermethrin, bendiocarb, chlorpyrifos, fenithrothion, and pyreth
+
+s and concluded
+that jar tests are more reliable than topical applications since they rely on tarsal contact with
+
+insecticide deposits (Scharf et al. 1995). The WHO jar test is a standard method in measuring the
+
+susceptibility levels of a German cockroach population to a given insecticide. This technique is
+
+33
+
+designed to investigate the emergence of an insecticide-resistant strain and devised to detect
+physiological resistance in cockroaches. The method employs treating glass jar with insecticide
+solutions diluted in analytical grade acetone. The treated jars will be rolled horizontally allowing
+solutions to run evenly over the bottom and side until the acetone evaporates. Afterwards, the adult
+German cockroaches will be bio-assayed on the treated glass jars for | hour and then transferred
+to holding container. The results of mortality will be recorded after 24 hours (WHO 1970).
+
+In various studies, researchers have paid attention on using the adult male as test insect
+because of its uniform size and weight. On the other hand, Koehler et al. (1993) reported that late-
+stage nymphs of B. germanica were significantly more tolerant to bendiocarb, cypermethrin, and
+chlorpyrifos than adult males. Valles et al. (1994) obtained same results on some pyrethroids. Qian
+et al. (2010), also discussed that late instar B. germanica (six-week-old nymphs) were more
+difficult to kill than adult males and females with dichlorvos and propoxur. The author used the
+late instar of Blattella germanica (six-week-old nymphs) in the current study after rearing in the
+laboratory to ensure same age range during the bioassay procedure.
+
+In light of the above literatures, the present study was undertaken to shorten the gap in the
+unavailability of published data on the current status of susceptibility of German cockroach to
+commercial insecticides in the Philippines. Results obtained from this study can improve on
+decision making in urban pest control industry in considering an appropriate insecticide for
+
+effective control of German cockroach.
+
+MATERIALS AND METHODS
+
+Figure 4 shows the schematic diagram of the methods used in the current study. The
+cockroaches were collected from nine sites, three sites from each of the three towns in Laguna.
+The collected gravid female German cockroaches were brought to laboratory and mass reared at
+temperature 28 °C and relative humidity of 58 £2% to ensure enough samples of six-week-old
+nymphs during the bioassay procedure. Afterwards, five commercial insecticides were prepared
+which served as representatives of five insecticide group (organophosphates, carbamates,
+pyrethroids, phenyl pyrazole and neonicotinoids). When all materials were ready, the bioassay
+procedures were conducted. Prior to final bioassay, preliminary dose-fixing experiment was useful
+step in the selection of the test dosages to be applied in the final bioassay. At least five to six
+concentrations were used in the final bioassay using the WHO glass jar method. The final step was
+the data analysis using the POLO plus version 2.0 software program to conduct probit analysis.
+
+The detailed description of each step presented were described in the following subsections.
+
+35
+
+Los BANOS CALAMBA, BAY
+cole eave | Calex grave | catex grave | cals grave | colez ga | cola gave “yo | cae | cae ge
+fensie Germ | female Geman | female Geman | femae Geman | femae Geman | female Gen le Geman | ferae German | female German
+coaread fm | carter fon cadmach fen | ech fom gare) fam | cea rom | cra om
+{Bxpematen | LEM pson BV pandaon | CA ppdaion YM mpdaion BAYS opdaon | BAM popaaon
+
+i \ N Si Ca
+
+'Massrearngin the laboratory with 28¢C+2andelative humidity of 58 +2.
+
+J
+
+Preparation of five commerilinsectcdes
+
+PMR AY (ESL A AE
+
+Preliminary Bioassay
+a
+Final Bioassay
+7
+
+‘Data Analysisusing POLO Plussotware
+
+Figure 4. Schematic diagram of the methods done in the
+
+Collection of Test Insects
+
+current study.
+
+Insect collection was done from three towns of Laguna namely: Los Baflos, Bay, and
+
+Calamba City. In each town, the collection was done from three (3)
+
+locations, each location was
+
+at least 1.5-2 kilometers away from the other locations to reduce the possibility of cross population
+
+mating (Figure 5). The collection was done at night (7:00 pm ~ 10:
+
+pm), with each location
+
+visited once a week thereby ensuring enough gravid females to provide the F: nymphs for the
+
+bioassay.
+
+36
+
+Figure 5. A portion of the map of Laguna showing the nine collection sites (Google My Maps 2020)
+
+paar eeaner
+
+CALAMBA, LAGUNA
+
+Figure 6. The specific locations of collection sites in Calamba, Laguna (Google My Maps 2020)
+
+Figure 8. The specific locations of collection sites in Bay. Laguna (Google My Maps 2020)
+
+37
+
+Figure 9. Collection of Blartellu germanica, A-B. Colony of field population of B. germunica C
+inspection D: collection via vacuum cleaner E: collection via brush method. F-G: collection via stick
+method
+
+39
+
+Mass Rearing of Test Nymphs
+
+The collected German cockroaches were brought to the Toxicology Laboratory, Institute
+of Weed Science, Entomology and Plant Pathology. College of Agriculture and Food Science,
+University of the Philippines Los Bafios and reared in the laboratory with temperature of 28°C+2
+and relative humidity of 58 +2%. Gravid females from each collection site were transferred to
+cylindrical plastic jar with petroleum jelly at the top and covered with ladies’ stocking to prevent
+the escape of the cockroaches (Fig. 10). The rest of the collected cockroaches were killed and
+disposed of properly. The gravid females were provided with water and dog pellets and monitored
+daily for egg laying and egg hatching. Once first day old nymphs were observed, the remaining
+gravid females were transferred to a new cylindrical plastic jar while those without oothecae were
+killed. This was done daily. Nymphs were provided with dog pellets and water soaked in cotton.
+The jars were checked daily for signs of feed deterioration, excessive moisture, and mold
+
+accumulation. Six-week-old nymphs were used for the bioassay tests.
+
+Figure 10. Cylindrical plastic jar used as mass rearing container of B, germanica.
+
+Figure 11. Open shelves housing the mass rearing containers of B. germanicu collected from
+three towns of Laguna,
+
+40
+
+41
+
+Preparation of Test Insecticides
+
+Selection of Test Insecti
+
+Five formulated insecticides (Figure 12) from five insecticide groups. namely:
+organophosphates, carbamates. synthetic pyrethroids, phenyl pyrazoles, and neonicotinoids were
+used in this study. One representative chemical from each insecticide groups was selected:
+Dichloroviny! Dimethy! Phosphate (DDVP) from organophosphates. propoxur from carbamates.
+a-cypermethrin from synthetic pyrethroids. fipronil from pheny! pyrazole and thiamethoxam from
+
+neonicotinoids. All compounds were purchased from the suppliers. Table 4 shows the list of
+
+insecticides that were used in the bioassay tests.
+
+Figure 12. Five commercial insecticides used in the study
+
+42
+
+Table 6. Insecticide formulations used in the bioassay test against B. germanica
+
+Insecticide Group Common name % Active Ingredient Type of formulation
+Organophosphates __ DDVP 25% emulsifiable concentrate
+Carbamates propoxur 18.7% emulsifiable concentrate
+Pyrethroids a-cypermethrin 13% suspension concentrate
+Phenyl pyrazoles Fipronil 2.6% suspension concentrate
+Neonicotinoids thiamethoxam 21.6% suspension concentrate
+
+Preparation of Stock Solutions
+
+Stock solutions of the five insecticides were first prepared at 10.000 ppm. Known quantity
+for each insecticide was dissolved in analytical grade acetone as solvent. The formula below was
+
+used in preparing the concentrations.
+
+CiVi=C2V2
+where:
+Ci= Initial concentration C2= Final concentration
+Vi= Initial volume V2= Final volume
+
+Preparation of Serial Dilutions
+
+From stock solutions (SS), serial dilutions were done using the equation C;V\=C2V2, where
+
+Ci= initial concentration. Vi=initial volume, C2= final concentration, and V2= final volume to
+obtain four concentrations (1,000 ppm: 100 ppm: 10 ppm: and | ppm) using the analytical grade
+
+acetone as solvent as shown in Figure 13.
+
+43
+
+Hint a
+
+10m! 9m 9mt
+
+bla Jl
+
+10° dilution 107dilution 10° dilution 10“dilution
+
+Figure 13. Illustration showing the serial dilutions
+
+Treatment of Glass Jars for Residual Bioassay Test
+
+Glass jars with a volume of 325 mL, height of 14 cm, and diameter of 5 cm were used
+for the tests (Figure 14A). The insecticide solution was dispensed into individual glass jars using
+a disposable syringe to deliver 2 mL solution. Immediately after treatment, the glass jars were
+rolled horizontally on a flat surface and then on a non-heating hotdog roller (Figure 14B) so that
+solution ran evenly over the bottom and sides until the solvents had evaporated completely. The
+upper inside lid of the jars was smeared with a thin layer of petroleum jelly and enclosed with
+
+mesh cloth to prevent the cockroach escape (WHO 1970: Scharf et al. 1995).
+
+44
+
+Figure 14. Glass jar (A) and non-heating hot dog roller (B) used in the preparation of treated glass jars
+
+Nymphal Bioassay
+
+The bioassay was performed within the framework of WHO (1970) and Scharf et al.
+
+(1995) techniques. with slight modifications. From the nymphal rearing jars. healthy and active
+
+individuals were chosen while lethargic and abnormal individuals were discarded. The nymphs
+were transferred first into a holding container for one hour to verify ifthey were healthy and active
+
+individuals.
+
+Batches of ten (10) six-week-old nymphs were transferred to treated glass jars with extra
+care. The unhealthy or damaged nymphs were removed and replaced. Exposure time of contact
+was one (|) hour. Afterwards, the cockroaches were transferred to clean holding containers (Figure
+
+15) provided with ample food and water. The number of dead/moribund insects was recorded after
+
+45
+
+24 hours. A cockroach was considered dead if it was unable to turn back to its normal posture by
+itself within 2 min after being touched on the abdomen with a pair of forceps (Scharf et al. 1995).
+When the control mortality exceeded 10%, the test was considered unacceptable. Each treatment
+including the control used four (4) jars containing ten (10) cockroaches in each concentration. A
+
+total of three (3) preliminary trials were conducted for each population.
+
+Figure 15. Holding container showing the front and upper portion.
+
+Set-up for Final Bioassay
+
+After determining the range of mortality of nymphs from preliminary bioassay. the final
+concentrations (at least 5-6 concentrations) yielding 5% - 95% mortality in 24h were used. In each
+dose/concentration, 40 insects were used per insecticide treatment. For ease of handling and to
+save on space, ten (10) cockroaches were put in each of the four (4) jars to complete the 40 insects
+per concentration. There were five (5) batches of final bioassay trials for each population. ‘The
+
+batch trials were done per population testing the five-insecticide treatment. These five trial
+
+46
+
+bioassays were done to randomize effects related to laboratory procedure. After 24h observation,
+
+insects (dead or alive) used from the final bioassay test were discarded.
+
+Data Analysis of Final Bioassay
+
+Mortality data from all five trials in the final bioassay in each German cockroach
+populations were used for analysis. LCso values were calculated from log dosage-probit mortality
+regression line using POLO plus version 2.0 software program. The program automatically
+computes the corrected mortality. Standard deviation or confidence intervals of the means of LCso
+
+values, and slopes were also determined.
+
+In this study, each population of B. germanica from nine collection sites were bio-assayed
+to five commercial insecticides and were analyzed independently. Purposive sampling was done
+on three collection sites on each town where the abundance of Blattella germanica was observed
+to ensure sufficient samples were used until the end of the study. Due to sampling method used
+(which is non-probability), samples taken from each collection sites cannot represent the whole
+
+population of main collection sites from Los Bafios, Calamba, and Bay. Furthermore, due to
+
+limitation of time and labor force, the author performed bioassay method by batch on each German
+cockroach population as well as the data analysis.
+
+Aside from the bioassay results on each population done in laboratory, the owners or staff
+securing the collection sites were interviewed regarding to cockroach control methods employed
+
+during the collection period. Moreover, chemical insecticides previously used for cockroach
+
+control as well as the manner and frequency of application were asked.
+
+RESULTS AND DISCUSSION
+
+This chapter is divided into two (2) parts. Part | presented the description of each collection
+site within the geographical framework of each of the three main collection sites namely: Town of,
+Los Bafios, City of Calamba and Town of Bay. Each collection site was at least about 1.5-2. km
+away from another collection site to avoid population migration which can affect the gene
+frequency of German cockroach. The susceptibility status of six-week-old B. germanica from nine
+populations when tested in five commercial insecticides was presented in Part II. Susceptibility is
+defined as the state of being likely to be harmed by exposure to a particular thing, in this case,
+exposure of test insects to an insecticide. Susceptible organisms are those who were killed after
+insecticidal exposure while those survived are tolerant individuals. On the other hand, the
+decreased susceptibility of a pest population to an insecticide that was previously effective at
+
+controlling the pest is called insecticide resistance (Heong et al. 2013). Determination of
+
+insecticide resistance is done by comparing the susceptibility of field population to a confirmed
+susceptible strain (a population which was known not exposed to any insecticide for a certain
+number of generations). In this study, the focus was on determination of toxicity of five
+
+insecticides used and not on insecticide resistance due to lack of susceptible strain of German
+
+cockroach. LCs was the parameter utilized to compare the relative toxicity of five insect
+
+ides
+
+while the 95% confidence interval on LCso indicates whether the
+
+ifference of toxicities of certain
+insecticide to a test population is significant if no overlapping is observed. The higher the LCso
+
+value, the lower the toxicity while the lower the LC5o value, the higher the toxicity.
+
+48
+
+Geographical Analysis
+
+Table 7 presents the location source of the nine test populations of B. germanica used in
+bioassay tests. The chemical insecticides used by the owner or personnel assigned in the collection
+sites are also listed in Table 7. The geographical descriptions below present a clear picture of the
+
+location of each site in relation to the rest of the sites.
+
+Los Bafios. The municipality is located at 14°10°N 121 °13°E. Elevation at these coordinates is
+estimated at 118 meters or 387 feet above sea level. Its land area is about 54, 22 km?, It has a
+tropical wet climate which has monthly mean temperatures above 18°C in every month of the year
+(Mcknight and Hess 2000). It is classified as an urban area (NSO 2006). The three (3) collection
+sites were restaurant kitchen with a population code LBK: a meat shop with a population code
+LBM and a vegetable store with a population code LBV. The distance of the collection sites from
+each other is ca. 2.5 km, The town of Los Bafios is bounded at northwest by City of Calamba (7.22
+
+Kilometers) while on the east by the town of Bay (6.32 kilometers).
+
+Calamba. The city is situated at 14.1877° N, 121.1251° E. It has a land area of 149.5 km? with
+elevation estimated at 98 meters or 322 feet above sea level. It has a tropical monsoon climate with
+a short dry season (which lasts only from January to April) and a longer rainy season. The city of
+Calamba belongs to first city income class of the province of Laguna. Due to highly urbanized
+location and increase in population (PSA 2020), many restaurants, markets, and meat shops are
+
+widespread to fulfill the demand of the society. The collection sites in this town were two (2) meat
+
+49
+
+shops with population code CALMI and CALM2 respectively, while CALC is a coconut grater
+
+shop. The distance of the collection sites was ca. 1.5-2.5 km away from each other.
+
+Bay. The town is located at 14.1320° N, 121.2569° E. Elevation at these coordinates is estimated
+at 17 m (56 ft) above sea level. This town belongs to a 2™ class municipality in the province of
+Laguna and has a land area of 42.66 km?. The town of Bay has tropical wet climate with a short
+dry season (from January to May) and a longer rainy season. The average precipitation in a year
+is 108 mm. The three collection sites were a meat shop with population code BAYM, a sari-sari
+store with population code of BAYS, and a small food stall kitchen (BAYK). The collection sites
+were ca. 1.5-3.5 km away from each other.
+
+The establishment of population of Blattella germanica depends on the availability of food,
+water, and harborage (Valles 1996). This is supported by the study of Tanaka and Motoki (1993)
+that heating and food supply influence the distribution and population of B. germanica. Therefore,
+one population of B. germanica will not simply migrate to form another colony or population if
+there is enough source of food in the current habitat. This scenario was considered in the selection
+of sites for collection of the cockroach populations since population mobility is a very important
+behavioral factor for resistance development (Yu 2008). When susceptible insects migrate to
+another population, the influx of migrants dilute the frequency of resistance among survivor after
+insecticide treatments. However, Barcay and Bennett (1991) discussed that starvation increases
+the distance travelled, velocity and the proportion of time in motion of adult males and final instars
+but not adult females. In the current study, average distance of each collection site from another
+
+collection site is 1.5 to 2.0 kilometers to avoid the cross-mating of the different populations. Only
+
+50
+
+the adult gravid females were collected which proved to be less mobile than adult males and final
+
+instars. Further, gravid females are not affected by the starvation or lack of food supply and
+remain in the respective harborage. In the current study, collection sites are food plenty such as
+restaurant kitchen, meat shops, vegetable stores and kitchen food stall, therefore no movement of
+German cockroach from one collection site to another. Only accidental transport which can be by
+humans, animals, or shipment of baggage might be a possible reason for migration of the German
+cockroach from one population to another.
+
+Sanitation is the first step in effective German cockroach control program. The removal of
+food sources and water reduce the population of German cockroach and lessen the risk of
+encouraging new infestations. Failure to maintain the cleanliness might lead to the increase of
+German cockroach population in an area. This primary control strategy should be done before
+doing any insecticide applications (Ogg et al. 2006). However, some individuals skip this
+necessary step to see dramatic effect on German cockroach control. This condition was evident
+and observed by the author on some collection sites selected in this study. Owner or staff of
+selected establishments apply commercial insecticides whenever German cockroaches are noticed
+even without eliminating the resources needed by cockroaches such a water, food, and shelter.
+
+Thus, frequent application of chemicals is practiced which might be a possible reason on the
+
+susceptibility status of nine populations of B. germanica and discussed in the next section.
+
+%S1-0 wsyIN|yAD wayyy
+
+“%60'0 wisyrosd! losory MAVE aeg lets pooy 6
+%S00'0 soudipoweze weg SAVE 8
+%§ uLsyraussads aigeseids WAVE L
+
+doys
+VIN UO ov Joyes® inuo303 9
+
+%S1'0 UyoUUDds> require
+“ee QUUyoUESIA Josoray ZWIv> doys ray s
+%S'7 YaWeIaP aiqeceads IWTv2 doys 1a b
+VIN 3UON AGT SITS S]qUIDTD A, €
+% ol uuyjouuad aigeceads wat doys ay z
+-%0 1-0 wyousydco
+
+“%01'0 wisyrosdt us, Jososay soueg $0'] aya
+luejoeme 2p Saaisaype eg yaT queineysay 1
+pasn pop, “ON
+(suarpas3uy any — suonenusoy jeotWayD ——_uoneindog UMOL — ang uONHDaI1109 —_uoNeIndog
+
+sayjavo14909
+
+3y} JosIUOD 01 pasn sjea1wayo pur sisa Aesseoig UI pasn H2/uMUAaS -g Jo SuoNeindod 1S9) DUIU DY) JO 2910S UONI0"] “Z 9142,
+
+52
+
+Suscepti
+
+of the Different German Cockroach Populations
+
+Los Bafios Town
+The results of bioassays of five commercial insecticides against the six-week-old nymphs
+of Blatiella germanica collected from the three sites are discussed below.
+
+LBK population (Site 1). The insecticidal potency of five commercial insecticides at 24
+hours after treatment (HAT) is shown in Table 8. Among five insecticides, fipronil was the most
+toxic having the lowest LCso value (LCso=22.59 ppm) while DDVP was the least toxic having the
+highest LCso value (LCs0=2,568.28 ppm). Based on overlapping confidence interval at 95%, the
+toxicity of propoxur and thiamethoxam are the same. Hence, the decreasing toxicity was fipronil
+> thiamethoxam = propoxur > a-cypermethrin > DDVP.
+
+Slopes generated based on concentration-mortality responses varied from 1.001 to 4.93.
+The response of B. germanica to DDVP had the steepest slope (4.93) while response to fipronil
+had the flattest slope (1.001) as illustrated in Figure 16. This shows that response of the LBK
+population is more homogeneous to DDVP (the least effective insecticide) but less homogeneous
+to fipronil (the most effective insecticide). It appears that the LBK population has shown tolerance
+to DDVP and possibly starting to develop resistance to it. According to Brown and Pal (1971), the
+frequency of resistant genotypes increases in populations under insecticide pressure. With this
+information, PCOs can decide to minimize the use of DDVP or other insecticides in the
+organophosphate group.
+
+The source of the LBK population is a restaurant kitchen (Table 7) which only implements
+in-house control of the German cockroach. Based on observation and personal interview, the
+
+restaurant staff monitor the cockroach infestation using bait trap. This product contains a food
+
+53
+
+attractant which lures the German cockroach, which then gets stuck in the adhesive within. The
+commercial roach trap is effective in monitoring as well as in reduction of the cockroach
+population. Once the infestation level became unmanageable, the restaurant staff resort to using
+aerosol formulation available from the nearby hardware or supermarket. The formulation contains
+a mixture of imiprothrin 0.10% and cyphenothrin 0.10% from the class of synthetic pyrethroids.
+Rahayu et al. (2016) reported that commercial aerosol insecticides containing pyrethroids cause
+low to very high level of resistance to German cockroaches in Indonesia. In the current study, a-
+cypermethrin, a synthetic pyrethroid was less toxic against the LBK population compared to
+
+fipronil or thiamethoxam.
+
+LBM population (Site 2). Based on LCso values, the general trend of toxicity of five
+insecticides against the LBM population was thiamethoxam > propoxur = fipronil > a -
+cypermethrin > DDVP (Table 9). Thiamethoxam was the most toxic compound with the lowest
+LCso value (LCso = 38.36 ppm) while DDVP was the least toxic with the highest LCso value
+(LCs0=2,120.39 ppm). Meanwhile, propoxur and fipronil are equally toxic to the LBM population.
+
+The slope values of the log-probit lines for the five insecticides ranged from 1.29 to 3.78
+
+(Figure 17). These responses are i
+
+ication that LBM population has less heterogeneity to the
+selection pressure provided by the five commercial toxicants. This shows that response of B.
+germanica from the LBM population is most homogeneous to a-cypermethrin (3.78) and DDVP
+(3.55) and least homogeneous to propoxur (1.29). The small variance in slope shown by the
+homogeneous response to a-cypermethrin and DDVP by LBM indicates possible chance of the
+
+presence of resistance gene developing in the population thus decreasing genetic variation
+
+Sa
+
+(Rosenheim & Hoy 1986). The decrease in genetic variation might be due to continued selection
+pressure which in this case - frequent application of synthetic pyrethroids, thus eliminating
+susceptible individuals and artificially selecting individuals with resistant genes. With this
+information, PCOs can be informed to altemate their choice of chemicals from synthetic pyrethroid
+class into other groups to slow down the rate of insecticide resistance.
+
+The collection site (LBM) is a meat shop located at the Los Bafios public market (Table 7).
+Based on interview, the market administrator assigns an in-house group to treat the area with
+synthetic pyrethroid (permethrin 10%) through misting and spot spraying. Since a-cypermethrin
+is related to the currently used chemical (permethrin) with respect to mode of action, it would be
+prudent to shift to another class of insecticide except organophophates. Pyrethroids are neurotoxins
+acting on the production of action potential. As sodium channel modulators, they slow the closing
+and inactivation of the channel causing it to remain longer than normal mode. Keeping sodium
+channel open re-excite the same area of membrane resulting to repetitive firing and hyperexcitation
+in targeted insect (IRAC 2019). Nerve axons occur throughout the insect’s body, when pyrethroids
+enter the body, the symptoms are extremely fast-acting resulting to immediate “knockdown”
+
+(BASF 2013).
+
+LBV population (Site 3). Thiamethoxam and fipronil are equally toxic to LBV population
+having the lowest LCso values (LCso= 30.78 ppm for fipronil and LCsy= 43.59 ppm for
+thiamethoxam) while the least toxic compound was DDVP having the highest LCso value
+(LCso=1,671.20 ppm). The toxicity of DDVP, a-cypermethrin, and propoxur are different from the
+
+other toxicants based on confidence interval (Table 10).
+
+55
+
+Figure 18 shows the slopes of the concentration—mortality responses of LBV population to
+five insecticides. The slope values of fipronil and thiamethoxam were 0.89 and 0.98 respectively
+indicating more heterogeneity response of LBV population. The slope values were 3.92 and 4.07
+for a-cypermethrin and DDVP respectively indicating more homogeneous response. The
+homogeneity response of German cockroaches in the latter insecticides indicates possible
+development of tolerance in the insects. Using this information, PCOs and individual pesticide
+applicator can be advised to minimize the use of pesticides containing organophosphate and
+synthetic pyrethroids in the meantime and instead use the newer fipronil and thiamethoxam if
+available.
+
+LBV population was collected from a vegetable store (Table 7). Abundant German
+cockroaches was observed every collection trip due to availability of food source such as rotten
+coconut husks and coconut meat. Environmental modification is the main cockroach control
+method and no hired pest control operator is servicing the establishment (personal
+communication). Without insecticide exposure, the LBV population could be a source of a
+susceptible strain. According to Syed et al. (2014), resistance does not develop unless and until an
+insecticide is applied repeatedly over a certain period of time. However, bioassay results showed
+the reduced toxicity of DDVP and possible presence of resistance gene in LBV population as
+
+discussed in homogeneity response.
+
+sjeaiaiut aouapyuoa Hurddeyian0 ayi Jo asnesaq wasaysip Aque: tou aze uuinjoo awes ay) ut sonia] sues axp YI Sanwa ,
+
+P(LLS'189°% — EL9'8SP'2) 9L7'898°7 Z67'0FE6'Y S6L'91 - 976 = K daqa
+
+9(€Z6'7ZL -L10°019) Sl€'b99 SEL OFLST O74 - xS9S'7 = 6 unyrauuadéo-n
+
+4 (6SL'€Z1 - 898°6S) Sores vOl'OF0L'I ooe'e - x10L1 = 4 anxodosg
+
+Q (ble L9 -1SE9E) Sbe'or VOF9P'L Lev z > XOSbL =A wexoyrawery |
+BCLS BZ “LIS LI) b6s'2z 650°0# 100" SS€1-x100'1 = 4
+(teasayur asuapyuos %s6) uid 057 aS Fadojg uoyenby worssosdoy
+
+“poujoul Ausse sel supe TuIsn UONeIndod Yq] Pyunudas | Isulede Saploloosuy OAL] JO AUDIKO] § 914°,L
+
+99%
+
+‘Response percentage
+
+%
+
+55
+
+10
+
+100
+
+1000
+
+100
+
+109000
+
+57
+
+1) tk fpronit
+
++ 2 wh thiamethorom
+3 tok_propoxur
+4 tok aloha
+5 tok cave
+
+Probits
+
+Figure 16. Concentration-mortality lines of five insecticides against B. germanica from LBK population.
+
+steaiaiut aouapyuos fuddelsano Jo asnesaq waLa4yip Ate:
+
+Fs tou axe uuunjoo ates ays Ut Jona] auHeS ayy UIE SanyeA ,
+
+P(LS-9€8' — €0°06h' 1) B8C07IZ ETOFSS'E ZOB HL > xBpS'E = & daaa
+9(186°OPb - EZ E6E) ley oly IZOFBL'E 6686 - X6LL'E = 4 uuyrouiiedco-v
+
+q (ZO'pbI- 9PE'7L) P8201 B81 0FSI'T 69L'b > XbSVT=A jodi |
+q(S58°9€1 — $86°9S) 656°06 6L0°0F67'I pES'T - XBBT 1 = A anxodod
+®(L9L'SS ~6L'SO) Ssr'se L80°0F IS‘ £6CT- XOIS T= 4 wexoylawely,
+
+(1easayur aauapyuo %56) uidd 37 as tadois uonenbg worssas3ay apronaasuy
+
+ee
+
+“poytawi Kesse sef sseif Rursn uoneindod wa] P2umwsas “gq sureBe sopio|ioasu! Balj JO AUDIXOY, “6 142,
+
+59
+
+wy
+1 fom thinmethoxae
+| Po Soares
+| @ tom fron
+lee 4 omaha
+| 3 = 5 tom. dap
+Fa F 5
+|
+Pr
+§ |
+a” 55
+eo |»
+5 3
+BG 54
+2 £
+He | 4
+3 y
+fu 45
+By
+\ 4
+0 é ! o |
+95
+\s
+| |
+% .
+1 0 100 1000 10000
+
+Figure 17. Concentration-mortality lines of five insecticides against B. germanica from LBM population
+
+sjeasaqut aouapyuoo fuiddepado Jo asneaag 1wasayyIP C41
+
+1S 10U aze ULUNJOD aUIBS ay) UL A9TI9] DUBS YL YILA SON|EA ,
+
+P(08°016'1-€6'°0Pb'1) SOriLo't BET OFLO'Y 901'E1 + x90" = £ dada
+(7ST OPP - PLE LOE 9zE'SOb L7Z‘0F6'E ZITZO1- X91G'E = 4 unyjauuadéa-0
+Q(SbL'€91 -9S7'8) 6Ls'8i1 $8009" ZEO'E - XZ9H'L = A anxodorg
+®(1b9'ZL -107'b2) ose £90°0F86'0 £19‘ - XP86'0 = 4 wexoyrauery |
+
+® (867'ZL-£8'01) £8L'0€ LS0°0F68'0 Lig’ - xS88°0 =< woud}
+
+(jeasayu aauapyuos %56) wdd 0597 as ¥ dois uonenbg worssas3ay apionaasuy
+“pours Resse Tel seep Mursn uoneindod Ag] PIunusae g isulede Saproniossur aAlj JO AUSIXOL “Ol AIGEL
+
+
+61
+
+oy
+b 1) tov fiproni
+— > 2 tov.thiamethoxam
+Pe 3 tbv_propowur
+© m a eat
+; tbv_déve
+Pe)
+El
+$0 55
+3° g
+Bey pn 53
+$0 i &
+e | 45
+5° H iad
+2 |
+; 1
+0 |
+25
+| 25
+3
+a1 j 0 Cn an en)
+
+Figure 18. Concentration-mortal
+
+lines of five insecticides against B. germanica from LBV population
+
+62
+
+Calamba City
+
+The results of bioassays of five commercial insecticides against the six-week-old nymphs
+of Blattella germanica collected from the three sites are discussed below:
+
+CALMI population (Site 4). The LCso of five commercial insecticides against six-week-
+old nymphs of Blattella germanica at 24 hours after treatment is shown in Table 1. The toxicity
+of five insecticides has the general trend of thiamethoxam = fipronil = propoxur >a-cypermethrin
+> DDVP. Thiamethoxam has the lowest LCso value (LCso= 42.69 ppm) but did not significantly
+differ from fipronil and propoxur based on confidence interval. DDVP was the least toxic with the
+highest LCso value (LCso= 2,527.28 ppm).
+
+Slope values obtained from probit analysis of five commercial insecticides against German
+cockroach ranged from 1.11 to 6.02. This shows that CALMI population of B. germanica are
+homogeneous to the selection pressure provided by DDVP and to a lesser extent a-cypermethrin.
+Homogeneous population is an indication of small variation of response of German cockroach to
+the insecticide. This reflects a possible chance of the presence of resistance gene in which continued
+pesticide application can lead to artificial selection of resistant individuals. With this information,
+PCOs can be informed to alternate their choice of chemicals belonging from organophosphate and
+synthetic pyrethroids to other class such as neonicotinoids.
+
+Collection site 4 is a meat shop in Calamba market (Table 7). The common methods of
+cockroach control are sanitation and use of residual spray insecticide containing synthetic
+pyrethroid (deltamethrin 2.5%). According to the assigned personnel, the establishment utilizes
+non-professional staff assigned by the market administrator and application method is through
+
+misting and spot spraying. Syed et al. (2014) reported that deltamethrin 2.5 SC showed moderate
+
+63
+
+to high level of resistance against adult Periplaneta americana. On the susceptibility status of
+German cockroaches in Iran, Mohebbi Nodez et al. (2018) presented that dormitory and hospital
+strains of B. germanica were tolerant to lambda cyhalothrin (WP 10%) and cyfluthrin (WP 10%).
+In the present study, a-cypermethrin which has the same mode of action with the currently used
+insecticide, deltamethrin, exhibited lower effectivity among five commercial insecticides. The
+reduced efficacy might be due to the frequency of application resulting to increased selection
+pressure on German cockroach from CALMI population. When the selection pressure becomes
+more intense, the development of resistance progresses more rapidly. There are at least 10 to 15
+generations required for the development of resistance in insect (Yu 2008). German cockroaches
+have high reproductive potential, higher number of eggs per ootheca, shorter hatching time and
+shorter nymphal stage. Thus, surviving population after series of insecticide application can
+
+produce a colony of resistant German cockroaches.
+
+CALM? population (Site 5). Table 12 shows the contact toxicity of five insecticides
+against six-week-old nymphs of Blattella germanica from CALM2 population at 24 hours after
+treatment. The general trend of toxicity of five commercial insecticides against B. germanica from
+CALM2 was fipronil > thiamethoxam = propoxur >a-cypermethrin > DDVP. Fipronil was the
+most toxic with the lowest LCso value (LCso= 7.75 ppm) while DDVP was the least toxic with the
+
+highest LCso value (LCs = 2,238.32 ppm).
+
+For homogeneity response (slope of the log-dose probit relationship), the slope values
+
+ranged from 1.05 (fipronil) to 5.88 (a-cypermethrin) (Figure 20). This shows that response of B.
+
+64
+
+germanica population is most homogeneous to a-cypermethrin and least homogeneous to fipronil.
+The homogeneity response of German cockroaches when tested in a-cypermethrin indicates
+possible presence of resistance gene in the population which is starting to increase in frequency.
+The frequency of resistance gene can be favored if continuous selection pressure (e.g frequent
+application of synthetic pyrethroids) is employed. Thus, eliminating susceptible individuals and
+artificially selecting individuals with resistant genes. The development of resistance in response to
+intensive pesticide pressure is an example of this adaptive continuous evolution (Stockwell et al.
+2003). Therefore, it is advised that professional and non-professional pesticide applicator to
+alternate their choice of chemicals from synthetic pyrethroid class into other groups.
+
+CALM2 collection site is a meat shop in a small ~talipapa” (Table 7). There is no hired
+PCO or in-house pest control operator servicing the establishment. The abundance of B. germanica
+population was observed every collection trip due to abundance of food supply for the cockroach
+such as carcasses and meat blood. Moreover, poor sanitation in the said establishment was
+observed due to accumulated garbage in the nearby area. The meat shop owner is dependent on
+the use of commercial insecticide in aerosol formulation containing mixture of tetramethrin 0.5%
+
+and cypermethrin 0.15% to control the cockroach. During the collection, the owner volunteered
+
+that German cockroach was no longer affected by the pesticide application. This information
+confirms the result of bioassay tests showing the lower effectivity of a-cypermethrin (second to
+DDVP) to the homogeneous tolerant CALM2 population (observed slope of a-cypermethrin 5.88).
+This is in accordance with the report of Cochran (1995) that if an insect population has a large
+
+(steep) slope, this population is homogeneous in its response to the insecticide. However, this claim
+
+must be further analyzed in the future studies regarding to the resistance status of the said
+
+65
+
+population using another parameter - the resistance ratio (RR), in comparison to an established
+
+susceptible population as standard.
+
+CALC population (Site 6). The insecticidal potency of five commercial insecticides against
+six-week-old nymphs of Blattella germanica from CALC population at 24 hours after treatment is
+shown in Table 13. The general trend of the toxicity of five commercial insecticides against B.
+germanica is thiamethoxam = fipronil = propoxur > a-cypermethrin> DDVP. Among five
+insecticides, thiamethoxam was the most toxic with the lowest LCso value (LCso= 102.16 ppm)
+while DDVP was the least toxic with LCso value 2,666.46 ppm. The toxicity of fipronil, propoxur,
+and thiamethoxam against B. germanica were not statistically different from each other based on
+overlapping of confidence interval while DDVP and a-cypermethrin were significantly different
+among the five insecticides. Thus, we can infer that responses of B. germanica to fipronil, propoxur
+and thiamethoxam were the same but not with DDVP and a-cypermethrin.
+
+The slope values ranged from 0.80-4.94. Slope of fipronil was less than | indicating high
+
+heterogeneity response of B. germanica to this insecticide whereas the other four insect
+
+les
+showed more homogeneity response of B. germanica, with the steepest slope of the regression line
+for DDVP as presented in Figure 21. Homogeneous population indicates small variation of
+response of German cockroach when tested in DDVP and a-cypermethrin. The small variance
+indicates the possible presence of resistance gene which was artificially selected through time and
+might eliminated the susceptible individuals (Hoskins and Gordon 2003). On the other hand, large
+variation among individual response is reflected in shallower slope of fipronil. With this
+information, PCOs and individual pesticide applicator can be guided to minimize the use of
+
+pesticides containing organophosphate and synthetic pyrethroids but rather, use of fipronil is
+
+66
+
+recommended as the most toxic insecticide to a heterogeneous population of the German
+
+cockroach.
+
+CALC collection site is an old coconut grater shop (Table 7). Poor sanitation and moisty
+environment observed in the area resulting to large colony of cockroach species (B. germanica and
+Periplaneta americana) during collection trips. No hired pest control operator servicing the said
+
+establishment while do-it-yourself technique is currently done to control the German cockroach
+
+population. The use of chemical is mi
+
+sjeasaqut 2ouapyuos Surddejsano Jo asnesaq 1u9J24}1p AjlueD\jtUAIs tou ase UUINJOD >UIRS ayp UI Zana] SUES ON YLIA San|EA ,
+
+9 (817'600'E ~ 675'F80'2)
+q(06b'9zS - 9L9'7EE)
+P(pLLLbe-S10 121)
+B(c8z'PlE - 1p9°0S)
+
+2 (89L'09 - 96562)
+
+_(feasaquy a2uapyuos %56)
+
+S8b'0Z - x0Z0'9 = 4
+
+is
+
+IscLzs'z 6be0F70'9
+ESe'llb 1L10F66'7 808'L - XL86'¢ =
+BIC8LI £80°0FEb'L 87Z'E- XPEbL =A
+668°b91 ELOOFIZ'L 949°C - XLOT'1 = &
+989° LOO'OFIN'L So8'l = X21
+wdd 537 ¥adois uonenby wossoszay
+
+dAaa
+
+umypawsadko-v
+
+anxodord
+
+wexoyrawery |,
+
+apranaasuy
+
+“poyraws esse sef sseja Bursn uoneindod |WTVD wos) nryumWAas gq suLEHe soplonoasuy DAY JO AUDIKO, “11 142L
+
+rt)
+
+68
+
+] calmi_thiamethoxam
+——- 2 calmt fioronil
+
+68 3+ calm1_propoxur
+
+4- calm1_alpha
+<= Be calmi_ddvp
+
+Lal |
+
+a0 a
+
+b "
+:
+
+Figure 19. Concentration-mortality lines of five insecticides against B. germanica from CALMI population
+
+sjeassqut 20uapljuos Fuiddelsano aun jo asneaaq 1uaJ9})1p StwueDy}UAIS you ave uujo9 sues ay) UE L9N2] ALES 241 YTIM SanyEA |
+
+P(ZIO'SISZ -PSb'ZL6'1) e7eRETZ 8ITOFS9'E ITT - XOHI'E = K daaa
+
+9 (6€8°0£€ -8E'LOE) S8o'8lt LEC OF8S'S TILL - X9LB'S = & ursyjeuuadko-n
+q(So'ZIZ- 815°9€) 697'S6 8LO0FPE'| 59°C - XOvE 1 =A anxodosg
+
+4 (9L1°€6 -91Z'Lb) SbeLo 680°0FES'I ZoL'z - x875' 1 = 4 wexoyrowery |
+
+® (891 -S8E'f) Sel 190°0FS0'I 1£6°0- x9P0'1 = & [woud
+
+(1easayuy aguapyuos % 56) uidd 537 ‘as = adoig uonenbg worssosday aptonaasuy
+
+—_—_—_—_—___>_>>S[_ Se
+
+‘poyrow Aesse sef ssej Buisn uoneindod ZWTVD wos PrUDUAAR “gS
+
+69
+
+ef sap.
+
+1D9SUL AALJ JO AUDIXOL “ZI GEL
+
+70
+
+99 calm? foronil
+
+| i]
+
+, cand thametioxan
+| 3. em? oroour
+| 4: caida
+
+| had memes 6 calmed
+%0 2
+le
+
+3
+g70 |s5
+ry ’
+4 2
+:° “=
+a0 | a
+3
+G2 ! las
+a 2
+
+\ 4
+
+35
+3
+
+1%
+° 0 100 1000
+
+Figure 20. Concentration-mortality lines of five insecticides against B. germanica from CALM2 population
+
+syeasiuy a0uapyuoo Fuiddeysano aun Jo asnedaq war9yyIP AjtuEDYTUAYS tou axe UUINjOD aurES a4 USOT] BLUES ay YALA SONIA,
+
+9 (L8ESBL'Z — 619 1SS'Z) 9SP'999'7 Z67'OFh6'b L691 - XI PGP = & dAdd
+
+4 (S16°€1S-906'26£) 86'0Sb €LVOFOI'E 6178 - XL60'E = 4 upyrouaddo-p
+B(SS'ILE “Ibb'ebI) 197'SEZ LOVOFIO'Z TLL'b - XZ10'T = 4 anxodosg
+®($Z0'9S 1 - 889°06) csvolt Sb0'0F08°0 659'I - X66L°0 = 4 juosd!
+®(86E°PEI “1E7'LL) 9rzol LIVOFE6'I 7aB'e - XZE6'| = 4 wexoysaurest |,
+
+_ (easayuy aauapyuos % 56) widd 03977 as tadois uopenby worssasday apransasuy
+
+‘powpau Aesse sef sso Guisn uonnejndod Jy] wos voyUDUas -g suede sopianoasul AAYj Jo AUDIXOL “E] 9192,
+
+w
+
+72
+
+ba shorethoren
+-- foron
+| 4 cle spho
+| mormon Be ale dp
+© 2 |
+6
+55
+*
+#
+53
+fA
+a
+45
+‘
+10 4
+35
+3
+%
+! 10 100 1000 10000
+
+Figure 21. Concentration-mortality lines of five insecticides against B. germanica from CALC population
+
+B
+
+Bay Town
+The results of bioassay test of five commercial insecticides against six-week-old nymphs
+
+of Blattella germanica were described below.
+
+BAYM population (Site 7). Table 14 presented the insecticidal potency of five commercial
+insecticides against six-week-old nymphs of Blattella germanica from BAYM population at 24
+hours after treatment. The decreasing trend of toxicity was fipronil > thiamethoxam = propoxur
+>a-cypermethrin > DDVP. DDVP was the least toxic compound with highest LCso value (LCso=
+1,978.69 ppm) while fipronil was the most toxic insecticide with lowest LCSo value (LCso = 15.65
+ppm). It was observed that the toxicity of propoxur and thiamethoxam against B. germanica were
+the same while toxicity of fipronil, DDVP, and a-cypermethrin were different from the rest of the
+compounds based on overlapping of confidence interval.
+
+Slope values based on concentration ~ mortality responses of B. germanica from BAYM
+population to five insecticides were varied from 0.96-7.38. The response of B. germanica to DDVP
+(the least effective insecticide) was the steepest slope (7.38) while response to fipronil (the most
+effective insecticide) was the flattest slope (0.96) as shown in Figure 22. The steep slope on the
+response of B. germanica to DDVP reflects the possible chance of the presence of resistance gene
+developing in the population thus, decreasing genetic variation (Rosenheim and Hoy 1986). The
+reduction in genetic variation might be due to prolonged used of DDVP or insecticides belonging
+to organophosphate class resulting to artificial selection and eliminating susceptible individuals.
+On the other hand, current status of the BAYM population reveals the mixed genotypic frequency
+(both resistance gene and susceptible gene) present in German cockroach when tested to fipronil
+
+showing large variance in the response. These data are informative for PCOs and individual urban
+
+74
+
+pesticide applicator for effective German cockroach control in decreasing the selection pressure.
+The minimal use of DDVP and the shift to other insecticide class (e.g. phenyl pyrazole) can slow
+down the rate of insecticide resistance.
+
+BAYM collection site is a meat shop store in Bay Market (Table 7). Blattella germanica
+population was abundant every collection trip of the student due to available food source and water
+(e.g meat blood and meat carcasses). According to the market personnel, the current control of B.
+germanica in the area is done by in-house pest control operators assigned by the market
+administrator. The in-house pest control individuals used commercial insecticide containing
+synthetic pyrethroids (cypermethrin 5%). This can be the reason for the less efficacy of a-
+
+cypermethrin against German cockroaches from BAYM population
+
+BAYS population (Site 8). From the eighth collection site, the toxicity of five insecticides
+against German cockroach has the general trend of thiamethoxam= propoxur= fipronil = a-
+cypermethrin > DDVP (Table 15). Based in LCso values, thiamethoxam was the most toxic (LCs0=
+60.71 ppm) and DDVP was the least toxic (LCs0= 2,094.98 ppm). The toxicity of thiamethoxam
+is not significantly different from propoxur, fipronil and a-cypermethrin based on confidence
+interval.
+
+The slope of concentration-mortality lines is an indication of the variation in response of
+the organism, with a steep slope indicating a homogeneous population, and a flat line resulting
+from a heterogeneous population (Kelly 1988). Slope values ranged from 1.41 to 5.75. These
+responses may indicate that BAYS population of B. germanica are homogeneous to the selection
+
+pressure provided by the five commercial toxicants. The response of B. germanica to DDVP was
+
+7s
+
+the steepest slope (5.75) while response to fipronil was the flattest (1.41) as shown in Figure 23.
+This shows that response of B. germanica from the current population is more homogeneous to
+DDVP but less homogeneous to fipronil. This reveals that current B. germanica population has
+possible chance of the presence of resistance gene and artificially selected due to continued use of
+chemicals belonging to organophosphate group; thus, decreasing genetic variation. However, the
+current study cannot detect if the developing resistance gene is dominant, incompletely dominant
+(or incompletely recessive), or recessive. Yu (2008) explained that when resistance gene is
+recessive, the F2 progeny of the R x S (resistant and susceptible) cross will result to 25% resistant
+population while 75% is susceptible population. However, if resistance gene is dominant, the F2
+progeny of the R x S (resistant and susceptible) cross will result to 75% resistant population while
+25% is susceptible population. The continuous selection pressure might result to difficulty in
+cockroach control when all resistant individuals are present in the population. In practical
+application, the PCOs and individual urban pesticide applicator can use these data for effective
+German cockroach control by minimizing the use of DDVP or other related insecticide group. The
+use of fipronil (which shows large variability in response) instead is recommended to slow down
+the rate of insecticide resistance.
+
+BAYS collection site is a sari-sari store located in the town of Bay (Table 7). No hired
+PCO or in-house individual servicing the said establishment. The area is suitable harborage for the
+German cockroaches due to availability of food sources (e.g.. damaged chicken eggs, rotten
+smoked fish). To control the German cockroaches, the owner is dependent on the use of
+commercial insecticides available in hardware or supermarket (personal communication). The
+
+establishment currently use an attractant containing azamethiphos 0.005% as observed during
+
+76
+
+collection trip. The attractant is a cockroach killing bait in powder formulation and packed in
+sachet form. The bait can be bought from the public market or online shopping platform. Although,
+some testimonials said that it is more effective than products in aerosol spray formulation, it is not
+registered with Food and Drug Administration (FDA). The FDA even warned the public against
+buying this unregistered product. Azamethiphos which is its active ingredient belongs to
+organophosphates group of insecticide. Organophosphates were discovered in the early 1930s and
+are still one of the largest families of insecticides. Even though their use is declining due to
+regulatory action, organophosphates are still widely used because of their broad-spectrum activity.
+flexibility in use and good residual characteristics (BASF 2013). The mode of action of
+organophosphates is the inhibition of acetylcholinesterase (AChE) responsible for breaking down
+the acetylcholine (ACh). This allows the ACh to continue stimulating the postsynaptic neuron
+resulting to overstimulation of nervous system and eventual death of the targeted insect (IRAC
+2019). In the current study, DDVP from the organophosphate class showed the least efficacy
+against German cockroach from BAYS population. The tolerance of the German cockroach to
+DDVP may be explained due to selection pressure from the currently used azamethiphos of same
+mode of action. Qian et al. (2010), reported in their study that six-week-old nymphs German
+cockroach were tolerant to dichlorvos. Other findings supported those insecticides belonging to
+organophosphate family were not effective enough in the control of cockroaches (Kaakeh et
+
+al.1997; Nasirian 2010).
+
+BAYK population (Site 9). Table 16 shows the toxicity of five commercial insecticides
+
+against six-week-old nymphs of Blattella germanica from BAYK population at 24 hours after
+
+7
+
+treatment. The decreasing trend is fipronil = thiamethoxam= propoxur > a-cypermethrin > DDVP.
+Based on LCso values, fipronil was the most toxic (LCso= 28.45 ppm) but did not significantly
+differ from thiamethoxam, and propoxur. On the contrary, DDVP was the least toxic
+(LCso=2,501.44 ppm) against German cockroaches from BAYK population. Moreover, the
+toxicity of fipronil, propoxur, and thiamethoxam against B. germanica were not significantly
+different from each other based on confidence interval overlap test. Thus, response of B. germanica
+coming from BAYK population were the same to three insecticides (fipronil, propoxur, a-
+cypermethrin, and thiamethoxam) but significantly different to DDVP and a-cypermethrin.
+
+For homogeneity response, slopes ranged from 0.95-5.79. Only slope value of fipronil
+(0.95) was less than | indicating high heterogeneity response of B. germanica to this insecticide.
+On the other hand, all four insecticides (DDVP, a-cypermethrin, thiamethoxam and propoxur)
+showed variable homogeneous response of B. germanica, with DDVP having the steepest slope
+(5.79) as presented in Figure 24. This implies that in genotypic level, resistance gene is present
+that might be artificially selected through time and eliminating susceptible individual resulting to
+
+the decrease in genetic variation particularly in DDVP. Consequently, large variance observed on
+
+the response of German cockroach when tested to fipronil indicates the mixture of susceptible,
+moderately resistant, and resistant individual present in the population. Having a wide range of
+susceptibility is advantageous to select out more resistant individuals (Cochran 1995). With this
+information, PCOs and other individual pesticide applicator can be informed to alternate their
+
+choice of chemicals from organophosphate group to phenyl pyrazole which can help in slowing
+
+down the rate of insecticide resistance in DDVP.
+
+8
+
+BAYK collection site is a food stall kitchen and does not avail the PCO servicing (Table
+7). To manage the insect pests, sanitation and in-house control are utilized by spraying the
+commercial insecticides which can be bought from the nearest hardware or supermarket. The food
+stall presently utilizing aerosol spray containing mixture of 0.015% cyfluthrin and 0.05%
+imiprothrin to control the German cockroaches. However, during the interview, the owner
+volunteered that the insecticides they are currently using are becoming less effective. The results
+of the bioassay tests confirm this observation. Insecticides containing fipronil and thiamethoxam
+were never used by the said establishment. This could be the reason why German cockroaches
+from this population were sensitive when exposed to fipronil and thiamethoxam producing lower
+LCso values (26.422 ppm and 71.06 ppm respectively) compared to a-cypermethrin and DDVP.
+Application of insecticidal baits is one of the effective strategies for controlling German
+cockroach, Baits have become popular and effective formulation against urban insect pest
+(Nasirian 2010). However, some are still using conventional pesticide due to the cheaper price like
+
+this food stall kitchen (personal interview).
+
+sreasaiuy aouap\yuoo Furddejsano ayi jo asnesag wasayyip ueaytuais 1ou ase uuunoo aures ay Uw Jana] aus ay YIM SanyRA ,
+
+P (09"60'7 — p9'S98"1) 69846" OrrOFREL —-LLOEZ- XERE'L = K dAaa
+
+9 (E1P 0b - 95960) 1oue9e PSV OFLSZ 685°9 - XELS'7 = & ursypouadko-n
+
+4 (s9E'S1 - zsb'sb) L816 800F9E | 999°7 - xBSe1 = 4 anxodoig
+
+4 (98'S - ZEZ'6b) Zr0'L8 980'0F6t'| 1687 -X06P' 1 =A WexoyrUeNYLL
+®(pS8'7C- ZhL'L) Liraat $50°0#96'0 080'I - X196'0 = & twuoads
+
+(ieasayuy aouapyuos %56) wdd 637 as Fadojg — uonenby uorssasdoy apianoasuy
+
+Poyjau Ausse Jel ssepH duisn UONeindod WAVE Wor DauDusAs g Isulede Saplonoasul aAly Jo AUOIXOL pl AGEL
+
+6s
+
+or J]. baym_fipronil
+7 ——> 2. baym_thiamethoxam
+3 bavm propoxur
+hed 4° baym_alpha
+“ ‘ ~-—~ B baym_ddvp
+6
+"
+ae ss
+zoo y
+eS eee eee ae 6a
+7. es
+Le Jas
+» |
+4
+© |
+
+Figure 22. Concentration-mortality lines of five insecticides against B. germanica from BAYM population
+
+a
+
+‘SyeAsatuy 2auapyjuos au Jo SuiddeysoA0 ayt Jo asnesaq was9yyIp AjiueDIpIUMIS OU ase ULURjOD >UeS ay) UL 49ND] DUES ay YRTA San|EA ,
+
+smou jtuoidyy pur anxodoud aftueyox:
+
+2 (B69'67E'7 — 9EN1Z8'1) 186'607 OPEOFSL'S GROG - XBPL'S = K daad
+4P (ELE'Sbz- BP'IST) 98°61 Ipc OF8I'Y 955°6 - x0BI'b = & uyrauuaddo-n
+Ge (6b9°9L1 - 9£7'6£) 188°68 780'0F 1b SL7 > X60P | = & jwuoud),
+® (GL7'87Z -EEE'0S) LSet ys0'OFEr I 726°C - XLTP'L = A anxodosd
+®(SZZ'16- 8E6'SE) 80L'09 £01'0#99"1 6567 > XOS9'1 = & wexoyrowery
+_ (1easaquy agu9pyuos %S6) widd 057 as Fadojg — uoyenby worssas3ay apronsasuy
+
+poysow Aesse sel ssvj Burs uonvindod ¢Ayq Wosy HoUMUAae -g IsuLEe sopionoasut aAty JO A
+
+HOLL “SE AIGRL
+
+82
+
+oy
+1+ bavs thiamethoxam
+7 ____. 9 bays_propoxur
+3 bays. Apron
+[3 4 bays aloha
+0 ---- 5 bays_dévp
+6
+3°
+Gn 55
+H
+Ho 4
+B50 / 7 5 3
+$0 i &
+Bo \ 45
+a, \
+} 4
+10 4 ‘
+fd
+| |
+0 100 1000 vo000
+
+Figure 23. Concentration-mortality lines of five insecticides against B. germanica from BAYS population
+
+8
+
+sjeaiaiu! aouapyuos Sulddeysano ayp jo asnesaq iuasayytp Ajiursyt
+
+5 10U a7e UUINoD SUES 24) UY 19119] WES ay yIEM SaNyeA
+
+(9 TIT LS6ZLI'Z) Zpb'Losz 9S10F 61'S L99°61 ~ XL8L'S = daa
+4 (Zol'szs -966°01¢) YOL'60b SLVOFIO'E paB'L-xOLO'E = —— uyrouuaddo-p
+P(LEPLII- 1b6'1L) 10€'26 160°0789'1 167'E - XSL9'1 = & anxodosd
+® (Zh'06 -LSE'PS) 1901L OOMOFELT Lore XLzL1 = 4 wexoysoureny |,
+® (86°65 -109°6) zzey'9z 50'0F56'0 bre'l- xsp6'0 =
+(jeasayur aauapyuos %s6) uid 5577 as Fadog —_ uonenby uorssasdoy
+
+Se
+
+‘poyrow Kesse sef ssej Fuisn uoneindod YA VE Woy) Mr!UMULA gq ISUIERE SapIotoasu! aALy JO AUDINOL “91 7192L
+
+Eo
+
+Response percentage
+
+Probits
+aon
+
+36
+
+100
+
+1000
+
+1000
+
+bayk_fipronil
+bayk_thiamethoxam
+bavk propoxur
+bayk_alpha
+bayk_ddvp
+
+Figure 24. Concentration-mortality lines of five insecticides against B. germanica from BAYK population
+
+dd ou VN
+
+anxodoud
+VN aaaa uuyouuad-p — wexoyjaueiy = (Luddy, AVE keg
+1yseuadéo-n=inxodoud
+VN VN dAGG = = Wexoyawery = [ruosdy SAVE
+dAGG —_unypeuuadéo-n —_anxodoad = wexopaweny [uosdy WAVE
+anxodoid = —
+VN uyyeuuadss-0 —— wexoyowerp = j1uosdyy DW equeje>
+daa anxodoud = wexoyrawery) uoadig zwivo
+anxodosd
+VN daa uyyauuadso-p = wexoyowery) = [1uosdy, WwIv
+dAGQ —uuounaddo-n anxodoad wexoyrauery—juordy Ag
+dAGG —uuypoussadKo-0 anxodosd = jtuosdyy wexoyroun wat
+sourg
+AAG __uLyeunadso-n —_anxodoud =wexoyowenp [wordy a1 soy
+aus
+
+pur
+
+Yon221105
+
+uMoL
+
+enuey zueY Tyuey
+_o————— ee
+
+“Bune7 Jo SUMO} da1y) WON) HoUPULaS “g yULeBe Sapronoasul AL Jo Fulyues AUDIXOL “Z1 a1QRL
+
+se
+
+86
+
+The ranking of the five insecticides against Blattella germanica based on LCso
+values and confidence intervals is presented in Table 17. Among five insecticides tested from nine
+populations where German cockroaches were collected, it was observed that fipronil was the most
+effective and ranked {* from eight populations (except LBM). This result is expected since fipronil
+from the phenyl pyrazole class of insecticide has not been used in the collection sites, being a new
+addition to the chemical arsenal for cockroach control. Some studies have reported the highest
+efficacy of fipronil against B. germanica compared to other commercial insecticides. Valles et al.
+(1997) discussed that fipronil is sufficient to kill pre-resistant population even in nano-gram
+quantity. Fipronil belongs to phenyl pyrazole family and discovered by Rhone-Poulenc in 1987.
+Its mode of action is inhibition of gamma-aminobutyric acid (GABA) gated chloride channel
+leading to overstimulation and convulsion on affected insects (IRAC 2019). Fipronil has proven
+to offer low dose, highly effective insect control against a broad range of pests. In household pest
+control, there are various bait formulation containing fipronil as the main active ingredient.
+
+According to Miller et al. (2005), baits have been claimed to be more consumer and environment-
+friendly than insecticide sprays since they can be placed in precise location where cockroaches
+habituate but inaccessible to people and pets.
+
+Thiamethoxam was observed to be highly effective to B. germanica from six collection
+sites, and as toxic as fipronil in five collection sites, viz., LBM, LBV, CALM1, CALC, BAYS,
+and BAYK population. Thiamethoxam is also a relatively new compound and has not been used
+in the nine collection sites. Low usage of thiamethoxam has increased its significance in
+controlling urban pest effectively. Thiamethoxam belongs to neonicotinoids family of insecticide
+
+and acts as agonists of acetyl choline receptors. Its mode of action is to mimic the action of
+
+87
+
+neurotransmitter acetylcholine (ACh) resulting to continuous firing of impulse and overstimulation
+of target insect pests (IRAC 2019). Similar to fipronil, insecticides containing thiamethoxam are
+normally packed into bait formulation while others are in suspension concentrate formulation. In
+the study of Fardisi et al. (2019), they reported that among the fourteen (14) active ingredients
+(Als) of insecticide against field-collected German cockroach, thiamethoxam is one of the
+compounds with lowest resistance level from Danville and Indianapolis. Moreover, in vial
+bioassay test (Fardisi et al. 2017), less than 5% survivorship was achieved when laboratory strain
+of Blattella germanica was exposed to any of the four Als such as abamectin, thiamethoxam,
+lambda cyhalothrin and boric acid. Thiamethoxam is non-repellent and can be transferred from
+exposed to unexposed insects that exhibit social behavior, such as ants and termites.
+
+Propoxur, a carbamate insecticide, demonstrated toxicity against four collection sites
+namely: CALMI, CALC, BAYS, and BAYK similar to fiproni! and thiamethoxam but was not as
+effective as the first two compounds for the rest of the sites. Propoxur is not a new compound. It
+was first introduced in the year 1959 with a fast knockdown and long residual effect against turf,
+forestry, and household pests and fleas. However, US Environmental Protection Agency (EPA)
+has been reluctant to approve indoor use due to its potential toxicity to children after chronic
+exposure. Vandekar et al. (1968) published the results of their studies carried out on spray
+operators and local inhabitants in Iran when exposed to propoxur as part of WHO control program
+It was reported that they suffered mild temporary cholinergic signs of poisoning such as headaches
+and nausea due to heavy contamination of propoxur on the skin. In 1990s, propoxur was withdrawn
+from indoor use and no longer available in the market in the US (Extension Toxicity Network
+
+1996). In the current study, propoxur was still effective against the field-collected populations of
+
+88
+
+German cockroach. Lack of use and selection pressure may be the reason for the susceptibility of
+
+these field-collected populations to this insecticide. The mode of action of carbamate insecticide
+
+is inactivation of acetyl cholinesterase inhibiting this enzyme which is responsible for breaking
+
+down acetylcholine (ACh) after it has carried its message across the synapse (IRAC 2019).
+
+Siegfied and Scott (1991) reported that B. germanica exhibited high level of resistance to propoxur
+via topical application compared to susceptible strain. They also indicated that resistance was due
+to increased level of metabolism together with decreased rates of penetration. Gecheva (1991) first
+reported the propoxur-resistant strain of German cockroach in Bulgaria. Meanwhile, propoxur’s
+toxicity against B. germanica in this study is greater than a-cypermethrin.
+
+The insecticide containing a-cypermethrin was second to the least effective insecticide
+against B. germanica from eight populations but as toxic as fipronil, thiamethoxam and propoxur
+in BAYS population. The reason may be due to frequent use of synthetic pyrethroids in almost all
+collection areas either in aerosol form or suspension concentrate administered by in-house pest
+control or just by do-it-yourself method in the contro! of German cockroach. Thus, increasing the
+selection pressure to target organisms and resulting to possible tolerance exhibited by the insects.
+Synthetic pyrethroids are sodium channel modulator. They are neurotoxins that act on action
+potential sodium channel. Synthetic pyrethroids slow the closing and inactivation of the channel
+causing it to remain open than normal. Thus, when action potential is not promptly terminated it
+leads to repetitive firing in the insect’s nervous system (IRAC 2019). Various researchers have
+
+reported the presence of high-level resistance in insects against pyrethroids and highlighted its
+
+control failure incidence (Zhai and Robinson 1996; Lee et al. 1997; Lee 1998; Lee and Lee 2000).
+
+Lee and Lee (2004) discussed that pyrethroids exhibit low to moderate level of resistance. Similar
+
+89
+
+conclusion has been made by Ahmad et al. (2009) and Nasirian et al. (2009) who reported that
+resistance against pyrethroid have been developed in certain cockroach species. Consequently,
+‘Choo et al. (2000) and Chai and Lee (2010) reported heavy resistance for pyrethroids (deltamethrin
+and cypermethrin) against both German and American cockroaches.
+
+The result of the present study revealed that DDVP was the least effective insecticide
+against B. germanica from nine collection sites. This observation can infer that German cockroach
+already produced tolerance and possible resistance to DDVP or to organophosphates class where
+DDVP belongs. Organophosphates’ mode of action is the inactivation of acetyl cholinesterase
+responsible for breaking down of acetylcholine (ACh) resulting to continuous stimulation of
+postsynaptic neuron leading to overstimulation of the nervous system and eventual death of the
+affected insect (IRAC 2019). According to Kaakeh et al. (1997) and Syed et al. (2014),
+organophosphates are not effective enough to combat susceptible and resistant population of
+cockroaches. Organophosphate acted as neurotoxic agent against cockroaches, however in this
+study, this compound did not come up with satisfactory result. This class is less favored by pest
+control industries nowadays due to its strong odor than pyrethroids, but good residual efficacy
+DDVP was already used by urban pest control operators against German cockroaches since 1980s
+until now. Even after four decades, some PCOs prefer the use of DDVP due to its cheaper price
+(personal communication). This may be the reason why DDVP was the least effective among the
+five insecticides tested. Although DDVP has same mode of action as propoxur
+(acetylcholinesterase inhibitors), the current study reveals differential responses of the nine
+populations to the two compounds. The reduced toxicity of DDVP against nine populations of
+
+German cockroach compared to highly toxic propoxur for 50% of the populations was observed
+
+90
+
+in this study. This can be explained due to the prolonged rate of binding of organophosphate
+compound to acetylcholinesterase (AChE) which may take days or even weeks compared to
+propoxur. Thus, insecticides belonging to organophosphates group are generally regarded as
+imeversible inhibitors of acetylcholinesterase. On the other hand, intoxication of carbamate
+insecticides is subject to its instantaneous unbinding to acetylcholinesterase (AChE), typically in
+minutes, and therefore regarded as reversible acetylcholinesterase inhibitors. The same result was
+observed by Wu and Appel (2017) and reported that field-collected strains of B. germanica were
+resistant to organophosphate (chlorpyrifos) while nearly no resistance to carbamate (propoxur)
+when resistance ratio was compared to susceptible strain.
+
+The prolonged selection pressure exhibited by organophosphate may have induced tolerant
+genes in the German cockroach from each collection site, thus less effectivity to target organism.
+The long residual life of a chemical can prolong the selection pressure in the particular area thus,
+
+resulting to insecticide resistance (Georgiou 1980). Studies on insecticide resistance as follow up
+
+to the current susceptibility study are highly desirable for better understanding of the insecticide
+resistance of the German cockroach.
+
+For studies of insecticide resistance, a susceptible strain of the German cockroach is
+necessary. At first, LBV and CALC populations were inferred to be possible sources of this
+susceptible strain due to no record of chemical control applied based on initial interview. However,
+bioassay results showed consistently high LCs values for DDVP. moderate LCs» values for a-
+
+cypermethrin in most populations and low LCs» values for fipronil or thiamethoxam in some
+
+populations. Thus, it can be inferred that there is no susceptible strain in the nine test populations.
+
+91
+
+Results obtained from the conducted bioassays can be used in considering an appropriate
+insecticide for PCOs as well as in household use. Fipronil and thiamethoxam — the two most
+effective insecticides against German cockroach in most collection sites can be a replacement to
+
+older classes of insecticides and most especially to DDVP. With the application of these new
+
+findings, together with evidence-based decisions may ensure that effective insecticides are selected
+
+and used for an effective German cockroach control.
+
+SUMMARY, CONCLUSION AND RECOMMENDATION
+
+The contact toxicity and insecticidal potency of five commercial insecticides were
+evaluated against Blattella germanica collected from the town of Los Baftos, Calamba and Bay,
+Laguna. From each town, three collection sites were used for a total of nine collection sites of
+gravid female B. germanica, The field-collected B. germanica were maintained in the laboratory,
+reared the F: nymphs until they reached six-week-old and conducted the bioassay tests using the
+WHO jar test method with some modifications. All primary data were obtained after the 24hr
+
+observation of each bioassay test.
+
+Fipronil solely ranked as the most toxic against German cockroach collected from three
+populations (viz. LBK, CALM2, BAYM), while thiamethoxam was the most toxic in LBM. Both
+insecticides shared same toxicity against B. germanica from LBV population. This is because both
+are relatively newer compounds and were not used for German cockroach control either in gel bait
+formulation or sprayable in the nine collection sites. Fipronil and thiamethoxan are examples of
+active ingredients packed in minimal amount in some gel baits. Propoxur was not as toxic
+compared to abovementioned compounds from five collection sites but demonstrated same toxicity
+with fipronil and thiamethoxam to four German cockroach populations (viz. CALMI, CALC,
+BAYS, and BAYK). Except in the case of BAYM population, propoxur exhibited more potency
+to a-cypermethrin. The reduced toxicity of a-cypermethrin was evident in the study. The reason
+might be due to frequent use of almost all collection areas of synthetic pyrethroids either in aerosol
+spray or in concentrate formulation in controlling the German cockroach. DDVP was the least
+
+toxic commercial insecticide against B. germanica from nine collection sites. DDVP from
+
+93
+
+organophosphate group of insecticide was long used by those in pest control industry. This shows
+that the older classes (organophosphates) which have been used through time have reduced
+efficacy against German cockroach compared to the newer compounds.
+
+It is recommended that owners and staff of the selected establishments should practice
+cleanliness and modification of environment by eliminating water, food and shelter needed by
+German cockroaches before doing chemical application. With this, frequent application of
+insecticides would be reduced, lessening the selection pressure. It is also recommended to staff
+and owners of establishments to refrain from using DDVP or compounds belonging to
+organophosphate class of insecticide due to their being less effective against nine populations of
+German cockroach based on the current study. The continual use of older class of insecticides
+
+(DDVP) although cheaper, can result to ineffective control of B. germanica, thus higher cost and
+
+labor intensive. On the contrary, the use of more expensive yet more effective insecticides mean
+less maintenance work visits for assigned PCOs in an establishment. Considering the fixed rate for
+their service based on the agreed contract, this may reduce their operational cost and add up to
+their profit as described in Appendix 2. The FDA website is a helpful tool in choosing newer
+compounds available in the market which are more efficacious even at lower dose.
+
+For the market administrator, monitoring and regulation of the pesticides used by the in-
+house PCOs as well as their pest control performance must be done. Prior to the purchase of
+
+pesticides, the local government unit (LGU) must require the updated certificate of product
+
+registration (CPR) issued by FDA from agrochemical suppliers to ensure the safe and effective
+
+pesticides against German cockroach. Currently, private owners of commercial establishments
+
+such as fast-food chains, restaurants, hotels, and factories require first the CPR and material safety
+
+94
+
+data sheet (MSDS) from the hired pest control operators as part of their initial agreement and used
+upon their contract renewal.
+
+For the pesticide applicator (professional or non-professional), knowledge on the active
+ingredient will be a good guide in understanding the mode of action (MoA) of a toxicant against
+the target organism. The Insecticide Resistance Action Commitiee’s (IRAC) MoA classification
+scheme is another helpful tool in knowing the up-to-date information of the MoA of new and
+established insecticides and acaricide control. To delay the insecticide resistance build-up of B.
+germanica, one must employ the rotation of chemical use from one class or family to another with
+different mode of action.
+
+The set of baseline data on the current susceptibility status of Blattella germanica on five
+
+commercially available insecticide can improve on decision makit
+
+in urban pest control industry.
+This can be a good guide in selecting most potent chemicals for effective control measures of the
+Blattella germanica, Moreover, Integrated Pest Management (IPM) or the holistic and coordinated
+approach in tackling the problem on German cockroach can also reduce selection pressure and is
+
+a must for every pest control operator.
+
+LITERATURE CITED
+
+ABBOTT WS. 1925. A method of computing the effectiveness of an insecticide. J Econ Entomol;
+18:265-267.
+
+AHMAD 1, SRIWAHJUNINGSIH SA, PUTRA RE, PERMANA AD. 2009. Monitoring
+pyrethroid resistance in field collected Blattella germanica Linn. (Dictyoptera:
+Blattellidae) in Indonesia. Entomol. Res. 39: 114-118.
+
+AMEEN A, KAAKEH W, BENNETT G. 2000. Integration of chlorfenapyr into a management
+program for the German cockroach (Dictyoptera: Blattellidae). Journal of Agricultural and
+Urban Entomology 17(3):135-142
+
+AMEEN A, WANG C, KAAKEH W, BENNETT G. 2005. residual activity and population effects
+of noviflumuron for German cockroach (Dictyoptera: Blattellidae) Control. Journal of
+Economic Entomology. 98(3)899-905.
+
+AULICKY R, STEJSKAL V, KOCOUREK V. 2010. Validation of insecticide aerosol generated
+by smoke-generator for German cockroach control. International Pest Control 52(2):84-
+86.
+
+BALLARD JD, GOLD RE. 1984. Laboratory and filed evaluations of German cockroach
+(Orthoptera: Blattellidae) traps. Journal of Economic Entomology, 77(3):661-665.
+
+BARCAY SJ, BENNETT GW. 1991. influence of starvation and lighting on the movement
+behavior of the German cockroach (Blattodea: Blattellidae). Journal of Economic
+Entomology Volume 84, Issue 5, pages 1520-1524.
+
+BASF.2013. insecticide mode of action technical training manual. BASF corporation. Accessed
+17 May 2019, from
+https://www.researchgate.net/publication/275959530_BASF_Insecticide_Mode_of' Acti
+on_Technical_Training_Manual
+
+
+96
+
+BILAGI C, YEWARE K. PRASAD E.2021.Pest control market by type (chemical, mechanical,
+biological, and others). pest type (insects, termites, rodents, and others), and application
+(commercial, residential, agriculture. industrial, and others): Global opportunity analysis
+and industry forecast, 2019-2027. Accessed 30 August 2021, from
+https://www.alliedmarketresearch.com/pest-control-market
+
+BRENNER RJ. 1995. Economics and medical importance of German cockroaches. pp. 77-92. In
+understanding and controlling the German cockroach (Rust MK, Owens JM & Reierson
+DA, eds.). Oxford University Press, New York.
+
+BROOKS GT. 1976. Penetration and distribution of insecticides, in: Insecticide Biochemistry, C.
+F Wilkinson, ed., pp.3-60. Plenum Publ. Corp., New York.
+
+BROWN AWA, PAL K 1971. The nature and characterization of resistance. In AWA Brown, K
+Pal, Insecticide resistance in arthropods, Monograph Series 38, World Health
+Organization, Geneva, p. 9-44.
+
+CAPINERA JL.2004. Encyclopedia of entomology. Kluwer Academic Publishers: London
+pp:564-572.
+
+CARIASO BL. 2003. An introduction to urban pest management. University of the Philippines
+Los Bajios, College, Laguna. pp. 54-56.
+
+CATAN GO JR, CATAN NR. 1980,Urban pests and their control. How to have a pest-free
+‘community. National Bookstore pp. 155-157.
+
+CHAI RY, LEE CY. 2010.Insecticide resistance profiles and synergism in field populations of the
+German cockroach (Dictyoptera: Blattellidae) from Singapore. J. Econ. Entomology. 103:
+460-471.
+
+CHOO LE, TANG CS, PANG FY, HO SH.2000.Comparison of two bioassay methods for
+determining deltamethrin resistance in German cockroaches (Blattodea: Blattellidae). J
+Econ Entomol. 93: 905-910.
+
+97
+
+COCHRAN DG. 1995. Insecticide resistance, pp. 171-192. Jn Rust, M.K., Owens, J.M., Reierson,
+D.A. (eds.), Understanding and controlling the German cockroach. Oxford University
+Press, New York.
+
+COCHRAN DG. 2003. Cockroaches. In. Encyclopedia of Insects (eds.) V.H. Resh and R.T Carde.
+Elsevier Science Academic press:USA pp.123-127.
+
+COOK ISLANDS BIODIVERSITY DATABASE. 2016. Tapinoma minutum, tiny ghost-ant. The
+Cook Islands Natural Heritage. Accessed | June 2021 from —http://
+cookislands.bishopmuseum.org/species.asp?id=9329.
+
+DHANG P. 2012. Future in urban pest control market in Philippines. Accessed I August 2021
+from hutp://news.agropages.com/News/NewsDetail---8163.htm
+
+EXTENSION TOXICITY NETWORK 1996. Extoxnet PIP-propoxur. Accessed 11 August 2021
+from hitp://extoxnet. orst.edu/pips/propoxur.htm.
+
+FARDISI M, GONDHALEKAR A, SCHARF M. 2017. development of diagnostic insecticide
+concentrations and assessment of insecticide susceptibility in German cockroach
+(Dictyoptera: Blattellidae) field strains collected from public housing. Journal of Economic
+Entomology, 110(3), 1210-1217. doi: 10.1093/jee/tox076
+
+FARDISI M, GONDHALEKAR A, ASHBROOK A, SCHARF M. 2019. Rapid evolutionary
+responses to insecticide resistance management interventions by the German cockroach
+(Blattella germanica L.) Nature Scientific reports 9:8292 https://doi.org/10.1038/s4 1598-
+019-44296-
+
+FASULO TR, KERN WH, KOEHLER PG, SHORT DE. 2005. Pests in and around the home.
+University of Florida, United States, pp. 124-126.
+
+FAYLONA MG. 1998. Practicum in Rhone-Poulenc: Analysis of cockroach control system of
+local pest control operators (PCO) in the Philippines. Undergraduate thesis, University of
+the Philippines Los Bafios.
+
+98
+
+[FDA] FOOD AND DRUG ADMINISTRATION. 2018. Household urban hazardous notification.
+Accessed 16 May 2019, from https://ww2.fda.gov.phy.
+
+FFRECH-CONSTANT, ROUSH RH. 1991. Resistance detection and documentation: the relative
+roles of pesticidal and biochemical assays, pp. 4-38. Jn R. T. Roush & B. E. Tabashnik
+[eds.], Pesticide resistance in arthropods. Chapman & Hall, New York.
+
+FINNEY DJ. 1972. Probit Analysis. Cambridge, England, Cambridge University Press.
+
+GADD CA, RAUBENHEIMER D. 2000. Nutrient specific learning in an omnivorous insect: the
+American cockroach Periplaneta americana L. leams to associate dietary protein with the
+odors citral and carvone. J Insect Behav. 13:85 1-864.
+
+GECHEVA G.1991. Resistance of German cockroach (Blattella germanica) to DDT and Propoxur
+in some parts of Bulgaria. Wiad Parazytol ;37(3):367-73. PMID: 1822052
+
+GEORGHIOU GP. 1986. The Magnitude of the resistance problem, in Pesticide Resistance:
+Strategies and Tactics for Management, National Academy Press, Washington, DC. Pp 14-
+4B.
+
+GEORGHIOU GP, TAYLOR CE. 1977. Genetic and biological influences in the evolution of
+insecticide resistance. J Econ Entomol; 70(30):319-23.
+
+GEORGHIOU GP. 1980. Insecticide resistance and prospects for its management. Residue
+Rev.,76,131.
+
+GONZALEZ JC JR.1981. Urban pest control in the Philippines. Philippine Entomologist ISSN:
+0048-3753.
+
+GOOGLE MY MAPS 2020. = Accessed += 20S May.-~—-2020-—Sfrom
+https://www.google.com/maps/d/u/0/viewer?ie=UTF8&oe=UTF8&showlabs= &msa=0
+
+
+99
+
+&mid=! WI9A_pNZ I glED682rV5mn 1 bGSZw&ll=14.17930602270463 1%2C 121.20236
+249999999&2=13
+
+HAMMOCK BD, SODERLUND DM. 1986. Chemical strategies for resistance management, in
+in Pesticide Resistance: Strategies and Tactics for Management, National Academy Press,
+Washington, DC. pp 111-129.
+
+HEONG K.L, TAN KH, GARCIA CPF, LIU Z, LU Z. 2013. Research methods in toxicology
+and insecticide resistance monitoring of rice plant hoppers. 2" Edition. Los Bafios
+(Philippines): International Rice Research Institute pp 30-31.
+
+HILL DS. 2002. Pests of Stored Foodstuffs and their control., Netherlands: Kluwer Academic
+Publidhers 145-146.
+
+HOLBROOK GL, ROEBUCK J, MOORE CB, SCHAL C. 1999. Prevalence and magnitude of
+insecticide resistance in the German cockroach (Dictyoptera: Blattellidae), pp. 141- 145.
+In W. Robinson H, Rettlich L, Rambo GW (eds.), Proceedings of the 3rd International
+Conference on Urban Pests, 19-22 July 1999, Prague, Czech Republic.
+
+HOSKINS WM, GORDON HT. 2003. Arthropod Resistance to Chemicals. Annual Review of
+Entomology 1(1):89-122.
+
+IRAC [INSECTICIDE RESISTANCE ACTION COMMITTEE]. 2019. IRAC mode of action
+classification scheme version 9.3. Accessed 2 August 2020, from www.irac-online.org.
+
+JACOBS S.2013. German cockroaches. Pennsylvania State Extension. Pennsylvania State
+University. Accessed | June 2021.
+
+JARILLA CM. 2010. Responses of the male and female German cockroaches, Blattella
+germanica L. (Blattodea: Blattellidae) to a commercial bait formulation. Unpublished
+Undergraduate Thesis. College of Agriculture, University of the Philippines Los Bafios. 49
+leaves.
+
+100
+
+KAAKEH W, BENNETT G. 1997. Evaluation of trapping and vacuuming compared with low-
+impact insecticide tactics for managing German cockroaches in residences. Journal of
+Economic Entomology 90(4):976-982.
+
+KAAKEH W, REID BL, BENNETT GW.1997. Toxicity of fipronil to German and American
+cockroaches. Entomol Exp Appl. 84: 229-237
+
+KELLER J C, CLARK PH, LOFGREN CS. 1956. Susceptibility of insecticide-resistant
+cockroaches to pyrethrins. Pest Control 24(11): 14--15, 30.
+
+KELLY SE. 1988. Metabolism and penetration of permethrin in resistant and susceptible strains
+of tobacco budworm, Heliothis virescens (F.) Unpublished Master's Thesis University of
+Arizona. Accessed 28 August 2021.
+
+KOEHLER PG, PATTERSON RS. 1988. Suppression of German cockroach (Orthoptera:
+Blattellidae) populations with cypermethrin and two chlorpyrifos formulations. Journal of
+Economic Entomology 81: 845-849
+
+KOEHLER PG, STRONG CA, PATTERSON RS, VALLES SM. 1993. Differential susceptibility
+‘of German cockroach (Dictyoptera: Blattellidae) sexes and nymphal age classes to
+insecticides. J Econ. Entomol. 86(3): 785-792.
+
+LADONNI H. 2001. Evaluation of three methods for detecting permethrin resistance in adult and
+nymphal Blattella germanica (Dictyoptera: Blattellidae). J Econ, Entomol. 94: 694-697
+
+LEE CY, YAP HH, CHONG NL, LEE RS.1996. Insecticide resistance and synergism in field-
+collected German cockroaches (Dictyoptera: Blattellidae) in Peninsular Malaysia. Bull
+Entomol Res. 86: 675-682.
+
+LEE CY, YAP HH, CHONG NL.1997. Elevated esterase detection in insecticide resistant German
+cockroaches (Dictyoptera: Blattellidae) using modified Pasteur- Georghiou's filter filter-
+paper method. Trap Biomed. 14: 81-86.
+
+LEE CY.1998. Control of insecticide-resistant German cockroaches, Blattella germanica
+
+101
+
+(L.) (Dictyoptera: Blattellidae) in food-outlets with hydramethylnon- based bait stations.
+Trop Biomed. 15: 45-51
+
+LEE CY, LEE LC. 2000. Influence of sanitary condition on the field performance of chlorpyrifos
+based baits against American cockroaches, Periplaneta americana (L.) (Dictyoptera:
+Blattidae). J Vect Ecol. 25: 218-221.
+
+LEE LC. LEE CY. 2004. Insecticide resistance profiles and possible underlying mechanisms in
+German cockroaches, Blattella germanica (Linnaeus) (Dictyoptera: Blattellidae) from
+Peninsular Malaysia. Med. Entomol. Zool., 55: 77-93.
+
+LEE CY, ROBINSON W. 2001. Handbook of Malaysian Household and Structural Pests. Pest
+Control Association of Malaysia, Kuala Lumpur, Malaysia, pp. 96-108.
+
+LEE KM, LEE CY. 2002. Prevalence of insecticide resistance in field-collected populations of the
+German cockroach, Blattella germanica L. (Dictyoptera: Blattellidae) in Peninsular
+Malaysia. Med. Entomol. Zool. 53: 219-225.
+
+MCKNIGHT TL, HESS D.2000. Climate Zones and Types. Physical Geography: A Landscape
+Appreciation. Upper Saddle River, NJ: Prentice Hall. ISBN 978-0-| 3-020263-5.
+
+MENDOZA IC.1976. Chemical control of the German cockroach, Blattella germanica L.
+(Blattidae: Orthoptera) with notes on its biology. Unpublished Undergraduate Thesis.
+University of the Philippines Los Bafios, College, Laguna, 1-41.
+
+MOHEBBI NODEZ S, RAFATPANAH A, KHOSRAVANI M, HAKAK FS, PAKSA A. 2018
+Susceptibility status of German cockroaches, Blattella germanica (L.) to carbamate and
+pyrethroid insecticides within surface contact method in Shiraz city, Iran. Journal of
+Entomology and Zoology Studies; 6(2): 1043-1046
+
+MILLER DM, MCCOY T, LEE C, ROBINSON WH .2005. Comparison of commercial bait
+formulations for efficacy against bait averse German cockroaches (Blattella germanica)
+(Dictyoptera: Blattellidae). Proceedings of the Fifth International Conference on Urban
+Pests Chow-Yang Lee and William H. Robinson (editors).
+
+NASIRIAN H.2010. An Overview of German Cockroach, Blattella germanica, Studies Conducted
+in Iran. Pakistan Journal of Biological Sciences 13(22) 1077-1084
+
+102
+
+[NPMA] NATIONAL PEST MANAGEMENT ASSOCIATION 2019. Pest management
+guidelines for retail food handling facilities and restaurants. Accessed June 20, 2021, from
+hups://npmapestworld.org/defaulvassets/File/Resource%20Center/Model%20
+Contracts%20and%20Standards/GuidelinesforF oodHandling%20(002).pdf
+
+[NSO] NATIONAL STATISTICS OFFICE. 2006. CPH, Report No. 4, urban population.
+Manila: National Statistics Office. Accessed June 20, 2021, from http://nscb.gov.ph/
+activestats/psgc/ municipality.asp?munco de=04341 1000&regcode=04&proveode=3
+
+OGG B, OGG C, FERRARO D. 2006. Cockroach Control Manual. University of Nebraska
+Lincoln Extension. Accessed 30 June 2021, from https://lancaster.unl.edu/pest/roach/
+cockroach%20manual.pdf
+
+Ol FM, WEEKS J, JONOVICH J, MILLER D. 2017. Assessment-based pest management of
+German Cockroaches. University of Florida IFAS Extension. Accessed 2 June 2021 from
+https://edis.ifas.ufl.edu/pdf/IN/IN1 19000.pdf
+
+PAI HH, WU SC, HSU EL. 2005. Insecticide resistance in German cockroaches Blattella
+germanica) from hospitals and households in Taiwan. Int. J Environ. Health Res. 15: 33-
+40. Econ. Entomol. 94: 694-697.
+
+PECHAL JL, AUSTIN J, GOLD R, TOMBERLIN JK. 2007. Epidemiology and Spatial
+Relationships of Bacteria Associated with Periplaneta americana (L.) (Blattodea:
+Blattidae) in Central Texas. J Agric Urban Entomol. 24(4): 205-216.
+
+PRIDGEON JW, APPLE AG, MOAR WJ, LIU N. 2002. Variability of resistance mechanism in
+pyrethroid resistant German cockroaches ( Dictyoptera:Blattellidae),. Pestic. Biochem.
+Physiol., 73:149-156.
+
+[PSA] PHILIPPINES STATISTICS AUTHORITY .2020. Census of Population. Region IV-A
+(Calabarzon). Total Population by Province. City, Municipality and Barangay. Accessed
+10 July 2021.
+
+QUESADA-MORAGA E, SANTOS-QUIROS R, VALVERDE-GARCIA P, SANTIAGO-
+ALVAREZ C. 2004. Virulence, horizontal transmission, and sublethal reproductive effects
+
+103
+
+of Metarhizium anisopliae (Anamorphic fungi) on the German cockroach (Blattodea:
+Blattellidae). Journal of Invertebrate Pathology, 87(1):51-58.
+
+QIAN K, WEI XQ, ZENG XP, LIU T, GAO XW. 2010. Stage-dependence tolerance of the
+German cockroach, Blattella germanica, for dichlorovos and propoxur. J Insect Sci 2010;
+10: 201-210.
+
+RAHAYU R, MADONA WR, BESTARI W. DAHELMI, JANNATAN R.2016. Resistance
+monitoring of some commercial insecticides to German cockroach Blattella germanica L.
+in Indonesia. Journal of Entomology and Zoology Studies; 4(6):709-712.
+
+REN XH, JIO MQ, ZHANG Y 2005. Study on histopathology of Blattella germanica infected by
+Metarhizium anisopliae. Chinese Journal of Vector Biology and Control, 16(3):171-173.
+
+ROBIN PEST CONTROL. 2021, May 5. Personal Communication [ Phone interview].
+
+ROSENHEINL, J. A. & M. A. HOY. 1986. Intraspecific variation in levels of pesticide resistance
+in field populations of a parasitoid, Aphytis fllélinus (Hymenoptera: Aphelinidae): the role
+of past selection pressures. J. Econ. Entomol. 79: 1161-1173.
+
+ROSS MH, MULLIN DE.1995. Biology, pp.21-32. In Rust MK, J.M. Owens, and D.A., Reiersosn
+[eds.], Understanding and controlling the German cockroach. Oxford Universit Press: New
+York.
+
+RUST, MK. 2001. Insecticides and their use in urban structural pest control. /n “Handbook of
+Pesticide Toxicology” (R. I. Krieger, ed.), 2nd ed., pp. 243-250. Academic Press, San
+Diego.
+
+SARINHO ED, SCHOR MA, RIZZO JA. 2004. There are more asthmatics in homes with high
+cockroach infestation. Braz J Biol Res. 37: 503-510.
+
+SCHARF ME, BENNETT GW, REID BL, QUI CH. 1995. Comparisons of three insecticide
+resistance detection methods for the German cockroach (Dictyoptera Blattellidae). J Econ.
+Entomol.; 88:536-542
+
+104
+
+SCHARF M. ROLLINS ©. 2020. German Cockroaches: More Difficult to Control. Annual
+Cockroach Control Issue. Pest Control Technology Magazine. Accessed 25 June 2021 from
+https://www.petonline.com/article/cockroaches-more-difficult-to-control/
+
+SCHULTS G, COATS JR, PETERSON C. 2006. Natural Insect Repellents: Activity against
+Mosquitoes and Cockroaches. ACS Symposium Series 927:168
+
+SCOTT J, ALEFANTIS T, KAUFMAN P, RUTZ D. 2000. Insecticide resistance in houseflies
+from caged-layer poultry facilities. Pest Management Science 56:147-153.
+
+SHAHRAKI G, HAFIDZI MN, KHADRI MS, RAFINEJAD J, IBRAHIM YB.2011WHO. Cost
+effectiveness of integrates pest management compared with insecticidal spraying against
+the German cockroach in apartment buildings, Neotropical Entomology 40(5)607-612.
+
+SIA SU GL, CARILLON, PERA D, SISON S, TANALGO B, SIA SU MLL, MISTIKA M.
+2016. Parasitic infestation in cockroaches (Periplaneta americana) obtained in selected
+areas of Metro Manila. International Journal of Tropical Disease & Health 13(4): 1-4,
+Article no. IJTDH.23820 ISSN: 2278-1005, NLM ID: 101632866
+
+SIEGFRIED BD, SCOTT JG. 1991. Mechanisms responsible for propoxur resistance in the
+German cockroach, Blattella germanica (L.). Pesticide Science, 33(2), 133-146.
+
+SILVERMAN J, BIEMAN DN. 1993. Glucose aversion in the German cockroach, Blattella
+germanica. Journal of Insect Physiology, 39, 925-933.
+
+SILVERMAN J, ROSS MH. 1994. Behavioral resistance of field-collected German cockroaches
+(Blattodea: Blattellidae) to baits containing glucose. Environmental Entomology, 23,
+425-430.
+
+STOCKWELL CA, HENDRY AP, KINNISON MT 2003. Contemporary evolution meets
+conservation biology. Trends Ecol Evol /8: 94-101
+
+SUITER DR 1997. Biological suppression of synanthropic cockroaches. In: Journal of
+Agricultural Entomology. 14(3) (ed. by Hinkle, N. C.\Oi, F. M.]. 259-270.
+
+105
+
+SYED R, MANZOOR F, ADALAT R, ABDU-SATTAR A, SYED A. 2014. Laboratory
+Evaluation of toxicity of insecticide formulation from different classes against American
+cockroach (Dictyoptera:Blattidae). J Arthropod-Borne Dis, 8(1) ;21-34.
+
+TABARU Y, MOCHIZUKI K. 2005. Repellency of ethanol extracts of herbs to the German
+cockroach, Blattella germanica (Blattaria: Blattellidae), observed by feces distribution in
+the extract treated harborages. Medical Entomology and Zoology 56(2)139-143,147.
+
+TANAKA I, MOTOKI M.1993.Release and recapture of German cockroaches Blattella
+germanica (L) in a vacant house. In: KB Wildey and WH Robinson (Eds) Proc. Ist Int.
+Conf. on Insects Pests in the Urban Env., Cambridge, UK, 281-283
+
+VALLES S. 1996. Featured creatures: Blattella germanica. Gainesville, USA: University of
+Florida. Accessed 1 June 202 from _http://entnemdept.ufl.edu/creatures/
+urban/roaches/german.htm#top.
+
+VALLES SM, YU SJ, AND KOEHLER PG. 1994.Detoxifying enzymes in adults and nymphs of
+the German cockroach: Evidence for different microsomal monooxygenase systems.
+Pesticide Biochemistry and Physiology 49: 183-190.
+
+VALLES SM, KOEHLER PG, BRENNER RJ .1997. Antagonism of fipronil toxicity by piperonyl
+butoxide and S, S, S,-tributy! phosphorotrithioate in the German cockroach (Dictyoptera:
+Blattellidae). J Econ Entomol. 90: 1254-1258
+
+VANDEKAR M, HEDAYAT E, PLESTINA R, AHMADY G. 1968. A study of the safety of o-
+isopropoxyphenyl methylcarbamate in an operational field-trial in fran. Bull. Wid Hith
+Org. 38: 609-623
+
+VERDEPRADO HN. 2008. Responses of the German Cockroach, Blattella germanica L.. to
+commercial bait formulation. Unpublished Undergraduate Thesis. College of Agriculture,
+University of the Philippines Los Baftos. 41 leaves.
+
+WATANABE H, KOBAYASHI Y, SAKURA M, MATSUMOTO Y, MIZUNAMI M. 2003.
+Classical olfactory conditioning in the cockroach Periplaneta americana. Zool Sci, 20:
+1447-1454
+
+106
+
+WORLD HEALTH ORGANIZATION. 1970.Tentative instructions for determining the
+susceptibility or resistance of cockroaches to insecticides. Tech Rep Ser 1970; 443,
+Geneva: WHO, Annex 12. p. 130-133.
+
+[WHO] WORLD HEALTH ORGANIZATION. 2006. Pesticides and their application for the
+control of vectors and pests of public health importance. sixth edition. World Health
+Organization.
+
+WU X, APPEL A. 2017. Insecticide Resistance of several field-collected German cockroach
+(Dictyoptera: Blattellidae) strains. Journal of Economic Entomology: Vol.10. Issue 3 pp.
+1203-1209, https://doi.org/10.1093/jee/tox072
+
+YUAN PAN X, ZHANG F. 2020. Advances in biological control of the German cockroach,
+
+Blattella germanica (L.), Biological Control Vol. 142.104104, ISSN 1049-9644.
+
+YU SJ. 2008. The Toxicology ad Biochemistry of Insecticides. Taylor & Francis Group, LL. New
+York, US: pp.207-214.
+
+ZHAI J, ROBINSON WH .1996. Instability of cypermethrin resistance in a field population
+of the German cockroach (Orthoptera: Blattellidae). J Econ Entomol. 89: 332-336.

@@ -246,7 +246,6 @@ significant contributor to forest loss if these areas were previously forested a
 
 conversion to such present land uses.
 
-10
 
 Penna (2010) defined “tree plantations” as areas composed primarily of trees
 established through planting or deliberate seeding and are likely to be more intensively
@@ -305,7 +304,6 @@ orchards also can mitigate global warming by sequestrating carbon (C) and supply
 
 biofuels (Aguilera et al., 2015; Plieninger, 2012; Temudo & Abrantes, 2014). Many animal
 
-12
 
 species also benefit because these trees provide food, nesting sites, and physical protection.
 Furthermore, these can link forests and other semi-natural habitats, which is often vital for
@@ -336,7 +334,6 @@ soil (Molnar et al., 2013). Furthermore, tree crops cultivated on rough, margina
 
 not produce yields equivalent to intense cultivation on level land; yet, future food supply
 
-13
 
 concems may make tree crop production on marginal land feasible (MacDaniels &
 Lieberman, 1979). According to MacDaniels & Lieberman (1979), there are vast
@@ -365,7 +362,6 @@ The orchard floor, particularly the soil, makes up a large part of the orchard
 
 agroecosystem. Still, it has gotten less attention in research and management than pest and
 
-14
 
 disease control and tree horticulture (Granatstein & Sanchez, 2009). However, there are
 opportunities to increase orchard sustainability by manipulating the orchard floor, which
@@ -394,7 +390,6 @@ and acting as storage and purifying medium for water as it moves through the soi
 
 (Obade & Lal, 2016; Wienhold et al., 2004).
 
-15
 
 The increased awareness that soil is a crucial component of the Earth’s biosphere,
 operating not only in food and fiber production but also in the maintenance of local,
@@ -423,7 +418,6 @@ According to Karlen et al. (1997), the simplest definition for soil quality is "
 
 (of soil) to function." An expanded version of this definition displays soil quality as "the
 
-16
 
 capacity of a specific kind of soil to function, within natural or managed ecosystem
 boundaries, to sustain plant and animal productivity, maintain or enhance water and air
@@ -454,7 +448,6 @@ usage and allocation of labor, energy, financial, and other inputs as agricultur
 
 and expands to satisfy growing global demand. Soil quality serves as a unifying idea for
 
-17
 
 educating producers, professionals, and the general public about soils' critical functions. It
 also serves as a tool for assessing current management practices and comparing alternative
@@ -507,7 +500,6 @@ Tesource emerges from the distinct balance and interaction of these three compon
 
 (Karlen et al., 1997). The indicators to be chosen will vary according to the nature of the
 
-19
 
 function under consideration. Nortcliff (2002) has grouped the soil quality indicators into
 four broad categories, comprising the three common groups of physical, chemical, and
@@ -533,7 +525,6 @@ extent their usefulness for plant growth. This capacity provides a buffer betwee
 
 climate and plant production (Weil & Brady, 2017).
 
-20
 
 Chemical indicators. The list of possible indicators is rather long in this case, and
 the final selection will be determined by the soil function being considered, Soil pH, cation
@@ -561,7 +552,6 @@ biotic and abiotic stresses (Wang et al., 2013). While N is the most important n
 
 affects the growth and development of plants; availability of N in soils largely controls
 
-21
 
 plant productivity (Saez-Plaza, 2013). Soil EC is a measure of the amount of salts in soil
 (salinity of soil) (USDA, 2014). It is an excellent indicator of nutrient availability and loss,
@@ -591,7 +581,6 @@ in virtually all of the organic transactions that characterize a healthy soil (W
 
 2017). They control soil processes such as decomposition and mineralization, including the
 
-22
 
 associated release of greenhouse gases into the atmosphere. Moreover, several soil bacteria
 promote plant growth and productivity (Kaiser et al., 2016). Lastly, soil fungi play a crucial
@@ -619,7 +608,6 @@ dynamic indicators. The impact of soil management decisions on use-dependent soi
 
 Properties is assessed using dynamic indicators.
 
-23
 
 Due to the rising demand for information and the need for rapid interpretation of
 soil science knowledge, an emphasis has been placed on analyzing numerous soil quality
@@ -648,7 +636,6 @@ Many authors have presented different key soil indicators for soil quality
 
 assessment (Arshad & Martin, 2002; Bunemann et al., 2018; Doran & Parkin, 1994; Karlen
 
-24
 
 etal., 2008, 2001, 1997; Larson & Pierce, 1991, 1994; Wienhold et al., 2004). For example,
 ina review of 65 different soil quality assessment methodologies undertaken by Bunemann
@@ -677,7 +664,6 @@ conservationists, and other land managers in identifying suitable interventions,
 
 quality indicator must do more than simply predict whether a soil would serve a good
 
-25
 
 function. The indicator should additionally explain why the soil will or will not perform as
 expected. Indicators are required to assist land managers in understanding the chain of
@@ -705,7 +691,6 @@ Upchurch, 1999; Wienhold et al., 2004). While Bunemann et al. (2018) noted that 
 
 ultimate goal of a soil quality evaluation is to inform farmers and other land managers
 
-26
 
 about the influence of soil management on soil functionality. It is therefore critical that any
 assessment of soil quality begin with a clear understanding of the function or functions of
@@ -734,7 +719,6 @@ inherent productivity differences and their ability to support a particular land
 
 absence of human interventions (Karlen et al., 2001)
 
-27
 
 Minimum data set (MDS)
 
@@ -763,7 +747,6 @@ Two often used techniques are expert opinion (EO) and principal component analys
 
 operators, and other interested stakeholders collaborate to identify soil quality goals,
 
-28
 
 essential functions, relevant indicators, scoring methodologies, and preferences among
 each factor. In contrast, PCA is a statistical technique for determining the indicators that
@@ -789,7 +772,6 @@ SQI should (a) be sensitive to soil management, (b) be responsive to changes in 
 
 function(s), and (c) be easily measured (Armenise et al., 2013).
 
-29
 
 The soil quality index used in this study was the additive soil quality index which
 was based on the approach of Andrews et al. (2003). In the index, each sclected indicator
@@ -816,7 +798,6 @@ study, which is necessary for the calculation of the SQI. This scoring function 
 
 over the linear (L) scoring function, which is a relatively easier way of obtaining the
 
-30
 
 indicator scores, due to the fact that many studies have confirmed that it represents system
 function better than the linear scores, have resulted in higher SQI values than LSF, and also
@@ -845,7 +826,6 @@ Identifying reference values is one stage that will likely benefit from and draw
 
 the knowledge base of traditional soil morphology and genesis, particularly concerning
 
-31
 
 inherent chemical and physical indicators (Karlen et al., 2001). Although farm field
 conditions are unlikely to return to their original undisturbed form, comparing them to
@@ -873,7 +853,6 @@ soil within the same management unit requires repeated assessments over time. Th
 
 baseline is the state or quality of the soil resource at the time of the initial measurements,
 
-32
 
 whereas the assessment is the trend in response to subsequent soil management actions.
 Measurements taken over time (often every 3 to 5 years) will reveal if the methods
@@ -902,7 +881,6 @@ focus on ecological concerns could jeopardize food and fiber supplics (Wander ct
 
 2002).
 
-33
 
 The wise use of the limited soil resource is critical for sustainable development
 and feeding the world's rising population (Arshad & Martin, 2002). Thus, a basic lack of
@@ -996,7 +974,6 @@ is 304 km north of Manila and 5 km east of MacArthur Highway (Manila North Road)
 
 The area has a hilly landform with elevation ranging from 40 to 430 mast and the soil types
 
-37
 
 present are Bauang Clay and San Manuel Silt (Appendix Figure 1). The exact location of
 
@@ -1032,7 +1009,6 @@ terrace gravel deposits, As well as alluvium composed mainly of clay, silt, sand
 
 deposits along stream beds and flood plains. Beach deposits and raised coral reefs are
 
-38
 
 essentially calcareous materials occurring along seashore. Marine clastics overlain by
 pyroclastics, associated with silty limestones are also present in the area. In the province
@@ -1065,7 +1041,6 @@ Coffee plantation 16.71722 ~ 120.40194
 Rambutan plantation 16.72500 120.39806
 
 
-39
 
 Further, a 20 m x 20 m plot was also established to verify and record the existing
 tree species in the forest, by identifying all the trees that attained a diameter of not less than
@@ -1093,7 +1068,6 @@ desired depth. Each subsample belonging to the same soil depth observation for e
 
 sites were thoroughly mixed, using a trowel, to form a homogenous mixture as composite
 
-40
 
 sample. The composite samples were removed with unnecessary debris such as roots and
 stones and undergone air drying for 7 days. Three representative samples, weighing 2.5
@@ -1111,7 +1085,6 @@ For the microbial analysis, representative samples collected were packed
 
 immediately into a sample bag and placed in an ice box to cool, which were then
 
-41
 
 transported immediately to the laboratory for analysis. Meanwhile, three undisturbed soil
 samples in each study sites were randomly collected through the use of soil core sampler
@@ -1139,7 +1112,6 @@ soil pH, CEC, available P, exchangeable K and EC were done at the Soils and Plan
 
 Laboratory of the Sericulture Research and Development Institute, DMMMSU, Bacnotan,
 
-42
 
 La Union. While the analyses for the total N, and bacterial and fungal population count
 were done at the Laboratory Services Division of the Department of Agriculture ~ Bureau
@@ -1157,7 +1129,6 @@ clay)
 2. Soil bulk density (BD) Core Method Blake & Hartge, 1986a
 3. Particle density (PD) Pycnometer Method Blake & Hartge, 1986b
 4. Soil porosity Computation from BD and Danielson & Sutherland,
-1986
 5. Soil water holding _ Percolation method Bhadha ct al., 2017
 capacity (WHC)
 
@@ -1183,7 +1154,6 @@ soil sample
 
 15. Fungi count Standard Plate count DA-BSWM.
 
-43
 
 For the determination of bacterial and fungal count, the method used was microbial
 plate count. A series of dilution was done to the soil samples to be able to count 30-300
@@ -1207,7 +1177,6 @@ were also combined, by means of mathematical computation, to form the total soil
 
 (0-60 cm).
 
-44
 
 Soil Quality Index Computation
 
@@ -1243,7 +1212,6 @@ The 15 soil quality indicators were selected because of their sensitivity to lan
 
 and management practices, ability to describe major soil processes, capability of available
 
-45
 
 laboratory for testing, costs of tests and financial consideration. Soil quality assessment is
 based on the selection of representative soil indicators (Jiang et al., 2020). Standardized
@@ -1272,7 +1240,6 @@ weighted indicators were retained trom each PC for the MDS. Highly weighted fact
 
 loadings were defined as having absolute values 20.40. When there is only one highly
 
-46
 
 loaded indicator within a PC, this indicator will be retained in the MDS. However, this
 study had more than one factor that was retained under a single PC. Therefore, a
@@ -1300,7 +1267,6 @@ S = Score of indicator
 
 a= maximum score (=1)
 
-47
 
 X = soil indicator value
 Xo = mean value of indicator
@@ -1326,7 +1292,6 @@ scores from individual indicators and dividing by the total number of indicators
 
 equation for the SQI:
 
-48
 
 Sql =) sin
 T
@@ -1356,7 +1321,6 @@ determine the effects of fruit tree plantations on the different soil quality in
 
 was used as the test procedure. This was done by constructing a One-way analysis of
 
-49
 
 variance (ANOVA) at 0.05 level of significance, wherein the result of each soil quality
 indicators was used as the response variables and the four fruit tree plantations and one
@@ -1424,7 +1388,6 @@ branches and leaves, were left within the orchard floor. The A-horizon of this p
 
 was found to have a color of brown and recorded a depth of 30 cm.
 
-52
 
 Figure 5. Fruit tree plantations assessed in the study: a) banana; b) calamansi; c) coffee;
 and d) rambutan plantations.
@@ -1439,7 +1402,6 @@ October, hence the schedule of harvesting. Rambutan fruits are harvested when fu
 
 on the tree. The color of its A-horizon was observed to be brown and has a depth of 15 cm.
 
-53
 
 Reference forest
 
@@ -1468,7 +1430,6 @@ parviflora Juss, to 109.5 cm, which was the average diameter attained by Parkia 
 
 (DC.) Mert.
 
-54
 
 Tectona grandis L.f. has the largest population within the reference forest. Based
 on local knowledge, teak was first introduced in the reference forest around 1970s through
@@ -1493,7 +1454,6 @@ Presence of shrubs and other understory vegetation were also observed in the are
 
 While a moderately thick layer of forest litters (approximately 2 cm deep) above the forest.
 
-55
 
 soil was noticed that is composed of fallen leaves, branches and other plant debris. Little
 to no anthropogenic disturbance or activities was observed in the area. It has an A-horizon
@@ -1520,7 +1480,6 @@ rambutan plantation consistently recorded the highest silt content at all depths
 
 in the upper, 55.48% in the lower and 55.3% for the total soil depth. While the banana
 
-56
 
 plantation (0-30 cm depth), calamansi plantation (30-60 cm depth) and reference forest (0-
 60 cm depth) attained the lowest silt content of 53.90%, 54.35% and 54,16%, respectively.
@@ -1545,7 +1504,6 @@ believed not to be heavily influenced by the change of land use but rather as ma
 
 Pronounced by its soil type. However, Fentie et al. (2020) mentioned that even though the
 
-37
 
 texture is an inherent soil property, management practices may contribute indirectly to the
 changes in particle size distribution particularly in the surface layers as a result of removal
@@ -1571,7 +1529,6 @@ intensive cultivation taking place in the former which may have helped maintain 
 
 condition to that of the latter.
 
-58
 
 Overall, the textural classes identified in the present study all belong under the
 medium-textured soils or loams which have a more even distribution between clay and
@@ -1598,7 +1555,6 @@ plantations and forest observed. Wherein with the thin canopy structure of a cal
 
 plant and a 5m x 5m spacing used in the plantation, it is evident that there is a lesser
 
-59
 
 interception potential of the plantation from rain drops that may contribute to soil
 compaction. Also, management activities done in the site may influence the increased BD
@@ -1620,7 +1576,6 @@ land. Similar studies (Bizuhoraho et al., 2018; Chowdhury et al., 2007; and Maru
 
 such as in cultivated lands, grazing lands, forest tree plantations and orchards.
 
-60
 
 Particle density
 
@@ -1648,7 +1603,6 @@ feldspar, micas, and the colloidal silicates that usually make up the major port
 
 soils all have densities within this range. They further discussed that for general
 
-61
 
 calculations concerning arable mineral surface soils (1%-5% organic matter), a particle
 density of about 2.65 g/cm’ may be assumed if the actual particle density is not known
@@ -1675,13 +1629,10 @@ conduct management activities, harvesting, and site visitation, which may also e
 
 most plantations, regardless of soil depth, have generally attained greater PD.
 
-62
 
 B0-30em 930-60 em
 
-28
 
-0
 
 120-60 em
 
@@ -1717,7 +1668,6 @@ land under the various plantations compared to the reference forest. The result 
 
 present study is also related to the findings of other studies where they found greater soil
 
-63
 
 porosity in reference forest compared to other land use, such as cultivated and grazing lands
 (Bizuhoraho et al., 2018; Chimadi et al., 2012; Selassie & Ayana, 2013; Tesfahunegn,
@@ -1738,7 +1688,6 @@ Forest Banana Calamansi Coffee Rambutan
 Figure 10. Soil porosity under the 0-30 cm soil depth. Bars with the same letters are not
 significantly different from each other.
 
-64
 
 Based on the reports from other studies, high organic matter and earthworms, along
 with other soil biota, that play an important role in the decomposition of organic material
@@ -1764,7 +1713,6 @@ Meanwhile, the reference forest recorded 43.33%. The lowest maximum WHC in the 3
 
 obtained for the total soil depth also revealed that the lowest value was found in the
 
-65
 
 rambutan plantation, with a mean of 37.17%. This plantation was recorded to be
 significantly lower compared to other sites for all the examined soil depths. On the other
@@ -1792,7 +1740,6 @@ layers. Furthermore, it is known that sand has lower WHC than silt and clay soil
 
 compared to other sites, may also explain why this plantation also recorded the lowest
 
-66
 
 value in terms of the WHC. Inversely, the reference forest, banana, calamansi and coffee
 plantations that were categorized to have a soil texture of silty clay loam has greater WHC
@@ -1818,7 +1765,6 @@ fall into low (1.0% — 2.0%) to medium (2.1% - 4.2%) SOM content category based
 
 BSWM.
 
-67
 
 The forest attaining the highest SOM in the upper and total depths might be directly
 related to the rich forest litters contained in its soil surface as contributed by the various
@@ -1846,7 +1792,6 @@ on surface soils also lowers PD (Chimdi et al., 2012). Hence, the lower PD in th
 
 forest compared to the plantations may be due to the generally higher SOM content of the
 
-68
 
 soils found in the former. Furthermore, the present study agrees with the findings of
 Tesfahunegn (2013) where he found that the variation in soil WHC among the different
@@ -1872,7 +1817,6 @@ plantation with 6.27 pH level, which was classified to be slightly acidic. On th
 
 the highest pH level within the lower soil depth was recorded in the banana plantation with
 
-69
 
 7.37 pH level, but was not observed to be statistically significant from all other sites. The
 rambutan plantation, calamansi plantation and reference forest, with 7.30, 7.14 and 7.10
@@ -1896,7 +1840,6 @@ soil depth are not significantly different from each other.
 ilar letters of the same
 
 
-70
 
 The result of the study was also evident in the study conducted by Hanisch et al.
 (2011) where they found a significantly lower pH level in a coffee agroforestry system
@@ -1952,13 +1895,11 @@ m.e./100g soil, respectively. On the other hand, the lowest CEC value for the to
 
 was attained by the coffee plantation (4.85 m.e./100g soil), as in accordance to what was
 
-2
 
 observed in the upper soil depth, which was found comparable to the banana plantation
 
 with 8.24 m.e./100g soil.
 120-30 cm 1230-60 em 0-60 em
-30
 25 7
 a
 2041 Ff Fy a ab
@@ -2009,7 +1950,6 @@ depth, across all sites. The available P content recorded in the 0-30 cm depth f
 
 order rambutan plantation > banana plantation > calamansi plantation > coffee plantation
 
-14
 
 > reference forest, and ranged from 32.67 ppm to 37.67 ppm. In the 30-60 cm depth, the
 values ranged from 27.67 ppm to 39.33 ppm. It follows the order coffee plantation >
@@ -2037,7 +1977,6 @@ observed in the lower and total soil depth, where the coffee plantation, closest
 
 level, obtained the highest available P of 39.33 ppm and 36.33 ppm, respectively.
 
-75
 
 The result of the study also relates to the findings of Janiola & Marin (2016), where
 they found a higher P content in the soils under the 0-30 cm depth within the rambutan
@@ -2063,7 +2002,6 @@ the highest exchangeable K content of 3.41 cmoldkg soil, and it was observed to 
 
 comparable with calamansi plantation (3.26 cmole/kg soil). Similar to the upper soil depth,
 
-76
 
 the lowest exchangeable K content was significantly attained by the reference forest with
 1.48 cmol./kg soil. Meanwhile, the coffee and rambutan plantations were comparable at
@@ -2072,7 +2010,6 @@ the lowest exchangeable K content was significantly attained by the reference fo
 
 130 cm 30-60 cm 00-60 cm
 
-4
 35 3 T 2
 
 3 a
@@ -2084,7 +2021,6 @@ coc d c
 
 ]
 
-1
 0s
 
 °
@@ -2105,7 +2041,6 @@ forest was found to be insignificantly different to calamansi and coffee plantat
 
 Horneck et al. (2011), the exchangeable K contents of the banana and rambutan plantations
 
-11
 
 from both soil depths, including the total depth, were classified to be excessive (>2).
 Additionally, those soils found in the lower soil depths within the calamansi and coffee
@@ -2133,7 +2068,6 @@ present study also observed greater concentration of exchangeable K in the soils
 
 banana plantation compared to other sites observed. It can be further add herein the
 
-8
 
 statement of Osman (2013) that the change in soil properties due to plantations depends
 
@@ -2162,7 +2096,6 @@ both attained the highest total N content of 0.07%. Further, banana and rambutan
 
 plantations both attained 0.05%. While the calamansi plantation, being the lowest, attained
 
-19
 
 aN content of 0.03%. Consistent with the result of the upper soil depth, the coffee (0.11%)
 and rambutan (0.05%) plantations also attained the significantly highest and lowest values,
@@ -2184,7 +2117,6 @@ abe
 0.04 a }
 0.02
 
-0
 
 Forest Banana Calamansi Coffee Rambutan
 
@@ -2200,7 +2132,6 @@ between 0.05% to 0.06% N (Bremner, 1965). However, the greater N concentrations
 
 observed in the upper soil depth for most of the fruit tree plantations may be due to the fact
 
-80
 
 that these plantations undergo lesser soil anthropogenic disturbances than in other
 cultivated fields, especially those planted with annual crops. As these areas could be
@@ -2228,7 +2159,6 @@ may also explain why the rambutan plantation, among all other plantations observ
 
 attained a lower total N concentration than what is generally found on the surface layer of
 
-81
 
 most cultivated soils. Additionally, Total N values were greater in the upper than in the
 lower soil depth among the different sites observed, but with the exemption of rambutan
@@ -2254,7 +2184,6 @@ Similarly to the result obtained in the lower soil depth and considerably to the
 
 Halecki et al. (2017) also reported a higher soil salinity in the forest area compared to the
 
-82
 
 cultivated area, However, the study of Zhang et al. (2010) supports the result obtained in
 the upper soil depth particularly in the calamansi plantation where they found that EC is
@@ -2289,7 +2218,6 @@ Nevertheless, all the gathered EC values within all soil depths across different
 
 were considered to be nonsaline, wherein salinity in these soils does not affect most plants
 
-83
 
 and soil microbial processes. According to USDA (2014), soils that have EC of more than
 1 dS/m are considered to be saline. Important microbial processes, such as nitrogen cycling,
@@ -2315,9 +2243,7 @@ number of earthworms ranged from 1.83 to 10.17 and follows the order coffee plan
 
 > calamansi plantation > rambutan plantation > banana plantation > reference forest.
 
-84
 
-10
 
 Forest Banana Calamansi_ Coffee Rambutan
 
@@ -2337,7 +2263,6 @@ earthworm count recorded in the lower soil depth may be due to the higher bulk d
 
 the soil as compaction tends to be greater with depth.
 
-85
 
 Atall soil depths, the coffee plantation recorded the highest earthworm count. This
 observation was found similar to the findings of Amador et al. (2010) where they also
@@ -2363,7 +2288,6 @@ carthworm biomass nor abundance was significantly related to litter quantity, li
 
 composition or soil properties for any of the natural and agricultural ecosystems studied.
 
-86
 
 Bacteria count
 
@@ -2391,7 +2315,6 @@ millions. Generally, greater number of bacteria was observed in the different fr
 
 plantations compared to the reference forest. This result relates with the study of Pandey
 
-87
 
 et al. (2010) when they also found higher bacteria population in an oak plantation compared
 to a natural forest in India. According to Hoorman & Islam (2010), bacteria can tolerate
@@ -2401,20 +2324,13 @@ in tilled soils.
 
 90-30 cm 0-60em
 
-6000000
-4000000
-12000000
-10000000
-8000000
 
-4000000
 
 2000000 od
 
 Rambutan
 -2000000
 
-4000000
 
 Figure 18. Bacteria count under 0-30 and 0-60 cm soil depths. Bars with similar letters of
 the same soil depth are not significantly different from each other.
@@ -2427,7 +2343,6 @@ regardless of exploratory and land use. Even so with the study of Zhalnina et al
 
 they added that the most likely effect that pH has on microbial community structure is
 
-88
 
 modulating the nutrient availability in soil. This may hold true in the present study as
 results revealed that the highest count within the 0-30 cm depth was attained by the
@@ -2455,7 +2370,6 @@ rambutan plantation (4.17x10°). Consistent with the two soil depths, the calama
 
 plantation also attained the highest fungi count in the total depth with 5.23x10" and was
 
-89
 
 found to be significantly different against the reference forest and the rambutan plantation
 with 3.60x10? and 4.37x10, respectively (Figure 19). On the other hand, the banana and
@@ -2463,10 +2377,6 @@ coffee plantations which were also comparable with cach other attained a mean co
 
 5.2x10? and 1.18x10*, respectively.
 
-30000
-20000
-15000
-10000
 
 Forest Banana Calamansi_ColfeRambutan
 
@@ -2482,7 +2392,6 @@ they found that total N content, soil organic matter content and available P con
 
 three most influential factors affecting arbuscular mycorrhizal fungi (AMF) community,
 
-90
 
 when they observed the soils of three land use, incuding forest, orchard and vegetable field,
 in southern China. However, results revealed in the present study seems not to support the
@@ -2529,7 +2438,6 @@ Principal components were observed to have eigenvalue of >1.0 and explained 78.4
 
 the variability, hence retained (Table 4).
 
-92
 
 Table 4. Results from the principal component analysis of statistically significant indicators
 in upper (0-30) cm depth.
@@ -2568,7 +2476,6 @@ count were selected, while the highly weighted indicators selected under the PC3
 
 pH, CEC, and earthworm population count. Soil porosity explained about 69.3% of the
 
-93
 
 variation in PC2 while earthworm population count explained about 64% of the variation
 
@@ -2603,7 +2510,6 @@ to have attained a >40 factor loading, these include the PD, WHC, and EC. In thi
 
 about 37.8% of the variation can be explained by Soil WHC.
 
-94
 
 Further, four principal components were retained out of the 11 PCs formed under
 the total soil depth, as these PCs had an eigenvalue of >1 and explained 75.29% of the
@@ -2638,7 +2544,6 @@ Soil pH -0.071 0.115 0.683 0.064
 CEC 0.263 0.247 0.333 0.502
 
 
-95
 
 Table 6. Continued.
 
@@ -2673,7 +2578,6 @@ soil depth, PD and WHC were found to be weakly correlated with each other as the
 
 tecorded a correlation value of -0.639. Hence, both PD and WHC were retained under PCI
 
-96
 
 for the MDS formation. In PC2, correlations for the BD and soil porosity, BD and bacteria
 population count, and soil porosity and bacteria population count with -0.504, 0.579 and -
@@ -2703,7 +2607,6 @@ influence on soil structure, breakdown of SOM, other soil microbial activities a
 
 as indicator for both water and nutrients cycling (Bunemann et al., 2018; Sofo et al., 2020),
 
-7
 
 cd esanyea svynfuein saddn :1u91314}909 9 4 osttag =sanyen.
 inploy oie = 11M “Austop 2]o1ued = Gd
@@ -2741,7 +2644,6 @@ mobeg wionqieg 29 jena ayestimprg 239 HENS OHI Gos Gd aa
 
 -undap j10s (wo 9¢-0) 4addn ayp ut suoweorput parydions Ayysry ay Tuowe waty3909 uoNE|as00 SIEUCANINN “L198
 
-98
 
 While the bacteria population represents the group of soil microorganisms that also
 
@@ -2772,7 +2674,6 @@ were found to be not well correlated (r < .70) with each other, thus all the hig
 
 indicators were retained for the MDS (Table 6). Specifically, the BD, soil porosity, and
 
-99
 
 total N were not well correlated under PC1; clay, PD, and soil WHC were also not well
 correlated under PC2 (Table 9). Correlation for soil pH and bacteria population count with
@@ -2794,7 +2695,6 @@ bacteria population count, a critical microorganism that is involved in various 
 
 processes that characterize a healthy soil (Kaiser et al., 2016; Weil & Brady, 2017)
 
-100
 
 d =sonyea sen uri saddn Syu2toyj209 uoneja1i09 J uosinad =Sanqea arjnFueAs 19Avof :-AuAnonpuod
 eotnsop9 = Ja ‘uoSosmu = Ni ‘wnisseod = ¥ ‘Aaloedeo oBuetoxo uoNeD = J3 ‘ArlvedeD Suipjoy JoVem = IIA *Aususp apo1ued = Cd ‘Ausuop H1Nq = GE
@@ -2816,7 +2716,6 @@ funy NIMOL  sigeafunyxg 229 HES HAL Asongd id aa
 
 adap [Yos (U9 99-9) [e101 auf Ur SioreoIpUT parysiam A{ysIy ay FuourE UdI914J209 UONE]aLI09 JeUEANIINN. “6 F1GEL
 
-101
 
 Indicator scores
 
@@ -2839,7 +2738,6 @@ ct al. (2008), and Tesfahunegn (2014). Table 10 presents the score of cach indic
 
 each of the sites observed under three soil depths.
 
-102
 
 Table 10. The corresponding scores of the selected soil indicators for each of the sites
 observed under three soil depths.
@@ -2878,7 +2776,6 @@ K = potassium, N = nitrogen, EC = electrical conductivity.
 
 . CEC = cation exchange capacity,
 
-103
 
 Soil quality index
 
@@ -2907,7 +2804,6 @@ Goren Aron LB Piatcn  }CaamanaPictance M)Cofee Platon Wl Fanbutm Fanon
 039 |
 
 08 |
-056
 
 Ey
 
@@ -2929,7 +2825,6 @@ SQI within the upper soil depth, only the banana plantation has enhanced the qua
 
 soil in the lower depth with an increase of 8%, compared to the reference forest (Figure
 
-105
 
 20). While the quality of the soil within the calamansi, coffee and rambutan plantations
 
@@ -2960,7 +2855,6 @@ to productivity on commercial banana plantations. For this reason, it is also re
 
 that the banana plantation observed in this study should also integrate in their management
 
-106
 
 objectives the improvement of its soil, particularly within the 0-30 cm depth, to increase
 yield. Specifically enhancing those soil properties that has observed to be lower in quality
@@ -2989,7 +2883,6 @@ is therefore recommended that soil management efforts should be emphasized on
 
 enhancing the various soil properties that was found limiting to soil quality.
 
-107
 
 However, some fruit tree plantations, across soil depths, have caused an increase in
 soil quality, with reference to the forest. This justifies that not all forest land conversions
@@ -3016,7 +2909,6 @@ contributions in the index values attained in the coffee plantation, namely eart
 
 population count (21.26%) at the upper soil depth and bacteria population count (18.72%)
 
-108
 
 at the total depth. The soil WHC (25.21%) had also a high influence in the coffee
 
@@ -3051,9 +2943,7 @@ soil depth.
 
 Figure 21. Radar plot of the percentage contribution of the selected indicators to SQI among various fruit tree
 
-109
 
-110
 
 Lorandi (2012), when a low CEC is recorded, it causes the necessity of greater investment
 in fertilization, especially with humic compounds. In this study, most of the fruit tree
@@ -3104,7 +2994,6 @@ to influencing the variability of the different land uses. These were done by co
 
 interview to the concerned individuals and also through personal observations. Tree species
 
-12
 
 assessment conducted by the institution that manages the area was also used to describe
 
@@ -3132,7 +3021,6 @@ index computation. Nonlinear scoring function and additive soil quality index we
 
 employed to finally derive the soil quality index values of each site at different soil depths.
 
-113
 
 All the fruit tree plantations were established and managed by the Don Mariano
 Marcos Memorial State University, intended for instruction, research, and production
@@ -3160,7 +3048,6 @@ density for fruit tree growth which ranges from 1.00 to 1.30 g/cm’. The greate
 
 within the fruit tree plantations compared to the reference forest may be due to their lesser
 
-14
 
 canopy cover that led to a lesser interception potential, lesser organic matter content, and
 to the greater anthropogenic activities done in the plantations. Further, the rambutan
@@ -3188,7 +3075,6 @@ sand content in its soil textural fraction have lesser porosity compared to all 
 
 while the rambutan plantation having the highest sand fraction among all sites also
 
-5
 
 recorded the highest total soil porosity. Therefore, it can be said that a soil with a finer
 texture has greater surface area and smaller soil pores. For the water holding capacity
@@ -3216,7 +3102,6 @@ significant differences. Nevertheless, the reference forest had the highest SOM 
 
 3.53% and 3.12% in the upper and total soil depths. Within the 30-60 cm depth, the
 
-116
 
 rambutan plantation attained an increased SOM of approximately 21% to that of the
 reference forest, as the rambutan plantation recorded the highest SOM of 3.29% followed
@@ -3272,7 +3157,6 @@ concentration is not li
 
 iting in the soils of the different sites observed and it can be
 
-118
 
 suggested that fertilizer application is no longer recommended. The lower concentration of
 exchangeable K in the reference forest compared to the fruit tree plantations may be
@@ -3301,7 +3185,6 @@ The biological soil quality indicators were comprised of three observations. For
 
 earthworm population count, this indicator was significantly affected by land use within
 
-9
 
 the 0-30 cm depth but were found to be unaffected within the lower and total depth of soil
 The highest count in the upper soil depth was attained in the coffee plantation with an
@@ -3327,7 +3210,6 @@ significantly greater among all other sites, while the reference forest signific
 
 the lowest count of 3.29x10°. Within the lower depth, all sites observed were seen to be
 
-120
 
 insignificantly different among each other. It was observed in the study that soil pH could
 have an effect on the population of bacteria, that a high soil pH increases their number, as
@@ -3355,7 +3237,6 @@ with eigenvalues of >1 were selected as these describe more data variability. Th
 
 total of three, two and four PCs were retained under the upper, lower, and total depths,
 
-121
 
 respectively. A factor loading of 20.40 were considered to be highly weighted. Thus, within
 the upper soil depth, the PD and WHC in the PCI, the BD, soil porosity and bacteria
@@ -3382,7 +3263,6 @@ used to obtain the corresponding scores for the soil pH, soil porosity, and elec
 
 conductivity.
 
-122
 
 After transforming each indicator to their corresponding scores, the MDS was
 subjected to the additive soil quality index to obtain the index values of the different sites
@@ -3410,7 +3290,6 @@ attained an index value of 0.42. Hence, only the banana plantation has enhanced 
 
 of the soil in the lower depth with an increase of 8%, compared to the reference forest.
 
-123
 
 While the quality of the soil within the calamansi, coffee and rambutan plantations
 
@@ -3441,7 +3320,6 @@ observations justified the important role of the different soil biological compo
 
 soil quality of the fruit tree plantations, specifically of the banana, calamansi and coffee
 
-124
 
 plantations. While the soil chemical indicators that have the greatest influence in the study
 were CEC and exchangeable K; two soil properties that greatly imply the significant role
@@ -3507,7 +3385,6 @@ quality, should not be neglected. Hence, the government and other concerned
 
 institutions are encouraged to address the negative impacts of fruit tree plantations
 
-127
 
 on soil quality or further enhance these land uses if found to contribute to soil
 
@@ -3555,7 +3432,6 @@ ANNUNZIO, R., M. SANDKER, Y. FINEGOLD and Z. MIN. (2015). Projecting global
 forest area towards 2030. Forest Ecology and Management 352 (2015) 124-133.
 http://dx.doi.org/10.1016/j.foreco.2015.03.014
 
-129
 
 APRILE, F., and R. LORANDI. (2012). Evaluation of cation exchange capacity (CEC) in
 tropical soils using four different analytical methods. Journal of Agricultural
@@ -3602,7 +3478,6 @@ Journal of Soil Science
 BONANOMI, G., R. D'ASCOLI, V. ANTIGNANI, M. CAPODILUPO, L.
 COZZOLINO, R. MARZAIOLI, G. PUOPOLOA, F. A. RUTIGLIANOC, R.
 
-130
 
 SCELZA, R. SCOTTI, M.A. RAO and A. ZOINAA. (2011). Assessing soil quality
 under intensive cultivation and tree orchards in Southern Italy. Applied Soil Ecology
@@ -3649,7 +3524,6 @@ CHAUHAN R.P., K.R. PANDE, S.C. SHAH, and D.D. DHAKA. (2015). Soil properties
 and earthworm dynamics affected by land use systems in Western Chitwan, Nepal
 J. Inst. Agric. Anim. Sci. 33-34: 123-128.
 
-131
 
 CHHETRI, S., T. R. GURUNG, T. UDEN, M. GURUNG and K. L. JAMTSHO, (2020).
 Assessment of soil fertility status using soil nutrient index in three landuse systems
@@ -3695,7 +3569,6 @@ Soil organic carbon, total Nitrogen, and soil pH, in a long-term continuous wint
 wheat (Triticum Aestivum L.) experiment, Communications In Soil Science and Plant
 Analysis. bttps://doi.org/10.1080/00103624.2018.1435678
 
-132
 
 DO V.H., N. LA , R. MULIA, G. BERGKVIST, A.S. DAHLIN, V.T. NGUYEN, H.T.
 PHAM, and I, OBORN. (2020). Fruit tree-based agroforestry systems for
@@ -3740,7 +3613,6 @@ cover dynamics and properties of soils under different land uses in the Tejibara
 Watershed, Ethiopia. Hindawi: The Scientific World Journal Volume 2020, Article
 ID 1479460, 12 pages https://doi.org/10.1155/2020/1479460
 
-133
 
 FRANZLUEBBERS, A.J. (2002). Soil organic matter stratification ratio as an indicator
 of soil quality. Soil & Tillage Research 66, 95-106.
@@ -3787,7 +3659,6 @@ and M.I. S. MATIAS. (2013). Soil organic matter pools and carbon fractions in so
 under different land uses. Soil & Tillage Research 126; 177-182.
 http://dx.doi.org/10.1016j.still.2012.07.010
 
-134
 
 HALECKI W., D. MEYNSKI, M. RYCZEK, E. KRUK, and A. RADECKI-PAWLIK.
 (2017). Applying an artificial neural network (ann) to assess soil salinity and
@@ -3833,7 +3704,6 @@ bacterial community structure, diversity, and function in temperate grasslands a
 forests. Scientific Reports; 6:33696. DOI: 10,1038/srep33696
 
 
-135
 
 KALHORO S.A., X. XU, A. MAHAR, A. ALI, F. A. KALHORO, S. A. OTHO, R. N.
 SOOMRO, F. ALI and Z. A. BALOCH. (2015). Study on growth effects of major-
@@ -3880,7 +3750,6 @@ KHALEDIAN Y., ERIC C. BREVIK, P. PEREIRA, A. CERDA, M. A. FATTAH and H
 TAZIKEH. (2017). Modeling soil cation exchange capacity in multiple countries,
 Catena 158, 194-200. http://dx.doi.org/10.1016/j.catena.2017.07.002
 
-136
 
 KLIMKOWICZ-PAWLAS, A., A. UKALSKA-JARUGA, and B. SMRECZAK. (2019).
 Soil quality index for agricultural areas under different levels of anthropopressure.
@@ -3925,7 +3794,6 @@ International Mountain Society: Mountain Research and Development, 26(3):245-
 MACDANIELS, L.H. and A.S. LIEBERMAN. (1979). Tree Crops: A Neglected Source
 of Food and Forage from Marginal Lands. BioScience, Vol. 29, No. 3, pp. 173-175.
 
-137
 
 MARBUN, P., Z. NASUTION, H. HANUM, and A. KARIM. (2019). Evaluation of land
 suitability on arabica coffee plantation by parametric method in Lintongnihuta
@@ -3972,7 +3840,6 @@ MOLNAR, T., P. KAHN, T. FORD, C.J. FUNK, and C.R. FUNK. (2013). Tree Crops, a
 Permanent Agriculture: Concepts from the Past for a Sustainable Future. Resources,
 2, 457-488. doi: 10.3390/resources2040457
 
-138
 
 MONSALUD, R.G., E. ARGUELLES, M.B. BROWN, M.S. PEDRO, R.A.
 NEPOMUCENO, S.A. VILLADIEGO, and F.C. MONSALUD. (2021).
@@ -4018,7 +3885,6 @@ OLIVARES, B.O., J. CALERO, J.C. REY, D. LOBO, B.B. LANDA, and J.A, GOMEZ.
 using regularized optimal _— scaling —regression. Catena. DOT:
 10.1016/j.catena.2021.105718
 
-139
 
 O'SULLIVAN, L., F. BAMPA, K. KNIGHTS, and R.E. CREAMER. (2017). Soil
 protection for a sustainable future: options for a soil monitoring network for Ireland.
@@ -4064,7 +3930,6 @@ PRATT, P.F. (1965). Potassium. p. 1022-1030. In A.G. Norman, Methods of soil ana
 Part 2: Chemical and Microbiological Properties. Agronomy Monograph no. 9. ASA
 and SSSA, Madison, Wisconsin, 53711 USA.
 
-140
 
 QI, Y., J. DARILEK, B. HUANG, Y. ZHAO, W. SUN, and Z. GU. (2009). Evaluating
 soil quality indices in an agricultural region of Jiangsu Province, China. Geoderma
@@ -4110,7 +3975,6 @@ Critical Reviews in Analytical © Chemistry, 43:224-272.. DOI:
 SANTOS-FRANCES, F., A. MARTINEZ-GRANA, C. AVILA-ZARZA, M. CRIADO,
 and Y. SANCHEZ-SANCHEZ. (2022). Soil quality and evaluation of spatial
 
-141
 
 variability in a semi-arid ecosystem in a region of the southeastern Iberian Peninsula
 (Spain). Land 2022, 11, 5. DOI: 10.3390/land! 1010005
@@ -4156,7 +4020,6 @@ Concept. Soil Science Society of America Journal Volume 63:1039-1054, no. 5.
 SOLOMOJU, A.D., A. I. SFOUGARIS, E. M. VAVOULIDOU, and C. CSUZDI. (2013).
 Species richness and density of carthworms in relation to soil factors in olive orchard
 
-142
 
 production systems in Central Greece. Communications in Soil Science and Plant
 Analysis, 44:301-311. DOI: 10.1080/00103624.2013.741904
@@ -4203,7 +4066,6 @@ Madison, Wis, USA.
 THROOP, H.L.,S.R. ARCHER, H.C. MONGER, and S. WALTMAN. (2012). When bulk
 density methods matter: Implications for estimating soil organic carbon pools in
 
-143
 
 rocky soils. Journal of Arid Environments 77 (2012) 66-71.
 doi: 10.1016/j jaridenv.2011.08.020
@@ -4250,7 +4112,6 @@ AWASTHI and G. LI. (2021). Long-term cover crops improved soil phosphorus
 availability in a rain-fed apple orchard. Chemosphere 275 (2021) 130093.
 https://doi.org/10.1016/j.chemosphere.2021.130093
 
-144
 
 WEI, O., Y. WU, Z. HAO, Q. ZHANG, Q. BU, and X. GAO. (2018). Combined impacts
 of land use and soil property changes on soil erosion in a mollisol area under long-
@@ -4296,7 +4157,6 @@ park grass experiment. Microb. Ecol. DOI 10.1007/s00248-014-0530-2
 ZHANG, J., J. JIANG, L. SHEN, C. PAN, H. WU, A. ABARQUEZ, Q. SHAN, G. CHEN,
 and Y. WANG. (2010). Soil salinization and ecological remediation by planting trees,
 
-145
 
 in China. Scientific & Technological Project of Zhejiang Forestry Department (No.
 07A02 and No. 08A02).

@@ -255,7 +255,6 @@ vitamin and other organic compounds were reduced due to these chemical character
 
 (Cromwell et al., 1998).
 
-10
 
 Porcine Epidemic Diarrhea Virus
 
@@ -283,7 +282,6 @@ massive amounts of the virus for seven to nine days after infection. Transmissio
 
 directly through contact with infected pigs or indirectly by exposure to contaminated pig
 
-11
 
 feces, which can last up to a month in cool, wet organic materials. PEDv can also be
 transmitted through the air, through sperm, through blood plasma, and indirectly by
@@ -312,7 +310,6 @@ the fluorescence signal as amplification occurs, a specialized thermal cycler wi
 
 fluorescence detection is needed (Bio-Rad, 2022).
 
-12
 
 Several studies were conducted to identify possible host pathological response to
 PEDv using qRT-PCR. Zong et al. (2019) investigated the relationships among the tight
@@ -338,7 +335,6 @@ family 27 member 2 (SLC27A2), fatty acid synthase (FASN), and long-chain acyl-Co
 
 synthetase 3 (ACSL3), while increasing (P < 0.05) FABP2 mRNA level in the jejunum.
 
-13
 
 Zhou et al. (2021) explored the role of glucagon-like peptite-2 (GLP-2) gene in
 regulating PEDv infection and repairing the damage to the intestinal mucosa caused by
@@ -365,7 +361,6 @@ the body in a highly regulated manner, including cells in the gastrointestinal t
 
 (Kuemmerle, 2012; Shen et al., 2014). The intestinal smooth muscle of the gastrointestinal
 
-14
 
 tract is also a rich source of IGF-1, and to regulate cell growth and survival, acts in an
 
@@ -394,7 +389,6 @@ of the organism. Basic metabolism genes, called housekeeping genes, may fulfill 
 
 conditions and they are involved in processes essential for cell survival and the expression
 
-15
 
 level is constantly stable and nonregulated (Kozera and Rapacz, 2013). Normalization is
 done to adjust the differences in the quantity and quality of the starting material and
@@ -423,7 +417,6 @@ gene in different pig tissue (e.g. diaphragm, heart, lung, skeletal muscle, righ
 
 atrium, left ventricle, and duodenum). However, in a study that assessed a set of reference
 
-16
 
 genes for different tissues (e.g. liver, lung, kidney, spleen, stomach, small intestine, and
 large intestine) of different pig breeds (Berkshire, Landrace, Duroc, and Yorkshire),
@@ -441,7 +434,6 @@ segment appears multiple times in a row and within the gene, is normally repeate
 
 (NC_010443.5).
 
-17
 
 MATERIALS AND METHODS
 
@@ -468,7 +460,6 @@ antibiotic, ZnO, CuSOx, and ZnO+CuSOs combination were added to the negative con
 
 diet at the expense of starch. All experimental diets were fed in meal form.
 
-18
 
 Table 1. Composition (as-fed basis) of experimental diets, Study 1.
 
@@ -515,7 +506,6 @@ vitamin E, 200 g; vitamin K3, 9 g; vitamin BI, 9 g; vitamin B2, 22 g; vitamin B6
 2Mineral premix provided the following vitamins per kilogram: Iron, 125,000 mg; copper, 7,500 mg; manganese,
 25,000 mg; zinc, 125,000 mg; cobalt, 500 mg; iodine, 175 mg; selenium, 300 mg; and carrier q.s. ad., | kg.
 
-19
 
 Diarrhea Incidence
 
@@ -544,7 +534,6 @@ model. Statistical significance and tendency between least square means were con
 
 at p<0.05 and p<0.10, respectively.
 
-20
 
 Study 2.
 Effect of Supplemental Copper Source on Growth Performance, Diarrhea
@@ -570,7 +559,6 @@ and tribasic copper chloride were added to the negative control diet at the expe
 
 All experimental diets were fed in meal form.
 
-21
 
 Production Parameters
 
@@ -600,7 +588,6 @@ placed in clear plastic for measurement of objective color (L*, a*, b* values) u
 
 chroma meter (CR-400 Chroma Meter, Konica Minolta).
 
-22
 
 Table 2. Composition (as-fed basis) of experimental diets, Study 2.
 
@@ -645,7 +632,6 @@ vitamin E, 200 g; vitamin K3, 9 g; vitamin B1, 9 g; vitamin B2, 22 g; vitamin B6
 
 3150ppm were added from each different copper source.
 
-23
 
 Table 3. Calculated nutrient composition (as-fed basis) of experimental diets, Study
 
@@ -680,7 +666,6 @@ Chlorine 0.25
 
 'SID: Standard Ileal Digestible
 
-24
 
 Small Intestinal Morphometry
 
@@ -708,7 +693,6 @@ The quality of the extracted RNA was determined using spectrophotometer (Epoch2
 
 Microplate Reader, BioTek). Reverse transcription to produce the complementary DNA
 
-25
 
 (cDNA) was performed using SuperScript™ IV First-Strand Synthesis System (Thermo
 Fisher Scientific) according to the manufacturer’s instructions. Fluorometer (Qubit® 2.0,
@@ -734,7 +718,6 @@ for amplifying the target sequence was done by mixing the cDNA template (10ng) i
 
 mix, 1.5mM MgCl, 1X Buffer, 0.5U DNA polymerase, and water in a PCR tube. The
 
-26
 
 mixture was then subjected to PCR amplification using thermal cycler (Veriti 96 Well,
 Applied Biosystems, Thermo Fisher Scientific) with thermal cycling profile of 94°C for
@@ -770,7 +753,6 @@ duplicates for DM (method 930.15; AOAC, 2007), CP (method 990.03; AOAC, 2007), E
 
 (method 920.39; AOAC, 2007), crude fiber (method 978.10; AOAC, 2007), ash (method
 
-27
 
 942.05; AOAC, 2007), and NDF (Holst, 1973). Diet samples were analyzed for Ca and P
 using an atomic absorption spectrophotometer (methods 4.8.03 and 3.4.11, respectively;
@@ -801,7 +783,6 @@ PDIFF option of SAS and adjusted using the Tukey-Kramer test. The a-level that w
 
 to determine significance and tendencies between means were 0.05 and 0.10, respectively.
 
-28
 
 RESULTS AND DISCUSSION
 
@@ -857,7 +838,6 @@ Diarrhea Score
 
 0.00
 
-29
 
 OVERALL DAILY DIARRHEA SCORE
 
@@ -885,7 +865,6 @@ week 3. Overall, there were one diarrhea day for NC, PC and CuSO,, and none for 
 
 and ZnO+CuSO, combination.
 
-30
 
 Table 7. Effect of supplemental zinc and copper source in diarrhea days of nursery
 
@@ -921,7 +900,6 @@ coliform numbers, are some potential modes of action of zinc (de Mille et al., 2
 
 copper has been shown to have bacteriostatic property (Espinosa and Stein, 2021). High
 
-31
 
 doses of dietary ZnO have shown to support a large diversity of coliforms in weaned
 piglets, to reduce the susceptibility of pigs to E. coli infection, and to reduce fecal counts
@@ -955,7 +933,6 @@ fed with the other diets (Table 9). From day 0 to 7, pigs fed with the CuSO, die
 
 (P<0.001) feces compared to the other dietary treatments. There were no significant
 
-32
 
 differences observed in the color of feces with pigs fed with ZnO, CuSOs, and ZnO+CuSO,
 combination diet from day 8 to 14. There was a significant difference (P=0.012) in the
@@ -992,7 +969,6 @@ lower (P<0.001) compared to the other treatments. Hill et al. (2000) and Coble e
 
 were also able to observe the darkening (blackening) of fecal color when CuSO4 was added
 
-33
 
 to the diet. However, in ZnO+CuSO, combination diet, ZnO negated the dark (black) color
 of the feces which was also observed by Debski (2016).
@@ -1027,7 +1003,6 @@ Eee
 
 288d Aaasanu Jo (sanjea qe] AID) 10109 [e923 aaqjdafqo ul adanos saddos pue dulz jeyuauatddns Jo 332j3H “OL F192 L
 
-35
 
 Table 11. Correlation coefficients between subjective fecal color and objective fecal
 color (CIE Lab), diarrhea score and diarrhea frequency.
@@ -1064,7 +1039,6 @@ Hex Color Code #BAA346 #9B9561 #76826E #6B7C75 #5C7067
 
 Figure 2. Fecal color scale generated using the prediction model for b* and L*.
 
-36
 
 Study 2.
 Effect of Supplemental Copper Source on Growth Performance, Diarrhea
@@ -1092,7 +1066,6 @@ observed reduced ADG (0.66 vs. 0.35 vs. 0.20 kg/d; P < 0.01), ADFI (1.22 vs. 0.8
 
 0.67 kg/d; P = 0.003), and G:F (0.54 vs. 0.39 vs. 0.31; P= 0.001).
 
-37
 
 Table 13. Effect of supplemental copper source on growth performance of nursery
 
@@ -1130,7 +1103,6 @@ different sources of tribasic copper chloride (TBCC1: XJ-BIO, China; and TBCC2: 
 
 respectively.
 
-38
 
 Diarrhea Incidence
 
@@ -1161,7 +1133,6 @@ respectively.
 
 ?Diarthea score: 1 = normal feces, 2 = moist feces, 3 = mild diarrhea, 4 = severe diarrhea, and 5 = watery diarrhea.
 
-39
 
 OVERALL WEEKLY DIARRHEA SCORE
 
@@ -1170,7 +1141,6 @@ OVERALL WEEKLY DIARRHEA SCORE
 
 2.8 —A
 
-24
 2.2
 
 Diarrhea Score
@@ -1193,7 +1163,6 @@ diets, having the PC with the lowest value observed at 1.57 days. Overall (d 0 t
 
 diarrhea days ranged from 5.88 to 9.38 days among the treatments.
 
-40
 
 Table 15. Effect of supplemental copper source on diarrhea days of nursery pigs from
 a Porcine Epidemic Diarrhea-infected herd’?
@@ -1240,7 +1209,6 @@ respectively.
 2Diarthea frequency: diarrhea days over total days in the period = 100.
 
 
-41
 
 The results of the experiment showed that even with the PC diet which contained
 antibiotics (tiamulin and chlortetracycline), diarrhea score, days, and frequency were not
@@ -1257,19 +1225,14 @@ acute diarrhea and/or vomiting, dehydration, and high mortality (Curry et al., 2
 Pig Site, 2018; Jung et al., 2020; Gao et al.. 2021; Iowa State University, 2022).
 
 Mortality
-5
 >
 Za
 c
 t
-33
 ‘So
 a 2
-8
 €
 S31
-2
-0
 1 2 3
 Week
 
@@ -1279,7 +1242,6 @@ CUSO4 == TBCC1 = TBCC2
 
 Figure 4. Weekly number of mortality nursery pigs fed with supplemental copper.
 
-42
 
 Fecal Color
 
@@ -1339,7 +1301,6 @@ quounesn WesIC
 P4294 paydajul-vayseig atwapidg
 auldiog & Wor sdid Arasanu Jo (sanjea qu] AID) 10[09 [ed2J 2AIa[qo uo ad1nos 1addod jejuaWIa]ddns Jo 39334 “ST A14GeL
 
-45
 
 Small Intestinal Morphology
 
@@ -1386,7 +1347,6 @@ quouyeary Areja1q
 ,PAsy pazdayul-vaysseiq
 awapidy aurss0g & wo ssid Aaasanu yo AZopoydaour [euNsazul [EUs Uo ad.1nos 19ddod [eyuauts[ddns Jo 399354 “61 PIGEL
 
-47
 
 Molecular Analysis
 
@@ -1413,7 +1373,6 @@ plays an essential role in PEDv entry process and it contributes to the infectio
 
 cofactor. Several tightly linked proteins (i.e. occludin, claudin, and junctional adhesion
 
-48
 
 molecule (JAM)) were validated to act as receptors for viruses (Mateo et al., 2015; Torres-
 Flores and Arias, 2015). Moreover, viruses were found to invade the epithelium by binding
@@ -1439,7 +1398,6 @@ in small intestine. Intestinal epithelial cell (IEC) specific IGF-1 promote the 
 
 and expansion of intestinal epithelial cells and promotes epithelial regeneration. Silencing
 
-49
 
 of IGF-I led to inhibition of intestinal cell proliferation. The loss of IEC-specific IGF-1
 leads to shortened small intestine length and villus. and shallow crypts. implying an
@@ -1473,7 +1431,6 @@ Occludin Sus scrofa occludin (OCLN), mRNA 100.00 = NM_001163647.2
 B-actin Sus scrofa beta-actin mRNA, partial cds 96.99 DQ845171.1
 
 
-50
 
 (B) Oceludin
 
@@ -1532,13 +1489,11 @@ In conclusion, ZnO + CuSO, combination has an effect in diarrhea incidence cause
 
 by post-weaning diarrhea. However, in the presence of porcine epidemic diarrhea virus,
 
-52
 
 copper source or antibiotic was unable to reduce diarrhea incidence. Regardless of any
 
 method to determine the fecal color, diets with purely copper source have darker color.
 
-53
 
 RECOMMENDATIONS
 
@@ -1561,7 +1516,6 @@ PEDv may be further investigated. At least three housekeeping genes should be us
 
 for comparison to verify the accuracy of the result.
 
-54
 
 LITERATURE CITED
 
@@ -1591,7 +1545,6 @@ BLAABJERG, K. and POULSEN, H.D. 2017. The use of zinc and copper in pig
 
 production. DCA — Nationalt Center for Jordbrug og Fedevarer. 23. maj 2017.
 
-55
 
 CHEN, Y.M., N.K. GABLER, and E.R. BURROUGH. 2021. Porcine epidemic diarrhea
 virus infection induces endoplasmic reticulum stress and unfolded protein response
@@ -1621,7 +1574,6 @@ CURRY, S.M., K.J. SCHWARTZ, K.J. YOON, N.K. GABLER, and E.R. BURROUGH.
 
 2017. Effects of porcine epidemic diarrhea virus infection on nursery pig intestinal
 
-56
 
 function and barrier integrity. Veterinary Microbiology 211 (2017) 58-66.
 http://dx.doi.org/10.1016/j.vetmic.2017.09.021.
@@ -1651,7 +1603,6 @@ overall immune status: a review. Journal of Animal Science and Biotechnology
 
 (2021)12:13. https://doi.org/10.1186/s40104-020-00533-3.
 
-57
 
 GAO, Q., Z. ZHENG, H. WANG, S. YI, G. ZHANG, and L. GONG. 2021. The New
 Porcine Epidemic Diarrhea Virus Outbreak May Mean That Existing Commercial
@@ -1680,7 +1631,6 @@ cytokines and tight junction protein in early weaned pigs. British Journal of Nu
 
 (2013), 110, 681-688. doi:10.1017/S00071 14512005508.
 
-58
 
 HU, Y., X. XIE, L. YANG, and A. WANG. 2021. A Comprehensive View on the Host
 Factors and Viral Proteins Associated With Porcine Epidemic Diarrhea Virus
@@ -1710,7 +1660,6 @@ KIPTOO, P., M.D. LAKSITORINI, and T.J. SIAHAAN. 2013. Chapter 233 - Peptide
 
 Delivery. Handbook of Biologically Active Peptides (Second Edition). pp. 1702-
 
-59
 
 1710. ISBN 978-0-12-385095-9. Copyright © 2013 Elsevier Inc. All rights reserved.
 https://doi.org/10.1016/C2010-0-66490-X
@@ -1741,7 +1690,6 @@ pork production — A review. Asian-Australasian Journal of Animal Science Vol. 
 
 No. 12:1667-1673 December 2017. https://doi.org/10.5713/ajas.17.0418.
 
-60
 
 LIU, Y., C.D. ESPINOSA, J.J. ABELILLA, G.A. CASAS, L.V. LAGOS, S.A. LEE, W.B.
 KWON, J.K. MATHAI, D.M.D.L. NAVARRO, N.W. JAWORSKI, and H.H.
@@ -1772,7 +1720,6 @@ MEDLINE PLUS. 2008. TBP gene: TATA-box binding protein (updated 2008 August 1;
 
 cited 2022 June 21). National Library of Medicine (US), Bethesda (MD): Available
 
-61
 
 from:https://medlineplus.gov/genetics/gene/tbp/#:~:text=Normal%20Function&text
 =The%20TBP%20gene%20provides%20instructions,the%20activity%200f%20mo
@@ -1804,7 +1751,6 @@ PHILSAN. 2012. Philippine Society of Animal Nutritionist. Feed Reference Standar
 
 Fourth Edition. ISBN: 978-971-877 1-04-4.
 
-62
 
 PIG INTERNATIONAL. 2014. Zinc, copper favor bacterial resistance. Digital edition:
 www. piginternational-digital.com. July 2014. p. 8.
@@ -1835,7 +1781,6 @@ Pathology. 2006 Nov; 59(11):1133-1150. doi:10.1136/jep.2005.031260. PMCID:
 
 PMC1860495 PMID: 16679353.
 
-63
 
 SHELTON, N. W., M. D. TOKACH, J. L. NELSSEN, R. D. GOODBAND, S. S. DRITZ,
 J.M. DEROUCHEY, G. M. HILL, R. G. AMACHAWADI, and T. G. NAGARAJA.
@@ -1867,7 +1812,6 @@ GORGELS, and T.T.J.M. BERENDSCHOT. 2016. Effects of dietary
 
 supplementation with epidermal growth factor-expressing Saccharomyces cerevisiae
 
-64
 
 on duodenal development in weaned piglets. British Journal of Nutrition.
 2016;115:1509-1520. pmid:26983845.
@@ -1898,7 +1842,6 @@ DENBOW. 2007. Growth performance and intestinal morphology responses in early
 
 weaned pigs to supplementation of antibiotic-free diets with an organic copper
 
-65
 
 complex and spray-dried plasma protein in sanitary and nonsanitary environments. J.
 Anim. Sci. 2007. 85:1302-1310. doi:10.2527/jas.2006-434.

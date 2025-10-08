@@ -95,7 +95,6 @@ Interest has been represented in their model as the likelihood that an individua
 
 will repeatedly do an activity. They quantified interest as a probability
 
-1
 l+a(t-t)’
 that is dependent on the difference between the current time ¢ and ?’ - the last
 
@@ -363,7 +362,6 @@ stochastic variable X is less than or equal to z. Alternatively, we may define t
 
 cumulative distribution function as:
 
-20
 
 Fe@)= f° Pway (2.5)
 
@@ -495,7 +493,6 @@ arguments as an alternative model to the model being introduced. Essentially, th
 null model will serve as a benchmark for the performance of the proposed model
 in explaining the given data.
 
-12
 
 0.0
 O30 -20 -10 0 10 20 30
@@ -530,7 +527,6 @@ the exponential distribution with probability density function given by,
 
 P(t)=de™, (2.14)
 
-13
 
 where ) is called the rate parameter. The rate parameter specifies the rate at
 which an event will occur. The Poisson process is used to model various stochastic
@@ -569,7 +565,6 @@ to the empirical data.
 Kolmogorov-Smirnov Statistic
 In statistical analysis, the equality of distributions can be evaluated by us-
 
-14
 
 ing some defined statistical measures for equality. An example of such equality
 measure is the Kolmogorov-Smirnov (KS) statistic or KS test [28].
@@ -616,7 +611,6 @@ Monte Carlo Hypothesis Testing and p-value
 In modeling a system, it is customary to know whether the model agrees with
 the empirical data. Usually, one performs a goodness-of-fit technique to measure
 
-15
 
 how well the model fits the empirical data. One is the Monte Carlo hypothesis
 testing (25,29, 30].
@@ -654,7 +648,6 @@ values as K,,j, where j = 1,2,3,...,.N.
 
 p-value = Pr(|Kz — (Kz)| > |Ks — (Ko)|)- (2.17)
 
-16
 
 The precision of the p-value is related to the size of the ensemble as given by the
 
@@ -729,7 +722,6 @@ The stochastic process for the CTCP model is as follows:
 3. Generate N, realizations for the value of A, from C[P(A,)]. This results to
 a train of N, short co-timescale events.
 
-19
 
 4. Now, take a realization for the value of Nj.
 
@@ -778,7 +770,6 @@ if At; <p; then At; € Tam
 , At; € Tom — with probability e~(4s-#)/% (3.1)
 if At; > me then { At; €Tim otherwise
 
-20
 
 where 7 is defined as the characteristic timescale dispersion for user é, with the
 form:
@@ -833,7 +824,6 @@ section, we will be discussing the method used to optimize the set of parameters
 
 that will characterize a user.
 
-21
 
 E 20 yer ~ Fis
 g &
@@ -869,7 +859,6 @@ parameter set 6,.
 In our work, we performed the optimization procedure by estimating the set
 of parameters five times giving us ©; = {6;,;}, where j € [1,5]. Then, each of the
 
-22
 
 estimated parameters was used in the model to produce 9; = (0,;) that is five
 times the size of the empirical data D; so that it will assume a smoother distribu-
@@ -912,7 +901,6 @@ the performance of the model.
 
 We define the truncated power law as the null model for our work. All users in
 
-23
 
 the dataset will be modeled as well using the truncated power law model defined
 in Chapter 2. Our purpose in defining a null model is to have a comparison or a
@@ -953,7 +941,6 @@ quarter of users with the highest value for A belong to the high activity class 
 
 users.
 
-24
 
 Chapter 4
 Results and Discussion
@@ -975,7 +962,6 @@ was obtained. The empirical distribution for each user defines the probability o
 occurrence of a given inter-event time At. We show the empirical distribution of
 inter-event times of eight users from the Twitter dataset in Fig. 4.1.
 
-25
 
 1.0
 
@@ -983,16 +969,13 @@ inter-event times of eight users from the Twitter dataset in Fig. 4.1.
 
 0.6
 
-04
 
 PAX >At)
 
-02
 
 0.0
 
 1.0 .
-08
 
 N= 1085 = 491
 06 L 4
@@ -1000,20 +983,15 @@ of
 02 L
 0.0 ms
 1.0
-08
 
 N= 2049 N= 1148
 ot 4
-04
 0.2
 0.0
 1.0 .
-08
 
 N = 3208 N= 3111
 0.6
-04
-02
 0.0 -
 
 10° 10? 10' 10° 10° 10° 10? 10! 10° 10°
@@ -1061,7 +1039,6 @@ mechanism for the empirical data. On the other hand, our model is able to explai
 
 users in the left column.
 
-27
 
 1.0
 
@@ -1089,10 +1066,8 @@ P(X >At)
 
 0.0
 
-2049
 0.66
 
-3208
 0.30
 
 P(X >At)
@@ -1148,11 +1123,9 @@ as well as users that are governed by seasonality. This realization is tantamoun
 
 to the discovery of a new type individuals, i.e., neither governed by seasonality
 
-29
 
 nor by power law behavior.
 
-30
 
 P{X>At)
 
@@ -1171,7 +1144,6 @@ power law as evidenced by p-values that are less than p = 0.05. This indicates t
 the mechanism governing these sampled users, whatever it may be, is not the truncated
 power law.
 
-31
 
 4.3 Summary of Model Performance for All Users
 
@@ -1195,7 +1167,6 @@ in this system yields not much insight on user sending behavior.
 In Fig. 4.4 we present the cumulative distribution of the p-values for all users
 for both the CTCP model as well as that of the truncated power law model.
 
-32
 
 1.0 te T T al ir
 — model (CTCP)
@@ -1240,7 +1211,6 @@ Our results show that for the CTCP model, 19.62% of the users in this class
 
 are modeled by it. While, for the case of the truncated power law model, only
 
-33
 
 3.02% were explained by it.
 
@@ -1287,9 +1257,7 @@ empirical data for users in the mid-high activity user class as represented by t
 
 cumulative distribution of p-values.
 
-34
 
-10
 
 r T
 Mid-High Activity Users
@@ -1323,7 +1291,6 @@ CTCP model, that is, the proportion of the users explained by the truncated
 
 power law increases as the activity level decreases.
 
-35
 
 rT T
 jid-Low Activity Users
@@ -1358,7 +1325,6 @@ explains are individuals with low activity. With this, we may infer that there
 
 exists a correlation between the deviant behavior of users and low activity.
 
-36
 
 x T i
 82.54% Low Activity Users
@@ -1404,7 +1370,6 @@ be observed. Furthermore, when he/she is away from the computer at seasonal
 
 or periodic time, e.g., going to school, eating, and sleeping, these periodic times
 
-37
 
 will introduce a bias on the inter-event time distribution resulting to a signature
 of seasonality.
@@ -1433,7 +1398,6 @@ of freedom”, wherein in this case is provided by technological improvements in
 
 mobile devices.
 
-38
 
 Chapter 5
 Summary and Conclusions
@@ -1466,7 +1430,6 @@ power law model in explaining user behavior based on the level of user activity.
 
 We have defined four classes of users: the high, mid-high, mid-low and low activity
 
-39
 
 user classes. When we modeled users in these classes, we found that an inverse
 relation between the model performance and the activity level exists.
@@ -1490,7 +1453,6 @@ ter. This is brought by the technological innovations in mobile communication
 
 allowing users to post tweets almost anytime.
 
-40
 
 Ss
 
@@ -1541,15 +1503,11 @@ pp. 18153-8, Nov. 2008.
 X.-P. Han, T. Zhou, and B.-H. Wang, “Modeling human dynamics with adap-
 tive interest.,” New Journal of Physics, vol. 10, p. 073010, July 2008.
 
-41
 
-8
 
 13)
-14
 15)
 
-16
 
 17,
 
@@ -1627,7 +1585,6 @@ Journal of the Royal Statistical Society, vol. 17, pp. 129-164, Jan. 1955.
 F. J. Massey, “The Kolmogorov-Smirnov Test for Goodness of Fit.,” Journal
 of the American Statistical Association, vol. 46, pp. 68-78, Mar. 1951.
 
-42
 
 [29] G. Gigerenzer, “Mindless statistics.,” The Journal of Socio-Economics,
 vol. 33, pp. 587-606, Nov. 2004.
@@ -1637,5 +1594,4 @@ vol. 33, pp. 587-606, Nov. 2004.
 ments of goodness-of-fit for ecological simulation models.,” Ecological Mod-
 elling, vol. 164, pp. 49-63, June 2003.
 
-43
 

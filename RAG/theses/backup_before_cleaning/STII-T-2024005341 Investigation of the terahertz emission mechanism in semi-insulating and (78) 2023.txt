@@ -1,0 +1,1806 @@
+Investigation of the terahertz emission mechanism in semi-insulating and low-temperature grown gallium arsenide at above- and below-band gap energy optical excitation
+
+Lourdes Nicole F. Dela Rosa
+
+UNIVERSITY OF THE PHILIPPINES DILIMAN
+
+Master of Science in Physics
+
+June 2023
+
+ABSTRACT
+
+We studied the terahertz (THz) emission carrier dynamics of semi-insulating (SI)
+and low-temperature grown (LT) gallium arsenide (GaAs) photoconductive antenna
+(PCA) devices photoexcited at above- (λ = 780nm, E₍g₎ = 1.59 eV) and below-
+(λ = 1.55 𝜇m, E₍g₎ = 0.80 eV) bandgap via THz time-domain spectroscopy (TDS).
+The excitation power dependence of the THz emission was determined. Moreover, we
+analyzed the experimental results through an equivalent circuit model (ECM) which
+accounts for the (i) photogeneration, (ii) screening effects, and (iii) transport of car-
+riers of the PCA. In modeling the THz mechanism at above-bandgap excitation we
+used the direct bandgap excitation model which takes into account the single photon
+absorption (SPA) and two photon absorption (TPA) for both PCAs. Meanwhile, at
+below-bandgap we followed and modified the two-step photoabsorption via mid-gap
+states model. The good fit of the numerical results with the experimental THz emis-
+sion power dependence reveal that at above-bandgap excitation, combined SPA and
+TPA is the primary mechanism responsible for THz emission for both PCAs. Sim-
+ilarly, the model used at the below-bandgap excitation for both PCAs was able to
+replicate the experimental THz emission power dependence. Hence, we conclude that
+the dominant THz emission mechanism for both SI- and LT-GaAs at below-bandgap
+regime is the two-step photoabsorption via mid-gap states.
+
+PACS: impurity and defect levels of III-V semiconductors (71.55.Eq), optical prop-
+erties of III-V semiconductors (78.66.Fd), ultrafast spectroscopy (78.47.J)
+
+Chapter 1
+
+Introduction
+
+Terahertz (THz) technology has evolved remarkably over the years {15 [16] The
+significant growth is mainly attributed to technological innovations leading to fabri-
+cation of better THz sources/detectors and ultrafast laser systems |16] Moreover,
+mode-locked fiber lasers with fundamental wavelength of 1.55 um have led to more
+stable and compact THz time-domain spectroscopy (TDS) set-ups [7]. Although,
+the lack of efficient emitters/detectors directly excited at 1.55 um has caused the up-
+conversion of the laser output from 1.55 jam to 800 nm in most systems employing
+fiber lasers [7] Thus, emitters/detectors that can be excited at this fundamental
+wavelength should be developed to maximize and fully utilize these fiber lasers [I7]
+Despite various available THz sources that can be directly excited at this wavelength
+(such as InAs and InGaAs), low-temperature grown gallium arsenide LT-GaAs based
+devices remain to be more efficient THz sources/detectors due to its properties apt for
+ultrafast operation such as short carrier lifetime, high carrier mobility, and high volt-
+age breakdown [ll [[8]. Previous works in references [0] [71 20] have shown that
+below-bandgap (A = 1.55 um, E, = 0.8 eV) excitation of LT-GaAs (E, = 1.42 eV) is
+feasible. In published literature, the TPA and two-step photoabsorption via mid-gap
+states are the two primary THz radiation mechanisms attributed to the below-band
+gap excitation of GaAs. Recent ab initio calculations, spectroscopy, and scanning
+tunneling microscopy measurements revealed the existence of defects that comprise
+the mid-gap states that could have facilitated the two-step photoabsorption for below-
+bandgap THz emission/detection [21] [22]
+
+1.1. Significance
+
+1.1 Significance
+
+Among practical applications of the THz technology are in the food and/or agri-
+cultural products quality control [23], information and communication technology
+(24, 25], and atmospheric pollution monitoring [26]. Hence, development of more eco-
+nomic and robust THz-TDS systems is highly advantageous. This can be achieved via
+lossless use of mode-locked fiber laser by employing it at its fundamental wavelength
+of 1.55 zm. As established previously, the more efficient GaAs based emitters/detec-
+tors can be excited at this wavelength. Though, the actual THz radiation mechanism
+of SI/LT-GaAs excited at 1.55 jum is yet to be established. Hence, insights regarding
+the carrier dynamics at below band-gap emission in these PCAs will be valuable in
+the understanding, design, and development of better THz-TDS setup. Moreover, ex-
+tensive investigation of the photocarrier dynamics and their corresponding influence
+on the THz radiation characteristics warrants in-depth research if the application
+of the more popular LT-GaAs as a PCA substrate material for telecommunication-
+
+wavelength optoelectronics is to be made viable for commercialization.
+
+1.2 Objectives
+
+This study aims to investigate the above: (A = 780nm, E, = 1.59 eV) and below-
+bandgap excitation (A = 1.55 wm, E, = 0.8eV) THz emission characteristics of SI-
+GaAs and LT-GaAs. Specifically, we aim to 1) study the intensity, bandwidth, and
+saturation characteristics of the THz emission, 2) compare the ultrafast carrier dynam-
+ics of SI-GaAs and LT-GaAs and 3) establish a dominant THz radiation mechanism
+at the two excitation conditions for both SI- and LT-GaAs.
+
+1.3. Scope and Limitations
+
+We modelled the PCA THz emission operation via ECM as a lumped-element circuit
+wherein the circuital elements account for all the electromagnetic (EM) phenomena
+upon ultrafast photoexcitation and bias voltage application. The ECM correlates the
+antenna physical parameters with the THz emission.
+
+Two main electromagnetic phenomena represent the PCA operation in this model:
+the (i) photogenerated carrier dynamics and (ii) the antenna screening effect in which
+
+two field screenings were considered, (a) the space-charge and (b) radiation field
+
+1.3. Scope and Limitations
+
+screenings. Moreover, the ECM assumed that the PCA gap is uniformly illuminated
+and that the THz emission exclusively arises from the electrodes. Finally, we only
+
+applied the model to small aperture (i.e. small gap width) PCAs.
+
+Chapter 2
+
+Background of the Study
+
+2.1 Terahertz waves
+
+The THz wave (0.1 — 10THz) is the band of frequencies beween infrared and mi-
+crowaves (Fig. |2.1) {IJ [18]. Table 2.1|lists some unit conversions at 1 THz. References
+(I, (5) (16) {[8} details the technological evolution of THz waves throughout the years.
+
+e
+Fa z 2
+radio and microwave Fd THz wave s 2 ultra-violet
+E © >
+E €
+10° 108 10° 10%? 104 10% = Hz
+
+Figure 2.1: Terahertz wave in the electromagnetic spectrum [[]]
+
+Remarkable qualities of THz wave pulses are as follows: i) highly penetrating, ii)
+non-ionizing, and iii) spectral fingerprinting suitability for various molecules. Due
+to these properties, THz technology has innumerable commercial applications in the
+
+fields of arts and archaeology [27], medicine [28], and security [29]
+
+Notation Equivalence Conversion
+
+frequency V 1THz 1000 GHz
+angular frequency w Qrv 6.28 THz
+period T 1/v lps
+wavelength a c/v 300 um
+wavenumber k k/2n 33.3cm!
+photon energy hv hv 4.14 meV
+temperature T hv /kp 48 Kx
+
+Table 2.1: Units and their conversions frequently used at 1 THz [I]
+
+2.2. Gallium arsenide semiconductor materials
+
+Semiconductor Bandgap (eV)
+
+SI-InP 1.34
+InSb 0.17
+InAs 0.35
+
+Ino 60Gag.4oAs 0.66
+Ino. 53Gag 53AS 0.73
+
+Table 2.2: Corresponding bandgaps of several semiconductor THz sources at 300 K
+
+For some time, the THz wave band remained the only unexplored band in the EM
+spectrum due to shortage of plausible and practical sources/detectors [Ij {15| 16)
+For this reason this range of frequencies in the EM band was called the “THz gap”. Re-
+cent innovations in nanotechnology and photonics have propelled the interdisciplinary
+research and industrial applications of THz technology into significant knowledge and
+technological feats |I6]. Moreover, the development of a more cost-effective, stable,
+and compact THz-TDS systems, and efficient THz emitters and detectors have also
+contributed to the consequential breakthroughs in THz research.
+
+Semiconductor materials can be used in the THz generation and detection. Listed
+
+in Table are some semiconductors THz sources and their corresponding bandgaps
+at 300 K [Al 5]
+
+2.2 Gallium arsenide semiconductor materials
+
+A popular semiconductor material for THz generation and detection is the GaAs.
+Figure illustrates the unit cube lattice of a pristine GaAs which is a III-V
+compound semiconductor composed of gallium (Ga) and arsenic (As) [2]. A summary
+of GaAs material properties is reported in reference [2]. Moreover, some general
+material characteristics of GaAs is listed in Table [2].
+
+2.2. Gallium arsenide semiconductor materials
+
+Figure 2.2: Lattice of (a) pristine high quality {2] and (b) defect rich GaAs
+(3)
+
+In addition, the resistivity of GaAs bulk can range from 10~® — 10? 2 - cm where
+in the practical range is 10-3 — 10° - cm [2]. Gallium arsenide is a direct band gap
+semiconductor {2}. Hence, a change in energy is the only requirement in transitions
+
+between the valence band and the conduction band [2].
+
+Table 2.3: Properties of GaAs at 300 K [2].
+
+Property Parameter .
+Atomic density 4.5 x 10” atoms/cm?
+Bandgap 1.42 eV
+Bulk modulus 7.55 x 101! dyn/cm?
+Coefficient of thermal expansion 5.8x10°§K}
+Crystal structure Zinc blende
+Density 5.32 g/cm?
+Dielectric constant 12.85
+Lattice constant 5.65 A
+Lattice thermal conductivity 0.55 W/cem—°C
+Melting point 1238 °C
+Molecular weight 144.64
+Peak drift. velocity 2.1 x 10’ cm/s
+Sheer modulus 3.26 x 10"! dyn/cm?
+Specific heat 0.327 J/g — K
+Threshold field 3.3kV/cm
+
+Although GaAs crystal growth is controlled, it is not impervious to defects, impuri-
+ties, and dislocations (Fig. {2.2(b)} [2]. The electronic properties of GaAs are affected
+(either desirably or not) by such defects [2]. Specifically, we look at point defects
+
+6
+
+2.2. Gallium arsenide semiconductor materials
+
+which are localized defects of atomic dimensions [2]. Examples of point defects are
+as follows; antisites, intersitials, vacancies, and dopant /material growth impurities |2]
+Further, these point defects are either external (intentionally introduced, e.g.: doping)
+or intrinsic (defects present in the material, e.g.: vacancies) [2]. In GaAs, intrinsic
+defects are observed and affect its electronic behavior {2|. Depending on the crystal
+growth conditions, the nature of defect and electronic effects can be determined [2]
+Over-pressure of arsenic during growth determine the concentrations of the arsenic
+(Asy) and gallium (Gay) vacancies [2]. According to reference [2], the possible effects
+of these defects on the electronic properties of GaAs are as follows i) neutral ii) deep
+donor-like iii) deep acceptor-like.
+
+Meanwhile, an important GaAs defect is the EL2 (deep level) which is present
+in arsenic-rich melt grown materials [2] This point defect is at the middle of the
+energy gap with donor-like characteristics [2] 30) 31). Further, it acts like an electron
+trap and is thermally stable [2]. This point defect can convert a p-type GaAs to a
+
+semi-insulating material {2|
+
+2.2.1 Semi-insulating gallium arsenide
+
+Kayali listed the requirements for SI-GaAs in providing semiconductor quality ma-
+terial: i) thermal stability, ii) absence of undesirable substrate active layer interface
+effects, iii) absence of degradation of active layer properties by outdiffusion of impu-
+rities from substrate during thermal processing, iv) low density of crystalline defects
+2.
+
+Semi-insulating gallium arsenide is commonly used as the photoconductive sub-
+strate in device fabrication of THz sources/detectors. Tani et al. reported the emis-
+sion characteristics of various PCA designs based on SI-GaAs in reference {82|. The
+presence of deep levels between the valence and conduction bands gives GaAs semi-
+insulating properties (p = 10’ — 10° -cm) [83].
+
+A study of the role of defects on SI-GaAs carrier dynamics is reported by Mizeikis
+et al. {13}. In this study, they found that the carrier lifetime is dependendent on the
+local density and ionization ratio of the EL2 (Neze ~ 1 x 10!® cm~%) centers [[3}.
+Moreover, the authors observed a significant slowing down of the diffusive grating
+
+which is attributed to the electrons and photoionized EL2 donors interaction [3].
+
+2.2. Gallium arsenide semiconductor materials
+
+2.2.2 Low-temperature grown gallium arsenide
+
+Another commonly used substrate for PCA THz emitters and detectors is the low
+temperature grown gallium arsenide (LT-GaAs) due to its relatively good carrier
+mobility (200 — 400cm?/V -s), subpicosecond carrier lifetime (~ 0.3 ps), and high
+breakdown field (~ 5 x 10° V/cm) [I] [[8]. A comprehensive study of the emission
+characteristics of several LT-GaAs based PCA designs is reported by Tani et al. [52]
+
+The LT-GaAs substrate is grown by molecular beam epitaxy (MBE) at substrate
+growth temperature (T's) range of Ts = 200°C - 460°C with a growth rate of 1um/hr
+(9). This is followed by rapid thermal annealing [Ij Further, a high density (>
+108 cm~3) of point defects such as As antisites (Asga), As interstitials (As,), and
+Ga-related vacancies (Gay) is observed in LT-GaAs [I]. The photocarrier transport
+of LT-GaAs in the THz frequency range is dominated by electrons since the electron
+
+mobility is one order of magnitude greater than the hole mobility [I]
+
+Point defects in LT-GaAs
+
+Figure demonstrates the difference between the lattice of a pristine GaAs (Ts =
+580°C-600°C) and defect rich GaAs. In GaAs growth, the As desorption decreases
+as Ts decreases [34]. This is because at low temperatures, the As mobility is low and
+the As sticking coefficient is high [34]. Due to this, there is an excess As in the grown
+layer which results to (non-stoichiometric) point defects in LT-GaAs [8] 84 85). An
+Asga is formed when Ga is replaced with As (As — As bond is formed). Further, Gay
+the absence of Ga in a Ga — As bond. The displacement of As in the GaAs is called
+the As; [7H9}.
+
+The average densities of the defects for certain T's ranges are listed in Table [2.4]
+{G9}. From the Table we see that the density of the defects significantly varies
+with Ts and post-growth annealing temperature J,. Further, the carrier mobility of
+LT-GaAs decreases in general in comparison with GaAs (Ts = 580°C — 600°C) with
+high defect concentration [36]
+
+Furthermore, for the annealed LT-GaAs, the Asga (0.65eV) and Gay (0.30eV)
+deep level bands from the conduction and valence edge act as trapping centers. The
+presence of these point defects affect the carrier lifetime. As the defect density in-
+
+creases the carrier lifetime decreases |], [[8] 87]
+
+2.3. Photoconductive antenna devices
+
+Table 2.4: Defect density, resistivity and mobility in LT-GaAs |6+9]
+
+Hi T, As,  Asé&, Vca _ Resistivity Mobility
+
+(°C) (°C) (cm™) (cm™*) (cm) (Mem) _(cm?/Vs)
+200 < T,; < 300 10 108 108 105 150-1000
+200 < T; < 300 600 10'9 101” 101” 10° 1000
+300 < T, < 400 1017 1076 10*6 107 5000
+
+2.3. Photoconductive antenna devices
+
+Figure illustrates the schematic diagram of a photoconductive antenna (PCA)
+which is an electrical switch that is made up of a photoconductive (typically a direct
+ILII-V semiconductor) substrate deposited with two metal electrodes separated by a
+
+gap.
+
+Semiconductor substrate |
+
+He
+
+Metal electrodes
+
+Figure 2.3: Schematic diagram of a PCA (with the gap zoomed in).
+
+When a voltage biased PCA is illuminated with light that has a photon energy
+greater than the band gap of the semiconductor substrate, it acts as an electric switch.
+The switch-on time, and switch-off time are a function of the laser pulse duration,
+and mainly determined by the photoexcited carrier lifetime in the semiconductor
+substrate, respectively [I]
+
+Due to its simple structure, cost-effectiveness, and operation at room temperature,
+the PCA is one of the most utilized and studied THz sources/detectors. In addition,
+the bandwidth of a PCA is in the range of 0.1 THz to a few THz. An extensive
+analysis of the PCA THz radiation generation and detection in the Drude-Lorentz
+model is reported in references [38 [39]
+
+2.3. Photoconductive antenna devices
+
+2.3.1 Terahertz radiation emission
+
+The PCA THz radiation generation is demonstrated in Fig. Electron-hole (e—h)
+pairs are created when an optical pulse with photon energy greater than the bandgap
+of the semiconductor substrate is illuminated at the PCA gap [Il [8]. These photo-
+carriers are accelerated by the applied electric field (Eyias). The rapid change in the
+
+transport photocurrent. produces the THz electromagnetic radiation (Ey).
+
+»
+
+THz pulse ‘
+
+* Silicon lens
+
+Metal electrodes \
+
+Semiconductor substrate
+Laser pulse
+
+Figure 2.4: Schematic diagram of PCA THz emission (not to scale).
+
+The current density is J = env where e, n, and v are the carrier charge, density and
+speed respectively. We attribute the change in J to two processes: i) the rapid change
+in the carrier density due to the ultrafast laser pumping, on and the acceleration of
+
+the carriers under an electric field 2 [38]. Thus,
+
+Brute « 219 = (0, SO) ; (2.1)
+
+The magnitude of the THz pulse radiated in the dipole approximation in free space
+at a distance z and time t considering the effective length L and the antenna active
+
+area S = lw is [I],
+
+a) SdJ(t
+Erae(21) = 22. (- [eae bar’) = wo a) (22)
+
+where fp is vacuum permeability, c is the speed of light in vacuum, and @ is the angle
+from the direction of dipole.
+Plotted in Fig. is the emitted THz radiation for a given optical pulse and
+
+transient photocurrent,
+
+10
+
+2.3. Photoconductive antenna devices
+
+Ipo(t) = / Tope(t — t)(en(t'yu(t/)) dt (2.3)
+where Ig), is the optical intensity profile. We observe in Fig. that the emitted
+
+Ertuz is a convolution of the emitter photocurrent and optical pulse [|
+
+Optical pulse
+| | Emitter photocurrent |
+Pry t Eruz at far-field |
+a i
+= i
+3 0.6 }
+2 i
+2
+Boa f
+Fa }
+2
+2
+£02 |
+|
+0.0
+-1 0 1 2 3 4 5
+Time (ps)
+
+Figure 2.5: Emitted THz radiation for a given optical pulse and tran-
+sient photocurrent in time domain. The plots were generated using Python
+v.3.11.2.
+
+2.3.2 Terahertz radiation detection
+
+The PCA Evry, detection mechanism is demonstrated in Fig. (reverse of the
+THz emission). When the PCA gap is illuminated with the probe pulse (optical pulse
+incident on the PCA detector), e—h pairs are created. The incident Ery, field induces
+a current in the antenna gap for some 7, (seminconductor substrate carrier lifetime
+of the THz detector) time. According to Jepsen et al. the electric field incident upon
+the PCA detector is a superposition of Gaussian beams of various frequencies [39]
+
+For a single component, the electric field is,
+
+E(zx,y) = Eo exp[—(z? + y*/w9)] (2.4)
+
+where Ep is the peak electric field strength and is given by,
+
+Ey = ey aad (2.5)
+Wo TCEQ
+
+in which c, eo, and Pry, are the speed of light in vacuum, vacuum permitivitty, and
+
+total power in THz beam, respectively.
+
+11
+
+2.3. Photoconductive antenna devices
+
+HC
+
+THz pulse
+
+Metal electrodes \
+
+Optical pulse
+
+Semiconductor substrate
+
+Figure 2.6: Schematic diagram of PCA THz emission (not to scale).
+
+The resulting photocurrent is affected by the geometrical response function (GRF)
+of the antenna detector |, 39),
+
+cPryz, 2Rytw 1 Ls + Im (n _ 1)xA
+Ip =(1- PB 1 a ee a) NS
+p= ( R) Fraser me Lg’dA(n — 1) put ( 2 ) cRy ¥
+
+d(n—1)xA
+xerf po
+
+(2.6)
+
+where Praser is the detector laser power, A is the antenna active area of the PCA
+detector, Pry, is the THz power, ¢ is the dielectric constant, Ry, is the silicon lens
+radius, n is the refractive index, t, is the detector wafer thickness, Ls is the gap
+length, Lm is the dipole length, and d is the gap width. Equation takes into
+account the effect of the PCA detector finite geometry.
+
+Further, this induced photocurrent is proportional to the amplitude of the Evry,
+
+focused on the gap, and the transient surface conductivity o,(¢) {[Il,
+
+I(t) = / * oa(t!) Erue(t)at! (2.7)
+
+0
+
+The o,(t) (in Eq. implies that the photocurrent does not flow instantaneously
+in response to the Epy,. Moreover, Eq. [2.7] tells us that the convolution of Ery, and
+a, at previous times gives us the J(t). From utilizing the convolution theorem, we
+Eq. after Fourier transformation becomes |],
+
+Jv) = 6(v)Ernz(v) (2.8)
+
+12
+
+2.3. Photoconductive antenna devices
+
+where 6,(v), Ery,(v), and J(v) are the Fourier transforms of o,(t), Ernz, and J(t),
+respectively. From here, we note that the PCA detector carrier dynamics limits the
+
+detection bandwidth. The photocurrent signal demonstrates frequency filtering via
+
+a(t) [I
+
+200
+van
+
+where T(det), aNd Ts(aer) are the PCA detector carrier lifetime, and scattering time,
+
+t
+o;(t) = / et ity _ 7 )/Ta(ae) Je“ (“8 )/ Felden dt! (2.9)
+
+respectively. Meanwhile op is [I],
+
+n= Viebe(det)(1 — R)Io(detyTt
+° hw
+
+where [e(aet) is the detector electron mobility, hw is the photon energy, and Io(det) is
+
+(2.10)
+
+the intensity of the probe beam power source. We integrate Eq. and get [I],
+
+2 ‘a 2
+7=09 [eo (a +erf [x - sl) — = (ate) xt ( +erf E - a*))| (2.11)
+
+where x = t/Te(det), @ = T1/Te(det), 6 = T1/Ta(det)- We plotted the conductivity in time
+and frequency domain in Fig.
+
+Moreover, according to Jespsen et al. the frequency dependent antenna response
+of the PCA detector reshapes the signal [39]. Taking this into account together with
+Eq. the corrected conductivity is illustrated by the dotted line in Fig.
+
+13
+
+2.3. Photoconductive antenna devices
+
+Conductivity, 0 1/Q-m)
+ar)
+FFT Amplitude (arb. units)
+
+o 2 4 6 8 10 12 16
+Time (ps)
+
+(a) (b)
+
+Figure 2.7: Surface conductivity (a) in time and (b) the amplitude of its
+Fourier transform. The dotted line indicates the response function of the
+detector when the frequency dependent antenna response is included. The
+plots were generated using Python v.3.11.2.
+
+14
+
+2.4. Equivalent circuit model
+
+2.4 Equivalent circuit model
+
+Castaneda-Uribe et al. detailed the comparison of several equivalent circuit models
+in reference II]. We simulated the THz radiation generation of the SI-GaAs and
+LT-GaAs PCAs via the ECM proposed by Loata et. al. [40]. Further, in simulating
+the THz emission of the PCAs, only the transport of electrons will be considered since
+
+for GaAs the hole mobility is an order of magnitude lesser than that of the electron.
+
+“Ge pulse
+
+G(t) Vee (t)
+Cee 2
+
+Yoias t) 74a Vad Ju
+i THz pulse
+
+Figure 2.8: Corresponding circuit model of the PCA THz radiation gener-
+ation in Fig. [2.4]
+
+In Fig. we see the corresponding equivalent circuit model of the PCA THz
+radiation emission. Three circuital elements in series (with an applied voltage bias)
+represents the antenna components of the PCA. A time varying photoconductance
+G(t) represents the photoswitch, a time-dependent voltage source V,,(t) accounts for
+the space-charge field screening, and an impedance Z, (frequency-independent over
+the relevant terahertz frequency range and purely resistive) describes the radiation
+field screening [40]
+
+The local voltage across the photoswitch is determined by the circuit in Fig.
+(a voltage divider). After applying circuital laws, the voltage at the gap is [12| M0],
+
+Veap(t) = Vbias — Vec(t) — Vraa(t). (2.12)
+
+where Vbias, Vec(t), and Visa(t) are the applied bias voltage, space-charge screening
+voltage, and radiation screening voltage. In this analysis the electric field is expressed
+
+as
+
+(2.13)
+
+2.5. Terahertz emission mechanisms
+
+The photoconductance is given by,
+
+Cte Nner(t)S
+l
+
+where ¢ is the carrier charge, and Npet(£) is the net carrier density, I]. From reference
+
+G(t) = (2.14)
+
+(LI), the voltage of the radiating element is written as,
+
+ZaG(t)Veap
+
+Viad = i (2.15)
+On the other hand, the space-charge screening can be solved from
+dP Pre
+a = LL 2.1
+di 7 +J (2.16)
+P.
+Ew = — 21
+=2 (2.17)
+Pye
+Y=: 1 (2.18)
+ne
+
+where 7, is the recombination time of the carriers, J is the current density at the gap,
+7 is the screening factor, € is the dielectric constant of the substrate, and P,, is the
+
+space-charge polarization [39]. In addition, we write the current density as
+
+€Nnet (t) He Veap(t)
+
+J= (2.19)
+From Eqs. — 2.19), the time evolution of the voltage at the gap is [I]
+Weoel) _ {yy — Vero(t) ! + beNowlte 7 CO _ guyz,
+dt ne dt (2.20)
+
+1
+“T+ GOZ)r
+
+We solve Vgap from Eq. [2.20] which use to solve for Eq. and ultimately Epp, (Eq.
+
+Ea)
+
+2.5 Terahertz emission mechanisms
+
+Illustrated in Fig. {2.9| are the THz mechanism models employed for the above- and
+below-bandgap excitation of SI- and LT-GaAs. For both PCAs, the combined SPA
+
+and TPA was the mechanism utilized in simulating the THz emission. Meanwhile,
+
+16
+
+2.5. Terahertz emission mechanisms
+
+the two-step photoabsorption via the mid-gap states was used to model the below-
+bandgap excitation of SI/LT-GaAs.
+
+l2 band Conduction band
+W (Upper states) n (Upper states)
+SoTB. lore
+| sig t3 hf”
+(Lower states) N (Lower states)
+41 e Tm]
+Nr
+lopr
+T2 Tif
+UI band Valence band
+
+(a) (b)
+
+Figure 2.9: Band diagram for (a) above band-gap excitation, and (b) below-
+bandgap excitation of SI- and LT-GaAs.
+
+2.5.1 Above-bandgap excitation
+
+In this thesis, we utilized the band diagram of the (SI- and LT-) GaAs at above-
+bandgap excitation in references [4] AIH13] (illustrated in Fig. 2.9(a)). The pump
+pulse (E > LEgisubstrate)) incident upon the PCA gap photoexcites electrons to the
+bottom of the conduction band {39} In addition, the TPA effect causes the
+electrons to jump from the valence band to the upper conduction band (then relaxes
+to the lower conduction band). As demonstrated in Fig. the photoexcited
+electrons in the lower conduction band can either transition to the mid-gap states
+(trapping) then back to the valence band (recombination) or transition to the upper
+
+states (re-excitation) [I4] The transitions described are summarized by the rate
+
+equation [14],
+
+dN(t) logs N ( a) n ( N )
+= No — N)- 1-——]+—[(1-— 2.21
+"a hf (No ) 7 Nro 73 No (2.218)
+-97,2(;-27)42(1-4 2.21b
+_ hf 2 Th No T4 Nro ( )
+dn(t) lorsNr PB on ( ~) n ( x
+= H+  - — (1 - S ] - -  I - 2.21¢c
+at hf Qhf 73 No 1%} Nro (
+
+where n(t), N(t), Nr(t) are carrier densities in the upper conduction band, lower
+
+conduction band, and mid-gap states, respectively (14). Moreover, No is the saturation
+
+17
+
+2.5. Terahertz emission mechanisms
+
+of carrier density, Nro is the saturation of the trapped carriers, ogg is the band-to-
+band cross section, org is the trap-to-band cross section, 7; is the carrier trapping time
+(from lower conduction band to mid-gap states), 72 is the trap emptying time, 73 is
+the hot carrier relaxation time, 74 is the carrier trapping time (from upper conduction
+band to mid-gap states), and J is the laser intensity. References [L3| £1 44] reports
+the various key parameters and optical constants in Eq.
+
+2.5.2 Below-bandgap excitation
+
+Meanwhile, for both substrates excited at below-bandgap, we employed the two-step
+photoabsorption via midgap states proposed by Tani et al. [10] in modeling the THz
+emission. According to Bacuyag et al. [21] and Escamo et al. {22] these mid-gap
+states arise from high density of EL2-like defects. As reported in reference {5], the
+transition energy from valence band to mid-gap states is about 0.8 eV, hence, below-
+bandgap (A = 1.55 ym) laser excitation is feasible. Following the model developed
+by Tani et. al. [IO] (with modifications following the model proposed by Benjamin
+et al. {4I}), Fig. illustrates the band-diagram employed for the below-bandgap
+excitation of both SI- and LT-GaAs. After below-bandgap photoexcitation, electrons
+are excited from valence band to mid-gap state, and then to the upper conduction
+band [[0]. The electrons in the upper conduction band can either transition to the
+lower conduction band (relaxation) or transition to the midgap states, and recombine
+with holes in the valence band |[0]. We describe the previously detailed processes as
+the following rate equations (Eq.
+
+avr(d _ rene 4 a ( i) _ “ +2 (: _ x) (2.22b)
+n N. N.
+(2.224)
+
+where ogr is the band-to-trap cross section.
+
+18
+
+Chapter 3
+Methodology
+
+This section details the methods employed in performing the study. First, we dis-
+cuss the device fabrication. Then, the THz-TDS set-up utilized in the experiment is
+described. Finally, the algorithm implemented in the ECM simulation is described.
+
+3.1 Device fabrication
+
+In this thesis we employed (one) SI-GaAs and (one) LT-GaAs PCA emitters. We
+fabricated the SI-GaAs PCA sample from a (100) SI-GaAs wafer (AXT Inc.) with
+a doping concentration of ~ 1 x 10'%/cm3. The PCA dimensions utilized in the
+fabrication is illustrated in Fig. Furthermore, the PCA fabrication process is
+demonstrated in Fig.
+
+Sum 30 um
+
+Figure 3.1: SI-GaAs PCA dimension utilized in the fabrication.
+
+A standard degreasing method was performed where in the samples were soaked in
+trichloroethylene, acetone, and methanol for three minutes consequently. Then, the
+substrate is washed with deionized water and dried with nitrogen gas. This process
+was done to remove dust or any impurity on the substrate surface. Using standard
+ultra-violet (UV) photolitography techniques, a Hertzian-dipole was patterned on top
+of the substrate. This was done by applying a positive resist (ma-P 1225) on top of
+the SI-GaAs and spin coating it at 3000 rpm. The spincoater was utilized to obtain
+
+19
+
+3.1. Device fabrication
+
+uniform photoresist (PR) coating of the surface. Using the MIDAS mask aligner (Fig.
+
+3.3(a))), we aligned a dipole pattern and exposed the sample with UV light. The UV
+exposure time was calculated via the equation,
+
+PR,
+texposure = in (3.1)
+
+where PReose is the PR dose (as listed in the technical sheet), and Iyy is the UV
+
+intensity. Then, we soaked it in toluene for five minutes which causes the topmost
+layer of the PR coat to be brittle. We developed the pattern on the sample by soaking
+it in a developer solution (mr-D 526/s) for two minutes. Before metal deposition, the
+sample was oxide stripped by immersing it ina 1: 50 solution of 48% hydrofluoric acid:
+deionized water. Metal contacts (Ni (25nm)/Au (85nm)) were deposited onto the
+sample using the electron beam deposition method via the ULVAC e-beam/resistive
+system in Fig. B.3(b)). Finally, we performed metal lift off by soaking the sample in
+a PG Remover solution overnight, then continuously agitating the solution via plastic
+
+dropper until all excess metal is lifted off.
+
+1. Degreasing 4. Development
+
+7a EEE
+—
+
+4 $
+
+2. Photoresist/spin coating 5. Metal deposition
+
+t {
+
+3. Mask alignment and UV 6. Metal lift off
+exposure
+
+— rr
+sles
+
+Figure 3.2: Standard PCA fabrication process employed at the Condensed
+Matter Physics Laboratory (CMPL), National Institute of Physics (NIP).
+
+20
+
+3.2. Experimental set-up
+
+Figure 3.3: (a) Midas MDA-400M mask aligner for photolithography, and
+(b) ULVAC e-beam/resistive evaporation deposition system for metallization
+at the CMPL, NIP.
+
+Meanwhile, the LT-GaAs PCA sample was a commercially available butterfly
+dipole PCA (Batop GMBH).
+
+3.2 Experimental set-up
+
+The schematic diagram for the THz-TDS utilized in this study is illustrated in Fig.
+[3.4, We mounted the PCA emitters on a hyper hemispherical silicon lens to collimate
+and reduce losses from the reflection and refraction of radiation at the surface-to-
+air interface. The excitation source was a dual-output Menlo C-fiber femtosecond
+(fs) laser (100 fs pulse width and 100 MHz repetition) with a central wavelength of
+1.55 wm and a second harmonic of 780nm. We utilized a set of flip mirrors to in-
+terchange the 1.55 ym and 780 nm pump beams and select the desired excitation
+wavelength. Moreover, a mechanical stage delay was incorporated along the pump
+beam to introduce a time delay. Photocarriers in the PCA emitter (SI/LT-GaAs)
+were excited by the pump beam focused on the dipole antenna gap. The electric field
+bias produced by the applied 20 V peak-to-peak, square wave AC bias accelerated the
+photexcited carriers. The change in photocurrent in the emitter gave rise to the THz
+pulse. We used another commercial dipole PCA which was gated by the probe beam
+at a fixed 10mW power to detect the generated THz radiation. Further, the Stan-
+ford Research SR510 lock-in amplifier measured the detected THz current. Finally,
+the following configurations that were used in performing the measurements for both
+
+emitters: 780 nm pump / 780 nm probe and 1.55 xm / 780 nm probe.
+
+21
+
+3.2. Experimental set-up
+
+fs fiber @780 nm/1.55 um 780 nm *&
+100 fs, 100 MHz
+
+beam splitter
+
+~ 1.55 ym
+ump beam probe beam
+ee, delay
+stage
+aspheric lens
+/\ PCA detector
+7
+
+PCA emitter \
+\ /
+
+off-axis paraboloid mirrors
+
+function
+"———__ generator (bias
+voltage)
+
+lock-in amplifier
+
+Figure 3.4: Schematic diagram of the THz-TDS set-up employed in the
+experiment.
+
+The detected THz signal in the time domain is transformed to the frequency via
+Fast Fourier Transform (FFT) to get the pertinent spectral information. In performing
+the FFT of the detected E;y, we use
+
+1 +00
+~iwt
+Ernz(w) => Evn.(t)e mt dt (3.2)
+V 27 Jo
+f EEE 0.10
+my period
+10 0.08
+ES 0.5 amplitude tole
+¢ 2 dynamic range
+E 00 4
+e & 0.04
+= -0.5 E
+0.02
+-1.04 \)
+bandwidth’
+134 9.09 z : .
+-4 -3 -2 -1 0 1 2 3 4 5 0 1 2 3 4 5
+Time delay (ps) Frequency (THz)
+
+Figure 3.5: Time domain waveform transformed into frequency domain via
+FFT. The plots were generated using Python v.3.11.2.
+
+As in published literature [46, 47], the spectral dips in the FFT correspond to
+
+22
+
+3.3. Numerical simulation
+
+absorption lines of water vapor in free-space.
+
+3.3. Numerical simulation
+
+The equivalent circuit model (discussed in Sec. 2.4) of the PCA THz operation of
+SI/LT-GaAs was simulated in Python v.3.11.2. Listed in Tables [A-3} and
+
+(A.2| are the various parameters used in the numerical simulation of the PCA THz
+
+emission and detection.
+
+3.3.1 THz radiation emission
+
+Figure [3.6] demonstrates the algorithm implemented in simulating the THz emission
+of both PCAs. Physical constants and parameters (listed in [A.1| |A.3| and [A.4]) were
+
+inputted. In this thesis we used a Gaussian intensity laser profile,
+
+2r2 202
+I(r,t) = Ip ( = et) (-#), (3.3)
+We inputted Eq. [3.3] as a function definition. Next, the simultaneous ordinary dif-
+ferential equations (ODE), Eqs. were coded as a single function
+definition. We used the ODEINT function from the scypi.integrate library to solve
+for Vgap(t), and Nnet(t) = N(t) + n(t). From here we solved for the current density
+(Eq. Finally, the emitted E7y, was calculated via taking the gradient of the
+
+current density.
+
+Figure 3.6: Flowchart of the implemented emission algorithm.
+
+23
+
+3.3. Numerical simulation
+
+In this study, we probed at how the Nyct expressions would look like depending
+on the carrier dynamics of the device used. Hence, the parameters describing the
+
+semiconductor substrate properties (7-, OTB, OBT, OBB, Tr; Me) have the most dominant
+
+effect on the THz emission characteristics simulation results.
+
+3.3.2. THz radiation detection
+
+In simulating the detected THz radiation, the PCA detector carrier dynamics was
+taken into consideration. The algorithm implemented for the detection of the THz
+radiation is shown in Fig. First we inputted all the detector physical constants
+
+and parameters. After solving for emitted Ery,, we inputted the detector response
+
+function (GRF in Eg. [2.6) and computed for the current detector response. Next,
+the surface conductivity in Eq. was inputted as a function definition. We multi-
+plied the Ery,, Ip, and a, in frequency domain (via FFT function in numpy library
+of Python). Finally, we implemented inverse FFT function from numpy library in
+Python to get the detected THz radiation.
+
+Figure 3.7: Flowchart of the implemented detection algorithm.
+
+24
+
+Chapter 4
+
+Results and Discussion
+
+In this section we present the the THz-TDS and ECM numerical simulation results.
+First, we present the measurements obtained from the THz-TDS. Then, the excitation
+
+power dependence is discussed. Finally, we analyzed these measurements via the
+ECM.
+
+4.1 Terahertz characterstics of SI- and LT-GaAs
+
+Figures [1 I] and {f.2| demonstrate the THz-TDS waveforms and corresponding emission
+spectra of the SI-GaAs and LT-GaAs excited above- and below-bandgap, respectively.
+The peak amplitude, bandwidth, and dynamic range of SI-GaAs excited at above
+bandgap are 5.92nA, 2 THz, and 8 orders of magnitude, respectively. Meanwhile, at
+below-bandgap excitation, the SI-GaAs peak amplitude is 0.29 THz. Furthermore, the
+bandwidth and dynamic range are 2.7 THz, and 6 orders of magnitude, respectively.
+Similarly, for the LT-GaAs, the peak amplitude is 26.25nA (above-bandgap), and
+0.32nA (below-bandgap). Moreover, at above-bandgap excitation, the bandwidth
+and dynamic range are 1.3 THz and 8 orders of magnitude, respectively. In addition,
+the bandwidth is 0.8 THz, and the dynamic range 5.5 orders of magnitude at below-
+bandgap excitation. We summarized these results in Table £-1]
+
+As seen in Fig. the above-bandgap THz emission is x20 more intense than
+the below-bandgap THz emission. Looking at Fig. the bandwidth at below-
+bandgap excitation is broader than that of excited at above-bandgap. Moreover,
+we observe a decrease in the dynamic range from the above- to the below-bandgap
+
+excitation (from 8 to 6 orders).
+
+25
+
+4.1. Terahertz characterstics of SI- and LT-GaAs
+
+8 0.20
+Experimental SI-GaAs (above-bandgap) Experimental SI-GaAs (above-bandgap)
+Experimental SI-GaAs (below-bandgap) [x20] 0.18 Experimental SI-GaAs (below-bandgap)[x20.
+6 \ 0.16
+< 016 A
+ie é 012 f
+2 iS
+o o
+5 3
+3 20104 |)
+B? Fool |
+5 § 008
+& E
+0.06 |
+Ky rs
+Fo i
+0.04 B
+|
+002 i
+-2 ]
+0.00
+ty) 2 4 6 8 10 12 #14 0 1 2 3 4 5
+Time delay (ps) Frequency (THz)
+(a) (b)
+
+Figure 4.1: SI-GaAs (a) THz-TDS waveform and (b) corresponding emis-
+sion spectra.
+
+On the other hand, in Fig.
+
+we see that the above-bandgap THz emission is
+x80 (about two orders of magnitude) more intense than the THz emission at below-
+bandgap. The bandwidth of the LT-GaAs excited at above-bandgap is broader than
+that of excited at below-bandgap. In addition, there is a decrease in dynamic range
+
+from the above- to the below-bandgap THz emission (from 8 to 5.5 orders).
+
+Experimental LT-GaAs (above-bandgap) Experimental LT-GaAs (above-bandgap)
+304 — Experimental LT-GaAs (below-bandgap) (x80) 1.6}. —— Experimental U-GaAs (below-bandgap)[x80}
+
+1.41 |»
+
+FFT Amplitude (nA)
+°
+cy
+
+Terahertz current (nA)
+
+0 2 4 6 8 10 12 14 0 1 2 3 4 5
+Time delay (ps) Frequency (THz)
+
+(a) (b)
+
+Figure 4.2: LT-GaAs (a) THz-TDS waveform and (b) corresponding FFT
+spectra.
+
+26
+
+4.2. Terahertz peak power dependence
+
+Table 4.1: Summary of the peak amplitudes, bandwidths, and dynamic ranges of
+LT-GaAs and SI-GaAs at above- and below-bandgap excitation at 10 mW pump
+power and 20 V peak-to-peak bias voltage.
+
+SI-GaAs LT-GaAs
+above- below- above- below-
+Peak Amplitude (nA) 5.92 0.29 26.25 0.32
+Bandwidth (THz) 2 2.7 1.3 0.8
+Dynamic Range (orders) 8 6 8 5.5
+
+Comparing the SI-GaAs and LT-GaAs THz emission characteristics, we observe a
+more intense THz emission (at above- and below-bandgap excitation) from LT-GaAs.
+However, we also note that when excited at below-bandgap, the THz emission of
+both samples becomes comparable. Moreover, the SI-GaAs bandwidth is higher than
+the LT-GaAs bandwidth (for both above- and below-bandgap excitation). This is
+attributed to the higher electron mobility, fe(s1-caas) ~ 8000 cm?/Vs, of SI-GaAs as
+compared to the electron mobility, “e(LT-caas) ~ 200 cm?/Vs, of LT-GaAs.
+
+We attribute the difference in the THz emission characteristics between the above-
+and below-bandgap excitation of the SI- and LT-GaAs to the difference in THz genera-
+tion mechanism and efficiency. The SI-GaAs and LT-GaAs above-bandgap excitation
+used a direct bandgap process. Hence, at above-bandgap excitation, the photocarrier
+energy is 1.59 eV which is greater than the GaAs bandgap of 1.42 eV. Meanwhile, to
+gain insights as to which THz mechanism is dominant in the below-bandgap regime
+
+we look at THz emission excitation power dependence of both samples.
+
+4.2 Terahertz peak power dependence
+
+The excitation power dependence at above- and below-bandgap of SI-GaAs and LT-
+GaAs are plotted in Figs. and {4.3(b)} respectively. At above-bandgap excitation
+
+power dependence, we used the equation
+
+Pope
+Pyopt + Peat
+where A is a constant, Jp, is the THz current, Pop, is the optical pump power exci-
+tation, and Py, is the power saturation of the SI-GaAs (LT-GaAs), to fit the data.
+The calculated Pyat values from the curve fit are 33 mW and 52 mW for SI-GaAs and
+LT-Gads, respectively.
+
+Jpn = (4.1)
+
+27
+
+4.2. Terahertz peak power dependence
+
+R Experimental SI-GaAs Emission (above-bandgap) i Experimental LT-GaAs (above-bandgap)
+
+Experimental SI-GaAs Emission (below-bandgap) 58 Experimental LT-GaAs (below-bandgap)
+
+Terahertz current (nA)
+Terahertz current (nA)
+
+0 a
+
+o 10 20 30 40 50 0 10 20 30 40
+Excitation power (mW) Excitation power (mW)
+
+(a) (b)
+
+Figure 4.3: Experimental THz peak amplitude power dependence at above-
+and below-bandgap excitation of (a) SI-GaAs and (b) LT-GaAs curve fit.
+
+On the other hand, in analyzing the power dependence measurements at below-
+bandgap excitation, we followed the assessment and simplifications employed in ref-
+
+erences [2(), 48]. We used a simple power law
+
+Jon « Poot, (4.2)
+
+in fitting the below-bandgap excitation power dependence measurements. The curve
+fit resulted to P);? for the SI-GaAs and P}-#° for the LT-GaAs. The results from the
+above- and below-bandgap excitation power dependence measurements are summa-
+
+rized in Table (2)
+
+Table 4.2: Summary of the power saturation and n values for SI-GaAs and LT-GaAs
+excited at below-bandgap.
+
+SI-GaAs LT-GaAs
+above- below- above- below-
+Power saturation (mW) 33 - 52 -
+n - 1.2 - 1.45
+
+Tani et al. enumerated the possible below-bandgap THz radiation mechanisms
+in reference [IQ] (summarized in Table [1.3). In published literature, the two main
+
+28
+
+4.2. Terahertz peak power dependence
+
+mechansims in which THz radiation is attributed to are the TPA, and two-step pho-
+toabsorption via mid-gap states (0) {I7| [19 20). A quadratic response given by
+
+Jon — BP. + Jaark (4.3)
+
+where B, and Jgax are proportionality constant, and dark current, respectively,
+characterizes the TPA. It is reported that the TPA contribution is negligible in
+the the below-bandgap excitation since the non-linear absorption coefficient, 8 =
+2.4 x 10-'cm/W), is very low [4d]. In addition, reference [20] reported that for 1
+mW excitation power, the GaAs TPA absorbs merely 0.06% of the laser power [20]
+Thus, given all these, we discount TPA as the dominant THz mechanism in the below-
+bandgap regime. Furthermore, given that the values of n of SI-GaAs and LT-GaAs
+in Table [£.2| are superlinear, but sub-quadratic, we conclude that the dominant THz
+mechanism at below-bandgap excitation is the two-step photoabsorption via mid-gap
+
+states.
+
+Table 4.3: Summary of possible THz radiation mechanisms listed in [IQ].
+
+THz radiation mechanism
+
+2 TPA
+
+l<n<2 two-step photoabsorption via mid-gap states
+1 excitation of trapped electrons from mid-gap states
+1 excitation of trapped electrons in As precipitates
+
+In in an undoped SI-GaAs, the most abundant defect is the intrinsic deep level EL2
+(mid-gap electronic level) [30, S1J. The following are the proposed EL2 components:
+(Asca), (Asy), and (Gaas) [31]. Meanwhile, it is reported that LT-GaAs has several
+defects such as Asga, Gags, and Gay with corresponding energy gap values close to
+the EB? (E, = 0.97 eV), EL4 (E, = 0.52 eV), and EL2 (E, = 0.82 eV) [21]. Bacuyag
+et al. concluded that the (Asga) is the most stable and thus the most abundant [21]
+among the defects enumurated previously. This was confirmed by scanning tunneling
+microscopy measurements, and ab initio calculations reported in reference [22]. Thus,
+it is suggested that the Asc, defects comprise the mid-gap states that facilitated the
+two-step photoabsorption process in the below-bandgap excitation [21] 22].
+
+On the other hand, reference [49] reported that the As-precipitates density is
+Na, = 10° cm3, while reference [50] reported a value of Na, = 2x 104 cm3. Regardless
+
+of the difference, given that the N4, in SI-GaAs is several orders of magnitudes lesser
+
+29
+
+4.3. ECM numerical simulation results
+
+than that of the EL2 density (Ngz2 ~ 1016 cm?), the effect of As-precipitates to
+the below-bandgap SI-GaAs THz emission may be trivial. Furthermore, Chen et
+al. reported that the post growth annealing affects the density of As-precipitates in
+LT-GaAs [35]. In addition, reference [35] reported that there is no observable As-
+precipitates in an unannealed LT-GaAs. The Na, is one order of magnitude lesser
+than the density of (Asgq) defects even after annealing [35]. Hence, in the same way,
+we conclude that the effect of As-precipitates in the below-bandgap THz emission of
+LT-GaAs is negligible.
+
+As a conjecture, we accredit the closeness to linearity of the below-bandgap exci-
+tation power dependence (P;?) of SI-GaAs to the fact that at lower intensities Jpn
+exhibits a linear growth [20]. According to Lee et al. [Id], and Ramer et al. {20}, the
+TPA effects will only be significant at higher laser power intensities. Furthermore, as
+reported in reference {[4], the TPA effect starts to have a more vital effect at about
+~ 30 mW. The experimental curve fit calculation revealed that the power saturation
+of SI-GaAs is (33 mW). Thus, for below-bandgap excitation of SI-GaAs, a value of n
+
+close to 1 is reasonable.
+
+4.3. ECM numerical simulation results
+
+4.3.1 Simulated THz waveforms and corresponding spectra
+of SI- and LT-GaAs
+
+The simulated THz-TDS and corresponding FFT waveforms of the SI-GaAs and LT-
+GaAs at above- and below-bandgap excitation are plotted in Figs. [1.4] and re
+spectively. Qualitative inspection of the simulated waveforms and the experimental
+waveforms exhibit relatively similar shapes. A summary of the simulated THz emis-
+sion characteristics of the SI- and LT-GaAs excited at above- and below-bandgap is
+provided in Table [1.4]
+
+From the simulation, the THz peaks are 5.97 nA and 0.29 nA for the above- and
+below-bandgap excitation of SI-GaAs, respectively. Moreover, as in the experiment
+(Fig. [£-1(a))), the SI-GaAs THz current values excited at above-bandgap is x20 higher
+than that of excited at below-bandgap. The simulated S]-GaAs bandwidth at below-
+and above-bandgap is 3THz. Meanwhile, the simulated THz peak amplitude, and
+bandwidth of LT-GaAs excited at above-bandgap are 26.54nA, and 2 THz, respec-
+tively. Furthermore, the simulated results of the LT-GaAs below-bandgap excitation
+
+30
+
+4.3. ECM mmerical simulation results
+
+are as follows:
+
+that as in Fig.
+
+the THz peak is 0.33nA, and the bandwidth is 1.8THz. We also note
+
+1.2(a)} the simulated above-bandgap THz current values are x80 more
+
+intense than that of the below-bandgap THz current values.
+
+8 Simulated SI-GaAs (above-bandgap) AR Simulated SI-GaAs (above-bandgap)
+Experimental SI-GaAs (above-bandgap) Experimental SI-GaAs (above-bandgap)
+6 a
+Za i
+£ 08}
+€ $ ‘an
+E 2 4 1)
+3 £06
+go
+8 “0.4
+2
+2
+0.2 ky
+4
+0
+6 t
+6 10 12 14 Cy i 2 3 4 5
+Time delay (ps) Frequency (THz)
+(a) (b)
+0.4
+Simulated S!-GaAs (below-bandgap) Simulated SI-GaAs (below-bandgap)
+Experimental SI-GaAs (below-bandgap) 12 Experimental SI-GaAs (below-bandgap)
+03
+2 LAL
+Zo2 | AN
+Pry g 4
+§ i gos | | \p
+i & 1} }
+3 02 | Foe !
+PA <0. i
+8 | | E iN
+8 1 4 7 “ a
+So s | I\ 0.4 Bit
+Fe \ y \ iF }
+ae
+02 qh
+0.1 } th
+] yy. ;
+a Nerina iran tena ia
+02S 8 10 12 14 () i 2 4 5
+Time delay (ps) Frequency (THz)
+(c) (a)
+
+Figure 4.4: Experimental and simulated SI-GaAs TDS waveform and cor-
+responding FFT at (a-b) above- and (c-d) below-bandgap.
+
+Comparing the THz characteristics of the experimental and simulated SI-GaAs and
+
+LT-GadAs excited at above- and below-bandgap, we observe a good agreement between
+
+the THz peak values for both samples. As for the difference between the measured and
+
+simulated bandwidths, we attribute it to the water vapor absorption. It is reported in
+
+31
+
+4.3. ECM numerical simulation results
+
+published literature that water vapor is highly-absorbing in the THz region [46] 7]
+As observed in Figs. H-T(a)] and oscillations occur at t > 0. These oscillations
+are caused by the water vapor absorption in free space (oscillations appear as dips in
+the emission spectra) [51]. From the values reported in references {6 47], we plotted
+the water vapor absorption lines in the experimental FFT (up to 5 THz) of the SI-
+GaAs and LT-GaAs (for above- and below-bandgap excitation) in Figs. and
+C.1(a)} respectively. Furthermore, looking at the simulated bandwidth of SI-GaAs
+(Figs. and [£-4(d)), we do not observe the broadening of the bandwidth at the
+below-bandgap excitation (compared to Fig. [1-1(b)). In conjecture, the broadening
+of the experimental bandwidth (Fig. may be due to the escape of trapped
+electrons from As-precipitates {50) 2). As previously mentioned in Sec. the
+
+contribution to the THz emission intensity of the excited electrons trapped in the
+
+As-precipitates is small (due to the density being several orders of magnitude lesser
+than the mid-gap states), but since this process is faster (< 20 ps) as compared to the
+SI-GaAs carrier capture time (50 — 100ps), it may have caused the broadening of the
+bandwidth at below-bandgap excitation. Similarly, we compare the experimental and
+simulated bandwidths of LT-GaAs excited at above- and below-bandgap (Figs. [£-5(b)]
+and 4.5(d)). We see that at below-bandgap excitation, the measured and simulated
+
+bandwidths decreased as compared to that of excited at above-bandgap. This decrease
+in emission spectral bandwidth is caused by the long carrier capture in the mid-gap
+state. Finally, for both samples the simulated dynamic range decreased from above- to
+
+below-bandgap excitation, which is what we observed from the experimental results.
+
+32
+
+4.3. ECM numerical simulation results
+
+40
+Simulated LT-GaAs (above-bandgap) i Simulated LT-GaAs (above-bandgap)
+30 Experimental LT-GaAs (above: bandgap) Experimental LT-GaAs (above. bandgap)
+1
+z 20
+5 gi)
+§ 10 2 |
+z £06
+Fy &
+3
+Zo E
+ig “0.4
+-10
+0.2
+\
+-20 0
+-2 i) 2 4 6 8 10 12 14 0 1 2 3 4 a
+Time delay (ps) Frequency (THz)
+(a) (b)
+05
+Simulated LT-GaAs (below. bandgap) 1.2 Simulated LT-GaAs (below-bandgap)
+04 —— Experimental LT-GaAs (below-bandgap) —— Experimental LT-GaAs (below-bandgap)
+1
+_ 03
+<<
+& » 0.8
+2 3
+0.2 2
+<
+§ oa &
+2 &
+S 0.4
+roo
+0.2
+0.1
+o
+-0.2
+-2 i) 2 4 6 8 10 12 14 0 1 2 3 4 5
+Time delay (ps) Frequency (THz)
+(c) (4)
+
+Figure 4.5: Experimental and simulated LT-GaAs TDS waveform and cor-
+responding FFT at (a-b) above- and (c-d) below-bandgap.
+
+Table 4.4: Summary of the simulated peak amplitude, and bandwidth of SI-GaAs
+and LT-GadAs at above- and below-bandgap excitation at 10 mW pump power and 20
+V peak-to-peak bias voltage.
+
+SI-GaAs LT-GaAs
+above- below- above-_below-
+
+Peak Amplitude (nA) 5.97 0.29. 26.77 0.33
+Bandwidth (THz) 3 3 2 1.8
+
+33
+
+4.3. ECM numerical simulation results
+
+4.3.2 Simulated excitation power dependence
+
+The simulated above- and below-bandgap excitation power dependence plots of SI-
+GaAs and LT-GaAs are presented in Figs. and respectively. For both
+PCA samples, we utilized the model (combined SPA and TPA) proposed in refer-
+ences {[4| 4] in simulating the THz emission at above-bandgap excitation. From the
+qualitative examination of the experimental and simulated results in Fig. we see
+that the model was able to closely replicate the actual THz emission mechanism at
+above-bandgap for both SI-GaAs and LT-GaAs. Hence, we conclude that at above-
+bandgap excitation for both SI-GaAs and LT-GaAs, the combined SPA and TPA is
+the dominant THz emission mechanism.
+
+Meanwhile, the simulated excitation power dependence of the SI-GaAs and LT-
+GaAs excited at below-bandgap using the two-step photoabsorption via mid-gap de-
+fect states model are shown in Figs. and respectively. For both samples,
+we observe that the simulated power dependence was able to replicate the experimen-
+tal power dependence. The good fit between the simulated and experimental power
+dependence establishes the two-step photoabsorption via mid-gap states as the dom-
+
+inant THz emission mechanism in the below-bandgap regime for the SI-GaAs and
+LT-GadAs.
+
+Simulated SI-GaAs (above-bandgap) 70 Simulated LT-GaAs (above-bandgap)
+
+“ Experimental SI-GaAs (above-bandgap) © ® Experimental LT-GaAs (above-bandgap)
+
+Simulated SI-GaAs (below-bandgap) Simulated LT-GaAs (below-bandgap)
+
+a Experimental SI-GaAs (above-bandgap) so * Experimental LT-GaAs (below-bandgap)
+aw = 40 a
+z z
+¢ =
+2° 2%
+5 5
+© 6 i=
+3 3 207
+p« g
+$
+© &
+
+° 0
+
+0 10 20 30 40 50 10 20 30 40 50
+Excitation power (mW) Excitation power (mW)
+(a) (b)
+
+Figure 4.6: Simulated and experimental THz peak amplitude power depen-
+dence plots at above- and below-bandgap excitation of (a) SI-GaAs and (b)
+LT-GaAs.
+
+Chapter 5
+
+Summary and Conclusion
+
+In summary, we were able to investigate the photocarrier dynamics of SI- and LT-GaAs
+optically excited at above- and below-bandgap regimes through THz-TDS set-up. For
+the above-bandgap excitation of SI-GaAs the THz peak amplitude, bandwidth, and
+dynamic range are 5.92nA, 2 THz, and 8 orders of magnitude, respectively. Moreover,
+the THz amplitude peak is 26.25 nA, the bandwidth is 1.3 THz, and the dynamic range
+is 8 orders of magnitude for the LT-GaAs excited at above-bandgap. Meanwhile,
+from the below-bandgap excitation of SI-GaAs, the THz peak amplitude, bandwidth,
+and dynamic range are 0.29nA, 2.7THz, and 6 orders of magnitude, respectively.
+Furthermore, the THz peak amplitude is 0.32nA, the bandwidth is 0.8 THz, and the
+dynamic range is 5.5 orders of magnitude for the LT-GaAs excited at below-bandgap.
+From the excitation power dependence measurements at above-bandgap, we calculated
+the Pa, as 33mW, and 52mW for the SI-GaAs, and LT-GadAs, respectively. The
+good agreement between the experimental and simulated power dependence trend
+for both SI- and LT-GadAs excited at above-bandgap reveals that the dominant THz
+mechanism in this regime is the combined SPA and TPA. On the other hand, the
+below-bandgap excitation power dependence revealed a power law fit of (Pot) and
+(Pi!) for SI-GaAs, and LT-GaAs, respectively. This corresponds to a super-linear
+power dependence described in the two-step photoabsorption process mediated by
+mid-gap states. Moreover, the numerical simulation of the THz peak amplitude power
+dependence was able to replicate the experimental trend. Hence, the dominant THz
+emission mechanism of SI- and LT-GaAs excited at below-bandgap is the two-step
+
+photoabsorption mediated by mid-gap states.
+
+35
+
+Bibliography
+
+[1] Y. S. Lee. Principles of terahertz science and technology. Springer, 233 Spring
+Street, New York, NY 10013, USA, 2009.
+
+NS
+
+S. Kayali. I. GaAs material properties. 1997.
+
+[3] E. A. P. Prieto. Terahertz Enhancement in Molecular Beam Epitazy-grown Gal-
+lium Arsenide Films with thin n-doped Gallium Arsenide Buffer. PhD thesis, Dec
+2015.
+
+[4
+
+M. Suzuki, M. Tonouchi, K. Fujii, H. Ohtake, and T. Hirosumi. Excitation
+wavelength dependence of terahertz emission from semiconductor surface. Appl.
+
+Phys. Lett., 89(9):091111, Aug 2006.
+
+[5
+
+P. Gu, M. Tani, S. Kono, K. Sakai, and X.-C. Zhang. Study of terahertz radiation
+from InAs and InSb. J. Appl. Phys., 91(9):5533-5537, May 2002.
+
+[6
+
+H. Shen, F. C. Rong, R. Lux, J. Pamulapati, M. Taysing-Lara, M. Dutta, E. H.
+Poindexter, L. Calderon, and Y. Lu. Fermi level pinning in low-temperature
+molecular beam epitaxial GaAs. Appl. Phys. Lett., 61(13):1585-1587, Sep 1992.
+
+[7] M. Kaminska, E. R. Weber, Z. Liliental-Weber, R. Leon, and Z. U. Rek.
+Stoichiometry-related defects in GaAs grown by molecular-beam epitaxy at low
+
+temperatures. J. Vac. Sci. Technol. B, 7(4):710, Jul 1989.
+
+M. Kaminska, Z. Liliental-Weber, E. R. Weber, T. George, J. B. Kortright,
+F. W. Smith, B-Y. Tsaur, and A. R. Calawa. Structural properties of As-rich
+
+[8
+
+GaAs grown by molecular beam epitaxy at low temperatures. Appl. Phys. Lett.,
+54(19):1881-1883, May 1989.
+
+D. C. Look, Z-Q. Fang, J. R. Sizelove, and C. E. Stutz. New AsGa related center
+in GaAs. Phys. Rev. Lett., 70(4):465-468, Jan 1993.
+
+[9
+
+36
+
+Bibliography
+
+[10]
+
+[11]
+
+[12]
+
+[13
+
+[14]
+
+15
+
+16
+
+17|
+
+[18]
+
+[19]
+
+[20]
+
+M. Tani, K.-S. Lee, and X.-C. Zhang. Detection of terahertz radiation with low-
+temperature-grown GaAs-based photoconductive antenna using 1.55 ym probe.
+
+Applied Physics Letters, 77(9):1396-1398, Aug 2000.
+
+O. A. Castafieda-Uribe, C. A. Criollo, S. Winnerl, M. Helm, and A. Avila. Com-
+parative study of equivalent circuit models for photoconductive antennas. Opt.
+
+Express, 26(22):29017-29031, Oct 2018.
+
+Neda Khiabani, Yi Huang, Yao-Chun Shen, and StephenJ. Boyes. Theoretical
+modeling of a photoconductive antenna in a terahertz pulsed system. JEEE
+
+Trans. Antennas Propag., 61:1538-1546, 2013.
+
+V. Mizeikis, K. Jarasiunas, J. Storasta, V. Gudelis, L. Bastiene, and M. Sudzius.
+Role of growth defects on carrier dynamics: semi-insulating GaAs. In Sergey V.
+
+Svechnikov and Mikhail Y. Valakh, editors, SPIE Proceedings. SPIE, Apr 1998.
+
+C.-K. Lee, C.-S. Yang, S.-H. Lin, S.-H. Huang, O. W., and C.-L. Pan. Effects
+of two-photon absorption on terahertz radiation generated by femtosecond-laser
+
+excited photoconductive antennas. Opt. Express, 19(24):23689-23697, Nov 2011.
+
+F. Sizov. Brief history of THz and IR technologies. Semicond. Phys. Quantum
+Electron. Optoelectron., 22:67-79, Mar 2019.
+
+M. Tonouchi. Cutting-edge terahertz technology. Nat. Photonics, 1(2):97-105,
+Feb 2007.
+
+T. Kataoka, K. Kajikawa, J. Kitagawa, Y. Kadoya, and Y. Takemura. Improved
+sensitivity of terahertz detection by GaAs photoconductive antennas excited at
+1560 nm. Appl. Phys. Lett., 97(20):201110, Nov 2010.
+
+K. Sakai. Terahertz optoelectronics. Springer, Berlin, 2005.
+
+H. Erlig, S. Wang, T. Azfar, A. Udupa, H. R. Fetterman, and D. C. Streit.
+LT-GaAs detector with 451 fs response at 1.55 zm via two-photon absorption.
+Electron. Lett., 35:173-174, Jan 1999.
+
+J.M. Ramer, F. Ospald, G. V. Freymann, and R. Beigang. Generation and
+
+detection of terahertz radiation up to 4.5THz by low-temperature grown GaAs
+
+37
+
+Bibliography
+
+[21]
+
+[22]
+
+[23]
+
+[24]
+
+[25]
+
+[26]
+
+[27]
+
+[28]
+
+[29]
+
+photoconductive antennas excited at 1560nm. Appl. Phys. Lett., 103(2):021119,
+Jul 2013.
+
+D. Bacuyag, M. C. S. Escafio, M. David, and M. Tani. First-principles study
+of structural, electronic, and optical properties of surface defects in GaAs(001) -
+B2(2 x 4). AIP Adv., 8(6):065012, Jun 2018.
+
+M. C. Escaiio, M. H. Balgos, T. Q. Nguyen, E. A. Prieto, E. Estacio, A. Salvador,
+A. Somintac, R. Jaculbia, N. H., Y. Kim, and M. Tani. True bulk As-antisite
+defect in GaAs(110) identified by DFT calculations and probed by STM/STS
+measurements. Appl. Surf. Sci., 511:145590, May 2020.
+
+J. Qin, Y. Ying, and L. Xie. The detection of agricultural products and food
+using terahertz spectroscopy: A review. Appl. Spectrosc. Rev., 48(6):439-457,
+Aug 2013.
+
+Md. H. Rahaman, A. Bandyopadhyay, S. Pal, and K. P. Ray. Reviewing the
+scope of THz communication and a technology roadmap for implementation.
+
+IETE Tech. Rev., 38(5):465-478, Jun 2020.
+
+I. Mehdi, J. Siles, C. P. Chen, and J. M. Jornet. Thz technology for space
+communications. In 2018 Asia-Pacific Microwave Conference (APMC), pages
+76-78, 2018.
+
+H. Zhan, K. Zhao, R. Bao, and L. Xiao. Monitoring PM2.5 in the atmosphere by
+using terahertz time-domain spectroscopy. J. Infrared Millim. Terahertz Waves,
+37(9):929-938, May 2016.
+
+A. Cosentino. Terahertz and cultural heritage science: Examination of art and
+
+archaeology. Technologies, 4(1), 2016.
+
+T. Amini, F. Jahangiri, Z. Ameri, and M. A. Hemmatian. A review of feasible
+applications of THz waves in medical diagnostics and treatments. J. Lasers Med.
+Sci., 12(1):e92-e92, December 2021.
+
+J. F. Federici, B. S., F. Huang, D. Gary, R. Barat, F. Oliveira, and D. Zim-
+dars. THz imaging and sensing for security applications—explosives, weapons
+and drugs. Semicond. Sci. Technol., 20(7):S266- S280, Jun 2005.
+
+38
+
+Bibliography
+
+[30]
+
+[31]
+
+[32]
+
+[33]
+
+[34]
+
+[35]
+
+[36]
+
+[37]
+
+[38]
+
+[39]
+
+K. Jarasiunas, Ph. Delaye, and G. Roosen. Optical nonlinearities and carrier
+transport in GaAs: EL2 at high excitation levels. Phys. Stat. Sol. (b), 175(2):445—
+457, Feb 1993.
+
+P.H. Yannakopoulos, G.E. Zardas, G.J. Papaioannou, Ch.I. Symeonides,
+M. Vesely, and P.C. Euthymiou. Behavior of semiinsulating gaas energy lev-
+els. Rev. Adv. Mater. Sci., 22:52-59, Dec 2009.
+
+M. Tani, S. Matsuura, K. Sakai, and S. Nakashima. Emission characteristics
+of photoconductive antennas based on low-temperature-grown gaas and semi-
+
+insulating gaas. Appl. Opt., 36(30):7853-7859, Oct 1997.
+
+L. Zanotti. Semi-insulating GaAs technology: Recent and future developments.
+Mater. Chem. Phys., 9(1-3):19-28, Sep 1983.
+
+Zuzanna Liliental-Weber. The role of as in molecular-beam epitaxy GaAs layers
+grown at low temperature. J. Vac. Sci. Technol. B: Nanotechnol. Microelectron.,
+9(4):2323, July 1991.
+
+Y. H. Chen, Z. G. Wang, and Z. Yang. Effect of arsenic precipitates on fermi
+level in GaAs grown by molecular-beam epitaxy at low temperature. J. Appl.
+Phys., 87(6):2923-2925, Mar 2000.
+
+S. Gupta, M. Y. Frankel, J. A. Valdmanis, J. F. Whitaker, G. A. Mourou, F. W.
+Smith, and A. R. Calawa. Subpicosecond carrier lifetime in GaAs grown by
+molecular beam epitaxy at low temperatures. Appl. Phys. Lett., 59(25):3276-
+3278, Dec 1991.
+
+G.-R. Lin, T.-A. Liu, and C.-L. Pan. Correlation between defect concentration
+and carrier lifetime of GaAs grown by molecular beam epitaxy at different tem-
+peratures. Jpn. J. Appl. Phys., 40(11R):6239, Nov 2001.
+
+Z. Piao, M. Tani, and K. Sakai. Carrier dynamics and terahertz radiation in
+photoconductive antennas. Jpn. J. Appl. Phys., 39(1R):96, Jan 2000.
+
+P. Uhd Jepsen, R. H. Jacobsen, and S. R. Keiding. Generation and detection
+of terahertz pulses from biased semiconductor antennas. J. Opt. Soc. Am. B,
+
+13:2424-2436, 1996.
+
+39
+
+Bibliography
+
+[40]
+
+[41]
+
+[42]
+
+[43]
+
+[44]
+
+[45]
+
+[46]
+
+[47]
+
+[48]
+
+[49]
+
+[50]
+
+G. C. Loata, M. D. Thomson, T. Léffler, and H. G. Roskos. Radiation field
+screening in photoconductive antennae studied via pulsed terahertz emission
+
+spectroscopy. Appl. Phys. Lett., 91:232506, 2007.
+
+S. D. Benjamin, H. S. Loka, A. Othonos, and P. W. E. Smith. Ultrafast dynam-
+ics of nonlinear absorption in low-temperature-grown GaAs. Appl. Phys. Lett.,
+68(18):2544-2546, April 1996.
+
+H.S. Loka, S.D. Benjamin, and P.W.E. Smith. Optical characterization of low-
+temperature-grown GaAs for ultrafast all-optical switching devices. JEEE J.
+Quantum Electron., 34(8):1426-1437, 1998.
+
+H.S. Loka, $.D. Benjamin, and P.W.E. Smith. Refractive index and absorption
+changes in low-temperature-grown gaas. Opt. Commun., 155(1):206-212, 1998.
+
+N. Vashistha, M. Kumar, R. K. Singh, D. Panda, L. Tyagi, and S. Chakrabarti.
+A comprehensive study of ultrafast carrier dynamics of LT-GaAs: Above and
+
+below bandgap regions. Phys. B: Condens. Matter, 602:412441, 2021.
+
+P. W. Yu, G. D. Robinson, J. R. Sizelove, and C. E. Stutz. 0.8 eV photolumi-
+nescence of GaAs grown by molecular-beam epitaxy at low temperatures. Phys.
+Rev. B, 49:4689-4694, Feb 1994.
+
+M. Van Exter, Ch. Fattinger, and D. Grischkowsky. Terahertz time-domain
+spectroscopy of water vapor. Opt. Lett., 14(20):1128-1130, 1989.
+
+D. M. Slocum, E. J. Slingerland, R. H. Giles, and T. M. Goyette. Atmospheric
+absorption of terahertz radiation and water vapor continuum effects. J. Quant.
+Spectrosc. Radiat. Transf., 127:49-63, 2013.
+
+L. Duvillaret, F. Garet, J.-F. Roux, and J.-L. Coutaz. Analytical modeling and
+optimization of terahertz time-domain spectroscopy experiments, using photo-
+switches as antennas. JEEE J. Sel. Top. Quantum Electro., 7(4):615-623, 2001.
+
+P. Schlossmacher, K. Urban, and H. Riifer. Dislocations and precipitates in
+gallium arsenide. J. Appl. Phys., 71(2):620-629, Jan 1992.
+
+A. C. Warren, J. M. Woodall, J. L. Freeouf, D. Grischkowsky, D. T. McInturff,
+M. R. Melloch, and N. Otsuka. Arsenic precipitates and the semi-insulating prop-
+
+40
+
+Bibliography
+
+[51]
+
+[52]
+
+erties of GaAs buffer layers grown by low-temperature molecular beam epitaxy.
+Appl. Phys. Lett., 57(13):1331-1333, Sep 1990.
+
+A. E. De Los Reyes, A. M. Aquino, L. N. F. Dela Rosa, V. P. P. Juguilon, I. C. M.
+Verona, J. P. R. Ferrolino, N. I. F. Cabello, H. R. Bardolaza, A. S. Somintac, A. A.
+Salvador, and E. S. Estacio. Investigating the terahertz emission properties of
+low-temperature-grown gallium arsenide (LTG-GaAs) photoconductive antenna
+(PCA) devices via drude-lorentz model. In Proceedings of the 40th Samahang
+Pisika ng Pilipinas Physics Conference, 2022.
+
+A. C. Warren, J. M. Woodall, J. H. Burroughes, P. D. Kirchner, H. K. Hein-
+rich, G. Arjavalingam, N. Katzenellenbogen, D. Grischkowsky, M. R. Melloch,
+N. Otsuka, K. Mahalingam, F. H. Pollak, and X. Yin. The electrical and optical
+properties of GaAs with as precipitates (GaAs:as). MRS Proceedings, 241, 1991.

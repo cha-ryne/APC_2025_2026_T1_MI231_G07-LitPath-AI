@@ -1,0 +1,3606 @@
+Predictors of Childhood Immunization Timeliness in the Philippines
+
+Karen Joyce C. Pattaui
+
+University of the Philippines Manila
+
+Master of Science in Public Health (Biostatistics)
+
+June 2022
+
+ABSTRACT
+
+Immunization has been proven to prevent a wide range of preventable diseases and
+demise. Different countries, including the Philippines, implemented the Expanded Program
+on Immunization (EPI) to ensure that children and mothers have access to routinely
+recommended vaccines against diseases such as tuberculosis, diphtheria, tetanus, pertussis,
+polio, and measles. However, many challenges have been affecting the implementation of
+vaccination programs, resulting in vaccination delays and underimmunization. Against this
+context, this paper applied methods in survival analysis to examine the timeliness of
+vaccine administration among Filipino children aged 0 to 35 months and its predictors,
+using data from the 2017 National Demographic and Health Survey. The estimated median vaccine delays among Filipino children were 5 days for BCG;
+2.4 weeks for OPV1; 2.7 weeks for Pental; 4.0 weeks for OPV2; 4.4 weeks for Penta2; 6.4
+weeks for OPV3; 6.6 weeks for Penta3; 2.3 weeks for MCV1; and 3.6 weeks for MCV2.
+The Turnbull estimation revealed that the probability of timely vaccination (ie.,
+vaccination within a month after the target administration age) was 67.32% for BCG;
+69.17% for OPV 1; 63.95% for Pental; 53.97% for OPV2; 50.40% for Penta2; 39.79% for
+OPV3, 38.69% for Penta3; 58.72% for MCV1; and 35.64% for MCV2. Semi-parametric and parametric survival models indicate that the child’s birth order,
+mother’s age, father’s age, membership in other insurance, and awareness of free immunization programs were significant factors of the delay in full vaccination,
+
+keywords: childhood vaccines, immunization timeliness, survival analysis, Turnbull estimation, full-vaccination delay, NDHS 2017
+
+1. INTRODUCTION
+1.1 Background of the Study
+
+Over the past century, vaccines have been a key factor for the historic reduction in
+child mortality and increase in life expectancy throughout the world (UNICEF, 2021). It is
+estimated that immunization prevents 2-3 million fatalities every year worldwide and could
+have avoided about 29% of deaths among children under the age of five (WHO, 2014).
+Moreover, vaccines are currently being produced to prevent new strains and serotypes of
+illnesses, such as dengue fever and influenza. However, despite the advancement in
+immunizations, government intervention is still crucial in safeguarding public health
+(Brownson et. al., 2009).
+
+The Philippine government has enacted a number of measures aiming to eradicate
+vaccine-preventable diseases (VPDs). For nearly four decades, the Department of Health
+(DOH) has been implementing the Expanded Program on Immunization (EPI) program to
+ensure that children and mothers receive routinely recommended vaccines against
+diphtheria, pertussis, tetanus, poliomyelitis, measles, and tuberculosis. Mass vaccination
+campaigns were held twice a year from 1977 to 1983 (DOH, 2021). During this period,
+over 10,000-14,000 Filipinos died every year because of measles. By 1984, quarterly mass
+campaigns were implemented, resulting in a significant reduction not only in measles-
+related deaths but also in mortality from other VPDs (WHO, 2020). In 2011, Republic Act
+‘No. 10152 was signed into law, ensuring mandatory vaccination of all infants and children
+against VPDs. This law also stipulates that basic immunization, as well as vaccines against
+mumps, rubella (German measles), and H. influenzae type B, should be provided free of
+charge to newborns and children under the age of five at any government hospital or health
+
+center (UNICEF, 2019).
+
+The country has successfully eradicated polio in 2000 and eliminated maternal and
+neonatal tetanus in 2017. However, the basic vaccination rate never really met the desired
+target of 95% coverage for decades (Ulep & Uy, 2021), and outbreaks of measles and polio
+were reported in 2019 (BBC, 2019; Crisostomo, 2019). Childhood vaccination rates have
+also fallen throughout this time. According to a study conducted in January 2018, the
+national immunization rate in a particular barangay in Pampanga fell from 89% to 49% in
+the same month the previous year. This decline in vaccination rates was aggravated by the
+media’s sensationalizing of the “Dengvaxia” dengue vaccination which began in April
+2016 and ended in December 2017 (Migrifio et. al., 2020).
+
+On the other hand, since the EPI program focuses primarily on vaccination coverage
+as its success indicator, the timeliness of vaccine administration is often overlooked and
+unmeasured. A high percentage of children, between 38% to 65%, had delayed vaccination
+from 1993 to 2017, while only 10% of children received complete and timely immunization
+(Ulep & Uy, 2021).
+
+Delayed vaccination and underimmunization pose a great risk to public health. Thus,
+it is crucial to determine the factors that may influence Filipino children’s timely and full
+immunization. Factors that will be examined in this study include the sociodemographic
+profile of the child’s parents such as education, employment, and living conditions, as well
+as maternal autonomy and domestic violence experience. Healthcare utilization is also
+another factor that will be considered in this study. The availability of health insurance,
+distance to the health facility, cost of medical expenses, antenatal and postnatal care, the
+child’s birthplace, and birth attendant will all be analyzed to evaluate the timeliness and
+
+intake of EPI-recommended vaccines.
+
+1.2 Statement of the Problem
+
+The knowledge about the timeliness of EPI-recommended vaccines, which should be
+evaluated as another success indicator of the vaccination program, is very limited in the
+Philippines. This is also due to the fact that the success of an immunization program is
+
+often measured by vaccination coverage, irrespective of the administration time.
+
+Although some researchers investigated vaccination timeliness and its predictors in
+the country, these studies were conducted on a smaller scale (Malecosio et. al, 2020), with
+a limited number of factors (Raguindin et. al, 2021), or with specific vaccines (Wallace et.
+
+al., 2012).
+
+In addition, the use of survival analysis to examine vaccine delays has been utilized
+in very few published articles. The majority of these studies employed semiparametric
+survival models (Adetifa et. al., 2018; Akoth, 2020; Babirye et. al., 2012; Barman et. al.,
+2015; Gram et al, 2014; Mokhtari et. al., 2015; Nakatudde et. al., 2019; Salam et. al.,
+2017), while only two journals used parametric survival models (Boulton et.al, 2019;
+
+Wagner et. al., 2021).
+
+Hence, it is critical to determine the timeliness of the EPI-recommended vaccine
+administration among Filipino children, as well as to assess its predictors in the country
+
+using survival analysis.
+
+1.3 Objectives of the Study
+The primary objective of this study was to determine the factors that might influence
+the timeliness of recommended vaccines under the Expanded Program on Immunization
+(EPI) among Filipino children aged 0 to 35 months old using the National Demographic
+and Health Survey (NDHS) 2017. Specifically, this research aimed to:
+a. estimate the mean and median administration times of each EPI-recommended
+vaccine;
+b. estimate the probability of Filipino children getting the EPI-recommended
+vaccines on time; and
+c. evaluate predictors of delay in getting all the EPI-recommended vaccines from
+
+the lens of survival analysis.
+
+1.4. Significance of the Study
+
+The study findings would reveal whether Filipino children were receiving timely
+immunizations or not. The estimated probabilities of getting each EPI-recommended
+vaccine would help determine the appropriate time between birth and the first birthday,
+during which certain interventions could be done to promote timely vaccination.
+
+This study would be the first to examine predictors of delay in full-vaccination of
+Filipino children using both semiparametric and parametric models. This study would also
+have estimates which are representative for the country by using the NDHS 2017 survey
+weights in the analysis. With a national survey being used, this study would be able to
+
+examine vaccine timeliness in a large number of Filipino children aged 0 to 35 months.
+
+In addition, a unique application of an existing statistical method proposed by
+Turnbull would be explored as an altemative in computing vaccine probabilities since the
+majority of the published journals only used Kaplan-Meier estimation. The Turnbull
+estimation, which employs an expectation-maximization (EM) algorithm, has only been
+used in a few vaccine studies (Shrivastwa et. al., 2016; Wagner et. al., 2018). The EM
+algorithm is a popular machine-leaming tool that is useful when there is missing data or
+
+latent variables (Beffel, 2015).
+
+Furthermore, the results of this study would give us a better understanding of the
+effects of a multitude of factors on the promptness and completeness of the EPI-
+recommended vaccines among Filipino children. With this in mind, health programs could
+be tailored to specific demographics in promoting timely immunization and boost
+
+immunization rates.
+
+2. THEORETICAL BACKGROUND
+2.1 Review of Related Literature
+2.1.1 Childhood Immunization
+
+Substantial progress has been made in the prevention of infectious diseases in the
+past two centuries. At the forefront of this progress is the development and mass production
+of vaccines, which have been demonstrated to be a simple, safe, and cost-effective way of
+enhancing global welfare (UNICEF, 2021). The first vaccine was developed in 1798 in
+response to the high morbidity rates caused by smallpox. In the late 18» century, a vaccine
+using killed or attenuated bacteria to activate the immune system was developed against
+tuberculosis. By the 1900s, more vaccines were developed against diphtheria, pertussis,
+poliomyelitis, hepatitis, and measles. These vaccines were created by viral tissue culture
+and whole-cell genetic modification (The Immunization Advisory Centre, 2020). Smallpox
+was proclaimed eradicated worldwide in 1979 after mass vaccinations (CDC, 2017), and
+cases of vaccine-preventable illnesses fell dramatically (Roser et. al., 2013).
+
+The establishment of the Expanded Program on Immunization (EPI) by the World
+Health Organization (WHO) in 1974 also played a significant role in the reduction of
+VPDs. The main purpose of the initiative is to improve childhood and maternal
+immunization by ensuring universal access to all recommended vaccines (Keja et. al.,
+1988). This goal has been achieved through the safe transportation and management of
+vaccine supplies, documentation of vaccine administration, training of healthcare workers,
+
+and educational outreach activities.
+
+The EPI standards were followed by every United Nations (UN) member state in
+implementing their country’s immunization policies. Community-based surveys, as well
+as the use of immunization data from public, private, and non-governmental healthcare
+facilities, are used to monitor and evaluate immunization programs in each country (Hadler
+et. al., 2004).
+
+Immunization programs primarily target newborn infants up to children under one
+year old, since they have an immature immune system and are more susceptible to
+infections (Elahi et. al., 2013). Although infants can acquire passive immunity from their
+mothers at birth (CDC, 2021), their immune system does not mature until they are two to
+three months old. In addition, the development of cell-mediated immunity also occurs
+during the first few months of life (Sabella, 2021). This fact had an impact on the
+standardized immunization schedule focusing on newborns and children, which consisted
+of several vaccine series administered through injection or oral drops. Originally, the EPI-
+recommended vaccines included Bacillus Calmette-Guérin (BCG) vaccine, Diphtheria-
+Tetanus-Pertussis (DTP) vaccine, polio vaccine, and measles vaccine. With the scientific
+advancement in immunologic factors, new vaccines were added to the EPI’s list of
+recommended vaccines such as Hepatitis B vaccine, Haemophilus influenzae type b (Hib)
+vaccine, pneumococcal conjugate vaccine (PCV), and rotavirus vaccine (WHO, 2020). By
+2012, the WHO and UNICEF recommended the use of the pentavalent vaccine in middle-
+and low-income countries. This combination vaccine is also known as the 5-in-1 vaccine
+which protects against five leading VPDs - diphtheria, tetanus, whooping cough, hepatitis
+
+B, and Hib (Oxford Vaccine Group, 2019).
+
+2.1.2 Challenges in Childhood Immunization
+
+Despite the recognized advantages of vaccines, the worldwide immunization rate has
+never reached the 90% public health target and has remained steady over the last ten years.
+Most of the basic childhood vaccines have rates higher than 80%, but coverage for other
+vaccines such as the Hib vaccine remains low. The global coverage even fell from 86% in
+2019 to 83% in 2020. It is estimated that 23 million infants did not receive any basic
+vaccines in 2020, the highest number since 2009 (WHO, 2020).
+
+Delayed administration of age-recommended vaccines goes hand in hand with the
+low vaccination rates. Among 45 low-income and middle-income countries, there were
+significant childhood vaccination delays with BCG (at 2.3 weeks), the first dose of DTP
+(DTP1 at 2.4 weeks), third dose of DTP (DTP3 at 6.2 weeks), and the first dose of measles-
+containing vaccine (MCV1 at 2.7 weeks) (Clark & Sanderson, 2009). A significant delay
+in vaccination means a child is being at risk of certain VPDs for a longer period, which has
+a negative impact on herd immunity (Akmatov et. al., 2008).
+
+For decades, various challenges have been affecting immunization completion and
+timeliness. The majority of unvaccinated children reside in the world’s poorest nations,
+where factors such as inadequate health care, challenging physical topography, and armed
+conflict impact vaccination rates (Maurice & Davey, 2009). Poor communities also often
+lack access to education, nutrition, clean water, and sanitation, as well as sexual and
+reproductive health services. In addition, poor countries have three times the risk of under-
+five mortality compared to developed countries. To support vaccination initiatives in low-
+income countries, the Global Alliance for Vaccines and Immunization (GAVI) was created
+in 2000. GAVI subsidizes immunization costs for half of the world’s children, vaccinating
+
+nearly 760 million children and averting 13 million deaths globally (Ikilezi et. al., 2020).
+8
+
+Vaccine accessibility, including maintaining supply, safe transportation, and
+affordability, has been a serious issue for several years. One-third of the 194 countries
+reported having critically low vaccine supply for a month or more between 2011 and 2015.
+Shortages of vaccines against hepatitis, diphtheria, tetanus, pertussis, and tuberculosis
+occurred both in poor and wealthy counties in 2017 (Garrett, 2018). These shortages caused
+considerable delays in vaccine administration (Boshnakova & Kamad, 2018; Stokley,
+2004). Concerning this, logistical challenges, such as vaccine storage and transportation,
+remain to be a problem. The temperature range under which vaccines are stored and
+transported is critical to their effectiveness. The oral polio vaccine, for example, must be
+maintained below 4°C during manufacture, shipping, and delivery. However, the
+administration of warmed, biologically inactive polio in 1997 resulted in thousands of
+Indian children being left unprotected. Vaccine transportation is also particularly more
+difficult in poor countries with underdeveloped areas and civil unrest (PRB, 2001).
+Additionally, the cost of basic vaccines has been a serious concern, especially for
+low-income countries. In the past, vaccines were seen to be less profitable for
+pharmaceutical corporations, but this has changed as the global market has grown. In fact,
+about 80% of vaccines today are produced by only five pharmaceutical companies,
+including GlaxoSmithKline, Merck, Novartis, Pfizer, and Sanofi Pasteur (Mackenzie,
+2011). Some vaccines, particularly those that are under patent protection, are also still
+expensive. To help address the gap, the public-private initiative GAVI allows developing
+countries to access recommended vaccines at a discounted price. For one, vaccines that
+were initially around $50-8200 per dose are now only $1-$22 per dose in developing
+
+countries (Vanderslott et. al., 2019).
+
+The government must also commit to a long-term strategy to boost immunization,
+encompassing improved public health services, healthcare worker training, and infectious
+disease surveillance (Institute of Medicine, 2003). A study conducted in 2007 revealed that
+low vaccination rates were influenced by ill-trained medical staff, absence of missed
+vaccination reminders, and the physician’s lack of knowledge about vaccine indications
+and contraindications (Kimmel et. al., 2007). On the other hand, high immunization rates
+‘were demonstrated by supportive medical personnel, convenient appointment hours, and a
+short waiting time (Gore et. al., 1999). Furthermore, reliable surveillance procedures with
+accurate documentation are essential to detect outbreaks and respond promptly in
+protecting the high-risk population.
+
+The WHO declared vaccine hesitancy to be a major global health threat. Vaccine
+skepticism has been around since the advent of immunization, and the main reasons for it
+include complacency, distrust, and inconvenient access in 2019 (WHO, 2019). Moreover,
+while government agencies attempt to censor and fact-check scientific materials on
+traditional media, the usage of social media contributed to increased skepticism
+(Vanderslott et. al., 2019). Safety concems, alternative options, and conspiracy theories
+about immunization can be seen on different social media platforms. As a result, social
+media sites like Pinterest and Facebook began to filter the spread of false information by
+only including credible public health links in vaccine-related searches and banning
+advertisements that contain misinformation (Burki, 2019). Vaccine skepticism was also
+revealed to be mainly caused by exposure to negative media information and concerns
+about vaccine safety in the country. Approximately 96% of the Filipino mothers living in
+Manila believed in the protective effect of vaccines, but 36.4% of them were still hesitant
+
+due to negative media exposure and concerns about vaccine safety (Migrifio et. al., 2020).
+10
+
+In the Philippines, basic immunization coverage has remained between 70-80% in
+the past 30 years, and the country has never reached the 95% target (Ulep & Uy, 2021). A
+national report in 2017 found that only 48.4% of children were fully immunized and 9.4%
+received no immunization at all (PSA, 2020). The country is also among the top 10
+countries with the most unimmunized and under-vaccinated children worldwide (WHO,
+2020), with the vaccination rate being lowest in the Administrative Region in Muslim
+Mindanao (ARMM) at 9% and highest in the Davao region at 78% (PSA,
+2020). Furthermore, the percentage of Filipino children who had delayed administration
+was estimated to be between 38% to 65% (Ulep & Uy, 2019). The median administration
+time among Filipino children was at 2.7 weeks for the BCG vaccine, 10.1 weeks for the
+Pentavalent | vaccine, and 21.7 weeks for the Pentavalent 3 vaccine, all of which are
+considered notable delays (Raguindin et. al., 2021).
+
+Considering all the barriers affecting childhood immunization, including
+administration delays, a child bom today has less than a 20% chance of being fully
+vaccinated before the age of five (UNICEF & WHO, 2020). Thus, it is critical to look into
+
+the various predictors that may influence Filipino children’s timely and full vaccination.
+
+11
+
+2.1.3 Factors Affecting Timely and Full Vaccination
+Parental characteristics
+
+Childhood immunization is mainly influenced by their parent’s social, economic, and
+cultural backgrounds (Los Angeles Public Health, 2015), as well as their understanding of
+how vaccines work (Downs et. al., 2008).
+
+Maternal age was found to be positively associated with full vaccination (Borras et.
+al., 2009; Salmon et. al., 2009). It was revealed that children of women aged 30-39 years
+old had a higher chance of being fully vaccinated than children of mothers under the age
+of 20 (Aalemi et. al, 2020). In a different study, children of women aged 25-34 years old
+and of women aged at least 35 years old had a higher likelihood of being completely
+vaccinated compared to children of women aged less than 25 years old (Nozaki et. al.,
+2019). Advanced matemal age was shown to be a significant factor for delayed vaccination
+in Eastern China (Hu et. al., 2014), Colombia (Narvaez et. al., 2017), Guatemala
+(D’Ardenne et. al., 2016), and Kenya (Gibson et. al., 2015). Paternal age was also found
+to be a factor for complete vaccination (Oleribe et. al., 2017). In comparison to younger
+fathers, older fathers were more involved in their children’s health care, including up-to-
+date vaccinations (Moore et. al., 2004).
+
+In relation to understanding the significance of vaccines and how it works, the
+educational attainment of both parents was revealed to be an important factor. In fact,
+the lack of education of both parents has affected children’s underimmunization (Aalemi
+et. al, 2020; Hussin & Marzo, 2020; Meleko et. al., 2017; Phukan et. al., 2008). Women
+who completed primary, secondary, or higher education had nearly twice to threefold the
+chance of having their children fully immunized compared to uneducated mothers in
+
+Ethiopia (Desalew et. al., 2020; Kinfe et. al., 2019), India (Devasenapathy et. al.,
+12
+
+2016; Sissoko et. al., 2014), and Philippines (Bondy et. al., 2009). Children whose mothers
+had higher education compared were more likely to be vaccinated on time in China (Hu et.
+al., 2017), Ghana (Gram et. al., 2014), India (Barman et. al., 2015), Kenya (Calhoun et. al.,
+2014), Tanzania (Le Polain de Waroux et. al., 2013), Uganda (Fadnes et. al., 2011), and
+United States (Luman et. al., 2002, 2005). In Egypt, nearly half of educated mothers
+vaccinated their children on time, compared to 50% of illiterate moms who failed to
+vaccinate their children on time (Ahmed et. al., 2013). Meanwhile, no patemal schooling
+compared to higher education was associated with non-vaccination among children
+(Sissoko et. al., 2014). This was consistent with various studies which found that having a
+high school and college graduate father increases the chances of their children being
+completely and timely immunized in Greece (Danis et. al., 2010), India (Barman et. al.,
+2015), Iran (Mokhtari et. al., 2015), and Nigeria (Oleribe et. al., 2017).
+
+With more children being born in non-traditional households (i.e., cohabitation and
+single parenthood) than in traditional families, different studies also attempted to determine
+the link between marital status and child health (Buckles & Price, 2013; Kane, 2015;
+Manderbacka et. al., 1992). Single parenthood was already recognized to be inferior to
+traditional family setup since dual parenthood had advantages in economies of scale,
+division of work, and risk-sharing. It was found that co-residency and union status were
+related to infant health (Kim & Lee, 2017). Hence, it was not surprising that parents' union
+status had an impact on a child’s health and immunization. Children of single or formerly
+married mothers had fewer odds of being fully immunized compared to children of married
+mothers in Kazakhstan (Akmatov et. al., 2007) and Nigeria (Oleribe et. al., 2017). In
+Ghana, children of divorced mothers also had fewer chances to be completely immunized
+
+than children of cohabiting, married, or widowed mothers (Anokye et. al., 2018).
+13
+
+In Uganda, children of unmarried mothers were more likely to have delayed vaccination
+(Babirye et. al., 2012). In Kenya, children in households with non-cohabiting parents were
+also less likely to be fully vaccinated (Calhoun et. al., 2014).
+
+The working status of parents was another factor influencing a child’s health and
+immunization (Abbi et. al., 1991). It was discovered that 84.6% of unemployed mothers
+did not vaccinate their infants (Ahmed et. al., 2013), although it was also found that
+children of mothers who work outside the house (Mayerova & Abbas, 2021) and who work
+part-time (Anokye et. al., 2018) were less likely to have been fully immunized. Delayed
+vaccination was also associated with working mothers in China (Hu et. al., 2013) and India
+(Barman et. al., 2015). Another research from Ethiopia revealed that children with working
+fathers were twice as likely to be fully vaccinated compared to children with unemployed
+fathers (Kinfe et. al., 2019). This has matched a systematic review showing that infants of
+unemployed fathers were more likely to be incompletely vaccinated than those with
+employed fathers (Desalew et. al., 2020). Children whose parents were employed were also
+less likely to have timely vaccination (Suarez-Castaneda et. al., 2014).
+
+Although rarely examined, parental smoking and alcohol drinking were also
+linked to childhood immunization. Children from households where mothers smoked or
+chewed tobacco were less likely to be fully vaccinated than children from non-smoking
+households. Likewise, children from households where members drink alcohol were less
+
+likely to be fully vaccinated compared to non-drinking households (Bonu et. al., 2004).
+
+14
+
+The mentioned association might be due to the indirect effects of tobacco and alcohol
+expenditures on reduced household income and child health services utilization. (Bonu et.
+al., 2014). This finding was consistent with those of other studies that examined the
+relationship of tobacco and alcohol consumption with child health (Ahmad et. al., 2021;
+
+Efroymson et. al., 2001; Emster et. al., 2000; Lawder et. al., 2019; O’Leary et. al., 2010).
+
+Child characteristics
+
+The child’s birth order and living arrangement were also associated with
+vaccination status. Among infants, the proportion of fully immunized firstborn children
+was significantly higher than that of fully immunized second-bom children (Schaffer,
+1995). It was discovered that birth order had an inverse relationship with the likelihood of
+being fully vaccinated in Israel (Gavrielov-Yusim et. al., 2012), Pakistan (Madad et. al.,
+2015), and the Philippines (Bondy et. al., 2009). In relation to this, firstborn children were
+more likely than their second-born children to have received immunizations on time, and
+late immunization of firstborn kids was observed to increase the likelihood of a second-
+bom sibling receiving immunizations late as well (Schaffer, 1995). Increasing birth order
+was also revealed to be associated with delayed vaccinations in Congo (Zivich et. al.,
+2017), Gambia (Odutola et. al., 2015), and Iran (Mokhtari et. al., 2015; Rejali et. al., 2015).
+Moreover, a child who was living apart from his or her mother had a higher likelihood of
+being underimmunized than a child who was living with the mother (Rossi et. al., 2015).
+In China, children who were not living with their parents were also significantly more
+likely to have delayed vaccination than children who were living with their parents (Tang
+
+et. al., 2016).
+
+1s
+
+Household characteristics
+
+Family wealth figured as a factor associated with full immunization. A
+comparative study of 45 developing countries revealed that only 49% of children were fully
+immunized worldwide, and the disparity in vaccination rates between the poorest and
+richest nations was more than 20% (Houweling et. al., 2007). Children of mothers from the
+richest quintile had significantly higher odds of being fully vaccinated than those from the
+poorest quintile based on studies conducted in Afghanistan (Aalemi et. al., 2020), Congo
+(Acharya et. al., 2019), Colombia (Narvéez et. al., 2017), India (Devasenapathy et. al.,
+2016), Myanmar (Nozaki et. al., 2019) and Philippines (Bondy et. al., 2009). Untimely
+vaccination was also associated with low household income in China (Hu et. al., 2017),
+Ghana (Gram et. al., 2014), India (Barman et. al., 2015), Kenya (Mutua et. al., 2016),
+Senegal (Mbengue et. al., 2017), Uganda (Babirye et. al., 2012) and Tanzania (Le Polain
+de Waroux et. al., 2013).
+
+Another factor that influenced complete immunization was family size. Family size
+had an inverse relationship with the likelihood of being fully vaccinated among children in
+Afghanistan (Aalemi et. al., 2020), Colombia (Narvaez et. al., 2017), Kenya (Calhoun et.
+al., 2014), Malaysia (Krishna et. al., 2019), and Zimbabwe (Rossi, 2015). This inverse
+relationship was also reflected in the odds of having timely immunization in countries such
+as China (Hu et. al., 2013; 2017), Guatemala (D’Ardenne et. al., 2016), Nepal (Hughes et.
+al., 2016), Peru (D’Ardenne et. al., 2016), Senegal (Mbengue et. al., 2017), Uganda
+
+(Babirye et. al., 2012), and United States (Luman et. al., 2005).
+
+16
+
+The type of residing place, whether rural or urban, would be another factor
+influencing vaccination. Children living in rural areas were less likely to be fully
+vaccinated compared to their urban-residing counterparts in El Salvador (Suarez-
+Castaneda et. al., 2014), Indonesia (Herliana &Douiri, 2017), India (Phukan et. al.,
+2008). Pakistan (Naeem et. al, 2011), and South Korea (Kim & Lee, 201 1). Children living
+in rural areas were also more likely to have delayed vaccinations as observed in the Gambia
+(Miyahara et. al., 2016), Ghana (Gram et. al., 2014), Iran (Jadidi et. al., 2015; Mokhtari et.
+al., 2015), and Senegal (Mbengue et. al., 2017). Low literacy rates, high poverty levels,
+and inadequate health care services in rural areas have contributed to this rural-urban gap
+(Aalemi et. al., 2020).
+
+The household’s insurance membership was also significantly associated with
+the odds of children being completely vaccinated, as well as children having access to
+medical, dental, and other healthcare (Newacheck et. al., 1998). The household not having
+insurance was associated with a lower likelihood of being fully immunized in Colombia
+((Narvéez et. al., 2017) and a higher likelihood of delayed immunizations in the United
+States (Dombkowski et. al., 2004). Children with private insurance also had higher odds of
+getting full and timely vaccination compared to uninsured children and children with other
+
+insurance types (Hill et. al., 2021; Santoli et. al., 2004).
+
+v7
+
+Domestic violence
+
+In a multi-country study, it was discovered that domestic violence affected
+childhood vaccination. Children of abused mothers were less likely to be completely
+immunized in many countries such as Cambodia, Colombia, Dominican Republic, Egypt,
+India, Nicaragua, and Peru (Kishor & Johnson, 2004). Domestic violence inflicted by the
+husband or partner has also been significantly reducing the autonomy of mothers
+(Friedman, 2003; Tenkorang, 2021). In relation to this, domestic abuse was found to be
+associated with low healthcare utilization. In developing and middle-income countries,
+women experiencing domestic violence were less likely to use maternity health services
+(Leight & Wilson, 2021). Mothers experiencing emotional violence were also less likely
+to have institutional delivery and they tend to have less than four antenatal visits (Hassan
+
+et. al., 2020).
+
+Maternal autonomy
+
+Full vaccination was more frequent among mothers who can make decisions
+about their medical care, household expenditures, and family events (Aalemi et. al.,
+2020). The odds of being fully vaccinated was almost twice among children of mothers
+with autonomy compared to those without (Desalew et. al., 2020). Matemal autonomy was
+also revealed to be an important factor in pregnancy-related healthcare utilization, which
+then impacts prospects of vaccination, as discussed in the next section. In Ethiopia and
+Nepal, mothers who were involved in household decisions were more likely to use maternal
+health services in Ethiopia (Tiruneh et. al.,2017) and Nepal (Adhikari, 2016) compared to
+mothers without autonomy. Indian women with high autonomy were also more likely to
+
+avail healthcare services than those whose low autonomy (Mondal et. al., 2020).
+18
+
+Problems in healthcare utilization
+Accessibility and affordability of medical services have been identified as major
+challenges in healthcare utilization (National Academy of Sciences, 2018). Clearly, these
+issues also affect a child’s status of being completely immunized (Caingles & Lobo, 2011).
+A study conducted in Papua New Guinea reported that 21% of mothers did not immunize
+their children due to distance and cost of transportation to local health centers (Toikilik
+et. al. 2010). Distance to vaccination centers was also reported to be one of the major
+causes of underimmunization in Haiti (Rainey et. al., 2012). Children living farther away
+from immunization clinics were also more likely to have delayed vaccinations in China
+(Huet. al., 2014), Gambia (Miyahara et. al., 2016), and Malawi (Mvula et. al., 2016). In
+addition, children who needed to travel using public transport were more likely to have
+delayed immunizations in El Salvador (Sudrez-Castaneda et. al., 2014) and Gambia
+(Odutola et. al., 2015). However, another study in China contradicted the previous
+associations and reported that children who experienced shorter travel time to vaccination
+clinics were more likely to have delayed vaccination (Lin et. al., 2014). The free-vaccine
+policy has been proven to significantly improve the completion and timeliness of childhood
+vaccination (Wu et. al., 2015). In fact, about 95% of vaccinated Filipino children got their
+
+vaccines from public medical facilities (Ulen & Uy, 2019).
+
+19
+
+Maternal and neonatal health
+
+Antenatal care (ANC) and postnatal care (PNC) utilization have contributed to the
+likelihood of a child’s full immunization. The majority of the mothers got their vaccine
+information from antenatal clinics, and maternal health care usage was found to be related
+to full child vaccination (Meleko et. al., 2017). Mothers who were visiting health centers
+more often were more likely to vaccinate their children on time (Poorolajal et. al., 2012).
+
+Children whose mothers made antenatal visits had higher odds of being fully
+vaccinated compared to children whose mothers were without antenatal visits in China (Hu
+et. al., 2013) and Nigeria (Anichukwu & Asamoah, 2019). A study of 29 African countries
+found that mothers who made four or more antenatal visits had a higher chance of fully
+vaccinating their infants (Budu et. al.,2021). This result was consistent with studies that
+mothers who had at least four antenatal visits were more likely to timely immunize their
+child in Congo (Zivich et. al., 2017) and to fully immunize their child in the Philippines
+(Bondy et. al., 2009). A mother’s history of antenatal care was also revealed to be positively
+associated with a child’s timely immunization in Bangladesh (Vasudevan et. al., 2014) and
+sub-Saharan African community (Olusanya, 2010).
+
+Mother’s intake of tetanus vaccine was also revealed to be associated with
+childhood vaccination (Desalew et. al.,2020). Maternal tetanus immunization improved the
+odds of her child being fully vaccinated by two to four times in India (Sissoko et. al., 2014),
+Myanmar (Nozaki et. al., 2019), and Zimbabwe (Rossi, 2015). Receipt of tetanus vaccine
+of mothers was also associated with timely vaccination of infants in Bangladesh
+
+(Vasudevan et. al., 2014) and Pakistan (Zaidi et. al., 2014).
+
+20
+
+In addition, the child’s birthplace and birth attendant were proven to alter the
+immunization status. Children who were delivered in a health facility had a higher chance
+of getting recommended vaccines, as well as being fully vaccinated (Moyer et. al., 2016).
+This was supported by other studies conducted in Congo (Acharya et. al., 2019), Ethiopia
+(Meleko et. al., 2017), and India (Devasenapathy et. al., 2016) where the odds of a child
+being vaccinated were higher with institutional delivery than with home or traditional birth
+attendant delivery. In addition, women who were accompanied by a midwife or nurse were
+more likely to vaccinate their infants (Abebe et. al., 2012). Delays in vaccination were also
+associated with non-health facility birth in China (Hu et. al., 2017; Zhou et. al., 2009),
+Gambia (Odutola et. al., 2015), India (Barman & Dutta, 2014), Malawi (Mvula et. al.,
+2016), and Uganda (Fadnes et. al., 2011).
+
+Health care personnel frequently have provided parents with documentation of
+every vaccine given for them to track their child's immunization progress. Hence, it was
+no surprise that a vaccination document influenced a child’s vaccination status. The
+presence of a child vaccination document was determined to have a strong association with
+complete vaccination status (Oleribe et. al., 2017). Children with vaccination cards were
+more likely to be fully immunized than children without cards (Kinfe et. al., 2019). The
+availability of a child vaccination card also prevented immunizations from being missed
+(Usman et. al., 2009). In the Philippines, a qualitative study showed that mothers who
+misplaced their children vaccine cards were reluctant to go back to the healthcare facility
+as they were embarrassed to not remember their child’s vaccine information (ICI Asia,
+
+2017).
+
+21
+
+Lastly, postnatal care visit, like antenatal visit, was found to be positively
+associated with full immunization. Mothers who had postnatal visits had a higher
+likelihood of their child being completely vaccinated than those who did not have any visits
+(Budu et. al., 2021). Receiving more than three postnatal visits was also found to increase
+vaccination among their children (Desalew et. al., 2020). According to a study conducted
+in Hoilo, children whose mothers had two or fewer postnatal visits were less likely to be
+completely vaccinated compared to children whose mothers had at least three postnatal
+visits (Malecosio et. al, 2020). On the other hand, having no postnatal visit was found to
+
+be associated with untimely vaccination in Nairobi, Kenya (Matua et. al., 2016).
+
+22
+
+2.2. Conceptual Framework
+
+‘SOCIODEMOGRAPHIC CHARACTERISTICS
+arena ehaceten
+ober ege 1
+Fabe’s og ‘ones voce
+Mae’ edatin etsmet Can ues
+Faber edxatial tne ote vince
+Motes wks Pays voknoe
+Fears wok tte Sonal wens
+Matera seking
+Meters ested king
+Faters atl canny HEACTHCARE RELATED FACTORS L_
+‘Uso tte arenes a Dany
+edo |-———, swconion
+Child harcterses Moses Wate and neontat here
+‘hss ihrer Heath and wees pogroms oc lth dey
+chad tg arangert ‘Aaentl are (AN) Beh tend
+trance etal ae NO) its
+oureholdchoractrsica ‘ "tans core
+Woot ndox Fraoas abate vation | | Mata! otal ae PNG) st
+Fant se taco to meal acy Newt pont ear (PNG ik
+Utanay Caste tenspean end mei F
+“Psmentersip pees
+Preah nentertip
+ber nsane (655, S88, 8)
+
+Figure 2.1 Conceptual Framework
+This conceptual framework resembles the health belief model where several
+variables are investigated to explain the delay in getting all the EPI-recommended vaccines.
+This health belief model suggests that people’s beliefs about health issues, perceived
+advantages and disadvantages, and self-efficacy explain their health-related behaviors
+(Janz & Becker, 1984), Even though the survey was unable to collect information about
+the mother’s perceived susceptibility to and severity of vaccine-preventable diseases, as
+well as the mother’s self-efficacy in vaccinating her child, the following theoretical
+constructs in the health belief model were measured: modifying variables, perceived
+benefits and barriers, and cues to action.
+The sociodemographic characteristics, domestic violence experience, and maternal
+autonomy were considered as modifying variables. Sociodemographic factors such as
+parental, childhood, and household characteristics were examined. Parent characteristics
+
+include age, educational attainment, current work status, union status, smoking, and
+
+23
+
+alcohol drinking, while child characteristics consist of a child’s birth order and living
+arrangement. Wealth index, family size, and urbanity were examined under household
+characteristics. Memberships in the Pantawid Pamilyang Pilipino Program (4Ps) and
+Philippine Health Insurance (PhilHealth) were also accounted for in the model. The 4Ps
+aims to reduce poverty among extremely poor households by improving the education,
+nutrition, and health of members (GOVPH, 2021). Meanwhile, PhilHealth aims to ensure
+that Filipinos will have access to quality health services (MB Lifestyle, 2022).
+
+Moreover, awareness of free health programs and perceived challenges in healthcare
+utilization were added to the model. The mentioned variables were the perceived benefits
+and barriers to getting fully vaccinated. Matemal and neonatal healthcare variables such as
+place of health delivery, birth attendant, antenatal care (ANC), and postnatal care (PNC)
+were also taken into account. The mother’s healthcare utilization could be considered
+external cues to action, as healthcare providers naturally encourage parents to vaccinate
+their children (Meleko et. al., 2017).
+
+Determinants related to domestic violence, maternal autonomy, and healthcare
+utilization were adjusted in the model in consideration of different sociodemographic
+variables, as demographic characteristics were shown to be factors in both medical
+utilization and domestic violence (Aslam et. al., 2020; Badu et. al., 2018; Cao et. al., 2013;
+
+Donta et. al., 2015; Kabir et. al., 2019; Loef et. al., 2021; Zhou et. al., 2020).
+
+24
+
+2.3 Operational Definition of Terms
+
+Vaccine timeliness
+
+Refers to whether the child received each EP]-recommended vaccine based on the
+
+suggested age of administration. The categories are as follows:
+
+© Timely vaccination
+
+Receiving each vaccine timely based on the EPI-recommended age of
+
+administration:
+
+Target age
+0 (at birth)
+At 6 weeks (1.5 months)
+At 10 weeks (2.5 months)
+At 14 weeks (3.5 months)
+At 9 months (9 months)
+At 12 months (12 months)
+
+* Delayed vaccination
+
+Routine vaccines
+BCG
+OPVI, Pentavalent! (Hep B 1, DTP 1, Hib 1)
+OPV2, Pentavalent2 (Hep B 2, DTP 2, Hib 2)
+OPV3, Pentavalent3 (Hep B 3, DTP 3, Hib 3)
+MCV 1
+Mcv2
+
+Receiving each vaccine 31 days (one month) or more beyond the EPI-
+
+recommended age of administration.
+
+Full-vaccination delay
+
+Refers to the number of days that a child has been delayed in getting all the EPI-
+
+recommended vaccines (i.e., vaccine delay days after 12 months of age)
+
+25
+
+immunization status
+
+Refers to whether the child received the EPI-recommended vaccines in terms of
+
+completion (i.e., received all or not) by 12 months of age. There are three categories as
+follows:
+© Fully Immunized Child (FIC)
+A child who has received all the EPI-recommended vaccines by 12 months of
+age, i.e., BCG at birth, OPV and Pentavalent (DTP- HepB-Hib) doses at 6,10 and
+14 weeks of age, and MCV doses at 9 and 12 months of age.
+© Completely Immunized Child (CIC)
+A child who has received all the EPI-recommended vaccines by 13 to 23 months
+of age.
+© Underimmunized Child (UIC)
+A child (1) who did not receive all of the EPI-recommended vaccines at any
+point before 35 months of age or (2) who received all of the EPI-recommended
+vaccines but only by 24 to 35 months of age.
+Mother’s age
+Age in years of the child’s mother
+Father’s age
+Age in years of the child’s father
+Mother’s educational attainment
+Highest educational attainment of the child’s mother with categories as follows:
+
+no education, primary level, secondary level, and higher level.
+
+26
+
+Highest educational attainment of the child’s father with categories as follows: no
+education, primary level, secondary level, and higher level.
+Mother’s work status
+
+Whether the child’s mother is currently working or not
+Father’s work status
+
+Whether the child’s father is currently working or not
+Union status
+
+Parent’s living situation; categorized as never in union, currently in union, or
+formerly in union
+Maternal smoking
+
+Frequency of the child’s mother smoking cigarettes; categorized as not at all,
+somedays, and often
+Mother's alcohol drinking
+
+Frequency of the child’s mother drinking alcohol; categorized as not at all,
+sometimes, and often
+Father’s alcohol drinking
+
+Frequency of the child’s father drinking alcohol; categorized as not at all,
+sometimes, and often
+Child’s birth order
+
+Order in which the child was born in his/her family (e.g., first-born, second-born,
+etc.)
+
+Child’s living arrangement
+
+Whether a child is currently living with his/her mother or not
+27
+
+Family’s wealth index
+
+Measure of a family’s cumulative living standard based on the wealth index
+quintiles: categorized as poorest, poorer, middle, richer, and richest
+Family size
+
+Total number of children ever born in the family
+Urbanity
+
+Whether the child’s family is living in a rural barangay or in an urban barangay
+APs membership
+
+Whether the family is a recipient of the Pantawid Pamilyang Pilipino Program
+(4Ps) Conditional Cash Transfer (CCT) or not
+PhilHealth membership
+
+Whether the parents are registered in the Philippine Health Insurance (PhilHealth)
+or not
+Other insurance membership
+
+Whether the parents are registered in other insurance (GSIS, SSS, etc.) or not
+Control issues
+
+Whether the child’s mother has experienced any of the following control issues
+from her partner for the past 12 months: (i) partner jealous if she talks with other men, (ii)
+partner accuses her of unfaithfulness, (iii) partner does not permit her to meet female
+friends, (iv) partner tries to limit her contact with family, and (v) partner always insists on
+knowing where she is. This variable is categorized as: (0) No, the child’s mother did not
+experience any control issues, and (1) Yes, the child’s mother experienced one or more of
+
+the stated control issues.
+
+28
+
+Emotional violence
+
+Whether the child’s mother has experienced any of the following emotional
+violence from her partner for the past 12 months: (i) humiliated by partner, (ii) partner
+threatened her with harm, (iii) partner insulted or made her fee! bad, (iv) partner did not
+allow her to engage in any legitimate work nor practice profession, (v) partner controlled
+her money or property or forced her to work, (vi) partner destroyed personal properties,
+pets, or belongings, and (vii) partner have other intimate relationship. This variable is
+categorized as: (0) No, the child’s mother did not experience any emotional violence, and
+(1) Yes, the child’s mother experienced one or more of the emotional violence statements.
+Physical violence
+
+Whether the child’s mother has experienced any of the following physical violence
+from her partner for the past 12 months: (i) humiliated by partner, (ji) partner pushed, shook
+or had something thrown at her, (iii) partner slapped her, (iv) partner punched her with fist
+
+or hit with something harmful, (v) partner kicked or dragged her, (vi) partner strangled or
+
+burned her, (vii) partner threatened her with knife/gun or other weapons, and (viii) partner
+twisted her arm or pulled her hair. This variable is categorized as: (0) No, the child’s mother
+did not experience any physical violence, and (1) Yes, the child’s mother experienced one
+
+or more of the physical violence statement/s.
+
+29
+
+Sexual violence
+
+Whether the child’s mother has experienced any of the following sexual violence
+from her partner for the past 12 months: (i) partner physically forced her into unwanted
+sex, (ii) partner physically forced her to perform other sexual acts, and (iii) partner
+physically forced her to perform sexual acts which she did not want to do. This variable is
+categorized as: (0) No, the child’s mother did not experience any sexual violence, and (1)
+Yes, the child’s mother experienced one or more of the sexual violence statement/s.
+
+Maternal autonomy in healthcare utilization
+
+Whether the mother can independently decide on her own healthcare or not
+
+Maternal autonomy in household purchases
+
+Whether the mother can independently decide on large household purchases or not
+
+Maternal autonomy in visiting family and friends
+
+Whether the mother can independently decide on visiting family and friends or not
+Maternal autonomy in family earnings
+
+Whether the mother can independently decide on how to spend husband’s earnings
+or not
+Aware of free medical consultations
+
+Whether the mother is aware of free medical consultations offered by the local
+government units (LGUs) or not
+Aware of free medicines
+
+‘Whether the mother is aware of free medicines offered by the local government
+
+units (LGUs) or not
+
+30
+
+Aware of free health and wellness programs
+
+Whether the mother is aware of free health and wellness programs offered by the
+local government units (LGUs) or not
+Aware of free antenatal care (ANC.
+
+Whether the mother is aware of free antenatal care (ANC) offered by the local
+government units (LGUs) or not
+Aware of free immunization/vaccines
+
+Whether the mother is aware of free immunization/vaccines offered by the local
+government units (LGUs) or not
+Distance problem in medical utilization
+
+Whether the mother perceive distance as a big problem in medical utilization or not
+Cost problem in medical utilization
+
+Whether the mother perceive distance as a big problem in medical utilization or not
+Health/vaccination card
+
+Whether the baby has a vaccination card or not
+Antenatal visits
+
+Total number of antenatal visits
+
+Total number of tetanus injections taken by the mother before child’s birth
+Maternal postnatal care
+
+Whether the mother has been checked after birth delivery; categorized as not
+checked, checked within a day, checked within a week, checked within a month, and
+
+checked after a month
+
+31
+
+Newborn postnatal care
+‘Whether the baby has been checked after birth; categorized as not checked, checked
+
+within a day, checked within a week, checked within a month, and checked after a month
+
+32
+
+3. METHODOLOGY
+3.1 Study Design
+This study employed an analytic cross-sectional design using secondary data from
+
+the 2017 National Demographic and Health Survey (NDHS).
+
+3.2 Data Source
+
+The datasets used in this study are from the latest round of NDHS conducted from
+August 14 to October 27, 2017. This survey is conducted every five years to provide current
+estimates of the key demographic and health indicators.
+
+NDHS 2017 utilized a two-stage stratified sampling which provides data
+Tepresentative for the country, for urban and rural areas, and for each administrative region.
+The master sampling frame in this survey was constructed based on the 2010 and 2015
+population censuses. The first stage entailed selecting primary sampling units (PSUs)
+where a unit is defined as a barangay, a section of a large barangay, or group of neighboring
+small barangays. Additionally, the PSUs were distributed by province or highly urbanized
+cities (HUCs). The second stage involves systematically sampling of 20 or 26 housing units
+from each sampled PSU. Women aged 15-49 years old who were regular members of the
+selected households were eligible for the survey. For the domestic violence questions, only
+one woman in each selected household was interviewed (PSA, 2020).
+
+The authorization certificate for the use of NDHS 2017 was requested from the
+Demographic and Health Surveys (DHS) program’s Data Archivist. The approval to
+
+download the data for this research’s purposes is presented in Appendix 8.5.
+
+33
+
+3.3. Study Population and Sample Size
+
+Children aged 0 to 35 months old, whose mothers or primary caregivers consented
+to be interviewed for the NDHS 2017, were included in this study. In addition, children
+who have missing vaccine cards and have been reported deceased were excluded from this
+study.
+
+In the recent round of NDHS, there were 25, 074 women interviewed with a total of
+10,551 children aged less than five years old. Among these children, a total 3,825 alive
+children aged 0 to 35 months with vaccine cards were included in the analysis. Subsets of
+this population were also considered in calculating the age-appropriate probabilities of
+vaccination.
+
+In estimating the probability of Filipino children getting EPI-recommended vaccines
+on-time, subsets of the study population were considered. For the BCG estimates, children
+aged 0 to 35 months old were included. For the three doses of OPV and Pentavalent vaccine
+series, the following subsets were considered: (1*' dose) children aged 1.5 to 35 months,
+(2 dose) children aged 2.5 to 35 months, and (3 dose) children aged 3.5 to 35 months.
+Children aged 9 to 35 months will be included in the estimation of MCVI. In addition,
+children aged 24 to 35 months were included for the estimates of MCV2 and estimates of
+getting all the EPI-recommended vaccines, since the MCV2 administration is only
+documented the said subgroup. The total number of children for each analysis subset can
+
+be seen in Figure 3.1.
+
+34
+
+NDHS 2017
+
+25,074 women
+aged 15-49 years old
+
+10,551 under-ive children
+
+254 underive children | [10,297 undersive
+reported dead children stl alive
+9,825 under-ve children
+with vaccine cards
+FerBocapeappropise [3,826 children aged
+eosoites 10-35 months old
+ForOPVt &Perat
+3,710 children aged
+pebsbites | _1.5-35 months old
+ForOPv28Perat
+Seeeteas | 3,622 children aged
+
+prebabiies |_2.5-95 months old
+
+FerOPVBPerat
+onvasrert | 3,488 children aged
+esis | 35-35 months old
+Formcvisgesppepite [2,775 children aged
+
+Ptsbises | 9-35 months old
+
+Fermcvzen ubroccsson [7,053 children aged
+eaeepprpiee pmbabiies | 24-35 months old
+
+Figure 3.1 Sampling Framework
+
+3.4 Data Collection and Processing
+
+NDHS 2017 datasets were requested online through the Demographic and Health
+Surveys (DHS) Program website. Two datasets, namely children’s file (KR) and women’s
+file (IR), were downloaded as Stata files. Each child’s data entry was merged with their
+mother’s data entry. Since the two datasets do not contain any personal information such
+as names or specific addresses, household numbers and unique identification numbers were
+
+used for merging.
+
+35
+
+Factors needed in this study were kept, while all other variables were removed. After
+all the needed variables were selected, variable names were changed for easier analysis.
+Some variables were also recoded or transformed into new ones such as vaccination time,
+domestic abuse, maternal antenatal care, vaccination card, etc. SAS Studio and Stata 17
+
+were used for all statistical analyses.
+
+3.5 Statistical Analysis
+
+Descriptive and inferential statistics were performed in this study. Survey weights
+were applied throughout the analysis to ensure that findings are representative of the
+population under study.
+
+Frequencies and percentages were presented to examine the characteristics of the
+study population. Mean and median administration times were estimated for each of the
+EPI-recommended vaccines, and it was compared to the recommended age of vaccination.
+The standard deviation (s.d.), 95% confidence interval (CI), |* quartile (Ql), and 3
+
+quartile (Q3) for administration time of each vaccine were also calculated.
+
+3.5.1 Survival Analysis and Estimation of Timely Vaccination
+
+Survival analysis methods were used in assessing the timeliness of EPI-
+recommended vaccines using administration days. Survival analysis is mainly concerned
+with examining the times to event, usually time until death or time until failure. In this
+study, the survival-time was defined as age (in days) until vaccination. An observation
+
+would be censored if the exact time of vaccination is unknown.
+
+36
+
+There are different types of censoring which might occur in survival-time data given
+a random time interval (t,, t,] . Right-censoring happens when the time of vaccination is
+unknown, but it occurred after ¢;. Left-censoring happens when the time of vaccination is
+unknown, but it occurred before t,. In addition, interval-censoring occurs when the time
+of vaccination is unknown, but it occurred within (t,,t,] time interval.
+
+Unvaccinated children with vaccine cards were right-censored using the age (in days)
+at the time of the interview. Right-censoring indicates that the children could still be
+vaccinated after the interview date. Children who had vaccine cards and received
+vaccination were uncensored. This censoring procedure was visually presented in Figure
+
+3.2.
+
+Child 1D number
+
+0 ‘Time of interview s
+Adminstration ime in months
+2 vocited (cece) CNetvacatd (Cen)
+
+Figure 3.2 Censoring Illustration
+To estimate the probability of Filipino children getting EPI-recommended vaccines
+on time, the cumulative probabilities were computed using the Turnbull estimation method.
+It is a nonparametric estimation procedure used when data are incomplete due to grouping,
+censoring, or truncation. It can also accommodate combinations of exact, left-censored,
+
+right-censored, and interval-censored data (Turnbull, 1976).
+37
+
+The Turnbull method is actually an example of the expectation-maximization (EM)
+algorithm where the nonparametric maximum likelihood estimation (NPMLE) is
+performed to calculate the cumulative distribution function (SAS Institute Inc., 2013).
+Since the usual maximum likelihood estimation (MLE) requires that the data is complete
+to fit a probability distribution, the EM algorithm is often used in the presence of missing
+data or latent variables. In the EM algorithm, the expected value for the missing data (or
+for each latent variable) would be estimated first, then the model parameters would be
+optimized to capture the best density fit for the data (Bishop, 2006). Considering the
+mentioned advantages above, the Turnbull estimator was chosen over the commonly-used
+Kaplan-Meier (KM) estimator. The age-appropriate vaccination probabilities were
+calculated in SAS Studio using the LIFEREG procedure.
+
+Different subsets of the target population were utilized in computing the cumulative
+probabilities to provide better estimates since each vaccine is recommended to be taken at
+a specific age. For example, children aged three months are not recommended to take the
+first dose of measles-containing vaccine (i.e.., MCV1 should be taken at 9 months old);
+hence, they should not be included when computing the cumulative probabilities of MCV1
+
+vaccination.
+
+38
+
+3.5.2 Survival Models for Full-Vaccination Delay
+
+The delay (in days) in getting all the EPI-recommended vaccines was also generated
+for right-censoring. Semiparametric and parametric survival models were implemented to
+determine the possible predictors of full-vaccination delay such as sociodemographic
+characteristics, domestic abuse, maternal autonomy, and healthcare utilization. This next
+
+part discusses the semiparametric and parametric survival models.
+
+Semiparametric survival model
+
+The Cox proportional hazards (PH) model is a semiparametric survival model that
+relaxes the assumption about the event-time distribution. This model specifies that the
+hazard function of the event time conditional on p-vector time-independent covariates is
+given as
+
+h(t; x) = ho(t) exp (Bix + + Bpxp)
+
+where fy, ..., Bp are regression coefficients and ho(t) is the baseline hazard function.
+The method for estimating 8 is based on a partial likelihood where the hg(¢) is cancelled
+out or left unparametrized. Since hg(t) is not directly estimated, the proportional hazards
+(PH) assumption allows for the estimation of the covariate’s effect on the hazard function,
+h(t; x). The relative effects of the covariates are parametrized as exp(Ayx1 +--+ BpXp),
+and exp(f) is called the hazard ratio (HR). To appropriately use the Cox model, the PH
+assumption should not be violated. This assumption also means that the survival curves for
+different strata must have hazard functions that are proportional over the time ¢ (i.e., the
+hazard ratio is constant over time) (Cantor, 2013). Methods in testing the validity of the
+
+PH assumption are discussed in the next section (Chapter 3.5.3)
+
+39
+
+Parametric survival models
+Some methods in survival analysis do not make any assumptions about the
+underlying distribution of the survival data and are said to be nonparametric. An example
+of a nonparametric procedure is the Turnbull estimation discussed in the previous section.
+The Cox model discussed above is considered as semiparametric since certain
+assumptions were made with the baseline hazard function, ho(t), left unspecified. A
+survival function which assumes a certain distributional form is considered parametric. The
+multiplicative or proportional hazards (PH) model and the accelerated failure-time (AFT)
+model are used in the parameterization of the survival data.
+In the PH models, the x; covariates have a multiplicative effect on the hazard
+function. The hazard function is given as
+A(s)
+
+where /ig(t) is the baseline hazard function and g(xj) is a non-negative function of the
+
+ho(t) g(x)
+
+covariates. The ho(t) can be left unspecified (i.e, Cox model) or can take different
+distributional forms such as exponential, Weibull, and Gompertz.
+
+The exponential distribution (hg(t) = 1) is suitable for data with constant hazards.
+On the other hand, the Weibull distribution (ho(t) = pt?~? with shape parameter, p) and
+the Gompertz distribution (ho(t) = exp (yt) with ancillary parameter, y) are appropriate
+
+for modeling data with monotone hazard rates that increase or decrease exponentially with
+
+time. The Weibul] model reduces to the exponential model when p =
+
+40
+
+The AFT model resembles that of the linear regression model with the dependent
+variable, y , replaced by survival time, t. Since the survival time cannot be negative, the
+natural logarithm of the survival time, log ¢, is instead used as the dependent variable.
+The log t is expressed as a linear function of covariates given as
+
+log (tj) = 4B +z
+where x; are the covariates, B is a regression coefficients vector, and z; is the error with
+density f(-). The f(-) in the AFT model can take different distributional forms such as
+lognormal, loglogistic, and generalized gamma. The exponential and Weibull models are
+also parameterized as AFT models (Cantor, 2013; Cleves et. al., 2016).
+
+The lognormal model (log (t;)~N(u = x;8, 07) with ancillary parameter, o) and
+loglogistic model (log (t;)~Logistic( A; = exp (-xj8),y) with ancillary parameter, y)
+tend to produce similar results and are appropriate for data with nonmonotonic hazards
+rates, specifically increasing at the start and then decreasing over time. Meanwhile, the
+generalized gamma distribution offers the most flexibility among all the models. The
+generalized gamma is implemented by parameterizing 4j=x;8 with x and o as ancillary
+parameters. Special cases of the generalized gamma distribution include the Weibull
+distribution when x = 1, exponential distribution when x = 1 and o = 1, and lognormal
+distribution when x = 0.
+
+Figure 3.3 shows the plotted example of hazard functions for different distributional
+forms lifted from the Stata manual. The generalized gamma was not plotted since it can
+take many shapes, and the exponential hazard was plotted in Weibull distribution when
+
+p = 1 (Stata Corp, 2021)
+
+41
+
+Gompertz Weibull
+
+Lee aoe a 7 25
+‘gemma =2 ‘gamma =0 ——p=s
+gemma =-2 pez
+lognormal toglogistic
+
+na
+Yas
+on
+
+Ws 2 25
+
+s
+
+é z 7 Cael z 7 $
+ona=05 wgra=t gemme=t ‘gemma = 05
+H——— sigma = 1.25 gamma =025,
+
+Figure 3.3. Hazard Function Plots for Different Distributions
+
+3.5.3 Model Fitting and Diagnostic Tests
+
+For the model fitting, the initial models were first examined without interaction
+terms. In assessing possible interaction terms to be included in the model, pairwise
+combinations of predictors with their interaction terms were modeled against the survival
+data. This pre-selection step was done since many interaction terms could be explored from
+the variables in this study. A relaxed p-value criterion of 0.20 was used to reconcile the
+recommended p-values of 0.15 and 0.25 (Bendel & Afifi, 1977). If the interaction term in
+the pre-selection step showed a p-value of less than or equal to 0.20, then that would be
+considered for the model. The same p-value criterion was used for the inclusion of each
+covariate (i.e., non-interaction terms) in the model. Only significant factors (p-values less
+than or equal to 0.05) would be retained in the final model.
+
+42
+
+Moreover, Akaike’s and Schwarz’s Bayesian information criteria (AIC, BIC) were
+used to compare the following: (1) model without interaction terms, (2) model with
+interaction terms before diagnostic tests, and (3) model with interaction terms after
+diagnostic tests. Both AIC and BIC were used in the stepwise selection of variables while
+trying to achieve good model fitting. It is expected that the model with interaction terms
+adjusted after performing the diagnostic tests would be the best model (i.e., lowest AIC
+and BIC) (Agresti, 2007).
+
+The survival models for the right-censored data were implemented using the stcox
+and streg commands in Stata 17 (Stata Corp, 2021). Diagnostic tests were also employed
+after creating the semiparametric and parametric models with significant interaction terms.
+
+The validity of the PH assumption in the Cox-PH model was assessed using the
+Schoenfeld residuals. This validity test is based on the principle that, for a given covariate,
+the PH assumption restricts f (t;) = # + E(s}) V ty, where B is the estimated coefficient
+from the Cox model and sj is the scaled Schoenfeld residual at failure time ¢;. This also
+means that the plot of B(t;) against time will have a slope of zero (Grambsch & Therneau,
+1994). The graphical inspection for the PH assumption was presented in Chapter 4.4.
+
+For all the survival models, martingale residuals were used to assess the inclusion of
+
+covariates, model accuracy, and identification of outliers.
+
+43
+
+Plotting the smoothed martingale residuals against the linear predictor shows if there
+is a need for a transformation of the covariate’s functional form. If the covariate should be
+included in the model, then the trend of the smooth should be linear. These plots were
+produced using the Jowess command which smooths the martingale residuals against the
+covariate of interest (i.e., locally weighted regression of martingale residuals on the
+covariate) (Stata Corp, 2021). The generated plots are presented in Appendix 8.3.
+Examining outlier values by martingale residuals plot alone can be tricky since these
+residuals are usually skewed. The rescaling of martingale residuals about zero, also known
+as deviance residuals, is then preferred in evaluating the presence of outlier and model
+accuracy. The deviance residuals plotted against the linear predictor should clump near
+zero if the fit was adequate. The deviance residuals plots are presented in Appendix 8.2.
+Lastly, the Cox-Snell residuals were used to assess the overall model fit of all the
+semiparametric and parametric survival models. The said residuals consider the
+distribution and estimated parameters from the survival model. If the model fits the data
+well, then the Cox-Snell residuals plotted against themselves should be close to the 45°
+reference line (Stata Corp, 2021). The plots of Cox-Snell residuals, AIC, and BIC were
+used to select the best model in explaining the delay of getting all the EPI-recommended
+
+vaccines among Filipino children.
+
+44
+
+A summarized data analysis plan for each research objective is shown below, and
+
+the model fitting process is described in Figure 3.4
+
+Research objective
+
+To estimate the mean and median
+administration time of the EPI-
+recommended vaccines among Filipino
+children
+
+To estimate the probability of Filipino
+children getting EPI-recommended vaccines
+on time
+
+To determine the predictors of delay in
+getting all the EPI-recommended vaccines
+
+al Model wibot
+
+let
+(ort 29)
+
+Statistical method
+
+Mean and median vaccination time
+(in months)
+
+Cumulative probabilities using Turnbull
+estimation for each of the EPI-recommended
+vaccine: BCG, OPV1, Pental, OPV2, Penta2,
+OPV3, Penta3, MCV1 and MCV2
+
+Models to be used in analysis survival data: Cox
+model, Exponential model, Weibull model,
+Gompertz model, Lognormal model,
+Loglogistic model and Generalized Gamma
+model
+
+(Ceckng poste
+ilretn ems
+
+(sco 5)
+
+Toscuenwetsabancre02
+Td Mal with esac Toms
+(const 2283.)
+
+Toda Wad i neracon ts
+(seg 12x20. 0)
+
+aman U
+iat a ee
+‘cern
+
+Wel Ajo made wihtracton forms
+(cag 12x23. 0).
+= =
+
+CaxPimod
+
+Exponent
+sual mel
+
+Genuad gna
+
+—
+suid model sun mde!
+
+‘Goodness off Cox Snell residuals AC, BIC
+
+Final survvalmadelsforfullvaccation delay
+
+Figure 3.4 Model Fitting Process
+
+45
+
+3.6 Ethical Considerations
+Conflict of interest
+
+The primary researcher and adviser declare no financial, familial, or propriety
+conflict of interests.
+Privacy and confidentiality
+
+The datasets obtained from the DHS program site do not allow respondents,
+households, or sampled communities to be identifiable in any manner. Data entry for each
+child is tagged with a unique identifier as well as their household number. The datasets
+utilized were kept on a password-protected computer that was only accessible to the
+researcher. The datasets will be stored for two years after the completion of the research
+paper, then the files will be completely erased from the researcher’s computer. The datasets
+were used solely for research purposes.
+Vulnerability of research participants
+
+Since this study used secondary data, there was no direct involvement with any
+vulnerable populations.
+Recruitment
+
+This study did not involve interaction with human participants.
+Informed consent process
+
+An authorization certificate for the usage of NDHS survey datasets was requested
+from the DHS program’s Data Archivist. The primary researcher was granted permission
+to download data for statistical reporting and analysis solely for this research’s purposes.
+Furthermore, the DHS program handled the informed consent process for those who
+participated in the NDHS surveys. The respondent was read an informed consent statement
+
+before the interview, which she could accept or deny. The purpose, duration, and methods
+46
+
+of the interview, potential risks, and benefits to the respondent, and contact personnel who
+could provide the respondent with more information were all included in the informed
+consent statements. Respondents could also refuse to answer any question or stop
+participating anytime. It was also emphasized that the identity and information of
+respondents would strictly be confidential. Interview for each respondent was assigned
+random identification numbers to maintain anonymity.
+Risks
+
+Data confidentiality risks might be a problem. However, it was ensured that datasets
+do not contain any personal information, such as names or addresses. Data redistribution
+in any form was likewise strictly prohibited. Datasets were on a password-protected
+computer that was only accessible to the researcher for two years after the completion of
+the research paper. Datasets will then be permanently deleted from the researcher’s
+computer.
+Benefits
+
+There was no direct benefit for the population in this study.
+Community considerations
+The findings of this study are crucial in knowing whether Filipino children are
+
+receiving immunizations on time, and to what extent the delay is in getting fully vaccinated.
+Nevertheless, estimations for vaccination timeliness should be carefully interpreted, and
+the results of this study should always be presented with its research limitations in mind.
+Dissemination of results
+
+The identity of respondents will remain anonymous upon presentation of this
+research in conferences and peer-reviewed journals. In addition, electronic reports and
+
+publications of this study will be submitted to the DHS program.
+47
+
+4. RESULTS
+
+4.1 Characteristics of the Study Population
+
+The study included a total of 3,825 children aged 0 to 35 months who had
+
+immunization cards. Since the administration of the second dose of measles-containing
+
+vaccine (MCV2) was only documented for children aged 24 to 35 months, the said
+
+subgroup was used to estimate the percentage for each immunization status. Among
+
+children aged 24 to 35 months old with vaccine cards (n=1,053), 29.72% were fully
+
+immunized children (FIC), 25.91% were completely immunized children (CIC), and
+
+45.46% were underimmunized children (UIC).
+
+Table 4.1 shows the characteristics of the population included in the analysis of this
+
+study.
+
+Table 4.1. Characteristics of Study Population (N=3,825)
+
+Variable Frequency Percentage (%)
+Parental variables
+Mother's age (in years) (mean=28.78, s.d.=6.60)
+15-24 1,151 30.09
+25-34 1,831 4787
+35-44 813 21.25
+45 and above 30 0.78
+Father’s age (in years) (mean=33.70, 5.4
+15-24 565 14.77
+25-34 1,788 46.15
+35-44 1,008 26.35
+45 and above 464 12.13
+Mother’s highest educational attainment
+No education 29 00.76
+Primary level 656 17.15
+Secondary level 1,930 50.46
+Higher level 1.210 31.63,
+Father's highest educational attainment
+No education 294 7.69
+Primary level 957 25.02
+Secondary level 1,630 42.61
+Higher level 944 24.68
+
+48
+
+Table 4.1. (Cont.) Characteristics of Study Population (N=3,825)
+
+Variable Frequency Percentage (%)
+Mother's current work experience
+Not currently working 2,590 67.71
+Currently working _ 1,235 32.29
+Father’s current work experience
+Not currently working 19 2.07
+Currently working 3,746 97.93
+Union status
+Never in union 160 4.18
+Currently in unionliving with a man 3,569 93.31
+Formerly in union/living with aman 96 2.51
+Mother’s smoking (frequency)
+Does not smoke 3,715 97.12
+Sometimes 16 1.99
+Often 34 0.89
+Mother drinking alcohol (frequency)
+Does not drink 854 22.3
+Sometimes 2,905 16.21
+Often 66 1.73
+Father’s drinking alcohol (frequency)
+Does not drink 1,106 35.98
+Sometimes 1,772 57.64
+Often 196 6.38
+Child variables
+Child’s birth order (mean=2.67, s.
+13 2,906 78.97
+46 744 19.45
+19 151 3.95
+10 and above 24 0.63
+Child’s living arrangement
+Living with mother 3,804 99.45
+Not living with mother 21 0.55
+‘Household variables
+Family size (mean=2.76, s.4.
+13 2,864 74.88
+4-6 719 20.37
+19 155 4.05
+10 and above 27 071
+Family’s wealth index
+Poorest 1,224 32.00
+Poorer 968 25.31
+Middle 25 18.95
+Richer 549 1435
+Richest 359 9.39
+Urbanity
+Urban 1,238 32.37
+Rural 2,587 67.63
+
+49
+
+Table 4.1. (Cont.) Characteristics of Study Population (N=3,825)
+
+Variable Frequency Percentage (%)
+Ps membership
+No 2,822 73.78
+Yes 1,003 26,22
+PhilHealth membership
+No 1,354 37.10
+Yes 2,292 62.90
+Other insurance (GSIS, SSS, etc.) membership
+No 3,323 91.04
+Yes 327 8.96
+Domestic violence
+Control issues
+No 1,919 50.17
+Yes 1,906 49.83
+Emotional violence
+No 2,578 67.40
+Yes 1,247 32.60
+Physical violence
+No 2,891 75.58
+Yes 934 24.42
+‘Sexual violence
+No 2,995 78.30
+Yes 830 21.70
+‘Maternal autonomy
+Healthcare utilization
+No 455 11.90
+Yes 3,370 88.10
+Large household purchases.
+No 744 19.45
+Yes 3,081 80.55
+Visiting family and friends
+No $70 14.90
+Yes 3,255 85.10
+Family earnings
+No 682 17.83
+Yes 3,143 82.17
+‘Awareness of free health programs
+Medical consultation
+No 1,645 43.01
+Yes 2,005 56.99
+Medicines
+No 1,182 30.90
+Yes 2,643 69.10
+Health and wellness programs
+No 3,257 85.15
+Yes 568 14.85
+
+so
+
+Table 4.1. (Cont.) Characteristics of Study Population (N=3,825)
+
+Variable Frequency Percentage (%)
+‘Antenatal care (ANC)
+No 3,575 93.46
+Yes 250 6.54
+Immunizations/Vaccines
+No 1,307 34.17
+Yes 2,518 65.83
+Problems in healthcare utilization
+Distance to medical facility
+Not a big problem 2,774 72.52
+Big problem 1,051 27.48
+Cost of medical expenses
+Not a big problem 1,950 50.98
+Big problem 1,875 49.02
+‘Maternal and Neonatal Healthcare
+Place of birth delivery
+Home delivery 555 1451
+Facility-based delivery 3,270 85.49
+Birth attendant
+Health personnel 3,355 87.71
+Traditional birth attendant 399 10.43
+Others u 1.86
+‘Number of antenatal care (ANC) visits
+(mean=6.73, s.d.=3.06)
+0-5 1,134 29.65
+6-10 2,047 53.52
+u-15 252 6.59
+16-20 48 1.25
+Number of tetanus injections
+(mean=1.7, s.d.=1.09)
+0 734 19.19
+1 1,164 30.43
+2 1,298 33.93
+3 461 12.05
+4 and above 168 4.39
+Mother’s health first checked afier delivery
+Not checked 348 10.25
+Within a day 2,585 76.12
+Within a week 435 12.81
+Within a month 23 0.68
+After than a month 5 0.15
+Baby’s health first checked afier birth
+Not checked 175 5.15
+Within a day 2,634 71.56
+Within a week 454 13.37
+Within a month 97 2.86
+After than a month 36 1.06
+
+s1
+
+4.2 Timeliness of EPI-recommended Vaccines
+
+To estimate the mean and median administration time of each EPI-recommended
+
+vaccine, subsets of children aged 0 to 35 months were considered. The following subsets
+
+were utilized in estimating the timeliness of vaccines: 3,825 for BCG vaccine; 3,710 for
+
+OPVI and Pental; 3,622 for OPV2 and Penta2; 3,488 for OPV3 and Pentat3; 2,775 for
+
+MCVI; and 1,053 for MCV2. The same subsets of the population were used to estimate
+
+the probability of Filipino children getting EPI-recommended vaccines on time. Table 4.2
+
+shows the administration time for each of the EPI-recommended vaccine.
+
+Table 4.2 Mean and Median Administration Time of EP]-recommended Vaccines
+
+Timeliness Administration time (in months)?
+Vaccine range
+(in months) | Mean —S.D. 95% CI Median Q1-Q3
+BCG o-1 0.81 3.25 0.71 - 1.05 0.16 — 0.00-0.95
+OPVI 15-25 2.43 231 2.35 -2.50 1.94 1.58 - 2.56
+Pental 15-25 2.75 3.53 2.64 -2.86 2.01 1.61 -2.83
+OPv2 25-35 3.96 3.85 3.83 - 4.08 3.220 2.73 -4.24
+Penta2 25-35 4.25 4.50 4.11-4.40 332 2.73 -4.67
+OPVv3 3.5-4.5 5.72 4.89 5.56 - 5.88 470 391-618
+Penta3 35-45 5.76 5.01 5.59 - 5.93 473 3.91-6.38
+MCVI 9-10 10.01 6.65 9.76-10.26 9.53. 9.11 - 10.82
+Mcv2 12-13 13.42 5.16 13.05-13.71 12.82 12.26 - 13.84
+action 12-13 13.51 7.66 13.05-13.97 12.85 12.26- 13.94
+
+= Administration time in months = (adr
+
+‘Sample size:
+2,775 (MCV1
+
++ Standard deviation;
+
+istration time in days x 30.417)
+
+325 (BCG); 3,710 (OPVI, Pental ), 3622 (OPV2, Penta2); 3,488 (OPV3, Penta3);
+
+1,053 (MCV2,full)
+Fi
+
+irst quartile; Q3: Third quantile
+
+52
+
+For the BCG, the median administration time was five (5) days (mean=25 days, 95%
+Cl:[22-32 days]). In other words, half of the children aged 0 to 35 months received their
+BCG vaccine by the age of five (5) days. It was also revealed that 75% of the children aged
+0 to 35 months old got their BCG vaccine within a month.
+
+For the three vaccine doses against polio (OPV1, OPV2, OPV3), the median
+administration times were 1.94 months (mean=2.43 mos., 95%CI:[2.34 — 2.50] mos.), 3.22
+months (mean=3.96 mos., 95%CI:[3.83 — 4.08] mos.), and 4.70 months (mean=5.72 mos.,
+95%CI:[5.56 — 5.88] mos.), respectively. Meanwhile, the median administration times for
+the three doses of the Pentavalent vaccine were 2.01 months (mean=2.75 mos.,
+95%CI:[2.64 — 2.86] mos.), 3.32 months (mean=4.25 mos., 95%CI:[4.11 — 4.40] mos.),
+and 4.73 months (mean=5.76 mos., 95%CI:[5.59 — 5.93] mos.), respectively. Based on the
+median administration time, the first doses of OPV and Pentavalent vaccine were delayed
+by two to three weeks from the target administration age, as well as the second and third
+doses of OPV and Pentavalent vaccines by one (1) to 1.5 months.
+
+The first dose of the measles-containing vaccine (MCV) had a median administration
+time of 9.53 months (mean=10.01 mos., 95%CI:[9.76 — 10.26] mos.). For the second dose
+of MCV, the median administration time was 12.82 months (mean=13.42 mos.,
+95%CI:[13.05 — 13.71] mos.). Based on the computed median age, the delay for MCV 1
+was around two weeks from the target vaccination age, while the delay for MCV 2 was
+around four weeks. In addition, the median administration time for being fully vaccinated,
+12.85 months (mean=13.51 mos., 95%CI:[13.05 - 13.97] mos.), was close to the estimates
+for MCV2. Furthermore, all of the vaccines, except for BCG, OPVI, and MCVI, had
+significant delays when the 95% confidence intervals were examined against the upper
+
+limits of the timeliness ranges.
+53
+
+4.3 Probability of Timely Vaccination among Filipino Children
+
+Turmbull estimation was performed in estimating the probability of Filipino children
+
+getting EPI-recommended vaccines on time. Timely vaccination was defined as receiving
+
+the antigen within a month after the target administration age. Table 4.3.1 presents the
+
+age-specific probability of Filipino children getting each of the EPI-recommended vaccine.
+
+The cumulative coverage (probability of vaccination) for each vaccine is visually presented
+
+in Figure 4.3.1.
+
+Table 4.3.1 Age-specific Probability of Vaccination among Filipino Children
+ict) BCG OPVI ental OPV2 Penta? OPV3 Penta’ MCVI MCv2 _ Full
+(in mos.) vaccination
+00,0000
+0.03 0.1031
+0.25 0:3816
+05 0.5095
+10.6732 0.0000 0.0000
+150.7906 0.1575 0.1513
+20.8600 0.5075 0.4648 0,000 0.0000
+250.8954 0.6917 0.6395 0.1104 0.0984
+30,9245 0.7763 0.7131 0.3662 _ 0.3323 0.0000 0.0000
+350.9367 0.8321 0.7632 0.5397 05040 0.0603 0.0572
+‘40.9463 0.8661 0.7983 0.6535 0.6045 0.2538 0.2495
+450.9574 0.8953 0.8250 0.7301 0.6650 0.3979 0.3869
+5 0.9609 0.9116 0.8403 0.7687 _0.7136 0.4967 0.4798
+350.9616 0.9251 0.8541 0.8014 0.7420 0.5821 0.5521
+6 0.9637 0.9312 0.8646 0.8329 0.7688 0.6396 0.6120
+70.9656 0.9424 0.8861 0.8665 0.8027 0.7225 0.6888
+0.9692 0.9481 0.9029 0.9018 0.8386 0.7721 0.7339 00739.
+90.9712 0.9512 0.9131 0.9117 0.8663 0.8080 0.7696 0.1464
+10 0.9751 _0,9529 0.9213 0.9215 _0,8855 0.8355 _ 0.7983 0.5872
+110.9762 __0,9544 0.9256 0.9282 0,8991 0.8580 0.8313 0.6931 00383 0.0180
+120.9771 0.9575 0.9329 0.9325 0.9071 0.8717 0.8555 0.7408 0.0608 0.0276
+130.9813 0.9575 0.9355 _0.9378 0.9152 0.8808 0.8695 0.8422 0.3564 0.3112
+140.9828 0.9594 0.9364 0.9396 0.9198 0.8874 0.8797 0.8821 0.4967 0.4332
+150.9835 0.9620 0.9396 0.9411 0.9213 0.8914 0.8828 0.9031 0.5575 0.4894
+180.9842 0.9635 0.9405 0.9484 0.9258 0.9047 0.8928 0.9193 0.6224 0.5599
+210.9847 0.9642 0.9426 0.9488 0.9270 0.9138 0.8955 0.9294 0.6442 0.5747,
+240.9859 0.9644 0.9437 0.9496 0.9296 0.9194 0.8963 0.9319 0.6549 0.5857
+270.9888 0.9691 0.9443 0.9578 09314 0.9223 0.8995 0.9432 0.6658 0.5955
+300.9892 0.9715 0.9519 0.9605 0.9379 0.9315 0.9059 0.9543 0.6742 0.6078
+330.9892 0.9715 0.9526 0.9615 0.9387 0.9419 0.9106 0.9589 0.6813 0.6117
+350.9901 0.9715 0.9536 0.9615 0.9396 0.9526 0.9114 0.9702 0.7051 0.6243
+Highlighted values are probabilities one month after the target administration age
+
+Sample size: 3,825 (BCG), 3,710 (OPV1, Pental); 3,622 (OPV2, Penta2); 3,488 (OPV3, Penta3), 2,775 (MCV1); 1,053 (MCV2,ull)
+
+54
+
+Only 10.31% of Filipino children were getting the BCG vaccine within a day, but the
+coverage increased to 50.95% after two weeks. After a month from birth, however, this
+probability would rise to 67.32%.
+
+Around 15.75% of Filipino children were receiving OPVI by the target
+administration age of 1.5 months, while 15.13% of Filipino children were receiving Pental
+by the same age. The chances of obtaining OPV1 and Pental increased to 69.17% and
+
+63.95%, respectively, by 2.5 months old.
+
+BCG Vaccine ral Polio Vaccine (OPV)
+pia PEPTererer [PPRUECTUESTEITIT ET
+pate thro bret “adnan teva amon)
+
+(beet == Dose? soo Bowed]
+
+‘Measles-containing vaccine (MCV)
+
+A2a458759
+420455789
+
+24 0 © 10 ja 14 10 10m mm me me
+. “adenine (net)
+
+~ Dose Dow
+
+Figure 4.3.1. Cumulative Coverage (Probability of Administration) by Age
+for EPI-recommended Vaccines
+
+55
+
+The computed estimates for the second doses of OPV and Pentavalent vaccine, which
+should be taken by 2.5 months, were 11.04% and 9.84%, respectively. After a month, these
+odds improved to 53.97% and 50.40%, respectively. In other words, around 53.97% of
+Filipino children were getting OPV2 and 50.40% of Filipino children were receiving
+Penta2 by the age of 3.5 months.
+
+For the third doses of OPV and Pentavalent vaccine, the computed probabilities of
+getting vaccinated by the age of 3.5 months old were only 6.03% and 5.72%, respectively.
+These probabilities increased to 39.79% for OPV3 and 38.69% for Penta3 by 4.5 months
+old. The probabilities for OPV3 and Penta3 would only reach 50% after five months of
+age.
+
+The probability of Filipino children getting the first dose of MCV by the age of nine
+(9) months was 14.64%, while the probability of them getting the second dose of MCV by
+12 months old was only 6.05%. Considering a month after the target age of vaccination,
+the probability of children getting MCVI by 10 months old increased to 58.72%, and the
+
+probability of children getting MCV2 by 13 months old increased to 35.62%.
+
+Full vaccination
+
+2) aa sree sais)
+
+E46 8 10,12 14 10 19 20 22 24 2 Be 50 a2 OH SS
+‘ ‘Administration time (In months)
+
+Figure 4.3.2. Cumulative Coverage (Probability of Administration) by Age
+for Being Fully Vaccinated
+
+56
+
+The probability of full vaccination was examined and visually presented in Figure
+4.3.2. The probability of children being fully vaccinated was only 2.76% by 12 months of
+age. However, after a month, the probability improved to 31.12%. The chance of being
+fully vaccinated would only reach 50% after the age of 15 months.
+
+The percentages of children with timely intake, vaccine delay, and non-vaccination
+were also estimated. The median age for each group per vaccine was calculated and
+presented in Table 4.3.2. It could be noticed that for all of the EPI-recommended vaccines,
+the percentage of non-vaccinated children was always lower than the percentage of
+children who received the vaccine.
+
+Table 4.3.2 Median Age and Estimate for Timely Intake, Vaccine Delay, and Non-
+Vaccination*
+
+Within the timeliness range Delayed Non-vaccinated
+Timeliness
+Vaccine range, mon oe
+(inmonths) | percentage vaccination | Percentage vaccination | Percentage
+age (Q1,03) age (Q1,03)
+
+0.03 Tar 51
+
+BCG 0-1 7348% rons | 39% sz r66) | 15% 079" 2259)
+1.84 2.86 3:79
+
+opvi 15-25 | 55.80% 64 ora | 377% aa sem) | 4% — aro t6.11)
+184 3.02 937
+
+Penta) 15-25 | 508% oar) | 401% rap—asoy | 89% 342-1966)
+a 2.96 4.08 628
+
+opv2 25-35 | 40.21% 9759.1) | 495% eas 550) | 0% ig ts.any
+2.96 " 434 7 934
+
+Pemta2 25-35 | 37.92% o73-3.19) | 4°80% ass 628) | 128%  (5.42-20.88)
+3.95 FXG] 391
+
+opvs 35-45 | 30-71% g.75— 421 | 538% — (ggo-7.43) | 155% (4.54 16.80)
+3.95 5.82 373
+
+Penta 35-45 | 3040% gr ais) | 521% a3 7.99) | 174% (4.93 22.26)
+934 1088 11:90
+
+Mcvl 9-10 44.70% 9.14~9.63) |_43-"% (p94 12.59) | 122%  10.06— 19,30)
+1239 13.74 2193
+
+Mcva 12-13 | 285% (19.20712.66) | 332% 13.1215.09) | 3% _ s.25—28.59)
+1239 13.84 22.22
+
+Fall 12-13 | 25.76% — (19.20°12.66) | 261% (a3.15-15.42) | 4" 15.75-28.83)
+
+Vaccination delay is defined as receiving dose afer the upper limit age in the timeliness range
+Sample si (BCG); 3.710 (OPVI, Penta): 3,622 (OPV2, Penta2); 3.488 (OPV3, Penta3); 2.775 (MCV; 1,053 (MCV2.full)
+
+57
+
+
+The percentage of children with timely intake was more than the combined
+percentage of delayed and non-vaccinated for BCG, OPV1 and Pental. However, the
+combined percentage of delayed and non-vaccinated children was more than the percentage
+of timely intake for the remaining vaccines (OPV2, Penta2, OPV3, Penta3, MCV1, and
+MCV2).
+
+The percentage of children with vaccine delay was highest for the third doses of OPV
+and Pentavalent vaccine. In addition, the non-vaccination rates were highest for MCV2, as
+well as for being fully vaccinated.
+
+The median age of children who never got the vaccine dose was interesting to
+examine. Half of the children who were not immunized were 8.91 months old for BCG;
+5.79 months old for OPV1; 6.28 months old for OPV2; 8.91 months old for OPV3; 9.37
+months old for Penta! ; 9.34 for Penta2; 9.73 for Penta3; 11.9 months for MCV1; and 21.93
+months old for MCV2. These median ages were significantly later than the recommended
+ages of vaccine administration.
+
+The two tables above mainly discussed the estimations for the age-specific
+probability of vaccination, timely intake, vaccine delay, and non-vaccination for each EPI-
+recommended vaccine. The next section discusses the number of doses received and
+subsequent delays for the vaccine series (OPV, Penta, and MCV).
+
+Table 4.3.3 shows the distribution of children based on doses received for each
+vaccine series. It was observed that 4.39% of Filipino children aged 3.5 -35 months did not
+receive any dose of OPV. Around 7.24% of children in the same age group were also not
+able to receive any dose of the Pentavalent vaccine. Meanwhile, around 4.12% of Filipino
+
+children aged 24 to 35 months did not receive any vaccine dose against measles.
+
+58
+
+Table 4.3.3 Distribution of Children Based on Doses Received for Each Vaccine Series
+
+Percentage of children by doses received
+Vaccine series Did not
+receiveany First dose only Two doses Three doses
+dose
+opv 4.39% 3.28% 181% 84.46%
+Penta 1.24% 2.83% 7.46% 82.47%
+MCV 4.12% 30.71% 65.17% _
+
+‘Sample size: 3,488 (OPV, Penta); 1,053 (MCV)
+~-+ MCV series only requires two doses by age of 12 months
+
+When compared to children who received either one dose of OPV (3.28%) or two
+doses of OPV (7.87%), the percentage of children who received three doses for OPV was
+high at 84.46%. The same could be said for the percentage of children who completed the
+three-dose Pentavalent vaccine at 82.47%. For the measles vaccine, around 30.71% of
+children had their MCV1, while 65.17% of children received both MCV1 and MCV2.
+
+To account time between vaccine doses, children who finished the vaccine series
+were assessed in the next section. The estimated percentages of children with timely and
+delayed administration per vaccine dose until completion were presented in Table 4.3.4.
+For OPV and Pentavalent vaccine series, a minimum time of four (4) weeks must lapse
+between vaccine doses. In this case, timely vaccination for the 2 dose of OPV and Penta
+was defined as obtaining the 2" dose a month after the receipt of 1* dose. The same
+definition was applied for the 3" dose of OPV and Pentavalent vaccine. Meanwhile, for
+the MCY, timely vaccination was defined as receiving the MCV2 three months after the
+
+administration of MCV1.
+
+59
+
+Table 4.3.4 Percentage of Children Accounting for Delays in Subsequent Doses
+
+Timely OPV1 (60.97%) Timely Pental (56.93%)
+Timely MCV1
+Timely OPV2" | Delayed OPV2 | Timely Penta2* | Delayed Penta2 | (58.67%)
+| (41.82%) (58.18%) (42.48%) (57.52%)
+
+Timely | Delayed | Timely | Delayed | Timely | Delayed | Timely | Delayed | Timely | Delayed
+OPv3> | OPV3 | OPV3* | OPV3 | Penta3’ | Penta3 | Penta3* | Penta3 | MCV2 | MCV2
+
+39.50% | 60.50% | 36.46% | 63.54% | 40.98% | 59.02% | 39.78% | 60.22% | 98.80% | 1.20%
+
+TIMELY FIRST DOSES _
+
+Delayed OPV1 (39.03%) Delayed Pental (43.07%)
+Delayed MCV1
+Timely OPV2° Delayed OPV2 | Timely Penta2* | Delayed Penta2 (41.33%)
+(39.57%) (60.43%) (39.17%) (60.82%)
+
+Timely | Delayed | Timely | Delayed | Timely | Delayed | Timely | Delayed | Timely | Delayed
+opv3® | OPV3 | Penta3® | Penta3 | Penta3® | Penta3 | Penta3® | Penta3 | McV2" | MCV2
+
+35.89% | 64.11% | 36.09% | 63.91% | 39.16% | 60.84% | 37.27% | 62.73% | 88.72% | 11.28%
+
+DELAYED FIRST DOSES
+
+Sample size, 2,946 children vaccinated with three doses of OPV; 2,877 children vaccinated with three doses of Pentavalent vaccine,
+
+*Timely vacci
+Timely vaccination is defined as re
+
+The percentage of children who had delay in OP V2 was 58.18% among those who
+had timely OPV] intake while the percentage was a bit higher at 64.11% among those who
+had delay in OPV1. Meanwhile, the percentages of children who had delayed Penta2
+intake were 57.52% and 60.82% among children who got their Penta] on time and late,
+respectively. The trend in the second-dose delays was the same with the delays in the third
+doses of OPV and Pentavalent vaccine.
+
+On the other hand, the percentages of children who had delayed MCV2 were low
+for children who had timely and late intake of MCV1. It could also be noted that 98.8% of
+
+children who had timely MCV received their MCV2 on time.
+
+60
+
+4.4 Factors Associated with Delay in Full Vaccination
+
+The delay (in days) of getting all the EPI-recommended vaccines was used for the
+survival models. The estimated survival and cumulative hazard functions for full-
+
+vaccination delay were shown in Figures 4.4.1 and 4.4.2.
+
+Kaplan-Meier Survival Function
+
+025 «0807s,
+
+0.00
+
+0 400 600 800
+Full-vaccination delay (in days)
+
+Figure 4.4.1 Kaplan-Meier Survival Function for Full-Vaccination Delay
+
+The graph above shows the survival curve for full vaccination past the recommended
+age of 12 months. The survival rate of children who were not fully vaccinated is 75% at 25
+days (i.e., 12.82 months old). Meanwhile, half of the children were able to receive all the
+EPI-recommended vaccines by 15.91 months old or 119 days after the target age of
+completion. The survival curve also showed a steep fall until 120 days, after which it would
+gradually decrease. Moreover, the survival rate did not reach 0.25 which would tell that at
+least 25% of Filipino children remained not fully vaccinated before reaching the age of
+
+three years.
+
+61
+
+Nelson-Aalen Cumulative Hazard Function
+
+150
+
+1.00
+
+0.80
+
+0.00
+
+° 200 800
+
+Fut-vaccinaton clay (rays) °°
+Figure 4.4.2 Nelson-Aalen Cumulative Hazard Function for Full-Vaccination Delay
+
+The cumulative hazard plot above gives an idea of possible distributions of the
+survival models for the delay in full vaccination. The shape of the plot resembled that of a
+logarithmic distribution than an exponential distribution.
+
+The next section discusses the survival models performed in this study. Initial models
+without interaction terms were first performed, and only a few factors were found to be
+significant as shown in Appendix 8.1. The factors examined in the survival models were
+sociodemographic characteristics, domestic abuse, maternal autonomy, and healthcare
+utilization. Semiparametric survival model (Cox-PH) and parametric survival models
+(Weibull, Exponential, Gompertz, Lognormal, Loglogistic, and Generalized Gamma) were
+
+finalized after adding interaction terms and performing diagnostic tests.
+
+62
+
+Table 4.4.1 Model Fit Statistics for Final Survival Models
+
+FINAL MODELS AIC BIC Log-likelihood
+‘Semi-parametric (PH)
+Cox model 9318.41 9408.08 -4642.21
+Parametric (PH)
+Weibull model 4240.11 4598.78 -2052.06
+Exponential model 4738.40 5081.24 -2304.20
+Gompertz model 3623.61 3781.84 1781.80
+Parametric (AFT)
+Weibull model 4240.11 4598.78 -2052.06
+Exponential model 4738.40 5081.24 -2304.20
+Lognormal model 3980.40 4175.55 -1953.20
+Loglogistic model 3813.85 4067.03, -1858.93
+Generalized Gamma model 3788.50 4051.09 1825.70
+
+Model fit statistics were calculated and compared for every parametric model in
+proportional hazards (PH) and accelerated failure-time (AFT) forms as shown above. The
+model with the lowest AIC, lowest BIC, and highest log-likelihood value, was deemed the
+best model. The Gompertz model was found to be the best model among the parametric
+PH models. Meanwhile, the generalized gamma model was the best model among the
+parametric AFT models.
+
+Furthermore, the lognormal and loglogistic models produced better model fit
+statistics compared to the Weibull and Exponential models, which was consistent with the
+assumed distribution of the cumulative hazard plot. This means that examining
+fall-vaccination delay is better with survival time in natural logarithm form or when using
+AFT models. The results of the model fit statistics were also in agreement upon inspecting
+
+the Cox-Snell residuals of the survival models as seen in Figure 4.4.3.
+
+63
+
+SEMIPARAMETRIC PARAMETRIC MODELS Be
+MODEL Proportional Hazards (PH) Accelerated failure-time (AFT)
+
+(acon (©) Exponential mode! (0) Lognonmal
+
+(6) Weibull : {f) Logiogistic
+
+(0 Gomperte () Gonaratzes gamma
+
+Figure 4.4.3. Cox-Snell Residuals for the Survival Models
+
+For the parametric models in PH form, the Gompertz model demonstrated the best
+fit (Cox-Snell residuals plotted against themselves are close to the 45° reference line),
+despite the large deviations on the latter end. It is in fact common for survival data to exhibit
+the latter characteristic. Meanwhile, the generalized gamma model showed the best fit
+among parametric models in AFT form. The residuals of the Cox model similarly followed
+the 45° reference line, indicating a good fit.
+
+The three models which showed the best fitting per category, the Cox model (semi-
+parametric PH), Gompertz model (parametric PH), and Generalized Gamma model
+
+(parametric AFT), were examined in the next section.
+
+64
+
+
+Semiparametric model
+The Cox-PH model, being the most commonly used survival model, was examined
+in this study. The Cox-Snell residuals of the Cox-PH model also showed good fit as seen
+
+in Figure 4.4.4. To test the validity of the PH assumption in the model, plots of the scaled
+
+Schoenfeld residuals were produced below.
+
+Figure 4.4.4. Scaled Schoenfeld Residuals for Testing PH Assumption
+
+The slope of the residuals must be equal to zero to satisfy the PH assumption.
+Graphical inspection of the residuals plot for each variable in the model showed the validity
+of the PH assumption. The interpretation of the coefficients in the Cox-PH model is
+
+discussed in the next section.
+
+65
+
+Table 4.4.2. Final Cox-PH Model for Full-Vaccination Delay
+
+j Hazard | 95% CI
+Variable Coefficient | Here | ee | P-value
+Mother's age (in years) (mom_age) 0.031 1.03 | 1.01-1.06 | 0.006"
+Father's age (in years) (dad_age) -0.023 | 098 | 096-099 | o.011+
+Child’s birth order (birth_order) -0.106 | 0.90 | 084-097 | 0.004%
+‘Autonomy in healthcare utilization (ma_healtheare)
+Yes -1.686 | 0.19 | 0.04-0.89 | 0.063
+Baby's health first checked after birth (pne_baby)
+Within a day 0.205, 1.23 | 075-202 | 0.420
+Within a week -0.015 | 098 | 054-181 | 0.960
+Within a month 0.69 | 030-158 | 0.375
+After a month 038_| 010-149 | 0.164
+™ma_healthcare*pne_baby
+‘Yes*Within a day 2.102 818 | 1.69-39.64 | 0.009"
+Yes*Within a week 1.651 521 | 0.91-29.98 | 0.064
+Yes*Within a month 1.709 352_| 067-45.72 |_0.113
+Other insurance membership (Insurance_others)
+Yes 0.474 161_| 111-233 | 0.036*
+‘(utonomy in visiting family and friends (ma_visit)
+Yes 0.669 204 | 111-343 | 0.020*
+‘Aware of free immunization (aware_immunization)
+Yes 0.335 142__| 1.09-1.80 | 0.009"
+ma_visit®aware_immunization
+Yes*Yes -0.822 | 044 | 024-081 | 0.008*
+
+*Significant at a = 0.05
+For survival models in PH form, the hazard ratio (HR) is interpreted as how often a
+
+particular event happens in one group compared to another group over time. The event in
+
+this study is defined as full vaccination past the recommended age of 12 months old (i.e.,
+full-vaccination delay). In this case, an HR value of greater than one (1) means that a certain
+group was more likely to be fully vaccinated after the age of one year.
+
+Parental age, child’s birth order, maternal autonomy in healthcare utilization and
+visiting family/friends, awareness of the free immunization program, baby’s postnatal care,
+
+and membership into other insurance (GSIS, SSS, etc.) were included in the final Cox-PH
+
+model as seen in Table 4.4.2.
+
+66
+
+The final Cox-PH model for the hazard of full vaccination after the recommended
+age of 12 months is given by:
+h(t) = ho(t) x exp [0.031 (mom_age) ~ 0.023(dad_age) ~ 0.106(birth_order)
++0.474(insurance_othersyes)- 1.686(ma_healthcareyss) +0.205(pnc_babywrtun aay)
++2.102(ma_healthcareves* pnc_babywrrumn pay) + 0.669(ma_visityes)
+
++ 0.335 (aware_immunizationyes) ~ 0.822(ma_visitves" aware_immunizationyes)]
+Holding all other factors constant, a year increase in the mother’s age would increase
+the risk of a child’s full vaccination after the age of 12 months by 3% [exp(0.031)=1.03,
+p-value=0.006], while a year increase in the father’s age would decrease said risk by 2%
+[exp(-0.023)=0.98, p-value=0.0111}. As an example, the relative risk of full vaccination for
+a mother aged 35 years compared to a mother aged 25 years was equal to
+exp{(35-25)*0.031) = 1.36. Meanwhile, the relative risk of full vaccination for a father
+aged 35 years old compared to a father aged 25 years old was exp[(35-25)*-0.023)] = 0.79.
+
+In addition, a unit increase in the child’s birth order would decrease the child’s full
+
+vaccination risk by 10% at any fixed point in time (p-value=0.004). In other words, a
+second-bom child was 10% less likely to be fully vaccinated compared to a firstborn child.
+
+The interaction of maternal autonomy in healthcare utilization with the baby’s first
+postnatal check-up was found to be significant (p-value=0.009). The risk of full vaccination
+for a mother with autonomy in healthcare utilization and whose baby got checked within a
+day after birth was exp[(-1.686+0.205+2.102)] = 1.86, holding all other variables constant.
+A mother with autonomy in healthcare utilization and whose baby got checked within a
+day after birth had a significantly higher risk of full vaccination, by 86%, compared to a
+
+mother without autonomy in healthcare utilization and whose baby never had a postnatal
+
+check-up.
+
+67
+
+Moreover, at any fixed point in time, parents being a member of other insurance
+(GSIS, SSS, etc.) increased the risk of full vaccination by 61% compared to not members
+(p-value=0.036).
+
+At any point in time, the risk of being fully vaccinated for children whose mothers
+had autonomy in visiting family/friends was twice that of children whose mothers did not
+have such autonomy (p-value=0.020). Meanwhile, children whose mothers were aware of
+the free immunization program in their area had a significantly higher risk of being fully
+vaccinated, 42% higher to be exact, than those who were not aware of the free vaccination
+program, holding all other predictors constant (p-value=0.009).
+
+The last interaction found to be significant in the Cox-PH model was the pairwise
+combination of maternal autonomy in visiting family/friends and awareness of the free
+immunization program of the local government units (LGU) (p-value=0.008). Holding all
+other factors constant, children whose mothers were aware of the free immunization
+program and who had autonomy in visiting family/friends had a significantly higher risk,
+by 20%, of getting fully vaccinated than children whose mothers were not aware of the free
+
+immunization program and who did not have autonomy in visiting family/friends.
+
+68
+
+Parametric model in Proportional Hazards (PH) form
+
+The Gompertz model showed the lowest AIC and BIC values among all the examined
+
+parametric models,. It showed the best fit among parametric models in PH form, but its
+
+Cox-Snell residuals plot was close to that of the lognormal and loglogistic models.
+
+The discussion of Gompertz model was mainly to assess its similarities with the
+
+PH-assumed Cox survival model.
+
+Table 4.4.3 Final Gompertz Model for Full-Vaccination Delay
+
+Variable Coctticient | Hazard | 95% Cl | value
+
+Mother's age (in years) (mom_age) 0.029 1.03 | 101-105 | oon
+Father’s age (in years) (dad_age) 0.020 0.98 0.96-0.99 | 0.020*
+Chilé’s bith order (birth_order) -0089 | ost | 08-099] 0028
+Family’s wealth index (wealth_index)
+
+Poorer 0.17 | 112 | 062-203] 0.700
+
+Middle 0.244 1.27 0.71 - 2.30 0.418
+
+Richer 0.264 1.30 0.70 - 2.43 0.406,
+
+Richest 0.478 161 0.94 - 2.77 0.085
+Urban (urban)
+
+Rural o.169 | 1s | 073-192 | 0.495
+wealth_index*urban_
+
+Poorer*Rural -0.256 0.77 0.41-1.47 0.434
+
+Middle*Rural 0.358 0.70 0.35-1.41 0.316
+
+Richer*Rural 087 | 042-181] o711
+
+Richest*Rural =1.101 0.33 0.15 - 0.74 0.007*
+‘Autonomy in household purchases(ma_hhpurchase)
+
+Yes -0.277 0.76. 0.46 - 1.24 0.266
+‘wealth_index*ma_hhpurchase
+
+Poorer*Yes 0.903 247 1.28 -4.75 0.007*
+
+Middle*Yes 0.165 118 0.51 - 2.73 0.701
+
+Richer*Yes 0.281 132 | 034-327] 0542
+
+Richest*Yes 0.944 2.57 1.10 - 5.98 0.028*
+Other insurance membership (insurance_others)
+
+Yes 0.470 1.60 1.06 - 2.42 | 0.027"
+“Aware of fee immunization (aware_jmmunizalion)
+
+Yes 0.257 1.29 1.02 - 1.64 0.035*
+
+*Significant at a= 0.05
+
+69
+
+Factors included in the final Gompertz model were parental age, child’s birth order,
+family’s wealth index, urbanity, matemal autonomy in large household purchases,
+awareness of the free immunization program, and membership into other insurance (GSIS,
+SSS, etc.). It should also be noted that HR > 1 indicates a higher likelihood of full
+vaccination after a year.
+
+The final Gompertz model for the hazard of full vaccination after the recommended
+age of 12 months is given by:
+
+h(t) = ho(t) x exp [0.029(mom_age) - 0.020(dad_age) - 0.089(birth_order)
++0.470(insurance_othersves) + 0.257(aware_immunizationyes)
++ 0.117(wealth.indexroonen) + 0.478 (wealth. indexricuest)
++ 0.169(urbanauna.) ~ 1.101 (wealth_indexncnesr * urbannunaL)
+~ 0.277(ma_hhpurchasevss) +0.903 (ma_hhpurchaseves * wealth_indexrooren)
++0.944 (ma_hhpurchaseves * wealth indexnicuest)]
+
+Similar to the Cox-PH model, the mother’s age (HR=exp(0.029)=1.03,
+p-value=0.011), father’s age (HR=0.98, p-value=0.020), child’s birth order (HR=0.91, p-
+value=0.028), membership in other insurance (HR=1.60, p-value=0.027), and awareness
+of free immunization programs (HR=1.29, p-value=0.035) were found to be significant in
+explaining the risk of a child being fully vaccinated after the first year.
+
+Furthermore, children from families who belonged to the richest quintile and were
+living in rural areas had a lower full-vaccination risk, at exp[(0.478 + 0.169 -1.101)] = 0.64,
+than the control group, i.e., children from the poorest household living in an urban area (p-
+value=0.007). A common pattern in the model was that families living in rural areas,
+
+regardless of their socioeconomic status, had lower risks of being fully vaccinated
+
+compared to families living in urban areas.
+
+70
+
+The interaction of wealth index and maternal autonomy on large household purchases
+was also found to be significant. Children whose mothers had autonomy in large household
+purchases and belonged to the second wealth quintile had a risk of being fully vaccinated
+equal to 2.10 times that of children whose mothers did not have autonomy and belonged to
+the poorest wealth quintile (p-value=0.007). In addition, children whose mothers had
+autonomy in large household purchases and belonged to the richest wealth quintile had a
+risk amounting to 3.14 times that of children whose mothers had no autonomy in large
+household purchases belonging to the poorest quintile (p-value=0.035). The computed
+risks of full vaccination for mothers with autonomy in large household purchases were also
+higher by 98% and 153% when compared to mothers without autonomy and belonging to
+
+second and richest wealth quintiles, respectively.
+
+Parametric model in Accelerated Failure-Time (AFT) form
+
+‘Among all the parametric survival models, the generalized gamma distribution
+provides the most flexibility in estimating survival data. It was not surprising that it had
+the best fit among parametric in AFT models. The generalized gamma model had ancillary
+parameter values of « = —1.98 and o = 2.16.
+
+In the AFT models, time ratios describe the median survival time of a group
+compared to another group. In this case, a time ratio greater than one (1) means a longer
+time of delay in getting all the EPI-recommended vaccines or a longer delay in not being
+
+fully vaccinated
+
+71
+
+Table 4.4.4. Final Generalized Gamma Model for Full-Vaccination Delay
+
+Variable Coefficient en es nas for | p-value
+Child's birth order (birth_order) 0.120 | 1.2 | 104-122 | 0.004
+Father's highest educational attainment (dad_edue)
+Primary level 0699 | 050 | 030-101 | 0.029*
+Secondary level 0.669 | 051 | 028-101 | 0.042"
+College level or higher 0785 | 046 | 026-097 | 0024+
+Mother drinking alcohol (mom_aleohol)
+Often 2.089 | 808 | 347-1884 | o.001*
+Sometimes -0021_| o98_| 072-134 | 0.895
+Emotional abuse
+No -04ss_| 0.62 | 0.43-0.89 | 0.009"
+PhilHealth membership (insurance_ph)
+Yes -0342_| 07 | 051-099 | 0.006"
+Oiher insurance membership (insurance others)
+Yes -1301_| 027 | 007-094 | 0.039
+‘Mother's health first checked after delivery
+(pne_mom) -1350 | 027 | 008-098 | 0.046
+Within a day 0059 | 114 | 026-511 | 0.860
+Within a week oat | 052 | 013-205 | 0348
+Within a month
+insurance_others*pne_mom
+Yes*Within a day 1451 | 4.10 | 1.05~15.99 | 0.033*
+Yes*Within a week 012 | 1.13 | 022-568 | 0.860
+Yes*Within a month 1.705__| 5.50 | 153-2159 |_0220
+
+*Significant at a = 0.05
+
+The model estimates for the generalized gamma model are shown in Table 4.4.4.
+Factors included in the final generalized gamma model were the child’s birth order, the
+father’s highest educational attainment, mother drinking alcohol, mother experiencing
+emotional abuse, membership in PhilHealth and other insurance, and the time (since
+delivery) of the mother’s first postnatal check-up.
+
+A unit increase in the child’s birth order would increase the full-vaccination delay by
+
+13% [exp(0.120)=1.13] at any given point in time (p-value=0.004). This result was
+
+consistent with the Cox-PH model and Gompertz model.
+
+72
+
+Holding all other predictors constant, children whose fathers had no education were
+generally twice more likely to be delayed in getting all the EPI-recommended vaccines
+than children whose fathers had primary education (p-value=0.029), secondary level
+education (p-value=0.042), or at least college-level education (p-value=0.024)
+
+In addition, the risk of full-vaccination delay among children whose mothers were
+drinking often was 8.08 times more compared to children whose mothers were non-
+drinkers.
+
+Meanwhile, the risk of delay in full vaccination was lower for children whose
+mothers did not experience emotional abuse (TR=0.62, p-value=0.009), and whose family
+was covered by PhilHealth (TR=0.71, p-value=0.006) and other insurance (GSIS, SSS, etc.)
+(TR=0.27, p-value=0.039).
+
+The interaction of timing of the mother’s postnatal care check-up with membership
+in other insurance was also found to be significant (p-value=0.033). Relative to children
+whose mothers have no other insurance and never had postnatal check-up, the risk of full-
+vaccination delay for children whose mothers had other insurance and who had themselves
+checked within a day after delivery was lower at exp[(1.451-1.350-1.301] = 0.30, while the
+risk of full-vaccination delay for children whose mothers did not have other insurance but
+was checked within a day after delivery is 0.27. This also meant that children whose
+mother’s health was checked within a day after delivery were less likely to be delayed in
+
+getting the EPI-recommended vaccines, regardless of their membership in other insurance.
+
+73
+
+5. DISCUSSION
+The administration of EPI-recommended vaccines is usually monitored at 12 or 24
+months, especially in countries with low immunization coverage (Raguindin et. al., 2021).
+In the Philippines, a child is considered fully immunized (FIC) if he or she has received all
+of the EPI-recommended vaccines by the age of 12 months, including BCG at birth, OPV
+and Pentavalent (DTP- HepB-Hib) doses at 6, 10, and 14 weeks of age, and MCV doses at
+9 and 12 months of age. Meanwhile, a child can still be considered as completely
+immunized (CIC) if he or she has received all the EPI-recommended vaccines within 13 to
+23 months old. Among children aged 24 to 35 months with vaccine cards, only 29.72%
+were able to obtain all EPJ-recommended immunizations within their first year of life,
+while 25.91% were able to receive all vaccines between the ages of 13 and 23 months.
+These figures vary from the national estimates in FHSIS 2017, which show that 67.47%
+are FIC and 8.11% are CIC. The difference in the estimates was due to the numerator and
+denominator used in calculating the national estimates in FHSIS. The denominator used
+for both measures is 2.056% of the estimated total population in the country. Meanwhile,
+the group of children aged 12 months is used as numerator in calculating the FIC rate, and
+the group of children aged 13-23 old is used for the CIC rate (DOH, 2018). Despite the fact
+that half of the children (55.63%) received all the EPl-recommended vaccines, it is still
+alarming that the 45.46% of children aged 24 to 35 months old remain underimmunized.
+Vaccination coverage is a widely used success indicator of different immunization
+programs around the world. However, the timeliness of vaccine administration is
+frequently neglected and unmeasured. The median vaccine delay from the target
+administration times was 5 days for BCG; 2.4 weeks for OPV1; 2.7 weeks for Pental; 4.0
+
+weeks for OPV2; 4.4 weeks for Penta2; 6.4 weeks for OPV3; 6.6 weeks for Penta3; 2.3
+74
+
+weeks for MCV1; and 3.6 weeks for MCV2. It can be noticed that the third doses for OPV
+and Pentavalent vaccine had the longest delay at 6 weeks. In a similar study conducted in
+the Philippines, the median delay from the recommended vaccination age was 2.7 weeks
+for BCG; 3.1 weeks for OPV1; 4.1 weeks for Pental; 4.7 weeks for OPV2; 5.8 weeks for
+Penta2; 6.7 weeks for OPV3; and 7.7 weeks for Penta3 (Raguindin et. al., 2021). These
+estimates are higher, especially for BCG, compared to the estimated median delays in this
+study. The vaccination delays were also observed in other middle-income and low-income
+countries (Akmatov et. al., 2011; Babirye et. al., 2012; Clark & Sanderson, 2009; Hu et.
+al., 2017).
+
+The percentage of children who received complete doses was 84.46% for OPV,
+82.47% for Pentavalent vaccine, and 65.17% for MCV. Meanwhile, the median age of
+children who never got each vaccine dose was also examined. Half of the children who
+were not immunized were 8.9 months old for BCG; 5.79 months old for OPV1; 6.28
+months old for Pental; 8.9 months old for OPV2; 9.37 months old for Penta2; 9.34 for
+OPV3; 9.73 for Penta3; 11.9 months for MCV1; and 22.22 months old for MCV2.
+
+The estimated median ages of children for vaccination and non-vaccination provided
+a quick overview of the country’s immunization delays. To further understand the timely
+and delayed administration of each EPl-recommended vaccine, the probability of
+vaccination at a specific age was examined
+
+The cumulative coverage (probability of vaccination) was 67.32% for BCG at one
+month; 69.17% for OPVI at 2.5 months; 63.95% for Pental at 2.5 months; 53.97% for
+OPV2 at 3.5 months; 50.40% for Penta2 at 3.5 months; 39.79% for OPV3 at 4.5 months,
+38.69% for Penta3 at 4.5 months; 58.72% for MCV at 10 months; and 35.64% for MCV2
+
+at 13 months. Delays in subsequent doses were assessed in this study. It should also be
+75
+
+noted that the percentage of children who had delayed vaccination for OPV2 and Penta2
+were a bit higher for children who had delayed first doses compared to children who had
+timely first doses. This observation in the second-dose delays was similar to the delays in
+the third-dose delays of OPV and Pentavalent vaccine. Meanwhile, the percentages of
+children who had delayed MCV2 were low regardless of the timeliness of their MCV1
+intake. In fact, around 98.8% of children who had timely MCVI received their MCV2 on
+time, while the timely receipt of MCV2 was 88.72% among children who had delayed
+MCVI intake.
+
+Factors associated with the delay in full vaccination were assessed from the lens of
+survival analysis. Cox-PH model (semiparametric), Gompertz model (parametric in PH
+form), and generalized gamma model (parametric in AFT form) showed the best fitting
+among the other survival models.
+
+The child’s birth order and membership in other insurance were found to be
+significant in all three models. A unit increase in the child’s birth order would increase the
+tisk of full-vaccination delay by around 9% - 12% at any fixed point in time. This was
+consistent with the studies conducted in Congo (Zivich et. al., 2017), Gambia (Odutola et.
+al., 2015), and Iran (Mokhtari et. al., 2015; Rejali et. al., 2015). In a separate study, delayed
+
+and incomplete vaccinations were more prominent among Filipino mothers who had more
+
+than one child and were not receiving assistance in childcare and household chores (ICI
+Asia, 2017). On the other hand, parents being a member of other insurance such as GSIS,
+SSS, etc. would decrease full-vaccination delay by around 60% ~ 73% compared to non-
+members. The household’s insurance membership was already found to be a significant
+factor for full and timely immunizations, as well as access to other healthcare services
+
+(Dombkowski et. al., 2004; Narvaez et. al., 2017; Newacheck et. al., 1998).
+76
+
+Mother’s age, father’s age, membership in other insurance, and awareness of free
+immunization programs were also found to be significant for models in proportional
+hazards (PH) form. A year increase in the mother’s age would increase the risk of a child’s
+full vaccination after the age of 12 months by 3%, while a year increase in the father’s age
+would decrease the said risk by 2%. This was in contrast to the studies in Eastern China
+(Hu et. al., 2014), Colombia (Narvaez et. al., 2017), Guatemala (D’Ardenne et. al., 2016),
+and Kenya (Gibson et. al., 2015) where advanced maternal age was shown to be a
+significant factor for delayed vaccination.
+
+Although rarely examined, awareness of the free immunization program offered by
+the local government unit (LGU) was also found to be a significant factor for full-
+vaccinated after one year. Children whose mothers were aware of the free immunization
+program in their area were 29% - 42% less likely to be delayed in getting all the EPI-
+recommended vaccines than those who are not aware of the free vaccination program. In
+addition, only 65.83% of mothers were aware of the free vaccination programs offered by
+their LGUs.
+
+Maternal autonomy in visiting family and friends and its interaction with awareness
+of free immunization were found to be significant factors in the Cox-PH model. The
+interaction of maternal autonomy on health care utilization with the timing of baby’s first
+postnatal check-up was also found significant in this model. Meanwhile, for the Gompertz
+model, another significant factor revealed was the interaction of wealth index with urbanity
+
+and with maternal autonomy on large household purchases.
+
+7
+
+The generalized gamma model showed a different set of significant factors when
+compared to the Cox model and Gompertz model. Father’s highest educational attainment,
+mother drinking alcohol, mother experiencing emotional abuse, and membership to
+PhilHealth were found to be significant in this model. The interaction of the mother’s first
+postnatal care check-up with membership in other insurance was also found to be
+significant.
+
+Children whose fathers have no education are generally twice more likely to be
+delayed in getting all the EPI-recommended vaccines after the age of 12 months than
+children whose fathers had higher levels of education. This result is supported by studies
+conducted in Greece (Danis et. al., 2010), India (Barman et. al., 2015), Iran (Mokhtari et.
+al., 2015), and Nigeria (Oleribe et. al., 2017). This might be due to that fact that the father’s
+knowledge and beliefs about childhood vaccines influence the mother’s vaccination
+behavior. It was recommended that fathers and partners should undergo “Responsible
+Fatherhood” seminars (ICI Asia, 2017). It was also found that the risk of full-vaccination
+delay among children whose mothers are drinking often is 8.08 times more compared to
+children whose mothers are non-drinkers. On the other hand, the risk of full-vaccination
+delay is lower for children whose mothers were not experiencing emotional abuse and
+
+whose family is covered by PhilHealth.
+
+78
+
+This study is not without limitations. Causality could not be established since this
+study implemented a cross-sectional study design.
+
+Children with vaccination cards were more likely to be fully and timely immunized
+compared to children without cards (Kinfe et. al., 2019; Usman et. al., 2009). Since
+vaccine timeliness was mainly computed from the dates in the vaccination cards (i.e.,
+administration date minus the date of birth), there was a risk of overestimation in vaccine
+timeliness.
+
+The second dose of MCV is only recorded for children aged 24 to 35 months old.
+The missing data might introduce bias when the full-vaccination rates differ between those
+who were included in the survival model (i.e., children aged 24 to 35 months old) compared
+to those who are not included (i.e., children aged 12 to 23 months old). The full-vaccination
+rate might be higher or lower than the actual rate (i.e., rate from all children aged 12 to 35
+months old).
+
+Furthermore, interaction between explanatory variables in the model were examined,
+
+but only at two-factors interaction effect.
+
+79
+
+6. CONCLUSION AND RECOMMENDATIONS
+
+The delayed administration of the EPI-recommended vaccines goes hand in hand
+with the low vaccination coverage in the country. The last doses of OPV, Pentavalent
+vaccine, and MCV, which should give maximum protection against targeted VPDs, were
+revealed to have low vaccination coverage and considerable delays. These delays put
+Filipino children at risk of certain VPDs for a longer period, which also has a negative
+impact on herd immunity (Akmatov et. al., 2008).
+
+The cumulative probability of vaccination did not reach 50% a month after the target
+age of administration for the OPV, Pentavalent vaccine, and MCV. The low cumulative
+probabilities for OPV3 and Penta3 were mainly affected by cumulative delays experienced
+in the first and second doses. Meanwhile, the low cumulative probability for MCV2 was
+mainly due to the delay in MCV1. In fact, most of the children were receiving their second
+dose of MCV three months after MCV], regardless of the timeliness of MCV] intake. It
+may be beneficial to propose interventions aimed at boosting immunization rates during
+the first four (4) months of life, and by 9 to 10 months old.
+
+Among the survival models explored in this study, the Cox-PH survival model was
+considered to be the final model in explaining full-vaccination delay among Filipino
+children. Compared to the other two models, significant variables in the Cox-PH model
+provide more useful information in developing health programs that promotes timely
+immunization and boost immunization rates.
+
+The child’s birth order was found to be a significant factor for the full-vaccination
+delay. The integration of family planning (FP) and immunization, which was proven to be
+beneficial for both mothers and infants, can be implemented by the local government units
+
+(Herrin et. al., 2012). A manual for implementing such an integration process, called
+80
+
+FP/ANC-EPI integration strategy, is available for use by LGUs and can be downloaded
+from the official DOH site (DOH, 2012). Domestic violence screening can also be
+incorporated into this integration as intimate partner violence was found to be associated
+with vaccine timeliness, as well as with using contraception and visiting family planning
+clinics (Tsai et. al., 2016). Health facilities, especially rural health units (RHU) and
+barangay health centers (BHC), can serve as a neutral venue for service providers to reach
+out to women experiencing domestic abuse.
+
+Non-membership in insurance was also found to be associated with delay in full
+vaccination. In relation to this, parents can be urged to enroll in PhilHealth or other
+insurance programs. Filipino citizens are automatically eligible for the National Health
+Insurance Program (NHIP) by PhilHealth under the Universal Health Care (UHC) Law.
+However, registration is needed to avail benefit packages of the insurance program. One
+benefit package is called Newborn Care Package (NCP) which provides essential health
+services for infants. NCP health services include newbom screening and vaccines for BCG
+and hepatitis B (PhilHealth, 2019).
+
+The local government units (LGUs) can also intensify information dissemination
+about the availability and schedule of free immunization, as well as the importance of
+timely vaccination. Communication campaigns can emphasize that EPI-recommended
+vaccines be administered at recommended ages and completed within the first year of life
+to attain maximum protection against preventable diseases. This can also be done
+highlighting personal and social benefits of vaccination such as the prospect of protecting
+families and holding family gatherings (The World Bank, 2021). Aside from publication
+materials conveying messages about the benefits of vaccinations, the availability of free
+
+vaccines in public health facilities can be stressed.
+81
+
+Moreover, a child’s vaccine information may be inputted into a software or computer
+application where the vaccine schedule can be automatically generated after dose
+administration (Bordley et. al., 2001; Kairys, et. al., 2006; Margolis et. al., 2001;
+Zimmerman et. al., 2014). Digitalizing vaccine information is useful for healthcare
+providers to conveniently monitor the vaccination status of children in their areas, as well
+as a data backup in the event that vaccine cards are misplaced or missing.
+
+Reminders about a child’s vaccination schedule can also be looked into. An addition
+to the verbal reminders, computer-assisted appointment reminders, and telephone
+reminders can be used. Text messages with short, specific text content can also be effective
+to remind mothers about their child’s next vaccination schedule (Ahlers-Schmidt et. al.,
+2011; Garcia-Dia, et. al., 2017). The use of bracelets and pendants (i.e., Khushi baby
+pendant) were already explored in reminding mothers, systematically updating health
+information, and monitoring children who are considered high-risk (i.e., children who are
+already delayed from the recommended vaccine administration time) (Nagar et. al, 2020;
+Siddiqi et. al., 2020).
+
+Researchers who want to examine the timeliness of vaccination can consider using
+the Turnbull estimation method as an alternative to the Kaplan-Meier (KM) method. The
+Turnbull method is advantageous over the KM method since it uses an expectation-
+maximization (EM) algorithm and can accommodate combinations of exact, left-censored,
+right-censored, and interval-censored data. To give a complete overview of the timeliness
+in the EPl-recommended immunization, the delays in the subsequent doses for OPV,
+Pentavalent vaccine, and MCV should be examined and interpreted with the Turnbull
+
+estimated probabilities of vaccination.
+
+82
+
+Before performing any parametric survival model for vaccination timeliness, the
+hazard function plot can be examined first. This plot can give an idea about the distribution
+suited for the survival data. If the plot shows monotone hazard rates that are exponentially
+increasing or decreasing, the generalized gamma model and the Gompertz model are
+recommended to be examined. If the plot illustrates nonmonotonic hazard rates which
+initially increases and then decreases, the generalized gamma model and loglogistic model
+can be explored. This process can save time since the generalized gamma model is flexible
+and have special cases for the other distributional forms. The parametric model produced
+by doing this procedure can also be compared to the semiparametric Cox model.
+
+When exploring possible interaction terms given a large number of factors,
+a pre-selection procedure is recommended. This can be done by examining the interaction
+terms modeled with its pairwise predictors using a relaxed p-value criterion of 0.15, 0.20
+or 0.25. If the interaction term in this pre-selection step shows a p-value of less than or
+equal to the specified p-value, then that term can be considered in the model.
+
+Information criteria should be checked, and diagnostics tests should always be
+
+performed to assess the model fit of the final survival model.
+
+83
+
+7. REFERENCES
+
+Aalemi, A. K., Shahpar, K., & Mubarak, M. Y. (2020). Factors influencing vaccination
+coverage among children aged 12-23 months in Afghanistan: Analysis of the 2015
+Demographic and Health Survey. PLOS ONE, 15(8).
+https://doi.org/10.1371/journal.pone.0236955
+
+Abbi, R., Christian, P., Gujral, S., & Gopaldas, T. (1991). The impact of matemal work
+status on the nutrition and health status of children. Food and Nutrition Bulletin,
+13(1), 1-6. https://doi.org/10.1177/156482659101300128
+
+Abebe, D. S., Nielsen, V. O., & Finnvold, J. E. (2012). Regional inequality and vaccine
+uptake: a multilevel analysis of the 2007 Welfare Monitoring Survey in Malawi.
+BMC Public Health, 12(1). doi:10.1186/1471-2458-12-1075
+
+Acharya, P., Kismul, H., Mapatano, M. A., & Hatlay, A. (2019). Correction: Individual-
+and community-level determinants of CHILD immunization in the Democratic
+Republic of Congo: A Multilevel analysis. PLOS ONE, 14(1).
+https://doi.org/10.1371 journal.pone.0211299
+
+Adetifa, I. M. O., Karia, B., Mutuku, A., Bwanaali, T., Makumi, A., Wafula, J., Chome,
+M., Mwatsuma, P., Bauni, E., Hammitt, L. L., Mataza, C., Tabu, C., Kamau, T.,
+Williams, T. N., & Scott, J. A. (2018). Coverage and timeliness of vaccination and
+the validity of routine estimates: Insights from a vaccine registry in Kenya.
+Vaccine, 36(52), 7965-7974. https://doi.org/10.1016/j.vaccine.2018.11.005
+
+Adhikari, R. (2016). Effect of women’s autonomy on Maternal Health Service Utilization
+in Nepal: A Cross Sectional Study. BMC Women's Health, 16(1).
+
+https://doi.org/10.1186/s12905-016-0305-7
+
+84
+
+Agresti, A. (2007). An Introduction to Categorical Data Analysis. John Wiley & Sons,
+Inc.
+
+Ablers-Schmidt, C. R., Hart, T., Chesser, A., Williams, K. S., Yaghmai, B., Shah-Haque,
+S., &amp; Wittler, R. R. (2011). Using human factors techniques to design text
+message reminders for childhood immunization. Health Education &amp;
+Behavior, 39(5), 538-543. https://doi.org/10.1177/10901981 1 1420866
+
+Ahmad, K., Kabir, E., Keramat, S. A., & Khanam, R. (2021). Matemal health and health-
+related behaviours and their associations with child health: Evidence from an
+Australian birth cohort. PLOS ONE, 16(9).
+https://doi.org/10.137 journal. pone.0257188
+
+Ahmed, S.M., Abd-El Rahmed, T.A., & Masoed, E.S. (2013). Mother’s awareness and
+knowledge of under five years children regarding immunization in Minia city
+Egypt. Life Science Journal. 10(4), 1224-1225.
+
+Akmatov, M. K., & Mikolajezyk, R. T. (2011). Timeliness of childhood vaccinations in
+31 low and middle-income countries. Journal of Epidemiology and Community
+Health, 66(7). https://doi.org/10.1136/jech.2010.124651
+
+Akmatov, M. K., Kretzschmar, M., Kramer, A., & Mikolajezyk, R. T. (2008). Timeliness
+of vaccination and its effects on fraction of vaccinated population. Vaccine, 26(31),
+3805-381 1. https://doi.org/10.1016/j.vaccine.2008.05.031
+
+‘Akmatov, M. K., Kretzschmar, M., Kramer, A., & Mikolajezyk, R. T. (2007).
+Determinants of childhood vaccination coverage in Kazakhstan in a period of
+societal change: Implications for vaccination policies. Vaccine, 25(10), 1756-1763.
+
+https://doi.org/10.1016/j.vaccine.2006.11.030
+
+85
+
+Akoth, C. (2020). Time to Childhood Immunization Uptake in Kenya: A Survival
+Analysis. (thesis).
+
+Anichukwu, O. I., & Asamoah, B. O. (2019). The impact of maternal health care
+utilisation on routine immunisation coverage of children in Nigeria: a cross-
+sectional study. BMJ Open, 9(6), €026324. doi:10.1136/mjopen-2018-026324
+
+Anokye, R., Acheampong, E., Budu-Ainooson, A., Edusei, A.
+
+Okyere, P., Dogbe, J.,
+& Nadutey, A. (2018). Socio-demographic determinants of childhood
+immunization incompletion in Koforidua, Ghana. BMC Research Notes, \1(1).
+https://doi.org/10.1186/s13104-018-3767-x
+
+Aslam, M., Sadiq, M., & Mehmood, T. (2020). Assessment of maternal health services
+utilization in Pakistan: the role of socio-demographic characteristics. Asian
+Biomedicine, 14(1), 3-1. https://doi.org/10.1515/abm-2020-0002
+
+Babirye, J. N., Engebretsen, I. M., Makumbi, F., Fadnes, L. T., Wamani, H., Tylleskar,
+T., & Nuwaha, F. (2012). Timeliness of childhood vaccinations in Kampala
+Uganda: A community-based cross-sectional study. PLoS ONE, 7(4).
+https://doi.org/10.137 1 Jounal pone.0035432
+
+Badu, E., Agyei-Batfour, P., Ofori Acheampong, I., Preprah Opoku, M., & Addai-
+Donkor, K. (2018). Households Sociodemographic Profile as Predictors of Health
+Insurance Uptake and Service Utilization: A cross-sectional study in a municipality
+of Ghana. Advances in Public Health, 2018, 1-13.
+https://doi.org/10.1155/2018/7814206
+
+Barman, D., & Dutta, A. (2014). Access and barriers to immunization in West Bengal,
+India: Quality matters. Journal of Health, Population and Nutrition, 31(4).
+
+https://doi.org/10.3329/jhpn.v3 1i4.20050
+86
+
+Barman, M. P., Nath, K., & Hazarika, J. (2015). Factors affecting timeliness of
+immunization coverage among children of Assam, India. Journal of Health
+Management, 17(3), 274-284. https://doi.org/10.1177/0972063415589243
+
+BBC. (2019, February 7). Measles outbreak declared in Philippines. BBC News.
+Retrieved from https://www.bbc.com/news/world-asia-47153817.
+
+Bendel, R. B., &amp; Afifi, A. A. (1977). Comparison of stopping rules in forward
+“stepwise” regression. Journal of the American Statistical Association, 72(357), 46.
+https://doi.org/10.2307/2286904
+
+Bishop, C. M. (2006). Pattern recognition and machine learning. Springer.
+
+Bobo, J. K., Gale, J. L., Thapa, P. B., & Wassilak, S. G. (1993). Risk factors for delayed
+immunization in a random sample of 1163 children from Oregon and Washington.
+Pediatrics, 91(2), 308-314. https://doi.org/10.1542/peds.91.2.308
+
+Bondy, J.N., Thind, A., Koval, J. J., & Speechley, K. N. (2009). Identifying the
+determinants of childhood immunization in the Philippines. Vaccine, 27(1), 169-
+
+175. https://doi.org/10.1016/j.vaccine.2008.08.042
+Bonu, S., Rani, M., Jha, P., Peters, D. H., & Nguyen, S. N. (2004). Household tobacco
+and alcohol use, and child health: an exploratory study from India. Health Policy,
+70(1), 67-83. https://doi.org/10.1016/).healthpol.2004.02.003
+Bordley, W. C., Margolis, P. A., Stuart, J., Lannon, C., & Keyes, L. (2001). Improving
+preventive service delivery through office systems. Pediatrics, 108(3).
+https://doi.org/10.1542/peds.108.3.e41
+
+Borras, E., Dominguez, A., Fuentes, M., Batalla, J., Cardefiosa, N., & Plasencia, A.
+(2009). Parental knowledge of paediatric vaccination. BMC Public Health, 9(1).
+
+https://doi.org/10.1186/1471-2458-9-154
+87
+
+Boshnakova, A. & Kamad, A. (2018). Medicine and vaccine shortages: What is the role
+of global regulatory complexity for post approval changes? The Economist
+Intelligence Unit.
+
+Boulton, M. L., Carlson, B. F., Wagner, A. L., Porth, J. M., Gebremeskel, B., & Abeje,
+Y. (2019). Vaccination timeliness among newborns and infants in Ethiopia. PLOS
+ONE, 14(2). https://doi.org/10.1371/journal.pone.0212408
+
+Brownson, R. C., Chriqui, J. F., & Stamatakis, K. A. (2009). Understanding evidence-
+based public health policy. American Journal of Public Health, 99(9), 1576-1583.
+https://doi.org/10.2105/ajph.2008.156224
+
+Buckles, K. S., & Price, J. (2013). Selection and the marriage premium for Infant Health.
+Demography, 50(4), 1315-1339. https://doi.org/10.1007/s13524-013-021 1-7
+
+Budu, E., Ahinkorah, B. O., Aboagye, R. G., Armah-Ansah, E. K., Seidu, A.-A., Adu, C.,
+Ameyaw, E. K., & Yaya, S. (2021). Maternal healthcare utilisation and complete
+childhood vaccination in sub-Saharan AFRICA: A cross-sectional study of 29
+nationally representative surveys. BMJ Open, 11(5).
+https://doi.org/10.1136/bmjopen-2020-045992
+
+Burki, T. (2019). Vaccine misinformation and social media. The Lancet Digital Health,
+1(6). https://doi.org/10.1016/s2589-7500(19)30136-0
+
+Caingles, S., & Lobo, J. (2011). Survey on Knowledge, Attitudes and Practices of Parents
+in Barangay 8A, District 1, Davao City Regarding Their Children’s Immunization.
+
+PIDSP Journal, 12.
+
+88
+
+Calhoun, L. M., van Eijk, A. M., Lindblade, K. A., Hamel, M. J., Wilson, M. L., Slutsker,
+L., Odhiambo, F. O., & Winterbauer, E. (2014). Determinants and coverage of
+vaccination in children in westem Kenya from a 2003 cross-sectional survey. The
+American Journal of Tropical Medicine and Hygiene, 90(2), 234-241.
+https://doi.org/10.4269/ajtmh. 13-0127
+
+Cantor, A.B. (2003). SAS® Survival Analysis Techniques for Medical Research, Second
+Edition. SAS Institute Inc.
+
+Cao, Y. P., Yang, S. C., Wang, G. Q., & Zhang, Y. L. (2013). Sociodemographic
+characteristics of domestic violence in China. Journal of Interpersonal Violence,
+29(4), 683-706. https://doi.org/10.1177/08862605 13505218
+
+Centers for Disease Control and Prevention (CDC). (2017, July 12). Smallpox. Centers
+for Disease Control and Prevention. Retrieved from
+https://www.cde.gov/smallpox/index.html.
+
+Centers for Disease Control and Prevention (CDC). (2020, November 5). Vaccine for
+Measles (MMR Shot). Centers for Disease Control and Prevention. Retrieved from
+https://www.cdc.gov/measles/vaccination.html.
+
+Centers for Disease Control and Prevention (CDC). (2021, September 24). Types of
+immunity to a disease. Centers for Disease Control and Prevention. Retrieved from
+https://www.cde.gov/vaccines/vac-gervimmunity-types.htm.
+
+Clark, A., & Sanderson, C. (2009). Timing of children's vaccinations in 45 low-income
+and middle-income countries: An Analysis of Survey Data. The Lancet, 373(9674),
+
+1543-1549. https://doi.org/10.1016/s0140-6736(09)603 17-2
+
+89
+
+Cleveland Clinic. (2021, August 12). Js your newborn baby's immune system strong
+enough? Cleveland Clinic. Retrieved from https://health.clevelandclinic.org/is-
+your-newbom-babys-immune-system-strong-enough/.
+
+Cleves, M. A., Gould, W. W., & Marchenko, Y. V. (2016). An Introduction to Survival
+Analysis Using Stata. Stata Press.
+
+Crisostomo, S. (2019, November 6). DOH confirms Philippine's 4th polio case.
+Philstar.com. Retrieved from
+https://www.philstar.com/headlines/2019/1 1/07/1966705/doh-confirms-philippines-
+4th-polio-case.
+
+D’Ardenne, K. K., Darrow, J., Fumiss, A., Chavez, C., Hernandez, H., Berman, S., &
+Asturias, E. J. (2016). Use of rapid needs assessment as a tool to identify
+vaccination delays in Guatemala and Peru. Vaccine, 34(14), 1719-1725.
+https://doi.org/10.1016/.vaccine.2016.01.060
+
+Danis, K., Georgakopoulou, T., Stavrou, T., Laggas, D., & Panagiotopoulos, T. (2010).
+Socioeconomic factors play a more important role in childhood vaccination
+coverage than parental perceptions: a cross-sectional study in Greece. Vaccine,
+28(7), 1861-1869. https://doi.org/10.1016/j.vaccine.2009. 11.078
+
+Department of Health (DOH). (2012). FP/ANC-EPI Integration Strategy: Supplemental
+Guide for Recording, Reporting, and Utilizing Data. Department of Health.
+
+Department of Health (DOH). (2018). Field Health Services Information System (FHSIS)
+Manual of Operations. Department of Health.
+
+Department of Health (DOH). (2021). National Immunization Program Manual of
+
+Operations. Department of Health.
+
+90
+
+Desalew, A., Semahegn, A., Birhanu, S., & Tesfaye, G. (2020). Incomplete Vaccination
+and Its Predictors among Children in Ethiopia: A Systematic Review and Meta-
+Analysis. Global Pediatric Health, 7. https://doi.org/10.1177/2333794x20968681
+Devasenapathy, N., Ghosh Jerath, S., Sharma, S., Allen, E., Shankar, A. H., & Zodpey, S.
+(2016). Determinants of childhood immunisation coverage in urban poor
+settlements of Delhi, India: a cross-sectional study. BMJ Open, 6(8).
+https://doi.org/10.1136/bmjopen-2016-013015
+Dombkowski, K. J., Lantz, P. M., & Freed, G. L. (2004). Risk factors for delay in age-
+appropriate vaccination. Public Health Reports, 119(2), 144-155.
+https://doi.org/10.1177/00333549041 1900207
+Donta, B., Nair, S., Prakasam, C. P., & Begum, S. (2015). Socio-demographic factors
+associated with domestic violence in urban slums, Mumbai, Maharashtra, India.
+Indian Journal of Medical Research, 141(6), 783. https://doi.org/10.4103/0971-
+5916.160701
+
+Downs, J. S., de Bruin, W. B., & Fischhoff, B. (2008). Parents’ vaccination
+comprehension and decisions. Vaccine, 26(12), 1595-1607.
+https://doi.org/10.1016/.vaccine.2008.01.011
+
+Efroymson, D., Rahman, O., Ahmed, K. U., Sujon, A. 1., Dhar, B., Saha, R., Dey, A. R.,
+Alam, S. M., Townsend, J., & Ahmed, S. (2001). Hungry for tobacco: An analysis
+of the economic impact of tobacco consumption on the poor in Bangladesh.
+
+Tobacco Control, 10(3), 212~217. https://doi.org/10.1136/te.10.3.212
+
+91
+
+Elahi, S., Ertelt, J. M., Kinder, J. M., Jiang, T. T., Zhang, X., Xin, L., Chaturvedi, V.,
+Strong, B. S., Qualls, J. E., Steinbrecher, K, A., Kalfa, T. A., Shaaban, A. F., &
+Way, S. S. (2013), Immunosuppressive CD71+ erythroid cells compromise
+neonatal host defence against infection. Nature, 504(7478), 158-162.
+https://doi.org/10.1038/nature12675
+
+Emster, V., Kaufman, N., Nichter, M., Samet, J., Yoon, S. (2000). Women and tobacco:
+moving from policy to action. World Health Organization Bulletin, 78,891-901
+
+Fadnes, L. T., Jackson, D., Engebretsen, I. M. S., Zembe, W., Sanders, D., Sommerfelt,
+H., & Tylleskiir, T. (2011). Vaccination coverage and timeliness in three South
+African areas: A prospective study. BMC Public Health, 11(1).
+https://doi.org/10.1186/1471-2458-11-404
+
+Fadnes, L. T., Nankabirwa, V., Sommerfelt, H., Tylleskar, T., Tumwine, J. K., &
+Engebretsen, I. M. S. (2011). Is vaccination coverage a good indicator of age-
+appropriate vaccination? A prospective study from Uganda. Vaccine, 29(19), 3564~
+3570. https://doi.org/10.1016/j.vaccine.201 1.02.093
+
+Friedman, M. (2003). Domestic violence against women and autonomy. Autonomy,
+Gender, Politics, 140-160. https://doi.org/10.1093/0195138503.003.0007
+
+Garcia-Dia, M. J., Fitzpatrick, J. J., Madigan, E. A., &amp; Peabody, J. W. (2017). Using
+text reminder to improve childhood immunization adherence in the Philippines.
+CIN: Computers, Informatics, Nursing, 35(4), 212-218.
+
+https://doi.org/10.1097/cin.0000000000000307
+
+92
+
+Garrett, L. (2018, January 16). Inoculate against a global vaccine crisis. Foreign Policy.
+Retrieved from https://foreignpolicy.com/2018/01/1 6/the-answers-are-out-there-
+natural-disasters-china-north-korea-corruption-economy/#health.
+
+Gavrielov-Yusim, N., Battat, E., Neumann, L., Friger, M., & Balicer, R. D. (2012). Birth
+order and private Voluntary Immunization—A study of 110,902 children. Vaccine,
+30(2), 442-447. https://doi.org/10.1016/.vaccine.2011.10.060
+
+Gibson, D. G., Ochieng, B., Kagucia, E. W., Obor, D., Odhiambo, F., O’Brien, K. L., &
+Feikin, D. R. (2015). Individual level determinants for not receiving immunization,
+receiving immunization with delay, and being severely underimmunized among,
+rural western Kenyan children. Vaccine, 33(48), 6778-6785.
+https://doi.org/10.1016/).vaccine.2015.10.021
+
+Global Alliance for Vaccines and Immunisation (GAVI). (2021, July 21). About our
+alliance. Gavi, the Vaccine Alliance. Retrieved from https://www.gavi.org/our-
+alliance/about.
+
+GOVPH. (2020). Pantawid Pamilyang Pilipino program: GOVPH. Official Gazette of
+the Republic of the Philippines. Retrieved from
+https://www.officialgazette.gov.ph/programs/conditional-cash-transfer/
+
+Gram, L., Soremekun, S., ten Asbroek, A., Manu, A., O'Leary, M., Hill, Z., Danso, S.,
+‘Amenga-Etego, S., Owusu-Agyei, S., & Kirkwood, B. R. (2014). Socio-economic
+determinants and inequities in coverage and timeliness of early childhood
+immunisation in rural Ghana. Tropical Medicine & International Health, 19(7),
+802-811. https://doi.org/10.11 1 1/tmi.12324
+
+Grambsch, P.M. & Themeau, T.M. (1994). Proportional hazards tests and diagnostics
+
+based on weighted residuals. Biometrika, 81, 515-526.
+93
+
+Hassan, S.-un-N., Memon, E., Shahab, M., & Mumtaz, S. (2020). Utilization of maternal
+healthcare services in women experiencing spousal violence in Pakistan: A
+comparative analysis of 2012-13 and 2017-18 Pakistan Demographic Health
+Surveys. PLOS ONE, 15(9). https://doi.org/10.1371/journal.pone.0239722
+
+Herliana, P., & Douiri, A. (2017). Determinants of immunisation coverage of children
+‘Aged 12-59 months in Indonesia: A cross-sectional study. BMJ Open, 7(12).
+https://doi.org/10.1136/bmjopen-2016-015790
+
+Herrin, A.N., Benabaye, R.S., Escalada, L.D.P., Apale, F.G., Micarandayo, R.T. (2012,
+November) FP-EPI integration as an approach to reduce unmet need for modem
+family planning,
+
+Hill, H. A., Yankey, D., Elam-Evans, L. D., Singleton, J. A., & Sterrett, N. (2021).
+Vaccination coverage by age 24 months among children born in 2017 and 2018 —
+national immunization survey-child, United States, 2018-2020. MMWR. Morbidity
+and Mortality Weekly Report, 70(41), 1435-1440.
+hitps://doi.org/10.15585/mmwr.mm7041al
+
+Houweling, T. A. J., Ronsmans, C., Campbell, 0. M. R., & Kunst, A. E. (2007). Huge
+poor-rich inequalities in matemity care: An international comparative study of
+maternity and childcare in developing countries. Bulletin of the World Health
+Organization, 85(10), 745-754. https://doi.org/10.247 | /blt.06.038588
+
+Hu, Y., Chen, Y., Guo, J., Tang, X., & Shen, L. (2014). Completeness and timeliness of
+vaccination and determinants for low and late uptake among young children in
+eastern China. Human Vaccines & Immunotherapeutics, 10(5), 1408-1415.
+
+https://doi-org/10.4161/hv.28054
+
+94
+
+Hu, Y., Li, Q., & Chen, Y. (2017). Timeliness of childhood primary immunization and
+risk factors related with delays: Evidence from the 2014 Zhejiang Provincial
+Vaccination Coverage Survey. International Journal of Environmental Research
+and Public Health, 14(9), 1086. https://doi.org/10.3390/ijerph14091086
+
+Hu, Y., Li, Q., Chen, E., Chen, Y., & Qi, X. (2013). Determinants of Childhood
+Immunization Uptake among Socio-Economically Disadvantaged Migrants in East
+China. International Journal of Environmental Research and Public Health, 10(7),
+2845-2856. doi:10.3390/ijerph 10072845
+
+Hu, Y., Li, Q., Luo, S., Lou, L., Qi, X., & Xie, S. (2013). Timeliness vaccination of
+measles containing vaccine and barriers to vaccination among migrant children in
+East China. PLoS ONE, 8(8). https://doi.org/10.137 I /journal.pone.0073264
+
+Hughes, M. M., Katz, J., Englund, J. A., Khatry, S. K., Shrestha, L., LeClerg, S. C.,
+Steinhoff, M., & Tielsch, J. M. (2016). Infant vaccination timing: Beyond
+traditional coverage metrics for maximizing impact of vaccine programs, an
+example from southern Nepal. Vaccine, 34(7), 933-941.
+https://doi.org/10.1016/j.vaccine.2015.12.061
+
+Hussin, H. B., & Marzo, R. R. (2020). A Literature Review of Parental Barriers to Child
+Immunization. Journal of Critical Reviews, 7(03).
+hitps://doi.org/10.31838/jer.07.03.112
+
+Immunisation Advisory Centre. (2020, January 8). A brief history of vaccination.
+Immunisation Advisory Centre. Retrieved from
+https://www.immune.org.nz/vaccines/vaccine-development/brief-history-
+
+vaccination.
+
+95
+
+Institute of Medicine. (2003). The future of the public's health in the 21st Century.
+National Academies Press.
+
+Integrative Competitive Intelligence Asia Inc. (ICI Asia). (2017). Qualitative Research on
+the Expanded Program for Immunization in Highly Urbanized Areas of Taguig in
+Manila.
+
+Jadidi, R., Mohammadbeigi, A., Mohammadsalehi, N., Ansari, H., Ghaderi, E. (2015).
+Inequity in timeliness of MMR vaccination in children living in the suburbs of
+Iranian cities. Jnt J Biomed Sci, 1 (2), 93-98
+
+Janz, N. K., & Becker, M. H. (1984). The health belief model: A decade later. Health
+Education Quarterly, 11(1), 1-47. https://doi.org/10.1177/109019818401 100101
+
+Kabir, R., Haque, M., Mohammadnezhad, M., Samad, N., Mostari, S., Jabin, S.,
+Majumder, M. A., & Rabbani, M. G. (2019). Domestic violence and decision-
+making power of married women in Myanmar: Analysis of a nationally
+representative sample. Annals of Saudi Medicine, 39(6), 395-402.
+https://doi.org/10.5144/0256-4947.2019.395
+
+Kairys, S. W., Gubemick, R. S., Millican, A., & Adams, W. G. (2006). Using a registry
+to improve immunization delivery. Pediatric Annals, 35(7), 500-506.
+https://doi.org/10.3928/0090-4481-20060701-06
+
+Kane, J. B. (2015). Marriage advantages in Perinatal Health: Evidence of marriage
+selection or marriage protection? Journal of Marriage and Family, 78(1), 212-229.
+https://doi.org/10.111 1jomf.12257
+
+Keja, K., Chan, C., Hayden, G., & Henderson, R. H. (1988). Expanded programme on
+immunization. World health statistics quarterly. Rapport trimestriel de statistiques
+
+sanitaires mondiales, 41(2), 59-63.
+96
+
+Kim, E.-Y., & Lee, M.-S. (2011). Related factors of age-appropriate immunization
+among urban-rural children aged 24-35 months in a 2005 population-based survey
+in Nonsan, Korea. Yonsei Medical Journal, 52(1), 104.
+https://doi.org/10.3349/ymj.201 1.52.1.104
+
+Kim, Y.-L, & Lee, J. (2021). Does single pregnancy hurt birth outcomes among young
+mothers? Journal of Demographic Economics, 1-33.
+https://doi.org/10.1017/dem.2021.15
+
+Kimmel, S. R., Bums, |. T., Wolfe, R. M., & Zimmerman, R. K. (2007). Addressing
+immunization barriers, benefits, and risks. The Journal of family practice, 56(2),
+61-69.
+
+Kinfe, Y., Gebre, H., & Bekele, A. (2019). Factors associated with full immunization of
+children 12-23 months of age in Ethiopia: A multilevel analysis using 2016
+Ethiopia Demographic and Health Survey. PLOS ONE, 14(11).
+https://doi.org/10.137 I/journal pone.0225639
+
+Kishor, S., & Johnson, K. (2004). Profiling Domestic Violence - A Multi-Country Study.
+Measure DHS - ORC Macro. hitps://dhsprogram.com/pubs/pdf/OD31/OD3 1 pdf
+
+Krishna, D., Mohd Zulkefli, N. A., Md Said, S., & Mahmud, A. (2019).
+Sociodemographic and health care factors in determining immunization defaulters
+among preschool children in Petaling District, Selangor: a cross-sectional study in
+Malaysia. BMC Public Health, 19(1). https://doi.org/10.1186/s12889-019-7561-z
+
+Lakew, Y., Bekele, A., & Biadgilign, S. (2015). Factors influencing Full immunization
+coverage among 12-23 months of age children in Ethiopia: Evidence from the
+national demographic and health survey in 2011. BMC Public Health, 15(1).
+
+https://doi.org/10.1 186/s12889-015-2078-6
+97
+
+Lawder, R., Whyte, B., Wood, R., Fischbacher, C., & Tappin, D. M. (2019). Impact of
+maternal smoking on Early Childhood Health: A Retrospective Cohort linked
+dataset analysis of 697 003 children bom in Scotland 1997-2009. BM Open, 9(3).
+https://doi.org/10.1136/omjopen-2018-023213
+
+Le Polain de Waroux, O., Schellenberg, J. R., Manzi, F., Mrisho, M., Shirima, K.,
+Mshinda, H., Alonso, P., Tanner, M., & Schellenberg, D. M. (2013). Timeliness
+and completeness of vaccination and risk factors for low and late vaccine uptake in
+young children living in rural southern Tanzania. International Health, 5(2), 139-
+147. https://doi.org/10.1093/inthealth/iht006
+
+Leight, J., & Wilson, N. (2021). Intimate partner violence and maternal health services
+utilization: Evidence from 36 National Household Surveys. BMC Public Health,
+21(1), https://doi.org/10.1 186/s12889-021-10447-y
+
+Lin, W., Xiong, Y., Tang, H., Chen, B., & Ni, J. (2014), Factors associated with delayed
+measles vaccination among children in Shenzhen, China: A case-control study.
+Human Vaccines & Immunotherapeutics, 10(12), 3601-3606.
+https://doi.org/10.4161/21645515.2014.979687
+
+Loef, B., Meulman, L., Herber, G.-C. M., Kommer, G. J., Koopmanschap, M. A., Kunst,
+A.E., Polder, J. J., Wong, A., & Uiters, E. (2021). Socioeconomic differences in
+healthcare expenditure and utilization in The Netherlands. BMC Health Services
+Research, 21(1). https://doi.org/10.1186/s12913-021-06694-9
+
+Los Angeles Public Health. (2015, June). What do parents think? Knowledge and attitude
+about immunization. Los Angeles Public Health. Retrieved from
+http://www.publichealth.acounty.gov/ha/reports/LAHealthBrief201 1
+
+/Ammunization/Immunization_2015Fs.pdf.
+98
+
+Luman, E. T., Barker, L. E., Shaw, K. M., McCauley, M. M., Buehler, J. W., &
+Pickering, L. K. (2005). Timeliness of childhood vaccinations in the United States.
+YAMA, 293(10), 1204. https://doi.org/10.1001/jama.293.10.1204
+
+Luman, E. T., McCauley, M. M., Stokley, S., Chu, S. Y., & Pickering, L. K. (2002).
+Timeliness of childhood immunizations. Pediatrics, | 10(5), 935-939.
+https://doi.org/10.1542/peds.110.5.935
+
+Mackenzie, D. (2011, September 21). Vaccines enjoy a healthy return. New Scientist.
+Retrieved from https://www.newscientist.com/article/dn20877-vaccines-enjoy-a-
+healthy-return/.
+
+Madad, A., Muhammad, N., & Shakir, U. (2015). The role of external factors in
+Affecting peace in Kyber Pakhtunkhwa, Pakistan. Applied Science Reports, (2),
+44-51. https://doi.org/10.15192/pscp.asr.2015.9.2.4451
+
+Malecosio, S. O., D. Celis, M. J., Delicana, K. B., Deopido, A. M., Bacale, K. M.,
+Labasan, V. K., Ladiao, R. M., Militante, K. M., Paguntalan, J. M., & Sabusap, V.
+E. (2020). Vaccination coverage and factors associated with incomplete childhood
+vaccination among children aged 12-59 months in Miagao, Iloilo, Philippines.
+International Journal Of Community Medicine And Public Health, 7(7), 2492.
+https://doi.org/10.18203/2394-6040.ijcmph20202971
+
+Mandatory Infants and Children Health Immunization Act 2011. (Phi). Retrieved from
+https://doh.gov.ph/sites/defaulv/files/policies_and_laws/ra_10152.pdf
+
+Manderbacka, K., Merilainen, J., Hemminki, E., Rahkonen, O., & Teperi, J. (1992).
+Marital status as a predictor of perinatal outcome in Finland. Journal of Marriage
+
+and the Family, 54(3), 508. https://doi.org/10.2307/353237
+
+99
+
+Margolis, P. A., Stevens, R., Bordley, W. C., Stuart, J., Harlan, C., Keyes-Elstein, L., &
+Wisseh, S. (2001). From concept to application: The impact of a community-wide
+intervention to improve the delivery of preventive services to children. Pediatrics,
+108(3). https://doi.org/10.1542/peds.108.3.¢42
+
+Maurice, J. M., & Davey, S. (2009). State of the world's vaccines and immunization.
+World Health Organization.
+
+Mayerova, D., & Abbas, K. (2021). Vaccine confidence and timeliness of childhood
+immunisation by health information source, matemal, socioeconomic, and
+geographic characteristics in Albania. https://doi.org/10.1101/2021.03.09.21253180
+
+MB Lifestyle. (2022, February 22). PhilHealth @27: Responding to the ever-changing
+needs of ... Retrieved from https://mb.com.ph/2022/02/18/philhealth-27-
+responding-to-the-ever-changing-needs-of-the-times/
+
+Mbengue, M. A. S., Mboup, A., Ly, I. D., Faye, A., Niang, F. B., Thiam, M., Ndiaye, B.
+P., Dieye, T. N., & Mboup, S. (2017). Vaccination coverage and immunization
+timeliness among children aged 12-23 months in Senegal: A Kaplan-Meier and cox
+Regression Analysis Approach. Pan African Medical Journal, 27.
+https://doi.org/10.11604/pamj.supp.2017.27.3.11534
+
+Meleko, A., Geremew, M., & Birhanu, F. (2017). Assessment of Child Immunization
+Coverage and Associated Factors with Full Vaccination among Children Aged 12
+23 Months at Mizan Aman Town, Bench Maji Zone, Southwest Ethiopia.
+International Journal of Pediatrics, 2017, 1-11.
+
+https://doi.org/10.1155/2017/7976587
+
+100
+
+Migrifo, Jr., J., Gayados, B., Birol, K. R., De Jesus, L., Lopez, C. W., Mercado, W.C.,
+Tolosa, J.-M. C., Torreda, J., & Tulagan, G. (2020). Factors affecting Vaccine
+hesitancy among families with children 2 years old and younger in two urban
+communities in Manila, Philippines. Western Pacific Surveillance and Response
+Journal, 11(2), 20-26. https://doi.org/10.5365/wpsar.2019.10.2.006
+
+Miyahara, R., Jasseh, M., Gomez, P., Shimakawa, Y., Greenwood, B., Keita, K., Ceesay,
+S., D’Alessandro, U., & Roca, A. (2016). Barriers to timely administration of birth
+dose vaccines in the Gambia, West Aftica. Vaccine, 34(29), 3335-3341.
+https://doi.org/10.1016/.vaccine.2016.05.017
+
+Mokhtari, M., Mohammadbeigi, A., Zahraei, S. M., Eshrati, B., & Rejali, M. (2015).
+Survival analysis for predictive factors of delay vaccination in Iranian children.
+International Journal of Preventive Medicine, 6(1), 119.
+https://doi.org/10.4103/2008-7802. 170868
+
+Mokhtari, M., Rezaeimanesh, M., Mohammadbeigi, A., Zahraei, S. M., SeyedMohsen,
+N., & Ansari, H. (2015). Risk factors of delay proportional probability in
+diphtheria-tetanus-pertussis vaccination of Iranian children; Life Table Approach
+Analysis. Journal of Global Infectious Diseases, 7(4), 165.
+https://doi.org/10.4103/0974-777x.170503
+
+Mondal, D., Karmakar, S., & Banerjee, A. (2020). Women’s autonomy and utilization of
+maternal healthcare in India: Evidence from a recent national survey. PLOS ONE,
+15(12). https://doi.org/10.137 1/journal.pone.0243553
+
+Moore, T., & Kotelchuck, M. (2004), Predictors of Urban Fathers’ Involvement in Their
+Child's Health Care. PEDIATRICS, 113(3), 574-580.
+
+https://doi.org/10.1542/peds.113.3.574
+101
+
+Moyer, C. A., Benyas, D., & Rominski, S. (2016). The Relationship between Facility-
+Based Delivery and Infant Immunization in sub-Saharan Africa. African Journal of
+Reproductive Health, 20(2), 27-33. https://doi.org/10.29063/ajrh2016/v20i2.3,
+
+Mutua, M. K., Kimani-Murage, E., Ngomi, N., Ravn, H., Mwaniki, P., & Echoka, E.
+(2016). Fully immunized child: Coverage, timing and sequencing of routine
+immunization in an urban poor settlement in Nairobi, Kenya. Tropical Medicine
+and Health, 44(1). https://doi.org/10.1186/s41182-016-0013-x
+
+Mvula, H., Heinsbroek, E., Chihana, M., Crampin, A. C., Kabuluzi, S., Chirwa, G.,
+Mwansambo, C., Costello, A., Cunliffe, N. A., Heyderman, R. S., French, N., &
+Bar-Zeev, N. (2016). Predictors of uptake and timeliness of newly introduced
+pneumococcal and rotavirus vaccines, and of measles vaccine in rural Malawi: A
+population cohort study. PLOS ONE, 11(5).
+https://doi.org/10.137 1/journal.pone.0154997
+
+Naeem, M., Khan, M. Z., Adil, M., Abbas, S. H., Khan, M. U., Khan, A., & Naz, S. M.
+(2011). Inequity in childhood immunization between urban and rural areas of
+Peshawar. Journal of Ayub Medical College, Abbottabad: JAMC, 23(3), 134-137.
+
+Nagar, R., Ambiya, M. S., Singh, P., Abdullah, H., Banshiwal, V., Stone, L., Manjanatha,
+D., Venkat, P., Purawat, D., Supatkar, V., Singh, A., &amp; Shahnawaz, M. (2020).
+Impacts of a novel mHealth platform to track maternal and child health in Udaipur,
+India. https://doi.org/10.23846/tw | 0ie129
+
+Nakatudde, I., Rujumba, J., Namiiro, F., Sam, A., Mugalu, J., & Musoke, P. (2019).
+Vaccination timeliness and associated factors among preterm infants at a tertiary
+hospital in Uganda. PLOS ONE, 14(9).
+
+https://doi.org/10.137 journal pone.0221902
+102
+
+Narvaez, J., Osorio, M. B., Castafieda-Orjuela, C., Alvis Zakzuk, N., Cediel, N.,
+Choconté-Piraquive, L. A., & de La Hoz-Restrepo, F. (2017). Is Colombia reaching
+the goals on infant immunization coverage? A quantitative survey from 80
+Municipalities. Vaccine, 35(11), 1501-1508.
+https://doi.org/10.1016/.vaccine.2017.01.073
+
+National Academy of Sciences. (2018). Health-care utilization as a proxy in disability
+determination. The National Academies Press.
+
+Newacheck, P. W., Stoddard, J. J., Hughes, D. C., & Pearl, M. (1998). Health Insurance
+and access to primary care for children. New England Journal of Medicine, 338(8),
+513-519. https://doi.org/10.1056/nejm199802193380806
+
+NHS. (2019, February 14). Pneumococcal vaccine overview. NHS Choices. Retrieved
+from https://www.nhs.uk/conditions/vaccinations/pneumococcal-vaccination/,
+
+Nicholls, A. C. (2018, February 3). Doctors: Parents refusing vaccines due to Dengvaxia
+scare. CNN Philippines. https://cnnphilippines.com/news/2018/02/03/doctors-
+parents-refusing-vaccines-dengvaxia.html.
+
+Nozaki, I., Hachiya, M., & Kitamura, T. (2019). Factors influencing basic vaccination
+coverage in Myanmar: secondary analysis of 2015 Myanmar demographic and
+health survey data. BMC Public Health, 19(1). https://doi.org/10.1186/s12889-019-
+6548-0
+
+Odutola, A., Afolabi, M. O., Ogundare, E. O., Lowe-Jallow, Y. N., Worwui, A., Okebe,
+J., & Ota, M. O. (2015). Risk factors for delay in age-appropriate vaccinations
+among Gambian children. BMC Health Services Research, 15(1).
+
+https://doi.org/10.1 186/s12913-015-1015-9
+
+103
+
+O'Leary, C. M., Nassar, N., Zubrick, S. R., Kurinezuk, J. J., Stanley, F., & Bower, C.
+(2010). Evidence of a complex association between dose, pattern and timing of
+prenatal alcohol exposure and child behaviour problems. Addiction, 105(1), 74-86.
+https://doi.org/10.1111/.1360-0443.2009.02756.x
+
+Oleribe, O., Kumar, V., Awosika-Olumo, A., & Taylor, S. D. (2017). Individual and
+socioeconomic factors associated with childhood immunization coverage in
+Nigeria. Pan African Medical Journal, 26.
+https://doi.org/10.11604/pamj.2017.26.220.11453
+
+Olusanya, B. O. (2010). Pattern and determinants of BCG immunisation delays in a sub-
+saharan african community. Health Research Policy and Systems, 8(1).
+https://doi.org/10.1186/1478-4505-8-1
+
+Oxford Vaccine Group. (2019, September 9). 5-/n-/ vaccine (also Called Pentavalent
+vaccine). 5-in-1 Vaccine (also called Pentavalent Vaccine) | Vaccine Knowledge.
+Retrieved from https://vk.ovg.ox.ac.uk/vk/5-1-dtapipvhib-vaccine.
+
+PhilHealth Enhances Benefit for Infants aims for Healthier Babies. PhilHealth. (2019,
+January). Retrieved from
+https://www.philhealth.gov.ph/news/2019/infant_benefit.php
+
+Philippine Statistical Authority (PSA). (2020, January 3). Vaccination Coverage of
+Filipino Children.
+
+Philippine Statistics Authority (PSA) & ICF International. (2014, August). Philippines
+National Demographic and Health Survey 2013.
+
+Philippine Statistics Authority (PSA) & ICF International. (2018, October). Philippines
+
+National Demographic and Health Survey 2017.
+
+104
+
+Phukan, R. K., Barman, M. P., & Mahanta, J. (2008). Factors Associated with
+Immunization Coverage of Children in Assam, India: Over the First Year of Life.
+Journal of Tropical Pediatrics, 55(4), 249-252.
+https://doi.org/10.1093/tropej/fmn025
+
+Poorolajal, J., Khazaei, S., Kousehlou, Z., Bathaei , S.J., Zahiri, A. (2012). Delayed
+vaccination and related predictors among infants. Jran J Public Health, 41, 65-71
+
+Population Reference Bureau (PRB). (2001, June 1). Challenges to global immunization
+programs. Population Reference Bureau. Retrieved from
+https://www.prb.org/resources/challenges-to-global-immunization-programs/.
+
+Raguindin, P. F., Morales-Dizon, M., Aldaba, J., Mangulabnan, L. P., Reyes, R. P.,
+Batmunkh, N., Ducusin, M. J., & Lopez, A. L. (2021). Timeliness of childhood
+vaccinations in the Philippines. Journal of Public Health Policy, 42(1), 53-70.
+https://doi.org/10.1057/s41271-020-00255-w
+
+Rainey, J. J., Lacapére, F., Danovaro-Holliday, M. C., Mung, K., Magloire, R., Kananda,
+G., Cadet, J. R., Lee, C. E., Chamouillet, H., & Luman, E. T. (2012). Vaccination
+coverage in Haiti: Results from the 2009 national survey. Vaccine, 30(9), 1746-
+1751. https://doi.org/10.1016/j.vaccine.2011.12.015
+
+Rejali, M., Mohammadbeigi, A., Mokhtari, M., Zahraei, S.M., Eshrati, B. (2015) Timing
+and delay in children vaccination; evaluation of expanded program of
+immunization in outskirt of Iranian cities. J Res Health Sci, 15, 54-58.
+
+Roser, M., Ritchie, H., & Dadonaite, B. (2013, May 10). Child and infant mortality. Our
+World in Data. Retrieved from https://ourworldindata.org/child-mortality#child-
+
+mortality-around-the-world-since-1800.
+
+105
+
+Rossi, R. (2015). Do Maternal Living Arrangements Influence the Vaccination Status of
+Children Aged 12-23 Months? A Data Analysis of Demographic Health Surveys
+2010-11 from Zimbabwe. PLOS ONE, 10(1).
+https://doi.org/10.137 1/journal.pone.0132357
+
+Sabella, C. (2021, August 13). Is Your Newborn Baby’s Immune System Strong Enough?
+Cleveland Clinic. other, Cleveland Clinic. Retrieved from
+https://health.clevelandclinic.org/is-your-newborn-babys-immune-system-strong-
+enough’.
+
+Salam, M. A., Mboup, A., Ly, I. D., Faye, A., Niang, F. B., Thiam, M., Ndiaye, B. P.,
+Dieye, T.N., & Mboup, S. (2017). Vaccination coverage and immunization
+timeliness among children aged 12-23 months in Senegal: A Kaplan-Meier and cox
+Regression Analysis Approach. Pan African Medical Journal, 21.
+https://doi.org/10.11604/pamj.supp.2017.27.3.11534
+
+Salmon, D. A., Smith, P. J., Pan, W. K. Y., Navar, A. M., Omer, S. B., & Halsey, N. A.
+(2009). Disparities in preschool immunization coverage associated with maternal
+age. Human Vaccines, 5(8), 557-561. https://doi.org/10.4161/hv.5.8.9009
+
+Santoli, J. M., Huet, N. J., Smith, P. J., Barker, L. E., Rodewald, L. E., Inkelas, M., Olson,
+L. M., & Halfon, N. (2004). Insurance status and vaccination coverage among us
+preschool children. Pediatrics, +-—-*113(Supplement_5), 1959-1964.
+https://doi.org/10.1542/peds. 113.s5.1959
+
+SAS Institute Inc. (2013). SAS/STAT® 13.1 User's Guide.
+
+Schaffer, S. J. (1995). Immunization status and birth order. Archives of Pediatrics &
+Adolescent Medicine, 1497), 792.
+
+https://doi.org/10.1001/archpedi.1995.02170200082013
+106
+
+Schoeps, A., Ouédraogo, N., Kagoné, M., Sié, A., Miiller, O., & Becher, H. (2013).
+Socio-demographic determinants of timely adherence to BCG, PENTA3, measles,
+and complete vaccination schedule in Burkina Faso. Vaccine, 32(1), 96-102.
+https://doi.org/10.1016/.vaceine.2013.10.063
+
+Shrivastwa, N., Gillespie, B. W., Lepkowski, J. M., & Boulton, M. L. (2016).
+Vaccination timeliness in children under India’s Universal Immunization Program.
+Pediatric Infectious Disease Journal, 35(9), 955-960.
+https://doi.org/10.1097/inf.0000000000001223
+
+Siddiqi, D. A., Ali, R. F., Munir, M., Shah, M. T., Khan, A. J., &amp; Chandir, S. (2020).
+Effect of vaccine reminder and tracker bracelets on routine childhood immunization
+coverage and timeliness in urban Pakistan (2017-18): A randomized controlled
+trial. BMC Public Health, 20(1). https://doi.org/10.1186/s12889-020-09088-4
+
+Sissoko, D., Trottier, H., Malvy, D., & Johri, M. (2014). The Influence of Compositional
+and Contextual Factors on Non-Receipt of Basic Vaccines among Children of 12-
+23 Months Old in India: A Multilevel Analysis. PLoS ONE, 9(9).
+https://doi.org/10.1371 /journal.pone.0106528
+
+Stata Corp. (2021). Stata Survival Analysis Reference Manual: Release 17. Stata Press.
+
+Suérez-Castaneda, E., Pezzoli, L., Elas, M., Baltrons, R., Crespin-Elias, E. O., Pleitez, O.
+A., de Campos, M. I, & Danovaro-Holliday, M. C. (2014). Routine childhood
+vaccination programme coverage, El Salvador, 2011—in search of timeliness.
+
+Vaccine, 32(4), 437-444. https://doi.org/10.1016/j.vaccine.2013.11.072
+
+107
+
+Tang, X., Geater, A., McNeil, E., Zhou, H., Deng, Q., Dong, A., & Li, Q. (2016).
+Parental migration and children’s timely measles vaccination in rural China: A
+cross-sectional study. Tropical Medicine & International Health, 21(7), 886-894.
+https://doi.org/10.111 1/tmi.12719
+
+Tenkorang, E. Y. (2021). Economic abuse and women's sexual autonomy: Evidence from
+Ghana. The SAGE Handbook of Domestic Violence, 113-128.
+https://doi.org/10.4135/9781529742343.n7
+
+The World Bank. (2021, September). Reducing Vaccine Hesitancy in the Philippines:
+Findings from a Survey Experiment. Retrieved from:
+https://thedocs. worldbank.org/en/doc/9b206c064482a4feb880ee234608 1d52-
+0070062021 /original/Vaccine-Hesitancy-World-Bank-Policy-Note-September-
+2021 pdf
+
+Tiruneh, F.N., Chuang, K.-Y., & Chuang, Y.-C. (2017). Women’s autonomy and
+maternal healthcare service utilization in Ethiopia. BMC Health Services Research,
+17(1). https://doi.org/10.1186/s12913-017-2670-9
+
+Toikilik, S., Tuges, G., Lagani, J., Wafiware, E., Posanai, E., Coghlan, B., Morgan, C.,
+Sweeney, R., Miller, N., Abramov, A., Stewart, A., & Clements, C. J. (2010). Are
+hard-to-reach populations being reached with immunization services? findings from
+the 2005 Papua New Guinea National Immunization Coverage Survey. Vaccine,
+28(29), 4673-4679. https://doi.org/10.1016/j.vaccine.2010.04.063
+
+Tsai, L. C., Cappa, C., & Petrowski, N. (2016). The relationship between intimate partner
+violence and family planning among girls and Young Women in the Philippines.
+
+Global Journal of Health Science, 8(9), 121. https://doi.org/10.5539/gjhs.v8n9p121
+
+108
+
+Turnbull, B. W. (1976). The empirical distribution function with arbitrarily grouped,
+censored, and truncated data. Journal of the Royal Statistical Society: Series B
+(Methodological), 38(3), 290-295. https://doi.org/10.1111/).2517-
+6161.1976.tb01597.x
+
+Ulep, V. G., & Uy, J. (2019, December). Too Early, Too Late: Timeliness of Child
+Vaccination in the Philippines. PIDS Discussion Paper Series, (2).
+
+Ulep, V. G., & Uy, J. (2021, February). An assessment of the Expanded Program on
+Immunization (EPI) in the Philippines: Challenges and Ways Forward. PIDS
+Discussion Paper Series, (4).
+
+United Nations Intemational Children’s Emergency Fund (UNICEF), & World Health
+Organization (WHO). (2020, July 15). Progress and Challenges with Achieving
+Universal Immunization Coverage. 2019 WHO/UNICEF Estimates of National
+Immunization Coverage.
+
+United Nations International Children’s Emergency Fund (UNICEF). (2019). UNICEF
+urges parents to get CHILDREN Immunized; calls for collective actions to fight
+‘measles. UNICEF. Retrieved from https://www.unicef.org/philippines/press-
+releases/unicef-urges-parents-get-children-immunized-calls-collective-actions-
+fight-measles.
+
+United Nations Intemational Children’s Emergency Fund (UNICEF). (2021, July 15).
+Immunization. UNICEF. Retrieved from https://www.unicef.org/immunization.
+
+Usman, H. R., Akhtar, S., Habib, F., & Jehan, I. (2009). Redesigned immunization card
+‘AND center-based education to reduce childhood immunization dropouts in urban
+Pakistan: A randomized controlled trial. Vaccine, 27(3), 467-472.
+
+https://doi.org/10.1016/j.vaccine.2008. 10.048
+109
+
+Vanderslott, S., Dadonaite, B., & Roser, M. (2013, May 10). Vaccination. Our World in
+Data. Retrieved from https://ourworldindata.org/vaccinationicitation.
+
+Vasudevan, L., Labrique, A. B., Mehra, S., Wu, L., Levine, O., Feikin, D., Klemm, R.,
+Christian, P., & West, K. P. (2014). Matemal determinants of timely vaccination
+coverage among infants in rural Bangladesh. Vaccine, 32(42), 5514-5519.
+https://doi.org/10.1016f.vaccine.2014.06.092
+
+Wagner, A. L., Shenton, L. M., Gillespie, B. W., Mathew, J. L., & Boulton, M. L. (2019).
+Assessing the timeliness of vaccine administration in children under five years in
+India, 2013. Vaccine, 37(4), 558-564.
+https://doi.org/10.1016/j.vaccine.2018.12.035
+
+Wagner, A. L., Tefera, Y. A., Gillespie, B. W., Carlson, B. F., & Boulton, M. L. (2021).
+Vaccine coverage, timeliness and delay estimated from regional and national cross-
+sectional surveys in Ethiopia, 2016. Pan African Medical Journal, 39.
+https://doi.org/10.11604/pamj.2021.39.205.22777
+
+Wallace, A. S., Sobel, H., Ryman, T. K., Mantaring III, J. B., Silvestre, M., Thorley, M.,
+Ducusin, J., & Nyunt-U, S. (2012). Timing of hepatitis B vaccination and impact of
+non-simultaneous vaccination with DTP vaccine following introduction of a
+hepatitis B birth dose in the Philippines. Journal of Public Health Policy, 33(3),
+368-381. https://doi.org/10.1057/jphp.2012.18
+
+World Health Organization (WHO). (2014, July). Global Immunization Data. World
+Health Organization. Retrieved from
+https://www.who invimmunization/monitoring_surveillance
+
+/global_immunization_data.pdf
+
+110
+
+World Health Organization (WHO). (2019). Immunization Coverage. Retrieved from:
+https://www.who.int/news-room/fact-sheets/detail/immunization-coverage
+
+World Health Organization (WHO). (2019). Ten threats to global health in 2019. World
+Health Organization. Retrieved from https:/www.who.intnews-room/spotlight/ten-
+threats-to-global-health-in-2019.
+
+World Health Organization (WHO). (2019, July 15). 20 million children miss out on
+lifesaving measles, diphtheria, and tetanus vaccines in 2018. World Health
+
+Organization. Retrieved from https://www.who.int/news/item/15-07-2019-20-
+
+million-children-miss-out-on-lifesaving-measles-diphtheria-and-tetanus-vaccines-
+in-2018.
+
+World Health Organization (WHO). (2020). Summary of WHO Position Papers -
+Recommended Routine Immunizations for Children. Retrieved from
+https://www.who.intimmunization/policy/Immunization_routine_table2.pdf
+
+World Health Organization (WHO). (2020, July 15). Jmmunization country profile.
+World Health Organization. Retrieved from
+
+https://apps. who .int/immunization_monitoring/globalsummary/countries?countrycr
+
+iteria%5Bcountry%5D%5B%5D=PHL.
+
+Wu, J.N., Wen, X. Z., Zhou, Y., Lin, D., Zhang, S. Y., & Yan, Y. S. (2014). Impact of
+
+the free-vaccine policy on timely initiation and completion of hepatitis B
+vaccination in Fujian, China. Journal of Viral Hepatitis, 22(6), 551-560.
+
+https://doi.org/10.1111jvh.12359
+
+111
+
+Zaidi, S. M., Khowaja, S., Kumar Dharma, V., Khan, A. J., & Chandir, S. (2014).
+Coverage, timeliness, and determinants of immunization completion in Pakistan.
+Human Vaccines & Immunotherapeutics, 10(6), 1712-1720.
+https://doi.org/10.4161/hv.28621
+
+Zhou, D., Zhou, Z., Yang, C., Ji, L., Ghose, B., & Tang, S. (2020). Sociodemographic
+characteristics associated with the utilization of maternal health services in
+Cambodia. BMC Health Services Research, 20(1). https://doi.org/10.1186/s12913-
+020-05652-1
+
+Zhou, Y., Zheng, J., Wang, H., Xia, W., Hipgrave, D. B., & Zhu, X. (2009). Coverage of
+and influences on timely administration of hepatitis B vaccine birth dose in remote
+rural areas of the People’s Republic of China. The American Journal of Tropical
+Medicine and Hygiene, 81(5), 869-874. https://doi.org/10.4269/ajtmh.2009.09-
+0238
+
+Zimmerman, R. K., Nowalk, M. P., Lin, C. J., Hannibal, K., Moehling, K. K., Huang, H.-
+H., Matambanadzo, A., Troy, J., Allred, N. J., Gallik, G., &amp; Reis, E. C. (2014).
+Cluster randomized trial of a toolkit and early vaccine delivery to improve
+childhood influenza vaccination rates in primary care. Vaccine, 32(29), 3656-3663.
+https://doi.org/10.1016/j.vaccine.2014.04.057
+
+Zivich, P.N., Kiketa, L., Kawende, B., Lapika, B., & Yotebieng, M. (2017). Vaccination
+coverage and timelines among children 0-6 months in Kinshasa, the Democratic
+Republic of Congo: A prospective cohort study. Maternal and Child Health
+
+Journal, 21(5), 1055-1064. https://doi.org/10.1007/s10995-016-2201-z

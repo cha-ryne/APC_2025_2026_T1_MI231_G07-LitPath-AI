@@ -48,7 +48,6 @@ respective owners. These proprietary materials are distributed under terms that 
 
 shared with non-profit and non-distributing stakeholders. Stakeholders are prohibited from
 
-2
 
 copying, transferring and distributing these materials by any means without prior notice and
 
@@ -83,7 +82,6 @@ designated stakeholders, and the technical support that follows. Library and Tec
 staffs are assigned in tracking these updates and assist them in manually updating their kiosk via
 call or SMS, and that incurs communication cost. Email was a cheaper alternative, but that
 
-3
 
 consumes time as some stakeholders have limited access to internet, and would only be able to
 
@@ -278,7 +276,6 @@ deployment of this system.
 
 The system will provide the following access levels:
 
-10
 
 . Super User
 The Super User shall be the overall technical and web
@@ -312,7 +309,6 @@ will also have access to the online STARBOOKS messenger for technical
 
 support and collaboration works.
 
-1
 
 Site administrator functions:
 
@@ -342,7 +338,6 @@ It is expected that some Site Administrators will have limited computer
 
 skills which may not conform to user requirements of this system. However,
 
-12
 
 proper training and support will be given to them upon the deployment of the
 system to be able to familiarize themselves with the functions of the system.
@@ -410,7 +405,6 @@ c. It must have at least 1 7B hard disk space to handle large amount of
 
 data.
 
-14
 
 d. The system will best run on the client-side workstation with at least 256 MB of RAM
 
@@ -440,7 +434,6 @@ to be entered and retrieved from the data center. Furthermore, list boxes will
 
 be made available to speed up data entry and ensure data accuracy. Moreover,
 
-15
 
 functional buttons will be made available to enable the users generate and
 
@@ -478,7 +471,6 @@ d. View desired result.
 e. Click on the download link to download the material.
 f. Save file to auxiliary device.
 
-16
 
 
 Pre-
@@ -515,7 +507,6 @@ Use Case Data Security: Using the Update
 Name:
 Actor: Site Administrator, Cluster Administrator, STII Administrator
 
-7
 
 
 Description:
@@ -558,7 +549,6 @@ Pre-Condition:
 
 The administrator should have logged in successfully.
 
-18
 
 
 Stakeholder has submitted a report.
@@ -593,7 +583,6 @@ Post- Stakeholder can interact with other online stakeholder.
 
 Condition:
 
-19
 
 
 3. Data construct specification
@@ -626,7 +615,6 @@ title, material type, Author, etc. Table Multimedia, however, will indicate how
 many multimedia/fulltext is attached to each records; this table has fields such as
 FileName, FileLocation, FileType, etc. Logs, CSF, Log Book and Keywords
 
-20
 
 tables will have the user logs to be used on reporting and monitoring. Table
 Transmit will hold the generation of transmittal file logs. Cluster, Institution type,
@@ -662,7 +650,6 @@ Although the STARBOOKS Online may be needing time for
 
 maintenance and upgrading, the system needs to be functional at least six
 
-21
 
 days a week and will be available 24 hours a day. This will give enough
 time for the administrators to download/upload updates with a maximum
@@ -697,7 +684,6 @@ The system shall enable the site/cluster administrators to manage
 
 their sites effectively.
 
-22
 
 The system shall present online help and provide proper
 
@@ -707,7 +693,6 @@ The system shall conduct proper training to its users upon the
 
 deployment of the system.
 
-23
 
 Methodologies
 A. Content Distribution
@@ -763,7 +748,6 @@ Download privileges will be available only for Cluster and Site administrators. 
 
 be responsible for updating their offline STARBOOKS.
 
-25
 
 Figure 5. Screenshot: STARBOOKS Online Login Screen.
 
@@ -776,7 +760,6 @@ Figure 6. Screenshot: Online User interface for the Site Administrator.
 
 Downloads are available in two ways. One is through the Notifications Section.
 
-26
 
 ea
 ery
@@ -795,7 +778,6 @@ ownership. Materials uploaded will be subjected to studies and verification by S
 
 shareable or if it is covered by proprietary laws.
 
-27
 
 Figure 8. Screenshot: STARBOOKS Online, Search page.
 
@@ -807,7 +789,6 @@ Figure 9, Screenshot: STARBOOKS Online, Results page.
 
 By viewing one of the results, Site Administrators and Cluster Administrators will have
 
-28
 
 an option for download. This feature enables the stakeholder to create customized content for
 
@@ -830,7 +811,6 @@ with the instructions. In cases like these, we employ the help of the DOST regio
 
 Technical staffs are sent from the DOST regional offices to assist problematic sites.
 
-29
 
 SECURITY AND ENCRYPTION
 
@@ -851,7 +831,6 @@ Authentication
 S 6dHf_11-03_qp6mm5g_qp6mm5umng.zip
 Ud a
 
-1
 
 Holdings 1D
 
@@ -869,7 +848,6 @@ STARBOOKS. This determines if this material will be uploaded to the Offline Kios
 
 Holdings ID represents a unique ID used to identify this material in the database.
 
-30
 
 (HOO B28
 
@@ -898,7 +876,6 @@ on this authentication, the Offline STARBOOKS will decide whether this file is l
 
 not. In case that the material is not intended for this machine, the STARBOOKS Offline will not
 
-31
 
 extract and unscramble the payload.
 
@@ -929,7 +906,6 @@ source softwares and will translate cost in software licenses.
 
 Figure 15. Encryption in the STARBOOKS Online, and decryption in the STARBOOKS Offline.
 
-32
 
 CONTENT SHARING
 
@@ -947,7 +923,6 @@ Creating the metadata is the first step in sharing content. These fields are use
 
 and possible computation of relevance.
 
-33
 
 es
 
@@ -971,7 +946,6 @@ will now become a content partner as well as a marketing arm for material promot
 
 dissemination.
 
-34
 
 REPORT AND MONITORING
 The team together with some senior staff carefully analyzed the existing processes for the
@@ -1001,7 +975,6 @@ call, transmittal file. Administrators now need only to send or upload the trans
 
 STARBOOKS Online.
 
-35
 
 1@
 
@@ -1024,7 +997,6 @@ The upload and download feature of the STARBOOKS Online already supports the
 
 proposed content sharing among stakeholders. To further enhance and solidify this community, a
 
-36
 
 communication media is established.
 
@@ -1044,7 +1016,6 @@ through this online messenger as well as Library Staff support for content inqui
 
 With this system, collaborative projects with stakeholders among clusters are now possible.
 
-37
 
 Content Distribution
 
@@ -1082,7 +1053,6 @@ selection of materials only. Database and system files are automatically extract
 
 updated by the Offline STARBOOKS backend.
 
-38
 
 Stakeholder
 
@@ -1123,7 +1093,6 @@ depending PHPMAdm
 on size of in or SQL
 command
 
-39
 
 
 SQ file through
@@ -1160,7 +1129,6 @@ reports. Turning the STARBOOKS Offline version 1.0 a monitoring nightmare. STARB
 
 Online has greatly improved report submission and monitoring
 
-40
 
 
 yan arm] an
@@ -1187,7 +1155,6 @@ Encyclopedia Britannica for the inclusion of their software in all STARBOOKS Off
 
 These are all made possible from the statistics gathered from these reports.
 
-42
 
 [GG sees tor eran
 
@@ -1210,13 +1177,11 @@ In their part, they were only trying to propagate the use of STARBOOKS material 
 
 even bigger audience. This actually initiated the idea that STARBOOKS should be pushed
 
-43
 
 online. This project actually helped the design process in gearing the STARBOOKS project
 
 towards becoming an online resource center.
 
-44
 
 CONCLUSIONS
 
@@ -1234,7 +1199,6 @@ projects because of its appeal to help promote government livelihood programs in
 
 It can still grow and has many more rooms for improvement to better serve our stakeholders.
 
-45
 
 REFERENCES
 Php.net — www.php.net, for all PHP syntax and programming references.

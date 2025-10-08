@@ -107,7 +107,6 @@ forms of contact recreation.” Policy makers and environmental managers therefo
 
 be informed about the impact of certain strategies.
 
-10
 
 Since then, water quality management areas in the National Capital Region (NCR), Region Ill,
 and Region IV-A have been established; rivers and creeks were cleaned via the “Adopt an
@@ -190,7 +189,6 @@ To better understand the dynamics of oxygen in Manila Bay, Chapter 3 presents a 
 that describes the hydrodynamics and water quality of the bay. This model is used to
 
 reproduce the field observations of dissolved oxygen and other parameters; after testing the
-12
 
 model, scenarios for nutrient and organic matter loading, and sediment oxygen demand
 were used to analyze the response of the Manila Bay ecosystem to these changes
@@ -213,7 +211,6 @@ phosphorus in detergents are also explored.
 
 Finally, chapter 5 is a synthesis of all the work presented in this dissertation.
 
-13
 
 1.2 References
 
@@ -260,7 +257,6 @@ Karlson, K., Rosenberg, R., Bonsdorff, E., 2002. Temporal and spatial large-scal
 eutrophication and oxygen deficiency on benthic fauna in Scandinavian and Baltic waters: a
 review. Oceanogr. Mar. Biol. an Annu. Rev. 40, 427-489.
 
-14
 
 Kemp, W.M., Boynton, W.R., Adolf, J.£., Boesch, D.F., Boicourt, W.C., Brush, G., Cornwell,
 1.C,, Fisher, T.R., Glibert, P.M., Hagy, J.., Harding, L.W., Houde, E.D., Kimmel, D.G., Miller,
@@ -310,7 +306,6 @@ Sy, A.G.A., Tobias, M.L., Borja, V.M., Gatdula, N.C., Santos, M.D., Furio, E.F.,
 temporal Variability of Hypoxia and Eutrophication in Manila Bay During the Northeast and
 Southwest Monsoons from 2012 to 2015, in: Santos, M.D., Furio, E.F., Lopez, G.D., Torres,
 
-15
 
 F.S.J., Borja, V.M., Bognot, E.D.C., Gatdula, N.C., Perez, M.A., Gonzales, F.L. (Eds.), Bureau of
 Fisheries and Aquatic Resources, National Fisheries Research and Development Institute,
@@ -322,7 +317,6 @@ Research Grant. UP Diliman OVPAA.
 Wu, R. S. S., 2009. Chapter 3: Effects of Hypoxia on Fish Reproduction and Development. Fish
 Physiology. https://doi.org/10.1016/s1546-5098(08)00003-4
 
-16
 
 2. Chapter 2: Spatiotemporal variability of hypoxia and
 eutrophication in Manila Bay, Philippines
@@ -338,7 +332,6 @@ eutrophication in Manila Bay, Philippines during the northeast and southwest mon
 
 Marine Pollution Bulletin 85: 446-454.
 
-7
 
 ABSTRACT
 
@@ -370,7 +363,6 @@ increased freshwater discharge intensifying water column stratification and cont
 
 the exacerbation of hypoxic conditions.
 
-18
 
 2.1 Introduction
 
@@ -410,7 +402,6 @@ the ASEAN water quality criteria (Chang et al., 2009; Jacinto et al., 2006). The
 affected by harmful algal blooms, persistent red tides, heavy metal pollution, and excess
 
 organic loads (Azanza et al., 2004; Chang et al., 2009; Jacinto et al., 2006; Prudente et al.,
-19
 
 1994; Reichardt et al., 2006). The total load of organic matter in Manila Bay was estimated
 at 250,000 tons of Biochemical Oxygen Demand (BOD}/year, and < 20% of the sewage
@@ -449,14 +440,12 @@ Regular servicing of tanks only started with the implementation of the Manila Se
 
 Sewerage Project in 1996 (Campos, 2007).
 
-20
 
 The bay receives freshwater input from numerous rivers, including the Pasig and Pampanga
 Rivers, which contribute 70% of the freshwater influx (25 km? y*) (PRRP, 1999). The dry
 
 season is from December to May and the wet season covers the rest of the year.
 
-146
 2.3 455
 6 9 10
 oh) 13 14 15
@@ -467,7 +456,6 @@ oh) 13 14 15
 
 28 29 30
 
-144
 
 31 | 32
 
@@ -493,7 +481,6 @@ concentrated phosphoric acid, and kept frozen until analysis. Depth, salinity, t
 
 fluorescence, and DO profiles were obtained at each site using a YSI Sonde 650 MDS
 
-2
 
 (February 2010), SEABIRD SBE-25 CTD (July 2010, February 2011, and August 2011), anda
 SEABIRD SBE-19 CTD (August 2012) whichever was available.
@@ -516,7 +503,6 @@ correlations and relationships between parameters, particularly dissolved oxygen
 
 and salinity.
 
-22
 
 2.3 Results
 
@@ -524,12 +510,9 @@ and salinity.
 
 Bon nek aare
 
-3
 
 8 Se
 
-9
-6
 
 Figure 2.2. Near-bottom dissolved oxygen levels in mg /-1 for Manila Bay during (A) February 2010, NE
 monsoon, (8) July 2010, SW monsoon, (C) February 2011, NE monsoon, (D) August 2011, SW monsoon,
@@ -538,7 +521,6 @@ Near-bottom DO levels for Manila Bay were as low as 0.12 mg I” in August 2012 
 wet season (Figure 2.2E, Table 2.1). Waters near the coast and up to the middle of the bay
 during the wet season surveys were hypoxic, with bay-wide averages falling to as low as 2.10
 
-23
 
 mg |* (August 2011). In August 2012, DO concentrations improved along the coast, but the
 midsection of the bay remained hypoxic. No hypoxia was observed during the dry season in
@@ -562,8 +544,6 @@ reached less than 1 mg I", with the lowest value occurring during August 2012 (0
 
 at Station 11 offshore Bataan in the western part of the Bay.
 
-5
-10
 S
 g 15
 a
@@ -579,7 +559,6 @@ DO [mg/l]
 
 Figure 2.3. Dissolved oxygen profiles for Station 19 located in the middle of the bay.
 
-24
 
 In February 2010 during the dry season, the oxycline (the depth at which DO declines
 rapidly) started at around 10 m. In the succeeding wet season surveys, the oxyclines began
@@ -638,7 +617,6 @@ and silicate levels decreased. For the three wet season surveys, surface TIN dec
 
 July 2010 to August 2011 and increased in August 2012, whereas surface phosphate and
 
-26
 
 silicate levels increased over time (Table 2.2). Through the five field surveys, surface
 
@@ -646,13 +624,11 @@ phosphate seems to be increasing over time.
 
 1a
 
-16
 
 i208 i
 
 mage fe an ae 06
 
-206
 
 Pamganoa
 
@@ -678,7 +654,6 @@ Surface chlorophyll-a values were usually higher near the coastal areas of the b
 
 near Manila, Cavite, Pampanga, and Bataan (Figure 2.5E, 2.5F). In February 2011, very high
 
-27
 
 values (20-41 1g |") were observed throughout the water column at Station 29, which lies in
 
@@ -692,10 +667,7 @@ i 22
 
 ~ 20
 
-16
 
-14
-12
 mys | 10
 
 A TIN
@@ -708,11 +680,7 @@ ua on
 
 1206 208 13
 
-135
-12
-105
 
-10
 
 go 5g
 
@@ -743,7 +711,6 @@ levels were generally higher than those measured during the dry season. Near-bot
 
 silicate levels remained relatively constant over time (Table 2.2).
 
-28
 
 ‘sanjon wntuowwo pun ‘aysyu ‘ay0.41U ay fo wns aya S| (NIL) VaBOsU 21U06s0U! [0x03
 “T10z 1sn6ny u) pasmsoaus Jou som winluowusy {arLnJU + 210/11N) N-ZON + N-FON 40f Avo 2]q0}1040 01004
@@ -792,8 +759,6 @@ ey I= — bie
 4 240 ayn a 2 185
 210 Tee: 140
 10° Memeo PRS
-150
-120
 
 1206 208 wi ‘206 i208 wai
 
@@ -810,7 +775,6 @@ reached up to the coast during the wet season (Figure 2.8). The same 20 km stret
 
 high phosphate and silicate, especially during the dry season surveys (Figure 2.9). In general,
 
-30
 
 near-bottom nutrient levels were higher near the coast along the north-south section. Along
 the west-east cross section, silicate, TIN, and phosphate, in general, were higher near the
@@ -824,7 +788,6 @@ the mouth for total inorganic nitrogen (A), phosphate (B), and silicate (C) and 
 the west-east axis from the coast of Bataan to Metro Manila for total inorganic nitrogen (D),
 phosphate (E), and silicate (F) during the wet season survey of August 2012.
 
-31
 
 Yasono Teccononnee et ‘ween eter One
 
@@ -870,17 +833,13 @@ conditions. Higher temperatures were observed for the wet season in July 2010 an
 
 surveys during the wet season, often associated with higher salinities.
 
-33
 
-32
 
-30
 
 20|
 
 Temp [C]
 
-26
 
 !
 Feb 2010 H
@@ -905,7 +864,6 @@ oxygen, nutrients, depth, and salinity was observed in field surveys of the whol
 
 NFRDI from 2012 to 2015 (Sy et al., 2016).
 
-34
 
 Table 2.3. Correlation matrix (Pearson (n)) for the nine water quality variables used In the PCA
 
@@ -939,7 +897,6 @@ Figure 2.12. Cluster map of the water quality data for Manila Bay after applicat
 represent the surface, and squares represent near-bottom. Smaller circles and squares represent the
 dry season, and larger markers represent the wet season. Red markers indicate DO levels <2 mg I-1.
 
-35
 
 2.4 Discussion
 
@@ -980,7 +937,6 @@ became hypoxic over time at some stations, as shown by the increasing maximum th
 of the hypoxic layer. The total area near the bottom affected by oxygen depletion also
 
 increased with time, especially during the wet season when more than half of the bay had
-36
 
 oxygen-depleted bottom waters. A similar overall increasing trend in the area affected by
 hypoxia was observed in the Changjiang (Yangtze River) Estuary in China (Zhu et al., 2011).
@@ -1020,7 +976,6 @@ northeasterly blowing winds (De Las Alas and Sodusta, 1985; Villanoy and Martin,
 
 These wind patterns and resultant current patterns can affect sediment and debris transport
 
-37
 
 so that it accumulates in the midsection of the bay; there the organic matter can settle and,
 upon sinking, contribute to the depletion of DO (Jacinto et al., 2011). Although the
@@ -1061,7 +1016,6 @@ western coast of Manila Bay) together with elevated nutrients. The SGD flux was 
 
 to be about 12.4 mm" day” with the magnitude of dissolved inorganic nitrogen (DIN) input
 
-38
 
 from the SGD flux roughly estimated to be 42% of the Pampanga River and 96% of the Pasig
 River input (Robert, 2010; Taniguchi et al., 2008). Results from the field surveys show that
@@ -1103,7 +1057,6 @@ Arecent fisheries survey (2014-2015) on Manila Bay revealed that the estimated d
 
 fish biomass of the bay declined by 90% since a 1947 baseline study. Moreover, it was found
 
-39
 
 that the fish catch was dominated by pelagic species showing a shift from demersal species.
 This shift is a possible consequence of habitat compression due to the occurrence of hypoxia
@@ -1142,7 +1095,6 @@ interventions are slowly undertaken. Data from surveys will also be useful in mo
 
 studies. Modeling studies can help in exploring the formation and disappearance of hypoxia
 
-40
 
 in relation to stratification, freshwater discharge, and nutrient levels and the linkages
 between these factors. The results of these studies will be useful for rehabilitation and
@@ -1158,7 +1110,6 @@ the Seas of East Asia (PEMSEA) for the support provided to present this study at
 International Conference on Marine Pollution and Ecotoxicology held in Hong Kong in June
 2013.
 
-41
 
 2.7 References
 
@@ -1210,7 +1161,6 @@ Golden Software Inc, 2012. Surfer 10: contouring and 3D surface mapping for scie
 Hansell, D.A., Carlson, C.A, 2001. Marine Dissolved Organic Matter and the Carbon Cycle.
 
 Oceanography 14, 41-49.
-42
 
 Hu, W.F., Lo, W., Chua, H., Sin, S.N., Yu, P.H.F., 2001. Nutrient release and sediment oxygen
 demand in a eutrophic land-locked embayment in Hong Kong. Environ. Int. 26.
@@ -1260,7 +1210,6 @@ Philipp. Dly. Ing. 1-2.
 
 PAGASA., 2012. PAGASA Weather Updates: August 8, 2012.
 
-43
 
 PEMSEA, MBEMP-MBIN., 2007. Manila Bay Area Environmental Atlas, PEMSEA Technical
 Report 20. Global Environment Facility / United Nations Development Programme /
@@ -1310,7 +1259,6 @@ Schlitzer, R., 2018. Ocean Data View [WWW Document]. URL http://odv.awi.de
 Siringan, F.P., Ringor, C.L., 1998. Changes in Bathymetry and Their Implications to Sediment
 Dispersal and Rates of Sedimentation in Manila Bay. Sci. Diliman 10, 12-26.
 
-44
 
 Strickland, J.D.., Parsons, T.R., 1972. A Practical Handbook of Seawater Analysis, 2nd ed.
 Fisheries Research Board of Canada, Ottawa.
@@ -1351,7 +1299,6 @@ Zhu, Z.-Y., Zhang, J., Wu, Y., Zhang, Y.Y., Lin, J., Liu, S.M., 2011. Hypoxia of
 3. Chapter 3: Hydrodynamic and water quality modeling of
 hypoxia in Manila Bay, Philippines
 
-50
 
 ABSTRACT
 
@@ -1387,7 +1334,6 @@ affects the system in about 14 days. Boundary conditions were important for impr
 
 water quality of the bay.
 
-51
 
 The model showed that deoxygenation of the bay is not a permanent feature and can be
 alleviated with less loading from rivers as well as lower sediment oxygen demand. The
@@ -1404,7 +1350,6 @@ with lower SOD which means that the feature may not be permanent in Manila Bay.
 
 However, hypoxia is likely a recurring phenomenon as seen in field surveys.
 
-52
 
 3.1 Introduction
 
@@ -1444,7 +1389,6 @@ More recent studies by the National Fisheries Research and Development Institute
 and UP MSI also reported the occurrence of deoxygenation and hypoxia in the bay (Jacinto
 
 et al., 2011; Sotto et al., 2014; Sy et al., 2016). Surveys done during the wet season
-53
 
 consistently showed evidence of stratification and hypoxia (which was often more severe
 during the wet season). Minimal improvement over time was observed throughout the
@@ -1484,7 +1428,6 @@ areas. In effect, most of the wastewater that drains out into the bay contains u
 
 sewage. Practically all the sewage is discharged without treatment.
 
-54
 
 The Pasig River Basin, a sub-basin of the Manila Bay watershed, delivers about 21% of the
 organic pollution load, and nearly 82% of the total sewage generated in Manila City is
@@ -1525,7 +1468,6 @@ and meteorological forcing on a curvilinear, boundary-fitted grid. Delft3D-WAQ u
 
 numerical simulations for various physical and biogeochemical processes that affect water
 
-55
 
 quality. It solves the advection-diffusion-reaction equation for a predefined computational
 
@@ -1549,23 +1491,19 @@ South China Sea).
 
 3.2.2.2. Layers
 
-0
 
 S
 a
 é
-20
 :
 H
 A H
 ° 0 30 7°
 
-20
 Sal [PSU]
 
 Figure 3.1. Salinity profiles from stations in the middle and at the mouth of the bay.
 
-56
 
 A total of 16 sigma (topography following) layers (Table 3.1) were identified with a depth
 distribution based on the salinity profiles of stations in the middle and at the mouth of the
@@ -1628,7 +1566,6 @@ the domain of the study. The boundary conditions for salinity and temperature we
 
 on CTD profiles from stations at the bay’s mouth.
 
-58
 
 Disenorge and Observation Ponts
 
@@ -1665,7 +1602,6 @@ al., 2006a). The 11 rivers identified in the model contribute a total discharge 
 
 draining a total area of 17,886.50 km? consistent with literature data.
 
-59
 
 The discharge for each river was distributed evenly until the k-th sigma layer based on the
 depth of each river mouth. Pampanga River was assigned to two discharge points
@@ -1687,7 +1623,6 @@ whole wet or dry season run (after a spin-up of ~1 month).
 
 Velocity
 \ hydrodynamic
-3
 
 Do-sat
 
@@ -1698,7 +1633,6 @@ Do-sat
 Figure 3.4, Schematic of the general dissolved oxygen model from the DELWAQ Manual (Deltares,
 2014). Details of the terms are given in Appendix 3.3.
 
-60
 
 The general dissolved oxygen model module from DELFT Water Quality (DELWAQ) (Deltares,
 2014) was used to build the water quality model for Manila Bay (Figure 3.4). It simulates the
@@ -1740,7 +1674,6 @@ activities and increased nutrient loads from rivers that stimulate primary produ
 
 is subject to a linear decay process dependent on temperature and oxygen.
 
-61
 
 Table 3.2. Summary of the water quality model runs.
 
@@ -1799,7 +1732,6 @@ resulting from major pollution sources (anthropogenic nutrient and organic matte
 
 loading) in Manila Bay.
 
-62
 
 2. The minimum substances and processes required to model dissolved oxygen were
 used to lessen the assumptions for unavailable inputs, flux, and process rates.
@@ -1826,7 +1758,6 @@ between the wet and dry season inputs. The main difference came from the corresp
 
 river discharges per run.
 
-63
 
 Table 3.3. Concentrations of ammonium (NHz), dissolved oxygen (D0), and carbonaceous biochemical
 ‘oxygen demand (CBODS) from rivers during the wet and dry season run.
@@ -1856,17 +1787,14 @@ Cal leO2m-
 Total Nand CBODS
 loading (ke/vear, , .
 acing elven, 9.366407 2.706608
-2012
 Total N loading
 Uke/yearl, Nim, 5.346407
-2015
 Total N loading -
 Pasig lkg/year], 3.01407 - .
 NUM, 2035
 Total N loading -
 Pampanga ' . . .
 Uha/vearl, num, 3626*07 - . -
-2015
 Water Gualty Monitoring data from the Bureau of Slls and Water Management (@SWM); Manila Bay
 Reference Coordinating Office (Water Quality Monitoring) (MBCO), Department of Environment and Natural
 
@@ -1884,7 +1812,6 @@ investigate the effects on dissolved oxygen concentrations in the bay. Decreased
 
 oxygen demand represents the long-term effects of decreased pollution loading in Manila
 
-64
 
 Bay. The loading from rivers was kept constant for this experiment. The baseline SOD value
 used for this study was 1.0 g 0, m?-day which is the approximate average of the oxygen
@@ -1918,7 +1845,6 @@ middle of the bay (Section 1) and from the head of the bay to the mouth (Section
 
 used shown in Figure 3.5 below.
 
-65
 
 © A.sectionsimooeu 8. secTion2{moDEL)
 
@@ -1936,7 +1862,6 @@ of the bay to its mouth.
 Bay are shown in Figure 3.3. The locations of the observation points used to extract time
 series data from the model runs are also indicated (at the bay's head, middle, and mouth).
 
-66
 
 3.3 Results
 
@@ -1958,7 +1883,6 @@ outflow of water occurs at the surface and subsurface layers. The inflow of dens
 
 western part and a somewhat stronger outflow at the eastern side of the bay’s mouth.
 
-67
 
 The residual water flow at the surface after 30 days is flowing out of the bay with slight
 convergence at the middle near the head of the bay. At 5.33 m, the flow is mostly similar
@@ -2003,7 +1927,6 @@ after a huge rain event, so the salinity range is wider compared with the other 
 
 season surveys.
 
-68
 
 Stratification of the water column, with the halocline located between 5-10 meters, was
 observed throughout the bay. Beginning with a uniform/well-mixed water column,
@@ -2106,7 +2029,6 @@ stratification indices were 1.86, 4.83, 19.09, and 3.75 PSU for July 2010, Augus
 2012, and the wet season model run, respectively. During the dry season, the indices were
 1.90, 0.25, and 1.75 PSU for February 2010, February 2011, and the model run, respectively.
 
-4
 
 3.3.1.5 Comparison with field data
 
@@ -2158,7 +2080,6 @@ with a pycnocline between 5-15 m. The dry season model run also had the presence
 
 pycnocline, but the density profiles are within a narrower range.
 
-76
 
 3.3.1.6 Horizontally averaged salinity and temperature profiles
 
@@ -2218,7 +2139,6 @@ Brunt-Vaisala values are relatively higher from 10-15 meters, the depth where th
 
 pycnocline is usually observed in Manila Bay. At these depths, there isa strong density
 
-8
 
 gradient, with temperature and salinity changing abruptly. Beyond 20-30 meters, the BV
 values are lower since the water column is more stable, and the density does not vary
@@ -2246,7 +2166,6 @@ greater variability in the values (even within the field surveys). Density profi
 
 salinity with the pycnocline between 5-15 meters.
 
-79
 
 3.3.2 Water Quality Modeling
 
@@ -2273,7 +2192,6 @@ DO at Section 2 ranged from 5.5-6.0 g m®. DO decreased slightly from day 90 to 
 
 Section 2. Table 3.7 summarizes the results in section 1.
 
-80
 
 Table 3.6. Summary and comparison of the water quality modeling results for the wet and dry season
 runs at section 1 (EW).
@@ -2371,7 +2289,6 @@ observed at the western and eastern sides of the bay. The results are summarized
 
 Table 3.6.
 
-82
 
 Figure 3.20. Modeled dissolved oxygen along Section 2 from the head to the mouth) of the bay at 90
 days (A) and 180 days (8) during the dry season. Refer to Figure 3.5 for the orientation of the cross-
@@ -2462,7 +2379,6 @@ levels along the northeastern coast. The surface and bottom levels of NHa produc
 
 model are within range of the values observed during the field surveys.
 
-84
 
 yong im ohne
 
@@ -2506,7 +2422,6 @@ The 30-day average for dissolved oxygen at 1 m for the wet season (Figure 3.22A)
 levels < 5.0 gm? (blues) at the shallow areas along the head of the bay and along the
 eastern coast. The lowest DO levels, ~ 2.0-3.0 g m? are found near the mouth of Pasig River.
 
-86
 
 The accumulation of water with relatively low DO on the eastern coast is due to shallow
 
@@ -2531,7 +2446,6 @@ water at the bottom across the bay (Section 1, Figure 3.23A and B) is present du
 
 the wet and dry seasons. Dry season DO levels are generally better by about 1.0-1.5 gm?
 
-87
 
 compared with the wet season. Shallow areas near rivers have the lowest near-bottom DO
 
@@ -2563,7 +2477,6 @@ the high DO at the surface observed during the August 2011 field survey was not 
 the model. DO at the surface during the July 2010 field survey was similar to the wet season
 
 model run.
-88
 
 Water column DO at the midsection of the bay (Section 1) during the dry season field
 surveys ranged from 6-8 g m® which is higher than the results from the dry season model
@@ -2595,7 +2508,6 @@ Figure 3.25. Horizontally averaged depth profiles* for dissolved oxygen. *All da
 depths for each station were averaged. The result is a representative depth profile for the whole bay
 for each field survey and model run.
 
-89
 
 The band of low DO water (DO 2.0-4.0 mg I") near the bottom of the bay for Section 2 was
 only found in the middle of the bay during the field surveys. DO at the shallow areas at the
@@ -2629,7 +2541,6 @@ the water column. The low DO at the bottom layers is consistent (1.0-4.0 gm), an
 
 entrainment of low DO water is still present at the eastern side of the bay.
 
-90
 
 After decreased loading, the DO at the surface improves but the low DO at the bottom
 
@@ -2665,7 +2576,6 @@ the rest of the water column also improve. Near the mouth, surface DO levels imp
 
 decreased sediment oxygen demand.
 
-91
 
 Dissolved Oxygen [g/m*]
 
@@ -2687,7 +2597,6 @@ DO levels decrease. At the mouth of the bay, DO levels decrease at the surface (
 proximity of the station to the shallow water areas with significant river influence). The
 change in DO levels is ~ + 1.0- 2.0 gm.
 
-92
 
 Dissolved Oxygen om?
 
@@ -2702,7 +2611,6 @@ Depth [m]
 
 Days
 
-10
 jot iit it
 
 Figure 3.29. Time series plot of dissolved oxygen with depth at an observation point near the head of
@@ -2721,7 +2629,6 @@ bottom are affected by increasing or decreasing sediment oxygen demand. Sediment
 
 demand also seems to be more relevant for DO levels beyond the pycnocline.
 
-93
 
 3.4 Discussion
 
@@ -2762,7 +2669,6 @@ The rivers draining into Manila Bay receive inputs from industry, agriculture, a
 and domestic sewage that is largely untreated. Pasig and Pampanga Rivers, which contribute
 
 70% of the freshwater influx into the bay flush out the waste from the overpopulated City of
-94
 
 Manila which has a population of 1.44 million (2020 PSA) and areas with heavy agriculture
 and aquaculture activities, respectively. In 2012, Metro Manila only had 20% of its
@@ -2804,7 +2710,6 @@ and the basin is ~50-60 km at its widest points near the head of the bay (Jacint
 2006a; Google Earth Pro). Other estuarine systems such as the Chesapeake Bay also have
 
 narrow entrances (27 km entrance, 50 km at its widest point).
-95
 
 The salinity range produced by the models for both the wet and dry season runs was in good
 agreement with the field survey data. The pycnocline (halocline) observed in the wet season
@@ -2845,7 +2750,6 @@ area wherein bottom hypoxia occurs with high probability. The occurrence of pers
 stratification depletes oxygen in the water column, allowing the hypoxic layer to thicken
 (Zhang et al., 2020).
 
-96
 
 Stratification has often been associated with deoxygenation because it prevents the vertical
 transfer of dissolved oxygen from the upper to the bottom water layers across the
@@ -2885,7 +2789,6 @@ water quality model. Lastly, a scenario with higher and lower sediment oxygen de
 
 also tested.
 
-97
 
 ‘(wayyo ayy uy asvaizap 0 0} spoa| Ja}auiniod auo ul asoa,ouy up) diysuopojad anyoBau 0 quasaday smosso pad pun (12430 ay} Ul as0a12U) UD 0} spba| JayaWDIOd
 uo u) asoa/ou1) diysuo;oja any)sod 0 yuasaudas smousp anja “sa}025 jo;bds pup josoduia} quasafhip uj Og Bunsaffo sassarosd ays Jo wouBoIp 2;oWayDs ‘Og"E 24nBIy
@@ -2963,7 +2866,6 @@ northeastern coast) are some factors that may affect this DO distribution (Jacin
 Loading from rivers creates a bigger impact on the DO levels at the surface and the upper
 
 water column since a parcel of water at the surface with low DO usually forms upon
-99
 
 increased loading in the model. This penetrates up to 5-10 meters in the water column at
 different points throughout the bay.
@@ -3005,7 +2907,6 @@ throughout the scenarios citing the importance of the oxygen draw from the sedim
 
 (sediment oxygen demand) as a factor for deoxygenation of near-bottom waters in the
 
-100
 
 modeled system. On the other hand, water with better water quality from the boundaries is
 
@@ -3050,7 +2951,6 @@ follows a similar pattern pointing to the possible accumulation of organic matte
 
 areas that may end up in the sediment, increasing oxygen demand.
 
-101
 
 These areas at the northern coast of the bay at its head are also where low salinity water
 tends to accumulate in the model. Seasonal averages of near-bottom CBOD and NHs in the
@@ -3091,7 +2991,6 @@ In terms of timescale, Fennel and Testa (2019) suggested an approach relating th
 
 timescale to residence times in a roughly 1:1 ratio. Manila Bay has a residence time of about
 
-102
 
 31 days. The model in this study estimates a quicker turnover time for hypoxia likely due to
 the low SOD set to test the scenario.
@@ -3132,7 +3031,6 @@ understanding the “legacy” effects of historic nutrient loading to understan
 
 and timing of recovery and rehabilitation due to reductions in nutrient loading in the
 
-103
 
 watershed. It referenced the possible lag in the water quality response of rehabilitation
 
@@ -3176,7 +3074,6 @@ temporal resolution for the model inputs (river loading and boundary conditions)
 
 limitation, some trends were not fully elucidated by the model.
 
-104
 
 nutrient loading comparison using the nutrient load model (discussed in chapter 4) and
 the river loading in the model was done in Table 3.3. The ammonium loading from the
@@ -3215,7 +3112,6 @@ Since SOD is relevant for DO in the system, it can be adjusted in the current WA
 
 interventions in the bay.
 
-105
 
 3.5 Summary, conclusion, and recommendations
 
@@ -3257,7 +3153,6 @@ inorganic nitrogen content found in Manila Bay, as determined through nutrient a
 
 conducted during field surveys.
 
-106
 
 Pollution loading scenarios tested using the water quality model showed that loading from
 the rivers is more relevant at the surface up to about 10 meters into the water column and
@@ -3299,7 +3194,6 @@ nutrients, and additional biogeochemical factors. However, for the purpose and s
 
 study, the model was appropriate in reproducing the main features observed in field surveys
 
-107
 
 and how it relates to the main drivers of oxygen depletion associated with Manila Bay. The
 model also allowed for different loading and sediment oxygen demand scenarios to be
@@ -3316,7 +3210,6 @@ continued monitoring at existing stations and extending the number of stations t
 
 the spatial coverage, as well as updated bathymetries.
 
-108
 
 3.6 References
 
@@ -3368,7 +3261,6 @@ Deltares., 2014. D-Water Quality User Manual. Delft, The Netherlands.
 Deltares., 2013. Process Library Description. Technical Reference Manual, D-Water Quality.
 Delft, The Netherlands.
 
-109
 
 Diaz, R.J., Rosenberg, R., 2008. Spreading dead zones and consequences for marine
 ecosystems. Science (New York, N.Y.) 321, 926-929.
@@ -3418,7 +3310,6 @@ Jacinto, G.S., Azanza, R.V., Velasquez, |.B., Siringan, F.P., 2006b. Manila Bay:
 Challenges and Opportunities. In: Wolanski, E. (eds) The Environment in Asia Pacific
 Harbours. Springer, Dordrecht. https://doi.org/10.1007/1-4020-3655-8_19
 
-110
 
 Jacinto, G.S., Sotto, L.P.A., Senal, M.LS., San Diego-McGlone, M.L., Escobar, M.T.L., Amano,
 A, Miller, T.W., 2011. Hypoxia in Manila Bay, Philippines during the northeast monsoon.
@@ -3516,7 +3407,6 @@ Sombrito, E. Z., A. Dm. Bulos, E. J. Sta. Maria, M. C. V. Honrado, R. V. Azanza,
 2004. Application of 210Pb-derived sedimentation rates and dinoflagellate cyst analyses in
 understanding Pyrodinium bahamense harmful algal blooms in Manila Bay and Malampaya
 
-112
 
 Sound, Philippines. Journal of Environmental Radioactivity 76: 177-194.
 (doi.org/10.1016/j,jenvrad.2004.03.025
@@ -3575,7 +3465,6 @@ Sotto, L.P.A., Beusen, A.H.W., Villanoy, C.L, Bouwman, A.F., and Jacinto, G.S. (
 Load Estimates for Manila Bay, Philippines using Population Data. Ocean Science Journal
 50(2):467-474. http://dx.doi.org/10.1007/s12601-015-0042-0.
 
-128
 
 ABSTRACT
 
@@ -3610,7 +3499,6 @@ help decrease the nutrient load, but tertiary treatment may be required for a
 
 significant decrease.
 
-129
 
 However, in the short term, a ban on phosphorus content in detergents could help decrease
 loads by almost as much as tertiary treatment albeit at a lesser cost. Decongesting the
@@ -3623,7 +3511,6 @@ nutrient sources, build scenarios, and consider options that may be useful for p
 
 and management bodies.
 
-130
 
 4.1 Introduction
 
@@ -3663,7 +3550,6 @@ in 20 years (1990 - 2010) with a growth rate of 2.12%. While in the National Cap
 (NCR including Metro Manila), the population grew by 33% with a growth rate of 2.02%
 (NSO, 2010).
 
-131
 
 Sources of waste from the Manila Bay watershed include agriculture, aquaculture, industrial,
 and domestic activities. There are five general land uses within the Manila Bay watershed:
@@ -3703,7 +3589,6 @@ River contributes about 49% of the net freshwater influx while Pasig River contr
 
 21%; the remaining 26% comes from the other minor rivers while 4% comes from
 
-132
 
 precipitation (Jacinto et al., 1999). At about 9 km upstream from the mouth of the
 Pampanga River, the annual nitrate load is estimated at 2849 metric tons. For phosphorus,
@@ -3744,7 +3629,6 @@ This study aims to complement these efforts by using models to cover a bigger st
 
 and a wider range of temporal scenarios.
 
-133
 
 ‘An advantage of using models is the ability to test different scenarios and use the results to
 address different policy issues in the rehabilitation and pollution management of Manila
@@ -3785,7 +3669,6 @@ retention, and crop uptake. N and P emissions were calculated as loads in kilogr
 year. Different scenarios were then tested based on possible policy options for rehabilitation
 
 of the bay (e.g. better sewage treatment, regulation of phosphorus content in detergents).
-1234
 
 This model was based on the work of Moreé et al., 2013, Beusen et al., 2015 and 2016, and
 Bouwman et al., 2013 looking at land-based nutrient flows at the global scale and was
@@ -3828,7 +3711,6 @@ rural. Many barangays make up a province (NSO, 2010). Coastal populations are cl
 
 people living within 1 km from the coast whose emissions are considered to flow directly
 
-135
 
 into the bay without any retention factors. Table 4.1 shows the list of provinces included in
 the study area and a sample of the population data that was used.
@@ -3879,7 +3761,6 @@ septic tanks. These septic tanks are regularly serviced by the water service pro
 
 or Maynilad. For this study, Pampanga and Metro Manila, having slightly better sewage
 
-136
 
 connections, will be assigned 15 and 30% connection to sewage pipes respectively. As of the
 2015 report from the two concessionaires providing sewerage services to Metro Manila,
@@ -3919,7 +3800,6 @@ connected to septic tanks and people who are not connected. Emissions from the c
 
 those from people who live 1 km from the coast with waste discharged directly into the bay.
 
-137
 
 get
 
@@ -3974,7 +3854,6 @@ The agriculture and aquaculture component was patterned after the work of Beusen
 
 but was modified to address certain limitations and local peculiarities of the study site. The
 
-139
 
 same concept as the point source model was applied to the agriculture and aquaculture
 model wherein statistical data from the Bureau of Agricultural Statistics (BAS) such as the
@@ -4031,7 +3910,6 @@ the average quantity applied. Rice and corn (major crops) inventory per province
 
 used. For animals, livestock and poultry inventory by farm type and province was used
 
-140
 
 (number of heads of carabao, cattle, goat, hog, and poultry) (Philippine Statistics Authority,
 nd.) (Table 4.3).
@@ -4087,7 +3965,6 @@ production data from 1998 to 2010. For the calculation of emissions from animal 
 
 and fertilizer use, the following coefficients were used (Table 4.3 and Table 4.4)
 
-141
 
 Table 4.4. Summary of coefficients for fertilizer use (International Plant Nutrition Institute, 2010;
 Kolay, 2007).
@@ -4143,7 +4020,6 @@ was used to evaluate the impact of different load reduction options tackling pop
 dynamics that may be applied to the bay. The following scenarios were tested: a baseline
 
 ‘scenario, a scenario representing a total ban on phosphorus in detergents, a scenario with
-142
 
 full tertiary treatment, a scenario with half of the population growth rate used, a tertiary
 treatment and growth rate scenario, and two scenarios wherein half of the population in
@@ -4170,7 +4046,6 @@ every scenario year since the conversion to gridded data that can be used as an 
 
 water transport model has not been automated in mapping software.
 
-143
 
 vot
 
@@ -4233,7 +4108,6 @@ loading to Manila Bay, addressing the agricultural sector, including livestock a
 
 also help in the reduction of nutrient loading to Manila Bay.
 
-45
 
 P-Coast
 
@@ -4263,7 +4137,6 @@ watershed which may affect the transport of material downstream.
 Figure 4.4, Nitrogen (A) and phosphorus (8) loading maps in the watershed of Manila Bay. Darker
 areas represent bigger sources of nutrient loads which are mostly situated near the bay.
 
-146
 
 4.3.2 Nutrient loading per sub-watershed
 
@@ -4289,7 +4162,6 @@ A Witenhed Watenhed Wtered Watershed Waterbed Wolenbed Wetenhed Waterbed
 Figure 4.6, The annual nitrogen loading per sub-watershed (A) and (B) annual phosphorus loading per
 sub-watershed.
 
-147
 
 The Pampanga sub-watershed, which is the largest, has increased nutrient loading from
 
@@ -4315,7 +4187,6 @@ provinces for a better, more specific, and effective nutrient load reduction str
 be done in addition to watershed or nationwide efforts and policies targeting nutrient load
 reduction.
 
-148
 
 4.3.3 Comparison of the different scenarios with the baseline
 
@@ -4341,7 +4212,6 @@ Total P load (M kg/yr)
 S
 =
 » —-Baseline
-2
 c
 [S)
 5 —-P-ban
@@ -4354,7 +4224,6 @@ Year
 Figure 4.8. Total phosphorus loading for the scenarios: baseline, scenario01 (phosphorus ban), and
 scenario02 (tertiary treatment).
 
-149
 
 Tertiary treatment is more effective at reducing phosphorus loads but this would require the
 updating of and/or installation of new sewage systems. An additional alternative which may
@@ -4389,13 +4258,11 @@ growth rate and treatment, decentralization and treatment, and tertiary treatmen
 
 status quo).
 
-150
 
 Total N load (M kg/year)
 100 5
 
 ~ Baseline
-90
 Half Growth Rate
 S 80
 $s
@@ -4434,7 +4301,6 @@ LLDA study was used in the comparison. This study produced less amounts of total
 
 less) and total P (76% less) loads as compared with the LLDA study. Differences may have
 
-151
 
 stemmed from the methodologies and sub-watershed delineation. The LLDA study had no
 natural purification at surface waters and considers the contribution from the industry with
@@ -4479,7 +4345,6 @@ long-term monitoring data of discharge and nutrient concentration should be avai
 
 preferably open access.
 
-152
 
 Domestic sources are a major source of nutrient load as compared with agriculture so efforts
 can be focused on this sector utilizing strategies such as the improvement of sewage
@@ -4522,7 +4387,6 @@ interventions to manage excessive nutrient loading, other strategies suggested a
 
 done while these improvements are in the pipeline.
 
-153
 
 4.5 References
 
@@ -4570,7 +4434,6 @@ Chang, K.-H., Amano, A., Miller, T.W., Isobe, T., Maneja, R., Siringan, F., Imai
 2009. Pollution Study in Manila Bay: Eutrophication and Its Impact on Plankton Community.
 Interdiscip. Stud. Environ. Chem. -Environmental Res. Asia 261-267.
 
-154
 
 Comber, S., Gardner, M., Georges, K., Blackwood, D., Gilmour, D., 2013. Domestic source of
 phosphorus to sewage treatment works. Environ. Technol. (United Kingdom) 34, 1349-1358.
@@ -4618,7 +4481,6 @@ Environment of Asia Pacific Harbours. Springer, pp. 293-307.
 Jacinto, G.S., San Diego-McGlone, M.L., Velasquez, |.B., Smith, S. V, 1999. N and P Budget of
 Manila Bay, Philippines.
 
-155
 
 Jacinto, G.S., Sotto, L.P.A., Senal, M.I.S., San Diego-McGlone, M.L., Escobar, M.T.L., Amano,
 A, Miller, T.W., 2011. Hypoxia in Manila Bay, Philippines during the northeast monsoon.
@@ -4668,7 +4530,6 @@ Population, 2016-058. https://doi.org/10.1096/f).08-114868
 Philippine Statistics Authority, n.d. Country Stat: Philippines [WWW Document]. URL
 http://stat.psa.gov.ph/
 
-156
 
 Prudente, M.S., Ichihashi, H., Tatsukawa, R., 1994. Heavy metal concentrations in sediments
 from Manila Bay, Philippines and inflowing rivers. Environ. Pollut. 86, 83-88.
@@ -4707,7 +4568,6 @@ phosphate in urban wastewater for the period 1970 to 2050. Global Biogeochem. Cy
 WorldBank, 2012. Philippines: Providing Sewerage and Sanitation Services to Over 3 Million
 People 3-6.
 
-187
 
 5. Chapter 5: Synthesis
 
@@ -4741,7 +4601,6 @@ Low DO levels coincide with the presence of stratification, elevated nutrient co
 
 chlorophyll-a levels, and dissolved organic carbon.
 
-158
 
 A shoaling oxycline and an increasing thickness of the hypoxic layer were also observed over
 time, indicating problematic conditions for the bay like habitat compression for pelagic
@@ -4759,7 +4618,6 @@ spatiotemporal dynamics of hypoxia and eutrophication in Manita Bay. Such data s
 prove useful in improving inputs to modeling work, the results of which can be beneficial to
 the rehabilitation and management programs for the bay.
 
-159
 
 In the second part of the study, a hydrodynamic model was developed for Manila Bay with
 freshwater discharges from major rivers as the main input. Two main regimes were tested,
@@ -4800,7 +4658,6 @@ consistent with the water levels from tide gauges and the profiles for salinity 
 
 temperature were similar to the field surveys.
 
-160
 
 seseenesesnecetiff
 
@@ -4815,7 +4672,6 @@ result is a representative depth profile for the whole bay for each field survey
 hhuge freshwater input into the bay (from an intense rainfall event) and hence covered a wider salinity
 range.
 
-161
 
 Wetseason; higher
 
@@ -4870,7 +4726,6 @@ in bringing in better quality water into the bay which helps increase the DO lev
 
 water column.
 
-162
 
 Dissolved Oxygen [g/m'
 
@@ -4881,23 +4736,15 @@ Oo 20; 40 60 80 100} 120 140 160 180
 
 mo gt
 :
-6
 
-0
 
-4
-2
 )
 
-160
 
-18
 
-10
 
 Depth [m]
 
-0
 0 60 80 100) 120
 
 Days
@@ -4919,7 +4766,6 @@ levels decrease at the surface (due to the proximity of the station to the shall
 with significant river influence) but are relatively unchanged for the rest of the water
 column, The change in DO levels is ~ + 1.0 - 2.0 gm.
 
-163
 
 The hydrodynamic and water quality model of Manila Bay was able to reproduce some of
 the major features observed during the field surveys conducted. A key implication of the
@@ -4961,7 +4807,6 @@ have been in place for decades have led to minimal improvements in water quality
 
 al., 2018; Murphy et al., 2022). At the very least however, consistent efforts should be the
 
-164
 
 goal for the rehabilitation of Manila Bay. In addition, stricter policies on dredging and
 dumping related to reclamation activities in the bay should be implemented as these can
@@ -4995,7 +4840,6 @@ The watershed model showed that as much as 66% of the total nitrogen (TN) and 59
 total phosphorus (TP) loading into Manila Bay are derived from point or domestic sources
 while agriculture accounts for 22% of TN and 30% of TP. From the nutrient analysis
 
-165
 
 conducted during the field surveys, ammonium is, on average, about 50% of the total
 inorganic nitrogen concentration in the bay. The total nitrogen and total phosphorus loading
@@ -5034,7 +4878,6 @@ option to reduce phosphorus loading into the environment before investing in ter
 
 sewage treatment systems or as the sewage systems in place are upgraded.
 
-166
 
 Sub-watersheds and provinces differ in their nutrient loading characteristics; policies and
 rehabilitation efforts can therefore be on a per province or per sub-watershed format to
@@ -5075,7 +4918,6 @@ loading impacts oxygen depletion. The spatially explicit modeling of loading sou
 scenarios helps to design strategies focused on specific areas where mitigation can be most
 cost-effective.
 
-167
 
 Although the approaches used have limitations, they proved to be useful for interpreting
 results from field studies, understanding some factors that affect oxygen depletion, and for
@@ -5111,7 +4953,6 @@ Basic and comprehensive research in addition to proper implementation of laws an
 are ultimately the keys to supporting the sustainable management and rehabilitation of
 Manila Bay.
 
-168
 
 5.1 References
 
@@ -5160,7 +5001,6 @@ Manila Bay Environmental Management, Quezon City, Philippines.
 Prudente, M.S., Ichihashi, H., Tatsukawa, R., 1994. Heavy metal concentrations in sediments
 from Manila Bay, Philippines, and inflowing rivers. Environ. Pollut. 86, 83-88.
 
-169
 
 Reichardt, W., San Diego-McGlone, M.L., Jacinto, G.S., 2006. Organic pollution and its impact
 on the microbiology of coastal marine environments: a Philippine perspective. Asian J. Water
@@ -5177,5 +5017,4 @@ F.S.J., Borja, V.M., Bognot, E.D.C., Gatdula, N.C., Perez, M.A., Gonzales, F.L. 
 Fisheries and Aquatic Resources, National Fisheries Research and Development Institute,
 Quezon City, Philippines.
 
-170
 

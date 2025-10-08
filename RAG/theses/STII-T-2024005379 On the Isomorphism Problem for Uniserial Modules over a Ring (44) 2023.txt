@@ -103,7 +103,6 @@ first-order logic invariance.
 
 The objectives of the thesis are the following:
 
-2
 
 1. Provide a clear exposition of the model-completeness of the theory of mod-
 
@@ -345,7 +344,6 @@ PE (er, ---5 Cp) = (Se)(
 >
 I
 
-1
 
 Since the theory of algebraically closed fields is model complete, the embedding
 
@@ -390,14 +388,12 @@ We note that a theory T is syntactically complete if and only if any two models
 
 of T are elementary equivalent. To see this, suppose all models of T are elementary
 
-9
 
 equivalent. Then for any sentence ¢, either M — ¢ or M |: -¢ for any model M
 of T and so by the Completeness Theorem either M+ ¢ or M+ 7¢. The converse
 
 is clear since if a sentence is provable, it must hold for all models.
 
-10
 
 Chapter 3
 
@@ -440,7 +436,6 @@ for some n € No. But z is a fixed point of S” if and only if n = 0 since the
 
 successor of any natural number is not 0. And so the above relation reduces
 
-11
 
 to x = x which tells us that the given quantifier-free formula defines the entire
 universe N. If n > 1 then no natural numbers satisfies the relation (*). Thus every
@@ -491,7 +486,6 @@ Jw), ..., Wn [V1...UnW1...wy] =0 (3.1)
 $11 Sim
 SN1 SNm
 
-12
 
 where 0 is the zero matrix of correct size.
 
@@ -540,7 +534,6 @@ mi on N
 du, B00%) w AQ? Ori; + So wes = 0)
 j=l i=] k=1
 
-13
 
 where rj; and s,; are in the ring R. And so is of form
 
@@ -604,7 +597,6 @@ j=l i=1
 
 Hence we can choose the uz to be wzr. oO
 
-14
 
 Corollary 3.2. Let ¢ be a positive primitive formula with free variables 0 and let
 
@@ -689,7 +681,6 @@ Prest [1, p.34]. Let M be an R-module and 4, A be positive primitive with the
 same free variables such that ¢ implies A. Define
 Inv(M, ¢,) = |6(M)/A(M)|
 
-16
 
 to be the order of the factor group ¢(M/)/A(M). If it is not the case that ¢ implies
 
@@ -733,7 +724,6 @@ With respect to the above partial ordering we defined, this is by definition the
 
 largest syntactically complete theory of modules.
 
-17
 
 A module M models T™ if for every positive primitive formulas ¢ and w with
 y — 4, the invariant Inv(M, ¢. V) is infinite i.e. 6(M)/w(M) is infinite. See [11,
@@ -780,7 +770,6 @@ We prove the above statement by (downward) induction on m. If m = n we
 
 are done. Thus suppose that the above statement holds for m + 1 and suppose
 
-18
 
 Ko,..-, Km-1 are groups in the hypothesis of the statement. Let K = Nem Ki.
 Since G is not the union of any proper subset of M (i.e. M is a minimal cover)
@@ -829,7 +818,6 @@ a boolean combination of positive primitive formulas and invariant sentences, it
 
 suffices to show that every formula of form (3.3) where each p; is positive primitive
 
-19
 
 is equivalent to a boolean combination of positive primitive formulas and invariant
 
@@ -882,7 +870,6 @@ dwy,... sry WN5Q1,- sau \D ViTig + Yay = = 0) A IN y TiC + So ade; = 0).
 
 j=l i=1 j=l i=1 k=1
 
-20
 
 By renaming the variables this is just the formula
 
@@ -929,7 +916,6 @@ all the y;(M,b) are nonempty.
 Choose elements c, do, ...,dp—1 € M such that (M,b) = $;(M,0)c and y,(M, b) =
 wi(M,0)d;. Let u; = dhe We can write condition (3.5) equivalently as
 
-21
 
 o(M,0) UJ wi(M, 0)ui. (3.6)
 i<n
@@ -976,7 +962,6 @@ junction of some 7); and py a conjunction of some yj.
 
 2. Ney Vi(M, O)ui # 0.
 
-22
 
 The 2nd condition is equivalent to dv A, ¥;(v,b). But a conjunction of positive
 
@@ -1019,7 +1004,6 @@ for all ¢,w. So N is elementary equivalent to M ®(N/M). In particular,
 
 Inv(M, ¢,¥) < Inv(N, ¢, ).
 
-23
 
 Proof. Suppose ¢ and wy are positive primitive formulas in n free variables. Since
 M <«_N, we have ¢(M) = M"1M @(N). So we can form the quotient group
@@ -1063,7 +1047,6 @@ That N is elementary equivalent to M @ (N/M) follows from Corollary 3.6. This
 proves the lemma.
 a)
 
-24
 
 Theorem 3.8. If M< N « M’ and M is elementary equivalent to M', then M
 
@@ -1112,7 +1095,6 @@ Using the characterization of von Neumann regular rings in Theorem 3.10, we
 
 prove the following theorem:
 
-25
 
 Theorem 3.11. Suppose R is von Neumann regular and ¢, W positive primitive
 
@@ -1157,7 +1139,6 @@ Hence, we have KerO = Mf as desired.
 By first isomorphism theorem for groups, we have:
 Me/Mf = Me/KerO = ImO = Me(1 — f).
 
-26
 
 It follows that
 
@@ -1204,7 +1185,6 @@ where p > k. Then by elementary equivalence
 MF 3u, os Up [\(vi # vj)
 ifj
 
-27
 
 This contradicts that |M| = k and thus |M| = |N|. Hence we have |R| = k = |R"|
 for n > 2 where k is a positive integer; which is a contradiction.
@@ -1244,7 +1224,6 @@ infinite, simple, and von Neumann regular ring R, every embedding of M to M’
 is elementary, that is, T is model complete.
 i)
 
-28
 
 Chapter 4
 
@@ -1286,7 +1265,6 @@ and
 
 Mz F (di, .-.dn) <=> Mi BD M2 F (i2(di), --, t2(dn))
 
-29
 
 for all n, and all cy, ...,¢n € Mi, dy,...,dn € Aly. By setting n = 0 we see that M,,
 Mz and M, @ M; all satisfy the same first-order sentences (without parameters)
@@ -1333,7 +1311,6 @@ right ideal of R is an elementary substructure of R as a module over R then R is
 an infinite, simple and von Neumann regular.
 Proof. Suppose otherwise that R is finite. That is, |R| is finite and R is a finite
 
-30
 
 module over itself. By syntactic completeness, any two modules over R are ele-
 mentary equivalent. Consider the module R” over R where n > 1. Since |R| is
@@ -1372,7 +1349,6 @@ and so for any r € R there is a v € R such that
 RE ror =r.
 Since r is arbitrary, R is a von Neumann regular ring. oO
 
-31
 
 We note that the conditions on ring R in Theorem 4.1 are sufficient for ele-
 mentary equivalence but not for isomorphism. To show insufficiency, we make use
@@ -1392,9 +1368,7 @@ Proof. Let T be the theory of R-modules above. If R is infinite, then the module
 R over R is also infinite. By Lowenheim-Skolem Theorem and Theorem 4.1, there
 are nonisomorphic yet elementary equivalent models of T.
 
-0
 
-32
 
 4.2 An application
 
@@ -1443,7 +1417,6 @@ Morita equivalent if their category of right modules are equivalent as categorie
 
 Since D is the only simple right D-module, the only simple M,(D)-module is D”.
 
-33
 
 4.3. Possible research directions
 
@@ -1465,7 +1438,6 @@ vide an explicit set S of boolean combination of conditions Inu(—,¢,~) < k
 
 axiomatizing T.
 
-34
 
 [1]
 
@@ -1528,7 +1500,6 @@ K. Bongartz and B. Huisgen-Zimmermann, Varieties of uniserial represen-
 tations IV. Kinship to geometric quotients, Transactions of the American
 Mathematical Society, Vol. 353 (5) (2001) 2091-2113.
 
-35
 
 [11]
 

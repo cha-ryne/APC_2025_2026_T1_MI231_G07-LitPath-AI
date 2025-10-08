@@ -1,0 +1,1972 @@
+Populating galactic dark matter halos with galaxies using machine learning
+
+Allen Neil C. Garcia
+
+UNIVERSITY OF THE PHILIPPINES DILIMAN
+
+Master of Science in Physics
+
+June 2023
+
+ABSTRACT
+
+Robust understanding of the connection between galaxies and the dark matter
+(DM) halos that host them is achieved using modern hydrodynamic simulations.
+However, such simulations are generally computation-intensive and require a lot
+of computing time. In this study, we develop machine learning (ML) models to
+map baryonic properties of galaxies onto DM halos from the SIMBA cosmological
+hydrodynamic simulation, at redshifts z = 0 — 2, in a computationally efficient
+manner. In particular, we trained random forest (RF) and extremely randomized
+trees (ERT) models to predict central galaxy properties, namely, the stellar mass
+M∗, neutral and molecular hydrogen masses M_HI and M_H2, star formation rate
+SFR, and the gas-phase metallicity Z_gas using DM halo properties, namely, the
+primary halo mass My and the mass of the previous halo progenitors, nearby halo
+mass densities ρ within r = 300, 1000, 3000 kpc, halo half mass radius r_h, halo spin
+λ, and halo velocity dispersion σ. Consistent with previous work, we find that the
+model predictions are able to successfully recover the mean relations between the
+halo mass and galaxy properties, as well as the intrinsic second parameter corre-
+lations, such as the fundamental metallicity relation (FMR) with the stellar mass
+and the effect of black holes in the quenching of galaxies, though they are not able
+to reproduce the observed scatter around the mean relations. We also study the
+relative importances of the features in predicting the different galaxy properties.
+Results from this study illustrate both the potential and current limitations of ML
+approaches for generating realistic galaxy catalogs.
+
+PACS: 98.80.-k (Cosmology), 07.05.Kf (Data analysis: algorithms and imple-
+mentation; data management)
+
+Chapter 1
+
+Introduction
+
+In the ACDM cosmological model, dark matter (DM) halos form through density
+fluctuations in the early universe and grow hierarchically through mergers. It is
+believed that these halos serve as the gravitational scaffolding upon which galax-
+ies form and evolve [1]. Understanding the relationship between galaxies and their
+host dark matter halos is a fundamental question in modern astrophysics. In recent
+years, significant improvements in computing paved the way to the development
+of simulations that are able to simulate the growth of the large-scale structure as
+constrained by DM halos. These simulations are used to understand the intrinsic
+galaxy-halo connection, which refers to the intricate interplay between the proper-
+ties of galaxies, such as their luminosity, size, and distribution, and the underlying
+dark matter halos that host them.
+
+Traditional methods of probing the galaxy-halo connection that relies on the in-
+formation provided by DM-only N-body simulations include statistical techniques
+like subhalo abundance matching (SHAM) [2] and halo occupation distribution
+(HOD) [3], and physical models like semi-analytic models (SAMs) [4]. However,
+these methods often suffer from uncertainties associated with the simplification of
+the astrophysical processes involved in galaxy formation and evolution, such as
+feedback from stars and black holes, and the effects of baryonic physics. Addition-
+ally, SHAM and HOD techniques commonly presupposes a monotonic relationship
+between the halo mass and galaxy luminosity which might not be the case in the
+
+real Universe. Offering a more sophisticated approach in probing the galaxy-halo
+connection are cosmological hydrodynamic simulations, albeit comes with heavy
+computational costs. These simulations co-evolve dark matter and gas particles
+with the growth of the cosmological large-scale structure [5]. Despite the physically
+motivated nature of SAMs and hydrodynamic simulations, these techniques are
+generally too computationally expensive to efficiently probe the galaxy-halo con-
+nection in a Gpc*-scale. The heavily parametric nature of traditional techniques in
+probing the galaxy-halo connection and the massive computational requirement of
+hydrodynamic simulations begs the development of a non-parametric and flexible
+approach of understanding the galaxy-halo connection on a larger scale.
+
+Recently, machine learning (ML) have been used to various astrophysical ap-
+plication [6-8] and have emerged as a powerful tool for studying the galaxy-halo
+connection. Machine learning algorithms can analyze high-dimensional datasets
+and identify patterns in the data, allowing for more accurate and precise modeling
+of the galaxy-halo connection within a small amount of time as it does not require
+the inclusion of the complex baryonic processes taking place within galaxies. One
+promising approach is to train various machine learning algorithms on data from
+physically accurate hydrodynamic simulations or SAMs that span a large volume
+[9, 10].
+
+In this study, we aim to leverage the ability of tree-based machine learning
+methods like random forest (RF) and extremely randomized trees (ERT) in pop-
+ulating galactic dark matter halos from the SIMBA hydrodynamic simulations [11]
+with galaxies. Specifically, we test the capability of ML in recovering the mean scal-
+ing relations and scatter around the halo mass. Additionally, we explore whether
+ML reproduces the intrinsic second-parameter correlations as a function of the
+stellar mass such as the fundamental metallicity relation (FMR) and the star
+formation-stellar mass relation. Lastly, this study seeks to explore how machine
+learning models uses different halo properties in predicting various galaxy proper-
+
+ties.
+
+This manuscript is organized as follows: in Chapter 2, we further discuss the
+commonly used techniques in probing the galaxy-halo connection mentioned ear-
+lier. In Chapter 3, we review SIMBA, the cosmological hydrodynamic simulation
+that is used to train the ML models. In Chapter 4, we discuss the set-up and
+implementation of the ML models used in this study. In Chapter 5 we present our
+results. Lastly, in Chapter 6, we lay out our conclusions and recommendations for
+
+future work.
+
+Chapter 2
+
+Probing the galaxy-halo
+connection
+
+In this chapter, we discuss the techniques in probing the galaxy-halo connection
+(GHC), highlighting their advantages and disadvantages. This chapter is struc-
+tured as follows: in Secs. 2.1 to 2.4, we separately discuss the most commonly used
+methods in constraining the intrinsic GHC. In Sec. 2.5, we discuss the emergence
+
+of machine learning (ML) as a powerful alternative over the traditional methods.
+
+2.1 Subhalo/Halo Abundance Matching
+
+Subhalo/halo abundance matching (SHAM) is a technique used in cosmology to
+connect the observed properties of galaxies with the properties of dark matter halos.
+It is a statistical method that uses the abundance of galaxies, commonly extracted.
+from data obtained by astronomical surveys, and dark matter halos, commonly
+extracted from N-body simulations, to establish a relationship between the two,
+allowing for predictions of galaxy properties based on the properties of their host
+halos. Within the standard ACDM formalism of hierarchical structure formation,
+the principal assumption behind abundance matching is that the luminosity L or
+the stellar mass M, of a galaxy is closely tied to the mass M, of a halo or subhalo
+in a one-to-one correspondence that preserves rank ordering (2, 12]. That is, the
+
+most massive (luminous) galaxy lives in the most massive halo or subhalo, the
+
+2.2. Halo Occupation Distribution (HOD)
+
+second most massive galaxy lives in the second most massive halo or subhalo, and
+so on.
+
+Since galaxy stripping occurs before halo mergers (e.g. subhalo accretion to
+a larger halo), another approach of this method is to abundance match galaxies
+to subhalos based on their time of accretion. This was done by connecting galax-
+ies to the subhalo’s maximum circular velocity during accretion V,2s5 which is a
+better proxy than the halo mass when considering halo merger history and the
+effects of tidal stripping [13, 14]. HAM can also be used to predict the stellar-to-
+halo mass (SMHM) relation, but this requires tedious parameter tuning to match
+observations. Another approach, proposed by Hearin and Watson [15] is the in-
+clusion of a halo property that encompasses the history of halos. In their work,
+they included the property Zstarve, Which corresponds to the redshift at which star
+formation in galaxy ceases, as additional property to determine the luminosity and
+color of galaxies residing within DM halos. They called this method conditional
+abundance matching (CAM).
+
+2.2 Halo Occupation Distribution (HOD)
+
+Using SHAM in describing the clustering of galaxies within a population of DM
+halos is not possible and is not recommended as it relies heavily on linking galaxies
+to DM halos using specific galaxy and halo properties that do not include any in-
+formation about their distributions. Halo occupation distribution (HOD), another
+statistical approach similar to SHAM, is a method that enables one to model the
+distribution of galaxies residing within halos/subhalos. HOD defines the relation
+between galaxies and halos as the probability distribution, P(N|M), that a halo
+of mass M hosts N galaxies. The HOD typically takes as input the halo mass
+distributions of halos from cosmological models and predicts the clustering of both
+central and satellite galaxies, which are modeled separately, within these halos
+[3, 16}.
+
+Some variations of HOD include the use of the conditional luminosity func-
+
+2.3. Semi-Analytic Models (SAMs)
+
+tion (CLF) and the conditional stellar mass function (CSMF) which indicates the
+average number of galaxies with a certain luminosity [17] and stellar mass [18],
+respectively as tracers of galaxy bias. Just like SHAM, HOD formalism deals with
+a number of parameters, especially when modelling the distribution of central and
+satellite galaxies, and also requires the use of high-resolution N-body simulations
+with the addition of data from astronomical surveys to link galaxies to DM halos.
+Also, as the two methods are generally statistical in nature, it is not possible to
+probe how baryonic processes like radiative cooling, feedback, and star formation
+
+drive the observations constrained by these methods.
+
+2.3 Semi-Analytic Models (SAMs)
+
+Semi-analytic models (SAMs) offer a physical approach that captures the complex
+baryonic processes happening within galaxies to model the galaxy-halo connec-
+tion. Specifically, SAMs are computational approaches that combine simplified
+analytic prescriptions of galaxy formation, such as for radiative cooling, gas recy-
+cling, and feedback with numerical simulations, to study the formation and evolu-
+tion of galaxies in the Universe. These models are used to simulate galaxies that
+follow the hierarchical growth of the DM-dominated large-scale structure from the
+early Universe up to the present day which includes mergers and accretion [4, 19].
+SAMs provide a powerful tool for understanding the physical processes that govern
+the formation and evolution of galaxies in a cosmological context.
+
+Despite providing a physical model of the Universe in a cosmological scale,
+SAMs are considered to be a less accurate approach compared to the more so-
+phisticated technique called hydrodynamic simulations (discussed in the following
+section, Sec. 2.4) as they make use of overly simplified analytic prescriptions of
+galaxy formation, thus the term “semi-analytic”, for relatively faster computing
+time. The utilization of simple analytic approach in SAMs means it needs to be
+continually tested with data from more sophisticated hydrodynamic simulations
+
+and high-redshift surveys. The major limitation of SAMs is that they require a
+
+2.4. Hydrodynamic simulations
+
+large number of free parameters, which in turn require heroic efforts to constrain
+simultaneously to match any new data [20]. One way to do this parameter tuning
+is to apply Markov Chain Monte Carlo (MCMC) techniques which tends to be a
+more intensive approach than HAM and HOD approaches [21]. However, what
+separates SAMs from the previously-discussed statistical approaches is that its pa-
+rameters are physical, not statistical and it directly probes the complex process of
+
+galaxy formation.
+
+2.4 Hydrodynamic simulations
+
+As stated in Sec. 2.3, feeding physically-motivated galaxies to dark matter halos
+from DM-only N-body simulations requires the use of simplified analytic prescrip-
+tions of galaxy formation such gas cooling, star formation, and feedback. SAMs
+are generally lacking in complexity and do not accurately capture the physical
+processes involved in galaxy formation and evolution. Rapid advancements in
+computing led to the emergence of a more sophisticated technique in simulating
+the cosmological large-scale structure using hydrodynamic simulations. In these
+simulations, galaxies are formed by treating gas particles like ideal fluids, which is
+subject to additional hydrodynamic and radiative processes, while simultaneously
+evolving them with dark matter particles in an ab initio manner, using various
+gravity and hydrodynamic solvers (codes). In other words, the formation and evo-
+lution of galaxies is simultaneously simulated with the growth and evolution of
+the DM-dominated large-scale structure. This makes hydrodynamic simulations
+a better option than the previously discussed methods that utilize pure DM-only
+N-body simulations in modelling a baryonic Universe. Numerous state-of-the-art
+hydrodynamic simulations have been generated with different specializations in
+terms of baryonic processes happening within galaxies. Some of these include the
+Magneticum simulation [22], which was used in examining star formation in the
+brightest cluster galaxies (BCGs) of galaxy clusters [23], the HORIZON-AGN hy-
+
+drodynamic simulation [24], which was used to study the impact of active galactic
+
+2.5. Machine Learning (ML)
+
+nuclei (AGN) feedback in the density profiles of galactic DM halos and galaxies
+[25], the IlustrisTNG simulation [26], which was used to probe the mass-metallicity
+relation on galaxies [27], and the SIMBA hydrodynamic simulation [11], which ex-
+plored the effects of black hole feedback by incorporating additional black hole
+accretion model other than the commonly employed Bondi-Hoyle-Lyttleton model.
+Overall, the results from these simulations successfully mimic and are tightly con-
+sistent with astronomical observations. In Chapter 3, we discuss in more detail the
+
+state-of-the-art SIMBA hydrodynamic simulation which is utilized in this thesis.
+
+2.5 Machine Learning (ML)
+
+Since conventional techniques used to understand the galaxy-halo connection such
+as HAM, HOD, and SAMs are considered to be overly simple, as they are heavily
+parametric, a holistic and flexible approach that remains computationally cheap
+would be ideal. Machine learning (ML), a technique that exploits the ability of
+various computer algorithms such as nearest neighbor, decision trees, and neural
+networks to acquire information from high-dimensional data, is another rapidly
+developing approach that have been proven to be a solution to this task. ML
+has already been applied to study various complex astrophysical models includ-
+ing predicting stellar parameters from SDSS and SEGUE spectra [6], probing the
+formation of the large-scale structure via DM particle classification [28], creat-
+ing weak-lensing convergence maps [29], and photometric redshift estimation for
+current [7] and future surveys [8], among many others.
+
+The idea of using ML in understanding the galaxy-halo connection is as follows:
+using the data from robust cosmological hydrodynamic simulations or SAMs, a
+computer will be trained to learn how DM halo properties relate to various galaxy
+properties without providing any analytical prescription of the complex baryonic
+processes of galaxy formation. With this, applying ML to study the galaxy-halo
+connection is considered as a regression problem, wherein the target quantities are
+
+continuous, using a supervised approach since ML will ‘learn’ from an existing
+
+2.5. Machine Learning (ML)
+
+dataset.
+
+ML has recently been applied to various cosmological hydrodynamic simulations
+such as the IlustrisTNG [9], HORIZON-AGN [30], and MUFASA [10]. The primary
+results from these studies state that ML was able to reproduce the mean relations
+between galaxy and halo properties but fails to reproduce the scatter around the
+mean. Additionally, the stellar mass M, is the only galaxy property that is well
+predicted by ML (p 2 0.9) as it is tightly connected to halo mass M, as observed
+and implemented in HOD, HAM, and SAMs. Constraining other properties such
+as the neutral hydrogen mass Myy and the star formation rate remains a challenge
+(p S 0.8). Recently, SIMBA has been employed in developing a hybrid ML model
+that predicts the central black hole mass Min, the neutral hydrogen mass Min,
+and the molecular hydrogen mass My using DM halo properties from a simulation
+and galaxy properties predicted by an analytical model of galaxy formation [(31].
+Also, just recently, SIMBAwas also utilized in developing physics-informed neural
+networks (PINNs) in mapping baryonic properties to halo properties wherein a
+neural network is trained with an extended loss function enforced with the physics
+
+of baryon conversion efficiency and the Kullback-Liebler divergence metric [32].
+
+10
+
+Chapter 3
+
+The SIMBA cosmological
+hydrodynamic simulation
+
+In this Chapter, we discuss the state-of-the-art SIMBA hydrodynamic simulation
+which we utilize in this study. First, in Sec. 3.1, we describe the structure of SIMBA,
+exploring specifically how it simultaneously forms galaxies with the evolution of the
+large scale structure and how black holes are formed and seeded in the simulated
+galaxies, a unique attribute by SIMBA which is not captured in other simulations.
+In Secs. 3.2 and 3.3 we describe the SIMBA runs and the publicly-available data
+used in this study.
+
+3.1 Overview of SIMBA
+
+The SIMBA hydrodynamic simulation [11] utilizes a framework similar to its pre-
+decessor MUFASA [33], but with updates on the sub-resolution star formation and
+feedback prescriptions. Both SIMBA and MUFASA use an updated version of GIZMO
+meshless finite mass (MFM) cosmological gravity and hydrodynamic solver [34, 35],
+which offers significant advantages compared to the commonly-used smoothed par-
+ticle hydrodynamics (SPH) method employed in other simulations in terms of han-
+dling fluid problems related to strong shocks and discontinuities. Both simulation
+also utilize the use of GRACKLE [36] for the radiative cooling, photoionization
+
+heating, metal cooling, and non-equilibrium evolution of primordial elements, and
+
+11
+
+3.1. Overview of SIMBA
+
+the implementation of FIRE (Feedback in Realistic Environments) high-resolution
+zoom simulations [37, 38] in modelling two-phase decoupled star formation-driven
+galactic winds.
+
+Notable improvements in SIMBA include the addition of black hole growth via a
+torque-limited accretion model [39], the inclusion of black hole feedback via kinetic
+bipolar outflows [39, 40] and X-ray energy [41], and the utilization of the AREPO
+
+codes [42] in modelling on-the-fly dust production and destruction.
+
+3.1.1 Star formation
+
+Similar to MUFASA, the complex star formation in SIMBA employs the molecular
+gas-based prescription from Krumholz et al. [43], commonly referred to as the
+KMT model. In a cosmological hydrodynamic simulation, a gas particle’s molec-
+ular hydrogen (Hz) gas fraction relative to the atomic/neutral hydrogen (HI) gas
+in an atomic-molecular complex, which is essentially a star-forming region, is ap-
+proximated as a function of a parameter s, given by
+
+Pit s
+= r1-0. — 1
+fia = Oe Wie (; zim) (3.1)
+
+with
+_ In(1+0.6x + 0.01”)
+°* 0.0396 Z(=/Mope~)
+
+which is a quantity that corresponds to the size of the atomic-molecular complex.
+
+(3.2)
+
+Here, Z is the metallicity of the gas measured in solar units, x is the dimensionless
+interstellar radiation field strength given by
+
+143.1(Z)2-355
+
+x(Z) ¥ 3.1 7 ;
+
+(3.3)
+
+which quantifies the intensity of the external radiation that affects the transition
+from HI gas to He gas within a star-forming region (higher values of x indicate
+stronger radiation which may result to He dissociation, effectively suppressing star
+formation), and is the HI gas column density for star formation. The larger the
+
+atomic-molecular complex (larger s), the larger the amount of dust that can absorb
+
+12
+
+3.1. Overview of SIMBA
+
+external radiation which can suppress star formation. Using the KMT model, in
+a cosmological simulation, the Hz gas fraction of a gas element is calculated using
+Eq. (3.1) if s < 2, otherwise fy, = 0.
+
+In the case of the star formation in both MUFASA and SIMBA, there is an
+imposed minimum metallicity of 10-3 Zo. Additionally, a minimum gas density
+for star formation of ny > 0.13 cm-° is required. Given fy, in Eq. (3.1), the star
+formation rate in SIMBA is governed by a Kennicutt-Schmidt law for star formation
+[44, 45]
+
+dM, _ (oo9)fie
+ae > (0.02) (3.4)
+
+where fy, is taken per gas element and tgyn is the local dynamical time for star
+
+formation given by
+1
+
+tan = =
+m= JGp
+
+where G is the gravitational constant. Once these ingredients for star formation are
+
+(3.5)
+
+met within a gas element, each MFM fluid element randomly spawns star particles
+of virtually the same mass as the gas elements. This is attained by simultaneously
+converting each gas element into collisionless star particles instead of spawning
+multiple star particles from a single gas element while reducing its mass. The
+latter is avoided in MUFASA and SIMBA to prevent the MFM from developing
+instabilities.
+
+The complex build-up of H2 gas in SIMBA, as prescribed by the KMT model,
+and the dependence of star formation with the amount of Hz gas in the simulation,
+as shown in Eq. (3.4), will prove to be of great importance later in Secs. 5.1.3
+and 5.1.4 as poor prediction of a galaxy’s gas mass, specifically of the Hz gas, will
+
+translate to poorer prediction of the star formation rate, and vice versa.
+
+3.1.2 Black hole growth and seeding
+
+What separates SIMBA from its predecessor MUFASA is its inclusion of black hole
+growth and seeding in the simulation. In SIMBA, black hole growth is a product
+
+13
+
+3.1. Overview of SIMBA
+
+of the combination of two accretion models around the central black hole: torque-
+limited accretion from cold gas and Bondi accretion from hot gas.
+
+The torque-limited accretion from cold gas is employed in SIMBA following Hop-
+kins and Quataert [46]. The gas inflow rate M, driven by gravitational instabilities
+
+from galactic scales to the accretion disc around the black hole is given by
+
+8/2 (_ Mon 3 Menc(Ro) Ro \7? fo \7 -
+tie went? (cos) (Aine) (sine) (+7) Moxe* Go)
+
+with
+
+Male)! (3.7)
+
+fo © 0.31 f2 ( 10M
+where er is the normalization factor that describes the processes that affect the
+transport of gas at unresolved scales within the simulation such as nuclear star
+formation and stellar feedback, fy describes the mass fraction of both stars and
+gas present in the accretion disk relative to the total mass of the black hole Mtn,
+Menc(Ro) is total enclosed baryonic mass within a radius Ro which includes stars
+and gas, fas is the mass fraction of gas in the disc relative to Mpyn, and Ma(Ro) is
+the mass of the accretion disc within Ro. Note that quantities evaluated at a radius
+Ro from each black hole effectively encompasses the nearest 256 gas elements in a
+simulation.
+On the other hand, the Bondi-Hoyle-Lyttleton hot gas accretion model takes
+
+the form
+
+4nG?Me,p
+(v? +02)?
+where p is the mean density of hot gas, c, is the speed of sound of hot gas, and v is
+
+Mpondi = €m (3.8)
+
+the velocity of hot gas, all of which are calculated within the black hole accretion
+
+kernel, the region where gas or material is being gravitationally attracted and
+
+accreted onto the black hole. In SIMBA, the efficiency €,, is suppressed to 0.1.
+The two accretion models which span the galactic scale down to the black hole
+
+accretion disc, are numerically implemented within SIMBA as the total black hole
+
+accretion rate given by
+Men = (1 —1)(Mr + Meonas) (3.9)
+
+14
+
+3.2. SIMBA runs
+
+where the radiative efficiency 7 is set to 0.1.
+
+These black holes are then seeded into individual galaxies using an on-the-
+fly friends-of-friends algorithm during the simulation. Black holes are seeded to
+galaxies with stellar mass of M, > ‘Yon X Meeea- In SIMBA, the following values were
+employed: Mecea = 104 Mo/h with h = 0.68 and yy = 3 x 10° translating to a
+stellar mass threshold of around M, > 10°° Mo or logy) M, > 9.5. This relatively
+high M, requirement results from the adopted FIRE simulations in SIMBA which
+places black holes to high-mass galaxies as stellar feedback strongly suppresses
+black hole formation in low-mass galaxies [47].
+
+The inclusion of black hole growth and its seeding to galaxies in SIMBA later
+motivates the filtering of the dataset utilized in this work which will be discussed
+in Sec. 3.3 and the implementation of the machine learning models which will be
+discussed in Sec. 4.2. Additionally, we will also explore the effect of black holes in
+the suppression of star formation in galaxies which will be discussed in Sec. 5.2.2.
+
+3.2 SIMBA runs
+
+SIMBA runs assume a Planck Collaboration concordant cosmology constrained
+by the following cosmological parameters: total matter (both baryonic and non-
+baryonic) density 0, = 0.3, dark energy density 2, = 0.7, baryon density Q, =
+0.048, Hubble’s constant Hp = 68 km s~! Mpc“, density fluctuations at 8 h~! Mpc
+og = 0.82, and scalar spectral index n, = 0.97. [48]. The primary runs of SIMBA
+consist of 4 runs in varying volumes: 100h-! Mpc down to z = 0, 50h7! Mpc to
+z= 1, 25h7) Mpc to z = 2, and 12.5h-} Mpc to z = 5, all with 10243 dark matter
+particles and 1024° gas particles. We note that the currently publicly-available
+snapshots and galaxy catalogs’ are extracted from runs different from the primary
+ones but yield results consistent with those presented in Ref. [11].
+
+There are 3 publicly-available runs with different volumes: 100h-! Mpc (the
+flagship run), 50h~! Mpc (the feedback variants run), and 25h7! Mpc (the high-
+
+Inttp://simba.roe.ac.uk/
+
+15
+
+3.3. Data from SIMBA
+
+resolution run) on a side. All the runs output 151 snapshots and catalogs from
+z = 20 to z = 0. The flagship run uses 1024° particles for both DM and gas,
+employing full SIMBA physics. The feedback variant, with 512° particles for both
+DM and gas, explores the parameter space as it contains full SIMBA physics run,
+arun without X-ray AGN feedback, a run without X-ray or jet feedback, without
+AGN feedback, and a run without star formation and AGN feedback. Lastly, the
+high-resolution run uses 512° particles for both DM and gas over a smaller volume.
+In this work, we use the halo and galaxy catalogs from the flagship run.
+
+Halos in the simulations are identified on the fly using 3D friends-of-friends
+(FoF) algorithm within GIZMO with a linking length of 0.2 times the mean in-
+terparticle spacing, without the consideration of subhalos. Galaxies are identified
+using a 3D FoF galaxy finder with a linking length of 0.0056 times the mean inter-
+particle spacing. This galaxy-finding method is applied to all stars, black holes, and
+gas elements with densities above the minimum star formation threshold density of
+ny > 0.13H atoms cm~°. Black holes and hydrogen clouds are assigned to galax-
+ies to which they are most gravitationally bound. Larger galaxies can be assigned
+more than one black hole, where the central black hole is taken to be the most
+massive one. Galaxy and halo cross-matching is done using a YT-based PYTHON
+package, CAESAR’, in post-processing which outputs an hdf5 file containing the
+galaxy and halo catalogs.
+
+3.3. Data from SIMBA
+
+We use the SIMBA flagship run’s galaxy and halo catalogs at redshifts z = 0,1,2
+corresponding to snapshot numbers 151, 105, and 78, respectively. Table 3.1 lists
+the counts of halos, galaxies, central and satellite galaxies per snapshot.
+
+For our machine learning implementation, only the central galaxies will be
+included. In addition, since we are interested in predicting the galaxy’s black hole
+
+masses, we only include galaxies with stellar mass M, = 10°° Mo or log M, > 9.5
+
+2https: //caesar.readthedocs. io/en/latest/running. html
+
+16
+
+3.3. Data from SIMBA
+
+Table 3.1: Raw count of halos and galaxies per snapshot of the SIMBA flagship
+
+run
+
+Redshift Snapshot Halos Galaxies Centrals Satellites
+z=0 151 464,043 55,609 35,843 19,766
+z=1 105 530,411 39,298 27,198 12,100
+z=2 78 545,417 30,743 + -23,042~SSs«7,701
+
+(as noted in Sec. 3.1.2, galaxies with lower
+not assigned black holes).
+
+stellar mass than this cut-off mas are
+
+Because our ML models will use the most massive progenitor halo from 5 previ-
+
+ous snapshots as features, we clean our sample by removing halos for which any of
+
+these progenitors are larger than the halo at the present snapshot since progenitor
+
+masses are expected to be smaller due to mergers over time. This criteria removes
+
+< 1% of the halos.
+
+We note that there is a one-to-one correspondence between halos and central
+
+galaxies in our sample. Table 3.2 lists the sample count and the average halo and
+
+stellar masses per snapshot.
+
+Table 3.2: Summary statistics for
+
+the sample used in this study
+
+Redshift Snapshot Centrals
+
+(logio My) (logo Mx)
+
+z=0 151 13,929
+z=1 105 8,295
+z=2 78 4,046
+
+11.8 9.97
+12.0 10.2
+12.1 10.2
+
+17
+
+Chapter 4
+
+Machine learning framework
+
+After processing the data from SIMBA to align with our objectives, we are now
+ready to train the machine learning models to ‘learn’ how to populate galactic
+dark matter halos with galaxies. In this Chapter, we discuss the machine learning
+framework used in this thesis. This chapter is structured as follows: in Sec. 4.1,
+we provide an overview of how the ML algorithms we will utilize, Random Forest
+(RF) and Extremely Randomized Trees (ERT), work. In Sec. 4.2, we discuss how
+the ML models are trained on the SIMBA data and implemented in this work.
+
+4.1 Supervised tree-based ML algorithms
+
+ML algorithms fed with continuous, high-dimensional data, can learn in two ways:
+supervised, where the ML model tries to learn a labeled target quantity based on
+a set of input features, or unsupervised, where the ML model tries to learn from
+unlabeled data, identifying patterns within, such as clustering, and learning their
+intrinsic relationships.
+
+In the context of applying ML in populating DM halos with baryonic properties,
+the supervised learning method is widely used. Supervised ML models, when fed
+with some training data (X,y), essentially tries to learn the mapping G(X — y),
+which will then be applied to previously unseen data. Within supervised ML,
+
+there are a plethora of algorithms that have been previously used to map baryons
+
+18
+
+4.1. Supervised tree-based ML algorithms
+
+to DM halos. These include neural networks (30, 49], k-nearest neighbour algorithm
+[10, 49, 50], support vector regression algorithm (10, 50], and the most widely-used
+tree-based algorithms, like random forest (RF) and eztremely randomized trees
+(ERT) [9, 10, 31, 49, 51-53]. Results from these studies suggest that tree-based
+algorithms like RF and especially ERT perform the best in learning the correlation
+between the DM halos and the galaxies that they host.
+
+RF and ERT, as their names suggest, are ensemble machine learning approaches
+which are built by aggregating the predictions of multiple decision trees (DT), the
+most basic unit of these algorithms. DT is one of the most powerful and widely-
+used ML algorithm, both in classification (when predicting categorical data) and
+regression (when predicting continuous data) problems.
+
+Decision trees use a process called recursive binary splitting to construct a
+‘tree’. From the ‘root’, where the entire dataset is used, it selects an input feature
+and a corresponding split point that minimizes the mean squared error (MSE), or
+any other custom loss function, at each node. The tree is grown recursively by
+repeating this process until certain stopping criteria are met, such as a maximum
+depth of the tree, a minimum number of samples required to split a node, or when
+the tree reaches a leaf node with all target values being the same.
+
+Due to the meticulous construction of a decision tree, it is usually prone to
+overfitting. This happens when an ML model becomes heavily reliant on the the
+data it was trained on which in turn results to poor predictive accuracy when fed
+with new unseen data. There are several measures that can be done to prevent DT
+from overfitting such as ‘pruning’ the ‘branches’, which is a way of removing splits
+that are not very helpful in the learning process, controlling various hyperparame-
+ters that controls the growth of the ‘tree’, or limiting the input data. However, one
+of the most, effective ways is to use ensemble learning approaches which is basically
+what RF and ERT are.
+
+RF and ERT are two distinct tree-based ensemble learning approaches which
+
+can be used to minimize the risk of overfitting when dealing with tree-based algo-
+
+19
+
+4.2. Machine learning set-up
+
+rithms. The only similarities between both methods are the use of multiple decision
+trees during the learning process and the minimization of the average square of the
+errors in learning the mapping between the features and the target quantities.
+
+In RF, multiple decision trees are trained via bootstrapping, wherein random
+samples with replacement are drawn from the original dataset to create multiple
+subsets of training data for each tree. Adding another layer of randomness, the
+‘trees’ grow recursively by selecting the best feature from a randomly sampled
+subset of features that maximizes information gain or minimizes impurity at each
+node, until a stopping criterion is met. Once all the decision trees are trained on
+the bootstrapped subsets of the training data and with random feature selection,
+RF combines the predictions of all the trees to make the final prediction. The most
+common approach is to take the average of the predictions from all the trees which
+provides a robust and accurate prediction [54].
+
+On the other hand, ERT ditches the bootstrapping and selects the splitting
+points randomly without considering the optimal split in terms of information
+gain or node impurity. This introduces further diversity among the trees in the
+forest and makes ERT faster than RF [55]. In this thesis, both algorithms are
+trained using data from SIMBA to learn how to populate galactic dark matter halo
+with galaxies.
+
+4.2 Machine learning set-up
+
+The two ML algorithms are trained separately on a high-dimensional dataset from
+the SIMBA hydrodynamic simulation to learn the mapping between galaxy proper-
+ties and DM-halo only information. Following Agarwal et al. [10] and as motivated
+by Moews et al. [31], the input fed to the machine learning algorithm is a set of
+the following halo properties which encompasses physical, environmental, and his-
+torical properties of a DM halo:
+
+T= (Mu, {Mprogen,i}s {05}; Mas A, Ovel) (4.1)
+
+20
+
+4,2. Machine learning set-up
+
+where Mj is the mass of the parent halo measured at the current snapshot, {Mprogen,i}
+are the masses of the most massive progenitors from the 5 preceding snapshots,
+thus considering the merger history of the halo, {p;} is the set of nearby halo
+mass densities at radii r = 300, 1000, and 3000 kpc, thus taking into account the
+small-scale and large-scale environment of each halo, 7, is the halo half-mass ra-
+dius which provides the information about the size and extent of the halo, 2 is the
+halo spin which is a measure of the angular momentum of a halo, and oy. is the
+halo velocity dispersion which characterizes the statistical spread or dispersion of
+velocities among dark matter particles within the halo. These chosen input halo
+properties are a union of the halo properties used by previous studies [10, 31, 32].
+
+From the halo properties, we develop separate models to predict each of the
+following galaxy properties:
+
+O = (Mx, Min, Muz, SFR, Zges, Mon) (4.2)
+
+where M, is the stellar mass, Myy is the neutral hydrogen mass, Myo is the molec-
+ular hydrogen mass, SFR is the star-formation rate, Za, is the SFR-weighted
+gas-phase metallicity measured as the ratio of abundance of oxygen related to hy-
+drogen [O/H] in SIMBA, and My, is the mass of the black hole at the center of the
+galaxy.
+
+The entire dataset is divided into two parts — a training set which is composed
+of 75% of the entire dataset and a test set, which is completely unseen by the
+model during training, composed of the remaining 25%. For both ML models, the
+space of the ML hyperparameters were randomly sampled 500 times per target
+attribute to give the optimal hyperparameter configuration for each models. The
+hyperparameters we searched for include the number of trees n_estimators, the
+maximum depth that each tree can attain max_depth, the minimum number of
+samples required to split an internal node min_samples_split, and the number of
+features to consider when looking for the best split max_features. We note that
+for the ERT models, as discussed in Sec. 4.1, the tuned max_features is None as
+
+it randomly chooses features from the entire dataset for splitting.
+
+21
+
+4.2. Machine learning set-up
+
+All these ML-related configurations and tuning are carried out using the PYTHON
+library SCIKIT-LEARN [56]. Specifically, the train-test_split function is used for
+the splitting of the datasets into training and test sets. Note that the splitting of
+the entire dataset between training and testing is done randomly, controlled by the
+random.state parameter. Assigning different values to this parameter will result
+to different splits. In this work, we used random_state = 0 for all ML models and
+changing this didn’t dramatically affect the performance of the models (this is fur-
+ther discussed in Sec. 5.1.7). The hyperparameter tuning is carried out using the
+RandomizedSearchCV class. Finally, the training of the ML algorithms was done
+
+using the built-in ExtraTreesRegressor and RandomForestRegressor classes.
+
+22
+
+Chapter 5
+Machine Learning vs SIMBA
+
+In this chapter, we present and discuss the results of applying RF and ERT models
+in predicting the baryonic properties of galaxies that reside within SIMBA DM halos.
+The structure of this chapter is as follows. In Sec. 5.1, the ML predictions are
+compared against the underlying true SIMBA values. In Sec. 5.2, the reproduction
+of various second-parameter correlations, mainly focusing on the relations around
+the stellar mass and star formation rate, is tested. Lastly, in Sec. 5.3, we explore
+the relative importance of the input DM halo properties in predicting the baryonic
+
+properties of the galaxies.
+
+5.1 Predicted galaxy properties vs SIMBA true
+values
+
+In this Section, we present how each of the predicted baryonic properties of the ML
+models compares with the true values from the SIMBA hydrodynamic simulation.
+After training the ML models to learn the complex relationships between DM halo
+properties given in Eq. (4.1) and the baryonic properties of the galaxies they
+host given in Equation (4.2), we test the accuracy of each model by essentially
+comparing the predicted galaxy property with the underlying true SIMBA data
+across all redshifts z = 0, 1, and 2.
+
+For each galaxy property, we plot the relation with halo mass and compare
+
+23
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+how well the predictions reproduce the mean relations from SIMBA. We also check
+whether ML was able to reproduce the distribution of the galaxy property as a
+whole by plotting a kernel density estimate (KDE) plot.
+
+Following Ref. [10], we evaluate the goodness-of-fit of the models by calculating
+the mean deviation y, rms error ¢, coefficient of determination or regression score
+
+R?, and the Pearson correlation coefficient p for the residuals, given by
+
+pw, 2) = ‘3 (4; — 2) (5.1)
+o?(é,2) = v4 » (4: - 2)? (5.2)
+R(@,2) <1 - Sp oa) (5.3)
+
+DY (a — a)
+SN (@— (@)) (ee — (2))
+VEN G- MY YEP ee -
+
+where # and z correspond to true and predicted values in log units, respectively,
+
+plé,2) = (5.4)
+
+(2) and (zx) corresponds to the means of the true and predicted values, respectively,
+and N is the overall sample size. These model performance tests were conducted
+separately for each galaxy property at all redshifts and results are presented in
+Secs. 5.1.1 to 5.1.6. In the final section, Sec. 5.1.7, we summarize this set of
+results and compare the ML performance across different galaxy properties. Note
+that all reported metrics are for the test set which is the same set fed to all models
+after training.
+
+Listed in Table 5.1 are the reported performance metrics, R? and p, at z = 0,
+for works by Kamdar et al. (2016) using the MlustrisTNG simulation [9] and Agarwal
+et al. (2018) using the MUFASA simulation [10], whose approach are similar to this
+work. Note that in Kamdar et al. (2016), the total gas mass Mgs. is considered,
+instead of the separate masses of the neutral and molecular hydrogen gases, which
+was done in Agarwal et al. (2018) and in this work. Additionally, Agarwal et al.
+(2018) were not able to consider the central black hole mass due to the limitations
+
+24
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+Table 5.1: Performance metrics reported by related works. Listed are the coef-
+ficient of determination R? and Pearson correlation coefficient p for each galaxy
+property.
+
+Kamdar et al. Agarwal et al.
+(2016) [9] (2018) [10]
+R? p Rr p
+M, | 0.91 0.95 0.90 0.95
+Mees | 0.67 0.85 : :
+My - - 0.35 0.59
+= = 0.51 0.71
+SFR | 0.63 0.79 0.55 0.74
+Zees | 0.93 0.96 0.73 = (0.86
+My, | 0.72 0.85 - -
+
+of the MUFASA simulation. As concluded in both works, stellar mass M, (p ~ 0.95
+for both works) and gas-phase metallicity Z,., (Kamdar et al. (2016): p ~ 0.96,
+Agarwal et al. (2018): p ~ 0.86) are the most tightly predicted galaxy properties
+while the star formation rate (p ~ 0.70 — 0.80 for both works) is poorly predicted.
+
+5.1.1 Stellar mass
+
+Table 5.2: Test performance metrics for the stellar mass M, predictions at all
+redshifts and for the RF and ERT models
+
+Redshift | # 20™*) u R p
+
+RF ERT [RF ERT |RF ERT] RF ERT
+Z=0 | 099 097} 0.13 0.13 | 087 087] 0.93 0.93
+z=1 | 058 -213/020 0.20/0.78 078/088 0.89
+z=2 |-1052 -12.08|025 024/076 0.76|0.87 0.87
+
+The results, as described above, for the ML predictions of stellar mass M, from
+DM halo-only information are shown in Figures 5.1 and 5.2, and Table 5.2. We
+find, similar to previous work [9, 10, 32], that both RF and ERT model predictions
+for M, are able to reproduce the actual values from SIMBA well on average, but
+
+25
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+o
+
+Figure 5.1: Stellar mass M, vs. halo mass M, relation from the RF
+
+(upper panels) and ERT (lower panels) models for z = 0, 1, and 2 (left to
+right panels). Also plotted are the actual values from SIMBA (gray dots).
+Binned means from the ML models (yellow stars) and the SIMBA data
+
+(black circles) are shown with 1o error bars.
+
+y
+V
+
+Figure 5.2: Kernel density estimate (KDE) plots for stellar mass M, for
+z=0, 1, and 2 (left to right panels). Distributions of ML predictions (RF:
+
+red, ERT: blue) are overlaid against SIMBA true values (gray).
+
+26
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+yield narrower distributions. Panels of Figure 5.1 show that at all epochs, both
+RF and ERT models were able to reproduce the mean stellar mass to halo mass
+relation of SIMBA as indicated by the overlapping circular and star markers and
+their lo error bars. They also show that across all halo masses, the scatter in the
+mean relation is underpredicted, as seen in the smaller 1¢ scatter in the binned
+means (yellow vs. black error bars). Comparing across epochs, the predictions
+match best for z = 0, with R? ~ 0.9 compared to R? ~ 0.8 for the higher redshifts;
+this trend is reflected in the other metrics as well. The discrepancy may partially
+be attributed to the fact that the ML models were trained with relatively smaller
+number of data (see Table 3.2) at higher redshifts. We see from Figures 5.1 and
+5.2 that for z = 1 and 2, there are low M, SIMBA galaxies (with M, ~ 10%5)
+with parent halo masses ranging from 10!! — 10? Mo that are not seen in the
+predictions. This demonstrates a limitation of a straightforward ML approach
+that does not explicitly take scatter into account. More sophisticated models, such
+as one recently implemented in Ref. [32], incorporated a loss function to a neural
+network that enforces scatter reproduction.
+
+As discussed in Sec. 2, HAM and HOD methods exploit the close relationship
+between M, and M,, so it is not surprising that our ML models are also able to
+exploit this relationship and reproduce the mean scaling relations. However, the
+information from the other input features do not seem to be sufficient to capture
+deviations from this mean relation and reproducing the scatter is still an open
+
+problem as of this writing.
+
+5.1.2 Neutral hydrogen mass
+
+The results for the ML predictions of neutral hydrogen mass Mjy from DM halo-
+only information are shown in Figures 5.3 and 5.4, and Table 5.3. The panels
+of Figure 5.3 show that the scaling relation of HI mass with halo mass evolve
+significantly over epochs. Driven by increased variability in evolution tracks of
+
+galaxies, the distribution becomes broader over time, as is also seen in Figure 5.4.
+
+27
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+a
+
+13
+a
+t
+
+By am
+
+Figure 5.3: Neutral hydrogen mass Myq vs. halo mass M, relation from
+the RF (upper panels) and ERT (lower panels) models for z = 0, 1, and 2
+(left to right panels). Also plotted are the actual values from SIMBA (gray
+dots). Binned means from the ML models (yellow stars) and the SIMBA
+data (black circles) are shown with 1o error bars.
+
+Figure 5.4: Kernel density estimate (KDE) plots for neutral hydrogen
+mass Myy for z = 0, 1, and 2 (left to right panels). Distributions of ML
+predictions (RF: red, ERT: blue) are overlaid against SIMBA true values
+(gray).
+
+28
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+Table 5.3: Test performance metrics for the neutral hydrogen mass Myy predic-
+tions at all redshifts and for the RF and ERT models
+
+Redshift | (10™*) a R p
+
+RF ERT [RF ERT | RF ERT] RF ERT
+Z=0 146 1.62] 0.33 033/050 0.52} 0.71 0.72
+z=1 |-715 -513]0.29 029/041 042/064 0.66
+z=2 |-149 —0.68| 0.23 0.23]038 041| 0.62 0.64
+
+The ML predictions are able to reflect this trend as well, but still yield narrower
+
+distributions in all cases.
+
+In this case, the model performance is comparable across epochs — as reflected
+in similar values of R? ~ 0.4 and p = 0.7. As in the case of M, predictions, both RF
+and ERT models yield very similar results. Poor prediction of gas masses, like Myy
+and Myp (discussed in the next section, Sec. 5.1.3), has been a common problem
+reported by previous studies [9, 10]. Gas masses are very sensitive to small-scale
+fluctuations happening within the galaxy brought upon by rapidly varying bary-
+onic processes like radiative cooling, feedback, and gas recycling. These processes
+are not essentially captured by the DM halo features that we used in training
+the ML models, which resulted to the poor performance of ML in predicting this
+baryonic information. More sophisticated models, such as physics-informed neural
+networks (PINNs) [32] and hybrid approaches [31] are being developed to address
+this limitation of the standard ML approach.
+
+5.1.3. Molecular hydrogen mass
+
+Results for the ML predictions of molecular hydrogen mass (My2) from DM halo-
+only information are shown in Figures 5.5 and 5.6, and Table 5.4. These results
+are qualitatively similar to what we found for Myq, as discussed in the previous
+section, Sec. 5.1.2. Quantitatively, the performance metrics are relatively worse,
+with R? ~ 0.4 and p ~ 0.6 across all epochs. This shows that ML was unable
+to capture the complex H>-based star formation of SIMBA. It is also worth noting
+
+29
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+See
+
+Figure 5.5: Molecular hydrogen mass My2 vs. halo mass Mj relation
+from the RF (upper panels) and ERT (lower panels) models for z = 0, 1,
+and 2 (left to right panels). Also plotted are the actual values from SIMBA
+(gray dots). Binned means from the ML models (yellow stars) and the
+SIMBA data (black circles) are shown with lo error bars.
+
+Figure 5.6: Kernel density estimate (KDE) plots for molecular hydrogen
+mass My for z = 0, 1, and 2 (left to right panels). Distributions of ML
+predictions (RF: red, ERT: blue) are overlaid against SIMBA true values
+(gray).
+
+30
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+Table 5.4: Test performance metrics for the molecular hydrogen mass Myo pre-
+dictions at all redshifts and for the RF and ERT models
+
+Redshift | #20™*) Yu R p
+
+RF ERT | RF ERT [RF ERT | RF ERT
+z=0 | —03¢ —1.08] 036 0.36)042 041] 0.65 0.66
+z=1 | -13.05 -10.79|034 033/043 0.43] 0.65 0.66
+z=2 | -119 —161|0.30 0.30|042 043/065 0.66
+
+that the similarity in R? and p values with increasing redshift suggests that ML,
+in general, struggles to predict My2 when fed with DM halo-only information,
+
+regardless of the number of data used in training.
+
+5.1.4 Star formation rate
+
+Table 5.5: Test performance metrics for the star formation rate (SFR) predictions
+at all redshifts and for the RF and ERT models
+
+Redshift | # 20°) Y R p
+RF ERT [RF ERT | RF ERT [RF ERT
+z=0 | -110 413/054 0541034 0.34] 058 0.59
+z=1 |-1733 -1380}059 0.57|029 032/054 0.57
+z=2 737 10.66|051 050/026 0.28|0.51 0.53
+
+Results for the ML predictions of star formation rate (SFR) from DM halo-only
+information are shown in Figures 5.7 and 5.8, and Table 5.5. As discussed in Sec.
+3.1.1, the primary drivers of star formation in SIMBA galaxies is the molecular gas
+mass, as specified in Eq. (3.4). Therefore, it is not surprising that ML predictions
+for SFR perform comparably as for My2, namely with R? ~ 0.3 and p ~ 0.5 — 0.6
+across epochs. The qualitative trends are the same as for My, and My as well
+— the predictions reflect the trend of broader distributions at lower z, but fail to
+match the full scatter. In particular, for SFR, there is a clear bimodal distribution
+for z = 1 (middle panel of Figure 5.8), while the predicted distribution is narrowly
+single-peaked.
+
+31
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+ine io.
+
+a]
+
+Figure 5.7: Star formation rate (SFR) vs. halo mass M, relation from
+the RF (upper panels) and ERT (lower panels) models for z = 0, 1, and 2
+(left to right panels). Also plotted are the actual values from SIMBA (gray
+dots). Binned means from the ML models (yellow stars) and the SIMBA
+data (black circles) are shown with lo error bars.
+
+|
+Ae _.
+
+Figure 5.8: Kernel density estimate (KDE) plots for star formation rate
+(SFR) for z = 0, 1, and 2 (left to right panels). Distributions of ML
+predictions (RF: red, ERT: blue) are overlaid against SIMBA true values
+(gray).
+
+32
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+We note, though, that despite the shortcomings of the predictions in reproduc-
+ing the distributions in SFR and gas masses separately — they are able to capture
+the second-parameter correlation, that is the correlation between scatter in the
+gas content, gas-phase metallicity, and SFR observed in SIMBA galaxies as well as
+observed galaxies. This will be discussed in detail later in Sec. 5.2.
+
+5.1.5 Gas-phase metallicity
+
+Table 5.6: Test performance metrics for the gas-phase metallicity Za, predictions
+at all redshifts and for the RF and ERT models
+
+Redshift | # 10°) a R p
+
+RF ERT [RF ERT | RF ERT | RF ERT
+Z=0 110 1.64] 0.13 0.13] 0.65 0.67} 0.81 0.82
+z=1 668 6.951020 020/061 0.63|0.79 0.80
+z=2 |-5.09 -387|0.22 0.21|046 0.48 | 0.68 0.69
+
+Results for the ML predictions of Zga; from DM halo-only information are
+shown in Figures 5.9 and 5.10, and Table 5.6. Panels of Figure 5.9 show how
+the distribution of Z,s, evolved across epochs as galaxies follow different evolution
+tracks. At z = 0, there are 2 distinct clumps: one at low M, centered around
+log Zgos * —2.1 and another stretching across higher M, 2 10)? Mg with log Zgas
+centered around -1.6. This translates to a bimodal distribution seen in the left panel
+of Figure 5.10. The predictions remarkably reproduced the two-peaked distribution
+though similarly to previous results, it yields narrower distributions for both peaks.
+The results are qualitatively similar for z = 1 and 2, as shown in the remaining
+panels of Figures 5.9 and 5.10 with a trend of worsening performance at higher
+redshift (as reflected in the metrics of Table 5.6 as well).
+
+Overall, the model performance falls somewhere between that for M, and the
+gas content masses, with R? ~ 0.5—0.6 and p ~ 0.7 —0.8. This has been observed
+in previous work [9, 10] as well and attributed to the fact that similar to M,,
+
+Zgos is an accumulated quantity, albeit with a more complex evolution governed
+
+33
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+Figure 5.9: Gas-phase metallicity Zgas vs. halo mass M, relation from
+the RF (upper panels) and ERT (lower panels) models for z = 0, 1, and 2
+(left to right panels). Also plotted are the actual values from SIMBA (gray
+dots). Binned means from the ML models (yellow stars) and the SIMBA
+data (black circles) are shown with 1o error bars.
+
+Figure 5.10: Kernel density estimate (KDE) plots for gas-phase metal-
+licity Zgas for z = 0, 1, and 2 (left to right panels). Distributions of ML
+predictions (RF: red, ERT: blue) are overlaid against SIMBA true values
+(gray).
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+by a somewhat subtle competition between gas inflows, gas outflows, and metal
+enrichment. For the observed correlation in scatter between Z,,, and SFR — also
+teferred to as the fundamental metallicity relation (FMR), refer to the discussion
+in Sec. 5.2.1.
+
+5.1.6 Black hole mass
+
+Table 5.7: Test performance metrics for the black hole mass Mpp predictions at
+all redshifts and for the RF and ERT models
+
+Redshift | #(20~*) G R P
+[RF ERT | RF_ERT [RF ERT | RF ERT
+Z=0 7840.39] 041 0.40] 0.59 0.6010.77 0.78
+Aol 703 7.80) 0.59 058/050 0511071 0.71
+z=2 —37.77 —43.76| 0.71 0.70) 0.49 0.50}0.70 0.71
+
+Results for the ML predictions of Myn from DM halo-only information are
+shown in Figures 5.11 and 5.12, and Table 5.7. Panels of Figures 5.11 and 5.12 show
+the evolution of the distribution of Mp across epochs. In this case, the distribution
+grows narrower over time for the SIMBA galaxies (gray dots in Figure 5.11 and gray
+curves in Figure 5.12), and the predictions do not reflect the trend (red/blue dots
+in 5.11 and red/blue curves in Figure 5.12), severely underpredicting the scatter
+for z = 2.
+
+At all redshifts, there is a trend in residuals — with overprediction of Mpn at
+low masses (Mbp < 10” Mg) and underprediction at higher masses. The mismatch
+worsens with higher redshift, as reflected in the values of the mean deviation y, and
+mms error o.
+
+Despite this, the mean trends are matched well (black circles and yellow stars
+in Figure 5.11. The models yield R? ~ 0.5—0.6 and p ~ 0.7—0.8, comparable with
+models for Zges. We also note that the Mp, predictions capture second-parameter
+correlations with stellar mass and SFR. This will be discussed in detail in Sec.
+5.2.2.
+
+35
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+Figure 5.11: Black hole mass Mj, vs. halo mass M, relation from the
+RF (upper panels) and ERT (lower panels) models for z = 0, 1, and 2
+(left to right panels). Also plotted are the actual values from SIMBA (gray
+dots). Binned means from the ML models (yellow stars) and the SIMBA
+data (black circles) are shown with 1¢ error bars.
+
+Figure 5.12: Kernel density estimate (KDE) plots for black hole mass
+My, for z = 0, 1, and 2 (left to right panels). Distributions of ML predic-
+tions (RF: red, ERT: blue) are overlaid against SIMBA true values (gray).
+
+36
+
+5.1. Predicted galaxy properties vs SIMBA true values
+
+5.1.7 Summary
+
+Table 5.8: Performance metrics of the ERT models for different galaxy properties
+for z = 0,1, and 2.
+
+M, | 0.87 0.93 | 0.78 0.89 | 0.76 0.87
+My | 0.52 0.72 | 0.42 0.66 | 0.41 0.64
+My | 0.44 0.66 | 0.43 0.66 | 0.43 0.66
+SFR | 0.34 0.59 | 0.32 0.57 | 0.28 0.53
+Zgos | 0.67 0.82 | 0.63 0.80] 0.48 0.69
+My, | 0.60 0.78 | 0.51 0.71 | 0.50 0.71
+
+Table 5.8 summarizes the performance metrics for different galaxy properties
+reported in Secs. 5.1.1 to 5.1.6. Here, we only show the ERT model results for R?
+and correlation coefficient p. Consistent with results from previous work 9, 10], the
+models performed best in predicting M,, followed by Zzas, and M,,. The models
+poorly performed most in predicting gas masses My and Myp, as well as SFR which
+is mainly driven by H2 gas. For all galaxy properties, the models yield narrower
+distributions compared to SIMBA, which motivate modifications that would enforce
+the reproduction of scatter, as attempted in Ref. [32].
+
+As a sanity check, we trained and tested all the models at z = 0 with vary-
+ing train-test splits by changing the value of the random_state parameter (see
+Sec. 4.2) to 69 and 134. We note that these changes yield minimal variation in the
+performance metrics as listed in Table 5.9.
+
+37
+
+5.2. Consistency with second parameter correlations
+
+Table 5.9: Performance metrics of the ERT models fed with different train-test
+splits controlled by varying the random_state parameter.
+
+random_state = 0 | random_state = 69 | random_state = 134
+R? p R p R? p
+
+M, | 0.87 0.93 0.87 0.93 0.87 0.93
+
+My | 0.52 0.72 0.52 0.72 0.53 0.73
+
+My | 0.44 0.66 0.40 0.63 0.43 0.66
+
+SFR | 0.34 0.59 0.35 0.60 0.34 0.60
+
+Zeas | 0.67 0.82 0.67 0.82 0.67 0.82
+
+Mpn | 0.60 0.78 0.61 0.78 0.61 0.78
+
+5.2 Consistency with second parameter correla-
+tions
+
+In this section, we present how the ML model predictions quantitatively recover
+second-parameter trends in galaxy properties. Specifically, in Sec. 5.2.1, we present
+the trend that galaxies with higher gas content and lower metallicity have high SFR
+at a given M,, also known as the fundamental metallicity relation. In Sec. 5.2.2,
+we present the trend that galaxies that host more massive central black holes have
+
+lower SFR at a given M,, and other trends involving Mpn.
+
+5.2.1 Fundamental metallicity relation
+
+In theory, the heavy inflow of metal-free gases, primarily due to mergers which
+are abundant at higher redshifts, drives star formation while heavy outflows of
+metal-rich materials due to processes like supernovae explosions and AGN feedback
+directly suppresses star formation and greatly affects the stellar mass of galaxies,
+especially at the present time. This suggests that there is a tight correlation
+between the stellar mass, star formation rate, and metallicity of galaxies. This
+relation has been observed, both observationally for local galaxies [59, 60] and via
+
+simulations at the present time to z = 3 [61], and is commonly referred to as the
+
+38
+
+5.2. Consistency with second parameter correlations
+
+we e THe 7
+5 a Pere By |
+a : Sree |
+
+Figure 5.13: The fundamental metallicity relation (FMR) at z = 0 from
+both ML models (left panel: RF, right panel: ERT). From top to bottom:
+neutral hydrogen mass fraction fj, molecular hydrogen mass fraction fy,
+and gas-phase metallicity Z,,,. Galaxies are color-coded by their distance
+from the mean sSFR—M, relation. Mean scaling relations are shown for
+SIMBA and ML predictions (green and blue dashed-dotted curves, respec-
+tively). Also, overlaid are data from observations from Catinella et al.
+(2012) [57] and Saintonge et al. (2017) [58] shown as circle and triangle
+markers, respectively.
+
+fundamental metallicity relation (FMR) [62].
+
+The primary idea of FMR is that, as a function of stellar mass, galaxies with
+suppressed star formation (quenched galaxies) typically have higher than average
+gas-phase metallicity. This extends to the idea that actively star-forming galaxies
+host a significant fraction of neutral and molecular hydrogen masses [57, 58].
+
+In Figures 5.13 and 5.14, we show that the ML predictions were able to repro-
+duce these second-parameter trends around the stellar mass M, of SIMBA galaxies
+at redshifts z = 0 and 1, respectively. The results for both ML models are shown,
+where the plots at the left panel are for RF predictions and plots at the right panel
+are for the ERT predictions. Both ML models show similar scatter and accurately
+
+reproduce the mean scaling relations, shown as green dashed-dotted lines for SIMBA
+
+39
+
+5.2. Consistency with second parameter correlations
+
+Figure 5.14: Same as in Figure 5.13 but for galaxies at z = 1
+
+and blue dashed-dotted lines for ML. Galaxies are color-coded according to their
+distance from the mean sSFR—M, relation where the specific star formation rate
+(sSFR) is given by
+SFR
+sSFR = Mi (5.5)
+
+Bluer galaxies correspond to actively star-forming ones while redder galaxies cor-
+
+responds to quenched ones. Without any baryonic input and without prior knowl-
+edge about FMR, ML was able to recover that as a function of M,, star formation
+has positive correlation with gas mass and negative correlation with metallicity.
+Compared to the FMR from SIMBA galaxies (Figures 8 and 9 of Ref. [11]), the
+predictions show a cleaner separation between actively star-forming and quenched
+galaxies, which is consistent with the narrower distributions in galaxy properties
+from the ML predictions, as shown in Sec. 5.1. It is also shown that the trend
+produced by both ML models is consistent with the observations by Catinella et
+al. (2012) for the fax — M, relation [57] and by Saintonge et al. (2017) fu — Mx
+relation [58] at z = 0.
+
+Finally, we note that the FMR is also reproduced at z = 2 but is less evident
+
+40
+
+5.2. Consistency with second parameter correlations
+
+due to fewer number of data points.
+
+5.2.2 Black hole - stellar mass relation and quenching
+
+Observations have shown that the mass of supermassive black holes (SMBH) re-
+siding within galaxies are strongly correlated with various galaxy properties like
+the stellar mass [63], the stellar bulge mass [64], and the stellar velocity dispersion
+[65, 66]. An indicator of a physically accurate hydrodynamic simulation is the re-
+production of these observed correlations. Separate studies have shown that SIMBA
+was able to accurately predict these observed trends [11, 67, 68]. Here, we explore
+whether the ML predictions are able to quantitatively reproduce the SMBH-galaxy
+relations found in SIMBA.
+
+Figure 5.15: The stellar mass - supermassive black hole mass (M, — Mbn)
+relations at z = 0 for SIMBA (left panel) and ML (middle panel: RF,
+tight panel: ERT). Galaxies are color-coded by their specific star-formation
+rate (sSFR). Mean scaling relations are shown as dashed-dotted lines for
+SIMBA and ML (blue dashed curves). Also overlaid are results of the
+M, — My relation from observations from Kormendy & Ho (2013) for
+bulge-dominated systems [69] and Bentz et al. (2018) for spiral, star-
+forming systems [70], as dashed-dotted and dotted lines, respectively.
+
+Figure 5.15 shows the My, — M, relation from SIMBA (left panel) and the ML
+predictions (middle panel: RF, right panel: ERT) is shown in Figure 5.15. Galaxies
+
+are color-coded according to their specific star formation rate (sSFR) equal to
+
+41
+
+5.2. Consistency with second parameter correlations
+
+Figure 5.16: The sSFR - M, relations at z = 0 for SIMBA (left panel) and
+both ML models (middle panel: RF, right panel: ERT). Galaxies are color-
+coded according to the ratio of their central black hole mass and stellar
+mass, M,,/M,. Mean scaling relations are shown as blue dashed-dotted
+lines. The horizontal line at log,, sSFR = —11 indicate the reference value
+separating quenched and actively star-forming galaxies.
+
+SFR/M,. Bluer galaxies are actively star forming while redder ones are quenched.
+Mean scaling relations are plotted as blue dashed-dotted lines. As shown, both
+ML models were able to reproduce the mean relations but failed to replicate the
+scatter. Also, overlaid are the M, — My relation from observations by Kormendy
+& Ho (2013) for bulge-dominated galaxies which are essentially quenched systems
+[69], shown as dashed-dotted lines, and by Bentz et al. (2018) for late-type, star-
+forming galaxies [70], shown as dotted lines. SIMBA and both ML models were able
+to reproduce the trend observed by Kormendy & Ho (2013) on quenched systems.
+Furthermore, we note that while the SIMBA galaxies reported in Ref. [11] populate
+the region indicated by the trend observed by Bentz et al. (2018) (shown as dotted
+lines) for star-forming galaxies (see their Figure 13), there is a scarcity of these
+galaxies in our sample (in both training and testing sets). Explaining this difference
+will need further investigation, but we note that this may be attributed to the fact
+that the publicly-available catalog of SIMBA used in this work came from a more
+recent run than the initial runs used in Ref. [11] (as discussed in Secs. 3.2 and 3.3).
+
+Interestingly, ML was able to recover the quenching (log sSFR < —11) of galax-
+
+42
+
+5.2. Consistency with second parameter correlations
+
+Figure 5.17: The supermassive black hole mass - neutral hydrogen frac-
+tion (My, — fu) relations at z = 0 for SIMBA (left panel) and both ML
+models (middle panel: RF, right panel: ERT). Galaxies are color-coded by
+their specific star-formation rate (sSFR). Mean scaling relations are shown
+as dashed-dotted lines (blue curves).
+
+ies that host high-mass BHs (log Mpn > 8.0 ), albeit not producing the lowest sSFR
+galaxies found in SIMBA (red dots in the left panel are yellow to orange dots in the
+middle and right panels). Another view of this is through the sSFR—M, relations,
+shown in Figure 5.16. Galaxies are color-coded by Mpn/M,; bluer galaxies host
+low-mass BHs while redder galaxies host more massive BHs relative to their stellar
+mass. Supporting the results presented in Figure 5.15, galaxies with massive BHs
+tend to have suppressed star formation (log;) sSFR < —11) while galaxies with
+low-mass BHs tend to be actively star forming.
+
+Additionally, motivated by the results from Ref. [68], we show that both ML
+models are able to accurately recover the Mp, — fin relation from SIMBA in Fig-
+ure 5.17. Here, galaxies are color-coded according to their sSFR and the mean
+scaling relations are plotted as dashed-dotted lines. We find that both ML models
+were able to replicate the observed relation between Mpn and fin, that is, galaxies
+with low neutral hydrogen fraction tends to host massive BHs and typically have
+
+suppressed star formation.
+
+43
+
+5.3. Relative importance of halo properties
+
+5.3 Relative importance of halo properties
+
+During training of RF and ERT models, input features are typically scored accord-
+ing to the frequency or proportion of times it is used for splitting across all the
+trees in the ensemble. Input features that are used more frequently for splitting,
+are considered more important, as they contribute more to the overall predictive
+performance of the model. In this Section, we report the relative importances of
+the host halo properties used in predicting baryonic galaxy properties.
+
+Shown in Figures 5.18 to 5.20 are heatmaps showing the relative feature impor-
+tance for the RF and ERT models (left and right panels, respectively) for z = 0,
+1, and 2. Rows show the halo properties used as features. Columns correspond to
+the different predicted galaxy properties. We note that the values are normalized
+using min-max normalization so that at each column, the minimum value is 0 and
+the maximum value is 1, which clearly shows the most and least important halo
+property.
+
+There are considerable differences between the two models, indicating that they
+leveraged different combinations of features to predict the same galaxy property.
+Here, we note the features deemed important by both models, which serves as an
+indication that they contain relevant information for the galaxy property being
+predicted.
+
+As shown in Figure 5.18, at z = 0, for predicting M,, both RF and ERT models
+heavily utilized the primary halo mass, M, and the halo velocity dispersion, 7 —
+“discovering” the tight relation leveraged by SHAM methods which rank halos by
+either M, or o to assign galaxies according to their stellar mass or luminosity. In
+predicting Min, Muz, SFR, and Zges, both models gave significant amount of im-
+portance to the halo spin parameter A. This is in contrast to the findings reported
+by Agarwal et al. (2018) [10] that the spin parameter was not an important feature
+in their models. The difference may stem from the fact that they report results
+for the combination of all galaxy properties. This result is not surprising, however,
+as based on simple galaxy formation models, high-spin halos are expected to host
+
+44
+
+5.3. Relative importance of halo properties
+
+Figure 5.18: Heatmap showing the relative importances of features
+(rows) used by the RF (left) and ERT (right) models at z = 0 across
+different predicted galaxy properties (columns).
+
+star-forming disk galaxies (with high gas content and SFR and low metallicities)
+while low-spin halos would host massive elliptical galaxies (with low gas content
+and SFR and high metallicities).
+
+Perhaps the most interesting result is that both models utilized the nearby halo
+mass densities around a 300-kpc radius when predicting the molecular hydrogen
+mass Myo. As the star formation process in SIMBA, and in the real Universe in
+general, heavily relies on Ho, it would be interesting to investigate further the
+dependence of Myz2 on the halo environment. This may be related to the ram
+
+pressure stripping of gas off of galaxies, which arises due to the motion of a galaxy
+
+45
+
+5.3. Relative importance of halo properties
+
+Figure 5.19: Heatmap showing the relative importances of features
+(rows) used by the RF (left) and ERT (right) models at z = 1 across
+different predicted galaxy properties (columns).
+
+through the intracluster medium (ICM), the heated gas between cluster environ-
+ments. Since both dark matter and gas particles are co-evolved ab initio in a
+cosmological hydrodynamic simulation, the overall density of an ICM, may be af-
+fected by the density of the DM halo cluster that hosts it. Specifically, the higher
+the density of the ICM in a galaxy cluster where a galaxy is moving, the greater
+the ram pressure it experiences, which in turn strips gas off of it.
+
+Finally, for predicting My, the primary halo mass M, is found to be an impor-
+tant feature by both RF and ERT. As discussed earlier in Sec. 5.2.2, more massive
+
+black holes are found in more massive galaxies and these galaxies are hosted in
+
+46
+
+5.3. Relative importance of halo properties
+
+Figure 5.20: Heatmap showing the relative importances of features
+(rows) used by the RF (left) and ERT (right) models at z = 2 across
+different predicted galaxy properties (columns).
+
+more massive halos, which is exploited by the ML models.
+
+At z = 1, as shown in Figure 5.19, both models once again utilized the halo
+velocity dispersion 7, and the primary halo mass My, though to a lesser degree,
+in predicting M,. In predicting My and SFR at this redshift, both models gave
+significant amount of importance to the halo spin parameter , similar to one at
+z=0. Interestingly, both ML models heavily utilized the nearby halo mass density
+within the 300-kpc radius in predicting My, My2, SFR, and Z,a. This may be
+related to the prevalence of galaxies being stripped off of gas content due to ram
+pressure stripping at this redshift.
+
+AT
+
+5.3. Relative importance of halo properties
+
+Finally, at z = 2, as shown in Figure 5.20, both ML models agree that M, is
+best predicted using the halo half mass radius 7, and the halo velocity dispersion a.
+Interestingly, both models gave importance to r, when predicting Zgas and Mpn. It
+would be interesting to investigate further the dependence on ry of both M,, Zges,
+and Mbpn, which may be related to the central density of halos and the galaxies
+that they host. Additionally, for both RF and ERT, the halo spin parameter
+X remains to be an important feature when predicting My2 and SFR while in
+predicting Myy, the nearby halo mass density is the primary feature utilized. This
+may still be related to the ram pressure stripping of gas content, like HI gas which
+is more abundant at higher redshifts, off of galaxies brought by interacting with a
+high-density medium. It would be interesting to explore this stripping process on
+galaxies at higher redshifts.
+
+48
+
+Chapter 6
+
+Conclusions and
+Recommendations
+
+In this work, we have investigated the capability of various machine learning (ML)
+algorithms in populating galactic dark matter halos with galaxies. We train Ran-
+dom Forest (RF) and Extremely Randomized Trees (ERT) models on halo and
+galaxy catalogs from the state-of-the-art SIMBA hydrodynamic simulations using
+only DM halo properties as features and test how well they are able to reproduce
+observed properties of SIMBA galaxies for 3 epochs, z = 0, 1, and 2.
+
+Consistent with previous work, the ML predictions were able to reproduce the
+mean scaling relations with halo mass but fail to reproduce the scatter around these
+mean relations, consistently yielding narrower distributions. They were also able to
+reproduce second-parameter correlations, specifically the fundamental metallicity
+relation (FMR) and the quenching of galaxies hosting more massive central black
+holes.
+
+Additionally, we found that the ML models, despite having different feature
+selection approaches during training, consistently ranked as high importance cer-
+tain host halo properties in predicting specific galaxy properties, which can provide
+insights to processes that drive the galaxy-halo connection. One of the interesting
+findings is the utilization of the nearby halo mass density around a 300-kpc radius
+by both models when predicting the molecular hydrogen mass My which might
+
+49
+
+be related to the ram pressure stripping of gas off of galaxies when moving through
+a high-density medium.
+
+Developing ML models reinforced with information about the physics of galaxy
+formation, like the physics-informed neural networks (PINNs) and imposing scat-
+ter reproduction by incorporating a custom loss function to the model, as recently
+employed in [32], is a step towards overcoming the limitations of standard ML
+approach demonstrated here. Achieving the goal of accurately matching baryon
+properties towards realistic cosmological galaxy catalogs is an active area of re-
+search.
+
+For future work, it may be interesting to explore the possibility of utilizing
+transformer models, which have been very successful in generative artificial intel-
+
+ligence (AI) applications, towards addressing this challenge.
+
+50
+
+Bibliography
+
+[7]
+
+C. S. Frenk and S. D. M. White, “Dark matter and cosmic structure,” Annalen
+der Physik 524, 507-534 (2012).
+
+A. Vale and J. P. Ostriker, “Linking halo mass to galaxy luminosity,” Monthly
+Notices of the Royal Astronomical Society 353, 189-200 (2004).
+
+A. A. Berlind and D. H. Weinberg, “The Halo Occupation Distribution: To-
+ward an Empirical Determination of the Relation between Galaxies and Mass,”
+The Astrophysical Journal 575, 587-616 (2002).
+
+S. D. M. White and C. S. Frenk, “Galaxy Formation through Hierarchical
+Clustering,” The Astrophysical Journal 379, 52 (1991).
+
+R. S. Somerville and R. Davé, “Physical Models of Galaxy Formation in a
+Cosmological Framework,” Annual Review of Astronomy and Astrophysics
+53, 51-113 (2015).
+
+P. Re Fiorentin, C. A. L. Bailer-Jones, Y. S. Lee, T. C. Beers, T. Sivarani,
+R. Wilhelm, C. Allende Prieto, and J. E. Norris, “Estimation of stellar atmo-
+spheric parameters from SDSS/SEGUE spectra,” Astronomy & Astrophysics
+467, 1373-1387 (2007).
+
+M. Carrasco Kind and R. J. Brunner, “TPZ: photometric redshift PDFs and
+ancillary information by using prediction trees and random forests,” Monthly
+Notices of the Royal Astronomical Society 432, 1483-1501 (2013).
+
+51
+
+Bibliography
+
+ipa
+
+12
+
+13)
+
+14
+
+15)
+
+16)
+
+A. D’Isanto and K. L. Polsterer, “Photometric redshift estimation via deep
+learning. Generalized and pre-classification-less, image based, fully probabilis-
+tic redshifts,” Astronomy & Astrophysics 609, A111 (2018).
+
+H. M. Kamdar, M. J. Turk, and R. J. Brunner, “Machine learning and cos-
+mological simulations - I]. Hydrodynamical simulations,” Monthly Notices of
+the Royal Astronomical Society 457, 1162-1179 (2016).
+
+S. Agarwal, R. Davé, and B. A. Bassett, “Painting galaxies into dark matter
+haloes using machine learning,” Monthly Notices of the Royal Astronomical
+Society 478, 3410-3422 (2018).
+
+R. Davé, D. Anglés-Alcdzar, D. Narayanan, Q. Li, M. H. Rafieferantsoa, and
+S. Appleby, “SIMBA: Cosmological simulations with black hole growth and
+feedback,” Monthly Notices of the Royal Astronomical Society 486, 2827—
+2849 (2019).
+
+A. V. Kravtsov, A. A. Berlind, R. H. Wechsler, A. A. Klypin, S. Gottlober,
+B. Allgood, and J. R. Primack, “The Dark Side of the Halo Occupation Dis-
+tribution,” The Astrophysical Journal 609, 35-49 (2004).
+
+C. Conroy, R. H. Wechsler, and A. V. Kravtsov, “Modeling luminosity-
+dependent galaxy clustering through cosmic time,” The Astrophysical Journal
+647, 201 (2006).
+
+A. Klypin, F. Prada, G. Yepes, S. He8, and S. Gottléber, “Halo abundance
+matching: accuracy and conditions for numerical convergence,” Monthly No-
+tices of the Royal Astronomical Society 447, 3693-3707 (2015).
+
+A. P. Hearin and D. F. Watson, “The dark side of galaxy colour,” Monthly
+Notices of the Royal Astronomical Society 435, 1313-1324 (2013).
+
+A. Leauthaud et al., “New Constraints on the Evolution of the Stellar-to-dark
+
+Matter Connection: A Combined Analysis of Galaxy-Galaxy Lensing, Clus-
+
+52
+
+Bibliography
+
+17
+
+18)
+
+19)
+
+[20
+
+[21
+
+[22]
+
+[23]
+
+[24]
+
+tering, and Stellar Mass Functions from z = 0.2 to z =1,” The Astrophysical
+Journal 744, 159 (2012).
+
+A. Cooray, “Halo model at its best: constraints on conditional luminosity
+functions from measured galaxy statistics,” Monthly Notices of the Royal
+Astronomical Society 365, 842-866 (2006).
+
+X. Yang, H. J. Mo, and F. C. van den Bosch, “Galaxy Groups in the SDSS
+DR4. III. The Luminosity and Stellar Mass Functions,” The Astrophysical
+Journal 695, 900-916 (2009).
+
+G. Kauffmann, S. D. M. White, and B. Guiderdoni, “The formation and
+evolution of galaxies within merging dark matter haloes.,” Monthly Notices
+of the Royal Astronomical Society 264, 201-218 (1993).
+
+C. M. Baugh, “A primer on hierarchical galaxy formation: the semi-analytical
+approach,” Reports on Progress in Physics 69, 3101-3156 (2006).
+
+B. M. B. Henriques, P. A. Thomas, S. Oliver, and I. Roseboom, “Monte
+Carlo Markov Chain parameter estimation in semi-analytic models of galaxy
+formation,” Monthly Notices of the Royal Astronomical Society 396, 535-547
+(2009).
+
+M. Hirschmann, K. Dolag, A. Saro, L. Bachmann, S. Borgani, and A. Burkert,
+“Cosmological simulations of black hole growth: AGN luminosities and down-
+sizing,” Monthly Notices of the Royal Astronomical Society 442, 2304-2324
+(2014).
+
+R.-S. Remus, K. Dolag, and T. L. Hoffmann, “The Outer Halos of Very Mas-
+sive Galaxies: BCGs and their DSC in the Magneticum Simulations,” Galaxies
+5, 49 (2017).
+
+Y. Dubois et al., “Dancing in the dark: galactic properties trace spin swings
+
+53
+
+Bibliography
+
+{25}
+
+26
+
+27]
+
+[28
+
+[29
+
+[30]
+
+(3
+
+along the cosmic web,” Monthly Notices of the Royal Astronomical Society
+444, 1453-1468 (2014).
+
+S. Peirani, Y. Dubois, M. Volonteri, J. Devriendt, K. Bundy, J. Silk, C. Pi-
+chon, S. Kaviraj, R. Gavazzi, and M. Habouzit, “Density profile of dark matter
+haloes and galaxies in the horizon—agn simulation: the impact of AGN feed-
+back,” Monthly Notices of the Royal Astronomical Society 472, 2153-2169
+(2017).
+
+V. Springel et al., “First results from the IllustrisTNG simulations: matter
+and galaxy clustering,” Monthly Notices of the Royal Astronomical Society
+475, 676-698 (2018).
+
+P. Torrey et al., “The evolution of the mass-metallicity relation and its scatter
+in IllustrisTNG,” Monthly Notices of the Royal Astronomical Society 484,
+5587-5607 (2019).
+
+L. Lucie-Smith, H. V. Peiris, A. Pontzen, and M. Lochner, “Machine learning
+cosmological structure formation,” Monthly Notices of the Royal Astronomical
+Society 479, 3405-3414 (2018).
+
+M. Mustafa, D. Bard, W. Bhimji, Z. Lukié, R. Al-Rfou, and J. M. Kratochvil,
+“CosmoGAN: creating high-fidelity weak lensing convergence maps using Gen-
+erative Adversarial Networks,” Computational Astrophysics and Cosmology
+6, 1 (2019).
+
+R. Stiskalek, D. J. Bartlett, H. Desmond, and D. Anbajagane, “The scatter
+in the galaxy-halo connection: a machine learning analysis,” Monthly Notices
+of the Royal Astronomical Society 514, 4026-4045 (2022).
+
+B. Moews, R. Davé, S. Mitra, S. Hassan, and W. Cui, “Hybrid analytic and
+machine-learned baryonic property insertion into galactic dark matter haloes,”
+Monthly Notices of the Royal Astronomical Society 504, 4024-4038 (2021).
+
+54
+
+Bibliography
+
+32
+
+33]
+
+34)
+
+35)
+
+36
+
+37
+
+[38]
+
+[39]
+
+Z. Dai, B. Moews, R. Vilalta, and R. Dave, “Physics-informed neural networks
+in the recreation of hydrodynamic simulations from dark matter,” arXiv e-
+prints p. arXiv:2303.14090 (2023).
+
+R. Davé, R. Thompson, and P. F. Hopkins, “MUFASA: galaxy formation
+simulations with meshless hydrodynamics,” Monthly Notices of the Royal As-
+tronomical Society 462, 3265-3284 (2016).
+
+P. F. Hopkins, “A new class of accurate, mesh-free hydrodynamic simulation
+methods,” Monthly Notices of the Royal Astronomical Society 450, 53-110
+(2015).
+
+P. F. Hopkins, “A New Public Release of the GIZMO Code,” arXiv e-prints
+p. arXiv:1712.01294 (2017).
+
+B. D. Smith et al., “GRACKLE: a chemistry and cooling library for astro-
+physics,” Monthly Notices of the Royal Astronomical Society 466, 2217-2234
+(2017).
+
+A. L. Muratov, D. Kere3, C.-A. Faucher-Giguére, P. F. Hopkins, E. Quataert,
+and N. Murray, “Gusty, gaseous flows of FIRE: galactic winds in cosmologi-
+cal simulations with explicit stellar feedback,” Monthly Notices of the Royal
+Astronomical Society 454, 2691-2713 (2015).
+
+D. Anglés-Alcdzar, C.-A. Faucher-Giguére, D. Kere3, P. F. Hopkins, E.
+Quataert, and N. Murray, “The cosmic baryon cycle and galaxy mass as-
+sembly in the FIRE simulations,” Monthly Notices of the Royal Astronomical
+Society 470, 4698-4719 (2017).
+
+D. Anglés-Alcézar, R. Davé, C.-A. Faucher-Gigueére, F. Ozel, and P. F. Hop-
+kins, “Gravitational torque-driven black hole growth and feedback in cosmo-
+logical simulations,” Monthly Notices of the Royal Astronomical Society 464,
+2840-2853 (2017).
+
+55
+
+Bibliography
+
+[40]
+
+[41]
+
+42
+
+43
+
+45,
+
+46
+
+47,
+
+[48]
+
+T. M. Heckman and P. N. Best, “The Coevolution of Galaxies and Super-
+massive Black Holes: Insights from Surveys of the Contemporary Universe,”
+
+Annual Review of Astronomy and Astrophysics 52, 589-660 (2014).
+
+E. Choi, J. P. Ostriker, T. Naab, and P. H. Johansson, “Radiative and
+momentum-based mechanical active galactic nucleus feedback in a three-
+dimensional galaxy evolution code,” The Astrophysical Journal 754, 125
+(2012).
+
+R. McKinnon, P. Torrey, M. Vogelsberger, C. C. Hayward, and F. Marinacci,
+“Simulating the dust content of galaxies: successes and failures,” Monthly
+Notices of the Royal Astronomical Society 468, 1505-1521 (2017).
+
+M. R. Krumholz, C. F. McKee, and J. Twmlinson, “The Atomic-to-Molecular
+Transition in Galaxies. II: H I and Hz Column Densities,” The Astrophysical
+Journal 693, 216-235 (2009).
+
+M. Schmidt, “The Rate of Star Formation.,” The Astrophysical Journal 129,
+243 (1959).
+
+J. Kennicutt, Robert C., “The Global Schmidt Law in Star-forming Galaxies,”
+The Astrophysical Journal 498, 541-552 (1998).
+
+P. F. Hopkins and E. Quataert, “An analytic model of angular momentum
+transport by gravitational torques: from galaxies to massive black holes,”
+Monthly Notices of the Royal Astronomical Society 415, 1027-1050 (2011).
+
+D. Anglés-Alcézar, C.-A. Faucher-Giguére, E. Quataert, P. F. Hopkins, R.
+Feldmann, P. Torrey, A. Wetzel, and D. KereS, “Black holes on FIRE: stellar
+feedback limits early feeding of galactic nuclei,” Monthly Notices of the Royal
+Astronomical Society 472, L109-L114 (2017).
+
+Planck Collaboration et al., “Planck 2015 results. XIII. Cosmological param-
+eters,” Astronomy & Astrophysics 594, A13 (2016).
+
+56
+
+Bibliography
+
+[49]
+
+[50]
+
+[51]
+
+[52]
+
+53]
+
+54
+
+55)
+
+[56
+
+57,
+
+N. S. M. de Santi, N. V. N. Rodrigues, A. D. Montero-Dorta, L. R. Abramo,
+B. Tucci, and M. C. Artale, “Mimicking the halo-galaxy connection using
+machine learning,” Monthly Notices of the Royal Astronomical Society 514,
+2463-2478 (2022).
+
+X. Xu, S. Ho, H. Trac, J. Schneider, B. Poczos, and M. Ntampaka, “A First
+Look at Creating Mock Catalogs with Machine Learning Techniques,” The
+Astrophysical Journal 772, 147 (2013).
+
+C. C. Lovell, S. M. Wilkins, P. A. Thomas, M. Schaller, C. M. Baugh, G.
+Fabbian, and Y. Bahé, “A machine learning approach to mapping baryons on
+to dark matter haloes using the EAGLE and C-EAGLE simulations,” Monthly
+Notices of the Royal Astronomical Society 509, 5046-5061 (2022).
+
+Y. Jo and J.-h. Kim, “Machine-assisted semi-simulation model (MSSM): es-
+timating galactic baryonic properties from their dark matter using a machine
+trained on hydrodynamic simulations,” Monthly Notices of the Royal Astro-
+nomical Society 489, 3565-3581 (2019).
+
+H. M. Kamdar, M. J. Turk, and R. J. Brunner, “Machine learning and cos-
+mological simulations - II. Hydrodynamical simulations,” Monthly Notices of
+the Royal Astronomical Society 457, 1162-1179 (2016).
+
+L. Breiman, “Random forests,” Machine learning 45, 5-32 (2001).
+
+P. Geurts, D. Ernst, and L. Wehenkel, “Extremely randomized trees,” Ma-
+chine learning 63, 3-42 (2006).
+
+F. Pedregosa et al., “Scikit-learn: Machine Learning in Python,” arXiv e-
+prints p. arXiv:1201.0490 (2012).
+
+B. Catinella, D. Schiminovich, G. Kauffmann, S. Fabello, C. Hummels, J.
+Lemonias, S. M. Moran, R. Wu, A. Cooper, and J. Wang, “The GALEX
+
+57
+
+Bibliography
+
+[58]
+
+[59]
+
+[60]
+
+[61]
+
+[62]
+
+[63]
+
+[64]
+
+Arecibo SDSS Survey. VI. Second data release and updated gas fraction scaling
+relations,” Astronomy & Astrophysics 544, A65 (2012).
+
+A. Saintonge et al., “xCOLD GASS: The Complete IRAM 30 m Legacy Survey
+of Molecular Gas for Galaxy Evolution Studies,” The Astrophysical Journal
+233, 22 (2017).
+
+M. A. Lara-Lépez, A. Bongiovanni, J. Cepa, A. M. Pérez Garcia, M. Sdénchez-
+Portal, H. O. Castafieda, M. Fernandez Lorenzo, and M. Povié, “Study of
+star-forming galaxies in SDSS up to redshift 0.4. II. Evolution from the fun-
+damental parameters: mass, metallicity and star formation rate,” Astronomy
+& Astrophysics 519, A31 (2010).
+
+M. Bothwell, R. Maiolino, R. Kennicutt Jr, G. Cresci, F. Mannucci, A. Mar-
+coni, and C. Cicone, “A fundamental relation between the metallicity, gas
+content and stellar mass of local galaxies,” Monthly Notices of the Royal As-
+tronomical Society 433, 1425-1435 (2013).
+
+R. Davé, K. Finlator, and B. D. Oppenheimer, “Galaxy evolution in cosmo-
+logical simulations with outflows - II. Metallicities and gas fractions,” Monthly
+Notices of the Royal Astronomical Society 416, 1354-1376 (2011).
+
+F. Mannucci, G. Cresci, R. Maiolino, A. Marconi, and A. Gnerucci, “A funda-
+mental relation between mass, star formation rate and metallicity in local and
+high-redshift galaxies,” Monthly Notices of the Royal Astronomical Society
+408, 2115-2127 (2010).
+
+A. E. Reines and M. Volonteri, “Relations between Central Black Hole Mass
+and Total Galaxy Stellar Mass in the Local Universe,” The Astrophysical
+Journal 813, 82 (2015).
+
+N. Haring and H.-W. Rix, “On the Black Hole Mass-Bulge Mass Relation,”
+The Astrophysical Journal 604, L89-L92 (2004).
+

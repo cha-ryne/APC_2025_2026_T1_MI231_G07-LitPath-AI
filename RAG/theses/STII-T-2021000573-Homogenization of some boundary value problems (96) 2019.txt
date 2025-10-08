@@ -632,7 +632,6 @@ the set of measurable functions
 u:rENru(z) eX,
 such that ||u(z)||x € L?().
 Theorem 2.60 L?(0;X) is a Banach space equipped with the norm
-1
 lliscaxy = (f, tu(e)IB de)”
 
 Theorem 2.61 If X is reflerive and 1 < p < oo, then L?(2;X) is reflerive too.
@@ -760,7 +759,6 @@ for each z € R¥, one has
 
 one((E], +{Z},) a0 ia".
 
-18
 
 Chapter 3. Periodic Unfolding Method 19
 
@@ -1096,7 +1094,6 @@ Tes(vw) = Tes(v)Tes(w).
 -N
 af pw (Ta(u)| dads < f |ul de.
 (iti) For any u € L?(Q),
-1
 7es(u)lIZacaxrxy S Frllellzacay-
 
 (iv) For any u € L}(Q),
@@ -1366,11 +1363,9 @@ a)
 d= lim S
 €
 
-0
 
 respectively, where A1, Az € [0, +00].
 
-4
 
 Chapter 4. Linear Elliptic Problem in Domains with Small Holes 35
 
@@ -1546,7 +1541,6 @@ Bev Tes( A®)Tes( Ves) Tes Vues) Tes) dnd
 
 NxRN
 
-1
 = 8 fay THA) Talus) [- V0] Teal) dds
 
 6N-1
@@ -1702,7 +1696,6 @@ Some physical applications include the Fruendlich kinetics model for chemical
 reactions on the walls of a chemical reactor where chemical reactive flows through
 the exterior of a domain containing periodically distributed reactive solid grains as
 
-42
 
 Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 43
 in [23] given by
@@ -1903,7 +1896,6 @@ Then, by R3 (iti), Cauchy-Schwarz and Poincaré Inequalities, and by the estimat
 Theorem 3.27, we have
 
 all Vues, slider.) S [A sigty A Or Metta) Yeh tsV Yet bs dz
-149
 < f A¥(a, ted 5,) V ted ba Vteb55 AE
 Meh by
 + f farts © Teh (ted 52 ebb Oe
@@ -1964,7 +1956,6 @@ Proof. First, by Theorem 3.22 written for T/s,5,, we have that for all r € [2,
 Tes,5,(We) + w strongly in Ly,,(2 x Y). (5.11)
 Since for N 2 3,
 
-2
 = ON It OY
 
 Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 49
@@ -2659,7 +2650,6 @@ Chapter 6. Linear Parabolic Problem in Perforated Domains
 
 From (6.26),
 
-66
 
 & repeated application of the Triangle Inequality, N1-N3, Poincaré and
 
@@ -3185,7 +3175,6 @@ and an additional term when compared with the limit problem in [15]. However,
 since we used the same test function as in [15], we obtained more details about the
 limit problem as viewed by its zero-order “strange” term. The work done in [38] was
 
-76
 
 Chapter 7. Summary 77
 
@@ -3272,7 +3261,6 @@ Using the following tables, we give a brief summary. Here, we use NH to denote
 
 nonhomogeneous and H for homogeneous.
 
-79
 
 Chapter 7. Summary
 
@@ -3292,7 +3280,6 @@ onda nding onding adAL Add
 [st] (9t0z) ‘Te 39 ‘noseues015 | [ge] (T10z) epnowurey] syseq.L
 
 
-80
 
 Chapter 7. Summary
 
@@ -3356,7 +3343,6 @@ J. Casapo-D1az, M. LuNA-LEYNEZ, AND J. D. MARTIN, An adaptation of
 the multiscale methods for the analysis of very thin reticulated structures, C.R.
 Academy of Sciences Paris, (2001), pp. 223-228.
 
-83
 
 List of References 84
 

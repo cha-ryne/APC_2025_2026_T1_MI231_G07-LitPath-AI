@@ -336,7 +336,6 @@ web systems. PHP and MYSQL are two leading open-source scripting and the
 
 database technologies for web designers today.
 
-10
 
 E. User Testing and Project Assessment
 
@@ -367,7 +366,6 @@ system, freshmen and sophomores were required to do the online faculty
 
 evaluation in the computer laboratory. Each section composed of 50 to 70
 
-11
 
 students were scheduled to make use of the laboratory with 20 to 30 available
 computer units connected online. Due to limited computer units in the
@@ -391,7 +389,6 @@ October 26, 2012. The Head of academic programs decided to make it
 
 available online to faculty members on November 18-25, 2012.
 
-12
 
 F. Data Models of Online Faculty Evaluation System
 a. Process Model
@@ -415,7 +412,6 @@ See
 
 Figure 1. Context Diagram
 
-13
 
 b. OFES Hierarchical Structure
 
@@ -435,7 +431,6 @@ Figure 8 shows the behavior of each stakeholders in the Online
 
 Faculty Evaluation System.
 
-14
 
 JUNODY 410;8.4ySTUTUIPY Jadng 105 SAAO Jo aanjanajg [eoysaesaip] *7 24n31y
 ns
@@ -484,7 +479,6 @@ sajnpays
 
 sjuawins}su|
 
-15
 
 J9P[OY2ABIS JUEPNIG SATO JO aanponayg [wyosesayy “sg andy
 
@@ -500,7 +494,6 @@ qasay | quapmis
 
 @woH
 
-16
 
 SBu}aS
 quno20y
@@ -522,7 +515,6 @@ uonenjenz
 uonenjenz
 HS
 
-17
 
 yuNordy 10je43S|UJWIPY 104 $340 JO BaNyzoNAYS jed]yDIeJ9I}H “E |1NI
 
@@ -542,7 +534,6 @@ uoienjeng uonenjeag
 Josimadns
 i e 4aed we
 
-18
 
 sBuqas
 qunoddy
@@ -579,7 +570,6 @@ uoleAIY dO} soAjeuy | yenpiaipuy ajnpeyas HeIss
 AS 3 Was asenbey 4asn | Ie-4a00 sse[d 185 Auo8aye> Ayinoe4
 
 |
-1
 
 sajnpayos syuawnsjsu|
 
@@ -900,7 +890,6 @@ vvarchar(11),
 varchar(30)
 int(10)
 
-19
 
 Online Faculty Evaluation System - Table Structures
 
@@ -987,7 +976,6 @@ ue varchar(20)
 
 Figure 7. Table Structures
 
-20
 
 Register New
 Account
@@ -1053,7 +1041,6 @@ s to the
 
 administrator
 
-21
 
 G. Design Interfaces
 
@@ -1100,7 +1087,6 @@ Tibp * @) Ons : 4 Stow aldoneleats
 
 Figure 9. Home and Log-in Page
 
-22
 
 b. Super Administrator Module
 In this module the super administrator shall have the following
@@ -1147,7 +1133,6 @@ Fenayii23 tite
 
 Figure 10. Super Administrator Page
 
-23
 
 Manage Users
 a. Add, view, update and delete faculty member
@@ -1198,7 +1183,6 @@ Evaluation Instruments
 
 a. Add, view, update and delete Evaluation Category.
 
-24
 
 
 b. Add, view, update and delete Questions
@@ -1231,7 +1215,6 @@ ese
 
 Figure 12: Evaluation Instrument’s Page
 
-25
 
 
 iii. Evaluation Schedules
@@ -1271,7 +1254,6 @@ NNN NNN NNN
 
 Figure 13: Evaluation Schedule Page
 
-26
 
 iv. Evaluation Results
 
@@ -1314,7 +1296,6 @@ CCA CRUE Fry omer) om «= mere
 
 Figure 14. Evaluation Result Page
 
-27
 
 v. Analytics
 View graphs of User Analytics per Campus
@@ -1342,7 +1323,6 @@ pr xVM VM tp XVM Oe XV Dep x Vaan x Vinee x gine x Vines x gre xb tee x Vom 3) O
 
 Figure 15. Analytics Page
 
-28
 
 
 vi. Recommendation
@@ -1380,7 +1360,6 @@ Faouty Develoment Progas - NALS
 
 Figure 16. Recommendation Page
 
-29
 
 
 Notifications
@@ -1402,7 +1381,6 @@ G) PeewetFortentoo ~ i U6 Loop ~ E heweccdnayfnn git * $L UnthlSbon Tapa 8) tas 
 
 Figure 17. Notification Page
 
-30
 
 Settings
 a. SEM & SY activation
@@ -1429,7 +1407,6 @@ ND
 
 Figure 18. Settings
 
-31
 
 c. Administrator Module
 
@@ -1467,7 +1444,6 @@ ut ROTA ha om oan
 
 Figure 19. Individual Faculty Page
 
-32
 
 
 i. Results
@@ -1495,7 +1471,6 @@ Mend Mr 11070,
 
 Figure 20. Individual Result Page
 
-33
 
 
 ii. Analytics
@@ -1516,7 +1491,6 @@ Rating Hstory Per Question
 
 Figure 21. Analytics Page
 
-34
 
 iii. Settings
 
@@ -1538,7 +1512,6 @@ ad wroteon tot on
 
 Figure 22. Password Settings Page
 
-35
 
 e. Student Module
 i. Evaluate Professors
@@ -1553,7 +1526,6 @@ fare Cate feb Cte ett ty Poses ey Vase
 
 Figure 23. Evaluator’s Page
 
-36
 
 IV. Results and Discussions
 A. The On-line Faculty Evaluation System
@@ -1583,7 +1555,6 @@ permanent) were evaluated. See Figure 26- 27. They are evaluated in terms of per
 
 class per subjects basis. In other words, if the faculty is handling only one subject
 
-37
 
 for different eight (8) courses or sections, the said faculty will be evaluated by
 eight (8) classes.
@@ -1608,7 +1579,6 @@ various reasons
 
 Figure 24. Percentage Distribution of Target Evaluators for Pilot Implementation
 
-38
 
 2254 out of 2268 or
 99.34 % of target
@@ -1652,7 +1622,6 @@ CLASS BATCH
 [cans spaen [390
 [cass Baers | 380]
 
-39
 
 Evaluated Facutty
 
@@ -1663,7 +1632,6 @@ Figure 26. Distribution of Evaluated Faculty Members during Pilot Implementation
 Evaluated Faculty
 
 2 a
-16
 
 [= EVStustec z ver u i]
 
@@ -1762,7 +1730,6 @@ Very Satisfactory
 
 Figure 28. Screen shots of Evaluation Results: Grades per Criteria
 
-41
 
 POLYTECHNIC UNIVERSITY OF THE PHILIPPINES - TAGUIG CAMPUS
 
@@ -1827,7 +1794,6 @@ cigherm examinsiors. her sludenks are very competve, she ssc makes her sterisrcs
 
 Figure 29. Screenshot of Evaluation Results: Comments
 
-42
 
 To determine the capacity of the system, stress test was conducted. Stress testing
 was done by gradually increasing the number of concurrent evaluators. Server error never
@@ -1851,7 +1817,6 @@ an ROMO IREE ht Nees S NER
 
 Figure 30. Daily User Analytics for Pilot Implementation
 
-43
 
 Threshold = 80 user /day @ 8hrs
 @ 10 concurrent user / batch
@@ -1900,7 +1865,6 @@ and implement the system in the second semester of school year 2012-2013.The PUP
 
 IT Center had already conducted system testing last October, 2012.
 
-45
 
 
 B. Academic Analytics : Output derived from Data Collected using On-line
@@ -1928,7 +1892,6 @@ vi. Sanctions and Rewards, refer to Figure 43
 
 vii. | Recommended faculty development programs, see Figure 44
 
-46
 
 Summary of Over-all Average Result Per Category - MIDTERM
 
@@ -1949,7 +1912,6 @@ D Management of Learing 4.0268 Very Satisfactory
 
 Figure 33. Campus Rating per Category Second Implementation
 
-47
 
 Figure 32 and 33 shows a graph that the weakness of faculty members during the
 pilot and second implementation based on category is Management of the Learning.See
@@ -1985,7 +1947,6 @@ Summary of Over-a! Average Resut Per Quesuon - NALS
 Figure 35. Over-all Campus Rating per Questions- Second
 Implementation
 
-49
 
 (7:03: M]
 (ese, aisy 2 OE
@@ -2004,7 +1965,6 @@ Cae bay
 
 Figure 38. Campus Rating History per Category
 
-51
 
 _ Over-All Rating Analytics
 
@@ -2018,11 +1978,9 @@ For rst Semester Fnals - 273
 
 Figure 40. Rating Statistics-Second Implementation
 
-52
 
 Figure 41. Historical Performance Rating of Individual Faculty
 
-53
 
 
 Semester & School Year:
@@ -2067,19 +2025,8 @@ Sort by :
 
 40S
 
-455
-450
-430
-420
-435
-4355
 <0)
-4385
-420
-435
 4a)
-4205
-405
 32 )))
 
 ORSON 498) OUTSTANDING
@@ -2143,7 +2090,6 @@ members who needs follow up), while those who excel (faculty members to be
 
 rewarded) were commended.
 
-55
 
 ConussBand: Serestey Schou Yee:
 TAGUG CAMPUS 7} Sst Semester of 2122013
@@ -2168,7 +2114,6 @@ Feouty Development Progans - FAALS
 
 Figure 44. Recommended Faculty Development Programs
 
-56
 
 Table 4. Tabulated Data of Faculty Rating - pilot and second implementation
 
@@ -2200,7 +2145,6 @@ ae 43993 43030 aae7 43905 cestry
 cet ames “42300 “aas05
 45120 45640 a0 39283
 
-57
 
 Scatter Plot for Midterm and Final Rating
 
@@ -2236,7 +2180,6 @@ Midterm Rating
 
 Figure 45. Scatter Plot for Midterm and Final Rating
 
-58
 
 Table 5. Relationship between Midterm and Final Rating
 
@@ -2345,24 +2288,20 @@ influences the faculty performance. Table 6 and Figure 23 shows that the faculty
 
 has no significant relationship with the number of classes that the faculty handled.
 
-61
 
 Table 5. Relationship between the number of classes and rating
 
 ws |e
 *
-8
 
 io
 
 HH
 
-33250
 
 dele lili le
 f BIG ]a
 
-62
 
 re
 
@@ -2418,18 +2357,15 @@ Number of Classes
 
 wm ghggrbtes. *,
 
-12
 
 a
 Sd
 
-14
 
 Figure 46. Scatter Plot for the Relationship between Number of Classes and Faculty
 
 Rating
 
-63
 
 V. Conclusions
 
@@ -2477,7 +2413,6 @@ the future research. Upgrade the subscription of web host package to allow more
 
 concurrent users to further shorten the necessary time for evaluation.
 
-65
 
 Chapter VII. References
 Books:

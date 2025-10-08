@@ -244,7 +244,6 @@ pancreatic), type 2 diabetes mellitus, hypertension, Coronary Artery Disease (CA
 
 stroke, congestive heart failure, osteoarthritis, chronic back pain, asthma, pulmonary
 
-10
 
 embolism, gallbladder, disease, and also an increased risk of disability (Djalalinia et al.,
 
@@ -273,7 +272,6 @@ bias, ridicule, rejection and humiliation. Weight-related discrimination itself 
 
 related to poor health behaviour such that it may cause eating disorders, sedentary
 
-11
 
 lifestyle and decreased physical activity which results to greater weight gain. This
 dreadful cycle does nothing other than strengthening the risk of exposure to weight-
@@ -302,7 +300,6 @@ with a multicomponent etiology that includes environment, genetics, lifestyle,
 
 metabolism, and behavioural components, such that its primary pathological agent is
 
-12
 
 food, particularly foods that are energy dense such as fat, or sugar-sweetened
 beverages, instead of a microbe (Bray et al., 2017). Compliance or adherence to
@@ -332,7 +329,6 @@ prevention of further weight gain. It is a process which aims to improve one’s
 
 status by attaining an ideal body weight based on one’s age stature. In addition, weight
 
-13
 
 management is described as strategies that are based on a comprehensive lifestyle
 approach with the use of dietary, physical activity and behaviour modification to attain
@@ -360,7 +356,6 @@ Symbian, and Windows; and also some virtual machines like Java/J2ME, BREW, Flash
 
 Light, and Silverlight (Islam et al., 2010).
 
-14
 
 In 2017, users downloaded 178.1 billion mobile applications to their connected
 devices, and projection for 2022 shows that app downloads will continue to increase to
@@ -387,7 +382,6 @@ its users through their devices (Leiffers et al, 2017; Rivera et al., 2016; Vuon
 
 and its promising outcomes, studies conducted are mostly pilot-testing or have
 
-15
 
 limitations in their study designs such as study duration and follow-ups, and sample
 
@@ -417,7 +411,6 @@ Systematic review and meta-analysis was also conducted by Liu et al. (2014) to
 
 evaluate the association of mobile phone intervention with weigh-related measurement
 
-16
 
 among overweight and/or obese adults. The study included 14 published and
 unpublished randomized controlled trials on over 1,300 participants, which has
@@ -445,7 +438,6 @@ Behavioural Model (score range: 0-6). Results of the study shows that all apps i
 
 in the analysis have received low overall scores for inclusion of behavioural theory-
 
-17
 
 based strategies, which is believed to likely improve the effectivity of a wellness
 application. Some of the behavioural strategies emphasised in the applications
@@ -473,7 +465,6 @@ application being tested. Weight measurements such as waist circumference, body
 
 weight, waist-hip ratio, and BMI are some of the commonly used weight indicators to
 
-18
 
 prove the effectiveness of an application as a tool which aids in the promotion of
 
@@ -502,7 +493,6 @@ smartphone, body weight scale, and accelerometer that enables wireless transmiss
 
 of body weight and step data to a website; or an attention-matched Health Education
 
-19
 
 control group (n=20) that receives health tips through a smartphone. Study outcomes
 shows that SmartLoss successfully promoted weight loss in comparison to an
@@ -531,7 +521,6 @@ a website and technology-mediated communication with a health coach (the SMART
 
 intervention). The study was a randomised controlled trial which consisted of
 
-20
 
 overweight or obese students from three universities in San Diego, California, ages 18
 to 35 years old. Participants in this study were randomly assigned (1:1) to either
@@ -559,7 +548,6 @@ prove that dietary self-monitoring is associated to improved weight loss success
 
 study included the use of a popular smartphone app for dietary self-monitoring and
 
-21
 
 weigh loss in comparison to traditional methods of diet counselling and entry methods.
 The study participants were randomly divided into three groups: an app (AP) group
@@ -587,7 +575,6 @@ messages sent, 96% have responded to at least one text data collection question,
 
 period. On average, study participants had a significant change in body weight from
 
-22
 
 baseline to 12 weeks in both intention to treat analysis and completers only analysis
 wherein 36 out of the original 53 participants were included. Although researchers of
@@ -736,7 +723,6 @@ and 4-week
 maintenance/
 follow-up
 
-24
 
 iY
 
@@ -786,7 +772,6 @@ method.
 
 Himsog: A Nutrition Mobile Application
 
-25
 
 In a prior study conducted by the researcher, a mobile application have been
 
@@ -802,7 +787,6 @@ in
 
 used Pinggang Pinoy (Figure 1) as a basis for the aesthetics and presentation of the
 
-26
 
 mobile application. All information and data gathered were then disseminated to the
 team of program developers. The mobile application which runs and made accessible
@@ -827,7 +811,6 @@ After the mobile application has been developed, an acceptability testing was
 
 done to different population groups as segmented in the Pinggang Pinoy guidelines.
 
-27
 
 Fifty (50) respondents, which equally represents five population groups (Children,
 Teens, Adults, Elderly and Pregnant/Lactating) having ten (10) respondents for each.
@@ -853,7 +836,6 @@ diets consumed in the pregnant/lactating group such as vegetarian and exclusive
 
 organic eating habits.
 
-28
 Conceptual Framework
 
 The diagram (Figure 2) shows the factors considered that could affect the
@@ -882,7 +864,6 @@ have dietary practices which greatly contributes to excessive weight gain and ob
 
 It is important to take into consideration dietary characteristics in different
 
-29
 
 sociodemographic levels when designing dietary interventions (Garcia-Chavez et al.,
 
@@ -902,7 +883,6 @@ health and nutritional promotion behaviours among the general population without
 
 diseases (Lee et al., 2017).
 
-30
 
 Auey91p
 
@@ -994,9 +974,7 @@ the Philippines Los Banos ages 19-59 years.
 smartphone software that provides nutrition-related
 services.
 
-31
 
-32
 Hypothesis of the Study
 
 There is no significant relationship between the use of mobile application and
@@ -1009,7 +987,6 @@ d. anthropometric measurements (i.e., weight, waist circumference); and
 
 e. food intake (i.e., energy, carbohydrates, protein, fat, and fluid intake);
 
-33
 
 METHODOLOGY
 
@@ -1039,7 +1016,6 @@ towards the use of mobile application were adults ages 18-59 years. Graduate
 
 students were chosen to represent the participants in the study such that no data has
 
-34
 
 yet been established with regards to the nutritional status among the students of the
 graduate school in UPLB who may be possibly at risk of malnutrition especially of
@@ -1102,9 +1078,7 @@ Excluded (n=18)
 
 Figure 3. Flowchart of the Data Collection
 
-35
 
-36
 
 Description of the Mobile Application
 
@@ -1133,7 +1107,6 @@ macronutrient and fluid intake of the user. The respondent’s nutritional requi
 
 the day is represented through a plate which is inspired by Pinggang Pinoy- a Filipino
 
-37
 
 nutritional guideline. The visual plate presented is divided into four sections that is
 
@@ -1167,7 +1140,6 @@ taken such as fruit juices, milk, etc. is reflected to its respective section
 
 accordingly.
 
-38
 
 * Butter on bread (yellow-coded section) - represents the total fat intake
 
@@ -1197,7 +1169,6 @@ instruction sheet was also given to each respondent which served as a guide in u
 
 the mobile application (Appendix C).
 
-39
 
 SIGN UP
 
@@ -1213,13 +1184,11 @@ Figure 5. Screenshot of the user’s daily recommended plate based on calculated
 
 daily requirement
 
-40
 
 Figure 7. Screenshots of the additional features of the mobile app - weekly graph
 
 of the user’s food intake and visual triggers for excess consumption
 
-4
 
 Data Collection
 
@@ -1248,7 +1217,6 @@ daily food intake after recording their last meal of the day, which was collecte
 
 the researcher through messaging applications between the researcher and participant.
 
-42
 
 The researcher conducted a weekly face-to-face assessment of physical activity and
 24-hour food recall which was administered during three (3) different weekday and one
@@ -1280,7 +1248,6 @@ end-line. Weight and height were measured three (3) times to the nearest 0.1 kg 
 
 measurement was calculated wherein the participant was measured with minimal
 
-43
 
 clothing and no footwear. Waist circumference was measured three (3) times to the
 nearest 0.1 cm using a tape measure and the average measurement was calculated,
@@ -1309,7 +1276,6 @@ either “true” or “false”, and are basic nutrition information which were
 
 nutrition mobile app. A correct answer corresponded to one (1) point, with a highest
 
-44
 
 possible score of 11 points. The following were the statements used in the general
 
@@ -1353,7 +1319,6 @@ the mobile application. The actual nutrition knowledge test used in this study w
 
 pretested among Filipino adults before the actual use for the study intervention.
 
-45
 
 24-hour Food Recall
 
@@ -1379,7 +1344,6 @@ to assess the acceptability of different population groups towards the use of th
 
 application.
 
-46
 
 Table 2. Acceptability Statements based on Sub-Categories
 
@@ -1428,7 +1392,6 @@ If yes, how much are you willing to pay for this mobile app?
 Marketable ( ) Less than Php 50.00 ( ) Php 50.00-Php 100.00 ( ) More than Php 100.00
 
 
-47
 
 Compliance
 
@@ -1448,7 +1411,6 @@ participants were asked to delete the mobile application on their smartphone in 
 
 presence of the researcher.
 
-48
 
 Data Analysis
 
@@ -1485,7 +1447,6 @@ activity standards with the equation of:
 
 activity computed for each setting)
 
-49
 
 + Equation: Total Physical Activity MET-minutes/week = [(P2 * P3 * 8) + (P5 * P6 * 4) +
 (P8 * PQ * 4) + (P11 * P12 * 8) + (P14 * P15* 4)]
@@ -1515,7 +1476,6 @@ application. The statements are sub-categorised to measure five attributes of th
 
 mobile application-Easy-to-Use, Educational, Use of Filipino Standards, Usable for Alll,
 
-50
 
 and Marketable. With the ordinal type of data gathered, frequency tables and summary
 
@@ -1587,7 +1547,6 @@ knowledge. mobile app use
 
 el
 
-52
 
 RESULTS AND DISCUSSION
 
@@ -1626,7 +1585,6 @@ The median height of the completing respondents is 156 cm, while the median
 
 initial weight is 60.7 kg, and initial waist circumference of 81.4 cm. The median BMI at
 
-53
 
 baseline of the respondents who completed the study is 23.85 kg/m2 which is
 classified as overweight using the Asian Criteria for BMI Classification.
@@ -1662,7 +1620,6 @@ Baseline 23.2 17 39.8 22 18.2 39.8 23.85 17 37.8
 End-line 2 > = 2 : : 23.75 17.1 38.4
 
 
-54
 
 Nutrition Knowledge
 
@@ -1695,7 +1652,6 @@ results of the study wherein only 28.13% (n=9) of the respondents were not physi
 
 active throughout the entire study duration.
 
-55
 
 Table 9. Weekly Total Physical Activity MET-minutes/ week of Respondents
 Total Physical Activity MET-
@@ -1726,7 +1682,6 @@ and purchase the mobile app in the future through an app store platform, and 73.
 
 of those who has an intent to purchase were willing to pay Php 50.00- Php 100.00 for
 
-56
 
 the mobile application, in contrast to the study conducted among US mobile phone
 owners wherein a large proportion of its respondents indicated their unwillingness to
@@ -1764,7 +1719,6 @@ Distribution Range (AMDR) for their age group of 19-49 years (FNRI, 2015). Only 
 
 participants (25%) have a CHO intake of less than 55% of their daily dietary
 
-57
 
 distribution. Average protein intake of the respondents shows that 90.63% (n=29) of
 the completing group has an adequate mean protein intake during the study duration
@@ -1804,7 +1758,6 @@ intake shows that there is no significant difference among the weekly mean energ
 
 intake in comparison with the participants’ energy requirement. Highest mean
 
-58
 
 difference between requirement and actual intake was observed during the 2"4 week
 (211.39 kcal), while the lowest mean difference of 35.98 kcal was during the 4th week
@@ -1841,7 +1794,6 @@ difference of 37.22 g, which is indicating that the mean actual intake is closer
 
 meeting the carbohydrate requirement, during the last week of the study duration.
 
-59
 
 Multivariate analysis of the mean difference between the recommended protein
 intake and the participants weekly actual intake shows that there is no significant
@@ -1870,7 +1822,6 @@ Compliance of participants were categorised as high (15 or more actual
 
 screenshots) or low (14 and below) compliance. Only 34.38% (n=11) of the participants
 
-60
 
 have actual screenshots of 15 and above, while most of the participants were
 categorised as low compliance having 65.62% of the total number of completing
@@ -1905,7 +1856,6 @@ weight measurements and BMI classification among participants, it was observed t
 
 most of the low compliant participants (71.43%) were classified as overweight or
 
-61
 
 obese and only 23.81% have normal BMI, as compared to the high compliant group
 
@@ -1943,7 +1893,6 @@ Total 4 28 32
 
 *Waist Circumference >= 88cm (Female), >=102cm (Male)
 
-62
 
 Table 16. Association of Compliance with Study Measures*
 
@@ -1975,7 +1924,6 @@ knowledge was found to be independent or not associated with the compliance leve
 
 the respondents (Table 18). Furthermore, nutrition knowledge may complement,
 
-63
 
 support and further boost weight loss strategies such as the use of mobile applications
 
@@ -2044,8 +1992,6 @@ High Compliance
 
 Frequency (n)
 
-4
-7
 
 %
 
@@ -2074,7 +2020,6 @@ range (45.45%) mean carbohydrate intake wherein adequacy of CHO intake and
 
 compliance level was found to be associated with each other (Table 20).
 
-65
 
 Table 20. Comparison of Week 4 Intake to Week 1 and Compliance Level
 
@@ -2120,7 +2065,6 @@ the 4th week and was closer to the recommended intake of 2500ml/ day as compared
 
 to their intake during the 1st week of the study duration (Refer to table 20).
 
-66
 
 Table 21. Association of Compliance with Average Nutrient Intake Adequacy*
 Mean KCAL Mean CHO Mean PRO Mean FAT
@@ -2158,7 +2102,6 @@ their dietary intake such that they are more often in using the mobile app, may 
 
 overall lower intake of carbohydrates possibly with the perception that carbohydrate
 
-67
 
 intake is associated to weight loss and weight management. In an experimental study
 led by Dr. Labiner-Wolfe under the Food and Drug Administration, which aims to
@@ -2188,7 +2131,6 @@ which is core component of a mobile app for weight and health management (Rivera
 
 al., 2018). Participants further noted that scrolling thru food items for entering data was
 
-68
 
 burdensome for them, and may have contributed to them being less compliant with the
 
@@ -2216,7 +2158,6 @@ app. Among those that was suggested were, “My Pinggan App”, “Food Diary”
 
 mobile app is acceptable.
 
-69
 
 Summary and Conclusion
 
@@ -2246,7 +2187,6 @@ which have low compliance in using the mobile application, having less than 15 d
 
 app use during the prescribed study duration.
 
-70
 
 Nutritional Status of Graduate School Students of the University of the
 Philippines Los Banos. Both the baseline and end-line results of the study shows that
@@ -2274,7 +2214,6 @@ data. Food intake, however, showed a significant difference with regards to
 
 carbohydrates and fluid intake weekly mean difference analysis. Physical activeness
 
-71
 
 among the respondents were consistent even from the first week of the study
 intervention down to the last. Changes in the following study measures may not be as
@@ -2290,7 +2229,6 @@ observed that there were changes, although insignificant, with regards to nutrit
 
 knowledge, and dietary intake.
 
-72
 
 RECOMMENDATIONS
 
@@ -2320,7 +2258,6 @@ accurate calorie and nutrient tracking. Household measurements is suggested to b
 
 made available for all food items for easy estimation of actual intake.
 
-73
 
 LITERATURE CITED
 
@@ -2356,7 +2293,6 @@ Bray G.A., Kim K.K., Wilding J.P.H., on behalf of the World Obesity Federation. 
 
 Obesity: A Chronic Relapsing Progressive Disease Process. A Position
 
-74
 
 Statement of the World Obesity Foundation. Obesity Reviews 2017. Vol. 18,
 
@@ -2393,7 +2329,6 @@ be Dismissed. Journal of the ASEAN Federation of Endocrine Societies,
 
 JAFES/article/view/83/383Food and Nutrition Research Institute. Current
 
-75
 
 Nutritional Status Among Filipino Adults. Retrieved from http://
 
@@ -2430,7 +2365,6 @@ from http:/Awww.fnri.dost.gov.ph/index.php/tools-and-standard/philippine-
 
 dietary-reference-intakes-pdri
 
-76
 
 Food and Nutrition Research Institute. Pinggang Pinoy. Retrieved from https://
 
@@ -2464,7 +2398,6 @@ Hruby, A., & Hu, F.B. (2015). The Epidemiology of Obesity: A Big Picture.
 
 PharmacoEconomics, 33(7), 673-689. doi:10.1007/s40273-014-0243-x
 
-77
 
 Institute of Medicine (US) Subcommittee on Military Weight Management. Weight
 Management: State of the Science and Opportunities for Military Programs.
@@ -2500,7 +2433,6 @@ Lieffers J., Arocha J., Grindrod K., Hanning R. (2017). Experiences and Percepti
 
 Adults Accessing Publicly Available Nutrition Behavior-Change Mobile Apps
 
-78
 
 for Weight Management. Journal of the Academy of Nutrition and Dietetics.
 
@@ -2535,7 +2467,6 @@ Undergoing Rehabilitation. Medicine (Baltimore) 2016; 95(36):e4446 DOI:
 
 10.1097/MD.0000000000004446
 
-79
 
 Mosconi P., Radrezza S., Lettieri E., Santoro E. (2019). Use of Health Apps and
 Wearable Devices: Survey Among Italian Associations for Patient Advocacy.
@@ -2570,7 +2501,6 @@ between Nutritional Knowledge, Obesity, and Sleep Disorder Severity.
 
 Journal of Sleep Research 2016. Vol. 25, Issue 3, pp. 350-355
 
-80
 
 Russell-Mayhew S., McVey G., Bardick A., Ireland A. (2012). Mental Health, Wellness,
 and Childhood Overweight/ Obesity. Journal of Obesity 2012; doi:
@@ -2609,7 +2539,6 @@ Forjuoh, S. N. (2012). Factors affecting acceptability and usability of
 
 technological approaches to diabetes self-management: a case study.
 
-81
 
 Diabetes technology & therapeutics, 14(12), 1178-1182. doi:10.1089/dia.
 
@@ -2646,7 +2575,6 @@ Expert Consultation. Retrieved fromhttps://apps.who.int/iris/bitstream/handle/
 
 10665/44583/978924 1501491_eng.pdf?sequence=1
 
-82
 
 Zaidan S., Roehrer E. (2016). Popular Mobile Phone Apps for Diet and Weight Loss: A
 Content Analysis. JMIR Mhealth and Uhealth. Volume 4, Issue 3. doi:

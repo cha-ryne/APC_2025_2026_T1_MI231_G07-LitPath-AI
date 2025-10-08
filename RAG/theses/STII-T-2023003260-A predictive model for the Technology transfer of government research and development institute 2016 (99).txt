@@ -321,7 +321,6 @@ important mechanism for economic growth. The Association of University Technolog
 Managers (AUTM) reported that 567 new products based on university or non-profit
 research were introduced to the market in 2004 alone. From 1980 to 2004, AUTM cited
 
-10
 
 the creation of 4,542 spin-off companies from universities, research institutions, and
 hospitals. Over 65% of innovations licensed by universities and institutions in 2004 were
@@ -356,7 +355,6 @@ disproportioned. Metal casting was the most penetrated at 49.02% while forging a
 electroplating were the least penetrated both at 0%. Further, the Center's total
 Penetration rate of the M&E sector was low at 14.66%
 
-11
 
 Table 3: MIRDC Industry Penetration Rate
 
@@ -402,7 +400,6 @@ R&D was 40% which occurred among projects completed in 2012-2013 while the lowes
 was at 0% in 2010-2011. This data further shows the disproportion of MIRDC’s R&D
 technology transfer statistics
 
-12
 
 In September 2015, DOST issued Administrative Order (AO) No. 009 entitled
 “The Technology Transfer Protocol of the DOST-RDIs”. This protocol defined the
@@ -462,7 +459,6 @@ projects that were completed within 2010-2014. However, only the criteria on the
 completeness of the documents were considered in these evaluations while the criteria
 listed in Table 5 were disregarded
 
-14
 
 3. STATEMENT OF THE PROBLEM
 
@@ -493,7 +489,6 @@ improve its performance with respect to technology transfer? What variables affe
 transferability of the Center's R&D outputs? More specifically, what factors determine
 the success of the MIRDC’s R&D project implementation?
 
-15
 
 4, REVIEW OF LITERATURE
 
@@ -553,7 +548,6 @@ uononpoid jo
 ubisap jo silejep
 BuluBisap ‘Buruueld apnjoul o
 
-9261
 EPO; sapuatiem
 pue uewysag'z
 
@@ -845,7 +839,6 @@ ueo japow uonenbe jeumonas
 
 Pauonueu oN
 
-6
 an uo|sioap-pue_—sishjeue
 
 jepow
@@ -906,12 +899,10 @@ ANN is trained to perform particular function by adjusting the values of the
 connection (weights) between elements (based on a comparison of the output and the
 target) until the network output matches the target. This is so that the network can
 
-22
 
 predict the correct outputs for a given set of inputs. This situation is illustrated by Nasr
 (2011) as shown in Figure 4.
 
-4
 Threshold
 a Activation
 Function
@@ -949,7 +940,6 @@ equation
 Equation 1: Bias of Node
 Uj = (Wij * ai) + bj
 
-23
 
 Node’s output is determined using a mathematical operation on the node's net
 input in a linear and non-linear manner. One of the most commonly used transfer
@@ -973,7 +963,6 @@ However, there are some fields in which the use of ANN's is still scarce; techno
 transfer is one of these. Some of the articles published on the application of ANN in
 various fields for 2008-2015 are found in Table 7.
 
-24
 
 Table 7: ANN Application in Various Fields
 
@@ -1002,7 +991,6 @@ Air Quality Management
 Retrieved from:
 
 hitps:/www.researchgate.net/publication/4
-371573
 
 Retrieval Date: 14 March 2016
 
@@ -1069,7 +1057,6 @@ iaseck’, A. et. al Woler Level Modeting Date Retneved: 14 March 2016
 DOI. 10.2478Aimre-2015-0003,
 
 
-25
 
 5. GAPS IN RESEARCH
 
@@ -1101,7 +1088,6 @@ predict the transferability of technologies developed by the MIRDC. The critical
 factors for transferring these technologies to the industry will also be identified using
 binary logistic regression.
 
-26
 
 6. CONCEPTUAL FRAMEWORK
 
@@ -1139,7 +1125,6 @@ and completion dates of the project
 ¢. Project value/cost - expenses (in terms of Pesos) that is incurred during project
 implementation considered indispensable to its operation
 
-7
 
 d. R&D type - specific R&D services applied that can be categorized in any of the
 following:
@@ -1176,7 +1161,6 @@ functionality in an efficient, safe, and reliable manner needs to be taken into
 account in its design/drawing (http://www businessdictionary.com, Accessed: 11
 March 2016)
 
-28
 
 *  Part/Product Localization - process of adapting any aspect of a part or
 product for a specific locale or market. It is the practice of adjusting a
@@ -1234,9 +1218,7 @@ Not Transferred
 
 Figure 5: Conceptual Framework
 
-29
 
-30
 
 7. RESEARCH HYPOTHESIS
 
@@ -1260,7 +1242,6 @@ technology
 
 © X= Project Cost © X- R&D Type
 
-31
 
 8. OBJECTIVES OF THE STUDY
 
@@ -1283,7 +1264,6 @@ transferability of Contract R&D and GIA R&D technologies: and
 3. To identify the critical success factors for the transferability of Contract R&D
 and GIA R&D technologies
 
-32
 
 9, SIGNIFICANCE
 
@@ -1309,7 +1289,6 @@ customer for the Contract R&D or from government funds for the GIA R&D, can be u
 efficiently since continuous benefits for new/existing scientific and technological
 knowledge is ensured
 
-33
 
 10. SCOPE AND LIMITATION
 
@@ -1324,7 +1303,6 @@ MIRDC customers are from the area, where M&E firms are highly concentrated.
 3. The context of technology transfer as discussed in the study only refers to the
 context of technology transfer as implemented in MIRDC.
 
-34
 
 11. RESEARCH METHODOLOGY
 
@@ -1359,7 +1337,6 @@ capacity of Supervising Science Research Specialist (SRS)/Senior Science SRS wer
 conducted to gather additional information with regards to the MIRDC’s R&D processes
 Results of the interviews were recorded electronically and were later transcribed
 
-35
 
 A total of 143 projects was initially gathered as data for this study. However,
 some attributes of these projects are either lacking or was inconsistent with the other
@@ -1389,7 +1366,6 @@ between variables while close to 1 indicates a strong association
 Only the input variables with significant association to the output variables were
 included in the development of the technology transfer model
 
-36
 
 11.3 Development of the Technology Transfer Model
 
@@ -1454,7 +1430,6 @@ Prior to loading the data in the program, non-numerical data were converted to
 
 ‘numerical values using the following quantification
 
-37
 
 1. X,- R&D Modality
 a. GIAR&D-0
@@ -1501,7 +1476,6 @@ where
 Emm = minimum value for variable E
 Ena= maximum value for variable E
 
-38
 
 ‘Step 2: Load the data
 
@@ -1524,7 +1498,6 @@ In the “Training Parameters” tab:
 a. “Random Input” button under inputs option and “Randomly Split” button under
 splitting data options were selected
 
-39
 
 b. “Sigmoid” was chosen as the activated function for hidden layer and “Linear” as
 activated function for output layer
@@ -1593,7 +1566,6 @@ CSF of R&D projects based on the result of the ANN Technology Transfer Model. Lo
 Regression measured the relationship between the categorical dependent variable and one
 ‘or more independent variables by estimating probabilities using logistic function. Binary
 
-42
 
 Logistic Regression was specifically performed since the outcome of this model was coded
 as: 1-Transferred and 0-Not Transferred.
@@ -1618,7 +1590,6 @@ Figure 10. ANN Predictive Model Tool
 ource Visual Basic Output Window for
 
 
-43
 
 The same set of data was fitted into the Binary Logistic Regression equation. The
 
@@ -1688,7 +1659,6 @@ in Emerging Technology. (Source: DOST
 Website, Date Retrieved: 5 March 2016)
 
 
-44
 
 Source of the idea and direction of the
 R&D project are provided by the customer
@@ -1744,7 +1714,6 @@ and and part/product | participation to _techno-fairs/exhibits,
 analysis,
 
 
-45
 
 Tocalization, among others.
 
@@ -1811,7 +1780,6 @@ details is subject to his approval. When the project is completed and accepted b
 customer, it is automatically considered as a transferred technology to the industry
 
 
-46
 
 Considering the nature of its implementation, all completed Contract R&D of the
 Center were automatically transferred to its customers. After 12 months of completion and
@@ -1852,7 +1820,6 @@ R&D versus GIA R&D for 2010-2014 is the low transfer rate of GIA R&D to the indu
 Primary reasons identified why most completed GIA R&Ds were not transferred to the
 industry
 
-47
 
 1. Technologies developed by MIRDC has to be subjected for further study to improve
 performance functions (i.e. capacity, speed, collection rate) and that several areas
@@ -1890,7 +1857,6 @@ Chantramonklasri Technology Transfer Models and the Technology Transfer Life Cyc
 view of a technology transfer project from its “conception” right up to its “conclusion” for
 developing a systematic approach for planning and managing technology transfer
 
-48
 
 According to Ramanathan (2005), technology transfer should not commence without a
 careful feasibility study to establish the viability of the technology because such undertaking
@@ -1928,7 +1894,6 @@ Table 10 shows that at 0.05 significance level. there is a strong negative
 association between duration and value/cost and the transferability of the technology
 indicated by the negative Point Biseral value of -0 6392 and -0 6023
 
-49
 
 Table 11: Cramer's V of Qualitative Input Variables
 
@@ -1965,7 +1930,6 @@ Appendix D.
 A technology transfer model was developed using the ANN Technique making use of
 the Splice MLP Program to compute neuron weights and biases, also known as “nodes”
 
-50
 
 The significant input variables included in the model were: R&D Modality,
 Project Duration, Project Cost, Sector Served, and R&D Type while the output variable is the
@@ -2050,7 +2014,6 @@ Table 14: Bias of the Output Node
 Output
 Bias | —-0644298
 
-52
 
 The detailed prediction result can be found in Appendix E. The summary of the result
 of the ANN Technology Transfer model is presented through an output matrix that shows the
@@ -2064,8 +2027,6 @@ Table 15: Output Matrix of the ANN Predictive Model
 Predicted Output 4g Total
 Saw
 87 0 87
-25
-112
 — J
 
 The sensitivity of the ANN Technology Transfer model is 92.55% (87/94) while its
@@ -2082,7 +2043,6 @@ the chances for a properly executed projects which will lead to the end goal of 
 the industry the technology that will be developed out of the project. Thus, Hypothesis 1 was
 accepted.
 
-53
 
 12.4 Critical Success Factors for Technology Transferability
 
@@ -2109,7 +2069,6 @@ D,- equal to: 1 if the project sector is Welding or 0 if otherwise
 
 Dz - equal to 1 if the R&D project type is Product Development or 0 if otherwise
 
-54
 
 Figure 12 shows that the probability of the R&D technology being transferred (p-
 value <0.001) was significantly dependent on the four (4) identified predictors namely the
@@ -2144,7 +2103,6 @@ Including other M&E sectors and R&D type in the mode! will result to multi-colli
 
 13. VALIDATION
 
-55
 
 Using the 2015 data for completed projects, the predicted result of the ANN
 Technology Transfer Mode! was compared against the actual result as well as with the result
@@ -2174,7 +2132,6 @@ complete ANN prediction results for the validation data
 
 Table 17: Summarized ANN Prediction Result for Validation Data
 
-56
 
 ANN Model
 ANN
@@ -2213,7 +2170,6 @@ GIA ° 0117 °
 [18 [Urarading of Heat Treatment Faciity GA 0 0.065 0
 
 
-57
 
 19 _| Capability development and R&D on Electroplatin;
 el is Cred GIA 0.161 tC)
@@ -2226,7 +2182,6 @@ GIA 0.145 0
 Passenger Station-Phase I!
 
 
-58
 
 14. CONCLUSION
 
@@ -2263,13 +2218,11 @@ should focus on projects with short gestation periods and market-driven needs
 The ANN predictive model could be used as a compass to direct GIA funded projects
 of MIRDC and should mimic the features and characteristics of the contract R and D
 
-59
 
 6. With this ANN predictive model, MIRDC could have a generic technology transfer
 model for both GIA and contract R and D that could pro-actively predict a high
 probability of transfer and penetration success rate.
 
-60
 
 15. RECOMMENDATIONS FOR FURTHER STUDY
 
@@ -2308,7 +2261,6 @@ acquainted with how the intellectual property system works, 2) have an additiona
 technical staff to be trained as patent agents to boost the Center's efforts in generating
 more property rights and ensuring protection of intellectual assets, 3) further encourage
 
-61
 
 researchers to engage in IP disclosure and protection; and 4) consider creating an
 incentive mechanism for researchers, which may include, among others, public
@@ -2329,7 +2281,6 @@ projects in comparison to that of other DOST RDIs. This can be accomplished thro
 conduct of benchmarking activities or focus group discussions with personnel from
 R&D and Technology Transfer Divisions of the RDIs.
 
-62
 
 16. REFERENCES
 
@@ -2371,7 +2322,6 @@ http ‘Awww smmeresearch co za/SMME%:20Research20General/Case%20Studies/SME
 [7] Choi, J. et. al, A Predictive Model of Technology Transfer Using Patent Analysis, 2015.
 via http:/Amww.mdpi.com/2071-1050/7/12/15809, Accessed: 30 March 2016
 
-63
 
 [8] De, S. and Debnath, A., Artificial Neural Network Based Prediction of Maximum and
 Minimum Temperature in the Summer Monsoon Months Over India, 2009, via
@@ -2412,14 +2362,12 @@ http:/www tandfonline.com/doi/paf/10. 1623/hys.52.4.713, Accessed: 30 March 2016
 applications/applications-of-artificial-neural-networks-in-chemical-problems, Accessed: 1
 April 2016
 
-64
 
 [16] Nasr, M. et. al., Application of Artificial Neural Network (ANN) for the Prediction of EL-
 AGAMY Wastewater Treatment Plant Performance-EGYPT, Alexandria Engineering Journal,
 Volume 51 Issue 1, 37-43, 2012, via
 
 http:/Awww. sciencedirect.com/science/article/pii/S1110016812000518, Accessed: 30 March
-2016
 
 [17] Olden, J. et. al., An Accurate Comparison of Methods for Quantifying Variable
 Importance in Artificial Neural Networks Using Simulated Data, 2004, via
@@ -2451,7 +2399,6 @@ Accessed: 20 May 2016
 Systems R&D Projects, 2014, via http:/ww hindawi.comijournals/jan/2014/472640/.
 Accessed: 5 January 2016
 
-65
 
 (24) Zizlavsk, O., Past, Present and Future of the Innovation Process, International Journal
 of Engineering Business and Management, Volume 5, 2013, via

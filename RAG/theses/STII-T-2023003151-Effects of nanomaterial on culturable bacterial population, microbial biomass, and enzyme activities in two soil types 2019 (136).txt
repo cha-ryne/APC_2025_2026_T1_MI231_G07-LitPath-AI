@@ -84,7 +84,6 @@ community using culture-dependent analysis.
 
 activities.
 
-2
 3.To evaluate the change in microbial biomass using substrate-induced
 
 respiration.
@@ -116,7 +115,6 @@ quantum dots often coated with polymer (CdSe) (Dinesh, et al., 2012).
 
 Nanotechnology is an interdisciplinary field of research (Duhan, et al., 2017) and
 
-5
 the most innovative field of the 21‘ century (Sabir, et al., 2014). It is one of the fast-
 
 developing fields having the potential to transform industries such as electronics, military,
@@ -148,7 +146,6 @@ intact or to recover fast from disturbances, such as drought, climate change, pe
 
 pollution, human exploitation which includes agricultural practices (Khati, et al., 2017).
 
-6
 Thus, as the world population increases, strategies for sustainable agriculture are needed to
 
 fulfill the global demand for food and other commercial products (Anderson, et al., 2017).
@@ -178,7 +175,6 @@ even soil pH. Nanobiosensor is more efficient than the conventional biosensors d
 
 miniature structure (Rai, et al., 2012). Aside from its application as fertilizer, it can also
 
-7
 serve as pesticides for pest and management of diseases (Servin, et al., 2015) and protects
 
 plant from environmental stresses (Wang, et al., 2014). NPs have advantages, against their
@@ -209,7 +205,6 @@ because of dose-dependent toxicity (Anderson, et al., 2017). According to Liu an
 
 (2015), NM-enhanced fertilizers are those NMs that neither contain nor provide the
 
-8
 targeted nutrients but rather augmented with plant nutrients to reduce the impact of
 
 conventional fertilizer application. The most important example of this type is nutrient-
@@ -240,7 +235,6 @@ or mechanical properties (Thiéry, et al., 2012). Aside from particle size, the 
 
 area and charge, and the adsorptivity affect the colloidal complexity and aggregation
 
-9
 chemistry of manufactured NPs (MNPs) (Handy, ef a/., 2012). In environmental media, the
 
 highly reactive and physiologically dynamic materials are the product of high surface area
@@ -269,7 +263,6 @@ are necessary in understanding environmental fate and behaviour, uptake and dist
 
 within organisms, and the interactions with other pollutants (Handy, et al., 2008).
 
-10
 Characterization of nanomaterials
 
 Size, among all of the parameters, is the most important in considering for the
@@ -299,7 +292,6 @@ NPs, for example, have served many purposes including health, cosmetics, water t
 
 electronics, and food packaging (Joo and Zhao, 2016). This technology holds great promise
 
-11
 for reducing the production of wastes, industrial contamination, and improving efficiency
 
 of energy production and use. Conversely, the production, use, and disposal of MNPs will
@@ -329,7 +321,6 @@ of natural colloids. Sedimentation is quite fast, usually hours once in micron s
 
 removing the aggregated NPs from the water column unless they are stabilized by
 
-12
 extracellular polymeric substances (EPS) or other natural organic material (NOM) (Keller,
 
 et al., 2017).
@@ -355,7 +346,6 @@ metal adsorption via anion-induced negative charge, like cation-exchange capacit
 
 and metal precipitation thereby facilitating in situ immobilization (Bolan, et al., 2003).
 
-13
 Soil and soil microorganisms: functions and importance
 
 Soil is a dynamic natural body which is made up of mineral and organic materials
@@ -385,7 +375,6 @@ considered as key to the ecosystem health and bioprocess success in various engi
 
 applications (Mohanty, ef al., 2014). Soil organisms are critically important since they
 
-14
 directly influence soil ecosystem processes and soil quality as a whole. Thus, they serve as
 
 biological indicators and any factor that affect soil microbial biomass, activity, and
@@ -414,7 +403,6 @@ and Kowshik, 2013; Neal, 2008). Important biogeochemical cycles include carbon a
 
 nitrogen cycling (Neal, 2008). Soil bacteria consists of six dominant bacterial phyla,
 
-15
 Acidobacteria, Bacteriodetes, Firmicutes, Actinobacteria, a-Proteobacteria, and the B-
 
 Proteobacteria (Fierer, et al., 2007).
@@ -444,7 +432,6 @@ noted that for all metals (including Cu and Zn), a general increase in metal ads
 
 as equilibrium concentration and contact time increased. Additionally, desorption of metal
 
-16
 from soil follows a similar pattern of initial phase reaction followed by slow phase one
 
 observed for the adsorption of metal onto the soil. A study conducted by Cornelis, et al.
@@ -475,7 +462,6 @@ Life on earth evolved in the presence of natural nanomaterials, carbon, cellulos
 
 and nano-Ag, however, those produced or engineered for a specific purpose may pose
 
-17
 potential danger due to significantly high environmental concentration, although identical
 
 to natural NMs (Klaine, et al., 2012). As the application of nanomaterials, especially metal
@@ -505,7 +491,6 @@ particle surfaces. Nanoparticles could be photocatalytic and generate reactive o
 
 species (ROS) (Thiery, et al., 2012).
 
-18
 Disruption of bacterial membranes is probably caused by the production of ROS as
 
 a result of contact between the NP and bacterial membrane. However, it is unlikely that
@@ -535,7 +520,6 @@ abundance, and diversity has already been done, even for very low concentrations
 
 mg/kg) (Simonin and Richaume, 2015).
 
-19
 Concha-Guerrero, et al. (2014) showed CuO NPs are very toxic for native soil
 
 bacteria or wild strains. Their interaction with bacterial cell wall components changes the
@@ -565,7 +549,6 @@ length of 10 nm-300 nm and width of 10-100 nm and few were globular with a diame
 
 10-80 nm and surface area of 30-50 m?/g. Ammonification was significantly inhibited in
 
-20
 the neutral soil treated with 1 mg ZnO NPs during the three-month study period but
 
 inhibition decreased. During the period of one month, inhibition of dehydrogenase activity
@@ -596,7 +579,6 @@ mineralization efficiency of soil microbes in sandy soil treated with date palm 
 
 symbiosis by the reduction of the number and size of the nodules and the depression of
 
-21
 expression of nif gene. It was also determined that the minimun inhibitory effect (MIC) of
 
 Ag NPs was less than the MIC of ZnO NPs against Sinorhizobium meliloti (a symbiotic
@@ -626,7 +608,6 @@ taxa as an indication of diversity reduction. Some of the declining taxa are rel
 
 nitrogen fixation (Rhizobiales, Bradyrhizobiaceae, and Bradyrhizobium), methane
 
-22
 oxidation (Methylobacteriaceae), recalcitrant organic pollutant decomposition
 
 (Sphingomonaceae), and biopolymers degradation (Streptomycetaceae and Streptomyces),
@@ -656,7 +637,6 @@ isolation and culturing steps of microorganisms which are known for their select
 
 leading to a non-representative view of the extent, for example, bacterial community
 
-23
 (Ranjard, et al., 2000). This technique gives understanding of the distribution and diversity
 
 of microorganisms in soil habitats (Hill, et al., 2001).
@@ -686,7 +666,6 @@ Stepniewska, 2012). Soil enzyme activities are very sensitive to both natural an
 
 anthropogenic disturbances (pesticide application, trace elements, or management
 
-24
 practices) and exhibit a quick response to any induced changes. Soil enzymes include
 
 phosphatase, urease, dehydrogenase, catalase, peroxidase, saccharase, protease, amylase,
@@ -717,7 +696,6 @@ are adsorbed by humic molecules as compared to extracellular enzymes (Wolinska a
 
 Stepniewska, 2012).
 
-25
 Soil urease
 
 Ureases (urea aminohydrolases, EC 3.5.1.5) (Krajewska, 2009) catalyzes the
@@ -746,7 +724,6 @@ amount of urea (13 ppm of urea-N). Pauson and Kurtz (1970) confirmed that urease
 
 in soil as in direct association with soil microorganisms and as excreted by microorganisms
 
-26
 and adsorbed on the soil colloids altering the activity of urease. Their finding further
 
 supports the hypothesis from other reported literatures.
@@ -776,7 +753,6 @@ Generally, fine-textured clay soils have a larger amount of small pores (Verbern
 
 1990).
 
-27
 The substrate-induced respiration (SIR) is the most commonly used physiological
 
 method for determining the soil microbial biomass. The equation dp/dt= re"'+ K is derived
@@ -827,7 +803,6 @@ was characterized chemically by quantitatively determining the pHwate, organic m
 
 Photometer Method), CEC (Ammonium Acetate Method), and available P (Bray No. 2
 
-29
 Method), Zn and Cu (Atomic Absorption Spectrophotometer). Physical characteristics,
 
 such as texture (Hydrometer Method) and field capacity (FC) and moisture content
@@ -861,7 +836,6 @@ Method) Respiration)
 Figure 1. Framework for the assessment of the effect of nanomaterials on culturable soil
 bacterial population, microbial biomass, and enzyme activities.
 
-30
 Incubation Experiments
 
 Experiment 1. Assessment of the effect of metal oxide nanoparticles (ZnO and CuO)
@@ -893,7 +867,6 @@ bulk ZnO 1314-13-2 96479-500 G na
 
 bulk CuO 1317-38-0 30843- 500 G n/a
 
-31
 Samples were collected at 1, 7, 14, and 28 day(s) after amendments (DAA) for
 
 culture-dependent analysis of soil bacteria. Simultaneously, assessment of dehydrogenase
@@ -926,7 +899,6 @@ and unamended soil as control. The treatments were replicated three times and la
 
 split-plot CRD (Gomez and Gomez, 1984). Pre-incubation was done in similar manner as
 
-32
 in Experiment 1. Except for the sampling periods and duration of incubation, the
 
 procedure and assessments were the same as in Experiment 1. Sampling was done at 1,
@@ -969,7 +941,6 @@ MCF- moisture correction factor
 
 DF- dilution factor
 
-33
 Observations regarding the CFU of bacteria are reported in log values. Analysis of
 
 Variance (ANOVA) was performed using Statistical Tool for Agricultural Research
@@ -995,7 +966,6 @@ grade EtOH. A set of 9 solutions was then be prepared with TF concentrations of 
 
 6.0, 9.0, 12.0, 15.0, 18.0, 21.0, and 24.0 wg/mL.
 
-34
 Urease activity (UA) assay
 
 Buffered method.
@@ -1025,7 +995,6 @@ schematic diagram for the buffered method of UA assay is shown in Appendix D.
 
 ureaseactivity = ODA x10x2.5
 
-35
 ai- NH«* content of the control
 a2- NH«* content of the sample
 ODM.- oven-dry mass
@@ -1055,7 +1024,6 @@ The schematic diagram for the buffered method of UA assay is shown in Appendix E
 
 Analysis of Variance (ANOVA) was performed using STAR v2.0.1.
 
-36
 
 ureaseactivity = ODA x10x2.5
 
@@ -1086,7 +1054,6 @@ nanomaterials. Exactly, the D-glucose used were 500 and 100 mg for every 10 g of
 
 samples for SSL and LCL, respectively (Figure 2).
 
-37
 
 Standardization of D-Glucose for SIR Using SSL
 
@@ -1103,37 +1070,23 @@ S
 
 8.97
 
-3
-30
 S
 a
-9
 io)
-3
 E
 
 O 10 20 30 40 50 60 70 80
 
 v
-3
-3
 g
 &
 Fy
-2
 =
-2
 g
 A
-3
 |
-3
-3
-3
 g
-2
 Pl
-2
 a
 °
 oC
@@ -1144,21 +1097,17 @@ b
 Figure 2. Standardization of D-glucose for the determination of microbial biomass by
 SIR for (a) LCL and (b) SSL.
 
-38
 
 Determination of the Equation for z value, LCL
 
 : 16.59
 8.00
-10
-00
 3 2.0¢
 0.00
 Oo 1 2 3 4 5 6 7 8 9
 Incubation Time, h
 a
 Determination of the Equation for z value, SSL
-3
 2.5
 2% > 1.941
 Ea
@@ -1183,7 +1132,6 @@ Using the maximum amount of glucose used, the time for initial biomass emission
 
 generation at second generation (B) were determined within a 10-hour incubation with 1
 
-39
 hour of sampling interval (Figure 3). Equations were generated depending on the curve
 
 plotted and the value of proportional unit, z, signifying the volume (in mL) of standard
@@ -1249,7 +1197,6 @@ range of strongly acid soil (Soil Survey Manual, 2017). The CEC of LCL is greate
 
 that of SSL due to higher percentage of clay and organic matter, considering that cation
 
-41
 exchange sites are found at the surfaces of clay and OM (Ross and Ketterings, 1995). It
 
 was also observed that available P of SSL is much higher than that of LCL. This high P
@@ -1268,7 +1215,6 @@ soil and represents approximately as many as 10* to 10° different species (Sylv
 
 1999; Holden, et al., 2014). Hence, they are considered as the most abundant and diverse
 
-42
 soil organisms (Sylvia, et al., 1999). Bacterial as well as fungal diversity increases soil
 
 quality by affecting soil agglomeration and increasing soil fertility. In addition, a healthy
@@ -1303,7 +1249,6 @@ nZnO 6.71 5.71 5.91
 
 "S not significant
 
-43
 Table 4. Effect of FertiGroe®N on the culturable soil bacterial population
 
 Treatment log (CFU g" soil)
@@ -1381,7 +1326,6 @@ a EEE eT
 2 g®0JQOOULIOH] pure ‘Ng21DIHOT ‘gored oprxo
 Jejour Aq poyoayye se uoeindod yerajoeq [10s afqeinyjno Jo sonjea AyIqeqosd jeouiduss oy) pue sourlseA Jo sIsAjeue oy) Jo Areulung “9 a1qeL
 
-45
 Assessment of the effect of metal oxide nanoparticles (nZnO and nCuO),
 
 FertiGroe®N, and HormoGroe® on soil dehydrogenase activity
@@ -1422,7 +1366,6 @@ t significant interaction effect on soil DHA between soil type and amendments at
 * means followed by the same letter(s) in a column are not significantly different at a=5 % according to
 Least Square Difference (LSD) test.
 
-46
 The result of the test of significance of the treatments on DHA revealed a significant
 
 interaction between the soil type and amendments at 1, 7, and 28 DAA. Significant
@@ -1483,7 +1426,6 @@ aSenqeA Anpqugorg jeoridurg
 pur ‘NQ2%01DIue,J ‘afoijed aprxo [eyo Aq payogyye se WHC JO sonjea Ayyiqeqosd yeoiidurs oy) pue souelseA Jo sissjeue oy Jo Areuruing ‘g a1quL
 Lb
 
-48
 soil which led them to conclude that ZnO NPs underwent rapid dissolution. Similarly, it
 
 was found that the strong influence by soil pH led to rapid dissolution of CuO NPs, added
@@ -1514,7 +1456,6 @@ incubated at field capacity with LCL exhibiting high water holding capacity. How
 
 Josko, et al. (2019) noted that moisture condition did not have any significant effect on
 
-49
 metal fractionation with a brief time of incubation. Significant effect on metal
 
 fractionation after 3 and 24 months of incubation was observed.
@@ -1544,7 +1485,6 @@ and exposure of soil to nanoparticles which results in a decrease enzymatic acti
 
 impacting the microbial community composition (Rajput, et al., 2017).
 
-50
 The strongly acid pH which increased the dissolution of metal oxide to their ionic
 
 forms which in tum increased the concentration of metal ions in the soil solution caused
@@ -1574,7 +1514,6 @@ bound transition metals in the metalloenzyme active sites if remained unregulate
 
 (Capdevila, et al., 2016). A study on the manganese uptake of Streptococcus pneumoniae
 
-51
 revealed that Zn could inhibit Mn uptake by binding to the Mn transport protein resulting
 
 in slowed bacterial growth (McDevitt, et al., 2016). Also, at enough concentration, Zn
@@ -1604,7 +1543,6 @@ bacteria. Zinc is a cofactor required by numerous metalloenzymes and is necessar
 
 structural and regulatory systems in bacterial cells (Suryawati, 2018) while copper is an
 
-52
 «portant micronutrient required as a redox cofactor in the catalytic centers of enzymes
 
 (Arguello, et al., 2013). Maybe, the nCuO-amended SSL contained enough concentration
@@ -1616,7 +1554,6 @@ LCL
 30.00
 20.00
 10.00
-20
 < 0.00
 a 1DAA 7DAA 14 DAA 28 DAA
 —control = —@=bCuo bZnO = =@=nCu0 —®=nZnO
@@ -1640,7 +1577,6 @@ b
 Figure 5. Plot of the effect of metal oxides on the soil DHA across time in (a) LCL and
 (b) SSL.
 
-53
 At 7 DAA, significant interaction effect on DHA between soil types and amendments
 
 is shown in Table 7. ZnO-amended LCL exhibited reduced soil DHA relative to the
@@ -1669,7 +1605,6 @@ concentration and contact time increased. Desorption of metals from soil follows
 
 pattern of initial phase reaction followed by slow phase one observed for the adsorption
 
-54
 of metal onto the soil. Comparatively, Figures 5a and 5b show that microbial activity
 
 was higher for soils treated with ZnO than with those contaminated with CuO.
@@ -1704,7 +1639,6 @@ nanocarrier 1.80 14.11 4.44
 
 t significant interaction effect on soil DHA between soil types at a=5 %
 
-55
 Figure 6 shows the change in DHA across time. No significant interaction effect
 
 between LCL and SSL can be observed. However, at 75 DAA, a drop in DHA was
@@ -1735,7 +1669,6 @@ SSL
 ©
 a
 = 15.00
-3
 &
 Fal
 3 10.00
@@ -1754,7 +1687,6 @@ b
 
 Figure 6. The plot of the effect of amendments on the soil DHA in (a) LCL and (b) SSL.
 
-56
 Effect of HormoGroe® on the soil dehydrogenase activity
 
 Significant main effect on DHA between soil types at 1, 35, and 75 DAA was
@@ -1791,7 +1723,6 @@ Norman (1965) noted that surfactants are involved in complex growth phenomena, s
 
 as differentiation, induction, or auxin-mediated events. Surfactants are being used to
 
-57
 reduce the surface tension of aqueous solutions to enhance the wetting of tissues for the
 
 penetration of various test compounds. The addition of surfactant in the soil system might
@@ -1822,7 +1753,6 @@ Also, according to Karagunduz, et al. (2015), the introduction of surfactant sol
 
 caused an increase in the percolation of water; however, this period of rapid water
 
-58
 
 LCL
 =
@@ -1861,7 +1791,6 @@ surfactant increases the availability of nutrient in the soil solution and the r
 
 transport. These processes must have allowed the microorganisms in the soil access to the
 
-59
 nutrient supply that is important for their growth. Hence, phospholipid-treated soil had
 
 significant level of DHA compared to other materials used.
@@ -1893,7 +1822,6 @@ extracellular soil enzymes was possible unless they are either adsorbed by clays
 
 immobilized by humic molecules. Another factor for the higher DHA of LCL than SSL is
 
-60
 the level of organic matter. DHA reaches higher values in soils with higher total organic
 
 carbon content (Wolinska and Stepniewska, 2012).
@@ -1925,7 +1853,6 @@ type is a key component in dictating the metal oxide nanoparticle effect on the 
 
 community through the activities of soil enzymes including determining both the bacterial
 
-61
 community composition and size inhabiting the soil (You, et al., 2018). Moreover,
 
 micronutrients like Cu and Zn have the potential to inhibit soil UA and reduce NH3
@@ -1966,7 +1893,6 @@ of UA is associated with the clay fraction thus urease is resistant to the activ
 
 proteolytic enzymes (Burns, ef al., 1972). Under steady state conditions, 79-89 % of the
 
-62
 urease activity of the soil examined by Paulson and Kurtz (1969) was due to urease
 
 adsorbed on soil colloids. The decrease in the UA, at 7 DAA, of the soil might be due to
@@ -1997,7 +1923,6 @@ However, bioavailable Zn (specifically from ZnO) was not able to inhibit UA, rat
 
 enhanced its activity despite being at a level toxic to microorganisms. Du, et al. (2011)
 
-63
 noted that the dissolved ZnO NP (40+10 nm) in soil did not inhibit the UA and the
 
 bioavailable Zn had a limited effect on soil UA (Adhikari, et al., 2018). However, Zn
@@ -2026,7 +1951,6 @@ also reveals that the UA of LCL amended with nCuO and bCuO decreased at 7, 14, a
 
 28 DAA compared to the control at 1 DAA. However, LCL amended with bZnO
 
-64
 exhibited lower UA at 28 DAA than at 1 DAA. Results indicate that the UA of LCL
 
 treated with nZnO was able to recover at 28 DAA.
@@ -2058,7 +1982,6 @@ SSL
 = 30.00
 2 25.00
 bo
-2
 yy 20.00
 15.00
 =
@@ -2072,7 +1995,6 @@ b
 
 Figure 8. The plot of the effect of metal oxides on UA in (a) LCL and (b) SSL.
 
-65
 Effect of FertiGroe®N on soil UA
 
 Result revealed a significant interaction effect on UA between soil type and
@@ -2113,7 +2035,6 @@ UA was strongly correlated with the clay content and CEC, but not significantly
 
 correlated with organic C content. However, for SSL at 1 DAA, a decrease in UA could
 
-66
 be due to the increase in the microbial population considering that nitrogen was
 
 introduced to both the LCL amended with Fertigroe®N and urea. Also, SSL contained
@@ -2143,7 +2064,6 @@ ion exchanger and because of its large porosity it also possesses high cation-ex
 
 capacity (Ramesh and Reddy, 2011). Similar to zeolites, the nanocarrier used might have
 
-67
 properties such as surface micropores and numerous cation exchange sites, thus, making
 
 it an effective ion exchanger.
@@ -2180,7 +2100,6 @@ b
 Figure 9. The plot on the effect of amendments on the soil UA across time in (a) LCL
 and (b) SSL.
 
-68
 Effect of HormoGroe® on soil UA
 
 Result showed significant interaction effect on UA between the soil type and
@@ -2222,7 +2141,6 @@ possible that phospholipid in LCL had stimulated the growth of microbial populat
 
 to 35 DAA. Phospholipid might have increased the matric potential at a level that allowed
 
-69
 the bacteria to grow faster, hence, increased microbial population. However, an increase
 
 in the microbial population might lead to the decrease in the UA of the soil. Under steady
@@ -2253,7 +2171,6 @@ Dharmakeerthi and Thenabadu (1996), the remarkable long-term stability of urease
 
 to organo-mineral complexes in the soil. Humic acid and fulvic acid, at pH below 10.4,
 
-70
 are negatively charged while urease is net positive below pH 5.2 or net negative at pH
 
 5.2. Humic substances form strong complexes with oppositely charged proteins leading to
@@ -2310,7 +2227,6 @@ e g201Q20ULOH]
 pur ‘Ng201NIW8J ‘afoied apixo jejowl Aq poyoajse se yr) JO sanjea Ayi]iqeqoud eolsduia oy} pue souelseA Jo sisKjeue oy3 Jo AreuluINg “py a1qeL,
 IL
 
-72
 Effect of metal oxides on soil microbial biomass
 
 Results revealed significant interaction effect on the microbial biomass between soil
@@ -2339,7 +2255,6 @@ Likewise, free Cu poses a hazard because of its high chemical reactivity (Arguel
 
 reactive oxygen species (ROS) which eventually causes lipid peroxidation and protein
 
-73
 damage (Dupont, et al., 2013). Neal, et al. (2012) suggests two general mechanisms on
 
 how synthetic metal oxide NPs exert toxicity. It is through the release of free ions at
@@ -2383,7 +2298,6 @@ t significant main effect on soil microbial biomass between soil types at a=5 %
 * means followed by the same letter(s) in a column are not significantly different at a=5 % according to
 Least Square Difference (LSD) test.
 
-74
 Effect of FertiGroe®N on soil microbial biomass
 
 Results revealed a significant main effect on MCB between soil types at 1 and 75
@@ -2420,7 +2334,6 @@ t significant main effect on soil MCB between soil types at a=5 %
 * means followed by the same letter(s) in a column are not significantly different at a=5 % according to
 Least Square Difference (LSD) test.
 
-75
 The decrease in MCB in urea-treated soil might be due to the limited amount of
 
 nitrogen as it approached 35 DAA due to ammonia volatilization. The fate of urea in soil
@@ -2450,7 +2363,6 @@ important for their growth. Also, greater percolation and, thus, distribution of
 
 mineral and soluble organic materials in SSL amended with nanocarrier than in LCL
 
-16
 might have occurred that allowed the microorganisms access to these growth factors,
 
 hence, favoring microbial growth at 35 DAA and 75 DAA in SSL.
@@ -2486,7 +2398,6 @@ The reason for the significant differences in the MCB between LCL and SSL was th
 
 differences in the amount of macropores. It is possible that substrate added during the
 
-77
 experiment was able to reach the micropores of the LCL which protected it from the
 
 utilization of microorganisms present in the macropores while in SSL, majority of the
@@ -2555,7 +2466,6 @@ standard indole acetic acid (stdIAA), and nanocarrier (phospholipid). Unamended 
 
 were included in all the experiments.
 
-80
 Analysis of physicochemical properties of the two soil types showed that LCL had higher
 
 OM, CEC, total N, exchangeable K, available Zn and Cu, clay particles, and field capacity
@@ -2585,7 +2495,6 @@ Urease, found in different microorganisms and associated with enzyme-organic mat
 
 complex, catalyzes the transformation of urea to CO2 and NHs, thus dictates the fate and
 
-81
 effectiveness of urea. Assessment of the effect of soil UA as affected by nanomaterials gives
 
 information on the alteration of urease in the soil colloids. Metal oxide particles had no adverse
@@ -2613,7 +2522,6 @@ the microbial biomass than urea. The nanoparticle nZnO appears to be less harmfu
 
 microbial community than nCuO. Results show that FertiGroe®N and HormoGroe® can be safely
 
-82
 used in crop production. FertiGroe®N can be an alternative nitrogen fertilizer while HormoGroe®
 
 can be a good alternative source of plant hormone.
@@ -2651,7 +2559,6 @@ AOYAMA, M. AND T. NAGUMO. 1996. Factors affecting microbial biomass and
 dehydrogenasc activity in apple orchard soils with heavy metal accumulation. Soil
 Science and Plant Nutrition, 42(4): 821-831.
 
-84
 
 ARGUELLO, J.M., D. RAIMUNDA, and T. PADILLA-BENAVIDES. 2013.
 
@@ -2693,7 +2600,6 @@ York, NY.
 BONG, C.W., F. MALFATTI, F. AZAM, Y. OBAYASHI, and S. SUZUKI. 2010. The
 effect of zinc exposure on the bacteria abundance and proteolytic activity in
 
-85
 
 seawater. Interdisciplinary studies on environmental chemistry—biological
 responses to contaminants. Terrapub, Tokyo: 57-63.
@@ -2732,7 +2638,6 @@ agricultural practices over three years in middle Tennessee. Scientific Reports,
 CHINNAMUTHU, C.R. and BOOPATHI, P.M. 2009. Nanotechnology and
 agroecosystem. Madras Agricultural Journal 96(1/6): 17-31.
 
-86
 CHOKOR, A.A. 2017. Adsorption-desorption study of heavy metals on sandy-loam
 soil of Sapele Metropolis. IOSR Journal of Environmental Science, Toxicology and
 
@@ -2772,7 +2677,6 @@ RAMALINGAN. 2016. Bovine serum albumin interacts with silver nanoparticles
 with a “side on” or “end on” conformation. Chemico-Biological Interactions 253:
 100-111. doi: 10.1016/j.cbi.2016.05.018
 
-87
 DHARMAKEERTHI, R.S. AND M.W. THENABADU. 2013. Urease activity in soils: a
 review. Journal of the National Science Foundation of Sri Lanka, 24(3).
 
@@ -2810,7 +2714,6 @@ finches of the bacterial world. Bio. Lett. 5: 429-432. doi: 10.1098/rsb1.2008.07
 FIERER N., M.A. BRADFORD, and R.B. JACKSON. 2007. Toward an ecological
 classification of soil bacteria. Ecology 88(6): 1354-1364.
 
-88
 FIJALKOWSKI, K., M. KACPRZAK, A. GROBELAK, and A. PLACEK. 2012. The
 influence of selected soil parameters on the mobility of heavy metals in
 
@@ -2850,7 +2753,6 @@ GLADKOVA M.M. and V.A. TEREKHOVA. 2012. Engineered nanomaterials in soil:
 sources and migration pathways. Moscow University Soil Science Bulletin 68(3):
 129-134. doi: 10.3103/s01476874 13030046
 
-89
 GOGOS A., K. KNAUER, and T.D. BUCHELI. 2012. Nanomaterials in plant protection
 and fertilization: current state, foreseen applications, and research priorities. Journal
 
@@ -2891,7 +2793,6 @@ JURKONIE, A. FICKE, A. MALDONADO-RAMIREZ, S.T. LYNCH, and E.B.
 NELSON. 2000. Methods for assessing the composition and diversity of soil
 microbial communities. Applied Soil Ecology 15: 25-36.
 
-90
 
 HOLDEN P.A., J.P. SCHIMEL, and H.A. GODWIN. 2014. Five reasons to use bacteria
 when assessing manufactured nanomaterial environmental hazards and fates.
@@ -2930,7 +2831,6 @@ JOO S.H. and D. ZHOU. 2016. Environmental dynamics of metal oxide nanoparticles 
 heterogeneous systems: a review. J. Hazard Mater.
 doi:10.1016/j/jhazmat.2016.02.068
 
-91
 
 JOSKO, L., P. OLESZCZUK, and B. FUTA. 2014. The effect of inorganic nanoparticles
 
@@ -2974,7 +2874,6 @@ KELLY, J.J. AND R.L. TATE. 1998. Effects of heavy metal contamination and
 remediation on soil microbial communities in the vicinity of a zinc smelter. Journal
 of environmental quality, 27(3): 609-617.
 
-92
 
 KHATI, P., SHARMA, A., GANGOLA, S., KUMAR, R., BHATT, P. AND KUMAR, G.
 2017. Impact of agri-usable nanocompounds on soil microbial activity: an indicator
@@ -3014,7 +2913,6 @@ KOTTEGODA, N., SANDARUWAN, C., PRIYADARSHANA, G., SIRIVARDHANA,
 A., RATHNAYAKE, U.A., BERUGODA ARACHCHIGE, D.M.,
 KUMARASINGHE, A.R., DAHANAYAKE, D., KARUNARATNE, V. AND
 
-93
 AMARATUNGA, G.A. 2017. Urea-hydroxyapatite nanohybrids for slow release
 of nitrogen. ACS nano, 11(2): 1214-1221.
 
@@ -3049,7 +2947,6 @@ LLOYD A.B. and M.J. SHEAFFE. 1973. Urease activity in soils. Plant and Soil 39:7
 LORENZ T. C. 2012. Polymerase chain reaction: basic protocol plus troubleshooting and
 optimization strategies. J. Vis. Exp. 63 (e3998): 1-15. doi: 10.3791/3998
 
-94
 
 LOWRY G.V., K.B. GREGORY, S.C. APTE, and J.R. LEAD. 2012. Transformations of
 
@@ -3089,7 +2986,6 @@ MOGHADDAM M.N., A.H. SABZEVAR, and S. MARTAZAEI. 2017. Impact of ZnO
 and silver nanoparticles on legume-Sinorhizobium symbiosis. Advanced Studies in
 Biology 9(2): 83-90. doi: 10.12988/asb.2017.712
 
-95
 
 MOHANTY A., Y. WU, and B. CAO. 2014. Impacts of engineered nanomaterials on
 
@@ -3128,7 +3024,6 @@ nanoparticles in soils: a review. European Journal of Soil Science 63: 437-456. 
 PARR, J. and NORMAN, A.G. 1965. Considerations in the use of surfactants in plant
 systems: A review. Botanical Gazette, 126(2): 86-96.
 
-96
 PAUL E.A., F.E. CLARK. 1996. Soil microbiology and biochemistry. 2"! ed. Academic
 Press: San Diego, California.
 
@@ -3166,7 +3061,6 @@ effects on their interactions between dissolved zinc non-nano and nano-ZnO with
 soil bacterial communities. Environmental Science and Pollution Research 23(5):
 4120-4128. doi:10.1007/s1 1356-01 5-4538-2
 
-97
 
 RIZWAN M., S. ALI, M.F. DAYYUM, Y.S. OK, M. ADREES, M. IBRAHIM, M.
 
@@ -3211,7 +3105,6 @@ G.V. LOWRY, E. DONNER, and E. LOMBI. 2017. Aging of dissolved copper and
 copper-based nanoparticles in five different soils: Short-term kinetics vs. long-term
 fate. Journal of Environmental Quality 46(6): 1198-1205.
 
-98
 
 SERVIN A., W. ELMER, A. MUKHERJEE, R. DE LA TORRE-ROCHE, H. HAMDI,
 
@@ -3253,7 +3146,6 @@ M. DE MELO TEIXEIRA, C.M. DE ALMEIDA SOARES, and A.M. BAILAO.
 2018. Mechanisms of copper and zinc homeostasis in pathogenic black
 fungi. Fungal Biology 122(6): 526-537.
 
-99
 
 SIMONIN M. and A. RICHAUME. 2015. Impact of engineered nanoparticles on the
 
@@ -3293,7 +3185,6 @@ SWAIN A., A. BASTIRAY, K. JITENDRA, and R. HAIBRU. 2014. Estimation of soil
 microbial biomass using substrate induced respiration: an experiment review study
 with loamy soil of North Bangalore.
 
-100
 
 SYLVIA, D.M., FUHRMANN, J.J., HARTEL, P.G. and ZUBERER, D.A. eds.,
 
@@ -3334,7 +3225,6 @@ VERBERNE, E.L.J., J. HASSINK, P. DE WILLIGEN, J.J.R. GROOT, and J.A. VAN
 VEEN. 1990. Modelling organic matter dynamics in different soils. Netherlands
 Journal of Agricultural Science, 38:221-238.
 
-101
 VON MERSI W. and F. SCHINNER. 1991. An improved and accurate method for
 determining the dehydrogenase activity of soils with iodonitrotetrazolium chloride.
 
@@ -3372,7 +3262,6 @@ WILSON M.A., N.H TRAN, A.S. MILEV, G.S.K. KANNANGARA, H. VOLK, and
 G.Q. MAXLU. 2008. Nanomaterials in soils. Geoderma 146: 291-302.
 doi:10.1016/j.geoderma.2008.06.004
 
-102
 
 WOLINSKA A, KUZNIAR A, U. ZIELENKIEWICZ, D. IZAK, A. SZAFRANEK-
 

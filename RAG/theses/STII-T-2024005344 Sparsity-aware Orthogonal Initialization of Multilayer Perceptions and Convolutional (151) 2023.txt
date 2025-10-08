@@ -278,7 +278,6 @@ These networks can be used for various machine learning tasks such as image
 
 classification, natural language processing, recommendation systems, and time series
 
-7
 
 analysis. As such, these networks have been implemented in various fields. In finance,
 DNNs have been employed for stock market prediction [31], credit scoring [32], and
@@ -409,7 +408,6 @@ length of inputs and position invariance, similar to the transformers, but with 
 
 instead of quadratic complexity. These features allow this architecture to be used for
 
-11
 
 Natural Language Process (NLP).
 
@@ -447,7 +445,6 @@ deeper architectures such as feature reuse and the potential for higher abstract
 
 found that the deeper networks can learn functions of higher complexity compared to
 
-12
 
 182 layers| |152 layers| [152 layers}
 
@@ -494,7 +491,6 @@ One of the main challenges of training very deep neural networks is the vanishin
 
 gradient problem, which occurs when the gradients of the parameters in the network
 
-13
 
 become very small and the network is unable to leam effectively. This can happen
 when the network has a large number of layers, and the gradients become diluted as
@@ -526,7 +522,6 @@ following equations:
 = (é)
 =— r
 UB >
-12
 2 _ (i) 2
 03 >= — rT’ — pp
 B ma 2! Hp)
@@ -538,7 +533,6 @@ y) = 78 48
 
 (2.1)
 
-14
 
 where 2“ is the ith input in the batch, jzg is the mean of the batch, o?, is the variance
 of the batch, © is the normalized input, y“ is the output of the batch normalization, 7
@@ -575,7 +569,6 @@ problem in very deep neural networks is not because of the vanishing gradients, 
 
 because of their low convergence rates. Thus, the benefits of ResNets lie beyond just
 
-15
 
 maintaining the gradient flow in the network [21]. The benefits of the addition of
 residual connections is apparent in deeper layers. [21] compared the Top-1 error of
@@ -612,7 +605,6 @@ models through free probability theory, which allowed the analytic computation o
 
 entire singular value distribution of a network’s Jacobian. In their work, it was found
 
-16
 
 that ReLU networks are not capable of dynamical isometry, while Tanh (and other
 sigmoidal activation functions) with orthogonal initialization, and not Gaussian, allows
@@ -650,7 +642,6 @@ determined by the network’s layers, consisted of matrix multiplications, eleme
 
 operations, and non-linear activation functions to make a prediction. In backward
 
-17
 
 propagation, the gradient of the loss function is calculated to be utilized by an
 optimization algorithm to adjust the weights in the direction of minimizing the loss
@@ -681,7 +672,6 @@ can leverage the full potential of deep networks for their research or applicati
 
 Beyond the training phase, the necessity of powerful hardware for deployment and
 
-18
 
 inference limits implementation in real-world scenarios, where cost-effective and
 energy-efficient hardware is important [63]. Applicability on edge devices is crucial
@@ -719,9 +709,7 @@ Alt Travel,
 CO? Equivalent Emissions (Tonnes)
 
 °
-8
 5|
-8
 
 Figure 2.7: CO2 equivalent emissions of modern deep learning models.
 
@@ -765,7 +753,6 @@ importance of each connection [67]. Although effective, the drawback is that the
 
 second derivative is costly to calculate.
 
-20
 
 2.3.1 Types of Pruning by Schedule
 
@@ -793,7 +780,6 @@ removed. Meanwhile, kernel-level pruning zeroes out entire kernels while channel
 
 pruning removes all the kernels of a specific input or output channel [78].
 
-21
 
 Finc-grained Vector-level Kernel-level Filter-level
 Sparsity(0-D) Sparsity(1-D) Sparsity(2-D) Sparsity(3-D)
@@ -824,7 +810,6 @@ networks. The performance of these sparse networks depend not only the evolved
 
 weights, but also on the sparse architecture [84]. Graph theory provides a powerful
 
-22
 
 framework for representing and analyzing connectivity patterns in such networks.
 Neural layers can be represented as bipartite graphs which can be analysed in terms of
@@ -850,7 +835,6 @@ the edges of each set are all directed to the other set. Figure 2.10 shows an ex
 
 a bipartite graph [86].
 
-23
 
 Figure 2.10: Example of a bipartite graph.
 
@@ -873,7 +857,6 @@ Ou. BT
 A= (2.2)
 B 0nv
 
-24
 
 2.4.2 Ramanujan bipartite graphs
 
@@ -913,7 +896,6 @@ EF, denotes the set of edges of the bipartite graph, and (i, j) the connection b
 
 node i from layer / and node j from layer (/+1). This adjacency matrix is used to induce
 
-25
 
 sparsity to the weight matrix it corresponds to. The paper proposed various construction
 methods to set the probability of a connection between nodes i and j P[Adj[i][j] = 1].
@@ -953,7 +935,6 @@ that the rapid decrease in accuracy upon reaching a certain sparsity can be attr
 
 the loss of the Ramanujan property of the sparse subnetwork.
 
-26
 
 [90] proposed the Ramanujan Bipartite Graph Product (RBGP) framework to
 generate structured, block-sparse, and highly-connected neural networks based on the
@@ -991,7 +972,6 @@ The convolution operation can be represented as a doubly block-circulant Toeplit
 (DBT) matrix, as shown in Figure 2.11. For a convolutional layer with kernel
 K € RMxCx2x2, input X € RO*4*4, and output Y € R”*3*3, the DBT matrix can be
 
-27
 
 defined as K € R(MHW)(CHW)_ This matrix can be interpreted as a combination of
 block matrices with size W’ x W for each kernel, where each row in this matrix
@@ -1003,7 +983,6 @@ Output ¥ € RM*3%3 Kernel K € RMXCX2x2 Input X € ROx***
 MY ss
 
 l
-4
 
 9s + 2, r
 > om. ‘ I
@@ -1037,7 +1016,6 @@ section will discuss the different orthogonalization techniques used for convolu
 
 neural networks.
 
-28
 
 2.5.2.1 Delta-Orthogonal Convolutions
 
@@ -1080,7 +1058,6 @@ singular values of a convolution can be computed through the 2D Fourier transfor
 
 each circulant matrix, and by forming n? number of m x m matrices, whose elements
 
-29
 
 are the i'* eigenvalue for each i € [n?]. They related the weight tensor to the singular
 
@@ -1116,7 +1093,6 @@ expansion, while ECO requires the computational cost of a standard dilated
 
 convolution.
 
-30
 
 25.3" Dynamical Isometry in Pruned Networks
 
@@ -1154,7 +1130,6 @@ regularization. Orthogonality preserving pruning (OPP) [98] which adds a penalty
 
 term for the gram matrix G = W © W' of the weights attempts to orthogonalize
 
-31
 
 “important” filters and drive the rest to zero. They also penalized the learnable scale
 and offset parameters of batch normalization layers so that activations from pruned
@@ -1193,7 +1168,6 @@ depth. Due to this, model compression techniques are used, one of which is model
 
 pruning. However, model pruning has been shown to damage the flow of information
 
-32
 
 in the network in two major ways: first in terms of the connectivity in the architecture
 
@@ -1216,7 +1190,6 @@ networks. Though there have been studies which exploited expander graph properti
 
 networks, none have been incorporated with the concept of dynamical isometry.
 
-33
 
 CHAPTER 3
 
@@ -1247,7 +1220,6 @@ m x n matrix defined by [104]:
 _ Ofi
 Jij= an; (3.1)
 
-34
 
 where J;,; is the (i, 7)** element of J, and gh is the partial derivative of the 7*”
 component of f with respect to the j** variable. In other words, the Jacobian matrix J
@@ -1288,7 +1260,6 @@ dynamical isometry, but it was empirically observed that employing orthogonal we
 
 initialization [15; 13] may still produce a well-conditioned Jacobian sufficient to
 
-35
 
 mitigate vanishing and exploding gradients [105] when the singular values of the
 Jacobian closely approximate unity. ReLU networks do not attain approximate
@@ -1316,7 +1287,6 @@ ome Matrix
 
 Figure 3.1: Transformation of a 4 x 16 MLP layer.
 
-36
 
 3.3. Orthogonal weight initialization for convolutional neural networks
 
@@ -1362,7 +1332,6 @@ at its center. The construction was adopted from the literature on generating bl
 
 circulant, random orthogonal matrices.
 
-37
 
 Table 3.1: Delta-Orthogonal Initialization algorithm for CNN filters.
 
@@ -1408,7 +1377,6 @@ orthogonal weight matrix using the inverse Fourier Transform [107].
 
 For an expanded convolution kernel Weony € R°*"*°*°, for each p,q € [n] x [n],
 
-38
 
 let P®) be the c x c matrix computed by:
 
@@ -1457,7 +1425,6 @@ performance of SAO construction to using conventional pruning methods when
 
 introducing sparsity to multilayer perceptrons and convolutional neural networks. We
 
-39
 
 apply sparsity-aware orthogonal initialization (SAO) by forming a sparse, orthogonal
 matrix S and then using this as the orthogonal matrix from which the weight matrix
@@ -1496,7 +1463,6 @@ output neurons of a layer. Each entry of the matrix indicates the presence (1) o
 
 absence of (0) of an edge between nodes from set U and set V. The biadjacency matrix
 
-40
 
 is the matrix transpose of the binary mask, M € {0,1}"*" which describes the
 topology of the neural layer, where m and n corresponds to the output n,y¢ and input
@@ -1534,7 +1500,6 @@ where Myis (c, 1)-regular
 
 3. Form =n:
 
-41
 
 either (1) or (2) is applicable
 
@@ -1600,7 +1565,6 @@ Convolutional neural networks are (c, d)-regular by definition where the local k
 
 kernel are the (c, d)-sparse connections. Unlike multilayer perceptrons, we modulate
 
-42
 
 the sparsity of convolutional neural networks in increments of the kernel size k x k,
 which is equivalent to pruning entire kernels in a channel. We illustrate this in Figure
@@ -1645,7 +1609,6 @@ identical columns in M. Assign the values of one vector to the nonzeros of the
 
 column for each set.
 
-43
 
 3. For m = n: either (1) or (2) is applicable.
 
@@ -1712,7 +1675,6 @@ S < sao_matrix
 When SAO is applied to multilayer perceptrons, S € R™*” is simply assigned as
 the weight matrix. The density of a (c, d)-regular layer is given by c/m = d/n, where
 
-44
 
 c and d refer to the degree of the input and output nodes, respectively. We compared
 the performance of SAO to the baseline multilayer perceptron and variants pruned with
@@ -1752,7 +1714,6 @@ IR*xkxcinXcout_ we generate the sparse orthogonal matrix S € Rt*% and then ass
 
 S[s, t] to Weonw|[§]; (8), s,t] Vs, t, as illustrated in Figure 3.7. All non-center weights
 
-45
 
 are zeroed at initialization but the weights are not removed. The weights initialized to
 zero can assume nonzero values during training as illustrated in Figure 3.7. Sparsity in
@@ -1789,7 +1750,6 @@ s is greater than 1, we reshape the input tensor into % € R**+*%»°" and perf
 
 convolution with Weony € RE***ens?Xcout with s = 1 [108; 95].
 
-46
 
 Figure 3.8: Applying SAO to a convolutional layer through Explicitly-Constructed
 Orthogonal (ECO) convolutions, resulting to the SAO-ECO method.
@@ -1820,7 +1780,6 @@ Prior the main experiments comparing SAO to pruning methods through their
 
 implementation on various architectures which were trained on various datasets, these
 
-47
 
 networks were first characterized in terms of their structure, i.e., whether the
 Ramanujan property is satisfied, and in terms of the singular value distribution, i.e.
@@ -1858,7 +1817,6 @@ connectivity after collapsing the layers of a network. Figure 3.9 demonstrates t
 
 concept of reachability.
 
-48
 
 0 101
 
@@ -1895,7 +1853,6 @@ distribution of the sparse layers were compared to that of the dense-orthogonal 
 
 Exact dynamical isometry is easily achieved through orthogonal initialization and easily
 
-49
 
 measured in layers with no nonlinearities, i.e., all the singular values are equal to 1. In
 our case, since we are using different activation functions with no rescaling, the singular
@@ -1936,7 +1893,6 @@ consists of grayscale images handwritten digits, each measuring 28 x 28 pixels, 
 total of 60,000 training and 10,000 test images. The simplicity and small image size
 makes it possible for plain MLPs to achieve practical accuracy in this task [109]. In
 
-50
 
 this work, the MNIST dataset is used to benchmark MLP models which are known to
 
@@ -1975,7 +1931,6 @@ Two main types of deep neural networks were considered in the study: multilayer
 
 perceptrons (MLPs) and convolutional neural networks (CNNs). MLPs are a
 
-51
 
 fundamental architecture used in deep learning, and have played a pivotal role in the
 development of techniques in field. Thus, in our study, we first developed our
@@ -2013,7 +1968,6 @@ specifically as it is a relatively new approach that has shown computational adv
 
 over the previous orthogonal initialization methods.
 
-52
 
 The architectures or models used are summarized in Figure 3.11. The training
 schemes and the layers of each model are discussed in the following subsections. To
@@ -2030,7 +1984,6 @@ Multilayer Perceptrons Convolutional neural networks
 MLP
 |
 | Test on plain networks Vanilla CNN Vanilla CNN
-7
 Uae]
 ixers Test on plain networks Test on plain networks
 
@@ -2067,7 +2020,6 @@ compared with the unpruned (dense) model, GMP-S, and GMP-T. GMP-T js acquired
 
 from training an unpruned MLP-7, pruning it, and then finetuning, such that it
 
-53
 
 undergoes a total of 180 training epochs. The architecture of MLP-7 is described in
 Table 3.3, where the layers are listed in the sequence in which the input data is passed
@@ -2101,7 +2053,6 @@ Symmetric linear[256, 256] N-—1
 
 Output Layer _linear[{256, 10] 1
 
-54
 
 Table 3.5: Learning rates used for different MLP-N depth.
 
@@ -2140,7 +2091,6 @@ used, corresponding to 33 and 65 trainable layers, respectively. The models have
 
 size = 4, hidden layer width = 128, channel-mixing width = 512, and token-mixing
 
-55
 
 channel width = 64. The modules are summarized in Table 3.6, where the layers are
 
@@ -2179,7 +2129,6 @@ excluded and maintained as dense. This is due to the dimensionality constraints 
 
 SAO, as mentioned in Section 3.4.1.
 
-56
 
 3.5.3.3 Vanilla CNN
 
@@ -2215,7 +2164,6 @@ from networks with N = 8, 16,32 were trained with the same learning rates. Only
 
 ReLU was used for these datasets.
 
-57
 
 Table 3.9: Architecture of a vanilla CNN with variable number of layers N and width
 W for CIFAR-10 and CINIC-10.
@@ -2256,7 +2204,6 @@ space. The Max-Min activation function is applied after every convolutional laye
 
 first two blocks are initialized with Skew-Orthogonal Convolutions (SOC) from [94]
 
-58
 
 while the last three blocks are initialized with Explicitly-Constructed Orthogonal
 Initialization (ECO) - see Section III.C.S below. This construction yields better
@@ -2300,7 +2247,6 @@ dilation. The architecture is summarized in Table 3.11, where the layers are lis
 
 the sequence in which the input data is passed through the network.
 
-59
 
 Table 3.11: Architecture of VGG-16.
 
@@ -2331,7 +2277,6 @@ SAO-ECO (discussed below), the input size is 36 x 36, all of the layers are init
 with the initialization method of SAO-ECO, but only the last block uses the prescribed
 cyclic padding and dilation.
 
-60
 
 3.5.4
 
@@ -2384,7 +2329,6 @@ then finetuned for the same duration as in training. The suffix “S” implies 
 
 initialization, the model is immediately pruned without training, e.g. GMP-S implies
 
-61
 
 two-dimensional kernels are removed en bloc.
 
@@ -2425,7 +2369,6 @@ comes from its unique weight assignments, we followed the same procedure as SAO,
 
 only that the weights are not orthogonal but simply have normal and uniform
 
-62
 
 distributions, denoted by RG-N and RG-U, respectively. All of the techniques which
 
@@ -2442,7 +2385,6 @@ il | Global magnitude pruning (GMP) Ramanujan a construction (RG)
 | Layerwise random pruning (LRP) [Normal | aoe
 L
 
-4
 Scratch | Trained
 
 Figure 3.13: Different pruning methods and Ramanujan construction techniques
@@ -2468,7 +2410,6 @@ This chapter includes a discussion on the existing methodologies we adopt. We
 
 briefly discussed the datasets used, i.e, MNIST, CIFAR-10, CIFAR-100, and
 
-63
 
 CINIC-10 image classification datasets. Then, we listed the deep neural network
 architectures considered and their corresponding training schemes, with the two main
@@ -2497,7 +2438,6 @@ scheduler, m the milestones, and the learning rate decay. The models employing
 
 variable learning rates based on N are denoted as f (JV).
 
-64
 
 Table 3.14: Summary of Experiments (Benchmarks)
 
@@ -2584,7 +2524,6 @@ s: multistep, m: [60, 120, 160],
 
 SAO, LMP-S
 
-65
 
 CHAPTER 4
 
@@ -2616,7 +2555,6 @@ graphs satisfy the spectral expansion condition Az < 2A; — I where A, is the l
 
 eigenvalue of the binary adjancency matrix and 2 the second largest eigenvalue [119].
 
-66
 
 The topology of each MLP layer, in the MLP-N and Mixer architectures as
 described in Sections 3.5.3.1 and 3.5.3.2, was designed to be a bipartite Ramanujan
@@ -2646,7 +2584,6 @@ to form a block diagonal matrix through elementary matrix operations, i.e., row 
 
 column interchanges. Such operations do not affect the spectrum of matrices.
 
-67
 
 123 4 13 2 4
 
@@ -2683,7 +2620,6 @@ rank [121]
 
 Definition 5 The Frobenius norm of a matrix is equal to the Lz norm of its singular
 
-68
 
 values [122].
 
@@ -2721,7 +2657,6 @@ structure.
 
 We expect this structure to have advantages over standard pruning methods. First, as
 
-69
 
 Local Magnitude Pruning Local Random Pruning Ramanujan Graph Construction
 
@@ -2759,7 +2694,6 @@ sparse MLP-5 uncovered through local magnitude pruning and one which was
 
 constructed using Ramanujan graphs. The figure labeled N = 1 is the transpose of the
 
-70
 
 Ramanujan Graph Construction (Sparsity = 98.4375%)
 Oe ee ) 400)
@@ -2769,13 +2703,9 @@ Gam W= 128 @mm Ww = 256
 
 100 300
 
-80
 
 60,
-150
-40
 100)
-20
 t) 0 - r
 
 c
@@ -2783,14 +2713,12 @@ ou =2.0 -15 -10 65 0.0 os to ts 2.0 -4 -3 2 -1 ° 1 2 3
 2° swe) 2000)
 z mmm W=512 mmm Ww = 1024
 800) 1750
-1500
 | |
 bees | 1250 |
 1000) |
 400)
 750)
 |
-500
 
 200)
 
@@ -2802,7 +2730,6 @@ Eigenvalues of the adjacency matrix
 Figure 4.3: Adjacency matrix eigenvalue spectra of an MLP layer with Ramanujan
 graph structure of different width.
 
-71
 
 mask of a single 256 x 256 layer, where the coloured pixels indicate the presence (1)
 or absence (0) of a connection between the input nodes (rows) and the output nodes
@@ -2831,7 +2758,6 @@ Ramanujan Construction
 Figure 4.4: Reachability matrix of sparse neural networks obtained through local
 magnitude pruning and constructed using Ramanujan graphs.
 
-72
 
 For convolutional neural networks such as in Section 3.5.3.3, 3.5.3.4, 3.5.3.5, and
 3.5.3.6, the Ramanujan structure is exhibited at the kernel level, i-e., each entry in the
@@ -2869,7 +2795,6 @@ linear network, the singular values of both the dense network and SAO are all eq
 
 1, indicating dynamical isometry. When an activation function is introduced, the
 
-73
 
 dynamical isometry is lost for both networks. The Tanh and SiLU networks have a
 skewed distribution on both dense and SAO networks, with Tanh towards 1 and SiLU
@@ -2884,27 +2809,20 @@ to zero, demonstrating the incapability of ReLU networks to achieve dynamical
 
 isometry through simple orthogonal initialization due to its induced sparsity [58].
 
-74
 
-250
 
 200}
 
 150)
 
-100
 
-3
 
-00
 
 _ Singular value distribution (Linear) _
 
 Dense ™™) SAO (S = 99.2%)
 
-04
 
-02
 Singular value distribution (ReLU) _
 
 Dense
@@ -2913,7 +2831,6 @@ Dense
 
 77 SAO (S = 99.2%)
 
-70
 
 Singular value distribution (Tanh)
 Dense mH SAO (S = 99.2%)
@@ -2944,17 +2861,13 @@ least approximate dynamical isometry. Thus, we show that achieving a similar
 
 distribution to the dense-orthogonal network is a feat exclusive to SAO networks.
 
-75
 
 Singular value distribution (Linear) Singular value distribution (Tanh)
 
 Dense ump ; Dense ump
 RG LRP RG LRP
-1
-1
 |
 |
-1
 eae |
 ld |
 2 04 é 08 10 5.0 2 0.4 06 0.8
@@ -2977,7 +2890,6 @@ achieve a similar singular value distribution to a dense orthogonal network desp
 
 extreme levels of sparsity for different activation functions.
 
-76
 
 Table 4.1: Similarity between the singular value distribution of a dense MLP orthogonal
 layer and sparse versions.
@@ -3013,7 +2925,6 @@ MLP with greater N to demonstrate its trainability in very deep vanilla MLPs of 
 As a preliminary, SAO was applied on a relatively shallow MLP, specifically the
 MLP-7, and compared its performance to GMP-S and GMP-T at 90% sparsity. The
 
-77
 
 experiment settings are summarized in Table 3.14 row 1. We included the
 measurements of the dense network to serve as the baseline. Figure 4.7 shows the
@@ -3030,7 +2941,6 @@ pruning-after-training methods without training prior to the introduction of spa
 
 the model.
 
-78
 
 MLP-7-Linear MLP-7-Tanh
 
@@ -3049,7 +2959,6 @@ sao
 0 0 ) 40 $0 60 a x ) 10 x rr 5¢ 60 90
 epochs epochs
 MLP-7-ReLU MLP-7-SiLU
-96
 94 4
 >
 Boz Bo2
@@ -3078,7 +2987,6 @@ for ReLU, is better conditioned than sparse networks pruned using GMP-S and GMP-
 
 to which the performance of SAO can be attributed.
 
-79
 
 MLP-7-Linear MLP-7-Tanh
 
@@ -3116,7 +3024,6 @@ additional training costs, more than what is needed to train an uncompressed mod
 
 the previous sections, we showed that SAO can achieve a similar singular value
 
-80
 
 Ly Livla birls Livle Lirle Lirlio Livli2 Livlas
 
@@ -3156,7 +3063,6 @@ The pruning methods RG-S, RG-T, RG-U, RG-N, and SAO were implemented on
 MLP-N with d = 4 and GMP-S and GMP-T with the corresponding sparsity of 98.6%.
 All the networks used a gain of 1.1, i.e. the magnitude of the weights were scaled by 1.1.
 
-81
 
 The default learning rate used is 10-? for N = 50 and 10~? for N > 50, which is reduced
 when the sparse network does not train. Figure 4.10 shows the accuracy and the mean
@@ -3196,7 +3102,6 @@ e.g., pruning, then this network is assured to possess approximate dynamical iso
 
 at initialization. Having this condition at the beginning of training allowed the dense
 
-82
 
 network to learn the necessary representations and achieve good accuracy before the
 magnitude of the singular values decreased to a critical level, i.e., much closer to 0,
@@ -3244,7 +3149,6 @@ We also conducted some exploratory experiments on the implementation of SAO
 
 on MLP-N shown in Table 4.2. These models were trained for 10 epochs in contrast to
 
-83
 
 the 100 epochs in the main experiment, to demonstrate the trainability of SAO models
 early in the training, which have some effects on the training behaviour later on. Two
@@ -3277,7 +3181,6 @@ Layers d=2 d=8 d=2 d=8 d=2 d=8
 
 1000 92.07 94.31 92.11 95.54 91.09 96.86
 
-84
 
 The difference between the accuracy of SAO 1-3 are subtle and could be dismissed
 as statistical discrepancies as the MNIST dataset is very small. Even then, it can be
@@ -3316,7 +3219,6 @@ Layers Degree Parameters Dense SAO SAO + Skip
 
 The SV mean of SAO networks starts on a higher value than the dense network,
 
-85
 
 but ends with a lower value, and is relatively more consistent throughout the training.
 This trend persists for all number of layers. Other than this, there is no substantial
@@ -3352,7 +3254,6 @@ experiment settings to produce the following results for these two models are
 
 summarized in Table 3.14 rows 3 and 4.
 
-86
 
 __SOlayers
 
@@ -3368,8 +3269,6 @@ epochs epochs
 __100 Layers 200 Layers
 
 1.6, 1.4)
-12
-14
 1.0
 
 1.2
@@ -3387,7 +3286,6 @@ connections during training on the MNIST dataset. The dense model was included t
 
 serve as the baseline.
 
-87
 
 4.3.1 MLP-Mixer
 
@@ -3417,7 +3315,6 @@ trainability despite the sparsity. The residual connections also assure a path b
 
 layers despite possible disconnection between some nodes.
 
-88
 
 MLP-Mixer on CIFAR-10
 
@@ -3450,7 +3347,6 @@ than just a simple affine transformation, which is used as an alternative when t
 
 is to make the network more efficient.
 
-89
 
 ResMLP (N = 39) on CIFAR-10
 
@@ -3463,7 +3359,6 @@ Uu | | |
 © | | |
 dal |
 40; |
-20
 ot
 
 0.932
@@ -3487,7 +3382,6 @@ are shifted versions with repeated values [127; 128] and more so if the weight v
 
 must also be sparse.
 
-90
 
 4.4.1 SAO-Delta
 4.4.1.1 Vanilla CNN
@@ -3516,7 +3410,6 @@ boost to the regularizing effect of sparsity and optimal sizing of network width
 
 depth [130].
 
-91
 
 Vanilla CNN (Tanh) on CIFAR-10
 ~~ Dense GBB LMP-S GE LMP-T © MNBRG-S GE SAO
@@ -3537,7 +3430,6 @@ Accuracy
 Figure 4.14: Accuracy of standard pruning methods, Ramanujan construction, and
 SAO-Delta on a vanilla CNN (Tanh) trained on CIFAR-10.
 
-92
 
 Vanilla CNN (ReLU) on CIFAR-10
 
@@ -3575,7 +3467,6 @@ which could be attributed to the increase in model capacity with depth, just bef
 leads to accuracy decline due to training complications, as shown in the dip in
 accuracy at N = 128 of the dense baseline, and consequently of SAO-Delta, similar to
 
-93
 
 the results of CIFAR-10 and in literature, where attenuation of non-uniform modes is
 worse in deeper networks [16].
@@ -3636,7 +3527,6 @@ deep neural networks without suffering from vanishing gradients [21]. Such netwo
 
 are shown to be in the edge-of-chaos by default [131; 101], as described in Section 4.3
 
-95
 
 Thus, these networks are expected to remain trainable even without orthogonal
 initialization. Furthermore, as these networks guarantee a path between the input and
@@ -3655,7 +3545,6 @@ gradient [94], and local and global connectivity i.e., assuring that there will 
 
 path for signal to propagate, is already taken care of by the residual connections.
 
-96
 
 ResNet on CIFAR-10
 --- Dense i LMP-S HMB RG-S MB SAO
@@ -3675,7 +3564,6 @@ Sparsity
 Figure 4.17: Accuracy of LMP-S, RG-S, and SAO-Delta on ResNet-20, 32, 44, and 56
 trained on CIFAR-10.
 
-97
 
 ResNet-18 on CIFAR-100
 
@@ -3714,7 +3602,6 @@ input [135]. To meet 1-Lipschitz constraint, the modified CNN dubbed LipConvNet
 [94; 95] utilized the gradient norm preserving MaxMin activation function [136] and
 orthogonalized the input-output Jacobian matrix with the weight initialization
 
-98
 
 schemes, SOC and ECO. ECO cleverly defines orthogonal kernels in the Fourier
 
@@ -3742,7 +3629,6 @@ approached zero as training progressed. Pruning destroys orthogonality in LipCon
 
 and compromises the trainability of the CNN [58].
 
-99
 
 LipConvNet on CIFAR-10
 
@@ -3763,7 +3649,6 @@ Sparsity
 Figure 4.19: Accuracy of standard pruning methods, Ramanujan construction, and
 SAO-ECO on LipConvNet-N trained on CIFAR-10.
 
-100
 
 4.4.2.2 Vanilla CNN
 
@@ -3804,7 +3689,6 @@ on extreme sparsity which could be attributed to the use of batch normalization.
 
 this model, there is no visible advantage to using SAO over the layerwise magnitude
 
-101
 
 Pruning, though it achieves slightly better accuracy than RG-S and RG-T despite
 having the same sparse structure. This may be attributed to the orthogonality in SAO
@@ -3815,7 +3699,6 @@ the expressivity of the model.
 
 100 ——___ VGG-16 on CIFAR-10
 
-80
 
 0.875
 Sparsity
@@ -3839,7 +3722,6 @@ LMP-S achieved higher accuracy than SAO which further shows that SAO presents no
 
 benefits for models with residual connections and batch normalization. The
 
-102
 
 experiment settings to produce the results are summarized in Table 3.14 rows 12 and
 13.
@@ -3849,17 +3731,14 @@ ResNet on CIFAR-10
 
 100. a ResNet-20
 eas ie oem oe dio Ss da ss i SE ee ee ee ee eee
-80
 > 60
 fd
 S
 o
 2 40
-20
 0 05 a 0.75 0.875
 “On ResNet-32
 | Bap Rg a Nee ae ee eee
-80
 o 60
 £
 S
@@ -3872,7 +3751,6 @@ Sparsity
 Figure 4.21: Accuracy of standard pruning methods, Ramanujan construction, and
 SAO-ECO on ResNet-20 and ResNet-32 trained on CIFAR-10.
 
-103
 
 ResNet-18 on CIFAR-100
 
@@ -3909,7 +3787,6 @@ the depth of CNNs beyond 200 layers. Furthermore, CNN with ReLU activations do
 
 not possess dynamical isometry but are still favored for image recognition tasks [139]
 
-104
 
 and outperform CNNs with sigmoidal activations. We observe these results
 
@@ -3949,7 +3826,6 @@ numbers = 2nnonzeros + Nrows + 1 = 21
 
 Figure 4.23: CSR representation of a sparse matrix.
 
-105
 
 On the other hand, from our methods, it is known that the Ramanujan constructions
 have repeated structure, i.e., these matrices are block matrices with identical blocks.
@@ -3994,7 +3870,6 @@ SAO permits sparse weight and model topology initializations without reference t
 
 a dense model but has several limitations. Firstly, SAO imposes dimensional
 
-106
 
 1.0) ——~ CSR a
 
@@ -4034,7 +3909,6 @@ readily exploited by commonplace hardware. Thus, specialized libraries or
 
 frameworks are needed to enjoy the benefits of SAO.
 
-107
 
 4.7 Summary
 
@@ -4070,7 +3944,6 @@ includes the dimensional constraints, accuracy ceiling, and inability to leverag
 
 pretrained models.
 
-108
 
 CHAPTER 5
 
@@ -4101,7 +3974,6 @@ Ramanujan property, which grants the sparse network with maximal connectivity, a
 
 orthogonality, which grants dynamical isometry. This emphasizes the value of
 
-109
 
 orthogonal weights as the superior choice for very deep and sparse structures in plain
 networks. Having achieved better performance than pruning after training, SAO can
@@ -4139,7 +4011,6 @@ question whether the orthogonality provided by SAO will present no benefits in
 
 such models, similar to the results in CNNs.
 
-110
 
 3. The methods SAO, and SAO-Delta and SAO-ECO were applied to induce
 weight-level and kernel-level sparsity, respectively, which are granularity levels
@@ -4155,7 +4026,6 @@ training on SAO and other sparse neural networks to see if it will present any
 
 advantages, especially in the practical CNNs.
 
-111
 
 REFERENCES
 
@@ -4203,7 +4073,6 @@ Compression and Acceleration for Deep Neural Networks,” IEEE Signal
 Processing Magazine, vol. 35, no. 1, pp. 126-136, jan 2018. [Online]. Available:
 http://ieeexplore.ieee.org/document/8253600/
 
-112
 
 (8)
 
@@ -4262,7 +4131,6 @@ nonlinear dynamics of learning in deep linear neural networks,” in Internation
 
 Conference on Learning Representations, 2014, pp. 1-22.
 
-113
 
 [16]
 
@@ -4321,7 +4189,6 @@ and the road to human-Level machine intelligence,” APSIPA Transactions on
 
 Signal and Information Processing, vol. 7, no. 2018, pp. 1-19, 2018.
 
-114
 
 [24]
 
@@ -4343,7 +4210,6 @@ Signal and Information Processing, vol. 7, no. 2018, pp. 1-19, 2018.
 
 A. Bourely, J. P. Boueri, and K. Choromonski, “Sparse Neural Networks
 Topologies,” pp. 1-12, 2017. [Online]. Available: http://arxiv.org/abs/1706.
-05683
 
 B. Pal, A. Biswas, S. Kolay, P. Mitra, and B. Basu, “A Study on the Ramanujan
 Graph Property of Winning Lottery Tickets,” in 39th International Conference
@@ -4378,7 +4244,6 @@ S. Pang, Y. Wang, and Y. Bai, ‘Credit Scoring Model Based on Miltilayer
 
 Perceptron,” in IEEE International Symposium on Intelligent Control, 2003, pp.
 
-115
 
 [33]
 
@@ -4438,7 +4303,6 @@ Technologies, vol. 195, pp. 21-30, 2021.
 
 X. Bu, Y. Wu, Z. Gao, and Y. Jia, “Deep convolutional network with locality and
 
-116
 
 [42]
 
@@ -4498,7 +4362,6 @@ IEEE Transactions on Pattern Analysis and Machine Intelligence, 2022.
 H. Liu, Z. Dai, D. R. So, and Q. V. Le, “Pay Attention to MLPs,” Advances in
 Neural Information Processing Systems, vol. 11, no. Mim, pp. 9204-9215, 2021.
 
-117
 
 [50]
 
@@ -4560,7 +4423,6 @@ vol. 1, pp. 536-549, 2017.
 
 J. Pennington, S. S. Schoenholz, and S. Ganguli, “Resurrecting the sigmoid in
 
-118
 
 [59]
 
@@ -4617,7 +4479,6 @@ Communications, ICCC 2022. EEE, 2022, pp. 1373-1377.
 
 Artificial Intelligence, Tech. Rep., 2023.
 
-119
 
 [67]
 
@@ -4680,7 +4541,6 @@ efficient convnets,” 5th International Conference on Learning Representations,
 
 ICLR 2017 - Conference Track Proceedings, no. 2016, pp. 1-13, 2017.
 
-120
 
 (76] Y. He, X. Zhang, and J. Sun, “Channel Pruning for Accelerating Very Deep
 Neural Networks,” Proceedings of the IEEE International Conference on
@@ -4725,7 +4585,6 @@ Representations, ICLR 2019, pp. 1-42, 2019.
 
 [85] “Graph Figure,” 2023. [Online]. Available:  https://en.wikipedia.org/wiki/
 
-121
 
 [86]
 
@@ -4785,7 +4644,6 @@ S. Singla and S. Feizi, “Skew Orthogonal Convolutions,” in Proceedings of th
 38th International Conference on Machine Learning, 2021.
 T. Yu, J. Li, Y. Cai, and P. Li, “Constructing Orthogonal Convolutions in an
 
-122
 
 [96]
 
@@ -4847,7 +4705,6 @@ M. Borel and G. Vénizélos, ‘Vector Calculus,” in Movement Equations 2.
 Hoboken, NJ, USA: John Wiley & Sons, Inc., jan 2017, pp. 1-33. [Online].
 Available: https://onlinelibrary.wiley.com/doi/10.1002/9781119379065.ch1
 
-123
 
 [105] J. Pennington, S. S. Schoenholz, and S. Ganguli, “The emergence of
 spectral universality in deep networks,” International Conference on Artificial
@@ -4889,7 +4746,6 @@ Society Conference on Computer Vision and Pattern Recognition, vol. 2019-June,
 
 no. Section 3, pp. 113-123, 2019.
 
-124
 
 {115}
 
@@ -4927,7 +4783,6 @@ resnet{ _}cifar10
 
 T. DeVries and G. W. Taylor, “Improved Regularization of Convolutional Neural
 Networks with Cutout,” 2017. [Online]. Available: http://arxiv.org/abs/1708.
-04552
 
 M. R. Murty, “Ramanujan Graphs: An Introduction,” in Academy of Discrete
 
@@ -4949,7 +4804,6 @@ Representations, ICLR 2017 - Conference Track Proceedings, pp. 1-18,
 
 A. E. Orhan and X. Pitkow, “Skip connections eliminate singularities,” in 6th
 
-125
 
 [125]
 
@@ -5010,7 +4864,6 @@ P. L. Bartlett, D. J. Foster, and M. Telgarsky, “Spectrally-normalized margin
 
 bounds for neural networks,” Advances in Neural Information Processing
 
-126
 
 [134]
 
@@ -5052,7 +4905,6 @@ T. Szandata, “Review and Comparison of Commonly Used Activation
 Functions for Deep Neural Networks,” 2018. [Online]. Available: https:
 /Nink.springer.com/chapter/10.1007/978-98 1-15-5495-7{-}11
 
-127
 
 LIST OF PUBLICATIONS
 

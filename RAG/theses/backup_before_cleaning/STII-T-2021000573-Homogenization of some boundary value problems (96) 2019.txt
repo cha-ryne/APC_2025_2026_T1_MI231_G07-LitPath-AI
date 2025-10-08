@@ -1,0 +1,3499 @@
+Homogenization of Some Boundary Value Problems in Perforated Domains
+
+Jake M. Avila
+
+University of the Philippines Diliman
+
+Master of Science in Mathematics
+
+June 2019
+
+Abstract
+
+This work deals with the asymptotic behavior of some boundary value problems
+posed in perforated domains of Rᴺ. In the first one, we consider a linear parabolic
+problem in a periodically perforated domain with nonlinear-Robin boundary condition
+on the inner boundary while a Dirichlet condition is imposed on the outer boundary.
+Second, we consider the case with “small holes” as described in [15] and deal with
+an elliptic problem with nonhomogeneous Neumann boundary condition imposed on
+the holes. Another problem in small holes, this case as described in [21], we consider
+8 quasilinear problem with a nonlinear Robin boundary condition on some holes
+while a Dirichlet condition is prescribed on the other holes as well as on the outer
+boundary. We apply an appropriate extension of the Periodic Unfolding Method for
+the homogenization of each problem.
+
+
+Chapter 1
+
+Introduction
+
+The theory of homogenization became a spotlight in applied mathematics ever since
+the discovery of composite materials. The goal of homogenization is to describe the
+macroscopic behavior of a material by taking into account its microscopic properties.
+That is, it tries to generalize the behavior of a heterogeneous material when it is
+viewed as a homogeneous one.
+
+Composite materials are basically a fine mixture of two or more individual homo-
+geneous constituents with slightly different properties, which in turn can produce a
+new material with a completely different property. Some composites play an active
+role in the industry since it offer a stronger, lighter, and a less expensive alternative to
+usual raw materials. Examples of composite materials are concrete, fibre-reinforced
+polymers, high strain composites, sandwich-structured composites, carbon compos-
+ites used as a shielding agent in the launch and re-entry phase of spacecrafts, super-
+conducting multifilamentary composites used in optical fibres, kevlar for bullet-proof
+vests, and implants for orthopedic surgery. The applications are astounding as com-
+posites in the form of fibreglass are widely-used in the production of sports equipment
+for baseball, racing and hockey.
+
+In essence, we can model certain processes using partial differential equations such
+as in infiltration [3], thermal diffusion [3], thermal conductivity [4], chemical reactions
+[23], and climatization problems [43]. Using the information obtained from the limit
+equation, we can now describe what is happening in the system with the consideration
+of the interaction among the individual components present.
+
+Several methods in homogenization have been developed; for instance for the
+non-periodic case, we have the G-convergence [41], H-convergence [36], and the I-
+convergence [33]. For the periodic case, we have Tartar’s method of oscillating test
+functions [42], multiple-scale method [5], two-scale convergence [37], and the periodic
+unfolding method [13].
+
+In this work, we utilize the periodic unfolding method, as it involves a more el-
+ementary approach since it only deals with convergences in L?-spaces. Also, the
+two-scale convergence of a sequence of functions in L?(2) is equivalent to a weak
+
+Chapter 1. Introduction 2
+
+convergence of the unfolded functions in L?(Q x Y). Here, any function in the perfo-
+rated domain is mapped to the unfolded function in a fixed domain. Furthermore, we
+do not need any extension operators for problems with nonhomogeneous boundary
+conditions due to the boundary unfolding operator.
+
+In this thesis, we aim to describe the asymptotic behaviors of some boundary
+value problems posed in perforated domains. We want to see what different types
+of boundary value problems posed in different geometries of domains with different
+boundary conditions yield once an appropriate extension of the periodic unfolding
+method is used. Also, in the latter part, we aim to discuss how these contributions
+arise, how the sizes of the holes matter in the limit problem, and how the boundary
+conditions behave in these settings.
+
+For the first two problems, we consider domains with holes that are distributed
+e-periodically whose size r(e) satisfies r(¢)/e + 0. Throughout the thesis, we call
+such as “small” holes. For the first problem, we consider domains with one hole in
+each period with size «5 where 6 = 6(€) where 5 > 0 as € — 0. For the second one,
+we consider two holes in each period each with sizes €6, and ed) where 6; = 6;(€) and
+62 = 52(€) whenever ¢ — 0. For the last problem, we consider a perforated domain
+whose holes have sizes the same as its period.
+
+Asymptotic behaviors of problems with Robin or Neumann boundary conditions
+posed in perforated domains via periodic unfolding method were done in the works
+[18], [19] and [17]. While in “small” holes, applications to sieve-type problems can
+be found in [15]. We mention here that the unfolding operator for “small” holes first
+appeared in [10] as a change of variable and a corresponding boundary layer operator
+was introduced in (15).
+
+In the literature, a homogeneous Dirichlet problem for the Poisson equation in
+perforated domains was studied in [20] with holes of size e* where k > 0. Here it was
+shown that the size e*/("-2) is critical in a sense that the limit problem contains an
+additional zero-order term, called the “strange” term which depends on the capacity
+of the set of holes in the limit. Also, in [24] the authors considered a non homogeneous
+Neumann problem for the Laplacian but with critical size is of order e"/(-)) and the
+contribution of the holes in the limit is again given by an additional term in limit
+problem. The problem in (24] was treated in [38] via unfolding. Furthermore, for
+mixed-type boundary conditions on the holes, we refer the reader to [9] and [82]. It is
+important to note that in both papers, the strange term contribution appears again
+
+Chapter 1. Introduction 3
+
+in the limit problem as well as the critical sizes.
+‘We consider first a linear elliptic problem posed in a domain with small holes
+
+given by the system
+
+—div (A*(z)Vus(z)) = f(z) in xs,
+AF (z)Viues(2) « Mes = ge(x) on OBE, (1.1)
+ues(z) = 0 on 85 \ OBE,
+
+where a nonhomogeneous Neumann boundary condition is imposed on the holes. Note
+that some homogenization results for this problem were done in [38] but was obtained
+by considering a test function usually used in perforated domains. In our case we will
+use 8 test function introduced in [15] that are particularly suited for domain with
+small holes. Here, our goal is to recover and to refine the previous results in [38].
+
+The second one we deal with is a quasilinear elliptic problem posed in a domain
+with two small holes given by the system
+
+div (A°(2, ¥e5,6,)V Ue s2) = f(z) in Q46835
+Ueds5. = 0 on 4%, 5, UOBS, (1.2)
+AS (2, the6s6q)V Uessba * Moby + €77e(2)A(Uesss,) = e(t) on OT?.
+
+In this problem, we impose a nonlinear Robin boundary condition on some holes
+while a Dirichlet condition is prescribed on the other holes as well as on the outer
+boundary. Along with difficulties pointed out in the previous problem, the presence
+of both nonlinearities in the coefficient matrix and the boundary condition poses a
+big problem. First, we need to prove some convergences on the boundary which is
+based on the weak continuity of the Nemytskii operator associated to h. In order to
+do so, we need several preliminary results on the properties of h. Another difficulty is
+the passing to the limit in the quasilinear matrix as one needs to prove by definition.
+
+Some known results related to this problem considered a linear problem with
+nonhomogeneous Neumann condition prescribed on some holes and a homogeneous
+Dirichlet condition on the other holes along with the outer boundary [21], a perforated
+domain setting of the problem was dealt in [7], and a linear Robin problem in two
+small holes was shown in [39].
+
+Lastly, we have a linear parabolic problem posed in a periodically perforated
+
+Chapter 1. Introduction 4
+
+domain given by the system
+
+u,(z, t) — div (A°(z)Vu-(z, t)) = f(x, t) in Q2 x [0,7],
+
+u-(z,t)=0 on (O03 \ OS.) x {0,T], (13)
+A®(x)Vue(z, t) me + €77e(z)h(te) = ge(z,t) on OS, x [0,T],
+
+ue(x, 0) = u2(x) in Qf.
+
+Here, u’(z,t) is the derivative with respect to the variable t and we prescribe a
+nonlinear-Robin boundary condition on the inner boundary while a Dirichlet con-
+dition is imposed on the outer boundary. We start by considering an e-fixed problem
+and show that a solution exists, it is unique, and it satisfies an a priori estimate. We
+do this using the Faedo-Galerkin method as in [1] and [2]. We note that there is a
+difficulty arising in showing the estimates for the solution of the approximate problem
+due to the nonlinear Robin condition as it needs another estimate for the function
+h. Another difficulty appears in the homogenization due to the presence of the term
+£7 because the behavior of the limit functions depends on the value of 7. Another
+point of difficulty is the treatment of the term h along the boundary of the holes. In
+order to pass to the limit, we need some preliminary results on the convergence of
+the unfolding of h.
+
+In the literature, some related known results were shown for the quasilinear case
+with nonhomogeneous Neumann boundary condition in [1], using the Faedo-Galerkin
+method to show well-posedness in the heat equation (see also [2]), the treatment of
+the Robin term A(v) in [19] and [7], and using the periodic unfolding method in the
+homogenization of the heat equation in perforated domains in [31] (see also [29]).
+
+This thesis contains seven chapters. In Chapter 2, we give a background that will
+be necessary to understand and to prove the main results of this work. This includes
+some well-known definitions and theorems in L?-spaces, Hilbert spaces, distributions,
+Sobolev spaces and some well-posedness theorems. Chapter 3 gives a short discussion
+on the periodic unfolding method including some of the several extensions of this
+tool, done in the literature, that we need. Chapter 4 deals with homogenization of
+the linear elliptic problem given in (1.1) which was introduced in [38]. Chapter 5
+works on with the asymptotic behavior of the quasilinear elliptic problem given in
+(1.2) while Chapter 6 concerns the well-posedness and homogenization of the linear
+parabolic problem given in (1.3). Lastly, we provide a comprehensive summary and
+a brief discussion of the main results of the thesis in Chapter 7.
+
+Chapter 2
+
+Preliminaries
+
+In this chapter, we introduce the convergences in Banach and L?-spaces, and enu-
+merate basic properties of some classes of Sobolev spaces as explained in [16] that are
+sufficient and necessary to prove the main results in this paper.
+
+2.1 Banach spaces
+
+Definition 2.1 A set V is called a vector space over R with the two operations
++:VxVHVand-:RxVHYV, if for all J, € R and z,y,z € V, the following
+are satisfied:
+
+(@) c+y=y+a,
+
+(i) (c+y)+z=2+(yt+2z),
+
+(iii) 36 € V such that 7+ 6 =z,
+
+(iv) r+ (-z) = 8,
+
+(v) A- (+) =(A-z)+QA-y);
+
+(vi) A+m)-2=(A-2)+(H-2),
+
+(vit) (An) 2 =A-(u-2),
+(vidi) ly -c=2 and 0y-r=8.
+Definition 2.2 A mapping
+
+Il l:2€ V+ [lz] € R*U {0},
+
+is called a norm in the vector space V if the following are satisfied:
+
+(i) ||z|| > 0 and ||z|| = 0 if and only if  =0.
+
+(ii) For all \ € R and all z,y EV,
+
+Chapter 2. Preliminaries 6
+
+a. [Axl = lllizil,
+b. fle + yll < [lel] + yl
+The space V together with its norm denoted by ||z||v is called a normed space.
+
+Definition 2.3 A subset E of a normed space V is said to be dense in V if each
+
+x € V is the limit of a sequence in E.
+
+Definition 2.4 A sequence {z,} in a normed space V is called a Cauchy sequence if
+lim, [ltm — tally = 0.
+
+Definition 2.5 A normed space V is said to be complete if for every Cauchy sequence
+{zn} in V, there exists an x € V such that {z,} converges to z. Moreover, a complete
+normed space is called a Banach space.
+
+Definition 2.6 Let V be a vector space. A mapping
+Gv: (ty) EV XV (2,9) ER,
+is called a scalar product if the following are satisfied:
+(i) (z,z)v > 0 if and only if c 4 0.
+(ii) For all A, € R and all z,y,z EV,
+
+a. (t,y)v = (y,2)v,
+b. (Az+ my, 2z)v = A(z, 2)v + u(y, 2)v-
+
+Moreover, if V is a Banach space with respect to the norm
+
+llzllv = y(z,2)v,
+
+then V is called a Hilbert space.
+
+2.1.1 The space C(E, F)
+
+In this section, we let E and F be Banach spaces equipped with the norms || - ||z and
+| Ilr, respectively.
+
+Definition 2.7 A mapping y: E'++ F is linear if
+e(Ar+ py) =Av(z) + Oly),
+for all A,u € R, and all z,y€ E.
+
+Chapter 2. Preliminaries 7
+
+Definition 2.8 A mapping y: E+ F is bounded if
+
+le()lle
+zek\{0} [lzllz
+
+that is,
+lle(z)lle < [llizlle,
+
+for some A € R, and all x € E.
+
+Definition 2.9 The space C(E, F) denotes the set of all linear and bounded maps
+from E to F.
+
+Theorem 2.10 (Characterization of C(E,F)) Let p: E++ F be a linear map.
+Then the following are equivalent:
+
+(i) — is bounded.
+(ii) ¢ is continuous.
+(iit) yg ts continuous at a point rp € E.
+
+Definition 2.11 The set of all linear and continuous maps from E to R is called the
+dual space of E denoted by E’. Also, the dual of the dual space of E and is denoted
+by E” is called the bidual of E. Moreover, if x’ € E’, then we denote by
+
+(2',2) eB,
+the image x(x) of z € E.
+Remark 2.12 The dual space E’ = £(E,R).
+Definition 2.13 Let F : E++ E” be the canonical injection map. Then E is said to
+
+be reflerive if F is surjective.
+
+2.1.2 Weak and weak* convergences
+Definition 2.14 A sequence {z,} in E is said to converge weakly to x € E, denoted
+In—z_ weakly in E,
+
+if for all 2’ € E’,
+(2', tn) ere > (2, 2) BB.
+
+Chapter 2. Preliminaries 8
+
+Theorem 2.15 Let z, — x weakly in E. Then
+(i) {zn} ts bounded in E.
+(ii) ||z\le is lower semicontinuous with respect to the weak convergence, that is,
+
+lIzlle < liming |lenlle.
+
+Theorem 2.16 (Eberlein-Smuljan) Let E be reflerive and {x,,} be a bounded se-
+quence in E. Then there exists a subsequence {rn,} of {tn} and x € E such that as
+k- 0,
+
+Zn, > Z weakly in E,
+
+and if tn, — x weakly in E for allk € N, then
+Zp, — x weakly in E.
+Theorem 2.17 Let {zn} C E and {yn} C E’ such that
+
+In—>=z weakly in E,
+Yn y — strongly in E’.
+
+Then,
+lim (Yn, Zn) ee = (2, y)erE-
+
+n=F00,
+
+Definition 2.18 Let F = E’ be a Banach space. A sequence {z,} in E is said to
+converge weakly” to z € E, denoted
+
+In ax  weakly* in E
+
+if for all z’ € F,
+(tn, 2’) ep > (2, 2') PP.
+
+Remark 2.19 Theorems 2.15 - 2.17 also hold for weak* convegence.
+
+2.1.3 L?-spaces
+In this section, we let be a bounded open set in R™ for n > 1.
+
+Definition 2.20 Let 1 < p < co and f : 2+ R be measurable. Define the following:
+
+@ 10) = {s|f 1s@)P ar <0}.
+
+Chapter 2. Preliminaries 9
+
+(i) L™(Q) = {fIlf| < C ae. on Q}.
+Theorem 2.21 L?(Q) is a Banach space equipped with the norm
+Ile <4 (here) 7 yp<ee,
+inf{C||f|< Cae. 2} ifp=+too.
+Remark 2.22 The space L?({) is a Hilbert space for the scalar product
+(Liam = [ Fl2) o(2)ae.
+
+Theorem 2.23 (Hilder Inequality) Let p’ be the conjugate of p for 1 < p < oo.
+That is,
+
+1 1
+
+sS=l1-- ifl<p<o,
+7 5 ifl<p<oo,
+y=1 — ifp=+o0,
+p=too ifp=1.
+
+Then for any f € L?(Q) and g € L* (2),
+fala) ae < IFllerollall are
+Corollary 2.24 (Cauchy-Schwarz Inequality) Let f,g € L?(). Then,
+fale) de < Sllarenllallirey
+‘We will also use numerously the following property in this study.
+
+Theorem 2.25 Let g; € L?() with p; > 1 fori € {1,2,...,k},
+
+1 1 1 1
+en re oa 2
+PoP P2 Pk
+Then,
+k
+TI 9 € 27(9),
+i=1
+and
+k k
+II 94 <I] Ihgill > ay «
+f=1 Mpa) i=
+
+
+Chapter 2. Preliminaries 10
+
+Theorem 2.26 (Convergences in L? spaces)
+(i) Let 1 <p <0 with’ its conjugate. If
+Un > u weakly in L?(Q),
+then for all p € L¥ (2),
+f Une dt +> f up dr.
+
+(ii) Let p=1. If
+Un — u weakly in L'(Q),
+
+then for all yp € L™(Q),
+
+foumeds > ff wpde.
+
+(iit) Let p= +00. If
+Un — u weakly? in L™(2),
+
+then for all p € L'(Q),
+[ivnvde— f wpdz.
+2.1.4 Boundary Value Problems and Periodicity
+
+In this section, we introduce the class of functions that 1we will consider in our main
+problem. We will also define some sequence of matrices and the conditions necessary
+for a boundary value problem.
+
+Definition 2.27 The interval Y in R% defined by
+Y=], &[x]O, [x --+ x]O, év[,
+where ¢; > 0 for any i € {1,2,..., N}, is called the reference period.
+
+Definition 2.28 Let Y be a reference period, and f be a function defined a.e. in
+R". Then, f is said to be Y-periodic if
+
+f(c+ké&e) = f(z),
+
+ae. in RN for all k € Z and any i € {1,2,...,N}, where {e:,¢2,...,ew} is the
+canonical basis of R.
+
+Chapter 2. Preliminaries 11
+
+We now introduce some operators that we will encounter in the next chapters.
+
+Definition 2.29 Let 2 be a bounded open set of R" and f € L(Q). The mean
+value of f over Q is the real number Mo(f) given by
+
+MoS) = Fay J, Sav
+
+Definition 2.30 Let a,8 € R such that 0 < a < f. We denote by M(a,§,2) the
+set of all N x N matrices
+
+A= (ay)icigen € (L°(Q)*
+that satisfy the inequalities:
+
+{ (A(z), A) > aap,
+(A(2)Al < BIA,
+
+for any \€ R™ and ae. on 2.
+Moreover, we define the operator
+
+N
+~div(A(z)¥) = - (auterge-).
+
+ij=l
+We end this section by giving necessary conditions for a given boundary value
+problem to be well-posed.
+
+Definition 2.31 Let P be a boundary value problem and E and F be Banach spaces.
+Then P is said to be well-posed with respect to E and F if the following are satisfied:
+
+(i) For any f € F, there exists a solution u € E of P.
+(it) The solution u is unique.
+
+(itt) The mapping f € F + u€ E is continuous, that is, the solution depends on
+the data continuously.
+2.2 Sobolev spaces
+
+In this section, we introduce some classes of Sobolev spaces where we will establish
+certain convergences in the homogenization results.
+
+Chapter 2. Preliminaries 12
+
+2.2.1 D(Q) and Distributions
+Definition 2.32 Let yp: 2++ R. The support of y, denoted by supp 9, is defined as
+supp ¢ = {x € N(x) # 0}.
+
+Definition 2.33 We denote by D() the set of indefinitely differentiable functions
+whose support is a compact set of R contained in 2.
+
+Theorem 2.34 The space D(Q) is dense in L?(Q) for 1 < p< oo.
+
+Definition 2.35 A map T : D(Q) — R is called a distribution in Q if T is linear and
+
+continuous on sequences.
+
+Remark 2.36 D/(Q) denotes the set of distributions in Q, and it is also the dual
+space of D(Q).
+
+Definition 2.37 Let T € D’(Q). For any i € {1,2,...,.N}, the derivative in the
+sense of distributions of T with respect to 2; is defined by
+
+oT a
+(52°) moon “(86 noe
+* ‘D(N),D(Q) Ti 1 D(n),D(A)
+
+for any y € D(M).
+
+2.2.2 The spaces W!? and H!
+Let us now have the definition of the Sobolev space.
+
+Definition 2.38 Let p > 1. The Sobolev space W1?(2) is defined by
+
+lu € LP(2) and & ¢ 1m0) fori € {0,2,....8}},
+
+w)?(Q) = {«
+
+where the derivatives are taken in the sense of distributions. Moreover, for p = 2, we
+denote the space W1?() to be H1(Q).
+
+Theorem 2.39 The space W1?(Q) is a Banach space equipped with the norm
+Ou
+
+Oz;
+
+A
+llullws.ecay = lleullzoqay + D0 7
+ia L9(9)
+
+for any u € W1P(0).
+
+Chapter 2. Preliminaries 13
+
+Theorem 2.40 The space H1({) is a Hilbert space for the scalar product
+Ov dw
+(v, w) aa) = (0, w)zaQn) + > (%. Bee’
+for any v,w € H}(Q).
+Let us now have the technical definition of a boundary being Lipschitz continuous.
+
+Definition 2.41 The boundary 62 is Lipschitz continuous if there exist c,,c, > 0
+and a finite number M of local coordinate systems (=, ry) and local maps ®,,, for
+m € {1,2,..., M} defined on the set
+
+Rm = {E" = (27,09, .--,2%-1) ERY ||2"| < cy for i=1,2,...,N-1}
+which are Lipschitz continuous on their domain of definition, such that
+
+M
+o2= UTm,
+where, for any m = 1,2,...,M, ™
+Tn = {(@", cH)” € Rn and ry = ®,,(F")}
+with the sets
+Om = {(E,2R)IE™ € Rm and Bma(Z™) < 2% < Bm(Z") +n} CM
+Cm = {(E",2%)|E™ € Rey and Gon(Z") — 09 < 22 < Gq(Z™)} CRYO.
+Moreover, D(®) denotes the set of restrictions in 1 of functions in D(RY).
+
+Theorem 2.42 Let 1 < p < oo. Then D(R) is dense in W19(R™). Moreover, if
+80. is Lipschitz continuous, then D(Q) is dense in W*(2).
+
+Definition 2.43 A map h: E > F is compact if the image {h(u,)} of a bounded
+sequence {un} of E contains a subsequence {h(u,,)} that is strongly convergent in
+F. When Ec F, the map z € E+ 2 € F is called an injection.
+
+Theorem 2.44 (Sobolev embeddings) Let G0 be Lipschitz continuous. Then,
+
+(i) Ifl<p<N, then W'9(2) C LQ) with compact injection for1 <q <p
+
+where + y= 5 - + , and a continuous injection for q = p’.
+
+(it) Ifp=N, then W4(Q) C LQ) with compact injection for 1 < q < 00.
+(iii) If p > N, then W19(2) C C°(Q) with compact injection.
+
+Corollary 2.45 H'(2) C L?() with compact injection. Moreover, H1(Q) contains
+a subsequence strongly convergent in L?(Q).
+
+Chapter 2. Preliminaries 14
+
+2.2.3 The spaces Hj and Hp.
+
+In this section, we show the embeddings needed for the convergences in the homoge-
+nization results to make sense. Moreover, we will also state useful inequalities which
+will be frequently used in the next chapters.
+
+Definition 2.46 The Sobolev space Wd?(), which we also denote by H}(), is the
+closure of D(Q) with respect to the norm in W1?(Q).
+
+Remark 2.47 H3(2) C H1(Q). Also, H3(®) is a Hilbert space for the scalar product
+of H1(Q). Moreover, Sobolev embeddings are still valid for this space.
+
+Definition 2.48 We denote by H~'(Q) the dual space of H}().
+
+Theorem 2.49 Suppose that 00 is Lipschitz continuous. Then we have the following
+
+inclusions which are compact:
+(2) c 1°(Q) c H-*(Q).
+
+Theorem 2.50 (Rellich Compactness) Let {u,} be a bounded sequence in H}().
+Then, there exist a subsequence {un,} of {un}, and u € Hd(Q) such that
+
+Um > u weakly in H}(2).
+
+Theorem 2.51 (Trace) Let 2 be an open bounded set in R™ such that AN is Lips-
+chitz continuous. Then, there exists a unique linear continuous map +(u) called the
+trace of u on OM, defined by
+
+4: H4(O) + 17(60),
+such that for any u € H}(2)N CM), we have 7(u) = u*, the restriction of u in AQ.
+
+Remark 2.52 Let u € H3(2) and assume that we have no regularity on 02. Then,
+tu vanishes on the boundary in the sense of trace. That is,
+
+HG(Q) = {u € H*(Q)|y(u) = 0}.
+
+Definition 2.53 Suppose that ON is Lipschitz continuous. Define the set H 4(a0)
+as the range of the trace +, that is,
+
+4490) = (H1(0)).
+
+Chapter 2. Preliminaries 15
+
+Theorem 2.54 There exists a constant C,(M) such that for any u € H'(Q)
+Uh gd omy $ CrMllulara
+
+Theorem 2.55 (Green’s Formula) Suppose that 09 is Lipschitz continuous. Let
+u,v € H*(Q). Then,
+
+[ox dz = — ox dr+ fn (u)7(v)n; ds,
+
+for i € {1,2,...,N} and n; denotes the i** component of the unit outward normal
+vector n toQ.
+
+Theorem 2.56 (Poincaré Inequality) For any u € H}(Q), there exists a constant
+Ca such that
+llullcacay < Call Vall aga.
+
+Definition 2.57 Let C2.(Y) be the subset of C°(R%) of Y-periodic functions. We
+denote by Hp.-(Y) the closure of Cs2,(Y) for the norm in H’.
+
+Theorem 2.58 Ifu€ H,.,(Y), then u has the same trace on opposite faces of Y.
+
+2.2.4 The space L?(2;X)
+
+Definition 2.59 Let X be a Banach space and p > 1. We denote by 17(2;X) be
+the set of measurable functions
+
+u:rENru(z) eX,
+such that ||u(z)||x € L?().
+Theorem 2.60 L?(0;X) is a Banach space equipped with the norm
+1
+lliscaxy = (f, tu(e)IB de)”
+
+Theorem 2.61 If X is reflerive and 1 < p < oo, then L?(2;X) is reflerive too.
+Moreover, if X is separable and 1 < p < 00, then L?(Q; X) is separable.
+
+Theorem 2.62 The space L?(2;Cper(Y)) is dense in L?(Q; L?(Y)) = L?( x Y).
+
+Theorem 2.63 The tensor product D(Q) ® Hy.-(Y) is dense in L?(9; H}.,(Y)).
+
+Chapter 2. Preliminaries 16
+
+2.3 Some Well-posedness Theorems
+
+This section deals with some fixed-point theorems used in showing the existence and
+
+uniqueness results for elliptic and parabolic boundary value problems.
+
+2.3.1 Lax-Milgram Theorem
+Here, we let V be a Banach space and H be a Hilbert space.
+Definition 2.64 A mapping a: V x V+ R isa bilinear form on V if for any fixed
+u € V, the following maps are linear:
+a(u,-):v €Vr+a(u,v) ER,
+a(-,u):vE€Vrsva(v,u) ER.
+Definition 2.65 A mapping a: V x V + R is bounded if there exists C > 0 such
+
+that for any u,v EV,
+la(u, v)| < Cllullvllelly.
+
+Theorem 2.66 Leta: V x V ++ R be a bilinear form. Then a is continuous on
+V x V if and only if a is bounded.
+Definition 2.67 A mapping a: V x V + R is V-elliptic with constant ao if there
+exists Qo > 0 such that for any ue V,
+
+a(u, u) > aollullt,.
+Definition 2.68 Let a be a bilinear form on H and F € H’. The problem given by
+
+Find u € H such that
+a(u,v) = (Fun (2.1)
+Wu € H,
+
+is called a variational equation, with v € H called a test function.
+
+Theorem 2.69 (Riesz Representation Theorem) Let F € H’. Then there ex-
+ists a unique TF € H such that
+
+(Fo) aH = (TF, e) x,
+for any v € H. Moreover, the injection
+T:FEH 4+rFeEH
+
+satisfies
+
+IrF lla = [Fil
+
+Chapter 2. Preliminaries 7
+
+The next theorem gives the well-posedness of a linear elliptic problem.
+
+Theorem 2.70 (Lax-Milgram) Let a be a continuous bilinear form on H and
+F € H’. Assume that a is H-elliptic with constant ao. Then, (2.1) admits a unique
+solution u € H that satisfies
+
+Nlullir < a7 Fler.
+
+2.3.2 Schauder’s Fixed Point Theorem
+
+Next, for quasilinear elliptic problems we use the following fixed-point theorem to
+show existence as in [6] (see also [12]); while the uniqueness part follows from the
+arguments in [39].
+
+Theorem 2.71 (Schauder’s Fixed Point, [44]) Let K be a closed convex set ina
+Banach space X. Let T be a continuous function from K to K such that T(K) is
+relatively compact. Then T has a fized point in K.
+
+2.3.3 Faedo-Galerkin Method
+
+To end this section, we have the following method used in parabolic problems. Here,
+we outline the general idea of the Faedo-Galerkin method.
+
+1. Since Hi(Q) can be approximated by a sequence of finite-dimensional subspaces
+say {E,}, we start by constructing these subspaces and introduce the projection
+operator. Also, we formulate an approximate problem for each n and show that
+
+it has a unique solution u, € W.
+2. Show that u,, satisfies an a priori estimate
+3. Pass to the limit as n -> oo and show that u, converges to a solution u of (6.8).
+
+4. Show that u is bounded and unique.
+
+Chapter 3
+
+Periodic Unfolding Method
+
+The periodic unfolding method started in the setting of fixed domains as in [14] (for
+more details, see see [25] and (26]). The extension of the operator to perforated do-
+mains was done in [18] which include time-dependent functions [31], and for domains
+with small holes [15] and for domains with two small holes [39]. For the extension in
+small holes to time-dependent functions, see [8].
+
+Now, we recall some of the extensions of this method that we need in this work
+(see [18], [31], [15], and [39], respectively). Here, we enumerate some properties and
+
+their implications.
+
+3.1 General notation
+
+In this section, we introduce the general notations used in [14]. Let 2 be a bounded
+open subset of R such that |O0| = 0, and define the reference cell Y =]0,1[" with
+respect to a basis (by, b2,...,by) defining the periods in RY.
+Define the set
+E. = {€€ Z%e(¥ +6) c 0},
+
+and denote the largest union of cells e(Y + €) that lies inside 2 by
+A.=ine{ U &(¥ +6),
+
+ee=,
+and set A, = 2\G, which is the subset of © containing parts from the cells e(Y + €)
+that intersect its boundary (see Figure 3.1).
+
+Let z € RY. Denote the unique integer combination of periods by [z]y = CJL, kjbj =
+
+€(k) such that z —[z]y € Y and set {z}y = z—[z]y. Thus, we can decompose z into
+its corresponding fractional part {z}y and integer part [z]y (see Figure 3.2). Then
+
+for each z € R¥, one has
+
+one((E], +{Z},) a0 ia".
+
+18
+
+Chapter 3. Periodic Unfolding Method 19
+
+Figure 3.1: ©, (blue) and A, (gray).
+
+Figure 3.2: {z}y and [z]y.
+3.2 Unfolding operator for fixed domains
+
+In this section, we recall the basic properties of the unfolding operator for fixed
+domains as introduced in [14] written for |Y| = 1 (for more details, see (25] and [26]).
+
+Definition 3.1 ([14]) Let ¢ be a Lebesgue-measurable function in 2, the unfolding
+
+operator 7; is defined as follows:
+
+(: lz], + v) . ae. for (x,y) € & x Y,
+
+Teas) = | °
+0, a.e. for (x,y) € Ae x Y.
+
+Let us have the following properties of the unfolding operator.
+
+Chapter 3. Periodic Unfolding Method 20
+
+Theorem 3.2 ({14]) Let y be measurable in Y, extended by the Y -periodicity in RY.
+
+Define
+
+Then,
+
+vy), ae. for (zy) € Ox ¥,
+0, a.e. for (z,y) E Ae x Y.
+Moreover, if 2 is bounded and y € L?(Y) for p € [1,+00[, then
+
+Te(vela)(z,y) = {
+
+Te(Peln)(2,y) — y strongly in L?(Q x Y).
+Theorem 3.3 ([14]) Let p € [1, +00], py € L'(9), and v, w € IA(Q). Then,
+(@) Telou)(z, y) = Te0)(z, 9) Telw)( 2).
+(ii) J; is linear and continuous from L?(Q) to I?(Q x Y).
+(it) f TEele)(eu) day = f v(x)az— [| v(a)de= fi v(x) de.
+() [IT ew)ldedy < f o(a)| az.
+w) |[oeae- ff  Te)ev) dedy| < J lole)laz.
+(i) I7e(w)(2, Dllertaxry = ho }g, lose < llwllzacay
+(vii) Let {ue} be a bounded sequence in L?(Q) and v € L?(Q). Then,
+frvae® [) Telue)(z.u) Tw)(x,u) ddy.
+
+(viii) Let {ue} and {v,} be bounded sequences in L?(Q) and L*(Q),
+respectively, with 3 +! <1. If ON is bounded, then
+
+firerede® f Telue)(x,u) Telve) au) dady.
+
+(iz) For w € L?(Q),
+T.(w) + w strongly in L?(Q x Y).
+
+(x) Let {w.} be a sequence in L?(2) such that
+
+we + w strongly in L?(Q).
+
+T.(we) > w strongly in L?(2 x Y).
+
+Chapter 3. Periodic Unfolding Method 21
+
+Theorem 3.4 (Unfolding Criterion for Integrals, [14]) If a sequence {p.} in
+L'(Q) satisfies
+[,\ee@)lax 0,
+then
+fivcla)de— [ Telee)(e.y) dedy — 0.
+
+Moreover, we write
+Te
+
+fvele)de® fi Te) ay) dzdy.
+Let us now consider some properties that involves the gradient.
+Corollary 3.5 ({14]) Let p €]1,+0o[ and {w.} be a sequence in W1(Q) such that
+
+we > w weakly in W1?(0).
+
+Then,
+
+T.(we) > w weakly in L?(0; W'9(Y)).
+Also, there exists @ € L?(Q;W,2(Y)) such that up to a subsequence,
+
+T.(Vuwe) > Vw + Vyid weakly in LP(Q x Y).
+
+3.3 Unfolding operator in perforated domains
+
+In this section, we recall the basic properties of the unfolding operator in perforated
+domains as introduced in [18].
+
+Geometric Setting
+
+Let 2 be a bounded open subset of R% such that |9| = 0 and consider the reference
+cell Y =]0,1[% with respect to a basis defining periods in R'. Let S be a compact
+subset of Y with a Lipschitz continuous boundary. Thus, the part occupied by the
+material in cell Y is Y* = Y \ S, in which we suppose is connected (see Figure 3.3).
+
+The perforated domain 22; (see Figure 3.4) is then obtained by removing from 2 the
+set of holes S,, where
+
+S = U e€+5).
+
+€eZzZN
+Also, define
+9 =A,\S,, and At =08\ A.
+
+Chapter 3. Periodic Unfolding Method 22
+
+Figure 3.3: The cell Y* and the set S.
+
+Figure 3.4: The domain 2,.
+
+Furthermore, we denote by 09, the boundary of 22.
+Let us now introduce the operator.
+
+Definition 3.6 (Unfolding Operator, [18]) Let y be a Lebesgue-measurable func-
+tion in Q, the unfolding operator 7, is defined as follows:
+
+= 6 .
+TleNey = | 9 (c zl, +e) , ae. for (z.y)EN, x Y*,
+0, a.e. for (x,y) € Ae x Y*.
+
+Remark 3.7 All properties mentioned in Section 3.2 still holds for this unfolding
+
+operator as given in [18]. Moreover, an unfolding criterion is still satisfied.
+
+For the terms in the boundary of the perforations, we introduce a suitable unfold-
+
+ing operator.
+
+Chapter 3. Periodic Unfolding Method 23
+Definition 3.8 (Boundary Unfolding Operator, [18]) Let y be a Lebesgue-measurable
+
+function on an: 1 @S,, the boundary unfolding operator 7? is defined as follows:
+
+Te\(2.y) = | 9g G [zl +ev{=} ) , ae. for (x,y) € % x aS,
+. we 0, a.e. for (x,y) € Ae x OS.
+
+We also have the following properties for this operator.
+Theorem 3.9 ([18]) Let p € [1,+00[, yp € L'(05,), and v,w € L?(S,). Then,
+(i) T2(ww)(2, y) = T2()(2,y) Te (w)(2,9)-
+(it) Te is linear.
+(it) fol) dow = = fg TEN a8) dey.
+(iv) Let ¢ € L?(OS) be a Y-periodic function and set p, = v(2). Then,
+Te (e)(x,y) = ly)
+
+(v) For w € L?(8S),
+
+Te(w) + w strongly in L?(O x OS).
+
+(vi) Let g € L?(8S) be Y-periodic and set
+9(2) if Mos(g) =0,
+9e(z) =
+eg(2) if Mos(g) #0.
+Then for p € D(Q), one has
+
+125 sys( of pdr, where Mas(9) doz.
+
+Ke
+YI = Bal os
+Theorem 3.10 ([18]) Let p € [1,+00|. Let {w.} be a sequence in W1?(Q,) such
+that
+
+lim las, 8? do, =
+
+Te (we) > w weakly in L7(2;W*(Y)),
+then
+Te(we) = w weakly in L?(0; W1-5”(Q8)).
+
+Now, we extend the unfolding operator in perforated domains suited for time
+dependent functions. Here, we only state the theorems as the proofs are similar as
+given in [18], one just needs to integrate over [0,7] to obtain the results.
+
+Chapter 3. Periodic Unfolding Method 24
+
+3.4 Time-dependent unfolding operator in perfo-
+rated domains
+
+Before we introduce the time-dependent operator for perforated domains, let us first
+have the analog for fixed domains. Here, we state the theorems from [31] (for more
+details, see [30}).
+
+Definition 3.11 ((31]) Let p € [1, oof and q € [1, oof. Let y € L9(0,T; L°(Q)), the
+unfolding operator 7,* : L4(0, T; L?(Q)) ++ L4(0,T; L?(Q x Y)) is defined as follows:
+
+g (c (zl, tent) » ae. for (x,y) € m, x Yxj)0,T[,
+
+Te(e)(a, ys t) = |
+0, a.e. for (x,y) € Ae x Yx]0,TI.
+
+Definition 3.12 ([31]) Let p € (1, oo[ and g € [1, oof. Let y € L9(0,T; L*(M2)), the
+unfolding operator T;* : L*(0,T; L?(Q2)) + L*(0,T; L°(Q x Y)) is defined as follows:
+
+9g (c [| +ey, t) , ae. for (z,y) € %% x ¥*x]0, TI,
+ély
+0, a.e. for (z,y) € Ae x Y*x]0,7[.
+
+Te (e)(2,y, t) = |
+Let us have the following properties of the unfolding operator.
+Theorem 3.13 ([31]) Let p € [1,+00[ and q € [1, 00|. Then,
+(i) Te(vw) = Te(v) Te (w), for every v, w € L9(0,T; L?(2))
+(ii) Te(v¢) = PTS (), for every  € L?(93) and y € L4(0,T).
+(iti) Vy Te (®) = Te(V®), for every & € L9(0,T;W'9(2)).
+-. 1 ot _ it pt _ it
+(iv) wit Joy. Te (@) dedyat = [ f pdrdt f he pdzdt = f fe pdrdt.
+
+(v) Let ¢ € LP(Y*) be a Y-periodic function and set p, = ¢(:)- Then,
+
+Te (pe) = oy), ae. 2x ¥*x]0,T[
+
+(vi) Let {ue} be a bounded sequence in L4(0,T; L?(Q2)) and a bounded v € L* (0,T; L? (22),
+with 1+ 3 =1and}+3=1. Then,
+
+[f [vv deat Ez WL oer. Toe) Te) ded
+
+Chapter 3. Periodic Unfolding Method 25
+
+(vii) Let {u,} and {v,} be bounded sequences in L4(0,T; L?(Q2)) and L* (0,T; L?°(Q2)),
+respectively, with 2 + 5 < land A +7 = 1. If AQ is bounded, then
+T tT 1 =/T
+f f tee deat © f [pe Te (te) Te (ve) dda
+(viii) Let {we} be a sequence in L?(0,T; L?(Q)) such that
+we + w strongly in L?(0,T; L?(9))
+
+Then,
+Ty (we) +> w strongly in L?(0,T; L?(2 x Y*)).
+
+Theorem 3.14 (Unfolding Criterion for Integrals, [31]) Let q € [l,oo|. If a
+sequence {y-} in L1(0,T; L'(Q2)) satisfies
+
+EF [, tentazat 0,
+
+then
+T 1 ;t
+[ I, pededt — 5 f [ Te (ve) dedydt + 0.
+Moreover, we write
+T Tj]! 1 =?
+dzdt ~ —
+Lf vedeat® ll fi. Te (ee) dada
+Let us now consider some properties that involves the gradient.
+
+Theorem 3.15 ({31]) Let {w.} be a bounded sequence in L?(0,T;H'(Q2)) Then
+there exists a w € L7(0,T; H3()) such that
+
+T;(we) > w weakly in L?(0,T; L?(0; H*(Y*))).
+
+Also, there exists ® € L?(0,T; L?(Q; H}.,(Y*))) with My-(@) =0 such that up to a
+
+subsequence,
+
+Te(Vur) + Vw+ Vy — weakly in L?(0,7; L?(Q x Y*)).
+
+3.5 Unfolding operator in domains with small holes
+
+In this section, we introduce two unfolding operators that depend on two and three
+parameters, respectively.
+
+Chapter 3. Periodic Unfolding Method 26
+
+3.5.1 Unfolding operator in domains depending on two pa-
+
+rameters
+
+In this section, we introduce an extension of the unfolding operator that suits the
+geometry of a perforated domain with holes of sizes depending on two parameters.
+This operator was first introduced in [10] and was used in reticulated structures
+[11] and sieve problems [15]. Furthermore, we enumerate basic properties and esti-
+mates (as mentioned in [15]) that will be useful in the homogenization results later.
+In the sequel, the Sobolev exponent for N > 3 corresponding to 2 is given by
+2N
+
+w= (3.1)
+
+General Notations
+
+Let N > 3. Let Q and Y be sets as defined in Section 3.3. Let B be an open subset
+of Y with a Lipschitz continuous boundary and 6 a small parameter going to zero.
+The rescaled set 5B will then be referred to as the hole in Y. Thus, the part occupied
+by the material in cell Y is ¥; = Y \ 5B, in which we will suppose to be connected
+(see Figure 3.5).
+
+Figure 3.5: The cell Ys; and the set B.
+
+The perforated domain 2, is then obtained by removing from 2 the set of holes
+BS (see Figure 3.6), where
+Bi= U e(€+ 6B).
+
+gezN
+Furthermore, we denote by 42,5 the boundary of 2.5.
+
+Finally, we suppose that the size €6 of the holes in 2 are smaller than the period,
+and so is tending to zero quicker than € as € approaches zero. That is, we are in the
+case of small holes as described in [20] (see also [15] and [24]).
+
+Chapter 3. Periodic Unfolding Method 27
+
+Figure 3.6: The domain 2.5.
+
+Let us now introduce the operator.
+
+Definition 3.16 (Unfolding Operator, [15]) Let p € [1,+0o[. For p € L*(Q),
+the unfolding operator
+Tes: LP(2) 4 L(A RY),
+is given by il
+Te az, Oz) if (x,z) € Ox <Y,
+TEE | " (Nz.52) if (2,2) Ox 5
+
+otherwise.
+
+We also introduce the local average of a function.
+
+Definition 3.17 (Local Average, [21]) Let p € [1,+00[. For ¢ € L?(Q), the local
+average Mj, : L?(9) ++ L?(Q) is given by
+
+E(y) =
+¥(¥) = [T) dy.
+Theorem 3.18 ((21]) Jf {v-} is a bounded sequence in L?(2) such that
+Ue vu — strongly in L?(Q),
+
+then
+My(v,-) + v strongly in L?(Q).
+
+Let us have the following properties of this unfolding operator.
+
+Chapter 3. Periodic Unfolding Method 28
+
+Theorem 3.19 (([15])
+
+(i) For any v,w € L7(2),
+Tes(vw) = Tes(v)Tes(w).
+
+(ii) For any u € L'(Q),
+-N
+af pw (Ta(u)| dads < f |ul de.
+(iti) For any u € L?(Q),
+1
+7es(u)lIZacaxrxy S Frllellzacay-
+
+(iv) For any u € L}(Q),
+
+[fuaz-o" f Tes(u) ded] < I. |ul de.
+(v) Let ue H1(Q). Then,
+
+1 1
+Tes(Veu) = =5V2(Tes(u)), in 2 x FY.
+
+(vi) Suppose N > 3 and let w C RN be open and bounded. The following estimates
+hold:
+€
+IV.(Tes(4))IlEacaxyvy < gralVulliaay,
+
+Ce?
+IITes(u — M¥(u))ll7a(a,2%-amy) < GraallValliag,
+
+2Ce?
+Tes) ll7>(axu) < ¥na
+
+where C is the Sobolev-Poincaré-Wirtinger constant for H*(Y).
+
+(vii) Suppose N > 3 and let {wes} be a sequence in H*(Q) which is uniformly
+bounded as both « and 6 approach zero. Then there exists W € L?(Q; L?*(R™))
+with V.W € L?(2 x RY) such that up to a subsequence,
+
+-1
+a (Tes(wes) — ME(wes)1yy) > W weakly in L?(0; L™*(R%)),
+and ya
+u = V=(Tes(wes)) yy + VeW weakly in 1(0 x RY).
+Furthermore, if
+; oe
+lim sup < +00,
+
+(d)-1(0+ 0+) €
+
+Chapter 3. Periodic Unfolding Method 29
+
+then one can choose the subsequence and some U € L2,,(9; L?*(R%)) such that
+x
+
+-1
+aa Tea(wes) =U weakly in 12,,(0; L*(R™)),
+
+where 2° is given in (3.1).
+Also, an unfolding criterion for integrals holds for this extension operator.
+
+Theorem 3.20 (Unfolding Criterion for Integrals, [15]) If a sequence {y,} in
+L(Q) satisfies
+
+Jf lec@laz 0,
+then
+fivea)de— 8" [Te ee)(a,2) dads + 0.
+
+Moreover, we write
+
+f pe() da EE 5N f, “aw Tle) 6,2) dade.
+
+Theorem 3.21 ((15]) Let {u,} be a bounded sequence in L?(Q) and v € L?(Q) with
+p> 2. Then,
+
+firereds Bay f  Teste)(x,2) Teslve) (a2) dadz.
+Theorem 3.22 ((39]) Let {w.} be a bounded sequence in H'({) such that
+we > w weakly in L?().
+Then for all r € (2,2*[, one has
+Tes(we) 4 w strongly in Lj,.(Q x Y).
+
+Theorem 3.23 ((38]) Let {we} be a sequence in H'(Q,5) such that ||wellir(n,4) #8
+bounded. Then, there exists w € H1(Q) such that
+
+Tes(we) + w weakly in L?(2; Hi,(Y)).
+Also, there exists © € L?(Q; H}.,(Y)) such that up to a subsequence,
+
+Tes(Ve) + Vw t+ Vy weakly in L7(9; L2,(Y))%.
+
+Chapter 3. Periodic Unfolding Method 30
+
+From here, we define a linear boundary operator on the boundary of the holes
+BE specific to the case of domains with volume-distributed holes. Moreover, we
+enumerate basic properties that are analogous to that of the boundary unfolding
+operator mentioned in [21] and [38], whose derivations are based only on a change of
+variable.
+
+Definition 3.24 (Boundary Unfolding Operator, [21]) For y € L?(@B8), the
+boundary unfolding operator
+
+Te, : L?(OB®) ++ LP(R™ x 8B),
+is defined by
+T3(e)(z, z) =p (c [ZI +62) , Vee R,Vz € OB.
+We have the following properties of this operator.
+Theorem 3.25 ([15]) Let v,w € L?(OB8). Then,
+Tes(vw)(2, 2) = T3(v) (a, 2) T33(w)(z, 2).
+Theorem 3.26 ([38])
+(i) For any y € L?(8B8),
+Tae)(2.3 {2}) = ole).
+(ii) Let ¢ € L?(OBS) and set y. = p(}{2}). Then,
+Tea(Pe)(z, 2) = (2).
+(itt) We have the following integration formula:
+[opp 2) 40e = = [gg THOME 2) dado, Wo € LOBE).
+
+Theorem 3.27 ((21]) Let g € L?(8B), where
+For all p € H1(2), one has the following estimate:
+
+<c
+
+Ba
+7 Z (6 + Mes(9)I)IVelluany,
+
+ep dos
+ony 9?
+where Moa(Q) is given in Definition 2.29. Also, as +0, we have the convergence
+
+axp day + |8B\Moa(a) f vaz.
+
+€
+ON-1 Japs
+
+Chapter 3. Periodic Unfolding Method 31
+
+Theorem 3.28 ((39]) Let p € [1, +00]. Let {we} be a sequence in W1?(Q,5) such
+that
+
+Tes(we) > w weakly in L?(2,W1(Y)),
+then
+Te3(we) = w weakly in LP(Q; W'-#?(AB)).
+
+3.5.2 Unfolding operator in domains depending on three pa-
+
+rameters
+
+Let us now have the version of the unfolding operator that suits the geometry of a
+perforated domain with holes of sizes depending on three parameters. The extension
+of the periodic unfolding method in three parameters in [39] utilizes the fact that the
+solution t,s,5, vanishes on the boundary of the perforated domain (see [39]). Also,
+we note that the domain 2,5, is just the domain 2,5 with 6 replaced by 62.
+
+Notations
+
+Let 2 and Y be sets as defined in Section 3.3. Let B and T be compact disjoint subsets
+of Y with Lipschitz continuous boundaries. Let 5; and 62 be small parameters going
+to zero independently. The rescaled sets 5, B and 52T will be referred to as the holes
+in Y. Thus, the part occupied by the material in cell Y is ¥s,¢, = Y \ (i: BU 8:7), in
+which we will suppose to be connected (see Figure 3.7).
+
+Figure 3.7: The cell Y5,5, and the sets B and T.
+
+The perforated domain 6,5, is obtained by removing from 22 the set of holes BS
+and T° (see Figure 3.8), where
+
+Bi = (J e€+6B) and T= LU e(€ +67).
+
+€ezN €eZN
+
+Chapter 3. Periodic Unfolding Method 32
+
+Furthermore, we denote by 085,51 the exterior boundary of Q.5,5,-
+
+Figure 3.8: The domain Q,6,5,-
+
+Finally, we suppose that the sizes €4, and ed: of the holes in 2 are smaller than
+the period, and so are tending to zero quicker than € as € approaches zero. That is,
+we are in the case of small holes as described in [20] (see also [24]).
+
+Let us now introduce the operator.
+Definition 3.29 (Unfolding Operator, [39]) Let p € [1,+00|. For y € L”(Q.5,),
+the unfolding operator 74,5, is the function Tcs,5, : L?(Q) ++ L?(Q x RY) defined by
+
+GF az, bz if (x, z) € Aes, x 2Y5,,
+Tennlo)(t,2) = e6, (P) (x, 612) (x, 2) € N25 x 5, Yb
+otherwise,
+
+where 7;s, is the operator in Definition 3.16 by taking 6 = 6, and where Ys, = Y \ dT.
+
+Remark 3.30 ([39]) All properties mentioned in Section 3.5.1 for Jes are still true
+for 7; 6,4, by replacing 5 by 6, and Y by Ys.
+
+We also have the following analog of the boundary unfolding operator.
+
+Definition 3.31 (Boundary Unfolding Operator, [39]) For y € L”(0T;), the
+boundary unfolding operator is defined by
+
+Te,5,(¢)(2, z= (c [Z], + <2) , Wee R’ ze aT.
+
+Chapter 3. Periodic Unfolding Method 33
+
+Remark 3.32 All properties mentioned in Section 3.5.1 for TZ are still true for 7,5,
+by replacing 5 by 4).
+
+Remark 3.33 Notice that 75,5, is just the operator 7;s,, and 7,55, is the operator
+To, Indeed, this follows directly from Definitions 3.16 and 3.24 with 6 replaced by
+6, and 42, respectively.
+
+We now introduce the functional space from which we will get our test function
+necessary for the treatment of the contribution of the small holes in our limit problem.
+
+Definition 3.34 ([15]) Define the functional space
+Kp = {py € L* (RY) | Vp € L7(R") and ¢ constant on B},
+where 2° is given by (3.1).
+
+Theorem 3.35 ([15]) Let v € D(RY)N Kg and set
+
+‘Wes(z) = o(B) — ¢ {2}) , Vee RN.
+
+Then,
+wes > 0(B) weakly in H*(Q), (3.2)
+and
+1 al
+Tes(Vwes) = -yV in DQ, x 5y (3.3)
+Theorem 3.36 ([15]) Let N > 3. Then the set
+
+Ut € Hyer(Y) |p = 0 on 5B},
+0<b<.
+
+is dense in H}.,(Y) for every by > 0.
+Remark 3.37 From (3.2) we have,
+wes > v(b) strongly in L?(Q),
+so that by Theorem 3.3 (z),
+Te(wes) + v(b) strongly in L?(9 x Y).
+Remark 3.38 From the strong convergence in the previous remark, we have that
+Tes(wes) > v(b) weakly in L?(9 x Y),
+and so by Theorem 3.28,
+Te(wes) + v(b) weakly in L?(9 x 8B).
+
+Chapter 4
+
+Linear Elliptic Problem
+
+in Domains with Small Holes
+
+In this section, we situate an elliptic problem considered in [38] in a periodically
+perforated domain with holes of orders depending on two parameters as in Section
+3.5.1 (see [15].) Here, we recover and refine the homogenization results in [38] in the
+sense that the effect of the perforations is captured by using the test function given
+in (15).
+
+In particular, we consider the elliptic problem given by
+
+—div (A*(z)Vues(z)) = f(z) in es,
+
+A®(z)Vucs(z) + Mes = ge(z) on OB%, (4.1)
+
+ues(z) = 0 on 8x5 \ OB?,
+where we prescribe a nonlinear Neumann-type condition on the boundary of the holes
+BS and a Dirichlet-type condition on the boundary of 2,5 that does not include the
+boundary of the holes Bé. Here, n,s is the unit exterior normal vector to BS, and
+
+A‘(a) = A (2) € M(a,6,9),
+where M(a. 8,9) is given in Definition 2.30.
+Some physical applications related to this problem involve the chemical reactions
+happening on the wall of a reactor with periodically distributed grains as in the
+
+Fruendlich kinetics model and the Langmuir kinetics model solved in [23].
+We assume the following:
+
+H1. f and g are functions such that
+
+(i) fe LQ),
+(ii) g € L?(OB).
+
+H2. 6 = &(e) satisfies
+
+Raa gN-1
+and 2=lim 5
+a)
+
+d= lim S
+€
+
+0
+
+respectively, where A1, Az € [0, +00].
+
+4
+
+Chapter 4. Linear Elliptic Problem in Domains with Small Holes 35
+
+Remark 4.1 The number ); corresponds to the critical size of Dirichlet small holes
+from [20], while 2 corresponds to that of Neumann small holes from [24].
+
+Introduce now the Banach space
+Ves = {p € H*(Me5) | p = 0 on AN%qs \ BE},
+equipped with the norm
+llullyes = Vullzagney = Vu € Ves. (4.2)
+
+In the sequel, we will still denote by y € Vs, its extension by zero in Bé and
+again, we will assume that N > 3.
+
+Remark 4.2 When f € V/; and g € H-4(9B) instead of the data assumptions in
+#1, the results are still valid and the proofs are similar.
+
+Remark 4.3 A Poincaré inequality holds in the space V.s. That is, there exists a
+constant C > 0 such that
+
+llullzaeacs) < Cll Villans), Yu € Ves. (4.3)
+This, together with (5.3) gives the norm in Vs equivalent to that in H1(1,-s).
+
+The variational formulation of (4.1) is given by:
+
+Find u,s € Vis such that
+
+G =
+f Ae) Vso de = f fede + f 94 0M) (4.4)
+for every v € V,s.
+
+Indeed, let v € V,5 be a test function. Multiplying the first equation of (4.1) by uv
+and integrating over Qs,
+
+f _, raiv (ASV) ude = f __fode. (4.5)
+Applying Green’s formula to the left-hand side of (5.6),
+a
+iv (AL =- e
+f div (AV) ode = x fh By AV) vde
+ov
+= G
+= rh, (Vues), 5 ae
+
+HZ fe, (A Vues mi) odo,
+
+Chapter 4. Linear Elliptic Problem in Domains with Small Holes 36
+so that we obtain,
+
+f div (AV) vde = f __ (A Vins) Vo de as)
+~ [ (AVue8) fi) odes,
+
+Now, notice that by the boundary conditions in (5.1),
+
+Jpn, (AP Vues) fl) vos = ((A'Vues) ff) v doe
+
+Tocxe01.00
+= ((A*Vucs) + fi) vdos
+
+© Songs\ 9B
++ [ogg (A'Vues): odes
+=0+ Leow gev doz,
+which yields
+Ton, (A Vues) Auden =f), gev dor. (4.7)
+Thus, by (4.5) - (4.7),
+fh A’ VuesVu de = fh. fodr+ f,,, gv doz,
+
+from which (4.4) directly follows.
+
+4.1 Homogenization results
+We begin this section with the well-posedness of (4.4) due to Lax-Milgram Theorem.
+
+Theorem 4.4 ([38]) Under assumptions H 1 and H 2, problem (4.4) admits a unique
+solution ues € Ves satisfying the a priori estimate:
+
+lluesllves < C, (4.8)
+for some constant C > 0.
+
+Let us now have the homogenization results. First, we obtain the unfolded limit
+problem and convert to its corresponding strong formulation and end the section by
+interpreting the contributions of each data at the limit. The next theorem will be
+useful in the proof of our main result.
+
+Chapter 4. Linear Elliptic Problem in Domains with Small Holes 37
+
+Theorem 4.5 ([38]) Let w. € H'(Qs) for every € with ||wella1(n,4) bounded. Then
+there exist w € H*(2) and @ € L7(; He(Y)) such that
+
+{ (i) Tw.) > w weakly in L?(O; H},(Y)), oo)
+
+(it) Te(Vue) = Vwt+ Vy weakly in L?(0; L2,(Y))”.
+
+Theorem 4.6 (Limit Problem) Suppose that, as € goes to zero, there exist a ma-
+trit A such that
+
+T.(A)(z,y) + A(z,y) a.e. nQx Y, (4.10)
+and a matriz field Ay such that as € and 6 go to zero,
+Tes(A)(z,z) 4+ Ao(z,z) ae. in Qx (RN \ B). (4.11)
+
+Let ugs € Vis be the solution of (4.4), where « and 6 satisfy H2. Then up to a
+subsequence, there exists up € H3(2) such that
+
+Ug + Up strongly in L?(2). (4.12)
+
+Also, there exist & € L?(9; Hi,(Y)) and U € L7(9;12,(IR™)) vanishing on 2 x B
+with U — A,u9 in L7(Q; Kg) such that the ordered triple (uo, @, U) solves the following
+limit equations:
+
+{ A(z, y)(Vuo + Vyi)Vye(y) dy =0 ae. inQ and Vy € Hp.,(Y), (4.13)
+
+foe Ao(z, z)V.UV.v(z)dz=0 ae. inQ and Wu € Kg with o(B) =0, (4.14)
+
+f ey Ae w)(Vuo + Vy) VY dandy — dr f con Ai(h2)V.U vay drdo,
+= 4.15
+J fede + r10B\Mon(s) [ waz, (4.18)
+for ally € Hi(O),
+where vg is the unit exterior normal to the set B and do, the surface measure.
+
+Proof. We give the proof in several steps.
+
+STEP 1. First, note that (4.12) is immediate from the estimate in (4.8) and that the
+existence of @ € L7(0; H}.-(Y)) is guaranteed by Theorem 4.5.
+
+Chapter 4. Linear Elliptic Problem in Domains with Small Holes 38
+
+On the other hand, the existence of U € L?(9; L2,,(R%)) such that U — Arup is
+
+in L?(Q; Kg) follows from the arguments given in [15], so we omit the details of the
+proof here.
+
+Let us now proceed to the limit equations.
+STEP 2. To show (4.13), let p € D(Q) and y € C},,(Y) be vanishing in a neighbor-
+hood of the origin. So for ¢ and 6 small enough, one has U(.) = ew(-)y () € Ves.
+Take © € V,5 as a test function in (4.4), and thus,
+fh. A'VugsVV de = i fvar+ f,, a¥ doz.
+By the gradient of W and the chain rule applied to y, we have
+
+ef, A VussVuv (2 ) dr+ to A ae ) ae
+
+Note that as € approaches zero, all integrals in this equation approach zero except
+the second term in the left-hand side. The choice of test function implies that the
+unfolding criterion in Theorem 3.4 is satisfied. So, unfolding this term by 7; together
+with Theorem 3.3 (4), (i), (vit), and (viii) yield
+
+ff Avuave (Z) ae B [TANT Tua) TET (Vo (Z)) dedy.
+
+This, together with (4.10), (4.9) (ii) and Theorems 3.3 (iz) and 3.2 allow us to pass
+to the limit to obtain
+
+lim j, _Avuesv¥e (Z ) dz = hy A(z, y)(Vuo + Va) pV, oly) drdy,
+
+from which (4.13) follows by the density in Theorem 3.36.
+
+Step 3. For (4.14) and (4.15), we consider the effect of the perforations in the limit
+equation by letting y € D(M) and take w-st) as a test function in (4.4), where wes is
+given in Theorem 3.35. Then, (4.4) is rewritten as
+
+fh ASV ues Vest) dz + fh, A’ Vucswes Vp de
+
+“=f, foabar+ f, Gewesp doz. (476)
+
+This choice of test function implies that the unfolding criterion in Theorem 3.20 is
+satisfied.
+
+Chapter 4. Linear Elliptic Problem in Domains with Small Holes 39
+
+For the first integral in the left-hand side of this equation, unfolding by T-s together
+with Theorems 3.19 (i), 3.21, and 3.35, we obtain
+
+f A'Vucs Vues dz
+a
+
+Bev Tes( A®)Tes( Ves) Tes Vues) Tes) dnd
+
+NxRN
+
+1
+= 8 fay THA) Talus) [- V0] Teal) dds
+
+6N-1
+=~ Jogw Te8(AYTe6(V ues) V 2vTeo(p) dade
+
+i
+
+€
+
+Fen THA‘) [58 Te( Vues] Tealv) Va dee.
+
+By H2, (4.11), and the convergences (for more details, see [15]),
+
+6¥-1
+2 Ve (Tes(ues)) 1yy = 69 T5(Vuss) > VU weakly in L2(9 x R"),
+with
+Tes(¥)V.v 4 ¥V.v strongly in L?(0 x RY),
+let us pass to the limit and obtain
+
+7 G __
+lim fh, A'Vugs Vue dr = —d f cng) M08 VU (2, 2)0V .0(2) dads. (4.17)
+For the second integral in the left-hand side of (4.16), unfolding by 7; together
+
+with Theorem 3.3 (vii) and (viii) we obtain
+fh. AVucswes Vy ds & f T(A'YTe(Vuss)Te(wes)Te( VY) dey.
+
+By (4.10), (4.9) (#i), Remark 3.37, Theorem 3.3 (iz), one can pass to the limit to
+obtain
+
+lif) A'Wucsues Vode = 0(B) f, Alzu)(Vut Vya)Vvdedy. (4.18)
+
+For the first term in the right-hand side of (4.16), unfolding again by 7, with
+Theorem 3.3 (vit), we obtain .
+
+Te
+fi, fucsvae® fT NTe(wes) Te) dey,
+By Theorem 3.3 (iz) and Remark 3.37, one can pass to the limit to obtain
+
+lig f Sueode = 0(B) [ fde. (4.19)
+
+Chapter 4. Linear Elliptic Problem in Domains with Small Holes 40
+For the second term in the right-hand side of (4.16), unfolding by Té with Theo-
+tems 3.25 and 3.26 (iii), we obtain
+
+gN-1
+Gees do, = —— Tes(e) Tes(wes) Te3(") dado.
+
+OBE é€ Jpyxep
+
+By H2, Theorems 3.26 (i), 3.27, and Remark 3.38, we get the limit
+
+lim [ng Sees dos = Mav(B)|OB|Moa(a) fi var. (4.20)
+
+Thus, passing to the limit in (4.16) through (4.17) - (4.20) we get the limit equation
+given by
+
+fo cura 4002 2). (2,2) Ve 0(2)v dads
++v(B) f vy Ae y)0(Vu + Vya) dedy (4.21)
+
+= 0(B) [fede + dav(B)/OB\Moa(9) f vac.
+
+which by density holds for all y € H3({) and v € Kg. When v(B) = 0, we get (4.14).
+Moreover, when u(B) # 0, by integration by parts in the first term in (4.21),
+
+—0(B) f cop 10(%12)VUv5y dda,
++0(B) [Ale u) Vu Vut Vea) dedy
+
+= 0(B) [ fudedy + da0(B)|OB|Moa(o) f var,
+from which (4.15) directly follows. S
+
+Let us now have the classical formulation in which the proof is similar to that of
+Theorem 5.9.
+
+We first introduce (as in (15]) the classical correctors X; for j = 1,...,N for the
+homogenization in fixed domains (for more details, see [5]) which solve the following
+
+cell problems:
+Xj € L°(0; Hpar(¥)),
+[ae y)V(%j — yj) Ve =0 ae. inQ,
+
+Vy € H},,(Y).
+
+Chapter 4. Linear Elliptic Problem in Domains with Small Holes 4l
+
+Also, x is the solution of the cell problem corresponding to the holes 6B given by
+xe L”(0; Ka), x(z,B)=1,
+fam\p Molt: 2)Vix(a, z)V.U(2) dz = 0 ae. in Q,
+VW € Kg with ¥(B) =0.
+Set the function
+
+Q(z) = ‘Ao(a, 2)Vex(a, z)Vex(e, 2) dz,
+
+RN\B
+which is nonnegative and can be interpreted as the local capacity of the set B.
+
+Theorem 4.7 (Classical Formulation) The limit function up is the unique solu-
+tion of the homogenized problem
+
+{ —div(A®°™Vup) + up = f + A2l9Bl|Mon(g) in Q,
+u =0 on AQ.
+
+Here, A*™ is the classical homogenized matrix given by
+N az;
+bom) — _ | xs,
+Abge(a) = J, (au(erw) — Yo ou(e 0) 2.0) ay.
+We end this section by discussing the contribution of each data in the limit problem.
+
+Remark 4.8 The oscillations in the matrix give rise to the classical homogenized
+matrix A*°™ in the limit problem. The set of Neumann holes Bé contributed the
+constant A|9B|Mop(g). The choice of the test function contributed to the zero-order
+strange term A?7@up.
+
+Remark 4.9 Notice that we recover the limit problem in [38] but here we have
+additional terms (as in (15]) that capture the effect of the perforations by using
+another suitable test function. Thus, we are able to refine the results in [38].
+
+Remark 4.10 The strange term ?@up is similar to that obtained in [15], [24] and
+[20].
+
+Chapter 5
+
+Quasilinear Elliptic Problem
+
+in Domains with Small Holes
+
+In this chapter, we deal with a quasilinear elliptic problem situated in a periodically
+
+perforated domain with holes of orders depending on small parameters as in Section
+
+3.5.2. We will have the well-posedness of the problem and obtain some homogeniza-
+
+tion results. We use the key ideas in [7] for the treatment of the quasilinear matrix.
+Consider the quasilinear elliptic problem given by
+
+—div (A‘(x, Ue5,6)VUe515.) = f(z) in Qe665
+Uc5,5. = 0 on 09,4, UBS, (5.1)
+AS (a, eds) V Ueb89 ° Meby + €7Te(E)A(Ues,e) = Ge(t) on OTZ?..
+
+Here, the domain 5,, and the boundaries 0°%,,;,,0B5 and 67% are defined in
+Section 3.5.2. We prescribe a nonlinear Robin-type condition on the boundary of the
+holes T& and a Dirichlet-type condition on the boundary of the holes B& and on
+O9,, 5,. We also let 7 > 0 and nes, be the unit exterior normal vector to T23, and the
+functions A‘, 7, and g, are given by
+
+(i) AM(@, ues) = A (Esteve)
+(a) na) =7 (= {3}), (62)
+(ai) ae) = 9 (= {2}).
+
+The extension of the periodic unfolding operator discussed in Section 3.5.2 will be
+applied to homogenize this problem.
+
+Some physical applications include the Fruendlich kinetics model for chemical
+reactions on the walls of a chemical reactor where chemical reactive flows through
+the exterior of a domain containing periodically distributed reactive solid grains as
+
+42
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 43
+in [23] given by
+—D,Au = f in NF,
+
+ue =0 on 62,
+Out
+—Ds=— =aeh(ut) on S*,
+correspoding to the case when A® = I,,y = 1,7e = 1,9. = 0,h(u) = |ul?-4u, for
+a@ € (0,1) and the scale factor Ds > 0, as the diffusion coefficient. This system
+becomes the Langmuir kinetics model for chemical reactions (for more details, see
+[23]) when A(u) = au/(1 + Bu) for positive a and f.
+
+Another application involves some nonlinear thermal flows through a periodically
+perforated domain. This describes the heat conduction through the exterior of a
+domain containing periodically distributed conductive grains which is important in
+considering climatization problems as in [43] in the same system above where h(v) is
+given by
+
+1 udh,
+hu) = 9 uk jul <j,
+-1 u<-}
+
+S-E
+for a given k > 0.
+
+Some known results related to this problem considered a linear problem with
+nonhomogeneous Neumann condition prescribed on some holes and a homogeneous
+Dirichlet condition on the other holes along with the outer boundary [21], a perforated
+domain setting of the problem was dealt in [7], and a linear Robin problem in two
+small holes was shown in [39].
+
+Data Assumptions
+Let us have the following assumptions on our data:
+Rl. f,g, and 7 are functions such that:
+
+() fe LQ),
+(ii) g € L°(8T),
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 44
+(iii) + € L°(AT) is positive.
+R2. h € C'(R) such that:
+
+(i) A is increasing and A(0) =0,
+
+(ii) there exists a constant C > 0 and an exponent g with
+qE[l.t+oof, ifN=2,
+q€[0,85], ifn >2,
+
+such that for every s € R,
+|a'(s)| < CQL + [sI*-).
+R3. A: (yt) EY x Rv Alyt) = fag(yt)icjen € RN" is a matrix field
+satisfying:
+(i) A(y,t) is Y-periodic for every t,
+(ii) A(y,t) is a Caratheodory function, that is
+a. t++ A(y,t) is continuous for ae. y € Y,
+b. y+ A(y,t) is measurable for every t € R,
+(iii) for every t € R, A(-,t) € M(a,8,Y) with M as in Definition 2.30,
+
+(iv) there exists a function w : R — R such that
+
+a. w is continuous, nondecreasing, and w(t) > 0 for every t,
+b. |A(y, t) — A(y, t1)| < wit — til ae. y EY, fort #t, € R,
+ce. for any r > 0,
+
+7 dt
+
+sot Js w(t) ie
+
+R4. 6; = 6:(e) and 52 = da(c) satisfy,
+
+a1 gN-1
+z and 9 =lim—,
+a0
+
+m= 1B
+respectively, where #1, 2 € (0, +00].
+
+Remark 5.1 Notice that «; corresponds to the critical size of Dirichlet small holes
+from [20], while «2 corresponds to that of Neumann small holes from [24].
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 45
+
+Consider the subspace V;5,5, of W?(Me6,5,) given by
+Vibra = { € H*(Mc6,5,) | p = 0 on ON%,5, U OBE},
+equipped with the norm
+Wellvesys, = Velen)» We € Veosaa- (63)
+
+In the sequel, we will still denote by p € Vz6,4,, its extension by zero in B® and
+from now on, we will assume that N > 3.
+
+Remark 5.2 From the above properties, we have the following consequences:
+
+(i) When f € Vis,5, and g € H-4(9T) instead of the data assumptions in R1, the
+results are still valid and the proofs are similar.
+
+(ii) A Poincaré inequality holds in the space V;s,5,. That is, there exists a constant
+C(2, 26,5) > 0 such that
+
+HullerQneaye) < CllVullerns,y,) Ve € Vesrr- (5.4)
+
+(iii) Since the boundaries are Lipschitz continuous, then by the Sobolev Embedding
+Theorem, V;s,s, is compact in L?(¢5,s,). From (5.4), for u € V.s,s, one has
+
+[Vall c2¢cr.ayeq) < lll er (es, 4q) S Call Vell 22(005450)-
+
+Thus,
+Uellve5i42 = IVullz2(.6,4,)
+
+defines a norm in V-s,5, which is equivalent to the norm in H*(%5,5,)-
+(iv) By R2, there exists a constant C > 0 such that
+
+sh(s) 20 and |h(s)|<C(i+|s|), VseR.
+
+The variational formulation of (5.1) is given by:
+Find 5,5 € Ves,5, Such that
+S o)
+Doc A®(Z, te6, 52) Ved 5,V 0 ar + i €7Teh( e652) doz
+= fodz+ [ , 9vdes,
+
+M4859
+for every v € Vi5,5.-
+
+(5.5)
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 46
+
+Indeed, let v € Vis,5, be a test function. Multiplying the first equation of (5.1) by v
+and integrating over 451535
+Praca OVA chs) Vuene)vde = ff fod. (5.6)
+
+Applying Green’s formula to the left-hand side of (5.6),
+eyo on
+f sagt TO (ASC, tein) Vt) vd = — r f say By CA (stabs) Ves) vz
+
+dv
+>, [oA tet) Daehn), 5 de
+
+~Z fo, (A Veet) mi) v dos,
+i 66159
+
+so that we obtain,
+
+f (—div (A* (zx, t¢5,4) Vues.) 0dz = f (A'Vues,.&) Vu dz
+“aa Rett (5.7)
+- ((A® (a, ttes,82)VUe618) * 71) doz,
+Mes, 53
+
+Now, notice that by the boundary conditions in (5.1),
+
+Ton... (At @sebits) Vues)“ vdoy = ((A°'Vucss) ft) vdo,
+by by
+
+(one, ,,voBE ure?
+
+= as, oats (APs) dor
++ an (A (@,t05,5) Ves) “fv do
+=0+ ioe (ge — €"reh(ue5,)0) doz,
+
+so that we obtain,
+fo, (A Vues) Aude, = [,, aevdor— [,,ereh(uens,\vdos (58)
+Thus, by (5.6) - (5.8),
+
+G 7, 5
+Pram AfVtgs, 6,0 de + Js €"1_h( tes, 45)” doz f fodr+ Inn 9.0 doz,
+
+e163
+from which (5.5) directly follows.
+
+5.1 Preliminary results
+
+In this section, we will prove the well-posedness of (5.5) and show that the solution
+satisfies an a priori estimate. Also, we give some properties concerning the nonlinear
+
+boundary condition and the quasilinear term.
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 47
+
+Theorem 5.3 Under assumptions R1, R2, and RS (i) and (iii), problem (5.5) ad-
+mits at least a solution ucs,s, € Ves,5_ satisfying the a priori estimate:
+
+Ilte8s63lVeeyeg < Cs (5.9)
+for some constant C > 0. Moreover, if RS (iv) holds, this solution is unique.
+
+Proof. The proof of the existence and uniqueness of the solution directly follow from
+the arguments in [6] (see also (12]) which utilizes Schauder’s Fixed Point Theorem
+and the results in [39], and using the Lebesgue Dominated Convergence Theorem in
+passing to the limit of the quasilinear matrix as in [7]. We omit the proof here.
+
+Let us prove the estimate in (5.9).
+
+Take ucs,, € Vis,s, a8 @ test function in (5.5). First, we note that from Remark
+5.2 (iv) and R1 (iii), one has
+
+7 Teh (tcb,52) Yeh t > 0.
+
+Then, by R3 (iti), Cauchy-Schwarz and Poincaré Inequalities, and by the estimate in
+Theorem 3.27, we have
+
+all Vues, slider.) S [A sigty A Or Metta) Yeh tsV Yet bs dz
+149
+< f A¥(a, ted 5,) V ted ba Vteb55 AE
+Meh by
++ f farts © Teh (ted 52 ebb Oe
+= Doo Stes: dE + = GeUe5,5, Iz
+
+S [I F lh. x2 (05,4) ll 406142 ll 22(045,45)
+
+set
++08
+
+= (cba + Mor(9)]) I Vues tallzreay,
+from which (5.9) follows. IN]
+Now, note that for w. € Vis,6,, one has
+h(Tesrts(we)) (2, 2) = Tetrta(F(we))(z, 2) ae. for (x, 2) € Dep, x 5Ye (5.10)
+Indeed by Definitions 3.1, 3.16, and 3.29, one has
+Teave(h(we))(2,2) = hw.) (e [2] + e612)
+
+= h (Teds, (we)) (2, 2).
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 48
+We recall next, a theorem that will enable us to obtain a convergence in the
+boundary.
+
+Theorem 5.4 (Nemytskii Operator, [35]) Let Q be a bounded open set in RY,
+h: Rvs R be a continuous function and F, : u ++ h(u), its associated Nemytskii
+operator. For py, p2 € [1,+00[, the following are equivalent:
+
+(i) Fy acts from L?'(2) into L*(Q).
+(it) Fh is bounded and continuous from 1! (Q) into L®(Q).
+(iit) There exist a,b > 0 such that
+
+|h(m)| <a-+b|m|=, WmeR.
+
+Let us have a result equivalent to Proposition 3.4 of [6] written for 25,5).
+
+Theorem 5.5 Let t > 1 be given by
+
+2N
+
+t ifN = = ——__
+€[1,2[ fN=2andq>1, t qN-2)+2
+
+otherwise.
+
+Then h: H*(Q45,8,) +> W*(Qe6,8,) and the map u++ h(u) ts bounded.
+
+We now state an equivalent result to Lemma 3.4 of [39] with the proof following
+the arguments in Theorem 6.1 of [19].
+
+Theorem 5.6 Let {w.} be a bounded sequence in V.4,5, 30 that there is some w €
+H4(Q) such that
+wu, weakly in L?(2).
+
+Then,
+Thyay(h(we))  A(w), weakly in Li, (9, W!-t(8T)) where t = POEL ES}
+
+Proof. First, by Theorem 3.22 written for T/s,5,, we have that for all r € [2,2°[,
+Tes,5,(We) + w strongly in Ly,,(2 x Y). (5.11)
+Since for N 2 3,
+
+2
+= ON It OY
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 49
+
+there exists s € (2, 2*[ such that $ >q. This with Remark 5.2 (iv) implies that
+|a(w)| < C( + wl?) < C(1 + |wl?).
+Thus, by Theorem 5.4, and properties (5.10) and (5.11), we obtain
+Tebsta(h(we))(z, 2) = h (Tessa (we)) (2,2) + h(w) strongly in Li,.( x Y). (5.12)
+
+By the second estimate in Theorem 3.19 (vi) written for 7s,s, and with Theorem
+5.5, there exists a function ho € W!#() such that
+
+Tebsta(h(we))(2, 2) > ho strongly in Li,.(9; W™(¥)).
+
+This, together with (5.12), gives h, = h(w), which by Theorem 3.28 written for Tcs,4,,
+concludes the proof.
+
+The next theorem gives the unfolding of the quasilinear matrix as in [7].
+
+Theorem 5.7 Suppose ¢,61, and 52 satisfy R4 and let u25,5. © Ves, be the solution
+of (5.5). Then up to a subsequence, there exist uy € H1(2) and @ € 12,,(0; Hi,(Y)),
+Y-periodic, such that
+
+(i) Teby6a(tebs52) > Uo weakly in L?(0; Hi.(Y)),
+(ti) Teb,6q(V tes) > Vuo + Vyi — weakly in L2.(2 x Y), (5.13)
+(iii) T3,4,(h(tes,4)) > (uo) weakly in Li,.(@, W-#(8T)).
+
+Also, we have the following convergences of the unfolding of the quasilinear matriz
+
+{ (i) Te(A"(@, tues.5.))(Z19) + A(Y, Uo) ae. in DXY, (6.14)
+
+(ii) Tes,5,(A*(z, Ue5,5))(z,z) + A(z, Uo) ae. in. 2 x (RY \ B).
+
+Proof. In view of estimate (5.9) and Definition 3.29, the existence of up € H*()
+and @ € 12,(2; HL.(Y)), Y-periodic, such that (5.13) (¢) and (7) hold, follow from
+Theorem 3.23 while that of (5.13) (iii) follows from Theorem 5.6.
+
+Let us prove (5.14). By Definition 3.1, (5.2) (i), and R3 (2), one has
+
+=4(E(« GEE a =) 1 Tel ted54)(2, v)
+
+~a(, +, Teltesse)(2,0))
+Ay, Te(te8s6)(2,9))
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 50
+ae. in Qe x Y and that 7;(A‘(2, ues4))(z,y) = 0 ae. in Ae x Y. From (5.13) (i),
+there exists a subsequence (still denoted by ¢) such that
+
+Te(te6) > Up ae.inQxY.
+This, together with the above computation, yields
+
+TAS (2, Ues,8))(2, ¥) = A (y, Te(tes,4)(2,y)) + A(y, Uo) ae. in 2x Y.
+This shows (5.14) (i).
+
+Similarly, from a change of variable z = dy together with Definitions 3.1, 3.16
+and 3.29, and R3 (i), one has
+
+(
+(7) + 612, Teb62 (ted: 52)(2, 2))
+
+v
+Z],, + # Tete.) (2,2))
+
+a + 2, Teirés (teb:5a)(2, 2)
+
+q
+>
+S
+Pl
+
+5,63 (Ueb,6,) (2; Z)) 5
+
+which by the same argument as above yields (5.14) (ii).
+
+5.2 Homogenization results
+
+In this section, we prove the unfolded limit problem and convert to its corresponding
+strong formulation. We end the section by interpreting the contributions of each data
+at the limit.
+
+Theorem 5.8 (Limit Problem) Let 1¢5,5. € Ves,s, be the solution of (5.5), where
+£,6,, and b9 satisfy R4. Then up to a subsequence, there exists uy € H}(Q) such that
+
+teas, > ty weakly in L?(Q). (5.15)
+
+Also, there exist @ € L2,,(2; Hi,,(Y)), Y-periodic, and U € L7(9;12,(R")) with
+U=rytp in L?(9; Kg) such that the ordered triple (uo, %,U) solves the following limit
+equations:
+
+L Aly, uo)(Vuo + Vy) Vyp(y) dy =0 ae. inQandVpe HEY), (5.16)
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 51
+
+A w\p A(2:t0)VUV.0(2)dz=0 ae. in and Ww € Kp with (B)=0, (6.17)
+
+ify>0, f vy Mtn to) (Wg + Vy) Vy dy
+a f van M?t0) VLU vay ddo,
+=f fode+ ml6T\Mor(a) [ vaz,
+
+ify =0, f vey A(Us to) (Wo + Vy) Vp drdy
+a f van Meta) ViU vay dedo,
++ mol8T|Mor(r) f h(ua)v dz
+
+= [fede + ml0T|Mor(9) f vac
+for all p € H3(Q),
+
+(5.18)
+
+where vg is the unit exterior normal to the set B and da, the surface measure.
+Proof. We provide the proof in several steps.
+
+STEP 1. First, note that (5.15) is immediate from the estimate in (5.9). Also, the
+existence of up € Hg (2) such that (5.15) holds and @ € L2,,(2; Hi.(Y)), Y-periodic,
+is guaranteed by Theorem 5.7 (5.13) (i) and (ii).
+Moreover, the existence of U € L?(9; L2,,(R")) such that U— st is in L?(; Kp)
+follows from the arguments given in [15], so we omit the details of the proof here.
+Let us now proceed to the limit equations.
+
+STEP 2. To prove (5.16), suppose y € D(M) and y € C},,(Y) be vanishing in a
+neighborhood of the origin. Then for ¢,6,, and 6; small enough, Y(-) = ev(-o(z) is
+
+in Vess6-
+Take WV € V,s,5, be a test function in (5.5), and so one has,
+
+5 af
+Pau (2, e552) Vtebsb VY dt + f aria Teh(Ued,,)V doz
+
+=f fedet f a¥ don,
+
+ty
+which is equivalent to
+
+£ fA eme Tuan Vo (Z) det fA (ermss Vuasvve (2) de
+on Fa
+
+te [thle ss We (2) aos =e Poon fo (Z) ae+e [abv (2) dos.
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 52
+
+Note that as € approaches zero, the terms in this equation approach zero except the
+second one in the left-hand side. Also, the choice of test function implies that the
+unfolding criterion in Theorem 3.4 is satisfied. So, unfolding this term by 7; together
+with Theorem 3.3 (i), (iii), (vii), and (viii) yield
+
+B fy TANT (Vues) TAW)T. (Vo (Z)) dzdy (6.19)
+
+= fy TANT (Vo (2)) Te(Vueses) TeV) ded.
+By (5.13) (i), R3 (i), (5.14) (i), and Lebesgue Dominated Convergence Theorem, we
+have
+T.(A‘ (2, Ue6,5,))Te(Vip) > ‘A(y, uo)Vp strongly in L?(Q x Y).
+
+This, together with Theorems 3.2, 3.3 (iz), and Corollary 3.5 allows us to pass to the
+limit in (5.19) to obtain
+
+lim A¥ (2, thes; 5) Vte8, 5: OV 9 (2) dz = f ‘Ay, uo) Vyp(y)(Vuo + Vay dedy,
+a € nxy
+
+0 Jn,4,
+= tov A(y, uo)(Vuo + Va) Vyo(y)p dady,
+from which (5.16) follows by the density in Theorem 3.36.
+
+Step 3. For (5.17) and (5.18), we consider the effect of the perforations in the limit
+equation by letting ~ € D(2Q) and take w,5,y as a test function in (5.5), where wes,
+is the function given in Theorem 3.35. Thus we have
+
+f nh ASV e5,5,V Wes, dz + f " AV tte5,5,e6, Vp de (520)
+“a be 5.20)
++67 f lors Teh( ues, 5) 05,0 dos = f oe frwes, da + Es Gee5,9 doz.
+
+Again, this choice of test function implies that the unfolding criterion in Theorem
+3.20 is satisfied.
+For the first integral in the left-hand side of this equation, unfolding by 76,5,
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 53
+
+together with Theorems 3.19 (i), 3.21, and (3.3), we obtain
+
+f APV e855, wes, de
+061 8q
+Testa gw
+=" 6 vem F816 A°) Tob, 53 ( V te 85) Tebrda( V Web, ) Tess sa(Y) dzdz
+= 8E fl Teasta(AS) Tessa 1 9.0] Teese () ded
+
+lawn 7615 2659 (V e552) a” e662 (9) dandz (5.21)
+
+‘N-1
+&
+
+Faure Teste AYTee Vests) V20 Tots) ode
+
+€
+oo
+= Pian Tete AS) [5 Toso Vuer,)] Va0Tere WV) dade.
+
+By R4, a similar application of the Lebesgue Dominated Convergence Theorem to
+A*, (5.14) (i), and the convergences written for T;s,s, (for more details, see (15)),
+oft
+€
+
+Ve(Tebsts(t4e5.52) Lav = 62 Teas 4(Vteds bs) = VU weakly in L?(0 x R”)
+and
+Tes,6,(¥)V.v > ¥V.v strongly in 12,,(2 x RY),
+one can pass to the limit in (5.21) to obtain
+hig Deas A(z, e515) V ebb, Ves, b az me
+=-K f. (rp) A(z, Ug)V2U (c, z)Vz0(z)p(z) drdz,
+
+which, by density, holds for any v € Kg.
+For the second integral in the left-hand side of (5.20), unfolding by 7, together
+with Theorem 3.3 (i) and (viii), we obtain
+
+f Af (x, 26,52) Vte6,5,Wes, VY de
+eb ba
+Bf Te(A(e tetsta)) TeV tessa) Te (tess) ECW) ded.
+
+By (5.13) (di), (5.14) (¢), a similar application of the Lebesgue Dominated Conver-
+gence Theorem to A‘, and (3.2), one can pass to the limit in this equation to obtain
+A‘(x, Ue6:5) Ves: 5We5, VY az
+
+lim
+oe a (5.23)
+= 0(B) f ey Ay. to) (Vu + Va) Vp dey.
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 54
+
+For the third integral in the left-hand side of (5.20), it is clear that if y > 0, the
+integral approaches zero. On the other hand, if = 0, unfolding by 7,5, together
+with Theorems 3.25 and 3.26 (ii), we obtain
+
+lon Teh (ues, 5) Wes, P doz
+
+Thy 6}
+BE Pa an Tob 7) Tet eb bn)) Ty Wet) TE, 08) dda.
+By R4, Theorems 3.26 (i) and (ii), 3.27, 3.28, 3.35, and 5.13 (iii), one can pass to
+the limit in this equation to get
+Ling ats Teese) U6, doe = mav(B) |, r(2)h(ua)y dado,
+Equivalently,
+Lig an TA(wesisn)Ue6, dos = wav(B)OT|Mer(7) f huywds. (6.24)
+
+The terms in the right-hand side of (5.20) are immediate by Remark 3.37 and
+Theorem 3.27,
+
+feed + ase ees,
+= 0(B) f) fude + mao(B)OT\Mor(a) f var.
+
+Thus, passing to the limit in (5.20) through (5.22)-(5.25) we get the limit equation
+given by
+
+0 Jou,
+
+(5.25)
+
+1 fh cgmpy Ae t0) V2 (2 2)V-0(2)0(2) dade
+
++0(B) [Aly wo) (Tut Vyll) dedy
+nxy
+(5.26)
++620(B)|9T|Mor(r) fo h(uo)) dx
+= o(B) [fede + nav(B)|OT|Mor(9) wae.
+which by density holds for all y € H3(Q) and v € Kg. When v(B) = 0, we get (5.17).
+Moreover, when v(B) # 0, by integrating by parts in the first integral in (5.26) and
+since v € Kg, so v = v(B) in OB, we have
+A(z, uo) V.UV vp dzdz
+= -mv(B) [Ale uo) VU var drde,
++1 amyp) UV =(AG, wo) V2 dee
+
+= —n0(B) ff Ales) V.U vad dede,,
+
+=n f
+x(BY\B)
+
+(5.27)
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 55
+which when substituted in (5.26) gives
+
+-*0(B) f cop A240) VU py dedo,
+
++018) fy AU wo) O(a + Vy) dedy + na0(B)IO7Mar(7) [ Awaaz
+
+=0(B) [| Fidedy + mav(B)|OT|Mer(4) [vaz,
+from which (5.18) directly follows. S
+
+The next theorem gives the classical form of the homogenized system given in
+(5.16)-(5.18). We first introduce (as in [15]) the classical correctors 2; for j =1,...,N
+for the homogenization in fixed domains (for more details, see [5]) which solve the
+following cell problems:
+
+R € L™(2; H,(Y)),
+[AW wz) VR —y))Ve=0 a0. in 2, (5.28)
+vy € H}..(Y).
+Also, x is the solution of the cell problem corresponding to the holes 6,B given by
+x€ L”(Q; Ke), x(uo(x), B) = 1,
+fh yg Mle tole) Vex(=, uo(2)) Ve (2) dz = 0 ae. in 2, (5.29)
+VW € Kg with U(B) = 0.
+
+Set the function © as
+(2) = fy. Mo(2vo(2))Vex(2, ole) Vex(e, o(2)) dz, (6.80)
+
+which is nonnegative and can be interpreted as the local capacity of the set B. We
+then have the following classical formulation in which the derivation is standard (see
+for instance, [15]).
+
+Theorem 5.9 (Classical Formulation) If > 0, then uo € H() is the unique
+solution of the homogenized problem
+
+—div(A™™Vuo) + Kj7Ous = f + K2l9T|Mor(9) in Q,
+
+tu =0 on 8.
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 56
+
+Ify=0 andh is Positively homogeneous of degree 1, then uo is the unique solution
+of the homogenized problem
+
+{ ~div( AME Vue) + w1Ouo + e2h(ua)|OT|Mer(r) = f+ mal@T|Mar(9) in 9,
+Uo = 0 on 82.
+(5.31)
+In both systems, @(zx) is given by (5.30), and A®°™ is the homogenized matriz given
+by
+N eS
+Apn(z) = f (autu uo(z)) — D> oxy 2o(2)) 5, w0(2)) dy. (5.32)
+k=l ke
+
+Proof. We only prove the case when + = 0, since the case when 7 > 0 is similar. We
+follow here the arguments in [15] and [21].
+
+First, note that with %j solving (5.28), one gets (see for instance [5])
+
+N
+G2, y) = ~ > 2 (2)R4(y,wol@))-
+ja 92;
+Using this expression for @ in (5.18), we have
+A AM 7 Va drdy — 1 f cop A(7sta) VU vay dedo,
++ malOT|Mor(r) | h(uyede = [fide + w2lOT\Mer(9) [ vde,
+(5.33)
+
+with A®™ given by (5.32). Now, applying integration by parts in (5.29), using (5.17)
+and the property (see (15]) that V.U = V.W, we have
+
+he A(z, uo)V Up doy = te A(z, to) Vz(U — nito)vp do,
+=~ niu ff Mole, uo(z))Vexl2,v0(2)\vede,, (5.34)
+which when replaced into (5.33) gives
+[ Am Vuove dedy — rio [Aol 2to(2))Vex(2, ual) Yo dda,
++ ma]OT|\Mor(r) [i hua)vde = f fede + nalOT\Mor(a) [ var,
+which is the variational formulation of (5.31) with @(z) given by
+O(2) = [Holz v0(z))V-x(2,to(e))¥e dos
+
+which is an equivalent form of (5.30). The well-posedneas of the classical formulations
+follow from the arguments in [12] as in the proof of Theorem 5.3. IN]
+
+Chapter 5. Quasilinear Elliptic Problem in Domains with Small Holes 57
+
+We end this section by discussing the contribution of each data in the limit problem.
+
+Remark 5.10 The oscillations in the quasilinear matrix give rise to the homoge-
+nized matrix A>™ in the limit problem. The set of Robin holes T? contributed the
+constant *2|9T|Mar(g) when y > 0; while it contributed the term 2|8T|(Mar(g) —
+Mor(r)h(uo)) when -y = 0. The choice of the test function contributed to the zero-
+order strange term x?@up.
+
+Remark 5.11 The strange term x?@up is similar to that obtained in [21], [39], [15],
+[24] and {20}.
+
+Chapter 6
+
+Linear Parabolic Problem
+
+in Perforated Domains
+
+In this chapter we will deal with the well-posedness and homogenization of a parabolic
+problem with nonlinear Robin boundary condition.
+In particular, we consider the parabolic problem given by
+
+u,(z, t) — div (A*(z)Vu,(z, t)) = f(z, t) in Qf x [0,7],
+u,(z,t) =0 on (802 \ 95.) x [0,7], (6.1)
+Af (z)Vue(z,t) + ne + 772(2)h(ue) = ge(z,t) on OS, x [0,7], ,
+ue(x, 0) = uP(z) in Q,
+
+where
+
+g9(2.t) if Mes(9) =0,
+
+eg(Z,t) if Mas(9) £0.
+Here, 27 and S, are the sets defined in Section 3.3 and n, is the unit exterior normal
+
+ge(z,t) =
+
+vector to S, and u’(z, t) is the derivative with respect to the variable t. We prescribe
+a nonlinear Robin-type condition on the boundary of the holes S,, a Dirichlet-type
+condition on the boundary of 97 that does not include the boundary of the holes S,,
+and we set an initial value u2(z) in 3.
+
+Some physical applications involve models of heat flow in a perforated material
+whose temperature is dependent on time, propagation problems such as in mass
+diffusion, momentum diffusion, and the unsteady heat diffusion in a solid (for more
+details, see [34]). Also, one can model the flow of a gas through a porous medium by
+using the conservation of mass as in Darcy’s Law and equation of states as in [40].
+
+In the literature, some related known results were shown for the quasilinear case
+with nonhomogeneous Neumann boundary condition in [1], using the Faedo-Galerkin
+method to show well-posedness in the heat equation (see also [2]), the treatment of
+the Robin term h(v) in [19] and [7], and using the periodic unfolding method in the
+homogenization of the heat equation in perforated domains in [31] (see also [29]).
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 59
+Data Assumptions
+In (6.1), we suppose that:
+Jl. At(2) =A (2) € M(q, 8,2), where M(a, 8, ®) is given in Definition 2.30.
+J2. f.g and 7 are functions such that
+() f € L0,T; L°(Q)),
+(ii) g € L?(0,T; L*(8S)), Y-periodic,
+(iit) + € L°(OS) is positive.
+J3. h € C}(R) such that
+(i) h is increasing and A(0) = 0,
+(ii) there exists a constant C > 0 and an exponent g with
+
+qé[l.toof, ifN=2,
+a€ (0, #5], if N > 2,
+
+such that for every s € R,
+|n'(s)| < C1 + |s|™).
+J4. The initial data satisfies the following convergence:
+u,(z,0) > |Y*|uo weakly in L?(0).
+Introduce now the Banach space
+Ve = { € H*(22) | yp = 0 on AN \ S.},
+equipped with the norm
+
+llullv. = [IVullzagay, Vue Vee (6.2)
+
+Remark 6.1 A Poincaré inequality holds in the space V,. That is, there exists a
+constant C > 0 such that
+
+llullv. < CllVullzaa;, Wev,. (6.3)
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 60
+Also, we consider the space
+
+We = {ve € 1°(0,7; Ve) | vf € 17(0,T;V2)},
+
+equipped with the norm
+
+lvellw. = lleellaaoriv, + lletllaeorve-
+The variational formulation of (6.1) is given by:
+Find u, € W. such that for every v € V; and ¢ €]0,T{,
+fh. uu dr + i A°VueVu dz + the €™7-h(ue)v doz
+
+= f,, fode+ |, avde.,
+
+u,(z, 0) = u(x) in 23.
+
+(6.4)
+
+To simplify notations, let us fix « > 0. In particular, we consider a more general
+problem given by
+
+u'(z, t) — div (A(z) Vu(z, t)) = f(z, t) in O x [0,7],
+
+u(x,t) =0 on (80 \ 8S) x [0,T], (65)
+A(z)Vu(z,t)-n+ar(z)h(u) = g(z,t) on 8S x [0,T], ,
+u(z, 0) = u°(z) in O,
+
+Here, O Cc RY is open and bounded, S be an open set in O with Lipschitz continuous
+boundary and which we will refer to as the hole in O, by n the unit exterior normal
+vector to S, and a be positive. We prescribe a nonlinear Robin-type condition on the
+boundary of the holes S, a Dirichlet-type condition on the boundary of O that does
+not include the boundary of the holes S, and set an initial value u°(zx) € L?(O) in O.
+
+Data Assumptions
+
+In (6.5), we suppose that:
+
+N1. A(z) € M(a, 8,2), where M(a, 8, Q) is given in Definition 2.30.
+N2. f,g and 7 are functions such that
+
+(i) f € 70,7; L7(Q)),
+(it) g € L?(0,T; L?(8S)), Y-periodic,
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 61
+(itt) + € L°(8S) is positive.
+N3. h € C}(R) such that
+(i) h is increasing and h(0) =0,
+(ii) there exists a constant C > 0 and an exponent q with
+
+qé[l.tool, ifN=2,
+qé[0,¢5], if N>2,
+such that for every s € R,
+
+|h'(s)| < C( + ||").
+
+Remark 6.2 ({6]) Let r € [1,00] and r > gr’, where q is given in N3 (ii). Then
+there exist a positive constant c such that
+
+WCu)llarces) < © (1+ lullz-ce5)) +
+Remark 6.3 Let {un} C R. Then,
+dim, A(un) = h(lim, un).
+Introduce now the Banach space
+V = {py € H'(O) | p=0 on 80 \ S},
+
+equipped with the norm
+
+llully =[IVullzao,  vuev. (6.6)
+
+Remark 6.4 A Poincaré inequality holds in the space V. That is, there exists a
+constant C > 0 such that
+
+llullv <ClVulliqo, Yue V. (6.7)
+Also, we consider the compact subset of L?(0,T; L7(O)) given by
+W = {v € 17(0,T;V) |v’ € L7(0,T; V’)},
+equipped with the norm
+
+llullw = llellzze.r:v) + lle'lleae.7;
+
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 62
+
+The variational formulation of (6.5) is given by:
+Find u € W such that for every v € V and t €]0,T7|,
+
+uvdz+ | AV = B
+fv [Avuvvde+ fiaThu)vdos [fears [ gvdos, (68)
+u(z,0) = u°(z) in O.
+
+Indeed, let v € V be a test function. Multiplying the first equation of (6.5) by v and
+integrating over O,
+
+£ u'vde + L (—div (AVu))u de = f fudz. (63)
+Applying Green's formula to the second term on the left-hand side of (6.9),
+. )
+f —div (AVu) vdz = — > f an (AVu) vdz
+ov
+= > L (AVu), 52 de — Eh. ((AVu); +n) vdos,
+so that we obtain,
+L -div(AVu)vdz = f AVuVods — fo ((AVu) i) vdoz, (6.10)
+Now, notice that by the boundary conditions in (6.5),
+fo (AVu- fi) ude, = hows (AVu- i) vdoz +f, (AVu- fi) vdo,
+=0+ f, (a - arh(u)v) doz,
+so that we obtain,
+fo (AVu- fi) vdo, = [9740 - fk ath(u)vdo;. (6.11)
+Thus, by (6.9) - (6.11),
+1 - _ =
+[weds [ Avuvode (fsa forbw)edos) = ff fods,
+
+from which (6.8) directly follows.
+Next, we show that (6.8) is well-posed.
+
+6.1 Well-posedness result
+
+As in [1] and [2] (for details see [16] and [27]), we show the well-posedness of (6.8)
+using the Faedo-Galerkin Method. We follow these steps in the proof of the next
+
+theorem.
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 63
+
+Theorem 6.5 (Existence and Uniqueness) Let T > 0. Under N1-N4, problem
+(6.8) admits a unique solution u € W such that
+
+Irsllasocrza0y + llullw < C, (6.12)
+where is C a constant depending on a, B,O and T.
+
+Proof. We give the proof in several steps.
+
+STEP 1. (Construction of subspaces and the approximate problem) Let E, be an
+n-dimensional subspace of L?(O) spanned by the orthonormal basis {m,...,7™n} in
+17(O). Define the projection operator P, : W + E, a8
+Pav) = Sov, ms)i(o)mj € En, Wu € 170). (6.13)
+j=l
+
+From classical results in Hilbert spaces (see for example [5]), one has
+
+Palle <1, (6.14)
+and
+P,(v) + v strongly in L?(0), Wu € L?(0). (6.15)
+Observe that by (6.14), we have
+IPa(e)llv < [Pallewvollelly < llvllv- (6.16)
+
+Since u° € L?(O) and if we set u° = P,(u°), then by (6.15),
+u® — u° strongly in L?(0). (6.17)
+Now, we have the following finite-dimensional approximate problem for (6.8):
+
+Find u,(z,t) € E, such that
+£ u,v dz + L AVunVv dz + i ath(un)v doz
+
+(6.18)
+= [fvde+ | gvde.,
+for every v € V and ¢ €]0,T|,
+Un(z, 0) = u2(z) in O.
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 64
+Equivalently,
+Find u,(z, t) = j=1 C7(t)m; € E,, such that
+L ulm, dr + f AV un Vm, dz
++ g27h(tn)ma dos = ff fede + | ome doe, (6.19)
+for all k € {1,...,n} and for ae. ¢ €]0,7I,
+Un(z, 0) = uo in O.
+
+By the initial condition and (6.13),
+
+n n
+p> G(0)m; = un(z,0) = ul = Pru? = yw, m3) 14(0)™5,
+= =
+
+which implies that c?(0) = (u°, m;)za(0) by the linear independence of {m,...,77n}-
+From here, we obtain a system of n linear ordinary differential equations equivalent
+to (6.19) given by:
+
+d n
+
+Fatt) + yao f AVmj(2) Vm, dz
+
++ fLarh( Sha Gltm,)mados =f frade+ f omedos,
+
+for all k € {1,...,n} and t €]0,T[,
+
+(6.20)
+
+ch (0) = (u°, me) za(0)-
+
+By standard arguments as in [22], the existence and uniqueness of a continuous
+solution cf,...,c% to (6.20) is guaranteed on the interval [0, T]. Consequently, we can
+now uniquely determine u, € C((0,7]; En)-
+
+Step 2. To prove the a priori estimate
+[leall =(0,7;22(0)) + [lull z2@,7:v) + lluallzz@r.vy < C, (6.21)
+
+we first show an estimate satisfied by first two terms in the left-handside above.
+Multiply the k-th equation in (6.19) by cf and sum from k = 1,...n, so that
+
+[ratende+ [AV un Vein de + fh 07h tn)tn de
+= [ funde+ fgmdos.
+
+Note that from Remark 6.2 and N2 (iti), one has
+
+(6.22)
+
+ath(un)tn > 0. (6.23)
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 6
+Then, by N1, (6.6), (6.22), (6.23), Poincaré and Cauchy-Schwarz Inequalities, Trace
+Theorem, Remark 6.4, and Young's Inequality with n = 1 > 0, we have
+ld 2 2
+Faq Mnllia(0) + allunll? = ff um de + all Pun 22,0,
+< [vavnde + [AV UnViin dr
+<ful
+L wht, dx + f AVunVun dz + f 4g 27h (tn)tn doe
+= ff funde+ f,gundos
+
+S CIF llaa(oyllunllz2(0) + [Igllz(osy|lunllza(es))
+S C(I Fllacoy + llallz2¢@5))|luall ao)
+ee ae
+
+rN
+
+ca 20a
+Qe (lfllz2¢e) + llgllzaes)) + qlually.
+Collecting like terms and simplifying,
+
+d Cc 2
+qllealliaco + allunll?, < Gy Milfllaacoy + llgllzacos)) - (6.24)
+
+Fix s € [0,7]. Integrating (6.24) in ]0,s[ and by the Fundamental Theorem of
+Calculus,
+
+22 2 od 2
+LS Were) + tlallaxes)” dt > f° Fllualtacoyat + f"alfuli
+:
+aco) ~ len(2, O)lFacoy + fale a
+uivalently, by rearranging and expanding the square
+Ys
+2 3 C2 2
+Ueia(t, )12a¢0y + [ allenldt < Itta(2, OME) +f” — ([Ifllu%ey + llalliresy)” dt
+3c?
+= llun2, O20) +f” S (IFllzaoy + lalizx0s))
+3c?
++f a (2llfllcacoyllallacosy) at.
+
+This and (6.17) implies that u, € L°(0,7; L?(O))  L7(0,T; V) which satisfies the
+estimate
+
+= [lun(z, 8
+
+[lull c= (0.7:22(0y) + Henllzaor3v) < C(llv8llzae + If llz2@7,22.0 (6.25)
++llgllaor.c2¢08 + flle20,7:22¢pllallza@,r:22¢05))-
+We are left to show the estimate in the third term in the left-handside of (6.21).
+Note that (6.18) along with v — P,(v) € Ex,
+L ulP,(v)dz = — L AV U,V Pa(v) dz — f 27H tn) Palo) doe
+
+(6.26)
++ f fPa(v) dx + f 4 9Fa(0) do.
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains
+
+From (6.26),
+
+66
+
+& repeated application of the Triangle Inequality, N1-N3, Poincaré and
+
+Cauchy-Schwarz Inequalities, Remark 6.2, Trace Theorem, (6.6), and (6.16), we have
+
+Kun e)vevl = (un, ¥) za)
+= Kua» Pa(v)) 22101
+—lfau
+= | ws Pato) |
+
+= |- £ AVunV P,(v) dz — f. ath(un)Pa(v) doz
+
++ [FPalo)dz + | 9Pa(v) doe
+<|- [Avan VPa(o) do] +|- f
+
++| fp Pale) aa| +
+< All Vunl|
++C(|
+< Allually
++C(|
+= {(8 + callrl|z~(s))|
++ C(lfllzaoy + Ilo
+< {(8 + callrllz=os))|
+
++ C(Ilfllzaey + Il!
+
+=>
+
+In view of (6.25), this implies that
+
+lugllve < {(8 + ca]
++CUls
+
+Integrating this inequality over
+
+230) |IV Pa(v)
+FllzcoyllPa(r)llz2¢@) + |
+|Pa(v)llv + a
+
+Lllz2(0yllPa(e)Ilv + llgllzzcosyl|Pa(v)llv)
+
+if, 5 Pale
+IIx) +
+
+unlly + cal
+
+junlly + cal
+1(05))} lo
+
+rll=es))|
+
+2(0) + Ilo!
+
+[0,7] we get
+
+rl
+
+IMgllrorvy <{(B + call
++C(IIf
+
+This and (6.25) give estimate (6.21).
+
+I llz=(0s)(
+
+1=(05)) lunllza¢o,r;v) + callllz(05)
+0.7:27(0y + llgllz2¢0.7:2¢05)))}-
+
+arh(un)Pa(v) dos
+
+) doz
+
+T|]2=(05)[|4(un) II z2(@5) ll Pa (v)Ilzacasy
+jall4¢o5)ll Pa()Ilz210s)
+(1 + [lunllv))IIPaCo)llv
+
+TIIz(08)
+
+24(08)) }llPa(v)llv.
+
+7 lIz=(a8)
+
+llv.
+
+ually + call Il (as)
+
+Ix205))}.
+
+(6.27)
+
+Srep 3. Next, we show that the initial condition is satisfied. By the estimate in
+(6.25), there exists a subsequence {un} and a function u € L7(0, T; V)NL(0, T; L?(O))
+and by using from Remark 2.19 with the separability of L1(0,T;L7(O)) and that
+
+(L(0, T; L?(O))Y = L°(0,T; L7()),
+
+, we have
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 67
+
+Un > u_ weakly* in L*(0,T; L?(0)). (6.28)
+Next, by the Eberlein-Smuljan Theorem (see Theorem 2.16) we have
+Un —u_ weakly in L?(0,T;V), (6.29)
+Lastly, by the reflexivity of V applied in Theorem 2.61.
+u, —u’ weakly in L7(0,T; V’). (6.30)
+
+Let p(t) € D([0, T]) and v € V. Taking P,(v)p as a test function in (6.18) and
+integrating over (0, 7], we get
+
+‘T ‘T
+f L ul. pP,(v) dzdt + [ L AV unV Pa(v)y deat
+T
++ f f g 07H (tn) Pau) daca (6.31)
+T ‘T
+= f f fPa(u)pdadt + f I -9Pa(w)pdazadt.
+Passing to the limit as n —+ 00, using (6.28)-(6.30), (6.15) and Remark 6.3, we have
+T T T
+;
+f L ulpudrdt + f L AVuVoug dedt + f I gaTh(u)up dat
+
+=f" [, foodsat + [" | ove dosat.
+
+That is, u solves the equation in (6.8).
+
+Since u, € W, then (6.31) is still valid for p € C™({0,7]). For the initial condition,
+choose such ¢ such that y(0) = 1 and y(T) = 0. Integrating by parts the first term
+in the left-hand side of (6.31), we obtain
+
+(6.32)
+
+[,umt2.7) (7) Pao) da — ff un(2,00e(0)Pa(v) de — f° [up Palv) deat
+us ‘T
++ [0 [AvunvPupdrat+ ff arh(un)Pa(v)edordt
+= [f [,sPatoredsae+ [° [,,9Palodo donde
+or equivalently,
+= L uP, (v) dz — f 7 L unig! P,(v) dxdt + [ 7 f AVu,VP,(v)p dxdt
+
++ f Jf ,27hlun)Paluy dozdt = [ * Jf fPalo)eded + f [,,9Pelo)e doa.
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 68
+
+Passing to the limit as n + oo, using (6.28)-(6.30), Remark 6.3, and (6.17), we have
+° T T
+- dr —
+f uv J L uy'y dedt + f L AVuVug deat
+
+‘T T T
++ =
+f f, 27h(uupde.dt = f f fopdedt + f f uedoadt.
+Subtracting this equation from (6.32), we get
+T T
+[ £ ul pu dzdt + [was +f [we dzdt = 0. (6.33)
+Meanwhile, by a product rule
+d 1 1
+a Lwrde = [wovds+ f up'vde.
+Integrating this equation on [0,7] and by the Fundamental Theorem of Calculus, we
+have
+[ue TreTywdz — [ u(x, 0)p(0)v dz = I 7 [vieodeat + [ 7 [yus'vdedt.
+lo lo lo Jo lo Jo
+
+Equivalently,
+
+T ‘T
+= u — _ u =
+f £ u'pu drdt cs O)udz f fw 'v drdt = 0. (6.34)
+Adding (6.33) and (6.34), we obtain
+=f
+fue O)udr = Le p(O)udz, WevV.
+This implies that u(z,0) = u°, and so u is a solution of (6.8).
+Step 4. We show the a priori estimate on u. By the lower-semicontinuity of the norm
+as in Theorem 2.15 (ii) and Remark 2.19, we have
+Ulullz=¢o,7:12(¢0y + llullw = [lulle=o,r:14¢6y + llullu=e.rvy + llu'lle=o-r:v7
+liming |lunllz~0,7;12(0y) + lim inf |lunllz=(0,7:v)
++ liming |lu,lIzeorv9
+< liminf {Ilualle=0.7:14¢0) + llunllw}
+< Jim {[lunllimon2(0y + lluallw}-
+
+This along with (6.21) imply (6.12).
+Lastly, we show the uniqueness of the solution u. Let u;, uz be solutions of (6.8)
+
+and let w = u; — ug. Since u; and uz are solutions of (6.8),
+
+[wivae+ [Avuvode+ [arh(uodoe= [ fodr+ |, gvde. (6.38)
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 69
+
+and
+uvdz+ [ AVWV =
+f L te vde+ | arh(usyodo, =f fede + f gvdos. (6.36)
+Subtracting (6.36) from (6.35), we obtain
+(ul —u)'vdz +/ AV = =
+L L (u — ug) Vudz + fe arh(u — u2)vdo, = 0.
+Equivalently by the choice of w,
+[pwras + [Avuvude+ J arhtw)v dos =0, (6.37)
+for any t € [0,7] with the initial condition
+w(z, 0) = u:(z,0) — up(z, 0) = u%(2) — w%(z) =0 in O.
+
+Let w be a test function in (6.37). First, note from Remark 5.2 (iv) and N2 (iii), we
+have
+
+arh(w)w > 0.
+Then, by a product rule, N1, (6.6) and Cauchy-Schwarz Inequality,
+O= L wwde + [ AvuVude+ f arh(w)w do,
+
+=33, w’ Pac+ f AVwVwde+ f arh(w)w do,
+
+aah wdc + [ AVwVwde
+
+2 agile +allVullixo)
+=5 at { Wwll20) +allw|lz.
+Integrating this on [0,7] and by the Fundamental Theorem of Calculus yield,
+1 1 T
+2 5llulz, Tilia) — gllu(,O)Ix0) + f allwlly,
+1 T
+> Fllwl=. Iza) +f alluly.
+Since each term on the above inequality is nonnegative, this forces w = 0 and so
+
+tu, = uz. This concludes the proof. IN}
+
+The variational formulation of (6.1) is given by:
+Find u, € W, such that for every v € V, and ¢ €]0,T[,
+
+hh ujvdr + i A®VueVv dz + the. €77,h(u,_)v doz
+= J, feast fq,9°der:
+
+tue(z, 0) = u2(x) in N3.
+
+(6.38)
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 70
+
+Now, we state the well-posedness of (6.38). Here, we omit the proof as it follows
+from Theorem 6.5.
+
+Theorem 6.6 (Existence and Uniqueness) LetT > 0. Under J1-J4, then (6.38)
+admits a unique solution tu, € W, such that
+
+Iluell 22° (0,7;22(%2)) + Iluellwe < C, (6.39)
+
+where is C a constant.
+
+6.2 Homogenization results
+
+Let us now have the asymptotic behavior of the solution written for IY] = |[0, 1)%] =1.
+First, let us recall the variational formulation of (6.1) given by
+
+Find u, € W, such that for every v € V, and t €]0,T|,
+f weeds + f A VueVo de + I 5, £7 7eh (ue) dos
+
+= i, fodr+ f gevdoz,
+
+ue(x, 0) = u2(z) in N.
+In this part, we obtain the limit equation. Here, the extension of the periodic un-
+folding operator discussed in Section 3.4 will be applied to homogenize this problem.
+But first, we recall a theorem that we will need in the proof.
+
+Theorem 6.7 ([7]) Let {we} be a bounded sequence in V, so that there is some
+w € Hi(Q) such that
+@—w, weakly in L?(Q).
+
+Then,
+
+2N
+Q(N —2)+2°
+Theorem 6.8 (Limit Problem) Suppose that, as € goes to zero, there exists a ma-
+triz A such that
+
+Te(h(we)) — h(w), weakly in L.(2,W!-#(8T)) where t =
+
+T.A(A‘)(z,y) + A(z,y) ae. mQxY". (6.40)
+
+Let u, € V, be the solution of (6.38). Under J1-J4, there exists u € L7(0,T; H}(Q))
+and & € L?(0,T; L?(Q; Hpe(Y*))) with My(@) = 0 such that
+
+{ (i) Tr(ue) +4 weakly in 1?(0,7; L?(9; H(Y"))),
+
+6.41)
+(i) Tet(Vue) > Vut Via weakly in L?(0,T; L?(Q x Y*)). (6.41)
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 71
+
+The pair (u, @) solves the limit equations
+ify>0,
+T
+-\y" f f ue’ dedt
++f * Doo MVut VATE + V,8)E dedydt
+* “ 7
+=|y' f [ry drdt + [25|\Mos(o) | f WE dedt,
+ify=0,
+T
+-\ f f we’ dedt (6.42)
+T
+‘0 Nx? va i "
++ A(Vu + Vya)(VU + Vy®)é dadydt
++108|Mas(r) [” [ nue deat
+Oo na
+
+= vi [" svg deat + 95\Mos() [" VE dedt,
+
+for any WE HUQ), Be 10; HV"), €€ DCO,T),
+u(z,0) = up in.
+
+Proof. First, the existence of u € L?(0,7; Hi()) and @ € L?(0,T; L?(O; Hi(¥*)))
+with Mj(i) = 0 such that (6.41) holds follow from Theorem 3.15.
+Now, let ¥, ¢ € D(Q) and y € H}.,(Y*) and set
+
+v(x) = U(x) + ey(z)¥(2).
+Consequently,
+Te(ve) = Te(Y) + eTe(y)d and Vue = VU + epVe+ pVyy.
+As in [31] and [30], we also have the following convergences
+
+(i) Te(u) > strongly in L?(Q x Y*),
+(ii) Te (¢¥¥) 7 ® strongly in L?(9 x Y*), (6.43)
+(iii) Tee(Vu.) + V¥+V, strongly in L2(9 x Y*),
+
+where ® = yp € D(A) @ H},,(¥").
+Let € € D([0,T]). Let ve€ be a test function in (6.8) and integrating on [0,7],
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 72
+
+we have
+
+a Se Uv dardt + f 7 f A VucVuck dadt
++f he e"teh(ue)uc€ dozdt (6.44)
+= C he Suef dedt + ia Jf, seve doadt.
+
+Unfolding the first term in the left-hand side of (6.44), by Definition 2.37, Theorem
+3.14,
+
+T T
+[ f. uLy€ drdt = -{ f uevel’ drdt
+Te T “ G
+B= [Tew Te (TEE) dedydt.
+
+By (6.41) (i), (6.43) (i), and Theorem 3.13 (vii), one can pass to the limit in this
+equation to obtain
+
+tim [" [, vevegdeae = -1¥"| [" [ wwe’ deat (6.45)
+
+Unfolding the second term in the left-hand side of (6.44), using Theorem 3.13 () and
+(iv),
+
+T Cry T
+f A {A VuVuek dadt f [pe TANTS (Vue) Te (Wve) Te (6) dzdydt.
+
+By (6.40), (6.41) (ii), (6.43) (ii), and Theorem 3.13 (vii), one can pass to the limit
+in this equation to obtain
+
+T T me
+lim [ i A VucVocg dedt = f i ye A(Wut Via (VW + VyP)Ededydt. (6.46)
+Unfolding the third term in the left-hand side of (6.44), using Theorem 3.9 (é) and
+(iii),
+T Te T
+Uf fpg.errudveédazat © ff, e°T(n)TE Mu) TH ve)TO(E) ded
+
+For 7 = 0, by Theorems 3.9 (it), 6.7, 3.10, and (6.43) (#), one can pass to the limit
+in this equation to obtain
+
+T T
+lim [ f 5, £7 TM e)ue§ doadt = f f vag 7W)M(U)UE dadydt
+
+= [wey f 7 f h(u) VE dedt.
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 73
+Equivalently by Definition 2.29,
+lim f * f 5, £Teh(ue)ve€ dosdt = |8S\Mos(r) f f h(u) VE deedt. (6.47)
+The case - > 0 yields
+lim f 7 f 5, €"7eh (ue) ve€ dxdt = 0. (6.48)
+
+Unfolding the first term in the right-hand side of (6.44), using Theorem 3.13 (i) and
+(iv),
+
+ff firs ® (frente oat © aedyat
+
+By Theorem 3.13 (viii) and (6.43) (i), one can pass to the limit in this equation to
+obtain
+
+tim ff fug drat = ["[ sugdedyat =v" [" [pve deat (6.49)
+
+Unfolding the second term in the right-hand side of (6.44), using Theorem 3.9 (#) and
+(ii),
+
+Lf [og seg drat ® [13a Tn TE) aedyat
+
+By Theorems 3.9 (vi), 3.10, (6.43) (i), and Definition 2.29 adapted for time-dependent
+functions, one can pass to the limit to obtain
+
+T T
+lim f I «, #veé dadt = |05|Mos(9) f f WE dedt. (6.50)
+Hence, passing to the limit in (6.44) through (6.45)-(6.50), we obtain for 7 = 0,
+
+T T
+-ly* J 2 dt.
+i fi f wwe deat + f Jp MDa + WANE + Vy DE dedy
+
++|85|Mos(r) a f h(u) VE drdt = |Y*| f 7 f fVEdedt (6.51)
++105\Mos(o) [” [ve deat,
+and for + > 0,
+<i [ fue’ deat + FF fy Aout WAN + Vy) dedyat
+=|y"| [ 7 f f¥Edzdt (6.52)
+
+T
++105|\Mos(o) f° [, ¥¢dsat,
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains 74
+
+which by density in Theorems 2.34 and 2.63 gives (6.42).
+
+For the initial condition, we only show the case when -y = 0, as 7 > 0 is similar.
+Let € € C™([0,T]) with €(0) = 1 and €(T) = 0. Let %€ be a test function in (6.8)
+and integrating on [0,7], we have
+
+f i, uy dadt + c L AVueVoeé dedt
+T
++ ff fig, €77Muelveé dona On)
+
+= [ff fereaedt+ ff oeveé dona
+
+Unfolding the first term in the left-hand side of (6.53), by integrating by parts with
+respect to t, since €(T) = 0 and €(0) = 1 and using Theorem 3.13 (uv) (vi),
+
+C i uyue€ drdt = he ue(2, T)ve€(T) dz
+- i ue(x, 0)v.(0) dr -[ fh ugve€’ dedt
+= -f,, u(t, Oued ~ fh ugve€! dadt
+EAL" [.Toluule,0)) Te (ve) dedyat
+- f Doe Te (ue) Te (ve) Te (E') dardyat.
+
+By J4, (6.43) (i), (6.41) (i), and Theorem 3.13 (vii), one can pass to the limit to
+
+obtain
+T T
+
+. ° ae aire 7
+
+lim f A _Mevek dadt = —1¥"| A uo dz — |Y*| f f ube! dedt. (6.54)
+Hence, passing to the limit in (6.44) through (6.54) and (6.46)-(6.50), we obtain
+
+_T
+-lY | f wo de - |¥" if [uve deat
+Tf A(Wut V,a)(VY + Vy 8) drdydt
++f fp APU + Vea) (VW + VyO)E dadydt.
+T T
++|0S|Mos(7) [ f h(u) WE dadt = |¥*| [ f SVE dedt
+
+T
++0s\Mos(9) [ f ve drat.
+
+(6.55)
+
+Note that the second term in left-hand side of (6.55), by integration by parts, is given
+
+<i [" [wee anat = Ir fw(aoyeae+iv"1 [” [ue dade
+
+Chapter 6. Linear Parabolic Problem in Perforated Domains i
+Substituting this in (6.55) and then subtracting the resulting equation from (6.51)
+gives
+
+frvovds = f u(z,0)ae, vw,
+which implies u(z,0) = uo. This completes the proof. S
+Theorem 6.9 (Classical Formulation) If 7 = 0 and h is positively homogeneous
+
+of degree one, then the limit function u is the unique solution of the homogenized
+problem
+
+[¥*]u’ — div(A®=Vu) + |8S|Mos(r)h(u)
+
+= IY*|f + 18S|Mas(g) in Qx (0,7),
+tuo =0 on a2 x [0,7],
+u(z,0) = up inn.
+
+If >0, then the limit function u is the unique solution of the homogenized problem
+
+I¥*|u’ — div(A%™Vu) = |Y"1f +|8S|Mas(g) in 2x [0,7],
+uo =0 on O&O x [0,7],
+u(z,0) = uo inn.
+
+In both systems, A®™ is the classical homogenized matriz given by
+Abom (7) = i(z.y) — q As dy.
+iy (2) f. (autem Lawle, VGy_ ») ly.
+
+Remark 6.10 The oscillations in the coefficient matrix give rise to the classical
+homogenized matrix A*™ in the limit problem. The boundary condition contributed
+to the domain 2 the constant |95|Mas(g) when y > 0 and the term |9S|(Mas(g) —
+Mos(r)h(u)) when y = 0.
+
+Chapter 7
+
+Summary
+
+The main objective of this thesis was to describe the asymptotic behaviors of some
+boundary value problems posed in perforated domains.
+
+The first one is linear elliptic problem posed in a domain with small holes given
+by the system
+
+—div (A*(z)Vugs(z)) = f(z) in gs,
+A®(x)Vues(z) - nes = ge(z) on OB%, (7.1)
+urs(z) = 0 on Oq6 \ OBE,
+
+where a nonhomogeneous Neumann boundary condition is imposed on the holes. For
+the homogenization of this problem, we used a test function of the form ‘wes, where
+
+we D(Q) and
+wes(2) = (8) - (5 {2}),
+
+with v € D(R‘)N Kz. With this choice, we obtained an additional term from the
+recovered limit equation given by
+
+—r p
+
+1 econ 4002: 2)V Ura dedo,
+
+Moreover in the classical formulation, we obtained the zero-order “strange” term
+Cup
+
+contributed by the choice of the test function. The nonnegative term © can be
+interpreted as the local capacity of the set B. Again, this term is similar to the
+one obtained in the works [21], [39], [15], [24] and [20]. This is due to the critical
+sizes of the Dirichlet and Neumann holes as in [24] and [20]. For the comparison
+of results for the linear elliptic problem in domains with small holes, as from Table
+7.1 we get the classical coefficient matrix as in [38] and [15]. Also, we produced the
+same contribution of the Neumann boundary condition from the work done in [38],
+and an additional term when compared with the limit problem in [15]. However,
+since we used the same test function as in [15], we obtained more details about the
+limit problem as viewed by its zero-order “strange” term. The work done in [38] was
+
+76
+
+Chapter 7. Summary 77
+
+recovered in the limit problem as well and corresponds to a special case when the size
+éé is just €, that is the case when 6 = 1.
+
+The second one, we dealt with is a quasilinear elliptic problem posed in a domain
+with two small holes given by the system
+
+—div (AS (z, 4e6,5,)Vuesi6.) = f(z) in Qe6621
+Urs, = 0 on 69%;,5, VOB, (7.2)
+AS(2, t1655,)V ted 84 * Theby + €7Te()A(Ues,) = ge) on OT.
+
+In this problem, we imposed a nonlinear Robin boundary condition on some holes
+while a Dirichlet condition is prescribed on the other holes as well as on the outer
+boundary. To homogenize this problem, we again used a test function of the form
+‘wes, and obtained the corresponding zero-order “strange” term. However in the pro-
+cess of doing so, we encountered some difficulties. To deal with quasilinear matrix, we
+proved by definition the limit of its unfolding as given in Theorem 5.7 (5.14). Another
+difficulty is the term h. For this one, we proved some preliminary convergences of the
+unfolding of h along the boundary using the idea of its associated Nemytskii operator
+as can be seen in Theorem 5.6. Also, to analyze the behavior of the limit functions
+with respect to the term €7, we considered two cases: = 0 and > 0. We observed
+that when 7 = 0, the term
+
+walT|Mor(r) jf h(ue)v de
+
+appeared in 2 and when 7 > 0, this term vanished on the limit equation.
+
+The second difficulty in this problem was due to the presence of a quasilinear term.
+Solving this one gave us an insight on the contribution of a quasilinear coefficient
+matrix as seen in Table 7.2 compared to the classical homogenized matrix obtained
+in [39] and [21]. It is also important to notice that our results especially for the
+nonlinear Robin boundary condition was more general than that of [39] since we
+considered a generalized version in the original problem statement.
+
+In dealing with problems given in (7.1) and (7.2), we obtained the same contri-
+bution of the choice of the test function and produced a similar zero-order “strange”
+term as seen in [15] and (21).
+
+Lastly, we considered a linear parabolic problem posed in a periodically perforated
+
+Chapter 7. Summary 78
+
+domain given by the system
+
+u;(z, t) — div (A*(z)Vu,(z, t)) = f(z, t) in Q2 x [0,7],
+
+u,(z,t) =0 on (AN3 \ OS.) x [0,7], (73)
+A®(z)Vue(z, t) - ne + €77(z)h(Ue) = ge(z, t) on OS, x [0,7], ,
+Ue(z, 0) = u(x) in 2.
+
+Here, we prescribed a nonlinear-Robin boundary condition on the inner boundary
+while a Dirichlet condition is imposed on the outer boundary. Here, the difficulty arose
+from the presence of the nonlinear Robin. boundary condition which needs preliminary
+convergences to pass to the limit. For the existence and uniqueness results, we put
+the problem to a more general framework. In particular we dealt with the system
+
+u'(z, t) — div(A(z)Vu(z, t)) = f(z, t) in O x [0,7],
+
+u(z,t) =0 on (80 \ aS) x {0,T],
+A(z)Vu(z, t)- n+ ar(z)h(u) = g(z,t) on OS x [0,T],
+u(z,0) = u°(z) in O.
+
+We showed the well-posedness using the Faedo-Galerkin method and to deal with the
+difficulty in obtaining the estimate on the solution for the approximate problem, we
+found an estimate for the function h (see Remark 6.2).
+
+For the asymptotic behavior of (7.3), in order to deal with difficulty on passing to
+the limit on the function h, we used Theorem 6.7. Also, to analyze the behavior of
+the limit functions with respect to the term €7, we considered two cases: y = 0 and
+7 > 0. From here, we saw that when 7 = 0, the term
+
+[aS|Mas(r) [” [ n(uy¥¢ deat,
+
+appeared in the domain 2 and when 7¥ > 0, this term vanished on the limit equation.
+Moreover, for the linear parabolic problem posed in perforated domains, as from Table
+7.3 we obtained the classical coefficient matrix as in [31] compared to the quasilinear
+contribution in [1]. Also, due to the nonlinear Robin boundary condition that we
+imposed, additional terms in the limit problem appeared as compared to the two
+works which only tackled Neumann boundary conditions.
+
+Using the following tables, we give a brief summary. Here, we use NH to denote
+
+nonhomogeneous and H for homogeneous.
+
+79
+
+Chapter 7. Summary
+
+‘s9[0]{ [TEU BM sureuog uy walgorg ond reoUTSENy :Z°2 OGL,
+
+uoeuman HN “TONIC uiqey HN ‘PUIG WIqO" HN ‘TUT | suorpuoD Arepunog
+Teoury TeourT TeouTTIsend XUV Wa!yyeoy,
+S9[0H [Teg S9]0H [Tews s9[oH [Tews urewog
+onda ondina ondina adKL Add
+[tz] (800z) epnourureyy pue noseues0jy | [6¢] (ST0Z) epnourureH pue PETZ sqsou.L |
+“SIO [PUG YIM suTeUOG UF Walqorg ONdITY TwoUry :T"L eTqeL,
+nem pue () Apa qh pue () Ans pm poe (2) 403 suotjouny 38a],
+mueuMeN H “YlYOUI uueuneN HN “@RPUIG | TueuMAN HN ‘PUI | suorpucD Arepunog
+qeour] qeour] qeaur'] XUVEY! WAITI0D,
+Sa]0H [TeuIg S9[0H{ [TeUIg S9[0H{ [Teas Uyeu0g
+onda nding onding adAL Add
+[st] (9t0z) ‘Te 39 ‘noseues015 | [ge] (T10z) epnowurey] syseq.L
+
+
+80
+
+Chapter 7. Summary
+
+“sureuog peyesopieg UI Ma{qorg oqereg TeoUr] :E°2 ATGRL
+
+uueUneN H “FIO uueunaN HN ‘4H | wIqe" HN “TUNIC | suorpucD Arepunog
+Teoury] Teautpisend, qeouly] XUIBN Wo!Dyje0g
+poyeiopleg peyeopieg peyes0jieg urewiog
+ayoqured ayoqured ayoqered adkL add
+{ [te] (9t0z) 3ae4_pue oyeu0q {t] (9t0z) erev ss0u,L,
+
+
+Chapter 7. Summary 81
+
+Some possible future works are the following:
+1. Corrector results for the three problems.
+2. A quasilinear coefficient term for (6.1).
+
+3. Consider a more general nonlinear term h ( ue) for (6.1) and h ICs {z} 1 teés6s)
+for (5.1).
+
+4, Optimal controls for the three problems.
+
+
+List of References
+
+M. AALA, Asymptotic behavior of a quasilinear parabolic problem with neumann
+boundary condition, Science-Diliman, (2016).
+
+H. AHMED AND S. M. Sain, Faedo-galerkin method for heat equation, Global
+Journal of Pure and Applied Mathematics, (2017).
+
+J. BEAR AND Y. BACHMAT, Introduction to modelling of transport phenomena
+in porous media, (1991).
+
+S. BENDIB, Homogénéisation d’une classe de problémes non linéaires avec des
+conditions de fourier dans des ouverts perforés, (2004).
+
+A. BENSOUSSAN, J.-L. LIONS, AND G. PAPANICOLAOU, Asymptotic analysis
+for periodic structures, (1978).
+
+B. CABARRUBIAS AND P. DONATO, Existence and uniqueness for a quasilinear
+elliptic problem with nonlinear robin conditions, Carpathian Journal of Mathe-
+matics, (2011).
+
+—, Homogenization of a quasilinear elliptic problem with nonlinear robin
+boundary conditions, Applicable Analysis, 91 (2012), pp. 1111-1127.
+
+——., Homogenization of some evolution problems in domains with small holes,
+Electronic Journal of Differential Equations, 169 (2016), pp. 1-26.
+
+G. CarDonE, C. D’APICE, AND U. DE MAIO, Homogenization in perforated
+domains with mired conditions, Nonlinear Differential Equations Applications, 9
+(2002), pp. 325-346.
+
+J. CasabDo-D1Az, Two-scale convergence for nonlinear dirichlet problems in
+perforated domains, Proceedings of the Royal Society Edinburgh, 130 (2000),
+pp. 249-276.
+
+J. Casapo-D1az, M. LuNA-LEYNEZ, AND J. D. MARTIN, An adaptation of
+the multiscale methods for the analysis of very thin reticulated structures, C.R.
+Academy of Sciences Paris, (2001), pp. 223-228.
+
+83
+
+List of References 84
+
+[12] M. Cuipot, A remark for uniqueness in quasilinear equations, Singularities and
+differential equations, 33 (1996), pp. 9-18.
+
+[13] D. CroRANEscu, A. DAMLAMIAN, AND G. GRISO, Periodic unfolding and
+homogenization, C.R. Acad. Sci. Paris, Ser. 1, 335 (2002), pp. 99-104.
+
+[14] ——, The periodic unfolding and homogenization, SIAM Journal of Mathematical
+Analysis, 40 (2008), pp. 1585-1620.
+
+[15] D. Croranescu, A. DAMLAMIAN, G. Griso, AND D. ONOFREI, The periodic
+unfolding method for perforated domains and neumann. sieve models, Journal of
+Mathematical Pure Applications, 89 (2008), pp. 248-277.
+
+[16] D. CroraNescu AND P. Donato, An Introduction to Homogenization, Oxford
+University Press, 1999.
+
+[17] D. Croranescu, P. Donato, AND R. ZAKI, Periodic unfolding and robin
+problems in perforated domains, C.R. Math. Acad. Sci. Paris, 342 (2006), pp. 469-
+474.
+
+[18] ——, The periodic unfolding method in perforated domains, Portugaliae Mathe-
+matica, (2006).
+
+19] ——, Asymptotic behavior of elliptic problems in perforated domains with non-
+linear boundary conditions, Asymptotic Analysis, (2007).
+
+[20] D. ClORANESCU AND F. Murat, Un terme étrange venu d’ ailleurs, Nonlinear
+partial differential equations and their applications, (1982).
+
+[21] D. CloRANESCU AND A. OULD-HAMMOUDA, Homogenization of elliptic prob-
+lems in perforated domains with mized boundary conditions, Rev. Roumaine
+Mathematical Pures Applications, 53 (2008), pp. 389-406.
+
+[22] E. CODDINGTON AND N. LEVINSON, Theory of ordinary differential equations
+International series in pure and applied mathematics, McGraw-Hill, 1955.
+
+[23] C. Conca, J. D1az, A. LINAN, AND C. TIMOFTE, Homogenization in chemical
+reactive flows, (2004).
+
+List of References 85
+
+[24]
+
+(25)
+
+[26]
+
+(27]
+
+[28
+
+(31
+
+(32
+
+C. Conca AND P. Donato, Non-homogeneous neumann problems in domains
+with small holes, Mathematical Modelling and Numerical Analysis, 22 (1988),
+pp. 561-607.
+
+A. DAMLAMIAN, Periodic unfolding and homogenization, Academic Sciences,
+335 (2002), pp. 99-104.
+
+——., An elementary introduction to periodic unfolding, Gakuto International
+Series: Mathematical Sciences Applications, 24 (2006), pp. 119-136.
+
+P. Donato, D. CIORANESCU, AND M. ROQUE, Introduction to Classical and
+Variational Differential Equations, University of the Philippines Press, 2012.
+
+P. Donato, K. H. LE NGUYEN, AND R. TARDIEU, The periodic unfolding
+method for a class of imperfect transmission problems, Journal of Mathematical
+Sciences, 176 (2011).
+
+P. DONATO AND A. NABIL, Homogenization and correctors for the heat equation
+in perforated domains., Ric. Mat., 50 (2001), pp. 115-144.
+
+P. DONATO AND Z. Y. YANG, The periodic unfolding method for the wave equa-
+tions in domains with holes, Advanced Math and Science Applications, (2012).
+
+——., The periodic unfolding method for the heat equation in perforated domains,
+Science China Mathematics, (2016).
+A. C. Esposito, C. D’APICE, AND A. GAUDIELLO, Homogenization in a
+
+perforated domain with both dirichlet and neumann boundary conditions on small
+holes, Asymptotic Analysis, 31 (2002), pp. 297-316.
+
+E. D. Giorci AND S. SPAGNOLO, Sulla convergenza degli integrals dell’energia,
+Boll. Un. Mat. It., 8 (1973), pp. 391-411.
+
+J. HOFFMAN AND S. FRANKEL, Numerical Methods for Engineers and Scien-
+tists, CRC Press, 2001.
+
+M. A. KRASNOSEL’SKII, Topological methods in the theory of nonlinear integral
+equations, Macmillan, 1964.
+
+F. MURAT AND L. TARTAR, H-convergence, Topics in the Mathematical Mod-
+elling of Composite Materials, (1970), pp. 21-43.
+
+List
+
+37]
+
+(41
+
+[42]
+
+[43]
+
+of References 86
+
+G. NGUETSENG, A general convergence result for a functional related to the
+theory of homogenization, SIAM J. Math.Anal., 20 (1989), pp. 608-629.
+
+A. OULD-HAMMoUuDA, Homogenization of a class of neumann problems in per-
+forated domains, Asymptotic Analysis, 71 (2011), pp. 33-57.
+
+A. OULD-HAMMOUDA AND R. ZAKI, Homogenization of a class of elliptic prob-
+lems with nonlinear boundary conditions in domains with small holes, Carpathian
+Journal of Mathematics, 31 (2015), pp. 77-88.
+
+S. SALSA, Partial Differential Equations in Action: From Modelling to Theory,
+Springer-Verlag Italia, 2008.
+S. SPAGNOLO, Su limite delle soluzioni di problemi di cauchy relativi
+
+all’equazione del galore, Ann. Sc. Norm. Sup. Pisa, 21 (1967), pp. 657-699.
+
+L. TARTAR, Quelques remarques sur l’homogénéisation, Functional Analysis and
+Numerical Analysis Proc. Japan-France Seminar, (1976), pp. 468-482.
+
+C. TIMOFTE, On the homogenization of a climatization problem, Stud. Univ.
+Babes-Bolyai Math, 52 (2007), pp. 117-125.
+
+E. ZEIDLER, Nonlinear Functional Analysis and its Applications, Springer-Verlag
+New York, 1986.
+
+G. ZuKAV, The Dancing Wu Li Masters: An overview of the new Physics,
+William Morrow, 1979.
+

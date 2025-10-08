@@ -168,7 +168,6 @@ people moving to a former logging area that had become an accessible secondary f
 
 Political conditions such as concentration of power and influence of few elites were favored by
 
-4
 
 the government especially in granting logging concessions in the country. Hence, such
 interlinked processes results to deforestation. As implied in the second objective of this
@@ -258,7 +257,6 @@ Carandang (2013), year 2010 data from NAMRIA (2013).
 5 a 8
 i TOTAL FOREST COVER .
 g» oe ww r
-5
 | be
 3a 5
 i PRIMARY OLD GROWTH :
@@ -326,7 +324,6 @@ In 2013, Carandang et al. published a detailed study regarding deforestation and
 
 degradation drivers in the Philippines from four selected provinces and their municipalities in
 
-10
 
 the Philippines, namely, General Nakar (Quezon), Narra and Quezon (Palawan), various
 municipalities in Southern Leyte and Mt. Malindang Natural Park (Misamis Occidental). The
@@ -386,7 +383,6 @@ im 1900 200 aa10
 Figure 5. Landsat has experienced administration operations within government
 and commercial institution (Adapted from Williams et al., 2006).
 
-12
 
 (USGS & NASA, 2003). The altitude for the Landsat 1, 2, and 3 platform is at 920 km (572
 miles) circling the earth every 103 minutes with a repeat coverage of 18 days, compared to
@@ -462,7 +458,6 @@ used by the government, military, industry, academe and civilian throughout the 
 
 Thus, many applications such as global research change, forestry, agriculture, geology,
 
-14
 
 resource management, geography mapping, water quality and to some extent oceanography
 (USGS & NASA, 2003). The joint publication of USGS & NASA (2013) “Landsat: Continuing
@@ -523,7 +518,6 @@ may be applicable for forest cover studies. Among these are the Global Land Surv
 
 Gutman et al. (2008), Geocover by Tucker et al. (2004) and Tropical Ecosystem Environment
 
-16
 
 Observations by Satellites Il (TREES II) (Mayaux et al., 2005). GLS is different from TREES
 Il since the former focused on the selection of cloud free images of Landsat in different epochs
@@ -585,7 +579,6 @@ asp | (us) aonnjosoy pueg wor njosay [e4}90ds aMTeS
 
 “s1osuss yespue'] Jo sonstiaiseseys jexsads “7 21421
 
-61
 
 “sado|s uonmeyadea soziseydurq Of Pou 190-90 :b pueg
 “TORTA quE|d
@@ -668,7 +661,6 @@ forest cover loss for two eras, 1990-2000 and 2000-2005 in Malaysia. On each tim
 
 a probability sample of 18.5 km 18.5 km blocks was designated, and pairs of Landsat images
 
-21
 
 used per sample block were inferred to quantify forest cover area and gross forest cover loss.
 They found out that annual gross forest cover loss was 0.43 Mha/year (1990-2000) and 0.64
@@ -699,7 +691,6 @@ cover loss in Indonesia. Moreover, global study on protected area and IFL that i
 
 Hansen Landsat processed data were carried out by Heino et al. in 2015.
 
-22
 
 2.45 Hansen Forest Cover Change Methodology
 
@@ -725,7 +716,6 @@ classifiers. After this, percent tree cover and forest cover change products wer
 
 a bagged decision tree process (Hansen et al., 2013).
 
-23
 
 CHAPTER 3
 METHODOLOGY
@@ -777,7 +767,6 @@ centered in the activities of logging firms and migrant upland settlers. The for
 
 forest due to high timber demand and policies by the government that promotes logging while
 
-24
 
 the latter practice permanent cropland establishment in open access forests because of
 landlessness, inadequate economic opportunities and population growth. Such activities of the
@@ -796,7 +785,6 @@ validation and accuracy assessment. In this figure, inputs were represented by p
 
 Figure 8. Flowchart of the Study.
 
-25
 
 outputs by rectangle and processing steps by rounded rectangles. The details of each will be
 
@@ -823,7 +811,6 @@ net change rank processing, annual forest loss and rate processing and annual fo
 
 processing. The first part produced both regional and provincial ranking and statistics, which
 
-26
 
 in tum identified the top and bottom regions and provinces
 
@@ -831,7 +818,6 @@ in terms
 
 Resulting Forest Area Aftter the Intersection of 5 Forest Vectors |
 
-1507526
 03060 120 Kilometers
 Legend
 
@@ -839,7 +825,6 @@ Legend
 
 Figure 9. Year 2000 Forests after Intersecting All Five Vectors.
 
-27
 
 of loss, gain and aggregate net change. Aggregate net change was computed in order to
 compare forest changes across all regions/provinces regardless of their year 2000 forest cover
@@ -870,7 +855,6 @@ Processing particularly the aggregate net change ranking. Then, key informant in
 focus groups discussions in conjunction with the KIIs were carried out. The outputs of KIIs
 and FGDs were basically the ranking of proximate and underlying causes of deforestation
 
-28
 
 based on the tally of interviewees’ answers (for KII) and consensus in FGDs. Next secondary
 data were gathered and collected from the Forest Management Bureau, designated as various
@@ -904,7 +888,6 @@ Five forest vectors were used to isolate forest areas of the country. This was d
 
 eliminate features from the main data that appeared as forest vegetation but not in the ground.
 
-29
 
 ‘These features could be coconuts, rubber plantation or other wooded vegetation that appear as
 forests in the satellite data but not in reality. These forest vectors came from various institutions
@@ -941,7 +924,6 @@ Global forest | gain Forest gain during the period Bbit T (gain) or
 cover gain 2000-2012, defined as the unsigned | 0 (no gain)
 inverse of loss, or a non-forest to_| integer
 
-30
 
 forest change entirely within the
 study period.
@@ -1001,7 +983,6 @@ Deciduous
 Needleleaf, Mixed
 Forests
 
-31
 
 
 TREES | Tropical *raster | 2002 Evergreen Mountain | VEGETATION
@@ -1046,7 +1027,6 @@ Process used two-stage probability based stratified random sampling. First, whol
 
 divided into four distinct and modified biogeographic regions, namely, Greater Luzon, Greater
 
-32
 
 Palawan-Mindoro, Greater Negros Panay and Greater Mindanao (see Appendix K). It used the
 assumption that these regions were based upon the distribution patterns of vascular plants,
@@ -1076,7 +1056,6 @@ was primarily used as a decision support tool to identify and address drivers of
 
 and forest degradation. The said document was mainly used to guide project implementers in
 
-33
 
 REDD¢+ projects. The first part of KI asked interviewees regarding basic information on the
 source of livelihoods (of communities dependent on or living near the forest), forestry and other
@@ -1106,7 +1085,6 @@ kaingin sites, timber-poaching sites, newly deforested sites and other areas pre
 
 the Landsat derived data. The waypoints and tracks of the visited sites were recorded using a
 
-34
 
 GPS device. Then, they were uploaded in Google Earth together with the Landsat processed
 
@@ -1124,7 +1102,6 @@ distributions that were not normal, no linear relationship between the two. Prov
 
 regions with significant correlations were presented and summarized using tables.
 
-35
 
 CHAPTER 4
 RESULTS AND DISCUSSIONS
@@ -1175,7 +1152,6 @@ Hl
 
 o
 
-2001
 
 Figure 12. Annual Roundwood and Lumber Production of the Philippines from 2001-2012.
 
@@ -1204,7 +1180,6 @@ increase in forest loss as related to the said forestry statistics of the countr
 decline in forest loss in 2008 was unexplained by the said factors, perhaps the global financial
 crisis on that year could be one of the reasons that drive the reduction in forest loss. According
 
-37
 
 to Yap et al. (2009), sectors such as forestry, agriculture and construction declined in its growth
 rate. This could possibly dropped down the demand for wood and construction materials
@@ -1239,7 +1214,6 @@ which do not really represent contiguous and intact forest cover as mapped by ot
 On one hand, TREES (21.24%) had the least remaining forest cover in 2012, (followed by
 ESSC at 21.90%). This can probably cause by the coarse resolution of TREES, while strict
 
-38
 
 exclusion of forest plantation in ESSC resulted to such low forest cover. Forest cover
 
@@ -1275,7 +1249,6 @@ Forest Loss Rate
 (ha/year) 15,082.41 | 17,297.21 | 29,692.60 | 13,990.83 | 13,181.90
 Forest Loss Rate | -1.82% ~6.03% 2.27% “1.71% “1.87%
 
-39
 
 
 Figure 15. Forest cover percentage in years 2000 and 2012 using NAMRIA forest vector.
@@ -1297,13 +1270,11 @@ next section identified specific places where significant losses occurred.
 
 Figure 17. Forest cover percentage in years 2000 and 2012 using MODIS forest vector.
 
-41
 
 [ESSC 2012 Philippine Forest Cover
 
 Figure 19, Forest cover percentage in years 2000 and 2012 using TREES forest vector.
 
-42
 
 The derived Landsat processed data from data analysis were compared to the NAMRIA
 
@@ -1457,7 +1428,6 @@ Central Visayas 791 441 94.86 “90.45 10,349.28
 
 [National Capital Region | 0.00 0.00 0.00 0.00 0.00
 
-45
 
 vectors used to isolate forest areas excluded some forests in La Mesa Forest Reserve of NCR.
 Cagayan Valley (1,040.04 ha/yr) had twice as much forest loss rate compared to MIMAROPA
@@ -1488,17 +1458,10 @@ logging moratorium was seen in CAR and MIMROPA region, signifying a sudden decli
 
 Year 20111, Peak loss years of Cagayan Valley and MIMAROPA will be explained later in 4.1.3.
 
-46
 
 (a) Cagayan Valley, MIMAROPA & CAR Annual Forest Loss
-3000
-2500
-2000
-1500
 
-1004
 
-50
 
 sii lll iii
 
@@ -1528,7 +1491,6 @@ Forest Loss Rate = 408.69 ha/year
 Figure 21. Annual forest loss of top three regions by net change (a) with respective forest loss rates
 (b) (These figures used 5 over 5 forest vector intersection, error bars are standard errors).
 
-47
 
 i)
 
@@ -1558,7 +1520,6 @@ on 412. house det Nerte
 
 Figure 22, Regions and provinces where logging is allowed (FMB, undated).
 
-48
 
 Table 8 shows the ranking of regions based on their mean aggregate net changes derived
 from various forest vectors used in this study. Since aggregate net change represents the
@@ -1594,11 +1555,9 @@ Western Visayas 1.54 -1.63 -1.44 | 0.62 | 0.43
 Nothem Mindanao “1.07 =1.65 =1.24| 0.55 [ -0.45
 locos Region “0.84 0.96 [0.83 | -0.74 | -0.84 | 0.35 | -0.42
 
-49
 
 Aggregate Net Change
 
-26
 22. 5
 3lo3
 aye
@@ -1638,7 +1597,6 @@ that MODIS forest vector had isolated relatively large portion of pixels as fore
 Perceived as forests could plausibly include coconuts, brush lands and other trees found in
 urban areas and upland farms.
 
-50
 
 Figure 25 showed the annual forest losses of Zamboanga Peninsula, CALABARZON
 and CARAGA region. Among the three regions, CARAGA was the only region that exhibited
@@ -1665,11 +1623,7 @@ SI
 
 Zamboanga Peninsula, CALABARZON & CARAGA
 Annual Forest Loss
-1200
-1000
-800
 
-60
 
 i il walls lil
 
@@ -1713,7 +1667,6 @@ Forest Loss Rate = 493.13 ha/year Forest Loss Rate = 163.52 ha/year
 
 1.69*_|CARAGA Annual Forest Loss|
 
-90
 300] Suspension of Logging Permit
 
 ° w2espeeae
@@ -1729,7 +1682,6 @@ Loe Ban £0.23,
 
 ha
 
-52
 
 good at the beginning of implementation and difficult to sustain in a nationwide scale. Here,
 logging bans effectiveness is questioned. Also, it was evident that another logging suspension
@@ -1772,7 +1724,6 @@ MIMAROPA had the biggest mean forest loss rate. It was evident that regions list
 
 Peninsula and CARAGA) were in the top three aggregate net change ranking table (Table 8).
 
-53
 
 4.1.3 Results by Province
 
@@ -1786,9 +1737,7 @@ terms of loss and gain. Again, this is attributed to the fact that some MODIS fo
 
 Top 3 Provinces in Terms of Forest Loss Top 3 Provinces in Terms of Forest Gain
 soon 9,00
-2000
 =
-7000
 an bas
 30,000 Jia 2 5,000 Te
 * 20,000 1] y i
@@ -1807,7 +1756,6 @@ hypothesis that places with large forest cover has a higher tendency to lose mor
 less forested places. As expected, top three provinces shown on this table belong to top three
 
 Tegions listed in Table 7. Aside from that, all of the net changes remained negative. This could
-54
 
 mean that forest regeneration or growth are always surpassed by forest reduction. There is a
 high probability that this really happens on the ground since reforestation or spontaneous forest
@@ -1844,7 +1792,6 @@ year 2000 forest cover among the provinces in Table 10. This forest loss rate co
 
 by the presence of Integrated Forest Management Agreement (IFMA) concessionaires all over
 
-55
 
 the province (see Figure 27). IFMA is geared towards industrial forest plantations at the
 
@@ -1880,7 +1827,6 @@ Zamboanga del Sur
 Figure 27. Zamboanga del Norte 2012 Forest Cover and Current IFMA Boundaries. Take note
 of the wholes inside the forest (highlighted in red ovals).
 
-56
 
 this type of IFMA belongs to type II where a certain forestland still contain residual (open)
 forest. In addition, Palawan had the highest loss rate (563. 72 ha/yr), followed by Isabela
@@ -1910,7 +1856,6 @@ increasing forest loss (see Figure 22). The decline in 2008 in Apayao may be att
 
 slobal financial crises on that year, as the low demand for wood construction materials might
 
-37
 
 (2) Palawan, Isabela and Apayao Annual Forest Loss
 
@@ -1950,7 +1895,6 @@ Forest Loss Rate = 357.14 ha/year
 Figure 28. Annual forest loss of top three provinces by net change (a) with respective forest loss
 Tates (b) (These figures used 5 over 5 forest vector intersection, error bars are standard errors).
 
-58
 
 caused the said decline. Nonetheless, Palawan had the biggest loss rate (563.72 ha/yr) among
 the three. Again, these estimated values could be much larger in reality due to the use of the
@@ -1993,7 +1937,6 @@ It-can be deduced that either logging concessions (for Zamboanga del Norte), sla
 
 farming and forest conversion to rubber (for Zamboanga Sibugay and Zamboanga del Sur)
 
-59
 
 operated quickly in replacing vast areas of forested lands. Thus resulting on their high
 aggregate net changes. In Figure 29, it was evident that the said Zamboanga provinces had
@@ -2026,7 +1969,6 @@ in Table 11 were presented. The list was topped by Mindanao provinces, with spec
 
 Zamboanga del Norte and Zamboanga Sibugay which also registered high aggregate net
 
-60
 
 changes in Table 11. As said in previous paragraphs, this could be brought about by logging
 
@@ -2071,7 +2013,6 @@ Sibugay 196.56| 192.26 | _363.50| 191.13| 221.79| 233.05 | 73.98] -8.94
 [ Maguindanao 91.72 {166.98 185.14 { 59.20[ 102.49] 121.10 $3.03{ 4.61
 (Laguna 35.71 73.33[ 339.25] 108.62] 20.15[ 119.41 | 126.96[ 4.16
 
-61
 
 
 Albay 42.73, 70.36 | _251.22| 92.71| 42.05| 99.81 | _87.23| __-4.98
@@ -2096,23 +2037,17 @@ identify barangays where most of the changes occur. Besides, Albay’s forest lo
 
 demonstrates the ability of Landsat processed data to detect even minute changes in the ground.
 
-62
 
 (@) Zamboanga Sibugay, Zamboange del Norte and Albay
 Annual Forest Loss
-400
 
 i. of wll ddd bat Jud fer}
 
 Jooanga Sibugay Zamboanga del Norte
 
-600
-500
 
 ha
 
-100
-200
 
 = 2001 2002 m 2003 « 2004 = 2005 m 2006 m 2007 #2008 m 2009 2010 m 2011 m 2012
 
@@ -2152,7 +2087,6 @@ Figure 30. Annual forest loss of top three provinces by aggregate net change (a)
 respective forest loss rates (b) (These figures used 5 over 5 forest vector intersection, error
 bars are standard errors).
 
-63
 
 4.1.4 Per Forest Type Portion
 
@@ -2177,7 +2111,6 @@ Vector Forest % | Forest ha | Forest % +Coniferous
 
 % %
 *NAMRIA | 40.83 53.35 242 - 6,804,438.12
-2003
 Ess 2002 _[ 22.8 62.54 317 10.1941.3 | 6,695,137.89
 BSWM 2003 | - = 1.075 : 7,054,079.23
 
@@ -2232,7 +2165,6 @@ highest values of loss rates and aggregate net change ranking, respectively. For
 
 only the top five provinces based on their loss rate amounts were included. In Table 16, it was
 
-65
 
 illustrated that provinces with huge remaining and intact forests also had the highest closed
 loss rates like Palawan, Apayao and Cagayan. Again, the low ratio of forest type to total forest
@@ -2281,7 +2213,6 @@ Sarangani 40.13 0.58 25.84 0.41 [32.99 10.11 3.59
 
 Camarines Norte 21.49 O61] 6.44 0.23 [13.96 | 10.64 2.66
 
-66
 
 4.1.4.2 Open Forest
 
@@ -2320,7 +2251,6 @@ areas could be former sites of logging concessions where upland farmers eventual
 subsistence through slash and burn agriculture and agroforestry. Hence, provinces shown here
 
 ‘might illustrate an immediate need to address deforestation in secondary forest types. The large
-67
 
 coverage of this forest type is indicated by high forest type area to forest area ratio. In ESSC
 forest vector alone, the ratio could range from 0.43 to 0.71, but this pattern is different in
@@ -2359,7 +2289,6 @@ Palawan 1049.29 0.32 | 1439.02 0.43 | 1244.15 | 275.58| -4.75
 
 Sur 1017.40 0.80 | 1376.96 0.88 | 1197.18| 254.25] -3.96
 
-68
 
 | Cagayan 692.63 0.31 | 520.34 0.59 | 606.48 | 121.83| -4.17
 Isabela 610.40 0.84 [503.11 o4i| 556.75] 75.86 | -2.44
@@ -2396,7 +2325,6 @@ of- 4.11% but other provinces ratio are always lower than one percent. This coul
 
 to the fact there is already small areas of mangrove in the country compared to open and closed
 
-69
 
 type of forest in year 2000. It is assumed that mangrove type of forest is second to open forests
 
@@ -2445,7 +2373,6 @@ comparisons adds confidence to Landsat processed data in analyzing mangrove exte
 
 rate,
 
-70
 
 Table 22. Top Provinces by Mangrove Forest Loss Rates (all values expressed in hectares per
 
@@ -2498,7 +2425,6 @@ than closed and mangrove forest, ini
 
 ating a high degree of dynamism.
 
-71
 
 
 Aggregate Net Changes of Top 3 Provinces in Terms of
@@ -2642,7 +2568,6 @@ the said CARAGA provinces are not far from each other. The year with the most lo
 
 del Sur and Surigao del Norte is 2012. This observation could be related to a large-scale
 
-74
 
 
 smuggling of lumber that was caught (one year after the implementation of Executive Order
@@ -2673,13 +2598,11 @@ and Guimaras mangrove loss were both highest in year 2001 and declining in succe
 
 implying effective mangrove protection in the area. Meanwhile, Bohol, Eastern Samar and
 
-75
 
 Surigao del Norte had peak loss in 2012 while Isabela and Lanao del Sur had peak loss in 2010
 
 and 2011, respectively.
 
-76
 
 a)_| surigao del Sur Annual Closed 5) | surigao del Norte Annual Closed
 Forest Loss Forest Loss
@@ -2729,7 +2652,6 @@ R
 2009, m+
 
 °o $8 8 8
-2002
 2003 m+
 2004, piesa
 2005 pms
@@ -2752,7 +2674,6 @@ Year 2008: Global Financial Crisi:
 February 2011: Logging Moratorium (E. 0. 23)
 2004, 2007 and 2010: Elections
 
-7
 
 8L
 
@@ -2761,7 +2682,6 @@ February 2011: Logging Moratorium (E. 0. 23)
 “(C0'0 > sanyea-d jJe) [eUaLIO oBAEG PUR ELE]
 ‘ang Jap uesnBy 303 (3 79 @ ‘P) 401904 18210} OSA Pue (9 7 q “2) 10199A 18310} VIAINVN JO $80] 152103 uado jenuuy “¢¢ aanBry
 
-002
 
 +m £007
 
@@ -2783,7 +2703,6 @@ om OTOZ
 
 4894/84 "ZE'BBZ = BEY $501 259104
 
-3507
 
 oot
 ooz
@@ -2827,7 +2746,6 @@ se
 
 ooo
 oost E
-002
 oosz
 
 ‘-sommaessems TTOZ
@@ -2843,7 +2761,6 @@ tome £002
 pm 2007
 ‘snmmml 1007
 
-4
 
 | cmmieomiomm ZT0Z
 
@@ -2863,7 +2780,6 @@ Teah/eu| 68 Zz = 818¥ 550715010) | 09
 $501
 ysaso4 uado jenuuy ans jap uesndy | (P
 
-6002
 
 }temmemms 8002
 Festmmemmen, $002
@@ -2905,25 +2821,21 @@ Forest Loss
 
 Forest Loss Rate = 0.15 ha/year
 
-6
 
 Forest Loss Rate = 0.09 ha/year
 
 x02
 Attoz
 em oroz
-6007
 bmi 8002
 
 Poor =
 
 002 #
-6002
 jew yoo
 |-stemmnsineam £002
 +2002
 
-06
 
 }-stomamiemmens 100
 
@@ -2958,7 +2870,6 @@ Forest Loss Rate
 Huztoz
 Hasttoz
 =f or0z
-6002
 #8002
 f+ -xo02
 f #002
@@ -2971,7 +2882,6 @@ e002
 +aeeniamteoss Z00Z
 }-atmpsionmmmms 1002
 
-15
 
 vH
 
@@ -2979,7 +2889,6 @@ YEAR
 
 “suorr9a}q 20102 Pue LO0Z ‘FOOT ‘(EZ ‘O “) WLLOLEOW BUIBB07 :1 107 AYEMIGeI
 
-08
 
 uD
 
@@ -2998,7 +2907,6 @@ oroz
 
 eam 6002
 
-8002
 eames g002
 
 pment £002 2
@@ -3123,7 +3031,6 @@ Reference %
 [Gain io Gain [Total _[User’s Accurac;
 Map % |Gain g.13 0.39 8.52 [95.38
 
-81
 
 io Gain Jott 85.39) = [99.87
 
@@ -3165,7 +3072,6 @@ Greater-Negros Panay biogeographic region has the least forest cover among the
 
 biogeographic regions discussed in this section. Most of their forests are isolated in mountain
 
-82
 
 ridges (Panay) and highest peaks (Negros). Its user accuracies for loss (53.46%) are lower than
 gain (72.22%). It is possible that forest loss in the map (Landsat derived data) are apparently
@@ -3204,7 +3110,6 @@ losses and gains. Overall accuracy for Greater Mindanao forest loss and gain wer
 
 than 90 percent.
 
-83
 
 Table 30. Greater Mindanao Confusion Matrix.
 
@@ -3250,7 +3155,6 @@ INo Loss 1.44 [74.39 (75.83 _|98.10
 
 [Producer's Accuracy [89.36 92.69)
 
-84
 
 overall accuracy 86.48%
 
@@ -3285,7 +3189,6 @@ direct driver of deforestation on their area was forest products harvesting (wei
 
 14.75) followed by farming (ws = 13.5), biophysical factors (ws = 13) and infrastructure (ws
 
-85
 
 = 625) (see Table 32). Forest product harvesting were exemplified by logging, timber
 poaching, charcoal making and rattan gathering. However, the weighted scores of the first two
@@ -3333,7 +3236,6 @@ especially upland farmers and the reason why typhoon and landslides were deemed 
 
 important drivers by all interviewees. On one hand, infrastructure facilities seemed to be of
 
-86
 
 little value when it comes to deforestation. Direct driver such as biophysical factors (typhoon
 and landslides) has aggravated the need to illegally harvest and fell more trees since there was
@@ -3365,7 +3267,6 @@ landslides brought about by three consecutive typhoons in November and December 
 
 2004. According to the interviewed farmers in the uplands, the typhoons and landslides served
 
-87
 
 as the triggering or push factor for forest reduction for years 2005 and 2006. First, landslides
 were still occurring after year 2004, this could probably affected some forests, as most
@@ -3377,7 +3278,6 @@ washed-out houses of the residents through logging. This reason is similar with
 General Nakar Annual Forest Loss and its Direct Drivers
 .
 
-900
 
 Continuing Erosion
 
@@ -3407,17 +3307,14 @@ EA « ~
 a «
 &
 
-200
 
 100 |
-0
 
 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012
 
 Bava
 
 mee
-25
 
 Bee
 
@@ -3435,7 +3332,6 @@ a living, as no more chainsaw registrations were renewed after their expiry in 2
 2005, logging was permitted to concessionaire holders especially, IFMA, and later on, logging
 cancellation was implemented in December 8, 2004 (DENR, 2004). This was according to
 
-88
 
 account of a DENR personnel in Real, Quezon. The imposition of provincial log ban
 (Provincial Ordinance No. 8 in year 2009) and E. O. 23 didn’t totally eliminate forest loss,
@@ -3467,7 +3363,6 @@ capacity and resources to protect forests and implement forest policies effectiv
 
 drivers influence logging and kaingin (proximate drivers) that will result in the conversion of
 
-89
 
 secondary forest to non-forested land. On one hand, another factor such as the occurrence of
 typhoon and landslides (year 2004) served as the aggravating force for logging and timber
@@ -3513,14 +3408,12 @@ ut trees, logs and branches) and landslides. As discussed, perhaps it is possibl
 algorithm of Landsat processed data to detect forest loss right after the year of Winnie and
 
 Yoyong typhoon because the Eastern side of Luzon are always contaminated by clouds brought
-90
 
 "2008 General Naxar Forest Cover
 
 Figure 38. Selected Forest Covers of General Nakar (NAMRIA forest vectors used as year
 2000 forest cover).
 
-91
 
 by the wet season and typhoons. Even if this was true, there is a high possibility that losses in
 2006 was caused by uncontrolled felling because the amount of forest loss were almost the
@@ -3540,7 +3433,6 @@ The next section will investigate deforestation process in Kabasalan, a second c
 
 municipality in Zamboanga Sibugay. Only two barangays were visited, namely, Sanghanan
 
-92
 
 and Tampilisan. Like in General Nakar, the said barangays were located in the uplands and
 
@@ -3570,7 +3462,6 @@ another important driver in the policy-institutional factor of deforestation. Im
 problems were highlighted by the lack of manpower and logistics of protecting the open access
 forests which mostly comprise the uplands. As for the least significant cause, lack of education,
 
-93
 
 landlessness, migration and population growth are said to be the most important in the
 demographic-socio-cultural cause of deforestation. Compared to General Nakar, there is a
@@ -3618,7 +3509,6 @@ Socio-Demo-
 
 Cultural i 6.75 2 9.15
 
-94
 
 Kabasalan Annual Forest Loss and Its Direct Drivers
 120 a
@@ -3638,7 +3528,6 @@ onducve for Kaingin \
 » «
 40 ry 2
 ry
-20
 o = &
 
 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012
@@ -3681,7 +3570,6 @@ in forest loss and this was mainly attributed to the enactment of Executive Orde
 
 there was a slight increase in forest loss a year later, illustrating a backslash of the policy. Like
 
-95
 
 in General Nakar, natural calamities such as drought served as the trigger to further kangin in
 Kabasalan, Zamboanga Sibugay. Without this, probably, the annual loss graph would be
@@ -3759,7 +3647,6 @@ almost widespread among the forest areas Kabasalan in year 2004. Then it was fol
 
 such as CBFMA and CADT had forests that experienced forest loss. However, upon inspection
 
-97
 
 of the tenure details, it was found out that the said CFMAs and CADTs were not in the political
 jurisdiction of Kabasalan but still included in its geographical jurisdiction (CBFMA were in
@@ -3795,7 +3682,6 @@ deforestation process (adapted from Mertens and Lambin, 1997. p. 149)
 (NAMRIA forest vectors used as year 200
 forest cover; red ovals, not covered by tenure instruments).
 
-99
 
 The next part will discuss the last municipality visited for the field validation, Siocon.
 This municipality belongs to another Zamboanga Peninsula province, Zamboanga del Norte.
@@ -3825,7 +3711,6 @@ the other hand, it was plausible that logging and kaingin drives deforestation c
 
 (sce Figure 45b) as these two might operate independently with each other. When it comes to
 
-100
 
 the indirect drivers, like in the previous sites, economic-market factor was deemed as the most
 
@@ -3869,7 +3754,6 @@ Whether | Ease of
 Importance | Driver Can | Addressing | Weighted
 Factors: of Driver _| be Changed_| the Driver | Scores
 
-101
 
 or
 Controlled
@@ -3910,7 +3794,6 @@ because of the cancellation of logging permits in Quezon and suspension to the r
 
 ‘Country (DENR, 2004) due to the calamities that struck the eastern side Luzon, the mentioned
 
-102
 
 typhoons that hit and caused landslides in General Nakar, and other eastem seaboard
 municipalities of Quezon and Aurora. As a result, forest loss definitely became lower in year
@@ -3953,7 +3836,6 @@ since the tenure holder started its operations in 2007 (IFMA has a 25 year contr
 
 for another 25 years).
 
-103
 
 The deforestation model of Sicon below is somewhat similar to Kabasalan though some
 drivers were added. For instance, high demand for wood (for construction material) and land
@@ -4007,7 +3889,6 @@ being converted to non-forestry land use, such as palm oil plantation establishm
 
 ‘Nevertheless, tenure name had changed but the end goal of utilizing forests for revenue and
 
-104
 
 profit had not. In the said diagram, the contention about the main driver of forest decline in
 Siocon clearly points to logging, only that kaingin and timber poaching worsens and completes
@@ -4036,13 +3917,11 @@ construction and felling of large forested areas facilitates easier access for s
 
 farming. Thus, logging of IFMA holders was the main factor in Sicon’s forest decline.
 
-105
 
 
 Figure 48. Selected Forest Covers of Siocon (NAMRIA forest vectors used as year 2000
 forest cover; red ovals, not covered by tenure instruments).
 
-107
 
 4.2.4 Focus Group Discussions’ Deforestation Drivers Summary
 
@@ -4077,7 +3956,6 @@ Economic/Market 1 1 2 4 ii
 Socio-Demographic-
 Cultural L 3 1 5 |2
 
-108
 
 Siocon
 Resources
@@ -4114,7 +3992,6 @@ Roundwood Exports Value 0.26573 0.40383,
 IEMA (ha) 0.34676 0.26948
 SIFMA (ha) 0.34965 0.26524
 
-109
 
 CBFM (ha) -0.58804* 0.04432
 Tree Farm and Agroforestry Farm Lease (ha) | -0.38462 0.21702
@@ -4149,7 +4026,6 @@ Possible that most forest loss and forests cover values were modified considerab
 
 use of all forest vectors through intersection and the tree cover thresholding of 85% and up.
 
-110
 
 Also, annual log requirement (0.74) was positively correlated to forest cover, so this could
 demonstrate a feedback mechanism where sawmills" log requirement also declined with the
@@ -4228,7 +4104,6 @@ m)
 SIFMA (ha) TVA ©.50), IVB (I), VIG@.71), VIl__ | CAR (081),
 (0.59) SOCCSKSARGEN(-0.96)
 
-112
 
 TFMA (ha) ‘ARMM (0.82), CARAGA (0.67), MIMAROPA (-0.58)
 ‘Zamboanga Region (0.73)
@@ -4271,7 +4146,6 @@ felling in CBFM and TFAFL for these programs promote forest cover enhancement th
 
 Teforestation by communities. Naturally grown and planted trees harvests had positive
 
-113
 
 correlation with forest loss in Western Visayas (0.85) while Ilocos Region had a negative
 association (-0.59). Estimated logging waste also had a positive correlation (0.86) to forest loss
@@ -4309,7 +4183,6 @@ IFMA (ha) TVA (0.58), IVB (0.94), | ARMM (-0.72), CAR (-0.97), IIT (-
 (0.61), VI (-0.70), XIII (-0.45), XI (-
 L 0.60)
 
-14
 
 CBFM (ha) CAR (0.77), 111 (0.77),
 (0.78), IVA (0.75), IX (0.68), I
@@ -4351,7 +4224,6 @@ Forestry Statistics | Provinces with positive r values | Provinces with negative
 Annual Log ‘Negros Occidental (0.66) ‘Abra (-0.65), Maguindanao (-0.62)
 Production (cu. m.)
 
-115
 
 ‘Annual Lumber ‘Agusan del Norte (0.61), Benguet | Capiz (-0.70), Compostela Valley (-
 
@@ -4399,7 +4271,6 @@ del Sur (-0.68) and Iloilo (-0.70) had negative and moderate correlation values 
 
 may imply that as IFMA areas are decreasing, forest loss might increase because tenure
 
-116
 
 instruments provides forest protection within the period of tenure. Zamboanga del Norte was
 not detected in this data, probably because applications for IFMA were in the latter years of
@@ -4480,7 +4351,6 @@ Sarangani (0.68) was the only province with annual lumber production which had a
 
 relationship to forest cover. It is possible that there were no significant timber processing that
 
-17
 
 occurred within those provinces, but some deforestation drivers were still active as testified by
 the declining forest cover in the majority of the provinces. Again, no provinces exhibited
@@ -4493,7 +4363,6 @@ mentioned, tenure instruments bring forest protection within the period of the c
 
 could be possibly true to TFAFL as well, as illustrated in the table above.
 
-118
 
 CHAPTER 5
 CONCLUSIONS AND RECOMMENDATIONS
@@ -4525,7 +4394,6 @@ factor to the already prevailing causes of deforestation in a specific area. Wit
 
 Landsat derived data, the cause of forest reduction were identified through interviews and
 
-119
 
 discussions. Therefore, remote sensing data coupled with socio-economic based ground
 validation further enhanced our understanding of the complex processes of deforestation.
@@ -4557,7 +4425,6 @@ Deforestation drivers that are presently occurring in the field should be valida
 
 More precision by including greater number of key stakeholders in the interviews and
 
-120
 
 discussions. On the other hand, the days for site visits should be lengthen so that a systematic
 method for validating the loss pixels from Landsat derived data can be performed in the ground.
@@ -4642,7 +4509,6 @@ Carandang, A. P. (2008). The Forestry Sector: Costs of Environmental Damage and 
 Benefits of Priority Interventions A Contribution to the Philippines Country
 Environmental Analysis. Manila: World Bank.
 
-198
 
 Carandang, A. P., Bugayong, L. A., Dolom, P. C., Garcia, L.N., Villanueva, M. B., &
 Espiritu, N. O. (2013). Analysis of Key Drivers of Deforestation and Forest
@@ -4697,7 +4563,6 @@ Department of Environment and Natural Resources (1997). Department Administrativ
 No. 04. Series of 1997. DAO 1997-04. Retrieved from
 http://www.denr.gov.ph/policy/pol-1997/dao04.pdf
 
-199
 
 Department of Environment and Natural Resources (1996). Department Administrative Order
 No. 24. Series of 1996. DAO 1996-24. Retrieved from
@@ -4749,7 +4614,6 @@ http://www. fao.org/docrep/017/i3 1 10e/i31 10e.pdf
 Forestry Development Center (1985). A 50-Year Development Program for the Philippines.
 FDC, Los Banos.
 
-200
 
 Forest Management Bureau (FMB) (2004). 2003 Forest Cover Statistics. A Draft Report on
 the Joint Project of Forest Management Bureau and National Mapping and Resources
@@ -4802,7 +4666,6 @@ Townshend, J. R. G. (2013) High-resolution global maps of 2st-century forest cov
 change. Science, 342(6160), 850-853. DOI: 10.1126/science. 1244693. Data Available
 online from: http://earthenginepartners.appspot.com/science-2013-global-forest.
 
-201
 
 Hansen, M. C., Stehman, S. V., Potapov, P., Anunarwati, B., Stolle, F., & Pittman, K. (2009).
 Quantifying changes in the rates of forest clearing in Indonesia from 1990 to 2005
@@ -4855,7 +4718,6 @@ NASA EOSDIS Land Processes DAAC, USGS Earth Resources Observation and
 Science (EROS) Center. Retrieved at
 https://Ipdaac.usgs.gov/dataset_discovery/modis/modis_products_table/med12q1
 
-202
 
 Lauer, D. T., Morain, S, A., & Salomonson, V. V. (1997). The Landsat Program: Its origins,
 evolution and impacts. American Society for Photogrammetry and Remote Sensing,
@@ -4909,7 +4771,6 @@ Tropical forest cover change in the 1990s and options for future monitoring.
 Philosophical Transactions of Royal Society B, 360, 373-384.
 DOI:10.1098/rstb.2004.1590
 
-203
 
 Mertens, B. & Lambin E. F. (1997). Spatial modelling of deforestation in southern
 Cameroon: Spatial disaggragation of diverse deforestation processes. Applied
@@ -4961,7 +4822,6 @@ Rimban, L. (2005a). Major players elude government's anti-logging drive in Auror
 Philippine Center for Investigative Journalism. Retrieved from
 http://pcij.org/stories/major-players-elude-governments-anti-logging-drive-in-aurora/
 
-204
 
 Rimban, L. (2005b). This developer burns money and cuts trees. Philippine Center for
 
@@ -5014,7 +4874,6 @@ Tucker, C.J., Grant, D. M., and Dykstra, J. D. (2004). NASA's global orthorectif
 dataset. Photogrammetric Engineering & Remote Sensing, 70, 313-322. Retrieved
 from http://www. landcover.org/library/pdf/PERSMarch_04_313-322.pdf
 
-205
 
 United States Geological Survey (USGS) (2012). Landsat—A Global Land-Imaging Mission.
 In USGS Fact Sheet 2012-3072. Retrieved from

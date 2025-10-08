@@ -1,0 +1,2026 @@
+QTL PYRAMIDING FOR ABIOTIC STRESS TOLERANCE IN ‘IR64’ RICE
+
+ARLENE P.RIOGELON
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+Master of Science in Plant Breeding
+
+June 2018
+
+ABSTRACT
+
+Monogenic expression and digenic interactions of abiotic stress tolerance QTLs pyramided
+in the mega variety ‘IR64' were evaluated. Five F2 populations of IR64-NILs produced, which
+numbered to a total of 827 plants were genotyped using SSR markers. A total of 78 F2 genotypes
+which were homozygous [+] at any two or three, but homozygous [-] at any single locus of these
+loci, were selected for phenotypic screening under anaerobic germination, submergence and
+salinity stress. Evaluation of monogenic expression and digenic interactions of these QTLS was
+limited only to four major QTLs namely, AG1, Sub1, Saltol and qDTY4.1. AG1 improved tolerance to anaerobic germination. It was compatible with Sub land Saltol
+under both submergence and salinity stress, and was also compatible with qDTY4.1 under
+anaerobic germination and submergence stress. It surmounted the negative effect of Saltol[+] under
+aerobic germination but it was inferior to the negative effect of qDTY4.1 [+] under salinity stress.
+It reduced tiller length and count. It still reduced tiller length and count with Sub1[+] and Saltol[+],
+and further reduced these traits with qDTY4.1 [+]. Sub1 significantly improved submergence
+tolerance. It was compatible with Saltol[+] under submergence and salinity, and with qDTY4.1[+]
+under anaerobic germination and submergence. It reduced tolerance to anaerobic germination and
+further reduced tolerance with Saltol[+] allele. In addition, it was inferior to the negative effect of qDTY4.1[+] under salinity but it surmounted the negative effect of qDTY4.1 in tiller length and count. Saltol improved tolerance to salinity, but reduced tolerance to anaerobic
+germination. It was compatible with qDTY4.1 under anaerobic germination and submergence and
+surmounted the negative effect of qDTY4.1 in salinity tolerance, tiller length and tiller count.
+qDTY4.1, was compatible with AG1, Subl and Saltol under anaerobic germination and
+submergence stress. It still reduced tolerance to salinity with AG1[+] and Sub1[+] but was inferior
+to the tolerance effect of the major QTL, Saltol under salinity stress. It reduced tiller length and
+count and further reduced these traits with AG1[+] allele. However, Sub1[+] and Saltol[+] alleles surmounted this effect.
+
+INTRODUCTION
+
+Rice holds the leading position in maintaining food security. As world populations
+continuously grow, rice consumption is also expected to rise particularly in countries where sole
+dependence to rice has been observed. Due to its increasing demand, about 40 % more rice produce
+has been estimated to meet the demand of the growing populations by 2030 (Kush, 2005).
+Therefore, production must grow substantially to meet the demand for rice.
+
+However, environmental constraints are currently being encountered in rice farming all
+over the world. External factors which negatively affect plant growth and development, also known
+as abiotic stresses are the most harmful factors to attaining higher crop productivity worldwide
+(Witcombe et al., 2008; Singh et al., 2010). Of these are, drought, salinity, floods, high temperatures
+and mineral deficiencies that negatively affect plant growth and crop yield (Onaga and Wydra,
+2016). Drought alone affects 45% of the agricultural lands (Onaga and Wydra, 2016), salinity
+account for 20% of the irrigated agricultural lands (Negrao et al., 2011) and 16% is affected by
+flash floods (Colmer and Pedersen, 2008). Furthermore, irregular weather patterns including more
+frequent and lengthy storms have been recently experienced in many areas worldwide (Shi et al.,
+2007; Jongman et al., 2014). These erratic changes have been attributed to climate change. As a
+result, warming, drought, floods and storm events have been also expected to become even more
+frequent and severe in the years to come (Wassmann et al ., 2009; Onaga and Wydra, 2016).
+Moreover, arable lands have been also believed to decrease through time. In fact, some cultivated
+areas have already reached their sustainable limits (Foley et al. 2011). Therefore, abiotic stresses
+ultimately limit rice productivity by limiting the land available for farming and disturbing plant
+processes for growth and productivity through availability of plant requirement in deficiencies or
+
+excess. In addition, they could possibly occur imultaneously than single stress (Singh et al., 2010).
+
+2
+
+Genetic improvement offers the most feasible and promising strategy to improve tolerance
+to abiotic stress. A first important step is to identify major quantitative trait loci (QTLs) for the
+target abiotic stress tolerance and efficiently transfer them to the existing high yielding varieties
+also called “mega varieties”. Some levels of success have already been achieved in identifying
+major QTLs conferring abiotic stress tolerance such those for drought (qD7Y2.2 and gDTY4.1),
+salinity (Salto), anaerobic germination (AG/), complete submergence (Sub/), P deficiency (pup!),
+high temperature (gHTSF4. 1) and rice tungro disease (TSV1). Several introgressions of these QTLs
+have also been successfully made through marker assisted selection (MAS) with the aid of closely
+linked molecular markers.
+
+Simple sequence repeat or SSR markers have been considered as the markers of choice for
+plant breeding (Gupta and Varshney, 2000). SSRs have been widely use in marker assisted
+backcrossing (MABC) for abiotic stress tolerance. The success of MABC has already resulted in
+significant improvements in the level of tolerance and some agronomic traits in a number of known
+varieties. Of these, is the well -known, “mega” variety IR64 from the Philippines.
+
+To date, only few of the major QTLs for abiotic stress tolerance have been combined or
+pyramided in a single genotype. “QTL pyramiding is the process that assemble many genes that
+work well together and, for a specific trait, assemble the alleles with similar effects from different
+loci” (Xu, 1997). However, abiotic stresses are often complex quantitative traits controlled by
+complex adaptive mechanisms (Roy et al., 2011). To date, QTL interactions in multiple abiotic
+stress tolerant varieties have not yet been fully established. Understanding the effect of each major
+QTL or multiple major QTLs in a single genotype would effectively aid in the efficient
+development of varieties with multiple abiotic stress tolerance to circumvent multiple abiotic
+stresses in rice.
+
+Generally, this study was conducted to select for multiple abiotic stress-tolerant near
+
+3
+
+isogenic lines (NILs) in IR64 background, as potential donors in breeding for multiple abiotic stress
+tolerance in rice. Specifically, it aimed to evaluate the monogenic expression and digenic
+interactions of the major QTLs for abiotic stress tolerance namely, Saltol, AG] and Sub/ through
+the following:
+1, Phenotype a set of multiple-QTL near isogenic lines contrasting at the Salto! locus
+under salinity stress during seedling stage.
+2. Phenotype a set of multiple-QTL near isogenic lines contrasting at the AG/ locus under
+anaerobic conditions during germination stage.
+3. Phenotype a set of multiple-QTL near isogenic lines contrasting at the Sub/ locus under
+complete submergence during seedling stage.
+4. Identify changes on particular traits as affected by the expression and interaction of the
+
+major QTLs for abiotic stress toleranc
+
+Time And Place Of The Study
+
+This study was conducted at the Genotyping Services Laboratory (GSL) and screen houses
+
+of the International Rice Research Institute (IRRI) from January 2015 to October 2017
+
+REVIEW OF RELATED LITERATURE
+
+Abiotic Stresses in Rice
+
+Abiotic stress is defined as “the negative impact of non-living factors on living organisms
+in a specific environment.” (Onaga and Wydra, 2011). Abiotic stresses are the major threat and the
+most harmful factors to attaining higher crop productivity, worldwide (Witcombe et al., 2008;
+Singh et al., 2010). Despite being semi aquatic in nature, rice is still sensitive to flooding at different
+stages of its growth. Of the major cereals, it is the only crop with seeds capable of germination
+under water (Ella and Setter 1999; Magneschi and Perata 2009; Angaji et al., 2010). But most
+genotypes could not withstand anaerobic germination (Angaji et al., 2010). Mackill et al. (2012)
+classified flood stress into four types depending on plant traits and varietal types. These include the
+following: a) flooding during germination (anaerobic germination/AG which result in submergence
+before germination); b) flash flood (results to complete submergence up to weeks); c) stagnant
+flooding (medium deep flooding which results in flooding for more than two weeks or several
+months); d) deeper stagnant flooding (results in flooding to depths of above 50 cm or more, for
+deepwater or floating rice). Rice is also the most sensitive to salinity among the cereals and its
+response to abiotic stresses varies with genotype, growth stage, duration and extent of the stress
+(Maas and Hoffman 1977; Flowers and Yeo, 1981; Jackson and Ram 2003; Sarkar et al 200:Fukao
+
+and Bailey-Serres, 2008; Das et al., 2009)
+
+Soil Salinity
+
+“Salinity is the presence of sufficient concentrations of soluble salts in the soil to reduce
+normal crop growth.” (Singh and Flowers, 2010). It is measured in terms of the electrical
+conductivity (EC) of a soil extract. When the EC reach 4.0 deci-Siemens per meter (4 dS/m) which
+is also equivalent to approximately 40 mM NaCl, the soil is then considered saline (Chinnusamy et
+al., 2005; Eynard et al., 2005). A salinity threshold of as low as 3 dSm-1 has been reported
+enough to reduce yield (Maas and Hoffman 1977). Soil salinity can be further ascribed to two salts
+— calcium (Ca) and sodium (Na) but the most common are chloride and sulfate of sodium (Singh
+and Flowers, 2010). NaCl is the most soluble and abundant and therefore a major contributing
+factor in soil salinity (Tiirkan and Demiral, 2009). In rice, soil salinity is next to drought in both
+extent and gravity (Singh et al., 2010; Ahmadi and Fotokian 2011). In coastal regions where rice is
+the major food for consumption, salinity stress is commonly a major threat (Thomson et al., 2010).
+Even in inland areas, salt accumulation is becoming a serious issue as a consequence of irrigation
+mismanagement and the use of poor-quality irrigation water (Rengasamy, 2002; Ismail et al., 2007;
+Rahman et al., 2016). In addition, intrusions of brackish water at dry season and at the start of the
+wet season is another source of soil salinity that hinders crop productivity (Thomson et al., 2010).
+Soil salinity has already affected more than 900 million ha or approximately 20% of agricultural
+land (Negrao et al., 2011; Rahman et al., 2016). Although salinity affects a relatively low
+percentage (<10%) of the total rice area in the Philippines, Bangladesh, India, and Indonesia, a
+significant increase in rice production could possibly be attained when rice varieties are tolerant to
+
+salinity (Alpuerto et al., 2009).
+
+Anaerobic Germination
+
+6
+
+Direct seeding is becoming popular in many rice growing areas worldwide. Due to its
+economic incentives (Pandey and Velasco, 2002; Angaji et al., 2010) direct seeding method has
+already accounted 20 % of the rice area in Asia (Dawe, 2005). Labor shortage and high cost of
+labor in manual transplanting (Pandey and Velasco, 2002), effective weed control method (Tuong
+et al., 2000; Angaji et al., 2010), earlier crop maturity of seven to ten days and higher tolerance of
+the crop to water deficit (Pandey and Velasco, 2002) and its potential for crop intensification are
+the driving forces in the shift to direct seeding in rice. However, its potential for crop intensification
+has not been fully realized, because during germination, rice is sensitive to flooding for a long
+period of time. Although, rice has the ability to germinate under water (Ella and Setter 1999; Ismail
+et al., 2009; Magneschi and Perata, 2009), most cultivars could not withstand flooding when it
+occur unexpectedly just after seeding (Ismail et al., 2009; Angaji et al., 2010). Unexpected flash
+floods and shallow flooding resulting from heavy rains in combination with the unleveled soils
+
+result in reduced germination and poor crop establishment (Ismail et al., 2009; Angaji et al., 2010).
+
+Complete Submergence
+
+Flooding is a major abiotic stress particularly in rainfed lowland areas. Bailey-Serres et al.
+(2012) describe “flooding” as an inundation by water of all or part of a plant, and “submergence”
+when most or all aerial tissue is under the water. Among the types of flood stress in rice (Mackill
+et al., 2010), flash flood or complete submergence is considered the most common but most
+damaging (Ismail et al., 2012) and most important yield limiting factor of rice production in South
+and South East Asia (Jena and Mackill 2008; Collard et al., 2013; Singh et al., 2013). Over 15
+million hectares of rain-fed lowland rice areas in South and Southeast Asia is regularly being
+affected by submergence stress (Neeraja et al., 2007).
+
+Flash flood results in complete submergence of the entire plant. However, most cultivars
+
+7
+
+cannot withstand complete submergence in a matter of few days of submergence (Xu et al., 2006:
+Bailey-Serres et al. 2010). Complete submergence can pose a complex stress. During
+submergence, diffusion of oxygen and carbon dioxide are reduce by 10,000-fold, and that
+availability of light is also limited for photosynthesis (Fukao and Bailey-Serries, 2008). In addition,
+the extent of damage resulting from complete submergence is highly dependent to environmental
+
+conditions particularly to flood water conditions (Das et al., 2009; Kirk et al., 2014).
+
+Genetic Solutions to Abiotic Stress Tolerance
+
+Tolerance To Salinity
+
+Mechanism of sodium (NA*) uptake and assimilation. Salinity is physiologically and
+genetically, a complex abiotic stress. It affects the major physiological processes in the plant
+resulting in eventual reduction in growth, development and survival (Carillo et al., 2011).
+Mechanisms of salt uptake in rice includes the transport of Na* through either apoplastic (passive
+transport) or symplastic (active transport) pathway (Singh and Flowers, 2010). A root bypass-flow
+or apoplastic pathway has been reported to contribute a significant part of Na* transport (Yeo et al.,
+1987) although Na‘ ions could also be transported into the cell through K* transporters (Blumwald,
+2000). In contrast, Cl uptake is generally viewed to take place in symplastic pathway. The main
+site of Na* accumulation is the leaf blade rather than roots ( Munns and Tester, 2008). As a result,
+Na* concentration in the leaf is used as an indicator of salinity tolerance. Symptoms of stress can
+be first observed in the burning of the leaf tip followed by other morphological parameters such as
+low tillering, leaf scorching and stunted plant growth, leaf rolling under low RH conditions (Singh
+
+and Flowers, 2010). The rate at which salt reach its toxic levels is variable between genotypes
+
+(Carillo et al., 2011).
+
+Plants are affected by salinity stress in two main ways: water deficit caused by high salt
+concentration in the soil and the ion-specific (Na‘ and CI ions) stresses which result from imbalance
+K’‘/ Na* ratios in plants (Blumwald, 2000; Munns, 2002). Initial exposure of the plant to salinity
+causes water stress or osmotic stress, a condition similar in drought, also called as “physiological
+drought” (Turkan and Demiral 2009). It occurs when salt concentration surrounding the roots
+reaches the threshold level of 40 mM NaCl or less in rice (Munns and Tester 2008). High salt
+concentration around the roots reduces the ability of the plant to take up water and thus reduce
+growth, a response also called as the osmotic phase. Growth reduction in consequence to osmotic
+stress is expressed in reduced cell expansion and division, and immediate stomatal closure, hence
+reduced leaf area and stunted shoot (Munns, 2002). On the other hand, long term exposure to salt
+stress causes salt-specific effects that reach to a level in which plant could no longer sustain growth
+(Munns, 2002). These effects occur in a slow phase until Na* accumulates in the leaf tissue over
+time, a response also called as the ionic phase (Munns and Tester, 2008). It causes death or
+premature senescence of the older leaves and thus, reduction in photosynthetic area when salt
+
+concentrations rise to toxic levels (Munns, 2002; Munns and Tester, 2008).
+
+Mechanism of salt tolerance. Salt tolerance is physiologically and genetically, a complex
+trait. Salt tolerant rice varieties have been observed to have maintained low Na’ and / or low Na‘
+ratio in shoots (Lutts et al., 1995; Gregorio, 1997; Lee et al., 2003; Thomson et al., 2010; Platten
+etal., 2013; Barua et al., 2015; Rahman et al., 2016). The ability to maintain this physiological trait
+is said to be the key feature of salinity tolerance (Ahmadi and Fotokian, 2011). Various
+physiological factors contributing to the complexity of salt tolerance at the vegetative stage have
+
+been reported (Yeo et al., 1990; Menezes-Benavente et al., 2004; Moradi and Ismail 2007; Cotsaftis
+
+9
+
+et al., 2011; Javid et al., 2011). Yeo and Flowers (1986) argued that no single factor controls
+resistance (tolerance) and that tolerance is the sum of the component traits which vary in: 1) NaCl
+entry via apoplastic pathways; 2) leaf to leaf compartmentalization; and 3) tissue tolerance. In 2012,
+Sudharani et al. summarized various possible mechanisms involved in salt tolerance. These include
+the following: 1) seedling vigor (tolerance by dilution effect of rapid vegetative growth); 2) initial
+entry of salts from roots (by either apoplastic and symplastic pathways as mediated by Na* and K*
+transporters); 3) intra-cellular compartmentation (or cellular level of tolerance) which further
+includes, (a) ion homeostasis pathway (example, Salt Overly Sensitive or SOS pathways), (b)
+synthesis of osmoprotectants (production of organic solutes and being localized in the cytoplasm
+while Na* and CI are preferentially sequestered into vacuole, thus turgor in the cell is maintained),
+(c) signal pathway — transcription factors (by promoter regions and transcription factors inducing
+expression of the stress tolerance genes), (d) stress activated protein pathway (stress responsive
+proteins that play protective role during desiccation/salt stress in rice plants); 4) plant level transport
+of salt and its compartmentalization which includes (a) compartmentalization of salts from younger
+to older leaves and within the leaf (compartmentalization in older leaves, leaf sheath and culm) (b)
+more selective uptake into reproductive organ and flag leaf.
+
+Rice is relatively tolerant during germination stage and becomes highly sensitive during
+the early seedling stage (1-3 weeks). It restores tolerance during active tillering stage, but becomes
+sensitive again during reproductive stage and finally becomes relatively tolerant at maturity stage
+(Singh et al., 2008a, as cited by Singh et al., 2010). This order of varying tolerance in different
+stages of rice also varies between cultivar (Heenan et al.,1988). Moreover, poor correlation in
+tolerance between the seedling and reproductive stage has also been reported (Makihara et al.,
+1999). Nonetheless, tolerance to salinity at the seedling stage is an important consideration in
+
+breeding program as it determines crop establishment in saline environment. Due to the
+
+10
+
+complexities of the trait, Munns and Tester (2008), have categorized salt tolerance by plant process
+in response to salinity which include (1) tolerance to osmotic stress, (2) Na* exclusion from leaf
+blades, and (3) tissue tolerance.
+
+Tolerance to osmotic stress is the ability of the plant to tolerate the physiological drought
+resulting from salinity stress (Rajendran et al., 2008). Plants immediately respond to osmotic stress
+by stomatal closure and reduced cell expansion in root tips and young leaves. Because of the need
+for carbon fixation, it would be an unsustainable mechanism of tolerance (Hasegawa et al., 2000).
+Conversely, reduction in response to osmotic stress, hence osmotic tolerance, results to greater leaf
+growth and stomatal conductance (Moradi and Ismail, 2007). However, greater stomatal
+conductance and the resulting greater leaf growth would be beneficial only when there is enough
+water supply (Munns and Tester, 2008)
+
+Salt tolerant plants were known to have exceptional capacity to exclude Na* and CI from
+the roots (Garthwaite et al., 2005). Although rice is the most salt sensitive among the cereals, it has
+the capability to exclude about 94 % of soil Na* (Munns, 2005 as cited by Singh and Flowers, 2010;
+Munns et al., 2006; James et al., 2006). Hence, tolerant genotypes are also considered as good Na*
+excluders (Cotsaftis et al., 2012). Likewise, tolerant varieties which have been considered as good
+Na* excluders absorbed high amounts of K*, and maintained a low Na*/ K ‘ratio in the shoot (Lee
+et al. 2003). In addition, several workers have reported the association between Na’ exclusion and
+the low Na* and / or low Na‘/K*“ratios in shoots (Gregorio et al., 1997; Ahmadi and Fotokian, 2011;
+Platten et al., 2013; Rahman et al., 2016).
+
+On the other hand, high concentrations of Na‘ that are still found in leaves have been
+attributed to intracellular compartmentalization (Munns and Tester 2008). It allows leaf to function
+normally by partitioning of Na* within the cells, an adaptive mechanism also called as tissue
+
+tolerance. However, genotypes with the greatest tissue tolerance do not necessarily show an overall
+
+11
+
+phenotypic tolerance (Yeo and Flowers, 1983).
+
+The Saltol (salinity tolerance) QTL. Various physiological mechanisms describing salt
+tolerance from large bodies of work only suggest the complexity of the mechanism of salt tolerance.
+Apart from characterizing physiological responses, efforts on breeding for salinity tolerance have
+also focused on mapping QTLs associated with these various physiological traits. Several major
+and minor QTLs associated to salt tolerance have been mapped in different genomic regions such
+as those detected in chromosomes 7 (Zhang et al., 1995), 1, 4, 6 and 9 (Koyama et al., 2001) and
+the 14 QTLs on chromosome 1 (5 QTLs), 3 (IQTL), 4 (3 QTLs), 5 (2 QTLs), 6 (1 QTL), and 8 (2
+QTLs) (Ahmadi and Fotokian, 2011). However, the best known and the most robust QTL was
+identified in chromosome 1, known as the Saltol. The initial tagging of the Saltol QTL (Gregorio,
+1997) and its subsequent characterization (Bonilla et al., 2002; Lin et al 2004) has led to the
+identification of the QTL SKC] in the Salto] region known as Saltol/SKC1. SKC] (qSKC-1) has
+accounted 40.1 % of the phenotypic variation for shoot K* concentration. Cloning of the SKC/ has
+led to the identification of the gene OsHKT1;5, known to encode an OsHKT-type transporter
+responsible for maintaining K*/ Na* homeostasis under salt stress (Ren et al., 2005). HKT1;5 was
+known to be responsible for Na* exclusion from photosynthetic tissues (Cotsaftis et al., 2012).
+Likewise, Platten et al. (2013) reported a strong association between leaf Na* concentration and an
+allele of the previously identified OsHKT1;5. An aromatic allele from O. glaberrima conferred the
+highest Na* exclusion suggesting that salinity tolerance in rice can be explained by a particular
+OsHKT1;5 allele present in a line. However a number of exceptions to this association were also
+noted suggesting an apparent existence of additional effective exclusion mechanism (Platten et al.,
+2013; Rahman et al., 2016).
+
+Despite the numerous QTLs and genes identified in the long time quest for salinity
+
+12
+
+tolerance, it still appeared difficult to generalize about the mechanism of tolerance to salinity stress.
+As argued earlier, not a single factor controls salt tolerance (Yeo and flowers, 1986). Moreover,
+multiple alleles were also detected in the Saltol region even in the most reputed rice accession
+Pokalli (Thomson et al., 2010) as well as in other accessions (Rahman et al., 2016). Nonetheless,
+Saltol still holds the most important aspect of the salinity tolerance. Other QTLs perhaps control
+much smaller portions of the total variance than Salto] and consequently presents a complex
+
+scenario (Platten et al., 2013).
+
+Tolerance to Anaerobic Germination
+
+Rice seeds are capable of germination under flooded condition, a phenomenon called
+anaerobic germination. However, most genotypes could not withstand flooding during germination
+(Ismail et al., 2009; Angaji et al., 2010). In the absence of oxygen, carbohydrate breakdown shifts
+from aerobic to anaerobic pathways (alcohol fermentation). However, energy production in this
+process is 18 times less efficient than aerobic carbohydrate breakdown (Ella and Setter, 1999).
+Being a semi-aquatic species, rice has developed survival mechanism when flooded during
+germination. Observations in growth, anatomical and physiological parameters have revealed the
+survival mechanism of the germinating rice under flooded condition. Under low oxygen
+concentration (hypoxia), rice coleoptile elongates faster than in normal condition (Alpi and
+Beevers, 1983; Ishizawa and Esashi, 1984; Yamauchi et al., 1993; Ella and Setter 1999; Lasanthi-
+Kudahettige et al., 2007; Ismail et al., 2009; Magneschi and Perata, 2009). The growing coleoptiles
+can elongate at a rate of nearly 1 mm 41 under anaerobic conditions (Magneschi and Perata, 2009;
+Narsai et al., 2015). In order to access and transport oxygen to the submerged organs, rice also
+develops anatomical adaptive mechanism such as formation of aerynchema tissues (Matsukura et
+
+al., 2000; Colmer and Pedersen, 2008). Aerenchyma are gas-filled spaces formed as an adaptive
+
+13
+
+mechanism in aquatic and semi-aquatic plants. It facilitates gas exchange between the aerial and
+submerged parts of the plant. However, coleoptile elongation during anaerobic conditions cannot
+be accounted only to oxygen transport through emerged shoots (Magneschi and Perata, 2009).
+Physiological bases underlying these growth and anatomical observations have also been reported
+in tolerant genotypes. Tolerance to anaerobic germination have been reported to be associated with
+an increase rate of alcoholic fermentation (Waters et al., 1991; Setter and Ella 1994), high
+carbohydrate supply (Ella and Setter, 1999), better ability to mobilize these stored carbohydrates
+(Ismail et al., 2012) and by faster depletion of starch and higher amylase activity for elongation and
+plant survival (Ismail et al., 2009). Moreover, the enhancing effect of the phytohormone ethylene
+to the rapid coleoptile elongation was also reported (Ishizawa and Esashi, 1988). However, its
+promoting effect has been observed only in the later stages of germination, particularly three days
+after imbibation, with a substantially greater increase in concentration with time (Ismail et al.,
+2009). To better understand and facilitate breeding for tolerance to anaerobic germination, efforts
+
+have also focused on mapping QTLs associated with these survival mechanisms.
+
+The qAG-9-2 known as AGI QTL (Anaerobic Germination). Initially, there have been
+only few QTL mapping studies known for tolerance to anaerobic germination (Jiang et al., 2004,
+2006; Angaji, 2008). Lack of donors with higher level of tolerance, standard method that meets all
+the required test for tolerance and the complexities of the physiological mechanisms involved in
+tolerance have been the major constraints in breeding for tolerance to flooding during germination
+(Seshu et al., 1988). The identification of the tolerant donor, Khao Hlan On, from which the largest
+effect QTL was identified, has paved the way for breeding tolerance to anaerobic germination
+(Angaji et al., 2010). Several other QTLs have also been mapped using known tolerant donors
+(Septiningsih et al., 2013; Baltazar et al., 2014). The largest effect was mapped on long arm of
+
+chromosome 9, known as the gAG-9-2 designated as AG/ accounting for 33.5 % of the phenotypic
+
+14
+variation (Angaji et al., 2010). Recently, gAG-9-2 (AG/) was fine mapped to OsTPP7, a gene that
+encodes a trehalose-6-phosphate phosphatase (T6P) known to enhance starch mobilization to drive
+embryo germination and coleoptile elongation (Kretzschmar et al., 2015). “OsTPP7 activity may
+increase sink strength in proliferating heterotrophic tissues by indicating low sugar availability
+through increased T6P turnover, thus enhancing starch mobilization to drive growth kinetics of the
+germinating embryo and elongating coleoptile, which consequently enhances anaerobic
+germination tolerance.” (Kretzschmar et al. 2015). Uniform germination and seedling
+establishment under flooded condition as controlled by AG/, is a key trait for crop intensification
+as more farmers adopt direct seeding for rice production. However, AG/ alone does not guarantee
+tolerance when submergence occurs at the seedling stage and thus, the need to develop rice varieties
+
+with tolerance to complete submergence in the early vegetative stage is an important consideration.
+
+Tolerance to Complete Submergence
+
+In search for tolerance to floodwater environment, physiological and molecular studies
+revealed two survival tactics during vegetative growth stages in rice. First is the low-oxygen
+“quiescence” strategy which enables plants to withstand deep floods, and second is the low- oxygen
+“escape” strategy which enable them to outgrow flood waters as exhibited by deepwater rice
+(Voesenek et al., 2006; Colmer and Voesenek, 2009). “Submergence tolerance” is defined as the
+ability of the plant to survive and grow after being completely submerged for several days (10-14
+days) (Jackson & Ram, 2003; Xu et al., 2006; Akinwale et al., 2015). In deepwater rice or floating
+rice varieties, submergence stress is overcome by fast elongation of stem internodes (Hattori et al.,
+2009). These types of rice elongate up to 25 cm per day resulting in very tall and spindly plants at
+late vegetative growth (Kende et al., 1998). Consequently these types of rice cultivars suffer from
+
+severe lodging when flood water recedes (Singh et al., 2011). Underwater elongation results in low
+
+15
+
+yield due to the high investment of energy reserves (Bailey-Serres et al., 2010). Conversely, a
+restriction in elongation growth is observed in genotypes that have survived complete submergence
+up to two weeks (Xu et al., 2006; Singh and Flowers, 2010). As a result, energy reserves are
+economized while plants are under submerged condition. Quiescence strategy utilizes stored energy
+to resume growth when flood waters have receded (Fukao et al., 2011). This mechanism is useful
+in breeding for submergence tolerance because the resulting phenotype protects the plant from
+excessive use of energy reserves and thus, plant growth resumes normally like the normal condition
+
+upon desubmergence (Fukao et al., 2006; Bailey-Serres et al., 2010)
+
+The Subl (Submergencel) gene. in contrast to the ongoing quest in finding the genetic
+determinants in salinity tolerance, scientific endeavors in breeding for submergence tolerance have
+already resulted in the identification, cloning, characterization of the QTL and the gene controlling
+the trait (Xu and Mackill, 1996; Xu et al., 2006; Fukao et al., 2006). This large-effect QTL was
+mapped on chromosome 9 and was designated as SUB] (SUBMERGENCE]). To further
+characterize the SUB] locus, it was isolated from the tolerant landrace Flood Resistant 13A
+(FR13A) of eastern India. A cluster of three genes encoding for the three AP2/ERF DNA binding
+proteins were further identified in the SUB1 locus, and were designated as Sub1A, Sub1B and
+Sub1C (Xu et al., 2006). Based on the amino acid sequence variation, Sub/A has two alleles, Sub]B
+and SubIC has 9 and 7 alleles respectively. Sub1B and SubIC were consistently present in all
+accession but Sub1A was variable. Gene expression analysis of rice accessions with Sub1A revealed
+two alleles within this gene: the strongly submergence-induced Sub/A-1, specific for tolerance and
+apoorly submergence-induced Sub/A-2. On the other hand, another allele of the Sub/C, the Sub1C-
+1 is also limited to several submergence-tolerant accessions. A distinction between submergence
+
+tolerant accessions with Sub/A-] from those with Sub/C-] was further detected through single
+
+16
+nucleotide polymorphism at the MAPK site (Prol186, for intolerant to Ser186, for tolerant).
+Furthermore, stable expression of Sub1A-1 was also found to downregulate Sub/C as observed in
+transgenic japonica variety, Liaogeng (Ubi:Sub/A-1+). Moreover, an increase in the transcript
+levels of the alcohol dehydrogenase gene (adh/) was also observed in tolerant lines, suggesting
+positive regulation of Sub/A-/ with acclimation responses. On the other hand, no Sub/B allele was
+identified as specific to submergence tolerance. Altogether, the distinction at the allelic level and
+gene expression assays, pointed to SubJA-/ allele as the major determinant of submergence
+tolerance. Sub/A-1 is enough to provide protection against submergence stress (Neeraja et al.,
+2007; Septiningsih et al., 2009).
+
+Fukao and Bailey-Serres (2008) have further elucidated the role of Sub/A and its interplay
+with the elongation hormone, gibberellins (GA) and with abscisic acid (ABA), the potent antagonist
+of GA. During submergence, physical entrapment of ethylene even at low levels promotes the
+expression of Sub1A, which in effect enhances the transcript and protein accumulation of the GA
+response repressors SLENDER RICE] (SLR1) and SLR-LIKE1 (SLRL1). Accumulation of the
+two GA signaling repressors results in the suppression of the energy-consuming escape response
+caused by gibberellins. Furthermore, overexpression of Sub/A reduces protein levels of the GA
+repressor SLR1 under prolonged submergence but is still accompanied by the accumulation of
+SLRL1. Consequently, lack of Sub1A promotes ethylene-mediated GA responsiveness which
+results in rapid shoot elongation.
+
+Sub1A-1 is highly induced in the leaves of 14 to 28-day-old plants (Fukao et al., 2006; Xu
+et al., 2006; Fukao and Bailey, 2008), specifically at base of the leaf sheath and in the collar region
+acting on suppression of leaf elongation under submergence (Singh , 2010). Although the
+quiescence strategy of Sub/A-/] reduces plant height as observed in transgenic plant, submergence
+
+tolerance is still independent of plant height during submergence (Xu et al., 2006; Fukaoand Bailey-
+
+17
+
+Serres, 2008).Conversely, Sub1A-1 is dependent on the levels of its transcript in the node and
+internode regions during submergence (Singh et al., 2010). GNS2, a CAPS and gene-based marker
+has been used to amplify the specific band linked to Sub/A. It was designed based on a SNP in the
+Sub1A gene and has been already used for marker assisted selection for submergence tolerance
+(Neeraja et al., 2007). Sub/ provides up to two weeks of protection against submergence stress with
+considerable yield benefits (Septiningsih et al., 2009; Mackill et al., 2012). On the other hand, flood
+water conditions also contribute a significant part in the survival of the tolerant genotypes. Higher
+mortality and more severe damage have been observed with turbid flood waters, more especially
+when percent silt increase during submergence. This has been observed even in the most tolerant
+
+cultivar FR13A (Das et al. 2009).
+
+MATERIALS AND METHODS
+
+Plant Materials
+
+Five F2 populations of IR64-NILs derived from QTL pyramiding of eight major QTLs for
+abiotic stress tolerance namely AG/, Pup!, Sub, Saltol, RTSV, qHTSF4.1, and the complementary
+QTLs qgDTY2.2 and qgDTY4.1, were used as the starting material in the study (Appendix Fig. 1). A
+total of 827 F2 IR64-NILs produced from the five populations were then subjected to genotypic
+screening. Evaluation of each QTL expression (monogenic expression) and two-QTL interactions
+(digenic interactions) was limited only to four major QTLs namely, AG/, Sub/, Saltol and
+qDTY4.1. Therefore, only genotypes which were homozygous [+] at any two or three, but
+homozygous [-] at any single locus of these loci, were selected for phenotyping. This allowed
+contrast of expression at any single locus (monogenic) and of any two-loci interaction (digenic
+interaction) among NILs under a specified abiotic stressed condition. Out of 827 F2 IR64-NILs
+genotyped, 78 were then selected for phenotypic screening under anaerobic germination,
+
+submergence and salinity stress conditions (Appendix Table 1)
+
+Molecular markers
+
+Genotypic screening of the segregating multiple-QTL IR64 NILs was carried out using
+gene-specific (5) and linked SSR markers(5) , CAPS (1), Indel (1) representing AG/, Pup], Sub,
+Saltol, RTSV, and qDTY4.1 loci (Table 1). These markers were initially screened and validated
+
+during the early stages of the QTL pyramiding (MBAST, IRRI).
+
+19
+
+Table 1. Profiles of the 12 SSR primers used for genotyping of the multiple-QTL F2 NILs
+derived from QTL pyramiding of eight QTLs for abiotic stress tolerance in IR64
+
+background
+Primer Target Forward Sequence Reverse Sequence
+QTL/Gen
+e
+Gene-
+specific
+SKC2a Saltol CTGGAGGGAGCCGACACT GTGGCAGATACACCCATCG
+T
+K29-1 Pupl ATGGCCAACGGGGTAGAG GTCCAGGTAACCACGAGGAA
+(OsPupK2
+9-1, Ist
+exon)
+K46-1 Pup! TGAGATAGCCGTCAAGAT AAGGACCACCATTCCATAGC
+(OsPupK4 GCT
+6-2)
+SC3 SubIC GCTAGTGCAGGGTTGACA CTCTGGCCGTTTCATGGTAT
+(SubIC CA
+exon)
+RSA2 RTSV TITGGCCGGAAAGTCTTG |TGGCAGTGCACCAGCCAAATGG
+(UM- GGC
+specific)
+linked
+Sdhups5 AGI GATGCACTCCCTCTGTTGC TCACCTTCTTACCGAACACCA
+T
+RM3412b Saltol TCATGATGGATCTCTGAG |GGGAGGATGCACTAATCTTTIC
+GTG
+RM336 RTSV CTTACAGAGAAACGGCAT GCTGGTTTGTTTCAGGTTCG
+CG
+
+DTY4.1 gDTY4.1_ +=TGTCCGTCCGTCCTACTTG CGCCGCCATTTCAGTTCAC
+(M245,246) TC
+
+DTY4.1 qDTY4.1 CCTGCAAGCCTCCTCTTCC GCCGAGATCCTCCGACGCYATCCA
+(M251,M25 GA GTG
+
+2)
+CAPS
+
+GnS2 SublA CTTCTTGCTCAACGACAAC TCGATGGGGTCTTGATCTCT
+
+G
+
+InDel
+DFR_R2+ AGI LB2: CACCGTTAAAATCGGCCGTTAG
+DFR_LB2 CGGCTTCGTCTTCACCTGA
+
+AC
+
+
+20
+
+Genotypic Screening for Multiple-QTLAbiotic
+Stress Tolerance
+
+DNA Extraction
+
+Genomic DNA from individual F2 plants were isolated from the young leaves of about
+three to four week-old rice plants using the modified CTAB method originally developed by
+Murray and Thompson (1980). Cut leaf tissues were ground using an automated high-throughput
+tissue homogenizer (Geno/Grinder 2010) at a rate of 750 rpm for three minutes. About 800 pl of
+the 2x CTAB buffer were added to the powdered tissue and mixed thoroughly. The resulting
+mixtures were incubated at 65 °C for an hour with agitation of 15 minutes interval to homogenize
+the buffer and ground tissue. After incubation, an equal volume of chloroform: isoamyl (24:1 v/v)
+was added to the sample followed by thorough shaking at room temperature for 20 minutes. The
+supematant was separated by centrifugation at 12,000 rpm for 10 minutes. An aqueous phase of
+500 yl was transferred into new sterile 1.5 ml microcentifugetubes using a wide-bore white tip. An
+equal volume of cold isopropanol was added to the aqueous phase and were mixed gently. To allow
+full precipitation of DNA, the samples were incubated at -20 °C overnight followed by
+centrifugation at 12,000 rpm for 10 minutes. The isopropanol was decanted and DNA precipitates
+were washed by addition of 70% ethanol (500 11) and centrifugation at 12,000 rpm for five minutes
+followed by air drying. The resulting DNA pellet was resuspended in 30-100 pl TE buffer followed
+by treatment of 2 4] RNAse (10 mg/ul) at 37 °C for 30 minutes. Finally, the DNAs were stored at
+
+4 °C and were used as the stock DNA.
+
+21
+
+DNA Quantification and Quality Check.
+
+DNA concentration of each sample was determined using Spectrophotometer (Thermo
+Scientific NanoDrop 8000) and the DNA quality was assessed by means of 1.0% agarose gel
+electrophoresis with Ecodye or SYBR® Safe gel stain and was viewed under UV on a gel photo
+
+documentation system (Alphalmager HP).
+
+PCR Amplification.
+
+Amplification was carried out in a 10.0 pl reaction containing 50 ng/ul of template
+DNA, 1 x PCR buffer (10 mM Tris-HCl, pH 8.3, 50 mM KCl) and 1.5 mM MgCh. Final
+concentration of the remaining components of a 10.0 yl reaction varied for each of the
+markers used in the study. For dNTPs, final concentration ranged from 0.2 - 1.0 mM, for
+each of the forward and reverse primers, 0.35 - 1.0 uM and 0.05 - 0.1 U of Tag DNA
+polymerase. PCR profiles (Table 2) and the gel components (agarose and polyacrylamide)
+were specific to the markers used. Bands were resolvedusing 1.6 - 2.0 % agarose gel or 6
+
+- 8 % PAG and were viewed under UV (Aphalmager HP) for gel documentation.
+
+N
+N
+
+ee nnk—
+
+‘OI ui ¢ ‘9 7 uw | ‘9 ZZ s9as Sp ‘DSS 8998 Sp ‘D 6 Se zsuo
+, (ooeswy)
+‘DOL um ¢ ‘DZ ur | ‘D ZL S998 Sp ‘DSS $998 Sb ‘D 6 of €0S rans
+‘DOI Um OL ‘D ZZ ur 1D ZL $998 Sp ‘DSS S998 Sb ‘D b6 of S ‘v6 ®ZOxS
+oD 01 unu OL ‘D ZL uw 1D ZL $998 Sb ‘DSS S998 Sb ‘D 6 Of qzIPeW =— 01705
+DOr ur ¢ ‘9 ZL uw 1 ‘D7 $998 O€ ‘D 8S S998 O€ ‘D 6 of tVSU
+S ‘56
+oe
+Ok 2 wu § ‘3 ZL S9ISOE‘DZL $998 OE ‘DSS S998 O€ ‘D b6 of ASIN
+zS7N
+© Dp ung 7 ‘D ZL 98 Of ‘D ZL 9s ‘DOL 988 OF ‘D 56 SE ‘IST
+OPzIN
+DP ur Z ‘D7 998 OF ‘D ZL 988 O€ ‘0.79 995 OF ‘D 56 SE ‘Spt Ss tL
+‘DOr uu Q] ‘D ZZ um | ‘D ZL s9as Sp ‘D 8S soas 0€ ‘D 16 o€ S ‘b6 1-67
+© *30 O1 ur QT ‘D ZL um | ‘D ZL $998 Sp ‘D 79 $998 O€ ‘D b6 oe 1-9p dnd
+zaT waa
+© Db ur ¢ ‘D ZL ur [ ‘D ZL 8998 Sp ‘DSS 8998 Sp ‘D 6 o£ +7 Wid
+ssdnyps
+eka uri ¢ ‘D ZL ur | ‘DZ $998 Sp ‘D SS Sb‘ b6 of IOV
+(suru ‘D0) SATDAD (sur ‘D0)
+(90) NOLLNGLXA — (suru ‘90) (saas ‘D0) (soas Do) 410 NOILLVURLVNaAG
+FDVAOLS ‘IVNIA NOISNALXG ONIIVANNV NOILVUNLVNAG WaAaWAN IVILINI wIARId _WL0
+
+“punoIdy9eq POY] UI SdUwII]O} SSOSs DHOIGR JOJ STLO 1319
+oy) jo Surprameidd TO Woy poausp STIN 7 TLO-odyynus oy Jo SurdAjoued soy pasn srourd YSs Z] Op JO So[YO Ud “Z AGSL
+
+23
+
+Phenotypic Screening for Abiotic Stress Tolerance
+
+Evaluation of the monogenic expression was done by comparing the effect of each allele
+(contrasting allele) at each locus. On the other hand, digenic interactions were evaluated by forming
+pairwise combinations of these four major QTLs, which resulted in six digenic pairs (digenic-loci)
+namely, AGJ-Sub], AGI-Saltol, AGI-qgDTY4.1, Sub1-Saltol, Sub1-Saltol, Subl-qDTY4.1 and
+Saltol-qDTY4.1. To further evaluate digenic interactions, another pairwise combinations between
+alleles of each locus (interallelic pairs) were made. These resulted in four digenic pairs within each
+of the six digenic loci, thus summed up to 24 digenic combinations. Due to the limited F3 seeds
+harvest from the selected 78 F2NILs, seed increase was done to produce the needed amount of seeds
+(F4) to complete the three experiments. This resulted in phenotypic screening of F; NILs under
+
+salinity stress and F4 NILs under anaerobic germination and submergence stress.
+
+Screening for Salinity Tolerance.
+
+Phenotypic screening for tolerance to salinity stress was done using a standard protocol
+under screen house condition (Platten et al., 2013). Fs seeds from the selected genotypes of the F2
+multiple-QTL NILs were pregerminated for two to three days at 32 °C in petri dishes lined with
+moist paper towels. Healthy seedlings were transplanted in styrofoam floats on de-ionised water.
+Only one seedling, including the tolerant (FL478) and susceptible (IR29) checks was sown per hole
+in styrofoam floats consisting of 144 holes (12 rows x 12 columns grid,) with columns 1 and 12 as
+borders, following a randomized complete block design (RCBD) in four replications. Three days
+
+after transplanting (3 DAT), the de-ionised water was replaced with Yoshida’s solution (Yoshida
+
+24
+
+et al., 1976) which was maintained at pH 5.0. Daily monitoring and maintenance were done by
+adjusting the pH of the solution to 5.0 with HCI/KOH daily and replacing it with fresh nutrient
+solution for an interval of one day. Seedlings were grown in the screen house facilities until they
+reach 4 to 6 leaf stage (growth stage 2-3). Tiller length was gathered 15 days after transplanting in
+the Styrofoam in a hydrophonic set up under greenhouse condition. Tiller count was calculated as
+the percent number of plants with tiller length of 40> mm. Salinization was imposed by applying
+100 mM NaCl (Sigma-Aldrich, USA) in 50-mM increment per day to reduce osmotic shock.
+Evaluation of the expression and interaction of each QTL under salinity stress was done by scoring
+salinity injury (SES score) as symptom progressed throughout the experiment (Table 3). This was
+
+done in an interval of two-three days and served as data points.
+
+Table 3. Standard Evaluation System (SES) for visual scoring of salt injury at seedling
+stage (IRRI, 2002
+
+SES DESCRIPTION Tolerance
+
+1 Normal growth and tillering Very High
+
+Nearly normal growth, some reduction in tillering, some High
+
+leaf whitening and leaf rolling
+Growth and tillering reduced, most leaves are whitening
+o and rolling, only few are elongating ee
+7 Complete cessation of growth, most leaves dried, some Susceptible
+
+plants dying
+
+9 Almost plants dead or dying Very low
+
+
+25
+
+Na* Test
+
+Leaf samples for the Na* test were taken from the fourth leaf of the individual plants in
+four replications. Sampling was done by carefully cutting the leaf using scissors followed by
+washing, initially with tap water then twice with deionised water using forceps. Washed samples
+were immediately placed in small envelopes for drying in several days at 50 °C and tissue dry
+weight was recorded prior to Na* extraction. Na* was extracted in 0.1 M acetic acid (Sigma-Aldrich,
+USA, diluted in Nanopure water) at 60 °C until Na* are leached from the leaves and was measured
+by atomic absorption spectrophotometer (Perkins Elmer, USA), operating in emission mode. Data
+
+were analyzed using T-test and was performed in microsoft excel.
+
+Screening for Tolerance to Anaerobic
+Germination
+
+Phenotypic screening for tolerance to anaerobic germination was done using a modified
+protocol from Septiningsih et al. (2013) under screenhouse condition. Seeds of the F, families
+harvested from the seed increase of the selected F3 families were placed in oven for three to five
+days at 50 °C to break seed dormancy. For phenotypic screening of anaerobic germination, dry
+seeds of the F, families harvested from the seed increase of the selected F3 families were directly
+sown in small boxes (tip boxes) filled with fine soil and were covered with another layer of 1 cm
+of soil. Each box was sown with 20 seeds representing single family and was further transferred to
+designated blue trays which served as tanks. Each tray contained 16 boxes representing 14 families
+plus the two tolerant (Khao Hlan On) and susceptible (IR42) checks, following RCBD with four
+replications. After sowing, the boxes were submerged with 10 cm tap water in the blue trays. To
+
+asses tolerance to anaerobic germination, percent survival was gathered after 21 days of
+
+26
+
+submergence. Data were analyzed using T-test and was performed in Microsoft Excel.
+
+Screening for Submergence Tolerance.
+
+Phenotypic screening for tolerance to complete submergence was done following
+the standard protocol currently being used at IRRI (modified from Mackill et al., 1996)
+under greenhouse condition. A total of 25-30 pregerminated seeds from the selected F4
+families, including the tolerant and susceptible checks (FR13A and IR42, respectively)
+were transplanted in rows within plastic trays (20 cm x 15 cm x 10 cm) following a
+randomized complete block design (RCBD). Another tray was also planted with
+susceptible check alone and was used for sampling during monitoring activities. After 14
+days, plant count was gathered and the 14-day old seedlings were completely submerged
+to a water depth of 1. 5- 2.0 m in screen house tanks. Daily monitoring was done at ten
+days after submergence (10 DAS) until 70-80% damage was observed from the susceptible
+check sampled from the tank, an indication to desubmerge the plants. This was based on
+the discoloration, softness of the stem and odor of the plant. Percent survival was gathered
+by counting the number of the plants that survived at 14" day after de-submergence. Data
+
+were analyzed using T-test and was performed in Microsoft excel.
+
+RESULTS AND DISCUSSION
+
+Monogenic Expression of the QTLs Across
+Abiotic Stress Conditions
+
+Anaerobic Germination
+
+Monogenic expression of the QTLs under anaerobic germination showed significant
+
+effects as displayed by the significantly different mean survival (%) of the NILs after 22 days of
+
+submergence during germination (Fig. 1)
+
+60
+
+50
+
+40
+
+30
+
+20
+
+eel
+
+SC ee 4
+=
+E
+*
+*
+BH
+i *
+e
+ee
+=
+
+H
+
+IR4
+IR64
+AGI[+
+AGI[-
+Sub! [+
+Sub
+Sal[+
+Sall
+
+Khao Hlan On
+qDTy4.1 [+
+qDTy4.1
+
+Contrasting Alleles
+
+Figure 1. Mean survival (%) of the F2 IR64-NILs contrasting at the AG/, Sub/,
+
+Saltol and qDTY4. after 22 days of submergence during germination.
+Values are means and vertical bars represent + SE. Probability values
+are based on a Student’s T-test.
+
+28
+
+Mean survival (%) of Khao Hlan On, the donor for the tolerant allele (AG/[+]), was
+expectedly higher than the susceptible check, IR42, which had intolerant allele (AG/[-]) at p< 0.001
+(Appendix Table 2). Similarly, survival (%) of NILs which had the AG/[+] allele was also
+significantly higher than those which had the AG/[-] allele at p< 0. 01. However, survival (%) of
+plants which possessed [+] alleles of the Sub/ and Saltol locus was significantly lower than their
+alternative [-] alleles, at p< 0. 01 and p< 0.05, respectively. On the other hand, mean survival (%)
+of NILs contrasting alleles at gDTY4.] locus did not show any significant difference under
+anaerobic germination. Monogenic expression of the AG/[+] allele improved tolerance to
+anaerobic germination in contrast to the Sub/[+] and Saltol[+] alleles which conversely, reduced
+tolerance under anaerobic germination. This was shown by the significantly lower survival (%) of
+plants possessing these alleles, with a stronger evidence found with the Sub/[+] allele. Apparently,
+qDTY4.1 locus had no effect on tolerance to anaerobic germination, as displayed by the comparable
+
+performance of its contrasting alleles under anaerobic germination.
+
+Submergence Stress
+
+Similar to anaerobic germination, survival (%) of FR13A, the donor for the tolerant allele
+for submergence (Sub/[+]), was also significantly higher than susceptible check, IR42, which had
+the intolerant allele (Sub/[-]) at p< 0.001 (Fig. 2; Appendix Table 3). Likewise, survival (%) of
+plants which possessed Sub/ [+] allele was significantly higher than those which had Sub/[-] allele
+(p< 0.001), but none of the contrasting alleles at AG/, Saltol and gDTY4.1 showed significant
+differences in the survival (%) of plants. Monogenic expression of the SubJ[+] allele improved
+tolerance to submergence and that comparable performance of the contrasting allele at AG/, Saltol
+and qDTY4.1 implied compatibility under submergence. Although, gD7Y4.1[+] allele had no
+
+statistically significant effect over gDTY4./[-] allele, it is worth noting that it might had positive
+
+29
+
+but minor effect on submergence tolerance (Fig.2).
+
+100
+
+60
+50
+40 —
+30
+20 - i
+
+10 |
+t
+So
+=
+
+R42
+Sub1[+
+Sub1[
+AGI[+
+AGI
+Sall+
+Sall-
+
+Mean Survival (%}
+xe
+° 388
+1R64-sub1 anaame eesmrsiees
+|
+R130 [See ERE
+|
+*
+*
+|
+1
+{
+
+qDTy4.1 [+
+qOTy4.1 [-
+
+Contrasting Alleles
+
+Figure 2. Mean survival (%) of Fs IR64-NILs contrasting at AG/, Sub1, Saltol
+and gDTY4.1 after 19 days of complete submergence and 14 days of
+recovery. Values are means and vertical bars represent + SE.
+Probability values are based on a Student’s T-test.
+
+Salinity Stress
+
+Mean salinity scores of FL478-A-1, the donor of tolerant allele for salinity (Saltol[+]) was
+expectedly lower than IR29, the susceptible check which had intolerant allele (Saltol[-]) at p< 0.001
+(Fig. 3; Appendix Table 4).
+
+30
+
+@— FL478-A-1
+@— IR29-1
+
+IR64
+@— IR64-Saltol
+—©~Saltol[+]
+__ —eSaltol[-]
+_ @=DTY4.1[+]
+—e—DTY4.1[-]
+
+0 3 6 9 12 15 18 21 24 27 30
+
+Days of Salinization
+
+Figure 3. Mean salinity scores of F3 IR64-NILs contrasting at AG/, and
+aDTY4.1 for 29 days of salinization in 100 mM NaCl
+
+On the other hand, mean salinity scores of NILs were significantly different at only two
+loci specifically, Saltol and gDTY4.1 locus (Appendix Table 4). Sa/tol[+], the QTL with the largest
+effect on salinity tolerance by far, displayed a modest effect on salinity tolerance. In some data
+points (SES3-5), mean salinity scores of Saltol[+] NILs did not show significant difference with
+Sal[-] NILs. However, Saltol[+] NILs maintained back tolerance effect over Saltol[-] NILs for the
+rest of the salinization period (Appendix Table 4). Conversely, qDTY4.] had negative effect on
+salinity tolerance. The increase in mean salinity scores, as a consequence of the negative effect of
+qDTY4.1 [+] allele was consistent throughout the salinization period. This effect was comparable
+to having a Saltol[-] allele (Fig.3). On the contrary, absence of the gDTY4.] [+] (or the presence of
+
+qDTY4.1 [-]) resulted in a significantly lower mean salinity scores, which implied enhanced
+
+31
+
+tolerance to salinity stress. Performance of NILs with gDTY4. I[-] allele were even comparable with
+Saltol[+] NILs.
+
+Surprisingly, none of the contrasting alleles from four major QTLs influenced Na‘ content
+(Appendix Table 5). It is widely known that tolerant lines/varieties have low Na*/K* ratio or low
+Na* content (Gregorio, 1997; Lutts et al., 1995; Lee et al., 2003; Thomson et al., 2010; Ahmadi and
+Fotokian, 2011; Platten et al., 2013; Barua et al., 2015; Rahman et al., 2016). In the present study,
+monogenic expression even at the Saltol locus did not show significant difference in Na* content.
+Likewise, no significant changes was also observed even at the gDTY4.] locus which consistently
+
+reduced tolerance to salinity by its plus [+] allele.
+
+Effects on Tiller Count and Length
+
+Significant differences on tiller count and length were observed at gDTY4. ] and AG/ locus
+(Fig. 4a and 4b). Both [+] allele of these loci significantly reduced tiller length at p< 0.01 and p<
+0.05, respectively (Appendix Table 6.1). Similarly, tiller length was also. negatively affected by
+the [+] allele of these loci at p< 0.01 and p< 0.05, respectively (Appendix Table 6.2). Furthermore,
+a stronger evidence of this converse effect was found in gDTY4./[+] allele whereas contrasting
+
+alleles at Sub/ and Saltol loci showed no significant differences in tiller length and tiller count.
+
+60
+i = t+
+50
+< : :
+zB 40 Tele)
+2
+iS 30
+| =| aK *
+= I =H
+20
+10 — — _ a -
+DTY4.1 Saltol AGI Subl
+(a) Contrasting Alleles
+60% —— a
+= TIC]
+50%
+FE 40% —— Leas oe
+e “4% ®t
+S:
+= 30%
+A *
+e =H
+= 20% =
+=
+10%
+0%
+DTY4.1 Saltol AGI Subl
+(b)
+
+Contrasting Alleles
+
+Figure 4. Means of tiller length and tiller count of F; IR64-NILs contrasting at
+
+AGI, Subl, Saltol, gDTY4.1 at 15 days after transplanting in
+Yoshida’s nutrient media prior to salinization during seedling stage
+(a) Mean tiller length(mm) (b) Mean tiller count. Vertical
+bars represent + SE. Probability values are based on a Student’s T-
+test.
+
+32
+
+33
+
+Digenic Interactions of the QTLs Across
+Abiotic Stress Conditions
+
+Anaerobic Germination
+
+Generally, higher survival (%) under anaerobic germination was attained with the presence
+of the tolerant allele for anaerobic germination (AG/[+]) (Fig.5). Digenic interactions of AG/ and
+Sub1 with Saltol (4G/-Saltol and Sub1-Saltol) showed significant effects on tolerance to anaerobic
+germination (Appendix Table 7). As previously discussed, monogenic expression of AG/[+] allele
+improved tolerance contrast to Sub] [+] and Saltol[+] alleles which both reduced tolerance to
+anaerobic germination (Fig.1 ; Appendix Table 2). Likewise, Survival (%) of plants which
+possessed AG] [-] Sal[+] was significantly lower compared to AG/ [-] Salf-] at p< 0.01 (Appendix
+Table 7). However, when Saltol[+] allele was paired with the AG/[+] allele, survival (%) of plants
+was significantly enhanced. This showed a stronger positive effect of AG/[+] allele over the
+negative effect of Salto! [+]. This was displayed by a significantly higher survival (%) AGI[+]
+Sal[+] NILs compared to AGI [-] Sal[+] (p< 0.05). This implied negative effect of Sal/+/ allele
+under anaerobic germination which was expressed only in the absence of the AG/[+] allele.
+
+Moreover, not only Saltol[+] had negative effect under anaerobic germination, but also the
+Sub1[+] allele. Combined effects of [+] alleles from both loci further reduced tolerance to anaerobic
+germination. Survival (%) of plants which possessed SubJ[+] Sal[+] was significantly lower
+compared to those which had Sub/[-] Sal[-] alleles, at p< 0.01 (Appendix Table 7). This implied
+continuous negative effect of both loci on tolerance to anaerobic germination and this effect was
+
+additive.
+
+34
+
+4
+4 t
+
+Be it } :
+
+fs 10 4 } Ly lt | | H
+5
+0
+
+qDTy4.1 [-]
+
+Figure 5. Mean survival (%) of F, IR64-NILs contrasting at six digenic loci
+namely, AG/- Sub1, AGI- Saltol, AGI-qgDTY4.1, Sub1-Saltol, Sub1-
+qDTY4.1, Saltol-qgDTY4.1, after 22 days of submergence during
+germination. Vertical bars represent + SE.
+
+On the other hand, digenic interactions at the Subl-qDTY4.1 and Saltol-qDTY4.1 loci did
+not show significant patterns of QTL interaction (Appendix Table 7). However, gDTY4. I[+] allele
+seemed to have positive but minor effect on tolerance to anaerobic germination. This was observed
+in a seemingly enhanced survival (%) of NILs with digenic pairs involving gDTY4. I[+] with either
+SubI{-] or Saltol [-] allele. However, when gDTY4. 1[+] was paired with either Sub1[+] or Saltol
+[+] allele, which both had negative effect, survival (%) was seemingly reduced. Although these
+
+were statistically insignificant, these implied positive but minor effect of gDTY4.1[+] allele on
+
+35
+tolerance to anaerobic germination, and that this minor effect was surmounted by the negative effect
+of Saltol[+] alleles at Saltol-gDTY4.1 and SubI-qgDTY4.1 digenic loci.
+
+Furthermore, digenic interaction of AG] with gDTY4.] showed compatibility under
+anaerobic germination. Survival (%) of plants which possessed AGJ[+] qDTy4.1 [-] was
+significantly higher compared to AGI[-] qDTy4.1 [+] at p< 0.01. Tolerance to anaerobic
+germination was conferred by AG/[+] allele alone. Moreover, digenic interaction at the AG/-Sub1
+cannot be defined in the present study, since there was only one family with both AG/[+] Sub1[+]
+allele. Although, generally survival (%) of plants with the AG/[+] allele was significantly higher
+
+compare to non-AG/[+] plants.
+
+Submergence Stress
+
+QTL interactions in digenic pairs of the four major QTLs showed significant
+tolerance effect controlled mainly by the major QTL for submergence tolerance, Sub/([+]
+allele) (Figure 6). Strong evidences of compatibility were found in digenic pairs with
+Sub1[+] allele specifically, Sub1-Saltol and Subl-qDTY4.1.
+
+Digenic interaction at the Sub/[+]AG/[+] could not be fully defined in the present
+study, since there was only one family with both Sub/[+]AG/[+] alleles. Nonetheless,
+Sub1[+] allele showed a highly positive and strong effect on tolerance to submergence as
+shown by the performance of plants which possessed Sub/[+] AG/[-] compared to Sub/[-
+
+] AGI[+] (p< 0.01), and to Sub/[-] AG/[-] (p< 0.001).
+
+36
+
+9
+9 = i
+r') i : | = T
+5 6D = .
+2 |
+2 T |
+5 4
+a
+©
+¢ 3
+2
+a
+0 |
+i‘)
+SEP oS Le PL see Moe eeR ES SESE FeDoug Ges o
+aaga 35 5 8 4 q 355 6 4 qd Po) 4
+BEGE FSR KH BESF F€S8RH FETE PEPE
+qetqt aprrtr LF Ps oapertr PEPE @TFEs
+ot a etae 0 eoug PrerPee Bit ge; ©
+ee a3 a 3 = 4 0634 Reo (aY-o t|
+tanga 322 2 acc fa] 9 ac c o cae
+gaigd 3353 fea285 Cy cs Seo
+2 oa ic Eos -Got eo
+333 3 a + hue COO +etae |]
+aaAD aaagds:s eaaea ay ee
+| g3o5 8 $454
+2285 Saad
+a
+Digenic loci
+
+Figure 6. Mean survival (%) of Fs IR64-NILs contrasting at six digenic loci namely,
+SubI-AGI, Subl- Saltol, Subl-gDTY4.1, AG1-Saltol, AGI-qDTY4.1 and
+Saltol-gDTY4.1 after 19 days of complete submergence and 14 days of
+recovery. Vertical bars represent + SE.
+
+Apparently, Salto] locus showed no interaction with the Sub/ locus. Survival (%)
+of NILs involving Sub/[+] allele within this digenic loci (Sub/[+] Sal[+] and SubJ[+] Sal[-
+}) were significantly higher than those which had the Sub/[-] allele (Sub/[-] Sal[+] and
+Sub I{-] Sal[-]) (Appendix Table 8). Therefore, tolerance conferred by these digenic pairs
+was due to Sub/[+] alone.
+
+Interestingly, gDTY4. J[+] seemed to enhance tolerance to submergence stress. This
+
+was observed in an increasing pattern of tolerance in digenic pairs at Sub/-gDTY4.1 digenic
+
+37
+loci (Fig.6). Although, significant positive effects were observed only in digenic pairs with
+SubI{+] alleles under submergence stress (Appendix Table 8), a similar effect was also
+observed with gDTY4. I[+] allele at AG/- gDTY4.1 digenic loci. Survival of plants which
+possessed both AG/[+] qDTy4.1 [+] was seemingly enhanced under submergence stress.
+Although, this was not statistically significant, it was further displayed in digenic pairs
+which possessed qDTy4.1 [+] allele at Saltol- qDTy4.1 digenic loci. Survival (%) of plants
+with qDTy4.1 [+] allele was relatively higher without regard for the Salto/ allele.
+Furthermore Saltol[+]qDTy4.1[-] showed significantly lower survival (%) that
+Saltol[+]qDTy4.1[+]. This in turn implied significant enhancing effect by the gDTY4./[+]
+allele under submergence stress. Digenic interaction at AG/-Saltol, and AGI-qgDTY4.1 did
+not show significant pattern of interaction. In relation to anaerobic germination, gDTY4.1
+
+[+] allele may also had positive and even additive effect on submergence tolerance.
+
+Salinity Stress
+
+Significant QTL interactions among digenic loci were observed in digenic pairs involving
+qDTY4.1 locus. While gDTY4.1 seemed to have promising effect on tolerance to both anaerobic
+germination and submergence stress, it negatively affected salinity tolerance. Digenic interaction
+at Saltol-qgDTY4.1 showed a significantly opposing effect on salinity tolerance. Positive effect by
+the Saltol[+] and negative effect by (DT Y4.[+] allele were displayed by the consistently significant
+lower mean salinity scores of Saltol[+]qDTY4. I[-] NILs compared to Saltol{-]qDTY4.1[+] allele
+
+(Fig.7; Appendix Table 9.1).
+
+38
+
+—®— Sal[+]
+qDTY4.1[+]
+—e— Sal[+]
+
+B qDTY4.1[-]
+
+S
+
+J
+
+wa
+
+is —o—Sal[-]
+
+a qDTY4.1[+]
+is + —e— Sal[-]
+10 qDTY4.1[-]
+0.5
+0.0
+
+0 3 6 9 12 15 18 21 24 27 30
+Days to salinization
+
+Figure 7. Mean Salinity injury scores of F; IR64-NILs at Saltol-gDTY4.1 digenic loci
+for 29 days of salinization in 100 mM NaCl.
+
+As discussed earlier, monogenic expression of gDTY4.][+] allele, consistently reduced
+tolerance to salinity stress (Fig.3; Appendix Table 4). This negative effect of qDTY4. 1[+] allele
+was further confirmed by the consistently significant higher mean salinity scores of Saltol[-
+]qDTY4.1[+] compared to Saltol[-]qgDTY4.1[-]. However, this effect was surmounted by the
+Saltol[+] allele at Saltol[+]qDTY4. 1[+] digenic loci. Statistical result between these digenic pairs
+still showed the stronger effect of Saltol[+]over gDTY4. 1[+] allele. This interaction was displayed
+by a significantly lower mean salinity score of Saltol[+]qDTY4.I{+] compared to Saltol[-
+]gDTY4. [+] NILs. With these, Saltol[+] allele remained to be the controlling QTL for salinity
+
+tolerance whereas qDTY4.1[+] allele reduced tolerance to salinity only in the absence of the
+
+39
+
+Saltol[+) allele and the former had stronger positive effect over the latter under salinity stress.
+Similarly, QTL interaction at AGI-qDTY4.1 digenic loci showed significant interaction in
+an opposite direction. This was consistently displayed by a significantly higher mean salinity injury
+score of AG/[-] qDTy4.1 [+] NILs compared to AG/[+] qDTy4.1 [-] (Fig. 8; Appendix Table 9.2).
+The significant difference in effect, by gDTY4.] was significant only at the first week of
+salinization period (SES 1-2) as displayed by the significantly higher mean salinity scores of AG/[-
+] qDTy4.1 [+] compared to AG/[-] qDTy4.1 [-] NILs. Furthermore, this was also significantly
+manifested even in the presence of AG/[+] allele, showing a stronger effect of qDTy4.1 [+] than
+AGI[+]. Likewise, this took place only at the early days of salinization period (SES1-3). This
+implied negative but minor effect of gDTY4.1[+] at AGI-qDTY4.1, as it manifest only at early
+stage of salinization period. Moreover, AG/[+] has seemingly enhance tolerance to salinity stress,
+as it consistently maintained lower mean salinity score than any of the digenic pairs at AGJ-
+qDTY4.1. However, this was not statistically significant as displayed by the comparable
+performance of AGI[+]qDTY4. 1[-] and AG/[-]qgDTY4. 1[-] NILs. (Fig.8). Digenic interactions at
+SubI-qDTY4.1 was similar to AGI-gDTY4.1, except that negative effect of gDTY4.] was not
+expressed in the presence of Sub/[+] allele at the first week of salinization period. This implied
+stronger effect of SubI[+] because it surmounted the negative effect of gDTY4.1[+] (Fig.9 ;
+
+Appendix 9.3).
+
+9.0
+Be —o—AGI[+]
+75 qDTy4.1 [+]
+7.0
+65
+S 60 —e— AGI[+]
+5 5.5 qDTy4.1 [-]
+a Be
+nm Es
+B40 ©—AGI[-]
+3.5 qDTy4.1 [+]
+3.0
+2.5
+ae —e~AGIL-]
+Aan qDTy4.1 [-]
+0.5
+0.0
+
+0 3 6 9) 12 15 18 21 24 27 30
+
+Days to salinization
+
+Figure 8. Mean Salinity injury scores of F; IR64-NILs at AGI-qDTY4. digenic
+loci for 29 days of salinization in 100 mM NaCl
+
+9.0
+85
+8.0
+75
+7.0
+65
+6.0
+55
+5.0
+45
+4.0
+35
+3.0
+25
+
+2.0
+15 —®— Subi[-]
+
+10 qDTy4.1 [-]
+05
+0.0
+
+0 3 6 9 12 15 18 «21 24 #27 «130
+
+—®— Sub1[+]
+qDTy4.1 [+]
+
+—e—Sub1[+]
+qDTy4.1 [-]
+
+—e—Sub1[-]
+qDTy4.1 [+]
+
+SES Scores
+
+Days to salinization
+
+Figure 9. Mean Salinity injury scores of F3 IR64-NILs at Subl-qDTY4.1
+digenic loci for 29 days of salinization in 100 mM NaCl
+
+40
+
+41
+
+On the other hand, digenic interaction at Saltol-AG/ displayed tolerance effect controlled
+by the major QTL, Saltol[+] allele, which in turn showed compatibility effect with AG/[+] (Fig. 10;
+Appendix Table 9.4). Furthermore, Saltol[+] allele also controlled tolerance at Saltol-Sub/ digenic
+loci. This was displayed by the significantly lower mean salinity scores of Saltol[+]Sub1[+]
+compared to Saltol[-]Sub/[-] NILs, Saltol[+]Sub1{-] compared to Saltol[-]Sub1[+] and to Saltol[-
+]Sub1[-] NILs ( Fig. 11; Appendix Table 9.5). Furthermore, the significant difference between the
+performance of Saltol[+]Sub1[-] and Saltol[-]Sub 1[+] NILs, was not considered as a negative effect
+by SubJ[+] allele. This was confirmed by the comparable performance of Saltol[-]Sub1[+] to
+Saltol{-]Sub1[-] ( Appendix Table 9.5). This difference was due to the greater effect of Saltol[+]
+
+allele as the major QTL for salinity tolerance.
+
+Na* Content
+
+As discussed earlier, Na* content was not affected by the monogenic expression of the
+QTLs (Appendix Table 5) under salinity stress. Similarly, even significant QTL interactions also
+did not affect Na* content. Therefore, salinity tolerance displayed by the expression of each QTL
+and their interaction at digenic loci could not be indicated by Na‘ content in the present study
+
+(Appendix Table 10).
+
+42
+
+SES Scores
+
+—o-Sall[+]
+AGI[+]
+
+—®—Sal|[+]
+AGI[-]
+
+—e—Sall-]
+AGI[+]
+
+—eSall-]
+AGI[-]
+
+0 3 6 9 12 15 18 21 24 27 «#30
+
+Days to Salinization
+
+Figure 10. Mean Salinity injury scores of F3 IR64-NILs at Saltol-AGI digenic
+
+loci for 29 days of salinization in 100 mM NaCl.
+
+SES Score
+
+—o— Sal[+]
+
+Sub[+]
+
+—e— Sal[+]
+
+Sub[-]
+
+—e-— Sal[-]
+
+Sub[+]
+
+0 3 6 9 12 15 18 21 24 27
+
+—e— Sal[-]
+Sub[-]
+
+30
+
+Days to salinization
+
+Figure 11. Mean Salinity injury scores of F; IR64-NILs at Saltol-Sub1 digenic
+
+loci for 29 days of salinization in 100 mM NaCl
+
+43
+
+Effects on Tiller Length and Tiller
+
+As previously discussed, monogenic expression of AG/[+] and gDT7Y4.1[+], with a
+stronger evidence found with gDTY4. 1 [+] (p< 0.01), reduced tiller length and count (Figure 4a &
+4b; Appendix Table 6.1 & 6.2). In effect, digenic interaction between these loci further reduced
+tiller length and count at seedling stage. The combined effects of this digenic loci were displayed
+by a much significantly lower means in plants which possessed AG/[+]qD7Y4.1[+] compared to
+AGI[-]qDTY4.I{-] at p< 0.001 (Fig. 12a & 12b; Appendix Table 11.1 & 11.2). A stronger evidence
+of reduction in these traits was still displayed with gD7Y4. J[+] digenic pairs, a similar effect with
+its monogenic expression (Fig. 4; Appendix Table 6.1 & 6.2). However, Saltol[+] allele surmounted
+this effect in its interaction with gD7Y4. I[+] allele. This was displayed by a significantly lower
+means of both tiller length and tiller count in Saltol[+]qDTY4.1 [+] compared to Saltol{-|gDTY4.1
+[+] NILs at p< 0.05 and p< 0.01, respectively. Furthermore, digenic interactions at Sub]-qDTY4.1
+was similar to that at Saltol-qDTY4.1.
+
+On the other hand, AG/[+] allele showed a negative stronger effect than qDTY4.1[+] in
+tiller length and count in its digenic interaction with Saltol. With AG1, reduction in these traits was
+still manifested even in the presence of Saltol[+] allele, contrast to Saltol-qgDTY4.1 digenic
+interaction, in which Salto! surmounted the negative effect of gDTY4.1[+] allele. Furthermore,
+digenic interaction at Saltol-Sub1 did not show significant pattern of QTL interaction. For AGJ-
+Sub], digenic interactions could not be defined in the present study, since there was only one family
+with both plus [+] alleles of these loci. Nonetheless, AG/[+] allele showed negative effect on tiller
+length and count as displayed by the a significantly lower means of these traits in AG/[+]Sub/[-]
+
+compared to AGJ[-]Sub/[-] NILs.
+
+44
+
+Ey
+
+8
+
+(a
+
+Mean Tiller length
+&
+
+eH
+
+R%
+
+0%
+
+30%
+
+Tiller count (40>mm)
+
+§
+
+g
+
+0%
+
+10%
+
+(b)
+
+0%
+
+eH
+
+°Hr
+
+"HH
+
+Salto AGI —SaltolSUB1 Saltol- qDTy4.1 AGI-SUB1 AGI-qDTY4.1 SUB1-qDTY41
+
+sTAt4
+
+|
+
+®HH
+
+aT: Tt I
+LJ ' °HH
+| | 1 |
+HH
+
+Saltol AGI —SaltohSUB1 = Saltol qDTy4.1 AG1-SUB1 AG1-qDTY41 SUBI-qDTY4.1
+
+Digenic Loci
+
+Figure 12. Means of tiller length and tiller count of F3 IR64-NILs at six-digenic
+
+loci namely Saltol- gDTY4.1, AGI-qDTY4.1, Subl-qDTY4.1, AGI-
+Saltol and Sub1-Saltol , Sub1-AG1 at 15 days after transplanting in
+Yoshida’s nutrient media prior to salinization during seedling stage
+(a) Mean tiller length(mm) (b) Mean tiller count. Vertical bars
+represent + SE.
+
+SUMMARY AND CONCLUSION
+
+Pyramiding multiple tolerance to abiotic stress in a superior genetic background would
+substantially provide greater increase in productivity and overcome loss due to uncontrollable
+external factors affecting yield. To effectively and efficiently develop such a variety, it is important
+to understand the effect of each QTL or multiple major QTLs pyramided in a single genotype. This
+study was carried out to evaluate the monogenic expression and digenic interactions of the major
+QTLs for abiotic stress tolerance in a background of an agronomically superior genotype, IR64, a
+mega variety from the Philippines. Previous attempt to pyramid multiple-QTL ( 8-QTLs) for abiotic
+stress tolerance in this background has already been made (MBAS, IRRI) and was used as the
+materials for this study. Five F2 populations of IR64-NILs produced which numbered to a total of
+827 plants were genotyped using gene-specific (5) and linked SSR markers (5), CAPS (1) and Indel
+(1) markers. PCR based markers such as SSR plays an immense role in detecting and selecting
+introgressed QTLs for the target traits in the homozygous condition.
+
+Evaluation of monogenic expression and digenic interactions was limited only to four
+major QTLs namely, AG/, Sub/, Saltol and gDTY4.1. A total of 78 F2 genotypes which were
+homozygous [+] at any two or three, but homozygous [-] at any single locus of these loci, were
+selected for phenotyping. This allowed contrast of expression at any single locus (monogenic
+expression) and of QTL interaction at any two homozygous (+ or -) (digeni interaction) among
+NILs under specified abiotic stressed condition. Evaluation of the monogenic expression was done
+by comparing the effect of each allele (contrasting allele) in each locus. On the other hand, digenic
+interactions were evaluated by forming pairwise combinations of these four major QTLs, which
+
+resulted in six digenic-loci namely, AG/-Sub1, AGI-Saltol, AGI-qDTY4.1, Sub1-Saltol, Sub1
+
+46
+
+Saltol, Subl1-qDTY4.1 and Saltol-gDTY4.1. To further evaluate digenic interactions, another
+pairwise combinations between alleles of each locus (interallelic pairs) were made within a digenic
+loci. These resulted in four digenic pairs within each of the six digenic loci, thus summed up to 24
+digenic combinations .In order to evaluate monogenic expression and digenic interactions of the
+four QTLs in the selected genotypes, phenotypic screening for tolerance was conducted under
+anaerobic germination, submergence and salinity stress conditions. Survival (%) of plants was
+gathered after 22 days of submergence in a 10 cm water depth during germination and 14 days of
+recovery from 19 days of submergence in 1.5-2.0 m water depth, for the screening of tolerance to
+anaerobic germination and submergence stress, respectively. Mean salinity injury scores were also
+gathered using the Standard Evaluation System (SES) for salinity in an interval of 2-3 days to
+evaluate QTL interactions during the salinization period. In addition, Na content which is an
+indicator of salinity tolerance, and important traits such as tiller length and count at the seedling
+stage were also gathered to evaluate changes attributed to the abiotic stress QTLs.
+
+Monogenic expression of QTLs under anaerobic germination showed significant
+improvement in tolerance by the AG/[+] allele whereas both Sub/(+] and Saltol[+] allele had
+contrasting effect. Furthermore, contrasting alleles at gDTY4.] did not show significant difference
+under anaerobic germination. Likewise, Sub/[+] allele also significantly improved tolerance to
+submergence stress. Contrasting alleles at AG/, Saltol and qDTY4.1] did not show any significant
+difference on submergence tolerance, which implied compatibility of theses alleles under
+submergence stress. Under salinity stress, Saltol[+] allele showed a modest effect on tolerance
+under salinity stress since at some data points Saltol[+] (SES3-5) showed comparable effect with
+Saltol{-] NILs. Conversely gDTY4. [+] consistently reduced salinity tolerance. Furthermore, none
+of the QTL showed significant effect on Na* content during salinization. Monogenic expression
+
+even at the Salto locus did not show significant difference in Na* content. Likewise, no significant
+
+47
+changes was also observed even at the gDTY4.] locus which consistently reduced tolerance to
+salinity by its plus [+] allele. On the other hand, tiller length and tiller count were significantly
+reduced by either AG/[+] or qDTY4.1 [+] allele, with a stronger evidence found with gDTY4.] [+].
+
+Digenic interaction of QTLs under anaerobic germination showed that Saltol/[+] allele still
+had negative effect on anaerobic germination but only in the absence of AG/[+] allele. The latter
+showed stronger positive effect over Saltol[+] allele. Since Sub1[+] had also negative effect on
+tolerance to anaerobic germination, digenic interaction with Saltol[+] allele further reduced
+survival (%) of plants under anaerobic germination. Under submergence stress, Sub1[+] allele was
+the overall controlling allele for submergence tolerance. Digenic interaction involving Sub/[+]
+showed compatibility except with AG/ locus, which was undefined since there was only one family
+with both [+] allele of the two loci. Furthermore, gDTY4.][+] enhanced survival (%) with Saltol[+]
+alllele under submergence.
+
+On the other hand, significant digenic interactions under salinity stress were observed in
+digenic pairs involving Saltol or gDTY4.]. Overall tolerance effect displayed under salinity stress
+was controlled mainly by the Saltol[+] allele. gDTY4. 1[+] allele had negative effect under salinity,
+but Saltol[+] allele surmounted this effect. Negative effect of qDTY4.1 was expressed only in the
+absence of Saltol allele. AG/[+] allele displayed positive (enhancing) effect under salinity.
+However, digenic interaction with gDTY4. [+] allele reduced salinity tolerance ,but only at early
+days of the salinization period. Digenic interactions at Sub]-qDTY4. 1 was similar to AGI-qDTY4.1,
+except that negative effect of gDTY4.1 was not expressed in the presence of Sub/[+] allele at the
+first week of salinization period.
+
+Moreover, Saltol{+] allele controlled the overall tolerance effect in digenic interactions
+with the other three loci namely, gDTY4.] AGI, Sub]. In addition, the strong positive effect of
+
+Saltol[+] was further enhanced by Sub/[+] allele. In relation to anaerobic germination, gDTY4.1
+
+48
+
+[+] allele may also had positive and even additive effect on submergence tolerance. On the other
+hand, tiller length and tiller count were also negatively affected by gDTY4. I[+], and also by AG/[+]
+alleles. Digenic interaction between these loci further reduced tiller length and count at seedling
+stage. However, Saltol[+] and Sub1[+] alleles surmounted the negative effect of qDTY4.1[+] on
+these traits. On the other hand, converse effect of AG1[+] still manifested even in the presence of
+Saltol[+] allele. AG1[+]Saltol[+] interaction still resulted in reduced tiller length and tiller count.
+In conclusion, pyramiding multiple QTLs in a superior genotype, IR64, is possible through
+marker assisted selection using selected SSR markers. However, phenotypic screening of the
+multiple-QTL IR64-NILs revealed complexities in the expression and interaction (digenic) of these
+
+loci on tolerance to abiotic stress.
+
+RECOMMENDATION
+
+Monogenic expression and digenic interaction with qgD7Y4.] showed a statistically
+insignificant yet interesting pattern. Monogenic expression of the locus seemingly had positive but
+minor effect on tolerance to anaerobic germination. However, digenic interaction of the locus with
+SubI[+] and Saltol[+] which both had negative effect under anaerobic germination, nullify this
+effect. As in the case of anaerobic germination, gDTY4.] [+] allele may have positive and even
+additive effect on submergence tolerance.
+
+Moreover, digenic interaction at AG/-Sub] was not defined in the present study since there
+was only one family which possessed both AG/[+]Sub1[+] allele.
+
+Altogether, these underscore further investigation.
+
+LITERATURE CITED
+
+AHMADI J, FOTOKIAN MH. 2011. Identification and mapping of quantitative trait loci
+associated with salinity tolerance in rice (Oryza sativa) using SSR markers. Iranian
+Journal of Biotechnology 9(1), pp.21-30.
+
+AKINWALE MG, AKINYELE BO, ODIYI AC, OSEKITA OS, GREGORIO G.2015.
+Inheritance of Submergence Tolerance in Lowland Rice Variety.2015. Donnish
+Journal of Agricultural Research 2(9) pp. 077-080
+
+ALPI A, BEEVERS H. 1983. Effects of O2 concentration on rice seedlings. Plant
+Physiology. 71(1):30-4.
+
+ALPUERTO VL, NORTON GW, ALWANG J, ISMAIL AM. 2009. Economic impact
+analysis of marker-assisted breeding for tolerance to salinity and phosphorous
+deficiency in rice. Applied Economic Perspectives and Policy.31(4):779-92.
+
+ANGAJI SA, SEPTININGSIH EM, MACKILL DJ, ISMAIL AM. 2010. QTLs associated
+with tolerance of flooding during germination in rice (Oryza sativa L.). Euphytica
+172(2):159-68.
+
+ANGAJI SA. 2008. Mapping QTLs for submergence tolerance during germination in rice.
+African Journal of Biotechnology. 7(15):2551-8.
+
+BALTAZAR MD, IGNACIO JC, THOMSON MJ, ISMAIL AM, MENDIORO MS,
+SEPTININGSIH EM. 2014. QTL mapping for tolerance of anaerobic germination
+from IR64 and the aus landrace Nanhi using SNP genotyping. Euphytica.
+197(2):251-60.
+
+BARUA, RAJESH, MARJORIE DE OCAMPO, JAMES EGDANE, ABDELBAGI M.
+ISMAIL, SATYEN M. 2015. Phenotyping rice (Oryza sativa L.) genotypes for
+physiological traits associated with tolerance of salinity at seedling stage Scientia
+Agriculturae 12(3): 156-162.
+
+BAILEY-SERRES J, FUKAO T, RONALD P, ISMAIL A, HEUER S, MACKILL D.
+2010. Submergence tolerant rice: SUB1’s journcy from landrace to modern
+cultivar. Rice (2-3):138-47
+
+BAILEY-SERRES J, LEE SC, BRINTON E. 2012. Waterproofing crops: effective
+flooding survival strategies. Plant Physiology 160(4):1698-709
+
+51
+
+BLUMWALD E. 2000. Sodium transport and salt tolerance in plants. Current opinion in
+cell biology (4):431-4.
+
+BONILLA P, DVORAK J, MACKILL D, DEAL K, GREGORIO G. 2002. RFLP and
+SSLP mapping of salinity tolerance genes in chromosome 1 of rice (Oryza sativa
+L.) using recombinant inbred lines. Philipp. Agric. Sci. 85(1): 68-76
+
+CARILLO P, ANNUNZIATA MG, PONTECORVO G, FUGGI A, WOODROW P. 2011.
+Salinity Stress and Salt Tolerance, Abiotic Stress in Plants Mechanisms and
+Adaptations, Prof. Arun Shanker (Ed.), InTech, DOI: 10.5772/22331.
+
+CHINNUSAMY V, JAGENDORF A, ZHU JK. 2005. Understanding and improving salt
+tolerance in plants. Crop Science 45(2):437-48.
+
+COLLARD BC, SEPTININGSIH EM, DAS SR, CARANDANG JJ, SANCHEZ D, KATO
+Y, YE G, REDDY JN, SINGH US, AULA K, VENUPRASAD R. 2013.
+Developing new flood-tolerant varieties at the International Rice Research
+Institute (IRRI). SABRAO Journal of Breeding & Genetics 45 (1) 42-56
+
+COLMER TD, PEDERSEN O. Oxygen dynamics in submerged rice (Oryza sativa). New
+Phytologist. 2008 Apr 1;178(2):326-34.
+
+COLMER TD, VOESENEK LA. 2009. Flooding tolerance: suites of plant traits in
+variable environments. Functional Plant Biology 36(8):665-81.
+
+COTSAFTIS O, PLETT D, JOHNSON AA, WALIA H, WILSON C, ISMAIL AM,
+CLOSE TJ, TESTER M, BAUMANN U. 2011. Root-specific transcript profiling
+of contrasting rice genotypes in response to salinity stress. Molecular Plant
+4(1):25-41.
+
+COTSAFTIS O, PLETT D, SHIRLEY N, TESTER M, HRMOVA M. 2012. A two-staged
+model of Nat exclusion in rice explained by 3D modeling of HKT transporters and
+alternative splicing. PLoS One 7(7):e39865.
+
+DAS KK, PANDA D, SARKAR RK, REDDY JN, ISMAIL AM. 2009. Submergence
+tolerance in relation to variable floodwater conditions in rice. Environmental and
+Experimental Botany 66(3):425-34.
+
+DAWE D. 2005. Increasing water productivity in rice-based systems in Asia—past trends,
+current problems, and future prospects. Plant Production Science 8(3):221-30.
+
+ELLA ES, SETTER TL. 1999. Importance of seed carbohydrates in rice seedling
+establishment under anoxia. InVI Symposium on Stand Establishment and ISHS
+Seed Symposium 504 (pp. 209-218).
+
+52
+
+EYNARD A, LAL R, WIEBE K. 2005. Crop Response in Salt-Affected Soils. Journal of
+Sustainable Agriculture 27:1.
+
+FLOWERS TJ, YEO AR. 1981. Variability in the resistance of sodium chloride salinity
+within rice (Oryza sativa L.) varieties. New Phytologist 88(2):363-73.
+
+FOLEY JA, RAMANKUTTY N, BRAUMAN KA, CASSIDY ES, GERBER JS,
+JOHNSTON M, MUELLER ND, O’CONNELL C, RAY DK, WEST PC,
+BALZER C. 2011. Solutions for a cultivated planet. Nature 478(7369):337-42.
+
+FUKAO T, XU K, RONALD PC, BAILEY-SERRES J. 2006. A variable cluster of
+ethylene response factor—like genes regulates metabolic and developmental
+acclimation responses to submergence in rice. The Plant Cell 18(8):2021-34.
+
+FUKAO T, BAILEY-SERRES J. 2008. Submergence tolerance conferred by Sub/A is
+mediated by SLR1 and SLRL1 restriction of gibberellin responses in rice.
+Proceedings of the National Academy of Sciences 105(43):16814-9.
+
+FUKAO T, BAILEY-SERRES J. 2008. Ethylene—a key regulator of submergence
+responses in rice. Plant Science 175(1):43-51.
+
+FUKAO T, YEUNG E, BAILEY-SERRES J. 2011. The submergence tolerance regulator
+SUBI1A mediates crosstalk between submergence and drought tolerance in rice.
+The Plant Cell 23(1):412-27.
+
+GARTHWAITE AJ, VON BOTHMER R, COLMER TD. 2005. Salt tolerance in wild
+Hordeum species is associated with restricted entry of Na+ and Cl- into the shoots.
+Journal of Experimental Botany 56(419):2365-78.
+
+GREGORIO, G.B., D. SENADHIRA and R.D. MENDOZA. 1997. Screening rice for
+salinity tolerance, IRRI Discussion paper Series No.22. International Rice Research
+Institute, Los Bafios. Laguna, Philippines. p. 30.
+
+GREGORIO, G.B. 1997. Tagging salinity tolerance genes in rice using amplified fragment
+length polymorphism. Unpublished Ph.D. Dissertation, University of the
+Philippines Los Bafios. Laguna, Philippines. 118 pp.
+
+GUPTA PK, VARSHNEY RK. 2000. The development and use of microsatellite markers
+for genetics and plant breeding with emphasis on bread wheat. Euphytica 113:163-
+185.
+
+HASEGAWA PM, BRESSAN RA, ZHU JK, BOHNERT HJ. 2000. Plant cellular and
+molecular responses to high salinity. Annual review of plant biology 51(1):463-99.
+
+53
+
+HATTORI Y, NAGAI K, FURUKAWA S, SONG XJ, KAWANO R, SAKAKIBARA H,
+WU J, MATSUMOTO T, YOSHIMURA A, KITANO H, MATSUOKA M. 2009.
+The ethylene response factors SNORKEL1 and SNORKEL? allow rice to adapt to
+deep water. Nature 460(7258): 1026-30.
+
+HEENAN DP, LEWIN LG, MCCAFFERY DW. 1988. Salinity tolerance in rice varieties
+at different growth stages. Australian journal of experimental agriculture.
+28(3):343-9.
+
+IRRI: STANDARD EVALUATION SYSTEM FOR RICE (SES). 2002. Manila
+International Rice Research Institute;
+http://www.knowledgebank irri.org/images/docs/rice-standard-evaluation-
+system.pdf
+
+ISHIZAWA K, ESASHI Y. 1984. Gaseous factors involved in the enhanced elongation of
+rice coleoptiles under water. Plant, Cell & Environment. 7(4):239-45.
+
+ISHIZAWA K, ESASHI Y. 1988. Action mechanism of ethylene in the control of sugar
+translocation in relation to rice coleoptile growth I. sucrose metabolism. Plant and
+cell physiology 29(1):131-41.
+
+ISMAIL AM, HEUER S, THOMSON MJ, WISSUWA M. 2007. Genetic and genomic
+approaches to develop rice germplasm for problem soils. Plant molecular biology
+65(4):547-70.
+
+ISMAIL AM, ELLA ES, VERGARA GV, MACKILL DJ. 2009. Mechanisms associated
+with tolerance to flooding during germination and early seedling growth in rice
+(Oryza sativa). Annals of Botany 103(2):197-209.
+
+ISMAIL AM, JOHNSON DE, ELLA ES, VERGARA GV, BALTAZAR AM. 2012.
+Adaptation to flooding during emergence and seedling growth in rice and weeds,
+and implications for crop establishment. AoB Plants. 2012 Jan 1;2012:pls019.
+
+JACKSON MB, RAM PC. 2003. Physiological and molecular basis of susceptibility and
+tolerance of rice plants to complete submergence. Annals of Botany. 91(2):227-41.
+
+JAMES RA, MUNNS R, VON CAEMMERER S, TREJO C, MILLER C, CONDON
+TA.2006. Photosynthetic capacity is related to the cellular and subcellular
+partitioning of Nat, K+ and Cl-in salt-affected barley and durum wheat. Plant,
+Cell & Environment.29(12):2185-97.
+
+JAVID MG, SOROOSHZADEH A, MORADI F, SANAVY SA, ALLAHDADI I. 2011.
+The role of phytohormones in alleviating salt stress in crop plants. Australian
+Journal of Crop Science. 2011. 5(6):726.
+
+54
+
+JENA KK, MACKILL DJ. 2008. Molecular Markers and Their Use in Marker-Assisted
+Selection in Rice. CROP SCIENCE 48:1266-76.
+
+JIANG L, HOU MY, WANG CM, WAN JM. 2004. Quantitative trait loci and epistatic
+analysis of seed anoxia germinability in rice (Oryza sativa). Rice Science 11:238-
+44,
+
+JIANG L, LIU S, HOU M, TANG J, CHEN L, ZHAI H, WAN J. 2006. Analysis of QTLs
+for seed low temperature germinability and anoxia germinability in rice (Oryza
+sativa L.). Field crops research 98(1):68-75.
+
+JONGMAN B, KOKS EE, HUSBY TG, WARD PJ. 2014. Increasing flood exposure in
+the Netherlands: implications for risk financing. Nat. Hazards Earth Syst. Sci
+14:1245-55.
+
+KENDE H, VAN DER KNAAP E, CHO HT. 1998. Deepwater Rice: A Model Plant to
+Study Stem Elongation. Plant Physiol 118:1105-10.
+
+KHUSH GS. 2005. What it will take to Feed 5.0 Billion Rice consumers in 2030. Plant
+Molecular Biology.59: 1-6.
+
+KIRK GJ, GREENWAY H, ATWELL BJ, ISMAIL AM, COLMER TD. 2014. Adaptation
+of Rice to Flooded Soils. In A Progress in Botany 75.:215.-253. Retrieved June 6,
+2017. https://books. google.com. ph/
+
+KOYAMA ML, LEVESLEY A, KOEBNER RM, FLOWERS TJ, YEO AR. 2001.
+Quantitative trait loci for component physiological traits determining salt tolerance
+in rice. Plant Physiology 125(1):406-22.
+
+KRETZSCHMAR T, PELAYO MA, TRIJATMIKO KR, GABUNADA LF, ALAM R,
+JIMENEZ R, MENDIORO MS, SLAMET-LOEDIN JH, SREENIVASULU N,
+BAILEY-SERRES J, ISMAIL AM. 2015. A trehalose-6-phosphate phosphatase
+enhances anaerobic germination tolerance in rice. Nature plants 1:15124.
+
+LASANTHI-KUDAHETTIGE R, MAGNESCHI L, LORETI E, GONZALI S, LICAUSI
+F, NOVI G, BERETTA O, VITULLI F, ALPI A, PERATA P. 2007. Transcript
+profiling of the anoxic rice coleoptile. Plant physiology 144(1):218-31.
+
+LEE KS, CHOI WY, KO JC, KIM TS, GREGORIO GB. 2003. Salinity tolerance of
+japonica and indica rice (Oryza sativa L.) at the seedling stage. Planta 216(6):1043-
+6.
+
+55
+
+LIN HX, ZHU MZ, YANO M, GAO JP, LIANG ZW, SU WA, HU XH, REN ZH, CHAO
+DY. 2004. QTLs for Na and K uptake of the shoots and roots controlling rice salt
+tolerance. Theor Appl Genet 108:253-60.
+
+LUTTS S, KINET JM, BOUHARMONT J. 1995. Changes in plant response to NaCl
+during development of rice (Oryza sativa L.) varieties differing in salinity
+resistance. Journal of Experimental Botany 46(12): 1843-52.
+
+MAAS EV, HOFFMAN GJ. 1977. Crop salt tolerance\-current assessment. Journal of the
+irrigation and drainage division 103(2):115-34.
+
+MACKILL DJ, COFFMAN WR, GARRITY DP. 1996. Rainfed lowland rice
+improvement, International Rice Research Institute, P.O. Box 933, Manila,
+Philippines. 242 p.
+
+MACKILL DJ, ISMAIL AM, PAMPLONA AM, SANCHEZ DL, CARANDANG JJ,
+SEPTININGSIH EM. 2010. Stress tolerant rice varieties for adaptation to a
+changing climate. Crop, Environment and Bioinformatics 7:250-9.
+
+MACKILL DJ, ISMAIL AM, SINGH US, Labios RV, Paris TR. 2012. Development and
+Rapid Adoption of Submergence-Tolerant (Sub/) Rice Varieties. In: Advances in
+agronomy. 115:299. Retrieved June 1 2017 from https://books. google.com. ph
+
+MAGNESCHI L, PERATA P. 2009. Rice germination and seedling growth in the absence
+of oxygen. Annals of Botany 103(2):181-96.
+
+MAKIHARA D, TSUDA M, MORITA M, HIRAI Y, KURODA T. 1999. Effect of salinity
+on the growth and development of rice (Oryza sativa L.) varieties. Japanese Journal
+of Tropical Agriculture 43(4):285-94.
+
+MATSUKURA C, KAWAI M, TOYOFUKU K, BARRERO RA, UCHIMIYA H,
+YAMAGUCHI J. 2000. Transverse vein differentiation associated with gas space
+formation-fate of the middle cell layer in leaf sheath development of rice. Annals
+of Botany 85(1):19-27.
+
+MENEZES-BENAVENTE L, TELXEIRA FK, KAMEI CL, MARGIS-PINHEIRO M.
+2004. Salt stress induces altered expression of genes encoding antioxidant enzymes
+in seedlings of a Brazilian indica rice (Oryza sativa L.). Plant Science 166(2):323-
+31.
+
+MORADI F, ISMAIL AM. 2007. Responses of photosynthesis, chlorophyll fluorescence
+and ROS-scavenging systems to salt stress during seedling and reproductive stages
+in rice. Annals of Botany 99(6):1161-73.
+
+56
+
+MUNNS R. SALINITY, GROWTH AND PHYTOHORMONES. 2002. In Salinity:
+Environment-Plants-Molecules.pp.271-290.Retrieved:June6 2017,
+https://books.google.com.ph 2017.https://books.google.com.ph
+
+MUNNS R. 2005. Genes and salt tolerance: bringing them together. New phytologist
+167(3):645-63.
+
+MUNNS R, JAMES RA, LAUCHLI A. 2006. Approaches to increasing the salt tolerance
+of wheat and other cereals. Journal of Experimental Botany 57(5):1025-43.
+
+MUNNS R, TESTER M. 2008. Mechanisms of salinity tolerance. Annual Review of Plant
+Biology 59: 651-681.
+
+MURRAY MG, THOMPSON WF. 1980. Rapid isolation of high molecular weight plant
+DNA. Nucleic acids research 8(19):4321-6.
+
+NARSAI R, EDWARDS JM, ROBERTS TH, WHELAN J, JOSS GH, ATWELL BJ.
+2015. Mechanisms of growth and patterns of gene expression in oxygen-deprived
+rice coleoptiles. The Plant Journal 82:25-40.
+
+NEGRAO S, ALMADANIM C, PIRES I, MCNALLY KL, OLIVEIRA MM. 2011. Use
+of EcoTILLING to identify natural allelic variants of rice candidate genes involved
+in salinity tolerance. Plant Genetic Resources 9(02):300-4.
+
+NEERAJA CN, MAGHIRANG-RODRIGUEZ R, PAMPLONA A, HEUER S,
+COLLARD BC, SEPTININGSIH EM, VERGARA G, SANCHEZ D, XU K,
+ISMAIL AM, MACKILL DJ. 2007. A marker-assisted backcross approach for
+developing submergence-tolerant rice cultivars. Theoretical and Applied Genetics
+115(6):767-76.
+
+ONAGA G., WYDRA K. 2016. “Advances in plant tolerance to abiotic stresses,” in Plant
+Genomics, ed. Abdurakhmonov I. Y., editor. (Rijeka: InTech; ) 10.5772/64350. p.
+167
+
+PANDEY S, VELASCO L. 2002. Economics of direct seeding in Asia: patterns of
+adoption and research priorities. Pandey S, Mortimer M, Wade L, Tuong TP, Lopez
+K, B Hardy, editors. Direct seeding: research strategies and opportunities. Los
+Bafios (Philippines): International Rice Research Institute. p.3-14.
+
+PLATTEN JD, EGDANE JA, ISMAIL AM. 2013. Salinity tolerance, Na+ exclusion and
+allele mining of HKT1; 5 in Oryza sativa and O. glaberrima: many sources, many
+genes, one mechanism?. BMC plant biology 13(1):32
+
+57
+
+RAHMAN MA, THOMSON MJ, DE OCAMPO M, EGDANE J, ISMAIL AM. 2016.
+Exploring novel genetic sources of salinity tolerance in rice through molecular and
+physiological characterization. Annals of botany 117(6):1083-97.
+
+RAJENDRAN K, TESTER M, ROY SJ. 2008. Quantifying the three main components of
+salinity tolerance in cereals. Plant, Cell and Environment 32:237-49.
+
+REN ZH, GAO JP, LI LG, CAI XL, HUANG W, CHAO DY, ZHU MZ, WANG ZY,
+LUAN S, LIN HX. 2005. A rice quantitative trait locus for salt tolerance encodes a
+sodium transporter. Nature genetics. 37(10):1141-6.
+
+RENGASAMY P. 2002. Transient salinity and subsoil constraints to dryland farming in
+Australian sodic soils: an overview. Australian journal of experimental agriculture
+42(3):351-61.
+
+ROY SJ, TUCKER EJ, TESTER M. 2011. Genetic analysis of abiotic stress tolerance in
+crops. Current Opinion in Plant Biology 14:232-9.
+
+SARKAR RK, REDDY JN, SHARMA SG, ISMAIL AM. 2006. Physiological basis of
+submergence tolerance in rice and implications for crop improvement. Current
+Science. 10:899-906.
+
+SEPTININGSIH EM, PAMPLONA AM, SANCHEZ DL, NEERAJA CN, VERGARA
+GV, HEUER S ISMAIL AM, MACKILL DJ. 2009. Development of submergence
+tolerant rice cultivars: the Sub/ locus and beyond. Ann Bot 103:151-160
+
+SEPTININGSIH EM, IGNACIO JCI, SENDON PMD, SANCHEZ DL, ISMAIL AM,
+MACKILL DJ. 2013. QTL mapping and confirmation for tolerance of anaerobic
+conditions during germination derived from the rice landrace Ma-Zhan Red. Theor.
+Appl. Genet. 126: 1357-1366.
+
+SESHU DV, KRISHNASAMY V, SIDDIQUE SB. 1988. Seed vigor in rice. In: Rice seed
+health. Manila (Philippines): International Rice Research Institute, pp 315-329
+
+SETTER TL, ELLA ES. 1994. Relationship between coleoptile elongation and alcoholic
+fermentation in rice exposed to anoxia. I. Importance of treatment conditions and
+different tissues. Annals of Botany 74(3):265-71
+
+SHI Y, SHEN Y, KANG E, LI D, DING Y, ZHANG G, HU R. 2007. Recent and future
+climate change in northwest China. Climatic change 80(3):379-93.
+
+SINGH RK, GREGORIO GB, ISMAIL AM. 2008a. Breeding rice varieties with tolerance
+to salt stress. J Indian Soc Coastal Agric Res 26:16-21
+
+58
+
+SINGH N, DANG TT, VERGARA GV, PANDEY DM, SANCHEZ D, NEERAJA CN,
+SEPTININGSIH EM, MENDIORO M, TECSON-MENDOZA EM, ISMAIL AM,
+MACKILL DJ. 2010. Molecular marker survey and expression analyses of the rice
+submergence-tolerance gene SUB1A. Theoretical and Applied Genetics
+121(8):1441-53.
+
+SINGH, R. K., AND T. J. FLOWERS, 2010: The physiology and molecular biology of the
+effects of salinity on rice. In: M. Pessarakli, ed. Handbook of Plant and Crop
+Stress, pp. 901-942. Taylor and Francis, Boca Raton, FL, USA.
+
+SINGH S, MACKILL DJ, ISMAIL AM. 2011. Toleranceoflonger-termpartial stagnant
+flooding is independent of the SUB1 locus in rice. Field Crops Research 121:311—
+32
+
+SINGH US, DAR MH, SINGH S, ZAIDI NW, BARI MA, MACKILL DJ, COLLARD
+BC, SINGH VN, SINGH JP, REDDY JN, SINGH RK. 2013. Field performance,
+dissemination, impact and tracking of submergence tolerant (Sub1) rice varieties in
+South Asia. SABRAO Journal of Breeding & Genetics. 2013 Mar 1;45(1).
+
+SUDHARANI M, REDDY PR, JAYALAKSHMI V. 2012. A Comprehensive Review On
+“Genetic Components Of Salinity Tolerance In Rice (Oryza Sativa L.)”. Int J Appl
+Biol Pharm Technol. 3:312-22.
+
+THOMSON MJ, DE OCAMPO M, EGDANE J, RAHMAN MA, SAJISE AG,
+ADORADA DL, TUMIMBANG- RAIZ E, BLUMWALD E, SERAJ ZI, SINGH
+RK, GREGORIO GB. 2010. Characterizing the Salto! quantitative trait locus for
+salinity tolerance in rice. Rice 3(2-3):148-60
+
+TUONG TP, PABLICO PP, YAMAUCHI M, CONFESOR R, MOODY K. 2000.
+Increasing water productivity and weed suppression of wet seeded rice: effect of
+water management and rice genotypes. Experimental Agriculture 36(01):71-89
+
+TURKAN I, DEMIRAL T. 2009. Recent developments in understanding salinity tolerance.
+EnviromMental and Experimental Botany 67(1):2-9.
+
+VOESENEK LA, COLMER TD, PIERIK R, MILLENAAR FF, PEETERS AJ. 2006. How
+plants cope with complete submergence. New phytologist 170(2):213-26.
+
+WATERS I, MORRELL S, GREENWAY H, COLMER TD. 1991. Effects of anoxia on
+wheat seedlings II. Influence of O2 supply prior to anoxia on tolerance to anoxia,
+alcoholic fermentation, and sugar levels. Journal of Experimental Botany
+42(11):1437-47.
+
+WASSMANN R, JAGADISH SV, SUMFLETH K, PATHAK H, HOWELL G, ISMAIL
+A, SERRAJ R, REDONA E, SINGH RK, HEUER S. 2009. Regional vulnerability
+
+59
+
+of climate change impacts on Asian rice production and scope for adaptation.
+Advances in Agronomy 102:91-133.
+
+WITCOMBE JR, HOLLINGTON PA, HOWARTH CJ, READER S, STEELE KA. 2008.
+Breeding for abiotic stresses for sustainable agriculture. Philosophical Transactions
+of the Royal Society B: Biological Sciences 363(1492):703-16.
+
+XU K, MACKILL DJ. 1996. A major locus for submergence tolerance mapped on rice
+chromosome 9. Molecular Breeding 2(3):219-24
+
+XU Y, 1997. Quantitative trait loci: In A Separating, pyramiding, and cloning. Plant Breed.
+Rev. 15:85-139. [ebookview]. Retrieved June 3 2017.https://books. google.com. ph/
+
+XU K, XU X, FUKAO T, CANLAS P, MAGHIRANG-RODRIGUEZ R, HEUER S,
+ISMAIL AM, BAILEY-SERRES J, RONALD PC, MACKILL DJ. 2006. Sub/A is
+an ethylene-response-factor-like gene that confers submergence tolerance to rice.
+Nature 442(7103):705-8.
+
+YAMAUCHI M, AGUILAR AM, VAUGHAN DA, SESHU DV. 1993. Rice (Oryza sativa
+L.) germplasm suitable for direct sowing under flooded soil surface. Euphytica.
+67(3):177-84.
+
+YEO AR, FLOWERS TJ. 1983. Varietal differences in the toxicity of sodium ions in rice
+leaves. Physiologia Plantarum 59(2):189-195.
+
+YEO AR, FLOWERS TJ. 1986. Salinity Resistance in Rice (Oryza sativa L.) And a
+Pyramiding Approach to Breeding Varieties for Saline Soils. Australian Journal of
+Plant Physiology 13(1):161-73.
+
+Yeo AR, Yeo ME, Flowers TJ. 1987. The contribution of an apoplastic pathway to sodium
+uptake by rice roots in saline conditions. Journal of Experimental Botany
+38(7):1141-53.
+
+YEO AR, YEO ME, FLOWERS SA, FLOWERS TJ. 1990. Screening of rice (Oryza sativa
+L.) genotypes for physiological characters contributing to salinity resistance, and
+their relationship to overall performance. TAG Theoretical and Applied Genetics
+79(3):377-84.
+
+YOSHIDA S, FORNO DA, COCK JH, GOMEZ KA. 1976. Laboratory manual for
+physiological studies of rice. Los Ban4os (Philippines): International Rice
+Research Institute.
+
+ZHANG GY, GUO Y, CHEN SL, CHEN SY. 1995. RFLP tagging of a salt tolerance gene
+in rice. Plant Science 110(2):227-34.

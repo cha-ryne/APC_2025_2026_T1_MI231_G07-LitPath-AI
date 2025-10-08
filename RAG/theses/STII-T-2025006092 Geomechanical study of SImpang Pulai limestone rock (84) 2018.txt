@@ -417,7 +417,6 @@ On, = normal stress
 
 c = cohesion
 
-12
 
 y = angle of internal friction of the material
 
@@ -453,7 +452,6 @@ petrophysical data such as: acoustic slowness, porosity, and bulk density are co
 
 laboratory-derived rock mechanical properties [20].
 
-13
 
 Soroush H., & Qutob H., (2011) added that laboratory approach to measure the
 “dynamic” moduli on a core sample through Acoustic Travel Time (ATT) method cab be done
@@ -463,7 +461,6 @@ correlations have been proposed in the literature for this purpose, although eac
 
 developed in a specific formation and hence not appropriate to be used in other areas [22].
 
-14
 
 CHAPTER 3
 
@@ -572,7 +569,6 @@ The Mohr-Coulomb strength criterion was also used for accurate rock failure anal
 
 Equation 2.4 was used to establish the equation for this failure envelope.
 
-18
 
 3.5 Unconfined Compressive Strength (UCS) Test
 
@@ -621,7 +617,6 @@ This can be also supported by looking at the density of the samples. The twelve 
 
 an average density of 2.84 g/cm’. This high density suggests that the sample formed from a
 
-20
 
 larger carbonate buildup that results into a high confining pressure environment and just
 
@@ -665,7 +660,6 @@ the density increases (decreases) and shear wave travel time also increases (dec
 
 density increases (decreases). See Apendix A for complete results of the analysis done in the
 
-21
 
 cores. The samples density ranges from 2.83 to 2.9 g/em’ higher than the normal density range
 of limestone which is 2.3 to 2.7 g/cm?, These suggests that the samples are not pure limestone
@@ -692,12 +686,9 @@ is defined as the unconfined compressive strength which is one of the mechanical
 
 that this study needs to determine.
 
-22
 
 Load (kN)
-3
 
-88
 
 ~ | Breakpoint|Stress
 
@@ -723,7 +714,6 @@ sudden decrease before increasing again. This sudden decrease is caused by an ex
 
 crack in the core sample.
 
-23
 
 
 iss Internal Crack R io)
@@ -753,9 +743,7 @@ its brittle fracture. After that sudden increase, the break point load was reach
 
 totally breaks and slides along a line.
 
-24
 
-100
 
 ‘Strain (%)
 
@@ -773,7 +761,6 @@ internal crack. This will continue until it reaches the break point stress where
 
 fracture completely.
 
-25
 
 Maximum Stress ‘Se
 x4 {
@@ -787,7 +774,6 @@ Internal Crack Response|
 zi io
 
 ‘Load (KN)
-8
 
 05 1 15 2 25 3
 ‘Strain (%)
@@ -805,7 +791,6 @@ the point where the crack breaks along the line. This is called as the break poi
 
 seen in the figure above as the sudden drop of the load.
 
-26
 
 jee Maximum Stipss | | fia nape
 
@@ -815,18 +800,12 @@ jee Maximum Stipss | | fia nape
 65 { } }
 60 — } ! | 1
 55 t
-50
 g45 ;
 340 { Z
 $35 | +
 |
 |
 
-30
-25
-20
-15
-10
 
 |
 |
@@ -835,7 +814,6 @@ A | |
 t
 | + +
 Internal Crack|Response | Breakpoint sf :
-3
 
 35 4
 
@@ -858,7 +836,6 @@ stress since load will drop when it reaches the maximum stress due to the effect
 
 crack.
 
-27
 
 a + ——
 | | | |
@@ -912,7 +889,6 @@ The triaxial test results were used to get the Young’s Modulus and produce the
 
 identify the failure envelope of the core samples.
 
-29
 
 i
 
@@ -929,7 +905,6 @@ sample undergone triaxial test with different confining pressure. All of these a
 
 shown as circles in Figure 4.10.
 
-30
 
 Table 4.2: Values from Mohr’s Circle Set 1
 
@@ -963,7 +938,6 @@ The static Young’s Modulus of the three samples were also determined to be 9.3
 14.6 GPa and 17.2 GPa respectively. Young’s Modulus describe the stiffness of the material,
 meaning the higher the Young’s Modulus the stiffer the material. The higher modulus of the
 
-31
 
 samples was caused by the higher axial stress due to the effect of confining pressure. Confining
 
@@ -980,7 +954,6 @@ different confining pressure and the results of principal stresses were graphica
 
 circles in Figure 4.11.
 
-32
 
 Table 4.3: Results of Triaxial Test for Set 2
 Angle of
@@ -1014,7 +987,6 @@ static Young’s modulus of the three samples are 10.1 GPa, 15.1 GPa and 11.9 GP
 
 The higher modulus of the samples was caused by the higher axial stress due to the effect of
 
-33
 
 confining pressure. When confining pressure increases, the core sample will become “longer”,
 
@@ -1026,7 +998,6 @@ SPS-1, SPS-5 and SPS-6 cores for triaxial testing.
 
 Figure 4.13: Samples After Triaxial Test (Set 1)
 
-34
 
 Figure 4.14: Samples After Triaxial Test (Set 2)
 
@@ -1042,7 +1013,6 @@ UCS = 0.0202v, — 49.545 (4.3)
 
 UCS = 0.0257, — 20.139 (4.4)
 
-35
 
 Uniaxial Compressive Stregth (KPa)
 
@@ -1065,7 +1035,6 @@ of UCS to vs is 67% while UCS to v; is 78%. Positive relationship means that UCS
 
 linearly with increasing compressional wave velocity and shear wave velocity. The positive
 
-36
 
 relationship of UCS to elastic waves velocity is due to the fact that the effect of porosity and
 
@@ -1084,18 +1053,12 @@ UCS = 1.0317Eq — 6.9337 (4.5)
 &
 =
 &
-2
 a
-2
 G
-8
 E
 §
 =]
-3
-8
 =
-2
 
 20 30 40 50
 Dynamic Young's Modulus (GPa)
@@ -1111,7 +1074,6 @@ compressive strength (UCS) and dynamic Young’s modulus (Eq). Figure 4.17 showe
 
 there’s a positive linear relationship between UCS and Eq meaning UCS increases linearly as
 
-37
 
 the Eu increases. The strength of this linear relationship is 75% (R=0.75). Like the UCS to vp
 and v; correlation, the same explanation can be applied here to describe the positive relationship
@@ -1133,44 +1095,27 @@ z
 &
 &
 re
-3
-3
-3
 Ss
 bs
 od
 )
-2
-5
 o
 g
-2
 Es
-5
 
 2000 3000 4000
 P-wave Velocity (m/s)
 
 Figure 4.18: Linear Correlation between E; and vp
 
-38
 
 =e
 &
 a
 re
-3
-3
-3
-8
 =
 a
-30
-2
-5
-3
 g
-2
 &
 a
 
@@ -1198,7 +1143,6 @@ changed and decreased by 1.5% as the crack aperture increased, suggesting that t
 of natural fractures affect the vp since vp cannot propagate well through the material with gaps
 [30,36].
 
-39
 
 4.3.4 Es to Ey Correlation
 
@@ -1210,7 +1154,6 @@ E, = 0.1393E, + 5.0149 (4.8)
 
 Static Young's Modulus (GPa)
 
-10
 
 20 30 40 50 60 70
 
@@ -1229,7 +1172,6 @@ reason why the results of static tests were inconsistent than the results of dyn
 
 resulted to a lower correlation coefficient. The static method, which is necessary for
 
-40
 
 quantifying the rock’s deformability, is more sensitive to the presence of discontinuities in the
 rock [30]. The more discontinuities in the rock, the lower the Young’s modulus value and the
@@ -1274,13 +1216,11 @@ Es
 versus 4.7 E, = 0.004, + 1.706 0.29 0.0812
 Vs
 
-41
 
 Es
 versus 4.8 E, = 0.1393Eg + 5.0149 0.33 0.1097
 Ea
 
-42
 
 
 CHAPTER 5
@@ -1313,7 +1253,6 @@ due to the error in the experiment, all the newly developed correlations will ha
 
 error in predicting UCS and Es.
 
-43
 
 5.2 Recommendations
 
@@ -1334,7 +1273,6 @@ e Investigation of the differences of the static and dynamic geomechanical prope
 
 from the laboratory and the log-based estimate geomechanical properties.
 
-44
 
 REFERENCES
 
@@ -1371,7 +1309,6 @@ in carbonates: Journal of Geophysical Research, 114.
 properties of carbonates: Effects of rock texture and implications for fluid substitution,
 Geophysics, 73, B51-B65.
 
-45
 
 [9] Kenter, J. A. M., Braaksma, H., Verwer, K., and van Lanen, X. M. T., (2007) Acoustic
 behavior of sedimentary rocks: Geological properties versus Poisson’s ratios: The Leading
@@ -1406,7 +1343,6 @@ Thin Section Analysis. Society of Petroleum Engineers. doi:10.2118/187885-MS
 [17] Ruzyla, K., Jezek, D. I., (1987), Staining method for recognition of pore space in thin and
 polished sections: Journal of Sedimentary Petrology, v. 57, p. 777-778.
 
-46
 
 [18] Folk, R. L., (1959), Practical petrographic classification of limestones: AAPG Bulletin, v.
 43, p. 1-38.
@@ -1445,7 +1381,6 @@ Rock Engineering.
 [26] Altindag R. & Guney A. (2010, July 2). Predicting the relationships between brittleness
 and mechanical properties (UCS, TS and SH) of rocks. Vol. 5(16), p. 2107 — 2118
 
-47
 
 [27] Wang, D., Nawrocki, P. A., Jebbouri, A., Hozayen, M., Radwan, E. S., & Zhang, X. (2015,
 January 1). Geomechanical Study of Fractured Carbonate Reservoir — Part I, Rock Testing
@@ -1483,7 +1418,6 @@ and physical properties in sedimentary rocks, Journal of Petroleum Science and E
 
 Volume 51, Issues 3-4, p. 223-237
 
-48
 
 [35] Mahdizadeh M., Ahangari K., Javadi A., Afzal P., & Yasrebi A. B. (2016) Determination
 of Relationship Between Uniaxial Compressive Strength (UCS) And Rock Densities Using

@@ -236,7 +236,6 @@ China. Shao and Hu (1988) described chemical emasculation as the physiological m
 
 sterility developed by spraying rice plants with chemicals, such as gametocides, which
 
-10
 
 induce stamen sterility without destroying the pistil. Further, they noted that this
 approach is a promising alternative for the development of male sterile lines wherein vast
@@ -290,7 +289,6 @@ were divided into nine clusters. Meanwhile, the pattern of group assemblage
 
 substantiated the existence of a significant amount of variability.
 
-12
 
 Diversity analysis through the use of pedigree information by calculating
 coancestry or coefficient of parentage (COP) is an indirect (He et al., 2012) and
@@ -317,7 +315,6 @@ acid sequences among different individuals (Mondini et al., 2009) and are less i
 
 by temporal, spatial and environmental conditions (Wang et al., 2006). Some of the
 
-13
 
 widely used molecular markers for diversity studies include SSRs (Garris et al., 2005;
 Wang et al., 2006; Yadav et al., 2013; Xie et al., 2014) and SNPs (Xie et al., 2012;
@@ -344,7 +341,6 @@ provide the most accurate quantification of genetic distance. However, Xu et al.
 
 revealed no clear correlation among the three measures. They studied maintainer and
 
-14
 
 restorer lines in the Philippine hybrid breeding programs and showed that these lines
 were genetically distinct. Yet, there is a weak correlation between pedigree and
@@ -371,7 +367,6 @@ during the initial growth stages since vigor is exhibited at the initial seedlin
 
 is retained only until the heading stage, but the growth rate was minimal at the ripening
 
-15
 
 stage. Second, conflicting data on the heterosis of net assimilation rate (NAR) and
 photosynthesis of F, hybrids necessitate further analysis of these activities. Lastly, the
@@ -398,7 +393,6 @@ traits of agronomic performance; (iii) use a sample population that allows ident
 
 of the genetic components, including dominance, overdominance, and epistasis, and (iv)
 
-16
 
 identify markers that can detect the genetic effects of any region in the genome. Further,
 the researchers evaluated the genetic composition of yield and yield component traits of
@@ -425,7 +419,6 @@ grain weight, and brown grain width, but significant negative heterosis for grow
 
 flag leaf area, panicle length, number of panicles per plant, number of grains per panicle,
 
-17
 
 grain yield, and brown grain length through the analysis of 15 hybrids from half-diallel
 crosses of six rice cultivars.
@@ -453,7 +446,6 @@ between good and poor combiners (Akter et al., 2010). Independent studies of Pra
 
 al. (2006), Saleem et al. (2010), Swamy et al. (2003), and Sao and Motiramani (2006)
 
-18
 
 used line-by-tester mating design to evaluate combining ability of different rice inbred
 lines. The studies concluded the preponderance of non-additive gene action for the
@@ -480,7 +472,6 @@ studied seven high yielding rice genotypes and their 21 hybrids where they revea
 
 predominance of both additive and non-additive gene actions with respect to different
 
-19
 
 traits considered. Additive genetic variance was significant for hundred grain weight,
 kemel length, kernel L/B ratio, and kernel length after cooking, whereas grain yield,
@@ -509,7 +500,6 @@ Melchinger and Gumber (1998) proposed the following steps for the construction
 
 of heterotic groups: (1) dividing the germplasm into groups based on genetic similarity;
 
-20
 
 (2) identifying parental lines from each subgroup to be used in a diallel cross; (3)
 evaluation of parental lines and generated hybrids in replicated trials; and (4) selection of
@@ -536,7 +526,6 @@ Hence, germplasms cannot be accurately classified into groups based solely on mo
 
 marker data. This justifies the need for field trials in the classification of heterotic groups.
 
-21
 
 Using agronomic data Badu-Apraku et al. (2005) clustered 65 extra-early
 maturing maize inbred lines into four clusters. However, as further noted by the authors,
@@ -585,7 +574,6 @@ Molecular Marker Applications Laboratory (MMAL) at IRRI for SNP genotyping using
 
 Illumina 6K Infinium platform.
 
-23
 
 Out of 182 elite inbred lines, ten inbred lines (Table 1) were chosen as parental
 lines for half-diallel mating to generate 45 hybrid crosses. The parental lines were
@@ -616,7 +604,6 @@ Line 9 RPP6-25
 Line 10 SN761
 
 
-24
 
 Field Trials
 
@@ -644,7 +631,6 @@ a. Days to 50% heading — measured as number of days from soaking to the time
 
 when 50% of the entries within a plot have exserted 50% of a plant’s panicle.
 
-25
 . Plant height (cm) — measured as the height from ground level to the top of the
 tallest panicle of three randomly selected plants at maturity.
 Productive tillers — measured as the number of productive tillers per plant of three
@@ -680,7 +666,6 @@ calibrated from yield per plot into yield per hectare. It was calculated using t
 
 following equation:
 
-26
 
 [Yield per plot (g) * (100 e ] *10
 
@@ -708,7 +693,6 @@ environment; b; is the effect of the I" block or replication within each environ
 
 while the replication-within-environment effect was considered as a random factor.
 
-27
 
 Genetic Distance and Cluster Analysis
 
@@ -736,7 +720,6 @@ was generated using the unweighted paired group method using arithmetic averages
 
 version 2.1 (Rohlf, 2000).
 
-28
 
 Combining Ability
 
@@ -761,7 +744,6 @@ Using the yield (kg ha‘) of hybrids, hybrid performance was evaluated against 
 
 respective parents and against check varieties using the following formulas:
 
-29
 
 . . F, — MP
 Midparent heterosis or MPH (%) = ———— x 100
@@ -789,7 +771,6 @@ Using Pearson product-moment correlation option of STAR version 2.0.1
 
 measured including: SNP marker-based genetic distance and quantitative agronomic
 
-30
 
 traits-based genetic distance, GCA and SCA; GCA and F1 yield; SCA and F1 yield; and,
 parent yield and hybrid yield. In addition, the genetic distance estimates were measured
@@ -820,7 +801,6 @@ Meanwhile, Badu-Apraku et al. (2013b) proposed grouping the inbred lines based
 
 on the GCA of multiple traits, also known as the HGCAMT method. In this method, the
 
-31
 
 GCA effects of different traits were standardized (mean of zero and standard deviation of
 one) used together simultaneously to identify the heterotic groups.
@@ -864,7 +844,6 @@ among the selected inbred lines resembles the genetic relationship within the or
 
 population. The five groups within the sample population were SNP-G1 (lines 1 and 2),
 
-33
 
 SNP-G2 (lines 3 and 8), SNP-G3 (lines 4 and 10), SNP-G4 (lines 5 and 6), and SNP-G5S
 
@@ -882,7 +861,6 @@ average of 0.1676. Further, about 81% of the original population have values gre
 
 0.15 (Fig 2A). Meanwhile, 87% of the sample population have values greater than 0.15
 
-34
 
 (Fig 2B). The genetic distance within the sample population has an average of 0.1623,
 
@@ -905,7 +883,6 @@ the selection of ten inbred lines with the same allelic distribution as the orig
 
 population of 182 inbred lines.
 
-35
 
 Also, the similarity of genetic clusters and the parallel allelic frequency
 distribution between the two populations indicates that the sample population was a
@@ -933,7 +910,6 @@ while the inter-group differentiation ranges from 0.1581 to 0.1828, with an aver
 
 0.1704.
 
-36
 
 Table 2. Genetic distance estimates of ten inbred lines based on CS Chord Genetic
 Distance of 6000 SNP markers summarized by hybrid groups and by intra- and
@@ -990,7 +966,6 @@ SLIVUL OINONOUDV FZAILVLILNVNO
 ‘9107 uosvas Aup ‘eunde’] ‘soueg soy] pue efiog eaonn ‘Zzounyy] Ssosoe syies} ofwoUoIe sAyeWUeNb
 Jo} spuqhy cp pue soul] poqui QO, JO (YAONY) d0UeLIeA Jo siskfeue pourquiod oy} Wo sorenbs jo wins ues] “¢ F192
 
-38
 
 Absence of significant effects of genotype-by-environment interaction indicated
 that any disparity between the two locations (Los Bafios, Laguna and Mufioz, Nueva
@@ -1018,9 +993,7 @@ Nueva Ecija caused all the genotypes to have shorter number of days to flowering
 
 the conditions in Los Bafios, Laguna.
 
-39
 
-88
 
 2 87
 
@@ -1028,13 +1001,11 @@ the conditions in Los Bafios, Laguna.
 = 85 = Checks
 & 84 @ Parents
 
-283
 & 83 = Crosses
 
 Q 82
 ® Overall
 
-81
 
 Location
 
@@ -1054,7 +1025,6 @@ distance estimates, which were further utilized to construct a dendrogram of the
 
 relationships within the sample population (Fig. 4).
 
-40
 
 Three clusters were generated upon truncation of the dendrogram at 11.30. It must
 be noted that there are noticeable differences between the groupings generated from the
@@ -1074,7 +1044,6 @@ The summarized genetic diversity values based on the seven agronomic traits are
 
 presented in Table 4. The genetic diversity based on agronomic data ranged from 7.1685
 
-41
 (Line 4 vs. Line 10) to 14.6886 (Line 1 vs. Line 2), with an average of 10.8566. Similar
 to the results from SNP marker data analysis, intra-group differentiation was smaller,
 
@@ -1104,7 +1073,6 @@ positively correlated at r = 0.3858. According to the standards set by Taylor (1
 
 value indicates a modest correlation between the phenotypic and molecular data.
 
-42
 Contrary to this, Xu et al. (2002) found a weak correlation between the molecular and
 phenotypic diversity estimates of maintainer and restorer lines of IRRI and PhilRice
 using 37 SSR markers.
@@ -1154,7 +1122,6 @@ SLIVUL OINONOUDV SAILVLILNVNO
 “9107 Uoseas Aip ‘eunde’] ‘soueg so] pue efiog
 PANN ‘ZOUNJ] $SO1De 111] O1WIOUOITE oANJEUENb Aq soul] PaiquI Us} Jo sayeUINS (YOO) ArlfIqy SuIUIquIOD yeIoUdy ‘¢ aIqQeL,
 
-44
 
 Significance of GCA and SCA effects indicates the relevance of additive and
 dominance genetic effects in trait expression, which further relates to the performance of
@@ -1182,7 +1149,6 @@ for contributing earliness, short stature, and productivity, in terms of high nu
 
 tillers, spikelets, and percentage for filled spikelets.
 
-45
 
 Yield GCA and yield means are also listed in Table 5. Yield GCA ranges from -
 766.31 (Line 6) to 1052.49 (Line 2). Remarkably, the highest yielding inbreds, Line 3
@@ -1208,7 +1174,6 @@ spikelets, and grain yield. However, these crosses with the most desirable SCA v
 
 not show significant differences.
 
-46
 
 Table 6. Top five crosses with most desirable SCA estimates by trait, its per se
 performance, the GCA effects of parental lines, and the GCA status of crosses
@@ -1247,7 +1212,6 @@ Line 6 x Line 9 1869.83 260.45 -108.95 57.99 LxH®
 Line 1 x Line 9 1833.39 225.65 -110.59 57.99 LxH*®
 
 
-47
 
 Table 6. Continued...
 
@@ -1285,7 +1249,6 @@ Line 9, Line 1 x Line 2, Line 4 x Line 7, and 1 Line x Line 9 had the highest SC
 
 estimates for yield. Notably, these combinations ranked first, fifth, second, fourth, and
 
-48
 
 seventh, respectively, in terms of grain yield. Moreover, only 17 out of 45 hybrid crosses
 gave positive SCA effects for yield. The lowest SCA value was recorded for the cross
@@ -1312,7 +1275,6 @@ Based on the GCA of crosses, the results of this study are in conformity with th
 
 of Saidaiah et al. (2010) and Hasan et al. (2013).
 
-49
 
 The weak association between yield GCA of parental lines and yield SCA of
 crosses was also revealed by Pearson’s coefficient at r = -0.0850. Meanwhile, both GCA
@@ -1339,7 +1301,6 @@ expected since parental performance was likely to reflect the yielding ability o
 
 (Young and Virmani, 1990; Sun et al., 2002), however, the cross between highest
 
-50
 
 yielding inbreds, Line 3 and Line 4, also had a relatively low yield (4573.39 kg ha’).
 Nonetheless, Line 2 x Line 7, the best hybrid cross with a yield of 10408.33 kg ha™!, was
@@ -1374,7 +1335,6 @@ Line 7 x Line 9 5355.70 27.75 14.76 29.11 34.85
 
 a=-_,,Xe_oos——ssssssaaeaSsSswmmareeses ess
 
-51
 
 Table 7. Continued...
 
@@ -1412,7 +1372,6 @@ Line 1 x Line 8 3381.23 -12.76 -17.42 -18.49 -14.87
 *Mid-Parent Heterosis; > Better-Parent Heterosis; ‘Standard Heterosis over Inbred check;
 4 Standard Heterosis over Hybrid check
 
-52
 
 There were no significant differences in the yield of the ten top yielding hybrids.
 Out of the ten top high-yielding hybrids, four were derived from crosses between two
@@ -1440,7 +1399,6 @@ From the results of the study, Line 2 x Line 7, Line 6 x Line 9, Line | x Line 2
 
 Line 2 x Line 10, and Line 1 x Line 9 were the best performing hybrids based on MPH
 
-53
 
 and BPH percentages. Among the 45 hybrids, 39 had higher yield than the mid-parental
 value while 34 yielded higher than their respective better-performing parent. However,
@@ -1466,7 +1424,6 @@ Council. Hence, desirable hybrids can be developed for commercial production usi
 
 germplasm employed in this study.
 
-54
 
 Genetic Distance, Hybrid Performance,
 SCA and Heterosis
@@ -1494,7 +1451,6 @@ between parental lines, whether based on molecular or phenotypic data, cannot pr
 
 an accurate measure in the changes in the phenotypic traits of the resulting hybrid.
 
-55
 
 Therefore, for this set of inbred lines, genetic distance cannot be used to predict hybrid
 
@@ -1528,7 +1484,6 @@ heterosis; ’ standard heterosis over inbred check; * standard heterosis over h
 
 ' specific combining ability, " Single Nucleotide Polymorphism
 
-56
 
 There were also no strong correlations found between the genetic distance
 estimates and the different forms of heterosis. The highest relationship was between
@@ -1555,7 +1510,6 @@ offers the maximum potential to produce offsprings with desirable F, performance
 
 heterosis. Therefore, due to the narrow divergence of parental lines, the actual overview
 
-57
 
 of the role of genetic divergence to F, agronomic performance, heterosis, and combining
 
@@ -1581,7 +1535,6 @@ providing the best avenues to classify inbred lines into heterotic groups. Table
 
 the different heterotic groupings based on the different grouping schemes.
 
-58
 
 Table 9. Grouping assignments of ten rice inbred lines from the germplasm collection of
 PhilRice CES and PhilRice-UPLB collaborative project and breeding efficiency
@@ -1595,13 +1548,10 @@ SDHI/SDHH' © ne Ee SEH)
 HGCAMT? —_1,3,5,6 8 2,7,10 4,9 34.29
 1,2, 3,4,
 SCA® 5,6,7,8, 10 44.44
-9
 1, 2, 3, 4,
 HSGCA‘ 5,6,7,8, 10 44.44
-9
 1,3, 4,5,
 Yield per se 6,7,8,9, 2 66.67
-10
 SNP° Marker 1,2 38 410 56 79 32.50
 Quantitative 1,3, 4, 5, 9 2 58.82
 
@@ -1616,7 +1566,6 @@ Two heterotic groups were identified using any of the measures of heterosis
 
 (MPH, BPH, SDHI, and SDHH), SCA, HSGCA, and yield per se. Both heterosis and
 
-59
 
 yield per se classified Line 2 in the second group while the rest of the inbred lines were
 categorized in the first group; whereas, both SCA and HSGCA solely classified Line 10
@@ -1644,7 +1593,6 @@ the breeding efficiency of the clusters based on SNP marker data and agronomic d
 
 were listed in the table. The phenotype-based groupings identified 10 out of 17 inter-
 
-60
 
 group crosses with an efficiency of 58.82%. Notably, the groupings identified using
 agronomic data gave one of the highest efficiencies. Meanwhile, the groups identified
@@ -1696,7 +1644,6 @@ groupings of the ten inbred lines. Moreover, the distance estimates were moderat
 
 correlated; nonetheless, intra-group differentiation was consistently higher than inter-
 
-62
 
 group differentiation which was expected since cluster analysis groups individuals with
 
@@ -1727,7 +1674,6 @@ data were evaluated for their correlation to hybrid performance, heterosis, and 
 
 combining ability. It was revealed that there is a weak to moderate correlations F,
 
-63
 
 performance, heterosis and yield combining ability to the different genetic distance
 estimates. These findings can be attributed to narrow genetic diversity of inbred lines
@@ -1756,7 +1702,6 @@ on both F, yield per se and heterosis was the most desirable approach to groupin
 
 parental inbreds used. Since the ten inbred lines were fairly representative of the original
 
-64
 population of 182 inbred lines as revealed by the similarity in cluster structure and allelic
 frequency distribution between the two populations, therefore, it can be presumed that the
 original population of 182 inbred lines must also be clustered into two heterotic groups.
@@ -1789,7 +1734,6 @@ yield and yield component traits which can possibly generate better predictive v
 
 hybrid performance and heterotic groupings.
 
-66
 
 Also, due to the limited amount of resources, the study was only able to evaluate
 the groupings of ten rice inbred lines within a population of 182 rice inbred lines. Future
@@ -1847,7 +1791,6 @@ AKINLAWE, R.O. AND ADEROUNMU. 2013b. Combining ability, heterotic
 patterns and genetic diversity of extra-early yellow inbred under contrasting
 environments. Euphytica 192:413-433.
 
-68
 
 BADU-APRAKU, B., ANNOR, B., OYEKUNLE, M., AKINWALE, R.O.,
 FAKOREDE, M.A.B., TALABI, A.O., AKAOGU, I.C., AND FASANMADE, Y.
@@ -1897,7 +1840,6 @@ DUVICK. D.N. 1999. Heterosis: feeding people and protecting natural resources. p
 Pandey (ed.), American Society of Agronomy, Inc., Crop Science Society of
 America, Inc., Soil Science Society of America, Inc., Madison, Wisconsin.
 
-69
 
 FAN, X.M., TAN, J., YANG, J.Y., AND CHEN, H.M. 2004. Combining ability and
 heterotic grouping of ten temperate, subtropical and tropical quality maize
@@ -1946,7 +1888,6 @@ hybrid rice germplasm measured by molecular markers. Rice Science 19(3):193-
 INTERNATIONAL RICE RESEARCH INSTITUTE. 2014. Statistical tool for
 agricultural research version 2.0.1: user’s manual.
 
-70
 
 JOSHI, S.P. BHAVE, S.G., CHOWDARI, K.V., APTE, G.S., DHONUKSHE, B.L.
 LALITHA, K., RANJEKAR, P.K. AND GUPTA, V.S. 2001. Use of DNA
@@ -1995,7 +1936,6 @@ The relationship of heterosis and genetic divergence in maize. Genetics 52:130-
 MONDINI, L., NOORANI, A., AND PAGNOTTA, M.A. 2009. Assessing plant genetic
 diversity by molecular tools. Diversity 1:19-35.
 
-71
 
 MURRAY, M.G. AND THOMPSON, W.F. 1980. Rapid isolation of high molecular
 weight plant DNA. Nuclein Acids Research 8:4321-4326.
@@ -2044,7 +1984,6 @@ RAJU, D. 2014. Heterotic grouping and patterning of quality protein maize
 inbreds based on genetic and molecular marker studies. Turkish Journal of
 Biology 38:10-20.
 
-72
 
 REDDY, M.R., RAJU, C.S., SRAVANI, D., REDDY, T.D., AND REDDY, G.N. 2012.
 Heterosis for yield and kernel size in aromatic rice (Oryza sativa L.). Annals of
@@ -2144,7 +2083,6 @@ PAZ, M.A. 2012. Genetic diversity and structure of indica rice varieties from tw
 heterotic pools of Southern China and IRRI. Plant Genetic Resources:
 Characterization and Utilization 10(3):186-193.
 
-74
 
 XIE, F., HE, Z., ESGUERRA, M.Q., QUI, F., AND RAMANATHAN, V. 2014.
 Determination of heterotic groups for tropical indica hybrid rice germplasm.

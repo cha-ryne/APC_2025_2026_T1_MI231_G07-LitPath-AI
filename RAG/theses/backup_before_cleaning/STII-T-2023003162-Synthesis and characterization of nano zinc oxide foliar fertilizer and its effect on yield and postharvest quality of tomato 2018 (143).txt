@@ -1,0 +1,2800 @@
+SYNTHESIS AND CHARACTERIZATION OF NANO ZINC OXIDE FOLIAR FERTILIZER AND ITS EFFECT ON YIELD AND POSTHARVEST QUALITY OF TOMATO
+
+QUINCY ESTOPIN YBAÑEZ
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+Master of Science in Soil Science
+
+JUNE 2018
+
+ABSTRACT
+
+This research work primarily aimed to optimize the synthesis parameters of nano
+zinc oxide using a simple precipitation technique that is ideal for large-scale and cost-
+effective production. The results of the characterization tests verified the successful
+synthesis of nano-sized ZnO (45 nm via SEM-EDX Spectroscopy) with low degree of
+aggregation and high chemical purity (59% Zn via EDS; 90.39% ZnO via XRF
+Spectroscopy). FT-IR spectroscopy confirmed the presence of the Zn and O bonds. The
+synthesized nano ZnO (SNZ) was therefore an ideal source of Zn foliar fertilizer for
+tomato. The performance of SNZ as foliar fertilizer was tested on pot-grown tomato (var
+‘Marimax’), and compared with bulk-size ZnO (BZ), commercial nano ZnO (CNZ), and
+granular Zinc sulfate (ZS). Boric acid was incorporated to a separate set of the Zn foliar
+treatments in order to determine the synergistic effects of Zn and B on the yield and
+postharvest quality of tomato. The SNZ+B treatment resulted in a positive response in
+terms of plant height, number of clusters per plant, SPAD units, number of leaves, flowers,
+and fruits per plant, percent fruit set, Zn and B uptake, dry matter yield and marketable
+yield. Foliar application of SNZ+B also led to significant improvements in fruit quality, including higher TSS, %TA, and Vitamin C content.
+
+CHAPTER 1
+
+INTRODUCTION
+
+Micronutrient deficiency is one of the major limiting factors for crop production,
+particularly in vegetable production. Tomato, being the second most important vegetable in the
+Philippines and planted to an estimated 17,000 ha with a volume of production of 176,000 MT
+valued at more than 4 billion pesos (www.bas.gov.ph), is susceptible to micronutrient
+deficiency. Among the microelements, boron and zinc play important roles directly and
+indirectly in improving the yield and quality of tomato, in addition to lowering disease incidence
+and physiological disorders (Magalhaes et al., 1980).
+
+Zinc mainly functions as the metal component of a series of enzymes. Zinc deficiency
+is known to restrict RNA synthesis, which in turn inhibits the synthesis of proteins that are
+involved in many biochemical pathways, and even affecting photosynthesis (Tsonev and Lidon,
+2012). Inadequate Zn levels in crops can manifest as stunted plant growth, decreased number
+of tillers, chlorosis and smaller leaves, increased crop maturity period, spikelet sterility and
+inferior quality of harvested products. (Hafeez, 2013). Boron deficiency, on the other hand,
+contributes to carbohydrate metabolism, nucleic acid synthesis, meristem growth, and therefore
+affects fruit shape, yield, and shelf life (Demoranville & Deubert, 1987).
+
+Zn and B can be supplied to tomatoes as dry fertilizer in the soil. However, dry
+formulations are difficult to manage because typically very small amounts, usually in ppm, are
+required. Thus, these nutrients are subject to loss by leaching, and the range of deficient to toxic
+levels of these heavy metals in soil is very narrow (Reisenauer et al., 1973). Farmers are using
+
+both sulfates and chelated Zn (with EDTA) for soil and foliar applications of Zinc. However,
+
+xvii
+
+As evident from the results of the pot experiment, SNZ enhanced the agronomic
+effectiveness of Zn foliar fertilizers. Nano-scaling has made ZnO more available to
+nanoscale plant pores and therefore resulted in efficient nutrient use. The decreased
+particle size also resulted in increased number of particles per unit weight of applied Zn,
+while increasing the specific surface area of the fertilizer, which increased the inherently
+low dissolution rate of ZnO in water thus enhancing the uptake by the plant. The ultimate
+result was the enhanced growth yield and postharvest quality of tomato. The addition of
+Boron on the Zn foliar fertilizer also resulted to a significant improvement in the
+
+effectiveness of the foliar fertilizers.
+
+the efficacy is low. Therefore, an efficient mechanism to reduce the amount of Zn and B
+fertilizer application without compromising the plant growth and yield is very essential. Foliar
+fertilization has the advantage over soil application in terms of low application rates, uniform
+distribution and quick plant responses to applied nutrients (Umer et al., 1999; Mengel, 2002).
+
+Nanotechnology is the design, characterization, production and application of structures,
+devices and systems by controlling shape and size at nanometer scale. In recent years, the
+application of nanoparticles of plant nutrients is being preferred to enhance the uptake by plants.
+Particle size may affect agronomic effectiveness of Zn and B fertilizers. Decreased particle size
+results in increased number of particles per unit weight of applied Zn and also increases the
+specific surface area of a fertilizer, which will increase the dissolution rate of fertilizers with
+low solubility in water such as Zn oxide (ZnO) (Mortvedt et al,1992).
+
+In this study, it was hypothesized that ZnO nanoparticles in combination with Boron, is
+more efficient as foliar fertilizer for tomato in terms of improving growth and yield, compared
+to the conventionally used ZnSO4. The second hypothesis for this study was that the application
+of nano ZnO and B can improve the postharvest quality of tomato. Therefore, this study
+primarily aimed to generate new information on the effectiveness of nano zinc oxide in
+
+combination with Boron on the growth, yield, and postharvest quality of tomato.
+
+OBJECTIVES
+
+The general objective of this study was to synthesize Zinc oxide nanoparticles, and
+utilize it in combination with Boron as foliar fertilizer for tomato in order to enhance the plant
+growth, yield and postharvest quality.
+
+Specific Objectives:
+
+Activity 1. Synthesis and characterization of zinc oxide nanoparticles.
+
+The first part of the study aimed to accomplish the following:
+1. to produce nano-sized ZnO particles in the laboratory using a simple precipitation
+
+method that is ideal for low-cost, large scale production;
+
+2. to characterize the properties of ZnO nanoparticles in terms of particle size, chemical
+
+purity, percent yield, and surface morphology using instrumentation techniques;
+
+Activity 2. Application of synthesized nano-ZnO as foliar fertilizer for tomato
+
+The second part of the experiment aims to accomplish the following:
+
+1. to formulate foliar fertilizer suspensions using ZnO nanoparticles and Boron;
+
+2. to determine the growth and yield response of tomato to the varying formulations of
+
+nanofoliar fertilizers applied.
+
+3. to compare the nanofoliar versus conventional foliar fertilizer; in terms of their effect
+
+on growth and yield parameters.
+
+Activity 3. Evaluation of postharvest quality of harvested tomato as influenced by nano
+
+ZnO foliar fertilizers
+
+The third and final part of the experiment aimed to accomplish the following:
+1. to evaluate the physical and chemical characteristics of the harvested tomatoes; and
+2. to determine the effect of varying formulations of the foliar fertilizers on the
+
+postharvest qualities of tomato.
+
+Conceptual Framework of the Study
+
+This study was divided into three activities namely: Synthesis and characterization of
+zinc oxide nanoparticles (Activity 1); Application of synthesized nano-ZnO as foliar fertilizer
+for tomato (Activity 2) and; Evaluation of postharvest quality of harvested tomato as influenced
+by nano ZnO foliar fertilizers (Activity 3). Activity 1 aimed to optimize the synthesis method
+parameters for nano zinc oxide and to characterize the synthesized nano zinc oxide
+nanoparticles in terms of particle size, chemical purity, percent yield, and surface morphology.
+Activity 2 was the testing of the performance of the synthesized nano ZnO and B on pot-grown
+tomato wherein initial soil characterization was done before the implementation of treatments.
+During the treatment implementation, optimum field management was observed to cancel the
+effect of other factors.
+
+Growth and yield parameters were measured which reflect the response of the tomato
+plants to the treatments applied. The postharvest parameters i.e. juice pH, Total Soluble Solids
+(TSS), titratable acidity (“TA), firmness and Vitamin C, as affected by the treatments were
+also assessed in Activity 3. The growth parameters, yield components, and postharvest quality
+were used to determine the effectiveness of the treatments applied in improving the yield and
+quality of tomato.
+
+Understanding the characteristics and chemistry of the foliar fertilizers applied such as
+nano ZnO and B is important especially their mechanism of absorption and mode of action that
+influences several physiological processes such as photosynthesis, which ultimately affects crop
+
+yield and quality.
+
+Activity 1 > Nano Zinc Oxide Synthesis
+
+Optimization Study 1: Syuthesis Method for Zinc Oxide Nanopartieles
+Optinization Study 2. Synthesis parameters for nano ZnO using ZnCl, as starting material
+
+Activity 2 Application of nano-ZnO and B foliar fertilizer for pot-grown tomato
+
+Initial Soil Characterization
+Imposition of Zn and B fohar treatments
+
+Activity 3 —-| Assessment of Postharvest Quality of
+Tomato
+
+Data Gathered
+* Growth Parameters
+* Yield Parameters
+
+Data Gathered
+* Juice pH
+TSS. Bux
+TA
+Firmness
+Vitamin C
+
+coer
+
+Figure 1. Conceptual Framework of the Study.
+
+CHAPTER 2
+
+REVIEW OF RELATED LITERATURE
+
+Nanotechnology in Agricultural Research
+
+Nanotechnology is the study of manipulating matter on an atomic and molecular scale.
+Generally, nanoparticles are defined as particulate dispersions or solid particles with a size in
+the range of 10-1000 nm (Mohanraj & Chen, 2006). Nanotechnology involves developing
+materials or devices within that size range. At the nanoscale, the matter presents altered
+properties which are novel and very different from those observed at macroscopic level, often
+displaying improved properties at a very dramatic degree. For instance, nanoparticles exhibit
+extremely high surface area to volume ratios and outstanding barrier properties when good
+dispersion is achieved, as compared to the same particles when in macroscale. The change in
+properties is due to the reduced molecular size and also because of changed interactions between
+molecules (Lagashetty & Venkataraman, 2005).
+
+Nano-scaling, in theory, should make fertilizer nutrients more available to nanoscale
+plant pores and therefore result in efficient nutrient use (Suppan, 2013). In order to produce
+nano-scale particle size, often a high-speed homogenization or ultrasonication may be employed
+(Zambaux et al. 1998). The major goals in designing nanoparticles as a fertilizer delivery
+system are to control particle size, surface properties and release of nutrients in order to achieve
+the optimal rate and dose regimen (Mohanraj & Chen, 2006).
+
+Despite of several advantages of using nanoparticles, nanoparticles do have limitations.
+For example, their small size and large surface area can lead to particle-particle aggregation,
+
+making physical handling of nanoparticles difficult in liquid and dry forms (Mohanraj & Chen,
+
+2006). This can be resolved by using cationic surfactants, such as cetyltrimethylammonium
+bromide, or CTAB (Li, 2003).
+
+The zeta potential of a nanoparticle is commonly used to characterize the surface charge
+property of nanoparticles. It reflects the electrical potential of particles and is influenced by the
+composition of the particle and the medium in which it is dispersed. Nanoparticles with a zeta
+potential above (+/-) 30 mV have been shown to be stable in suspension, as the surface charge
+prevents aggregation of the particles (Covreur et al., 2002).
+
+A study by Behnassi et al. (2011) observed that the size reduction in adsorbent (natural
+zeolite) from micro to nano-dimension coincided with an increase in N content by 33.3%. The
+phenomenal increase was attributed to the extensive surface area exhibited by nano-based
+
+formulations that facilitates adsorption processes.
+
+Nano Zinc Oxide
+Zinc Oxide (ZnO) in its simplest form shows tetrahedron geometry in which each ion is
+enclosed by four counter ions pointing towards corners of a tetrahedron. Its physical and
+chemical properties are summarized in Table 1. Zinc oxide exists in two common crystalline
+forms: wurtzite (Figure 2a) and zincblende (Figure 2b). The wurtzite structure is more stable
+under ambient conditions. In a ZnO nanoparticle, the Zn atom has an atomic number 30 and
+belongs to the d-block, whereas the O atom has an atomic number 8, belonging to the p-block
+
+in the periodic table.
+
+raw
+«i ot e4
+\\,
+
+D>
+
+(a) Hexagonal Wurtzite structure (b) Zincblende structure
+
+Figure 2. The two common forms of Zinc oxide in terms of crystal structure.
+
+Table 1. Physical properties of ZnO nanoparticles.
+
+Physical Appearance White, colorless, odorless solid
+Crystalline structure Wurtzite or Zincblende
+Molecular weight 81.38 g/mol
+
+Melting point 1,975°C
+
+Density 5.47 g/cm?
+
+Standard molar entropy 43.9 J/(K-mol)
+
+Standard enthalpy of formation -348.0 kJ/mol
+
+Source: UI hag et al., 2017
+
+The synthesis of ZnO nanostructures can be accomplished by physical and chemical
+routes. However, chemical methods are more suitable for the production of ZnO on an
+industrial scale due to low cost and efficiency in obtaining nanostructures with uniform size and
+morphology. Among the chemical methods, the solochemical technique stands out for its
+
+simplicity, quickness and low cost in the production of ZnO nanocrystals with high quality.
+
+10
+
+Moreover, this method uses milder reaction conditions than those employed by most chemical
+methods proposed in the literature. The method involves a reaction between a heated alkaline
+solution, such as NaOH solution, and another containing the precursor, such as ZnCl solution,
+at room temperature. Therefore, a decomposition reaction of the reactants is initiated causing
+the immediate formation of ZnO nanocrystals (Vaezi & Sadrnezhaad, 2007).
+
+In chemical synthesis of ZnO nanoparticles, capping agents and stabilizers are
+extensively used in order to control the size and to avoid agglomeration (UI hag et al., 2017).
+In this study, CTAB was used as a stabilizer, or a surfactant for the synthesis of the ZnO
+nanoparticles.
+
+ZnO is described as a functional, strategic, promising and versatile inorganic material
+with a broad range of applications. Zinc oxide nanoparticles typically have neutral hydroxyl
+groups attached to their surface, which plays a key role in their surface charge behavior (Qu &
+Morais, 2001). In aqueous medium and at high pH, the chemisorbed protons (H*) move out
+from the particle surface leaving a negatively charged surface with partially bonded oxygen
+atoms (ZnO°). At lower pH, protons from the environment are likely transferred to the particle
+surface, leading to a positive charge from surface ZnOH2* groups. The isoelectric point of 9-
+10 (Degen & Kosec, 2000) indicates that ZnO nanoparticles will have a strong positive surface
+
+charge under physiological conditions.
+
+Soil Micronutrients
+
+A fertilizer is technically defined as any material of natural or synthetic origin (other
+than liming materials) that is applied to soils or to plant tissues (usually leaves) to supply one
+
+or more plant nutrients essential to the growth of plants. Fertilizers contain beneficial nutrients
+
+11
+
+including macronutrients and micronutrients. Macronutrients include nitrogen, phosphorus,
+and potassium which are added to soil in quantities from 0.2% to 4.0% (on a dry matter weight
+basis) and are more essential than micronutrients. Micronutrients, on the other hand, are
+elements that are applied to soil in much smaller amounts, ranging from 5 to 200 ppm, or less
+than 0.02% dry weight (Das, 2014). These elements could be sulfur (S), boron (B), copper (Cu),
+
+iron (Fe), manganese (Mn), molybdenum (Mo), or zinc (Zn).
+Zinc role in plants
+
+Zinc (Zn) is an essential micronutrient for humans, animals and plants. It is the second
+most abundant transition metal in organisms, next only to iron (Fe), and the only metal
+represented in all six enzyme classes (oxidoreductases, transferases, hydrolases, lyases,
+isomerases and ligases) (Auld, 2001). Zinc is generally taken up by higher plants as a divalent
+cation, Zn?*, which acts either as the metal component of enzymes or as a functional structural
+or a regulatory co-factor of many enzymes (Prasad et al., 2012).
+
+A number of published researches have reported the essentiality and role of zinc for
+plant growth and yield (Marschner, 1993; Brown et al., 1993; Fageria et al., 2002). Early reports
+of severe Zn deficiency symptoms included impaired stem elongation in tomato (Skoog, 1940),
+and reduced protein and starch synthesis while sugar content was unaffected (Marschner, 1995).
+
+Zinc plays a crucial role in the germination, pollen function, biomass production, and
+chlorophyll synthesis in plants (Kaya and Higgs, 2002). Zn is also known to reduce the negative
+effects of Reactive Oxygen Species (ROS) in environmental stresses and its deficiency
+decreases plant resistance (Cakmak and Marschner, 1988).
+
+Zn acts as co-factor for some of the important antioxidant enzymes like super oxide
+
+dismutase (SOD), and peroxidase whose activity depends on the co-factor supply of Zn nutrient
+
+12
+
+(Misra and Srivastava, 2010). In a study by Cherif et al. (2011) on Zn-treated tomato, the
+superoxide dismutase, CAT and ascorbate peroxidases activities were found to increase
+significantly. Elmer and White (2016) have also reported the pesticidal properties of ZnO. It
+was noted that foliar application of ZnO on tomato and eggplant reduced disease by 28%.
+
+Zn is also essential in the synthesis for tryptophan, a precursor of indole acetic acid
+(IAA). Physiological disorders such as "little leaf disease" in fruit trees are attributable to Zn
+and IAA deficiencies. Zn deficiency symptoms are easily identified by mottled leaves, highly
+reduced leaf size, and often dieback of twigs and small misshapen fruit (Spiegel-Roy and
+Goldschmidt, 2008).
+
+Carbonic anhydrase is a Zn-containing enzyme involved in photosynthesis. In a study
+by Qiao et al. (2014), foliar application of Zn enhanced carbonic anhydrase activity in rice
+
+leaves and hence, increased photosynthesis.
+
+Zinc chemistry in soils
+
+The average concentration of Zn in the lithosphere is 80 mg kg “! (Lindsay, 1979). The
+chemical composition of the parent material primarily dictates the concentration of Zn in natural
+(unfertilized and uncontaminated) soil. Total Zn concentrations in uncontaminated soils vary
+widely and can range from 10 to 100 mg kg “! (Mertens and Smolders, 2013).
+
+Soil solution Zn represents a small proportion of total Zn in the soil, but it is of critical
+importance as it is from this pool that plants absorb Zn. The concentration of Zn in soil solution
+is normally low, and can range from 4 x 10°'° to 4 x 10° M (Barber, 1995). Zinc concentration
+in soil solution is negatively correlated to soil pH, which can be explained by the stronger
+
+sorption on the solid phase at high pH values (Jeffery and Uren, 1983).
+
+13
+
+In addition to the total concentration, the speciation of Zn in solution may affect its
+bioavailability. In the soil solution, Zn occurs in the form of free hydrated [Zn(6H20)**] and
+complexed species. Solution Zn speciation depends on pH as well as the abundance of ligands
+and competing ions in solution (Degryse et al., 2009). At high pH values (pH above 7.7), the
+free hydrated Zn ion can hydrolyze and form “hydroxy-complexes,” that is, ZnOH* and
+Zn(OH) (Lindsay, 1979).
+
+Zinc in soil solution can form soluble complexes with inorganic (eg, sulfate, phosphate,
+nitrate, chloride) and organic (eg, fulvic and humic acids) ligands. Zinc complexes with
+inorganic ligands are usually of lesser importance. Complexation with dissolved organic matter
+(OM) (humic, fulvic acids) increases with increasing pH (Weng et al., 2002).
+
+Soil pH is the most important soil property determining the adsorption of Zn in soils,
+which can be attributed to the increasing negative charge on the soil surface as pH increases.
+The term adsorption refers to the transfer of Zn from the solution to the solid phase and includes
+
+precipitation (McBride et al., 1997).
+Boron role in plants
+
+The adequate supply of boron (B) in plants is essential for the germination of pollen
+grains, the elongation of pollen tube, fruit set and yield. It is also indirectly involved in the
+activation of dehydrogenase enzymes, sugar translocation, uptake of calcium, nucleic acids and
+plant hormones (Bose and Tripathi,1996; as cited by Davarpanah et al., 2016).
+
+As with other nutrients, B has a pronounced effect on the production and quality of
+tomato. Boron also plays an important role in flowering and fruit formation (Nonnecke, 1989).
+
+Boron deficiency affects the growing points of roots and youngest leaves. The leaves become
+
+14
+
+wrinkled and curled with light green color. Its deficiency affects translocation of sugar,
+starches, nitrogen and phosphorus, synthesis of amino acids and proteins (Stanley et al., 1995).
+In B-deficient plants the youngest leaves become pale green, losing more color at the base then
+at the tip. Boron deficiency symptoms will often appear in the form of thickened wilted, or
+curled leaves, a thickened, cracked, or water soaked condition of petioles and stems, and
+discoloration, cracking or rotting of fruit, tubers or roots. (Tisdale et al., 1985).
+
+The requirement of plant for B is higher during the reproductive growth or seed
+production stage than it is in the vegetative stage. As a result of the general immobility of B,
+which is a characteristic of most plant species, and the higher B requirements during
+reproductive stages of growth, plant require a continuous supply of B from soil or foliar for
+their entire growth cycle (Mozafar, 1993). Naz et al (2012) observed that 2 kg B ha’! resulted
+in maximum number of flower clusters per plant, fruit set percentage, total yield, fruit weight
+loss and total soluble solid in Rio Grand cultivar of tomato. This treatment showed significant
+effect on all parameters. It was found that 2 kg B ha” significantly affected flowering and
+
+fruiting of Rio Grand cultivar.
+
+Boron chemistry in soils
+
+The amount of boron in soils ranges from 2 to 100 mg/kg with an average of 30 mg/kg.
+High-boron-content soils (10-100 mg B/kg) are usually associated with volcanic activity. Most
+soils, however, have a low boron content (<10 mg B/kg). Boron does not exist in in its free
+form in nature, but it invariably occurs as the oxide B2O3 in combination with the oxides of
+other elements to form borates of greater or lesser complexity. The first discovered borate
+
+mineral is sodium tetraborate decahydrate Na2B407:10H2O or borax. Boron is an essential
+
+15
+
+micronutrient for plants and consequently is included in many fertilizers at levels ranging from
+0.01 to 0.06 wt.%, most commonly in the form of borax (Kochkodan et al., 201 5).
+
+In nature, boron is released from rocks and soils through weathering, and subsequently
+ends up in the aqueous environment as boric acid B(OH); or borate ion B(OH) 4. Boric acid
+can be prepared from borax by the action of hydrochloric acid, via the following reaction:
+
+Na,B,07+10H,0 + 2HCl > 4H3B03+ NaCl+5H,0 £q.1
+
+It crystallizes from aqueous solutions normally as white, shining, waxy plates of orthoboric
+acid, H3BO3. On heating above 100°C, the orthoboric acid gradually loses water, and changes
+to metaboric acid HBO2:
+
+H3B03 > H3B0,+ H,0  Eq.2
+At higher temperatures, all the water is lost, and anhydrous boric oxide is formed:
+
+2H3B03 > B,03+ 3H,0 Eq.3
+Crystalline boric acid consists of layers of H3BO3 molecules held together by hydrogen bonds
+(Figure 2). The solubility of boric acid in water increases rapidly with temperature at
+atmospheric pressure (Table 2). Boric acid dissolved in water is uncharged and has a trigonal
+
+structure.
+
+Table 2. Effect of the temperature on water solubility and the first dissociation constant
+Ka, of Boric Acid.
+
+TEMP (°C) SOL’Y OF B(OH)s (wt%) Ka X 10”
+
+0 2.70 :
+
+15 4.17 4.72
+20 4.65 5.26
+25 5.44 5.79
+50 10.24 8.32
+75 1741 :
+
+100 27.53 :
+
+(Source: Kochkodan et al., 2015)
+
+16
+
+Boron occurs in aqueous solutions as boric acid, B(OH)3 and borate ions, B(OH)"
+(Evans and Sparks, 1983). Boric acid is a very weak, monobasic acid that acts as a Lewis acid
+
+by accepting a hydroxyl ion (OHY to form the B(OH)s (Goldberg, 1993).
+
+H3B03 + H,0 > B(OH), + H2,0 Eq.4
+
+The equilibrium constant for the hydrolysis reaction of boric acid is 5.75 x 107° or pKa
+= 9.24 at 25° C (Basset, 1980). Thus, below pH 9.24, the uncharged species is predominant,
+while above 9.24, the borate anion is predominant. Kochkodan et al., (2015) also reported that
+boric acid dissociates into borate ions at pH 8.5 and above, peaking at pH 10.5. At pH > 10,
+B(OH), is the main form of Boron that is present in solution. Boric acid, the uncharged
+molecule, is the main chemical form of B taken up by plants (Marschner, 1986).
+
+The storehouse for most of the boron in soils is soil organic matter. Asa result, most of
+the available boron is in the plow layer, where OM is highest. Soils low in OM are deficient in
+boron more often than soils with high OM content. When the surface soil dries out, plants are
+unable to feed in the zone where most of the available boron is present. This can lead to boron
+deficiency. When rain or irrigation moistens the soil, the plants can again feed from the surface
+soil and the boron deficiency often disappears.
+
+Somewhat like nitrates, boron is not readily held by the soil particles and moves down
+through coarse-textured soils, often leaching below the root zones of many plants. Because less
+leaching occurs on fine-textured silts and clays, these soils are not boron deficient as often as
+sands. Soils with a pH of 7.0 or above are more apt to be deficient in boron than are acid soils.
+
+This is one reason for not applying lime when the pH of the soil is above 6.8.
+
+17
+
+Sah and Brown (1997) investigated the different techniques for boron determination in
+plant and soil samples. Boron present in soils is commonly divided into three categories: (1)
+total B, (2) acid-soluble B and (3) water-soluble B. Total B content of a soil is not a reliable
+indicator of available B or the need for B. The acid-soluble B content of a soil is a better
+indicator but is not a reliable index of plant available B, especially in calcareous soils that
+neutralize the acidity of extractant. Berger and Truog (1940) proposed a hot water extraction
+(HWE) for 5 min (with refluxing) as an index of available B in the soil. The HWE method has
+been widely used and B extracted by this method often correlates well with plant B uptake
+(Shuman et al., 1992). The HWE method however is time consuming, tedious for routine and
+reproducible usage. Several convenient alternative methods to estimate the amount of plant
+available B in soils have been cited by Sah and Brown (1997). These include (1) microwave
+heating of the soil sample and the extractant in sealed plastic pouches, (2) extraction with water
+or 2mM DTPA at room temperature, (3) extraction with water or a solution of BaCl2 and
+microwave heating (4) extraction with hot 0.01 M CaCl or extraction with 1.0 N NH4OAC (pH
+
+7.0) (Sakal et al., 1993).
+
+Zinc and Boron deficiency in Philippine soils
+
+Zinc deficient areas in the Philippines are those land planted with rice usually submerged
+into water or frequently flooded. Five different rice-growing regions in Luzon were identified
+by BSWM as zinc deficient soils: Alaminos, Pangasinan (Region I), Jaen, Nueva Ecija (Region
+III), Naujan, Mindoro (Region IV-B), Banga and New Washington, Aklan (Region VI) and
+Victoria, Laguna (Region IV-A) (BSWM, 2016). A study by Yoshida et al., 1973 also
+
+concluded that soils in San Juan, Batangas and San Pablo, Laguna are Zinc-deficient, and
+
+18
+
+responsive to Zn fertilization. Sariaya sandy loam in Sariaya, Quezon province, has also been
+previously documented to be deficient in Zinc. Table 3 summarizes the soil and environmental
+conditions leading to Zn and B deficiency. Zinc-deficient soils have typically neutral to alkaline
+pH, high CaCO; content, high OM content (peat soils), high oxide content, high P phosphorus,
+
+sandy texture, or have been subjected to prolonged waterlogging (Alloway, 2009).
+
+Table 3. Summary of soil and environmental conditions leading to Zn and B deficiency.
+
+Parameters Zn-deficient B-deficient
+Soil pH Gigber ther pet =e Alkaline
+Texture Coarse (Sandy) Coarse (Sandy)
+OM High Low
+N No significant effect High
+P High No significant effect
+K No significant effect High
+oxides High No significant effect
+CaCO3 High High
+Drainage Poor (waterlogged) No significant effect
+Climate High rainfall, warm T Drought
+Soil practices aaa anor noe Liming
+
+Zinc deficiency is also associated with a high bicarbonate content, a Mg to Ca ratio in
+soils which is greater than 1, and high levels of available phosphate and silica. The critical
+deficiency limit in Philippine soils is 1.0 mg kg™! Zn by extraction with 0.05M HCI and 0.5-
+1.15 ppm mg kg" Zn by extraction with DTPA. Zinc extracted from the soil solution of deficient
+paddy fields is generally in the range of 0.05 - 0.25 mg L"! (BSWM, 2016).
+
+Boron in soils typically has a concentration between 2 to 100 mg kg" with an average
+
+of 30 mg kg". Boron, like Zinc, becomes less available to plants as soil pH increases.
+
+19
+
+Therefore, the practice of applying lime to improve the uptake of other important nutrients can
+cause B deficiency (Bunt, 1956 and Fleming, 1980 as cited by Davis et al., 2003). Adams
+(1978) also observed that B deficiency can occur readily in tomatoes grown in areas with acid
+
+sandy soils and heavy rainfall, because such conditions result to leaching.
+
+Sources of Zn and B fertilizer
+
+The common sources of Zinc and B fertilizers are summarized in Tables 4 and 5. The
+application of 20 to 50 kg ha’! of zinc sulfate to the soil is the most common way of correcting
+zinc deficiency among farmers. Likewise, treating seeds with zinc materials before sowing in
+nursery beds or direct seeded field is the common practice among farmers. Borax and boric acid
+are the two most common sources of Boron fertilizers for farmers. In this study, the sources of
+Zn foliar are ZnSO« and nano ZnO (synthesized and commercial), and bulk ZnO, whereas for
+
+Boron source, Boric acid will be used as foliar spray.
+
+Table 4. Commonly used Zn fertilizers.
+
+,
+Zn SOURCE FORMULA ne Ny an ONTENT
+Zinc sulfate monohydrate ZnSO, + H20 Soluble 36
+
+Zinc sulfate heptahydrate ZnSO, + 7H20 Soluble 23
+
+Zinc oxide ZnO Insoluble 50-80
+Zinc carbonate ZnC03 Insoluble 50-56
+Zinc chloride ZnCl Soluble 50
+
+Zinc nitrate Zn(NO3)2*3H,0 Soluble 23
+Basic zinc sulfate ZnSO,°4Zn(OH)2 — Slightly soluble 55
+
+Source: Mortvedt and Gilkes (1993) as cited by Montalvo et al., 2016.
+
+20
+
+Table 5. Commonly used B fertilizers.
+
+B SOURCE FORMULA SOL’YIN WATER  B CONTENT (%)
+Borax Na2B407.10H20 Soluble 11%B
+Boric acid H3BO3 5.44% at RT 17.5% B
+
+Zinc and Boron critical levels and deficiency symptoms in tomato
+
+In tomato, boron and zinc are the micronutrients that play an important role in improving
+the yield and fruit quality, in addition to checking various diseases and physiological disorders
+(Magalhaes et al., 1980). In Philippine soils, Zinc concentration is considered as low when the
+value is between the range of 0.5 — 1.15 ppm (via DTPA extraction), and very low when the
+concentration is below 0.5 ppm (Pantastico, 1973 as cited in Phil. Bureau of Soils and Water
+Management Handbook). Below these Zn concentrations, tomato is expected to manifest
+deficiency symptoms. On the other hand, B deficiency occurs when the level in the tomato
+tissue falls below 19 mg kg” Gallagher (1972). The deficiency can be reduced by spraying
+borax solution in the foliage at 0.5 mg L"! or applying borax in the soil at 22 kg ha’.
+
+Severe Zn deficiency is characterized by root apex necrosis (‘dieback’), whilst sub-
+lethal Zn deficiency induces spatially heterogeneous or interveinal chlorosis (‘mottle leaf’), the
+development of reddish-brown or bronze tints (‘bronzing’), and a range of auxin deficiency-
+like responses such as internode shortening (‘rosetting’), epinasty, inward curling of leaf lamina
+(‘goblet’ leaves) and reductions in leaf size (‘little leaf”). In most crops, the typical leaf Zn
+concentration required for adequate growth is 15—20 mg Zn kg”! dry weight (Marschner, 1995).
+
+In Boron-deficient tomato, the petioles are brittle and break off suddenly, which results
+
+to lower yield. Fruits are not marketable because of their chapped surface. Roots are short and
+
+21
+
+with thickened necrotic tips. With severe B deficiency, the growing points of main shoot and
+laterals die and the crop is lost. The younger leaves remain small, are curled inwards and
+deformed. They show chlorotic spots between the veins which are yellow to orange and the
+
+veins themselves can become yellow or purple. The older leaves appear yellowish green.
+
+Foliar Application of nano ZnO and B
+
+The most important application of nanotechnology in agricultural crop production is the
+field of nano-fertilizers, which can feed plants gradually in a controlled manner, conversely to
+what occurs in the case of common fertilizers. Nano-materials can be used for designing new
+Zn fertilizers, with the solubility, diffusion and availability of Zn to plants being affected by the
+nano-particulate Zn characteristics (size, specific surface area and reactivity) (Davarpanah et
+al., 2016).
+
+Foliar application of Zn has been used as an agronomic practice to supplement soil Zn
+fertilizer applications during plant growth stages of high Zn demand, particularly when soil and
+climatic conditions may limit the availability of soil-applied Zn (Fernandez and Brown, 2013).
+Foliar Zn application is considered more effective than soil Zn applications to alleviate Zn
+deficiency symptoms when they appear during the crop cycle. However, the disadvantage of
+foliar Zn is that multiple applications may be required to correct Zn deficiency due to the limited
+mobility of foliar-absorbed Zn to non-sprayed new leaves and roots (Swietlik, 2002). Also a
+yield penalty may be incurred by the time the symptoms of Zn deficiency are diagnosed and a
+foliar spray program initiated. Brennan (1991) showed that in a Zn-deficient soil banding ZnSO4
+at sowing resulted in higher wheat grain yield compared to a foliar Zn spray. The limited re-
+
+translocation of foliar-applied Zn to other organs of the plant is related to poor penetration of
+
+22
+
+the nutrient into the leaf or to the high binding capacity of Zn to leaf tissues, rather than limited
+phloem mobility (Fernandez et al., 2013).
+
+A study by Davarpanah et al (2016) was carried out to assess the effects of the foliar
+application of nano-fertilizers of zinc (Zn) and boron (B) on pomegranate fruit yield and quality.
+The effect was not as large with Zn as with B. Fertilization with the highest of the two doses
+led to significant improvements in fruit quality, including 4.4-7.6% increases in TSS, 9.5—
+29.1% decreases in TA, 20.6-46.1% increases in maturity index and 0.28-0.62 pH unit
+increases in juice pH, whereas physical fruit characteristics were unaffected. Changes in total
+sugars and total phenolic compounds were only minor, whereas the antioxidant activity and
+total anthocyanins were unaffected. The study by Panwar et al, (2012) revealed that tomato
+plant exposed to a concentration of 20 mg L"! ZnO nanoparticles exhibited maximum growth
+and biomass production. ICP-OES analysis showed significant concentration of Zn in the
+digested plant material confirming the penetration of Zn NPs in tomato plants. SEM
+assessments of tomato leaves revealed stomata as the preferred site for the penetration of ZnO
+NPs.
+
+In a recent study, Du et al. (2015) used X-ray fluorescence microscopy for in situ
+examination of the absorption and relocation of foliar-applied Zn to either the adaxial or abaxial
+surface of leaves from Zn-sufficient and Zn-deficient tomato and citrus plants. Results from this
+study showed that the concentration of Zn in the underlying tissue increased by up to 600-fold
+in tomato but only up to 5-fold in citrus.
+
+The most common Zn sources used for foliar fertilization are soluble salts and chelates.
+Surfactants and adjuvants are also included in the formulation to aid on penetration of the
+
+nutrient through the cuticle Crowley et al. (1996).
+
+23
+
+Factors affecting foliar fertilization
+
+The major factors that affect the absorption and translocation of foliar-applied nutrients
+are the timing of application, the physicochemical properties of the formulation, the
+environmental conditions during application, and the particular characteristics of the plants
+(Fernandez and Brown, 2013). The other factors affecting the efficiency of foliar fertilization
+
+are presented in the following table.
+
+Table 6. Factors affecting efficiency of foliar fertilization
+
+PLANT ENVIRONMENT SOLUTION
+Type of cuticle Temperature Concentration
+Leaf age Light Rate
+
+Number of stomas Photoperiod Application
+Presence of trichomes Wind intensity Chemical form
+Turgor Relative humidity Adjuvants
+Surface moisture Drought pH
+
+CEC Schedule Polarity
+Nutritional status Nutritional stress Hygroscopicity
+Growth stage Interactions
+
+Source: Camargo and Silva, 1975
+
+Effect of pre-harvest factors on chemical properties of tomato
+
+Tomato is defined as a vegetable, but botanically is a fruit. It is among the most
+popularly consumed fruits in the world and as such could be considered as an important source
+
+of ascorbic acid and dietary antioxidants.
+
+24
+
+Figure 3. Tomato fruits of “Marimax” variety (Source: www.eastwestseed.com/philippines)
+
+Lycopene, phenolics, flavonoids and vitamins C and E are mainly responsible for the
+antioxidant activity of raw tomatoes and processed tomato products (Lenucci et al., 2006).
+Lycopene is the most abundant carotenoid present in red tomatoes, comprising up to 90% of the
+total carotenoids present. The taste, color, and nutrient qualities of tomatoes can depend on
+their antioxidant contents (Dumas et al., 2003). However, there is limited information on the
+effect of different forms of fertilizers on the antioxidant components of tomatoes. The data
+available on the effect of fertilizers on the production of phenolic substances and other
+antioxidant components of tomato are either rare or not very reliable or applicable.
+
+Tomatoes are grown by using both conventional as well as organic fertilizers. They are
+considered as heavy consumers because of their rapid growth and long production season.
+Production of one ton of tomato fruit removes 1.4 - 3.6 kg nitrogen, 0.2 - 1.4 kg phosphorous,
+and 2.2 - 5.4 kg potassium from the soil (Sandoval-Villa et al., 1999).
+
+Nitrogen (N) is one of the major macronutrients in improving the yield of tomato (Zhu
+
+etal., 2012). High N levels in greenhouse plantation will produce a high yield of tomato (Zhang
+
+25
+
+et al., 2005). However, excessive N fertilizer is a common occurrence in conventional tomato
+cultivation and this practice degrades soil and water quality by increasing NO3-N concentration
+in topsoil and groundwater (Sainju et al., 2001).
+
+Nitrogen fertilizers at high rates tend to decrease the vitamin C content in many fruits
+and vegetables. Vitamin C content of many crops can be increased with less frequent irrigation.
+Temperature management after harvest is the most important factor to maintain vitamin C of
+fruits and vegetables; losses are accelerated at higher temperatures and with longer storage
+
+durations (Lee & Kader, 2000).
+
+Effect of B and Zn on Tomato Postharvest Quality
+
+A study by Salam et al., (2011) showed that tomato fruits which were produced with 2.5
+kg B + 6 kg Zn tons ha’! gave the highest fruit pulp weight among all treatments. In contrast,
+it was the lowest (76.7% lower than best treatment) in treatments without boron, and zinc. This
+can be accounted to the higher accumulation of assimilates to the fruits with higher Zn
+treatment. Dry matter content of the tomato fruits also increased progressively with increased
+doses of boron and zinc. The fruits produced with 2.5 kg B + 6 kg Zn ha’! gave the highest TSS
+content (4.60%), but the lowest TSS content (3.80%) was found in without boron and zinc. The
+effect of Zn on total sugars can be due to its role in the starch and nucleic acid metabolism, and
+also to the activities of various enzymes involved in these biochemical reactions (Alloway,
+2009). The fruits produced with that same treatment also gave the highest (11.20 mg 100g!)
+ascorbic acid. On the contrary, the lowest value was recorded in without application of boron
+
+and zinc.
+
+26
+
+In terms of chlorophyll content, the fruits which were produced without boron and zine
+had less chlorophyll-a content. Singh and Singh (2004) reported that zinc application not only
+increased chlorophyll content, but also raised the concentration of Zn, Ca, Mg, K, and P in
+tissues.
+
+At 30 days after storage, percent marketable fruit was gradually increased with the
+increased quantity of boron and zinc. This could be attributed to the reduction in microbial
+activities as a consequence of balanced boron, zinc, and cowdung. Kocevski et al. (1997) stated
+that boron influenced the defenses against plant diseases. Shelf life was also gradually increased
+
+with the increased doses of boron and zinc.
+
+Biochemical changes during tomato fruit ripening
+
+During ripening of tomatoes, several important changes occur in their chemical
+structure, such as synthesis of pigments (e.g. lycopene), production of flavor and aroma
+compounds, and increase in the ratio of citric to malic acid (Toor & Savage, 2006). There are
+also studies that reported an increase in ascorbic acid content of tomatoes during their ripening
+(Abushita et al., 1997). Total phenolics and flavonoids have also been reported to increase
+during the ripening of tomatoes (Cano et al., 2003). Lycopene, which is responsible for the red
+color of tomatoes, is regarded as an antioxidant with high biological activity in the body
+(Javanmardi & Kubota, 2006). Lycopene content varies considerably between cultivars, stage
+of maturity and growing conditions (Dumas et al., 2003). The metabolism of tomatoes
+continues, even after their detachment from the plant, when fruits have reached their red stage.
+They continue to ripen and finally deteriorate to a point where they become non-marketable
+
+(Toor & Savage, 2006).
+
+27
+
+Cultural Management Practices of Tomato
+
+Growth stages of tomato. Tomato completes a life cycle, from seed to seed, in one
+season (Figure 4). The general growth stages for tomato are: seed, seedling stage, vegetative
+stage, flowering stage, fruiting stage, and harvesting stage. The seedling stage is usually the
+period from emerging seed to transplanting to the main field. Vegetative stage is the period
+from transplanting until the first flower buds develop. Flowering stage is when the plant with
+flower buds and open flowers. The fruiting stage is the period when plant yields mature fruits.
+Finally, the maturity stage or the harvesting stage is the period when plant yields mature fruits
+
+(FAO, 2000).
+
+These growth stages are overlapping in time: harvesting stage
+fruiting stage 55+DAT
+flowering stage | 45+DAT
+
+seedling stage vegetative stage 24-45 DAT
+045 DAS 0-25DAT
+
+sowing transplanting
+
+DAS = Days after sowing
+DAT = Days after transplanting _
+
+Figure 4. The growth stages of tomato (FAO, 2000).
+
+Tomato Varieties. Presented in Table 7 are the different varieties of tomato in the
+Philippines. For this study, the variety used was “Marimax”, which is a product of East-West
+Seed company. The horticultural characteristics of Marimax tomato is summarized in Table 7.
+This variety has a relatively shorter postharvest life (32-33 days) as compared to other hybrid
+
+varieties (Table 8).
+
+Table 7. Horticultural characteristics of ‘Marimax’ tomato variety.
+
+CHARACTERISTICS ‘MARIMAX' (HYBRID)
+a) Yield (t/ha)
+Wet season 15
+Dry season 14.3
+b) Maturity: days to 50% flowering
+(DAT)
+Wet season 41
+Dry season 38
+c) Maturity: days to 1st harvest (DAT)
+Wet season 69
+Dry season 65
+d) Weight/fruit (g)
+Wet season 18.4
+Dry season 24.5
+e) Shelf life: days to shriveling (DAH)
+Wet season 32
+Dry season 33
+Source: (Narciso & Balatero, 2008)
+Table 8. Varieties of tomato in the Philippines.
+VARIETY MATURITY (DAT) VARIETY MATURITY (DAT)
+Diamante 55 Mapula 60
+Marimax 60-65 Marilag 60
+Maxima 55-60 Marikit 60
+Improve pope 60-65 BPI Claveria 60
+Cardinal 70 VC48 - 1 60
+Apollo 60 CA 633 60
+Tabeth F1 65 CA 530 60
+
+28
+
+Climate and soil requirements of tomato. Tomato is a day neutral plant. Its fruits
+
+contain higher ascorbic acid with high light intensity. It also needs different temperatures for
+
+each growth development stage (Table 9). High day temperatures (>40°C) can abort the flowers
+
+due to physical destruction of pollen grains. Tomato thrives on many soil types. It grows best
+
+29
+
+in fairly fertile, well-drained sandy loam soil or heavier soils and soil free from root-knot
+nematodes and bacterial wilt organisms. The soil organic matter must be at least 1.5%, with a
+pH of 4.3 — 8.7 (growth is optimum at pH 5.5 — 6.5). Tomato is moderately tolerant to acidity
+
+(Rasco, 2014).
+
+Table 9. Optimum temperature for tomato growth.
+
+GROWTH STAGE TEMPERATURE
+Seed germination 26 - 32°C
+Seedling growth 25 — 26°C
+Pollen germination & pollen tube growth 22 — 27°C
+Fruit setting 18 — 20°C
+Fruit ripening 24 - 28°C
+
+(Source: Hanson et al., 2001)
+
+This study primarily aimed to investigate the efficacy of ZnO nanoparticles in
+combination with Boron, on the growth, yield, and fruit quality of tomato. One of the major
+objectives of this study is to determine the effect of nano ZnO and Boron foliar fertilizers on
+the major carpometric characteristics, antioxidant components and antioxidant activity of the
+
+greenhouse-grown tomatoes.
+
+30
+
+CHAPTER 3
+
+MATERIALS AND METHODS
+
+Time and Place of Study
+
+The synthesis of the nano Zinc and Boron fertilizers was conducted at the Soil Chemistry
+laboratory, Division of Soil Science, Agricultural Systems Institute - College of Agriculture and
+Food Science (ASI-CAFS), University of the Philippines Los Bafios. The pot experiment for
+testing of the nanofertilizers on tomato was done in the experimental screen house in ASI-
+CAFS, UPLB. The third and final part, which involved the postharvest quality of the harvested
+tomatoes, was conducted at Postharvest Horticulture Training and Research Center (PHTRC),
+Institute of Crop Science, College of Agriculture and Food Science, University of the
+
+Philippines Los Bafios. The duration of the entire study is from June 2017 to March 2018.
+
+Activity 1. Synthesis and characterization of Zinc Oxide Nanoparticles
+The first part of this thesis study focused on the synthesis and characterization of the
+Zinc oxide nanoparticles that will be used in combination with Boron as foliar fertilizers for the
+
+tomato pot experiment.
+
+Activity 1.1. Optimization of Starting Material for Zinc Oxide Nanoparticles
+
+Two different synthesis methods were compared in the preparation of ZnO
+nanoparticles. The objective of this activity was to determine the most suitable starting material
+for the ZnO nanoparticles. The products formed from both methods were characterized in terms
+
+of yield and chemical purity. The synthesis method that produced nano ZnO with the desired
+
+31
+
+characteristics was used for the production of the final nano ZnO that was used for the actual
+
+pot experiment.
+
+Method 1: Direct Precipitation Method using Zinc sulfate heptahydrate and
+Ammonium Hydroxide as precursors. The method used by Sadraei (2016) for synthesis of
+nano ZnO nanoparticles was adapted for the first method. Zinc sulfate heptahydrate
+(ZnSO4(H20)7) and Ammonium hydroxide (NH4OH), both technical grade, were used as the
+starting materials for this method. Zinc sulfate heptahydrate (2.9386 g) was dissolved in 100
+mL deionized water. A mother solution was then prepared from 25 mL of the Zinc sulfate
+solution (0.2 M) and 50 mL of purified water. The alkali solution, ammonium hydroxide, 25
+mL (NH,OH, 25%) with an approximate rate of 5 mL per minute was added dropwise into the
+mother solution. The magnetic stirrer/heater for vigorous stirring was used at the temperature
+of about 50-60°C. The precipitates derived from the reaction between the Zinc sulfate and
+Ammonium hydroxide solution were collected by filtering, and then rinsed three times with
+distilled water by centrifugation. The final ZnO precipitates were then collected after drying at
+
+60, 100, 200, and 300 °C (for optimization) in a laboratory drying oven for 8 hours.
+
+Method 2: Synthesis of nano ZnO using ZnCl: and NaOH as precursor. For the
+second synthesis method of ZnO nanoparticles for this study, the precipitation technique used
+by Awodugba & Ilyas (2013) was adapted, with some modifications. Zinc oxide nanoparticles
+were synthesized using Zinc Chloride (ZnCl2) and Sodium Hydroxide (NaOH), both technical
+grade, as precursors. The concentration ratio between the ZnCl2 and NaOH was determined
+
+using the chemical equation formula shown below:
+
+ZnCl, + 2NaOH > Zn(OH), + 2NaCl
+
+32
+
+Initially, 0.4 M aqueous methanol solution of ZnCl2 was kept under constant stirring
+using magnetic stirrer to completely dissolve the zinc chloride and 0.8M aqueous methanol
+solution of NaOH was also prepared in the same way and kept under stirring. The speed of
+stirring of the ZnCl: was increased after its complete dissolution, and 0.8M aqueous solution of
+NaOH was added dropwise for 20 minutes. The cationic surfactant, Cetyltrimethyl ammonium
+bromide (CTAB), 0.5 g, was added into the resulting solution. Surfactants have the ability to
+control the morphology and size distribution of nanoparticles.
+
+The white-colored solution obtained after complete addition of addition of NaOH and
+CTAB was constantly stirred in a magnetic stirrer for 2 hrs, and later sealed and kept overnight.
+At high pH values (pH above 7.7), the free hydrated Zn ion can hydrolyze and form “hydroxy-
+complexes,” that is, ZnOH* and Zn(OH)2 (Lindsay, 1979). The pH of the solution was varied
+in order to determine the optimum pH that yielded the nano Zinc oxide with the desired
+characteristics.
+
+Zinc hydroxide with some impurities such as NaCl settled at the bottom and the excess
+mother liquor obtained on top was discarded. The residue was washed five times with deionized
+water and methanol or ethanol to remove the by-products such as NaCl which are bound with
+the Zinc hydroxide, and then dried in air atmosphere at 60, 100, 200, and 300 °C (for
+optimization).
+
+Synthesis products from both methods were subjected to Scanning Electron Microscopy
+for particle structure elucidation and Energy Dispersive X-ray Spectroscopy analysis for
+
+elemental analysis.
+
+33
+
+Activity 1.2. Optimization of synthesis parameters for nano ZnO
+
+The starting material that was selected based on the result from the initial optimization
+experiment was then used to optimize the synthesis parameters, particularly the pH of the
+solution, mixing time, and calcination temperature and duration.
+
+The synthesized ZnO was compared to commercial nano ZnO (technical grade Sigma
+Aldrich) in terms of the following characterization methods:
+
+Mineralogical Analysis by Fluorescence Spectroscopy. Mineralogical analysis of the
+nano ZnO samples was performed by X-Ray Fluorescence (XRF) spectroscopy to determine
+the average mineral composition.
+
+Particle Size Determination. Scanning Electron Microscopy (SEM) analysis was
+performed on the submitted samples to characterize the surface structure and measure average
+particle size in powder form.
+
+Molecular structure by Infrared Spectroscopy. The identification of the atomic
+arrangement and the concentrations of the chemical bonds present in the samples was carried
+out using Fourier Transform-Infrared Spectroscopy (FTIR), in which percentage transmission
+and wave number are the output. In the spectrogram for ZnO nanoparticles, there is a
+characteristic sharp peak at around 400-470 cm"! which can be attributed to Zn-O stretching
+vibrations, but depending on synthesis and other experimental conditions, weak bands
+positioned at 520 cm’!, 566 cm’! and 665 cm! are also possible to appear in the FT-IR spectrum
+(Hernandez et al., 2007).
+
+Elemental Characterization. Energy dispersive X-ray (EDX) analysis was performed
+to determine elemental composition (%Zn, %O) in the synthesized samples, and measure zeta
+
+potential, which is related to the degree of agglomeration of the nanoparticles.
+
+34
+
+Activity 2. Application of nano-ZnO and B foliar fertilizer for pot-grown tomato
+
+The second major activity of the thesis study was the formulation of the foliar fertilizers
+containing nano ZnO and B, and testing their performance on greenhouse-grown tomato. The
+
+effect of the foliar treatments on growth and yield parameters of tomato was evaluated.
+
+Treatments and Experimental Design
+
+The treatments for this study consisted of four sources of zinc and one source of boron
+as foliar fertilizers. There were nine (9) treatment combinations, laid out in a Randomized
+Complete Block Design (RCBD) with three (3) replications and four (4) pots per replication
+
+(Table 10). Tomato (var. ‘Marimax’) was used as the test crop.
+
+Table 10. Treatments based on source and rate of fertilizer application.
+
+NT! IN.
+NO. CODE DESCRIPTION CONCENTRATION, ppm
+
+FLOWERING FRUITING PRE-MATURITY
+
+1 CTRL Control - - -
+Synthesized A
+
+2 SNE 7nO 300 300 600
+Commercial
+
+3 CNZ ho 7n0 200 200 400
+
+4 BZ Bulk ZnO 200 200 400
+
+5 ZS Zinc sulfate 700 700 1400
+Synth.
+
+6 SNZ+B LO . oa 300 Zn +0.2%B 300Zn+0.3%B 600Zn+0.4%B
+Comm.
+
+7 CNZ+B Fa rayon 200 Zn+0.2%B 2002Zn+0.3%B 400Zn+0.4%B
+Bulk Zinc
+
+8  BZ+B oxide + 200 Zn+0.2%B 200Zn+0.3%B 400Zn+0.4%B
+H3BO3
+
+9 ZS+B aso * 700 Zn+0.2%B 700Zn+0.3%B 700Zn+04%B
+
+——
+
+35
+
+The foliar fertilizers were applied during three critical growth stages of the tomato: (i)
+before flower initiation; (ii) after fruit set when it becomes approximately marble sized; and (iii)
+at 20 days interval of second spray (Sultana et al., 2016). In addition to the levels of boron and
+zinc under investigation, NPK and organic fertilizers were applied to the soil uniformly, based
+
+on recommended rates, for all the pots.
+
+Preparation of foliar solutions containing Zn and B
+
+Zinc oxide has an inherent low solubility in water, thus a heterogeneous suspension is
+formed when it is added to water. If the suspension is to be used as a foliar spray, the solids
+should be dissolved thoroughly, or dispersed evenly in the solution. Prior to spraying, the
+suspensions were subjected to ultra-sonication (15-30 minutes) in order to disperse the particles
+uniformly in the solution. The foliar solution for the commercial zinc oxide nanopowder (80%
+Zn, Sigma-Aldrich™), were prepared in the same manner. The other source of zinc is technical
+grade zinc sulfate (ZnSOq .7H20) containing 23% Zn. The foliar solutions of ZnSO4 were
+prepared by manual stirring. Zinc sulfate is soluble in water, thus no sonication is required.
+
+The foliar spray for B were prepared using technical grade boric acid (H3BO3), which
+contains 17.5% B. Boric acid has a water solubility of 5.44% at 25°C, thus a homogenous
+solution was obtained in preparing the foliar solutions for boric acid. At a pH of 9.24, the
+uncharged species of boric acid is predominant, while above 9.24, the borate anion is
+predominant. Boric acid, the uncharged molecule, is the main chemical form of B taken up by
+plants. Thus the pH of the foliar solutions were maintained at values below 9.24.
+
+The total volume for each foliar spray was 50 mL, and was applied in such a way that it
+
+will completely wet the tomato plant. All foliar solutions were added with Polysorbate-20 or
+
+36
+
+Tween-20, as wetting agent at the rate of 0.01 % for reducing contact angle between the liquid
+and leaf surface (Sajid et al., 2010 as cited by Sultana et al., 2016). The surfactant will limit
+water loss during the spray process, and ensure that the nutrients will adhere to the leaf surface,
+
+thus maximizing uptake by foliage.
+
+Tomato Variety. Tomato (Lycopersicon esculentum Mill. var. “Marimax”), purchased
+from EastWest Seed Company, was used as the test crop, and grown in pots inside the
+experimental screen house of Agricultural Systems Institute — University of the Philippines Los
+
+Baijios.
+
+Potting Soil. The potting soil used in the experimental pots was collected from Brgy
+Canda, Sariaya, Quezon province on January 2018. The freshly collected soils were brought to
+the Plant Pathology Division, Institute of Biological Sciences, UPLB, for sterilization in order
+to minimize disease incidence, particularly bacterial wilt. The soils were heated over fire using
+a halved drum, continuously for 3 days at 8 hours per day. The soils were subjected to physical
+
+and chemical characterization prior to planting.
+
+Experimental Lay-out. Randomization was done using Statistical Tool for Agricultural
+Research (STAR) software according to a Randomized Complete Block Design (RCBD) with
+three (3) replications and six (4) pots per replication (Figure 5). A total of 108 pots were used
+in the study. Each experimental pot measured 10x10x13 inches, and contained eight (8)
+
+kilograms of pre-weighed dry Sariaya sandy loam soil.
+
+rz]
+a_i]
+a FE
+ea] Be] “3
+Hi
+ee] a
+BM 36
+
+ra
+
+Zz a7
+15 16
+T6
+17 18
+19 20
+
+T4
+37
+= a
+
+HH HH
+ee] 7 ee] a
+in| sr s_|
+eS] a
+
+5s |
+
+Figure 5. Experimental lay-out of the experiment.
+
+fad a
+By * 3
+
+ae] Te rir
+
+ite
+i a 105 106
+T7
+
+89 90
+
+LEGEND:
+
+REPLICATES
+
+R1_: Replicate 1
+
+R2_ : Replicate 2
+
+R3__: Replicate 3
+TREATMENTS
+
+Tl: Control
+
+T2 : Synthesized nano ZnO
+
+T2 : Commercial nano ZnO
+
+T4 : Bulk ZnO
+
+TS: Zine sulfate
+
+T6  : Synth. nano ZnO + H3BO3
+T7 _: Synth. nano ZnO + H3BO3
+T8 : Bulk Zinc oxide + H3BO3
+T9 : Zine sulfate + H3BO3
+
+37
+
+38
+
+Initial Soil Characterization. Composite soil samples were collected and were
+analyzed for physical and chemical properties. The pH of soil was determined in a ratio of 1:2.5
+soil: distilled water suspension and 0.01 M CaCl solution using a glass electrode (Black, 1965).
+Soil organic carbon was determined using the method by Walkley and Black (1934). Total N
+was determined using Kjeldahl method, available P using Bray No. 2 method, exchangeable K
+using flame photometer method, and soil CEC by leaching with ammonium acetate buffer
+adjusted to pH 7.0 followed by steam distillation (Black, 1965). The soil texture was
+determined using hydrometer method (Tan, 2005). Soil Zn levels were analyzed using AAS
+while soil B levels were analyzed via Inductively Coupled Plasma — Optical Emission
+
+Spectroscopy.
+
+Cultural management practices for tomato:
+
+a. Seed sowing. Tomato seeds (var. Marimax) purchased from East-West Corp were sown
+directly into the prepared pots. Two seeds were sown directly into the pots, then the
+seeds were covered lightly with soil after sowing. The seeds were hand watered. The
+potting soils weree saturated with water for three days. After germination, watering
+was. A week after sowing, the germinated seedlings were drenched with 1.0 tbsp of
+dissolved complete fertilizer in 1.6 L of water. Drenching was done early in the morning
+or late in the afternoon to avoid leaf burning(www/eastwestseed.com).. The distance
+
+between pots was 0.75 meters.
+
+b. Thinning. Seedlings growing almost in the same way were chosen for research and the
+
+other seedlings were thinned out. Thinning was done 3-4 weeks after sowing. Each pot
+
+39
+
+contained one tomato seedling. Each treatment replicate had 6 pots. In all cases, plant
+
+age was expressed in days after planting (DAP).
+
+Fertilization. In addition to the levels of boron and zinc under investigation, NPK and
+organic fertilizers were applied to the soil uniformly, based on recommended rates, for
+all the pots. Among the three major nutrients (NPK), lesser potassium (K) is required
+than nitrogen (N) and phosphorous (P) in vegetable. However, K is usually applied to
+tomatoes because of their high requirement. Based on the results of the soil analysis,
+the recommended fertilizer rate (NPK) that was used for tomato is 200-220-300 (N-
+P20s-K20) kg/ha. This rate was calculated using the assumption that the planting
+distance is 0.5 x 0.75 meters. Therefore, it was assumed that an area of 0.4 sq m will be
+occupied by each plant in a hill, and there is a total of 25,000 hills per hectare. The
+following table summarizes the amount and type fertilizers that was applied uniformly
+
+to each pot.
+
+Table 11. Guide for fertilization of tomato using conventional fertilizers.
+
+MODE OF TIMING FERTILIZER &
+APPLICATION RECOMMENDED RATE*
+Basal At transplanting 10.0 g (14-14-14)
+
+2nd sidedressing 4 weeks after transplanting 15.0 g (14-14-14) + 5.0 g (0-0-60)/plant
+3rd sidedressing 6 weeks after transplanting 15.0 g (14-14-14) + 5.0 g (0-0-60)/plant
+
+(Source: www/eastwestseed.com/philippines)
+
+d.
+
+Calcium Application. Tomatoes perform best when their soil has a pH level of 6.5 to 7.2.
+Based on the soil analysis, the pH of the Sariaya sandy loam is at 5.92, which is acidic.
+Lime was therefore added to the soil to increase the pH. Liquid lime was also added to
+the soil as a drenching solution in order to have a more rapid effect, since agricultural
+
+lime would have more time to incorporate into the soil.
+
+40
+
+e. Irrigation. Distilled water was used in irrigating all pots throughout the growing period
+of the tomato. Newly transplanted seedlings were watered daily until they have
+recovered (1-2 weeks). Tomato is most sensitive to water deficit during flowering,
+somewhat sensitive immediately after transplanting and during fruit development and
+least sensitive during vegetative growth. After seedling recovery, irrigation was done
+only when the soil gets dry.
+
+f. Staking/Trellising. Tomato plants were staked 3-4 weeks after transplanting. The
+tomato plants were trellised with wooden stakes to keep the fruits and foliage off the
+ground.
+
+g. Pruning. Pruning, or the selective removal of side shoots, results to earlier maturity,
+bigger size, uniformed fruits and ensures proper fruit color as it allows the sun to reach
+the fruits. Pruning was done regularly, starting at an early stage because when done later
+in the season, it becomes difficult to distinguish between the main stem and the suckers
+(Hanson et al., 2001).
+
+h. Pest and Diseases. Tomatoes are susceptible to diseases. Damping-off bacterial wilt,
+bacterial spot, fusarium wilt, late blight, nematodes and a number of viral diseases are
+some of the diseases that could infect tomatoes. High population of cutworm and
+armyworm can also contribute to the loss in production, as well as the attack of whitefly
+that carries viral diseases. The damage on the leaf of leafminer also affects the ability
+of the plant to manufacture food, thus reducing the capacity to develop fruits (FAO,
+2000). Tomato plants were given ample spacing to allow for proper air circulation,
+which helps the foliage dry faster. Irrigation was done at the base of the tomato plant.
+
+When blight or powdery mildew has infected leaves, these were immediately removed
+
+41
+
+and destroy them to help prevent the disease from spreading (Hanson et al., 2001; FAO,
+2000).
+
+i. Harvesting. Fruits were harvested at the mature green stage. Tomatoes harvested at
+the mature green stage will ripen into a product indiscernible from vine-ripened fruit.
+Yields reported were marketable fruit or total yield (marketable plus culls). Fruits were
+culled for cracks, deformity, blossom end rot and other damage. All culled fruit were
+
+weighed.
+Growth parameters gathered
+
+The growth parameters that were measured at a weekly interval were the following: plant
+height (cm), number of leaves per plant, number of clusters per plant, number of buds per plant,
+number of flowers per plant, number of fruits per cluster, and SPAD readings using a handheld
+
+Chlorophyll meter.
+Plant tissue analysis
+
+At 54 DAP, one representative plant was randomly selected from each treatment replicate
+and harvested for destructive analyses. After air drying for 24 hours, the roots, stem, and leaves
+were separated and oven dried at 80°C for 72 hours. The above-ground biomass was determined
+and the plant tissue samples were prepared for tissue analysis of total N (Kjeldahl method),
+Total P (Vanadomolybdate method), Total K (Flame emission photometry), and Zn, B, Ca, Mg,
+Mn, Cu, and Fe analyses via Inductively-Coupled Plasma — Optical Emission Spectroscopy
+(ICP-OES). Laboratory samples were digested using a microwave digester. All tissue analyses
+were performed in the Soils Chemistry Laboratory and Analytical Services Laboratory,
+
+Division of Soil Science, Agricultural Systems Institute - College of Agriculture and Food
+
+42
+
+Science (ASI-CAFS), University of the Philippines Los Bafios. During harvest (74 DAP),
+
+another set of plant tissue samples were subjected to the same methods of analyses.
+Yield and yield components
+
+Fruits were harvested during color break, or at Peel Color Index 2 (Green with a tinge of
+orange). During harvest, the fruits were sorted in terms of quality (marketable and non-
+marketable). The yield data that were gathered during and after harvest period were the
+following: marketable yield (kg per plant, t ha‘'), non-marketable yield (kg/plant, t ha’), fruit
+
+length and diameter (mm), and single fruit weight (g).
+
+Activity 3. Evaluation of postharvest quality of harvested tomato as
+
+influenced by nano ZnO foliar fertilizers
+
+The newly harvested tomatoes were distributed according to the fertilizer treatments.
+Their maturity were first checked in order to ensure uniformity. For all the postharvest analyses,
+tomatoes with Peel Color Index 2 (definite break in color but not > 10%) (Table 15, Figure 6)
+and Visual Quality Rating of 9-8 (excellent, field fresh), were selected for uniformity. The
+tomatoes were then washed and then air dried prior to analysis. Each treatment type comprised
+of three fruit replicates. All postharvest analyses were performed in the Postharvest
+Horticulture Training and Research Center, Institute of Crop Science, University of the
+
+Philippines Los Banos.
+
+43
+
+Table 12. Peel color index (PCI) for tomato.
+PCI DESCRIPTION
+
+1 Completely green
+
+Breaker, definite break in color but not > 10%
+Turning, more green than yellow, orange or pink
+Green = yellow, orange, pink or red
+
+More yellow, orange, pink or red than green
+
+a nun & WB N
+
+Fully red or yellow or orange or pink
+
+Figure 6. Tomato fruits arranged according to PCI 1 to 6 (left to right).
+
+Table 16. Visual quality rating (VQR) for tomato.
+
+VOR QUALITY DESCRIPTION
+9-8 Excellent, field fresh
+7-6 Good, defects minor
+5-4 Fair, defects minor, limit of marketability
+3 Poor, defects serious
+2 Limit of edibility
+
+1 Non-edible under usual conditions
+
+
+44
+
+Data were collected on the following postharvest parameters:
+
+a. Firmness. Fruit firmness was determined by puncture tests using a penetrometer.
+Results were expressed in kg-force as the mean of two (2) random measurements taken
+
+along the equatorial region of each tomato fruit.
+
+b. Total Soluble Solids (TSS). 1n order to determine the TSS, thirty (30) g tomato fruit
+flesh was homogenized in 30 mL distilled water and filtered using cotton. TSS,
+expressed as “Brix, of the fruit extract (filtrate) was measured using a portable handheld
+
+refractometer.
+
+Total soluble solids (Brix) = Refractometer reading in “Brix x DF
+Where: DF = dilution factor
+
+Vuz0 in mL
+
+=1+
+
+fresh weight of sample in g
+
+c. Juice pH. Using the filtrate from the TSS analysis, the juice pH was measured using a
+Horiba™ table-top digital pH meter. Means of two readings were recorded per fruit
+
+juice extract.
+
+d. Titratable Acidity (TA). Titratable acidity of tomato was determined using standardized
+0.1N NaOH solution as titrant and phenolphthalein as indicator. A 5 mL of the tomato
+extract was titrated using 0.1N NaOH until the faint pink endpoint. The fruit extract was
+obtained by homogenizing thirty (30) g of fruit pulp using a blender with 30 mL distilled
+
+water. The mixture was then blended at high velocity using a blender, then filtered
+
+45
+
+through a cotton. The results were expressed as percentage of malic acid (mg/100g of
+
+fresh weight) (Wanitchang et al., 2010).
+
+(meq NaOH) x (meg Malic acid)
+
+7 ; - x 100
+weight equivalent of aliquot
+
+%Titratable acidity =
+
+Where:
+
+meq NaOH = milliequivalents of NaOH (Normality of std. NaOH x
+Volume NaOH used in mL)
+
+Meg Malic acid = milliequivalent weight of Malic acid (0.067 Meq)
+
+Weight equivalent of aliquot (pulp analysis), g =
+
+fresh weight of sample in g
+
+x Vay
+fresh weight ofsample + Vaomo  2#4¥ot
+
+j. Ascorbic Acid Content. Tomato pulp (30 g) was crushed to a paste-like state for
+approximately two (2) minutes (with intermittent stops to minimize heating) using a
+blender. Vitamin C content of the fruit was determined by redox titration of ascorbic acid
+with 2,6-dichloroindophenol (DICP) as titrant. The reaction involves the oxidation ascorbic
+acid present in the fruit extract by DCIP until all ascorbic acid have been oxidized resulting
+to an excess of the titrant. Any slight excess of unreacted DICP will result to a change in
+color of solution from red to brown which is considered the end point of titration.
+Standardization of indophenol blue solution:
+
+Five (5) mL metaphosphoric acid—acetic acid solution and 2.0 mL ascorbic acid standard
+solution was poured into each of three 50-mL Erlenmeyer flasks. Using a funnel, the buret
+was filled with indophenol solution (dye) and the initial buret reading was recorded.
+
+Titration was done by slowly adding indophenol solution with constant swirling to standard
+
+46
+
+ascorbic acid solution until a light but distinct rose-pink color persists for >5 s (takes about
+15-17 mL). The final buret reading was recorded and the volume of dye used was
+calculated. Blanks were prepared by pipetting 7.0 mL metaphosphoric acid-acetic acid
+solution into each of three 50-mL Erlenmeyer flasks. Same volume of distilled water
+approximately equal to the volume of dye used above (i.e., average volume of dye used to
+titrate three standard samples) were added.
+
+Titration of tomato extract:
+
+Titration followed the same procedure as described above. The initial and final buret
+readings for each titration of the blank were recorded and the volume of the dye used was
+calculated (Nielsen, 2010). Another 5 mL metaphosphoric acid-acetic acid solution and 2
+mL tomato juice extract was placed into a 50-mL Erlenmeyer flask. Each samples was
+titrated with the standardized indophenol dye solution until a light but distinct rose-pink
+color persists for >5 s. The initial and final readings were recorded and difference was
+
+calculated to determine the amount of dye used for each titration (Nielsen, 2010).
+
+mg ascorbic acid in volume of standard solution titrated
+[(average volume dye solution to titrate standards) —
+(average volume dye used to titrate blank)
+
+Titer =F =
+
+mg ascorbic acid
+Se) 2mL
+
+mg ascorbic acid in volume of standard solution titrated = ( Te
+m
+
+_ acid F V
+mg ascorbic —- = (X-B)x (=) x (5)
+
+E Y,
+
+Where: X= average mL for sample titration
+
+B= average mL for sample blank titration
+
+
+47
+
+F= titer of dye(=mg ascorbic acid equivalent to 1.0 mL
+
+indophenol standard solution)
+E= mL assayed (=2mL)
+V= volume of initial assay solution (=7 mL)
+
+Y= volume of sample aliquot titrated (=7 mL)
+
+Statistical analysis
+
+All results were presented as means of treatments. The Analysis of variance (ANOVA)
+was computed for the measured traits as affected by each treatment using the Statistical Tool
+for Agricultural Research (STAR) developed by the Biometrics and Breeding Informatics of
+the Plant Breeding, Genetics and Biotechnology Division (PBGBD) of the International Rice
+Research Institute (IRRI). Comparison among means was done using the Tukey’s honesty
+
+significant different (HSD) test.
+
+48
+
+CHAPTER 4
+
+RESULTS AND DISCUSSION
+
+Optimization Study 1: Synthesis Method for Zinc Oxide Nanoparticles
+
+In this study, two different synthesis methods were compared in terms of efficiency in
+the preparation of ZnO nanoparticles. In each method, the precursor for Zinc oxide and the type
+of precipitating agent were varied, as well as the temperature during drying, which has a direct
+implication on crystal formation of ZnO (Table 14). This part of the study was done primarily
+
+to determine the most suitable starting materials for the ZnO nanoparticles.
+
+Table 14. Method parameters for synthesis of ZnO nanoparticles.
+
+Method Zinc source Precipitating Temp and duration of drying
+
+no. agent
+1 ZnSO4(H20); NH4OH 60°, 100° 8h
+
+2 ZnCh NaOH 60°, 100°, 200°, 300° (2-4 h)
+
+The synthesis products QZ1 and QZ2 were subjected to characterization test using Scanning
+Electron Microscopy to determine the particle size and morphology of the nanoparticles. The
+images in Figure 7 and Figure 8 were generated using a Hitachi™ TM4000 Scanning Electron
+Microscope (SEM) and analyzed in Nanotech Analytical Services and Training Corp (NASAT
+Corp.), Muntinlupa City, Philippines. Both SEM images show the synthesized nano ZnO at
+10,000x magnification. The ZnO appear as rod-shaped, or strand-like, with at least one
+dimension measured at less than 100 nm. However, the nanoparticles appear to be aggregated,
+or agglomerated to one another. This is an inherent property of nanoparticles, owing to their
+
+extremely large surface area to volume ratio. The ZnO generated from ZnCl2 and NaOH
+
+49
+
+appeared to be less aggregated and had a smaller average particle size as compared to the ZnO
+
+produced from Zn sulfate + NHsOH.
+
+Figure 7. SEM image of ZnO nanoparticles prepared from ZnCl2 + NaOH.
+
+Figure 8. SEM image of ZnO nanoparticles synthesized from ZnSO4 + NH4OH.
+
+50
+
+From this optimization study, it was therefore concluded that, Zinc chloride was a better
+starting material as compared to Zinc sulfate in the synthesis of nano ZnO, since the former
+produces crystals that are not only smaller in size, but also less aggregated and less clustered
+with one another as compared to the latter. In the preparation of foliar fertilizer, these properties
+are desirable, since more uniform dispersion and more absorption of the ZnO can be achieved
+
+when using less aggregated and smaller sized particles.
+
+Optimization study 2: Optimization of synthesis parameters for nano ZnO
+using optimized starting material from study 1.
+
+In order to produce smaller-sized and less aggregated nano ZnO, a second optimization
+study was conducted by varying the reaction conditions, particularly the pH and temperature of
+the reaction mixture, and temperature during drying and calcination (furnace) of the precipitate.
+
+The effect of adding a cationic surfactant was also tested (Table 15).
+
+Table 15. Optimization of synthesis parameters for ZnO nanoparticles.
+
+Volume of Vol of NaOH Drying/ Surfactant Appearance _ Product
+
+ZnCl, (0.4M) (0.8 M) P Calcination of product Code
+
+100.0 25.0 7.5 400°C, 6hrs None pele -
+precipitate
+
+100.0 25.0 7.5 400°C, 1 hr None ve -
+precipitate
+
+50.0 25.0 75 400°C,1hr None Yellow -
+precipitate
+
+50.0 30.0 11.5 200°C,2hrs CTAB White NZI
+precipitate
+
+50.0 30.0 7.7 200°C,2hrs ~CTAB Kate NZ2
+
+precipitate
+
+
+51
+
+Zinc chloride reacts with sodium hydroxide to form a white colored Zinc hydroxide
+precipitate, while leaving sodium chloride in the aqueous state, as shown by the following
+
+equation:
+ZnCl, + 2NaOH > Zn(OH)2 + 2NaCcl
+After drying, Zn(OH)2 was completely converted to into ZnO, as illustrated by the equation:
+
+Zn(OH), + high temp + CTAB — nano ZnO, + H2,0
+
+Temperature had a clear effect on the growth rate of salt crystals. Based on classical
+nucleation theory, the variables that effect the nucleation rate are the supersaturation,
+temperature, and interfacial tension. Increases in temperature or supersaturation, or a decrease
+in the interfacial tension are expected to produce an increased nucleation rate (Mullin, 1993).
+In theory, high temperature grows crystals faster as compared to room temperature and cold
+temperature conditions. This is because a higher temperature increases the rate of evaporation
+of the solvent, thereby speeding up the rate of growth. Different temperatures produce different
+amounts of crystals. Colder solutions contract, forcing minerals closer together, thus creating
+bonds, but catching impurities in their crystal lattice at the same time. These impurities interrupt
+the crystal pattern, forming a larger number of smaller crystals. In warmer temperatures, the
+distance between molecules is greater, which allows crystals to form larger, purer shapes at a
+much more uniform rate than can occur at colder temperatures. This is the reason why the
+temperature during crystal growth was kept higher than room temperature, at a minimum of 80
+
+degrees Celsius.
+
+In order to decrease the interfacial tension, CTAB was introduced into the solution in
+
+the nano ZnO synthesis as a cationic surfactant. The growth process of ZnO in the presence of
+
+52
+
+CTAB is completely different as compared to when CTAB is not added. CTAB is an ionic
+compound, which ionizes completely in water. The resulting cation is a positively charged
+tetrahedron with a long hydrophobic tail, while the growth unit for ZnO crystal is considered to
+be Zn(OH)2—4Zn(OH)4-, which also has a tetrahedron geometry, but it is negatively charged.
+The positively charged CTAB ions passivate the ionized oxygen O on the surface of ZnO seeds
+by electrostatic interaction, which suppresses the growth of ZnO crystal. Thus, the ZnO nano
+particles with smaller size are obtained in the presence of CTAB. The influence of CTAB on
+ZnO morphology can also be attributed to the reduction of surface tension of solution by CTAB,
+which lowers the energy to form a new phase and ZnO crystal. Therefore, nanocrystals could
+form in a lower super saturation. Moreover, CTAB could also be considered to influence the
+erosion process of Zinc and the growth process of ZnO by the electrostatic and stereo-chemical
+
+effects.
+
+The synthesis optimization parameters were narrowed down to two different methods:
+NZ1 and NZ2 (Table 16), since the other methods produced yellow-colored precipitate,
+implying the presence of impurities in the precipitate. Pure zinc oxide appears as white crystals
+in nature. The two methods that produced pure white crystals were labelled ZN1 and ZN2. The
+only parameter that differed between the two methods was the solution pH during
+
+crystallization.
+
+Both NZ1 and NZ2 were synthesized using the same starting materials: ZnCl2 and
+NaOH; but under different reaction conditions. NZ1 was synthesized at pH 7.0, whereas NZ2
+was synthesized at pH 7.5 but the resulting solution was adjusted to pH 11.5 using 1.0 N NaOH.
+A cationic surfactant, CTAB, was added, in order to promote dispersion between the nano ZnO
+
+particles.
+
+53
+Characterization of the synthesized ZnO nanoparticles
+
+The ZnO nanoparticles synthesized from the second optimization study were subjected
+to characterization tests using standard instrumentation techniques for nanoparticle studies.
+ZnO synthesized from different methods were compared in terms of particle size and
+morphology, degree of aggregation, and chemical purity. Technical grade zinc oxide was also
+analyzed using the same instrumentation techniques, and results were compared with that of the
+
+synthesized nano ZnO.
+
+Scanning Electron Microscopy — Energy Dispersive X-Ray Spectroscopy (SEM-
+EDS). In order to characterize the particle size and elemental composition, the ZnO
+nanoparticles were subjected to SEM-EDS analysis. The images shown in Figures 9 and 10
+show ZnO nanoparticles at 15,000x and 20,000x magnification, respectively, using a Hitachi™
+
+TM4000 Scanning Electron Microscope with Bruker™ Energy Dispersive X-Ray accessory.
+
+The SEM images for the ZnO samples produced from ZN1 and ZN2 show that the rod-
+shaped ZnO particles are less than 100nm in size, thus satisfying the size requirement for
+nanoparticles. In terms of particle size, the average particle size from six readings (measured
+in the smaller dimension) for ZN1 is 45.65 nanometers, whereas that of ZN2 is 45.35
+
+nanometers.
+
+The property that distinguished ZN1 from ZN2 was the degree of aggregation of the
+nanoparticles. ZN1 had more dispersion of nanoparticles than ZN2, as evident from the SEM
+images showing more discernable individual particles in ZN1 than ZN2. Nanoparticles, owing
+to their extremely high surface area, tend to aggregate with each other. It was therefore verified
+
+that more dispersed nano ZnO can be achieved by precipitation at pH 7, as compared to pH 11.
+
+Figure 9. SEM image of ZnO nanoparticles prepared from ZnCl2 +
+NaOH + CTAB; at pH 7.7, & calcined at 200 °C for 2 hrs.
+
+Figure 10. SEM image of ZnO nanoparticles prepared from ZnCl2 +
+NaOH + CTAB; adjusted pH from 7.5 to 11.5 & calcined
+at 200 °C for 2 hrs.
+
+54
+
+55
+
+In terms of elemental composition via EDX analysis (Table 16, Fig 10-11), ZN1 (pH 7)
+produced a higher Zn% (59.96%) as compared to ZN2 method (pH 11.5), at 41.45%. The
+percentage of oxygen was also higher in ZN1 (26.83%) relative to ZN2 (5.61%), which could
+indicate that more ZnO molecules were produced in ZN1 method. Moreover, ZN2 had more
+chloride impurities (52.95%) as compared to ZN1 (13.21%). The Cl impurities from the ZnCl2
+starting material may have been trapped within the crystal lattices during crystal growth, or
+could be adhered onto the surface of the crystals. This was addressed by washing the ZnO
+
+precipitate more liberally using hot deionized water during filtration, and prior to calcination.
+
+Table 16. Elemental composition of ZnO samples using EDX.
+
+MASS %
+ELEMENTS
+ZN1 ZN2
+Zn 59.96 41.45
+oO 26.83 5.61
+cl 13.21 52.95
+Total 100.00 100.00
+cps/eV
+40 ah
+7 ai
+i A
+2 4 6 8 10 12 14
+
+Figure 11. EDX spectrum of nano ZnO (ZN1).
+
+56
+
+Figure 12. EDX spectrum of nano ZnO (ZN2).
+
+X-Ray Fluorescence (XRF) Spectroscopy. The ZnO products were also subjected to
+X-ray fluoresence (XRF) spectroscopy in order to quantify the percentage of Zinc oxide in the
+sample. XRF is a non-destructive analytical technique used to determine the elemental
+composition of materials. XRF analyzers determine the chemistry of a sample by measuring
+the fluorescent (or secondary) X-ray emitted from a sample when it is excited by a primary X-
+
+ray source.
+
+In this study, the model of XRF that was used to characterize the samples was a MESA-
+50 Horiba Scientific X-ray Fluorescence Analyzer. The XRF results, summarized in Table 18
+show that the ZnO composition of the synthesized material was 90.39% (Table 17, Fig. 13).
+The Chloride ions that were detected in the XRF Spectra (Figure 13) were the aforementioned
+impurities from the Zinc chloride starting material. The characterization test using XRF
+Spectroscopy therefore confirms the purity of the synthesized nano ZnO. The obtained purity
+of 90.39% in the synthesized nano ZnO is comparable with the technical grade nano ZnO
+
+(Sigma-Aldrich), which is at 99% purity.
+
+57
+
+Table 17. XRF results for nano ZnO.
+
+Mee Concentration, %
+Elements
+ZnO 90.3915
+cl 9.5758
+Fe 0.0152
+Ni 0.0175
+
+Figure 13. XRF Spectra for synthesized ZnO nanoparticles (ZN1).
+
+Fourier Transform — Infrared Spectroscopy (FT-IR). The identification of the
+atomic arrangement and the concentrations of the chemical bonds present in the samples was
+carried out using Fourier Transform-Infrared Spectroscopy (FTIR), wherein the percentage
+transmission and wave number are the output. Ideally, in the spectrogram for ZnO
+nanoparticles, there is a characteristic sharp peak at around 400-470 cm™! which can be
+attributed to Zn-O stretching vibrations, but depending on synthesis and other experimental
+conditions, weak bands positioned at 520 cm”!, 566 cm’! and 665 cm’! are also possible to appear
+in the FT-IR spectrum (Hernandez et al., 2007). The FT-IR spectra for sample ZN1 and ZN2
+
+are shown on Figure 14.
+
+58
+
+Figure 14. FT-IR Spectra of two different ZnO nanoparticles (ZN1 and ZN2) synthesized at
+varying reaction conditions.
+
+The FT-IR spectra of samples ZN1 and ZN2 are shown in Figure 11. An overlay of the
+red and blue-colored line shows the spectra for ZN1 and ZN2, respectively. The distinct peaks
+at 506.33 cm"! and 515.19"! for ZN1 and ZN2, respectively, matches the characteristic peak of
+ZnO. As reference, an FT-IR analysis was also conducted for a technical grade ZnO
+nanopowder, and the FT-IR spectrum is shown in Figure 15. A distinct peak was also observed
+in the spectrum at 502.89 cm’! due to the ZnO bond. This therefore confirms the presence of
+
+Zn=O bonds in the synthesized nano ZnO.
+
+59
+
+Figure 15. FT-IR Spectra of ZnO nanopowder (<100 nm, Sigma-Aldrich, ~80% Zn basis).
+
+The solution pH had a notable effect upon the number of crystals produced during
+precipitation. In this study, it was observed via SEM imaging that at the solution pH of 7.7,
+remarkably more crystals were produced as compared to the solution pH of 11.5. This is in
+accordance to a study by Judge et al. (1999), where it was recorded that as the pH increased
+from 4.4 to pH 4.6 the crystal number dropped by a factor of 1.5, whereas the change of pH
+from 4.6 to 4.8 resulted in a drop by a factor of 20. This is a significant change over a very
+narrow pH range. The effect of pH on number of crystals produced can be attributed to changes
+in charge at localized areas on the molecule’s surface, indicating that macromolecule nucleation
+
+rates may be very sensitive to changes in molecular charge distribution brought about by
+
+60
+
+changes in solution conditions. The precipitation of nano ZnO for the foliar fertilizer was
+therefore carried out at pH 7.7 rather than at 11.5 as the latter is a more efficient method in
+terms of producing higher number of crystals produced, smaller-sized crystals, higher ZnO
+
+purity, and less aggregated nanocrystals.
+
+The results of the characterization tests are sufficient evidence to conclude that ZnO
+nanoparticles with high chemical purity, and desirable characteristics as nanoparticles, was
+successfully synthesized using ZnCl. and NaOH as starting materials. The synthesized nano
+
+ZnO were then used to prepare foliar fertilizers for the second part of the study.
+
+Activity 2. Application of nano-ZnO and B foliar fertilizer for pot-grown tomato
+
+Initial Soil Characterization
+
+Based on the results of the initial soil characterization (Table 19), it was established that
+the soil collected from Sariaya, Quezon was sandy loam. The total N and exchangeable K were
+both found to be at intermediate levels, whereas the available P (Bray method) was high. A
+high available P in soil, coupled with a sandy soil texture, are conditions that result to Boron
+deficiency in the soil. Zinc levels were also found to be below the critical levels in soil. Thus,
+the Sariaya sandy loam was an ideal potting mixture to observe the effect of the foliar Zn and
+B fertilizers on tomato. The fertilizer recommendation of 200-220-300 (N-P20s-K20) kg/ha
+was formulated based on this soil analysis. Soil pH was found to be acidic, thus lime was
+applied prior to planting, and frequently throughout the growing period in order to supply
+Calcium into the soil. During destructive analysis at 58 DAP and at maturity (74 DAP), the
+
+soils were subjected again to characterization of N, P, K and Zn content.
+
+Table 18. Physical and chemical properties of soil collected from Sariaya, Quezon.
+
+METHOD
+
+PARAMETERS USED VALUES INTERPRETATION
+Hyd ; %Sand — 66.89
+Soil Texture hed Tr _-¥Silt 30.48 Sandy Loam
+metho %Clay — 2.63
+pH dH20 5.06 + 0.01 Acidic
+OM Walkley & 3.31% + 0.80 Intermediate
+Black
+CEC Ammonium 0.1062 meq/100g + Intermediate
+acetate 0.003
+Total N Kjeldahl 0.0721% + 0.008 Intermediate
+Avail P Bray 208 ppm + 15 High
+Avail K ua 0.461 cmol/kg+ 0.019 _ Intermediate
+Photometer
+Zn* AAS 0.735 ppm Low
+Mn** AAS 4.895 ppm Low
+Cu*** AAS 1.46 ppm Low
+
+*Critical deficiency limit for Zn for Phil. Soils: 0.5-1.15 ppm.
+**Critical deficiency limit for Mn for Phil. Soils: 5-55 ppm.
+
+*** Critical deficiency limit for Cu for Phil. Soils: 1-5.9 ppm.
+(Source: BSWM, 2013)
+
+Application of Zn and B foliar treatments
+
+61
+
+The Zn and B foliar treatments were applied at 40 DAP, 54 DAP, and 68 DAP (Table
+
+19). These dates correspond to critical stages for Zinc requirement during growth period of
+
+Marimax tomato: (i) flower initiation; (ii) after fruit set when it becomes approximately marble
+
+sized; and (iii) at 2 weeks interval of second spray, or the reproductive stage of the tomato
+
+(Sultana et al., 2016). The amount of Boron was increased in subsequent applications since B
+
+62
+
+requirement is higher during the reproductive growth or seed production stage than it is in the
+
+vegetative stage.
+
+Table 19. Treatments based on source and rate of fertilizer application.
+
+SOLUTION CONCENTRATION, ppm
+
+NO. CODE DESCRIPTION FLOWER FRUITING
+INITIATION (MARBLE-SIZE) Beet ae
+(40 DAP) 54 DAP
+1 CTRL Control - - =
+2 snz Synthesized 300 300 600
+nano ZnO
+3 cnz Commercial 200 200 400
+nano ZnO
+4 BZ Bulk ZnO 200 200 400
+5 ZS Zinc sulfate 700 700 1400
+
+Synth. nano 0
+6 SNZ +B ZnO + HsBOs 300 Zn +0.2%B 300Zn+03%B 600Zn+04%B
+
+Comm. nano
+
+0, 9, 0,
+7 CNZ+B FONm NaN -200Zn+0.2%B 200 Zn+03%B 400 Zn +0.4%B
+8  BzZ+B Bulk Zinc 200 Zn +0.2%B 200Zn+03%B 400 Zn +0.4%B
+oxide + H3BO3
+9 ZS+B neo * 700 Zn+02%B 700Zn+03%B 700 Zn+0.4%B
+
+In calculating for the total amount of Zn and B that will be supplied to each plant, the
+following factors were considered: desirable levels of Zn and B in tomato plant tissue, the purity
+of the Zn and B source, and the percent Zn and B content, as summarized in Tables 20 and 21.
+
+The amount of boron that was added was the same for all foliar solutions from Treatments 6-9.
+
+According to a study by Marschner (1995), the leaf concentration of Zinc that is required
+for adequate growth of tomato is 15-20 mg Zn kg! DW of plant, whereas for Boron, the
+
+desirable concentration is 40-60 mg B kg"! DW of plant (Sainju et al., 2012). In the soil, the
+
+63
+
+desirable concentration range for Zinc is at 10 to 100 mg kg “' with average at 80 mg kg =
+whereas for Boron, the optimum concentration range is at 2 to 100 mg kg “| with an average of
+
+30 mg kg”.
+
+Table 20. Amount of Zn supplied per plant using different Zn sources.
+
+CODE %Zn %PURITY AMOUNT SUPPLIED/ PLANT, mg
+
+40DAP S54DAP 68DAP TOTAL
+
+SNZ 60 90 8.1 8.1 16.0 32
+CNZ 80 99 8.0 8.0 16.0 32
+BZ 80 99 8.0 8.0 16.0 32
+ZS 23 99 8.0 8.0 16.0 32
+
+Table 21. Amount of B supplied per plant using Boric acid.
+
+B SUPPLIED/PLANT, mg
+40DAP 54DAP 68DAP TOTAL
+17.5 99 18 27 35 80
+
+%BORON PURITY
+
+Plant height of tomato
+
+Plant height of tomato was significantly different among treatments starting at 46 DAP
+(vegetative stage). The SNZ+B treatment was significantly taller than the control treatment,
+but was not significantly different with the rest of the treatments during the vegetative stage
+
+(Figure 16). The differences in plant height were not significant during the flowering stage (53
+
+64
+
+DAP), but at 64 DAP and 74 DAP, which marked the fruiting and maturity stages, respectively,
+the SNZ+B treated tomatoes were significantly taller than the control. During this period,
+maximum plant height was observed in the SNZ+B treatment, followed by the SNZ treatment,
+and CNZ+B treatment, whereas the lowest plant height was observed in the control. This
+implies that the combination of Zn and B application has resulted to a significant increase in
+plant height for tomato. These results are in accordance to the results in a study by Hatwar et
+al. (2003), where plant height of tomato also increased due to the foliar application of Zn and
+B. Zinc is a component of several enzymes and therefore affects many metabolic processes in
+the plant. Zinc is an essential component in the synthesis for tryptophan, a precursor of indole
+acetic acid (IAA), which plays a key role in both root and shoot development. Zinc helps on
+auxin synthesis and in association with boron helps on cell wall development and cell
+
+differentiation of plants (Basavarajeswari et al., 2008).
+
+VEGETATIVE FLOWERING FRUITING maturity
+
+Figure 16. Plant height of tomato as influenced by varying foliar treatments.
+
+65
+Number of clusters per plant
+
+During the vegetative and flowering stages, no significant differences in terms of
+numbers of clusters per plant were observed between the treatments. At 64 DAP, which marked
+the fruiting stage of the tomato, the SNZ+B treatment had a significantly higher number of
+clusters as compared to the control (Fig. 17). During maturity (74 DAP), the SNZ+B treatment
+had the highest number of clusters (5.43), followed by SNZ (5.00), and CNZ+B (4.67) and BZ
+
+(4.67). The control treatment had the lowest number of clusters (3.33) during the maturity stage.
+
+ant
+
+eee
+‘
+1
+
+VEGETATIVE FLOWERING FAUMNG maturity
+
+Figure 17. Number of clusters per tomato plant as influenced by varying foliar treatments.
+
+The application of synthesized nano ZnO with Boron therefore significantly increased
+the number of clusters per tomato plant. A high number of clusters in plants is advantageous
+since more flower buds can be produced, and therefore more flowers can bloom and eventually
+
+these flowers will develop into fruits. This could be attributed to the key role of Zn and B in
+
+66
+
+RNA synthesis and DNA formation in plants. Zinc also affects the indole acetic acid content
+in plants which is important for regulation of plant growth. Thus, the concentration of Zn and
+
+B in the plant is directly proportional to leaf growth and development in tomato.
+
+Number of leaves per plant
+
+The difference in the number of leaves per plant was highly significant (P<0.01) among
+treatments at 64 DAP (fruiting stage), where SNZ+B treatment had the maximum number of
+leaves (14.14), followed by SNZ (13.78), CNZ (12.67), CNZ+B (12.00), while the control
+treatment was the minimum (11.00) (Fig. 18). During the maturity stage (74 DAP), maximum
+number of leaves (average) was observed in SNZ+B treatment, at 15.90, which was found to be
+significantly higher than that in control treatment (11.58) and the ZS treatment (12.22), but not
+statistically higher with the rest of the treatments. The trend in the results for the number of
+leaves per plant are in accordance to a study by Singh and Tiwari (2013), where number of
+
+leaves of tomato also increased due to the foliar application of Zn and B.
+
+Figure 18. Number of leaves per tomato plant as influenced by varying foliar treatments.
+
+67
+
+Number of flowers
+
+During the flowering stage of tomato, the maximum number of flowers was recorded in
+SNZ treatment. During the fruiting stage (64 DAP), maximum number of flowers per plant was
+recorded in the SNZ treatment at 18.11, followed by SNZ treatment at 16.56. The lowest
+number of flowers per plant was observed in the ZS+B treatment (10.89). The same trend was
+observed during the maturity stage (74 DAP) (Figure 19). Statistical analysis however revealed
+that the difference in number of flowers between treatments was not significant across all
+sampling periods. Boron plays a significant role in the pollination and reproductive growth of
+tomato, and when present in adequate amounts, can positively influence the production of
+tomato flowers and fruits. Zinc, on the other hand, is responsible for the metabolism of RNA,
+stimulates carbohydrates, proteins and the DNA formation, thereby increasing the potential of
+
+the plant to produce flowers and eventually fruits.
+
+VEGETATIVE FLOWERIN FRUITING MaTuRITY
+
+Figure 19. Number of flowers per tomato plant as influenced by varying foliar treatments.
+
+68
+
+Percent fruit set and number of fruits per plant
+
+Highest percent fruit set among treatments was recorded in SNZ+B in all sampling
+periods (Figure 20). The number of fruits per plant was not significantly different among
+treatments during the first 3 sampling periods. At 64 DAP, SNZ+B treatments had significantly
+higher number of fruits as compared to the control and the rest of the treatments except SNZ.
+At 74 DAP, the maximum number of fruits was observed at SNZ+B treatment, followed by
+SNZ, CNZ, CNZ+B, and BZ+B (Figure 21). Previous studies have already reported that the
+combined application of zinc and boron increased the number of fruits per plant in tomato
+(Yadav et al, 2001). Boron is known to be involved in flowering and fruit formation, thus its
+
+deficiency can affect fruit set and yield in tomato.
+
+|
+|
+
+Figure 20. Percent fruit set per tomato plant as influenced by varying foliar treatments.
+
+69
+
+Figure 21. Number of fruits per tomato plant as influenced by varying foliar treatments.
+
+SPAD units
+
+SPAD readings were measured using a chlorophyll meter in order to determine the effect
+of the foliar treatments on the relative chlorophyll content of the plants. Marked difference
+among treatments were observed during the vegetative (46 DAP), flowering (53 DAP), and
+maturity stage (74 DAP). Maximum values of SPAD readings for all treatments were observed
+during flowering stage and decreased during the subsequent sampling periods (Figure 22).
+During maturity stage, the highest SPAD readings were recorded in plants from SNZ+B
+treatment (Table 28). Statistical analysis revealed significant differences between treatments
+
+during the flowering and maturity stages only.
+
+Zinc is known to play a key role in chlorophyll synthesis in plants. As a component of
+
+enzymes, zinc catalyzes the synthesis of fructose-6-phosphate, an important metabolite in
+
+70
+
+glycolysis and therefore photosynthesis. Zn increases the biosynthesis of chlorophyll and
+carotenoids ultimately proving beneficial for the photosynthetic machinery of the plant system
+
+(Aravind & Prasad, 2004).
+
+VEGETATIVE FLOWERING FRUITING MaTURITY
+
+Figure 22. Leaf SPAD readings of tomato plants as influenced by varying foliar treatments.
+
+Biomass Production and Total Nutrient Uptake
+
+During the first destructive sampling at 58 DAP, the SNZ+B treatment produced the
+highest amount of above-ground biomass, at 0.42 tons per hectare while the minimum was
+recorded in the control treatment at 0.20 tons per hectare. However, the aboveground biomass
+production was not significantly different among treatments at 58 DAP. The dry matter yield
+during harvest was highest in SNZ+B treatment, and this was significantly different compared
+to all other treatments. The lowest amount of dry matter yield was recorded in the control
+
+treatment. These results are in accordance to the study by Panwar et al, (2012), which also
+
+71
+
+revealed that tomato plant exposed to a concentration of 20 mg/L ZnO nanoparticles exhibited
+maximum growth and biomass production. It was also reported by Alloway (2009) that dry
+
+matter content of the fruits increased progressively with increased doses of boron and zinc.
+
+Application of B and Zn to tomato therefore resulted in a significant response in terms
+of total dry weight of plant at harvest. This trend can be attributed to the role of Zinc in
+promotion of shoot elongation and fruit set, and therefore in the production of biomass. Zinc
+is a co-factor for carbonic anhydrase, an essential enzyme for photosynthesis because of its
+property to convert CO2 to HCO3" reversibly. Carbonic anhydrase plays an important part in
+stomatal closure, which has an effect on photosynthesis. Thus, the deficiency of Zinc can
+
+influence the biomass production and yield of tomato.
+
+Table 22. Above-ground biomass and Dry Matter Yield of tomato as influenced by varying
+
+foliar treatments.
+ABOVE-GROUND BIOMASS, tons ha!
+TREATMENTS (FLOWERING STAGE) (MATURITY STAGE)
+58 DAP 74 DAP
+CTRL 0.20 1.37 be
+SNZ 0.30 1.90 b
+CNZ 0.36 1.94b
+BZ 0.28 1.73 be
+zs 0.29 1.93 b
+SNZ+B 0.42 2.59 a
+CNZ+B 0.35 1.54 be
+BZ+B 0.31 1.71 be
+ZS+B 0.34 1.21¢
+%CV 22.57 11.55
+Mean 0.32 1.77
+Significance ns **
+
+Means within the same column followed by different letters are significantly different (P<0.05, HSD).
+ns = not significant; * significant at P<0.05; ** significant at P<0.01.
+
+72
+
+Zn and B uptake
+
+Tomato plants treated with the nano-sized ZnO (SNZ+B) had a significantly higher Zn
+uptake in both stem and leaves as compared to those treated with bulk ZnO, and granular Zinc
+sulfate (Table 23-24), This is because particle size can influence agronomic effectiveness of
+Zn fertilizers. Decreased particle size results in increased number of particles per unit weight
+of applied Zn, and also increases the specific surface area of the fertilizer, which should increase
+the dissolution rate of fertilizers with low solubility in water such as zinc oxide (ZnO)
+
+(Mortvedt, 1992).
+
+Since the individual ZnO nanoparticles weigh less than bulk-sized ZnO and granular
+ZnO, smaller ZnO particles were used for the same weight, thus resulting in a better distribution
+of Zn when applied, and the higher surface area of contact of Zn fertilizer resulted in better Zn
+
+uptake.
+
+Table 23. Tomato Stem Zn concentration as influenced by varying foliar treatments.
+
+[Zn], mg kg {B], mg kg"
+TREATMENTS | FLOWERING MATURITY FLOWERING MATURITY
+(58 DAP) (74 DAP) (58 DAP) (74 DAP)
+CTRL 10.57 b 9.34 1.34 b 1.65 b
+SNZ 17.07 ab 26.22 2.78 ab 4.01 b
+CNZ 16.65 ab 25.37 2.96 ab 3.72 b
+BZ 19.57 a 19.34 2.68 ab 2.51 b
+ZS 19.76 a 18.87 2.92 ab 2.03 b
+SNZ+B 22.57 a 24.04 4.92 a 6.60 b
+CNZ+B 16.30 ab 19.71 3.07 ab 13.34 ab
+BZ+B 20.19 a 14.60 4.76 a 7.22 b
+ZS+B 21.35 a 15.56 3.55 ab 740 b
+%CV 13.16 37.05 32.76 36.94
+Mean 18.23 19.23 3.22 5.39
+Significance ** ns a **
+
+Means within the same column followed by different letters are significantly different (P<0.05, HSD).
+ns = not significant; * significant at P<0.05; ** significant at P<0.01.
+
+Table 24. Tomato Leaf Zn and B concentration as influenced by varying foliar treatments.
+
+[Zn], mg kg! [B], mg kg"
+TREATMENTS | FLOWERING | MATURITY | FLOWERING | MATURITY
+(58 DAP) (74 DAP) (58 DAP) _ (74 DAP)
+CTRL 7.81 b 16.44 d 2.47 b 16.44 d
+SNZ 49.06 a 47.76 b 2.75 b 47.76 b
+CNZ 33.86 ab 45.20 bed 1.12 b 45.20 bed
+BZ 27.61 ab 17.85 cd 1.20 b 17.85 cd
+ZS 40.35 ab 45.48 be 1.39 b 45.48 be
+SNZ+B 47.17 a 79.12 a 20.61 ab 79.12 a
+CNZ+B 42.89 ab 65.46 ab 35.11 a 65.46 a
+BZ+B 36.74 ab 49.63 b 28.29 a 49.63 b
+ZS+B 47.94 a 61.48 ab 19.70 ab 61.48 ab
+%CV 34.52 20.86 55.60 20.86
+Mean 37.05 47.60 12.51 47.60
+Significance i ae Lh a
+
+Means within the same column followed by different letters are significantly different (P<0.05, HSD).
+ns = not significant; * significant at P<0.05; ** significant at P<0.01.
+
+Table 41. Total N uptake of tomato as influenced by varying foliar treatments.
+
+TOTAL N UPTAKE, kg ha"!
+TREATMENTS FLOWERING MATURITY
+(58 DAP) _____(4DAP)
+CTRL 3.98 b 21.83 d
+SNZ 7.83 ab 30.42 bed
+CNZ 10.58 a 37.75 ab
+BZ 6.97 ab 26.03 ed
+VAS 7.16 ab 34.56 be
+SNZ+B 11.30a 48.70 a
+CNZ+B 8.16 ab 35.74 be
+BZ+B 7.93 ab 38.61 ab
+ZS+B 7.09 ab 35.42 be
+%CV 20.24 11.08
+Mean 7.89 34.34
+Significance ** “
+
+Means within the same column followed by different letters are significantly different (P<0.05, HSD).
+ns = not significant; * significant at P<0.05; ** significant at P<0.01.
+
+Yield components
+
+73
+
+74
+
+The fruits were harvested at 80-85 DAP, at the breaker stage, or at Peel Color Index 2,
+which is green with a tinge of orange color. The SNZ+B treatment produced the highest
+marketable yield at 14.28 tons ha’, followed by SNZ (12.99 tons ha”), CNZ (11.49 tons ha"),
+while the control treatment produced the lowest yield (4.99 tons ha’!) (Table 26). Statistically,
+the differences between treatments were significant in terms of the marketable yield of tomato.
+The single fruit weight was also found to be significantly different between treatments, with
+maximum values from SNZ+B treatment at 47.23 g, followed by CNZ (43.47 g) and SNZ
+(42.75), while the lowest values in fruit weight was observed in the control treatment (32.27 g).
+A similar trend was also observed in fruit length, where control treatment had the lowest values.
+In terms of fruit diameter or width, the control treatment was significantly lower (P<0.05) as
+
+compared to the rest of the treatments, which were all statistically similar in terms of width.
+
+Table 26. Yield data of tomato as influence by varying foliar treatments.
+
+TREATMENTS MARKETABLE SINGLE FRUIT FRUIT FRUIT
+YIELD, tons/ha WEIGHT, g LENGTH,mm WIDTH, mm
+CTRL 4.99 b 32.27 ¢ 35.85 d 32.42 b
+SNZ 12.994 42.75 ab 45.32 abc 41.0l a
+CNZ 11.49 ab 43.47 ab 46.41 ab 42.90 a
+BZ 8.39 ab 39.64 abc 43.34 abc 40.23 a
+ZS 11.73 ab 36.39 be 44.28 abc 40.63 a
+SNZ+B 14.28 a 47.23 a 47.40a 39.21 a
+CNZ+B 9.69 ab 39.92 abc 41.76 be 41.68 a
+BZ+B 8.70 ab 33.14 ¢ 40.49 cd 39.81 a
+ZS 6.04 b 36.99 be 44.16 abc 39.61 a
+%CV 24.01 7.57 4.15 4.36
+Mean 12.27 39.09 43.22 39.72
+Significance ** ek ak *
+
+Means within the same column followed by different letters are significantly different (P<0.05, HSD).
+ns = not significant; * significant at P<0.05; ** significant at P<0.01.
+
+75
+
+The improvement in yield in tomatoes treated with nano Zinc oxide and Boron can be
+attributed to the synergistic effects of Zn and B on fruit development in tomato. Zinc is
+essential for synthesis of the carbonic anhydrase enzyme and photosynthesis, resulting in
+increase in translocation of photosynthates in fruits; and positive effect on retaining flowers and
+fruits. Boron, on the other hand, also plays a key role on accumulation of photosynthates that
+has correlation with fruit weight. The reduced size of nano ZnO also may have improved the
+agronomic effectiveness of the foliar fertilizer, resulting to enhanced yield and fruit quality.
+Higher yield due to the application of B and Zinc have also been reported in previous studies
+
+involving vegetable crops (Shukha, 2011).
+Soil final characterization
+
+Soil parameters particularly pH, total N, available P (Bray), exchangeable K, and
+organic matter were determined after harvest. Soil pH was found to be acidic for all treatments,
+and no significant difference was observed statistically. Total N, exchangeable P, exchangeable
+
+K, and organic matter content were also found to be statistically similar for all treatments.
+Postharvest Quality of Tomato
+
+The postharvest parameters of the harvested tomatoes are presented in Table _. Total
+Soluble Solids (TSS) is a refractometric index that indicates the relative proportion (%) of
+dissolved solids in a solution. It is the sum of sugars (sucrose and hexoses), acids (citrate
+and malate) and other minor components (phenols, amino acids, soluble pectins, ascorbic
+acid and minerals) in the tomato fruit pulp (Beckles, 2012). The total soluble solids (TSS)
+was highest in SNZ+B treatment at 6.06 °Brix, which was found to be significantly higher than
+
+the control and the rest of the treatments, except for the SNZ treatment, which had the second
+
+76
+
+highest value, followed by the CNZ+B treatment. The positive effect of Zn on total sugars can
+be attributed to its role in the starch and nucleic acid metabolism, and also to the activities of
+various enzymes involved in the biochemical reactions during ripening (Alloway, 2009). In
+terms of juice pH and firmness, no significant difference was observed among the treatments.
+Titratable acidity was highest in SNZ+B, followed by CNZ+B, both of which were significantly
+
+different with the control treatment.
+
+Because acids influence the perception of sweetness, another useful indicator of tomato
+taste is the TSS-to-titratable acid (TSS/TA) ratio (Beckles, 2012). There are two primary acids
+in tomato, citric and malic (Beckles, 2012). A minimum TSS of 5 and a minimum %TA of 0.4,
+respectively (TSS:TA of 12.5), is considered desirable to produce a good-tasting table tomato
+(Kader et al., 1977). Only the SNZ+B and SNZ treated fruits had a TSS value of more than
+5 and %TA of at least 0.4%. This implies that even without sensory testing, these tomatoes can
+
+be judged as palatable and having a good balance of sweetness and sourness.
+
+In terms of Vitamin C content, maximum values were recorded in the SNZ+B treatment
+at 8.60 mg 100g", which was significantly higher than the control treatment but not with the
+rest of the treatments. CNZ+B had the second highest vitamin C content at 6.32 mg 100g"
+followed by SNZ at 5.97 mg 100g”. This is in accordance to a previous study by Lee and Kader
+(2000), where pre-harvest factors including the Zn fertilization had a positive effect on ascorbic
+
+acid content of tomato fruits.
+
+Zinc plays an essential role in ATP and protein synthesis. Zinc is a key component of
+
+RNA polymerase which catalyzes RNA synthesis, which in turn affects production of proteins
+
+77
+
+and manufacturing of carbohydrates. The amount of Zinc therefore directly affects the amount
+
+of sugars in the tomato fruits.
+
+Table 27. Postharvest parameters of tomato as influenced by varying foliar treatments.
+
+TREATMENTS JUICE reg eprixy %TA tssra  FIRMNESS, eis
+pH (kg/m?) _mL)
+CTRL 4.26 2.89 c 0.22 ¢ 13.58 16.93 2.64 b
+SNZ 4.16 5.39 ab 0.41 abc 13.58 28.20 5.97 ab
+CNZ 4.27 3.55 be 0.25 ¢ 14.34 21.77 2.55 b
+BZ 4.08 3.62 be 0.26 be 13.81 19.84 5.06 ab
+ZS 4.45 3.95 be 0.35 abc 12.88 18.88 4.45 ab
+SNZ+B 4.19 6.06 a 0.48 a 12.83 28.08 8.60a
+CNZ+B 4.13 4.94 abc 0.46 ab 10.84 22.50 6.32 ab
+BZ+B 4.27 3.65 be 0.27 be 14.41 18.65 5.36 ab
+ZS+B 4.28 3.61 be 0.21¢ 18.30 18.72 4.61 ab
+%CV 4.36 16.95 21.59 21.40 22.01 28.38
+Mean 4.23 4.18 0.32 13.84 22.12 5.06
+Significance ns ae Ls ns ns ae
+
+Means within the same column followed by different letters are significantly different (P<0.05, HSD).
+ns = not significant; * significant at P<0.05; ** significant at P<0.01.
+
+78
+
+SUMMARY AND CONCLUSION
+
+The synthesis method parameters for Zinc oxide nanoparticles were optimized in the
+study. Nano zinc oxide was successfully synthesized via a simple alkaline precipitation
+technique using Zinc chloride as starting material and sodium hydroxide as the precipitating
+agent. The characterization test using SEM-EDX Spectroscopy verified that the synthesized
+nano ZnO was less than 100 nm in size, and contained 59% Zinc content with a low degree of
+aggregation. XRF Spectrosocopy further revealed that the synthesized nano ZnO was
+chemically pure (90.39% ZnO), while FT-IR Spectroscopy analysis confirmed the molecular
+structure of ZnO using a commercial technical grade nano ZnO as standard. These results were
+sufficient to conclude that the nano ZnO was an ideal source of zinc as foliar fertilizer.
+
+Foliar solutions containing the synthesized nano ZnO and Boric acid as Boron source
+were prepared and tested on pot-grown ‘Marimax’ tomato in order to investigate the synergistic
+effect of Zn and B on plant growth, yield and postharvest quality.
+
+It was evident from the study that application of the synthesized nano ZnO, in
+combination with Boron (SNZ+B treatment), had positive effects on plant height, number of
+leaves per plant, number of fruits per plant, clusters per plant, SPAD readings, dry matter yield
+and marketable yield. Fertilization with the treatments containing both Zn and B also led to
+significant improvements in fruit quality, including higher TSS, %TA, and Vitamin C content,
+whereas juice pH, and firmness were unaffected. Among the all treatments, the lowest
+performance was recorded in the control treatment.
+
+Zinc and boron improves fruit growth and yield since these micronutrients play key roles
+
+in the synthesis of essential enzymes and growth regulators involved in photosynthesis and
+
+79
+
+carbohydrate synthesis, thereby influencing shoot growth, biomass production, fruit quality,
+and yield. Owing to the small size of the ZnO nanoparticles, the particles can easily penetrate
+the stomates as they are applied as foliar spray and therefore resulted in more efficient nutrient
+use as compared to the commercial ZnO and granular zinc sulfate. Nano-sizing on ZnO also
+increased the number of particles per unit weight of applied Zn, while increasing the specific
+surface area of the fertilizer, which increased the solubility rate of ZnO in water thereby
+enhancing plant uptake. It was therefore concluded that the use of nano ZnO has resulted to a
+significant improvement in the effectiveness of the foliar fertilizers and in combination with
+
+Boron at calculated dosages, has enhanced growth yield and postharvest quality of tomato.
+
+80
+
+LITERATURE CITED
+
+ABUSHITA AA, HEBSHI EA, DAOOD HG, BIACS PA. 1997. Determination of antioxidant
+vitamins in tomatoes. Food Chemistry, 60: 207-212.
+
+ADAMS P. 1978. Tomatoes in peat. Part I. How feed variations affect yield. Grower 89: 1091,
+1093-1094.
+
+ALI MR, MEHRAJB H, JAMAL UDDIN AFM. 2015. Effects of foliar application of zinc and
+boron on growth and yield of summer tomato. J. Biosci. Agric. Res. 06(01): 512-517
+
+ALLOWAY BJ. 2009. Soil factors associated with zinc deficien cy in crops and humans.
+Environ. Geochem. Health 31: 537-548.
+
+AULD DS. 2001. Zinc coordination sphere in biochemical zinc sites. Biometals. 14: 271-313.
+
+ARAVIND P, PRASAD MNV. 2004. Zinc protects chloroplasts and associated photochemical
+functions in cadmium exposed Ceratophyllum demersum L., a freshwater macrophyte.
+Plant Science, 166: 1321-1327.
+
+AWODUGBA AO, ILYAS AO. 2013. Synthesis and Characterization of ZnO Nanoparticles
+With Zinc Chloride as Zinc Source. Asian Journal of Natural & Applied Sciences, 2: 41-
+44,
+
+BARBER §&. 1995. Soil Nutrient Bioavailability, second ed. John Wiley & Sons, Inc., New
+York, NY.
+
+BASAVARAJESWARI CP, HOSAMNI RM, AJJAPPALAVARA PS, NAIK BH, SMITHA
+RP, & UKKUND. 2008. Effect of foliar application of micronutrients on growth, yield
+components of Tomato (Lycopersicon esculentum Mill). Karnataka J. Agri. Sci., 21(3),
+428-430.
+
+BECKLES DM. 2012. Factors affecting the postharvest soluble solids and sugar content
+of tomato fruit. Postharvest Biology and Technology, 63, 129-140
+
+BEHNASSI M, SHAHID AS, D’ SILVA J. 2011. Sustainable Agricultural Development.
+Springer Science Business Media, London, 171-184.
+
+BERGER KC, TRUOG E. 1940. Boron deficiencies as revealed by plant and soil tests. J. Am.
+Soc. Agron. 32: 297-301.
+
+81
+
+BOSE US, TRIPATHI SK. 1996. Effect of micronutrients on growth, yield and quality of
+tomato cv. Pusa Ruby. Crop. Res. Hisar. 12(1): 61-64.
+
+BRENNAN R. 1991. Effectiveness of zinc sulfate and zinc chelate as foliar sprays in alleviating
+zinc deficiency of wheat grown on zinc-deficient soils in Western Australia. Aust. J. Exp.
+Agric. 31: 831-834.
+
+BROWN PH, CAKMAK I, ZHANG Q. 1993. Forms and function of zinc in plants. In: Zinc in
+Soil and Plants, ed. A. D. Robson, Dordrecht, the Netherlands: Kluwer Academic
+Publishers pp. 93-106.
+
+BUREAU OF SOILS AND WATER MANAGEMENT HANDBOOK. 2013.
+
+CAKMAK I, MARSCHNER H. 1988. Zinc-Dependent Changes in ESR Signals, NADPH
+Oxidase and Plasma Membrane Permeability in Cotton Roots. Physiol Plant., 73: 132-
+186.
+
+CHERIF J, MEDIOUNI C, AMMAR WB, JEMAL F. 2011. Interactions of zinc and cadmium
+toxicity in their effects on growth and in antioxidative systems in tomato plants (Solanum
+Lycopersicum). J Environ Sci. 23: 837-844.
+
+CHOO WS, YONG WK. 2011. Antioxidant properties of two species of Hylocereus fruits.
+Advances in Applied Science Research, 2(3): 418-425.
+
+COUVREUR P, BARRATT G, FATTAL E, LEGRAND P, VAUTHIER C. 2002. Nanocapsule
+technology: a review. Crit Rev Ther Drug Carrier Syst, 19: 99-134.
+
+CROWLEY DE, SMITH W, FABER B, MANTHEY JA. 1996. Zinc fertilization of avocado
+trees. HortScience 31, 224-229.
+
+DAS SK. 2014. Role of Micronutrient in Rice Cultivation and Management Strategy in Organic
+Agriculture—A Reappraisal. Agricultural Sciences 5: 765-769.
+
+DAVARPANAHA S, TEHRANIFARA A, DAVARYNEJADA G, ABADiAB J,
+KHORASANI R. 2016. Effects of foliar applications of zinc and boron nano-fertilizers
+on pomegranate (Punica granatum cv. Ardestani) fruit yield and quality. Scientia
+Horticulturae 210: 57-64
+
+DAVIS JM, SANDERS DC, NELSON PV, LENGNICK L, & SPERRY WJ. 2003. Boron
+Improves Growth Yield, Quality, and Nutrient Content of Tomato. J. Amer. Soc. Hort.
+Sci. 128(3):441-446.
+
+DEGEN A, & KOSEC M. 2000. Effect of pH and impurities on the surface charge of zinc oxide
+in aqueous solution. J Europena Ceramic Society, 20: 667-73.
+
+82
+
+DEGRYSE F, BAIRD R, MCLAUGHLIN M. 2015. Diffusion and solubility control of
+fertilizer-applied zinc: chemical assessment and visualization. Plant Soil 386: 195-204
+
+DU Y, KOPITTKE PM, NOLLER BN, JAMES SA, HARRIS HH, XU ZP, LI P, MULLIGAN
+DR, HUANG L. 2015. In situ analysis of foliar zinc absorption and short-distance
+movement in fresh and hydrated leaves of tomato and citrus using synchrotron-based X-
+ray fluorescence microscopy. Ann. Bot. 115: 41-53.
+
+DUBE BK, PRATIMA S, CHATTERJEE C. 2004. Effects of boron and zinc on the yield and
+quality of tomato. Indian J. Hort. 61(1): 48-52.
+
+DUMAS Y, DADOMO M, LUCCA G, GROLIER P, DI LUCCA G. 2003. Effects of
+environmental factors and agricultural techniques on antioxidant content of tomatoes.
+Journal of the Science of Food and Agriculture, 83, 369-382.
+
+ELMER WH, WHITE JC. 2016. The use of metallic oxide nanoparticles to enhance growth of
+tomatoes and eggplants in disease infested soil or soilless medium. Environmental
+Science: Nano, Vol. 3, 6: 1072-1079.
+
+FAGERIA NK, BALIGAR VC, CLARK RB. 2002. Micronutrients in crop production.
+Advances in Agronomy 77: 189-272.
+
+FAO. 2000. Tomato Integrated Pest Management: An Ecological Guide. Training Resource
+Text on Crop Development, Major Agronomic Practices, Disease and Insect Ecology,
+Insect pests, Natural Enemies, and Diseases of Tomato.
+
+FERMIA AM. 2016. Administering soil ameliorant to combat Zinc deficiency in Aklan. In:
+BSWM website http://www.bswm.da.gov.ph/news/0056/administering-soil-amcliorant-
+to-combat-zinc-deficiency-in-aklan, Accessed 12 July 2017.
+
+FERNANDEZ V, BROWN PH. 2013. From plant surface to plant metabolism: the uncertain
+fate of foliar-applied nutrients. Front. Plant Sci. 4: 289.
+
+FERNANDEZ V, SOTIROPOULOS T, BROWN PH. 2013. Foliar Fertilization: Scientific
+Principles and Field Practices, first ed. IFA, Paris, France.
+
+FISH WW, PERKINS-VEAZIEA P COLLINS JK. 2002. Quantitative assay for lycopene that
+utilizes reduced volumes of organic solvents. J. Food Comp. Anal., 15 (3): 309-317.
+
+FLEMING GA. 1980. Essential micronutrients, p.155. In: B.E. Davies (ed.) Boron and
+molybdenum. Applied soil trace elements, Wiley, New York.
+
+GALLGHER PA. 1972. Potassium nutrition of tomatoes. Proc. Provisional Glasshouse
+Conference, Dublin, England. pp. 13-18.
+
+83
+
+GRAHAM RD, WELCH RM AND BOUIS HE. 2000. Addressing micronutrient nutrition
+through enhancing the nutritional quality of staple foods. Advances in Agronomy, 70: 77-
+161.
+
+HANSON JT, CHEN CG, KUO R, MORRIS R, OPENA RT. 2001. Suggested cultural
+practices for tomato [Online]. AVRDC — the World Vegetable Center. Retrieved from:
+http://www.agrifoodgateway.com/articles/suggested-cultural-practices-tomato [27
+January 2017].
+
+HATWAR GP, GONDANE SM, URKADE SM, & GAHUKAR OV. 2003. Effect of
+micronutrients on growth and yield of chilli. Soils and Crops, 13(1), 123-125.
+
+HERNANDEZ A, MAYA L, SANCHEZ-MORA, SANCHEZ EM. 2007. Sol-Gel Synthesis,
+Characterization and Photocatalytic Activity of Mixed Oxide ZnO-Fe20s3. Journal of Sol-
+Gel Science and Technology, 42(1): 71-78.
+
+JEFFERY J, UREN N. 1983. Copper and zinc species in the soil solution and the effects of soil
+pH. Soil Res. 21: 479-488.
+
+JUDGE RA, JACOBS RS, FRAZIER T, SNELL EH, PUSEY ML. 1999. The Effect of
+Temperature and Solution pH on the Nucleation of Tetragonal Lysozyme Crystals.
+Biophysical Journal. 77:
+
+KAYA C, HIGGS D. 2002, Response of tomato (Lycopersicon esculentum) culture at low zinc.
+Scientific Horticulture. 93: 53-64.
+
+KOCEVSKI GV, JAKIMOV NI, JEKIC MM, KOLEVA RL. 1997. The effect of NPK. Mg and
+B on the yield, morphological characteristics and quality characteristics of industrial
+tomatoes. Acta Hort. 462: 183-186.
+
+KOCHKODAN V, DARWISH NB, HILAL N. 2015. The Chemistry of Boron in Water, In:
+Boron Separation Processes. 2: 35-64.
+
+LAGASHETTY A, VENKATARAMAN A. 2005. Polymer Nanocomposites. School of
+Chemistry and Biochemistry, Thapar Institute of Engineering and Technology.
+
+LARBAT R, LE BO J, BOURGAUD F, ROBIN C, ADAMOWICZ S. 2012. Organ-specific
+responses of tomato growth and phenolic metabolism to nitrate limitation. Plant Biol.
+(Stuttg) 14 (5): 760-769
+
+LEE SK, KADER AA. 2000. Pre-harvest and postharvest factors influencing vitamin C content
+of horticultural crops. Postharvest Biology and Technology, 20: 207 — 220.
+
+LI Z. 2003. Use of surfactant-modified zeolite as fertilizer carriers to control nitrate release.
+Microporous and Mesoporous Materials, 63,181—188.
+
+84
+
+LINDSAY WL. 1979. Chemical Equilibria in Soils. John Wiley & Sons, Inc., New York.
+
+MAGALHAES JR. IC, SOLWA DC, MONNERAT PH. 1980. Levels and methods of boron
+application in tomatoes. Pesquisa Agropecuria Brasilesia 10 (2): 153-157 as cited from
+Hort. Abstr. 50(4): 2031, 19811.
+
+MARSCHNER H. 1995. Mineral Nutrition of Higher Plants. San Diego, CA: Academic Press.
+
+MCBRIDE M, SAUVE S, HENDERSHOT W. 1997. Solubility control of Cu, Zn, Cd and Pb
+incontaminated soils. Eur. J. Soil Sci. 48: 337-346.
+
+MERTENS J, SMOLDERS E. 2013. Zinc. In: Alloway, B.J. (Ed.), Heavy Metals in Soils, 22.
+Springer, Netherlands, pp. 465-493.
+
+MISRA A, AND NK SRIVASTAVA. 2010. Value addition of essential monoterpene oil(s) in
+Geranium (Pelargonium graveolens) on leaf positions for commercial exploitation.
+African Journal of Agricultural Research. 15: 2077-2079.
+
+MOHANRAJ VJ, CHEN Y. 2006. Nanoparticles-A Review. Tropical Journal of
+Pharmaceutical Research, 5 (1): 561-573.
+
+MONTALVO D, DEGRYSE F, DA SILVA RC, BAIRD R, MCLAUGHLIN MJ. 2016.
+Agronomic Effectiveness of Zinc Sources as Micronutrient Fertilizer. Advances in
+Agronomy, Volume 139: 215-263.
+
+MORTVEDT JJ. 1992, Crop response to level of water soluble zinc in granular zinc fertilizers.
+Fertilizer Research. 33: 249-255.
+
+MORTVEDT JJ, GILKES RJ. 1993. Zinc fertilizers. In: Robson, A.D. (Ed.), Zinc in Soils and
+Plants, 55. Kluwer Academic Publishers, Dordrecht, Netherlands, pp. 33-44.
+
+MOZAFAR A. 1993. Role of Boron in seed production, p. 186-206, In U.C. Gupta, (ed.) Boron
+and its Role in Crop Production. ed. CRC Press, Boca Raton, Florida.
+
+MULLIN JW. 1993. Crystallization, 3rd Ed. Butterworth-Heinemann, Oxford,
+England. 176, 194.
+
+NARCISO JO, BALATERO CH. 2008. ‘Rica’: a New Off-Season Tomato Variety
+(Lycopersicon esculentum L.). Philippine Journal of Crop Science, 33(3): 94-96.
+
+NAZ RMM, MUHAMMAD §S, HAMID A, BIBI F. 2012. EFFECT OF BORON ON THE
+FLOWERING AND FRUITING OF TOMATO. Sarhad J. Agric. Vol.28, No.1, 37-40.
+
+NIELSEN SS. 2010. Food Analysis Laboratory Manual. 2nd Ed. USA: Springer Science
+Business Media, LLC. p 55.
+
+85
+
+NONNECKE IBL.1989. Vegetable Production. Avi Book Publishers. New York, USA. pp.200-
+229.
+
+NURLIYANA R, ZAHIR IS, SULEIMAN KM, AISYAH MR, RAHIM KK. 2010. Antioxidant
+study of pulps and peels of dragon fruits: a comparative study. International Food
+Research Journal, 17, 367-375.
+
+OTAKAR R, REZNICEK V, VALSIKOVA M, JURIKOVA T, MLCEK J, KRAMAROVA D.
+2010. Antioxidant properties of European Cranberry bush fruit (Viburnum opulus var.
+edule). Molecules 15: 4467-4477.
+
+PANWAR J, JAIN N, AKHTAR MS, YUN YS. 2012. Positive effect of Zinc Oxide
+nanoparticles on tomato plants: A step towards developing “Nanofertilizers”.
+
+PRASAD TNVKV, P. SUDHAKAR, Y. SREENIVASULU, P. LATHA, V. MUNASWAMY,
+REDDY KR, SREEPRASAD TS, SAJANLAL PR, & PRADEEP T. 2012. Effect of
+Nanoscale Zinc Oxide Particles on the Germination, Growth and Yield of Peanut, Journal
+of Plant Nutrition, 35:6, 905-927
+
+QIAO X, HE Y, WANG Z, LI X, ZHANG K, ZENG H. 2014. Effect of foliar spray of B
+carbonic anhydrase expression and enzyme activity in rice (Oryza sativa L.) leaves. Acta
+Physiol Plant. 36:263-272.
+
+QU F, MORAIS PC. 2001. The pH dependence of the surface charge density in oxide-based
+semiconductor nanoparticles immersed in aqueous solution. IEEE Transactions on
+Magnetics, 37: 2654-6.
+
+RASCO AO. 2014. Seed Production of Solanaceous Crops. Institute of Plant Breeding-Crop
+Science Cluster, College of Agriculture, University of the Philippines Los Bafios.
+
+REISENAUER HM, WALSH LM, HOEFT RG. 1973. Testing soils for sulfur, boron,
+molybdenum, and chlorine. p. 173 In: L.M. Walsh and J.D. Benton (eds.). Soil testing and
+plant analysis. Soil. Sci. Soc. Amer., Madison, Wis.
+
+SADRAEI R. 2016. A Simple Method for Preparation of Nano-sized ZnO. Research &
+Reviews: Journal of Chemistry. 5: 45-49.
+
+SAH RN, BROWN PH. 1997. Techniques for boron determination and their application to the
+analysis of plant and soil samples. Plant and Soil, 193: 15-33.
+
+SAKAL R, SINGH S P, SINGH A P AND BHOGALN S. 1993. Evaluation of soil test methods
+for response of chickpea to boron in calcareous soil. Anal. Agric. Res. 14: 377-387.
+
+86
+
+SANDOVAL-VILLA M, WOOD CW, GUERTAL EA. 1999. Effects of nitrogen form,
+nighttime nutrient solution strength, and cultivar on greenhouse tomato production.
+Journal of Plant Nutrition, 22: 1931-1945.
+
+SHUKHA AK. 2011. Effect of foliar application of calcium and boron on growth, productivity
+and quality of Indian gooseberry (Emblica officinalis). Indian J. Agric. Sci., 81(7), 628-
+632.
+
+SHUMAN L M, BANDEL VA, DONOHUE SJ, ISAAC RA, LIPPERT RM, SIMES JT,
+TUCKER MR.1992. Comparison of Mehlich-1 and Mehlich-3 extractable soil boron with
+hot-water extractable boron. Comm. Soil Sci. Plant Anal. 23: 1-14.
+
+SAINJU UM, SINGH BP, WHITEHEAD WF. 2001. Comparison of the effects of cover crops
+and nitrogen fertilization on tomato yield, root growth, and soil properties. Scientia
+Horticulturae, 91, 201-214.
+
+SALAM MA, SIDDIQUE MA, RAHIM MA, RAHMAN MA, GOFFAR MA. 2011. Quality
+of Tomato as Influenced by Boron and Zinc in Presence of Different Doses of Cowdung.
+Bangladesh J. Agril. Res. 36(1): 151-163.
+
+SINGH HP, SINGH TN. 2004. Effect of sources and levels of Zn on growth yield and mineral
+composition of rice in Alkali soil. Indian J. Plant Physiol. 4: 378-382.
+
+SINGH HM, TIWARI JK. 2013. Impact of micronutrient spray on growth, yield and quality of
+tomato (Lycopersicon esculentum Mill). Hort Flora Research Spectrum, 2(1), 87-89.
+
+SKOOG F. 1940, Relationships between zinc and auxin in the growth of higher plants.
+American Journal of Botany. 27: 939-951.
+
+SPIEGEL-ROY P, GOLDSCHMIDT E. 2008, Biology of Citrus. Cambridge University Press.
+140-184.
+
+STANLEY DW, BOURNE MC, STONE AP AND WISMER WV. 1995. Low temperature
+blanching effects of chemistry, firmness and structure of canned green beans and carrots.
+Food Sci. (60): 327-333.
+
+STEIN AJ, MEENAKSHI JV, QAIM M, NESTEL P, SACHDEV HPS. 2008. Potential impacts
+of iron biofortification in India. Soc. Sci. Med. 66: 1797-1808.
+
+SUPPAN S. 2013. Nanomaterials In Soil, Our Future Food Chain? Institute of Agriculture and
+trade policy.
+
+SULTANA S, NASER HM, AKHTER S, BEGUM RA. 2016. Effectiveness of Soil and Foliar
+Applications of Zinc and Boron on the Yield of Tomato. Bangladesh J. Agril. Res. 41(3):
+411-418
+
+87
+
+SWIETLIK D. 2002. Zinc nutrition of fruit crops. HortTechnology 12: 45-50.
+TISDALE SL, NELSON WL, BEATON JD. 1985. Soil fertility and fertilizers. pp: 754.
+
+TOOR RK, SAVAGE GP, HEEB A. 2006. Influence of different types of fertilisers on the
+major antioxidant components of tomatoes. Journal of Food Composition and Analysis,
+19: 20-27
+
+UL HAQ AN, NADHMAN A, ULLAH I, MUSTAFA G, YASINZAI M, KHAN I. 2017.
+Synthesis Approaches of Zinc Oxide Nanoparticles: The Dilemma of Ecotoxicity.
+Hindawi Journal of Nanomaterials. Vol 2017: 1-4.
+
+UMER S, BANSAL SK, IMAS P, MAGEN H. 1999. Effect of foliar fertilization of potas-sium
+on yield, quality and nutrient uptake of groundnut. J. Plant. Nutr. 22:1785—1795.
+
+VAEZI M R, SADRNEZHAAD SK. 2007. Nanopowder synthesis of zinc oxide via
+solochemical processing. Materials & Design.; 28: 515-519.
+
+WANITCHANG J, TERDWONGWORAKUL A, WANITCHANG P, NOYPITAK S. 2010.
+Maturity sorting index of dragon fruit: Hylocereus polyrhizus. Journal of Food
+Engineering, 100: 409-416.
+
+WENG L, TEMMINGHOFF EJM, LOFTS S, TIPPING E, VAN RIEMSDIJK WH. 2002.
+Complexation with dissolved organic matter and solubility control of heavy metals in a
+sandy soil. Environ. Sci. Technol. 36: 4804-4810.
+
+YADAV PVS, TIKKOO A, SHARMA NK, TIKKOO, A. 2001. Effect of Zn and B on growth,
+flowering and fruiting of tomato (Lycopersicon esculentum Mill.) Haryana J. Hort. Sci.,
+30(1-2), 105-107.
+
+YOSHIDA S, AHN JS, & DA FORNO. 1973. Occurrence, diagnosis, and correction of zinc
+deficiency of lowland rice, Soil Science and Plant Nutrition, 19:2, 83-93
+
+YU Q, OSBORNE L, RENGEL Z. 1998. Micronutrient Deficiency Changes Activities of
+Superoxide Dismutase and Ascorbate Peroxidase in Tobacco Plants. J Plant Nutr., 21:
+1427-1437.
+
+ZAMBAUX M, BONNEAUX F, GREF R, MAINCENT P, DELLACHERIE E, ALONSO M,
+LABRUDE P, VIGNERON C. 1998. Influence of experimental parameters on the
+characteristics of poly(lactic acid) nanoparticles prepared by double emulsion method. J.
+Control. Release, 50: 31-40.
+
+Online Reference:
+
+FOOD AND FERTILIZER TECHNOLOGY CENTER. 2001. Retrieved on 12 July 2017
+from: http://www. fftc.agnet.org/library.php?func=view&id=20110804140457&
+
+type_id=2
+

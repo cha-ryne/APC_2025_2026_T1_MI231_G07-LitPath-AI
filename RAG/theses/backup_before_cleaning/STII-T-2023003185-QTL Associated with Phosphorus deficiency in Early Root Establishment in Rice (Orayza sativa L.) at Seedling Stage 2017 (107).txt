@@ -1,0 +1,2724 @@
+QTLs ASSOCIATED WITH PHOSPHORUS DEFICIENCY IN EARLY ROOT ESTABLISHMENT IN RICE (Oryza sativa L.) AT SEEDLING STAGE
+
+LOUELL MANANGAN OZARRAGA
+
+UNIVERSITY OF THE PHILIPPINES LOS BAÑOS
+
+Master of Science in Plant Breeding
+
+June 2017
+
+ABSTRACT
+
+One-hundred forty two F₁₄, Recombinant Inbred Lines from the cross between
+Dasanbyeo (Indica) and TR22183 (Japonica) were phenotypically evaluated at seedling
+stage, 14 days after seeding, under phosphorus deficiency in a hydroponic solution. The
+RILs were selected and genotyped using Genotyping by Sequencing (GBS) technology.
+The genotyped data was used to correlate with the phenotype data of the 142 F₁₄DT-RILs
+evaluated at seedling stage under phosphorus deficient condition. Nine-hundred ninety
+two (992) markers were used to generate the genetic linkage map using inclusive
+composite interval mapping (ICIM) software version 4.1. The generated linkage map
+showed a total length of 3061.76 cM with an average interval size of 3.0864 cM.
+Permutation analysis of the data was done obtaining an LOD threshold of 3.4068. Twenty
+eight QTLs were identified in chromosome 1, 3, 4, 5, 6, 8, 9, 10, and 12 explaining
+5.6068 to 20.8062% of the phenotypic variance. The QTLs- number of crown roots
+(qCR1, qCR3, and qCR12), root length (qRL1, qRL5, qRL8, and qRL9), shoot length
+(qSL3, qSL5, and qgSL12), total projected area (q7PA6), total surface area (g7SA3,
+qTSA4.1, qTSA4.2, and qTSA9), number of root tips (qTIP5, qTIP8, qTIP9 and qTIP10),
+and number of forks (qFRK1, qFRK5, qFRK8 and qFRK9). Potentially good QTLs
+showing significant LOD and phenotypic variance were selected because of their position
+that is associated with other genes and markers. Fine-mapping of these QTLs - qRL5,
+qRL9 and qTSA9 - is recommended for further identification of closely linked markers for
+marker-assisted breeding purposes. The three QTLs are potentially good because their
+position is associated with genes that could be underlying in their position.
+
+Keywords: QTL, Permutation Analysis, Fine Mapping, LOD threshold
+
+INTRODUCTION
+
+Rice is an important cultivated grass crop of tropical origin. As a cereal grain, it is
+being grown widely throughout the world as a staple food especially in Asia. It is the first
+food crop in Asia providing 50 to 80% daily calorie intake among rice consumers (Khush
+2005). The significant role of rice in agriculture brought about rigid and thorough
+researches on its genetic and morphological properties to enhance yield production.
+
+Rice is a diploid (2n=2x=24) annual grass that belongs to family Poaceae. It
+belongs to class Monocotyledonae thus; it has a fibrous root system. Its root system plays
+a very essential role in plant development including the plants’ anchorage capacity, and
+the uptake of water and nutrients (Dorlodot et al. 2007; Fujii 1961; Gewin 2010; Liao et
+al. 2004). Rice root systems that would exhibit deeper, thick and more branched
+morphology result in a better survival under water and nutrient deficient conditions (Price
+et al. 2002; Yano et al. 2005; Zheng et al. 2000).
+
+As the world battles the pressing environmental issues and challenges, yield
+production of rice all over the world has been affected too. The unpredictable and
+uncontrolled environment brings unfavorable conditions that pose a huge threat for
+agriculture and food security (Kumari et al. 2009). Phosphorus deficiency is an abiotic
+stress that is inherently widespread in rice ecosystems. Phosphorus is one of the essential
+macronutrients needed for plant’s growth and development. A phosphorus deficient soil
+affects root development especially during the seedling stage by reducing root mass
+
+making it unable to reach more water and nutrients (Dobermann and Fairhurst, 2000).
+
+Root vigor in rice during seedling stage helps phosphorus acquisition and vice
+versa. Root vigor is a vital characteristic that provide plants a better chance to survival
+chance even in a nutrient deficient soil. It is a quantitative trait in plants that is associated
+with the number of crown roots, root length, number of root tips, root surface area and
+root mass. The crown roots help plants to absorb more nutrients and water from the soil
+and provide strong anchorage. Longer root length extends the drawing power of plants
+into the soil thus providing the necessary nutrient elements that it needs. More root tips
+means more roots and a greater root mass. These phenotypic parameters provide
+information in selecting appropriate varieties of rice that grow under low phosphorus
+conditions.
+
+A way to identify traits for root vigor under phosphorus deficiency is by the use
+of molecular markers that are linked tightly to the genes controlling the trait. This is done
+through the use of Quantitative Trait Loci (QTL) mapping or QTL analysis that enables
+detection of QTL associated with the different root agronomic traits. It allows the
+identification of a specific chromosome region where the QTL lies. The information
+obtained through this is used to improve the efficiency in the selection in conventional
+breeding (Aliyu et al. 2011; Ghomi et al. 2013).
+
+QTL identification will allow further understanding of the genetic control of a
+trait. Unfortunately, there are only few existing QTL researches for root traits under
+phosphorus deficiency tolerance in rice that were able to provide useful results. Apart
+from the difficulty in the phenotyping aspects due to the rice roots’ delicate and fragile
+nature especially during seedling stage, there is lack of a more specific marker system
+
+that could identify potential QTL of the trait.
+
+The advent and availability of high-quality rice genome sequences (Yu et al.
+2002; International Rice Genome Sequence Project; 2005) paved the way for the
+genome-wide discovery of Single Nucleotide Polymorphisms (SNPs) as a marker system
+in rice. This system identifies a single base pair variation that exists all over the genome.
+They are more specific, much more abundant, stable, amenable to automation, efficient,
+and increasingly cost-effective (Edwards and Batley 2010; Thomson et al. 2011). It has
+proven to be reliable and effective in combination with Illumina Golden Gate array
+technology especially for studies involving genetic diversity, introgression and QTL
+
+mapping (McNally et al. 2009; Ye et al. 2012; Zhao et al. 2010).
+
+Objectives of the Study
+
+The study aims to identify the QTLs for phosphorus deficiency in the RIL
+population obtained from crossing an indica Dasanbyeo and japonica TR22183 at
+seedling stage.
+
+Specifically. This research seeks to:
+
+1. To phenotype Fi, RILs for phosphorus deficiency tolerance under
+
+hydroponics condition.
+
+2. To construct linkage map using SNP markers.
+
+3. To identify QTLs for vigorous root traits during the seedling stage of RIL
+
+population under normal and low phosphorus conditions.
+
+4. To describe the association among root traits and other agronomic traits
+
+Time and Place of Study
+
+The study was conducted from April 2016 until January 2017 at the Plant
+Breeding, Genetics and Biotechnology (PBGB) Division of the International Rice
+Research Institute (IRRI), Los Bafios, Laguna, Philippines (14030’N, 121 01’E). The
+seedling stage phenotyping and screening was done at IRRI screen-house BG 12 from
+August to November 2016. Root scanning was conducted at the Genetics and Genomics
+
+Laboratory (GGL), PBGB at IRRI from November 2016 to January 2017.
+
+REVIEW OF LITERATURE
+
+Phosphorus Deficiency in Soils
+
+Phosphorus is one of the essential nutrient elements for plant growth and
+development. It is needed by plants in large amounts because it is a vital component of
+DNA and RNA. It is a key element that acts as a catalyst in the conversion of many
+biochemical reactions in plants. It is also a component of the biological energy unit ATP
+thus is required in all stages of development of the plants. It affects the major functions in
+energy storage and transfer of plants. Specifically, it affects tillering, early root
+development, root development, early flowering, and ripening (Crop Nutrition 2016).
+
+Phosphorus deficiency in rice production areas is one of the most important
+nutritional constraints to rice growth across the globe (Ismail et al. 2007). Phosphorus
+deficient soils are characterized by relatively low amount of phosphorus present in its
+available form. It is commonly associated with highly weathered soils that fix phosphorus
+in forms that are rendered not available for uptake of plants. It occurs mostly in types of
+soils such as coarse-textured soils with amounts of organic matter and small P reserves,
+highly weathered clayey acid upland soils, degraded lowland soils, calcareous soils,
+saline soils and sodic soils (Dobermann and Fairhurst, 2000). These soil types are
+common in tropical countries of Asia and South East Asia (Fageria et al. 1982; Hedley et
+
+al. 1994; Sanchez and Salinas, 1981).
+
+Generally, at present, the most common P-deficient soils for rice production areas
+are observed in areas with low fertilizer inputs such as those that are from resource-poor
+farmers. This is due to the lack of available and alternate supply of P and the high cost of
+commercially available P-fertilizers (Fageria et al. 1988; Sanchez and Salinas, 1981). P-
+deficient soil can also occur because of inherent soil chemical characteristics such as
+those found in rice tilled soils that have high native P-fixing capacity. This is common to
+soil types with relatively lower or higher pH like acidic soils, acid sulphate soils and
+
+alkaline.
+
+Root Response under Phosphorus Deficiency
+
+Plant roots play a very crucial role in nutrient and water uptake. This function is
+potentially used to enhance plant productivity under a broad range of growing conditions.
+Despite this, breeding efforts that aims to change the root morphology of plants are
+limited. This is due to the underground location of the root systems that makes it difficult
+to phenotype and selects good root characters (Paez-Garcia et al. 2015).
+
+Plants exhibit different responses with different kinds of abiotic stress. According
+to Paez-Garcia et al., (2015), the overall spatial distribution of all root parts in the plant’s
+root system in a particular environment is called the Root System Architecture (RSA).
+For any given environmental condition, there is a corresponding effect in the plant’s RSA
+phenesf/traits. Traits like root depth, root hairs, root branching and other root anatomical
+
+structures are important response indicators of the type of environmental condition or
+
+abiotic stress the plant is exposed to. In the case of phosphorus deficiency, rice exhibits a
+notable change in its root architecture especially during its early seedling stage. There is a
+corresponding significant effect in the amount of phosphorus in the root’s size, shape and
+
+biomass (Wissuwa and Ae 2001).
+
+Seedling Stage Tolerance to Phosphorus Deficiency
+
+Root phenotyping is difficult especially during the mature stages of growth in
+rice. The root system is more complex and is more difficult to handle during later stages
+of development such as late vegetative to ripening stages. It is during these stages where
+roots are increasingly meshed due to the increase in number of adventitious roots and root
+branches. The evaluation of root traits at these stages is near impossible due to its delicate
+and unruly state (Paez-Garcia et al. 2015). Consequently, there have been few studies that
+involve root phenotyping at reproductive stage (Courtois et al. 2009). Seedling stage
+phenotyping is much adequate for root phenotyping for phosphorus deficient tolerance
+trait. This is due to the early root growth development action of phosphorus. Changes that
+occur in the roots during seedling stage pose a meaningful implication of the survival of
+the plant under a given abiotic stress.
+
+There is notable difference in the root traits of rice at seedling stage when exposed
+to a phosphorus deficient environment. Gahoonia and Nielsen (1997), and Lynch and
+Brown (2001) observed that there is increase in the root hair length and density of the
+
+plant due to phosphorus deficient environment. This is an adaptation to improve uptake
+
+by expansion of root surface area to acquire more nutrients from the soil. Another
+observed response of the plant to P deficiency is the increase in root to shoot ratio. This
+response is believed to have been due to the preferential assimilating distribution to the
+roots (Fredeen et al. 1989; Mollier and Pellerin 1999; Vance et al. 2003). The adaptation
+where there is an increase in the root biomass is due to topsoil foraging which is an effect
+of the concentration of lateral root growth in the relatively P-rich top soil (Wissuwa
+2005). Seedling root characteristics such an increase in number of crown
+
+roots/adventitious roots is probably the result of the adaptation.
+
+Genetics of Phosphorus Deficiency Tolerance
+
+Phosphorus deficiency tolerance is already established as a quantitative trail and
+is being treated so by most researchers. In rice, it has already been postulated that it is a
+quantitative trait with high heterotic effects (Majumder et al. 1989). A study by Chaubey
+et al. (1994) revealed that determination of QTL can explain the genetic basis of the trait
+that would then help improve the breeding and selection efficiency.
+
+There are two possible aspects of mechanisms that confer tolerance to phosphorus
+deficiency in rice. The first mechanism is described as internal efficiency where tolerance
+is achieved by thriving even at low phosphorus level conditions. The second mechanism
+is the external efficiency. This is tolerance achieved by plants through their root
+adaptation where they can capture unavailable soil phosphorous (Ni, 1998). A study done
+
+by Wissuwa et al. (1998), found out that tolerance to phosphorus deficiency was largely
+
+due to external efficiency mechanism of the plants. There is significant genotypic
+difference in the phosphorus uptake among Near Isogenic Lines (NILs) tested, while the
+
+phosphorus use efficiency had an inconsequential effect.
+
+Molecular Markers
+
+Molecular markers are genetic markers used as an important tool in molecular
+breeding to manipulate characters of interests in plants. These are sites in the genome
+sequence that are polymorphic and can be scored. They are used as experimental probes
+that functions as tags to keep track of an individual, a tissue, a cell, a nucleus, a
+chromosome or a gene. These markers are used in studies according to how they are
+described: Semagn et al. (2006b) defined it as a landmark within the chromosome
+sequence or allele that enables scientists to keep track of a gene or other pieces of DNA;
+De Vicente and Fulton (2004) defined it as a known position in the genome that marks a
+specific piece of DNA; Also, according to King and Standfield (1990), it is linked to a
+gene whose phenotypic expression is normally easily perceived and is used to identify an
+individual or a cell that carries it, or as a probe to mark a nucleus, chromosome or a
+locus.
+
+In plant breeding and genetics, genetic markers are classified into two categories:
+classical markers and DNA markers (Xu 2010). Classical markers include morphological,
+cytological and biochemical markers. DNA markers are DNA fragments that reveals
+
+variation that are used to detect polymorphism. This is identified through molecular
+
+10
+
+technologies such as southern blotting (Southern 1975), PCR or Polymerase Chain
+Reaction (Mullis 1990) and DNA sequencing (Collard et al. 2005). DNA markers as
+molecular markers proved to be very useful in molecular breeding, taxonomy and genetic
+engineering (Joshi et al. 2011). They are more advantageous than classical markers
+because they are not affected by the environment and they are able to give reliable data to
+analyze variation. Korzun (2002) stated that these markers are reputable tools to assess
+genetic variability and characterization of germplasm; to identify and fingerprint
+genotypes; to estimate genetic distances; to detect QTL; to use in marker-assisted
+selection; and to identify sequences of candidate genes.
+
+DNA marker is an important tool that helps breeders in selection especially to
+shorten development time for varieties (Joshi et al. 2011). The reliability of DNA marker
+used depends upon its kind. Over the years there are several kinds of genetic markers
+used in molecular breeding. Joshi et al. (2011) and Guo-Liang (2013) elucidated some
+properties of an ideal DNA marker for efficient use in marker assisted breeding: 1) a high
+level of polymorphism; 2) evenly distributed in the whole genome; 3) should be co-
+dominant in expression to distinguish heterozygote from homozygotes; 4) a clear allelic
+features to identify different alleles; 5) single copy and with no pleiotropic effect; 6) cost-
+efficient marker development and genotyping; 7) easy assay; 8) highly available and
+sustainable to be multiplexed for data to be accumulated and shared between laboratories;
+and 9) genome specific in nature; 10) no detrimental effect on phenotype.
+
+Different molecular markers have now been developed and are made available for
+the detection of QTL for different abiotic traits in rice. Markers such as the Amplified
+
+Fragment Length Polymorphism (AFLP), Restriction Fragment Length Polymorphism
+
+11
+
+(RFLP), Simple Sequence Repeats (SSR)/Microsatellite and Expressed Sequence Tag
+(EST) are widely used for different population types (Gregorio, 1997; Gregorio et al.
+2002; Bonilla et al. 2002; Lin et al. 2004; Ammar et al. 2009). Among these,
+Microsatellites are commonly used for QTL mapping in rice. According to Lang et al.
+(2001), microsatellite/SSR markers are very useful in tagging and QTL mapping for salt
+tolerance trait in rice. However, these markers are limited in abundance when saturating
+genomic regions, they also have constraints in multiplexing and automation, and there are
+difficulties in platforms and databasing. With the development and discoveries of the
+advances in genome sequencing of rice, the use of SNP has proven to be much more
+reliable and accurate. Thomson et al. (2011) postulated that SNPs are more efficient and
+cost-effective marker system that have varying levels of multiplexing to suit range of
+
+genetics and breeding applications.
+
+Single Nucleotide Polymorphism (SNP) Markers
+
+SNPs are single base pair positions/locations in the genomic DNA where different
+alleles are existent in an individual in a population (Jehan and Lakhanpaul 2006). Single
+base insertion/deletion variants are not considered to be SNPs. And unlike other markers,
+SNPs are bi-allelic in nature. They are found within the coding sequence of genes, non-
+coding regions of genes, or in the intergenic regions between genes making them the
+
+most abundant genetic variation in a eukaryotic genome (Kwok et al. 1996).
+
+12
+
+SNPs are individually responsible for specific phenotypic expressions, or could
+represent a neutral variation useful for the evaluation of diversity in the context of
+evolution (McCouch et al. 2010). SNP are now very popular and useful in molecular rice
+breeding due to the following advantages: 1) they are bi-allelic making allele calling
+simpler; 2) they are useful in high-throughput marker genotyping because they are
+abundant in the genome and multiplexed SNPs is efficient and cost-effective; 3) SNP
+data from different systems are easily merged in a database; 4) SNP chips allows rapid
+scans of the rice genome at different levels of resolution for applications such as diversity
+analysis, fingerprinting, QTL and association mapping, and marker-assisted selection
+(Thomson et al. 2011). Moreover, the genotyping of SNPs are being developed with
+public funding and made available for application in rice improvement (McCouch et al.
+
+2010).
+
+SNP Genotyping
+
+Genotyping is a process done to determine genetic variants and is performed in a
+variety of methods. One of the methods for identification of genetic variants is the use of
+SNP markers. In the genome of an individual, SNPs occur mostly with an estimated
+frequency of one per 100-300 base pair in plants (Edwards et al. 2007; Xu 2010). They
+are the most abundant type of genetic variation with a variable distribution among species
+
+(Rafalski 2002) thus, the probability of detecting polymorphism in a target gene increases
+
+13
+
+(Ganal et al, 2009). Also, in population studies, SNPs are a lot easier to be tracked down
+because they are genetically stable from generation to generation (Kim et al, 2009).
+
+The development of a high-throughput sequencing (next generation sequencing)
+technologies that could yield 1000 or millions of sequences concurrently is driven due to
+the demand for a low cost sequence data. The advances in the next generation sequencing
+(NGS) technologies have made it possible to lessen the cost of DNA sequencing that
+reached to a point that genotyping-by-sequencing (GBS) is now feasible in a range of
+species with complex genomes (Elshire et al, 2011). GBS is a genotyping method that has
+been used in many areas of genomic research. It is an application of NGS protocols that
+is designed for simultaneous discovery and genotyping of thousands to millions of SNPs
+from varying species of plants and animals. It has been successfully applied in genome-
+wide association study (GWAS) genotype screening and genetic mapping by large scales
+of plat breeding programs (He et al, 2014). GBS works by generating many molecular
+markers through the combined data generation power of Illumina DNA sequencing with
+that of the known molecular biology techniques in a streamline method. It takes
+advantage of the capacity of Illumina sequencing to generate huge amount of data thus
+reducing the cost per sample. It uses an efficient DNA bar coding system that can
+combine up to 384 samples for sequencing (Elshire et al, 2011).
+
+The NGS platforms that have been developed and used are Illumina MiSeq and
+HiSeq 2500, Roche 454 FLX Titanium, Life Technologies 5500xl, Ion Torrent PGM
+(Life Sciences) (Deschamps et, al 2012; Liu et al, 2012; Quail et al, 2012). These recently
+used NGS technologies will pave a way for SNPs to become more popular than other
+
+forms of molecular markers in the 21st century (Thomson, 2014).
+
+Genetic Mapping
+
+A genetic map generates a location that indicates the position and the relative
+genetic distance between markers along chromosomes (Collard et al. 2005). The sites
+indicated by the markers are points of the sequence of base pairs. Genetic mapping (also
+known as linkage mapping or meiotic mapping) is the actual process of using DNA
+markers to locate which chromosomes contain a specific gene and precisely where a
+target gene lies on the chromosome. It also generates a physical map that identifies the
+distance between genes in a chromosome (Semagn et al. 2006b). Maps are further studied
+to increase the underlying cause of the phenotypic expressions. According to Angaji
+(2009), approaches in genetic mapping such as QTL mapping and association mapping
+are forward genetic approaches initiated to determine the genetic underpinnings of the
+
+observable phenotypic variation.
+
+Quantitative Trait Locus (QTL) Mapping in Rice
+
+QTLs are regions within the chromosome and are associated with a specific
+trait/phene of interest, with single or many genes that underlie quantitative phenotypes.
+They are responsible for any variations in the quantitative trait of interest (Doerge, 2002).
+The process of detecting tight linkages of a molecular marker to a gene of interest is
+known as QTL mapping (Collard et al. 2005). QTL mapping is used for the identification
+
+of the responsible loci for the variation in the quantitative trait, such as phosphorus
+
+15
+
+deficiency tolerance and salinity tolerance. QTL mapping uses a statistical technique to
+localize chromosomal regions that may contain the genes that is responsible to the
+phenotypic variation in a complex trait of interest (Mauricio 2001).
+
+The advantages of QTL mapping in the genetic and plant breeding researches are:
+1) It provides an information of the inheritance and genetic structure of the plants within
+and across species (Mackay, 2001); It allows the analysis of the genetic control
+mechanism of a complex quantitative trait like tolerance to abiotic factors; and 3) It
+facilitates the development of high superior rice varieties by combining favorable QTLs
+into one line and it provides access to QTL pyramiding (Hossain et al. 2015; Mansuri et
+al. 2012; Thomson et al. 2010).
+
+A linkage map is required in QTL mapping for analysis. A mapping population is
+required in constructing a linkage map. Mapping populations are derived from crossing
+two genetically different parents, usually inbred lines, which show polymorphism for one
+or more traits of interest. It is very important however to understand the nature of both
+parents to ensure a successful crossing. The parents should be too genetically distant to
+one another that they will not be able to cross or produce a sterile progenies (Semagn et
+al. 2006; Mohanrao and Deepak, 2015). A mapping population requires 100 to 300
+segregating lines or individuals. The individuals are then evaluated for both phenotypic
+traits and genotypic constitution. When resources are available, it recommended to have a
+larger population size to ensure a more stable and accurate statistics (Beavis, 1998).
+
+Mapping populations in QTL mapping are usually obtained from controlled
+crosses (Mohanrao and Deepak 2015). There are several types of mapping populations
+
+but F, and Backcross (BC) are the most commonly used in molecular mapping studies
+
+16
+
+because they are simple and easy to develop in a relatively shorter period of time. The F2
+population is produced by crossing or selfing F; hybrids while the BC population is
+derived from crossing the F, back to one of its parents. F2 populations are preferred over
+BC populations in detecting QTLs because it can detect QTLs with additive effect. The
+detected QTLs are also provided with useful information to estimate the degree of
+dominance. In a BC population, possible bias estimates are generated because it cannot
+distinguish dominance effect over additive effects (Carbonell et al. 1993).
+
+Although simple and easily obtained, BC and F2 populations are limited in a way
+that they are only temporary and cannot be repeated. The possible recombination events
+are few which make it difficult to study epistatic interactions (Semagn et al. 2010). More
+permanent populations like Recombinant Inbred Lines (RILs), Near Isogenic Lines
+(NILs), and Doubled Haploids (DHs) have proven to be much more effective in QTL
+studies. These populations undergo several recombinations (selfing and selection of
+progenies until near homozygosity) that results in finer mapping and isolation of the
+target QTLs (Guo et al. 2009; Bimpong et al. 2014). The individuals in the population are
+near to homozygote or fixed so that they can provide a continuous supply of genetic
+material for repeatability of the experiment. This allows collaborators to further examine
+the same material which led to the accumulation of genetic information across
+laboratories (He et al. 2001, Collard and Mackill 2008; Xu 2010).
+
+The mapping populations are subjected to phenotyping where the individual
+plants are evaluated for important quantitative characteristic traits. The precision and
+effectiveness of phenotyping will determine the accuracy of the QTL mapping results
+
+(Rahaman et al. 2015). The individuals being subjected to phenotyping are first to be
+
+17
+
+genotyped using molecular marker techniques. Once both phenotypic and genotypic data
+are obtained, statistical analysis is performed to detect an association between the
+markers and the phenotype to identify the loci that are affecting the traits of interest
+(Collard et al. 2005).
+
+A major QTL, phosphate uptake | (Pup 1), was identified from a traditional aus-
+type rice variety kasalath inferring phosphorus deficiency tolerance. Pup 1 is found in
+chromosome 12 and its locus was sequenced later showing a specific protein kinase gene.
+The gene was later named the phosphorus-starvation tolerance 1 (PISTOL 1). Rice
+verities that exhibit an overexpression of PISTOL 1 showed a significant enhancement in
+their grain yield in a phosphorus deficient soil (Gamuyao 2012). A noted significant yield
+advantage was also observed for rice verities with Pup | present in varying P-deficient
+soil types and environment (Chin et al. 2010).
+
+A QTL for deep rooting angle (DRA) in rice is an important trait that shows
+increase in phosphorus uptake. Additional phosphorus taken up could result to a
+corresponding biomass accumulation including root growth (Wissuwa 2003). Deep
+rooting | (Dro 1) is a major QTL in chromosome 9 that confers roots to be pointed down
+instead of sideways. It was detected in chromosome 9 from a mapping population of
+recombinant inbred lines (IK RIls) derived from a cross of shallow-rooting cultivar IR64
+and the deep-rooting cultivar Kinandang Patong (Uga et al. 2011).
+
+Several developed programs are available that analyze and perform the QTL
+mapping and linkage mapping. Among the statistical softwares for QTL mapping are: 1)
+QTL Cartographer (Basten et al. 1994); 2) MAPMAKER/QTL (Lincoln et al. 1992); 3)
+
+PlabQTL (Utz and Mechinger, 2003); 4) QGene (Nelson, 1997); 5) Map Manager QTX
+
+18
+
+(Manly et al. 2001); 6) MapQTL (Van Ooijen, 2009); 7) Epistat (Chase et al. 1997); and
+
+8) inclusive composite interval mapping (ICIM) software version 4.1
+
+MATERIALS AND METHODS
+
+Plant Materials
+
+Recombinant Inbred Lines (RILs) comprising of 142 lines was obtained from
+Dasanbyeo and TR22183. Dasanbyeo is a divergent tongil-type (deriverd from IR8 x
+Taichung Native | x Yukara) developed as a high yielding variety in Korea (Navea et al.
+2017). It is responsive to fertilizer application with a genomic similarity of an indica type
+variety (Kim et al. 2014). TR22183 which is considered to be a japonica type (Chin et al.
+2007) from Northeren China is known to be nitrogen-use efficient. Both parent varieties
+are known to be cold tolerant (Park et al. 2004). The lines were derived from the cross by
+selfing and advancing to F\4 by single seed descent (SSD) method (Figure 1). The parents
+of the RILs, Dasanbyeo and TR22183 have different responses to phosphorus deficiency.
+Dasanbyeo showed a much more positive response under phosphorus deficiency (Navea
+et al. 2017). The seeds were provided by the Plant Breeding, Genetics and Biotechnology
+Research Division of the International Rice Research Institute.
+
+Dasanbyeo X TR22183
+
+- evaluated the best segregating family at
+
+F,, (142 DT-RILs) seedling and reproductive stage and used
+“ as mapping population
+
+Figure 1. Developmental scheme of F,4 D-T RILs mapping population derived from
+Dasanbyeo and TR22183 genotypes.
+
+20
+
+Seedling Stage Phenotyping
+
+The study used hydroponics for its seedling stage phenotypic screening. It was
+conducted for 14 days after transplanting. The 142 Recombinant Inbred Lines (RILs)
+were planted in trays. There were two set-ups; one grown in a phosphorus deficient
+medium and the other was grown in a normal phosphorus condition. There were four
+replications for each set-up. Each tray can accommodate 24 lines with four biological
+replications. Therefore, there were six trays per set-up. There were a total of 12 trays per
+
+replication. The set-up was laid out as Randomized Complete Block Design (RCBD).
+
+DI-RIL 1 to DT-RIL 12
+
+Legend
+X- Plant
+
+Figure 2 Seedling stage phenotyping hydroponics set-up of the 142 DT-RILs under
+phosphorus deficient and phosphorus efficient condition.
+
+21
+
+The seeds were first incubated using a convection oven for three days at 50°C to
+break dormancy. They were washed with 5% Zonrox to remove any contaminants during
+its incubation or germination. After washing, the seeds were placed in a labeled petri dish
+with a small amount of water for imbibition during germination. They were then
+incubated in the dark room for three days to ensure germination.
+
+Immediately right after pre-germination, seedlings were transplanted from the
+germination room to the screen house. They were seeded in the “floats” (trays with
+Styrofoam floats modified for hydroponic set-up) right after the embryo emerged. The
+germinated seeds were planted in the floats for 14 days and hydroponic media was
+replaced every three days from seeding. The pH of the media was monitored frequently
+to maintain a pH range of 5.0 to 5.2. Gathering of the phenotypic data was done after 14
+days from seeding.
+
+The set-up used Yoshida solution as media for hydroponics. The phosphorus
+concentration was modified to meet the normal and the low phosphorus conditions. The
+concentrations for the remaining nutrient elements were not changed. Each tray contained
+
+eight liters of Yoshida solution. Table | is a list of the contents of the hydroponic media.
+
+22
+
+Table 1 Concentrations of nutrient elements using Yoshida Culture in hydroponic
+seedling stage of the F,, DT-RILs under low phosphorus (-P) and high
+phosphorus (+P) condition.
+
+ML OF
+
+MLOF CONCENTRAT STOCK CONCENTRA VOL IN VOL IN
+ELEMENT STOCK ION OF PER 4 TION OF 8L 8L
+PER4 ELEMENT LITERS ELEM ENT’ (1/50TH) = (1/S0TH-
+LITERS (PPM) (1/50TH) (PPM) 1/50 +P P)
+N 5 40 0.1 0.8 0.2 1.6
+P 5 10 0.2 0.2 0.4
+K 5 40 0.1 0.8 0.2 1.6
+Ca 5 40 0.1 0.8 0.2 1.6
+Mg 5 40 0.1 0.8 0.2 1.6
+Micronutrient
+Mn 0.5 0.01
+Mo 0.05 0.001
+B 5 0.2 0.1 0.004 0.2 0.008
+Zn 0.01 0.0002
+Cu 0.01 0.0002
+Fe 2 0.04
+
+Data Collected
+
+Phenotypic data of the roots were gathered right after the fourteenth day from
+seeding. The following root parameters were measured manually:
+1. Number of Crown Roots (NCR) — number of counting roots per plant minus
+the seminal root.
+2. Root Length (RL) — length of the longest root in centimeters.
+3. Shoot Length (SL) — length of the longest shoot part in centimeters.
+During data gathering, root samples from 142 lines in the P-deficient set-up and
+
+P-sufficient set-up were preserved for further phenotypic data gathering. The root
+
+23
+
+samples were then scanned using WinRHIZO scanner. For each root scanned, the
+following phenotypic parameters were generated:
+1. Root Tips (RT) — Number of root tips of the entire root system including
+branches, seminal roots, and other lateral root parts.
+2. Number of Forks (NF) — Overall number of root branching.
+3. Total Projected Area (TPA) — The covered area projected by the roots in cm’.
+
+4. Total Surface Area (TSA) — Total surface area of the roots in cm’.
+
+Genotyping
+
+There were 142 DT-RILs including the parents, sent for SNP genotyping at the
+Genotyping Services Laboratory (GSL) of IRRI. The leaf samples were collected from
+the set-up. DNA was then extracted for Genotyping by Sequencing (GBS) using APK1
+protocol (The Elshire Group Limited 2015 -2017) that will be used for SNP genotyping.
+
+Leaf samples of the corresponding DT-RILS were collected from 14-day old
+seedlings. The DNA extraction was done at the Genotyping Service Laboratory (GSL),
+IRRI using CTAB mini preparation method. The isolated DNA quality was checked
+using 1% agarose gel using 1x TBE buffer. The samples were run at 100 volts for 1.5
+hours. The isolated DNA quantification and purity check was measured using the
+Spectrophotometer (Nanodrop, ND-100, USA). The DNA samples from the nanodrop
+
+readings were diluted to working concentrations of 50 ng/pl using deionized distilled
+
+24
+
+water. The DNA samples were then submitted to GSL for SNP genotyping using
+genotyping by sequencing.
+
+Single nucleotide polymorphism genotyping by GBS was done in IRRI using the
+following protocols below. The DNA samples were cut into fragments using methylation
+sensitive restriction enzymes. Specially designed DNA molecules (incorporating bar
+codes and illumina sequencing regions) were attached to the cut DNA using DNA ligase.
+A DNA library was then made by running PCR to generate more copies of the DNA
+molecules. A large data set was then generated by sequencing the library using Illumina
+technology. Fragment sizes are evaluated and an analysis of the data was performed
+comparing the sequences. Genetic markers then determine the differences (The Elshire
+Group Limited 2015 -2017).
+
+The data generated by GBS was then filtered using TASSEL version 5.0 and
+Plink version 0.8 to evaluate the traits association and linkage disequilibrium. It was used
+
+to filter out the data of no calls and non-polymorphic markers.
+
+Data Analysis
+
+The analysis of variance (ANOVA) of the phenotypic data of the root quantitative
+parameters was performed using SAS software version 9.3.1 (SAS Institute Inc., 2012)
+and Statistical Tool For Agricultural Research (STAR). Pearson’s correlation was
+performed using STAR to determine the relationship of the data. The correlation between
+
+characters was computed at P < 0.05 and P < 0.01 using trait averages.
+
+25
+
+Construction of Linkage Map and QTL Analysis
+
+The SNP genotypic data that was obtained from GSL was used to generate
+linkage map using the QTL IciMapping V4 (Wang et al., 2016) which is an integrated
+software for building genetic linkage maps and mapping quantitative trait. This was done
+using functions suggested by Kosambi (1944). Linkage groups were established using
+command group with the logarithm of odds (LOD) > 3.0.
+
+The performance or root phenotypic data of the DT-RILs were correlated with the
+SNP data to perform the QTL analysis. Mapping was performed using QTL IciMapping
+not only to calculate LOD but also to remove multiple QTLs by extending the regression
+equation to include more markers as cofactors (Ahmadi and Fotokian 2011). A
+permutation test (1000 times) was used to establish a significant value at 0.05 and 0.01
+indicating a 95% and 99% confidence level to be the minimum LOD threshold for each
+trait in CIM (Doerge and Churchill 1996). The permutation test assigns LOD threshold
+values that declare a QTL to be significant. The coefficient of determination (R2 = ratio
+of the sum of squares explained by the QTL to the total sum of squares) estimates the
+proportion of the observed phenotypic variance explained by each QTL detected
+
+(McCouch et al. 1997).
+
+RESULTS AND DISCUSSION
+
+Phenotypic Variation of F}4 D-T RILs Under
+
+Different Phosphorus Condition
+
+Phenotyping at Seedling Stage
+
+The 142 DT-RILs were analyzed for the seedling root traits listed in Table 2. The
+following traits for root vigor were evaluated 14 days after planting in a hydroponics set-
+up.
+
+The analysis of variance showed significant difference among the 142 lines for
+traits total surface area (TSA) and root length (RL). There was also a significant
+difference between the two set-ups, the phosphorus deficient and phosphorus sufficient,
+for traits number of forks (FRK), number of crown roots (CR), shoot length (SL), and
+root length (RL). For both the lines and set up, analysis of variance showed significant
+difference in Root length parameter trait. The total projected area (TPA) did not show
+
+any significant difference among lines or between the two set-ups (Appendix Table 3).
+
+Table 2. Trait abbreviations for phenotypic parameters analyzed at seedling stage under
+phosphorus deficient in rice (Oryza sativa L.).
+
+TRAIT ABREVIATION TRAIT DESCRIPTION
+TPA Total Projected Area ( cm?)
+TSA Total Surface Area ( cm’)
+TIP Number of Root Tips
+
+FRK Number of Forks
+
+CR Number of Crown roots
+RL Root Length (cm)
+
+SL Shoot Length (cm)
+
+27
+
+The mean and range of the 142 F,4 DT-RILs and their parents are presented in
+Table 3. The distributions of phenotypic data for all the traits observed are shown in
+Figure 2. The traits indicated a continuous distribution thereby indicating a quantitative
+character. A positive skewness is shown in the distribution for the traits TSA, TIP, FRK,
+RL and SL (Table 3). The result indicated that, for example in FRK (Skewness 1.089),
+the population was averagely skewed towards the lower values in the number of forks.
+This indicates that much of the distribution of values gathered is below the mean and few
+values exhibit values greater than the mean. Negative skewness was observed for CR and
+TPA which indicates that majority of the population showed higher value than the mean
+that is, 13.6 for TPA and 33.4 for CR (Table 3).
+
+In table 3, for the trait TPA, the mean value of the 142 DT-RILs (13.36)
+indicates a closer relevance to the Dasanbyeo parent mean value (13.3064). For trait SL,
+much of the values of the 142 DT-RILs were closer to the parent TR22183 as indicated
+by their corresponding mean values (105.54 and 131.6667). The mean values of the
+progenies were higher than the mid-parent value for the trait SL and lower mean values
+are observed for trait TPA, TSA, TIP, FRK, CR, and RL. For these traits that exhibited
+transgressive segregation, QTLs associated with it infers the appearance of transgressive
+individuals. According to genetic studies, the appearances of combinations of alleles
+from both parents that have effects in the same direction (complementary gene action) are
+results of transgressive segregation (de Vicente and Tanksley 1993; Rieseberg et
+
+al.1999).
+
+28
+
+Table 3. Mean values of the measured traits of Fj, DT-RILs population in rice (Oryza sativa L.)
+produced from the cross Dasanbyeo X TR22183 at seedling stage under phosphorus
+
+deficiency.
+
+PROGENY VALUES
+MEAN OF
+TRAIT DASANBYEO 1TR22183 MPV* MIN MAX PROGENIES SKEWNESS
+TPA 13.3064 153.6 83.4532 10.6891 14.6876 13.36 -1.0939
+TSA 16.1258 154.4 85.2629 8.95877 20.8365 12.5 1.19374
+TIP 1188.33 157.74 673.037 242.333 1283.67 340.1 0.52301
+FRK 632 14.402 323.201 153 769.667 211.16 0.96342
+CR 8.30556 528.67 268.488 6.75 13.6667 33.34 -0.1585
+RL 143.889 250 196.944 90.9722 222.778 103.59 0.13802
+SL 131.667 29 80.3334 94.8611 274.444 105.54 0.82199
+
+Through the analysis of variance, the coefficient of variation of the eight
+phenotypic traits was obtained. Among the traits, the data set for number of root tips (CV
+= 48.85%) and number of forks (CV = 35.65%) exhibited the highest average ratio of the
+standard deviation to the mean. The number of root length (CV = 12.74 %) and total
+
+projected area (CV = 6.47) showed the least amount of variations in the data sets.
+
+a
+DS
+a TR %
+3 é
+2 z* Ds
+v
+Total Projected Area (cm2) Total Surface Area (em?)
+(a) (b)
+cs %
+% Be
+E-4 E
+3 So
+2 2°
+Number of Root Tips Number of Forks
+3) @
+
+Figure 3. Frequency distribution of root phenotypic data — (a) TPA, (b) TSA, (c) TIP,
+(d) FRK, (e) CR, (f) RL and (g) SL - in F,4 RILs population of rice (Oryza
+sativa L.) under phosphorus deficienc. Arrows indicate the mean of the
+traits for the two parents and the population
+
+29
+
+30
+
+T T <2 a T
+or of oz oo o
+squerd ©4 jo wquON
+a
+ea
+1s 338 T T
+os or oc oz o o
+
+squerd “4 jo soquinn
+
+150
+Root Length (cm)
+tu)
+
+3 3
+F3
+&
+z
+° a =
+228
+Fa Fs
+& J
+_ g
+e os o oc oz o o
+sauerd “4 jo29qWwoN
+
+Figure 3. Continued. . .
+
+31
+
+Correlation between Traits
+
+Correlation analysis was performed in order to determine the relationship between
+the different traits. The correlation matrix is presented in Table 4 using spearman
+correlation analysis. It was observed that TPA showed a strong positive correlation with
+RL while having a moderate positive correlation with SL. TPA indicated a weak
+correlation with TSA, TIP, and FRK while showing a negative weak correlation with CR
+(r = -0.034). This indicated that for example between TPA and TIP (r=0.1028), the
+increase in the total projected area does not necessarily increase or decrease the number
+of root tips. On the other hand, increased in the values of root length has also
+
+significantly increased the value of the total projected area and vice versa.
+
+Table 4. Pearson correlation coefficients for root morphological and physiological
+parameters of F,4 DT- RILs population of rice (Oryza sativa L.) from the cross
+
+Dasanbyeo x TR22183 under low phosphorus at seedling stage.
+
+TRAITS TPA TSA TIP FRK CR RL SL
+TPA 1
+
+TSA 0.0486ns 1
+
+TIP 0.1028ns 0.2026** 1
+
+FRK 0.094Ins 0.221**  0.9528** 1
+
+CR -0.034ns 0.1823** -0.808** -0.804** 1
+
+RL 0.1667** 0.2924** 0.8879** 0.8883** 0.8248** 1
+
+SL O.1177* _0.1385** _0.8597** 0.8752** 0.8441** 0.9211** 1
+
+ns: not significant; * and **: significant at P < 0.05 and P < 0.01, respectively.
+
+It was observed that TSA showed a strong and positive correlation with all the
+traits except TPA. This indicates that for every increase in its value there is also a
+
+corresponding increase in the values of TIP, FRK, CR, RL and SL and vice versa. This
+
+32
+
+data explained how the total surface area is affected by many of the root traits such as
+crown roots and number of tips.
+
+A strong negative correlation indicated strength in the relationship of the traits
+while also indicating a different direction of the variable as it increases or decreases. In
+Table 4, CR showed a strong negative correlation with TIP and FRK. This denotes that
+for an increase in the values of the number of crown roots there is a corresponding
+decrease in the values of the number of forks and number of root tips. The results
+obtained from the correlation of the different traits as variables indicated a strong positive
+relationship for most of the seedling root vigor traits. The following traits above that
+showed a correlation are often mapped in the same chromosomal regions (Veldboom et
+
+al., 1994).
+
+SNP Genotyping
+
+Genotyping was done using a 384-plex Genotyping by sequencing in an ApeKI
+protocol. Out of the 180,599 markers used in the study, 992 (0.55%) exhibited
+polymorphism between Dasanbyeo and TR22183 after filtering (Appendix Table 10).
+Scoring for the markers was done with reference to the parents, the 142 RILs was
+classified as homozygous for the Dasanbyeo type marker or homozygous for the
+TR22183 marker. The 992 polymorphic markers were used as the genotype data and used
+
+to run with the phenotype data for linkage map construction.
+
+33
+
+QTL Mapping and Analysis
+
+A total of 992 markers were used to construct the linkage map (Fig 3). The
+genotype data were arranged and formatted to a file necessary for it to be loaded in the
+inclusive composite interval mapping (ICIM) software version 4.1 (Wang et al., 2016).
+Kosambi function was used to convert the recombination frequency to genetic distances
+in centimorgan (cM) based on genotyping data of D-T RILs. The linkages among SNP
+markers were determined using command group with logarithm of odds (LOD) > 3.0.
+The total linkage map generated a length of 3061.76 cM having an average interval size
+of 3.08645161 cM. The QTLs detected determined an estimated (phenotypic variation)
+PEV value or the phenotypic variation that indicated the percentage of variation in the
+population for the different phenotypic traits. Significant additive QTLs were declared by
+
+the LOD as threshold by permutation of the data 1000 times.
+
+Chromosomet
+
+s1_808704
+Si_1069788
+$171074206
+S11251162
+S1l1747144
+§171984383
+Sto2i2i772
+8112294714
+
+$1_2476543
+5412616125,
+422815580,
+S1_2809683.
+8173259598
+$4_3680733
+$173745250
+$473954703
+$114494434
+$124792103
+$170550740
+S$1_107011404
+$4_10914433,
+$4_11071767
+$1019175936
+$14.11596305,
+S111910474
+S112183084
+$4_12870837
+$1713264861
+$4214060399
+
+3 siovassears
+2 SI-17325288
+3 $123038335
+‘ Siaiseness
+3 Scdarrases
+3 $ideesreas
+4 $iz2oososos
+3 Sigeseaiee
+2 Sicgesseoss
+° HH
+: $i-2epeoee3
+938 Pte
+210 Ete
+138 frazesaers
+383 $uo3agpaere
+207 $i-33enet27
+aa 3173335033
+038 $i33beases
+ze $io3sesse3s
+333 $insssesese
+938 $i35sesigs
+us $1-376838e3
+473 $i-3yeseees
+oa $ioaesosese
+zee Sseresss
+ase PSE
+oe Sosiasaaes
+$43 ssisseaes
+12 Sinaseseess
+248 Sictzasiser
+338 si-a2a7asee
+
+$4743157026
+
+$2_110846
+$27463652
+$2_1049672
+S2-1380496
+$2_2064718
+§2-2773499
+$2_3360745
+274041906
+$2_4250745
+$2_4390302
+$2-4408126
+847895
+274908190
+
+$2_5194939
+$2_5204619
+$275254453,
+275346325
+S2-ss00a67
+205746222
+$2-5800588
+$2"5042760
+$2_6110191
+$2_6480279
+5276651629,
+$206785105
+$2-7324159
+$207542770
+$2-7614318
+S2_7988405,
+8278131979,
+$2.8375427
+$278531702
+S2-e531784
+$2_8730258
+S2-ee36003
+$2_8837190
+S2-94se1e3.
+$2_10205033
+$2-10747561
+S2-11318874
+
+187 So-iarasee
+384 $3-12230800
+249 Sict2restze
+ee = Seed
+332 so-teroas3s
+S2-te3s0334
+
+499 So-te373030
+237 2 1ec0aa74
+qrosesa
+
+292 Sot 7203109
+fee ss Semis
+ee = Seer
+728 So-1yeoeeae
+ce (Seer
+338 Si-tezsoco2
+
+$2018335429
+
+363 So-teaa7302
+207 $3-10303980
+287 Soctgasarss
+268 So-t96s3176
+434 Soczots3208
+188 Socanoaz037
+348 So-Ftoasoas
+233 Secgteseres
+23 $3-283ea24
+oat So 31ea2a79
+$33 Saczieess27
+498 Sediotvere
+378 Sa-23teores
+fe 323478003
+246 $3-23e00103
+220 225098503
+438 $2-2340a083
+738 S3-23r0s082
+297 $3-d433078
+384 S32ulzar00
+ore So-2arao07s
+385 SoStracrie
+719 S2-2a0e0038
+g3e Se-Zsoeez03
+$37 $2-38532073
+738 $o-3220752
+187 So-3se0s060
+ase Se-Zeto0e7e
+ost So dezseore
+eH SecZessz01
+oa2 Se-Zereeazo
+aa So-Froveses
+94s Searsieres
+9.42 Socdraseres
+040 $3-27720938
+424 SicZazs0sa8
+aaa Se-Zeerze32
+120 $3-28803%03
+499 $3-Zoseecoz
+738 So-Zoco1se
+398 S2-zseeeze
+283 SeSoerosst
+378 S2-30tes3e5
+o7e $3-3odooaee
+az $3 30asaser
+$38 Se 3oeass45
+9.00 $3-300s7300
+478 So-3oss308
+337 $2 31t13000
+33 $3-31223788
+2.49 S53 tas03
+gat Sec3ocreas
+248 Se Szoezras
+38s So 32101201
+
+2732015082
+$2734430369
+
+Chromosomes
+
+oat $3_983163
+oes $3_1110340
+342 $3"1497144
+3.76 $301726821
+325 $321985120
+oz $3"2263377
+126 $3_2342838
+121 $3_2771494
+oe2 $3_3555929
+3.05 $3"3740218
+3.45 $3_3798064
+351 33081360
+652 83 4458704
+5.24 $3_4719097
+349 $3_4775968
+469 374924286
+oat $3_5546250
+1.60 $3_5609663
+075 $3_6011601
+038 $3_6217543
+205 $3_6645401
+0.44 37049235
+8.01 $3_7380900
+492 38603160
+037 '$3_9039960,
+995 $39230825
+257 3379020140
+127 $3_10004873
+257 $3_10107667
+170 $3_10360582
+461 83710981394
+278 $3_14053044
+195 83211156104
+199 $3-11268085
+200 $3211532180
+159 $3_11761765
+3.00 $3_11808506
+212 $3_12070478
+305 $3212357397
+23.64 $3212529189
+219 $3_16307341
+1404 $3216358706
+2.03 $3_227e9348
+248 $3_23096137
+421 $3-23477708
+181 $3_23727607
+212 3724246740
+5:80 $3_24365837
+337 $3_24082499
+177 8325288445
+428 $3_25715886
+161 83026542118
+254 $3"28978180
+640 8327315048
+244 33727832095
+125 $3_27980222
+449 $3"28342430
+688 3728441938
+O75 53 202aeeae
+1.64 $3"29637495
+3.40 $3_29793274
+3.02 $3_20858085
+772 $3_29935764
+3.00 $3_30407638
+563 $3_30523409
+271 3231828055
+043 3732028657
+5.43 $3232161221
+164 "32019902
+292 3733010621
+199 33466106
+195 3734123771
+3734657308
+
+Dasanbyeo x TR22183 parents using 992 polymorphic SNP markers.
+
+34
+
+Figure 4. Genetic linkage map of the F:4 DT-RILs population of rice (Oryza sativa L.) from
+
+Chromosome4
+$4_499032
+$4_512166
+$4_917191
+$4_1114993
+$4"4216027
+$4_1858311
+$4_2407777
+
+0.40 $4_2755613
+290 $4_4650850
+620m $4_4941718
+ait I. 45097256
+ee || $4_5333705
+2.50 45045057
+2.48 =e S4_6060023
+4.15 a $4_7151248
+158 $4_8771842
+254 $4_13000541
+043 i S4_13468729
+452 $4_14156048
+214 $4_14812790
+583 $4716647046
+313 RSE 5419038912
+la
+3.82 $4_19248161
+442 54719323662
+8.95 $4_19398266
+285 $4_19564343
+425 $4_19652067
+
+$4_20005717
+
+122 $4_20266971
+376 $4_20274005
+3.05 $4_20418733
+591 54720605436
+an $4_20826451
+
+$4_20942157
+
+3.61 $4_21300603
+519 $4-21400738
+833 $4_21498207
+
+382 $4_21879467
+9.19 $4_22026522
+038 $4_23546397
+340 $4-23727732
+
+$4_24418008
+
+043 8424561644
+043 $4_24882565
+261 $4_25115463,
+850 $4_25338872
+
+$4_27246924
+$4_27329022
+
+1.24
+
+464 S$4_27496755
+4.80 $4_28260649
+232 $4_ 28486797
+422 54728563550
+
+$4_29084934
+
+1.29 $4_29398114
+470 $4_29562992
+085 $4_29868104
+
+$4_30025777
+$4_30243791
+$4_34074152
+$4_31257859
+
+223
+
+403 $4_31410708
+266 $4_31800256
+4.03 $4_31981005
+5.58 $4732064381
+
+$4_32411131
+
+498 $4_32455224
+469 $4_32779299
+083 $4733095676
+081 $4_33146776
+123 $4_33422947
+
+$4_33723807
+$4_33875971
+S$4_34432676
+
+$4_35321446
+$4735452739
+
+Figure 4. Continued. . .
+
+Chromosomes
+$5_312457
+$5_642285
+
+373 $5_853674
+1.59 $5_956377
+1.67 551146585,
+1.26 $5_1278582
+3.28 $5_1473896
+1.92 $5_1671090
+8.78 $5_2003517
+8.64 $5_3056471
+5.58 $5_3567694
+6.23 $5_4107898
+268 $5_4565557
+10.88 $5_4699921
+5.28 iY s5_5787993
+261 I s5_5909747
+6.16 $5_6240246
+448 I $5 6607675
+3.89 + $5_6934062
+
+$5_7169377
+$5_7357633
+
+$5_7731844
+$5_8080503,
+$5_8754037
+$5_13703165
+
+1.99 $5_14666967
+3.37 $5_15058094
+3.02 $5_15167853
+1.79 $5_15874514
+
+$5_16659776
+$5_17198053
+$5-17468243,
+$5_18536210
+$5_18757951
+$5_18942631
+$5_19124523,
+
+257 $5_19313677
+452 $5_19482932
+4,36 $5_19548916
+254 $5_19646259
+
+TTT TL
+
+$5_19959503
+$5_20461863
+$5_20621082
+
+4.18 $5_21009516
+5.68 $5_21345263
+7.58 $5_21714571
+0.80 $5_21747050
+
+$5_22001930
+$5_22075495
+$5_22295486,
+$5_22296823
+$5_22394481
+$5_22694164
+$5_22720307
+$5_22947152
+
+746 $5_23218584
+345 $5_23784845
+2.00 $5_23877535
+3.40 $5_24041138
+
+$5_24197356
+5524612269
+$5_25329651
+$5_25778321
+$5_27092349
+$5_27101637
+$5_27321910
+$5_27431621
+$5_27540075
+
+3.07 $5_27866555
+342 $5_28046577
+240 $5_28389026
+246 $5_28583995
+
+$5_28597538
+$5_28744011
+$5_29238030
+$5_29446027
+
+Chromosomeé6
+177 $6_3598843
+0.00 $6_4327366
+257 $6_4341298
+440 $6_4721780
+352 $6_4890290
+3.61 $6_5269698
+287 $6_5637833
+3.02 $6_5869506
+10.14 $6_6292891
+6.99 $6_7137088
+043 $6_7967315
+0.45 \ s6_8176438
+1.29 $6_9246889
+3.73 $6_9976075
+3.16 $6_10198122
+263 $6_11532639
+
+$6_11552974
+
+1.16 $6_12015619
+1.20 $6_12636543
+123 $6_12740649
+6.64 $6_13000837
+
+$6_20725876
+$6_21256132
+$6_24330958
+$6_25347871
+$6_25517312
+$6_26892703
+$6_27257436
+$6_27599088
+
+3.51 $6_27613796
+8.72 $6_27918570
+6.28 $6_28483503
+712 $6_29138444
+
+$6_29408939
+$6_29516992
+$6_29873079
+$6_30510502
+$6_30827833
+$6_31110893
+
+35
+
+Chromosome?
+S7_218487
+5811 s7a0e010
+
+aes s74929011
+SN §774993005
+s~
+
+1V—~ $7_2694943
+Se S7 315488
+1237—| §7_3528925
+
+1.67 —fe $7_4472333
+a 74643814
+14777] | 574744559
+
+—}— 575760445
+aH $7_20921378
+240 $7_21342882
+0339 $7_21615118
+419 $7_22053178
+0.38 S7_20354747
+018 §722501258
+oat | | pr $7 22786097
+05 fr 723000232
+04 Ir ST_23233280
+202 §723597624
+158 §1_23165675
+038 5723926121
+205— $7_24015834
+
+371 RT 8724440743
+f ST_246 45555
+
+i s7_24800071
+202 ST 25112317
+24 725412339
+583 N. 5726031237
+214 726606835
+31 57727060873
+int ST_2TAT64
+040 5728417507
+171 $7_28504964
+035 728699783
+287 s7_209e8849
+
+$7_29183167
+$7_29383606
+
+Figure 4. Continued. . .
+
+Chromosomes
+
+$8_3601707
+$8_3858207
+984326543
+585066312
+s@_5318021
+
+§8_5619487
+
+8_6264140
+
+87747024
+
+A\ se_934879
+
+N. se_9194480
+
+§8_9719540
+
+$8 10591945
+§8.11543301
+§8.13976743
+$8 14786445
+$8_15176911
+815698752
+5819251454
+58_19494836
+5819591534
+$8_20165619
+$8_20366812
+$8_20451092
+$820859255
+$8_21065081
+$8_21466673
+§821822793
+$8. 22012998
+$8_22457493
+$8_22723720
+$8_73504564
+823571056
+$8_73906938
+5824738259
+§8_25495781
+58_26215686
+$8_26381588
+$8_26544130
+5826866060
+$8_27190095
+$8.27320054
+§8_27641077
+$8_27761380
+5827829404
+$8_28399689
+
+Chromosomed
+0.00 $9_1359737
+039 $9_3571389
+0.39 $9_5157692
+379 $9_5996435
+
+$9_6209074
+$9_6666691
+
+543 $9. 6831688
+208 §9_8775788
+14 5979857329
+385 $9_10480759
+
+$9_10496108
+$9_11322670
+
+114 $9_14780005
+294 $9_12236464
+259 $9_12364987
+2.68 $9_12549832
+
+$9_ 12699411
+$9_13640473
+
+089 914600108
+464 $9 14891856
+519 $0. 15337818
+502 6915749209
+
+$9_ 15868907
+$9_ 16415391
+$9_16574479
+$9_ 16969353
+$9_17081013
+$9_17277469
+$9_17389984
+$9_47637176
+
+305 $97 18034390
+498 $9. 18057902
+205 $0. 18174905
+382 $0" 183344152
+gat $9. 18387845
+SAT $9. 19167545
+5 §9719327080
+553 919439323
+3,00 0_ 20214632
+a4 $9" 20224356
+3.85 5920450780
+5.02 $9. 20791757
+307 9_20812800
+043 $o-21212006
+281 $9-21271305
+1.61 59721313463
+307 $9 21773712
+129 $9-22102639
+686 5072260595
+207 $922303837
+36 0. 72390062
+
+$9_22415213
+$9_22709072
+
+36
+
+Chromosome10
+1.15 $10_173348
+0.39 $10_1005360
+1.19 $10_1463367
+195 $10_2336901
+297 $10_2888037
+257 $10_2913585
+1.67 $10_3135700
+177 $10_3620850
+281 $10_4478542
+3.25 $10_5188890
+361 $10_5278716
+6.28 $10_5369318
+5.28 $10_5487449
+3.42 $10_6017106
+3.26 $10_6903458
+081 $10_9069658
+273 $10_9395769
+5.48 $10_9935259
+1.63 $10_10329044
+0.40 $10_10627473
+3.76 $10_11124878
+9.85 $10_11129803,
+17 $10_11804324
+118 $10_11908061
+292 $10_12218403
+3.76 $10_12775868
+0.85 $10_13827124
+0.42 $10_14853168
+779 $10_15016266
+4.25 $10_15879666
+250 $10_16327837
+0.38 $10_16566053
+7.75 $10_16778661
+5.85 $10_16803197
+5.36 $10_17186762
+0.85 $10_17236797
+6.06 $10_17407013
+1.65 $10_17432016
+5.06 $10_17782648
+043 $10_18053155
+259 $10_18363591
+5.06 $10_18870300
+4.06 $10_19219240
+8.09 $10_19335407
+493 $10_19651211
+1.68 $10_19778630
+4.64 $10_19878131
+7.94 $10 19916740
+337 $10_20267093
+
+$10_20275339
+$10_20556451
+
+6.68 $10_20765851
+783 $10_21174348
+2.16 $10_22152500
+2.08 $10_22532492
+
+$10_22822839
+$10_22990987
+$10_23107766
+
+Figure 4. Continued. . .
+
+Chromosomet1
+
+3.79 =f $11_ 1030329
+$14_1796739
+
+041
+2.61 $11_2049993
+432 811_2124854
+425 $11_2288140
+280 1172360857
+159 $14_2529923
+208 $11_2666525
+3.05 $11_3028186
+4.64 $11_3533391
+305 $11_3650294
+6.84 $11_3672433
+1.63 $11_3834626
+153 $11_4249575
+3.79 $11_4934574
+4.60 $11_4560944
+3.05 $11_4569963
+0.40 $11_4973205
+5.63 $11_5082356
+3.82 $11_5634517
+3.05 $11_6336509
+3.48 $11_6406781
+3.02 $11_6468951
+
+$11_6916665
+
+$14_7057392
+$14_7128671
+$11_7410511
+$11_7474377
+811_7676972
+$11_7870037
+$11_7873952
+$11_8090496
+S11_8528989
+$11_8950871
+
+33: $11_9308243
+3.45 $11_9957084
+$11_10185226
+
+$11_10232778
+
+0.87
+323 $11_10443912
+3.58 $11_10443922
+438 $11_10913873
+
+$11_11013070
+$11_11693959
+
+257
+287 $11_13618702
+3.10 $11_14086256
+079 §11114119202
+
+$11_14606506
+811_14754769
+
+0.79
+3.28 $11_15247619
+2.90 91115337491
+0:39 $11215497344
+
+$11_15708628
+$11_15746921
+$11_16282411
+$11_16931100
+$11_17055837
+$11_17180775
+$11_17207110
+$11_17596656
+$11_17603938
+$11_17830345
+$11_17981289
+$11_18157311
+
+12.92
+2.66 $11_19075666
+6.16 $11_19108095
+5.68 $11719645272
+
+$14_19707700
+
+244 $11_19942056
+7.26 $11_20153816
+488 $11_20702691
+3.68 $14_21199920
+
+$14_21490854
+$11_22090932
+$11_22242668
+$11_22243479
+$11_22413155
+811_22570560
+$11_22999967
+
+493
+373 655
+448 23246216
+1.72 $11_23288878
+
+$11_23635645
+$11_23793708
+
+4.22
+
+5.68 $11_23845567
+ont $11_24294938
+207 $11_24335733
+
+$11_24673870
+$11_24700942
+
+10.24
+753 $11_25226771
+749 $11_26261114
+541 $19127152741
+
+$11_27546003
+$11_27603834
+$11_27608564
+$11_28733883
+$11_28977691
+
+Chromosome12
+
+$12_936898
+$12_1969755
+$12_2507466
+$12.2913256
+$12_3438197
+$12_3777630
+5123884843
+
+Be $12_4053360
+ie $12_4153216
+841 $1274462524
+be $12-4698553
+MP4 $12_5049404
+158 3125692877
+50 8127185269
+ior $1277503930
+nae $12°9774559
+ned $12-10140275
+eae $12_10636498
+467 $12_10893756
+436 §12711169439
+nvr} $12-11104925,
+tea $12-12304084
+320 $12_12764533
+ae $12713828976
+ioe $12_14063356
+039 $12_14751905
+
+$12-15006612
+$12_15783558
+
+re $12.16343617
+Ba $12.16498758
+as $12716507415
+
+$12_16565716
+$12_17640520
+$12_17691894
+
+ae $12.17780115
+See $12.17786175
+aa $12_18208089
+
+$12_18614318
+$12_18620168
+
+oe $12719675749
+Baa $12_19719112
+351 81219095558
+368 $12_20886194
++70 $12-21875501
+x64 $12_22217166
+385 $12_22741407
+rer} 81222741411
+320. $12-23410556
+292 $12-23522101
+302 $12_23709140
+nas $12°2382217
+1190. $12_24068920
+byt 81224686225
+438 $12_25045953
+298 1225615621
+120 $12-25657051
+261 $12_26087769
+aay $12_26195748
+et $12_26947225
+ae $12-27123455
+570 $12_27205921
+313 $12_27326026
+
+$12_27360082
+
+37
+
+38
+
+QTLs for root vigor under phosphorus deficiency at seedling stage were identified
+through inclusive composite interval mapping using SNP markers. It revealed a total of
+28 significant QTLs and was confirmed by permutation analysis (Table 5 and Fig 5). A
+permutation test was used to determine the threshold value for the testing of QTL effect
+tailored to the experimental data (Churchill and Doerge, 1994). The QTLs detected were
+all named according to the QTL nomenclature suggested by McCouch et al. (2008). The
+QTLs detected includes QTLs for number of crown roots (¢CRI, gCR3, and gCR/2), root
+length (qRL/J, qRL5, qRL8, and gRL9Y), shoot length (qSL3, qSL5, and qSL12), total
+projected area (q7PA6), total surface area (q7SA3, qTSA4.1, qTSA4.2, and qTSA9),
+number of root tips (g7/P5, qTIP8, qTIP9 and qTIP10) and number of forks (¢FRKI,
+qgFRKS, qFRK8 and qFRK9). The identified QTLs were located in Chromosome 1, 3, 4,
+5, 6, 8, 9, 10, and 12 explaining 5.6068 to 20.8062% of the phenotypic variance (Table
+
+5).
+
+QTLs for Number of Crown Roots (CR)
+
+Three QTLs (qCRI/, qCR3, and qCR/2) were mapped in chromosome 1, 3 and 12
+for the number of crown roots. In chromosome 3, a notable LOD = 5.474 was recorded
+with gCR3 explaining 12.5725% of the phenotypic variation and a 0.4482 additive effect
+from TR22183 parent. In chromosome |, TR22183 have an additive effect of 0.403 and
+
+qCRI explains 9.9682% of phenotypic variance. In chromosome 12, gCR/2 was detected
+
+39
+
+with an LOD = 3.8392 explaining an 8.7617% of phenotypic variance and an additive
+
+effect of -0.3839 from Dasanbyeo parent.
+
+) Total Projected Area
+
+Figure 5. Chromosome locations of QTLs for root vigor under phosphorus deficiency
+during the seedling stage of the Fj, DT-RILs of Dasanbyeo x TR22183
+(threshold LOD= 3.4068).
+
+(©) Number of Tips
+
+too = Markers" Position Threshold 34068 |
+
+10
+
+D Score
+
+$00 1000 1500 2000 2500 3000
+Position in the whole genome
+
+En EEE
+
+() Number of Forks
+
+too + Markers’ Position Threshold 3 4088)
+
+° 500 1000 1500 2000 2500 3000
+Position in the whole genome
+
+(e) Number of Crown Roots
+TOD + Markers” Position —~Threshold' 34068")
+
+LOD Score
+
+500 1000 1800 2000 2500 3000
+Position in the whole genome
+
+Figure 5. Continued. . .
+
+40
+
+41
+
+Shoot Length
+
+| Y) WE I ay Wi | y
+
+sadness trl mesmo soem sontcnbhettonanvodanmctaksith ab thes nert sete hcl Sanne Sent STORE eameee
+
+Figure 5. Continued. . .
+
+QTLs for Root Length (RL)
+
+There were four QTLs (qgRL/1, gRL5, qgRL8, and qgRL9) mapped in chromosome 1,
+5, 8 and 9 for the root length. In chromosome 1, LOD of 4.129 was recorded with gRL/
+
+explaining a 5.9985% of phenotypic variation and a -6.4852 from parent Dasanbyeo. In
+
+42
+
+chromosome 5, gRL5 indicated the highest LOD of 12.4051 for QTLs for root length
+with a phenotypic variation of 20.7266% for a 12.346 additive effect towards TR22183
+parent. In chromosome 8, gRL8 was detected with an LOD = 7.5154 explaining an
+11.6638% of phenotypic variance and an additive effect of 9.0623 from parent TR22183.
+Another QTL found in chromosome 9 (qRL9, LOD = 9.6586) was detected with a
+15.7346% of phenotypic variation and a -10.6531 additive effect towards Dasanbyeo
+
+parent.
+
+QTLs for Shoot Length (SL).
+
+Three QTLs were found for shoot length trait (¢SL3, qSL5, and gSL12) in
+chromosome 3, 5 and 12 having the corresponding LOD of 3.8543, 3.6096 and 3.5817
+respectively. The result suggests several genes controlling shoot length. Among the three,
+qSL3 exhibited the highest phenotypic variance of 11.9769% with an additive effect of -
+7.2496 leaning from Dasanbyeo parent. The other remaining QTLs for the trait exhibited
+a phenotypic variance not too far from the previously mentioned. The following QTLs
+qSL5 and qSL12 indicated a phenotypic variance of 10.7931% and 11.0509 respectively.
+An additive effect of 7.1995 for gSL5 from parent TR22183 and an additive effect for -
+
+7.6149 from parent Dasanbyeo for gSL/2 were indicated.
+
+43
+
+QTL for Total Projected Area (TPA)
+
+Only one QTL was detected for the trait total projected area. QTL g7PA6 was
+found in chromosome 6 with an LOD = 4.1486 and having a phenotypic variance of
+
+13.1473%, It indicated a 0.2604 additive effect from parent TR22183.
+
+QTLs for Total Surface Area (TPA)
+
+A total of four QTLs were detected for the total surface area trait namely g7SA3,
+qTSA4.1, qTSA4.2, and qTSA9. Among the four, g7SA4.2 found in chromosome 4
+exhibited the highest LOD of 10.9518 with a phenotypic variance of 17.1021% and an
+additive effect of 1.5684 from parent TR22183. Both g7SA4.] and g7SA9 were from
+parent Dasanbyeo having an additive effect of -0.9961 and -1.5455 respectively. A LOD
+of 4.8644 for g7SA4.1 and a much higher LOD of 10.4898 for g7SA9 was shown with a
+corresponding phenotypic variance of 6.8886 and 16.1736 respectively. Another QTL for
+this trait is from chromosome 3. QTL g7SA3 showed an LOD of 3.4325 nearing the
+threshold 3.0 with a phenotypic variance of 5.1333% and an additive effect of 0.8603
+
+from TR22183 parent.
+
+44
+
+QTL for Number of Root Tips (TIP)
+
+Four QTLs were found for the trait number of root tips (q7/P5, qTIP8, qTIP9 and
+qTIP10). These QTLs were mapped in chromosome 5, 8, 9 and 10 for the said trait. In
+chromosome 5, LOD = 5.8035 was recorded from q7IP5 having a phenotypic variance of
+9.7301% and an additive effect of 4.148 from parent TR22183. In chromosome 8, q7IP8
+was detected with LOD = 4.3084 with a phenotypic variance of 7.3145% and an additive
+effect of 3.5066 from TR22183 parent. An almost similar amount of LOD = 4.1611 from
+qTIP10 in chromosome 10 was detected with a phenotypic variance of 6.9931 and an
+additive variance of 34239 from TR22183 parent. In chromosome 9, g7IP10 was
+recorded showing LOD = 10.0746 with a phenotypic variance of 18.5392% and an
+
+additive effect of 3.4239 for parent Dasanbyeo.
+
+QTLs for Number of Forks (FRK)
+
+For this trait, chromosome | and chromosome 9, gFRK/ and qFRK9 respectively
+were detected to have an LOD score of 5.5728 and 13.1391. Both QTLs were from parent
+Dasanbyeo having an additive effect of -4.3179 for gFRK1 and -7.1479 for gFRK9 and a
+phenotypic variance of 7.7882 and 20.8062 respectively. In chromosome 5 and 8, gFRK5S
+and qFRK8 were detected with LOD = 9.6477 and 4.4005 respectively. Both were from
+parent TR22183 with an additive effect of 6.0148 for gFRKS5 and 3.7988 qFRK8 with a
+
+phenotypic variance of 14.3977 and 6.0566 respectively.
+
+45
+
+The identified QTLs in this study did not correlate with previous works on QTL
+mapping for root morphological trait at seedling stage. QTLs from other studies have
+different populations and genetic background and the markers (other than SNP) utilized
+are different. For that reason, the key basis for comparison would be the specific
+chromosome where the QTLs were mapped. The gene that contains the phenotype is
+usually linked or contained within the QTL found. Thus, both are found in the same
+chromosome. This indicates that the QTLs identified with the highest LOD are potential
+candidates to be mapped in a finer resolution that might identify a relatively small DNA
+segment.
+
+The QTLs that showed a LOD score higher than 10 are (RLS, qTSA4.2, q(TSA9
+and qFRK9. Among them, qFRK9 and qRLS were the highest having an LOD of 13.1391
+and 12.0451 respectively. Both QTLs mentioned above are good candidates for further
+studies as their LOD indicated that the presence of their associated trait is high in that
+
+region.
+
+Comparison of Fi, DT-RIL QTLs with Other QTLs Associated
+
+Root Vigor at Seedling Stage in Rice
+
+For following discussions below, the comparisons of QTLs detected are based on
+the directory found in the Q-TARO (Yonemaru et al, 2010) database. In the directory,
+
+702 functionally characterized genes were annotated as of 31 March 2012. The
+
+46
+
+information of genes is organized in the database to facilitate comparisons with QTL
+information (Yonemaru et al, 2010).
+
+For root length trait, the QTLs that could be considered as a good and potential
+for further investigation are gRL5 and gRL 9. QTL qRL5S in chromosome 5, as according
+to its physical position, showed an underlying gene OsMKPlin the same chromosome
+(Yonemaru et al, 2010). It codes for Mitogen-Activated Protein Kinase Phosphatase]
+(MAPK) which according to Katou et al. in 2007, is a substance that has been observed to
+play an important role in abiotic tress response, hormone response and microtubule
+formation. Another QTL for this trait (gRL9) found in chromosome 9 matches a gene,
+OsZHD1, which underlies within the range of its physical position in the same
+chromosome as based on its physical position (Yonemaru et al, 2010). The gene codes for
+a zinc finger homeodomain class homeobox transcription factor that is responsible for the
+abaxially curled leaf phenotypes (Xu et al, 2014).
+
+In chromosome 9 for trait TSA, g7SA9 showed a relatively high LOD of 10.4898
+and a significant gene match underlying within its physical position. From Q-TARO
+database, the genes Short Grain 1(SG1), OSEATB, OsbZIP72, cwal/bcl and Amy3A
+were found within the physical distance of the QTL. Among these genes, cwal/bcl
+which codes for a cell wall architecture 1/brittle culm Ithat expresses a lodging resistance
+is more relevant to root vigor development at seedling stage. While the gene OSEATB
+and OsbZIP72 expresses salinity tolerance and drought tolerance respectively (Yonemaru
+
+et al, 2010).
+
+47
+
+QTL Clusters
+
+There were two clusters of QTLs detected in chromosome 4 for traits number of
+root crossings and total surface area. The first clustering in chromosome 4 is for trait total
+surface area of the root containing QTLs- g7SA4.1 and gTSA4.2 flanked by S4_4650850
+
+to S4_4941718 and S4_20266971 to S4_20274005 respectively (Figure 5).
+
+48
+
+EREARAREAZEBFE DB
+
+sa
+aL
+sa
+sa
+UL
+UL
+sa
+sa
+UL
+UL
+
+6Lb L-
+886LE
+8r109
+6LIE
+6E2b'E
+v8Es's-
+990S'€
+
+Srl
+SSPS'I-
+$8951
+1966'0-
+£0980
+0970
+
+6bI9L-
+S661'L
+96b7'L-
+T€s90I-
+£7906
+£9vE'T1
+TS8b'9-
+686€0-
+78pr'0
+£0r'0
+
+add
+
+(adda
+GALLIGGV
+
+79080
+99509
+LL6E'¢1
+C8BLL
+1£66°9
+T6ES'81
+SPLEL
+10EL'6
+SELT9L
+1ZOVLT
+9888'9
+e€er's
+ELpl el
+
+60S0°IT
+1€6L'01
+694611
+OPEL'SI
+8E99° LT
+99%L 0%
+
+$866
+
+LISL'8
+StLS TL
+
+78966
+
+“(AVGAM |
+
+; aoT
+|
+|
+|
+
+T6Er el O6EPEOST 6S SLIZESLT 6S 68 6 Oa ‘Soy JO FOquIIN,
+soor'y POP6ZRLT 8S O8EI9LLZ 8S Lvl 8 saab So10q Jo JaqUIIN,
+LL¥9'6 PLOESE SS 8729 SS L s swab 9204 Jo JoquinN,
+8ZLS'S ESe9z76E IS 6ESPOIGE 1S kd I pre S920 JO JOqUINN,
+I19l'y SSIESO8I O1S BP9ZBLLT OS Iz ol ordiL> sdi yoy Jo JoquNN,
+
+9vLO0I 801009¢1 6S ELPOV9ET 6S 6p 6 6d1Lo Sdiy 1004 Jo oquINN,
+v80e'y vOP6TBLT 8S O8EI9LLZ 8S vl 8 8dlLb sdi 004 Jo oqUN
+seog's PLOESE SS S87ZH9 SS L s Sd1Lb sdi] 1004 Jo oquNN
+
+868701 O6EbE081" 6S SLILESLI 6S 68 6 6VSI6 — (Zuid) vary adELINS [OL
+
+815601 SO0vLZ07 ¥S 14699207 »S 96 v ZPVSLD — (ZuId) Bary soR}INS [ROL
+vo98'y SILIv6y S Os80sor oS 4 v TevSLb (quid) vary soepns [BOL
+steve vOLESrb ES O9Els8e ES & € EVSLO — (Zuid) vary soRLMS [HO
+98bl'y S9ELZEY 9S £v886SE 9S 1€ 9 gvdLo (quis)
+
+vary porolorg TeOL
+LI8s'€ IsoLs9sz IS Iz9s19sz ZIS sl zl zrTse (wo) yyBua7] 1004S
+9609°€ 91960017 SS 78017907 SS gsi s Sse (wo) ipBua] 1ooys
+£pSe'e POELSOPE ES ILLEZIVE €S ssz € €Tso (aio) Bus] Jo0ys
+98596 SvBL8Esl 6S ZSIvEEST 6S 101 6 6TH (urs) ppBue7 1ooy
+HSISL vOP6TBLT 8S O8EI9LLZ 8S ost 8 grab (wo) Bua] 1004,
+Isov'z1 vLOES8 SS S87Zb9 SS L s stab (wo) yBua7] 1004,
+6c b ESE9ZZ6E IS GE9POI6E IS Plt i 1Tab (wo) yBue7 Jooy
+Z6E8'e OSSOIPET TIS pl plzz ZS <a rat ZMID6 —- Soo UMD Jo JOquINN,
+Lys YOELSOVE ES ILLEZIVE ES Sst € £UDb —- SJooy_ WMO Jo J9qUIIN,
+ssty LU06L6ZE IS 9L9TESZE IS Lt I TID —_Sjooy uMosD Jo JaquINN
+ry “WDRIVALHST | WDRAVALATT NOILISOd #]  dAVWN | SWVNIIVaL
+| wprivw | awosowound | 110
+vad | |
+SWaoaVN ONDINV TT | i
+
+“uorIpuos Aouaraiyap snioydsoud sapun ¢g1ZZy_L/ooAqueseq
+
+JO STA Zp Bursn Surddew jeasoyut apisoduios sarsnjoul y8nosm) e8ejs Suljpses ye psqsj9p STLO ‘S FGeL
+
+49
+
+*(ND) SuBSIO[IJUDD UT passaidxe are SOOURISIG “ESI ZTUL X OoAqueseq Jo STY-Ld "A
+9y} Jo aBeys Sul[poos oy) SuLNp Aouaroyap sroydsoyd sapun IOBIA 3004 OJ JOJ SLO JO uoHeso] sy) Suimoys dew aBeyul] oNEUayH *9 andy
+
+se
+we
+of.
+——— SS «cree
+Sa 7
+° e = a Vv
+‘ aia OL9MosowoIy> Grmosomosy W>
+my ———
+a v bd
+. o> 9 1
+———— Vis e — =
+== J S 2
+v oe
+
+
+SUMMARY AND CONCLUSION
+
+From the cross between the indica divergent tongil-type developed in Korea
+Dasanbyeo and the Japonica temperate variety developed in Northern China TR22183,
+142 F,4 Recombinant Inbred Lines (RILs) were developed as a mapping population for
+seedling stage phenotypic evaluation for root vigor traits. The following traits were
+evaluated during the seedling stage (14 days after seeding): Total projected area of the
+root (TPA), total surface area of the root (TSA), number of root tips (TIP), number of
+forks formed (FRK), number of crosses formed by the roots (CRS), number of crown
+roots (CR), root length (RL) and shoot length (SL). The RILs were planted in a
+hydroponics set up with reduced phosphorus condition. Results showed that the values of
+the data gathered exhibited continuous distribution and transgressive segregation, which
+was indicative of quantitative inheritance for the traits examined. A corresponding
+genotyping using genotyping by sequencing (GBS) was done by collecting samples for
+DNA extraction during the seedling stage development of the 142 RILs. A linkage map
+with a total size 3061.76 cM and having an average interval size of 3.08645161 cM. A
+total of 28 QTLs have been found from the population: three for number of crown roots
+(qCR1, qCR3, and gCR12); four for root length (gRL/, qRL5S, gRL8, and gRL9); three for
+shoot length (q¢SL3, gSL5, and gSL12); one for total projected area (q7PA6); four for total
+surface area (q7SA3, qTSA4.1, gTSA4.2, and qTSA9); four for number of root tips (q7IP5,
+qTIP8, qTIP9 and qTIP10); four for number of forks (gFRKI, gFRK5, gFRK8 and
+
+qFRK9) and five for number of crossings (qCRS3, qCRS4.1, qCRS4.2, qCRS8 and
+
+51
+
+qCRS9). The largest QTL effect have been found in chromosome 9 and 5 with PVE =
+20.7266% for RLS and PVE = 20.8062% for gFRK9.
+
+The traits showed a significant degree of correlation with one another in negative
+and positive relationships of the values of the variables used. Only TPA showed a non-
+significant correlation with the other variables except for RL and SL. Two clusters were
+found in chromosome 4: two for the total surface area of the roots and two for number of
+crossing.
+
+QTL mapping for the other stages of development could be done using the same
+F,4 DT-RILs population to identify QTLs for phosphorus deficient tolerance. The lines
+can also be further evaluated in its root character responses to phosphorus deficiency in a
+soil field environment. The strong positive correlation of RL and SL with all the other
+root traits (CR, FRK, TIPS and TSA) indicates an effective phenotyping for other stages
+of development in the filed using RL and SL only. This will remove the limitations of
+root phenotyping during later stage under field condition.
+
+The use of large number of markers through GBS genotyping has proven that it is
+effective in detecting QTLs and efficient because genotyping was done in a short period
+of time. The QTLs detected can be further verified and established using varying genetic
+background and different abiotic conditions. Sequence specific-SNP markers from genes
+that exhibits positive responses for phosphorus deficiency of the root can be designed for
+more efficient detection of individuals in a population. QTL mapping for the other stages
+of development could be done using the same F,4 DT-RILs population to identify QTLs
+
+for phosphorus deficient tolerance.
+
+52
+
+Fine-mapping for the QTLs qRLS5, qRL9 and qTSA9, is recommended to aid in
+the identification of tightly linked markers for marker assisted breeding and QTL
+pyramiding. QTL qRL5 in chromosome 5 is positioned between 642285 to 853674 (bp)
+with flanking SNP markers S5_ 642285 at the left and S5_853647 at the right. QTL qRL9
+in chromosome 9 is positioned between 18334152 to 18387845 (bp) with flanking SNP
+markers S9_18334152 in the left and S9_18387845 in the right. QTL qTSA9 is
+positioned between 17637176 to 18034390 in chromosome 9 with flanking SNP marker
+S9_17637176 in the left and S9_18034390 I the right. The following good QTL
+
+candidates are potentials for breeders for further root studies in rice.
+
+LITERATURE CITED
+
+AHMADI, J. and M.H. FOTOKIAN. 2011. Identification and mapping of quantitative
+trait loci associated with salinity tolerance in rice (Oryza sativa L.) using SSR
+markers. Iranian Journal of Biotechnology 9(1):21 -30.
+
+ALIYU R., A.K. ADAMU, S. MUAZU, S.O. ALONGE and G.B. GREGORIO. 2011.
+Tagging and Validation of SSR markers to Salinity Tolerance QTLs in Rice
+(Oryzaspp). 2010 International Conference on Biology, Environment and
+Chemistry. IPCBEE vol.1 (2011) © (2011) IACSIT Press, Singapore
+
+AMMAR, M.H.M., A. PANDIT, R.K. SINGH, S. SAMEENA, M.S. CHAUHAN, A.K.
+SINGH, P.C. SHARMA, K. GAIKWAD, T.R. SHARMA, T. MOHAPATRA
+and N.K. SINGH. 2009. Mapping of QTLs controlling Na’, K* and Cl ion
+concentrations in salt tolerant Indica rice variety CSR27. J Plant Biochem
+Biotechnol 18:139-150.
+
+ANGAJI, S.A. 2009. Short Cuts for Gene Tagging. Res. J. Biol. Sci. 4(11):1208-1210.
+
+BASTEN, C., B.S.WEIR and Z.-B. ZENG. Zmap -a QTL cartographer. In: SMITH, C.,
+J.S. GAVORA, B. BENKEL, J. CHESNAIS, W. FAIRFULL, J.P. GIBSON,
+B.W. KENNEDY and E.B.BURNSIDE. 1994. World Congress on Genetics
+Applied to Livestock Production, 5", 7- 12 August, 1994, Guelph, ON.,
+Canada. Proceedings. Computing strategies and software. Guelph, Organizing
+Committee. Vol. 22, p. 65-66.
+
+BEAVIS W. 1998. QTL analyses: power, precision and accuracy. In: Paterson A.H,
+editor.Molecular dissection of complex traits. CRC Press; Boca Raton, FL.
+
+BIMPONG I.K., B. MANNEH , B. DIOP, K. GHISLAIN, A. SOW, N.K.A. AMOAH
+and G.B. GREGORIO. 2014. New quantitative trait loci for enhancing
+adaptation to salinity in rice from Hasawi, a Saudi landrace into three African
+cultivars at the reproductive stage. Euphytica. DOI 10.1007/s10681-014-1134-
+0
+
+BIMPONG, I.K. , B. MANNEH , R. EL-NAMAKY, F. DIAW, N. K. A. AMOAH, B.
+SANNEH, K. GHISLAIN, A. SOW, R.K. SINGH , G.B.GREGORIO, J. B.
+BIZIMANA and M. WOPEREIS. 2014. Mapping QTLs Related to Salt
+Tolerance in Rice at the Young Seedling Stage using 384-plex Single
+Nucleotide Polymorphism SNP, Marker Sets, Molecular Plant Breeding, Vol.5,
+No. 9 47-63 (doi: 10.5376/mpb.2014.05.0009)
+
+54
+
+BONILLA, P., J. DVORAK , D. MACKILL, K. DEAL and G. GREGORIO. 2002. RFLP
+and SSLP mapping of salinity tolerance genes in chromosome 1 of rice (Oryza
+sativa L.) using recombinant inbred lines. Philippine J AgricSci 85:68—76
+
+CARBONELL, E.A., M.A. ASINS, M. BASELGA, E. BALANSARD and T.M. GERIG.
+1993. Power studies in the estimation of genetic parameters of quantitative trait
+loci for backcross and doubled haploid populations. TAG Theoretical Applied
+Genetics. Vol. 86, no. 4, p. 411-416
+
+CHASE, K., F.R. ADLER and K.G. LARK. 1997. Epistat: a computer program for
+identifying and testing interaction between pairs of quantitative trait loci. TAG
+Theoretical and Applied Genetics. Vol. 94, no. 6-7, p. 724-730.
+
+CHIN JH, KIM JH, JIANG WZ, CHU SH, WOO MO, HAN LZ, BRARDS, KOH HJ.
+2007. Identificaiton of subspecies-specific STS markers and their association
+with segregation distortion in rice (Oryza sativa L. ). J Crop Sci Biotechnol
+10(3):175-184
+
+CHIN JH, LU X, HAEFELE SM, GAMUYAO R, ISMAIL A, WISSUWA M, HEUER S
+(2010) Development and application of gene-based markers for the major rice
+QTL Phosphorus uptake |. Theor App! Genet 120: 1073-1086
+
+CHURCHILL GA, DOERGE RW. 1994. Empirical threshold served genome scan is
+used to determine which simu-values for quantitative trait mapping. Genetics
+138: 963-971.
+
+COLLARD, B.C.Y. and D.J. MACKILL. 2008. Marker-assisted selection: an approach
+for precision plant breeding in the twenty-first century. Philos Trans R
+SocLond B Biol Sci. 363(1491): 557-572. doi: 10.1098/rstb.2007.2170.
+
+COLLARD, B.C.Y., M.Z.Z. JAHUFER, J.B. BROUWER and E.C.K. PANG. 2005. An
+introduction to markers, quantitative trait loci (QTL) mapping and marker-
+assisted selection for crop improvement: the basic concepts. Euphytica 142:
+169-196.
+
+COURTOIS, B., N. AHMADI, F. KHOWAJA, A.H. PRICE, J.F. RAMI, J. FROUIN, C.
+HAMELIN AND M. RUIZ. 2009. Rice root genetic architecture: metaanalysis
+from a drought QTL database. Rice 2: 115-128.
+
+DE VICENTE, C. and T. FULTON. 2004. Molecular Marker Learning Modules—Vol. 2.
+
+DE VICENTE, M.C. and S.D. TANKSLEY. 1993. QTL analysis of transgressive
+segregation in an interspecific tomato cross. Genetics 134(2):585-96.
+
+55
+
+DESCHAMPS S, LLACA V, MAY GD. 2012. Genotyping-by-Sequencing in Plants.
+Biology 2012, 1, 460-483; doi:10.3390/biology 1030460. IPGRI, Rome, Italy
+and Institute for Genetic Diversity, Ithaca, New York, USA. 1-18 pp.
+
+DOBERMANN A, FAIRHURST T. 2000. Rice: Nutrient disorders & nutrient
+management. Handbook series. Potash & Phosphate Institute (PPI), Potash &
+Phosphate Institute of Canada (PPIC) and International Rice Research Institute.
+191 p.
+
+DOERGE, R.W. and G.A. CHURCHILL. 1996. Permutation tests for multiple loci
+affecting a quantitative character. Genetics 142:285-294.
+
+DORLODOT,S., B.FORSTER, L.PAGES, A.PRICE, R.TUBEROSA AND X.DRAYE
+(2007) Root system architecture: opportunities and constraints for genetic
+improvement of crops. Trends Plant Sci. 12: 474-481.
+
+EDWARDS D, FORSTER JW, CHAGNE D, BATLEY J. 2007. What are SNPs? In:
+Oraguzie NC, Rikkerink EHA, Gardiner SE, De Silva HN (ed) Association
+mapping in plants, 3rd edn. Springer, New York.
+
+EDWARDS, D. and J. BATLEY. 2010. Plant genome sequencing: applications for plant
+improvement. Plant Biotech. J. 8:2-9.
+
+ELSHIRE GROUP LIMITED. 2015 — 2017. [cited on April 2017]. Available from
+Internet: https://www.elshiregroup.co.nz/genotyping-by-sequencing/
+
+ELSHIRE RJ, GLAUBITZ JC, SUN Q, POLAND JA, KAWAMOTO K, BUCKLER ES,
+MITCHELL SE. 2011. A robust, simple genotyping-by-sequencing (GBS)
+approach for high diversity species. PLoS ONE  6:e19379. doi:
+10.1371 /journal.pone.0019379.
+
+FAGERIA N K, BARBOSA FILHO M P AND CARVALHO J R P. 1982. Response of
+upland rice to phosphorus fertilization on an oxisol of central Brazil. Agron. J.
+74, 51-56.
+
+FREDEEN AL, RAO IM, TERRY N. 1989. Influence of phosphorus nutrition on growth
+and carbon partitioning in Glycine max. Plant Physiology 89, 225-230.
+
+GAHOONIA TS, NIELSEN NE. 1997. Variation in root hairs of barley cultivars doubled
+soil phosphorus uptake. Euphytica 98, 177-182.
+
+GAMUYAO R., HYOUN C. J., PARIASCA T. J., PESARESI P., CATAUSAN S.,
+DALID C. et al. 2012 The protein kinase PSTOL1 from traditional rice confers
+tolerance of phosphorus deficiency. Nature 488, 535-542.
+
+56
+
+GANAL MW, ALTMANN T, RODER MS. 2009. SNP Identification in Crop Plants.
+Current Opinion in Plant Biology, 12, 211 -217.
+http://dx.doi.org/10.1016/j.pbi.2008.12.009.
+
+GHOMI, K., B. RABIEI, H. SABOURI and A. SABOURI. 2013.
+MappingQTLsfortraitsrelated to salinitytolerance at seedlingstage of rice
+(Oryza sativa L.): Anagrigenomicsstudy of anlranian rice population. OMICS
+A Journal of IntegrativeBiology, Volume 17, Number 5, 2013. Mary Ann
+Liebert, Inc. DOI: 10.1089/omi.2012.0097
+
+GREGORIO, G. B., D. SENADHIRA and R. D. MENDOZA. 1997. Screening rice for
+salinity tolerance. IRRI Discussion Paper Series no. 22. Manila (Philippines):
+International Rice Research Institute. p. 1-30.
+
+GREGORIO, G.B., D. SENADHIRA, R.D. MENDOZA, N.L. MANIGBAS, J.P.
+ROXAS and C.Q. GUERTA. 2002. Progress in breeding for salinity tolerance
+and associated abiotic stresses in rice. Field Crops Res. 76: 91-101.
+
+GUO, L., L. MA, H. JIANG, D. ZENG, J. HU, L. WU, Z. GAO, G. ZHANG and Q.
+QIAN. 2009. Genetic analysis and fine mapping of two genes for grain shape
+and weight in rice. J Integr Plant Biol 51: 45-51.
+
+GUO-LIANG, J. 2013. Molecular Markers and Marker-Assisted Breeding in Plants, Plant
+Breeding from Laboratories to Fields, Prof. Sven Bode Andersen (Ed.), ISBN:
+978-953-51-1090-3, InTech, DOI: 10.5772/52583.
+
+HE, P., J.Z. LI, X.W. ZHENG, L.S. SHEN, C.F. LU, Y. CHEN and L.H. ZHU. 2001.
+Comparison of molecular linkage maps and agronomic trait loci between DH
+and RIL populations derived from the same rice cross. Crop Science. Vol., 41,
+no. 4, p. 1240-1246.
+
+HEDLEY M J, KIRK G J D AND SANTOS M B. 1994. Phosphorus efficiency and the
+forms of soil phosphorus utilized by upland rice cultivars. Plant Soil 158, 53—
+62.
+
+HOSSAIN, H., M.A. RAHMAN, M.S. ALAM and R.K. SINGH. 2015. Mapping of
+Quantitative Trait Loci Associated withReproductive-Stage Salt Tolerance in
+Rice. Journal of Agronomy and Crop Science. doi:10.1111/jac.12086.
+
+IAN PAUL NAVEA . MARIA STEFANIE DWIYANTI . JONGHWA PARK . BACCKI
+KIM . SANGBUM LEE . XING HUANG . HEE-JONG KOH . JOONG
+HYOUN CHIN. 2017. Identification of quantitative trait loci for panicle length
+and yield related traits under different water and P application conditions in
+tropical region in rice (Oryza sativa L.). Euphytica 213(37): DOI
+10.1007/s 1068 1-016-1822-z
+
+57
+
+INTERNATIONAL RICE GENOME SEQUENCE PROJECT. 2005. The map-based
+sequence of the rice genome. Nature 436(7052):793-800.
+
+ISMAIL AM, HEUER S, THOMSON JT, WISSUWA M. 2007. Genetic and genomic
+approaches to develop rice germplasm for problem soils. Plant Molecular
+Biology 65: 547-570.
+
+JOEHANES, R. and J.C NELSON. 2008. QGene 4.0, an extensible Java QTL-analysis
+platform. Bioinformatics 24:2788-2789.
+
+JOSHI, S.P., K. PRABHAKAR, P.K. RANJEKAR and V.S. GUPTA. 2011. Molecular
+markers in plant genome analysis. http/www.ias.ac.in/currsci/jul25/articles 15.
+htm. Pp 1-19
+
+JUNICHI YONEMARU, PH.D., MAFF Research Geneticist, QTL Genomics Research
+Center, National Institute of Agrobiological Sciences, 2-1-2, Kannondai
+Tsukuba, Ibaraki 305-8602
+
+KATOU S, KURODA K, SEO S, YANAGAWA Y, TSUGE T, YAMAZAKI M,
+MIYAO A, HIROCHIKA H, OHASHI Y. 2007. A calmodulin-binding
+mitogen-activated protein kinase phosphatase is induced by wounding and
+regulates the activities of stress-related mitogen-activated protein kinases in
+rice. Plant and Cell Physiology 48: 332-344.
+
+KING, R.C. and W.D. STANSFIELD. 1990. A dictionary of genetics. 4th ed., Oxford
+University Press, New York-Oxford. 188 pp.
+
+KORZUN, V. 2002. Use of molecular markers in cereal breeding. Cell MolBiol Lett
+7:811-820
+
+KOSAMBI, D.D. 1944. The estimation of map distances from recombination values.
+Ann. Eugen. 12: 172-175.
+
+KUMARI, S., V. PANJABI NEE SABHARWAL, H. R. KHUSWAHA, S. K. SOPORY,
+S. L. SINGLA-PAREEK and A. PAREEK. 2009. Transcriptome map for
+seedling stage specific salinity stress response indicates a specific set of genes
+as candidate for saline tolerance in Oryza sativa L. Funct. Integr. Genomics 9:
+109-123.
+
+KHUSH, G.S. 2005. What it will take to feed 5.0 billion rice consumers in 2030? Plant
+Mol. Biol. 59:1-6.
+
+KIM C, YOON U, LEE G, LEE H, KIM Y, HAHN J. 2009. Rice genetic marker
+database: An identification of single nucleotide polymorphism (SNP) and
+quantitative trait loci (QTL) markers. African J. Biotechnology 8 (13): 2963 -
+2967.
+
+58
+
+KIM B, KIM DG, LEE G, SEO J, CHOI IY, CHOI BS, YANG TJ, KIM KS, LEE J,
+CHIN JH, KOH HJ (2014) Defining the genome structure of ‘‘Tongil’’ rice, an
+important cultivar in the Korean ‘‘Green Revolution’. Rice 7:22.
+doi:10.1186/s12284-014-0022-5
+
+KWOK, P.Y., DENG, Q., ZAKERI, H., TAYLOR, S.L. and D.A. NICKERSON. 1996.
+Increasing the information content of STS-based genome maps: identifying
+polymorphisms in mapped STSs. Genomics 31:123-126.
+
+LANG, N. T., S.S. YANAGIHARA and B.C. BUU. 2001. A microsatellite marker for a
+gene conferring salt tolerance on rice at the vegetative and reproductive
+stages. Sabrao J. Breed. Genet. 33 1-10.
+
+LIN, H. X., M. Z. ZHU, M. YANO, J. P. GAO, Z. W. LIANG, W. A. SU, X.H. HU,
+Z.H. REN and D.Y. CHAO. 2004. QTLs for Na* and K* uptake of the shoots
+and roots controlling rice salt tolerance. Theor. Appl. Genet. 108, 253-260.
+DOI: 10.1007/s00122-003-1421-y
+
+LINCOLN, S., DALY, M. and E. LANDER. 1992. Mapping genes controlling
+quantitative traits with MAPMAKER/QTL. Version 1.1: A tutorial and
+reference manual. 2" ed. Cambridge, MA., Whitehead Institute Technical
+Report. 46 p.
+
+LIU L, LI Y, LIS, HUN, HE Y, PONG R, LIN D, LU L, LAW M. 2012. Comparison of
+Next-Generation Sequencing Systems. Journal of Biomedicine and
+Biotechnology, vol. 2012, Article ID 251364, 11 pages.
+doi:10.1155/2012/25 1364.
+
+LYNCH JP, BROWN KM. 2001. Topsoil foraging: an architectural adaptation of plants
+to low phosphorus availability. Plant and Soil 237, 225-237.
+
+MACKAY, T. F. C. 2001. The genetic architecture of quantitative traits. Annu. Rev.
+Genet. 35, 303-339.
+
+MAJUMDER ND, BORTHAKUR DN, RAKSHIT SC. 1989. Heterosis in rice under
+phosphorous stress. Indian J Genet 49 : 231—235
+
+MANLY, K.F., R.H. CUDMORE and J.M. MEER. 2001. Map manager QTX, cross-
+platform software for genetic mapping. Mammalian Genome. Vol. 12, no. 12,
+p. 930-932.
+
+MANSURI, S.M., JELODAR N.B. and N. BAGHERI. 2012. Evaluation of rice
+genotypes to salt stress in different growth stages via phenotypic and random
+amplified polymorphic DNA (RAPD) marker assisted selection.African
+
+59
+
+Journal of Biotechnology Vol. 11(39), pp. 9362-9372. DOI:
+10.5897/AJB11.1490
+
+MAURICIO, R. 2001. Mapping Quantitative Trait Loci in Plants: Uses and Caveats for
+Evolutionary Biology. Nature Reviews Genetics. Vol. 2, 370-381
+
+McCOUCH, S. R., ZHAO, K., WRIGHT, M., TUNG, C., EBANA, K., THOMSON, M.,
+REYNOLDS, A., WANG, D., DECLERCK, G., ALI, M.L., MCCLUNG, A.,
+EIZENGA, G. and C. BUSTAMANTE. 2010. Development of genome-wide
+SNP assays for rice. Breeding Science 60(5):524-535.
+
+MOHANRAO, M. M. and P. DEEPAK. 2015. Mapping Population: Types and Method
+of Production. _ http://www.biotecharticles.com/Genetics-Article/Mapping-
+Population-Types-and-Method-of-Production-3335.html.
+
+MOLLIER A, PELLERIN S. 1999. Maize root system growth and development as
+influenced by phosphorus deficiency. Journal of Experimental Botany 50, 487—
+497.
+
+MULLIS, K. 1990. The unusual origin of the polymerase chain reaction. Scientific
+American 262 (4): 56-61, 64-65.
+
+NATIONAL INSTITUTE OF AGROBIOLOGICAL SCIENCE. 2017. Q-TARO
+database. Available at. http://qtaro.abr.affre.go.jp/. Access last 24 April 2017
+
+NI J. J. P. WU, D. SENADHIRA AND N. HUANG. 1998. Mapping QTLs for
+phosphorus deficiency tolerance in rice (Oryza sativa L.). Theoretical Applied
+Genetics. 97: 1361-1369.
+
+PAEZ-GARCIA, A., MOTES, C., SCHEIBLE, W.-R., CHEN, R., BLANCAFLOR, E.,
+& MONTEROS, M. 2015. Root Traits and Phenotyping Strategies for Plant
+Improvement. Plants, 4(2), 334-355. doi:10.3390/plants4020334
+
+PARK, I.S., PARK, S.K., KIM, S.L., SONG, B.H., JIANG, W., CHO, Y.I., KOH, H.J.,
+AND CHO, Y.G. 2004. QTL analysis of agronomic traits and intracellular
+substances related to cold tolerance in rice (Oryza sativa L.). Korean J. Breed.
+36, 9-19.
+
+PLANT NUTRITION. (July 29, 2016). Retrieved from
+http://www.cropnutrition.com/efu-phosphorus
+
+PRICE, A.H., J.E.CAIRNS, P.HORTON, H.G.JONES AND H.GRIFFITHS. 2002.
+Linking drought-resistance mechanisms to drought avoidance in upland rice
+using a QTL approach: progress and new opportunities to integrate stomatal
+and mesophyll responses. J. Exp. Bot. 53: 989-1004.
+
+60
+
+QUAIL MA, SMITH M, COUPLAND P, OTTO TD, HARRIS SR, CONNOR TR,
+BERTONI A, SWERDLOW HP, GU Y. 2012. A tale of three next generation
+sequencing platforms: comparison of Ion Torrent, Pacific Biosciences and 94
+76 Illumina MiSeq sequencers. BMC Genomics 13:341 . doi: 10.1186/1471 -
+2164- 13-341.
+
+RAFALSKI JA. 2002. Novel genetic mapping tools in plants: SNPs and LD-based
+approaches. Plant Sci. 162(3):329-33.
+
+RAHAMAN, M.M., D. CHEN, Z. GILLANI, C. KLUKAS and M. CHEN. 2015.
+Advanced phenotyping and phenotype data analysis for the study of plant
+growth and development. Front. Plant Sci. 6:619. doi: 10.3389/fpls.2015.00619
+
+RIESEBERG, L.H., ARCHER, M.A., and WAYNE, R.K. 1999. Transgressive
+segregation, adaptation and speciation. Heredity 83: 363-372.
+
+SANCHEZ P A AND SALINAS J G. 1981. Low-input technology for managing oxisols
+and ultisols in tropical America. Adv. Agron. 34, 279-406.
+
+SAS INSTITUTE INC, 2012. What’s New in SAS® 9.3. Cary, NC, USA: SAS Institute
+Inc.
+
+SEMAGN, K., BJORNSTAD, A. and M.N. NDJIONDJOP. 2006b. Principles,
+requirements and prospects of genetic mapping in plants. J. Biotech. 5:2569-
+2587.
+
+SOUTHERN, E. M. (1975). Detection of specific sequences among DNA fragments
+separated by gel electrophoresis. Journal of Molecular Biology 98: 503-517.
+
+T. JEHAN AND S. LAKHANPAUL. 2006. Single Nucleotide Polymorphism (SNP)—
+Methods and Applications in Plant Genetics: A Review,” Indian Journal of
+Biotechnology, Vol. 5, No. 4, pp. 435-449.
+
+THOMSON, M.J., A.M. ISMAIL, S. R. McCOUCH and D.J. MACKILL. 2010. Marker
+Assisted Breeding. In: Abiotic stress Adaptation in Plants: Physiological,
+Molecular and Genomic Foundation. A. Pareek, S.K. Sopory, H.J. Bohnert and
+Govindjee (eds.). Springer Science: pp. 451-469.
+
+THOMSON, M.J., ZHAO, K., WRIGHT, M., MCNALLY, K.L., REY, J., TUNG, C.W.
+and A. REYNOLDS. 2011. High-throughput single nucleotide polymorphism
+genotyping for breeding applications in rice using the BeadXpress platform.
+Molecular Breeding 29(4):875-886.
+
+THOMSON MSJ. 2014. High-Throughput SNP Genotyping to Accelerate Crop
+Improvement. Plant Breed Biotech. 195-212.
+
+61
+
+UGA Y, OKUNO K, YANO M. DROI. 2011. A major qtl involved in deep rooting of
+rice under upland field conditions. J EXP BOT 62:2485-2494.
+
+UTZ, H.F. and A.E. MELCHINGER. 2003. PLABQTL, a computer program to map
+QTL, Version 1.2. 2006-06-01. Stuttgart, Institute of Plant Breeding, Seed
+Science, and Population Genetics, University of Hohenheim. 33 p.
+
+VAN OOIJEN, J.W. 2009. MapQTL 6: Software for the mapping of quantitative trait loci
+in experimental populations of diploid species. Wageningen, The Netherlands,
+2009 [cited on August 2010]. Available from
+Internet: http://www.kyazma.nl/docs/MQ6Manual.pdf.
+
+VANCE CP, UHDE-STONE C, ALLAN DL. 2003. Phosphorus acquisition and use:
+critical adaptations by plants for securing a nonrenewable resource. New
+Phytologist 157, 423-447.
+
+VELDBOOM, L.R., LEE, M. and W.L. WOODMAN. | 994. Molecular-marker
+facilitated studies in an elite maize population. I. Linkage analysis and
+determination of QTLs for morphological traits. Theor. Appl. Genet. 88:7-16.
+
+WANG J, LI H, ZHANG L, MENG L. 2016. IciMapping Version 4.1.
+Webpage:http://www. isbreeding.net.
+
+WISSUWA M, AE N. 2001. Further characterization of two QTLs that increase
+phosphorus uptake of rice (Oryza sativa L.) under phosphorus deficiency. Plant
+Soil ;237:275-86.
+
+WISSUWA M, YANO M AND AE N. 1998. Mapping of QTLs for phosphorus-
+deficiency tolerance in rice (Oryza sativa L.). Theor. Appl. Genet. 97, 777-
+783.
+
+WISSUWA M.2003. How do plants achieve tolerance to phosphorus deficiency: small
+causes with big effects. Plant Physiology 133,1947-1958.
+
+WISSUWA M. 2005 Combining a modelling with a genetic approach in establishing
+associations between genetic and physiological effects in relation to
+phosphorus uptake. Plant Soil 269: 57-68
+
+XU, Y. 2010. Molecular Plant Breeding. CABI International, Wallingford, Oxfordshire.
+XU, Y., WANG, Y., LONG, Q. ET AL, 2014. Overexpression of OsZHD1, a zinc finger
+
+homeodomain class homeobox transcription factor, induces abaxially curled
+and drooping leaf in rice. . Planta 239: 803. doi:10.1007/s00425-013-2009-7
+
+62
+
+YANO,M., M.MURAKI, M.FUJIMORI, T.TAKAMIZO AND B.KINDIGER. 2005.
+Identification of QTL controlling adventitious root formation during flooding
+conditions in teosinte (Zea mays ssp. huehuetenangensis) seedlings. Euphytica
+142: 33-42.
+
+YONEMARU JI, YAMAMOTO T, FUKUOKA S, UGA Y, HORI K, YANO M. 2010.
+Q-TARO: QTL annotation rice online database. Rice 3(2):194—203
+
+YU, J., HU, S., WANG, J., WONG, G., LI, S., LIU, B., DENG, Y., DAI, L., ZHOU, Y.,
+ZHANG, X., CAO, M., LIU, J., SUN, J., TANG, J., CHEN, Y., HUANG, X.,
+LIN, W. and C. YE. 2002. A draft sequence of the rice genome. Science
+296:79- 92.
+
+ZHENG,H.G., R.C.BABU, M.S.PATHAN, L.ALI, N.HUANG, B.COURTOIS AND
+H.T.NGUYEN (2000) Quantitative trait loci for root-penetration ability and
+root thickness in rice: comparison of genetic backgrounds. Genome 43: 53-61.
+

@@ -69,10 +69,8 @@ E. Di Valentino, S. Gariazzo, O. Mena [13]
 E. Di Valentino, et. al. [14]
 
 < 0.06 - 0.14
-95
 
 < 0.09
-90
 
 N. Palanque-Delabrouille, et. al. [15]
 S. Alam, et. al. [16]
@@ -103,9 +101,7 @@ E. Komatsu, et. al. [22]
 
 < 1.3
 
-95
 
-95
 
 K. Ichikawa, M. Fukugita, M. Kawasaki [23]
 
@@ -139,7 +135,6 @@ a sera See -1] SU(N) Coupling | Name |
 
 | SU(2 le 92 left
 
-7
 SU(3 93 color
 
 Table 1.3: Properties and quantum numbers of chiral superfields
@@ -173,7 +168,6 @@ features an effective » which can naturaly coincide with the electroweak
 
 symmetry breaking scale, alleviating the u problem. However, the NMSSM’s
 
-3
 
 1.2. Scope
 
@@ -246,7 +240,6 @@ has an important contribution to the generation of masses and finally, we
 will introduce the R-parity violating (RPV) MSSM tree-level neutrino mass
 obtained by [35]. In Chapter 4, we will explain the challenges of MSSM and
 
-5
 
 1.2. Scope
 
@@ -354,7 +347,6 @@ section. Figure 2.2 showcases every particle of the Standard Model along
 
 with each one’s unique and distinctive characteristics. The SM’s mathemati-
 
-9
 
 2.1. The Standard Model
 
@@ -396,7 +388,6 @@ e The assumption of the Standard Model that fermions are grouped into
 
 three generations is experimentally verified using the properties of the
 
-10
 
 2.1. The Standard Model
 
@@ -439,7 +430,6 @@ the fact that its theoretical prediction matches with experiments and mea-
 
 surements but despite all of these, SM also has shortcomings because it fails
 
-11
 
 2.2. Spontaneous Symmetry Breaking
 
@@ -478,7 +468,6 @@ kinetic and potential is given by [7]
 
 L=T-V (2.3)
 
-12
 
 2.2. Spontaneous Symmetry Breaking
 
@@ -511,12 +500,9 @@ where 77 is the deviation from the minimum. Substituting (2.6) to (2.2), we
 obtain [7] ;
 Ayn)(8"n) — wn? + wry? + A, (2.7)
 
-1
 A 42
 
-36
 
-13
 
 2.2. Spontaneous Symmetry Breaking
 
@@ -529,7 +515,6 @@ From (2.7) we can now read off the mass since the second term now
 
 corresponds to the mass term [7],
 
-1
 5m - per?
 >m= V2 (2.8)
 
@@ -551,7 +536,6 @@ total energy, FE, as a function of kinetic energy, T, as shown by Figure 2.4
 
 where the plot of massless scalar field is a straight line passing through the
 
-14
 
 2.2. Spontaneous Symmetry Breaking
 
@@ -599,7 +583,6 @@ For the case in which py? > 0, Figure 2.5 a.) shows that the minimum
 
 potential happens when both fields are zero. For the case when 2 < 0, the
 
-15
 
 2.2. Spontaneous Symmetry Breaking
 
@@ -642,7 +625,6 @@ neously broken. Also, the coordinate fields can be expressed as ($1, ¢2) =
 
 this, we may add additional fields. With this, we can expand the fields with
 
-16
 
 2.3. Higgs Mechanism: Masses of Fermions, Gauge Bosons and
 the Higgs Boson
@@ -687,7 +669,6 @@ which is the global U(1) symmetry. A system respects this symmetry when
 
 it is unchanged under the associated transformation which is related to the
 
-17
 
 2.3. Higgs Mechanism: Masses of Fermions, Gauge Bosons and
 the Higgs Boson
@@ -704,7 +685,6 @@ corresponds to the kinetic term and F#” is the Maxwell’s stress-energy tenso
 The full Lagrangian is given by [3]
 
 L= Leauge + (D,)*(D"6) _ Vitiges()
-1
 & = —7F Fu + (Dyu6)"(D"8) — Viiges(4)
 = —TP By — 2d — D0"
 — igB,¢*(0"$) + ig(0,6")B“¢ + 9B, B' "od (2.19)
@@ -727,7 +707,6 @@ For example, an object can move up, down, right, left, forward and backward.
 
 Then, we can say that object has 6 degrees of freedom. We also take note
 
-18
 
 2.3. Higgs Mechanism: Masses of Fermions, Gauge Bosons and
 the Higgs Boson
@@ -766,7 +745,6 @@ g’vB,BYh+ 50° B,B"h + 50° B, Ben — Avh3 — aha (2.24)
 where the first and second terms describe the massive higgs field given by [3]
 mu = V2Xv (2.25)
 
-19
 
 2.3. Higgs Mechanism: Masses of Fermions, Gauge Bosons and
 the Higgs Boson
@@ -809,7 +787,6 @@ where the Higgs potential, Vitiggs(¢), is given by [3]
 
 Vitiegs(¢) = 1 o'd + X(4'9)? (2.28)
 
-20
 
 2.3. Higgs Mechanism: Masses of Fermions, Gauge Bosons and
 the Higgs Boson
@@ -818,7 +795,6 @@ The nonzero minima of the Higgs potential is generated when p? < 0 as we
 
 can observe from our previous discussion [3],
 
-1
 go= 5 (Oi + $3 + 63 + $4)
 pe
 ~~ OX
@@ -847,12 +823,10 @@ of U(1)y x SU(2), group. The resulting Golstone bosons will be absorbed in
 the degrees of freedom of Standard Model gauge bosons (W“), W@), W®))
 through the Higgs mechanism giving us the mass [3]
 
-1
 mw = 5gwe (2.32)
 
 The masses of the Z boson (W)) and the photon can be obtained from the
 
-21
 
 2.3. Higgs Mechanism: Masses of Fermions, Gauge Bosons and
 the Higgs Boson
@@ -867,20 +841,17 @@ vu
 8 -gwy gg
 wee
 «(Ne
-2
 
 Uv y (3)u
 (gwW® — 9'B,)(gwW* — g/ BH) = — (we B,) M ("i )
 
 we
 
-8
 (2.33)
 
 diagonalizing and calculating the eigenvalues of the matrix M leads us to [3]
 
 ma =0 (2.34)
-1
 mz = 3° V ow +g? (2.35)
 
 2.3.2 Masses of Fermions and the Neutrino Mass Prob-
@@ -905,7 +876,6 @@ way of thinking when it comes to masses of fermions is to consider the mass
 term from the Dirac Lagrangian given by [3]
 — mypy = —m(wrdr + VLR) (2.37)
 
-22
 
 2.4. The Neutrino Oscillation and Seesaw Mechanism
 
@@ -944,7 +914,6 @@ nism that provides an explanation for why neutrinos have very small masses.
 
 The content of this section follows closely from the discussions of [1, 3].
 
-23
 
 2.4. The Neutrino Oscillation and Seesaw Mechanism
 
@@ -975,14 +944,12 @@ Uz) = Ups |r) + Ute |Y2) + Usa |v) (2.40)
 
 We can write these states in a more compact expression as [1]
 
-3
 Yo) = > Uy |) (2.42)
 
 where U,; is an element of unitary matrix called the Pontecorvo-Maki-Nakagawa-
 
 Sakata or PMNS matrix which contains information about the mixture of the
 
-24
 
 2.4. The Neutrino Oscillation and Seesaw Mechanism
 
@@ -1016,20 +983,17 @@ we can express the following expression as [1]:
 
 t)) = e HBG, (2.46)
 
-25
 
 2.4. The Neutrino Oscillation and Seesaw Mechanism
 
 We can further express the energy, E;, for the case where neutrinos are
 relativistic as
 
-2
 Ei = piyf1+—+
 P;
 m2
 By & Di (: + 74)
 2p;
-2
 Expt = (2.47)
 Then, (2.46) is
 ~i(n.+3t)e
@@ -1050,7 +1014,6 @@ Pag = )_ US Up Ui, + > UZ UsVegU§,e
 
 i=l fj
 
-3
 Pos = 3 U5 UVa 5; + > Ux iV aj U5;
 i=l tj
 
@@ -1065,13 +1028,11 @@ _ 1—cos(26)
 
 sin?@ = a (2.50)
 
-26
 
 2.4. The Neutrino Oscillation and Seesaw Mechanism
 
 The neutrino oscillation probability, P,g, can now be written as [1]
 
-3
 Pap = > U3U sVai 5, + So UZ piUoj UG, — 23° UZ U siVas US,
 1=1
 
@@ -1086,7 +1047,6 @@ _ 25° Im[U.iU3,U 2,53] sin (amis) (2.51)
 
 i<j
 
-2
 aj?
 the mixing matrix, U.,,Ug; are zero, the first term of (2.51) will only survive
 
@@ -1110,7 +1070,6 @@ smaller compared to the masses of quarks and other leptons. One proposed
 
 explanation for this is the so-called seesaw mechanism.
 
-27
 
 2.4. The Neutrino Oscillation and Seesaw Mechanism
 
@@ -1134,9 +1093,7 @@ The properties of components of Dirac neutrino can be very different to each
 other. The Lagrangian governing the Dirac neutrinos is given by [3, 4]
 
 Lp = —Mp(VivR + VRvz)
-1
 Lp = —5mplivr + Davi, + Davy + VRV{)
-1
 Lp = —5Mv(¥LYR + DR) + he. (2.53)
 
 The other class of neutrinos are called the Majorana neutrinos in which there
@@ -1147,14 +1104,11 @@ Um = v5 (2.54)
 
 The Majorana Lagrangian can be expressed as [3]
 
-1
 Ly = 5M Pave + DrVp) (2.55)
 We can combine the contribution of the Dirac and Majorana Lagrangian
 given by [3]
-1
 LZ = -3 (mpiLVR + MpVR + M(VAvR + DRVR) + hic. (2.56)
 
-28
 
 2.4. The Neutrino Oscillation and Seesaw Mechanism
 
@@ -1175,11 +1129,9 @@ _M4M 1+ 2%
 
 rr
 M+M (1+ 7P)
-2
 
 )
 M+M M+M (1+)
-2
 
 ms % ——————————_, M>m
 
@@ -1216,7 +1168,6 @@ supersymmetry, a Beyond the Standard Model (BSM) theory which we
 
 will now discuss in the next section.
 
-30
 
 Chapter 3
 
@@ -1244,7 +1195,6 @@ us about the governing physics of fundamental particles and their interaction.
 
 Supersymmetry, also known as SUSY, targets these issues by im
 
-31
 
 3.2. Constructing Supersymmetric Lagrangian: Wess-Zumino
 Model and the Superpotential
@@ -1289,7 +1239,6 @@ The Wess-Zumino model is crucial in understanding supersymmetry because
 
 it gives us a nice introduction of the superfields as well as the superpotentials
 
-32
 
 3.2. Constructing Supersymmetric Lagrangian: Wess-Zumino
 Model and the Superpotential
@@ -1335,7 +1284,6 @@ where o” are the Pauli spin matrices. (3.4) and (3.5) are called the Weyl
 
 equations. On the other hand, the auxiliary field, F', doesn’t correspond
 
-33
 
 3.2. Constructing Supersymmetric Lagrangian: Wess-Zumino
 Model and the Superpotential
@@ -1373,7 +1321,6 @@ The free Lagrangian which contains no interaction between the fields is
 (2)
 LD = 4,60" g' + xhis#O,% + FFI (3.10)
 
-34
 
 3.2. Constructing Supersymmetric Lagrangian: Wess-Zumino
 Model and the Superpotential
@@ -1418,7 +1365,6 @@ shall understand better why it is called superpotential when we discuss the
 
 superfields since from its expression, it is not clear why it is called that way.
 
-35
 
 3.3. The Superspace Formalism: Reproducing the Wess-Zumino
 Lagrangian
@@ -1439,7 +1385,6 @@ hold. If we have an n-copies of fields, the full Wess-Zumino Lagrangian is
 ay 2
 Lwz = a,b! 0"; + iT"OnX: — |mizb; + Ho 6,04 +¢;
 
-1
 
 We will derive (3.21) using a more straightforward way of constructing a
 
@@ -1462,7 +1407,6 @@ tary operator corresponding to translational symmetry in the framework of
 
 supersymmetry?
 
-36
 
 3.3. The Superspace Formalism: Reproducing the Wess-Zumino
 Lagrangian
@@ -1537,7 +1481,6 @@ conjugate of the Grassman coordinate, 6, given by [25]
 S(z, 0,6) =A+0-x+0-A+6-6B+6-8C + 60"6U,,
 (60"6)0 - OV, + (80"8)8 - OW, + 6-66 -OD (3.31)
 
-38
 
 3.3. The Superspace Formalism: Reproducing the Wess-Zumino
 Lagrangian
@@ -1582,7 +1525,6 @@ derivative under SUSY. This can be carried out by performing the integral
 [2006.8 ..) = W(G,, Bo, ...) (3.37)
 F
 
-39
 
 3.3. The Superspace Formalism: Reproducing the Wess-Zumino
 Lagrangian
@@ -1604,7 +1546,6 @@ multiply three left-chiral superfields, then, we have [25]
 F
 
 Then, the result is [25]
-1
 [cove ©;,O,) = Gist (Didi Fi + bbe Fi + Gide Fy
 — PiX5 Xk — PjXk > Xi — ORXE* XG (3.40)
 where we have multiplied a dimensionless quantity, 2 Yijks since terms are
@@ -1631,7 +1572,6 @@ D
 
 F
 
-40
 
 3.4. SUSY Breaking
 
@@ -1669,7 +1609,6 @@ achieved when the field configuration corresponds to a state in which the
 potential is minimum, mathematically, the condition is given by [25]
 (0| V(¢i) |0) > 0 (3.45)
 
-41
 
 3.4. SUSY Breaking
 
@@ -1710,7 +1649,6 @@ value of the Higgs mass. We will discuss more on the hierarchy problem
 in Chapter 4. Now, we break the SUSY softly thorough an addition of a
 Lagrangian that breaks the SUSY softly, Zor, on top of the SUSY-preserving
 
-42
 
 3.5. The Minimal Supersymmetric Standard Model (MSSM)
 
@@ -1744,7 +1682,6 @@ is called the chiral multiplet while a group that contains SM gauge bosons
 
 and their SUSY partners is called the vector supermultiplets [24]. Lastly the
 
-43
 
 3.5. The Minimal Supersymmetric Standard Model (MSSM)
 
@@ -1785,7 +1722,6 @@ contains the Yukawa interactions of Higgs to chiral superfields, w is the Hig-
 
 gsino mass parameter, the first term on (3.50) is known as the p-term. A,
 
-44
 
 3.5. The Minimal Supersymmetric Standard Model (MSSM)
 
@@ -1835,7 +1771,6 @@ loog,| 4 ho| + So ales, (3.63)
 Lgusy = wa) +
 F
 
-45
 
 3.5. The Minimal Supersymmetric Standard Model (MSSM)
 
@@ -1888,7 +1823,6 @@ e The Yukawa couplings, Y;§, Y;¥
 d
 G YG) and Yj.
 
-46
 
 3.6. Charginos and Neutralinos
 
@@ -1904,7 +1838,6 @@ V3 wmz
 >9= Vacosby
 v
 tanby = a
-92
 
 >= Vasinby 2
 u
@@ -1941,7 +1874,6 @@ of mixing charged Winos and higgsinos [28]. To determine the mass matri-
 
 ces corresponding to chargino and neutralino, we start with the Lagrangian
 
-47
 
 3.6. Charginos and Neutralinos
 
@@ -1983,7 +1915,6 @@ nalization process, the results are [26]
 Xe = Z{ MAT} (3.72)
 K-=2*{ \hz}P (3.73)
 
-48
 
 3.7. R-parity and the Lightest Supersymmetric Particle (LSP)
 
@@ -2029,7 +1960,6 @@ capacity to result in an unobserved processes such as the rapid decay of pro-
 
 ton or large flavor-changing neutral current [25, 27, 28]. To alleviate these
 
-49
 
 3.7. R-parity and the Lightest Supersymmetric Particle (LSP)
 
@@ -2075,7 +2005,6 @@ R= {*t for Standard Model particles (3.83)
 
 —1, for supersymmetric particles
 
-50
 
 3.8. Tree-Level Majorana Neutrino Mass in R-Parity Violating
 (RPV) MSSM
@@ -2115,7 +2044,6 @@ singlets, D, Des does [27]. Baryon and lepton numbers describe whether a
 
 particle is a baryon or a lepton [3]. Breaking the R-parity symmetry can
 
-51
 
 3.8. Tree-Level Majorana Neutrino Mass in R-Parity Violating
 (RPV) MSSM
@@ -2163,7 +2091,6 @@ the tree-level neutrino mass using the RPV MSSM superpotential [35]
 WSS = Wysem + oi LiAu (3.90)
 Wapy = Wassm + W101 Ay + paieAy + wsi3Hy (3.91)
 
-52
 
 3.8. Tree-Level Majorana Neutrino Mass in R-Parity Violating
 (RPV) MSSM
@@ -2194,7 +2121,6 @@ mass matrices. This means that upon diagonalizing the M“), it generates
 
 an effective 3 x 3 neutrino mass matrix given by [59, 60]
 MSSM = —nMSSM (M),)  (nbissM (3.94)
-2
 2 M: M2 Hy Hib2 Pips
 Mit = oe (MG Mil, 1B Malls (3.95)
 
@@ -2221,7 +2147,6 @@ neutrino mass from the supersymmetric extensions of MSSM as we will dis-
 
 cuss in the next chapter.
 
-53
 
 Chapter 4
 
@@ -2248,7 +2173,6 @@ mass correction, 6m?, for the Higgs mass, it has a large discrepancy to the
 
 observed mass of the Higgs [25]. Now, the
 
-54
 
 4.1. Challenges of MSSM
 
@@ -2283,7 +2207,6 @@ the calculated Higgs mass is a tree-level result which can be slightly modified
 
 by including radiative corrections coming from the top and (s)top quarks, the
 
-55
 
 4.1. Challenges of MSSM
 
@@ -2318,7 +2241,6 @@ when it comes to the right scale of the parameter. This issue is known as the
 
 p problem [30, 65, 66).
 
-56
 
 4.2. The Next-to-Minimal Supersymmetric Standard Model
 (NMSSM)
@@ -2366,7 +2288,6 @@ SUSY breaking. Then, in this scenario, the scale of the uNMSSM and the
 
 SUSY breaking are naturally related to one another because the parameters
 
-57
 
 4.2. The Next-to-Minimal Supersymmetric Standard Model
 (NMSSM)
@@ -2386,7 +2307,6 @@ slepton/lepton - (a, é) (v.< ), 1 2 1
 Ee 4 | 1 1 2
 s [2 [4
 squark/quark 1 -4
-3
 E , 3 1 |G
 H 0 7 9 Fy -
 a fa (#8. Hi) 19. i; 1 2 1
@@ -2398,10 +2318,8 @@ see that the NMSSM can address the issue of the » problem. Unfortunately,
 the little hierarchy problem is not solve in NMSSM since the upper bound
 of the Higgs mass is calculated to be [29]
 
-22
 ™}, NMSSM < M2 (cos*(20) + AE sin*(28) J . (4.6)
 
-9
 We can see from (4.6) that there is an extra quartic coupling which increases
 the upper bound of the Higgs mass but as tan@ —> 00, m?. nassm 7 ™}mssm>
 but, as we take the limit as tans > oo, the second term of (4.6) vanishes
@@ -2411,7 +2329,6 @@ Hence, we must find a way that in the aforementioned limit, the Higgs mass
 
 must not be suppressed.
 
-58
 
 4.3. The Triplet Extended Minimal Supersymmetric Standard
 Model (TMSSM)
@@ -2434,7 +2351,6 @@ T= I T° v2Tt 1, . T° v2r*
 
 Po VaF :) (4.7)
 
-1
 +70-8( fe _ po
 where 7°, T+, and T- are the components of the triplet superfield, hence
 the name ” triplet”. The quantum numbers of this new superfield are shown
@@ -2455,7 +2371,6 @@ color and electromagnetic forces. Meaning it doesn’t interact with particles
 
 associated to these forces.
 
-59
 
 4.4. The Triplet Next-to-Minimal Supersymmetric Standard
 Model (TNMSSM)
@@ -2502,7 +2417,6 @@ the former while the NMSSM fixes the latter problem. It is interesting to
 
 have a model that simultaneously solves the two problems. We can achieve
 
-60
 
 4.4. The Triplet Next-to-Minimal Supersymmetric Standard
 
@@ -2538,7 +2452,6 @@ higgsino ih, (GAD) (Ag. 719) 1 | 2 [1
 Higgs singlet /singlino s Ss § 1 1 0
 Higgs triplet/triplino T I 1 3 0
 
-2
 
 T. Sart A Pp Var
 VviT- -T° *\ Var -7°
@@ -2560,7 +2473,6 @@ That is, we can address the little hierarchy problem by means of a triplet
 
 and we can solve the p problem using the singlet vev [30, 33, 69].
 
-61
 
 4.5. The Tree-Level Majorana Neutrino Mass in RPV NMSSM
 
@@ -2599,7 +2511,6 @@ rana neutrino masses beyond the singlet extensions of supersymmetry which
 
 are the R-parity violating versions of TMSSM and TNMSSM.
 
-62
 
 4.6. Neutrino Mass on the Other Extensions of MSSM
 
@@ -2642,7 +2553,6 @@ other hand, the mixing of neutralinos and left-handed neutrinos as well as
 
 the mixing of right- and left-handed neutrinos are contained in m3x7 where
 
-63
 
 4.6. Neutrino Mass on the Other Extensions of MSSM
 
@@ -2678,7 +2588,6 @@ triplet superfield in which we didn’t modify the symmetry group and field
 
 content of the said models.
 
-64
 
 Chapter 5
 
@@ -2708,7 +2617,6 @@ neutrinos in the Standard Model. We also showed that lepton and baryon
 
 numbers in that model are always conserved thus, R-parity symmetry is
 
-65
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -2743,14 +2651,12 @@ TMSSM can read as follows:
 —GT™MSSM _ _[2),Ay,HaHy + Am, Tr(TT) + h.c.]
 
 soft
-2
 
 1-.- ~
 + mi,,|Hal? + mi, |Hul? + Mz a P +TtT-
 
 (5.3)
 
-66
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -2797,7 +2703,6 @@ and we are only interested in a specific part of Lagrangian that contains the
 
 mixing of neutrinos with neutralino since from this mixing, we can generate
 
-67
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -2812,7 +2717,6 @@ neutralino Lagrangian is given by
 
 or TMS:
 
-1
 Lp = — 5 TssmM x0 SMyiussm + h.c. (5.9)
 
 where the TMSSM neutralino mass matrix, MisSSM, is [29]
@@ -2843,7 +2747,6 @@ To incorporate neutrinos in the model, we will use the bilinear RPV super-
 
 potential given in (5.1) where L; = v;. With this, The TMSSM neutralino-
 
-68
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -2855,7 +2758,6 @@ Mz
 
 ~ TaaPPusli? - nT" fig MrT°T°
 = 1, Ho — pv, H® — pgv3H® + hic. (5.12)
-1
 ZINE = i) Ve vissmMpeSsM Voussm + hac. (5.13)
 
 If we choose a basis defined by U2yiggy = {B°, W°?, H8, 1°, T° 4, V2, V3},
@@ -2868,8 +2770,6 @@ where
 000 w 0
 mvSsM = 10 0 0 pe 0 (5.15)
 000 ps 0
-000
-000
 
 The tree-level masses of neutralino-neutrino and neutrino can be obtained
 through performing the Takagi diagonalization of the mass matrices, MIMSSM
@@ -2885,7 +2785,6 @@ by using specific transformation that will make the matrix diagonal. Part
 
 of diagonalization process is finding the cigenvalues in which, as we have
 
-69
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -2928,7 +2827,6 @@ can observe from this equation the ” cancellation mechanism”, that is, this
 
 cancellation can lead to suppression of neutrino mass similar to what [31] was
 
-70
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -2980,13 +2878,11 @@ and 72 MSSM is given from (5.15)
 mSSM = 10 0 0 pe 0 (5.24)
 000 ps O
 
-71
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
 Carrying out the matrix operation from (5.22), we have
 
-2
 2cos*(8)MsMzM3 + My Mpv2d2 [| Hi Mila Hilts
 Det (MIMSSM) Hila 2 pets} (5.25)
 *° Hibs pols pe
@@ -3033,7 +2929,6 @@ correction from second and third terms of (3.84) which correspond to the
 trilinear interactions where ;;, and j;, are the RPV coupling parameters
 for those interactions. The fact that we didn’t add these RPV trilinear terms
 
-72
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -3075,7 +2970,6 @@ M, = 1000 GeV, Mz = 2000 GeV
 p= 200 GeV, tan(8) = 1.877
 Vy = 211.622 GeV, vg = 112.735 GeV (5.29)
 
-73
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -3115,7 +3009,6 @@ not yet excluded in the TeV scale. The result also offers another method of
 
 constraining the triplino mass parameter using an observable in particular,
 
-74
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -3133,7 +3026,6 @@ higher values of coupling within the experimental upper bounds of neutrino
 
 mass.
 
-75
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -3168,7 +3060,6 @@ by (5.1
 
 Mr = 5000 GeV
 
-76
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -3189,7 +3080,6 @@ it has a positive contribution with respect to the suppression. This is a
 manifestation of the compensation mechanism.
 
 Mr(GeV)
-6000
 
 At
 
@@ -3199,7 +3089,6 @@ Figure 5.3: Plot of triplino mass parameter as a function of triplino-
 
 higgsino coupling parameter where m, = 1.0 x 10-° GeV
 
-77
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -3239,7 +3128,6 @@ fields characterized by a bilinear interaction with H° and H$. Additionally,
 
 the Lagrangian where those terms are manifested is not yet diagonalized.
 
-78
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -3270,7 +3158,6 @@ contributes to the origin of neutrino mass which are the gaugino-triplino
 
 cancellation and Mr — ; compensation mechanisms.
 
-79
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -3303,7 +3190,6 @@ M;(GeV)
 Figure 5.5: Plot of triplino mass parameter as a function of bino
 mass parameter from (5.18) where \; = 0.3 and m, = 1.0x 10-® GeV
 
-80
 
 5.1. The Tree-Level Majorana Neutrino Mass in RPV TMSSM
 
@@ -3349,7 +3235,6 @@ Figure 5.7: Superimposed plots from MSSM and TMSSM tree-level
 neutrino mass expressions given by (5.18) and (5.28) as a function of
 bino mass parameter, M,, where A/7 = 5000 GeV
 
-81
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3383,7 +3268,6 @@ Lagrangian is
 soft
 
 + AA, STr(TT) + h.c.] + m¥,,|Hal? + mi, | Hu!”
-2
 + M2|S|? + M2
 
 sir +7 (5.32)
@@ -3397,12 +3281,10 @@ MSSM TNMSSM
 — Lao. = — LEM — [An HaHa + AvAr, Halla + RAS?
 
 + AA, STr(TT) + h.c.] + m3,,|Hal? + mi, |Hul?
-2
 sTOT0 4 FF
 
 + M2|S|? + MPR (5.34)
 
-82
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3431,7 +3313,6 @@ LMS = 73 fmssm Mz0 MSM av aissm +h. (5.36)
 
 where TNMSSM effective , wINMSSM, is given by
 
-1
 TNMSSM — ).y, — —dyry (5.37)
 
 V2
@@ -3456,7 +3337,6 @@ The TNMSSM bilinear RPV superpotential is [31, 35]
 
 Wp, = Wrnmssm + wil Hy (5.39)
 
-83
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3471,7 +3351,6 @@ LANVSSM = 5 V 2costy —=W (vale — Uy HE) + padMSSM 77° 779
 
 v2 v2
 - [4 He — [aV2H® - p3V3H° +hic. (5.40)
-1
 LANYSSM = a — 5 Vins MYM OF TNassm + h.c. (5.41)
 
 The neutralino-neutrino mass matrix, MZNNSSM, with the basis Vinwssm =
@@ -3490,9 +3369,6 @@ NMSSM __ MINMSSM (7,TNMSSM yT
 Myo-, -( NMSSM , )
 Ny, 03.3
 where
-1
-2
-3
 
 ooo
 coo
@@ -3511,7 +3387,6 @@ x ((2cos(B)sin® (Ow) M2M3(MsMr — 4A?v?) + My(-8A?
 cos?(3)cos? (Ow) MZu? + 2Mou2r5(MrAs + 2V2Au,Ars)
 + Msg(2cos?(8)cos*(Ow) Mp Mz + Mov2d?))) (5.45)
 
-84
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3549,7 +3424,6 @@ parameter, p2NMSSM, are approximately equal with the MSSM higgsino mass
 
 parameter, p. Then, we have PINMSSM x, yTMSSM ~ y, ~ 200 GeV. With
 
-85
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3586,7 +3460,6 @@ tracted from TNMSSM result provided that u7NMSSM rw NMSSM x y {MSSM
 
 b.
 
-86
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3626,7 +3499,6 @@ the TMSSM effective higgsino mass parameter to be approximately equal to
 
 the MSSM higgsino mass parameter in order to ensure that those parameters
 
-87
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3665,7 +3537,6 @@ parameter is approximate equal to that of MSSM higgsino mass parameter.
 
 Now, TNMSSM also reduces to that of MSSM result. To show this, we
 
-88
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3681,7 +3552,6 @@ both cases correspond to a more suppressed neutrino mass so we would expect
 that among all four models (MSSM, NMSSM, TMSSM, and TNMSSM), the
 neutrino mass is highly suppressed in MSSM.
 
-89
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3718,7 +3588,6 @@ level neutrino mass expressions given by (5.45) and (5.18) as a func-
 tion of triplino-higgsino coupling parameter, 4,, where Afr = Ms =
 5000 GeV
 
-90
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3758,7 +3627,6 @@ level neutrino mass expressions given by (5.45) and (5.47) as a func-
 tion of singlino-higgsino coupling parameter, 4, where Mr = Mg =
 5000 GeV
 
-91
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3831,7 +3699,6 @@ garding the contributions of couplings and mass parameters to the neutrino
 
 mass suppression.
 
-93
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3868,7 +3735,6 @@ Figure 5.15: Plot of triplino mass parameter, Mr, as a function
 of bino mass parameter, M,, from (5.45) where Ms = 5000 GeV and
 As i Mt =0.3
 
-94
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3895,23 +3761,18 @@ Figure 5.17: Plot of singlino mass parameter, Ms, as a function
 of bino mass parameter,M,, from (5.45) where My = 5000 GeV and
 As = = 0.8
 
-95
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
 My(GeV)
-5000
 
 t
 L
 4000 -
 [
-3000
 t
 f
-2000
 
-1000
 
 L
 
@@ -3930,7 +3791,6 @@ Ms(GeV)
 8000 |
 6000|-
 
-4000
 
 roa
 
@@ -3945,7 +3805,6 @@ Figure 5.19: Plot of singlino mass parameter, Ms, as a function
 of singlino-higgsino coupling parameter,\,, from (5.45) where Mp =
 5000 GeV, »; = 0.3, and m, = 1 x 10-9 GeV
 
-96
 
 5.2. The Tree-Level Majorana Neutrino Mass in RPV TNMSSM
 
@@ -3989,7 +3848,6 @@ Figure 5.21: Plot of triplino-higgsino coupling parameter, ,, as a
 function of singlino mass parameter,Ms, from (5.45) where My =
 5000 GeV, A, = 0.3, and m, = 4.5 x 10-19 GeV
 
-97
 
 Chapter 6
 
@@ -4018,7 +3876,6 @@ these mass parameters using an observable specifically, the neutrino mass.
 
 The latter result shows that singlino-higgsino and triplino-higgsino coupling
 
-98
 
 parameters have negative contribution to the Majorana neutrino mass sup-
 pression reflecting the condition of perturbation that couplings must be taken
@@ -4036,7 +3893,6 @@ of this work is to consider the loop corrections because the measured values
 
 of neutrino mass correspond to the tree-level + loop contributions.
 
-99
 
 Bibliography
 
@@ -4068,7 +3924,6 @@ of particle physics,” Rev. Mod. Phys. 71 p. 25 (1999).
 (WILEY-VCH Verlag GmbH Co. KGaA, Strauss GmbH, Morlenbach,
 2008).
 
-100
 
 Bibliography
 
@@ -4109,7 +3964,6 @@ Vector Mesons,” Phys. Rev. Lett. 13.321 p. 323 (1964).
 
 [22] E. Komatsu et al., APJS 180 330 .
 
-101
 
 Bibliography
 
@@ -4150,7 +4004,6 @@ Phys.Rev.D82:035002 p. 14 (2010).
 Supersymmetric Extension of the Standard Model with a Y=0 Higgs
 Triplet and a Singlet at the LHC,” JHEP09(2015)045_p. 39 (2015).
 
-102
 
 Bibliography
 
@@ -4210,7 +4063,6 @@ B. Odom, D. Hanneke, B. D’Urso, and G. Gabrielse, “New Measure-
 ment of the Electron Magnetic Moment Using a One-Electron Quantum
 Cyclotron,” Phys. Rev. Lett. 99, 039902 (2007).
 
-103
 
 Bibliography
 
@@ -4253,21 +4105,13 @@ in three years of IceCube data,” Phys. Rev. Lett., 113, 10 p. 101101
 [54] W. Konetschny and W. Kummer, “Nonconservation of total lepton num-
 ber with scalar bosons,” Phys. Lett. B, 70(4) pp. 433-435 (1977).
 
-104
 
-56
 
-57
 
-58
 
-59
 
-60
 
-61
 
-62
 
 [63]
 
@@ -4310,7 +4154,6 @@ Physics letters B, 122(1) pp. 103-116 (1983).
 P. Bagnaia et al., “Evidence for Z) +> e+e at the CERN pp Collider,”
 Physics Letters B, 129(1-2) pp. 130-140 (1983).
 
-105
 
 Bibliography
 
@@ -4322,7 +4165,6 @@ Bibliography
 
 68}
 
-69
 
 [70]
 

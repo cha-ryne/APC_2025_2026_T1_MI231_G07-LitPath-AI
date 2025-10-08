@@ -135,7 +135,6 @@ development for crop improvement and adaptation strategies.
 
 Genotypic Variation
 
-4
 
 Controlled Condition
 
@@ -176,7 +175,6 @@ Rate of growth
 Leaf
 Number
 
-1
 
 ‘Thermal time (°Cd) Leaf Number
 Figure 2.The rate of leaf appearance in Figure 3. The predicted rate of growth of
@@ -242,7 +240,6 @@ predicting crop phenology is important for modeling of crop growth calendar whic
 
 serves as basis for employing field management strategies (Sie et. al, 1998). Temperature,
 
-10
 
 solar radiation, and water availability are assumed to be the key factors that control plant
 
@@ -270,7 +267,6 @@ temperature, vapour pressure deficit, planting density, sowing date and genotype
 
 condition, cereal leaves continuously develop and elongate until sufficient number of
 
-11
 
 phytomer units are produced before proceeding to the reproductive stage (McMaster,
 
@@ -299,7 +295,6 @@ viewed as coordinated processes. Certainly signaling throughout the plant can af
 
 individual shoot apex functioning (McMaster, 2005).
 
-12
 
 Phytomer is formed upon initiation of leaf phenology, hence timing of phytomer
 formation is controlled by the rate of primordial initiation (McMaster, 2005). Only leaf
@@ -327,7 +322,6 @@ similar. In contrast, dependent on the genotype, cereals exhibit varied rates of
 
 (McMaster, 2005).
 
-13
 
 Leaf Appearance
 
@@ -354,7 +348,6 @@ conditions in which the plant is grown. Hence, the plastochron is more strongly 
 
 temperature (essentially only cell division) than the phyllochron (which includes cell
 
-14
 
 growth). In relation to thermal time, scientists tried to study and predict the trend of leaf
 
@@ -382,7 +375,6 @@ appearance rate in rice. This means that the difference observed by Yin et al. (
 
 the effect of Tp and Tw on rice development to flowering is related to leaf development
 
-15
 
 until panicle initiation phase,hence leaf development in rice is not affected by Tp and Ty
 
@@ -407,7 +399,6 @@ leaf. The assumption is that before a leaf tip could fully emerge, the ligule of
 
 predecessor should come out first (Yin et al., 1995).
 
-16
 
 Kinetics of leaf appearance
 
@@ -434,7 +425,6 @@ Furthennore, given diumally fluctuating conditions, it was verified that time co
 
 leaf appearance is constant for all genotypes (Yin and Kropff, 1996).
 
-17
 
 Phyllochron and genotypic variation
 
@@ -459,7 +449,6 @@ controls on developmental processes since there are still many areas of uncertai
 
 variability that need to be explained (McMaster, 2005).
 
-18
 Leaf Elongation
 
 Cell division and tissue expansion of epidermal cells occurs in the meristematic
@@ -488,7 +477,6 @@ If gradients of water potential are the driving force for cell expansion and
 
 elongation, alteration of the gradient should result in alterations of the leaf elongation
 
-19
 
 rate(Cutler, 1979). Elastic properties of cell walls have a large influence on the relation
 between protoplast volume and turgor (Dainty, 1972) as cited by (Cutler, 1979). Highly
@@ -516,7 +504,6 @@ synthesis of sucrose with the fact that blade growth is not limited by the phloe
 
 of sucrose (Seneweera, et. al, 1995; Wiangsamut and Mendoza, 2008). However, the
 
-20
 
 demand for carbohydrates from the growing blades increases with increasing tiller
 number because the growing tillers initially depend their carbohydrates from the shoots
@@ -544,7 +531,6 @@ the expanding leaves and Sucrose Phosphate Synthase (SPS) activity have clear si
 
 because the growing blades are the major sinks. On the other hand, the correlation
 
-21
 
 became absent at mid-tillering stage because tillers are stronger sinks than the growing
 
@@ -574,7 +560,6 @@ and 7. As the elongation rate of leaf 6 rapidly decreases, the rapid growth of l
 
 to occur rendering the elongation of leaf 5 to stop. The theory of the self-regulating
 
-22
 
 dynamic system, stating that leaf growth depends on the growth of other elongating
 leaves, supports the claim that there is a decrease in the rate of leaf elongation of the
@@ -604,7 +589,6 @@ has about 1:1 ratio of plastochron rate and phyllochron rate (McMaster, 2005). T
 
 phyllochron might internally increase depending on the genotype controlling the heading
 
-23
 
 date. Phyllochron dynamics varies with the daylength even in the same genotype. Itoh
 and Sano (2006) reported that daylength might be related to increases of the phyllochron
@@ -631,7 +615,6 @@ ferromagnetic coil is a fraction of the coil assembly length. The coil magnetica
 
 the primary to the secondary winding turns that are located along the length of the core
 
-24
 
 (Measurement Specialties, Inc.). The LVDT requires AC power of typically 3 Vrms at 3
 
@@ -681,7 +664,6 @@ connection
 
 Secondary |
 
-25
 
 Figure 4.Application of LVDT in recording leaf elongation (left) and the general LVDT
 
@@ -707,7 +689,6 @@ of development in calendar days under natural conditions, such as constant tempe
 
 there could be internal regulation of phyllochron rather than due to unpredictable
 
-26
 
 fluctuations under field conditions (Itoh and Sano, 2006). This is due to combined effects
 of environmental conditions and genotype-specific differences between species,
@@ -735,7 +716,6 @@ temperature of >27°C. Small differences in the base temperature can strongly af
 
 duration of germination at low temperatures because the duration is inversely
 
-27
 
 proportional to the temperature. Clerget and Bueno (2013) claimed that the growth
 stopped when sorghum was temporarily exposed to higher temperature (about 60°C) for
@@ -760,7 +740,6 @@ However, some of the plant processes occurring in the course of its development 
 
 respond differently to day and night temperatures (Yin and Kropff, 1996).
 
-28
 
 Thermal time. Crop development can be predicted using the concept of thermal
 time, or growing degree days (GDD) (McMaster, 2005). This involves summation of the
@@ -790,7 +769,6 @@ McMaster (2005) pointing out that temperature is perceived in the shoot apex and
 
 developmental processes such as, leaf primordial formation and that single and double
 
-29
 
 ridge occur in this area. Furthermore, prior to internode elongation, the shoot apex is
 located in the crown (about 20 mm below the soil surface) hence temperature readings
@@ -818,7 +796,6 @@ reduction of LER during transition from day to night provided high carbohydrate
 
 accumulation at nighttime (Wiangsamut and Mendoza, 2008).
 
-30
 
 Munns et al. (2000) reported that sudden changes in humidity, light and salinity
 induce sudden changes in leaf water status which significantly affected leaf elongation
@@ -842,7 +819,6 @@ likely, this means that hormones control leaf expansion in water-stressed plants
 
 the night (Munns et al., 2000).
 
-31
 
 Secondary factors
 
@@ -872,7 +848,6 @@ biomass at heading time. During this time, plants have longer duration of vegeta
 
 phase thus producing more leaves and tillers per plant and leading to maximizing the
 
-32
 
 capture of solar radiation (Clerget and Bueno, 2013). Considering differences in
 photoperiod in sowing dates, growers and extensionists are interested on the effect of
@@ -900,7 +875,6 @@ main tiller. Distance between consecutive collars was also measured starting fro
 
 11.
 
-34
 
 Core Experiment
 
@@ -921,7 +895,6 @@ replication with 4 replications per treatment, arranged in Randomized Complete B
 
 Design (RCBD) (Table 2).
 
-35
 
 Table 1. Rice genotypes used in the characterization of leaf growth experiment.
 
@@ -975,7 +948,6 @@ LOd
 
 ‘yuoutadxe YIMOIS Jea] JO UONeZA}ORIeYO dy} UI pasn INo-AeT “7 9IQUL
 
-37
 
 Evaluation of Diurnal Leaf Growth of 4 Contrasting Genotypes. Four
 contrasting varieties was used ,i.e. early maturing, intermediate, late maturing, and hybrid
@@ -1019,7 +991,6 @@ SAHELIKA::C1
 8 HONG ZUI ZHAO::IRGC 68090-1
 
 
-38
 
 Plant Management
 
@@ -1043,7 +1014,6 @@ numbered according to their rank of appearance. Number of leaf rank was written 
 
 full expansion of the leaf of interest.
 
-39
 
 Daily Leaf Elongation. Leaf blade growth was measured by daily tagging the
 newly developing leaf using a permanent marker. From leaves 3-7, the reference used
@@ -1070,7 +1040,6 @@ reference collar. Moreover, the collar distance data was used for the determinat
 
 exact date when the stem elongation has occurred in each genotype. Since most of the
 
-40
 
 analyses were based onthermal time, temperature was taken into consideration. Prior to
 the onset of stem elongation, thermal time was calculated using soil temperature data and
@@ -1097,7 +1066,6 @@ a new leaf. The displacement limit of the sensor is only up to 20 cm, hence the 
 
 adjusted everyday, i. e. from the previous position of the clip to the lowest opened part of
 
-41
 
 the elongating leaf. A datalogger(CR1000, Campbell Scientific, Logan, UT, USA)
 
@@ -1124,7 +1092,6 @@ SAS version 9.2 where the parameters were and their confidence intervals were es
 
 using Proc NLIN. Dynamics of leaf development were fitted to either bilinear or trilinear
 
-42
 
 segmented model. The observed leaf number (LN) from the leaf appearance data was
 regressed against the elapsed thermal time using the equations of bilinear or trilinear, as
@@ -1152,7 +1119,6 @@ appearance until the last day of leaf elongation was caiculaied in millimeter pe
 
 °C"),
 
-43
 
 Leaf Elongation Rate on the Second Day. The leaf elongation rates on the second
 day of measurement were extracted from the dataset. The rate of growth during the
@@ -1180,7 +1146,6 @@ LER = leaf elongation rate (mm h"'); LE] = leaf elongation at a given time 1 (mm
 
 = leaf elongation at a given time 2 (mm);t2 = tl + 15. Four LER values were calculated
 
-44
 
 and averaged per hour since measurements were logged every 15 minutes. The multiplier
 ‘2’ was used in the LVDT setup because the elongation of the leaf is carried by the two
@@ -1201,7 +1166,6 @@ the diurnal leaf growth evolution of the four genotypes was correlated using SAS
 
 9.2
 
-45
 
 Climate Data
 
@@ -1233,7 +1197,6 @@ Figure 5.Leaf appearance rate of IR 72 across growing days. Date of appearance o
 leaves was the first date of measurement of LER extracted from the dataset.
 Data was obtained from the average of plants in 12 pots.
 
-47
 
 Leaf Elongation Rate
 
@@ -1270,7 +1233,6 @@ Figure 6.Maximum leaf elongation rate of IR 72 (mm/°Cd). The values were the
 average maximum LER per pot from leaf 8 - 16. Thermal time (°Cd) was
 computed using the soil temperature in the randomly placed thermocouples.
 
-48
 
 Collar Distance
 
@@ -1283,8 +1245,6 @@ temperature to be used for the computation of thermal time will be coming from t
 
 temperature, instead of soil temperature.
 
-80
-70
 = 60
 E °
 = so Leaf11
@@ -1297,7 +1257,6 @@ FS *—Leaf12
 8) 20) eames
 me ~ Leaf1s
 =~ Leaf 16
-0
 
 35 37 39 42 43 46 49 51 53 S6 58
 
@@ -1309,7 +1268,6 @@ distance between the collar of interest and the collar of its predecessor was
 measured in 2-d interval. Measurements were done upon the appearance of the
 collar of interest until the senescence of its reference collar.
 
-49
 
 Automatic Leaf Elongation Measurement (LVDT)
 
@@ -1332,11 +1290,9 @@ contrasting genotypes. Observations throughout the duration of the experiment we
 
 to adjust and fine-tune the protocol so that it couid fit the core experiment.
 
-50
 
 ——r
 
-4
 
 LER (mm/°Cd)
 Ornweuavood
@@ -1371,7 +1327,6 @@ Figure 8. Diurnal Leaf elongation rate of leaves 10 (A), 12 (B) and 15 (C) of IR
 interval. Thermal time (°Cd) was computed using the soil temperature in the
 randomly placed thermocouples.
 
-51
 
 Core Experiment
 
@@ -1405,7 +1360,6 @@ Thermal time (SumT) was pertains to the cumulative difference of average tempera
 
 per day and the base temperature for rice (11°C). The minimum temperature for leaf
 
-52
 
 growth varied with the position of the shoot hence temperature effects are not equivalent
 during the vegetative growth (Itoh and Sano, 2006). During the early stage of the plant,
@@ -1434,7 +1388,6 @@ Hodges (1991) as cited by Yin et. al (1995) suggested that temperature primary a
 
 crop development and can be modified by other factors such as photoperiod. Moreover,
 
-53
 
 Ellis et al (1993) cited that the optimum temperature for leaf appearance rate of indica
 cultivars may be cooler than 30°C. However, Bade et. al (1985) reported that the
@@ -1448,12 +1401,8 @@ appearance in thermal units gives temperature-independent results (Lafarge and T
 
 2001).
 
-54
 
-35
-33
 3 t
-2
 2 +
 o
 e June
@@ -1461,7 +1410,6 @@ e June
 je = Sept
 <
 
-23
 0 10 20 30 40 SO 60 70 80 90
 
 Das
@@ -1469,10 +1417,6 @@ Das
 Figure 9.Average air temperature during the experimental period covering two sowing
 dates.
 
-35
-33
-31
-29
 
 ae a June
 
@@ -1480,9 +1424,7 @@ ae a June
 
 Soil Temperature (°C)
 
-25
 
-23
 0 10 20 30 40 50 60 70 80 90
 
 DAS
@@ -1490,7 +1432,6 @@ DAS
 Figure 10.Average soil temperature during the experimental period covering two sowing
 dates.
 
-90
 
 June
 
@@ -1498,11 +1439,8 @@ Sept
 
 Relative Humidity (%)
 
-60
 
-55
 
-50
 0 10 20 30 40 5SO 60 70 80 90
 
 DAS
@@ -1522,9 +1460,7 @@ DAS
 Figure 12.Totalglobal radiation during the experimental period covering two sowing
 dates.
 
-55
 
-56
 
 Characterization of leaf growth of 11 genotypes
 
@@ -1551,7 +1487,6 @@ The leaf appearance of genotypes in the two sets of sowing were combined and
 
 grouped according to type and duration with their corresponding confidence intervals, as
 
-57
 
 shown in Figures 14 - 18, i.e. Figure 14 showing two hybrid varieties, Mestizo 30 and
 Mestizo 7; Figure 15 for two tropical japonicas — Azucena and IR 780; Figure 16
@@ -1585,7 +1520,6 @@ SAHELIKA::C1 21 1402.58 18 1108.83
 WAS 203-B-B-2-4-1::C1 18 1293.45 17 1144.92
 
 
-58
 
 Mestizo 30
 =—IR72
@@ -1594,7 +1528,6 @@ Mestizo 30
 Mestizo7
 
 Leaf Rank
-4
 
 aa Azucena
 Hong Zui Zhao
@@ -1607,7 +1540,6 @@ Was 203
 SumT (°Cd)
 
 Mestizo 30
-20
 *—IR72
 IR 780
 Mestizo7
@@ -1632,7 +1564,6 @@ was the first date of measurement of LER extracted from the dataset. Data was
 obtained from the average of plants in 4 plants per genotype. Thermal time
 (°Cd) was computed using the soil temperature and air temperature.
 
-59
 
 On the other hand, compared with June 2013 sowing, thermal time for leaves to
 appear in the second sowing is longer in most genotypes except for IR 780, IR 72 and
@@ -1660,7 +1591,6 @@ sumt (a) Sumt (mm/"ca)
 Figure 15.Leaf appearance rate of tropical japonicas sown in June and September 2013
 sowing.
 
-60
 
 Hong Zui Zhao £5168
 
@@ -1676,9 +1606,7 @@ Sahelika Was 203
 Figure 17.Leaf appearance rate of late maturing indicas sown in June and September
 2013 sowing.
 
-61
 
-62
 
 NSICRe 222 PSBRC18
 
@@ -1697,7 +1625,6 @@ varieties. Since the first 3 to 4 leaves are pre-existing in the embryo, they ap
 
 than the succeeding leaves hence creating an inflection point leading to trilinear kinetics.
 
-63
 
 Manual inspection of the points in Figure 19 revealed that there were points
 which were below the model line around the second inflection point. To further analyze
@@ -1723,7 +1650,6 @@ in Figure 21. This means that the shift in the leaf appearance rate is not abrup
 
 gradual. The gradual shift in the rate caused the observed values to be systematically
 
-64
 
 below from the predicted values near the inflection point on the first run. This implies
 that the visually curvilinear portion was the transition period between two linear portions
@@ -1749,19 +1675,15 @@ LeafRank
 
 Figure
 
-02
-01
 
 0.1
 
 Average Residue
 
 0.2
-03
 
 Figure
 
-65
 
 A B
 = 20
@@ -1781,12 +1703,10 @@ Sum ("Cd) Sum (°Cd)
 19. General linear model of NSIC Rc 222 leaf appearance rate using the complete
 data of June (A) and September (B)sowing.
 
-04
 
 =f eel ieee |
 8 oye | 2. | 5 Th a
 x
-3
 Leaf Rank LeafRank
 
 20.Residuals of NSIC Re 222 leaf appearance modeling the June (left) and
@@ -1812,7 +1732,6 @@ SumT ("Cd)
 
 sumt (°Ca)
 
-1400
 
 Figure 21. General linear model of NSIC Rc 222 leaf appearance rate using probably
 complete data set of June (A) and September (B) sowing.
@@ -1863,17 +1782,13 @@ b1=0.0174
 400 600 800 1000 1200
 SumT (*Cd)
 
-1400
 
-1400
 
 Figure 23.General linear model of IR 72 leaf appearance rate using probably complete
 
 data set of June (A) and September (B) sowing.
 
-66
 
-67
 
 Removal of data corresponding to early leaves until the first inflection point was
 based on the fact that the first two leaves have the highest leaf appearance rate because
@@ -1901,7 +1816,6 @@ accumulation of photosynthaies in the culm could poientially be reduced. The res
 
 assimilates in the culm compensates the increasing respiration during grain filling stage
 
-68
 
 hence reduction of stored carbohydrates in the culm due to shortened crop growth
 duration may result to reduction of grain growth and finally yield (Streck, et. al, 2013).
@@ -1925,7 +1839,6 @@ affected by differences in photoperiod (Lafarge and Tardieu, 2001). Similariy, a
 
 response between leaf emergence and thermal time was reported by Eixarch et.al (2013).
 
-69
 
 Table 7. Summary of kinetics of leaf appearance of the genotypes for the two sowing dates.
 
@@ -1952,7 +1865,6 @@ depending on the siage of the plant. Clergei et al (2008) cited that phyliochron
 
 changed after panicle initiation and hence related to the onset of stem elongation.
 
-70
 
 Leaf Elongation Rate. Daily manual elongation measurement of leaves from the
 main tiller starting from leaf 3 until flag leaf was done in all genotypes planted in the two
@@ -1975,10 +1887,8 @@ confidence intervals of leaf elongation in all the leaves of each genotype were 
 
 Appendix Tables 3 - 4
 
-71
 
 A
-10
 8 ;
 Mestizo 30
 q Y My : *—IR72
@@ -1995,8 +1905,6 @@ Was 203
 aes eh nee bere eae Ob es bem Cea rig £)
 Leaf Rank
 B
-10
-9
 8 Mestizo 30
 —1R72
 7 i AR
@@ -2008,7 +1916,6 @@ Es) /RrY Azucena
 & 4 * Hong Zui Zhao
 ae NSICRe 222
 ¥ PSBRc222
-2
 Sahelika
 1 Was 203
 0 £5168
@@ -2022,7 +1929,6 @@ and September (B). The points correspond to the initial and/or maximal LER
 which occurred on the second day of measurement. This was the average
 maximum LER of four plants per genotype across leaf rank.
 
-72
 
 The dataset was subjected to curve fitting using the software Table Curve 2D
 version 5.01 and generated a model that best represents the maximum LER of all
@@ -2050,7 +1956,6 @@ tank LeatRank
 Figure 25.Leaf elongation rate of hybrid indicas sown in June and September 2013
 sowing.
 
-73
 
 Azucena IR 780
 
@@ -2071,7 +1976,6 @@ Figure 27.Leaf elongation rate of early maturing indicas sown in June and Septem
 
 Sahelika Was 203
 
-5
 E
 
 Leaf Rank
@@ -2088,14 +1992,12 @@ FS i = {
 i PN bs AT,
 2 IR72
 n
-10
 5 ¢ fa
 g7 ALY
 Es ] ity,
 gS iA i i. June
 4 yl WI + sept.
 yf 'l]
-1
 °
 3s son Bos 7 2 2
 Leaf Rank
@@ -2103,9 +2005,7 @@ Leaf Rank
 Figure 29.Leaf elongation rate of late maturing indicas sown in June and September
 2013 sowing.
 
-74
 
-75
 
 Table 8. Maximum LER and the corresponding leaf of each genotype for the two sowing
 dates.
@@ -2144,7 +2044,6 @@ Leaf elongation is the cumulative effect of cell elongation (Durand et. al, 1999
 
 During the early stage of leaf development, there is a coordinated cell division and
 
-76
 
 elongation hence rendering a relatively constant mean length or growth. The primordium
 at this stage is mainly composed of division zone which allows the first occurrence of
@@ -2171,7 +2070,6 @@ that enzyme activities were not affected by temperature ranging from 5 - 40°C p
 
 due to the stabilizing effects of chaperones or activation enzymes.
 
-77
 
 Synchronism of Leaf Appearance and Leaf Elongation Rates. A trilinear
 
@@ -2205,7 +2103,6 @@ a
 
 is associated with rapid internode elongation as observed in many studies. This period of
 
-78
 
 rapid internode elongation coincided with the stable leaf appearance rate that is the
 second linear portion of the curve. Analysis of the leaf where maximum LER was
@@ -2232,34 +2129,26 @@ leaf development of a specific genotype at a given phytomer (Lafarge and Tardieu
 
 sorghum delayed the onset of elongation of each successive internode.
 
-79
 
 A
-16
 14 °
 12 ¥ + ¢ %
 A } ry
 = 10 ‘
 fa
-8
 o
 § 6
 4 ¢ inflection
 2 max LER
-0
 Genotype
 B
-16
-14
 ai fa x Sree Oe ee
 = 10 ° ¢ ¢
 A 2
 = We
-3
 S26
 4 * inflection
 2 max LER
-0
 
 Genotype
 
@@ -2268,7 +2157,6 @@ June (A) and September (B) sowing. Leaves corresponding to the onset of the
 second inflection of the trilinear model and that of maximum LER were tested
 for synchronism.
 
-80
 
 Therefore, the hypothesis that LER increases with plant age until around leaf 11,
 suddenly drops down at the time of appearance of the 12" leaf and then stabilizes was not
@@ -2296,7 +2184,6 @@ Since there was no sudden drop of LER after reaching its maximum, the dual
 
 effect of reduced cell division and cell elongation was not experienced by the plant
 
-81
 
 simultaneously hence the decrease in LER occurred gradually, This may be explained by
 the occurrence of the transition period in the leaf appearance which implies that there was
@@ -2323,7 +2210,6 @@ around 6 pm with 5 - 6 mm/d elongation, and then gradually decreased before it
 
 stabilized at 7 pm. On ihe other hand, the diumai patiern of leaf elongation for the
 
-82
 
 September 2013 sowing also showed stable rate of elongation of 4 —- 6 mm/d was
 observed from 6 pm to 6 am and then gradually increased with slightly abrupt increase at
@@ -2350,13 +2236,8 @@ sowing shows a gradual decrease in LER starting from 6 am to 3 pm and then stabi
 
 until 4pm before its abrupt increase with a peak at 6 pm at the rate ranging from 5.5 - 6.5
 
-83
 
 10 A
-9
-8
-7
-2
 = es
 ay yy: eS ry *—1R72
 Es Seextet a a
@@ -2364,13 +2245,9 @@ CP ince SS = Mestizo 7
 = 4
 33 Hong Zui Zhao
 2 Sahelika
-1
-0
 0 2 4 6 8 10 12 14 16 18 20 22
 Time of day (h)
 10 B
-9
-8
 —
 7 x
 € 6 4 Se
@@ -2381,8 +2258,6 @@ o 4. =~ Mestizo 7
 s
 3 Hong Zui Zhao
 2 Sahelika
-1
-0
 
 i?) 2 4 6 8 10 12 14 16 18 20 22
 
@@ -2394,7 +2269,6 @@ measured the leaf displacement in 15-min interval for 24-h period throughout
 the duration of leaf elongation. Elongation (mm/h) was the average of all
 observations per hour.
 
-84
 
 mm/°Cd. A sudden decrease was then occurred until 7 pm before the onset of it gradual
 increase. On the other hand, in the second sowing, there was an increasing elongDD from
@@ -2422,13 +2296,10 @@ during the night and the PPFD during the preceding day are not related. Instead,
 
 consistently affects the transient changes in LER during day — night transitions.
 
-85
 
 A
 
-10
 
-9
 
 8 .
 
@@ -2443,15 +2314,11 @@ a
 
 3 Hong Zui Zhao
 
-2
 
 Sahelika
-1
-0
 0 2 4 6 8 10 12 14 16 18 20 22
 Time of day (h)
 B
-1
 aan
 | aad =~
 a ‘e ‘
@@ -2476,7 +2343,6 @@ measured the leaf displacement in 15-min interval for 24-h period throughout
 the duration of leaf elongation. ElongDD (mm/°Cd) was the average of all
 observations per day divided by thermal time elapsed.
 
-86
 
 Light and temperature increases during the day hence LER also increases until it
 reaches its saturation. These factors directly affect leaf growth hence another way of
@@ -2503,7 +2369,6 @@ relative humidity had moderate to strong negative correlation with it. On the ot
 
 expressing LER to elongDD resulted to its negative correlation with soil and air
 
-87
 
 temperatures and positive correlation with relative humidity. Streck et. al (2008) cited
 that biological process, including plant development, have non-linear response to
@@ -2533,7 +2398,6 @@ temperature and that is specific to the time of cell cycling. The last part in p
 
 which is cell growth, is influenced by other factors such as carbohydrate, water and
 
-88
 
 nutrient availability that depends on the environmental conditions in which the plant is
 grown. Hence, the plastochron is more strongly related to temperature (essentially only
@@ -2565,7 +2429,6 @@ the leaf appearance curve. For the first sowing, the transitional period started
 
 to 1land ended in leaves 11 - 16. On the other hand, transition period for September
 
-90
 
 sowing started in leaf 8 to 11 and ended at leaf 10 to 14. The ranges of leaves pertain to
 
@@ -2602,7 +2465,6 @@ initiation could begin shortly after the appearance and full expansion of leaf w
 
 maximum LER.
 
-91
 
 Diurnal leaf elongation rates observed in four contrasting genotypes using LVDT
 showed an actual absolute leaf elongation rate (mm/h) which was higher during the day
@@ -2644,7 +2506,6 @@ internode elongation is relevant in determining the specific time of shifting fr
 
 air temperature for the computation of thermal time. Second, internode elongation relates
 
-93
 
 to panicle initiation which is a crucial point in cereal development. Panicle initiation may
 start shortly after the full expansion of leaf with maximum LER or to about 2 - 3 days
@@ -2673,7 +2534,6 @@ area that could affect simulation of canopy architecture of specific rice genoty
 
 origin and crop duration of rice genotypes do not reflect specific kinetics of leaf
 
-94
 
 appearance and synchronicity with leaf elongation, and that could be attributed to their
 
@@ -2702,7 +2562,6 @@ could be a reliable source of information for the breeders and crop modelers for
 
 improvement and climate adapiation strategies. On the other hand, one limitation of the
 
-95
 
 study is that the conditions inside the greenhouse were not controlled hence correlation
 between climate variables and LER may not necessarily be representative because the
@@ -2766,7 +2625,6 @@ ELLIS, R.H., A. QI, R.J. SUMMERFIELD, and E.H. ROBERTS. 1992. Rates of leaf
 appearance and panicle development in rice (Oryza sativa L.): a comparison of
 three temperatures, Agric. For. Meteorol., 66: 129-138.
 
-97
 
 FOURNIER, C., J.L. DURAND, S. LIUTOVAC, R. SCHAUFELE, F. GASTAL and B.
 ANDRIEU. 2005. A functional-structural model of elongation of the grass leaf
@@ -2810,7 +2668,6 @@ non-steady elongation of rice leaves. Plant, Cell and Environment, 32: 1561-1572
 PARENT, B., ©. TURC, Y. GIBON, M. STITT and F. TARDIEU. 2010. Modelling
 temperature-compensated physiological rates, based on the co-ordination of
 
-98
 
 responses to temperature of developmental processes. Journal of Experimental
 Botany 61(8): 2057-2069.
@@ -2856,7 +2713,6 @@ Agronomy Joumal, 100: 490-501.
 STRECK, N.A., L.O. UHLMANN and L.F. GABRIEL. 2013. Leaf development of
 cultivated rice and weedy red rice under elevated temperature
 
-99
 
 scenarios.RevistaBrasileira de Engenharia Agricola e Ambiental, 17 (2): 190 -
 199.

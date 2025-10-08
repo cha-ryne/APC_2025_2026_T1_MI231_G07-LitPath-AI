@@ -244,7 +244,6 @@ The NO molecule is the reactive intermediate that has the ability to form very
 
 stable complexes with metal ions, such as iron (Mills, 2014). This results in the binding
 
-10
 
 of NO with the iron atom present in meat pigment myoglobin, forming a red-colored
 nitrosylmyoglobin [MbFe(II)NO]. On the other hand, when the myoglobin undergo
@@ -259,7 +258,6 @@ react with NO to form MbFe(II)NO.
 Figure 2. Possible curing reactions that result from the addition of nitrite to meat
 (Bard and Townsed, 1978).
 
-1
 
 Stabilization of cured meat color occurs when the product is subjected to thermal
 processing. Denaturation and separation of the globin moiety of nitrosylmyoglobin from
@@ -287,7 +285,6 @@ nitrite on meat flavor is a complex stimulus that involve properties including a
 
 texture, taste, and temperature (Sindelar & Milkowski, 2011).
 
-12
 
 According to Feiner (2006), the distinct cured flavor is brought about by reactions
 between nitric oxide (NO) and numerous substances that are naturally present in meat,
@@ -313,7 +310,6 @@ longissimus dorsi muscle by Cho & Bratzler (1970) and on frankfurters by Wasserm
 
 Talley (1972), reported that nitrite-containing products possessed a more intense cured
 
-13
 
 favor. Kemp et al. (1975) reported improved color and sensory properties in packages of
 sliced dry-cured hams containing nitrate and/or nitrite. Lastly, it was reported by Hustad
@@ -342,7 +338,6 @@ Milkowski, 2011). It acts as a preservative against the growth of pathogenic bac
 
 as Staphylococcus aureus and most importantly Clostridium botulinum. However, nitrite
 
-14
 
 has relatively little impact against Micrococcus spp., Lactobacillus spp., and
 Enterococcus spp. (Feiner, 2006). The broad antimicrobial effects and specific inhibitory
@@ -369,7 +364,6 @@ botulinum is the most widely recognized target microorganism associated with nit
 
 application in processed meats. This microorganism is a potent anaerobic bacteria that is
 
-15
 
 capable of growing heat resistant-spores and producing the deadly botulinum neurotoxin,
 which causes botulism. Several mechanisms for the effective growth inhibition by NO*
@@ -396,7 +390,6 @@ Models of predicting bacterial growth showed that nitrites also contribute to th
 
 protection from other food-borne pathogens, such as Listeria monocytogenes, E. coli
 
-16
 
 O157:H7, S. aureus, and Bacillus cereus, by reducing their growth rates (Sindelar &
 
@@ -425,7 +418,6 @@ rancidity is probably due to the same reaction that is responsible for color dev
 
 Two mechanisms cooperate to limit lipid oxidation which is based on the action of nitric
 
-17
 
 oxide (NO). The first mechanism involves the heme compounds of muscle containing
 iron ions that catalyze lipid oxidation reactions. When nitrite, in the form of NO, reacts to
@@ -475,7 +467,6 @@ per kg of body weight (Mills, 2014). The current acceptable daily intakes (ADIs)
 
 nitrite, set by the European Commission’s former Scientific Committee for Food (SCF)
 
-19
 
 in 1997, and by the Joint FAO/WHO Expert Committee on Food Additives (JECFA) in
 2002, are 0.06 and 0.07 ppm body weight/day, respectively.
@@ -502,7 +493,6 @@ toxicity with the consumption of cured meats. Aside from its direct toxicity, ni
 
 react with certain amino acids to produce carcinogenic nitrosamines (Mills, 2014).
 
-20
 
 During the 1970s, in the United States, a discussion arose about the formation of
 nitrosamines in cured meat products, especially in fried bacon. Fiddler et al. (1978), as
@@ -531,7 +521,6 @@ temperature and time, storage conditions, and presence of microorganisms, which 
 
 able to reduce nitrate to nitrite and promote degradation of proteins to amines and amino
 
-21
 
 acids (Nollet & Toldra, 2009). The formation of these compounds in the cured meat
 product is favored under acidic conditions (pH <5.5) and high temperatures. The pH must
@@ -558,7 +547,6 @@ tertiary amine RN + NO+ > no nitrosamine formation
 Figure 3. Chemical reactions leading to possible nitrosamine formation; M/M+ are
 transition metal ions (like Fe2+/Fe3+ and others).
 
-22
 
 On the other hand, when cured meat products are subjected to high temperature
 conditions (>130°C), such as in the case of fried bacon, grilled cured sausage, and pizza
@@ -585,7 +573,6 @@ presence of vitamin C or other antioxidants. Some epidemiological studies have a
 
 the risk of cancer in people who had high intake of nitrite or nitrate and low intake of
 
-23
 
 vitamin C, a dietary pattern that could result in increased endogenous formation of N-
 
@@ -614,7 +601,6 @@ or pretreatment cartridges to remove sample matrix interferences. Another possib
 
 procedure is to separate the fat by centrifugation and rapid cooling followed by in-line
 
-24
 
 dialysis to remove protein and remaining fat. The choice of a specific procedure to clean
 
@@ -663,7 +649,6 @@ purchased, were interviewed using the “Wet Market Vendor and Product Survey Fo
 
 The questionnaire is divided into seven sections: (1) Personal Information, (2) Pre-
 
-26
 
 processing Conditions, (3) Processing of Tocino and Longganisa, (4) Post-Processing
 
@@ -690,7 +675,6 @@ Collected samples were sent to the laboratory for analysis, maintaining chilled 
 
 by placing in an ice chest or cooler during transit.
 
-27
 
 Determination of Residual
 
@@ -712,7 +696,6 @@ statistics, and computed values were reported in values of frequency/percentage 
 
 range.
 
-28
 
 Study Il - Effect of Storage Period, Storage Condition, and Cooking Method on
 Residual Nitrite of Cured Longganisa
@@ -739,7 +722,6 @@ Jean pork meat and backfat in proportion of 60:40, and other ingredients as list
 
 1. Three batches of longganisa, with approximately 2.5 kg each, were prepared to serve
 
-29
 
 as samples for the study. Figure 2 shows the process for pork longganisa production.
 After curing, the samples were packed by at least 250 g each in separate polybags to
@@ -810,9 +792,7 @@ and cure for 1-2 days
 
 Figure 1. Process flow for the production of pork longganisa (Bueno, 2016).
 
-30
 
-31
 
 Storage of Cured Longganisa and Sample Collection
 
@@ -828,7 +808,6 @@ Chilled samples were stored in a refrigerator, while frozen samples were stored 
 
 chest-type freezer. Samples were pulled out from the storage according to each
 
-32
 
 experiment’s sampling point (Table 2). Storage temperature, product temperature and pH
 
@@ -862,7 +841,6 @@ mL cooking oil, and the samples were fried until 71.1°C to <93.3°C intemal mea
 
 temperature (IMT) was achieved. Treatment B was done using the same procedure as
 
-33
 
 treatment A, but with extended cooking time until 98.9°C to 104.4°C IMT was reached.
 Treatment C was done in a stainless steel cooking pot with a 1:2 (v/iw) water to meat
@@ -885,7 +863,6 @@ were also followed from the preparation of reagents, color development and
 
 measurement, preparation of standard calibration curve, up to the expression of results.
 
-34
 
 Statistical Analysis
 
@@ -929,7 +906,6 @@ processing. Majority of the vendors, with 15 respondents (52%), acquired their
 
 knowledge on tocino and/or longganisa-making from a family member, who in turn had
 
-36
 
 inherited the recipe or formulation as well. Eight (28%) were self-taught, and the
 
@@ -956,7 +932,6 @@ stored in available cold storage or displayed directly for selling. Details and 
 
 relevant information per process step are summarized in Table 4.
 
-37
 
 Table 3. Demographic profile of survey respondents
 
@@ -994,7 +969,6 @@ ooo
 
 “Resource person: Friend, Neighbor, Colleague
 
-38
 
 yoyreW 19M UT SULMoRINUBUT OUTDO} pu esIULTTUO] JO MOY ssad0Ig “¢ 2INTIy
 
@@ -1031,7 +1005,6 @@ PARTICULARS
 
 REMARKS
 
-39
 
 FREQUENCY,
 
@@ -1118,7 +1091,6 @@ Han
 
 Table 4. Continued...
 
-40
 
 PARTICULARS REMARKS FREQUENCY
 Storage available Chest-type freezer (in store, in house) 14,1
@@ -1162,7 +1134,6 @@ basin
 
 Table 4. Continued...
 
-41
 
 PARTICULARS REMARKS FREQUENCY.
 Stuffing Manually stuffed in hog casing using 24
@@ -1200,7 +1171,6 @@ Tocino 6-50 kg for | day sales 1s
 
 Table 4. Continued...
 
-42
 
 PARTICULARS REMARKS FREQUENCY
 Sales volume _Longganisa 3-40 kg/day
@@ -1235,7 +1205,6 @@ Sta. Rosa 2 . ;
 
 Total 8 5 16
 
-43
 
 Curing Salt Declaration and Residual
 Longganisa and Tocino
@@ -1270,7 +1239,6 @@ Nitrite-positive samples
 
 aaaa
 
-44
 
 Twenty-six (58%) out of the total 45 products from the wet markets have curing
 salt declaration. One hundred percent sampling from the wet market was not
@@ -1299,7 +1267,6 @@ Total 6 6 6 - -
 
 % out of n 100% 100% - ~
 
-45
 
 Table 8. Residual nitrite of longganisa products.
 
@@ -1333,7 +1300,6 @@ said product from the same vendor was sampled and tested twice to confirm the re
 
 from the first analysis in order to obtain a conclusive result. The absorbance obtained
 
-46
 
 during the first analysis was unreadable by the spectrophotometer, indicating a high
 nitrite concentration. On the other hand, all branded products were compliant with the
@@ -1368,7 +1334,6 @@ limit of 416 ppm for Food Category 08.2 (unbranded) and 167 ppm for Food Categor
 
 08.2.3 (branded).
 
-47
 
 The unbranded products from each of the 5 wet markets showed variations, in
 terms of the presence and amount of residual nitrite individually per area, and are highly
@@ -1392,7 +1357,6 @@ unbranded and 0-150 ppm in branded products; while the latter present 0.76-12.00
 
 from micro-scale (wet market) and 12.20-144.42 ppm from small-scale processors.
 
-48
 
 Processing Conditions, Personnel, and Environment Impact
 on Quality and Residual Nitrite of Longganisa and Tocino
@@ -1416,7 +1380,6 @@ Series of 2012, also known as the Rules and Regulations on Hygienic Handling of 
 
 Slaughtered Meat in Meat Markets.
 
-49
 
 Table 10. Personnel and store condition observations and regulatory requirements.
 KEY ‘OBSERVATIONS RELEVANT SECTIONS OF
@@ -1470,7 +1433,6 @@ d. Not wearing of jewelries,
 accessories, and perfumes;
 
 
-50
 
 Table 10. Continued...
 KEY OBSERVATIONS, RELEVANT SECTIONS OF
@@ -1514,7 +1476,6 @@ all times be maintained in good sanitary
 condition.
 
 
-51
 
 Table 10. Continued...
 
@@ -1558,7 +1519,6 @@ quality of raw meat material used in processing, thus in the quality of the proc
 
 products as well. The most critical quality characteristic that defines spoilage of meat is
 
-52
 
 the microbial load. According to Vasuhandra, et al. (1999), as cited by Leistner & Gould
 (2002), meat produced under tropical climatic conditions carries a high microbial load, as.
@@ -1585,7 +1545,6 @@ fresh meat. A study conducted by Pet, et al. (2017) reported an initial of 3.13x
 
 average aerobic plate count (APC) in fresh meat sold in Calamba, Laguna. The obtained
 
-53
 
 count was high, yet still within the standard. However, upon further exposure of the same
 meat samples to ambient conditions, a bacterial growth rate of 8.16x10° CFU/g per hour
@@ -1612,7 +1571,6 @@ compartment or chiller. While the shelf life of meat can be extended at refriger
 
 temperatures (<4°C), meat will still spoil, mainly due to the activities of aerobic,
 
-54
 
 psychrotrophic bacteria, unless additional control measures are taken to modify the
 environmental storage conditions (Lambert, 1991). The washing of meat practiced by 10
@@ -1638,7 +1596,6 @@ technique, favors potential growth of pathogens on the surface initially, then i
 
 meat temperature rises into the danger zone (Akhtar, et al., 2013).
 
-55
 
 Given the quality of raw meat material and the conditions or environmental
 factors present in the wet market, the inclusion of curing salt in meat products plays a
@@ -1677,7 +1634,6 @@ Rw ue
 
 Improvised measuring spoon/tool
 
-56
 
 In order to ensure that the amount of curing salt introduced to the meat during
 processing is sufficient to preserve the product and inhibit the growth of microorganisms,
@@ -1705,7 +1661,6 @@ tocino-making, wherein fixed amount of raw materials are being used for a certai
 
 quantity. According to them, meat ingredients (lean/fat) and basic non-meat ingredients,
 
-57
 
 such as salt and sugar, were measured with a weighing scale. However, for the curing
 salt, quantification is done by majority through estimation. Results show that there were
@@ -1723,7 +1678,6 @@ observations highlight the importance of having proper training on meat handling
 
 processing, as none of them had attended any.
 
-58
 
 Study II - Effect of Storage Period, Storage Condition, and Cooking Method on
 Residual Nitrite of Cured Longganisa
@@ -1751,7 +1705,6 @@ especially to infants and young individuals, upon consumption of meat products w
 
 high levels of the additives. Local incidences of NO2 poisoning in the Philippines due to
 
-59
 
 cured meat products has been reported by Dayrit, White, & Lapastora (1992) in Azanza
 (2003), wherein children who had eaten tocino, in Metro Manila, containing nitrite levels
@@ -1774,7 +1727,6 @@ at Day 4 with 183 ppm. This level was significantly higher than the initial (174
 
 with the rest of the samples from Day 7 (152 ppm) to 42 (125 ppm).
 
-60
 
 200 7 1838
 ra 178
@@ -1810,7 +1762,6 @@ illustrated by the R? value denotes that 70.34% of the variation in residual nit
 
 explained by the number of days in storage.
 
-61
 
 Table 12. Correlation and regression data for storage time and residual nitrite.
 
@@ -1830,11 +1781,8 @@ observed from Day 7 to 21. The increase went up to 6.86, which then decreased on
 
 710 6.86
 690 6m
-670
-650
 630 _
 Bo 5.86
-590
 5 = 4
 70 sce 5.78 568°
 5.50
@@ -1846,7 +1794,6 @@ Initial pH em pt + Trend line (pH)
 
 Figure 5. pH of longganisa during storage (n = 6)
 
-62
 
 Table 13. Correlation and regression data for storage time and pH.
 
@@ -1873,9 +1820,7 @@ small fraction of nitrite is present as nitrous acid, which has been considered,
 
 leak through which nitrite is depleted (Olsman and Krol, 1972).
 
-63
 
-200
 £180 ~
 fl
 = 160
@@ -1905,7 +1850,6 @@ Pérez-Rodriguezt et al. (1997) cited that during the first reaction of nitrite 
 
 muscle pigment, or the oxidation of Fe?" in myoglobin to Fe" in metmyoglobin;
 
-64
 
 production of nitrate through autocatalytic reaction takes place simultaneously. Results of
 their study also showed that as nitrite depletes throughout the storage period of
@@ -1936,7 +1880,6 @@ st temperature read-out display of temperature measuring device
 
 Table 15. —_ Residual nitrite and pH of chilled and frozen longganisa (means + SEM;
 
-65
 
 n=6)
 CHILLED FROZEN
@@ -1952,12 +1895,7 @@ Initial 5.86 + 0.01° - - -
 
 =<Means with different superscripts within the same column are significantly different (p<0.05)
 
-200
-180
-160
-140
 
-120
 
 100 +
 T
@@ -1970,7 +1908,6 @@ Chilled We Frozen
 
 Figure 7. Residual nitrite of chilled and frozen longganisa (n= 6)
 
-66
 
 Results of the study show a decreasing trend in residual nitrite and increasing pH
 during the storage period, similar to the 42-day findings. Change in residual nitrite level
@@ -1997,17 +1934,13 @@ residual nitrite than 174 ppm at Day 1 when the product is stored at frozen cond
 
 The difference in the rates of reduction between the two conditions, however, was not
 
-67
 
 fully appreciated in the study as only 2 data points had been measured simultaneously
 
 throughout the 7-day storage period.
 
-62
-61
 
 zs 00
-58
 5.7
 il
 i J
@@ -2029,7 +1962,6 @@ tate of pH increase in the cured buffalo meat stored at -5.0°C compared to 0°C
 
 from the reported increase in pH, a subsequent continuous pH decrease was observed by
 
-68
 
 Nazir et al. (2013) until the products reached spoilage. According to Sofos (1981), pH of
 cured meat products is expected to decrease with storage to an extent, depending on
@@ -2052,7 +1984,6 @@ done since spoilage of samples would already have taken place at extended storag
 
 period of chilled longganisa.
 
-69
 
 Effect of Cooking Methods
 
@@ -2078,7 +2009,6 @@ observation was also noted in recent studies conducted on Cantonese sausage (Y. 
 
 Wang, Xu, & Zhou, 2012).
 
-70
 
 Table 16. Residual nitrite level of longganisa at different cooking methods (means +
 
@@ -2110,7 +2040,6 @@ intermolecular binding; thus, decreasing the water-binding capacity and increasi
 
 pH of about ~ 0.3 pH unit. Similar changes occur in collagen at ~ 65-70°C (150-158°F);
 
-71
 
 and in between 80°C — 100°C (176-212°F), collagen slowly changes into gelatin.
 Furthermore, breakdown of nitrite and binding of nitrite to proteins (SH-groups) is
@@ -2138,7 +2067,6 @@ concluded that boiling for 30 minutes facilitates ~ 18% removal of nitrite in Ca
 
 sausage by dissolving the nitrite from the product into the water.
 
-72
 
 Boiling and frying are the two basic cooking methods, which both reduced the
 residual nitrite level in longganisa in this study. As the nitrite dissolves into the water
@@ -2169,7 +2097,6 @@ products (MRPs) are formed as a result of the reaction between protein and reduc
 
 sugars upon heating. These products are responsible for the desired "burnt" meat flavor,
 
-73
 
 aroma volatiles, and browning of meat. However as heat is introduced, other changes in
 the characteristics of cooked meat may also result from Maillard-type reactions, including
@@ -2197,7 +2124,6 @@ the degree of reduction in treatment C (33%; 89 + 1.6°C IMT) can be attributed 
 
 longer cooking time and boiling process aside from frying. A similar pattem of residual
 
-74
 
 nitrite reduction was obtained in the study conducted by L. Li et al. (2012) wherein
 boiling and deep-frying method had greater reduction than just pan-frying. According to
@@ -2235,7 +2161,6 @@ The effect of post-processing or pre-consumption conditions and processes,
 
 including storage and cooking, on longganisa were evaluated. Nitrite depletion during
 
-76
 
 storage at the rate of 1.17 ppm/day was determined on a 42-day storage period at frozen
 conditions. The degree of nitrite loss was confirmed to be greater in chilled storage
@@ -2246,7 +2171,6 @@ reductions: 15% through pan-frying, 38% through extended pan-frying, and 33% thr
 
 boiling then frying.
 
-77
 
 Recommendations
 
@@ -2274,7 +2198,6 @@ quality and safety of longganisa and tocino in relation with residual nitrite le
 
 Temperature of the product and storage temperature should also be monitored alongside
 
-78
 
 pH and residual nitrite starting from the time of curing termination up to the maximum
 shelf-life of chilled and frozen longganisa, on a closer time interval than the 3-day
@@ -2298,7 +2221,6 @@ Volume 173, 2015, Pages 808-814, ISSN 0308-8146,
 https://doi.org/10.1016/j.foodchem.2014.09.095.
 
 ALLI, I. 2016. Food Quality Assurance: Principles and Practices. CRC Press, 19 Apr
-2016
 
 ANGELES, J.P. 2015. Processed Meat Industry. Roadmap Localization & AEC Game
 Plan. Retrieved from: http://industry. gov.ph/
@@ -2329,7 +2251,6 @@ Dissertations. 10941. Retrieved from: http://lib.dr.iastate.edw/etd/10941
 BAUER, F. 2014. Residues in Meat and Meat Products | Residues Associated with Meat
 Production, Editor(s): Michael Dikeman, Carrick Devine, In Encyclopedia of
 
-80
 
 Meat Sciences (Second Edition), Academic Press, 2014, Current as of 29 July
 2014, Pages 221-225, ISBN
@@ -2377,7 +2298,6 @@ hitp://www.meatscience.org/
 CASSENS, R. G., IZUMI, K., LEE, M., M.L., G., & LOZANO, J. 1981. Reaction of
 Meat Constituents with Nitrite. ACS Symposium Series; American Chemical Society,
 
-81
 
 289-301. https://doi.org/10.1021/bk-1981-0174.ch020
 
@@ -2422,7 +2342,6 @@ Academic Press
 EUROPEAN FOOD SAFETY AUTHORITY. 2017. Nitrites and nitrates added to food.
 Accessed on: https://www.efsa.europa.eu/
 
-82
 
 FEINER, G. 2006. Meat products handbook. Practical science and technology.
 Woodhead Publishing Limited, Abington Hall, Abington Cambridge CBI 6AH,
@@ -2468,7 +2387,6 @@ ISSN 0115- 8724.
 HASHEIDER, P. 2016. The Complete Book of Pork Butchering, Smoking, Curing,
 Sausage Making, and Cooking. Voyageur Press, Quarto Publishing Group, USA
 
-83
 
 HEINZ, G. and P. HAUTZINGER. 2002. Meat Processing Technology for Small- to
 Medium-Scale Producers: Heat Treatment of Meat Products. RAP Publication
@@ -2515,7 +2433,6 @@ KEETON, J.T., N.B. WESLEY, W.N. OSBURN, M.D. HARDIM and N.S. BRYAN.
 Products and Non- meat Foods Available at Retail. National Pork Board,
 Research Report, Human Nutrition, NPB #08-124
 
-84
 
 KERRY, J., J. KERRY and D. LEDWARD. 2002. Meat processing: Improving quality.
 CRC Press LLC. 2000 Corporate Blvd, NW. Boca Raton FL 33431
@@ -2560,7 +2477,6 @@ LI, Y., C. GAN, M. CHENG, W. CHEN, L. CAO, and T. ZHAO. 2016. Effects of
 Cooking Process on the Content of Nitrite in Sausage. /nternational Journal of Food
 Nutrition and Safety, 7(1), 52-60.
 
-85
 
 LOPEZ, E.B., E.M. ARRIOLA and E.D. SERRANO. 2002. Food poisoning longganisa
 at Quezon City. Field epidemiological training program (FETP) scientific papers.
@@ -2607,7 +2523,6 @@ ORGANIZATION FOR ECONOMIC CO-OPERATION AND DEVELOPMENT
 (OECD). 2017. Meat consumption (indicator). doi: 10.1787/fa290fd0-en
 (Accessed on 06 December 2017)
 
-86
 
 ORGANIZATION FOR ECONOMIC CO-OPERATION AND DEVELOPMENT
 (OECD). 2018. Meat consumption (indicator). doi: 10.1787/fa290fd0-en
@@ -2653,7 +2568,6 @@ Curing of Meat, Editor(s): Michael Dikeman, Carrick Devine, Encyclopedia of
 Meat Sciences (Second Edition), Academic Press, 2014, Current as of 29 July
 2014, Pages 416-424, ISBN 9780123847348
 
-87
 
 SINDELAR, J.J. and A.L. MILKOWSKI. 2011. Sodium nitrite in processed meat and
 poultry meats: a review of curing and examining the risk/benefit of its use.
@@ -2699,7 +2613,6 @@ on food poisoning outbreak in sitio veterans, Bagong Silangan and Payatas B
 Quezon City. Quezon City Health Department, Quezon City, Metro Manila,
 Philippines.
 
-88
 
 U.S. DEPARTMENT OF AGRICULTURE FOOD SAFETY AND INSPECTION
 SERVICE (FSIS). 2012. Safe Minimum Internal Temperature Chart. Accessed on

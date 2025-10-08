@@ -1,0 +1,3207 @@
+COPPER RECOVERY FROM TREATMENT OF SIMULATED COPPER-IRON WASTEWATER USING FLUIDIZED-BED HOMOGENEOUS CRYSTALLIZATION REACTOR
+
+Jayson Sime D. Jeremias
+
+UNIVERSITY OF THE PHILIPPINES DILIMAN
+
+Master of Science in Chemical Engineering
+
+July 2023
+
+Abstract
+
+Electroless plating wastewater effluents contain Cu-EDTA complex which
+has high solubility in water solutions making it difficult to recover copper using readily
+available abatement technologies. These complexes are destroyed first using Fenton
+Process producing treated solutions with small concentrations of iron that may interfere on
+copper recovery. The purpose of this study was to confirm the influence of trace amount
+of iron ions, resulting from a Fenton pre-treatment, on copper removal, crystallization, and
+recovery as copper salts using Fluidized Bed Homogeneous Crystallization (FBHC)
+process. Several process parameters were varied such as effluent’s pH, initial copper and
+iron concentrations, and metal and precipitant inlet flowrate and molar ratio (MR). The
+optimum conditions include effluent pH of 6.5-7.0, inlet flowrate of 15 mL min-1, and
+CO32-/Cu2+ MR of 1.5 with variable copper concentrations of 3.15 — 9.44 mM and iron
+concentrations of 0.36 — 1.08 mM. % Copper removal was not affected by addition of iron
+ions while increase in copper crystallization ratio was observed with increasing amount of
+iron. Superior copper removal and crystallization ranging from 93% — 99% and 80% —
+98%, respectively were recorded. Characterization through XRD, XPS, and SEM analyses
+of the high-density spheroidal crystals obtained allowed the major identification of the precipitates as copper carbonate and its polymorphs, namely malachite and azurite. The FBHC’s ability to obtain high purity spheroidal solid salts enables resource recovery and catalyzes strategies for circular economy practices.
+
+1. Introduction
+
+1.1 Background of the Study
+
+Heavy metals are naturally occurring elements found in the earth’s crust. However,
+human activities have significantly disrupted their geochemical cycles and upset the
+biochemical balance over time, leading to elevated concentrations in the biosphere beyond
+permissible limits(Singh et al., 2011). Copper is one such heavy metal of concern, where
+its concentrations in bodies of water vary depending on location. For instance, studies in
+the USA have reported that copper has a median value of 0.01 mg L“', In the United
+Kingdom, the mean copper concentration in the River Stour was at 0.006 mg L"! (Donohue
+et al., 2004). However, these average copper concentrations were found out to be at least
+four times higher at downstream of several industrial plants.
+
+In typical electroplating wastewater, the concentration of copper could reach 1500
+mg L"! (Ghorpade & Ahammed, 2018). The etching process involving ammonia solution
+is commonly employed in the production of printed circuit boards, resulting in spent
+solutions with copper concentrations reported 150 g L"! (Peng et al., 2017). Stringent
+effluent standards for copper exist globally, varying from 0.1 mg L” in Italy to 3.0 mg L!
+in India (2016 Wastewater Guidelines The Zero Discharge of Hazardous Chemicals
+Programme, 2016). Furthermore, the drinking water should not contain more than 2 mg L”
+| of copper ions according to the guideline suggested by the World Health Organization
+
+(Sayato, 1989).
+
+Industrial processes such as mining, smelting, surface metal finishing, fertilizer and
+pesticide manufacturing, and electroplating release heavy metals into the environment
+through wastewater (Dave & Chopda, 2014; Sabela et al., 2019; J. Wang & Chen, 2009).
+The heavy metals released into the environment can become bound with sediment,
+absorbed by plants and animals, posing potential risks to human health. Adverse effects
+may include bronchitis, dermatitis, poisoning, liver and kidney dysfunction, central
+nervous system damage, anemia, and mental retardation (Gadd & Griffiths, 1978; Malamis
+etal., 2011).
+
+Copper, even at trace amounts, is considered highly toxic, making it of utmost
+importance to treat copper-contaminated wastewater from industries before its discharge
+into the environment (Ghaedi et al., 2008; S. Yang et al., 2015). Several treatment methods
+have been devised to effectively eliminate Cu(II) from industrial wastewater, ensuring
+adherence to the required effluent standards. These techniques encompass membrane
+filtration, chemical precipitation, ion-exchange, adsorption, _electrocoagulation,
+electrodialysis, and crystallization, among others (Azimi et al., 2017).
+
+The presence of ligands and coexisting metals is very common among the
+mentioned industrial wastewaters. These usually limits the effectiveness of current copper
+removal technologies (Rajoria et al., 2022). For instance, Electroless Plating (EP),
+commonly used to obtain even metal coatings of copper, employs organic complexing
+agents like ethylenediaminetetraacetic acid (EDTA) is the chelating agent most widely
+
+used to stabilize the metal ion solution, prevent precipitation of Cu(OH)as) precipitation,
+
+and to control the speed of electrodeposition (Deckert, 1995; Y. M. Lin & Yen, 2001).
+With this, it is expected that wastewater effluents from EP contain Cu-EDTA. This prompts
+a problem since complexed metallic ions like Cu-EDTA cannot be easily recovered given
+their higher solubility in water solutions. Resource recovery technologies based on metallic
+ion selective precipitation require a pre-treatment to destroy the complex (Q. Wang et al.,
+2021).
+
+Advanced oxidation processes (AOP) are implemented to mineralize the organic
+chelants prior to their release. The AOPs are based on the generation in situ of strong
+oxidants such as hydroxyl radical (*OH) (Ribeiro et al., 2015). The Fenton process is the
+main AOP being commercially implemented. The Fenton process yields homogeneous
++OH from the iron-catalyzed decomposition of H2O2 following Fenton reaction (1) (Ameta
+et al., 2018).
+
+H,0, + Fe?+ —- OH + OH + Fe** O)
+
+In the context of EP wastewater effluents containing Cu-EDTA, the Fenton process
+can induce the mineralization of EDTA, thus breaking down the complex (Guan et al.,
+2018). However, treated solutions contain small concentrations of iron ions in solution that
+may interfere with copper recovery using available copper abatement technologies(Guan
+et al., 2018). Fluidized-bed homogeneous crystallization (FBHC) has demonstrated
+promising capabilities for recovery of added-value metallic salts and nutrients through
+selective precipitation. Effluents containing one metal that can form an insoluble salt can
+
+be recovered through precipitation in FBHC when inducing supersaturation conditions.
+
+The FBHC obtains high purity spheroidal solid salts, which enables resource recovery and
+catalyzes strategies for circular economy practices (Caddarao et al., 2018; Guevara et al,
+2017; Salcedo et al., 2016; Vilando et al., 2017). However, despite the extensive research
+on copper removal from wastewater, limited studies have investigated treatment under the
+coexistence of two different metals susceptible to precipitation (Boonrattanakij et al., 2023;
+Quiton et al., 2022). This research gap is significant because industrial wastewaters often
+contain multiple heavy metals, and the presence of ligands can complicate the removal
+process. Understanding the treatment of wastewater containing coexisting metals and
+ligands is crucial for developing efficient and sustainable treatment methods.
+
+The purpose of this study is to confirm the influence of trace amount of ferrous iron
+resulting from a Fenton pre-treatment on the removal of copper and recovery of its salts as
+Malachite crystals. Beyond the water matrix impacts on abatement and recovery
+technology of copper, this work explores the impact of FBHC operational conditions. The
+metal concentration, precipitant to metal molar ratio, inflow flow rate, and reaction pH
+value showed effects on the reactor’s performance in terms of metal removal,
+crystallization, and size distribution of spheroidal solids recovered. The results of this work
+may lead the path elucidating implications of treatment technologies for sustainable
+management of industrial wastewater.
+
+1.2 Significance of the Study
+The detrimental health effects associated with prolonged exposure to heavy metals,
+
+including bronchitis, dermatitis, poisoning, liver and kidney dysfunction, central nervous
+
+system damage, anemia, and mental retardation, have been well-established. Among these
+heavy metals, copper is often found in wastewater at ened concentrations due to its
+widespread use in industrial applications. As more illnesses are being attributed to metal
+exposure, particularly copper, it is important to manage wastewater to ensure that it meets
+safety limits. This research aims to address this concern by improving the quality of
+industrial wastewater effluents.
+
+By investigating the mechanism of co-precipitation of coexisting metallic ions, this
+study seeks to evaluate the barriers and challenges associated with solid recovery
+technologies such as fluidized bed homogeneous crystallization. Additionally, exploring
+bimetallic salts, specifically those formed by copper and iron ions, presents an opportunity
+for unexploited niche applications. For instance, the recovery of layered-double hydroxide
+salts (LDHs) from such salts can offer alternative uses as fine products. Moreover, if
+proven effective and efficient in copper removal and recovery from simulated copper-iron
+industrial wastewaters, the studied FBHC reactor holds potential for scalability to meet the
+capacity demands of industrial wastewater treatment. It can also be implemented as a
+secondary or tertiary treatment in existing industrial wastewater treatment plants, thereby
+enhancing the degradation of copper metal.
+
+By addressing this purpose, this research aligns with the United Nations Sustainable
+Development Goals, specifically SDG 6 - Clean Water and Sanitation, underscoring the
+importance of achieving cleaner water quality on a global scale (Sustainable Development
+
+Goal 6: Ensure Access to Water and Sanitation for All, n.d.).
+
+1.3 Objectives of the Study
+This study is generally aimed to investigate the influence of trace amounts of iron
+ions on the performance of the fluidized bed homogeneous crystallization reactor in terms
+of copper removal and crystallization ratio as well as the metal salt recovery. The specific
+objectives of this research are as follows:
+sol. Explore the effects of different reactor effluent pH (pH) on copper
+removal, crystallization, and the resulting size distribution of recovered
+crystals.
+$02. Investigate the effects of different molar ratios (MR) of precipitant
+
+c037~
+cua
+
+to metal ) on copper removal, crystallization, and the resulting size
+
+distribution of recovered crystals.
+$03. Analyze the effects of varying metal and precipitant inlet flow
+rates (Qm and Qppi) on copper removal, crystallization, and the resulting
+size distribution of recovered crystals.
+S04. Evaluate the impact of varying copper and iron concentrations on
+copper removal efficiency, crystallization ratio, and crystal growth.
+SOS. Analyze and characterize the properties of the recovered metal
+salts.
+These objectives will provide valuable insights into the performance and
+optimization of the fluidized bed homogeneous crystallization reactor, contributing to the
+
+advancement of copper removal and metal salt recovery technologies.
+
+14 Scope and Limitations
+
+This study utilizes a laboratory-scale fluidized bed reactor with an effective volume
+of 513.5 mL. The experimentation involves the treatment of synthetic wastewater, which
+emulates a typical copper plating wastewater and incorporates the Fenton process. The
+choice of a wide range of copper and iron concentrations is lifted from previous research
+(Dib & Makhloufi, 2004; Pirkanniemi et al., 2007), which demonstrates the relevance of
+these concentrations to the study the set objectives. Furthermore, other parameters are
+selected based on relevant findings from previous studies (Lertratwattana et al., 2019).
+
+The analysis of the reactor's effluent primarily focuses on dissolved and total copper
+concentrations to determine the percentage of copper removal and crystallization,
+
+respectively. Since the added iron ions are present in minimal amounts compared to the
+
+£2 <2), the removal and crystallization
+
+magnitude of copper ions in the solution (2, < 25 < =
+
+ratio of iron is not reported within the scope of this study. It is important to note that the
+synthetic wastewater used in this study is designed to replicate an effluent after a Fenton
+pretreatment, which aims to destroy the Cu-EDTA complex from electroless plating
+
+wastewater before subjecting it to fluidized bed homogeneous crystallization.
+
+2. Review of Related Literature
+
+2.1 Copper: Nature and Utilization
+
+Copper is a versatile metallic element with notable physicochemical properties. Its
+inherent malleability and ductility enable easy shaping and manipulation, rendering it an
+ideal choice for diverse industries such as construction. Additionally, copper exhibits
+exceptional conductivity for heat and electricity, making it indispensable for various
+applications like telecommunications and semiconductors (Abhinav K et al., 2015). Copper
+is also resistant to corrosion and possesses antimicrobial properties further enhancing its
+value in different fields (Vincent et al., 2018).
+
+Copper is naturally abundant, being found in a variety of forms within the Earth's
+crust. Sulfide deposits, including minerals such as chalcopyrite, bornite, chalcocite, and
+covellite, serve as primary sources of copper (Sinyakova & Kosyakov, 2009). Carbonate
+deposits, comprising minerals like azurite and malachite, as well as silicate deposits such
+as chrysocolla and dioptase, also contribute to the availability of copper (Selby et al., 2009;
+Selvin et al., 2001). Furthermore, copper occurs in its pure form as native copper. A
+comprehensive overview of the physical and chemical properties of copper can be found
+in Table 1.
+
+Table 1. Copper physicochemical properties lifted from The World Copper Factbook
+2022 (Saralli & Yusheng, 2022)
+
+Chemical Symbol Cu
+Atomic Number 29
+Atomic Weight 63.54
+
+
+Density (ke m*) 3960
+
+Melting point (K) 1356
+
+Specific heat at 293 K (kJ kg" K") 0.383
+
+Thermal conductivity (Wm K") 394
+Coefficient of linear expansion (K"') 16.5 x 10°
+
+‘Young’s Modulus of Elasticity (Nm) 110 x 10°
+Electrical Conductivity (ohm-m) 1.673 x 10
+Crystal structure Face-centered Cubic
+
+In addition to its presence in the Earth's crust, copper is also naturally found in
+humans, animals, and plants. Being an essential nutrient, copper plays a vital role in
+maintaining health and supporting life-sustaining functions (Karim, 2018). Its importance
+to organic life forms is evident from the evolutionary adaptation to an environment
+containing copper. For instance, it was found out that copper functions as a cofactor for a
+terminal enzyme (cytochrome c oxidase) of the respiratory electron transport chain in cells.
+It is also part of plastocyanin contributing to the photosynthesis process in plants and algae.
+In arthropod and gastropod, copper is essential part of their blood’s oxygen-carrying
+hemocyanin. Moreover, copper exhibits involvement in regulatory processes such as cell
+proliferation, angiogenesis, and certain aspects of body defense in both humans and
+animals (Linder, 1991). These diverse involvements of copper in various biological
+processes highlights its importance as a trace element with diverse functional implications.
+
+In the context of industrial utilization, the numerous applications of copper and
+copper-based alloys are vital for attaining a reasonable standard of living, making their
+continued production and use crucial for societal development (Pietrzyk & Tora, 2018). To
+
+ensure sustainable development, responsible exploitation and utilization of resources are
+
+necessary to meet the needs of future generations. According to the 2022 report of
+International Copper Study Group, industrial utilization of copper can be categorized into
+two. The first group involves the use of copper as wire, rod, tube, sheets, castings, and
+melted copper scraps, while the second category comprises the alteration of copper and its
+alloys into end-use products by downstream industries. End-use products include |
+automobiles, appliances, electronics, among other copper-dependent product the society
+uses in day-today life (Saralli & Yusheng, 2022). Figure 1 shows the global distribution of
+copper into its respective usage.
+
+First-Use (Semis Production") End-use (Industry)
+(5s
+
+10% a8
+
+Wire «Rods brs sections «Flatrotedrodvcts pate sheet sri) «Tube # Fol strction
+
+Figure 1. Copper distribution in terms of its global utilization. Reproduced from (Saralli
+& Yusheng, 2022)
+
+Copper is widely utilized in electrical industry due to its remarkable low resistance
+compared to other metals. It is also widely utilized in power cables, catering to high,
+medium, and low voltage needs which accounts of almost over a third of total copper usage
+(Magno & Guzman, 2021). Additionally, copper plays a vital role in renewable energy
+
+sources such as solar (Han et al., 2023), wind (Nasution, 2012), geothermal (Johnston et
+
+al., 2011), fuel cells (Johnston et al., 2011) and other technologies are all heavily reliant on
+copper making use of its excellent conductivity. :
+
+Copper holds significant role in global electronics and communications technology.
+Internet wires which facilitate high-speed data transmission are mainly composed of
+copper. Copper and copper alloy products are commonly utilized in the manufacturing of
+mobile phones, laptops, desktops, and various electronic equipment like wires,
+transformers, and connectors, exemplifying its widespread presence (Fukuda & Yusheng,
+2020). Furthermore, copper finds significant applications in diverse sectors including
+construction, industrial machinery, transportation, as well as consumer and general
+products, emphasizing its versatility and importance in numerous downstream industries.
+2.2. Copper Abatement Technologies
+2.2.1 Adsorption
+
+Adsorption removes aqueous pollutant based on its accumulation at solid-liquid
+interface. Due to its simplicity in design and low cost in operation, adsorption method is
+one of the most adopted processes to treat copper-containing streams (Davarnejad &
+
+Panahi, 2016; Hidalgo vazquez, A.R.; Alfaro cuevas villanueva et al., 2011; Patel et al.,
+
+2013). However, the operation range of copper concentration is often limited to prevent
+rapid exhaustion and frequent regeneration (Abdel Salam et al., 2011). Depending on the
+property of the surface of adsorbent, copper ion can be immobilized by inner-sphere
+complexation or outer-sphere complexation. Therefore, it is essential to consider the
+
+specific surface area, number of active sites, and the affinity between active site and copper
+
+species when designing the adsorbents. Typical choices of adsorbent for copper includes
+activated carbon, zeolites, activated alumina, lignite coke, and bentonite (Cossu et al.,
+2018). In the past decades, novel adsorbents have been developed to either be more
+sustainable or more efficacious, including biomass-derived adsorbents, inorganic
+adsorbents, and nanomaterials among others.
+
+The utilization of biomass as adsorbent for the control of copper is efficient and
+sustainable. Biomass-derived adsorbents are derived from bacteria, algae, fungi, yeasts,
+and agricultural wastes (Bilal et al., 2013; Gavrilescu, 2004). The characteristics of
+biosorbents dictates the removal mechanism of heavy metal, which can be physical or
+chemical, monolayer or multilayer (Jain et al., 2016).
+
+The surface functional groups on bioadsorbents are critical for chemisorption of
+copper ion. Ben-Ali et al. identified the surface groups of pomegranate-derived adsorbent
+using the Boehm titration, including carboxylic, lactonic, phenolic, and carbonyl groups
+(Ben-Ali et al., 2017). Due to the speciation of the surface group, copper removal was
+affected by pH and the maximum adsorption capacity of 20.49 mg g”' was achieved at pH
+= 5.8, primarily bound to hydroxyl and carboxyl functional groups. Zhou et al. (Zhou et
+al., 2017) investigated the adsorptive mechanism and capacity of a modified biochar
+derived from sawdust. The sawdust biochar, doped with iron and zinc (Fe/Zn-biochar), was
+studied for its capacity to remove copper (Cu) and tetracycline (TET) co-contaminated
+wastewater. The synthesized Fe/Zn-biochar was found out to have a higher Cu adsorption
+
+capacity at pH > 4 where electrostatic attraction of cationic Cu and negatively charged
+
+biochar is beneficial to Cu adsorption. The carboxyl and/or hydroxy! functional groups on
+Fe/Zn-biochar immobilized Cu and TET via surface complexation. The competition
+between Cu and TET over the active sites were observed at elevated concentrations: from
+5 to 10 mg-Cu L"' and from 10 to 25 mg-TET L!. Nearly 90% of recovery rate was
+observed even after three adsorption/desorption cycles with 0.1 M NaOH as a regenerating
+agent, showing the exemplary regeneration performance of the synthesized Fe/Zn-biochar
+(Zhou et al., 2017). Jin et al. (X. Jin et al., 2017) improved the copper adsorption capacity
+of bacteria-derived biochar through the functionalization polyethyleneimine. The
+introduced amine functional group enabled the surface complexation of copper, with the
+maximal adsorption density at pH 4.5. At lower pH, it was noted that large number of H*
+competes with copper for the adsorption site of -NH2.
+
+The decoration of biochar by metal oxide is an effective way to improve copper
+adsorption capacity. In the study of Wan et al., a hybrid adsorbent (denoted as MO-L-BC)
+was fabricated through dispersing manganese oxide (MO) inside a biochar containing
+enlarged pore structure (namely L-BC). Enlarged pores of biochar L-BC have large pores
+lower the diffusion resistance of target pollutants in the pore region of MO-L-BC. The
+fixed bed-adsorption tests performed in the study revealed that MO-L-BC can treat
+wastewater that was contaminated by both antimony or copper. It was also observed that
+copper was removed through two interactions: (1) electrostatic attractions between copper
+ions and negatively charged carboxyl- and hydroxyl-groups covalently bonded on the L-
+
+BC, and (2) inner-sphere complexation between copper and impregnated manganese oxide
+
+(Wan et al., 2020). Yang et al. studied the adsorptive mechanism and capacity of com
+straw-derived biochar impregnated with a-FeOOH nanorods to remove copper. This as-
+prepared biochar (a-FeOOH@PC) composite has active a-FeOOH nanocrystals
+encapsulated in gradient porous carbon (PC) framework via C-O-Fe bonding. The
+formation mechanism of a-FEOOH@PC composites is shown in Fig 1. The excellent
+performance of this adsorbent can be attributed to the synergistic effect of the large amount
+of reactive surface hydroxy! sites ofgoethite and the large surface area and porous volume
+of the PC which was proven by the improved removal efficiency of 79% (Fan Yang et al.,
+2018).
+
+Copper can be readily adsorbed by a variety of inorganic substances, including
+clays, zeolite, metal oxide, and industrial waste. Natural clays such as zeolite and bentonite
+are cost-effective in the control of heavy metals. Taamneh et al. demonstrated that the
+removal of copper and cadmium are dictated by the availability of active site of natural
+zeolites. Therefore, the adsorption capacity increased with higher metal concentration
+while the removal was improved with greater dosage of zeolite (Taamneh & Sharadqah,
+2017). Bentonite from Norther Luzon, Philippines was modified by the group of De
+Castro et al. with ethylenediaminetetraacetic (EDTA). EDTA-modified bentonite (EMB)
+ability to adsorb methylene blue and copper ions was investigated. The modification of
+bentonite by EDTA increased the adsorption of copper and methylene blue by 100% and
+40%, respectively. The result was attributed to the swelling of bentonite by EDTA that
+
+improved the accessibility of positively charged ions in the interlayers, which was further
+
+bounded by the carboxyl groups. The adsorption process was found to be spontaneous,
+exothermic, and reversible (De Castro et al., 2018).
+
+Layered double hydroxides (LDHs) are synthetic anionic clays featuring abundant
+hydroxyl groups for binding with heavy metals. Yang et al. synthesized Mg-Al layered
+double hydroxides/palygorskite (Pal/MgAI-LDHs) through hydrothermal process for the
+removal of lead, nickel, and copper ions. It was found out that the copper adsorption
+capacity of Pal/MgAI-LDHs was higher than those of palygorskite and Mg-Al LDHs alone
+due to the synergistic effects of each building unit. Moreover, the calcination of Pal/MgAI—
+LDHs at 400°C improved the copper adsorption capacity of uncalcined Pal/MgAI-LDHs
+by 44%. The phenomenon was attributed to the reconstruction of LDHs from CLDHs upon
+hydration, which exhibits more active sites than the uncalcined LDHs (J. Y. Lin et al.,
+2021; Facui Yang et al., 2016). Removal of copper and zinc from the footbath in
+commercial farming of cattle was explored using the calcium-aluminum LDHs with EDTA.
+as an interlayer anion (CazAI-EDTA LDHs). The adsorption capacity of CazAl-EDTA
+LDHs was 570 mg g"' in CuSOy solution and 280 mg g"' in footbath solution. The result
+suggests that the active sites were competed by other components in footbath of cattle. The
+group proposed that there is a significant opportunity to retrieve valuable copper and zine
+waste stream for secondary copper production (Williams et al., 2019).
+
+Industrial waste are potential sources of low-cost adsorbents. Oliveira et al. used
+bagasse fly ash (BFA) as the source of aluminum and silicon to synthesize zeolite. After
+
+calcination, BFA underwent hydrothermal treatment with 0.1 M NaOH as a mineralizing
+
+agent. The zeolite prepared from BFA (Si/AI ratio of 5.9) showed an adsorption capacity
+of 100 mg g". The introduction of aluminum source in hydrothermal treatment could tune
+the AI/Si ratio of the zeolite to maximize the intrinsic charge due to isomorphic
+substitution. Therefore, the optimized zeolite with Si/Al ratio of 1.71 featured an adsorption
+capacity of 142 mg g’! (Oliveira et al., 2019). Due to alkaline components of residual solid
+wastes from steel-making industries, steel slag is currently being studied due to its great
+potential as low-cost high-efficient adsorbent in removing heavy metal ions. The alkaline
+matters such as CaO and MgO in steel slag can readily release hydroxide ion that increases
+the solution pH to induce the surface precipitation of heavy metal ions on the steel slag
+surface (L. Wang et al., 2022). Nikolié et al. applied steel slag waste to remove copper
+from aqueous solution. Compared to the pristine slag, the alkali activation significantly
+improved the sorption capacity from 200.02 to 256.4] mg g"' due to the increase in specific
+surface area (from 0.6 m? g’! to 6.5 m? g"). The adsorption of copper by alkali activated
+slag obeyed pseudo-second order kinetic model where the adsorption is film diffusion-
+controlled, and data were well-fitted against Langmuir model. XRD also revealed that
+adsorption of copper on both steel slag wastes occurs through Cu-complex production
+(Nikolié et al., 2020). Wang et al. investigated effectivity of steel slag as a cost-effective
+adsorbent for simultaneous removal of collectors and heavy metals (Pb and Cu) from
+floatation wastewaters. At a steel slag dosage of 12 g L"', 99.8% removal was observed for
+both Pb and Cu with a maximum capacity intake of 110.45 and 160.48 mg g”! for Cu and
+
+Pb, respectively. Several structural analyses also proved the generation of lead and copper
+
+hydroxides and oxides onto the steel slag surface. The surface of the precipitated metal
+oxide also provided active sites to bind the flotation reagents such as butyl Pei (BX)
+and diethyl dithiocarbamate (DDTC) forming insoluble metal-collector chelates (L. Wang
+etal., 2022).
+
+Utilization of nanomaterials draws interest as potential adsorbents for removal of
+heavy metal due to its large surface area. The materials of interest include graphene oxide
+(GO), carbon nanofibers (CNF), and carbon nanotubes (CNT). On the other hand,
+composite adsorbents have been explored, including magnetic composite, metal
+hydroxide-hydrogel, and nanocomposites (Behra & Krug, 2008).
+
+Carbonaceous materials with directional structure are potential adsorbents for
+heavy metals, For example, CNFs are produced by the hydrothermal carbonization with
+precursor material electrospun into fibers showed high mechanical property and specific
+surface area, with tunable hydrophilicity (Ding et al., 2016; Qian et al., 2006). Garcia-Diaz
+et. al studied the adsorption of copper by commercial CNFs. With an isoelectronic (IEP)
+PH of 1.9, the adsorption capacity plateaued at pH > 4 due to the complete dissociation of
+surface carboxyl groups. The thermodynamic and kinetic aspects of adsorption process
+were described by Langmuir isotherm and pseudo second-order kinetics, respectively. The
+adsorption process was analyzed to reveal that the particle diffusion was the rate-limiting
+step (Garcia-Diaz et al., 2018). Lee et al. studied the adsorption capacity of a modified
+carbon foam to remove heavy metal ions such as copper, nickel, and chromium from metal
+
+plating wastewater. The decoration of FexO3 on macroporous carbon foam not only
+
+improved the adsorption capacity but accelerated the adsorption rate due to the additional
+active sites of FexO3. The fixed-bed operation was conducted to evaluate the metal
+adsorption of synthetic wastewater that contained Cr*, Cu*, and Ni?*. The breakthrough
+time of three metals were different, suggesting that the active sites were not identical (Lee
+et al., 2017).
+
+The composite of amine-rich adsorbents shows high adsorption affinity towards
+heavy metal. Wang et al. synthesized polyethyleneimine-glutaraldehyde (PEI-GA)
+composites of different mass ratios to determine their capability to remove selenium and
+copper ions in aqueous solution. The amount of GA to PEI for crosslinking also affects
+copper adsorption performance. Increase in amount of GA decreases adsorption since GA
+reduces the amount of free amine groups available for copper adsorption. The as-prepared
+adsorbents could selectively remove copper for copper-lead system, indicating that the
+selectivity was not compromised by cross-linking (S. Wang et al., 2020). Plohl et al.
+developed a novel nanoadsorbent from the irreversibly linked amino-rich polymer onto
+previously silica-coated magnetic nanoparticles (MNPs). In this experiment, the available
+MNP’s were uniformly coated with 3 nm thick silica layer for the core-shell stricture.
+Derived branched polyethyleneimine (bPEI) were also added for systematic covalent
+attachment modification. The synthesized nanoadsorbent exhibited high density of
+chelating amino groups and high saturation magnetization. Experimental data also showed
+that the adsorption isotherm was fitted well with Langmuir isotherm with a maximum
+
+adsorption capacity of 143 mg g"'. Reusability was also studied and showed that even after
+
+four cycles of adsorption-desorption, adsorption performance is still at a promising 88%
+removal efficiency (Plohl et al., 2019).
+
+Other adsorbent materials being studied are polymer-based. Biopolymers abundant
+surface group to immobilize heavy metals are sustainable and widely available. The active
+sites of the biopolymers include hydroxyl, carboxyl, and amines (Kanamarlapudi et al.,
+2018). Dou et al. prepared an polymer composite that contained Mg/Al LDHs,
+polydopamine (PDA), and poly(methyl vinyl ether-alt-maleic anhydride) (PMVE-MA). By
+doing so, the LDHs were stabilized by the hydrophilic copolymer (PMVE-MA), featuring
+a copper adsorption capacity of 193.8 mg g'. Furthermore, the composite adsorbent
+retained 93% of adsorption capacity after 4 cycles of regeneration using 0.1 M HCl, which
+was outperformed the LDHs adsorbent (< 20% after 4 cycles) (Dou et al., 2019).
+Crosslinked hydrophilic polymers (hydrogels) have the ability to expand their volumes due
+to high swelling in presence of moisture, enabling the diffusion of heavy metal into the
+hydrogel network and immobilized by strong binding sites (Barakat, 2011). The cross-
+linked chitosan composite hydrogel has been developed for copper removal. Zidan et al.
+synthesized a novel hydrogel based on N-aminorhodanine modified chitosan hydrogel for
+antibacterial and copper ions removal from aqueous systems. N-aminorhodanine was
+reacted with glutaraldehyde to yield Schiff base followed by reaction with chitosan to
+obtain the new hydrogel adsorbent. The modification of N-aminorhodanine doubled its
+maximum adsorption capacity up to 62.5 mg g!. Maximum adsorption for this modified
+
+chitosan was achieved in 15 mins, which is much faster than the unmodified chitosan (360
+
+min) (Zidan et al., 2020). The chitosan hydrogel crosslinked by diphenylcarbazide
+(DPCCS) was prepared by Ahmad et al. for copper adsorption. The synergistic effect of
+DPC in the improvement of mechanical and adsorption properties of chitosan hydrogel was
+observed. Swelling capacity of the CS and DPCCS showed that in acidic media, zero
+swelling was observed for the CS while addition of DPCCS showed significant swelling
+(50%). No significant loss on the adsorption capacity after 5 cycles of
+adsorption/desorption processes with HCI solutions where 85% of copper ions were still
+recovered even after regeneration cycles of the hydrogel (Ahmad et al., 2019).
+Biodegradable cellulose hydrogel and cellulose/gelatin composite hydrogel were
+synthesized by Teow et al. to avoid hydrogel disposal problem after adsorption. The
+swelling ability and biodegradability of the hydrogel were tuned through the esterification
+cross-linking with epichlorohydrin (ECH). Cellulose hydrogel with 6 v/v% of ECH has the
+greatest swelling ability (4650%), highest biodegradability rate (79.5%), and highest
+adsorption capacity (28.4 mg/g) compared to other cellulose hydrogels. Biodegradability
+rate of cellulose hydrogel also decreases when cross-linking degree increases and
+increasing ECH concentration to the cellulose hydrogel decreases its adsorption capacity
+due to induced steric hindrances. On the other hand, the gelatin content of hydrogel affected
+the swelling property due to intermolecular hydrogen bonding and the abundance of amine
+
+group for binding copper ion. (Teow et al., 2018).
+
+2.2.2 Electrochemical Treatment
+
+Electrochemical treatment features high removal efficiency and compact design but
+require large capital investments and high energy supply (Gupta & Ali, 2012; Holt et al.,
+2005). A variety of electrochemical methods have been developed for copper removal,
+such as electrodialysis, electrocoagulation, electrodeposition, and capacitive deionization.
+
+Electrodialysis (ED) is a membrane-based separation process which utilizes
+electrical potential difference as a driving force for ion separation through semi-permeable
+membranes. A typical electrodialysis configuration consists of a series of anion- and
+cation-exchange membranes in an alternating pattern in between anode and cathode to
+individual chambers. In the presence of an electric field, cations would move to cathode
+and anions would move towards the anode. Accordingly, the dilute and concentrate streams
+will be produced in the alternating chambers (T. Scarazzato et al., 2017).
+
+A pilot-scale electrodialysis that contained 15 compartment chambers was
+investigated for the treatment of metal plating wastewater. The group of Min et al.
+identified linear velocity as a key operation parameter. Both voltage and limiting current
+density were proportional to the linear flow velocity because of the decrease in the
+thickness of boundary layer on the surface of ion-exchange membrane. The removal
+efficiency of 95% was achieved in the first run of 120 min; the efficiency could be
+maintained over 90% in the first ten consecutive operations but decreased sharply after
+because of significant increase in the concentration of ions in the concentrate compartment
+
+leading these ions to back-diffuse into the dilution compartment (Min et al., 2021).
+
+Scarazzato et al. studied the treatment of synthetic electroplating wastewater that contained
+chelated copper by 1-hydroxyethane 1,1-diphosphonic acid (HEDP). The speciation of the
+HEDP-copper complex is pH-dependent, being Cu?* at pH < 2, CuH(HEDPY at pH 3-6,
+and CuHEDP* > 6. Therefore, the copper species may move toward to either anionic or
+cationic concentrated compartment, depending on the operation pH. The results showed
+the extraction of up to 99.7% of the copper and up to 94.4% of the HEDP from the working
+solution (Tatiana Scarazzato et al., 2015).Other considerations in the variables affecting
+performance of electrodialysis setup are also important in enhancing the said configuration.
+It is important to study the effect of remediation time and current density of the
+contaminated wastewater since these parameters also dictate the efficiency of heavy metal
+removal using electrochemical methods (Al-Saydeh et al., 2017; Chang et al., 2010; Nasef
+& Giiven, 2012). Additionally, Caprarescu et al. studied the requirement of membrane to
+be used in electrodialysis process. They have found out that this should possess good
+chemical and thermal stability, where the separation process can be carried out at high
+temperatures, in a solution that has a very high or low pH values (Caprarescu et al., 2012).
+
+Electrocoagulation (EC) is an effective method that produces metal hydroxide
+sweeping flocs from the anodic dissolution of aluminum or iron metal. (Escobar et al.,
+2006) The advantages of EC include simplicity of equipment, flexibility of operations, and
+non-production of secondary pollution. The chemical reactions in EC processes are shown
+
+below (Song et al., 2017).
+
+Anodic reaction: M>M™ +ne~ Q)
+
+Cathodic reaction: 2H,0 + 2e~ > 20H~ + Hp Q)
+Precipitation M"* (qq) + NOH™ (aq) > M(OH)n (aq) @)
+reaction:
+
+The design of experiment has been applied to evaluate the performance of EC at
+various operating conditions. Mehdipoor and Moosavirad employed the response surface
+methodology (RSM) to optimize the EC using iron electrodes based on initial pH, current
+density, electrode distance, and operation time. Among these variables, analysis of variance
+(ANOVA) revealed that the most important parameter was the electrolysis time which
+determines production of Fe* from the sacrificial anodes. At the optimum conditions (pH
+=the copper current density = 438.2 mA cm, electrode distance = 2.10 cm, and operation
+time = 68.05 min), more than 90% of copper was removed. The XRD analysis also showed
+that minerals formed were classified mainly into phases of copper and Cuprite with a trace
+amount of quartz minerals (Mehdipoor & Moosavirad, 2020). Mateen et al. applied the
+four-variable RSM to optimize the EC with iron electrode in a cylindrical reactor. The
+group studied the effects of pH, reaction time, applied current, and initial concentration
+against the percentage removal of copper as well as the energy consumption per gram
+copper removal. Maximum removal of 95% was observed when applied current was 0.26
+A, initial copper concentration of 27.8 ppm, and pH of 7 in just 5.4 mins of electrolysis
+
+time. This optimized conditions also gave the minimum energy consumption of 0.903 W-
+
+hg Cu". Studies carried on Cu (II) removal rate also showed adsorption suited best with
+pseudo-first order kinetics (Mateen et al., 2020),
+
+Electrocoagulation is known for its versatility to treat multiple pollutants. For
+example, Kilany et al. developed an electrocoagulation (EC) cell with sparging air to
+achieve oil demulsification and copper removal simultaneously to reduce capital and
+operating costs of the plant’s effluent treatment. At optimum conditions, 98% of total
+copper (2000 ppm-Cu) and 85% of oil (1000 ppm of paraffin oil) was removed in 15 min
+and | h, respectively. This fast removal was attributed to the fact that copper removal was
+not only governed by electrocoagulation but also by cathodic deposition. Gas sparging
+improves copper removal since this process promotes the rate of diffusion-controlled
+cathodic deposition copper. It also decreases electrical energy consumption. Electrical
+consumption for copper removal was found out to be ranging from 5.4 x 10° (with
+sparging) to 7.5 kW-h kg Cu"! (without sparging). The authors used helical Al tube anode
+
+to offer compactness with high area per unit volume. Its internal surface can also be used
+
+as a built-in cooler to prevent the increase in solution temperature which adversely affects
+the efficiency of large-scale electrocoagulation processes (Kilany et al., 2020).
+
+Reduction process of metallic ions from solution and oxidation of a compound from
+a solution, followed by film deposition as a result of internal current induced in the process
+is the working mechanism of electrodeposition process (EDP) (Vidu et al., 2020). This
+
+process utilizes an external source of electrical current passing through an electrochemical
+
+cell to facilitate the said reduction operation. The advantage of electrodeposition includes
+
+the avoidance of using chemical reagent, zero production of sludge, and recovery of copper
+metal (Maarof et al., 2017).
+
+The polarization of cathode that leads to the low current efficiency can be avoided
+by pulsed current and reactor geometry. The recovery of copper from real jewelry
+wastewater using pulsed electrodeposition was studied by Carpanedo de Morais Nepel et
+al. The process was optimized, and a 33.6% copper removal from a real wastewater (430
+mg L"') with a deposition efficiency of 84.4% in 30 minutes using fast galvanic pulse,
+current application time of 1 ms, 190 mA, 70 rpm, and 37 °C. Varying parameters such as
+initial solution pH, current density, electrode distance, and electrolysis time also showed.
+that removal of copper can be shifted from formation of crystalline oxides to crystalline
+copper in its metallic form (Carpanedo de Morais Nepel et al., 2020). From 20°C to 40°C,
+the experimental data described a pseudo-first order irreversible rate equation. The same
+data also fit the Arrhenius equation where increase in temperature favors the reaction
+kinetics (Nepel et al., 2020). The group of Jin et al. recovered copper from spent
+hydrochloric acid solution by modifying the reactor geometry of electrodeposition to
+alleviate the problem of low current efficiency and contaminated deposits. A cylinder
+turbulent cell with large surface area cathode was employed in the experimental set-up
+since it has been proven that mass transport has a significant effect for copper
+electrodeposition in HCI media. Copper recovery of 93.6% was observed in the study with
+89.4% current efficiency. The absence of CuCl solid confirmed the avoidance of the low
+
+efficiency chloride-mediated pathway. Uniform and fine powder could be obtained easily
+
+from the cathode. (W. Jin et al., 2017). Ning et al. employed facile jet electrodeposition
+method for the removal and recovery of copper ions from dilute copper concentration
+wastewater. The difference between the conventional and jet electrodeposition can be seen
+in Fig 4. The wastewater feed from the nozzle anode was impinged to the cathode surface
+at a rate of 3 m s"', resulting to an applied current density of 12 A dm”. This operation
+ensured a copper recovery of more than 97.4% with current efficiency of 77.2%. In
+comparison to 6 A dm? current density and 76.3% current efficiency observed from
+conventional electrodeposition process, these figures presented in this study proved the
+high rate and efficiency of the jet electrodeposition setup employed (Ning et al., 2019).
+The porosity of the carbon electrode can be improved through proper activation and
+decoration. Jin and Hu reported the copper removal by CDI process using zinc sulfide-
+decorated carbon felt electrode since it is suitable for use in HCI electrolytes. Upon the
+addition of ZnS to the carbon felt, it exhibited nanoporous structure with improved
+electrochemical capacitance, larger surface area, and enhanced wettability. Copper
+removal governed by electrostatic interactions in this experiment at low voltage of -0.2 V
+revealed a removal capacity of 27.4 mg g which is 52% better than FeS-decorated and
+128% higher than pristine carbon felts. Systematic runs were also performed to validate
+electrosorption selectivity of copper in the presence of CrCl3 and natural organic matter
+(NOM). Results showed that copper ions removal capacities weren't that affected under
+the influence of these compounds proving that ZnS-decorated carbon felt possesses great
+
+selectivity towards copper during the CDI (W. Jin & Hu, 2019). A promising method of
+
+production of activated carbon (AC) for capacitive deionization process was proposed by
+Wu et al. The authors synthesized activated carbon from cation-exchange resin by
+introducing zinc chloride (ZnCl2) through ion exchange followed by heat treatment and
+carbon dioxide (CO2) activation. This fabricated AC was then applied to the electrodes to
+be used in CDI set up where it is evaluated for the removal of copper ions in water. The
+heat treatment and CO? activation helped in tuning the pore structures of the AC in terms
+of ion adsorption and transport. The resulting electrode exhibited a copper adsorption
+capacity of 77.8 mg g" at 1.2 V which is superior to the commercial AC. The
+electrosorption of copper ions also followed pseudo-first order kinetics and monolayer
+adsorption isotherm is well fitted with Langmuir model (Wu et al., 2021).
+
+Industrial wastewater effluents with high total dissolved solid are deemed to be
+harder to be treated by CDI due to the competition between the target metallic ions and the
+high concentration of sodium ions. To answer this problem, Zhang et al. (Xudong Zhang
+et al., 2020) studied the application of flow electrode capacitive deionization (FCDI) in
+treating salty influents containing copper and sodium ions. The use of cation exchange
+membrane promotes the transport of divalent Cu** than Na‘ to the adsorption chamber for
+the capture by the flow electrode. (Xudong Zhang et al., 2020). The study revealed that
+separation was achieved and more evident in the short-circuited closed cycle (SCC) mode
+where copper ions were selectively deposited in the carbon particles in the electrode while
+the sodium ions remained distributed in the electrolyte. Additionally, the increment in
+
+applied voltage increases the copper removal efficiency while maintaining the copper ions
+
+stored in the electrode. At optimum conditions, 94% copper removal efficiency was
+retained. Industrial wastewater containing metal contaminants at low concentration has
+been difficult to treat even by well-established technology due to low efficiency, secondary
+pollution, and difficult enrichment. Zhao et al. developed a novel capacitive deionization-
+electrodeionization (CDI/EDI) system to treat dilute copper wastewater (Fig. 6) was
+fabricated through coordination mechanism of electromigration, electroadsorption, and ion
+exchange. In the anode chamber, copper was removed by ion exchange and
+electromigration while SO,” was removed via electrode adsorption. In contrast, copper
+was removed due to electrode adsorption in the cathode chamber, while SO.” removal was
+achieved through ion-exchange and electromigration. The results showed an exemplary
+performance of the proposed setup where percent copper removal was 95.7% for the first
+cycle and 87.6% during the second cycle at the optimum conditions of applying 1.5 mA
+direct current for 1.5 minutes (Zhao et al., 2019).
+2.2.3 Chemical Precipitation
+
+Chemical precipitation is commonly adopted to treat heavy metals from industrial
+wastewater due to its simplicity and easy automation. In a typical precipitation process,
+chemical precipitant agents react with heavy metal ions to form sparingly soluble solids
+which can be further separated through coagulation, flocculation, and sedimentation (L. K.
+Wang et al., 2005; Zamboulis et al., 2004), The sparingly soluble salt of copper includes
+copper hydroxide (Cu(OH)2), tenorite (CuO), paratacamite (CuzCI(OH)s), brochantite
+
+(CusSO«(OH)s), and malachite (CuzCO3(OH)z) and so on (Baltpurvins et al. 1996). Table
+
+2 summarizes the solubility products (Ksp) of the copper salts. For precipitation reaction
+
+to take place, the solution must be supersaturated, i.e., the activity product must surpass
+
+the corresponding Ksp. Depending on the degree of supersaturation, the precipitation
+process can proceed through homogeneous nucleation, heterogeneous nucleation, and
+crystal growth.
+
+Table 2. Solid phase solubility product constants of some copper-containing precipitates
+(Baltpurvins et al., 1996; Bayon et al., 2019; Sugimoto et al., 1998; Sylva, 1976; Yoder et
+
+al, 2010)
+Mineral name Chemical formula TogKsp
+Tenorite ‘CuO -20.38
+Copper Hydroxide Cu(OH): -19.30
+Paratacamite CurCI(OH)s 34.66
+Brochantite CusSO«(OH)s -68.66
+Malachite Cu2COx(OH)2 -34,00
+Azurite Cux(COs)(OH)2 -45.80
+Gerhardtite Cuz(NO3)(OH)s -36.09
+Libethenite Cu2PO,OH -28.00
+Copper sulfide CuS -35.40
+
+The precipitate of copper depends on the constitute of the wastewater. Wen et al.
+studied the effect of anions (sulfate, nitrate, and chloride ions) on the precipitation of
+copper using activated calcium carbonate. In this process, the hydroxide ion was released
+from the dissolution of calcite, enabling the precipitation of copper-containing minerals.
+The anion dominates the mineral phase of the product, being posnjakite
+(Cus(SOs)(OH)s-(H20)), gerhardtite (Cu2(NO3)(OH)s) and copper chloride (CuxC(OH)s)
+when sulfate, nitrate and chloride ions are present, respectively. The different solubility of
+
+the mineral phases led to the various removal efficiency. Among the three anions, it was
+
+found out that sulfate-containing wastewater obtained 99% copper removal with
+CaCO3/Cu molar ratio of 1:1 while nitrate and chloride ions gave 20% and 30% copper
+removal, respectively (T. Wen et al., 2019). The addition of certain concentration of
+selected metals can improve copper removal efficiency via the formation of layered
+doubled hydroxides. Bai et al. studied the removal of copper ions from electroplating
+wastewater by co-precipitation process. Among the tested metal ions, the Mg”*-AP*
+mixture gave the most effective removal with 0.2 mg L"! effluent copper concentration for
+Mg”*/AP* molar ratio of 3. The co-precipitate — CugAln(OH): 16CO3-4H20 from Mg?*-AP*
+mixture revealed characteristics representing a typical structure of LDHs. The obtained Cu-
+Mg-Al LDHs coprecipitate was tested for the adsorption of iodide, featuring an adsorption
+capacity of 41.23 mg g"! (Bai et al., 2016).
+
+The removal of copper by precipitation is hampered when wastewater contains
+chelating ligands. The solution to mitigate complexed copper includes the destruction of
+organic ligand and the precipitation of copper sulfide. Qin et al. adopted the iron reduction-
+coprecipitation method to remove chemical oxygen demand (COD) and the complexed
+hexavalent chromium, nickel, and copper. Optimum reaction time for copper removal was
+20 minutes. Further increase in reaction time will make the copper metal reduced at the
+cathode. After the iron reduction-coprecipitation method, removal efficiency of 99.94%
+was tallied (Qin et al., 2018). Zhang et al. prepared various pyrrhotite crystals (FeS) for the
+precipitation of copper sulfide. Due to the higher solubility of FeS than CuS, HS" ion was
+
+provided by the dissolution of FeS and then CuS was precipitated on FeS surface.
+
+Compared to the hexagonal FeS, the monoclinic pyrrhotite was more effective in copper
+sulfide precipitation because of the greater proportion of vacancies in crystal structure. The
+process works well on concentrated acidic copper wastewater, reducing copper level from
+2015 to 81 mg L"! at sulfide to copper molar ratio of 3.0 (Xingfei Zhang et al., 2020) .
+Effluent of copper pyrometallurgy plants contains high concentration of sulfates
+and heavy metals, rendering the difficulty to reuse. In the experiment of Balladares et al.,
+batch and continuous neutralization processes were employed by the addition of lime as
+pH-modifying agent, focusing on not only copper removal but also the precipitation of
+quality gypsum (CaSOs), which can be used as flux during smelting operations. Batch tests
+were done in order to produce clean gypsum from the liquid wastewater effluent. The group
+performed neutralization of wastewater first at different pH (1.0, 1.5, 2.0, 2.5) to prevent
+precipitation of other elements present. After achieving the target pH, filtering of the pulp,
+and washing of cake was done next. During this step, the effect of amount of washing water
+to the quality of gypsum obtained was determined. Using the proposed series circuit
+method, at pH 1-2 with minimum of four washers, clean gypsum was produced which
+complies to current regulations of hazardous solid waste (Balladares et al., 2018).
+
+2.3. Copper Wastewater Treatment using Fluidized Bed (Homogeneous)
+Crystallization Technology
+
+The fluidized-bed crystallization (FBC) and  fluidized-bed homogeneous
+crystallization (FBHC) were developed to circumvent the mass production of sludge in
+
+conventional precipitation process (de Luna et al., 2020). This technology is the
+
+combination of two-unit processes: crystallization and fluidization. In order to fully
+understand the merit of this novel approach in treating wastewater streams, their individual
+operation must be well established first.
+
+Fluidized-bed reactors are the result of the combination of the two most common
+continuous flow reactors: the packed bed and the stirred tank. In this system, a fluid (either
+liquid or gas) passes through a particulated solid maintaining it continuously suspended
+due to the fluid flow velocity. It is important to note that the velocity of the fluid must be
+just enough to suspend the particles but not too strong that it will carry the particles with
+them as they exit the vessel. When small particles are suspended in an upward-flowin
+stream of fluid, the solid behave as though it were a fluid, which actually helps a chemical
+reaction through improved mass transport. The performance of fluidized bed is affected by
+two main variables, the fluid velocity and solid dispersion physical properties (Grace et al.,
+2020)..
+
+Ina fluidized bed, three stages could be clearly differentiated. The first stage, so-
+called (i) packed bed reactor, appears when the fluid flow too slow, making the solid
+particles not displaced, and remains the base of the reactor. By the increase of the fluid
+velocity, it is possible to reach the next stage where the solid starts to be displaced by the
+fluid force in balance with the solid material weight, which could be considered the
+inflexion point that indicates the minimum velocity to start the fluidization process, being
+defined as (ii) the incipient fluidization stage. The last stage corresponds to the (iii)
+
+fluidized-bed reactor itself, which is attained when the minimum fluid velocity defined by
+
+stage (ii) is surpassed. Under a fluidized-bed stage, the solid particles of the reactor bed
+start to expand through the vessel. Additionally, at high fluid velocities the particles remain
+in constant agitation and swirl around through the fluidized bed avoiding their
+agglomeration, which can clog the entire reactor (Gui et al., 2022).
+
+As mentioned before, fluidization of the solid particles can be attained once the
+fluid velocity surpasses the minimum fluidization velocity (Um#). The best methods for
+predicting Umr are based on the fact that minimum fluidization requires that the weight-
+minus-buoyancy of the particles be counterbalanced by drag exerted by the fluid at the
+transition from packed bed flow to fluidization. In a fixed bed, the drag is proportional to
+the pressure drop through the bed. This pressure drop through a fixed bed can be described
+by the Ergun equation shown in the equation (5). Additionally, at minimum fluidization,
+the pressure drop across the bed is equal to the bed weight per unit area as presented in
+equation (6). Combination of these two equations result to expression where Umris defined
+as function of various parameters including particle diameter and sphericity, solution and
+
+particle density, and bed voidage among others.
+
+2 2
+AP U, 1-e, Umy? 1 = Em
+= 150 mst ( Ens) +1,75°ome sot
+Ling (bdy) Emp ody Ey
+
+On the other hand, the degree of supersaturation can be manipulated in order to
+
+remove heavy metals such as copper through crystallization. Supersaturation reflects the
+
+(6)
+
+(J)
+
+concentration gradient of crystal formation and precipitation in the supersaturated solution.
+The degree of supersaturation is related to the concentration of the solution and the
+solubility product of the precipitated crystals. Crystallization is driven by kinetics and
+thermodynamics. Divalent metals such as copper can be crystallized using various anions
+in the form of metal carbonate, sulfate, or oxide. Metal ions are hydrolyzed to form
+hydroxide species as shown below. These equations show that the solubility of metal
+
+hydroxide depends significantly on pH (Benjamin, 2015).
+
+M?* + HO @ M(OH)* +H* By 12)
+M?* + 2H,0 © M(OH)3 + 2H* Be (8)
+M** + 3H,0 © M(OH); + 3H+ Bs 9)
+M?* + 2H20 © M(OH)ae) + 2H* Ksp (10)
+
+Aside from kinetics, crystallization is also driven by thermodynamics.
+Thermodynamically speaking, at supersaturation, where crystallization starts to happen,
+the difference between the chemical potential of the crystals and the solution must be less
+than zero. Unfortunately, it is extremely difficult to measure quantities related to chemical
+potential such as the solute activity coefficient at supersaturated conditions because the
+system is not at an equilibrium state. For this reason, this definition is not immediately
+useful, and must make simplifying assumptions to estimate the true supersaturation of a
+solution. These assumptions gave the following expressions (11) to (13). The equation (11)
+shows the approximation for the dimensionless chemical potential difference. Furthermore,
+
+alternative supersaturation units are reflected by the other equations (12) and (13) since it
+
+is often convenient to make simplifications and express supersaturation in a dimensional
+
+form such as concentration difference and ratio (Myerson et al., 2019).
+
+oy
+
+(12)
+Sas (13)
+
+The crystallization process is composed of formation and growth of several crystal
+nuclei. During nucleation, new solid phases from a supersaturated mother liquor are
+created. These nuclei are formed via several mechanisms. Nucleation in a clean,
+homogeneous solution that results solely from coming together of molecular “clusters” is
+known as primary homogeneous or activated nucleation. On the other hand, primary
+heterogeneous nucleation happens when kinetics is aided by the presence of an existing
+surface in the form of poorly defined “dust” or alien seeds. Further nucleation might happen
+on the surface of the crystallizing material itself, which is called secondary nucleation. This
+occurs generally at lower supersaturations compared to primary nucleation. Secondary
+nucleation can occur by several mechanisms. Crystals in the form of needles are often
+fragile and small parts of it might break, thus forming secondary nuclei. Evidence shows
+that shear forces imposed on a crystal face by the solution flowing can be sufficient to
+produce secondary nuclei from the surface. This is called shear nucleation. On the other
+hand, the most encountered mechanism is the contact nucleation. Contact between growing
+
+crystals and walls of container or even with other crystals result in contact nucleation. It is
+
+now recognized that for materials with moderate to high solubility, the most significant
+nucleation mechanism is contact nucleation (Myerson et al., 2019).
+
+The key to FB(H)C process was to provide vast surface area of granular seeds to
+facilitate heterogeneous nucleation and crystal growth but suppress homogeneous
+nucleation. The fluidization of the granular medium improves the mass transport (Andalib
+et al., 2014). To maintain the fluidized state of granular seeds, a sufficient superficial
+velocity is required to drag the seeds upward. Additionally, control of chemical reagent
+addition provides appropriate supersaturation for crystal formation. Pellets are also
+discharged when the size is grown up to | to 2 mm in diameter and settled by gravity at the
+bottom. Figure 2a shows a typical fluidized bed reactor flow diagram. FBC and FBHC
+processes are distinguished from each other by the utilization of seed material. In FBC,
+silica is often used as the seeds given its low cost and availability. In FBHC, the seed
+material is the same as the major phase to by crystallized, i.e., homogeneous seed, which
+improves the purity of the granules. Figure 2b shows the comparison of process mechanism
+between FBC and FBHC. The product of crystallization with high purity can therefore be
+
+utilized as feedstocks to promote resource recovery.
+
+Table 3 at the end of this section summarizes the performance of the FBC and
+
+FBHC studies discussed in this paper.
+
+ry) fom,
+
+cater
+
+Effluent
+
+Reaction
+
+111
+tt \ pent
+
+Homozencousmucleation
+
+Figure 2. (a) Illustrative design layout of fluidized bed reactor and (b) mechanism of
+fluidized-bed crystallization (FBC) and fluidized-bed homogeneous crystallization
+(FBHC). Reproduced based on (Bayon et al., 2019; C. S. Chen et al., 2015).
+
+8€
+
+a pea 0) «OHA *1HO)M9 %b6 %86 $9 %=nOKOD OOP
+; (Ho’oa?nd) . - al
+(610z “ley wodeg) © HE eneaeaT %L0'96 W665 S99 _avagg ——«00E
+(ozoz (HO)#609)«ND) ie
+r ouad OS ub9 6 Mmsz 161
+Je 32 eunr] ap) ayanzy nee
+or OHOH
+(ozoz (@HO)(FOD)END)
+4 oud LB %66 6 MMs 161
+je 32 eB Lanz"
+18 39 Bun] 2p) ayunzy pea
+(ozoz *(HO)COO)END) y sz
+syereuny ap) OHS eae “b8 %S56 Gets 161
+610¢ “Ie (f00% (Ho)énD) 7 st
+eeurnemienoq) Had 496 a no
+(Stoz“1e1 BunyD) =a 189 %s9 L  $0=8M oo
+“re te ro Dad OD ‘HORI %06 %66 8 = Z=NDOPd 06
+(%) (18m)
+seoussejy poyay. ronposg rerowas — yd 8°S°Poneuzouo09
+feyow [a0 1OW reniuy
+
+‘paowias saddoo sof anbruyoa) uoywzyjoistuo Buidojdua suaysks masaffiq “¢ 91901
+
+39
+
+The factors that affect the FBC of copper includes pH, hydraulics, and property of
+seeds. Chung et al. found out that crystal growth and aggregation of copper sulfide crystals
+increased using calcium-coated sands as seed material to reduce the electrostatic energy
+barrier. CuS crystallization was found out to be dependent on the static bed height of seed
+material, recirculation rate, and seed type in the FBR. Under optimal conditions, at least
+95% of the initial Cu?* (100 mg Cu* L*}) was successfully transformed to CuS crystals
+within 120 minutes of operation (Chung et al., 2015). Mahasti et al. employed fluidized
+bed crystallization process in order to simultaneously remove copper and ferrous ion from
+wastewater using silica as seed material. The recovered solid was determined to be as
+binary metal-oxide (Fell10.66Cul0.33@SiOz). Noted that copper was recovered as Cu(1)
+species rather than Cu(II) species due to the reduction of copper by the green rust (LDHs
+of Fe(III) and Fe(II). At optimum conditions of pH = 8, Fe/Cu molar ratio of 2, and total
+metal concetration of 3 mM, the FBC was able to remove 99% of total iron and copper
+(Mahasti et al., 2022).
+
+Several groups have adopted FBHC process to recover copper from wastewater and
+produce granules with high purity. Basic copper carbonates, such as malachite
+(CuxCOx(OH)2) and azurite (Cus(COs)2(OH)2), are the major products to be crystalized in
+FBHC. Lertratwattana et al. studied several operational parameters for optimizing FBHC
+to achieve maximum removal and recovery of copper from metallurgy industry effluents.
+From the speciation distribution of carbonic acid species at different pH, it was deduced
+
+that operation pH must range from 6 to 8 only to ensure selective recovery of copper as
+
+40
+
+malachite. The authors proposed to conduct FBHC in two stages at various pH to prepare
+homogeneous seeds efficiently: (1) operation at pH 6.5 or 7 for six days to produce and
+retain the fines in the reactor; (2) operation at higher pH (~9) to enhance the crystal growth
+on fine seeds (Lertratwattana et al., 2019). de Luna et. al demonstrated the removal of
+copper by FBHC of azurite from electroless copper plating spent rinse water. The presence
+of ligands such as EDTA and formaldehyde could interfere the crystallization efficiency.
+At higher EDTA concentrations, copper removal and granulations decreased due to the
+complexation of copper with EDTA, which decreased the available free copper ion for
+granule formation. On the other hand, varying formaldehyde concentration did not alter the
+performance of FBHC significantly, in which copper removal of 99% and crystallization
+ratio of 90% were achieved in a 24-h run. Lastly, when both EDTA and CH20 were present,
+94% copper removal and 84% granulation were obtained (de Luna et al., 2020). The study
+of Quimada et. al optimized several operating conditions of the removal of copper and
+nickel from synthetic printed circuit board wastewater via (FBHG) as granular basic metal
+carbonates. The effluent’s pH was influential to the removal rate of metals. Results showed
+that varying operating pH favored copper granules formation more than nickel granules.
+Molar ratio (MR) between precipitant and metal was also studied. Increasing MR increases
+metal removal since at low MR, no precipitation occurs due to low supply of carbonates
+and hydroxide ions. Increasing MR also favors spontaneous nucleation. After
+characterization of granules formed, they were found out to be hollow and finer and not
+
+agglomerated enough which is might be due to mixture of copper and nickel ions (Quimada
+
+41
+
+et al., 2022). In addition to basic copper carbonate, Bayon et. al explored the capability of
+FBHC in removing copper and phosphate as libethenite (Cu2(POs)OH). An optimum pH
+is necessary to ensure maximum removal of copper and phosphate through precipitation of
+insoluble salts. Copper crystallization drastically decreased from pH 4.5 to 6.5. However
+an increase in copper crystallization was observed above pH 6.5 which is due to the
+elevated solubility attributed to the predominance of Cu(OH)«" ion (Bayon et al., 2019).
+
+Employing FBHC in treating multiple metal systems has also been reported. The
+study of Quimada et. al optimized several operating conditions of the removal of copper
+and nickel from synthetic printed circuit board wastewater via (FBHG) as granular basic
+metal carbonates. The effluent’s pH was influential to the removal of metals. Results
+showed that varying operating pH favored copper granules formation more than nickel
+granules. (Quimada et al., 2022). Bimetallic system containing copper and cobalt was
+reclaimed as metal carbonate granules using FBHC by Anotai et al. For the mixed metals
+of 10.5 mM Co and 10.5 mM Cu* synthetic wastewater, the optimum conditions were
+at pH 8.5 and a [CO3*}:[M?*] molar ratio of 2.0 yielding maximum granulation and
+removal efficiencies of 96.0 % and 97.8 % for Co™ and 97.8 % and 99.8 % for Cu,
+respectively (Anotai et al., 2021).
+
+One advantage of using fluidized bed homogenous crystallization over the
+
+conventional precipitation processes is the minimal production of sludge. Instead, it
+
+produces crystallized granules of high purity that can be utilized further. For example, the
+
+recovered CuO and FeOOH particles from study of Mahasti et al can be applied to catalyze
+
+42
+
+a visible light-assisted photo-Fenton reaction (Mahasti et al., 2022). Malachite
+(CuxCO3(OH)2) recovered from FBHC processes can also be further use as mineral
+pigment in the paint industry (Haldar, 2017). On the other hand, libethenite (Cus(POx)OH)
+electro and photochemical properties were studied by Li et al due to its good photocatalytic
+activity. Libethenite as found to be active for electrochemical water oxidation, as confirmed
+by quantitative O2 measurements (Li et al., 2014).
+
+2.4 Research Gap and Future Perspectives: Copper recovery using
+FBHC
+
+Fluidized-bed crystallization is a preferred method for treating concentrated copper
+wastewater due to its ability to rectify the issue of sludge production and offer potential
+metal recovery as insoluble salts. However, this technology requires careful operation at
+an appropriate degree of supersaturation, which can be challenging. Fluctuations in copper
+concentration within the feedwater can lead to a decrease in treatment efficiency. The
+presence of chelating agents may compromise copper removal, but this can be addressed
+through organics pretreatment or the formation of copper sulfide with low solubility.
+
+Recent studies have focused on using homogeneous seeds in fluidized-bed
+crystallization to enhance the purity of the recovered granules. Maintaining a high
+crystallization ratio while minimizing sludge formation relies on precise control of
+supersaturation through pH adjustment and precipitant dosage. To improve the operation
+of fluidized-bed crystallization, it is crucial to establish standardized protocols for
+
+producing homogeneous seeds. Furthermore, future investigations should verify the effects
+
+43
+
+of chelating agents and multiple heavy metals on precipitation and crystallization
+
+processes.
+
+44
+
+3. Methodology
+
+3.1 Chemicals
+
+Cupric chloride dihydrate (CuCl22H20, 98% w/w) and ferrous sulfate
+heptahydrate (FeSOs-7H20, 98.6% w/w) were purchased form Hongyao Chemical
+Instruments. Sodium carbonate (Na2COs, 99.5% w/w), used as precipitating agent was
+provided by Union Chemical Works LTD. Acid and base buffer solutions prepared from
+concentrated nitric acid (HNOs, 69% v/v) and sodium hydroxide pellets (NaOH, 95%
+wiw), respectively, were utilized to regulate the solution pH. All solutions were prepared
+using ultrapure water with a resistivity greater than 18.2 MQ cm at 25 °C, obtained from
+the Millipore Milli-Q system.
+3.2 Fluidized bed homogeneous crystallization reactor set-up
+
+Figure 3 illustrates the schematic of the fluidized-bed reactor used for FBHC
+treatment. The reactor with effective volume of 513.5 mL is consisted of a glass column
+divided into two sections with different diameters. The lower section, designated as the
+reaction region, had a diameter of 2 cm and a length of 80 cm, while the upper section,
+known as the effluent region, had a diameter of 4 cm and a length of 20 cm. The sudden
+expansion in diameter resulted in a reduction of the upflow velocity due to the increased
+cross-sectional area. Consequently, larger particles settled back to the reaction region,
+
+promoting enhancing mixing and particle growth.
+
+45
+
+Peristaltic pumps (ChromTech YZ25) were carefully calibrated and utilized to
+introduce the synthetic wastewater into the reactor and recirculate a portion of the effluent
+solution back into the reactor. To ensure the fluidization imposed in this, the up-flow
+solution (introduced and recirculated) in the reactor should be at least equal to the minimum
+fluid velocity (Um) where the fluid flow balances the gravitational force of the particles,
+maintaining this bed of solids in fluidized state (Grace et al., 2020). This Unr is typically
+calculated using the combination of Erqun equation shown in (5) and pressure drop
+relationship at fluidization shown in (6) resulting to expression in (14). Several
+
+approximations were studied to simplify this expression. Wen and Wu proposed that
+
+1
+
+qaand ae = 11(C. Y. Wen & Yu, 1966). From this estimation, the dependence
+mf
+
+Fy
+
+beng =
+of Une with minimum fluidization bed voidage, enr , and particle sphericity, $ were
+
+eliminated and equation was simplified to equation (15) where Ar is the Archimedes
+
+number (16) which describes the ratio of gravity to viscous forces. In this set of equations,
+
+values of constant parameters were lifted from similar study: particle density (pp) = 2.41
+mg L"; solution density (p1) = 1.0 mg L"; solution viscosity (y) = 1 cP; particle diameter
+(mm) = 0.425; and acceleration due to gravity (g) = 9.81 m s"? (Mahasti et al., 2022). From
+
+equation (15), Umr for this study was calculated to be 5.44 m hl,
+
+46
+
+2
+U, 1-«, Ump? 1 = Em;
+mp ( Ens) eas Pele f
+
+(bdy)° Eng dp Emy
+
+eee -
+Uns = aa [V@3. 7? + 0.04084r) 33.7| (15)
+
+(0 — Pf)(1 - emp)g = 150 (14)
+
+are tele ppd (16)
+
+In order to support the production of crystallization bed during the reaction, glass
+beads (diameter=0.5 cm) are placed at the bottom of the fluidized bed reactor at the height
+of 4cm. This arrangement also facilitated the regulation of solution flow within the
+
+reaction region. Moreover, effluent pH was controlled and monitored by using a pH/ORP
+
+transmitter/controller (Suntex TS-130 Portable meter) with a sensitivity of + 0.05.
+
+47
+
+24
+[cu*lo Effluent
+[Cu], je
+=x B Region
+@=4em
+5 ffluent H/ORP
+& cffluen pH/ORt
+ba] pH controller
+reflux é is
+a
+finestudge
+coarseslucge | Region
+Metastable (Particle Growth)
+‘Heterogeneous Nucleation
+§ (Nuclei growth)
+3 (Particle Fluldized Zone)
+o=2cm
+Homogeneous Nucleation
+a
+Copper and | Input pump
+iron Tanke
+(metal)
+\. Refluxpump
+
+Figure 3. Ilustrative design layout of fluidized bed homogeneous crystallization reactor
+3.3, Experimental procedures
+
+Several experimental variables were investigated in this study to assess their impact
+‘on the performance of the FBHC process. These conditions were established based on
+
+preliminary reports (Lertratwattana et al., 2019). The precipitant to metal molar ratio
+
+COs?
+
+(
+
+-) was varied within the range of 0.75-2.0 to examine its influence on the process.
+
+48
+
+The pH was evaluated from 5.0 up to 9.0. Furthermore, inlet flow rate of the synthetic
+‘wastewater was varied from 5 up to 25 mL min’! to investigate the effects of different
+surface loading and hydraulic characteristic. Additionally, the presence of iron ions in a
+copper synthetic wastewater (with concentrations ranging from 3.15 to 9.44 mM Cu?*) was
+explored using 0.36-1.07 mM Fe”* to assess its interference with FBHC performance in
+terms of copper removal, crystallization ratio, and copper salt recovery.
+
+The synthetic copper-iron wastewater and the crystallization reagent solutions were
+prepared based on the concentrations of the actual electroplating wastewaters and usual
+Fenton process. Both solutions were then pumped into the reactor at an equal rate set for a
+specific experimental run (Qn=Qpp:) While the recirculation flow rate was varied between
+10-50 mL min‘! (Q,). It is important to note that FBHC process doesn’t employ external
+use of alien seeds that aid crystallization process. With this, it is necessary to have a
+preliminary stage during the initial days of operation wherein creation of a homogeneous
+seed bed is of utmost importance. Initially, the high supersaturation (Qr = 0) in the reactor
+was kept for the formation of small nuclei. This stage was carried out until the copper and
+iron precipitates grew to a size that was big and strong enough to avoid getting carried
+away from the reactor by the fluid up velocity. Acid and base buffer solutions were used
+to control the pH of the solution which is necessary for the precipitation of the desired
+metal. An 11.16 M NaOH solution was prepared dissolving the appropriate mass of sodium
+hydroxide pellets to high-purity water. Similarly, a 9.45 M HNOs solution was prepared
+
+by adding the required volume of concentrated nitric acid to high-purity water. Effluent pH
+
+£037-
+cut
+
+(pH) and the
+
+49
+
+molar ratio were maintained at specific value, depending on a particular
+
+operation. Table 4 provides a comprehensive summary of all the relevant constant and
+
+varying operational variables for each respective part of the study, addressing specific
+
+objectives outlined in this research.
+
+Table 4. Operational conditions for evaluating the impact of varying copper and iron
+
+€037-
+Cu
+
+concentrations,
+
+molar ratios, metal and precipitant inlet flow rates, and effluent pH
+
+on copper removal efficiency, crystallization ratio, and crystal growth.
+
+I. Evaluating the impact of varying copper and iron concentrations on copper removal
+
+efficiency, crystallization ratio, and crystal growth
+
+Varying Parameters Constant Parameters
+
+[Cu] (mM) [Fe?*] (mM) pHe 65
+
+3.15 0.36 Qu (mL min“) 15
+
+4.72 0.54 HRT (min) 17.12
+
+63 0.72 Qe(mL min“) 20-120
+
+7.87 0.9 al 15
+
+: i Cuzt “
+
+9:44 1.07 Operating time (ART) 505
+
+Il Investigating the effects of different molar ratios (MR) of precipitant to metal
+
+Cut®
+
+Ms
+(2 ) on copper removal, crystallization, and the resulting size distribution of
+
+recovered crystals
+
+Varying Parameters Constant Parameters
+Ss molar ratio [Cu], [Fe] (mM) | 6.30, 0.72
+0.75 pHe 65
+1.00 Qu (mL min“) 15
+1.25 HRT (min) 17.12
+1.50 Qe (mL min“) 20-120
+2.00 Operating time (HRT) 505
+
+Ill. Analyzing the effects of varying metal and precipitant inlet flow rates (Qm and
+and the resulting size distribution of
+
+Qppt) on copper removal, crystallization,
+
+recovered crystals
+
+Varying Parameters
+
+Constant Parameters
+
+
+50
+
+Qm (mL min”) / HRT (min) / Operating time
+
+(HR [Cu?*] (mM) 6.30
+5751.35 / 168 [Fe] (mM) 0.72
+10 /25.68/ 336 pHe 65
+c037=
+
+15/17.12/505 15
+rand
+
+207 12.847 673 Q (mL min) 20-120
+
+25 /10.27/ 841
+IV. Exploring the effects of different reactor effluent pH (pH) on copper removal,
+crystallization, and the resulting size distribution of recovered crystals
+
+Varying Parameters Constant Parameters
+
+Effluent pH (pH.) [Cu] (mM) 630
+5.0 [Fe*] (mM) 0.72
+6.0 Qn (mL min“) 15
+65 HRT (min) 17.12
+7.0 (mE min“) 20-120
+8.0 C05 15
+
+cuz,
+
+90 Operating time (ART) 505
+
+All experimental runs were conducted at room temperature and pressure (25 °C, 1
+atm) and the fluidized bed was operated continuously for six (6) days, equivalent to
+approximately 505 hydraulic retention times (1 HRT = 17.12 min) per run. This operating
+time was determined based on a preliminary experiment, where both the percentage of
+copper removal and the crystallization process reached a constant value after six days.
+Additionally, stable precipitates were consistently recovered after this duration.
+
+At the end of each operation, two samples of twenty (20) mL each were taken from
+the reactor’s effluent region and collected in a sampling tube for copper concentration
+analysis. The first sample was filtered through a 0.45 um microfilter membrane (GHP,
+PALL™), Both filtered and unfiltered samples were treated with acid using 0.5 mL of
+
+concentrated HNO3 (69% v/v) solution to terminate further precipitation reactions
+
+51
+
+(American Public Health Association et al., 2023). The filtered sample was analyzed for
+the dissolved (soluble) copper concentration, denoted as [Cu’*]p, while the unfiltered
+sample provided the total copper concentration, denoted as [Cu?*}r, in the effluent
+(Udomkitthaweewat et al., 2019).
+
+On the other hand, the recovered crystals were subjected to a thorough drying
+process to eliminate any excess moisture after each operation. The crystals were placed in
+a circulatory oven from Hung Yao Instruments Co. and maintained at a temperature of
+65°C for 24 hours, ensuring complete drying (Mahasti et al., 2022). Once the recovered
+particles were completely dried, they underwent sieving analysis to determine the product
+size distribution, providing valuable insights into the particle sizes achieved after each
+experimental run.
+
+3.4 Instruments and analytical procedures
+3.4.1 Effluent analysis
+
+The performance of the fluidized bed homogenous crystallization reactor was
+evaluated in terms of the metal ion removal and crystallization ratio. The copper ion
+concentration in the effluent region was analyzed, allowing calculation of the removal
+percentage (% Cu Removal) and the crystallization percentage (% Cu Crystallization)
+
+using equations (17) and (18), respectively:
+
+(Cu?*]>(Qe)
+= Be) 17
+% Cu Removal fe.0) a7)
+2+
+% Cu Granulation = 1 — G4 }r(Qe) (18)
+
+Cu?*]o(Qm)
+
+52
+
+where [Cu]p refers to the initial copper ion concentration in the original solution,
+{Cu?*]p is the dissolved (soluble) copper ion concentration, [Cu?*], is the total copper
+ion concentration, Q, is the effective volumetric flow rate of effluent (equivalent to Qn +
+Qopi), and Q,, is the volumetric flow rate of metal wastewater into the reactor. Both
+[Cu?*]p and [Cu?*], were analyzed at the end of each specified operating time. The
+concentration of dissolved and total metal ions in the effluent region was determined using
+a flame atomic absorption spectrometer (FAAS Perkin Elmer Analyst 100).
+3.4.2. Product size analysis
+
+Tyler sieves, which are commonly used for particle size classification, were
+employed in the sieving analysis to determine the size distribution of the recovered crystals.
+After undergoing overnight drying, the dried crystals were sieved using specific Tyler
+sieves that corresponded to the designated particle sizes. In this research, Tyler mesh
+numbers 18, 25, and 40 were used for the sieving analysis, corresponding to sieve openings
+equal to 1 mm, 0.710 mm, and 0.425 mm, respectively (ASTM Sieve Chart and TYLER
+Equivalents, n.d.). To facilitate the size-based separation of particles, the dried crystals
+were initially and carefully placed on Tyler sieve 18 and subjected to mechanical shaking.
+The retained particles on each sieve were then weighed to determine the proportion of
+crystals in each size fraction. This sieving analysis provided precise information on the size
+distribution of the recovered crystals by utilizing Tyler sieves tailored to each specific
+particle size range, thereby aiding in the comprehensive characterization of the
+
+crystallization process.
+
+53
+
+3.4.3 Product analysis and characterization
+
+Selected dried crystals were subjected to comprehensive analyses and
+characterization techniques to gain a better understanding of the reaction mechanism
+undergone by the recovered particles. The surface morphology and elemental composition
+were determined by the scanning electron microscope (FE-SEM, Japan JEOL JSM-7800F)
+and energy dispersive spectrometry (EDS, Japan JEOL JSM-7800F), respectively (Girao
+et al., 2017). The identification of the crystalline structure of recovered solids was carried
+out using a high-resolution X-ray diffractometer (HR XRD Bruker D8 DISCOVER). The
+obtained peaks were then compared with the integrated available data on the RRUFF
+Project website, which includes Raman spectra, X-ray diffraction and chemistry data for
+selected minerals (The RUFF Project Team, 2023). Moreover, X-ray photoelectron
+spectroscopy (XPS, Thermo ESCALAB 250X1) was employed to further analyze the
+surface properties of the precipitates, utilizing the data from binding energies of
+
+photoelectrons emitted during X-ray excitation (Baer et al., 2019).
+
+54
+
+4, Results and Discussion
+
+4.1 Effect of effluent pH on copper removal, crystallization, and salt
+recovery
+
+Precipitation and crystallization processes are driven by several key factors such as
+supersaturation, nucleation, and crystal growth (Abdel-Aal et al., 2004). The core principle
+of the technology studied in this research revolves around controlling supersaturation,
+which can be achieved through the manipulation of various parameters, such as the pH of
+the fluidized reaction solution (Gui et al., 2022). By exploring different solution pH levels,
+it is possible to determine the optimal range that drives the system toward a state of
+supersaturation, crucial for efficient nucleation and crystallization of insoluble precipitates
+(Udomkitthaweewat et al., 2019).
+
+In this part of the study, the effects of different effluent pH (pHe) values ranging
+from 5.0 - 9.0 on copper removal, crystallization, and copper salt recovery were explored.
+The simulated wastewater had initial concentrations of 6.30 mM copper and 0.72 mM iron
+and was introduced into the fluidized bed reactor at a rate of 15 mL min’. Simultaneously,
+the carbonate precipitant was fed at the same rate, maintaining a CO3* to Cu** molar ratio
+of 1.5. A portion of the effluent was also recirculated back to the bottom of the reactor to
+control the level of supersaturation in the reaction region, promoting crystal growth. The
+continuous operation lasted for 505 hydraulic retention times (HRTs), with each HRT
+corresponding to 17.12 minutes. The experimental results for this section are presented in
+
+Figure 4.
+
+55
+
+100 100,
+cy
+tJ cy
+g J
+1 0 o
+i ot
+| “|
+? Fy
+o 2»
+10
+30 °
+30 60 6s 19 xo 90
+tte
+
+1.00 mm>O20710mm E20.710 mm>O20425 mm EIO<0428 mm —-~Y6Cu Removal —H-%4 Cu Crysalization
+
+Figure 4, Effluent pH (pHe) dependence of % copper removal and crystallization, and
+product size distribution of recovered crystals after continuous FBHC operation of 505
+ARTs (1 HRT = 17.12 min) with [Cu2+]0 = 6.30 mM, [Fe2+]0 = 0.72 mM, CO32-
+/Cu2+ MR = 1.5, and Qm = 15 mL min-1.
+
+Figure 4 illustrates a steady increase in the percentage of copper removal (from
+74% to 95%) and copper crystallization (ftom 72% to 91%) as the effluent pH increased
+from 5.0 to 7.0. Subsequently, a slight decrease in the percentage of removal (from 95% to
+93%) was observed with a further increase in effluent pH to 8.0 and 9.0. In contrast, the
+percentage of crystallization plateaued at 91% when the effluent pH was increased from
+7.0 to 9.0. Furthermore, bigger crystals were recovered when the pHe was increased from
+5.0 to 7.0 and while smaller crystals were collected upon increasing the effluent pH to 9.0.
+
+Lastly, the attained percentage of copper removal is always higher than the percentage of
+
+56
+
+copper crystallization due to the formation of fine nuclei produced at high supersaturation
+conditions that are not recoverable as pein which lowers the overall crystallization
+efficiency (Caddarao et al., 2018). The difference between % copper removal and % copper
+crystallization is related to the concentration of these fine soluble nuclei at the effluent
+which were not able to grow during the process (Boonrattanakij et al., 2023).
+
+To aid the explanation of the results presented in this section, the solubility concept
+of pertinent metal ion and its hydroxo-complexes, as well as the theoretical solubility
+diagrams of possible metal insoluble hydr(oxides) and carbonates must be introduced first.
+Copper and iron, like other metals, reacts in aqueous solution to form free metal ionic
+species, a variety of soluble complexes, and insoluble particles or precipitates, depending
+on the several factors like pH (Cuppett et al., 2006). In this study, only cupric ions (Cu2*)
+were considered since cuprous ions (Cu) are easily oxidized to Cu** by dissolved oxygen
+and other oxidants in wastewater streams (Jeremias et al., 2023). On the other hand, both
+ferrous (Fe**) and ferric (Fe**) ions were evaluated since studies show high possibility of
+spontaneous oxidation of Fe”* to Fe** within the chosen pHe range in this research as shown
+in Equation (28). In situations where there is absence of usual strong Fe** oxidants like
+hydrogen peroxide (H202), its oxidation is highly dependent on solution pH and partial
+pressure of dissolved oxygen (poz) (Pham & Waite, 2008). At room temperature and poz =
+0.2 bar, the total ferrous ion oxidation occurs at a fast rate for pH > 6 and can occur in just
+
+10 minutes, which is well within the HRT set in this study (17.2 min) (Mahastiet al., 2019).
+
+57
+
+All possible copper and iron hydrolysis and hydroxide precipitation reactions with
+
+their respective reaction constants are listed and summarized in Table 5. The reaction
+
+constants utilized in this study assumed that the activities of solid and liquid species are
+
+equal to unity. Moreover, the activities of the ionic and aqueous species, indicated by
+
+square brackets, are approximated equal to their actual concentrations since these solutions
+
+are diluted (Caddarao et al., 2018). Note that dissociation constant for water (Kw) is 1.00 x
+
+10" and is equivalent to the solubility product of hydronium (H*) and hydroxide (OH")
+
+ions (Skoog et al., 2014).
+
+Table 5. Summary of kinetic parameters of hydrolysis and formation reactions pertinent
+in this study.
+
+Reaction
+
+Reaction constant (;, Ksp,)
+
+Copper (II) hydrolysis and hydroxide
+precipitation reactions (Quiton et al.,
+2022)
+
+Cu? + HzO 2 CuOH* + Ht Bou, = SPM) = 10-7479)
+Cur + 220 & CuCOM)2(aqy + 2H — Bey, = AMAT — yo9m163% (20)
+Cu2* + 3H,0q + Cu(OH)5 + 3H* Beus = coger 10-7 (aly
+Cu?* + 4H20q) = Cu(OH)Z + 4H* Bou, = euoie Ie I< 49-396 (22)
+Cu(OH)a¢s) & Cu?* + 20H~ Kspey, = (Cu?*][OH-}? = 10-293? (23)
+Iron (II) hydrolysis and hydroxide
+
+precipitation reactions (Furcaas et al.,
+
+2022)
+
+Fe? + H,Oq = Fe(OH)* + Ht Brews = poo = 10-43 (24)
+Fe? +2H,0qy = Fe(OH)acaq) + 2H* — Brewin, = GPE = 10°25 (25)
+
+(Fe2*)
+
+58
+
+Fe?* + 3H,0q) = Fe(OH); + 3H* Brettns = ‘ecceumoee = 10732587 (26)
+Sf
+
+Fe? + 2H,0q = Fe(OH)a¢s) + 2H* — Keren, = eal = 1071227 7
+
+Iron (11) oxidation to iron (III) (Mahasti et
+
+al,, 2019)
+
+4Fe®* + 0, + Hz0q > 4Fe(OH)** (28)
+
+Iron (Ill) hydrolysis and hydroxide
+
+precipitation reactions (Furcas et al.,
+
+2022)
+
+Fe + Hq) Fe(OH) +H* Brean, = EOREIHI = 19-22 29)
+
+Fe* + 2H,0qo Fe(OH) +2H* Brgy, = FECBELME = 19-875 (20)
+
+Fe3* + 3H,0q) « Fe(OH)s¢aq)+3H* — Brey, = RUE = 10-28 (31)
+
+Fee +4H,0q) % Fe(OH)g+4H* — Brean, = CREMT — 19-246 (32)
+
+Fe* + 3H20q @ Fe(OH) +3H* — Ks Prep, = gS = 10735 (33)
+
+From these set of equations presented in Table 5, material balance can be performed
+
+to determine respective total metal concentration as sum of their individual metal ionic
+species and hydroxo complexes, assuming these are the only solution composition. As
+
+summarized in
+
+59
+
+Table 6, these material balance equations (34), (36), and (38) of total metal
+concentration can then be rewritten strictly in terms of the concentration of free metal ion,
+the stability constants, and the H* (or OH’) concentration (Benjamin, 2015). For the ease
+of discussion, ame, was introduced in material balance equation, resulting from factoring
+‘out common terms, and became function of [H*] and reaction constants only. This factor
+also pertains to the fraction of total metal concentration present as its dissolved metal cation
+species. Additionally, the ideal solubility of the total metal in the solution ({Me]z) at
+equilibrium during precipitation reaction should depend on the solubility products (Kspi)
+and ame, Which are functions of pH (equations (35), (37), and (39)). Lastly, these methods
+allow generation of theoretical solubility diagrams for the metal hydroxides showing the
+relationship of the equilibrium concentration of the metal at different pH as shown in
+Figure 5.
+
+Table 6. Summary of total metal material balance equation and its solubility relationship
+with pH and reaction constants.
+
+Metal Material balance and metal solubility as function of pH and Ksp;
+
+(Cur = (Cu?*] + (Cu(OH)*] + [CuCOH),] + [Cu(OH)3] + [CuCOH)§-]
+
+= +] Peuy Beu; Beus Bous
+Copper = lou] (14+ Ft + aR + feb tee (4)
+aD. ala]
+é =
+
+(35)
+
+
+60
+
+[Fe()lr = [Fe?*] + [Fe(OH)*] + [Fe(OH),] + [Fe(OH)5]
+= (re? (1-4 Besta 4. Bata Seton)
+
+a ory oe wep (6)
+_ le
+Iron (11): =)
+= tat?
+(Fear _ KsPpeans tFeun 67)
+(Fea = [Fe] + [Fe(OH)**} + Fe(OH + [Fe(OH] + [Fe(OH)a]
+= “el ret setliNs , Bret
+= Ure2e) (1+ ee + see Fie ae) G8)
+Iron (Il):
+[Fe(II] =“? _ G9)
+7 Kspprecnya Fett
+
+cum,
+S) 0mm,
+
+— wom,
+
+ree) {Fao1n
+== fFeoIMo] — [FOI
+
+—[eworns] — (Cuore.
+~~ -[Feomn
+
+<= (62) [owon
+ams oun
+
+Figure 5. Theoretical cuprous, ferrous, and ferric ions speciation into their respective
+hydroxo complexes in pure water for [CuJT = 6.30 mM and [Fe]T = 0.72 mM, and
+
+61
+
+theoretical solubility diagram for spernitiite Cu(OH)2, Fe(OH)2, and ferrihydrite
+Fe(OH)3 at different pH.
+
+Figure 5 shows the solubility of metal cations and their complexes at different pH
+as controlled by the total solubility of copper and iron set in this study ({Cu]r = 6.30 mM
+and [Fe}r = 0.72 mM). In general, insoluble metal precipitation occurs inside the solid
+curve, especially starting at the points where the curve approaches minimum. In this
+manner, low solubility of precipitates of concern is ensured which it increases the
+likelihood of reaching the supersaturated state necessary for crystallization to happen
+(Cuppett et al., 2006; Furcas et al., 2022; Wieland et al., 2023). The solubility curve of the
+metal hydroxides presented in Figure 5 predicts which pH regions insoluble Cu(OH)2.
+Fe(OH), and Fe(OH); may tend to precipitate. The thermodynamic equilibria of
+precipitation of these co-existing metal ions Cu’*, Fe”*, and Fe™* suggest the complex
+panorama in regards with their separation. Note that starting pH > 4.5, at least two out of
+the three insoluble hydroxides begin to precipitate out during the operation set in this study.
+This confirms that separation by selective precipitation as a function of pH should not be
+expected. Co-precipitation should be explored to better understand synergistic effects of
+both metal concentration ratio exert on the granulation process.
+
+Carbonate precipitation was also employed in this research. Carbonate as
+precipitant was sourced from the deprotonation of carbonic acid as shown in equations (40)
+and (41). Similar approach on material balance discussed earlier was applied to determine
+
+the total carbonate in the solution. This also allows expressing the concentration of the
+
+62
+
+carbonate anion [CO3*] (equation (42)) as a function of the total carbonate concentration
+and pH (Sawyer et al., 2003). This expression was used to generate the solubility diagrams
+of metal carbonates expected in this study (to be discussed in the next part of this section).
+Additionally, generation of logC vs pH of the carbonic acid deprotonation can allow one
+to predict which pH range to operate for the maximum production of CO; which is
+necessary for the carbonate precipitation. From Figure 6, the pH of the precipitant tank in
+this study was maintained to be at least 10.33. Lastly, the possible exchange of acidic
+carbon dioxide gas in the precipitant solution with the surroundings was neglected since
+the rate of exchange is not enough to maintain gas/liquid equilibrium, producing negligible
+effect on the alkalinity when it enters or exits solution (Benjamin, 2015).
+
+HCO3 2 H*+HCO,~ Ka = aeerine = 107637 (40)
+
+ies
+HCO3” # Ht + C05?- Kg = Melleaa
+
+972033 (al)
+
+(CO3]7 = [CO3"] + [HCO] + [H2CO3]
+
+aa KaxKaz:
+
+= (co? }(1+41+*) (42)
+
+
+63
+
+eu
+
+Figure 6. Deprotonation and speciation of carbonic acid (H2CO3) into bicarbonate
+(HCO3") and carbonate (CO32-) ions at different solution pH.
+
+Given the presence of multiple soluble metal, hydroxides, and carbonates in the
+system, it is expected that multiple metal-hydr(oxides) and -carbonates simultaneously
+precipitate out and crystallize. Eventually, [Me]r reaches equilibrium with these
+hydr(oxides) and carbonates at different pH and with [COs]r at the background.
+
+Table 7 lists all possible hydro(oxide) and carbonate precipitation carried out in this
+experiment with their respective solubility Ksp; (Anotai et al., 2021; Furcas et al., 2022;
+Mahasti et al., 2022; Quiton et al., 2022). From these Kspi expressions, [Me]r can be
+expressed as function of the solubility constants and [COs]r, at varying pH. Setting [COs]
+
+to 9.45mM, which is the actual carbonate concentration in the precipitant tank, theoretical
+
+64
+
+solubility diagrams (log [Me]r vs pH) were plotted for the expected precipitates (Figure 7)
+
+to help evaluate and explain the results observed in this section.
+
+Table 7. Summary of metal hydr(oxide) and carbonate precipitation reaction and its
+respective metal solubility relationship with pH.
+
+Chemical an :
+formula ra solubility Reaction Reaction constant, Kspi
+(mineral name) 7 SOMBDINLY expression
+Cu(OH)2 Cu(OH)aig) = Cu?* + 20H~ Kesey, = (Cu?*][OH-}? = 10-3? (23)
+(Spertiniite) Cu)y = pao (35)
+CuCOa¢5) = Cu* + COZ Kspeus = (Cu?*][CO3-] = 10-7 (43)
+CuCO; — __KsPeur
+Culr = ceracoatcOslr a
+Cu;C03(OM)aqy = 2Cu®* + COR + 20H- Keres = (Eu PICOFTON-F = 10" (45)
+Cu2CO3(OH)2 k 2
+(Malachite = (__*Sfaus ___P 46
+Gfalachive) Culr (qaethtore) sa)
+‘Cus(COs)a(OH)ayy = 3Cu* + 2C0F- + 20H 47)
+Cus(COs)x(OH)2 k 2
+i = SPeus 48)
+(azurite) Culp = ox teas (48)
+Fe®* + 2H,0) * Fe(OH)2q)+2H* — Ksppeay, = os = 107227 (27)
+Fe(OH): ___ wp
+Fen = ns en
+FeCOx5) = Fe’* + CO}- Kereauns = Fe**N{COF"] = 107°" (49)
+FeCOs (siderite) KsPreana 50)
+FeCl) \r = seranacoqlCOale ee
++ = + = HHP _ 49-3:
+Fe(OH)s Fe + 3H20q) * FeOW)a)+3H* Keppra, = feeaey = 10° 33)
+A) wtp
+ferril trite) =
+(ferrihydrite) Fe(III) |p KP reams tFeun (39)
+; tae
+(hematite =
+(hematite) Fer = a5 ps eeatnn : (52)
+«-Fe0OH Fe + 2HOy =~ FROM +3H” — Keppaiing = Ea = 10H (53)
++
+(goethite) [Fe(II], = “4 (54)
+
+KsP reins Fe!)
+
+
+65
+
+2 3 4 s 6 7 8 9 oo 2 Bo
+rit
+
+Figure 7. Copper- and iron-hydr(oxides) and -carbonates theoretical solubility diagrams
+
+Going back to the results in Figure 4, the steady increase on both copper removal
+and crystallization ratio, as well as collection of bigger particles as per the product size
+distribution, that were observed from pHe 5.0 to 7.0 can be attributed to the decreasing
+solubility of both copper and iron ions and formation of their respective stable precipitates
+with increasing pH. As predicted in the solubility diagram from Figure 7, it is feasible that
+the major production of stable copper carbonate polymorphs such as malachite and azurite
+started at around pH = 6.5-7.0. (de Luna et al., 2020; Lertratwattana et al., 2019). This
+copper-carbonate polymorph production extends until pH 9, together with spertiniite,
+Cu(OH)>s, precipitation at pH range 6.5-12.0 (Cuppett et al., 2006). This is the reason why
+
+93% copper removal and 91% copper crystallization values remained constant within pHe
+
+66
+
+range 7.0-9.0. The preferential spertiniite formation at alkaline region also explains why
+smaller precipitates were obtained at pHe 8.0-9.0 (Devamani & Alagar, 2013).
+
+Multiple ferrous and ferric insoluble hydr(oxides) and carbonate have high
+tendency to be produced within pHe 5.0-9.0. Ferrihydrite, Fe(OH)3, together with stable
+alpha-ferric oxides, hematite (a-Fex0s) and goethite (a-FeOOH), have low solubility and
+precipitate out within the pH range of operation set in this study. While siderite, FeCOs,
+might occur at neutral to slightly basic solution, Fe(OH) only precipitates out at very basic
+solution (pH>10) which makes it less likely to form in this study (Furcas et al., 2022;
+Wieland et al., 2023). Similar study of Lertratwattana et al., where treatment of simulated
+pure copper-containing wastewater effluent using FBHC, reported a 98% copper
+crystallization at pHe 6.5-7.0 which is higher than the optimum crystallization ratio (91%)
+at the same effluent pH obtained in this study (Lertratwattana et al., 2019). The co-
+precipitation of copper and iron metals in this study possibly impeded the crystallization
+of copper due to competition with iron species for available hydroxide and carbonate ions
+for the expected precipitation and crystallization reactions (Pratiwi et al., 2021).
+
+The crystals obtained at effluent pH 5.0, 7.0, and 9.0 were subjected to X-ray
+diffraction (XRD) analysis in order to identify crystalline structure of recovered solids and
+verify the presence of the copper and iron-containing precipitates at this pHe. Raw XRD
+peaks were compared with the available data from literature and on the RRUFF Project
+website. Across the operating pH range, copper carbonate polymorphs, malachite and
+
+azurite, exhibited dominant peaks that are apparent in the XRD patterns obtained in this
+
+67
+
+study as shown in Figure 8 (left). Malachite’s, CuzCO3(OH)2, major peaks is at 26 = 14.9,
+17.8, 24.0, 30.0, 31.2, 32.0, 35.5, 42.2 (G. rong Wang et al., 2020) while azurite,
+Cus(COs)2(OH)s, exhibited peaks at 20 = 24.0, 31.2, 36.2, 38.8, 41.5, 57.8 (Hu et al., 2022).
+On the other hand, spertiniite’s, Cu(OH)z, major peaks at 20 = 38.8, 54.7, 56.4, 62.8 were
+only apparent at pHe 7.0 and 9.0 which also suggests its low solubility at neutral to basic
+region as predicted by its theoretical solubility diagram (Devamani & Alagar, 2013). For
+the iron-containing precipitates, XRD analyses show that the major diffraction peaks of all
+possible ferric hydr(oxides) listed in this study were identified in Figure 8 (right). Apparent
+ferrihydrite, Fe(OH)s, diffraction peaks which occurred in this study’s diffraction pattern
+were at 20 = 62.7 (H. Chen et al., 2021). For hematite a-FezOs (goethite) and (a-FeOOH),
+peaks occurred at 28 = 39.0, 41.2, 58.0 and at 26 = 42.3, 44.0, 51.0, 65.5, respectively
+(Gonzélez et al., 2000; Schimanke & Martin, 2000). Moreover, siderite’s, FeCOs, major
+peaks (20 = 38.5, 42.3. 46.0) were evident at pHe 7.0 and 9.0 only (Rakshit et al., 2008).
+These results were parallel with the theoretical solubility diagrams of copper- and iron-
+
+(hydr)oxides and -carbonates.
+
+68
+
+Intensity
+
+Figure 8, Copper (left) and iron (right) XRD analyses of recovered crystals at pHe 5.0,
+7.0, and 9.0.
+
+The same recovered crystals were also subjected to X-ray photoelectron
+spectroscopy (XPS) was employed to further analyze the surface properties of the
+precipitates analyses and to confirm the presence of the insoluble precipitates predicted by
+the theoretical solubility diagrams and identified from XRD analyses, as well as to estimate
+how much of this respective metal hydr(oxide) and carbonate constitute the crystals.
+Relevant peak binding energies of these precipitates were collated from the NIST X-ray
+Photoelectron Spectroscopy Database, Handbook of Monochromatic XPS Spectra
+(Volume 1 and 2) and other available literature (H. Chen et al., 2021; Hu et al., 2022;
+Naumkin et al., 2012; Vincent Crist, 1999, 2005; C. Zhang et al., 2015). As shown in Figure
+9(a, ¢, and e), copper carbonate polymorphs malachite and azurite were recovered at all
+pH. considered in the analyses, especially at pHe 7.0 where they constitute almost 2/3 of
+
+the total copper recovered. On the other hand, preferential precipitation of spertiniite at
+
+69
+
+basic conditions (pHe = 9.0) were also verified where it comprised around 65%. On the
+other hand, XPS analyses also supported the identification of iron-hydr(oxides) and -
+carbonate from the XRD. Ferrihydrite, hematite, and goethite’s respective binding energies
+were apparent at all pHe considered while siderite only occurred when effluent pH is at
+least 7.0. Their respective approximated composition with respect to the total iron
+
+recovered varied at different pHe as depicted in Figure 9(b, d, and f).
+
+Rawintensity
+
+Raw intensity
+
+Raw intensity
+
+70
+
+Row nensiy
+extgen
+mera copper “
+z
+a. Cast pt 50 H Feat plt,S0
+5
+957 oh os oh a Gi or oa ot ol or oe ts 167 TeV 7a 7 Fo 7s We 1 We 75 Toe
+BEI) BEI)
+Raw iensiy ‘
+—Backgrount pees
+Spertnite Soetie
+2 See
+.Cuat ptt, 70 : 4. Featptt,7.9
+3 .
+S37 Ge os ie Be Ga BH oho ks slo or ote ts Ne Te Ta Fa Ta a We Wer Wes
+BE) BEL)
+— Raw inensiy Row tens
+‘Background: Seckpeund’
+=== Femnysite
+- Spetinite Gouite
+Seere
+2
+H
+e.Cuat pil, 90 Hy £. Feat pil, 9.0
+716 715 ha 743 712TH THO 709 708707 706 705 704 709 702
+
+9387 0b6 Gas 054 959 652 951 950 929 O28 O27 O26 62s
+BE(eV)
+
+BE(eV)
+
+Figure 9. XPS analyses of recovered crystals with respect to copper (a, c, e) and iron (b,
+d, f) at pHe 5.0, 7.0, and 9.0.
+
+wal
+
+4.2 Effect of CO;* to Cu’ molar ratio on copper removal,
+crystallization, and salt recovery
+
+Insoluble precipitates are formed by introducing corresponding precipitant in the
+system. In this research, recovery of copper as copper carbonates was one of the objectives
+to enable resource recovery and circular economy. With this, the effects of varying
+carbonate (CO3*) to copper (Cu’*) molar ratios (MR) from 0.75 to 2.0 on copper removal,
+crystallization, and copper salt recovery were investigated. This parameter is essential in
+this study since it also drives the supersaturation state of the system which allows
+nucleation and granulation process to proceed. The simulated wastewater had initial
+concentrations of 6.30 mM copper and 0.72 mM iron and was introduced into the fluidized
+bed reactor at a rate of 15 mL min‘. The effluent pH (pHe) was maintained at 6.5 which
+was deemed optimum from the previous section. A part of the effluent was also recirculated
+back to the bottom of the reactor to control the level of supersaturation in the reaction
+region, promoting crystal growth. The continuous operation lasted for 505 hydraulic
+retention times (HRTs), with each HRT corresponding to 17.12 minutes. Figure 10 presents
+
+the trends corresponding to the effects on the reactor performance of different MR.
+
+100 =
+0
+bead 80
+i 70
+§
+2 50 4
+i 0 “oF
+. s
+? x0
+o 20
+0
+so °
+075 100 12s 150 200
+
+Molar Ratio (CO¥ Cu")
+
+PS L0Omm>O20.710mm SSHOT0mm>O20425 mm IO<0425 mm —-4CuRemoval “B24 Cu Crystallization
+
+Figure 10. Effects of CO32- to Cu2+ molar ratios on % copper removal and
+crystallization, and product size distribution of recovered crystals after continuous
+FBHC operation of 505 HRTs (IHRT = 17.12 min) with [Cu2+]O = 6.30 mM, [Fe2+]O
+= 0.72 mM, pHe = 6.5, and Qm = 15 mL min-I.
+
+Figure 10 demonstrates a continuous increase in the percentage of copper removal
+(from 86% to 97%) and copper crystallization (from 79% to 95%) as the CO3* to Cu* MR.
+was increased from 0.75 to 2.0. This trend is expected since as more carbonate ions were
+added in the system, this drove the equilibrium of equations (43) and (49) towards the
+formation of insoluble copper- and iron-carbonates. This is a clear demonstration of Le
+Chatelier’s principle which states that once additional stress is introduced on a system in
+equilibrium it will shift the equilibrium to counteract the disturbance (Kokes et al., 2014).
+
+Additionally, these results can also be attributed to the increase in supersaturation with
+
+B
+
+increasing concentration of precipitant in the system. The low % Cu removal and
+crystallization at MR = 0.75 is mainly due to the lack of excessive carbonate ions in the
+system necessary for the copper carbonate precipitation. Ideally, at MR = 1.0, complete
+reaction between copper and carbonate was expected since this satisfies the stochiometric
+requirement for the reaction in equation (43) to go to completion. However, due to
+incomplete mixing of the solutions inside the fluidized bed reactor, the system allowed
+some copper ions not to react with the available carbonate in the solution and just be carried
+away in the effluent (Udomkitthaweewat et al., 2019). Moreover, iron ions were also
+present in the system which could’ve inhibited copper carbonate precipitation since at these
+conditions in the reactor, iron could have scavenged for available carbonate for its own
+carbonate precipitation shown in equation (49. For these reasons, continuous increase in
+copper removal and crystallization ratio, and recovery of bigger granules were observed
+even the carbonate was fed in excess with respect to its stoichiometric amount. The bigger
+crystals obtained at higher MRs can be inferred that at these values, the available carbonate
+ions are just enough to maintain the supersaturation at a level where crystal growth was
+enhanced over homogeneous nucleation (Tai, 1999).
+
+In this section, the carbonate to copper molar ratio of 1.5 was deemed optimum
+even though MR = 2.0 gave the maximum removal and crystallization ratio. This choice
+could be attributed to the fact that higher precipitant to metal molar ratios reflects higher
+operating costs once this process is scaled up and applied to industry (Oncel et al., 2013).
+
+Additionally, the values obtained between these two MR’s are almost identical especially
+
+74
+
+the % copper removal. Furthermore, the optimum 96 % copper removal and 90 % copper
+crystallization at MR = 1.5 in this section was found out to be less than the optimum
+performance (99 % copper removal, 95 % copper crystallization) reported by a similar
+study where pure copper-containing wastewater was treated using FBHC (Lertratwattana
+et al., 2019). This could be due to the presence of iron ions in this study which are
+competing against the copper ions for available precipitant in the system.
+
+4.3 Effect of metal and precipitant flow rates on copper removal,
+crystallization, and salt recovery
+
+A typical fluidized bed homogeneous crystallization reactor allows occurrence of
+most of the reaction near the bottom where the feed was located. Since the feed streams
+with reactants were introduced on the two opposite sides of the reactor, better mixing was
+enabled by varying the upward velocity which is controlled by the inlet flow rates of the
+wastewater and recirculation streams (Su et al., 2014). Hydrodynamic conditions such as
+volumetric flow rate (Q) of streams fed into the FBHC reactor are important parameters
+needed to be assessed with respect to reactor’s performance since this affects several
+reaction kinetics and fluidization variables, as well as size and morphology of the crystals
+produced via granulation (Karpinski & Wey, 2002). Varying metal flow rates also
+translates to different hydraulic retention time (HRT), upflow velocity (U), and metal
+cross-section loading (L), as shown in equations (55), (56), and (57), respectively.
+According to these equations, the volumetric flow rate (Q) is directly proportional to U and
+
+L while it is inversely proportional to HRT. Moreover, in these equations presented, Vr
+
+75
+
+pertains to effective volume of the reactor; Atow is the internal cross-section area of the
+
+reaction region; [Cu]o denotes the ial concentration of copper in the wastewater tank;
+and Qin, Qpp, and Q, are the metal wastewater, precipitant, and recirculation flow rates,
+
+respectively.
+
+Vr
+
+HRT i ——-
+(min Ont Om (55)
+My _ Qm+ Qppe + Qr
+u (2) = se tere er 56
+Gh) iow ae
+kg) _ OmfCulo
+ae) ‘Atow on
+
+Modifying the flow rates of metal and precipitant solutions from 5 to 25 mL min
+' was set in this study to analyze its effects on copper removal, crystallization, and copper
+salt recovery. The simulated wastewater had initial concentrations of 6.30 mM copper and
+0.72 mM iron. A CO;* to Cu molar ratio of 1.5 and effluent pH (pHe) of 6.5 were
+maintained in this part of the study as they were deemed optimum from the previous
+sections. It is important to note that Qm is equal to Qppr in this study. A part of the effluent
+was also recirculated back at a rate of 20 to $0 mL min depending on the operation’s
+volumetric flow rate. The continuous operation lasted for 168 - 841 HRTs, dependent on
+the set Qn (IHRT = 17.12mins). From setting the influent and recirculating volumetric
+flow rate, their corresponding HRT, U, and L were calculated and summarized in Table 8.
+Take note that the upflow velocity has two values, one without recirculation flow and the
+
+other one with reflow, to consider the U during the initial days of operation where
+
+76
+
+preliminary stage of high supersaturation and production of small nuclei as the
+homogenous seed were employed in the reactor. During this stage, no reflow was
+introduced to allow these seeds to initially grow into size where they won’t be overflown
+out of the reactor. Additionally, Figure 11 presents the results regarding the effects on the
+reactor performance of different Qm.
+
+Table 8. Calculated hydraulic retention time, upflow velocity, and copper cross-section
+loading at different metal and recirculation volumetric flow rates.
+
+U(mh"
+Qn = Ore Qa HRT (min) ver
+(mL min") (mL min") wor Won (ke-Cum?h})
+(mh!) (cui)
+
+5.00 10.0 51.35 191 3.82 038
+10.0 20.0 25.68 3.82 764 0.76
+15.0 30.0 17.12 5.73 11.46 115
+20.0 40.0 12.84 7.64 15.28 1.53
+
+25.0 50.0 10.27 9.55 19.10 1.91
+
+
+71
+
+100 i
+%0
+s 80
+& 0
+ia i
+as
+&
+of
+i
+x0
+© 2»
+
+s 0 1s 2» 3
+Q. (en mit)
+
+S55 .00 mm > O 20.710 mm HH0.710 mm > O2 0425 mm SIO <0.425 men —A—ts Cu Removal ~H—%6 Cu Cryllization
+
+Figure 11. Effects of influent flow rates (Qm) on % copper removal and crystallization,
+and product size distribution of recovered crystals after continuous FBHC operation with
+[Cu2+]0 = 6.30 mM, [Fe2+]0 = 0.72 mM, pHe = 6.5, and CO32-/Cu2+ MR = 1.5.
+
+As shown in Figure 11, copper removal ratio was not generally affected by the
+increasing volumetric flow rates of the reactants and has an average value of 96%. In
+contrast, a steady decrease in percentage of copper crystallization (from 94% to 79%) was
+‘observed as Qm was increased from 5.0 to 25.0 mL min’. This trend can be mainly
+attributed to the decreasing hydraulic retention times once you increase the inlet flow rates
+of the reactants. HRT defines the time the reactants spend inside the reactor to mix and
+react (Grootscholten et al., 2013). With shorter HRTs, this would not allow the reactants
+
+to completely react with each other and would reduce the collisions of the small nuclei
+
+produced initially in the reaction which will not induce granulation. In return, theses nuclei
+
+78
+
+did not stay in their fluidized state in the reactor and were washed out as sludge in the
+effluent (C. S. Chen et al., 2015).
+
+A general trend with respect to the product size distribution at different Qn was also
+apparent in this section. Bigger crystals were obtained at higher flow rates. This trend can
+be attributed to the effects of different upflow velocities (U) and copper cross-section
+loadings (L), which are both directly proportional to flow rates. In this study, U varies at
+different operating days since the recirculation flow (Q,) was changing and is dependent
+on Qn as shown in Table 8, making the degree of supersaturation at the bottom region of
+the reactor a variable, too. The low U at lower Qm translates to lower mixing energy in the
+reactor making small bed expansion, resulting to smaller effective surface area available
+for granulation to process. In contrast, higher values of U induced larger bed expansion
+increasing the length of mass transport path making more available reactive areas for
+crystal growth (Priambodo et al., 2017). This mainly explains why smaller granules were
+collected at low upflow velocity and bigger crystals were recovered at higher U.
+
+The cross-section loading (L) is defined as the mass of copper that passes through
+a cross-sectional unit area per unit time, which is adjusted by varying influent flow rate of
+copper at its specific concentration. This is a critical factor ofa fluidized-bed system reactor
+in the laboratory that is going to be scaled up to a pilot. A low cross-section loading is
+tantamount to a low dilution factor at the bottom of the reactor and would not provide
+enough fluidization for mass transfer as well. This impedes the precipitation and growth of
+
+expected copper insoluble salts at this labile zone of the reactor. With this, increasing
+
+79
+
+copper cross-section loading at a specific copper concentration would increase the dilution
+in the reactor, lowering the supersaturation at a levels where crystal growth is favored
+against spontaneous and homogeneous nucleation which promotes formation of fines (C.
+S. Chen et al., 2015; Le et al., 2022). This also supports the results obtained in this study
+where bigger crystals recovery were possible at higher cross-section loading.
+
+In determining the optimum Qm in this section, it is important to consider all reactor
+performance indicators. A good copper removal and crystallization percentage of 95.6%
+and 90.0%, respectively, as well as decent product size distribution, were recorded at Qm
+= 15 mL min‘! and deemed optimum in this part of the study. Additionally, this influent
+metal flow rate was the first flow rate among the set Qm which surpassed the estimated
+minimum fluidization velocity (Umr= 5.44 m h’') in this study even though no recirculation
+was introduced. This choice balances the high % copper crystallization but poor recovery
+of bigger particles at low Qm and the low % copper crystallization but major recovery of
+large particles at high Qn. Comparing with the 95% copper crystallization obtained at a
+similar study of Lertratwattana et. al. where pure copper-containing wastewater was treated
+using FBHC, the optimum data recorded in the present study was slightly inferior,
+confirming the significant effects of the added iron ions in the metal wastewater tank.
+
+4.4 Effect of varying copper and iron concentration on copper removal
+and crystallization
+
+In an industrial set-up, the metal concentrations of raw wastewater to be treated
+
+varies depending on the manufacturing activities of each metal industry. It is also very
+
+80
+
+seldom to encounter wastewater containing only pure metals. With this, it is important to
+establish the capacity of the fluidized bed homogeneous crystallization process with respect
+to removal and recovery of heavy metals like copper from its wide range of concentration
+at different industrial wastewater with possible presence of other heavy metals like iron
+(Anotai et al., 2021; Boonrattanakij et al., 2023).
+
+Comparative experimental runs at different initial copper and iron concentrations
+which emulates a typical copper plating wastewater and incorporates the Fenton process
+ranging from 3.15 mM to 9.44 mM and 0.36 mM to 1.07, respectively were studied in this
+section. These set-ups were run under the optimized conditions obtained from the previous
+
+sections: pHe of 6.5, CO3* to Cu* MR of 1.5, and metal and precipitant volumetric flow
+
+rates of 15 mL min”. Figure 12 reveals how the presence of trace amounts of iron ions at
+defined copper concentration affected the latter’s removal and crystallization ratio after
+continuous treatment in an FBHC reactor for 505 hydraulic retention times, where one
+
+HRT is around 17.12 minutes.
+
+81
+
+o
+ws
+%6
+ss
+2
+0
+ox 036 ost on 09 Los
+(Fe}omMp
+RISmMICu —A-AT2MMCH E-6IOMMCU “STAT mM CH Be 9.44 mt Co
+100
+
+ons 036 oss on 09 tos
+(FJ
+
+BASmM Ca -S-472mM Co -630mMMCU TAT MM CU HOA WAL CH
+
+Figure 12. % Cu removal (top) and % Cu crystallization (bottom) at different copper and
+iron concentration after continuous FBHC operation of 505 HRTs (1 HRT = 17.12 min)
+with pHe = 6.5, CO32-/Cu2+ MR = 1.5, and Qm = 15 mL min-1.
+
+82
+
+It can be deduced from Figure 12 that addition of iron ions in this study didn’t
+greatly affect the percentage copper removal at all copper concentrations defined in each
+experimental run. % Cu removal reported in this section averaged at superior values
+ranging from 94% to 98%, These could be attributed to the small magnitude of the iron
+added in the wastewater wherein it could not significantly influence the removal capacity
+of the FBHC process. In contrary, a definite trend can be observed with respect to copper
+crystallization ratio at different amount of iron ions added in the simulated metal
+wastewater tank, For a defined copper concentration from 3.15 mM to 7.87 mM, acommon
+trend of decreasing % Cu crystallization was evident from 0 mM Fe* to 0.54 mM Fe”.
+Moreover, further increasing the iron concentration from 0.54 mM to 1.07 mM resulted to
+steady increase on copper crystallization.
+
+This general trend can be attributed to several factors including competition for
+active precipitation sites and precipitate composition. These affect the supersaturation state
+of the system which is driving the initial nucleation and precipitation to happen (Tiangco
+et al., 2019). As the iron concentration was initially increased, the competition between.
+copper and iron embryos for active surface available for precipitation might have increased,
+leading to a decrease in the copper crystallization ratio. However, at higher iron
+concentrations, the competition between copper and iron for precipitation sites may
+approach a certain “saturation” point, wherein larger and more stable crystals were
+produced, which could possibly improve the copper crystallization ratio (Javed & Asselin,
+
+2020). Additionally, composition of the precipitate formed during the crystallization
+
+83
+
+process can vary with the iron concentration. As the iron concentration was increased, iron
+might have precipitate out first as hydr(oxide) and carbonate followed by copper insoluble
+(Javed & Asselin, 2020). With this, the composition of the precipitate may shift towards
+iron-containing compounds which could deter the copper crystallization ratio as the
+presence of iron-containing compounds may interfere with the precipitation of copper.
+However, at higher iron concentrations, the composition of the precipitate may shift now
+towards more stable copper carbonates, which could improve the % copper crystallization
+as shown in this study. It was also observed that at higher copper concentrations (9.44 mM
+Cu), addition of iron ions set in this study was not enough to affect the high percentage of
+copper crystallization averaged at 98%. Lastly, it is imperative to mention that in all the
+considered copper and iron concentrations, copper was effectively removed from the
+simulated wastewater solution and partly recovered as copper-iron crystals which can be
+used in other applications (Pratiwi et al., 2021).
+4.5 Product analysis and characterization
+
+Under the several operating conditions, the recovered copper/iron-containing
+crystals were subjected to comprehensive characterization processes as shown in section
+4.1. To determine their crystalline composition, X-ray diffraction (XRD) analysis (Figure
+8) was conducted which allowed the identification of the primary copper constituent as
+copper carbonate polymorphs namely malachite and azurite. Due to addition of trace
+amounts of iron, hints of XRD peaks of expected iron insoluble including ferrihydrite,
+
+goethite, hematite, and siderite, were also visible in the XRD pattern of the recovered
+
+84
+
+granules. Furthermore, X-ray photoelectron spectroscopy analysis (Figure 9) showed that
+at neutral conditions (pHe 6.5-7.0), the system favors the production of copper carbonate
+minerals malachite and azurite which could be further processed to be used for other
+industrial applications.
+
+In addition to XRD and XPS analyses, the crystals recovered under optimum
+conditions by FBHC process in this study under were further characterized to analyze the
+morphology of the granules. The scanning electron micrograph of Figure 13b shows a
+smooth and highly spheroidal morphology of the particles recovered from the reactor. This
+is driven mainly by precipitation and crystallization under fluidization state inside the
+reactor during their crystal growth at low to moderate level of supersaturation. Further
+magnification of the surface of the crystals (Figure 13c and 13d) reveals composition of
+aggregated fibrillary crystals. This suggests crystal growth might have undergone a three
+stage mechanism consisting of (1) formation of nuclei, (2) aggregation of fine nuclei, and
+
+(3) crystal growth (Lertratwattana et al., 2019).
+
+Figure 13. Macroscopic image (a) of copper/iron containing granules recovered and
+scanning electron microscopy (SEM) images (b, c, d) of the free-surface of spheroidal
+granules obtained ar different magnifications.
+
+86
+
+5. Conclusion and Recommendations
+
+The fluidized bed homogeneous crystallization process was carried out in this
+research to determine the effects of trace amounts of iron ions found in copper-containing
+wastewater stream after a Fenton pretreatment which destroys highly soluble Cu-EDTA
+complexes in the immediate wastewater stream coming off a copper plating industry.
+Several FBHC operating parameters including effluent pH, carbonate to copper molar ratio,
+feed streams volumetric flow rates, and copper and iron initial concentrations were varied
+to investigate their corresponding effects on copper removal and crystallization ratio, as
+well as copper recovery as copper insoluble salts. In general, presence of iron ions deterred
+the reactor’s performance with respect to copper as compared to previous study where
+wastewater containing copper only was treated using FBHC.
+
+The supersaturation of a system is mainly driven by the reaction pH as dictated by
+speciation of copper and iron into their hydroxo complexes, as well as their hydr(oxide)
+and carbonate precipitation which all dependent on pH as shown in their respective
+equilibrium reactions. In this study, it was found out that great improvement on both copper
+removal and crystallization ratio, as well as collection of bigger particles as per the product
+size distribution, were observed by increasing the pHe 5.0 to 7.0 which can be attributed to
+the decreasing solubility of both copper and iron ions and formation of their respective
+stable precipitates with increasing pH as predicted in their theoretical solubility diagram.
+Further increase to pHe 9.0 didn’t affect greatly the 93% copper removal and 91% copper
+
+crystallization values. On the other hand, varying carbonate to copper molar ratio also
+
+87
+
+affect the reactor performance. Increasing MR resulted to increase on copper removal and
+crystallization as well as recovery of bigger particles. This trend is expected since as more
+carbonates were added in the system, this drives the equilibrium of precipitation reactions
+towards the formation of insoluble copper- and iron-carbonates. This is a clear
+demonstration of Le Chatelier’s principle which states that once additional stress is
+introduced on a system in equilibrium it will shift the equilibrium to counteract the
+disturbance.
+
+Hydrodynamic conditions affect expected particle size and morphology of crystals
+recovered after precipitation and crystallization reaction. One major parameter related to
+hydrodynamics is the influent volumetric flow rate which was varied in this study. In
+general, increasing the incoming volumetric flow rates of reactants decreases the amount
+of reaction time they spend inside the system. This is the main reason why percentage of
+copper crystallization diminished as the Qm was increased. On the other hand, bigger
+particles were recovered at higher Qm due to faster upflow velocity and copper cross-
+section loading which allowed the reactor to operate at a lower supersaturation which
+favored crystal growth over nucleation. Lastly, effects of different iron concentrations at a
+defined copper concentration were investigated as well. % Copper removal was not
+significantly affected while % copper crystallization exhibited general trend when
+increasing iron concentrations at all defined copper concentrations in this study. The
+
+decreasing then increasing trend on copper crystallization ratio as more iron were
+
+88
+
+introduced in the system can be due to several reasons including competition on available
+precipitation sites and precipitate compositions.
+
+The recovered granules were found to resemble the major XRD peaks of copper
+carbonate polymorphs (malachite and azurite). Weak peaks of iron hydr(oxide) minerals
+were also observed. Furthermore, XPS analyses confirm the presence of these copper and
+iron-containing compounds with majority of the copper recovery as copper carbonate
+minerals. SEM analysis also confirmed three stage mechanism of granulation: formation
+
+of nuclei, aggregation of fine nuclei, and crystal growth.
+
+In conclusion, the FBHC process treatment proved successful in removing and
+recovering copper, particularly in the presence of iron, from simulated wastewater. The
+experimental and characterization findings presented in this study would greatly contribute
+to the comprehensive understanding of the complex phenomenon of heavy metal co-
+precipitation as well providing valuable insights on towards crystal growth mechanism. It
+is recommended that the results of this laboratory-scale study to be validated serve as a
+foundation for the development of a novel approach based on FBHC for the treatment of
+wastewater containing copper and iron ions in industrial scale. Furthermore, extending the
+investigation to encompass higher iron concentrations would enable a broader
+
+understanding of its effects on both copper and iron removal and crystallization ratios.
+
+89
+
+References
+
+2016 Wastewater Guidelines The Zero Discharge of Hazardous Chemicals Programme.
+(2016). http://www.epa.sa.gov.au/xstd_files/Corporate/Public
+consultation/wastewater_lagoons.pdf
+
+Abdel-Aal, E. A., Rashad, M. M., & El-Shall, H. (2004). Crystallization of calcium
+sulfate dihydrate at different supersaturation ratios and different free sulfate
+concentrations. Crystal Research and Technology, 39(4), 313-321.
+https://doi.org/10.1002/crat.200310188
+
+Abdel Salam, O. E., Reiad, N. A., & ElShafei, M. M. (2011). A study of the removal
+characteristics of heavy metals from wastewater by low-cost adsorbents. Journal
+of Advanced Research, 2(4), 297-303. https://doi.org/10.1016/j.jare.201 1.01.008
+
+Abhinav K, V., Rao R, V. K., Karthik, P. S., & Singh, S. P. (2015). Copper conductive
+inks: Synthesis and utilization in flexible electronics. RSC Advances, 5(79),
+63985-64030. https://doi.org/10.1039/cSra08205f
+
+Ahmad, M., Zhang, B., Wang, J., Xu, J. Manzoor, K., Ahmad, S., & Ikram, S. (2019).
+New method for hydrogel synthesis from diphenylcarbazide chitosan for selective
+copper removal. International Journal of Biological Macromolecules, 136, 189~
+198. https://doi.org/10.1016/j.ijbiomac.2019.06.084
+
+Al-Saydeh, S. A., El-Naas, M. H., & Zaidi, S. J. (2017). Copper removal from industrial
+wastewater: A comprehensive review. Journal of Industrial and Engineering
+Chemistry, 56, 35-44. https://doi.org/10.1016/j jiec.2017.07.026
+
+American Public Health Association, American Water Works Association, & Water
+Environment Federation. (2023). Standard Methods for the Examination of Water
+and Wastewater (W. Lipps, E. Braun-Howland, & T. Baxter (Eds.); 24th ed.).
+APHA Press.
+
+Ameta, R., Chohadia, A. K., Jain, A., & Punjabi, P. B. (2018). Fenton and Photo-Fenton
+Processes. In Advanced Oxidation Processes for Wastewater Treatment:
+Emerging Green Chemical Technology. https://doi.org/10.1016/B978-0-12-
+810499-6.00003-6
+
+Andalib, M., Elbeshbishy, E., Mustafa, N., Hafez, H., Nakhla, G., & Zhu, J. (2014).
+Performance of an anaerobic fluidized bed bioreactor (AnFBR) for digestion of
+primary municipal wastewater treatment biosolids and bioethanol thin stillage.
+Renewable Energy, 71, 276-285. https://doi.org/10.1016/j.renene.2014.05.039
+
+Anotai, J., Udomphan, T., Choi, A. E. S., & Lu, M. C. (2021). Fluidized-bed
+homogeneous granulation process: Comparison of individual and mixed
+
+
+90
+
+precipitation of cobalt and copper. Journal of Environmental Chemical
+Engineering, 9(6), 106644. https://doi.org/10.1016/j,jece.2021.106644
+
+ASTM Sieve Chart and TYLER Equivalents (Issue ¢, p. 1000). (n.d.).
+https:/www.mitest.com/PDF/astm_chart_wstyler.pdf
+
+Azimi, A., Azari, A., Rezakazemi, M., & Ansarpour, M. (2017). Removal of Heavy
+Metals from Industrial Wastewaters: A Review. ChemBioEng Reviews, 4(1), 37—
+59. https://doi.org/10.1002/cben.201600010
+
+Baer, D., Artyushkova, K., Brundle, C., Castle, J., Engelhard, M., Gaskell, K., Grant, J.,
+Haasch, R., Linford, M., Powell, C., Shard, A., Sherwood, P., & Smentkowski, V.
+(2019). Practical guides for x-ray photoelectron spectroscopy. Journal of Vacuum
+Science & Technology A, 37(3), 031401.
+https://doi.org/10.1116/1.5065501.Practical
+
+Bai, D. K., Ying, Q. H., Wang, N., & Lin, J. H. (2016). Copper removal from
+electroplating wastewater by coprecipitation of copper-based supramolecular
+materials: Preparation and application study. Journal of Chemistry, 2016.
+https://doi.org/10.1155/2016/5281561
+
+Balladares, E., Jerez, O., Parada, F., Baltierra, L., Hernandez, C., Araneda, E., & Parra,
+V. (2018). Neutralization and co-precipitation of heavy metals by lime addition to
+effluent from acid plant in a copper smelter. Minerals Engineering, 122(October
+2017), 122-129. https://doi.org/10.1016/j.mineng,2018.03.028
+
+Baltpurvins, K. A., Burns, R. C., & Lawrance, G. A. (1996). Heavy metals in wastewater:
+Modelling the hydroxide precipitation of copper(II) from wastewater using lime
+as the precipitant. Waste Management, 16(8), 717—725.
+https://doi.org/10.1016/S0956-053X(97)00014-7
+
+Barakat, M. A. (2011). New trends in removing heavy metals from industrial wastewater.
+Arabian Journal of Chemistry, 4(4), 361-377.
+https://doi.org/10.1016farabjc.2010.07.019
+
+Bayon, L. L. E., Ballesteros, F. C., Garcia-Segura, S., & Lu, M. C. (2019). Water reuse
+nexus with resource recovery: On the fluidized-bed homogeneous crystallization
+of copper and phosphate from semiconductor wastewater. Journal of Cleaner
+Production, 236, 117705. https://doi.org/10.1016/j,jclepro.2019.117705
+
+Behra, R., & Krug, H. (2008). Nanoecotoxicology: Nanoparticles at large. Nature
+Nanotechnology, 3(5), 253-254. https://doi.org/10.1038/nnano.2008.113
+Ben-Ali, S., Jaouali, |., Souissi-Najar, S., & Ouedemi, A. (2017). Characterization and
+adsorption capacity of raw pomegranate peel biosorbent for copper removal.
+Journal of Cleaner Production, 142, 3809-3821.
+https://doi.org/10.1016/ jclepro.2016.10.081
+
+91
+
+Benjamin, M. (2015). Water Chemistry (Second). Waveland Press, Inc.
+
+Bilal, M., Shah, J. A., Ashfaq, T., Gardazi, S. M. H., Tahir, A. A., Pervez, A., Haroon,
+H., & Mahmood, Q. (2013). Waste biomass adsorbents for copper removal from
+industrial wastewater-A review. Journal of Hazardous Materials, 263, 322-333.
+https://doi.org/10.1016/}jhazmat.2013.07.071
+
+Boonrattanakij, N., Puangsuwan, S., Vilando, A. C., & Lu, M. C. (2023). Influence of
+coexisting EDTA, citrate, and chloride ions on the recovery of copper and cobalt
+from simulated wastewater using fluidized-bed homogeneous granulation process.
+Process Safety and Environmental Protection, 172(January), 83-96.
+https://doi.org/10.1016/).psep.2023.02.009
+
+Caddarao, P. S., Garcia-Segura, S., Ballesteros, F.C., Huang, Y. H., & Lu, M. C. (2018).
+Phosphorous recovery by means of fluidized bed homogeneous crystallization of
+calcium phosphate. Influence of operational variables and electrolytes on brushite
+homogeneous crystallization. Journal of the Taiwan Institute of Chemical
+Engineers, 83, 124-132. https://doi.org/10.1016/,jtice.2017.12.009
+
+Caprarescu, S., Purcar, V., & Vaireanu, D. I. (2012). Separation of Copper Ions from
+Synthetically Prepared Electroplating Wastewater at Different Operating
+Conditions using Electrodialysis. Separation Science and Technology
+(Philadelphia), 47(16), 2273-2280.
+https://doi.org/10.1080/01496395.2012.669444
+
+Carpanedo de Morais Nepel, T., Landers, R., Gurgel Adeodato Vieira, M., & Floréncio
+de Almeida Neto, A. (2020). Metallic copper removal optimization from real
+wastewater using pulsed electrodeposition. Journal of Hazardous Materials, 384.
+https://doi.org/10.1016/ jhazmat.2019.121416
+
+Chang, J. H., Ellis, A. V., Tung, C. H., & Huang, W. C. (2010). Copper cation transport
+and scaling of ionic exchange membranes using electrodialysis under
+electroconvection conditions. Journal of Membrane Science, 361(1-2), 56-62.
+https://doi.org/10.1016/j.memsci.2010.06.012
+
+Chen, C. S., Shih, Y. J., & Huang, Y. H. (2015). Remediation of lead (Pb(II)) wastewater
+through recovery of lead carbonate in a fluidized-bed homogeneous
+crystallization (FBHC) system. Chemical Engineering Journal, 279, 120-128.
+https://doi.org/10.101.6/j.cej.2015.05.013
+
+Chen, H., Fan, Y., Fan, Z., Xu, H., Cui, D., Xue, C., & Zhang, W. (2021). Noble-metal-
+free p-n heterojunction of iron(II) hydroxide and graphitic carbon nitride for
+hydrogen evolution reaction. Ceramics International, 47(24), 35057-35066.
+https://doi.org/10.1016/.ceramint.20211.09.047
+
+92
+
+Chung, J., Jeong, E., Choi, J. W., Yun, S. T., Maeng, S. K., & Hong, S. W. (2015).
+Factors affecting crystallization of copper sulfide in fed-batch fluidized bed
+reactor. Hydrometallurgy, 152, 107-112.
+https://doi.org/10.1016/j.hydromet.2014.12.014
+
+Cossu, R., Ehrig, H.-J., & Muntoni, A. (2018). Physical—Chemical Leachate Treatment.
+In Solid Waste Landfilling. Elsevier Inc. https://doi.org/10.1016/b978-0-12-
+407721-8.00028-0
+
+Cuppett, J. D., Duncan, S. E., & Dietrich, A. M. (2006). Evaluation of copper speciation
+and water quality factors that affect aqueous copper tasting response. Chemical
+Senses, 31(7), 689-697. https://doi.org/10.1093/chemse/bjl010
+
+Davarnejad, R., & Panahi, P. (2016). Cu (II) removal from aqueous wastewaters by
+adsorption on the modified Henna with Fe304 nanoparticles using response
+surface methodology. Separation and Purification Technology, 158, 286-292.
+https://doi.org/10.1016/.seppur.2015.12.018
+
+Dave, P. N., & Chopda, L. V. (2014). Application of iron oxide nanomaterials for the
+removal of heavy metals. Journal of Nanotechnology, 2014.
+https://doi.org/10.1155/2014/398569
+
+De Castro, M. L. F. A., Abad, M. L. B., Sumalinog, D. A. G., Abarea, R. R.M.,
+Paoprasert, P., & de Luna, M. D. G. (2018). Adsorption of Methylene Blue dye
+and Cu(II) ions on EDTA-modified bentonite: Isotherm, kinetic and
+thermodynamic studies. Sustainable Environment Research, 28(5), 197-205.
+https://doi.org/10.1016/j.serj.2018.04.001
+
+de Luna, M. D. G., Capito, J. A., Vilando, A. C., & Lu, M. C. (2020). Effect of EDTA
+and CH20 on copper recovery from simulated electroless copper plating spent
+rinse water by unseeded fluidized-bed granulation process. Separation and
+Purification Technology, 253(July), 117460.
+https://doi.org/10.1016/}.seppur.2020.117460
+
+Deckert, C. A. (1995). Electroless copper plating. A review: Part I. Plating and Surface
+Finishing, 82(3), 58-64.
+
+Devamani, R. H. P., & Alagar, M. (2013). Synthesis and characterisation of Copper II
+Hydroxide nano particles. Nano Biomedicine and Engineering, 5(3), 116-120.
+https://doi.org/10.5101/nbe.v5i3.p} 16-120
+
+Dib, A., & Makhloufi, L. (2004). Cementation treatment of copper in wastewater: Mass
+transfer in a fixed bed of iron spheres. Chemical Engineering and Processing:
+Process Intensification, 43(10), 1265-1273.
+https://doi.org/10.1016/j.cep.2003.12.006
+
+93
+
+Ding, C., Cheng, W., Wang, X., Wu, Z. Y., Sun, Y., Chen, C., Wang, X., & Yu, S. H.
+(2016). Competitive sorption of Pb(II), Cu(II) and Ni(II) on carbonaceous
+nanofibers: A spectroscopic and modeling approach. Journal of Hazardous
+Materials, 313(1i), 253-261. https://doi.org/10.1016/ jhazmat.2016.04.002
+
+Donohue, J., Fawell, J., Ohanian, E., Giddings, M., Toft, P., Magara, Y.., & Jackson, P.
+(2004). Copper in Drinking-water Background document for development of
+WHO Guidelines for Drinking-water Quality (Vol. 68, Issue 1).
+hutps://doi.org/10.1111/1467-8292.00035
+
+Dou, J., Huang, Q., Huang, H., Gan, D., Chen, J., Deng, F., Wen, Y., Zhu, X., Zhang, X.,
+& Wei, Y. (2019). Mussel-inspired preparation of layered double hydroxides
+
+based polymer composites for removal of copper ions. Journal of Colloid and
+Interface Science, 533, 416-427. https://doi.org/10.1016/j,jcis.2018.08.064
+
+Escobar, C., Soto-Salazar, C., & Inés Toral, M. (2006). Optimization of the
+electrocoagulation process for the removal of copper, lead and cadmium in natural
+waters and simulated wastewater. Journal of Environmental Management, 81(4),
+384-391. https://doi.org/10.1016/}jenvman.2005.11.012
+
+Fukuda, M., & Yusheng, L. (2020). The World Copper Factbook. International Copper
+Study Group, 63. http://www. icsg.org/
+
+Furcas, F. E., Lothenbach, B., Isgor, O. B., Mundra, S., Zhang, Z., & Angst, U. M.
+(2022). Solubility and speciation of iron in cementitious systems. Cement and
+Concrete Research, 15](October), 106620.
+https://doi.org/10.1016/.cemconres.2021.106620
+
+Gadd, G., & Griffiths, A. (1978). Microorganisms and Heavy Metal Toxicity. Microbial
+Ecology, 4(4), 303-317.
+
+Garcia-Diaz, 1., Lopez, F. A., & Alguacil, F. J. (2018). Carbon nanofibers: A new
+adsorbent for copper removal from wastewater. Metals, 8(11), 1-13.
+https://doi.org/10.3390/met8 110914
+
+Gavrilescu, M. (2004). Removal of heavy metals from the environment by biosorption.
+Engineering in Life Sciences, 4(3), 219-232.
+https://doi.org/10.1002/elsc.200420026
+
+Ghaedi, M., Shokrollahi, A., Ahmadi, F., Rajabi, H. R., & Soylak, M. (2008). Cloud
+point extraction for the determination of copper, nickel and cobalt ions in
+environmental samples by flame atomic absorption spectrometry. Journal of
+Hazardous Materials, 150(3), 533-540.
+https://doi.org/10.1016/j jhazmat.2007.05.029
+
+
+94
+
+Ghorpade, A., & Ahammed, M. M. (2018). Water treatment sludge for removal of heavy
+metals from electroplating wastewater. Environmental Engineering Research,
+23(1), 92-98. https://doi.org/10.449 I/eer.2017.065
+
+Giro, A. V., Caputo, G., & Ferro, M. C. (2017). Application of Scanning Electron
+Microscopy-Energy Dispersive X-Ray Spectroscopy (SEM-EDS).
+Comprehensive Analytical Chemistry, 75(November), 153-168.
+https://doi.org/10.101 6/bs.coac.2016.10.002
+
+Gonzalez, G., Sagarzazu, A., & Villalba, R. (2000). Study of the mechano-chemical
+transformation of goethite to hematite by TEM and XRD. Materials Research
+Bulletin, 35(14—15), 2295-2308. https://doi.org/10.1016/S0025-5408(00)00434-7
+
+Grace, J., Bi, X., & Ellis, N. (2020). Essentials of Fluidization Technology. Wiley-VCH.
+
+Grootscholten, T. I. M., Steinbusch, K. J. J., Hamelers, H. V.M., & Buisman, C. J. N.
+(2013). Improving medium chain fatty acid productivity using chain elongation
+by reducing the hydraulic retention time in an upflow anaerobic filter.
+Bioresource Technology, 136, 735-738.
+https://doi.org/10.1016/.biortech.2013.02.114
+
+Guan, W., Zhang, B., Tian, S., & Zhao, X. (2018). The synergism between electro-
+Fenton and electrocoagulation process to remove Cu-EDTA. Applied Catalysis B:
+Environmental, 227(December 2017), 252-257.
+https://doi.org/10.1016/ apcatb.2017.12.036
+
+Guevara, H. P. R., Ballesteros, F. C., Vilando, A. C., de Luna, M. D. G., & Lu, M.C.
+(2017). Recovery of oxalate from bauxite wastewater using fluidized-bed
+homogeneous granulation process. Journal of Cleaner Production, 154, 130-138.
+https://doi.org/10.1016/,jclepro.2017.03.172
+
+Gui, L., Yang, H., Huang, H., Hu, C., Feng, Y., & Wang, X. (2022). Liquid solid
+fluidized bed crystallization granulation technology: Development, applications,
+properties, and prospects. Journal of Water Process Engineering, 45(November
+2021), 102513. https://doi.org/10.1016/j.jwpe.2021.102513
+
+Gupta, V. K., & Ali, I. (2012). Environmental Water Advances in Treatment,
+Remediation and Recycling (1st ed.). Elsevier 2012.
+https://www sciencedirect.com/book/9780444593993/environmental-water
+
+Haldar, S. K. (2017). Introduction. In Platinum-Nickel-Chromium Deposits.
+https://doi.org/10.1016/0978-0-12-80204 1-8.00001-8
+
+Han, Q., Gao, Y., Su, T., Qin, J., Wang, C., Qu, Z., & Wang, X. (2023). Journal of
+Environmental Chemical Engineering Hydrometallurgy recovery of copper ,
+aluminum and silver from spent solar panels. Journal of Environmental Chemical
+Engineering, 11(1), 109236. https://doi.org/10.1016/j jece.2022.109236
+
+95
+
+Hidalgo vazquez, A.R.; Alfaro cuevas villanueva, R., Marquez Benavides, L., & Cortes
+Martines, R: (2011). Cadmium and Lead Removal From Aqueous Solutions
+Using Pine Sawdust As Biosorbent. Journal of Applied ..., 6(4), 447-462.
+http://search.ebscohost.com/login.aspx?direct=true&profile=ehost&scope=site&a
+uthtype=crawler&jrnl=01262807&AN=70125356&h=26y TPmgfONUx8qzxB W5
+AxflDc%2F7%2F7Xymo7zj6MOwRsSi 1 O00mTWBBuk fhCGESMGrqAFGQsA
+waUgaRD%2B6K4Tm%2BQ%3D%3D&crl=c
+
+Holt, P. K., Barton, G. W., & Mitchell, C. A. (2005). The future for electrocoagulation as
+a localised water treatment technology. Chemosphere, 59(3), 355-367.
+huips://doi.org/10.1016/j.chemosphere.2004.10.023
+
+Hu, B., Huang, L., Yang, B., Xie, X., Tong, X., Zhang, X., & Sun, X. (2022). Flotation
+Performance and Adsorption Mechanism of a Novel Chelating Collector for
+Azurite. Minerals, 12(4), 1-14. https://doi.org/10.3390/min12040441
+
+Jain, C. K., Malik, D. S., & Yadav, A. K. (2016). Applicability of plant based biosorbents
+in the removal of heavy metals: a review. Environmental Processes, 3(2), 495—
+523. https://doi.org/10.1007/s407 10-016-0143-5
+
+Javed, T., & Asselin, E. (2020). Fe(III) precipitation and copper loss from sulphate-
+chloride solutions at 150°C: A statistical approach. Metals, 10(5).
+https://doi.org/10.3390/met] 0050669
+
+Jeremias, J. S. D., Lin, J.-Y., Dalida, M. L. P., & Lu, M.-C. (2023). Abatement
+technologies for copper containing industrial wastewater effluents — A review.
+Journal of Environmental Chemical Engineering, 11(2), 109336.
+https://doi.org/10.1016/j jece.2023.109336
+
+Jin, W., & Hu, M. (2019). High-Performance Capacitive Deionization of Copper Ions at
+‘Nanoporous ZnS-Decorated Carbon Felt. Journal of The Electrochemical Society,
+166(2), E29-E34, https://doi.org/10.1 149/2.1061902jes
+
+Jin, W., Su, J., Zheng, S., & Lei, H. (2017). Controlled Electrodeposition of Uniform
+Copper Powder from Hydrochloric Acid Solutions. Journal of The
+Electrochemical Society, 164(12), D723-D728.
+https://doi.org/10.1149/2.1491712jes
+
+Jin, X., Xiang, Z., Liu, Q., Chen, Y., & Lu, F. (2017). Polyethyleneimine-bacterial
+cellulose bioadsorbent for effective removal of copper and lead ions from aqueous
+solution. Bioresource Technology, 244, 844-849.
+https://doi.org/10.1016/.biortech.2017.08.072
+
+Johnston, I. W., Narsilio, G. ., & Colls, S. (2011). Emerging geothermal energy
+technologies. KSCE Journal of Civil Engineering, 15, 643-653.
+https://doi.org/https://doi.org/10.1007/s12205-01 1-0005-7
+
+
+96
+
+Kanamarlapudi, S. L. R. K., Chintalpudi, V. K., & Muddada, S. (2018). Application of
+Biosorption for Removal of Heavy Metals from Wastewater. Biosorption.
+https://doi.org/10.5772/intechopen.77315
+
+Karim, N. (2018). Copper and Human Health- A Review. Journal of Bahria University
+Medical and Dental College, 8(2), 117-122.
+https://doi.org/https://doi.org/10.51985/JBUMDC2018046
+
+Karpinski, P. H.. & Wey, J. S. (2002). 6 - Precipitation processes. In A. S. Myerson (Ed.),
+Handbook of Industrial Crystallization (2nd ed., pp. 141-160). Butterworth-
+Heinemann. https://doi.org/https://doi.org/10.1016/B978-075067012-8/50008-2
+
+Kilany, A. Y., Nosier, S. A., Hussein, M., Abdel-Aziz, M. H., & Sedahmed, G. H.
+(2020). Combined oil demulsification and copper removal from copper plating
+plant effluents by electrocoagulation in a new cell design. Separation and
+Purification Technology, 248(April), 117056.
+https://doi.org/10.1016/j.seppur.2020.117056
+
+Kokes, H., Morcali, M. H., & Aca, E. (2014). Dissolution of copper and iron from
+malachite ore and precipitation of copper sulfate pentahydrate by chemical
+process. Engineering Science and Technology, an International Journal, 17(1),
+39-44. https://doi.org/10.1016/},jestch.2014.03.002
+
+Le, V.G., Luu, T. A., Bui, N. T., Mofijur, M., Van, H. T., Lin, C., Tran, H. T., Bahari,
+M.B., Vu, C. T., & Huang, Y. H. (2022). Fluidized-bed homogeneous
+granulation for potassium and phosphorus recovery: K-struvite release kinetics
+and economic analysis. Journal of the Taiwan Institute of Chemical Engineers,
+139(September), 104494, https://doi.org/10.1016/ jtice.2022.104494
+
+Lee, C. G., Lee, S., Park, J. A., Park, C., Lee, S. J., Kim, S. B., An, B., Yun, S. T., Lee, S.
+H., & Choi, J. W. (2017). Removal of copper, nickel and chromium mixtures
+from metal plating wastewater by adsorption with modified carbon foam.
+Chemosphere, 166, 203-211. https://doi.org/10.1016/j.chemosphere.2016.09.093
+
+Lertratwattana, K., Kemacheevakul, P., Garcia-Segura, S., & Lu, M. C. (2019). Recovery
+of copper salts by fluidized-bed homogeneous granulation process: Hit
+selectivity on malachite crystallization. Hydrometallurgy, 186(April), 66-72.
+https://doi.org/10.1016/j.hydromet.2019.03.015
+
+Li, M., Cheng, Q., Wittman, R. M., Peng, X., & Chan, C. K. (2014). Electrochemical and
+Photoelectrochemical Properties of the Copper Hydroxyphosphate Mineral
+Libethenite. ChemElectroChem, 1(3), 663-672.
+https://doi.org/10.1002/cele.201300046
+
+Lin, J. Y., Mahasti, N. N.N., & Huang, Y. H. (2021). Recent advances in adsorption and
+coagulation for boron removal from wastewater: A comprehensive review.
+
+
+97
+
+Journal of Hazardous Materials, 407(November 2020), 124401.
+https://doi.org/10.1016/j,jhazmat.2020.124401
+
+Lin, Y.M., & Yen, S. C. (2001). Effects of additives and chelating agents on electroless
+copper plating. Applied Surface Science, 178-4), 116-126.
+https://doi.org/10.1016/S0169-4332(01)00306-3
+
+Linder, M. C. (1991). Introduction and Overview of Copper as an Element. Biochemistry
+of Copper. https://doi.org/doi:10.1007/978-1-4757-9432-8_1
+
+Maarof, H. I., Daud, W. M. A. W., & Aroua, M. K. D. (2017). Recent trends in removal
+and recovery of heavy metals from wastewater by electrochemical technologies.
+Reviews in Chemical Engineering, 33(4), 359-386. https://doi.org/10.1515/revce-
+2016-0021
+
+Magno, C. D., & Guzman, R. R. S. (2021). The Extractive Industries and Society Energy
+and the viability of downstream integration : Cross-country evidence from the
+copper industry. The Extractive Industries and Society, 8(3), 100947.
+https://doi.org/10.1016/}.exis.2021.100947
+
+Mahasti, N.N. N., Lin, J.-Y. L., Shih, Y.-J. S., & Huang, Y.-H. (2022). Simultaneous
+recovery of Cu20 and FeOOH from wastewater contaminated with mixed metals
+using fluidized-bed crystallization. Journal of Environmental Chemical
+Engineering, 10(3). https://doi.org/nttps://doi.org/10.101 6 jece.2022.107357
+
+Mahasti, N.N.N., Shih, Y. J., & Huang, Y. H. (2019). Removal of iron as oxyhydroxide
+(FeOOH) from aqueous solution by fluidized-bed homogeneous crystallization.
+Journal of the Taiwan Institute of Chemical Engineers, 96, 496-502.
+https://doi.org/10.1016/jtice.2018,12.022
+
+Malamis, S., Katsou, E., & Haralambous, K. J. (2011). Study of Ni(II), Cu(II), Pb(II), and
+Zn(II) removal using sludge and minerals followed by MF/UF. Water, Air, and
+Soil Pollution, 218(1-4), 81-92. https://doi.org/10.1007/s11270-010-0625-4
+
+Mateen, Q. S., Khan, S. U., Islam, D. T., Khan, N. A., & Faroogi, I. H. (2020). Copper
+(II) removal in a column reactor using electrocoagulation: Parametric
+optimization by response surface methodology using central composite design.
+Water Environment Research, 92(9), 1350-1362.
+https://doi.org/10.1002/wer.1332
+
+Mehdipoor, M. A., & Moosavirad, S. M. (2020). Effect of Holed Ferrum electrodes
+(HFE) on the efficiency of the electrocoagulation process for copper recovery and
+optimization of parameters, using RSM. Hydrometallurgy, 194, 105313.
+https://doi.org/10.1016/j.hydromet.2020.105313
+
+Min, K. J., Kim, J. H., & Park, K. Y. (2021). Characteristics of heavy metal separation
+and determination of limiting current density in a pilot-scale electrodialysis
+
+
+98
+
+process for plating wastewater treatment. Science of the Total Environment, 757,
+143762. https://doi.org/10.1016/j.scitotenv.2020.143762
+
+Myerson, A. S., Erdemir, D., & Lee, A. (2019). Handbook of Industrial Crystallization
+(3rd ed.). Cambridge University Press. https://doi.org/10.1017/9781 139026949
+
+Nasef, M. M., & Giiven, O. (2012). Radiation-grafted copolymers for separation and
+purification purposes: Status, challenges and future directions. Progress in
+Polymer Science, 37(12), 1597~1656.
+https://doi.org/10.1016/.progpolymsci.2012.07.004
+
+Nasution, F. P. (2012). Fatigue analysis of copper conductor for o ff shore wind turbines
+by experimental and FE method. 24(January), 271-280.
+https://doi.org/10.1016/).egypro.2012.06.109
+
+Naumkin, A., Kraut-Vass, A., Gaarenstroom, S., & Powell, C. (2012). NIST X-ray
+Photoelectron Spectroscopy Database.
+https://doi.org/http://dx.doi.org/10.18434/T4T88K
+
+Nepel, T. C. de M., Costa, J.M., Gurgel Adeodato Vieira, M., & Almeida Neto, A. F. de.
+(2020). Copper removal kinetic from electroplating industry wastewater using
+pulsed electrodeposition technique. Environmental Technology (United
+Kingdom), 0(0), 1-22. https://doi.org/10.1080/09593330.2020.1793005
+
+Nikolié, I., Durovié, D., Tadié, M., Radmilovié, V. V., & Radmilovié, V. R. (2020).
+Adsorption kinetics, equilibrium, and thermodynamics of Cu2+ on pristine and
+alkali activated steel slag. Chemical Engineering Communications, 207(9), 1278—
+1297. https://doi.org/10.1080/00986445.2019.1685986
+
+Ning, D., Yang, C., & Wu, H. (2019). Ultrafast Cu2+ recovery from waste water by jet
+electrodeposition. Separation and Purification Technology, 220(February), 217—
+221. https://doi.org/10.101.6/j.seppur.2019.03.059
+
+Oliveira, J. A., Cunha, F. A., & Ruotolo, L. A. M. (2019). Synthesis of zeolite from
+sugarcane bagasse fly ash and its application as a low-cost adsorbent to remove
+heavy metals. Journal of Cleaner Production, 229, 956-963.
+https://doi.org/10.1016/j,jclepro.2019.05.069
+
+Oncel, M. S., Muhcu, A., Demirbas, E., & Kobya, M. (2013). A comparative study of
+chemical precipitation and electrocoagulation for treatment of coal acid drainage
+wastewater. Journal of Environmental Chemical Engineering, I(4), 989-995.
+https://doi.org/10.1016/j,jece.2013.08.008
+
+Patel, K. P., Tank, S. K., Patel, K. M., & Patel, P. (2013). Removal of Cadmium and Zinc
+Ions From Aqueous Solution By Using Two Type of Husks. APCBEE Procedia,
+5, 141-144, https://doi.org/10.1016/j.apcbee.2013.05.025
+
+99
+
+Peng, C., Chai, L. Y., Tang, C. J., Min, X. B., Ali, M., Song, Y. X., & Qi, W. M. (2017).
+Feasibility and enhancement of copper and ammonia removal fiom wastewater
+using struvite formation: a comparative research. Journal of Chemical Technology
+and Biotechnology, 92(2), 325-333. https://doi.org/10.1002/jetb.5009
+
+Pham, A.N., & Waite, T. D. (2008). Oxygenation of Fe(II) in natural waters revisited:
+Kinetic modeling approaches, rate constant estimation and the importance of
+various reaction pathways. Geochimica et Cosmochimica Acta, 72(15), 3616—
+3630. https://doi.org/10.1016/j.gca.2008.05.032
+
+Pietrzyk, S., & Tora, B. (2018). Trends in global copper mining — a review. JOP
+Conference Series: Materials Science and Engineering, 0-10.
+https://doi.org/10.1088/1757-899X/427/1/012002
+
+Pirkanniemi, K., Metsdrinne, S., & Sillanpaa, M. (2007). Degradation of EDTA and
+novel complexing agents in pulp and paper mill process and waste waters by
+Fenton’s reagent. Journal of Hazardous Materials, 147(1-2), 556-561.
+https://doi.org/10.1016/j,jhazmat.2007.01.050
+
+Plohl, O., Fin3gar, M., Gyergyek, S., Ajdnik, U., Ban, I., & Zemljié, L. F. (2019).
+Efficient copper removal from an aqueous anvironment using a novel and hybrid
+nanoadsorbent based on derived-polyethyleneimine linked to silica magnetic
+nanocomposites. Nanomaterials, 9(2). https://doi.org/10.3390/nano9020209
+
+Pratiwi, J., Lin, J. Y., Mahasti, N.N.N., Shih, Y. J., & Huang, Y. H. (2021). Fluidized-
+bed synthesis of iron-copper bimetallic catalyst (FellICul@SiO2) for
+mineralization of benzoic acid in blue light-assisted Fenton process. Journal of
+the Taiwan Institute of Chemical Engineers, 119, 60-69.
+https://doi.org/10.1016/.,tice.2021.02.007
+
+Priambodo, R., Shih, Y. J. & Huang, Y. H. (2017). Phosphorus recovery as ferrous
+phosphate (vivianite) from wastewater produced in manufacture of thin film
+transistor-liquid crystal displays (TFT-LCD) by a fluidized bed crystallizer
+(FBC). RSC Advances, 7(65), 40819-40828. https://doi.org/10.1039/c7ra06308c
+
+Qian, H.S., Yu, S.H., Luo, L. B., Gong, J. Y., Fei, L. F., & Liu, X. M. (2006). Synthesis
+of uniform Te@carbon-rich composite nanocables with photoluminescence
+properties and carbonaceous nanofibers by the hydrothermal carbonization of
+glucose. Chemistry of Materials, 18(8), 2102-2108.
+https://doi.org/10.1021/em052848y
+
+Qin, X. Y., Chai, M. R., Ju, D. Y., & Hamamoto, O. (2018). Investigation of plating
+wastewater treatment technology for chromium, nickel and copper. JOP
+Conference Series: Earth and Environmental Science, 191(1).
+https://doi.org/10.1088/1755-1315/191/1/012006
+
+
+100
+
+Quimada, N. E., De Luna, M.D. G., Vilando, A. C., & Lu, M. C. (2022). Competitive
+effect of copper and nickel recovery with carbonate in the fluidized-bed
+homogeneous granulation process. Environmental Science and Pollution
+Research, 29(9), 12414-12426. https://doi.org/10.1007/s1 1356-021-14733-5
+
+Quiton, K. G.N., Huang, Y. H., & Lu, M. C. (2022). Recovery of cobalt and copper from
+single- and co-contaminated simulated electroplating wastewater via carbonate
+and hydroxide precipitation. Sustainable Environment Research, 32(1).
+hetps://doi.org/10.1 186/s42834-022-00140-z
+
+Rajoria, S., Vashishtha, M., & Sangal, V. (2022). Treatment of electroplating industry
+wastewater: a review on the various techniques. Environ Sci Pollut Res Int,
+29(48), 72196~72246. https://doi.org/10.1007/s1 1356-022-18643-y
+
+Rakshit, S., Matocha, C. J., & Coyne, M. S. (2008). Nitrite Reduction by Siderite. Soil
+Science Society of America Journal, 72(4), 1070-1077.
+https://doi.org/10.2136/sssaj2007.0296
+
+Ribeiro, A. R., Nunes, O. C., Percira, M. F. R., & Silva, A. M. T. (2015). An overview on
+the advanced oxidation processes applied for the treatment of water pollutants
+defined in the recently launched Directive 2013/39/EU. Environment
+International, 75, 33-51. https://doi.org/10.1016/.envint.2014.10.027
+
+Sabela, M. I., Kunene, K., Kanchi, S., Xhakaza, N. M., Bathinapatla, A., Mdluli, P.,
+Sharma, D., & Bisetty, K. (2019). Removal of copper (1!) from wastewater using
+green vegetable waste derived activated carbon: An approach to equilibrium and
+kinetic study. Arabian Journal of Chemistry, 12(8), 4331-4339.
+https://doi.org/10.1016j.arabjc.2016.06.001
+
+Salcedo, A. F. M., Ballesteros, F. C., Vilando, A. C., & Lu, M. C. (2016). Nickel
+recovery from synthetic Watts bath electroplating wastewater by homogeneous
+fluidized bed granulation process. Separation and Purification Technology, 169,
+128-136. https://doi.org/10.1016/.seppur.2016.06.010
+
+Saralli, M., & Yusheng, L. (2022). THE WORLD COPPER FACTBOOK 2022.
+INTERNATIONAL COPPER STUDY GROUP.
+
+Sawyer, C.N., McCarty, P. L., & Parkin, G. . (2003). Chemistry for Environmental
+Engineering and Science (Fifth). McGraw Hill.
+
+Sayato, Y. (1989). WHO Guidelines for Drinking-Water Quality. In Eisei kagaku (Vol.
+35, Issue 5). https://doi.org/10.1248/jhs1956.35.307
+
+Scarazzato, T., Panossian, Z., Ten6rio, J. A. S., Pérez-Herranz, V., & Espinosa, D.C. R.
+(2017). A review of cleaner production in electroplating industries using
+electrodialysis. Journal of Cleaner Production, 168, 1590-1602.
+https://doi.org/10.1016/jclepro.2017.03.152
+
+
+101
+
+Scarazzato, Tatiana, Buzzi, D. C., Bernardes, A. M., & Romano Espinosa, D. C. (2015).
+Treatment of wastewaters from cyanide-free plating process by electrodialysis.
+Journal of Cleaner Production, 91, 241-250.
+https://doi.org/10.1016/,jclepro.2014.12.046
+
+Schimanke, G., & Martin, M. (2000). In situ XRD study of the phase transition of
+nanocrystalline maghemite (y-Fe203) to hematite (a-Fe203). Solid State Ionics,
+136(137), 1235-1240. https://doi.org/10.1016/S0167-2738(00)00593-2
+
+Selby, D., Kelley, K. D., Hitzman, M. W., & Zieg, J. (2009). Scientific communications:
+Re-Os sulfide (borite, chalcopyrite, and pyrite) systematics of the carbonate-
+hosted copper deposits at ruby creek, southern brooks range, Alaska. Economic
+Geology, 104(3), 437-444. https://doi.org/10.21 13/gsecongeo. 104.3.437
+
+Selvin, P., Watanabe, S., & Ayala-Arenas, J. S. (2001). Thermoluminescence and
+electron paramagnetic resonance (EPR) studies of mineral chrysocolla (dioptase)..
+Radiation Physics and Chemistry, 61(3~6), 531-533.
+https://doi.org/10.1016/S0969-806X(01)00323-1
+
+Singh, R., Gautam, N., Mishra, A., & Gupta, R. (2011), Heavy metals and living systems:
+An overview. Indian Journal of Pharmacology, 43(3), 246-253.
+https://doi.org/10.4103/0253-7613.81505
+
+Sinyakova, E. F., & Kosyakov, V. 1. (2009). Experimental modeling of zonality of
+copper-rich sulfide ores in copper-nickel deposits. Doklady Earth Sciences,
+427(1), 787-792. https://doi.org/10.1134/S1028334X09050183
+
+Skoog, D. A., West, D. M., Holler, F. J., & Crouch, S. . (2014). Fundamentals of
+Analytical Chemistry (Ninth). Mary Finch.
+
+Song, P., Yang, Z., Zeng, G., Yang, X., Xu, H., Wang, L., Xu, R., Xiong, W., & Ahmad,
+K. (2017). Electrocoagulation treatment of arsenic in wastewaters: A
+comprehensive review. In Chemical Engineering Journal (Vol. 317).
+https://doi.org/10.1016/j.cej.2017.02.086
+
+Reano, R. L., Dalida, M. L. P., & Lu, M. C. (2014). Barium recovery by
+
+crystallization in a fluidized-bed reactor: Effects of pH, Ba/P molar ratio and seed.
+
+Chemosphere, 105, 100-105. https://doi.org/10.1016/j.chemosphere.2014.01.005
+
+Sugimoto, T., Chen, S., & Muramatsu, A. (1998). Synthesis of uniform particles of CdS,
+ZnS, Pbs and CuS from concentrated solutions of the metal chelates. Colloids and
+Surfaces A: Physicochemical and Engineering Aspects, 135(1-3), 207-226.
+https://doi.org/10.1016/S0927-7757(97)00245-8
+
+Sustainable Development Goal 6: Ensure access to water and sanitation for all. (n.4.)..
+
+United Nations Sustainable Development.
+https:/Awww-un.org/sustainabledevelopment/water-and-sanitation/#:~:
+
+Su, C.
+
+ext=Goal
+
+
+102
+
+6%3A Ensure access to water and sanitation for all&text=Access to safe
+water%2C sanitation,in 2030 unless progress quadruples.
+
+Sylva, R. N. (1976). The environmental chemistry of copper (II) in aquatic systems.
+Water Research, 10(9), 789~792. https://doi.org/10.1016/0043-1354(76)90097-X
+
+Taamneh, Y., & Sharadqah, S. (2017). The removal of heavy metals from aqueous
+solution using natural Jordanian zeolite. Applied Water Science, 7(4), 2021-2028.
+https://doi.org/10.1007/s13201-016-0382-7
+
+Tai, C. Y. (1999). Crystal growth kinetics of two-step growth process in liquid fluidized-
+bed crystallizers. Journal of Crystal Growth, 206(1-2), 109-118.
+https://doi.org/10.1016/S0022-0248(99)00300-0
+
+Teow, Y.H., Kam, L. M., & Mohammad, A. W. (2018). Synthesis of cellulose hydrogel
+for copper (Il) ions adsorption. Journal of Environmental Chemical Engineering,
+6(4), 4588-4597. https://doi.org/10.1016/j,jece.2018.07.010
+
+The RUFF Project Team. (2023). RRUFF Project. RUFF: The Rock-Forming
+Mineralogy Database. https://rruff.info/
+
+Tiangco, K. A. A., de Luna, M. D. G., Vilando, A. C., & Lu, M. C. (2019), Removal and
+recovery of calcium from aqueous solutions by fluidized-bed homogeneous
+crystallization. Process Safety and Environmental Protection, 128, 307-315.
+https://doi.org/10.1016/.psep.2019.06.007
+
+Udomkitthaweewat, N., Anotai, J., Choi, A. E. S., & Lu, M. C. (2019). Removal of zine
+based on a screw manufacturing plant wastewater by fluidized-bed homogeneous
+granulation process. Journal of Cleaner Production, 230, 1276-1286.
+https://doi.org/10.1016/,jclepro.2019.05.192
+
+Vidu, R., Matei, E., Predescu, A. M., & Alhalaili, B. (2020). Removal of Heavy Metals
+from Wastewaters : 1-37.
+
+Vilando, A. C., Caparanga, A. R., Huang, Y. H., & Lu, M. C. (2017). Tohdite recovery
+from water by fluidized-bed homogeneous granulation process. Desalination and
+Water Treatment, 96(September), 224-230.
+https://doi.org/10.5004/dwt.2017.21540
+
+Vincent Crist, B. (1999). Handbooks of Monochromatic XPS Spectra Volume I - The
+Elements and Native Oxides (Vol. 1). XPS Intemational, Inc. www.xpsdata.com
+
+Vincent Crist, B. (2005). Handbooks of Monochromatic XPS Spectra Volume 2 -
+Commercially Pure Binary Oxides and a few Common Carbonates and
+Hydroxides (Vol. 2). XPS International, LLC. www.xpsdata.com
+
+103
+
+Vincent, M., Duval, R. E., Hartemann, P., & Engels-Deutsch, M. (2018). Contact killing
+and antimicrobial properties of copper. Journal of Applied Microbiology, 124(5),
+1032-1046. https://doi.org/10.111 I/jam.13681
+
+Wan, S., Qiu, L., Li, Y., Sun, J., Gao, B., He, F., & Wan, W. (2020). Accelerated
+antimony and copper removal by manganese oxide embedded in biochar with
+enlarged pore structure. Chemical Engineering Journal, 402.
+https://doi.org/10.1016/.ce}.2020.126021
+
+Wang, G. rong, Yang, H. ying, Liu, Y. yuan, Tong, L. lin, & Auwalu, A. (2020). Study
+on the mechanical activation of malachite and the leaching of complex copper ore
+in the Luanshya mining area, Zambia. International Journal of Minerals,
+Metallurgy and Materials, 27(3), 292-300. https://doi.org/10.1007/s12613-019-
+1856-z
+
+Wang, J., & Chen, C. (2009). Biosorbents for heavy metals removal and their future.
+Biotechnology Advances, 27(2), 195-226.
+https://doi.org/10.1016/j.biotechadv.2008.1 1.002
+
+Wang, L., Fu, P., Ma, Y., Zhang, X., Zhang, Y., & Yang, X. (2022). Steel slag as a cost-
+effective adsorbent for synergic removal of collectors, Cu(II) and Pb(II) ions from
+flotation wastewaters. Minerals Engineering, 183.
+https://doi.org/https://doi.org/10.1016/j.mineng.2022.107593
+
+Wang, L. K., Hung, Y.-T., & Shammas, N. K. (2005). Physicochemical Treatment
+Processes. Amsterdam University Press.
+https://citations.springernature.com/book?doi=10.1385/159259820x
+
+Wang, Q., Li, Y., Liu, Y., Ren, J., Zhang, Y., Qu, G., & Wang, T. (2021). Effective
+removal of the heavy metal-organic complex Cu-EDTA from water by catalytic
+persulfate oxidation: Performance and mechanisms. Journal of Cleaner
+Production, 314(June), 128119. https://doi.org/10.1016/.jclepro.2021.128119
+
+Wang, S., Xiao, K., Mo, Y., Yang, B., Vincent, T., Faur, C., & Guibal, E. (2020).
+Selenium(VI) and copper(II) adsorption using polyethyleneimine-based resins:
+Effect of glutaraldehyde crosslinking and storage condition. Journal of Hazardous
+Materials, 386(Vi), 121637. https://doi.org/10.1016/j,jhazmat.2019.121637
+
+Wen, C. Y., & Yu, Y. H. (1966). A generalized method for predicting the minimum
+fluidization velocity. AIChE J, 12, 610-612.
+
+Wen, T., Zhao, Y., Zhang, T., Xiong, B., Hu, H., Zhang, Q., & Song, S. (2019). Effect of
+anions species on copper removal from wastewater by using mechanically
+activated calcium carbonate. Chemosphere, 230, 127-135.
+https://doi.org/10.1016/j.chemosphere.2019.04.213
+
+
+104
+
+Wieland, E., Miron, G. D., Ma, B., Geng, G., & Lothenbach, B, (2023). Speciation of
+iron(II/III) at the iron-cement interface: a review. Materials and
+Structures/Materiaux et Constructions, 56(2). https://doi.org/10.1617/s11527-
+023-02115-x
+
+Williams, O., Clark, I., Gomes, R. L., Perehinec, T., Hobman, J. L., Stekel, D. J., Hyde,
+R., Dodds, C., & Lester, E. (2019). Removal of copper from cattle footbath
+wastewater with layered double hydroxide adsorbents as a route to antimicrobial
+resistance mitigation on dairy farms. Science of the Total Environment, 655,
+1139-1149. https://doi.org/10.1016/j.scitotenv.2018.11.330
+
+Wu, S., Yan, P., Yang, W., Zhou, J., Wang, H., Che, L., & Zhu, P, (2021). ZnC12 enabled
+synthesis of activated carbons from ion-exchange resin for efficient removal of
+Cu2+ ions from water via capacitive deionization. Chemosphere, 264, 128557.
+https://doi.org/10.1016/j.chemosphere.2020.128557
+
+Yang, Facui, Sun, S., Chen, X., Chang, Y., Zha, F., & Lei, Z. (2016). Mg-Al layered
+double hydroxides modified clay adsorbents for efficient removal of Pb2+, Cu2+
+and Ni2+ from water. Applied Clay Science, 123, 134-140.
+https://doi.org/10.1016/.clay.2016.01.026
+
+Yang, Fan, Zhang, S., Li, H., Li, S., Cheng, K., Li, J. S., & Tsang, D. C. W. (2018). Corn
+straw-derived biochar impregnated with A-FeOOH nanorods for highly effective
+copper removal. Chemical Engineering Journal, 348, 191-201.
+https://doi.org/10.1016/.cej.2018.04.161
+
+Yang, S., Ren, X., Zhao, G., Shi, W., Montavon, G., Grambow, B., & Wang, X. (2015).
+Competitive sorption and selective sequence of Cu(II) and Ni(II) on
+montmorillonite: Batch, modeling, EPR and XAS studies. Geochimica et
+Cosmochimica Acta, 166, 129-145. https://doi.org/10.1016/}.gca.2015.06.020
+
+Yoder, C. H., Bushong, E., Liu, X., Weidner, V., McWilliams, P., Martin, K., Lorgunpai,
+J., Haller, J., & Schaeffer, R. W. (2010). The synthesis and solubility of the
+copper hydroxyl nitrates: gerhardtite, rouaite and likasite. Mineralogical
+Magazine, 74(3), 433-440. https://doi.org/10.1180/minmag.2010.074.3.433
+
+Zamboulis, D., Pataroudi, S. I., Zouboulis, A. I., & Matis, K. A. (2004). The application
+of sorptive flotation for the removal of metal ions. Desalination, 162(1—3), 159—
+168. https://doi.org/10.1016/S0011-9164(04)00039-6
+
+Zhang, C., Liu, W., Chen, D., Huang, J., Yu, X., Huang, X., & Fang, Y. (2015). One Step
+Hydrothermal Synthesis of FeCO3 Cubes for High Performance Lithium-ion
+Battery Anodes. Electrochimica Acta, 182, 559-564.
+https://doi.org/10.1016/j.electacta.2015.09.137
+
+105
+
+Zhang, Xingfei, Tian, J., Hu, Y., Han, H., Luo, X., Sun, W., Yue, T., Wang, L., Cao, X.,
+& Zhou, H. (2020). Selective sulfide precipitation of copper ions from arsenic
+wastewater using monoclinic pyrrhotite. Science of the Total Environment,
+705(xxxx), 135816. https://doi.org/10.1016/j.scitotenv.2019.135816
+
+Zhang, Xudong, Yang, F., Ma, J., & Liang, P. (2020). Effective removal and selective
+capture of copper from salty solution in flow electrode capacitive deionization.
+Environmental Science: Water Research and Technology, 6(2), 341-350.
+https:/doi.org/10.1039/c9ew00467j
+
+Zhao, C., Zhang, L., Ge, R., Zhang, A., Zhang, C., & Chen, X. (2019). Treatment of low-
+level Cu(II) wastewater and regeneration through a novel capacitive deionization-
+electrodeionization (CDI-EDI) technology. Chemosphere, 217, 163-772.
+https://doi.org/10.1016/.chemosphere.2018.11.071
+
+Zhou, Y., Liu, X., Xiang, Y., Wang, P., Zhang, J., Zhang, F., Wei, J., Luo, L., Lei, M., &
+Tang, L. (2017). Modification of biochar derived from sawdust and its application
+in removal of tetracycline and copper from aqueous solution: Adsorption
+mechanism and modelling. Bioresource Technology, 245, 266-273.
+https://doi.org/10.1016/.biortech.2017.08.178
+
+Zidan, T. A., Abdelhamid, A. E., & Zaki, E. G. (2020). N-Aminorhodanine modified
+chitosan hydrogel for antibacterial and copper ions removal from aqueous
+solutions. International Journal of Biological Macromolecules, 158, 32-42.
+https://doi.org/10.1016/;.ijbiomac.2020.04.180
+

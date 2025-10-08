@@ -1,0 +1,1612 @@
+ACTIVE TRANSFER OF NXTHINKING KNOWLEDGE TO HIGH SCHOOL RESEARCH PRACTICE VIA HYBRID WORKSHOP
+
+JENSHIAM E. BALGUA
+
+University of the Philippines Diliman
+
+Master of Technology Management Program
+
+January, 2023
+
+Abstract
+
+On 21-22 October 2022, the PSHS-CVC (academe), Shell (industry), and
+the LGU Cauayan City (government) collaborated on a Triple-Helix project
+to conduct a NXplorers hybrid workshop for the City’s research students
+and teachers. The NXplorers program trains highschoolers into becoming
+positive change actors for issues in food, water, and energy sustainability. The 106 teachers and students from 18 senior high schools in Cauayan City
+completed six one-hour workshops and then pitched their ideas forward
+using video presentations. Collectively, their NXtools outputs were rated
+satisfactory on the criteria of content quality, technical fidelity, and idea
+continuity in a double-blind evaluation by experts in NXthinking. This meant
+that the participants were able to practice what they learned from the
+training. The participants acknowledged the benefits of the program on their
+problem statement definition, solutions ideation, social impact study, and
+knowledge transfer approaches to research. The participants considered how the method used — hybrid workshop — may
+be improved to bridge the polarizing challenges of the high cost of large in-
+person workshops and the low knowledge retention in full virtual training. In
+a focus group discussion, the participants validated the results of post-event
+surveys that hybrid workshops are a viable training method in situations
+where people involved cannot easily congregate in one place due to
+distance or health safety concerns, and yet participants need tactile and
+real-time experience in using the actual tools for skills enhancement. To get the full picture, they stacked up seven team-based training formats
+versus quality indicators such as scalability, learning, and retention; and the
+aggravating factors of complexity, vulnerability, and cost. They decided that
+small-group coaching is the best method for and hybrid workshops can only
+measure up when the technical challenges inherent to online training are
+minimized and audience interactivity is improved. Finally, the results were submitted to the knowledge management office of
+NXplorers Global for the improvement of the program. In the end, a positive
+step towards wider adoption of systems thinking was implemented and
+evaluated to equip high school students with timely and practical research
+skills and contribute to increasing the number of early-trained social action
+leaders and solution engineers in the country.
+
+Keywords: NXthinking, knowledge transfer, hybrid workshop, Triple Helix
+
+1. Introduction
+
+NXplorers is an educational program that trains high school students with
+the complex skills needed to solve problems involving food, water, and
+energy sustainability (Shell Global Solutions, 2021). It is one of the
+environmental, social, and governance actions of the Shell multinational oil
+and energy company. It was advanced worldwide by the London-based
+Shell Global Solutions International with the help of nonprofits and learning
+institutions from participating countries.
+
+In this paper, Shell collectively refers to the whole Shell business interests,
+Shell Global Solutions International B. V., and non-profits involved in the
+NXplorers program. Locally, the Pilipinas Shell Foundation, Inc. supervises
+NXplorers' efforts in the Philippines.
+
+The program implements NXthinking — a paradigm and practice built upon
+systems thinking, scenario planning, and the theory of change (Shell Global
+Solutions, 2019). Students are trained using NXtools, a set of graphic
+organizers for analyzing societal problems and their feasible and scalable
+solutions (Shell Global Solutions, 2020).
+
+High school students were trained in the method through in-person
+workshops. As an alternative, Shell used a webinar format in countries
+affected by the lockdowns due to the COVID-19 pandemic. In the
+Philippines, PSF! conducted workshops in the years 2018, 2020, and 2022.
+An innovation contest, called The Bright Ideas Challenge, follows each
+workshop season for students to showcase their achievements (Shell
+Philippines, November 2021).
+
+The NXplorers website lists the schools that benefited from the workshops
+from Australia, Brazil, Brunei, China, Egypt, Hong Kong, India, Indonesia,
+Kazakhstan, Malaysia, Netherlands, Oman, the Philippines, Qatar, Russia,
+Singapore, Trinidad & Tobago, UAE, and Vietnam. Every two years,
+NXplorers Global recognizes the best projects, teams, and facilitators from
+these participating countries (Shell Global Solutions, December 2020).
+
+Student teams from the Philippine Science High School - Cagayan Valley
+Campus (PSHS-CVC) have been recognized as exemplary by NXplorers
+Global in 2020 and 2021, resulting from their winnings in the national
+NXplorers TBIC. As of September 2022, these students are coached, jointly
+and severally, by sixteen NXplorers-trained teachers.
+
+2. The Problem
+
+As of September 2022, 27 Philippine schools are registered NXplorers
+Schools, most of which offer the K-12 senior high school program. This is
+about 0.25% of the 10,795 public and private high schools in the country
+(Department of Education, May 2018). In contrast, developed countries
+have significantly higher diffusion ratios. In Singapore, 56 out of 128
+secondary schools participated in the program, or 43.75% (Hirschmann,
+November 2021). In Qatar, it is 55.88% or 19 of their 34 secondary schools
+(Web Solutions LLC, 2022). Based on this data, it can be argued that the
+adoption of the NXthinking theory and practice is relatively slower in the
+Philippines.
+
+The PSFI prefer to conduct the workshops in-person and per host school.
+However, memoranda issued by the education overseer on class disruption
+(Department of Education, March 2005) and regulation of co- and extra-
+curricular activities of students (Department of Education, October 2020)
+are roadblocks to wider implementation. This research proposed that
+adoption may be faster if (1) it is coordinated first with the Committee on
+Education of target local government units, who may mediate the project to
+the schools division head after endorsement by the regional office, (2) with
+research teachers and students as the target audience, and (3) empower
+local teachers trained in the method to serve as workshop facilitators.
+
+This project implemented a NXplorer workshop based on these arguments.
+In the technology management practice, this follows a Triple Helix approach
+where success is dependent on the synergy between the academe,
+government, and industry participants (Pique, Berbegal-Mirabent, &
+Etzkowitz, December 2018). To leverage this collaboration model, the
+PSHS-CVC, as a trainer pool, sought permission from the DepEd Region II
+Office and then tapped the City of Cauayan to finance the project and assist
+in onboarding the participant schools, while PSFI coordinated with the Shell
+Global Solutions on the use of copyrighted NXplorers training materials (see
+Annex J for the signed communiques).
+
+The Philippine NXplorers Lead Facilitator was assured that the NXplorers
+method will be transferred effectively to the students considering that it will
+be delivered by teacher-facilitators and not by Shell in-house trainers (Dy,
+September 2022). An agreement was reached on September 16, 2022 (1)
+to use published NXplorers materials, (2) to evaluate the outputs of
+participants, and (3) to evaluate the conduct of the workshop itself. PSHS-
+CVC, as the training host, was also allowed to design a workshop format
+that is acceptable for the target participants and compliant with existing
+regulatory requirements on education, accounting, and COVID-19 safety.
+
+10
+
+2.1 Statement of the Problem
+
+This project facilitated a NXplorers Hybrid Workshop, with Cauayan City,
+Isabela senior high school research teachers and students as participants.
+It sought to answer the question: “Will a hybrid workshop format cascade
+the NXthinking paradigm to participants as well as other training formats ?”
+
+2.2 Specific Research Objectives
+
+1. Describe training coverage based on the number of schools
+represented in the workshop versus the number of public and private
+senior high schools in Cauayan City, Isabela (Philippines).
+
+2. Compare the hybrid workshop with other training formats based on
+the participant responses in a focus group discussion, with a focus
+on the application of learning and improvement of the training format.
+
+3. Determine the quality of the practice of NXthinking by the workshop
+participants based on the evaluation of their outputs by NXplorers
+experts.
+
+23 Significance of the Study
+
+Participants became more aware of their role as positive change actors
+toward achieving the United Nations’ Sustainable Development Goals,
+particularly along the nexus of food, energy, and water sustainability.
+Indirectly, the workshop contributed to increasing the ranks of early-trained
+researchers and innovators in the Philippines.
+
+For participating schools, a pool of students was trained for innovation
+competitions and got them to propose quality capstone projects that
+effectively address the pain points of relevant stakeholders.
+
+For the PSHS-CVC, their teachers and students gained more experience in
+facilitating innovation workshops with the end goal of designing the School's
+training program for innovation.
+
+For the City of Cauayan, this activity served as an accomplishment towards
+the promotion of the local government as the Smarter City in the North.
+
+For the Pilipinas Shell Foundation, the adoption of NXthinking was further
+advanced to the Philippine senior high schools. The results of the
+evaluations served as a knowledge management feedback loop to
+recommend improvements for the next season of NXplorers workshops.
+
+11
+
+3. Review of Related Literature
+
+The cascading and subsequent application of new knowledge can be
+morphologically different across factors such as context, quality of the
+source, participant engagement, and method of instruction. Subsequent
+topics in this section discussed these factors in order. First, literature
+contemporary with the COVID-19 pandemic was cross-referenced to
+surface issues about the continuing need to boost the number of
+researchers and innovators with a socio-entrepreneurial mindset. Second,
+a"systems thinking" paradigm by the Shell NXplorers Global was presented
+as a platform to train highschoolers. Finally, methods to cascade said
+knowledge was discussed with an exploration of their pros and cons for
+promoting engagement and retention.
+
+3.1 State of Talent in the Philippine Tech Landscape
+
+In a benchmark survey, founders and funders expressed their constructive
+recommendations on how to bridge the gap between the quality of
+education and skills of the contemporary Filipino workforce versus the
+specific needs of the nascent Philippine startup ecosystem (Gobi Partners
+and Core Capital, November 2022). Experts agree that we should place a
+premium now on workforce readiness and quality because resilience and
+adaptability are already proven Filipino traits. However, they say that it will
+require a quad-helix collaboration to equip the current workforce and new
+graduates with the skills they need to contribute towards economic growth
+(RiConfigure, May 2021).
+
+This is neither new nor specific to developing countries like the Philippines.
+Several works of literature from academics, regulators, and government
+statisticians point out the correlation between the number of researchers
+per capita and economic growth. Israel and Singapore, two of the top-most
+innovative countries, both have the highest ratio not only in talent per capita
+but also in the number of unicorns per capita, patents per capita, and R&D
+fund ratio to country annual budget (Gobi Partners and Core Capital,
+November 2022). Other factors catapult the economies of nations; however,
+this research focused on the need for quality and patriotic talent.
+
+According to The Future of Jobs 2020 report, critical thinking, creativity, and
+complex problem-solving remain the top skills that future employers need
+(World Economic Forum, October 2020). With the skill sets listed in the
+teport geared towards digitalization and social action, the digital-native
+Generation Z is naturally primed to take on the challenge. Regardless, the
+needs of data-driven businesses require continuous upskilling and reskilling
+of current human capital for them to adapt to market opportunities.
+
+12
+
+To teach 21st-century skills at college might be too late for new talents to
+survive in these uncertain times. The Dream a Dream Trust posits that the
+young must proactively acquire life skills and future-proof competencies to
+adapt to the complex world (Talreja, July 2019). Thus, this paper argues
+that future researchers and innovators must be trained as early as possible
+by the academe and industry immersion partners.
+
+In the first of three papers for a global study in 24 countries on the Future
+of Education, Google highlighted three post-pandemic trends driven in part
+by dire global issues and the accelerated rate of technological innovation
+(Google EDU, December 2022). These trends mean developing new
+paradigms and skill sets to become effective problem-solvers, and evolving
+learning to be more outcomes-based and socially positive, to best train
+future technopreneurs and leaders.
+
+3.2.1 The rising demand for global problem-solvers
+
+The academia will be at the forefront of helping future generations
+embrace global mindsets and skill sets, beginning with guiding them
+to ideate for civic and environmental issues affecting their
+communities (HundrED, April 2022). From these learning
+experiences, students can scale up towards making their ideas a
+reality through investigatory projects, innovation contests, and social
+advocacies (LoopMe Philippines, December 2019).
+
+Creative thinkers as they are, the young need teacher guidance and
+the right tools to properly frame their focus, consistently grit towards
+completion, and reduce the effect of bandwagon or biases. It was
+observed that when students see that their actions make a
+difference, they gain a sense of agency and responsibility.
+
+3.2.2 Change in the skill sets required for work
+
+As technology advances, education focuses on equipping students
+with the high-demand skills they will need to thrive in a new world of
+work. The O*Net Resource Center categorized the skills needed
+based on the cross-sectional factors of worker profile, specific
+occupation, cross-discipline, and industry (O*Net, June 2022). From
+these lists, the WEF highlighted what mindsets and skills the young
+have to acquire, or at least be exposed to, to be more competitive in
+the fast-changing world they are living in (World Economic Forum,
+October 2020).
+
+13
+
+3.2.2 Shift to a lifelong learning mindset
+
+As lifespans increase and societal change accelerates, the idea of
+lifelong learning is gaining traction, with more tools available for
+upskilling and advancement. More student-centered schools design
+their curricula based on six Deep Learning dimensions: character,
+citizenship, collaboration, communication, creativity, and critical
+thinking (Quinn, McEachen, Fullan, Gardner, & Drummy, 2020).
+
+The six global competencies in Deep Learning are a synthesis of the
+most-relevant 21st-century skills — fewer and more measurable than
+other literature proposes. Adherence and continual improvement
+along these six dimensions drive innovative practices among lifelong
+learners. Proponents of 6C designed several tools for planning,
+adoption, implementation, and evaluation of the paradigm.
+Ultimately, any individual or group may represent their 6C
+compliance through a radar chart (Barcelona Field Studies Centre,
+September 2022).
+
+Figure 3.1
+Sample Deep Learning Assessment Chart
+
+Character
+
+\
+
+Qitizenship
+
+Critical Thinking
+
+Creativity, Coflaboration
+
+\ Y
+
+Communication
+
+14
+
+3.2 NXthinking and the Shell NXplorers Program
+
+NXplorers as a program. NXthinking as a paradigm. and NXtools as
+work templates are the intellectual property of Shell Global Solutions.
+cha for fair use. all materials borrowed from NXplorers.com
+redited. Access to privileged information is only given
+gistered NXplorers. PSHS-CVC was recognized as a NXPlorers
+| in May 2019. Compliance duly verified, NXplorers Philippines
+wed the publication of this paper to the public domain (Annex L)
+
+The NXplorers community at the Philippine Science High School - Cagayan
+Valley Campus facilitated a NXplorers Workshop for this research. As a
+recognized NXplorers School, trained teachers and scholars have access
+to training materials saved in the knowledge base pages of the NXplorers
+website. With this authority, the School is allowed to design, initiate, and
+facilitate workshops promoting the program as long as the local NXplorers
+partner was duly informed. The Pilipinas Shell Foundation, Inc. was the
+local partner that represented the industry in this collaboration.
+
+As described earlier, NXplorers is an ESG program of Shell that equips high
+school students with a subset of the complex skills they need to solve
+problems involving food, water, and energy sustainability. At present, it is
+used as an alternative learning activity for students from 20 countries
+including Filipino high school learners (NXplorers.com, June 2022).
+
+To confirm the practice of the learned theory and skills, Shell hosts a yearly
+competition — the NXplorers The Bright Ideas Challenge. This competition
+accepts proposals for change from NXplorers teams of the trained schools.
+The top ten or 15 entries usually present their work in an in-person science
+fair and defend their solution to a panel of experts. During the pandemic,
+Shell hosted TBIC through video-conferencing and live-streaming.
+
+NXplorers is one of the ideal education platforms to train high schoolers on
+systems thinking and 21st-century skills because of their expert-validated
+end-to-end content and graphical ideation tools (NXplorers.com, July 2022).
+
+3.2.1 The NXthinking Paradigm
+
+As stated in their whitepaper, NXthinking offers a way to explore real-
+world problems and generate potential solutions. It encourages
+young people to be analytical and creative, to dig beneath the
+surface, to appreciate the complex and interrelated possible and
+preferred futures, and to think about what could be done differently
+to bring about positive change (Shell Global Solutions, 2019).
+
+15
+
+NXthinking takes many of its ideas from the disciplines of systems
+thinking, scenario planning, and theory of change. Integrating these
+approaches creates a new way of looking at global complexities, and
+shows young people how to approach the complex challenges the
+world faces, now and in the future.
+
+Specifically, the paradigm argues that:
+
+1. Thinking about THE BIG PICTURE helps practitioners to see
+beyond the pieces and appreciate the multiple connections and
+relationships in a system.
+
+2. Thinking about CONNECTIONS helps make complex problems
+and situations easier to understand.
+
+3. Thinking about the PERSPECTIVES of stakeholders helps
+practitioners understand systems and their effect on the world.
+
+4. Thinking about the FUTURE helps practitioners see how they can
+act to create change in any situation.
+
+5. Thinking about CHANGE considers the enablers and how they
+can overcome the barriers and inspire others with their ideas.
+
+3.2.2 Graphical NXTools
+
+NXplorers equip high schoolers with the tools to reimagine the world.
+It is a facilitated program, run in accredited learning centers, where
+staff and students learn about and engage in real-world issues
+(NXplorers.com, August 2022).
+
+There are three stages to the NXplorer program - Explore, Create
+and Change — with tools and resources for each. At present, their
+library has the following NXtools available : (1) Perspectives Circle,
+(2) Confidence Triangle, (3) Causal Loops, (4) Connections Circle,
+(5) Change-Over-Time Graph, (6) Scenario Planning Quadrant, (7)
+SCAMPER Tool, (8) Feasibility Funnel, (9) If-Then Chain, (10)
+Persuasion Pyramid, (11) Ripple Effect, and (12) Compass Tool.
+
+To quickly progress through the program with sufficient practice,
+NXplorers workshops often take a focused progression through the
+stages of the program using a priority set of NXtools listed next page.
+
+16
+
+. Explore — Perspectives Circle
+Learners collate the sentiment of various stakeholders on a
+specific sustainability issue, framed as a "How-Can-We" prompt.
+Data-gathering in this exploration stage includes interviews,
+FGDs, surveys, and a review of news and literature.
+
+. Explore — Connections Circle
+Upon group review, several factors emerge from the stakeholder
+perspectives and are then laid out along the perimeter of a circle.
+Causal relationships between the factors were determined and
+then defined whether that relationship is reinforcing or balancing.
+The teams decide on two leverage points that affect most of the
+other factors, preferably in a positive manner.
+
+. Explore — Scenario Planning Quadrant
+The teams laid out the two leverage points from their connections
+circle in a Cartesian quadrant with each factor on either axis. With
+one axis direction the extreme opposite of its other end, the two
+factors create 4 scenarios that the participants may consider.
+They describe each of the scenarios and finally decide on which
+one is the most ideal future.
+
+. Create — Feasibility Funnel
+
+Individually and independently, team members generate ideas on
+how to achieve the ideal future scenario. They may ideate
+inventions, innovations, training programs, advocacies or
+campaigns, process improvements, web or mobile apps, and
+other creative outputs with the end goal of generating as many
+candidate solutions as possible. Aided by this practical tool, they
+brainstorm whether each idea can pass through the criteria filters
+such as capability, support, cost, scalability, social impact, etc.
+where the team themselves choose the order of the filters.
+
+. Create — Ripple Effect Tool
+
+If a solution made it through the spout of the Feasibility Funnel, it
+must be investigated further. With water ripples in a pool as an
+analogy, teams consider that with every action is a reaction, and
+that effect can be intended or unintended. A solution can only be
+accepted if the intended positive results far outweigh the
+multifaceted costs of unintended consequences. Else, they will
+be creating more problems rather than solutions.
+
+17
+
+F. Change — Persuasion Pyramid
+The teams train themselves in presenting their bright idea. The
+structure of the persuasion pyramid enables them to create an
+elevator pitch that communicates their solution effectively and
+expediently regardless of the audience.
+
+3.3 Training Format vis-a-vis Participant Engagement
+
+Learnt skills and tools used by the students to adapt to remote learning are
+here to stay. Having experienced the benefits of distance learning allowed
+them to reconsider approaches to team learning. However, academic
+discussions validated by human gestures are a social factor that should be
+revived and encouraged with the return to face-to-face instruction.
+
+While the world is cautious about opening completely post-pandemic,
+training providers prefer online training rather than in-person workshops.
+Companies, such as Butter.us, built their business model on this opportunity
+by integrating workshop tools into their video-conferencing software
+(Teresa, November 2020). This capstone project proposed an alternative
+method that uses the best of both formats to address the social gap.
+
+3.2.2 Learning and Working with a Team
+
+Considering the nature of the problems the world faces today,
+successful solutions are often inter-disciplinary and collaborative.
+Gone are the days where a single individual can ideate, design, and
+implement a panacea for a social ill, or engineer the most effective
+and cheapest solution to a technology challenge (Banks, Scheyvens,
+& Leonard, November 2020).
+
+Renaissance thinkers and tinkerers had apprentices, Edison had a
+workshop, AT&T had Bell Labs, and Alphabet designs software
+solutions at their Googleplex. It can be argued that these setups are
+run like companies but it is evident that employees are organized into
+teams that look into specific projects (Gertner, 2013).
+
+The same can be said about student projects, where teachers
+sometimes purposely and equitably group students based on
+parameters that promote group dynamics and encourage inclusivity
+and agency, with the end goal of task expediency and output quality
+(Forsyth, 2019).
+
+18
+
+3.2.2 Categories of Team-based Training
+
+Arranged based on the estimated number of participants in a single
+physical or virtual venue (Gore, January 2022), training may be:
+
+A. Full Virtual Training
+
+This format accommodates the most audience at once.
+Mainstream video conferencing tools can host hundreds of video
+participants and even be live-streamed on video-sharing sites.
+This method has become the norm during the pandemic. Some
+video-conferencing services revised their business model to
+include breakout rooms, opt-in scheduling, SocMed interactivity,
+and integration of collaboration tools (Teresa, November 2020).
+However, this method can be adversely affected by technical
+difficulties, weak connectivity, or unscheduled power cuts.
+
+B. Large Group In-person
+Mistakenly interchanged by many with the concept of "training",
+participants benefit from plenary sessions and seminars, attend
+parallel workshops, and consult with fireside mentors. However,
+this method can be a logistical nightmare with all the venue
+preparation, issuance of travel documents, and coordinating for
+the accommodation of the participants and facilitators.
+
+C. Hybrid Workshop
+It is a compromise that takes the best features of both virtual and
+in-person large group training to host situations where training in
+a single location is too costly, logistically challenging, or a health
+tisk. This requires, however, that training materials must be sent
+to the participants first before the online training schedule. This
+method was used in the Belt and Road Teenager Maker Camp
+2022 where organizers send robot kits to the participating teams
+while training is delivered through a secure website on-demand.
+
+D. Focus Group Discussion
+This format allows the participants to directly contribute to the
+pool of knowledge by either asking questions, pitching their ideas,
+or voting on certain concerns to be resolved immediately. The
+process will require a moderator and a secretary. Learning is
+bilateral because while the FGD participants are expected to give
+verbal answers to FGD questions, the moderator may summarize
+responses and discuss their implications. The feedback loop in
+this method has a fast turnaround time and the opinions of all
+participants are valued. This method is best for brainstorming but
+
+19
+
+may be challenging if the purpose is a top-down cascade of
+knowledge, where the knowledge is not anymore open to
+interpretation.
+
+E. Small Group Coaching
+
+This method is designed to mentor a team of students with the
+end goal of finding a consensus at the end or coaching them to
+complete a task they have started. This method is arguably the
+most effective for small functional teams of two to six members.
+As this method is designed for a very small group, a high ratio of
+knowledge diffusion cannot be achieved unless this method is a
+subset of a larger gathering and more trainers are available.
+
+F. Courseware
+Teams or individuals may learn through a self-paced or cohort-
+based online or paper-based courseware. Many open online
+courses offer training for free but masterclasses are offered at
+cost to augment the text or to provide guided mentorship.
+
+G. Self-study
+In this method, the teams or learners are free to gather the
+information they need from various sources, either through online
+or in-person means. Because the content is not curated, there is
+a possibility for misinterpretation.
+
+In-person training is presumably the best, especially if the training is
+immersive, experiential, outcomes-based, and mentors are within
+arm’s reach. However, hosting a single-venue training becomes
+proportionally complex with the number of participants, especially if
+they are from different places. Transport, permits, and outsourced
+accommodation are often aggravating logistical factors.
+
+On the other end of the spectrum, online webinars tend to be a one-
+sided transfer of knowledge, with low indicators of whether the
+participants apply, or even recall, what was taught. It is cheaper to
+host than large in-person training but the impact is less relatively.
+
+Looking at these categories, there are formats in-between these
+extremes, and one of them is a hybrid workshop. This study aimed
+to prove or disprove the suggestion that a hybrid workshop is a win-
+win method to deliver training where:
+
+1. single-venue training is logistically not feasible, costly, or a risk;
+2. participants must access local materials and respondents; and
+3. speakers are from various places or prefer remote training.
+
+20
+
+4. Conceptual Frameworks
+The conceptual framework of the study is presented in the following IPO
+Diagram, based on the Lean Six Sigma practices (Sankar, July 2011).
+
+Figure 4.1
+Input-Process-Output Diagram of the Study
+
+p PROCESS eee
+
+(Hybrid) NXplorers Training Evaluation of
+Workshop Design for Students Workshop and Outputs
+Trained ; Researchues| ' $$$ ..-----) ¥ a 7
+Teachers as ! Teachers as t Feedback Loop i
+Facilitators | 1 Chaperons 1 for Improvement «
+A ; z ee ed
+1 ' 1 '
+ooneeee ee ee eee eee eee)
+
+The hybrid workshop itself served as the data-gathering venue and used a
+Triple-Helix scheme (Chatzinikolaou & Viados, May 2019), as shown:
+
+Figure 4.2
+Triple-Helix Collaboration Diagram
+[ACADEME] e Funding
+e Stakeholder Mediation
+Phlippine e Material Distribution
+Science H/S -_+ TE
+CVC / \
+—— NXplorers [GOVERNMENT] | \
+Planning & Legwork | Hybrid ner |
+e On-boarding Schools Workshop F i}
+e Workshop Facilitation for Cauayan eoreuGy
+e Documentation City SHS : . ,
+Pest
+
+[INDUSTRY]
+
+Training Materials
+
+Pilipinas Shell Training of Trainors
+Foundation xpert Evaluation
+
+I _/ | ¢ Promotion
+
+|
+
+21
+
+4.1 Definition of Terms
+
+Coverage — an objective in this research defined as the ratio between
+the number of schools participating versus the actual number of
+senior high schools in the target geographical region.
+
+NXperts — refers to NXplorers alumni with prior involvement in
+training others or have had successes in innovation contests using
+the NXtools and not organizers of the hybrid workshop itself.
+
+Senior high schools — Philippine high schools, either public or private,
+that offer grades 11 and 12 and are compliant with the K-12
+education system.
+
+Quad-helix — a collaboration between the academe, the government,
+the private sector, and the community of volunteers.
+
+Triple-helix — a collaboration between universities, the government,
+and the industry.
+
+4.2 Limitations of the Study
+
+This study evaluated the implementation of a hybrid workshop by comparing
+that to the earlier experience of the participants with the other formats of
+team-based learning. It is possible that the participants might not have tried
+out the other formats prior and thus might misinform their decision. To
+balance out this phenomenon, it was aimed to onboard as many participants
+from as many schools as possible within the geographical bounds of the
+City of Cauayan, Isabela (Philippines).
+
+The evaluation of the workshop came from the responses of the participants
+to quantitative surveys and their qualitative feedback in the post-event focus
+group discussion. The quality of learning was through quantitative
+evaluation of the participant outputs by NXplorers experts. However, only
+descriptive statistics were used as there are no population data to compare
+the means of the sample with.
+
+Furthermore, the results only reflect the sentiment of the 106 students and
+teachers that participated in the workshop, the nine FGD active participants,
+and the opinions of the nine experts that evaluated their outputs.
+
+Finally, the study covers the knowledge transfer of NXthinking and no other
+
+method of systems thinking. Thus, the results cannot generalize the transfer
+of knowledge of similar paradigms even if using the same training method.
+
+22
+
+5. Methodology
+
+The study is an action research for the benefit of the NXplorers community
+and is evaluated by the participants and experts using quantitative and
+qualitative means and the results interpreted using descriptive statistics.
+
+First, a Triple-Helix collaboration between the PSHS-CVC, PSFI, and LGU
+Cauayan City was signed to conduct a NXplorers workshop for the senior
+high schools in the City. Next, training materials and financial support were
+distributed to the schools followed by an online orientation and dry-run of
+the event with the teacher-chaperons of the 18 participant schools.
+
+On 21-22 October 2022, the workshop was conducted using a hybrid
+format. That is, the training was delivered online semi-interactively by
+PSHS-CVC teachers via Zoom® in 30-minute lectures followed by 30-
+minute workshops. The participants follow through the instructions video-
+streamed from a single computer only while working together inside their
+tespective schools. This way, the participants were encouraged to use
+printed worksheets they received earlier and not to rely on digital tools.
+
+In each remote venue, the participants ideated solutions for food, water, and
+energy sustainability issues affecting the City of Cauayan, with the guidance
+of their teacher-chaperon. These three nexus issues cover most of the 17
+Sustainable Development Goals of the United Nations. In each workshop,
+they were taught how to use the NXtools to frame a "How-Can-We" problem
+statement, identify factors and leverage points, contrast scenarios, and
+critique their solutions toward achieving a desired future.
+
+To gather stakeholder data, they interviewed random individuals within the
+
+walls of their campuses on the questions:
+
+1. What issues in food, energy, and/or water sustainability confront the
+residents of Cauayan City?
+
+2. What's causing the issue? How do you envision a future without this
+issue?
+
+3. As a/an {alternate role in society}, what are your actions or suggestions
+that could bring about positive change?
+
+They were considered NXplorers graduates after they presented their ideas
+in a pitch session where their work was critiqued by the teacher-facilitators.
+Their outputs were forwarded to experts gathered by PSFI for evaluation of
+learning quality. Finally, the 106 participants evaluated the performance of
+each speaker and the quality of the training itself as required by PSFI, and
+then a stratified subset of the graduates validated their quantitative
+evaluation through active participation in a focus group discussion.
+
+23
+
+5.1 Training Content and Program of Activities
+
+Overall, the participants learned to use six of the twelve published NXtools.
+They also attended lectures on the global progress of the NXplorers
+program, the basis and myriad application of NXthinking, and how to frame
+an actionable problem statement. There were also panel interviews with
+previous winners of innovation contests on their team journeys, the direction
+their innovative projects took post-competition, and best practices toward
+expedient and efficient plans of action for opportunities.
+
+The program of activities is shown in the following slide screenshot:
+
+Figure 5.1
+Program of Activities
+
+DAY 4: Friday 21 October 2022
+Start End Part
+
+Twelve PSHS-CVC teachers, all trained by Shell Global Solutions, served
+as speakers and trainers. They were assisted by ten PSHS-CVC students
+and alumni, four of them were captains of winning teams in the first three
+NXplorers TBIC iterations and similar innovation competitions.
+
+In the week before the workshop proper, orientation and technical dry-run
+were conducted to prepare the teacher-chaperons for their roles and to
+answer their concerns. However, because the training was partly online,
+there were technical glitches encountered but expediently resolved with
+contingency plans set in place by the organizers.
+
+24
+
+5.2 Planning, Preparations, and Responsibilities
+
+After an exploratory meeting with the Lead NXplorers Facilitator for the
+Philippines on the sidelines of the third NXplorers Workshop for PSHS-CVC
+on August 30, 2022, a Project Plan was submitted for review by the
+stakeholders. On September 20, 2022, a conforme to initiate the plan (see
+Annex A) was finally signed by:
+
+Mr. Jenshiam Balgua, a PSHS-CVC teacher, representing facilitators
+Ms. Angel Iniego, a PSHS-CVC scholar, representing host committees
+Mr. Erick John Marmol, Director III, representing the PSHS-CVC offices
+Ms. Beverly Berberabe, NXplorers Country Head, for Shell and PSF
+Mr. Garry Galutera, City Councillor, representing LGU Cauayan City
+
+OPRON>
+
+From then on, planned activities were plotted into a Gantt Chart based on
+a Work Breakdown Structure of the project, as shown below. The Gantt
+Chart, both proposed and implemented, was documented in Annex B.
+
+Figure 5.2
+Work Breakdown Structure
+
+NXplorers Hybrid Workshop
+for Cauayan City SHS
+
+PREPARATION EXECUTION CONTROL EVALUATION
+Pilot Meetings Coach Orientation Sourcing Funds Proofread Slides
+Project Planning Remote Dry-Run Fund Distribution Design Eval.Tools
+
+Probono Speaking
+
+Liaising —_ LL ae
+
+Materials Prep Topic Webinars.
+
+Live Pitch/Critique
+
+Equipment Resp. Topic/Speaker Eval.
+
+Hosting Dry-run NXtool Workshops
+
+|
+
+Speaker Dry-run Panel Discussions Time Direction Focus Group Disc.
+I = I
+Registration L Program Outro | Plan Contingencies Expert Evaluations
+Paper Distribution Support & Promotion Certificates/Tokens Compliance Reports
+
+25
+
+Queuing Speakers Whole Event Eval.
+
+
+In a RACI Matrix, the organizers considered the roles of all parties involved
+including the participating schools. The focal persons — Mr. Balgua and Ms.
+Iniego — were also categorized as project managers because of their
+oversight roles. This served as a blueprint for success because the chart
+specifies who was responsible, accountable, consulted, and informed of
+each activity (Morris, October 2022). Role assignments were consistent with
+PMBOK® (Project Management Institute, 2021), a definitive reference in
+the project management discipline.
+
+Table 5.1
+Responsibility Assignment Matrix
+
+ACTIVITY
+Pilot meetings with stakeholder representatives
+Project planning by the project managers
+
+Liaising for approval of plans and permits
+Preparation of training materials
+
+|_Dry-run on the hosting activities
+
+|_Dry-run of the lecture and workshops
+
+Registration of schools and their participants
+Distribution of physical training materials to schools
+Orientation of and Q&A with the teacher-chaperons
+Video-conferencing dry-run with the remote venues
+Opening session to introduce the NXplorers program
+Webinar-lecture of the NXthining topics
+
+Hybrid workshop using NXtools
+
+Panel discussion with winners of innovation contests
+Closing session for wrap-up activities:
+
+Support and promotion via SocMed and the official website
+Sourcing of funding for materials, per diems, and tokens
+Distribution of financial assistance to participating schools
+Serving as pro bono teacher-facilitator
+Responsible use of equipment in the broadcast room
+Seamless queueing of speakers
+
+D-|O) OOS
+
+DPIDS|>|>) [Ol
+
+D/D|>|>|>|>
+
+DOQOQ|O\|OlO|}S|}H|D)/—|P| DD) |Q|O|e
+
+|) |2}7)7)
+
+>\_lslalsl_lsls[5[-[-|2
+
+—|-|>|-|-|-|o]o]o|—||>|-|2
+
+_Directing the program flow vs. time allotment
+Contingency scenarios and risk treatment plans
+
+Control of distribution of certificates and tokens
+Proofreading presentation slides and emcee scripts
+Design and validation of evaluation tools
+
+Live elevator pitch and expert critique
+
+Quantitative evaluation of the speakers’ expertise
+Individual evaluation of the conduct of the whole event
+Validation of evaluations through focus group discussion
+Quantitative evaluation of outputs by NXplorers experts
+Submission of post-event reports CLA 1
+
+STAKEHOLDERS: 1. Project Managers R — Responsible
+
+Facilitators/Mentors A-— Accountable
+Hosts/Committees C —Consulted
+PSHS-CVC Offices | — Informed
+Shell NXplorers / PSFI
+Cauayan City LGU
+Participating Schools
+
+2B) O)-|O|O|a\a\-|
+
+BS) NO/O\O|}S|P|O|>
+
+=|9)OIO|—|O|O/O|/-|a
+
+>|—|=|—|-|9|>|0|2)0|-|-
+
+=|AIAIA\A\AIO| |>|>\—
+
+MlA|>|P|>/> 0] 0 O}D|DO|—|Q|9|D]O|—|DO/O)}—| =|) S| —|9|O|H| | | Dl =
+
+Jee
+m
+
+2
+fe)
+
+IN OOP why
+
+26
+
+6. Results and Analyses
+
+Concerning the Problem Statement and Specific Objectives stated in
+Section 2, participants and experts evaluated certain aspects of the
+conducted workshop to get an objective basis for the recommendations.
+Data were gathered using surveys and a focus group discussion.
+Interpretation of the results was through descriptive statistics.
+
+6.1 Analysis of Results for Specific Objective #1
+
+The first specific objective sought to describe the training coverage based
+on the number of schools represented in the workshop versus the number
+of public and private high schools in Cauayan City. This is a descriptive
+statistic presented as a ratio.
+
+Based on the DepEd website, there were 23 high schools in Cauayan City
+offering various strands in the senior high school program of the K-12
+education system of the Philippines. Of this number, 22 schools were invited
+except for Linglingay National High School because of weak Internet
+connectivity in the vicinity of the school.
+
+The approved project plan aimed for a training coverage of at least 75%.
+Likewise, based on the financial support from LGU Cauayan City, at least
+96 participants (24 schools with 1 teacher and 3 learners per school) were
+expected to register for the program.
+
+At the end of the training, 18 out of the 23 schools completed the program,
+or 78.26% training coverage. Likewise, 106 participants completed the
+training (88 students and 18 teachers), 20 heads more than the target count.
+This is because the schools decided to onboard more learners despite the
+lesser distributed per-person per diem from the city government.
+
+In a post-event Q&A with the NXplorers Lead Facilitator for the Philippines,
+
+she disclosed that this workshop trained more schools in two days than
+
+what they were able to reach from July to November 2022. As a result, they
+
+awarded the following benefits to the 18 new NXplorers senior high schools
+
+in Cauayan City:
+
+1. Certificate of Completion for the teachers and learners and certificate of
+participation for the school;
+
+2. Access to the collaboration space and the NXplorers courseware on the
+Official global website (NXplorers.com, September 2022);
+
+3. Eligibility to participate in the forthcoming iterations of the NXplorers The
+Bright Ideas Challenge.
+
+27
+
+6.2 Analysis of Results for Specific Objective #2
+
+The second measurable objective evaluated the conduct of the workshop
+using survey tools and focus group discussion. Two survey forms were
+floated to the participants (1) to comply with the process improvement
+requirements of the collaborating agencies and (2) to generate the best
+questions to ask in the post-event focus group discussion.
+
+The first survey was a quantitative evaluation of the competency of the
+speakers. The results were not included in the main text because it was
+fielded to comply with the Quality Management System of PSHS-CVC.
+However, the results and analyses were included in Annex C.
+
+The second survey was an objective evaluation of the workshop as a whole.
+Before the event was closed out, the participants were asked to rate the
+totality of the workshop using a secure Google Form. Shell often uses an
+online qualitative survey for participants to evaluate the workshop they just
+completed. However, in consultation with his faculty-adviser, the researcher
+designed a questionnaire with the following sections: (1) Training/Workshop
+Content; (2) Potential Impact of Learning; (3) Management of Training/
+Workshop; and (4) Evaluation of the Hybrid Workshop Format.
+
+SO#2 was concerned with comparing the hybrid workshop with other
+training formats based on the participant responses in a focus group
+discussion, highlighting the application of learning and _ iterative
+improvement of the training format. While the survey results and its
+subsequent analyses were the basis of the post-event FGD questions, the
+data and statistics were post scripted to this report instead. The reader is
+enjoined to refer to Annex D, Annex E, and Annex F, if necessary.
+
+On 18 October 2022, 19 teachers and students took time to attend a Focus
+Group Discussion called by the organizers to validate the results of the post-
+activity evaluations. The FGD was moderated by the researcher. After a
+short online socialization, the participants were informed that their
+responses will be recorded and that the data waiver they signed earlier
+covers this activity. They were encouraged to speak up their opinion on
+each of the focus questions, preferably on-mic and on-camera.
+
+Nine participants agreed to join and answer the FGD questions. For each
+question, they selected from the preset options but not more than the set
+maximum for each item. The options were distilled from the gathered
+responses from the two surveys. The questions and the results are in the
+next pages.
+
+28
+
+6.2.1 Discussions for FGD Item #1
+
+The open-ended question in the second survey elicited the ways the
+participants might apply what they learned from the workshop. Their
+short responses were coded for similarity and the following themes
+were collated:
+
+A. Learning Material
+NXplorers is a relevant and purposeful way to enhance the
+curriculum. Teachers can use the NXtools as an experiential
+template for their students to ideate solutions to a myriad of
+problems. Students can use the materials and their experience
+as primary references. They can also review the paradigm and
+practice using the courseware on the NXplorers global website.
+
+B. Contest Opportunity
+The NXtools is a springboard for ideating innovation contest
+entries and elevator pitches. The opportunities are not limited to
+the NXplorers Challenge because the skills are transferable
+regardless of the competition theme, complexity, and duration.
+
+C. Research Focus
+With SHS students and teachers as participants, their impetus
+was to design capstone projects and action research that
+addresses real-world problems. The paradigm and practice allow
+deeper consideration of the United Nations SDGs, particularly
+with the food, energy, and water nexus.
+
+D. Social Action
+NXplorers champions may horizontally scale their project to
+benefit the community without asking for anything in return. It can
+be their altruistic pursuit to hands-on address the pain points
+affecting their beneficiaries and stakeholders.
+
+E. Sharing Forwards
+NXthinking is knowledge worth sharing in various ways
+regardless of transfer media and audience. It can be an informal
+conversational piece or presented as a formal topic by academics
+
+F. Life Solutions
+By reflection, NXthinking was used by everyone daily. Informed
+decisions are best when after a study of facts and factors to
+choose the best action forwards.
+
+29
+
+G. Work Improvement
+The NXtools is loosely procedural and yet intentional. Thus,
+students regardless of grade, and workers regardless of trade,
+can form positive habits for improving their work and workplace.
+
+The categories were listed based on their frequency in the coded
+data. Because the responses were not grouped by demographics,
+no further statistical test was conducted. However, the exact order of
+categories was then fielded as options for the first FGD question:
+“Within the next six months, in what ways will you use what you’ve
+learned in the NXplorers training? (Choose 4)". The following
+screenshot of the Slido poll was the summary of their responses:
+
+Figure 6.1
+Summary of Responses for FGD Item #1
+
+Within the next six months, in what ways will you use what you've learned in the
+NXplorers training? (Choose 4)
+
+60
+
+40
+
+40
+
+20
+
+60'
+
+Based on these results, participants from Villa Concepcion High
+School — Baculud Extension recognize the power of the NXthinking
+paradigm in proposing sustainability-aligned investigatory projects.
+Teachers agree that it can benefit their action research, too. Mr.
+
+30
+
+Joseph Eco, the research coordinator of the Villa Concepcion
+National High School shared that the training made him reframe the
+problem statement of his research proposal for a scientific poster
+presentation for teachers. Ms. Maricel Yadao of Saint Claire College
+appreciated the quality of the program as a learning material for
+learning social research methods (FGD, October 2022).
+
+6.2.2 Discussions for FGD Item #2
+
+The third quantitative item in the post-event survey asked the
+participants to compare and contrast the hybrid workshop against the
+two extremes of in-person and virtual training formats. To verify their
+awareness of the other training formats for team-based learning and
+to determine their willingness to attend training in such formats, this
+question was asked next to the FGD participants: "Which are your
+preferred modes of learning NXthinking while using the NXtools?
+(Choose 4)". The following screenshot of the Slido poll results was
+the summary of their responses:
+
+Figure 6.2
+Summary of Responses for FGD Item #2
+
+Which are your preferred mode of learning NXthinking while using the NXtools?
+(Choose 4)
+
+89
+
+67
+
+22%
+
+22
+
+31
+
+While Mr. Jerome Suigitan of Isabela Colleges agreed that FGDs are
+an ideal training format, he was worried that their response might
+also have been influenced by their democratic experience in the
+current session. As for the students, Ms. Raki Santos of UPHS —
+Isabela Campus mentioned that some students do not have stable
+connectivity and that might be a reason why they haven't attended
+training that uses some of the formats yet. (FGD, October 2022).
+
+This two-strike dilemma prompted participants — with exposure to at
+least five of the seven training formats — to review the results of the
+poll for this FGD question by collaboratively editing values in an ad-
+hoc Google Sheet. After 28 November 2022, they completed a
+custom scorecard of the various training formats, taking into
+consideration enhancing factors such as (1) audience scalability, (2)
+experiential learning, and (3) knowledge retention; and negative
+indicators such as (4) logistics complexity, (5) technical vulnerability,
+and (6) cost of implementation. The absolute value of each score is
+the collective rating of the volunteers about the relative extent of each
+factor to the effectiveness of the training format under consideration.
+
+Table 6.1
+Custom Scorecard of the Training Formats
+1 2 3 4 5 6 Score
+A 3 1 1 -1 -3 -1 0
+B 2 2 2 -3 -2 -3 -2
+Cc 2 2 2 -2 -2 -2 0
+D 2 2 3 -2 -2 -2 1
+E 1 3 3 -1 -1 -1 4
+F 2 2 2 -1 -2 -2 1
+G 2 1 1 -2 -2 -1 -1
+TRAINING FORMATS: CRITERIA:
+A. Full Virtual Training 1. Audience Scalability
+B. Large Group In-person 2. Experiential Learning
+C. Hybrid Workshop 3. Knowledge Retention
+D. Focus Group Discussion 4. Logistics complexity
+E. Small Group Coaching 5. Technical Vulnerability
+F. Courseware 6. Cost of Implementation
+G. Self-Study
+
+32
+
+Comparing the scorecard with the previous poll results, the small
+group coaching format rose through the ranking by having the
+relatively lowest score on the aggravating factors. This was followed
+by a tie of FGDs and courseware. In a follow-up call with the
+presumptive leader of the volunteers, Mr. Jorich Primero of Centro
+De Cultura clarified that for online courses to be effective, the
+platform must have a pool of experts or a community of peers that
+can provide on-demand mentoring time or certification. At the middle
+of the spectrum are hybrid workshops and full virtual training. Mr.
+Primero opined that this was because both formats were vulnerable
+to almost the same technical difficulties (Primero, December 2022).
+
+6.2.3 Discussions for FGD Item #3
+
+To form a feedback loop for improvement, the FGD participants were
+asked to reflect on their observations and experience with the hybrid
+workshop format used to train them with the NXthinking paradigm
+and practice. At that instance, the FGD participants were asked: "/n
+what aspects should the NXplorers hybrid workshop improve to be
+as effective as the other modes? (Choose 4)". This item is an
+adaptive follow-up to the quantitative and qualitative responses of
+the participants in the post-activity evaluation.
+
+Mr. Nifio Basubas from San Antonio National High School and Ms.
+Lian Ines from the Metropolitan Bible Baptist School discussed back
+and forth selected difficulties in the conduct of the hybrid workshop
+before prioritizing them using a Slido poll (FGD, October 2022).
+
+These were the categories of issues considered, collated from the
+
+results of earlier surveys:
+
+1. More interactivity to get higher audience engagement
+
+2. Stable connection (client side) to ensure technical availability at
+the remote venues
+
+3. Longer workshop time to prepare outputs for presentation
+
+4. Longer lecture time for more depth of presentation/discussion
+
+5. Stable connection (host-side) to ensure technical availability at
+the broadcast center
+
+6. Assured critique time to give all teams equal time with experts
+
+7. More workshop days to pace discussion and breaks well
+
+8. Social factor to be able to be with other participants (in-person)
+or being able to interact via breakout rooms (virtual)
+
+9. Fair chance to present to give all teams equal time to demo
+
+10. Time-based dry-run to ensure smooth flow of the program
+
+33
+
+The participants prioritized the issues as shown in the next figure.
+
+Figure 6.3
+Summary of Responses for FGD Item #3
+
+In what aspects should the Nxplorers hybrid workshop improve to be as effective as
+the other modes? (Choose 4)
+
+44
+
+56
+
+44
+
+67
+
+44
+
+33
+
+6.3 Analysis of Results for Specific Objective #3
+
+Based on the results and discussion for SO#2, there was a consensus that
+implementation issues affect the effectiveness of the hybrid workshop to
+deliver NXthinking knowledge and skills. However, because there were no
+Shell-approved studies conducted as of yet on the effectivity of transferring
+NXthinking knowledge using any of the formats, the researcher accepted
+the objective evaluation of the participants’ outputs by NXplorers experts as
+an indicator of actual practice and retention of knowledge gained through
+the hybrid workshop.
+
+34
+
+The data were gathered from the experts using an approach that assured
+the integrity of the results. The double-blind survey format ensured that
+neither the researcher nor the enumerator may influence the response of
+the evaluators. This survey method was implemented as follows:
+
+1. The researcher anonymized the outputs of the 18 schools and placed
+them in a structured Google Drive folder.
+
+2. Mr. Edan Viel Aguada, the team leader for evaluations, was instructed
+(see Annex G) to invite nine NXplorer experts to evaluate the outputs.
+
+3. The outputs were equitably distributed to the nine NXperts such that
+each expert will rate three of the 18 output sets.
+
+4. The evaluation form used was presented in Annex H. The tool includes
+the link to the Google Drive folder and explicitly states the output set to
+be evaluated.
+
+5. Mr. Aguada did not know which outputs are from which schools; the
+researcher never knew who were the evaluators; and the NXperts
+themselves are not aware of the identity of the other respondents.
+
+6. Inthe end, each output received evaluations from exactly three NXperts.
+
+To further data privacy and expediency, Mr. Aguada translated the printed
+form into a secure Google Form, as shown below, and embedded the same
+in emails to the invited NXperts. As to their credentials, Mr. Aguada declared
+that three were NXplorers facilitators from different countries, two were
+PSHS-CVC teachers who did not serve as speakers in the workshop, two
+were employees of research organizations who were themselves NXplorers
+alumni, and the last two were members of past TBIC winning teams.
+
+Figure 6.4
+NXpert Evaluation Google Form
+
+35
+
+The NXperts evaluated the outputs in three dimensions: (1) Content Quality,
+(2) Technical Fidelity, and (3) Idea Continuity. For each criterion, each
+NXtool output was rated based on a 4-point Likert Scale (1 — Poor, 2 —
+Average, 3 — Satisfactory, 4 — Excellent). The raw data are in Annex | and
+the results are discussed in the specific subsections on the next pages.
+
+6.3.1 NXpert Evaluation Results on Content Quality
+
+First, nine NXperts evaluated if the participants were able to present
+their ideas completely and clearly by using the NXtools. Means of the
+scores for each NXtool output were taken, and then a Mean of Means
+Test was implemented using built-in functions from Google Sheets
+and compared to a 4-point Likert Scale. The results are as follows:
+
+Table 6.2
+NXpert Evaluation Results on Content Quality
+NXtool Output Mean
+Perspectives Circle ta kat _ 3.2778
+Connections Circle 2.9074
+| Scenario Planning Quadrant 3.2037
+| Feasibility Funnel __ | 2.8889
+| Ripple Effect Tool 3.0741
+Persuasion Pyramid | 2.7407
+Likert Scale for Interpretation.
+3.50 to 4.00 — Excellent MeanichMesns 3.0154
+2.75 to 3.49 — Satisfactory Standard Deviation 1.0234
+2.00 to 2.74 — Average z
+1.00 to 1.99 — Poor Interpretation Satisfactory
+
+While the overall results were satisfactory, the substandard score on
+the Persuasion Pyramid outputs was because some teams did not
+submit the paper output after they did the viva presentation. Their
+elevator pitches used the said NXtool as a script and were video-
+recorded. However, sending the recordings to the NXperts will fail
+the double-blind format because anonymity will be compromised.
+
+The critique of the teacher-facilitators of their outputs, after each
+elevator pitch, was that their outputs were of the level of quality
+observed from first-time users of the NXtools. That is, points for
+improvement are expected. The video recording of their elevator
+pitches is at https://bit.ly/NXcyn-day2.
+
+36
+
+6.3.2 NXpert Evaluation Results on Technical Fidelity
+
+Second, the invited NXperts checked if the graduates followed the
+tules of using the graphical NXtools. Means of the scores for each
+NXtool output were taken, and then a Mean of Means Test was
+calculated using built-in statistical tools from Google Sheets and
+interpreted according to the stated Likert Scale. The next table
+presents the results:
+
+Table 6.2
+NXpert Evaluation Results on Technical Fidelity
+NXtool Output Mean
+Perspectives Circle el PRE
+| Connections Circle - _ | 3.0556
+Scenario Planning Quadrant 3.2963
+Feasibility Funnel 3.0741
+Ripple EffectTooh 3.2407
+| Persuasion Pyramid _ ‘ a 2.8148
+| Likert Scale for Interpretation: Mean of Means 3.1235
+
+3.50 to 4.00 — Excellent
+2.75 to 3.49 — Satisfactory Standard Deviation 1.0079
+
+2.00 to 2.74 — Average ei é
+1.00 to 1.99 — Poor 8 Interpretation Satisfactory
+
+Overall, the participants were found compliant with the norms of
+using the NXtools. These rules include (1) the direction of arrows to
+show cause-and-effect relationships in the Connections Circle, (2)
+the plus or minus labels to denote the acceptability of scenarios in
+the Planning Quadrant and Ripple Effect Tool, (3) synching content
+and speech time with the Persuasion Pyramid, etc.
+
+These observations were highlighted by the teacher-facilitators when
+they critiqued the participants’ outputs midway through the program.
+The video recording can be accessed at https://NXcyn-day1.
+
+6.3.3 NXpert Evaluation Results on Idea Continuity
+
+Finally, the NXperts objectively rated the logical flow of the ideation
+and polishing of their solution starting with the Explore NXtools up to
+the Ripple Effect Diagram. The mean scores given for each output
+set were found using Google Sheet statistical functions and then
+compared against a 4-point Likert Interpretation Scale. Refer to the
+table on the next page for the results of this criterion:
+
+37
+
+Table 6.2
+NXpert Evaluation Results on Idea Continuity
+
+Likert Scale for Interpretation: Mean 20
+3.50 to 4.00 — Excellent 3.0556
+2.75 to 3.49 — Satisfactory Standard Deviation 0.8777
+
+2.00 to 2.74 — Average c z
+| 1.00 to 1.99 — Poor Interpretation Satisfactory
+
+These results suggest that the participants were able to hold on to
+the goals of their project statement and ideated a feasible solution
+towards achieving a desired future when they went from using the
+
+NXtools in the logical order.
+
+38
+
+7. Conclusions and Recommendations
+
+Based on the results of the NXpert evaluations and FGD scorecard, it can
+be argued that the participants were able to learn NXthinking and practice
+the same to ideating solutions for real-life problems using NXtools using a
+hybrid workshop training format as the mode of transfer of learning. There
+is room for improvement in the interactivity and choreography of the
+workshop, and this was well noted by the organizers for the future iteration
+of the workshop. The results were likewise acknowledged by the copyright
+owner and, at their discretion, use the results to improve the content and
+training materials used in in-person, virtual, and self-paced formats.
+
+The “Satisfactory” outputs of the participants are as good as can be
+expected from the maiden outputs of anyone who hears a concept, learns
+a new skill, or uses new tools. The NXthinking paradigm is a particularly
+demanding practice because practitioners are expected to think of ideas
+that work and solutions that address societal pain points without adding
+palliatives or unintended negative consequences.
+
+In the Q&A meeting with the Shell representative in parallel with the FDG
+on 28 October 2022, they recognized that six of the 18 outputs are already
+pre-qualified for participation in the next NXplorers TBIC, the showcase
+competition for ideas generated in the NXplorers workshops across the
+country (FGD, October 2022), but there are still forms and waivers to submit
+to comply with the data privacy and intellectual property regulations.
+
+Shell recommended that the participants continue practicing NXthinking in
+research, as this was the primary and long-term goal of the program. Dy
+(2022) highlighted that NXthinking skills are not single-purpose knowledge
+but a future-proof skill that can serve them well for their whole life. However,
+retention and continued practice of learning, while ideal for future follow-up,
+is beyond the scope of this research. For this reason, the researcher
+recommends that:
+
+1. Shell may conduct parallel workshops of different formats, gather
+quantitative evaluations from the participants, and compare the results
+using t-test statistical approaches;
+
+2. The organizers to conduct a full in-person refresher for one-half of the
+hybrid workshop graduates, and full virtual training for the other; and
+compare the quality of their work in this cycle with the quality of their
+work in the hybrid workshop to see if there was an improvement; and
+
+3. To train teacher-chaperons first so that they can guide their students
+well in each remotely-connected school in the next online workshops.
+
+39
+
+Bibliography
+
+Banks, G., Scheyvens, R., & Leonard, S. (November 2020). Implementing
+an interdisciplinary Masters of the SDGs. Retrieved from https://ic-
+sd.org/wp-content/uploads/2020/1 1/Samantha-Leonard.pdf
+
+Barcelona Field Studies Centre. (September 2022). Radar Chart Creator.
+Retrieved from https://geographyfieldwork.com.
+
+Chatzinikolaou, D., & Vlados, C. (May 2019). University-industry-
+Government Linkages and the Helix Theory on the Fourth Industrial
+Revolution. Semantic Scholar.
+
+Department of Education. (March 2005). Department Order 9, Series of
+2005: Instituting measures to increase engaged time-on-task and
+ensuring compliance therewith. Retrieved from
+https:/Avww.deped.gov.ph/2005/03/02/do-9-s-2005-instituting-
+measures-to-increase-engaged-time-on-task-and-ensuring-
+compliance-therewith/
+
+Department of Education. (May 2018). List of Senior High Schools.
+Retrieved from _https:/Avww.deped.gov.ph/k-to-12/senior-high-
+school/list-of-senior-high-schools/
+
+Department of Education. (October 2020). Memorandum OUCI-2020-307.
+Retrieved from Suggested measures to foster academic ease during
+the COVID-19 pandemic: https:/Awww.deped.gov.ph/wp-
+content/uploads/2020/1 1/OUCI-2020-307_ACADEMIC-EASE-
+DURING-COVID-19-final-version-01Nov2020.pdf
+
+Dy, M. (September 2022). In-person meeting transcript.
+
+FGD. (October 2022). Video Recording of Focus Group Interview dated 28
+October 2022. (J. Balgua, Interviewer) Retrieved from
+https://bit.ly/NXcyn-fgd
+
+Forsyth, D. (2019). Group Dynamics, 7Ed. Cengage.
+
+Gertner, J. (2013). The Idea Factory: Bell Labs and the Great Age of
+American Innovation. Penguin Press.
+
+40
+
+Gobi Partners and Core Capital. (November 2022). State of Talent in Tech:
+Philippines 2022.
+
+Google EDU. (December 2022). Trend Forecast Report 2022, Future of
+Education, Part 1: Preparing for a new future.
+
+Gore, E. (January 2022). Different Types of Training Methods. Retrieved
+from Learning Lab: https://elmlearning.com/blog/training-methods/
+
+Hirschmann, R. (November 2021). Number of secondary schools in
+Singapore from 1960 to 2021. Retrieved from  Statista:
+https://www-statista.com/statistics/865463/singapore-number-of-
+secondary-schools/
+
+HundrED. (April 2022). Reap Benefit. Retrieved from
+https://nundred.org/en/innovations/reap-benefit
+
+LoopMe Philippines. (December 2019). NXplorers: TBIC 2019 Awards 10
+Schools for Innovative Problem-Solving. Retrieved from LoopMe.PH:
+https://www.loopme.ph/looptalk/nxplorers-tbic-20 19-awards-10-
+schools-for-innovative-problem-solving
+
+McGrath, J. (1964). Social Psychology: A Brief Introduction. Holt, Rinehart
+& Winston.
+
+Morris, L. (October 2022). Understanding Responsibility Assignment Matrix
+(RACI Matrix). Retrieved from https://project-
+management.com/understanding-responsibility-assignment-matrix-
+raci-matrix/
+
+NXplorers.com. (August 2022). NXplorers Facilitator Resources (Approved
+access required). Retrieved from https://nxplorers.com/en/facilitator-
+resources
+
+NXplorers.com. (July 2022). NXthinking Toolkit (Partial public access
+allowed). Retrieved from https://nxplorers.com/en/nxthinking
+
+NXplorers.com. (June 2022). NXplorers Programme (Main Page, Public
+Access). Retrieved from https://nxplorers.com/en/about
+
+NXplorers.com. (September 2022). NXplorers Classroom (Alumni access
+required). Retrieved from https://classroom.nxplorers.com/dash
+
+41
+
+O*Net. (June 2022). O*Net Content Model. Retrieved from O*Net Resource
+Center.
+
+Pique, J., Berbegal-Mirabent, J., & Etzkowitz, H. (December 2018). Triple
+Helix and the evolution of ecosystems of innovation: the case of
+Silicon Valley. Springer Open Access.
+doi:https://doi.org/10.1186/a40604-018-0060x
+
+Primero, J. (December 2022). Recording of phone call with Mr. Joseph
+Primero. (J. Balgua, Interviewer)
+
+Project Management Institute. (2021). A Guide to the Project Management
+Body of Knowledge (PMBOK® Guide), 7th Ed.
+
+Quinn, J., McEachen, J., Fullan, M., Gardner, M., & Drummy, M. (2020).
+Dive into Deep Learning: Tools for Engagement. Corwin/SAGE.
+
+RiConfigure. (May 2021). Quadruple Helix Collaborations in Practice:
+Stakeholder Interaction, Responsibility and Governance. European
+Commission.
+
+Sankar, S. (July 2011). Lean Six Sigma. (A. Coskun, Ed.) Lean Six Sigma:
+Projects and Personal Experiences.
+
+Shell Global Solutions. (2019). NXthinking Poster. Retrieved from
+https://nxplorers.com/uploads/docs/Shell_NXthinking_A3_Poster.pd
+f
+
+Shell Global Solutions. (2020). Facilitator Resources. Retrieved from
+https://nxplorers.com/en/facilitator-resources
+
+Shell Global Solutions. (2021). NXplorers Brochure. Retrieved from
+https://nxplorers.com/uploads/docs/Shell_NXplorers_Brochure_202
+1.pdf
+
+Shell Global Solutions. (December 2020). 2020 NXplorers Recognition
+Awards. Retrieved from https://nxplorers.com/en/events/2020-
+global-recognition-awards
+
+Shell Philippines. (November 2021). Shell NXplorers The Bright Ideas
+Challenge: STEM student teams solve global challenges. Retrieved
+from https:/Avww.shell.com.ph/media/media-releases/2021-media-
+releases/shell-nxplorers-the-bright-ideas-challenge-stem-student-
+teams.html
+
+42
+
+Talreja, V. (July 2019). World Youth Skills Day: ... the Critical Role of Life
+Skills ... Retrieved from https://vishaltalreja.com/
+
+Teresa, C. (November 2020). Meeting video recording via Butter App.
+Retrieved from https:/bit.ly/outter-cheska
+
+Web Solutions LLC. (2022). Qatar: Secondary Education. Retrieved from
+https://education.stateuniversity.com/pages/1246/Qatar-
+SECONDARY-EDUCATION. html
+
+World Economic Forum. (October 2020). The Future of Jobs Report 2020.

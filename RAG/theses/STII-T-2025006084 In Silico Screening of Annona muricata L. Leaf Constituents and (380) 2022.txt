@@ -449,7 +449,6 @@ Glucose homeostasis
 Figure 2: Physiological pathways involving PTP1B
 (Zou, 2016)
 
-16
 
 Lastly, Sirtuin-6 or Mono-ADP ribosyltransferase-sirtuin-6 (SIRT6) is a stress-
 responsive protein deacetylase, and mono-ADP ribosyl transferase enzyme encoded by
@@ -568,7 +567,6 @@ the time and memory more efficient. Since it automatically conforms to user inpu
 
 AutoDock, points of confinement such as maximum grid map size, number of atoms, and
 
-20
 
 rotatable bonds, are being established. AutoDock Vina can further speed up the
 implementation by taking advantage of multiple CPUs or CPU cores; therefore, it is
@@ -596,7 +594,6 @@ This prediction can also be performed using free web-based in silico tools such 
 
 SwissADME and ADMETLab 2.0 online servers.
 
-21
 
 Conceptual Framework
 
@@ -627,7 +624,6 @@ As a computational technique, molecular docking has become a powerful tool in
 
 the rational drug design pipeline (Meng et al., 2011). It is used to analyze the conformation,
 
-22
 
 orientation, and molecular interactions of molecules being placed into the binding site of a
 macromolecular target (Yi et al., 2018). It is also used to predict the relative binding
@@ -658,7 +654,6 @@ i. Structural Analogues are chemical compounds having structural
 
 similarity to a reference compound. In this study, bioisosteres were
 
-23
 
 considered in designing in silico structural analogues. Bioisosteric
 replacement was done by generating bioisosteres using the online
@@ -698,7 +693,6 @@ Angstroms (A) is often used as a criterion of the correct bound
 
 structure prediction (Trott & Olson, 2010) and this was obtained
 
-24
 
 using AutoDock Tools 1.5.7 and Discovery Studio Visualizer. This
 parameter was the basis for selecting the appropriate grid box values
@@ -726,7 +720,6 @@ D. Protein-ligand interactions refer to the representation of the interaction of
 
 and a ligand to form a stable complex. This variable was evaluated using software
 
-25
 
 such as AutoDock Vina for the generation of binding energies, LigPlot Plus, and
 PyMol to assess interacting residues and possible molecular interactions present in
@@ -756,7 +749,6 @@ LigandScout 4.4.8 to identify the similar and essential features for the optimal
 
 binding with the protein targets.
 
-26
 
 Chapter 3: METHODOLOGY
 
@@ -776,7 +768,6 @@ Figure 5: Overview of Methodology
 
 3 Protein targets
 
-27
 
 Study Design
 
@@ -806,7 +797,6 @@ College of Pharmacy using computers running on Windows 10 Home Single Language 6
 
 bit operating system with Intel® Core™ i5-8400 CPU 2.80GHz processor.
 
-28
 
 The summary of the software and online web servers used in this study and their
 
@@ -837,7 +827,6 @@ using PyMol and LigPlot Plus, generation of derivatives using SwissBioisostere, 
 
 SMARTCyp, MetaTox of Way2Drug, and BioTransformer 3.0. Pharmacokinetic and
 
-29
 
 physicochemical evaluation using SwissADME and ADMETIab 2.0, and pharmacophore
 
@@ -869,7 +858,6 @@ obtained from PubChem server, and the others were processed using MarvinSketch
 
 15.6.29. The 2D structures of 36 ligands are illustrated in Appendix A.
 
-30
 
 The ligand preparation was conducted as described by Morris et al., (2009),
 O’Boyle et al., (2011) and Huey et al., (2012). Each ligand was cleaned in 3D, prepared,
@@ -898,7 +886,6 @@ ten docked conformations of bound native ligands compared to the original pose w
 
 analyzed using AutoDock tools 1.5.7. The binding pockets of AF2 models were selected
 
-31
 
 based on the topmost site provided by the Discovery Studio Visualizer v.21.1.0.20298
 compared with the searched significant amino acid residues.
@@ -930,7 +917,6 @@ After the initial docking simulation of the parent compounds of 36 ligands, the
 
 topmost active parent compounds were subjected to further analysis. Derivatives for both
 
-32
 
 structural analogues and metabolites were considered in this study. For structural
 analogues, all considerations for the MolOpt and SwissBioisostere-generated molecular
@@ -959,7 +945,6 @@ using the parameter of synthetic accessibility, modified, and exported through a
 
 clipboard function or CSV file. The modifications of the 3D structures of all the analogues
 
-33
 
 obtained were processed using MarvinSketch 15.6.29 and were prepared similarly to the
 
@@ -987,7 +972,6 @@ metabolites. The output results were collected, saved, and prepared the same as 
 
 compounds and were subjected to molecular docking analysis.
 
-34
 
 Pharmacophore analysis
 
@@ -1017,7 +1001,6 @@ separating the drug from non-drug entities, resulting in a higher quality produc
 
 al., 2002).
 
-35
 
 After the molecular docking results, all the ligands with improved binding energies
 per protein target and their corresponding parent compounds were subjected to
@@ -1047,7 +1030,6 @@ spontaneous interaction with the protein and be considered the most stable. The 
 
 deviations of each trial were also checked to align with the 2.85 kcal/mol standard error of
 
-36
 
 AutoDock Vina. For docking reliability, all the docking poses of the top parent compounds
 and derivatives were clustered together, and RMSD calculation was performed using
@@ -1075,7 +1057,6 @@ this study. The software and online web tools that were used in this study were 
 
 due to their accessibility, free academic licensing, and ease of utilization.
 
-37
 
 CHAPTER 4: RESULTS
 
@@ -1114,7 +1095,6 @@ both PDB and AF2 models. The highlighted residues in both models were superimpos
 
 to visualize the alignment. The RMSD of PDB and AF2 models for each protein target
 
-38
 
 CHAPTER 4: RESULTS
 
@@ -1148,7 +1128,6 @@ both PDB and AF2 models. The highlighted residues in both models were superimpos
 
 to visualize the alignment. The RMSD of PDB and AF2 models for each protein target
 
-38
 
 11B-HSD1 1.169A
 
@@ -1156,7 +1135,6 @@ ow.
 Figure 6: Superimposed PDB (Blue; Surface structure) and AF2 (Yellow: Ribbon
 structure) models, and RMSDs (A) of the protein targets
 
-40
 
 CBO in 11B-HSD1 (2BEL) 0.819 + 0.003A
 
@@ -1169,7 +1147,6 @@ The co-crystallized ligand in 11B-HSD1 target (PDB Code: 2BEL) is
 
 Carbenoxolone (CBO). As for the PTP1B target (PDB Code: 2CM8), the ligand 5-(3-
 
-41
 
 Hydroxyphenyl) isothiazol-3(2H)-one 1,1-dioxide (F16) can be found. Lastly, the SIRT6
 target (PDB Code: 6QCD) contains Quercetin (QUE). The extracted native ligands were
@@ -1191,7 +1168,6 @@ energies of each ligand towards the PDB and AF2 models of each protein target wa
 
 calculated and predicted in Figure 9.
 
-42
 
 Table 3: Average binding energies of the parent compounds towards the six protein
 models.
@@ -1250,7 +1226,6 @@ Vomifoliol (RVFL) 65 68 53-58
 ® Substrate; Cortisone (11P-HSD1)-Control
 * Product, Cortisol (118-HSD1)
 
-43
 
 8 11B-HSD1
 GCCS Spee nreenegeerreeer reg
@@ -1316,7 +1291,6 @@ processed into ligands using the same preparation as the parent compounds. Table
 
 the bioisosteres used for each single site of replacement in each parent compound.
 
-46
 
 Table 4: Summary of the selection of parent compounds
 
@@ -1356,7 +1330,6 @@ NNWUAAA AAA ARR Edo ee eRe RUUUUUUADZADARAD
 FHKE QLLLLLV LLL LLL KLE KR LKR LK KKK KKK KAKA G
 OM OO OE RK KE KERR KK
 
-47
 
 PRIN PKOR
 
@@ -1375,7 +1348,6 @@ Zou
 
 Figure 10: Points of molecular replacements in the 8 parent compounds
 
-48
 
 Table 5: Summary of bioisosteres used in single modifications
 
@@ -1444,7 +1416,6 @@ was done by selecting the best functional group per point of replacement of each
 
 compound. The average binding energies of each single structurally modified analogue
 
-49
 
 across all targets were calculated. This was then compared to the average binding energy
 of the corresponding parent compound in all targets, respectively. For a bioisostere to be
@@ -1480,7 +1451,6 @@ Tetrazole*
 “para position
 “attachment to C2 atom
 
-50
 
 Table 6 displays the top and best bioisosteres from single modifications that were
 subsequently used in combined variations. Some replacement points were disregarded
@@ -1512,7 +1482,6 @@ predicted sites of metabolism, PKOR has 12, PKFL has 8, and DCXE has 6, while th
 
 remaining four compounds have 7. The phase | biotransformation products predicted by
 
-51
 
 the online tools BioTransformer 3.0 and MetaTox were also considered. As a result, a total
 of 70 metabolites were generated — 14 for PRTN, 15 for PKOR, 8 for PKFL, 7 each for
@@ -1525,7 +1494,6 @@ PRIN k PKOR
 cH
 Figure 11: Predicted sites of metabolism in the 8 parent compounds
 
-52
 
 Replacement _ Phase I Metabolic Reaction/s
 Hydrolysis
@@ -1571,7 +1539,6 @@ hydroxyl groups, producing simple structures. The structure simplification was e
 
 indicated for PRTN and PKOR resulting from the possible O-dealkylation or hydrolysis of
 
-53
 
 their ether linkages (at positions 3 and 5). The summary of the structural design of the
 
@@ -1603,7 +1570,6 @@ x
 
 Figure 12: Classification of derivatives based on their binding energies
 
-54
 
 Figure 12 shows that out of 672 derivatives, 280 or 41.67% derivatives, all of which
 are structural analogues, exhibited mean binding energies which are less than or equal to
@@ -1623,7 +1589,6 @@ simple structures of PRTN and PKOR, AM022 and BM022 with the hydroxy! replacemen
 
 in the R3 and RS ether linkers.
 
-55
 
 Table 8: Structural analogues with improved binding energies in all protein targets
 
@@ -1653,7 +1618,6 @@ the highest affinity towards PTP1B and SIRT6, while BCM00S binds the best with 1
 
 HSDI1. Their chemical structures can be seen in Figure 13.
 
-56
 
 i re
 siege a.
@@ -1676,7 +1640,6 @@ by methyl. Except for ACM008, their R2 hydroxyls are replaced by fluoro substitu
 
 ACMO008, ACM012 and ACM016 have their R3 and R6 substituted by fluoro and methyl
 
-57
 
 groups, respectively, while ACM016, ACM054 and ACMO055 have their R7 hydroxyls
 replaced by fluorine. In the case of ACM055, its R9 ether linker is replaced by a phenyl
@@ -1690,7 +1653,6 @@ actually an analogue having only a single modification — a phenyl ring that re
 
 ether.
 
-60
 
 Py
 
@@ -1703,7 +1665,6 @@ In terms of individual targeting, 137 derivatives were observed to show improved
 
 binding energies towards 11B-HSD1. The binding energies of these derivatives range from
 
-58
 
 -10.5 to -12.8 kcal/mol (Figure 14). The majority of which fall within the -10.9 to -11.3
 kcal/mol range, followed by the 37 derivatives under -10.5 to -10.9 kcal/mol, 26
@@ -1727,7 +1688,6 @@ ACMO18
 
 Figure 15: Two-dimensional structures of the top 5 compounds in 11B-HSD1
 
-59
 
 The top compounds for the 11B-HSD1 enzyme are all derived from PRTN. They
 all possess a phenyl ring as a substitute of R8 and R9 ether linkers. Except for ACMO018,
@@ -1738,12 +1698,7 @@ and ACM024. The same replacement was also used in the R4 hydroxyls of all the st
 
 except ACM036 and ACM044.
 
-60
-50
-40
-30
 
-20
 
 [-9.8, -9.5]  (-9.5,-9.2]  (-9.2,-9.0]  (-9.0,-8.7] (-8.7,-8.4] (-8.4, -8.1]
 
@@ -1785,7 +1740,6 @@ ACM024
 
 Figure 17: Two-dimensional structures of the top 5 compounds in PTP1B
 
-61
 
 The top 5 compounds for PTP1B enzyme are also derived from PRTN. All of the
 structures possess a phenyl ring and methyl groups as substitutes of R4 hydroxyl and R8&
@@ -1798,11 +1752,8 @@ R9 hydroxyl.
 
 60 mae
 
-50
 
-40
 
-20
 
 [-9.5,-9.3] (-9.3,-9.1] (9.1, -8.9] (-8.9, 8.7] (-8.7, -8.5] (-8.5, -8.3]
 
@@ -1816,7 +1767,6 @@ Majority of these derivatives, 48 to be exact, fall within the -8.3 to -8.5 kcal
 
 followed by 20 under the range of -8.5 to -8.7 kcal/mol, 21 under -8.7 to -8.9 kcal/mol, 15
 
-62
 
 are within the range of -8.8 -9.1 kcal/mol, 13 under -9.1 to -9.3 kcal/mol range, and 4 under
 
@@ -1848,7 +1798,6 @@ difference between the 2 structures was the presence of a methyl substituent in 
 
 hydroxyl of BCM008.
 
-63
 
 On the other hand, all of the 3 PECE derivatives possess a 2-methylpropane and a
 methyl group at R2 and R3 hydroxyls. Except for DCM004, having -NHOH replacement
@@ -1947,7 +1896,6 @@ PDB model
 0.222+0.192
 0.39340.221
 
-65
 
 AF? model
 0.318+0.183
@@ -2022,7 +1970,6 @@ oe ee
 
 tee eee retest
 
-66
 
 Additional interacting residues have been observed with the 36 parent compounds
 aside from the reported amino acid residues listed in Table 2. For 11B-HSD1, Ile121,
@@ -2058,7 +2005,6 @@ HEE HEE tHe tt eee teeeest
 
 PHE182
 
-67
 
 In PTPIB, additional interacting residues were identified — Tyr020, Arg047,
 Gly259, and Gln266. The amino acid residues GIn021, Lys116, and Thr263 are also
@@ -2102,7 +2048,6 @@ Che tte tte etter eet teetgste
 
 t+ etteee
 
-68
 
 Lastly in SIRT6, Gly111 and Thr213 were reported in previous studies but did not
 show any interactions in any of the parent compounds. However, additional interacting
@@ -2117,7 +2062,6 @@ Leu186, Glul89, Asp190, Ser191, Asp194. Leul97, Alal98, Leu217, Gln218, Arg220,
 
 and Pro221 with AF2 model (Table 13).
 
-69
 
 Ei il i ed iS end EER Eabl T ]
 
@@ -2178,7 +2122,6 @@ Table 14: Summary of interactions in 11B-HSD1
 Green: PDB mode!
 Blue: AF2 model
 
-70
 
 Gold: Both models
 I-Bond interaction
@@ -2217,7 +2160,6 @@ hydrogen bond interactions, specifically to interact with 37 ligands while Phel8
 
 hydrophobic interactions with 49 interacting ligands.
 
-71
 
 PTPIB
 
@@ -2397,7 +2339,6 @@ B
 H
 ie
 
-1
 i
 H
 
@@ -2443,7 +2384,6 @@ B
 L
 H
 Bit] [B
-7
 iu
 LIL
 L[B/ BIT
@@ -2467,7 +2407,6 @@ LH
 
 it
 ih
-1
 L
 
 L
@@ -2544,7 +2483,6 @@ Cys324
 Glu326
 Phe327
 
-72
 
 TALE
 
@@ -2553,7 +2491,6 @@ BIBI3:
 L3:
 HA]!
 
-4
 
 [cfc
 
@@ -2564,7 +2501,6 @@ L
 H
 
 L
-7
 im
 LLL
 
@@ -2700,7 +2636,6 @@ L
 
 t
 
-1
 
 B/B/B/B/B(B/B/B/B/B/ BIL || B/B{Bl BILL BIBI3
 
@@ -2825,7 +2760,6 @@ H
 L
 
 i
-1
 
 iG
 
@@ -2834,7 +2768,6 @@ iG
 1B
 L
 
-19
 
 i
 
@@ -2974,7 +2907,6 @@ Gin218
 
 ‘Arg220
 
-73
 
 Table 16. Continued
 
@@ -3017,7 +2949,6 @@ specifically for the control in PTP1B, which generated the highest value of 11.8
 
 followed by QUE of SIRT6 having 10.798A, and 9.409A of CIN in 11B-HSDI.
 
-74
 
 In terms of the parent compounds, although as positioned in the same binding
 pockets, different orientations in different locations have been observed yielding RMSDs
@@ -3041,7 +2972,6 @@ CTL in 11B-HSD1
 Figure 20: Superimposed docked conformations and RMSDs (A) of the controls and
 native ligands with both PDB (blue) and AF2 (yellow) models of the protein targets
 
-75
 
 PRIN PKOR
 6.613A 6.613A
@@ -3119,7 +3049,6 @@ Ala226, Val227, Gly229, Ile230, Val231, and Met233. As shown in Figure 24D, a fl
 
 position was observed between the binding pose of ACM021 (green) and the parent
 
-79
 
 compound PRTN (white) leading to a change in the types of interactions and additional
 
@@ -3142,7 +3071,6 @@ ic Tne D
 
 Figure 24: Binding interactions of ACM021 with 11B-HSD1 PDB model
 
-80
 
 Figure 25: Binding interactions of ACMO021 with 11B-HSD1 AF2 model
 
@@ -3157,7 +3085,6 @@ observed with ACM021, such as hydrogen bonding with Gly38 and hydrophobic
 
 interactions with Val180, Val227, Prol78, and Met!79. The overlaid position of ACM021
 
-81
 
 with the binding pose of PRTN shows that the substitution of the two phenyl rings to the
 two linker groups extends and adjusts the whole structure inside the binding site leading to
@@ -3180,7 +3107,6 @@ interaction with both F16 and ACMO14. On the other hand, hydrogen bonding with A
 
 and GIn262 and hydrophobic interactions with Arg047, Phe! 82, and Ala217, were retained
 
-82
 
 in both ACMO14 and PRTN (B). Changes in the types of interactions were observed with
 Asp048 and Tyr046. The overlaid position of ACM014 with PRTN reveals the reverse
@@ -3196,7 +3122,6 @@ with F16 (A), but none of these amino acids were found to interact with PRTN (B)
 
 other hand, aside from the retained hydrogen bonding with Asn321 and hydrophobic
 
-83
 
 interactions with Tyr046, Arg047, and Asp048 in PRTN and ACMO021 (C), several
 additional interactions were observed such as 4 hydrogen bonding with Arg024, Tyr02,
@@ -3212,7 +3137,6 @@ Lastly, the interactions in SIRT6 are presented in Figures 28 and 29. Hydrophobi
 
 interactions were only present with QUE (A) and the PDB model of SIRT6, while Phe064,
 
-84
 
 Phe082, Phe086, Vall15, Vall70, Metl36, and Metl57 were observed to retain its
 hydrophobic interactions with QUE and PKOR (B). On the other hand, comparing PKOR
@@ -3224,11 +3148,9 @@ interactions were due to the different orientation of the Ring AC of the analog 
 
 the position of PKOR.
 
-3
 
 Figure 29: Binding interactions of BCM008 with SIRT6 AF2 model
 
-85
 
 In the AF2 model, only hydrophobic interactions were present with QUE (A) and
 the residues Trp188 and Ile219 were also present exhibiting the same interaction with
@@ -3248,7 +3170,6 @@ values having RMSDs of 15.824A and 11.252A, respectively. The summary of the RMS
 
 of the top 5 ligands is listed in Table 18.
 
-86
 
 ACMO2|
 
@@ -3277,13 +3198,11 @@ Figure 31: Superimposed docked conformations and RMSDs (A) of the top 5 derivati
 
 with both PDB (blue) and AF2 (yellow) models of PTPIB
 
-87
 
 BCM008.
 5.824A
 
 DCM004
-114034
 
 DCM027
 11.252A
@@ -3322,7 +3241,6 @@ DCMO004
 DCM025
 BCM022
 
-88
 
 RMSD Value (A)
 12.807A
@@ -3355,7 +3273,6 @@ spheres, forming a new pharmacophore model.
 
 Figure 33: Pharmacophore models for 11B-HSD1
 
-89
 
 In PDB model (A) of 11B-HSD1, hydrophobic and hydrogen bond donor groups
 were highlighted to be the important features in the top 5 ligands having 7 and 2,
@@ -3369,7 +3286,6 @@ acceptor are needed for the optimal binding with 11B-HSD1.
 
 Figure 34: Pharmacophore models for PTP1B
 
-90
 
 In PTPIB, hydrophobic, hydrogen bond donors and acceptors were marked in the
 top ligands in PDB model (A) having 3 and | of each, respectively. These are predicted to
@@ -3390,7 +3306,6 @@ analogue under the same class of the parent compound PKOR and PECE. As BCM008
 
 exhibited the most negative binding energy, the structure of which was used as the
 
-91
 
 reference for the features. In the PDB model (A), hydrophobic and hydrogen bond donor
 groups were observed to be important in lipophilic and hydrogen bonding interactions,
@@ -3413,7 +3328,6 @@ grouped into major categories as shown in Figure 36 and the specific parameters 
 
 in Table 19.
 
-92
 
 =Passed @ Failed
 
@@ -3455,7 +3369,6 @@ both aqueous and lipid phases were composed of 20.90% or 60, having the ideal
 
 physicochemical properties. Furthermore, 29.51% or 85 compounds were predicted to be
 
-93
 
 drug-like molecules, meaning these compounds can be considered for oral administration.
 Lastly, for synthetic accessibility, all the designed compounds and their corresponding
@@ -3503,7 +3416,6 @@ PKFL. For distribution parameters, PRTN and PKOR derived analogues comprised of
 
 metabolism with 46.1% or 65 compounds. DILE derived compounds comprised of 2.8%
 
-94
 
 or 4 compounds passed the excretion, 68.1% or 96 compounds from PRTN and PKOR
 analogues passed the toxicity screening, 4.3% or 6 PRTN derived compounds met the ideal
@@ -3532,7 +3444,6 @@ majority from PECE. The derive compounds of PRTN, PKOR, PQTN, and PECE with
 
 79.1% or 102 compounds passed the toxicity screening. Most PECE analogues comprising
 
-95
 
 33.3% or 43 compounds, possessed the ideal physicochemical properties, and 63.6% or 82
 compounds, of PQTN, and PECE were predicted as drug-like molecules. All the designed
@@ -3562,7 +3473,6 @@ predicted to be well absorbed, distributed, inactive inhibitor and substrate of 
 
 CYP450 isozymes, non-toxic, a drug-like molecule, and has the ideal solubility profile.
 
-96
 
 Compared to its parent compound, the substitution of the R2 hydroxyl with a
 hydroxymethyl group in DSM008 decreased the property of being an active CYP2C9
@@ -3573,7 +3483,6 @@ seen in Appendices E and F.
 
 : as y
 
-16
 nes
 
 ASM021 HCM004
@@ -3583,7 +3492,6 @@ DSM008
 Figure 38: Two-dimensional structures of the top ligands for each target based on
 ADMET-physicochemical profiles
 
-97
 
 Table 19: Pharmacokinetic and physicochemical screening results of the best ligand in 11B-
 HSDI1, PTP1B and SIRT6
@@ -3621,7 +3529,6 @@ Muege 56% 56% 78% 89% 100% 100%
 QED 0.140 0.161 0.234 0.287 0.510 0.535
 Synthetic Accessibility 4.783 4.763 3.781 «4.074 3.334 3.346
 
-98
 
 CHAPTER 5: DISCUSSION
 
@@ -3651,7 +3558,6 @@ is not directly involved in adrenal cortisol biosynthesis, it also emphasizes th
 
 carefully examine the endocrinologic effects of decreasing this non-adrenal source of
 
-99
 
 cortisol. Studies have shown that prolonged inhibition of cortisol production mediated by
 11B-HSD1 leads to hypothalamic-pituitary—adrenal (HPA) axis activation to ensure
@@ -3680,7 +3586,6 @@ negatively regulates the insulin signaling pathway, and its inhibition has shown
 
 results in the treatment of type 2 diabetes mellitus (Shi et al., 2004).
 
-100
 
 Moreover, the PDB model of protein-tyrosine phosphatase 1B (PTP1B) has a
 bound 5-(3 Hydroxyphenyl)isothiazol-3(2H)-one 1,1-dioxide (F16), a member of the
@@ -3708,7 +3613,6 @@ actions, quercetin has further been labeled as SIRT6 inhibitor at low concentrat
 
 activator at high concentrations. Furthermore, quercetin derivatives trichostatin, catechin
 
-101
 
 gallate and gallocatechin gallate acted as potent small molecule SIRT6 inhibitors (Wood
 et al., 2018; You & Steegborn, 2018).
@@ -3738,7 +3642,6 @@ Structural modifications of natural products have been an ongoing and
 
 indispensable source of novel drug leads. Plants are a large category of natural products
 
-102
 
 with a wide range of pharmacological activity that has yielded an abundance of clinical
 drugs. It has been evident that a lot of clinical drugs have been developed by the structural
@@ -3767,7 +3670,6 @@ retaining activity. In certain instances, the use of bioisosteres can improve ta
 
 ligand interactions. Bioisosterism permits molecular modification of the lead compound
 
-103
 
 without compromising the drug-target interaction, improves biological activity with
 enhanced pharmacokinetics, and reduces toxicity (Patani & LaVoie, 1996).
@@ -3796,7 +3698,6 @@ and ACM055, which were analogues of PRTN, PKOR derived compounds BCM005 and
 
 BCMO006, and ESM008 as an analog of DILE, suggesting that these derivatives can be
 
-104
 
 considered as multifunctional compounds that can efficiently bind to 11B-HSD1, PTP1B
 and SIRT6 enzymes.
@@ -3827,7 +3728,6 @@ the controls for all protein targets. On the other hand, this suggests the possi
 
 predicted metabolites may be more reactive than their corresponding parent compounds.
 
-105
 
 As listed in Table 7, it is evident that most of the parent compounds were predicted to
 undergo different functionalization reactions. Most of the reactions predicted were
@@ -3856,7 +3756,6 @@ dimensional (3D) protein structures (Neveu et al., 2018). For an accurate predic
 
 the bound conformation and structural similarity of biological structures, the RMSD should
 
-106
 
 be less than or equal (<) to 2A (Trott & Olson, 2010) or the smaller the RMSD, the more
 similar the two structures (Reva et al., 1998).
@@ -3887,7 +3786,6 @@ iandj, Rr is the van der Waals radius of atom type t. Interaction functions fig 
 
 where it corresponds to certain weights of steric interactions, which are represented in
 
-107
 
 terms of gaussi(d), gausso(d), and repulsion(d) with its corresponding formulas,
 hydrophobic interaction is weighted depending on the distance: when d < 0.5A: 1, d >
@@ -3915,7 +3813,6 @@ cortisol, the major glucocorticoid in humans, is to regulate glucose metabolism 
 
 pressure in order to limit stress levels (Munckt et al., 1984). Due to the wide array of
 
-108
 
 physiological properties of cortisol, the circulating levels of the glucocorticoid must be
 tightly regulated (James & Lawson, 2010).
@@ -3945,7 +3842,6 @@ As for the average binding energies of parent compounds in both models of 11B-
 
 HSDI1, PRTN has the same binding energy with the cortisone (-10.5 kcal/mol), and lower
 
-109
 
 binding energy than CBO (-10.2 kcal/mol). PKOR has the same binding energy with CBO
 (-10.2 kcal/mol). Considering the +2.85 kcal/mol threshold as the standard error of
@@ -3971,7 +3867,6 @@ their critical roles in the catalytic activity of 11B-HSD1 as they were found to
 
 of the interactions with docked ligands.
 
-110
 
 Among the top structural analogues for 11B-HSD1, ACM021, a PRTN derived
 compound, exhibited the best affinity towards 11B-HSD1, having the lowest binding
@@ -3999,7 +3894,6 @@ interactions. The unreported Gly229, and Ile230 also participated in hydrophobic
 
 interactions with ACM021.
 
-11
 
 On the other hand, for the 11B-HSD1 AF2 model, the binding pose of ACM021
 was slightly different compared to PRTN (Figure 25D). It is evident that the substitution
@@ -4028,7 +3922,6 @@ Gly041, which has hydrogen bonding, His120, Val227, Prol78, Met179, and Val180,
 
 which initiated a hydrophobic interaction.
 
-112
 
 Binding Towards PTPIB
 
@@ -4058,7 +3951,6 @@ Val49, Lys120, Asp181, Phe182, and Gln262 are additional residues that contribut
 
 catalysis and substrate recognition and form the sides of the catalytic cleft. These reported
 
-113
 
 essential amino acid residues were all recorded to have interactions with the docked
 ligands. Moreover, as shown in Table 15, Ty046, Phe182, and Ala217 were found to be
@@ -4087,7 +3979,6 @@ been oriented at the opposite side of binding site. This suggests that the subst
 
 phenyl ring in the R8 ether linker redirected the distal chain of ACM014.
 
-114
 
 Some amino acid residues have retained their interactions with ACM014 compared
 with PRTN, reported GIn262 retained its hydrogen bond interactions. However, there is a
@@ -4116,7 +4007,6 @@ ACMO014. In addition, new hydrophobic interactions between ACMO14 and Arg254,
 
 Met258, Gly259 and Cys324 were also observed.
 
-115
 
 Binding Towards SIRT6
 
@@ -4145,7 +4035,6 @@ kcal/mol. On the other hand, aside from PQTN, PECE also shows the same binding e
 
 as compared to control in PDB model. PCTN has -7.7 kcal/mol and -9.7 kcal/mol being
 
-116
 
 both showed a better binding energy in both models. These docking results support the
 study of You et al., (2019) proving that quercetin and its based compounds catechin and
@@ -4175,7 +4064,6 @@ DCM025 were the best ligands to have the highest binding affinity towards the SI
 
 target. This suggests that the attachment of phenyl ring in the R8 ether linker, replacement
 
-117
 
 of fluoro substituent in R6 hydroxyl and an optional substitution of methyl group in the R3
 hydroxyl of PKOR framework might be good scaffold for SIRT6. In addition, in PECE
@@ -4204,7 +4092,6 @@ interaction was seen with Arg065, Gln113, His133, Leul86, and Asp187. These chan
 
 were evident in the functional groups of the distal chain due to the structural extension of
 
-118
 
 the analogue. The reported Gly214 with moderate hydrogen bonding with BCM008 was
 observed to be an additional interacting residue. On the other hand, Ala053, Gly054, and
@@ -4234,7 +4121,6 @@ protein target were used as the database and subjected to pharmacophore analysis
 
 determine different chemical features that are essential in protein-ligand interactions. The
 
-119
 
 red color represents hydrogen bond acceptor, green color represents hydrogen bond donor,
 yellow spheres represent hydrophobic and blue rings represent an aromatic ring.
@@ -4264,7 +4150,6 @@ observed in the AF2 model, the presence of 4 hydrogen bond acceptors. As a resul
 
 consensus pharmacophore, 4 hydrophobic, 5 of each hydrogen bond donors, and
 
-120
 
 hydrophobic acceptors are essential features to have optimal interaction with the SIRT6
 
@@ -4293,7 +4178,6 @@ values are equivalent to excellent, 0.3-0. range values are equivalent to medium
 
 1.0 range values, which is equivalent to poor (Xiong et al., 2021).
 
-121
 
 In this study, the prediction of the ADMET properties was applied to the 280
 derivatives with improved binding energies; they were consolidated per protein target and
@@ -4323,7 +4207,6 @@ protein binding (PPB); thus. the binding of a drug to proteins in plasma has a s
 
 influence on its pharmacodynamic behavior. PPB can directly influence oral bioavailability
 
-122
 
 because the free concentration of the drug is at stake when a drug binds to serum proteins
 in this process. Blood-brain barrier (BBB) permeation is a measure of how molecules
@@ -4351,7 +4234,6 @@ toxicity and drug interactions are always a usual occurrence (Kell & Goodacre 20
 
 terms of criteria, Category 0 was referred to as non-substrate/non-inhibitor, while Category
 
-123
 
 1 reflects a substrate or inhibitor. The probability value represents a compound's being a
 substrate or inhibitor, where poor (0.7-1.0) signifies Category 1.
@@ -4380,7 +4262,6 @@ In toxicity analysis, Category 0 was referred to as an inactive inhibitor/non-
 
 carcinogen/non-hepatotoxic, while Category 1 represents a compound as being an active
 
-124
 
 inhibitor/carcinogen/hepatotoxic. The probability value represents a compound's being
 inactive or active, where poor (0.7-1.0) signifies Category 1.
@@ -4410,7 +4291,6 @@ drug-likeness. It is derived from a multivariate nonlinear function in which mul
 
 properties have been parameterized and combined, including those used by Lipinski’s rule-
 
-125
 
 of-five, PSA, Nrow, counts of aromatic rings (NAr), and the presence of certain undesirable
 structural motifs (Bickerton et al., 2012). Results interpretation includes > 0.67 (excellent)
@@ -4440,7 +4320,6 @@ resulting product during derivatization, all of the designed analogues and even 
 
 corresponding parent compounds were considered to be synthetically feasible.
 
-126
 
 In the absorption parameter, 71 compounds were predicted to absorbed or
 assimilated through the human intestine. These compounds were also considered to be non-
@@ -4470,7 +4349,6 @@ predicted to have the lowest scores, reflecting that these compounds have the hi
 
 therapeutic index.
 
-127
 
 In the metabolism parameter, a number of PCAD derivatives were predicted to be
 the best ligands to have the property of being non-inhibitor and non-substrate of the major
@@ -4502,7 +4380,6 @@ In terms of lipophilicity, PCAD derivatives were predicted to have the best scor
 
 capable of permeating lipid membranes, and these are HCM002, HCM009, HCMO007,
 
-128
 
 HCM006, and HCMO10. On the other hand, compounds that were predicted to have the
 best scores to be soluble in the aqueous phase were also PCAD derivatives, including
@@ -4531,7 +4408,6 @@ For the top 5 compounds in the PTP1B target, ACM014, ACM021, ACM028,
 
 ACMO020, and ACM024 were predicted to be highly absorbed in the human intestinal tract.
 
-129
 
 Except for ACM014 and ACM028, the top 5 ligands were predicted to be strong substrates
 and strong inhibitors of the P-glycoprotein (P-gp) transporter. All the top 5 ligands were
@@ -4559,7 +4435,6 @@ transporter. It was also noted that DCM004 is a strong substrate of the P-gp tra
 
 was also predicted that none of the top 5 ligands would cross the blood-brain barrier (BBB).
 
-130
 
 Except for BCMO008, all the top ligands have a low therapeutic index. In terms of their
 metabolism roles, BCM008 and BCM022 were non-inhibitors and non-substrates of the 5
@@ -4586,7 +4461,6 @@ excretion and absorption parameters. For HCM004 and DSMO008 minimal modification
 
 in dosing might address the long half-life of the compound.
 
-131
 
 CHAPTER 6: CONCLUSION AND RECOMMENDATIONS
 
@@ -4614,7 +4488,6 @@ are alkaloids and phenolic compounds, suggesting that these families can be cons
 
 good prospects for the selected protein targets.
 
-132
 
 Structural modification was performed to the top parent compounds with a
 comparable binding affinity with controls in all models of the protein targets, and these are
@@ -4642,7 +4515,6 @@ SA 5.023) the top 5 derivatives for SIRT6; the 2" to 4 compounds are derivatives
 
 PECE while the other two are designed from PKOR.
 
-133
 
 Interaction analysis reveals that most of the reported binding residues have been
 observed to interact with most of the experimental ligands. In SIRT6, Gly! 11 and Thr213
@@ -4669,7 +4541,6 @@ Lastly, 5 hydrogen bond donors, 5 hydrogen bond acceptors, and 4 hydrophobic fea
 
 were recorded to be present and essential for optimal binding with SIRT6.
 
-134
 
 Pharmacokinetic and physicochemical analysis have shown that out of the 280
 potential derivatives, 71 compounds have fulfilled all indices of the absorption parameter,
@@ -4698,7 +4569,6 @@ binding pockets, since there were observed differences in the PDB and AF2 orient
 
 the ligands. Ensemble docking or molecular dynamic (MD) simulations can also be used
 
-135
 
 for the post-docking refinement of the generated ligand-protein complexes prior to
 interactions analysis.
@@ -4711,7 +4581,6 @@ to in vitro and in vivo studies to determine their actual biological effects —
 
 will serve as inhibitors, activators, or modulators of the target enzymes.
 
-136
 
 REFERENCES
 
@@ -4744,7 +4613,6 @@ Almeida, C., Monteiro, C., & Silvestre, S. (2021). Inhibitors of 11®-hydroxyste
 
 dehydrogenase type | as potential drugs for type 2 diabetes mellitus—a systematic
 
-137
 
 review of clinical and in vivo preclinical studies. In Scientia Pharmaceutica (Vol. 89,
 Issue 1, pp. 1-14). MDPI AG. https://doi.org/10.3390/scipharm89010005
@@ -4771,7 +4639,6 @@ Arnold, K., Bordoli, L., Kopp, J., & Schwede, T. (2006). The SWISS-MODEL workspa
 
 A web-based environment for protein structure homology modelling. Bioinformatics,
 
-138
 
 22(2), 195-201. https://doi.org/10.1093/bioinformatics/bti770
 
@@ -4805,7 +4672,6 @@ targets for the treatment of type-2 diabetes mellitus. In Journal of Experimenta
 
 Pharmacology (Vol. 12, pp. 1-15). Dove Medical Press Ltd.
 
-139
 
 https://doi.org/10.2147/JEP.S226113
 
@@ -4838,7 +4704,6 @@ Ashraf, N. A., Kit, S. W., Yee, T. S., Pichika, M. R., Gorain, B., & Kesharwani,
 
 systematic review. Journal of Traditional and Complementary Medicine, 8(3), 361—
 
-140
 
 376. https://doi.org/10.1016/J.JTCME.2017.08.012
 
@@ -4872,7 +4737,6 @@ like molecules based on molecular complexity and fragment contributions.
 
 Feinstein, W. P., & Brylinski, M. (2015). Calculating an optimal box size for ligand
 
-141
 
 docking and virtual screening against experimental and predicted binding pockets.
 Journal of Cheminformatics, 7(1). https://doi.org/10.1186/s13321-015-0067-S
@@ -4905,7 +4769,6 @@ Gajalakshmi, S., Vijayalakshmi, S., & Devi, R. V. (2012). Phytochemical and
 
 pharmacological _ properties of Annona muricata: A review,
 
-142
 
 https://www.researchgate.net/publication/280012402
 
@@ -4938,7 +4801,6 @@ drug discovery: Focusing on acid protease inhibitors. In Expert Opinion on Drug
 
 Discovery (Vol. 7, Issue 10, pp. 903-922).
 
-143
 
 https://doi.org/10.1517/17460441.2012.712513
 
@@ -4972,7 +4834,6 @@ Hollis, G., & Huber, R. (2011). 1] -Hydroxysteroid dehydrogenase type | inhibiti
 
 Hosfield, D. J., Wu, Y., Skene, E. J., Hilgers, M., Jennings, A., Snell, G. P., & Aertgeerts,
 
-144
 
 K. (2005). Conformational flexibility in crystal structures of human 11B-
 hydroxysteroid dehydrogenase type I provide insights into glucocorticoid
@@ -5007,7 +4868,6 @@ in vitro antidiabetic and inhibitory potential against a-amylase, a-glucosidase,
 
 non-enzymatic glycation and lipid peroxidation. Biomedicine and Pharmacotherapy,
 
-145
 
 100, 83-92. https://doi.org/10.1016/j.biopha.2018.01.172
 
@@ -5042,7 +4902,6 @@ Koshland, D. E. (1994). The Key-Lock Theory and the Induced Fit Theory.
 
 Kuang, J., Chen, L., Tang, Q., Zhang, J., Li, Y., & He, J. (2018). The role of Sirt6 in obesity
 
-146
 
 and diabetes. In Frontiers in Physiology (Vol. 9, Issue FEB). Frontiers Media S.A.
 https://doi.org/10.3389/fphys.2018.00135
@@ -5075,7 +4934,6 @@ Edition, 585-614. https://doi.org/10.1016/B978-0-12-417205-0.00025-0
 
 Majhi, S., & Das, D. (2021). Chemical derivatization of natural products: Semisynthesis
 
-147
 
 and pharmacological aspects- A decade update. In Tetrahedron (Vol. 78). Elsevier
 Ltd. https://doi.org/10.1016/j.tet.2020.131801
@@ -5108,7 +4966,6 @@ approach.
 
 Morris, G. M., Ruth, H., Lindstrom, W., Sanner, M. F., Belew, R. K., Goodsell, D. S., &
 
-148
 
 Olson, A. J. (2009). AutoDock4 and AutoDockTools4: Automated docking with
 selective receptor flexibility. Journal of Computational Chemistry, 30(16), 2785—
@@ -5140,7 +4997,6 @@ IOP Publishing Ltd. https://doi.org/10.1088/2043-6262/3/1/013001
 
 O’Boyle, N. M., Banck, M., James, C. A., Morley, C., Vandermeersch, T., & Hutchison,
 
-149
 
 G. R. (2011). Open Babel. Journal of Cheminformatics, 3(33), 1-14.
 https://jcheminf.biomedcentral.com/track/pdf/10.1186/1758-2946-3-33
@@ -5174,7 +5030,6 @@ Qin, K., Zhang, N., Zhang, Z., Nipper, M., Zhu, Z., Leighton, J., Xu, K., Musi, 
 
 P. (2018). SIRT6-mediated transcriptional suppression of Txnip is critical for
 
-150
 
 pancreatic beta cell function and survival in mice. Diabetologia, 61(4), 906-918.
 https://doi.org/10.1007/s00125-017-4542-6
@@ -5208,7 +5063,6 @@ Reva, B. A., Finkelstein, A. V, & Skolnick, J. (1998). What is the probability o
 
 prediction of a protein structure with an rmsd of 6 A ? 3, 141-147.
 
-151
 
 Rodriguez, A. C. I., Epel, E. S., White, M. L., Standen, E. C., Seckl, J. R., & Tomiyama,
 A. J. (2015). Hypothalamic-pituitary-adrenal axis dysregulation and cortisol activity
@@ -5240,7 +5094,6 @@ drug discovery. Computers in Biology and Medicine, 137(July), 104851.
 
 https://doi.org/10.1016/j.compbiomed.2021.104851
 
-152
 
 Shi, K., Egawa, K., Hiroshi Maegawa, Takaaki Nakamura, S. U., & Yoshihiko Nishio, A.
 K. (2004). Protein-tyrosine phosphatase 1B associates with insulin receptor and
@@ -5273,7 +5126,6 @@ Teimouri, M., Hosseini, H., Sadeghabadi, Zahra Arab Babaei-Khorzoughi, R., Gorga
 
 Firuzjaee, S., & Meshkani, R. (2022). The role of protein tyrosine phosphatase 1B
 
-153
 
 (PTP 1B) in the pathogenesis of type 2 diabetes mellitus and its complicationsNo Title.
 https://doi.org/10.1007/s13105-021-00860-7 Abstract
@@ -5308,7 +5160,6 @@ Ward, D. T., Yau, S. K., Mee, A. P., Mawer, E. B., Miller, C. A., Garland, H. O.
 
 Riccardi, D. (2001). Functional, Molecular, and Biochemical Characterization of
 
-154
 
 Streptozotocin-Induced Diabetes. Journal of the American Society of Nephrology,
 12(4), 779-790. https://doi.org/10.1681/ASN.V124779
@@ -5343,7 +5194,6 @@ Yamazaki, M., & Lin, J. (2003). Role of P-glycoprotein in pharmacokinetics: clin
 
 implications.
 
-155
 
 Yi, F., Li, L., Xu, L. jia, Meng, H., Dong, Y. mao, Liu, H. bo, & Xiao, P. gen. (2018). In
 silico approach in reveal traditional medicine plants pharmacological material basis.

@@ -246,7 +246,6 @@ habitats with different wave exposure conditions showed that shell morphology is
 
 adaptive trait with an important genetic basis and a plastic potential (Solas et al., 2013).
 
-10
 
 The genetic and environmental factors affecting shell shape in the freshwater snail
 Semisulcospira reiniana at Takahashi in Kyoto, central Japan, were studied by means of a
@@ -299,7 +298,6 @@ of P. canaliculata found variations in shape of dorsal and ventral portions of t
 
 between male and female individuals based on landmark-based analysis. The study,
 
-12
 
 therefore demonstrated the effectiveness of geometric morphometric methods in describing
 morphological variation. The uncontrollable variation existing in P. canaliculata could
@@ -327,7 +325,6 @@ also insights that could be used to develop effective management strategies and 
 
 conservation efforts for other gastropod species. Therefore, comparative studies among
 
-13
 
 freshwater gastropod lineages should be explored, especially those that examine the
 adaptive potential of shell variation. Furthermore, genomic tools should also be used to
@@ -356,7 +353,6 @@ will be 43,547 (Davao City Investment Promotion Center [DCIPC], 2016; City
 
 Agriculturist Office, 2021).
 
-14
 
 Davao City is an agriculture center with an agricultural area consisting of 51,009
 ha, 21% of its overall land area. However, the Davao City Agriculturist Office reported a
@@ -384,7 +380,6 @@ rice fields is altered because paddies are flooded during the rice growing perio
 
 in harvesting period. The absence of water in rice field during this period is unfavorable to
 
-15
 
 the development of many species, including the golden apple snail. Water level variations
 can affect the survival of species with longer life cycles (Bazzanti et al., 2003; Caramujo
@@ -426,7 +421,6 @@ about 42.4% of the city’s total rice field area. The study was located in five
 
 districts planted entirely of rice. The common varieties of rice planted in the study sites are
 
-17
 
 NSIC RC 214 (TUBIGAN 16), NSIC RC 224 (TUBIGAN 19), NSIC RC 238 (TUBIGAN
 21), NSIC RC 9 (APO), and NSIC RC 11 (CANLAON). The planting month and harvest
@@ -438,7 +432,6 @@ submerged in freshwater, suitable for the growth of rice. The area coverage of e
 
 sampling site was recorded using the Global Positioning System (GPS) receiver.
 
-9
 
 >
 (Google Maps, 2021) (Google Maps, 2021)
@@ -504,7 +497,6 @@ further tests. Salinity and total dissolved solids (TDS) were analyzed in the DO
 Regional Standards and Testing Laboratory, while total hardness and nitrate concentrations
 
 
-20
 
 were measured and analyzed in the Davao Analytical Laboratories, Inc. Moreover,
 laboratory analysis of water samples was also conducted in the DOST RO-XI Regional
@@ -535,7 +527,6 @@ evidence of no association between the two variables. While the p value is commo
 
 in different research disciplines, the Bayes factor has a number of advantages, including.
 
-21
 
 the ability to draw a conclusion about the alternative hypothesis rather than only the null
 hypothesis (Jarosz & Wiley, 2014).
@@ -579,7 +570,6 @@ width, and aperture length were recorded in Calinan district. Moreover, Tugbok d
 
 the lowest mean value for the number of bands, with 16.22. Marilog district had the lowest
 
-23
 
 mean values for band width per shell and number of whorls, with 0.83 mm and 4.09,
 respectively. Table 2 shows the shell morphometric measurements of P. canaliculata
@@ -616,7 +606,6 @@ with a value of 14.23 mg/L. Meanwhile, the lowest DO level was measured in Calin
 
 district, with a value of 5.31 mg/L. The highest measurement of total dissolved solids
 
-24
 
 (TDS) was recorded in Tugbok district, with a value of 230 ppm, while the lowest TDS
 level was measured in Calinan district, with a value of only 39 ppm. The highest total
@@ -653,7 +642,6 @@ interpreting a range of Bayes factors. Table 4 shows the interpretation scheme o
 
 factor.
 
-25
 
 Table 4. Interpretation of the Bayes factor (Jeffreys, 1961, as cited in Quintana &
 Williams, 2018)
@@ -689,7 +677,6 @@ in favor of the alternative hypothesis. Moreover, it is 1.205 times more likely 
 
 the number of bands are related than not. Similarly, shell length, shell width, aperture
 
-26
 
 length, number of bands, and dissolved oxygen (DO) reported BFio values > 1.000. Lastly,
 the BFio of shell dry weight and total dissolved solids (TDS) also suggests anecdotal
@@ -735,7 +722,6 @@ variables were less than 1.000. This means that there is anecdotal evidence supp
 
 null hypothesis: that the paired variables are not correlated.
 
-27
 
 Table 5b. Bayesian Pearson correlation matrix of shell features and
 hysicochemical parameters
@@ -774,7 +760,6 @@ evidence. The remaining paired variables reported BF+o values that indicate anec
 
 evidence in favor of the alternative model.
 
-28
 
 Table 6a. Bayesian Pearson one-sided pairwise correlations of shell features and
 
@@ -831,7 +816,6 @@ Shell dry weight 2.175.
 or alll tests, the alternative hypothesis specifies that the correlation is positive.
 
 
-29
 
 A scatterplot visualization of shell width-salinity, aperture length-salinity, and
 number of whorls-salinity suggests that there is a correlation between the variables (Figure
@@ -859,7 +843,6 @@ Galan et al. (2015) on golden apple snails in selected aquatic habitats (Central
 
 University campus and vicinities in Bukidnon, Philippines), no significant correlation was
 
-30
 
 found between aperture length-salinity and number of whorls-salinity. However, it is
 
@@ -887,7 +870,6 @@ aperture length-temperature, and number of whorls-temperature also indicates tha
 
 variables are related (Figure 7A, D, G, and J). Furthermore, the posterior-prior plots (Figure
 
-31
 
 7B, E, H, and K) also reported a Bayes factor that is in favor of the alternative positive
 correlation, with all having a median value of 0.452. The Bayes factors are also relatively
@@ -914,7 +896,6 @@ whorls-temperature in golden apple snails in selected aquatic habitats (Central 
 
 University campus and vicinities in Bukidnon, Philippines). However, determining
 
-32
 
 whether the non-significance is due to data insensitivity or evidence of no relationship
 between the two variables is difficult (Quintana & Williams, 2018).
@@ -936,7 +917,6 @@ width-temperature, aperture length-temperature, and number of whorls-temperature
 
 be attributed to increased active behaviors of the organism as temperature rises.
 
-33
 
 4 {pendence or, ‘ong
 ze os [canis [ones
@@ -947,7 +927,6 @@ Tanks oF Temperate
 
 Stetches beta prior with
 
-53
 7 Pevienee ory Yared
 G farke thot i H  _endates T_stetched beta por with «
 si ah Madians 0.452 oman BF 4.954 at x = 1.596
@@ -963,7 +942,6 @@ A scatterplot visualization of shell dry weight-salinity and shell length-salini
 
 revealed that the variables were correlated (Figure 8A and D). The posterior-prior plots
 
-34
 
 (Figure 8B and E) also reported a Bayes factor that is in favor of the alternative positive
 correlation, with all having a median value of 0.441. The Bayes factors are also relatively
@@ -993,7 +971,6 @@ patches, and other similar habitats where aquatic crops are grown (Cowie, 2005).
 
 al. (1991) identified variations in salinity tolerance among three strains of P. canaliculata,
 
-35
 
 suggesting that the strains have different genotypes. According to Cowie (2002), P.
 canaliculata is sufficiently tolerant of seawater just enough to be carried by currents from
@@ -1047,7 +1024,6 @@ the alternative positive correlation. The Bayes factors are also relatively stab
 
 very small prior widths, as confirmed by the Bayes factor robustness check.
 
-37
 
 ‘Conclusion
 
@@ -1078,9 +1054,7 @@ canaliculata;
 
 e
 
-2
 
-38
 
 . that further studies establishing correlation analysis should also incorporate sex
 
@@ -1151,7 +1125,6 @@ Caramujo, M. J., & Boavida, M. J. (2010). Biological diversity of copepods and
 cladocerans in Mediterranean temporary ponds under periods of contrasting
 rainfall. Journal of Limnology, 69(1), 64-15. doi:10.3274/3L10-69-1-06
 
-7
 
 Centre for Agriculture and Bioscience International (CABI). (2019). Pomacea
 canaliculata (golden apple snail). Retrieved from Invasive Species Compendium:
@@ -1243,7 +1216,6 @@ apple snail (Pomacea cancaliculata, Lamarck) in selected aquatic habitats.
 International Journal of Environmental Science and Development, 6(8), 625-628.
 doi:10.7763/JESD.2015.V6.670
 
-73
 
 Google Maps. (2021). Davao City, Davao del Sur. Retrieved November 15, 2021, from
 Google Maps:
@@ -1292,7 +1264,6 @@ Philippine Rice Research Institute (PhilRice). Retrieved from
 https://www.researchgate.net/publication/320560199_Biology_and_management_
 of_invasive_apple_snails
 
-4
 
 Jubaedah, D., Wijayanti, M., Marsi, & Rizaldy, N. (2018). Utilization of golden apple
 snail (Pomacea canaliculata) shells as liming materials for Pangasius sp culture
@@ -1342,7 +1313,6 @@ between gastropod shell dissolution and water chemical properties in a tropical
 estuary. Marine Environmental Research, 66(4), 422-429.
 doi:10.1016/j.marenvres.2008.07.003
 
-75
 
 Michalak, I., & Chojnacka, K. (2014). Effluent Biomonitoring. In P. Wexler,
 Encyclopedia of Toxicology (3rd Edition ed., pp. 312-315). Waltham, MA:
@@ -1391,7 +1361,6 @@ Primost, M. A., Bigatti G., & Marquez, F. (2015). Shell shape as indicator of po
 marine gastropods affected by imposex. Marine and Freshwater Research,
 67(12), 1-7. doi:DOI: 10.1071/MF15233
 
-76
 
 Qin, Z., Yang, M., Zhang, J.-E., & Deng, Z. (2020). Effects of salinity on survival,
 growth and reproduction of the invasive aquatic snail Pomacea canaliculata
@@ -1440,7 +1409,6 @@ Solas, M. R., Sepilveda, R. D., & Brante, A. (2013). Genetic variation of the sh
 morphology in Acanthina monodon (Gastropoda) in habitats with different wave
 exposure conditions. Aquatic Biology, 18(1), 253-260. doi:10.3354/ab00508
 
-77
 
 Tamburi, N. E., Seuffert, M. E., & Martin, P. R. (2018). Temperature-induced plasticity
 in morphology and relative shell weight in the invasive apple snail Pomacea
