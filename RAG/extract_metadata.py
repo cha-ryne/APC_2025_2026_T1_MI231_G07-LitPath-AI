@@ -1,26 +1,119 @@
+# Controlled vocabulary for main subjects
+MAIN_SUBJECTS = [
+    "Agriculture",
+    "Anthropology",
+    "Archaeology",
+    "Architecture",
+    "Astronomy",
+    "Biology",
+    "Botany",
+    "Chemistry",
+    "Communications",
+    "Computer Science",
+    "Ecology",
+    "Education",
+    "Engineering",
+    "Information and Communications Technology",
+    "Environmental Science",
+    "Fisheries",
+    "Food Science and Technology",
+    "Forestry",
+    "Genetics",
+    "Geology",
+    "Health and Wellness",
+    "Hydrology",
+    "Industry",
+    "Library and Information Science",
+    "Livelihood",
+    "Marine Science",
+    "Mathematics",
+    "Medicine",
+    "Meteorology",
+    "Nutrition",
+    "Physics",
+    "Science and Technology",
+    "Statistics",
+    "Social Sciences",
+    "Veterinary Medicine",
+    "Zoology",
+    "General Works"
+]
 
-import dotenv
-dotenv.load_dotenv()
+# Rule-based mapping from degree/title terms to main subject
+DEGREE_TO_MAIN_SUBJECT = {
+    'agronomy': 'Agriculture',
+    'horticulture': 'Agriculture',
+    'plant breeding': 'Agriculture',
+    'soil science': 'Agriculture',
+    'entomology': 'Agriculture',
+    'botany': 'Botany',
+    'forestry': 'Forestry',
+    'environmental science': 'Environmental Science',
+    'marine science': 'Marine Science',
+    'applied nutrition': 'Food Science and Technology',
+    'food science': 'Food Science and Technology',
+    'genetics': 'Genetics',
+    'mathematics': 'Mathematics',
+    'statistics': 'Statistics',
+    'physics': 'Physics',
+    'chemistry': 'Chemistry',
+    'engineering': 'Engineering',
+    'computer science': 'Computer Science',
+    'information technology': 'Computer Science',
+    'social science': 'Social Sciences',
+    'economics': 'Social Sciences',
+    'education': 'Education',
+    'general science': 'General Works',
+}
 
-def recover_chromadb_from_index(pdf_folder, chunk_size=500):
-    """
-    If ChromaDB is empty but indexed_files.json exists, re-embed and re-index all PDFs listed in indexed_files.json.
-    """
-    indexed_path = os.path.join(pdf_folder, "indexed_files.json")
-    if not os.path.exists(indexed_path):
-        print("[RECOVERY] No indexed_files.json found. Skipping ChromaDB recovery.")
-        return 0
-    with open(indexed_path, "r", encoding="utf-8") as f:
-        indexed_files = json.load(f)
-    if not indexed_files:
-        print("[RECOVERY] indexed_files.json is empty. Skipping ChromaDB recovery.")
-        return 0
-    embedder = SentenceTransformer('all-MiniLM-L6-v2')
-    from extract_metadata import extract_thesis_metadata
-    recovered_chunks = 0
-    for txt_path in indexed_files:
-        if not os.path.exists(txt_path):
-            print(f"[RECOVERY] Missing .txt for {txt_path}, skipping.")
+def extract_thesis_metadata(text):
+    import re
+    from sentence_transformers import SentenceTransformer
+    from sklearn.metrics.pairwise import cosine_similarity
+
+    meta = {}
+    lines = text.splitlines()
+
+    # Title: first non-empty line
+    for l in lines:
+        if l.strip():
+            meta["title"] = l.strip()
+            break
+
+    # Author: look for a line with all uppercase or title case, not matching section headers
+    for l in lines[1:10]:
+        if l.strip() and not re.match(r'^(chapter|introduction|background|review|statement|objectives|scope|significance|summary|conclusion|references|acknowledgments?)', l, re.I):
+            meta["author"] = l.strip()
+            break
+
+    # Degree: look for 'Master', 'Doctor', etc.
+    for l in lines:
+        if re.search(r'(Master|Doctor|Bachelor|Philosophy|Science|Arts|Engineering)', l, re.I):
+            meta["degree"] = l.strip()
+            break
+
+    # University: look for 'University'
+    for l in lines:
+        if 'university' in l.lower():
+            meta["university"] = l.strip()
+            break
+
+    # Publication year: look for a line with a 4-digit year (e.g., 2018)
+    for l in lines[1:20]:
+        m = re.search(r'(19|20)\d{2}', l)
+        if m:
+            meta["publication_year"] = m.group(0)
+            break
+
+    # Abstract: text between 'ABSTRACT' and the next major section header, allow multi-line, avoid premature cutoff
+    abstract = []
+    in_abstract = False
+    idx = 0
+    while idx < len(lines):
+        l = lines[idx]
+        if not in_abstract and l.upper().startswith("ABSTRACT"):
+            in_abstract = True
+            idx += 1
             continue
         if in_abstract:
             # Stop at major section headers, roman/numbered section headers with or without section names
