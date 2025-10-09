@@ -158,8 +158,8 @@ const LitPathAI = () => {
                 abstract: doc.abstract || 'Abstract not available.',
                 fullTextPath: doc.file || '',
                 degree: doc.degree || 'Thesis',
-                call_no: doc.call_no || 'N/A',
                 subjects: doc.subjects || ['Research'],
+                school: doc.school || '[Unknown University]',
             }));
 
 
@@ -307,91 +307,6 @@ const LitPathAI = () => {
                                         <ArrowRight size={20} />
                                     </button>
                                 </div>
-
-
-                                <div className="flex flex-wrap items-center space-x-4">
-                                    {/* Subject Filter */}
-                                    <div className="relative" ref={subjectDropdownRef}>
-                                        <button
-                                            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
-                                            onClick={() => setShowSubjectDropdown(!showSubjectDropdown)}
-                                        >
-                                            <span>{selectedSubject}</span>
-                                            <ChevronDown size={16} />
-                                        </button>
-
-
-                                        {showSubjectDropdown && (
-                                            <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px] max-h-60 overflow-y-auto">
-                                                {subjects.map((subject) => (
-                                                    <button
-                                                        key={subject}
-                                                        className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                                                        onClick={() => {
-                                                            setSelectedSubject(subject);
-                                                            setShowSubjectDropdown(false);
-                                                        }}
-                                                    >
-                                                        {subject}
-                                                    </button>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-
-
-                                    {/* Date Filter */}
-                                    <div className="relative" ref={dateDropdownRef}>
-                                        <button
-                                            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
-                                            onClick={() => setShowDateDropdown(!showDateDropdown)}
-                                        >
-                                            <span>{selectedDate}</span>
-                                            <ChevronDown size={16} />
-                                        </button>
-
-
-                                        {showDateDropdown && (
-                                            <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px]">
-                                                {dateOptions.map((option) => (
-                                                    <button
-                                                        key={option}
-                                                        className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                                                        onClick={() => {
-                                                            setSelectedDate(option);
-                                                            setShowDateDropdown(false);
-                                                        }}
-                                                    >
-                                                        {option}
-                                                    </button>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-
-
-                                    {/* Custom Date Range */}
-                                    {selectedDate === 'Custom date range' && (
-                                        <div className="flex items-center space-x-2 ml-auto">
-                                            <label className="text-sm text-gray-700">From:</label>
-                                            <input
-                                                type="number"
-                                                placeholder="YYYY"
-                                                className="px-3 py-2 w-24 border border-gray-300 rounded-lg text-sm"
-                                                value={fromYear}
-                                                onChange={(e) => setFromYear(e.target.value)}
-                                            />
-                                            <label className="text-sm text-gray-700">To:</label>
-                                            <input
-                                                type="number"
-                                                placeholder="YYYY"
-                                                className="px-3 py-2 w-24 border border-gray-300 rounded-lg text-sm"
-                                                value={toYear}
-                                                onChange={(e) => setToYear(e.target.value)}
-                                            />
-                                        </div>
-                                    )}
-                                </div>
                             </div>
 
 
@@ -500,89 +415,10 @@ const LitPathAI = () => {
                     <ArrowRight size={20} />
                   </button>
                 </div>
+            </div>
 
 
-                {/* Filters (stay with search bar) */}
-                <div className="flex flex-wrap items-center space-x-4">
-                  {/* Subject Filter */}
-                  <div className="relative" ref={subjectDropdownRef}>
-                    <button
-                      className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
-                      onClick={() => setShowSubjectDropdown(!showSubjectDropdown)}
-                    >
-                      <span>{selectedSubject}</span>
-                      <ChevronDown size={16} />
-                    </button>
-                    {showSubjectDropdown && (
-                      <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px] max-h-60 overflow-y-auto">
-                        {subjects.map((subject) => (
-                          <button
-                            key={subject}
-                            className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                            onClick={() => {
-                              setSelectedSubject(subject);
-                              setShowSubjectDropdown(false);
-                            }}
-                          >
-                            {subject}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
 
-
-                  {/* Date Filter */}
-                  <div className="relative" ref={dateDropdownRef}>
-                    <button
-                      className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
-                      onClick={() => setShowDateDropdown(!showDateDropdown)}
-                    >
-                      <span>{selectedDate}</span>
-                      <ChevronDown size={16} />
-                    </button>
-                    {showDateDropdown && (
-                      <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px]">
-                        {dateOptions.map((option) => (
-                          <button
-                            key={option}
-                            className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                            onClick={() => {
-                              setSelectedDate(option);
-                              setShowDateDropdown(false);
-                            }}
-                          >
-                            {option}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-
-                  {/* Custom Date Range */}
-                  {selectedDate === 'Custom date range' && (
-                    <div className="flex items-center space-x-2">
-                      <label className="text-sm text-gray-700">From:</label>
-                      <input
-                        type="number"
-                        placeholder="YYYY"
-                        className="px-3 py-2 w-24 border border-gray-300 rounded-lg text-sm"
-                        value={fromYear}
-                        onChange={(e) => setFromYear(e.target.value)}
-                      />
-                      <label className="text-sm text-gray-700">To:</label>
-                      <input
-                        type="number"
-                        placeholder="YYYY"
-                        className="px-3 py-2 w-24 border border-gray-300 rounded-lg text-sm"
-                        value={toYear}
-                        onChange={(e) => setToYear(e.target.value)}
-                      />
-                    </div>
-                  )}
-                </div>
-              </div>
                             {/* Search Results Header */}
                             <div className="mb-6">
                                 <h2 className="text-2xl font-bold text-gray-900 mb-2">{searchResults.query}</h2>
