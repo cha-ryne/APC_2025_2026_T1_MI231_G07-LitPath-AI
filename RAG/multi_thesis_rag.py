@@ -242,7 +242,7 @@ def prompt_chain(top_chunks, prompts, api_key):
             ],
             "generationConfig": {
                 "temperature": 0.3,
-                "maxOutputTokens": 2000
+                "maxOutputTokens": 1600
             }
         }
         response = requests.post(url, headers=headers, json=data)
