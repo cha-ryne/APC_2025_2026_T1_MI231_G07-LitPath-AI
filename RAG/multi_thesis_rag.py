@@ -1,6 +1,7 @@
 import dotenv
 dotenv.load_dotenv()
 
+
 def recover_chromadb_from_index(pdf_folder, chunk_size=500):
     """
     If ChromaDB is empty but indexed_files.json exists, re-embed and re-index all PDFs listed in indexed_files.json.

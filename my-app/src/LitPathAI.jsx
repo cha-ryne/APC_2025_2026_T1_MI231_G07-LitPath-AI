@@ -3,11 +3,7 @@ import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, Message
 import dostLogo from "./components/images/dost-logo.png";
 
 
-
-
-
-
-// Backend API URL - Update this to match your server
+// Backend API URL 
 const API_BASE_URL = 'http://localhost:5000';
 
 
@@ -19,8 +15,6 @@ const LitPathAI = () => {
     const [showDateDropdown, setShowDateDropdown] = useState(false);
     const [fromYear, setFromYear] = useState('');
     const [toYear, setToYear] = useState('');
-    const [selectedSchool, setSelectedSchool] = useState('All schools');
-    const [showSchoolDropdown, setShowSchoolDropdown] = useState(false);
     const [searchResults, setSearchResults] = useState(null);
     const [selectedSource, setSelectedSource] = useState(null);
     const [showOverlay, setShowOverlay] = useState(false);
@@ -65,27 +59,9 @@ const LitPathAI = () => {
     const dateOptions = ['All dates', 'Last year', 'Last 3 years', 'Custom date range'];
 
 
-    //school dropwdown
-    const schools = [
-        "All schools",
-        "Ateneo de Manila University",
-        "University of the Philippines Los Baños",
-        "University of the Philippines Diliman",
-        "University of the Philippines Manila",
-        "Universiti Teknologi Petronas",
-        "University of the Philippines Tacloban College",
-    ];
-
-
-
-
-
-
     // Refs for dropdowns to close when clicking outside
     const subjectDropdownRef = useRef(null);
     const dateDropdownRef = useRef(null);
-    const schoolDropdownRef = useRef(null);
-
 
     // Check backend health on component mount
     useEffect(() => {
@@ -100,9 +76,6 @@ const LitPathAI = () => {
             }
             if (dateDropdownRef.current && !dateDropdownRef.current.contains(event.target)) {
                 setShowDateDropdown(false);
-            }
-            if (schoolDropdownRef.current && !schoolDropdownRef.current.contains(event.target)) {
-                setShowSchoolDropdown(false);
             }
         };
 
@@ -162,7 +135,6 @@ const LitPathAI = () => {
                     dateFilter: selectedDate,
                     fromYear: selectedDate === 'Custom date range' ? fromYear : null,
                     toYear: selectedDate === 'Custom date range' ? toYear : null,
-                    school: selectedSchool === 'All schools' ? null : selectedSchool,
                 }),
             });
 
@@ -236,8 +208,6 @@ const LitPathAI = () => {
         setRating(0);
         setLoading(false);
         setError(null);
-        setSelectedSchool('All schools');
-        setShowSchoolDropdown(false);
     };
 
 
@@ -297,8 +267,6 @@ const LitPathAI = () => {
                     </div>
                     <div className="absolute bottom-6 left-6 right-6 text-xs text-gray-500 space-y-2">
                         <p>AI-generated content. Quality may vary.<br />Check for accuracy.</p>
-                        <a href="#" className="text-blue-600 hover:underline block">About LitPath AI</a>
-                        <a href="#" className="text-blue-600 hover:underline block">Privacy and Disclaimer</a>
                     </div>
                 </div>
 
@@ -395,36 +363,6 @@ const LitPathAI = () => {
                                                         }}
                                                     >
                                                         {option}
-                                                    </button>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-
-
-                                    {/* School Filter */}
-                                    <div className="relative" ref={schoolDropdownRef}>
-                                        <button
-                                            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
-                                            onClick={() => setShowSchoolDropdown(!showSchoolDropdown)}
-                                        >
-                                            <span>{selectedSchool}</span>
-                                            <ChevronDown size={16} />
-                                        </button>
-
-
-                                        {showSchoolDropdown && (
-                                            <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[220px] max-h-60 overflow-y-auto">
-                                                {schools.map((school) => (
-                                                    <button
-                                                        key={school}
-                                                        className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                                                        onClick={() => {
-                                                            setSelectedSchool(school);
-                                                            setShowSchoolDropdown(false);
-                                                        }}
-                                                    >
-                                                        {school}
                                                     </button>
                                                 ))}
                                             </div>
@@ -622,34 +560,6 @@ const LitPathAI = () => {
                   </div>
 
 
-                  {/* School Filter */}
-                  <div className="relative" ref={schoolDropdownRef}>
-                    <button
-                      className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
-                      onClick={() => setShowSchoolDropdown(!showSchoolDropdown)}
-                    >
-                      <span>{selectedSchool}</span>
-                      <ChevronDown size={16} />
-                    </button>
-                    {showSchoolDropdown && (
-                      <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[220px] max-h-60 overflow-y-auto">
-                        {schools.map((school) => (
-                          <button
-                            key={school}
-                            className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                            onClick={() => {
-                              setSelectedSchool(school);
-                              setShowSchoolDropdown(false);
-                            }}
-                          >
-                            {school}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-
                   {/* Custom Date Range */}
                   {selectedDate === 'Custom date range' && (
                     <div className="flex items-center space-x-2">
@@ -692,7 +602,7 @@ const LitPathAI = () => {
                                             className={`flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-5 cursor-pointer border-2 ${selectedSource && selectedSource.id === source.id ? 'border-blue-500' : 'border-gray-100'} hover:shadow-xl transition-all duration-200 ease-in-out`}
                                             onClick={() => handleSourceClick(source)}
                                         >
-                                            <div className="flex items-center justify-center w-9 h-9 bg-blue-600 text-white rounded-full mb-3 text-base font-bold">
+                                            <div className="flex items-center justify-center w-9 h-9 bg-[#1E74BC] text-white rounded-full mb-3 text-base font-bold">
                                                 {index + 1}
                                             </div>
                                             <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-3">{source.title}</h4>
@@ -718,7 +628,13 @@ const LitPathAI = () => {
                                     <p className="text-md text-gray-700 mb-4">{selectedSource.author} • {selectedSource.year}</p>
                                     <div className="mb-4">
                                         <h4 className="font-semibold text-lg mb-2 text-gray-800">Abstract:</h4>
-                                        <p className="text-base text-gray-700 leading-relaxed">{selectedSource.abstract}</p>
+                                        <p className="text-base text-gray-700 leading-relaxed">
+                                            {selectedSource.abstract
+                                                ?.split(/(?<=\.)\s+/) // split sentences by period + space
+                                                .slice(0, 3)          // shows only 3 lines of abstract
+                                                .join(" ") + (selectedSource.abstract.split(/(?<=\.)\s+/).length > 3 ? " ..." : "")
+                                            }
+                                        </p>
                                     </div>
                                     <button
                                         onClick={handleMoreDetails}
@@ -729,17 +645,22 @@ const LitPathAI = () => {
                                 </div>
                             )}
 
-
                             {/* Overview of Sources */}
                             <div className="mb-6">
                                 <h3 className="text-xl font-semibold mb-4 text-gray-800">Overview of Sources</h3>
                                 <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-                                    <p className="text-gray-700 leading-relaxed whitespace-pre-line text-base">{searchResults.overview}</p>
+                                    <div
+                                        className="text-gray-700 leading-relaxed whitespace-pre-line text-base"
+                                        dangerouslySetInnerHTML={{
+                                            __html: searchResults.overview
+                                                ? searchResults.overview.replace(/\[(\d+)\]/g, (_, num) => {
+                                                      return `<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-sm font-semibold mx-1">${num}</span>`;
+                                                  })
+                                                : "<i>No overview available.</i>",
+                                        }}
+                                    ></div>
                                 </div>
                             </div>
-
-
-
 
                             {/* Related Research Questions */}
                             {searchResults.relatedQuestions.length > 0 && (
@@ -768,7 +689,7 @@ const LitPathAI = () => {
             {/* Overlay for More Details */}
             {showOverlay && selectedSource && (
                 <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center">
-                    <div className="w-full sm:w-1/2 lg:w-2/5 xl:w-1/3 bg-white h-full overflow-y-auto shadow-2xl max-h-[90vh]">
+                    <div className="w-full sm:w-1/2 lg:w-50 xl:w-50 bg-white h-full overflow-y-auto shadow-2xl max-h-[90vh]">
                         <div className="text-white p-6 shadow-md" style={{ backgroundColor: '#1E74BC' }}>
                             <div className="flex items-center justify-between mb-4">
                                 <button
@@ -823,21 +744,24 @@ const LitPathAI = () => {
                                         })()}
                                     </div>
                                 </div>
+                                    <div className="flex items-center space-x-2">
+                                        <span className="font-semibold text-gray-800">University/College:</span>
+                                        <span>{selectedSource.school}</span>
+                                    </div>
                             </div>
 
-
-                            <div className="bg-[#1E74BC] text-white p-6 rounded-md shadow-md">
-                                <h3 className="font-semibold text-lg mb-3">Full text available at DOST-STII Library from 8am - 5pm:</h3>
-                                <div className="text-base leading-relaxed">
-                                    <div className="font-semibold">STII Bldg., Gen. Santos Ave., Upper Bicutan,</div>
-                                    <div>Taguig City, Metro Manila, 1631, Philippines</div>
-                                    <div className="mt-3 font-medium">library@stii.dost.gov.ph</div>
-                                </div>
+                        <div className="bg-[#1E74BC] text-white p-6 rounded-md shadow-md">
+                            <div className="text-base leading-relaxed">
+                                <div className="font-semibold">STII Bldg., Gen. Santos Ave., Upper Bicutan,</div>
+                                <div>Taguig City, Metro Manila, 1631, Philippines</div>
+                                <div className="mt-3 font-medium">library@stii.dost.gov.ph</div>
+                                <div className="mt-2 font-medium">Full text available at DOST-STII Library from 8am - 5pm</div>
                             </div>
+                        </div>
 
 
                             <div>
-                                <h3 className="font-semibold text-xl mb-4 text-gray-800">ABSTRACT</h3>
+                                <h3 className="font-semibold text-lg mb-2 mt-6 text-gray-800">ABSTRACT</h3>
                                 <p className="text-base text-gray-700 leading-relaxed">{selectedSource.abstract}</p>
                             </div>
                         </div>
