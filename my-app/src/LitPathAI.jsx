@@ -159,7 +159,7 @@ const LitPathAI = () => {
                 fullTextPath: doc.file || '',
                 degree: doc.degree || 'Thesis',
                 subjects: doc.subjects || ['Research'],
-                school: doc.school || '[Unknown University]',
+                school:  doc.university|| '[Unknown University]',
             }));
 
 
