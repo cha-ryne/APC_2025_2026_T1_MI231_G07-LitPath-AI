@@ -9,17 +9,7 @@ Master of Science in Applied Mathematics (Optimization and Approximation Track)
 July 2019
 
 Abstract
-
-The Support Vector Machine (SVM) Algorithm is one of the most popular clas-
-sification method in machine learning and statistics. However, in the presence of
-outliers, the classifier may be adversely affected. In this paper, we experiment on
-the hinge loss function of the SVM Algorithm to suit prior information about non-
-linearly separable sets of Gaussian data. Taking an inspiration from Huber’s least
-informative distribution model to desensitize regression from outliers, we parametrize
-some elements of the hinge loss function to challenge the hard margin of 1 convention
-and to promote insensitivity of the classification to outliers. Using statistical anal-
-ysis, we will determine if at some level of significance, we could see a considerable
-improvement with respect to the number of misclassified data.
+The Support Vector Machine (SVM) Algorithm is one of the most popular clas- sification method in machine learning and statistics. However, in the presence of outliers, the classifier may be adversely affected. In this paper, we experiment on the hinge loss function of the SVM Algorithm to suit prior information about non- linearly separable sets of Gaussian data. Taking an inspiration from Huber’s least informative distribution model to desensitize regression from outliers, we parametrize some elements of the hinge loss function to challenge the hard margin of 1 convention and to promote insensitivity of the classification to outliers. Using statistical anal- ysis, we will determine if at some level of significance, we could see a considerable improvement with respect to the number of misclassified data.
 
 Chapter 1
 
@@ -1364,4 +1354,3 @@ List of References 57
 
 [26] A.B. Yacat, Conjugate gradient method for support vector machines with non-
 quadratic regularizations, (2018).
-

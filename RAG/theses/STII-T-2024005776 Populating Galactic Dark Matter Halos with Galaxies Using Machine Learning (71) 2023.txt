@@ -9,26 +9,7 @@ Master of Science in Physics
 June 2023
 
 ABSTRACT
-
-Robust understanding of the connection between galaxies and the dark matter
-(DM) halos that host them is achieved using modern hydrodynamic simulations.
-However, such simulations are generally computation-intensive and require a lot
-of computing time. In this study, we develop machine learning (ML) models to
-map baryonic properties of galaxies onto DM halos from the SIMBA cosmological
-hydrodynamic simulation, at redshifts z = 0 — 2, in a computationally efficient
-manner. In particular, we trained random forest (RF) and extremely randomized
-trees (ERT) models to predict central galaxy properties, namely, the stellar mass
-M∗, neutral and molecular hydrogen masses M_HI and M_H2, star formation rate
-SFR, and the gas-phase metallicity Z_gas using DM halo properties, namely, the
-primary halo mass My and the mass of the previous halo progenitors, nearby halo
-mass densities ρ within r = 300, 1000, 3000 kpc, halo half mass radius r_h, halo spin
-λ, and halo velocity dispersion σ. Consistent with previous work, we find that the
-model predictions are able to successfully recover the mean relations between the
-halo mass and galaxy properties, as well as the intrinsic second parameter corre-
-lations, such as the fundamental metallicity relation (FMR) with the stellar mass
-and the effect of black holes in the quenching of galaxies, though they are not able
-to reproduce the observed scatter around the mean relations. We also study the
-relative importances of the features in predicting the different galaxy properties.
+Robust understanding of the connection between galaxies and the dark matter (DM) halos that host them is achieved using modern hydrodynamic simulations. However, such simulations are generally computation-intensive and require a lot of computing time. In this study, we develop machine learning (ML) models to map baryonic properties of galaxies onto DM halos from the SIMBA cosmological hydrodynamic simulation, at redshifts z = 0 — 2, in a computationally efficient manner. In particular, we trained random forest (RF) and extremely randomized trees (ERT) models to predict central galaxy properties, namely, the stellar mass M∗, neutral and molecular hydrogen masses M_HI and M_H2, star formation rate SFR, and the gas-phase metallicity Z_gas using DM halo properties, namely, the primary halo mass My and the mass of the previous halo progenitors, nearby halo mass densities ρ within r = 300, 1000, 3000 kpc, halo half mass radius r_h, halo spin λ, and halo velocity dispersion σ. Consistent with previous work, we find that the model predictions are able to successfully recover the mean relations between the halo mass and galaxy properties, as well as the intrinsic second parameter corre- lations, such as the fundamental metallicity relation (FMR) with the stellar mass and the effect of black holes in the quenching of galaxies, though they are not able to reproduce the observed scatter around the mean relations. We also study the relative importances of the features in predicting the different galaxy properties.
 Results from this study illustrate both the potential and current limitations of ML
 approaches for generating realistic galaxy catalogs.
 
@@ -1910,4 +1891,3 @@ Journal 813, 82 (2015).
 
 N. Haring and H.-W. Rix, “On the Black Hole Mass-Bulge Mass Relation,”
 The Astrophysical Journal 604, L89-L92 (2004).
-

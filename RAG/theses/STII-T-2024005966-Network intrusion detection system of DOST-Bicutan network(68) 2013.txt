@@ -9,19 +9,7 @@ MASTER IN INFORMATION TECHNOLOGY
 April 2013
 
 Abstract
-
-This project focused on open source tools to implement network intrusion
-detection system for DOST. Open source network intrusion detection systems like Snort,
-OSSEC, Suricata and Prelude were tested and evaluated using open source network
-intrusion detection testing tools like Pytbull, Scapy, Netcat, Hping, Nmap, Tepdump,
-Hydra and Apachebench. Installation procedures were presented for the readers to be
-guided accordingly for future use. Test simulations were done to evaluate the system for
-its usage, functionality and ability to detect network intruder. Using the selected open
-source network intrusion detection system’s ability to detect intruder, functionality, rules
-and database, a system was developed that shows a graphical representations of network
-intruders. Developed network intrusion detection system for DOST-Bicutan was tested
-using apachebench for its functionality. As a result, the experience gained from this
-endeavor can also be used to help other government agencies to review and assess their own network security.
+This project focused on open source tools to implement network intrusion detection system for DOST. Open source network intrusion detection systems like Snort, OSSEC, Suricata and Prelude were tested and evaluated using open source network intrusion detection testing tools like Pytbull, Scapy, Netcat, Hping, Nmap, Tepdump, Hydra and Apachebench. Installation procedures were presented for the readers to be guided accordingly for future use. Test simulations were done to evaluate the system for its usage, functionality and ability to detect network intruder. Using the selected open source network intrusion detection system’s ability to detect intruder, functionality, rules and database, a system was developed that shows a graphical representations of network intruders. Developed network intrusion detection system for DOST-Bicutan was tested using apachebench for its functionality. As a result, the experience gained from this endeavor can also be used to help other government agencies to review and assess their own network security.
 
 I. The Problem Domain
 

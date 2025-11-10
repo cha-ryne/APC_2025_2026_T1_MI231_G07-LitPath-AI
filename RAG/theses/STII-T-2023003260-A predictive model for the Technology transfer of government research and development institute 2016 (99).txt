@@ -9,34 +9,7 @@ Master of Science in Industrial Engineering
 June 2016
 
 ABSTRACT 
-
-The technology transfer data of the Metals Industry Research and Development
-Center (MIRDC) covering the period from 2010-2014 showed that the Center's
-penetration rate of each sector of the metals and engineering (M&E) industries, namely
-tool and die, machining, forging, metalcasting, electroplating, heat treatment, and
-welding, was disproportioned. Metalcasting (49%) was the most penetrated sector while
-forging and electroplating (0%) were the sectors least penetrated. Total penetration rate
-for the whole M&E sector was low at 14.66%. In addition, the annual transfer rate for
-Grant-in-Aid (GIA) research and development (R&D) projects peaked at 40% in 2012-
-2013, and dipped to its lowest at 0% in 2010-2011. The total technology transfer rate of
-GIA R&D (28%) was significantly smaller when compared to the transfer rate of Contract
-R&D (100%). This study aimed to contribute to the improvement of MIRDC's technology
-transfer performance through the: (1) development of a model that has the capability to
-predict the transferability of both Contract and GIA R&D outputs; and (2) identification of
-Critical Success Factors (CSF) for the transferability of these technologies. The Artificial Neural Network (ANN) technique was used to develop the predictive
-model because of its capability to quantify relationships between numerical and
-categorical variables. The model developed had a 93.75% prediction accuracy and
-6 25% error rate. Using Binary Logistic Regression, it was identified that the CSF for the
-transferability of MIRDC-developed technologies were project duration, project
-value/cost, assistance to the welding sector, and product development R&D type. It is expected that the results of this study will aid key actors in making a more
-informed decision, particularly in technology transfer. Such that MIRDC’s Top
-Management may be able to formulate evidence-based policies related to R&D project
-planning and implementation. In addition, the results may be useful tools in guiding the
-MIRDC personnel towards better grasp of the R&D process and how the resulting
-technology can be made more effective and efficient for its purpose. Knowing and
-understanding the CSFs affecting the R&D technology transfer will enable MIRDC to
-effectively channel energy and resources to a more successful R&D project
-implementation. This will then redound to more benefits for the M&E industry.
+The technology transfer data of the Metals Industry Research and Development Center (MIRDC) covering the period from 2010-2014 showed that the Center's penetration rate of each sector of the metals and engineering (M&E) industries, namely tool and die, machining, forging, metalcasting, electroplating, heat treatment, and welding, was disproportioned. Metalcasting (49%) was the most penetrated sector while forging and electroplating (0%) were the sectors least penetrated. Total penetration rate for the whole M&E sector was low at 14.66%. In addition, the annual transfer rate for Grant-in-Aid (GIA) research and development (R&D) projects peaked at 40% in 2012- 2013, and dipped to its lowest at 0% in 2010-2011. The total technology transfer rate of GIA R&D (28%) was significantly smaller when compared to the transfer rate of Contract R&D (100%). This study aimed to contribute to the improvement of MIRDC's technology transfer performance through the: (1) development of a model that has the capability to predict the transferability of both Contract and GIA R&D outputs; and (2) identification of Critical Success Factors (CSF) for the transferability of these technologies. The Artificial Neural Network (ANN) technique was used to develop the predictive model because of its capability to quantify relationships between numerical and categorical variables. The model developed had a 93.75% prediction accuracy and 6 25% error rate. Using Binary Logistic Regression, it was identified that the CSF for the transferability of MIRDC-developed technologies were project duration, project value/cost, assistance to the welding sector, and product development R&D type. It is expected that the results of this study will aid key actors in making a more informed decision, particularly in technology transfer. Such that MIRDC’s Top Management may be able to formulate evidence-based policies related to R&D project planning and implementation. In addition, the results may be useful tools in guiding the MIRDC personnel towards better grasp of the R&D process and how the resulting technology can be made more effective and efficient for its purpose. Knowing and understanding the CSFs affecting the R&D technology transfer will enable MIRDC to effectively channel energy and resources to a more successful R&D project implementation. This will then redound to more benefits for the M&E industry.
 
 1. INTRODUCTION
 

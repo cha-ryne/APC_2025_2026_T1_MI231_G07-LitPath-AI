@@ -9,19 +9,7 @@ Master of Science in Mathematics
 June 2019
 
 Abstract
-
-This work deals with the asymptotic behavior of some boundary value problems
-posed in perforated domains of Rᴺ. In the first one, we consider a linear parabolic
-problem in a periodically perforated domain with nonlinear-Robin boundary condition
-on the inner boundary while a Dirichlet condition is imposed on the outer boundary.
-Second, we consider the case with “small holes” as described in [15] and deal with
-an elliptic problem with nonhomogeneous Neumann boundary condition imposed on
-the holes. Another problem in small holes, this case as described in [21], we consider
-8 quasilinear problem with a nonlinear Robin boundary condition on some holes
-while a Dirichlet condition is prescribed on the other holes as well as on the outer
-boundary. We apply an appropriate extension of the Periodic Unfolding Method for
-the homogenization of each problem.
-
+This work deals with the asymptotic behavior of some boundary value problems posed in perforated domains of Rᴺ. In the first one, we consider a linear parabolic problem in a periodically perforated domain with nonlinear-Robin boundary condition on the inner boundary while a Dirichlet condition is imposed on the outer boundary. Second, we consider the case with “small holes” as described in [15] and deal with an elliptic problem with nonhomogeneous Neumann boundary condition imposed on the holes. Another problem in small holes, this case as described in [21], we consider 8 quasilinear problem with a nonlinear Robin boundary condition on some holes while a Dirichlet condition is prescribed on the other holes as well as on the outer boundary. We apply an appropriate extension of the Periodic Unfolding Method for the homogenization of each problem.
 
 Chapter 1
 
@@ -3482,4 +3470,3 @@ New York, 1986.
 
 G. ZuKAV, The Dancing Wu Li Masters: An overview of the new Physics,
 William Morrow, 1979.
-

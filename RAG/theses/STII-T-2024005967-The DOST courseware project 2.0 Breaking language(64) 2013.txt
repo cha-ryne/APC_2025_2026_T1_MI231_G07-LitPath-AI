@@ -9,16 +9,7 @@ MASTER IN INFORMATION TECHNOLOGY
 APRIL 2013
 
 Abstract
-
-The Courseware Project 2,0 is an enhancement of the current website
-“Courseware in Science and Mathematics” that will cater new major functionality which
-is the localized-text translation and annotation of courseware modules that complies with
-the requirement of Department of Education’s Mother Tongue-Based Multi-Lingual
-Education (MTB-MLE) policy. The project localized four modules: for Science Grade 3 and three for
-Mathematics Grades 1-3 for four major dialects of Ioko, Cebuano, Maranao and
-Tagalog. Testing of the prototype was done by the project proponents using DOST network
-facilities and of their respective offices. Development of the prototype was done by using
-PHP, JQuery, MySQL, Adobe Dreamweaver, Sothink SWF Decompiler and Adobe Flash CS4 to address the requirements of the project.
+The Courseware Project 2,0 is an enhancement of the current website “Courseware in Science and Mathematics” that will cater new major functionality which is the localized-text translation and annotation of courseware modules that complies with the requirement of Department of Education’s Mother Tongue-Based Multi-Lingual Education (MTB-MLE) policy. The project localized four modules: for Science Grade 3 and three for Mathematics Grades 1-3 for four major dialects of Ioko, Cebuano, Maranao and Tagalog. Testing of the prototype was done by the project proponents using DOST network facilities and of their respective offices. Development of the prototype was done by using PHP, JQuery, MySQL, Adobe Dreamweaver, Sothink SWF Decompiler and Adobe Flash CS4 to address the requirements of the project.
 
 I. The Problem Domain
 

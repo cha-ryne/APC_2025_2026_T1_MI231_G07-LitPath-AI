@@ -9,47 +9,7 @@ Master of Science in Public Health (Environmental Health)
 August 2023
 
 ABSTRACT
-
-Most studies focusing on heat strain and cognition were mostly done in high income
-countries such as Europe, Japan, Australia, Poland, and the United States. The Philippines, on
-the other hand, lacks information on the impact of heat strain on cognition especially among
-healthcare workers in hospital settings. With the general objective of determining the
-association between heat strain score index and level of cognitive function among HCWs
-wearing PPE at work, the study specifically aims to determine the prevalence of different
-categories of heat strain score index and cognitive function levels among hospital HCWs in
-Batangas. Additionally, the study also aimed to determine if there is significant differences in
-the level of heat strain score index and level of cognitive function when HC Ws were aggregated
-according to personal factors (age, socioeconomic status, mental status, body mass index,
-menopausal status), lifestyle-related factors (exercise status, smoking status, sleep duration),
-non-communicable diseases (hypertension status, diabetes mellitus status), and work-related
-factors (level of PPE, work schedule, work break duration, and water intake status). This study utilized analytic cross-sectional design to assess the association of heat strain
-score index and level of cognitive function. A total of 449 HCWs (n=114 from public hospital
-and n=335 from private hospital) recruited through proportionate stratified cluster random
-sampling participated in the study. A self-administered questionnaire was distributed by
-sending Google form link via email. Heat Strain Score Index was used to evaluate the level of
-heat strain experienced by the respondents while a validated constructed questionnaire was
-used to determine other factors that affect the association of heat strain and level of cognitive
-function. To measure the level of cognitive function, PROMIS Cognitive Function Measure
-version 2.0 (Adult Short Form 8A) was used. Multiple logistic regression was used to measure
-the relationship between heat strain score index and level of cognitive function while Chi-square test was used to evaluate differences between groups. The findings revealed that only a small percentage of HCWs were categorized under
-the alarm (11.6%) and danger levels (2.7%) of heat strain score index. However, the majority
-(57.9%) of HCWs were found to have worse cognitive function than the average of the
-reference population. Significant differences were observed in the level of heat strain score
-index when HCWs were grouped based on diabetes status (χ²= 21.8619, p=0.001),
-hysterectomy status (χ²= 17.1504, p=0.0090), and perceived adequacy of workplace
-ventilation (χ²= 72.5620, p<0.001). No statistically significant differences were found in
-cognitive function level when HCWs were aggregated based on personal factors (age,
-socioeconomic status, mental status, body mass index), lifestyle-related factors (exercise status,
-smoking status, sleep duration status), non-communicable diseases (hypertension status,
-diabetes mellitus status), and work-related factors (level of PPE, work schedule, work break
-duration, and water intake status). Lastly, after holding other variables constant, the likelihood
-of having worse cognitive function increases by 3.6 times when the heat strain of HCWs was
-considered in unsafe level. These findings provide insights into the prevalence of different levels of heat strain
-score index and cognitive function levels among hospital HCWs in Batangas. The study
-highlights the importance of considering heat strain as a potential contributor to cognitive
-function impairment and identifies specific factors that may influence the level of heat strain
-experienced by HCWs. However, it is important to note that further research is needed to
-explore other potential factors influencing heat strain and cognitive function among HCWs and to validate the study's findings in larger and more diverse populations.
+Most studies focusing on heat strain and cognition were mostly done in high income countries such as Europe, Japan, Australia, Poland, and the United States. The Philippines, on the other hand, lacks information on the impact of heat strain on cognition especially among healthcare workers in hospital settings. With the general objective of determining the association between heat strain score index and level of cognitive function among HCWs wearing PPE at work, the study specifically aims to determine the prevalence of different categories of heat strain score index and cognitive function levels among hospital HCWs in Batangas. Additionally, the study also aimed to determine if there is significant differences in the level of heat strain score index and level of cognitive function when HC Ws were aggregated according to personal factors (age, socioeconomic status, mental status, body mass index, menopausal status), lifestyle-related factors (exercise status, smoking status, sleep duration), non-communicable diseases (hypertension status, diabetes mellitus status), and work-related factors (level of PPE, work schedule, work break duration, and water intake status). This study utilized analytic cross-sectional design to assess the association of heat strain score index and level of cognitive function. A total of 449 HCWs (n=114 from public hospital and n=335 from private hospital) recruited through proportionate stratified cluster random sampling participated in the study. A self-administered questionnaire was distributed by sending Google form link via email. Heat Strain Score Index was used to evaluate the level of heat strain experienced by the respondents while a validated constructed questionnaire was used to determine other factors that affect the association of heat strain and level of cognitive function. To measure the level of cognitive function, PROMIS Cognitive Function Measure version 2.0 (Adult Short Form 8A) was used. Multiple logistic regression was used to measure the relationship between heat strain score index and level of cognitive function while Chi-square test was used to evaluate differences between groups. The findings revealed that only a small percentage of HCWs were categorized under the alarm (11.6%) and danger levels (2.7%) of heat strain score index. However, the majority (57.9%) of HCWs were found to have worse cognitive function than the average of the reference population. Significant differences were observed in the level of heat strain score index when HCWs were grouped based on diabetes status (χ²= 21.8619, p=0.001), hysterectomy status (χ²= 17.1504, p=0.0090), and perceived adequacy of workplace ventilation (χ²= 72.5620, p<0.001). No statistically significant differences were found in cognitive function level when HCWs were aggregated based on personal factors (age, socioeconomic status, mental status, body mass index), lifestyle-related factors (exercise status, smoking status, sleep duration status), non-communicable diseases (hypertension status, diabetes mellitus status), and work-related factors (level of PPE, work schedule, work break duration, and water intake status). Lastly, after holding other variables constant, the likelihood of having worse cognitive function increases by 3.6 times when the heat strain of HCWs was considered in unsafe level. These findings provide insights into the prevalence of different levels of heat strain score index and cognitive function levels among hospital HCWs in Batangas. The study highlights the importance of considering heat strain as a potential contributor to cognitive function impairment and identifies specific factors that may influence the level of heat strain experienced by HCWs. However, it is important to note that further research is needed to explore other potential factors influencing heat strain and cognitive function among HCWs and to validate the study's findings in larger and more diverse populations.
 
 CHAPTER I
 INTRODUCTION

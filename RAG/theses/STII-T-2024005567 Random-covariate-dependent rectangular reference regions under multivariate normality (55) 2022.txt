@@ -9,24 +9,7 @@ Master of Science in Statistics
 June 2022
 
 Abstract
-
-Reference intervals are among the most widely used decision-making tools in the
-medical field, and are invaluable in the interpretation of laboratory test results. These
-intervals may depend on covariates such as age and sex. The covariate values are often
-random quantities since they are typically not controlled in reference interval determina-
-tion studies. When several biochemical analytes are needed to diagnose the same condi-
-tion, the use of combined univariate reference intervals is not recommendable since the
-analytes could be correlated. Instead, a multivariate reference region is necessary to take
-the correlations among the analytes into account. Traditionally, multivariate reference
-regions have been constructed as ellipsoidal in shape. However, such regions cannot
-detect the outlyingness of a specific analyte. We propose procedures to construct rectan-
-gular multivariate reference regions that incorporate random covariate information from
-the subjects. The reference regions are computed in a multivariate normal setting and
-the prediction region criterion is used. A parametric bootstrap approach is employed to
-compute the required prediction factor. Numerical results show that the parametric boot-
-strap approach is quite accurate, with coverage probabilities very close to the desired
-nominal value. Finally, we apply the proposed method to real-life data from a study to
-compute covariate-dependent reference regions for insulin-like growth factors.
+Reference intervals are among the most widely used decision-making tools in the medical field, and are invaluable in the interpretation of laboratory test results. These intervals may depend on covariates such as age and sex. The covariate values are often random quantities since they are typically not controlled in reference interval determina- tion studies. When several biochemical analytes are needed to diagnose the same condi- tion, the use of combined univariate reference intervals is not recommendable since the analytes could be correlated. Instead, a multivariate reference region is necessary to take the correlations among the analytes into account. Traditionally, multivariate reference regions have been constructed as ellipsoidal in shape. However, such regions cannot detect the outlyingness of a specific analyte. We propose procedures to construct rectan- gular multivariate reference regions that incorporate random covariate information from the subjects. The reference regions are computed in a multivariate normal setting and the prediction region criterion is used. A parametric bootstrap approach is employed to compute the required prediction factor. Numerical results show that the parametric boot- strap approach is quite accurate, with coverage probabilities very close to the desired nominal value. Finally, we apply the proposed method to real-life data from a study to compute covariate-dependent reference regions for insulin-like growth factors.
 
 KEYWORDS: Multivariate reference region; Mixed reference intervals; Parametric bootstrap;
 Rectangular prediction region

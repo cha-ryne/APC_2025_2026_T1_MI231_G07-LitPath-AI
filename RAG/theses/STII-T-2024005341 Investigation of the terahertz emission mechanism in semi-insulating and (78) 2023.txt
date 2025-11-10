@@ -9,25 +9,7 @@ Master of Science in Physics
 June 2023
 
 ABSTRACT
-
-We studied the terahertz (THz) emission carrier dynamics of semi-insulating (SI)
-and low-temperature grown (LT) gallium arsenide (GaAs) photoconductive antenna
-(PCA) devices photoexcited at above- (λ = 780nm, E₍g₎ = 1.59 eV) and below-
-(λ = 1.55 𝜇m, E₍g₎ = 0.80 eV) bandgap via THz time-domain spectroscopy (TDS).
-The excitation power dependence of the THz emission was determined. Moreover, we
-analyzed the experimental results through an equivalent circuit model (ECM) which
-accounts for the (i) photogeneration, (ii) screening effects, and (iii) transport of car-
-riers of the PCA. In modeling the THz mechanism at above-bandgap excitation we
-used the direct bandgap excitation model which takes into account the single photon
-absorption (SPA) and two photon absorption (TPA) for both PCAs. Meanwhile, at
-below-bandgap we followed and modified the two-step photoabsorption via mid-gap
-states model. The good fit of the numerical results with the experimental THz emis-
-sion power dependence reveal that at above-bandgap excitation, combined SPA and
-TPA is the primary mechanism responsible for THz emission for both PCAs. Sim-
-ilarly, the model used at the below-bandgap excitation for both PCAs was able to
-replicate the experimental THz emission power dependence. Hence, we conclude that
-the dominant THz emission mechanism for both SI- and LT-GaAs at below-bandgap
-regime is the two-step photoabsorption via mid-gap states.
+We studied the terahertz (THz) emission carrier dynamics of semi-insulating (SI) and low-temperature grown (LT) gallium arsenide (GaAs) photoconductive antenna (PCA) devices photoexcited at above- (λ = 780nm, E₍g₎ = 1.59 eV) and below- (λ = 1.55 𝜇m, E₍g₎ = 0.80 eV) bandgap via THz time-domain spectroscopy (TDS). The excitation power dependence of the THz emission was determined. Moreover, we analyzed the experimental results through an equivalent circuit model (ECM) which accounts for the (i) photogeneration, (ii) screening effects, and (iii) transport of car- riers of the PCA. In modeling the THz mechanism at above-bandgap excitation we used the direct bandgap excitation model which takes into account the single photon absorption (SPA) and two photon absorption (TPA) for both PCAs. Meanwhile, at below-bandgap we followed and modified the two-step photoabsorption via mid-gap states model. The good fit of the numerical results with the experimental THz emis- sion power dependence reveal that at above-bandgap excitation, combined SPA and TPA is the primary mechanism responsible for THz emission for both PCAs. Sim- ilarly, the model used at the below-bandgap excitation for both PCAs was able to replicate the experimental THz emission power dependence. Hence, we conclude that the dominant THz emission mechanism for both SI- and LT-GaAs at below-bandgap regime is the two-step photoabsorption via mid-gap states.
 
 PACS: impurity and defect levels of III-V semiconductors (71.55.Eq), optical prop-
 erties of III-V semiconductors (78.66.Fd), ultrafast spectroscopy (78.47.J)

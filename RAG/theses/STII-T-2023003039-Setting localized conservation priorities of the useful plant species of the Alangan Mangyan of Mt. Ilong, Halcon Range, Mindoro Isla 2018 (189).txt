@@ -9,36 +9,7 @@ Master of Science in Environmental Science
 JUNE 2018
 
 ABSTRACT
-
-This study aimed to set priorities for conservation among useful plants of the
-Alangan Mangyan of Mt. Ilong, Halcon Range, Mindoro Island, Philippines. Information
-on plant ecology of Mt. Ilong and traditional knowledge of the Alangan people were
-utilized for local conservation priority setting of species. The useful plants of the Alangan people were documented from interviews among
-60 key informants and verified by the elderly key informants. This study recorded 199 local
-names of plants (wild and cultivated types) with varying uses. Patterns on plant use indicate
-that there were more cultivated than wild plant species for food, fodder, medicine, and
-firewood use categories, while more wild than cultivated species were recorded for
-construction and lumber use categories. The plants were verified in the field during a study of the vegetation structure and
-dynamics of tree species in Mt. Ilong, Halcon Range. Hierarchical cluster analysis in
-unweighted pair group arithmetic mean (UPGMA) algorithm (using Bray-Curtis similarity
-index) was performed to identify major plant communities in Mt. Ilong, namely; Zone I
-(agroforest), Lansium - Artocarpus - Swietenia - Ficus - Nephelium - Mangifera zone; Zone
-II (forest zone), Cyathea - Astronia - Syzygium - Garcinia - Ficus - Psydrax - Diplodiscus
-zone; and Zone III (forest zone), Agathis - Suli - Alitugba - Ardisia zone. Furthermore,
-ordination using canonical correspondence analysis (CCA) was performed to analyze the
-relationship between the tree species and selected environmental variables. Temperature
-and elevation were the greatest influencing environmental factors that affected the species
-distribution in Mt. Ilong. An evaluation index for species level was devised to set priorities for conservation.
-The conservation priority index is a point-scoring procedure, composed of seven criteria
-encompassing ecological, socio-cultural significance, and present threat assessment which
-are important considerations when setting conservation priorities for conservation.
-Seventy-two wild plant species identified from field survey and vegetation analysis were
-evaluated using the devised index. From this evaluation, 17 species were identified as
-species of medium priority for conservation. Furthermore, a nonlinear principal component analysis was also done to identify which among the criteria have influenced in conservation
-priority setting. The results of this study can be useful in conservation management in the local
-level, as the index promotes the involvement of the local people in conservation. Moreover,
-the methodology used in setting conservation priorities of plants species can be simulated
-to other localities in the Philippines.
+This study aimed to set priorities for conservation among useful plants of the Alangan Mangyan of Mt. Ilong, Halcon Range, Mindoro Island, Philippines. Information on plant ecology of Mt. Ilong and traditional knowledge of the Alangan people were utilized for local conservation priority setting of species. The useful plants of the Alangan people were documented from interviews among 60 key informants and verified by the elderly key informants. This study recorded 199 local names of plants (wild and cultivated types) with varying uses. Patterns on plant use indicate that there were more cultivated than wild plant species for food, fodder, medicine, and firewood use categories, while more wild than cultivated species were recorded for construction and lumber use categories. The plants were verified in the field during a study of the vegetation structure and dynamics of tree species in Mt. Ilong, Halcon Range. Hierarchical cluster analysis in unweighted pair group arithmetic mean (UPGMA) algorithm (using Bray-Curtis similarity index) was performed to identify major plant communities in Mt. Ilong, namely; Zone I (agroforest), Lansium - Artocarpus - Swietenia - Ficus - Nephelium - Mangifera zone; Zone II (forest zone), Cyathea - Astronia - Syzygium - Garcinia - Ficus - Psydrax - Diplodiscus zone; and Zone III (forest zone), Agathis - Suli - Alitugba - Ardisia zone. Furthermore, ordination using canonical correspondence analysis (CCA) was performed to analyze the relationship between the tree species and selected environmental variables. Temperature and elevation were the greatest influencing environmental factors that affected the species distribution in Mt. Ilong. An evaluation index for species level was devised to set priorities for conservation. The conservation priority index is a point-scoring procedure, composed of seven criteria encompassing ecological, socio-cultural significance, and present threat assessment which are important considerations when setting conservation priorities for conservation. Seventy-two wild plant species identified from field survey and vegetation analysis were evaluated using the devised index. From this evaluation, 17 species were identified as species of medium priority for conservation. Furthermore, a nonlinear principal component analysis was also done to identify which among the criteria have influenced in conservation priority setting. The results of this study can be useful in conservation management in the local level, as the index promotes the involvement of the local people in conservation. Moreover, the methodology used in setting conservation priorities of plants species can be simulated to other localities in the Philippines.
 
 CHAPTER I
 
@@ -5632,4 +5603,3 @@ Common Future. Oxford: Oxford University Press.
 
 YEN, D.E. AND GUTIERREZ, H.G. 1974. The ethnobotany of the Tasaday: The useful
 plants. Philippine Journal of Science, 103(2), 75-140.
-

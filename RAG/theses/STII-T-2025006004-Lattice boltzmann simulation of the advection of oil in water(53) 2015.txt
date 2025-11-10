@@ -9,14 +9,7 @@ MASTER OF SCIENCE IN PHYSICS
 JUNE 2015
 
 Abstract
-
-We show a simple simulation of the transport of oil on the surface of flowing
-water using a program implementation of the Shan-Chen lattice Boltzmann
-method. The oil advection path of the lattice Boltzmann simulation showed fair
-agreement with the actual trajectory observed in a simple oil advection
-experiment performed on a tabletop setup, supporting the functionality of the
-implementation. The implementation is then extended to simulate the trajectory
-of of an actual oil spilling accident.
+We show a simple simulation of the transport of oil on the surface of flowing water using a program implementation of the Shan-Chen lattice Boltzmann method. The oil advection path of the lattice Boltzmann simulation showed fair agreement with the actual trajectory observed in a simple oil advection experiment performed on a tabletop setup, supporting the functionality of the implementation. The implementation is then extended to simulate the trajectory of of an actual oil spilling accident.
 
 PACS: 47.11.-j [Computational techniques in fluid dynamics], 47.85.Dh [Applied
 fluid mechanics], 95.55.-n47.11.Qr [Lattice Gas], 47.11.Fg [Finite element method]
@@ -1229,5 +1222,4 @@ Water, Air and Soil Pollution (November 1992).
 P. Vethamony, K. Sudheesh, et. Al “Trajectory of an oil spill off Goa,
 eastern Arabian Sea: Field observations and simulations” Environmental
 Pollution (2007)
-
 

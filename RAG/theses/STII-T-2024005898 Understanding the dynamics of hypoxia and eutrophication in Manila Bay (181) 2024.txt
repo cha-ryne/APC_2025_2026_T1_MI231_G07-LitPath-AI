@@ -9,33 +9,7 @@ Doctor of Philosophy In Marine Science
 February 2024
 
 ABSTRACT
-
-Hypoxia and eutrophication were evident in Manila Bay during bay-wide field surveys
-spanning wet and dry seasons. During the wet season, areas with low DO extended
-northward toward the coast. Near bottom dissolved oxygen levels ranged from 0.12 to 9.22
-mg l⁻¹. High nutrient levels coincide with low near-bottom DO. Hypoxia was worse during the wet season due to increased freshwater discharge and stratification. To better understand the oxygen dynamics in Manila Bay, a hydrodynamic and water quality
-model was developed using DELFT3D. It reproduced wet season stratification, with
-stratification forming and dissipating in 10-15 days. The model showed lower DO near the
-coast, particularly the northern and eastern coast consistent with field surveys. In general,
-higher DO levels were found during the dry season model run. Loading from the rivers
-affected the DO levels at the surface up to 10 meters, while sediment oxygen demand
-influenced the DO levels below the pycnocline and near the bottom. The model showed that
-deoxygenation of the bay is not a permanent feature and can be alleviated with less loading from rivers as well as lower sediment oxygen demand. Efforts to improve the water quality in Manila Bay by reducing the organic and nutrient
-loading from rivers may only be relevant to DO levels, initially, at the surface and upper
-water layers. The importance of sediment oxygen demand emphasizes the possible time lag
-of the effects of these rehabilitation efforts due to residual SOD (from old sediments).
-However, DO/hypoxia clears up in the near bottom waters in ~ 2 weeks with lower SOD
-suggesting that the feature may not be permanent in Manila Bay. However, hypoxia is likely a recurring phenomenon as seen in the field observations. A watershed model was also developed to estimate nutrient loads coming from the Manila
-Bay watershed. It revealed that 66% of total nitrogen (TN) and 59% of total phosphorus (TP)
-came from domestic sources. Agricultural activities contributed 22% of TN and 30% of TP.
-Densely populated provinces contributed major domestic waste loads, while rural provinces
-contributed most to agricultural nutrient loads. Smaller but densely populated watersheds like Pasig and Cavite contributed significantly to nutrient loading. The nutrient load model was used to analyze different scenarios for the future of Manila
-Bay, considering factors such as population growth, urban development, connection to
-sewage systems, and wastewater treatment. This tool provided a relatively swift assessment
-of nutrient sources and possible scenarios, considering different options for policymakers and management bodies. The field and modeling studies conducted in this research are a step toward understanding
-the ecosystem of Manila Bay. The hydrodynamic and water quality model shows how
-changing nutrient loading impacts oxygen depletion. The spatially explicit modeling of
-loading sources using scenarios helps to design strategies focused on specific areas where mitigation can be efficient. Although the approaches used have limitations, they proved to be useful for interpreting
+Hypoxia and eutrophication were evident in Manila Bay during bay-wide field surveys spanning wet and dry seasons. During the wet season, areas with low DO extended northward toward the coast. Near bottom dissolved oxygen levels ranged from 0.12 to 9.22 mg l⁻¹. High nutrient levels coincide with low near-bottom DO. Hypoxia was worse during the wet season due to increased freshwater discharge and stratification. To better understand the oxygen dynamics in Manila Bay, a hydrodynamic and water quality model was developed using DELFT3D. It reproduced wet season stratification, with stratification forming and dissipating in 10-15 days. The model showed lower DO near the coast, particularly the northern and eastern coast consistent with field surveys. In general, higher DO levels were found during the dry season model run. Loading from the rivers affected the DO levels at the surface up to 10 meters, while sediment oxygen demand influenced the DO levels below the pycnocline and near the bottom. The model showed that deoxygenation of the bay is not a permanent feature and can be alleviated with less loading from rivers as well as lower sediment oxygen demand. Efforts to improve the water quality in Manila Bay by reducing the organic and nutrient loading from rivers may only be relevant to DO levels, initially, at the surface and upper water layers. The importance of sediment oxygen demand emphasizes the possible time lag of the effects of these rehabilitation efforts due to residual SOD (from old sediments). However, DO/hypoxia clears up in the near bottom waters in ~ 2 weeks with lower SOD suggesting that the feature may not be permanent in Manila Bay. However, hypoxia is likely a recurring phenomenon as seen in the field observations. A watershed model was also developed to estimate nutrient loads coming from the Manila Bay watershed. It revealed that 66% of total nitrogen (TN) and 59% of total phosphorus (TP) came from domestic sources. Agricultural activities contributed 22% of TN and 30% of TP. Densely populated provinces contributed major domestic waste loads, while rural provinces contributed most to agricultural nutrient loads. Smaller but densely populated watersheds like Pasig and Cavite contributed significantly to nutrient loading. The nutrient load model was used to analyze different scenarios for the future of Manila Bay, considering factors such as population growth, urban development, connection to sewage systems, and wastewater treatment. This tool provided a relatively swift assessment of nutrient sources and possible scenarios, considering different options for policymakers and management bodies. The field and modeling studies conducted in this research are a step toward understanding the ecosystem of Manila Bay. The hydrodynamic and water quality model shows how changing nutrient loading impacts oxygen depletion. The spatially explicit modeling of loading sources using scenarios helps to design strategies focused on specific areas where mitigation can be efficient. Although the approaches used have limitations, they proved to be useful for interpreting
 results from field studies and understanding the ecosystem dynamics concerning oxygen
 depletion, and for evaluating different policies that are geared towards improving the status of the Bay in terms of water quality.
 
@@ -5016,5 +4990,4 @@ Southwest Monsoons from 2012 to 2015, in: Santos, M.D., Furio, E.F., Lopez, G.D.
 F.S.J., Borja, V.M., Bognot, E.D.C., Gatdula, N.C., Perez, M.A., Gonzales, F.L. (Eds.), Bureau of
 Fisheries and Aquatic Resources, National Fisheries Research and Development Institute,
 Quezon City, Philippines.
-
 

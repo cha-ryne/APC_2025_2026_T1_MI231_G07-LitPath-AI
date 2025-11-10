@@ -9,29 +9,7 @@ Master of Science in Microbiology
 September 2023
 
 ABSTRACT
-
-Earthworms and their gut microflora perform synergistically to efficiently transform
-organic wastes into useful metabolites. However, studies on the composition and
-function of the earthworm gut microbial community is limited in the Philippines.
-Pontoscolex corethrurus (Brazilian earthworm) is an endogeic species belonging to
-Family Rhinodrilidae (subclass Oligochaeta) that is commonly found in tropical soils
-under undisturbed native vegetation. This study highlights the structural and functional
-profiles of bacterial communities found in the gut of P. corethrurus collected from Mt.
-Makiling in Los Bafios, Laguna, Philippines. Community-level physiological profile
-(CLPP) analysis revealed that at 48h of incubation, all Biolog EcoPlate™ carbon
-substrates, except a-ketobutyric acid, were utilized by the gut bacteria, with an
-increasing average well color development (AWCD) within the 120h incubation.
-Shannon-Weaver Index (H) value of 3.226±0.053 indicates a relatively high functional
-metabolic diversity and an even distribution of different functional types.
-Proteobacteria (42.23%), Actinobacteria (27.85%), and Firmicutes (11.88%) were the
-most abundant bacterial phyla found in the P. corethrurus gut, based on QIIME 2
-bioinformatics analysis. The enzymes associated with the highly utilized carbon
-substrates in the Biolog EcoPlate™ also corresponded to the PICRUSt2-predicted
-functions. Overall, it was found out that the P. corethrurus gut bacterial community is
-genetically and physiologically diverse, with high efficiency of substrate degradation.
-P. corethrurus gut hosts different bacteria may serve as a potential source of
-biocatalysts with agricultural and industrial uses. The study facilitates an understanding
-of the relationship between the community structure and their function in the host and surrounding environment in the tropics.
+Earthworms and their gut microflora perform synergistically to efficiently transform organic wastes into useful metabolites. However, studies on the composition and function of the earthworm gut microbial community is limited in the Philippines. Pontoscolex corethrurus (Brazilian earthworm) is an endogeic species belonging to Family Rhinodrilidae (subclass Oligochaeta) that is commonly found in tropical soils under undisturbed native vegetation. This study highlights the structural and functional profiles of bacterial communities found in the gut of P. corethrurus collected from Mt. Makiling in Los Bafios, Laguna, Philippines. Community-level physiological profile (CLPP) analysis revealed that at 48h of incubation, all Biolog EcoPlate™ carbon substrates, except a-ketobutyric acid, were utilized by the gut bacteria, with an increasing average well color development (AWCD) within the 120h incubation. Shannon-Weaver Index (H) value of 3.226±0.053 indicates a relatively high functional metabolic diversity and an even distribution of different functional types. Proteobacteria (42.23%), Actinobacteria (27.85%), and Firmicutes (11.88%) were the most abundant bacterial phyla found in the P. corethrurus gut, based on QIIME 2 bioinformatics analysis. The enzymes associated with the highly utilized carbon substrates in the Biolog EcoPlate™ also corresponded to the PICRUSt2-predicted functions. Overall, it was found out that the P. corethrurus gut bacterial community is genetically and physiologically diverse, with high efficiency of substrate degradation. P. corethrurus gut hosts different bacteria may serve as a potential source of biocatalysts with agricultural and industrial uses. The study facilitates an understanding of the relationship between the community structure and their function in the host and surrounding environment in the tropics.
 
 INTRODUCTION
 

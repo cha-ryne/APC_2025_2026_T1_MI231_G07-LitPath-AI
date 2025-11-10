@@ -9,19 +9,7 @@ Master of Science in Statistics
 DECEMBER 2018
 
 ABSTRACT
-
-The Philippine Statistics Authority has shifted to a new design of the master sample,
-which caters to all the household-based surveys it conducts. These surveys are generally
-used as basis from which evidence-based policies are derived. While domain level analysis
-is also of great importance, policies are usually crafted to target certain subclasses, whose
-estimators are known to be ratios since sampling units at these levels are almost intractable.
-To determine the appropriate method for estimating the subclasses, this paper presents a
-comparative analysis of the ratio estimators and their corresponding standard errors
-computed using the Taylor Series Linearization and Random Group methods. It was
-theoretically shown that for a simple random sample, TSL performs better than RG in terms
-of bias and precision, hence lower mean squared error. These properties are then verified
-using the LFS 2016 data where unemployment rate at the domain level are computed.
-Moreover, this comparison is extended to the subclass level where the validity of the variance formulas is expected to weaken due to smaller sample sizes.
+The Philippine Statistics Authority has shifted to a new design of the master sample, which caters to all the household-based surveys it conducts. These surveys are generally used as basis from which evidence-based policies are derived. While domain level analysis is also of great importance, policies are usually crafted to target certain subclasses, whose estimators are known to be ratios since sampling units at these levels are almost intractable. To determine the appropriate method for estimating the subclasses, this paper presents a comparative analysis of the ratio estimators and their corresponding standard errors computed using the Taylor Series Linearization and Random Group methods. It was theoretically shown that for a simple random sample, TSL performs better than RG in terms of bias and precision, hence lower mean squared error. These properties are then verified using the LFS 2016 data where unemployment rate at the domain level are computed. Moreover, this comparison is extended to the subclass level where the validity of the variance formulas is expected to weaken due to smaller sample sizes.
 
 CHAPTER 1
 

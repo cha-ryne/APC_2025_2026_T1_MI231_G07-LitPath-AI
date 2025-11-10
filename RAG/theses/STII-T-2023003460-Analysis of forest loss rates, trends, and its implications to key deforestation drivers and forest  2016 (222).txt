@@ -9,48 +9,7 @@ Master of Science in Environmental Science
 June 2016
 
 ABSTRACT
-Tropical deforestation is among the significant processes of land cover change. In monitoring
-deforestation, remotely sensed data played a crucial role in understanding the extent of forest
-depletion. However, in tropical countries like the Philippines, generation of spatially explicit
-forest cover data are hindered by multiple imagery sources, varying scales and resolutions,
-undisclosed methods of mapping and different forest classes and definitions used. In this study,
-the main objectives were to identify the trends of forest cover change in the Philippines using
-Landsat processed data from years 2000-2012 and to validate its causes in the field. The data
-were enhanced and further analyzed to make sure that forest pixels fall within acceptable tree
-cover and non-forests features were excluded. Then post-processing was done to produce net
-change ranking and annual forest loss rates, trends and correlations. The said step was also
-done per forest cover type to provide detailed insights on forest cover change. The results
-showed that MIMAROPA had the highest forest loss rate (2,864.10 ha/year), followed by
-Cagayan Valley (2,550.82 ha/yr) and CARAGA (2,522.56 ha/yr). Zamboanga Peninsula region
-had the highest mean aggregate net change (or percent net change) of -7.18% with mean forest
-loss rate of 1,294.40 ha/year followed by CALABARZON (-3.41% with mean forest loss rate
-of 1,098.54 ha/year) and CARAGA (-3.16%). However, only CARAGA had the significant
-Positive trend of forest loss (r = 0.69, p-value < 0.05). In the provincial level, Palawan had the
-highest forest loss rate (2,380.02 ha/yr), followed by Agusan del Sur (1,693.86ha/yr) and
-Cagayan (1,018.23 ha/yr). Zamboanga Sibugay had the highest mean aggregate net change (-
-8.94%, mean forest loss rate = 233.05 ha/year) followed by Zamboanga del Norte (-8.10%,
-mean forest loss rate = 812.02 ha/year and Albay (-4.98%, mean forest loss rate = 99.81
-ha/year. Open forest (secondary growth) was the most dynamic forest type with national mean
-forest loss rate of 613.19 ha/yr and mean aggregate net change of -2.75%. Likewise, Agusan del Sur (0.68), Tarlac (0.67) and Davao Oriental (0.65) were the top provinces which had significant increasing trend of forest loss (p-value < 0.05) in open forest. The overall accuracies
-for Landsat processed data were 86.48% for loss and 92.26% for gain, but this varied greatly
-per biogeographic region. On the other hand, key indirect drivers such as forest product
-harvesting (logging and timber poaching; weighted score = 14.75), and agriculture (kaingin
-and forest to rubber plantation conversion; ws = 18) were identified as main reasons of
-deforestation in General Nakar, Quezon and Kabasalan, Zamboanga Sibugay, respectively.
-Meanwhile, agriculture (kaingin) and forest product harvesting (logging and timber poaching)
-were tied in Siocon, Zamboanga del Norte (ws = 13.5). However, biophysical drivers such as
-landslides and drought served as push factors to intensify the said proximate causes as observed
-in General Nakar and Kabasalan. Economic-market driven factors (limited livelihood
-opportunities and high demand for wood) were identified as the main indirect driver of forest
-decline in three sites. Specific events such as global financial crisis, policy changes, log bans,
-cutting and logging permits issuance were identified as another underlying causes of forest
-decline in validated sites. On the other hand, in relating Landsat derived data to various forestry
-statistics, it was found out that annual lumber production (r = 0.66) and roundwood production
-(r= 0.62) were significantly and moderately correlated to forest loss while CBFM (r = -0.59)
-areas had negative association to forest loss (p-value < 0.05). In this research, areas with
-significant forest change were identified and key deforestation drivers were analyzed with the
-aid of the Landsat processed data. This study demonstrated that remote sensing data coupled
-with socio-economic based ground validation for selected sites further enhanced our understanding of the complex processes of deforestation.
+Tropical deforestation is among the significant processes of land cover change. In monitoring deforestation, remotely sensed data played a crucial role in understanding the extent of forest depletion. However, in tropical countries like the Philippines, generation of spatially explicit forest cover data are hindered by multiple imagery sources, varying scales and resolutions, undisclosed methods of mapping and different forest classes and definitions used. In this study, the main objectives were to identify the trends of forest cover change in the Philippines using Landsat processed data from years 2000-2012 and to validate its causes in the field. The data were enhanced and further analyzed to make sure that forest pixels fall within acceptable tree cover and non-forests features were excluded. Then post-processing was done to produce net change ranking and annual forest loss rates, trends and correlations. The said step was also done per forest cover type to provide detailed insights on forest cover change. The results showed that MIMAROPA had the highest forest loss rate (2,864.10 ha/year), followed by Cagayan Valley (2,550.82 ha/yr) and CARAGA (2,522.56 ha/yr). Zamboanga Peninsula region had the highest mean aggregate net change (or percent net change) of -7.18% with mean forest loss rate of 1,294.40 ha/year followed by CALABARZON (-3.41% with mean forest loss rate of 1,098.54 ha/year) and CARAGA (-3.16%). However, only CARAGA had the significant Positive trend of forest loss (r = 0.69, p-value < 0.05). In the provincial level, Palawan had the highest forest loss rate (2,380.02 ha/yr), followed by Agusan del Sur (1,693.86ha/yr) and Cagayan (1,018.23 ha/yr). Zamboanga Sibugay had the highest mean aggregate net change (- 8.94%, mean forest loss rate = 233.05 ha/year) followed by Zamboanga del Norte (-8.10%, mean forest loss rate = 812.02 ha/year and Albay (-4.98%, mean forest loss rate = 99.81 ha/year. Open forest (secondary growth) was the most dynamic forest type with national mean forest loss rate of 613.19 ha/yr and mean aggregate net change of -2.75%. Likewise, Agusan del Sur (0.68), Tarlac (0.67) and Davao Oriental (0.65) were the top provinces which had significant increasing trend of forest loss (p-value < 0.05) in open forest. The overall accuracies for Landsat processed data were 86.48% for loss and 92.26% for gain, but this varied greatly per biogeographic region. On the other hand, key indirect drivers such as forest product harvesting (logging and timber poaching; weighted score = 14.75), and agriculture (kaingin and forest to rubber plantation conversion; ws = 18) were identified as main reasons of deforestation in General Nakar, Quezon and Kabasalan, Zamboanga Sibugay, respectively. Meanwhile, agriculture (kaingin) and forest product harvesting (logging and timber poaching) were tied in Siocon, Zamboanga del Norte (ws = 13.5). However, biophysical drivers such as landslides and drought served as push factors to intensify the said proximate causes as observed in General Nakar and Kabasalan. Economic-market driven factors (limited livelihood opportunities and high demand for wood) were identified as the main indirect driver of forest decline in three sites. Specific events such as global financial crisis, policy changes, log bans, cutting and logging permits issuance were identified as another underlying causes of forest decline in validated sites. On the other hand, in relating Landsat derived data to various forestry statistics, it was found out that annual lumber production (r = 0.66) and roundwood production (r= 0.62) were significantly and moderately correlated to forest loss while CBFM (r = -0.59) areas had negative association to forest loss (p-value < 0.05). In this research, areas with significant forest change were identified and key deforestation drivers were analyzed with the aid of the Landsat processed data. This study demonstrated that remote sensing data coupled with socio-economic based ground validation for selected sites further enhanced our understanding of the complex processes of deforestation.
 
 CHAPTER 1
 INTRODUCTION

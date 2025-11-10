@@ -10,34 +10,7 @@ June 2024
 
 
 ABSTRACT
-
-Microbial eukaryotes are an important part of the total microbial diversity
-globally. However, little is known about their composition and sources in contaminated
-surface waters. Here, the pathogens and potential sources (i.e., cattle, ducks, dogs,
-poultry, swine, and sewage) of microbial eukaryotic communities in polluted sink
-environments (i.e., Pasig, Marikina, and San Juan Rivers in Metro Manila, Philippines)
-during the dry and wet seasons collected between December 2021 and March 2023
-were examined using the 18S rDNA amplicon sequencing combined with Fast
-Expectation-Maximization for Microbial Source Tracking (FEAST) program.
-Taxonomic composition revealed the dominance of SAR, Opisthokonta, and
-Archaeplastida in the rivers, accounting for 69.7%, 18.9%, and 10.2% mean abundance
-of microbial sink communities, respectively. Economically and clinically relevant
-human pathogens from Apicomplexa and Fungi were also found in sink environments
-including Cryptosporidium sp., Plasmodium sp., Kodamaea sp., Candida sp.,
-Aspergillus sp., and Fusarium sp. The Spearman’s rank correlation test demonstrated
-that dissolved oxygen, total suspended solids, pH, temperature, fecal coliform count,
-and phosphates were the important environmental factors driving the microbial
-eukaryotic community variations. While the presence of indicator species Uronemella
-filificum and Euplotes vannus in the dry season and Spumella sp. and unclassified
-Chlorophyta in the wet season did not exhibit significant abundance, their occurrence
-suggests their potential as bioindicators for bacterial and nutrient pollution assessment
-in the river system. Moreover, the observed distinctiveness of community patterns
-between sinks and sources, as shown by the NMDS plot using Bray-Curtis distances, strengthens the effectiveness of the source-tracking analysis. Results generated from FEAST displayed that sewage (19.6%), followed by duck (0.644%) and cow (0.566%)
-feces, were the major sources of riverine microbial eukaryotes. Spatio-seasonal
-variations were also observed wherein downstream stations received higher
-contributions of microbial eukaryotes from source samples than upstream stations, and
-that source contributions were higher in the wet than in the dry season, indicating the
-impact of rainfall in enhancing the dispersal of microbial eukaryotic communities.
+Microbial eukaryotes are an important part of the total microbial diversity globally. However, little is known about their composition and sources in contaminated surface waters. Here, the pathogens and potential sources (i.e., cattle, ducks, dogs, poultry, swine, and sewage) of microbial eukaryotic communities in polluted sink environments (i.e., Pasig, Marikina, and San Juan Rivers in Metro Manila, Philippines) during the dry and wet seasons collected between December 2021 and March 2023 were examined using the 18S rDNA amplicon sequencing combined with Fast Expectation-Maximization for Microbial Source Tracking (FEAST) program. Taxonomic composition revealed the dominance of SAR, Opisthokonta, and Archaeplastida in the rivers, accounting for 69.7%, 18.9%, and 10.2% mean abundance of microbial sink communities, respectively. Economically and clinically relevant human pathogens from Apicomplexa and Fungi were also found in sink environments including Cryptosporidium sp., Plasmodium sp., Kodamaea sp., Candida sp., Aspergillus sp., and Fusarium sp. The Spearman’s rank correlation test demonstrated that dissolved oxygen, total suspended solids, pH, temperature, fecal coliform count, and phosphates were the important environmental factors driving the microbial eukaryotic community variations. While the presence of indicator species Uronemella filificum and Euplotes vannus in the dry season and Spumella sp. and unclassified Chlorophyta in the wet season did not exhibit significant abundance, their occurrence suggests their potential as bioindicators for bacterial and nutrient pollution assessment in the river system. Moreover, the observed distinctiveness of community patterns between sinks and sources, as shown by the NMDS plot using Bray-Curtis distances, strengthens the effectiveness of the source-tracking analysis. Results generated from FEAST displayed that sewage (19.6%), followed by duck (0.644%) and cow (0.566%) feces, were the major sources of riverine microbial eukaryotes. Spatio-seasonal variations were also observed wherein downstream stations received higher contributions of microbial eukaryotes from source samples than upstream stations, and that source contributions were higher in the wet than in the dry season, indicating the impact of rainfall in enhancing the dispersal of microbial eukaryotic communities.
 Results from community-based microbial source-tracking (MST) can give knowledge
 on how microbial eukaryotes in freshwater environments are shaped by different
 factors. Moreover, it could provide information on evaluating potential hazards caused

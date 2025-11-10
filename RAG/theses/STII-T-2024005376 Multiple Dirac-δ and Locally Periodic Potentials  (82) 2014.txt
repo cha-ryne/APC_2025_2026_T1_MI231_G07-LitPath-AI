@@ -9,41 +9,7 @@ Master of Science in Physics
 April 2014
 
 Abstract
-
-In the framework of space-fractional quantum mechanics, systems with mul-
-tiple Dirac-δ and locally periodic potentials are studied. First, bound states for
-multiple Dirac-δ wells with uniform strength are considered and analyzed using the
-momentum-space (Fourier transform) approach. A matrix formulation that facilitates
-the analysis of bound states for this system is presented. This matrix formulation
-is applied to derive expressions satisfied by the bound-state energies of N = 1,2,3
-6-function wells. Known results for single and double delta wells are recovered. The
-case of a triple Dirac-δ well extends the application of the proposed matrix method.
-It is shown that obtaining bound states for higher numbers of Dirac-δ wells is concep-
-tually straightforward from the matrix eigenvalue equation derived. The bound-state
-wave functions are expressed in terms of Fox’s H-function. Second, transmission through locally periodic potentials is analyzed using the
-piecewise approach. In particular, transmission probabilities T(N) for a particle in
-a chain of N Dirac-δ barriers and for a particle in a chain of N square barriers
-are calculated. A transfer-matrix approach in the context of fractional quantum
-mechanics is adapted together with the jump condition for the fractional derivative
-of a wave function. For N > 1 plots of T(N) for both barrier systems exhibit
-hill-like (or plateau-like) and valley-like structures for a certain range of energies
-FE. The numbers of these structures increase as the fractal order (Lévy index) α
-decreases. Also observed in the case of Dirac-δ multibarrier system is the presence of
-undulations in each hill-like structure, which is related to the number of barriers by
-N — 1, independent on the value of α. Emergence of bandlike structures for as low
-as N = 4 barriers, which is known to be a characteristic of periodic potentials, is also
-seen. These bandlike structures are more apparent as the number of undulations in
-each hill increases and are more apparent for lower values of α. Third, special cases of Dirac-δ potentials with non-uniform strengths are consid-
-ered. Specifically, the space-fractional Schrédinger equation with a dipolar double
-Dirac-δ potential and the one with a quadrupolar triple Dirac-δ potential are solved.
-The momentum-space approach is used in the analysis, which is divided into two
-cases: E < 0 for bound state and E ≥ 0 for scattering state. The wave functions for both potentials are expressed in terms of Fox’s H-function. Graphical analysis
-reveals only one unique bound-state eigenenergy α for each potential, which shifts
-to higher values as α decreases. The corresponding wave functions are found to be
-antisymmetric for the dipolar potential and, with the particular choice W = Z for
-these parameters, symmetric for the quadrupolar potential. The scattering-state wave
-functions for the two systems are also obtained as precursors to analyzing scattering
-properties of these potentials.
+In the framework of space-fractional quantum mechanics, systems with mul- tiple Dirac-δ and locally periodic potentials are studied. First, bound states for multiple Dirac-δ wells with uniform strength are considered and analyzed using the momentum-space (Fourier transform) approach. A matrix formulation that facilitates the analysis of bound states for this system is presented. This matrix formulation is applied to derive expressions satisfied by the bound-state energies of N = 1,2,3 6-function wells. Known results for single and double delta wells are recovered. The case of a triple Dirac-δ well extends the application of the proposed matrix method. It is shown that obtaining bound states for higher numbers of Dirac-δ wells is concep- tually straightforward from the matrix eigenvalue equation derived. The bound-state wave functions are expressed in terms of Fox’s H-function. Second, transmission through locally periodic potentials is analyzed using the piecewise approach. In particular, transmission probabilities T(N) for a particle in a chain of N Dirac-δ barriers and for a particle in a chain of N square barriers are calculated. A transfer-matrix approach in the context of fractional quantum mechanics is adapted together with the jump condition for the fractional derivative of a wave function. For N > 1 plots of T(N) for both barrier systems exhibit hill-like (or plateau-like) and valley-like structures for a certain range of energies FE. The numbers of these structures increase as the fractal order (Lévy index) α decreases. Also observed in the case of Dirac-δ multibarrier system is the presence of undulations in each hill-like structure, which is related to the number of barriers by N — 1, independent on the value of α. Emergence of bandlike structures for as low as N = 4 barriers, which is known to be a characteristic of periodic potentials, is also seen. These bandlike structures are more apparent as the number of undulations in each hill increases and are more apparent for lower values of α. Third, special cases of Dirac-δ potentials with non-uniform strengths are consid- ered. Specifically, the space-fractional Schrédinger equation with a dipolar double Dirac-δ potential and the one with a quadrupolar triple Dirac-δ potential are solved. The momentum-space approach is used in the analysis, which is divided into two cases: E < 0 for bound state and E ≥ 0 for scattering state. The wave functions for both potentials are expressed in terms of Fox’s H-function. Graphical analysis reveals only one unique bound-state eigenenergy α for each potential, which shifts to higher values as α decreases. The corresponding wave functions are found to be antisymmetric for the dipolar potential and, with the particular choice W = Z for these parameters, symmetric for the quadrupolar potential. The scattering-state wave functions for the two systems are also obtained as precursors to analyzing scattering properties of these potentials.
 
 Chapter 1
 
@@ -2495,4 +2461,3 @@ tum mechanics: The one-dimensional lévy crystal. Phys. Rev. E, 88:012120,
 
 A. A. Kilbas, H. M. Srivastava, and J. J. Trujillo. Theory and Applications of
 Fractional Differential Fquations. Elsevier, 2006.
-

@@ -9,28 +9,7 @@ Master of Science in Pharmacy (Pharmaceutical Chemistry)
 August 2022
 
 ABSTRACT
-
-Type 2 diabetes mellitus, or T2DM, is one of the world's most severe health problems that
-is linked to numerous deaths and high health care expenses. Novel enzymes involved in its
-complex pathogenesis have been identified, including 11β-hydroxysteroid dehydrogenase
-type 1 (11β-HSD1), protein-tyrosine phosphatase 1B (PTP1B), and mono-ADP-ribosyl
-transferase sirtuin-6 (SIRT6). In the Philippines, Annona muricata or Guyabano is a
-commonly used natural remedy for several illnesses, including type 2 diabetes mellitus.
-However, most of these traditional claims have received few molecular evaluations. This
-study investigated the phytoconstituents and derivatives of the leaves of A. muricata by
-evaluating their binding profiles towards selected novel T2DM-related protein targets
-through in silico methods. Among the 36 parent compounds of Guyabano, rutin,
-kaempferol 3-O-rutinoside, quercetin, epicatechin, isolaureline, kaempferol, coreximine,
-and chlorogenic acid exhibited comparable binding affinities with the respective control
-ligands in all models of the 3 protein targets. A total of 672 derivatives were designed,
-tested, and compared against the controls and parent compounds in each protein. As a
-result, 280 derivatives exhibited more negative binding energies than the controls.
-ACMO021, ACMO14, and BCM008 exhibited the highest affinities with 11β-HSD1, PTP1B,
-and SIRT6, respectively. Among the potential ligands for each target, ASMO021 is the top
-ligand for 11β-HSD1 in terms of pharmacokinetic and physicochemical profiles, while
-HCMO004 is for PTPIB and DSMO008 is for SIRT6. The designed derivatives can be
-synthesized and further investigated for potential biological effects towards 11β-HSD1,
-PTP1B, and SIRT6 through in vitro and in vivo studies.
+Type 2 diabetes mellitus, or T2DM, is one of the world's most severe health problems that is linked to numerous deaths and high health care expenses. Novel enzymes involved in its complex pathogenesis have been identified, including 11β-hydroxysteroid dehydrogenase type 1 (11β-HSD1), protein-tyrosine phosphatase 1B (PTP1B), and mono-ADP-ribosyl transferase sirtuin-6 (SIRT6). In the Philippines, Annona muricata or Guyabano is a commonly used natural remedy for several illnesses, including type 2 diabetes mellitus. However, most of these traditional claims have received few molecular evaluations. This study investigated the phytoconstituents and derivatives of the leaves of A. muricata by evaluating their binding profiles towards selected novel T2DM-related protein targets through in silico methods. Among the 36 parent compounds of Guyabano, rutin, kaempferol 3-O-rutinoside, quercetin, epicatechin, isolaureline, kaempferol, coreximine, and chlorogenic acid exhibited comparable binding affinities with the respective control ligands in all models of the 3 protein targets. A total of 672 derivatives were designed, tested, and compared against the controls and parent compounds in each protein. As a result, 280 derivatives exhibited more negative binding energies than the controls. ACMO021, ACMO14, and BCM008 exhibited the highest affinities with 11β-HSD1, PTP1B, and SIRT6, respectively. Among the potential ligands for each target, ASMO021 is the top ligand for 11β-HSD1 in terms of pharmacokinetic and physicochemical profiles, while HCMO004 is for PTPIB and DSMO008 is for SIRT6. The designed derivatives can be synthesized and further investigated for potential biological effects towards 11β-HSD1, PTP1B, and SIRT6 through in vitro and in vivo studies.
 
 Keywords: Type 2 Diabetes Mellitus, Annona muricata, In silico methods, Alkaloids, Phenolic compounds
 

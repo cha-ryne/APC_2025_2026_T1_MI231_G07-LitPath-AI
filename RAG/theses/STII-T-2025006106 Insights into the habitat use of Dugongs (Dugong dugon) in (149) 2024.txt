@@ -9,39 +9,7 @@ Master of Science in Environmental Science
 May 2024
 
 ABSTRACT
-
-Dugong (Dugong dugon) populations are known to be declining throughout its range because
-of by-catch fishery, direct hunting, boat collisions, and rapid coastal development. It is
-categorized as Vulnerable in the IUCN Red List, indicating a high risk of extinction in the wild
-in the medium-term future. In the Philippines, dugongs are considered Critically Endangered
-based on DENR’s Administrative Order No. 2019-09. This study aimed to inform the
-conservation management of the dugongs in Calauit Island, Busuanga through identifying
-confirmed daylight space use (CDSU) and confirmed daylight core areas (CDCA) of dugongs
-based on sightings generated from simultaneous land-based monitoring surveys. Four two-day
-surveys were conducted in 2019 which resulted to 365 dugong sighting events across 30-32
-monitoring stations (most manned by local Indigenous Peoples) situated within the Calauit
-Island Group in Northern Busuanga, Philippines. Using Kernel Density Analysis (KDE), the
-95% Utilization Distribution (UD) was used to estimate the CDSU, while 50% UD reflects the
-CDCA. The total dugong CDSU (95% KDE) was approximately 4.6km² spanning across all
-survey areas, while the total CDCA (50%KDE) was approximately 0.7km² which represented
-15.2% of the CDSU. The nearby islands (hereinto referred as off-shore islands), Dimipac and
-Maltanobon, had the highest KDE ratio, characterized with a relatively high proportion of
-CDCA within its CDSU. These offshore islands also have the highest mean sighting duration
-of dugongs (19.82 min), and calves (22.73 min). Three pairs of mother and calf were seen in
-Dimipac 2 in May 2019 and in Maltanobon in June 2019. Aban-aban and Elhan 1, were notably
-frequented by dugongs with 30 and 23 sightings, respectively. Through opportunistic spot
-surveys, seagrass was observed in depths between 1.5 to 27 m, with deep-water seagrasses
-(15m) with the presence Halophila sp. observed in CDCAs off Aban-aban (23-27m) and
-Kawiren (18-20m). Fishers perception survey (n=58) on dugong population in Calauit Island
-revealed that all respondents ‘frequently’ see dugongs around the island, and that 52
-tespondents (89.66%) have seen dugongs ‘several times’ in the past year. Additionally, perceived important dugong areas include Aban-aban (n=25) and Kawiren (n=19). Furthermore, in this study, which aimed to elucidate space use patterns in a relatively small
-spatial scale, observations of shallow and deep-water seagrass patches off the coast of Kawiren,
-Aban-aban, Pagdukon and Dimipac indicate the potential spatial heterogeneity of foraging habitats, given the availability of both intertidal and subtidal seagrass beds. While space use fidelity within the Calauit Island Group has yet to be studied, the location
-appears to be an important dugong area in Palawan with calf sightings indicating a reproducing
-population. Expansion of monitoring stations within the region could therefore identify
-interconnectivity of space use and reveal movement and habitat use patterns of dugongs on a
-larger scale within the regional network. Ultimately, this study has shown that systematic
-surveys coupled with citizen science could generate useful data in developing conservation
+Dugong (Dugong dugon) populations are known to be declining throughout its range because of by-catch fishery, direct hunting, boat collisions, and rapid coastal development. It is categorized as Vulnerable in the IUCN Red List, indicating a high risk of extinction in the wild in the medium-term future. In the Philippines, dugongs are considered Critically Endangered based on DENR’s Administrative Order No. 2019-09. This study aimed to inform the conservation management of the dugongs in Calauit Island, Busuanga through identifying confirmed daylight space use (CDSU) and confirmed daylight core areas (CDCA) of dugongs based on sightings generated from simultaneous land-based monitoring surveys. Four two-day surveys were conducted in 2019 which resulted to 365 dugong sighting events across 30-32 monitoring stations (most manned by local Indigenous Peoples) situated within the Calauit Island Group in Northern Busuanga, Philippines. Using Kernel Density Analysis (KDE), the 95% Utilization Distribution (UD) was used to estimate the CDSU, while 50% UD reflects the CDCA. The total dugong CDSU (95% KDE) was approximately 4.6km² spanning across all survey areas, while the total CDCA (50%KDE) was approximately 0.7km² which represented 15.2% of the CDSU. The nearby islands (hereinto referred as off-shore islands), Dimipac and Maltanobon, had the highest KDE ratio, characterized with a relatively high proportion of CDCA within its CDSU. These offshore islands also have the highest mean sighting duration of dugongs (19.82 min), and calves (22.73 min). Three pairs of mother and calf were seen in Dimipac 2 in May 2019 and in Maltanobon in June 2019. Aban-aban and Elhan 1, were notably frequented by dugongs with 30 and 23 sightings, respectively. Through opportunistic spot surveys, seagrass was observed in depths between 1.5 to 27 m, with deep-water seagrasses (15m) with the presence Halophila sp. observed in CDCAs off Aban-aban (23-27m) and Kawiren (18-20m). Fishers perception survey (n=58) on dugong population in Calauit Island revealed that all respondents ‘frequently’ see dugongs around the island, and that 52 tespondents (89.66%) have seen dugongs ‘several times’ in the past year. Additionally, perceived important dugong areas include Aban-aban (n=25) and Kawiren (n=19). Furthermore, in this study, which aimed to elucidate space use patterns in a relatively small spatial scale, observations of shallow and deep-water seagrass patches off the coast of Kawiren, Aban-aban, Pagdukon and Dimipac indicate the potential spatial heterogeneity of foraging habitats, given the availability of both intertidal and subtidal seagrass beds. While space use fidelity within the Calauit Island Group has yet to be studied, the location appears to be an important dugong area in Palawan with calf sightings indicating a reproducing population. Expansion of monitoring stations within the region could therefore identify interconnectivity of space use and reveal movement and habitat use patterns of dugongs on a larger scale within the regional network. Ultimately, this study has shown that systematic surveys coupled with citizen science could generate useful data in developing conservation
 objectives for dugongs in Northern Busuanga and is an important strategy towards the monitoring of dugongs in localized populations.
 
 Keywords: Dugong (Dugong dugon), home range, spatial distribution, kernel density, land-based surveys
@@ -3260,5 +3228,4 @@ Zeh D, Heupel M, Hamann M et al (2018) Evidence of behavioral thermoregulation b
 
 dugongs at the high latitude limit to their range in eastern Australia. J ExpMar Biol Ecol
 508:27-34. https://doi.org/10.1016/j jembe.2018.08.004
-
 

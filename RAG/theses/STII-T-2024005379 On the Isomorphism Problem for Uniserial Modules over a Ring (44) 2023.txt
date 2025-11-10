@@ -9,19 +9,7 @@ Master of Science in Mathematics
 July 2023
 
 Abstract
-
-Determining whether two uniserial modules over an Artin algebra are isomor-
-phic is an open problem in representation theory. However, isomorphism is a
-very strong condition. If the interest is to translate a first-order theorem in one
-module to another, it suffices to consider weaker notions such as elementary equiv-
-alence. The thesis investigates a particular class of uniserial modules over a ring.
-In particular, it will be shown that if the ring is infinite, simple and von Neu-
-mann regular, then the theory of modules over this ring has elementary equivalent
-models. An application of this result is given. Conversely, it is shown that with
-the assumption that every ideal of the ring is an elementary substructure of the
-ring as a module over itself, we have that the ring must be infinite, simple and
-von Neumann regular. It is also shown that the prescribed conditions are strictly
-insufficient for isomorphism. The thesis will include a discussion of preliminary concepts and known theorems that leads to the main results.
+Determining whether two uniserial modules over an Artin algebra are isomor- phic is an open problem in representation theory. However, isomorphism is a very strong condition. If the interest is to translate a first-order theorem in one module to another, it suffices to consider weaker notions such as elementary equiv- alence. The thesis investigates a particular class of uniserial modules over a ring. In particular, it will be shown that if the ring is infinite, simple and von Neu- mann regular, then the theory of modules over this ring has elementary equivalent models. An application of this result is given. Conversely, it is shown that with the assumption that every ideal of the ring is an elementary substructure of the ring as a module over itself, we have that the ring must be infinite, simple and von Neumann regular. It is also shown that the prescribed conditions are strictly insufficient for isomorphism. The thesis will include a discussion of preliminary concepts and known theorems that leads to the main results.
 
 Chapter 1
 

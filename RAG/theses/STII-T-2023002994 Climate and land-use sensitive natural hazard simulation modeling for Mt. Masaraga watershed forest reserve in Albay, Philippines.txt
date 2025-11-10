@@ -9,37 +9,7 @@ Doctor of Philosophy in Forestry
 JUNE 2021
 
 ABSTRACT
-
-The study was conducted to simulate multi-temporal and scenario-based natural hazards
-incorporating the important drivers such as LULC change and climate change. It assessed the
-dynamics of land-use change in the area, formulate models of the dynamics of landslide and
-flooding events in the area, simulated the models for landslide and flooding at different time-slices
-and at different climate scenarios combining the land-use change model results; generated multi-
-hazard maps to determine the areas within the watershed prone to natural hazards for the year 2050
-and 2070; and recommend strategies for public responsiveness, disaster preparedness, and
-preventive disaster management to mitigate the impacts of geophysical and climate-induced
-hazards in the area. The resulting LULC classification has an accuracy of 87% and 80% and Kappa statistics
-of 0.83 and 0.73 for the year 2010 and 2020, respectively. Assessment of the landslide susceptibility
-model obtained an accuracy based on ROC of 0.80, while the area under the curve is 94% and the
-Kappa index is 0.58. The flood susceptibility model ROC-AUC of 98%, Accuracy of 0.95, and
-Kappa index of 0.89. This means that the model is consistent in predicting the probability of
-occurrence of natural hazards. GIS-based Multi-Criteria Decision Analysis (GIS-MCDA) and Analytic Hierarchy
-Process (AHP) provides powerful techniques for the analysis and prediction of floods and landslide
-hazards. Simulated natural hazards for different time periods (2020, 2050, and 2070) and climatic
-condition RCP 4.5 (medium case) and RCP 8.5 (worst case scenario) used a raster calculator to
-compute in hectare the areas prone to flooding and landslide. Integrated hazards maps were used to
-evaluate the condition of MMWFR. Results of integrated hazard in 2050 with the RCP 4.5 scenario
-show that areas with low susceptibility to hazards both in flooding and landslide totaled 7,709.98
-ha, accounting for 60.26 % of the total area of MMWER. Almost 40% of the total area will fall in
-different combinations of moderate to very high susceptibility to landslide and flooding across the
-four municipalities covering MMWFR. In the year 2050 and with RCP 8.5, around 52.56 % of the
-total area has low susceptibility to flooding and landslide while 47.44 % of the total area is under
-moderate to very high susceptibility. For the 2070 results of integrated hazards with RCP 4.5,
-almost half of the area or 49.59% will be exposed to moderate, high, and very high susceptibility
-classes while 50.41% falls under low landslide and low flooding. However, for the year 2070 and
-with RCP 8.5 scenario, 76.68% of the area will experience different combinations of moderate to
-very high susceptibility to flooding and landslide since only 23.32% will fall under low landslide
-and low flooding.
+The study was conducted to simulate multi-temporal and scenario-based natural hazards incorporating the important drivers such as LULC change and climate change. It assessed the dynamics of land-use change in the area, formulate models of the dynamics of landslide and flooding events in the area, simulated the models for landslide and flooding at different time-slices and at different climate scenarios combining the land-use change model results; generated multi- hazard maps to determine the areas within the watershed prone to natural hazards for the year 2050 and 2070; and recommend strategies for public responsiveness, disaster preparedness, and preventive disaster management to mitigate the impacts of geophysical and climate-induced hazards in the area. The resulting LULC classification has an accuracy of 87% and 80% and Kappa statistics of 0.83 and 0.73 for the year 2010 and 2020, respectively. Assessment of the landslide susceptibility model obtained an accuracy based on ROC of 0.80, while the area under the curve is 94% and the Kappa index is 0.58. The flood susceptibility model ROC-AUC of 98%, Accuracy of 0.95, and Kappa index of 0.89. This means that the model is consistent in predicting the probability of occurrence of natural hazards. GIS-based Multi-Criteria Decision Analysis (GIS-MCDA) and Analytic Hierarchy Process (AHP) provides powerful techniques for the analysis and prediction of floods and landslide hazards. Simulated natural hazards for different time periods (2020, 2050, and 2070) and climatic condition RCP 4.5 (medium case) and RCP 8.5 (worst case scenario) used a raster calculator to compute in hectare the areas prone to flooding and landslide. Integrated hazards maps were used to evaluate the condition of MMWFR. Results of integrated hazard in 2050 with the RCP 4.5 scenario show that areas with low susceptibility to hazards both in flooding and landslide totaled 7,709.98 ha, accounting for 60.26 % of the total area of MMWER. Almost 40% of the total area will fall in different combinations of moderate to very high susceptibility to landslide and flooding across the four municipalities covering MMWFR. In the year 2050 and with RCP 8.5, around 52.56 % of the total area has low susceptibility to flooding and landslide while 47.44 % of the total area is under moderate to very high susceptibility. For the 2070 results of integrated hazards with RCP 4.5, almost half of the area or 49.59% will be exposed to moderate, high, and very high susceptibility classes while 50.41% falls under low landslide and low flooding. However, for the year 2070 and with RCP 8.5 scenario, 76.68% of the area will experience different combinations of moderate to very high susceptibility to flooding and landslide since only 23.32% will fall under low landslide and low flooding.
 
 CHAPTER I
 
@@ -4356,4 +4326,3 @@ glossary of hydrology. WMO-No. 385. ISBN 978-92-63-03385-8, pp. 1-461.
 YALCIN, G. and Z. AKYUREK, (2002). Analyzing Flood Vulnerable Areas with
 Multicriteria Evaluation. Master’s Thesis, Geodetic and Geographic Information
 Technologies, Middle East Technical University, Ankara, Turkey, April 2002.
-

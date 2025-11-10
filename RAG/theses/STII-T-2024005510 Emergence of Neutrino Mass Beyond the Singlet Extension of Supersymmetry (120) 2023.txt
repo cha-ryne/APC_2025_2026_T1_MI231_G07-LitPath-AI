@@ -9,21 +9,7 @@ Master of Science in Physics
 September 2023
 
 ABSTRACT
-
-We have generated the tree-level Majorana neutrino masses from the
-Triplet Extended Minimal Supersymmetric Standard Model (TMSSM) and
-the Triplet Next-to-Minimal Supersymmetric Standard Model (TNMSSM)
-both in the presence of the bilinear R-parity violating interactions, μi​L̂i​Ĥu​
-Neutrino mass expressions derived in TMSSM and TNMSSM are consistent
-with the NMSSM and MSSM limits provided that μeff​≈μ. The mecha-
-nisms that were found to suppress the neutrino mass are the cancellation
-mechanism that depends on the mass parameters, and the compensation
-mechanism which relies on the presence of mass and coupling parameters.
-These mechanisms can explain the smallness of neutrino mass. A new ob-
-servation was found in this study where TNMSSM pay a price of reducing
-neutrino mass suppression mechanism in trying to solve the mu and the lit-
-tle hierarchy problems. The results of this study can be used to constrain
-SUSY parameters using neutrino mass, and vice versa, as data from both sides become available.
+We have generated the tree-level Majorana neutrino masses from the Triplet Extended Minimal Supersymmetric Standard Model (TMSSM) and the Triplet Next-to-Minimal Supersymmetric Standard Model (TNMSSM) both in the presence of the bilinear R-parity violating interactions, μi​L̂i​Ĥu​ Neutrino mass expressions derived in TMSSM and TNMSSM are consistent with the NMSSM and MSSM limits provided that μeff​≈μ. The mecha- nisms that were found to suppress the neutrino mass are the cancellation mechanism that depends on the mass parameters, and the compensation mechanism which relies on the presence of mass and coupling parameters. These mechanisms can explain the smallness of neutrino mass. A new ob- servation was found in this study where TNMSSM pay a price of reducing neutrino mass suppression mechanism in trying to solve the mu and the lit- tle hierarchy problems. The results of this study can be used to constrain SUSY parameters using neutrino mass, and vice versa, as data from both sides become available.
 
 PACS: 14.60.Pq (Neutrino mass and mixing), 11.30.Pb (Supersymmetry), 12.60.Jv (Supersymmetric Models)
 
@@ -4209,4 +4195,3 @@ boson phenomenology in flavored-TNMSSM,” Nucl. Phys. B, 974 pp.
 Y. Grossman and H. E. Haber, “Sneutrino Mixing Phenomena,” Phys.
 
 Rev. Lett. 78(18) pp. 3438-3441 (1997).
-

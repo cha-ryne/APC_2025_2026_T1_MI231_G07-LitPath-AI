@@ -9,12 +9,7 @@ MASTER IN INFORMATION TECHNOLOGY
 April 2013
 
 Abstract
-This proposal helped develop an online system for the stand-alone kiosks to address the
-challenges in content distribution and monitoring, and in preparation for establishing a
-community of stakeholders. The online version serves not only as an online kiosk for registered stakeholders, but most importantly it would serve as a venue for resource sharing and sourcing. Areas of implementation focused on the uploading and downloading features of the
-online version, the security of updates in transit, simplification of report generation and submissions, and the platform for communication among stakeholders. PHP was used in developing the front-end and the back-end, together with MYSQL for
-database. Various open sourced software were also integrated to achieve system requirements
-like Gpgraph for reporting, Flex Paper for viewing full text files, Sparkweb for online chat, and SWFTools for auto convertion of uploaded PDF materials.
+This proposal helped develop an online system for the stand-alone kiosks to address the challenges in content distribution and monitoring, and in preparation for establishing a community of stakeholders. The online version serves not only as an online kiosk for registered stakeholders, but most importantly it would serve as a venue for resource sharing and sourcing. Areas of implementation focused on the uploading and downloading features of the online version, the security of updates in transit, simplification of report generation and submissions, and the platform for communication among stakeholders. PHP was used in developing the front-end and the back-end, together with MYSQL for database. Various open sourced software were also integrated to achieve system requirements like Gpgraph for reporting, Flex Paper for viewing full text files, Sparkweb for online chat, and SWFTools for auto convertion of uploaded PDF materials.
 
 The Problem Domain
 DOST’s information arm Science and Technology Information Institute (STII), has

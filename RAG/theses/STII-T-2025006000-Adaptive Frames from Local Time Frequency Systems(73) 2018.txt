@@ -9,27 +9,7 @@ Master of Science in Mathematics
 December 2018
 
 Abstract
-
-Time-frequency analysis is intrested in simultaneous representation of signals
-in time and frequency. The discrete representation of such signals can be studied in
-terms of fraine theory whosc fundamental result is that: any signal f ∈ L²(ℝᵈ) can
-be written as a sum, provided that the so-called upper and lower frame bounds
-exist from the frame inequalities. An exainple of such a frame in the context
-of time-frequency analysis arc the Gabor frames, which can be constructed by
-discretely sampling the continuous Short-Time Fourier transform with a single
-window function on points in the time-frequency plane with some nice structure,
-an example of such arc lattices. Generalizations of Gabor frames have also been
-studied. for example, time-frequency systems where multiple window functions
-are allowed, or when the sampling points are not necessarily restricted to have
-any structure. These gencralizcd frames can also be adapted to certain properties
-of signals. An example of such an adaptive system is Dörfler’s quilted Gabor
-frames, w hich shows that an upper frame bound exists for a system constructed
-by quilting local time-frequency systems from pre-existing Gabor frames. In this
-work, we show that we do not need the existence of Gabor frames to construct
-an upper frame bound for Dérfier’s construction. Furthermore, we prove that our
-relaxed construction admits a lower frame bound by using density techniques on
-irregular sampling. This results to an adaptive frame from local time frequency
-systems. We also use results from relevant sampling to construct other adaptive time-frequency systems.
+Time-frequency analysis is intrested in simultaneous representation of signals in time and frequency. The discrete representation of such signals can be studied in terms of fraine theory whosc fundamental result is that: any signal f ∈ L²(ℝᵈ) can be written as a sum, provided that the so-called upper and lower frame bounds exist from the frame inequalities. An exainple of such a frame in the context of time-frequency analysis arc the Gabor frames, which can be constructed by discretely sampling the continuous Short-Time Fourier transform with a single window function on points in the time-frequency plane with some nice structure, an example of such arc lattices. Generalizations of Gabor frames have also been studied. for example, time-frequency systems where multiple window functions are allowed, or when the sampling points are not necessarily restricted to have any structure. These gencralizcd frames can also be adapted to certain properties of signals. An example of such an adaptive system is Dörfler’s quilted Gabor frames, w hich shows that an upper frame bound exists for a system constructed by quilting local time-frequency systems from pre-existing Gabor frames. In this work, we show that we do not need the existence of Gabor frames to construct an upper frame bound for Dérfier’s construction. Furthermore, we prove that our relaxed construction admits a lower frame bound by using density techniques on irregular sampling. This results to an adaptive frame from local time frequency systems. We also use results from relevant sampling to construct other adaptive time-frequency systems.
 
 Introduction
 
@@ -2528,4 +2508,3 @@ nal of Applied Mathematics. 28(5):854876, 2017.
 
 A. Villani. Another note on the inclusion L?(j1) © L%y). The American
 Mathematical Monthly, 92(7):485. 487, 1985.
-

@@ -9,17 +9,7 @@ Master of Science in Physics
 April 2013
 
 ABSTRACT
-
-We describe and model the structure of small-sized network systems involving
-real-world data sets. Large systems, like the Internet and the World Wide Web,
-often involving millions of nodes and cdges, has becn the most dominant data
-sets in complex networks research. The finite size and sparse edge distributions
-of small networks pose difficultics on extracting uscful cxpcrimental data because
-of insufficient statistics. Several data sets of small real-world network systems -
-influence and friendship networks; House of Representatives co-authorship net-
-works; and MIDI music networks - are collected and analyzed. Known models for
-each of the networks are simulated and network parameters for both small-sized
-real-world networks and simulated model networks are compared.
+We describe and model the structure of small-sized network systems involving real-world data sets. Large systems, like the Internet and the World Wide Web, often involving millions of nodes and cdges, has becn the most dominant data sets in complex networks research. The finite size and sparse edge distributions of small networks pose difficultics on extracting uscful cxpcrimental data because of insufficient statistics. Several data sets of small real-world network systems - influence and friendship networks; House of Representatives co-authorship net- works; and MIDI music networks - are collected and analyzed. Known models for each of the networks are simulated and network parameters for both small-sized real-world networks and simulated model networks are compared.
 
 PACS: 89.75.He (Networks and gencalogical trecs), 89.75.Fb (Structurcs and organization in complex systems)
 
@@ -1870,5 +1860,4 @@ networks,” Proceedings of the National Academy of Sciences, 2000.
 
 A. Barabasi and R. Albert, “Emergence of scaling in random networks.”
 Science, 1999.
-
 

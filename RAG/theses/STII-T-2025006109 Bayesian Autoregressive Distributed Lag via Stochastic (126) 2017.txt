@@ -9,24 +9,7 @@ Waster of Science in Statistics
 May 2017
 
 Abstract
-
-The main objective of the study is the integration of the Stochastic Gradient
-Hamiltonian Monte Carlo (SGHMC) in estimating the parameters of the Bayesian
-Autoregressive Distributed Lag (BADL) model. In particular, the a priori set
-for the weights of the BADL is assumed to have fixed hyperparameters, and
-that is the standard Gaussian distribution. The main theoretical results derived
-for the proposed model (BADL-SGHMC) are given by: Proposition 5.1.1:
-the a posteriori; and Proposition 5.1.2: the stochastic gradient of the potential
-energy (the negative log a posteriori). The results of the proposed model were
-applied to forecasting the Philippine’s economic growth. In this application, three
-cases were considered for preliminary evaluation on the behavior of the SGHMC
-in comparison to other Markov Chain Monte Carlo (MCMC) algorithms, namely:
-Metropolis-Hasting (MH) and Hamiltonian Monte Carlo (HMC). The markov
-chains in these three scenarios were assessed using Heidelberger-Welch’s stationary
-test and Gelman-Rubin’s convergence test. The results favored BADL-SGHMC
-over the contenders in the out-of-sample dataset. Lastly, the paper developed
-statistical packages for SGHMC algorithm both for R and Julia programming
-languages.
+The main objective of the study is the integration of the Stochastic Gradient Hamiltonian Monte Carlo (SGHMC) in estimating the parameters of the Bayesian Autoregressive Distributed Lag (BADL) model. In particular, the a priori set for the weights of the BADL is assumed to have fixed hyperparameters, and that is the standard Gaussian distribution. The main theoretical results derived for the proposed model (BADL-SGHMC) are given by: Proposition 5.1.1: the a posteriori; and Proposition 5.1.2: the stochastic gradient of the potential energy (the negative log a posteriori). The results of the proposed model were applied to forecasting the Philippine’s economic growth. In this application, three cases were considered for preliminary evaluation on the behavior of the SGHMC in comparison to other Markov Chain Monte Carlo (MCMC) algorithms, namely: Metropolis-Hasting (MH) and Hamiltonian Monte Carlo (HMC). The markov chains in these three scenarios were assessed using Heidelberger-Welch’s stationary test and Gelman-Rubin’s convergence test. The results favored BADL-SGHMC over the contenders in the out-of-sample dataset. Lastly, the paper developed statistical packages for SGHMC algorithm both for R and Julia programming languages.
 
 Keywords: Big Data, Gelman-Rubin, Gross Domestic Product, Growth Rate,
 Gibbs Sampling, Heidelberger-Welch, Julia, Langevin Dynamics, Laplace's

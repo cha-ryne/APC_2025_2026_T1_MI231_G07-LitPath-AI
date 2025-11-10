@@ -9,32 +9,7 @@ Master of Science in Physics
 April 2013
 
 ABSTRACT
-
-We propose a model to explain message posting of users in Twitter. Our model,
-the Co-timescale Cox Process (CTCP) model, is based on the idea of timescales
-and Cox Process, a doubly stochastic process. We suggest that by considering
-only the disparity in the timescale, i.e., short and long timescales, of the inter-
-event time between tweets in our model, we will be able to predict the form of the empirical inter-event time distribution of user in Twitter. We provide a new perspective in modeling human behavior. We avoided to
-explicitly incorporate factors that are intuitive to influence human behavior in
-our model. This is in contrast with traditional modeling techniques for human
-behavior. We demonstrate that more insights can be inferred by not explicitly in-
-corporating such specific and intuitive behavioral attributes, e.g., sleeping pattern, in the model. We define a truncated power law model as the null model. This null model
-serves as the baseline of the performance of our proposed model. Since empirical
-data have been frequently reported to obey power law behavior, we use the trun-
-cated power law model to evaluate whether, at the individual level, the power law model is still an appropriate explanation for human behavior. Our results show that the CTCP model is able to explain 52.08% of users in the
-dataset used. In contrast, only 10.47% of the users are explained by the truncated power law. We also considered the performance of both models across different types of user classes based on activity level. We found that most users in the high activity
-user class cannot be explained by both the CTCP model and the truncated power
-law model. This suggests that other mechanisms govern most users in this class.
-Based on the four classes of users, we found that the models perform best in the low activity user class. Lastly, we show that the CTCP model explains exclusively a set of individ-
-uals that do not possess seasonal behavior and power law behavior. We would
-intuitively think that it seems impossible for users to have no seasonal behavior
-depicted in their temporal pattern since we all sleep. The absence of a seasonal
-signature can possibly be attributed to Twitter influenced shifts in sleeping pat-
-terns. Various ways of accessing Twitter allow users to post tweets almost anytime
-which can also be a possible reason for the lack of seasonal signature for some of
-the users. These results give us insights as to how multiple ways of connecting to
-Twitter as well as how an individual uses the system itself induce change in an
-individual’s behavior.
+We propose a model to explain message posting of users in Twitter. Our model, the Co-timescale Cox Process (CTCP) model, is based on the idea of timescales and Cox Process, a doubly stochastic process. We suggest that by considering only the disparity in the timescale, i.e., short and long timescales, of the inter- event time between tweets in our model, we will be able to predict the form of the empirical inter-event time distribution of user in Twitter. We provide a new perspective in modeling human behavior. We avoided to explicitly incorporate factors that are intuitive to influence human behavior in our model. This is in contrast with traditional modeling techniques for human behavior. We demonstrate that more insights can be inferred by not explicitly in- corporating such specific and intuitive behavioral attributes, e.g., sleeping pattern, in the model. We define a truncated power law model as the null model. This null model serves as the baseline of the performance of our proposed model. Since empirical data have been frequently reported to obey power law behavior, we use the trun- cated power law model to evaluate whether, at the individual level, the power law model is still an appropriate explanation for human behavior. Our results show that the CTCP model is able to explain 52.08% of users in the dataset used. In contrast, only 10.47% of the users are explained by the truncated power law. We also considered the performance of both models across different types of user classes based on activity level. We found that most users in the high activity user class cannot be explained by both the CTCP model and the truncated power law model. This suggests that other mechanisms govern most users in this class. Based on the four classes of users, we found that the models perform best in the low activity user class. Lastly, we show that the CTCP model explains exclusively a set of individ- uals that do not possess seasonal behavior and power law behavior. We would intuitively think that it seems impossible for users to have no seasonal behavior depicted in their temporal pattern since we all sleep. The absence of a seasonal signature can possibly be attributed to Twitter influenced shifts in sleeping pat- terns. Various ways of accessing Twitter allow users to post tweets almost anytime which can also be a possible reason for the lack of seasonal signature for some of the users. These results give us insights as to how multiple ways of connecting to Twitter as well as how an individual uses the system itself induce change in an individual’s behavior.
 
 PACS: 05.10.-a (Statistical physics and nonlinear dynamic), 02.50.-r (Statistics),
 89.75.-k (Complex systems), 05.10.Gg (Stochastic models in statistical physics and
@@ -1593,5 +1568,4 @@ vol. 33, pp. 587-606, Nov. 2004.
 
 ments of goodness-of-fit for ecological simulation models.,” Ecological Mod-
 elling, vol. 164, pp. 49-63, June 2003.
-
 

@@ -9,28 +9,7 @@ Master of Science in Plant Breeding
 June 2017
 
 ABSTRACT
-
-One-hundred forty two F₁₄, Recombinant Inbred Lines from the cross between
-Dasanbyeo (Indica) and TR22183 (Japonica) were phenotypically evaluated at seedling
-stage, 14 days after seeding, under phosphorus deficiency in a hydroponic solution. The
-RILs were selected and genotyped using Genotyping by Sequencing (GBS) technology.
-The genotyped data was used to correlate with the phenotype data of the 142 F₁₄DT-RILs
-evaluated at seedling stage under phosphorus deficient condition. Nine-hundred ninety
-two (992) markers were used to generate the genetic linkage map using inclusive
-composite interval mapping (ICIM) software version 4.1. The generated linkage map
-showed a total length of 3061.76 cM with an average interval size of 3.0864 cM.
-Permutation analysis of the data was done obtaining an LOD threshold of 3.4068. Twenty
-eight QTLs were identified in chromosome 1, 3, 4, 5, 6, 8, 9, 10, and 12 explaining
-5.6068 to 20.8062% of the phenotypic variance. The QTLs- number of crown roots
-(qCR1, qCR3, and qCR12), root length (qRL1, qRL5, qRL8, and qRL9), shoot length
-(qSL3, qSL5, and qgSL12), total projected area (q7PA6), total surface area (g7SA3,
-qTSA4.1, qTSA4.2, and qTSA9), number of root tips (qTIP5, qTIP8, qTIP9 and qTIP10),
-and number of forks (qFRK1, qFRK5, qFRK8 and qFRK9). Potentially good QTLs
-showing significant LOD and phenotypic variance were selected because of their position
-that is associated with other genes and markers. Fine-mapping of these QTLs - qRL5,
-qRL9 and qTSA9 - is recommended for further identification of closely linked markers for
-marker-assisted breeding purposes. The three QTLs are potentially good because their
-position is associated with genes that could be underlying in their position.
+One-hundred forty two F₁₄, Recombinant Inbred Lines from the cross between Dasanbyeo (Indica) and TR22183 (Japonica) were phenotypically evaluated at seedling stage, 14 days after seeding, under phosphorus deficiency in a hydroponic solution. The RILs were selected and genotyped using Genotyping by Sequencing (GBS) technology. The genotyped data was used to correlate with the phenotype data of the 142 F₁₄DT-RILs evaluated at seedling stage under phosphorus deficient condition. Nine-hundred ninety two (992) markers were used to generate the genetic linkage map using inclusive composite interval mapping (ICIM) software version 4.1. The generated linkage map showed a total length of 3061.76 cM with an average interval size of 3.0864 cM. Permutation analysis of the data was done obtaining an LOD threshold of 3.4068. Twenty eight QTLs were identified in chromosome 1, 3, 4, 5, 6, 8, 9, 10, and 12 explaining 5.6068 to 20.8062% of the phenotypic variance. The QTLs- number of crown roots (qCR1, qCR3, and qCR12), root length (qRL1, qRL5, qRL8, and qRL9), shoot length (qSL3, qSL5, and qgSL12), total projected area (q7PA6), total surface area (g7SA3, qTSA4.1, qTSA4.2, and qTSA9), number of root tips (qTIP5, qTIP8, qTIP9 and qTIP10), and number of forks (qFRK1, qFRK5, qFRK8 and qFRK9). Potentially good QTLs showing significant LOD and phenotypic variance were selected because of their position that is associated with other genes and markers. Fine-mapping of these QTLs - qRL5, qRL9 and qTSA9 - is recommended for further identification of closely linked markers for marker-assisted breeding purposes. The three QTLs are potentially good because their position is associated with genes that could be underlying in their position.
 
 Keywords: QTL, Permutation Analysis, Fine Mapping, LOD threshold
 
@@ -2639,4 +2618,3 @@ LIN, W. and C. YE. 2002. A draft sequence of the rice genome. Science
 ZHENG,H.G., R.C.BABU, M.S.PATHAN, L.ALI, N.HUANG, B.COURTOIS AND
 H.T.NGUYEN (2000) Quantitative trait loci for root-penetration ability and
 root thickness in rice: comparison of genetic backgrounds. Genome 43: 53-61.
-

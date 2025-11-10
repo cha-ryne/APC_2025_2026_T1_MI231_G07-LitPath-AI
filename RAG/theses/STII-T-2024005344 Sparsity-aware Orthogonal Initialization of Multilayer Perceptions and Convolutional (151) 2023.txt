@@ -9,27 +9,7 @@ MASTER OF SCIENCE IN ELECTRICAL & ELECTRONICS ENGINEERING
 DECEMBER 2023
 
 ABSTRACT
-
-Deep neural networks have achieved impressive pattern recognition and generative
-abilities on complex tasks by developing larger and deeper models, which are
-increasingly costly to train and implement. There is in tandem interest to develop
-sparse versions of these powerful models by post-processing with weight pruning or
-dynamic sparse training. However, these processes require expensive
-train-prune-finetune cycles and compromise the trainability of very deep network
-configurations. We introduce sparsity-aware orthogonal initialization (SAO), a method
-to initialize sparse but maximally connected neural networks with orthogonal weights.
-SAO constructs a sparse network topology leveraging Ramanujan expander graphs to
-assure connectivity and assigns orthogonal weights to attain approximate dynamical
-isometry. We implemented SAO to multilayer perceptrons and demonstrated that SAO
-networks outperform magnitude pruning in very deep and sparse networks up to a
-thousand layers with fewer computations and training iterations. Meanwhile, in
-convolutional neural networks within the SAO framework, kernels may be removed
-prior to model training based on a desired compression factor rather than post-training
-based on parameter-dependent heuristics. SAO is parameter-efficient, exhibiting the
-potential for applications with tight energy and computation budgets such as edge
-computing tasks, because it achieves sparse, trainable neural network models with
-fewer learnable parameters without requiring special layers, additional training,
-scaling, or regularization. The advantages of SAO networks are attributed to both its sparse but maximally connected topology and orthogonal weight initialization.
+Deep neural networks have achieved impressive pattern recognition and generative abilities on complex tasks by developing larger and deeper models, which are increasingly costly to train and implement. There is in tandem interest to develop sparse versions of these powerful models by post-processing with weight pruning or dynamic sparse training. However, these processes require expensive train-prune-finetune cycles and compromise the trainability of very deep network configurations. We introduce sparsity-aware orthogonal initialization (SAO), a method to initialize sparse but maximally connected neural networks with orthogonal weights. SAO constructs a sparse network topology leveraging Ramanujan expander graphs to assure connectivity and assigns orthogonal weights to attain approximate dynamical isometry. We implemented SAO to multilayer perceptrons and demonstrated that SAO networks outperform magnitude pruning in very deep and sparse networks up to a thousand layers with fewer computations and training iterations. Meanwhile, in convolutional neural networks within the SAO framework, kernels may be removed prior to model training based on a desired compression factor rather than post-training based on parameter-dependent heuristics. SAO is parameter-efficient, exhibiting the potential for applications with tight energy and computation budgets such as edge computing tasks, because it achieves sparse, trainable neural network models with fewer learnable parameters without requiring special layers, additional training, scaling, or regularization. The advantages of SAO networks are attributed to both its sparse but maximally connected topology and orthogonal weight initialization.
 
 CHAPTER 1
 

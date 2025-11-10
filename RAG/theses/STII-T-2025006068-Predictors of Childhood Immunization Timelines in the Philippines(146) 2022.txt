@@ -9,23 +9,7 @@ Master of Science in Public Health (Biostatistics)
 June 2022
 
 ABSTRACT
-
-Immunization has been proven to prevent a wide range of preventable diseases and
-demise. Different countries, including the Philippines, implemented the Expanded Program
-on Immunization (EPI) to ensure that children and mothers have access to routinely
-recommended vaccines against diseases such as tuberculosis, diphtheria, tetanus, pertussis,
-polio, and measles. However, many challenges have been affecting the implementation of
-vaccination programs, resulting in vaccination delays and underimmunization. Against this
-context, this paper applied methods in survival analysis to examine the timeliness of
-vaccine administration among Filipino children aged 0 to 35 months and its predictors,
-using data from the 2017 National Demographic and Health Survey. The estimated median vaccine delays among Filipino children were 5 days for BCG;
-2.4 weeks for OPV1; 2.7 weeks for Pental; 4.0 weeks for OPV2; 4.4 weeks for Penta2; 6.4
-weeks for OPV3; 6.6 weeks for Penta3; 2.3 weeks for MCV1; and 3.6 weeks for MCV2.
-The Turnbull estimation revealed that the probability of timely vaccination (ie.,
-vaccination within a month after the target administration age) was 67.32% for BCG;
-69.17% for OPV 1; 63.95% for Pental; 53.97% for OPV2; 50.40% for Penta2; 39.79% for
-OPV3, 38.69% for Penta3; 58.72% for MCV1; and 35.64% for MCV2. Semi-parametric and parametric survival models indicate that the child’s birth order,
-mother’s age, father’s age, membership in other insurance, and awareness of free immunization programs were significant factors of the delay in full vaccination,
+Immunization has been proven to prevent a wide range of preventable diseases and demise. Different countries, including the Philippines, implemented the Expanded Program on Immunization (EPI) to ensure that children and mothers have access to routinely recommended vaccines against diseases such as tuberculosis, diphtheria, tetanus, pertussis, polio, and measles. However, many challenges have been affecting the implementation of vaccination programs, resulting in vaccination delays and underimmunization. Against this context, this paper applied methods in survival analysis to examine the timeliness of vaccine administration among Filipino children aged 0 to 35 months and its predictors, using data from the 2017 National Demographic and Health Survey. The estimated median vaccine delays among Filipino children were 5 days for BCG; 2.4 weeks for OPV1; 2.7 weeks for Pental; 4.0 weeks for OPV2; 4.4 weeks for Penta2; 6.4 weeks for OPV3; 6.6 weeks for Penta3; 2.3 weeks for MCV1; and 3.6 weeks for MCV2. The Turnbull estimation revealed that the probability of timely vaccination (ie., vaccination within a month after the target administration age) was 67.32% for BCG; 69.17% for OPV 1; 63.95% for Pental; 53.97% for OPV2; 50.40% for Penta2; 39.79% for OPV3, 38.69% for Penta3; 58.72% for MCV1; and 35.64% for MCV2. Semi-parametric and parametric survival models indicate that the child’s birth order, mother’s age, father’s age, membership in other insurance, and awareness of free immunization programs were significant factors of the delay in full vaccination,
 
 keywords: childhood vaccines, immunization timeliness, survival analysis, Turnbull estimation, full-vaccination delay, NDHS 2017
 

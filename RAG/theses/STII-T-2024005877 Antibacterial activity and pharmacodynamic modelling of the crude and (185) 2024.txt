@@ -9,66 +9,7 @@ Masters of Science in Pharmacology
 July 2024
 
 ABSTRACT
-
-Background: Catheter related bloodstream infection (CRBSI) is considered to be
-the most common cause of nosocomial bacteremia and is the third leading cause
-of hospital acquired infections. Sixty-four percent (64%) of documented cases of
-catheter-related bloodstream infections (CRBSI) were attributed to the presence
-of coagulase-negative Staphylococcus epidermidis, which colonized the catheter.
-Numerous herbal sources exhibit antimicrobial properties, including Psidium
-guajava, whose leaves have been traditionally used by healers for addressing
-diverse skin infections. Research has evidenced the antibacterial efficacy of crude
-leaf extracts against a broad spectrum of gram-positive bacteria. Despite
-substantial supportive evidence from numerous studies, no pharmaceutical
-formulation based on this plant has been introduced to the market. Thus, exploring its development as a potential plant-derived antimicrobial is warranted.
-Objectives: This study aimed to determine the antibacterial activity and
-pharmacodynamic functions of the crude and semi-purified fractions of the
-ethanolic leaf extracts of Psidium guajava on biofilm-forming Staphylococcus epidermidis (ATCC 12228).
-Methods: Minimum Inhibitory Concentration (MIC) and the Minimum Bactericidal
-Concentration (MBC) were determined using the agar dilution method. Time-kill
-curves were determined using the time-kill assay. Pharmacodynamic functions,
-specifically the maximal bacterial growth rate in the absence of antimicrobial (Ψ max), minimal bacterial growth rate at high concentrations of antimicrobial (Ψ min), hill coefficient (κ) and pharmacodynamic MIC (zMIC) were determined using the
-pharmacodynamic model proposed by Regoes. Lastly, Minimum Biofilm
-Eradication Concentration (MBEC) and the Minimum Biofilm Inhibitory
-Concentration (MBIC) were determined using the crystal violet biomass staining assay.
-Results: The Minimum Inhibitory Concentration (MIC) against S. epidermidis
-(ATCC 12228) was found to be 2500 μg/mL for both the crude and the three semi-
-purified fractions. The Minimum Bactericidal Concentration (MBC) was determined
-for the crude and semi-purified alkaloid fraction to be 5000 μg/mL, whereas for the
-semi-purified flavonoid and phenolic fraction, it is the same with its MIC, which is
-2500 μg/mL. In a 24-hour time-kill assay, the crude and semi-purified alkaloid
-fraction exhibited 93% inhibition of bacterial density at 1250 μg/mL, compared to
-the semi-purified flavonoid and phenolic fraction, which required a concentration
-of 2500 μg/mL to achieve the same level of % inhibition of bacterial density. The
-crude and the three semi-purified PGELE fractions all exhibited inhibition of
-bacterial density even at sub-MIC concentrations after 24-hours incubation. At MIC
-concentrations and above, there was no significant difference in the rate at which
-the crude and the three semi-purified PGELE fractions decreased the growth rate
-of S. epidermidis during its exponential phase. Time-kill curves revealed
-bacteriostatic activities for the crude and PGELE fractions, indicating a time-
-dependent bacterial inhibitory effect rather than concentration-dependent against
-S. epidermidis. For the pharmacodynamic functions, the growth rate of S. epidermidis in the absence of any of the treatments (Ψ  max) was determined to be 0.2557 hr-1 + 0.002. The minimal bacterial growth rate at high concentrations (Ψ
-min) values of the crude and the three semi-purified PGELE fractions showed no
-significant difference between them. The analysis of the Hill coefficient (κ) for the
-crude and three semi-purified fractions indicated that a 1 log unit increase in their
-concentration at the MIC is associated with a 6-7% reduction in the growth rate of
-S. epidermidis. The pharmacodynamic MIC (zMIC) values were determined to be
-3,633 g/mL for the crude and 5,740 μg/mL for the semi-purified alkaloid fraction,
-closer to their respective MBC values. However, the semi-purified flavonoids and
-phenolics did not reach a Ψ value of 0, making computation of their zZMIC not
-possible. The dose-response curve of the crude and semi-purified PGELE
-fractions exhibited a linear pattern rather than a sigmoidal one, indicating that an
-increase in PGELE concentration proportionally decreased the growth rate of S.
-epidermidis. Furthermore, the crude and the three semi-purified PGELE fractions
-demonstrated the ability to inhibit biofilm formation at 625 μg/mL, which was four
-times lower than their MIC. However, all the extracts did not possess biofilm-eradicating properties.
-Conclusion: The crude and semi-purified alkaloid, flavonoid and phenolic
-fractions of PGELE showed antibacterial activity. Time-kill curves revealed
-bacteriostatic activities for the crude and the three PGELE fractions, indicating a
-time-dependent bacterial inhibitory effect rather than concentration- dependent
-effect against S. epidermidis. The dose-response curve of the crude and semi-
-purified PGELE fractions exhibited a linear pattern rather than a sigmoidal one, indicating that an increase in PGELE concentration proportionally decreased the growth rate of S. epidermidis. Furthermore, the crude and semi-purified PGELE
-fractions demonstrated the ability to inhibit biofilm formation but did not show biofilm- eradicating properties.
+Background: Catheter related bloodstream infection (CRBSI) is considered to be the most common cause of nosocomial bacteremia and is the third leading cause of hospital acquired infections. Sixty-four percent (64%) of documented cases of catheter-related bloodstream infections (CRBSI) were attributed to the presence of coagulase-negative Staphylococcus epidermidis, which colonized the catheter. Numerous herbal sources exhibit antimicrobial properties, including Psidium guajava, whose leaves have been traditionally used by healers for addressing diverse skin infections. Research has evidenced the antibacterial efficacy of crude leaf extracts against a broad spectrum of gram-positive bacteria. Despite substantial supportive evidence from numerous studies, no pharmaceutical formulation based on this plant has been introduced to the market. Thus, exploring its development as a potential plant-derived antimicrobial is warranted. Objectives: This study aimed to determine the antibacterial activity and pharmacodynamic functions of the crude and semi-purified fractions of the ethanolic leaf extracts of Psidium guajava on biofilm-forming Staphylococcus epidermidis (ATCC 12228). Methods: Minimum Inhibitory Concentration (MIC) and the Minimum Bactericidal Concentration (MBC) were determined using the agar dilution method. Time-kill curves were determined using the time-kill assay. Pharmacodynamic functions, specifically the maximal bacterial growth rate in the absence of antimicrobial (Ψ max), minimal bacterial growth rate at high concentrations of antimicrobial (Ψ min), hill coefficient (κ) and pharmacodynamic MIC (zMIC) were determined using the pharmacodynamic model proposed by Regoes. Lastly, Minimum Biofilm Eradication Concentration (MBEC) and the Minimum Biofilm Inhibitory Concentration (MBIC) were determined using the crystal violet biomass staining assay. Results: The Minimum Inhibitory Concentration (MIC) against S. epidermidis (ATCC 12228) was found to be 2500 μg/mL for both the crude and the three semi- purified fractions. The Minimum Bactericidal Concentration (MBC) was determined for the crude and semi-purified alkaloid fraction to be 5000 μg/mL, whereas for the semi-purified flavonoid and phenolic fraction, it is the same with its MIC, which is 2500 μg/mL. In a 24-hour time-kill assay, the crude and semi-purified alkaloid fraction exhibited 93% inhibition of bacterial density at 1250 μg/mL, compared to the semi-purified flavonoid and phenolic fraction, which required a concentration of 2500 μg/mL to achieve the same level of % inhibition of bacterial density. The crude and the three semi-purified PGELE fractions all exhibited inhibition of bacterial density even at sub-MIC concentrations after 24-hours incubation. At MIC concentrations and above, there was no significant difference in the rate at which the crude and the three semi-purified PGELE fractions decreased the growth rate of S. epidermidis during its exponential phase. Time-kill curves revealed bacteriostatic activities for the crude and PGELE fractions, indicating a time- dependent bacterial inhibitory effect rather than concentration-dependent against S. epidermidis. For the pharmacodynamic functions, the growth rate of S. epidermidis in the absence of any of the treatments (Ψ  max) was determined to be 0.2557 hr-1 + 0.002. The minimal bacterial growth rate at high concentrations (Ψ min) values of the crude and the three semi-purified PGELE fractions showed no significant difference between them. The analysis of the Hill coefficient (κ) for the crude and three semi-purified fractions indicated that a 1 log unit increase in their concentration at the MIC is associated with a 6-7% reduction in the growth rate of S. epidermidis. The pharmacodynamic MIC (zMIC) values were determined to be 3,633 g/mL for the crude and 5,740 μg/mL for the semi-purified alkaloid fraction, closer to their respective MBC values. However, the semi-purified flavonoids and phenolics did not reach a Ψ value of 0, making computation of their zZMIC not possible. The dose-response curve of the crude and semi-purified PGELE fractions exhibited a linear pattern rather than a sigmoidal one, indicating that an increase in PGELE concentration proportionally decreased the growth rate of S. epidermidis. Furthermore, the crude and the three semi-purified PGELE fractions demonstrated the ability to inhibit biofilm formation at 625 μg/mL, which was four times lower than their MIC. However, all the extracts did not possess biofilm-eradicating properties. Conclusion: The crude and semi-purified alkaloid, flavonoid and phenolic fractions of PGELE showed antibacterial activity. Time-kill curves revealed bacteriostatic activities for the crude and the three PGELE fractions, indicating a time-dependent bacterial inhibitory effect rather than concentration- dependent effect against S. epidermidis. The dose-response curve of the crude and semi- purified PGELE fractions exhibited a linear pattern rather than a sigmoidal one, indicating that an increase in PGELE concentration proportionally decreased the growth rate of S. epidermidis. Furthermore, the crude and semi-purified PGELE fractions demonstrated the ability to inhibit biofilm formation but did not show biofilm- eradicating properties.
 
 Keywords: Psidium guajava, Catheter related infections, Anti-bacterial agent,
 

@@ -117,7 +117,7 @@ def extract_thesis_metadata(text):
             continue
         if in_abstract:
             # Stop at major section headers, roman/numbered section headers with or without section names
-            if re.match(r'^(CHAPTER|INTRODUCTION|BACKGROUND|REVIEW|STATEMENT|OBJECTIVES|SCOPE|SIGNIFICANCE|SUMMARY|CONCLUSION|REFERENCES|ACKNOWLEDGMENTS?)', l, re.I):
+            if re.match(r'^(CHAPTER|INTRODUCTION|BACKGROUND|REVIEW|STATEMENT|OBJECTIVES|SCOPE|SIGNIFICANCE|SUMMARY|CONCLUSION|REFERENCES|ACKNOWLEDGMENTS?|THE PROBLEM|PROBLEM DOMAIN|METHODOLOGY|METHODS|RESULTS|DISCUSSION|LITERATURE REVIEW)', l, re.I):
                 break
             # Match lines like 'I. INTRODUCTION', 'II. METHODS', '1. INTRODUCTION', etc.
             if re.match(r'^([IVXLCDM]+|\d+)\.\s*([A-Z][A-Z ]+)?$', l.strip()):

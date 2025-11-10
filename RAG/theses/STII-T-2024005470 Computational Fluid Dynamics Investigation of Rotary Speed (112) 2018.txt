@@ -9,28 +9,7 @@ Master of Science in Petroleum Engineering
 September 2018
 
 ABSTRACT
-
-The emergence of the Casing While Drilling (CWD) for the simultaneous borehole
-drilling and installation of the casing pipe has brought into attention one of its inherent
-benefits which is the plastering effect. This effect involves the smearing of the mud cake
-and cuttings into the surrounding formation as the rotating casing pipe hits the surface of the
-borehole, thus creating an impermeable layer which prevents fluid loss. This warrants further
-investigation on parameters that affect the formation of the mud cake as it plays a crucial
-role on plastering effect. This study utilizes computational fluid dynamics (CFD)
-simulations that implements a Eulerian-Eulerian two-fluid model using ANSYS CFX-18.2
-to observe the effects of the particle size distribution (45 µm to 5000 µm) of the cuttings
-produced during casing while drilling together with the rotation speed (0 rpm to 80 rpm) of
-the casing pipe. A total of 20 simulations was made having different combinations of particle
-sizes and rotation speeds. The formation of the mud cake which is the main material
-used during plastering effect is the response that was observed from the contributions of
-different particle sizes and rotation speeds together with their interactions. It was found that
-the particle size distribution is a significant factor in the formation of the mud cake with a
-p-value of 0.048, showing that increasing particle size tends to increase the response. Results
-have shown that the 2000 µm particle size produced the highest average mud cake thickness.
-On the other hand, rotation speed was not found to be a significant contributor to the
-formation of the mud cake with a p-value of 0.134. It was also found that the interaction
-between the particle size and rotation speed was not a significant factor in the formation of
-the mud cake with a p-value of 0.945. The average mud cake thickness obtained from the simulations and the regression equation showed a spread of values within a ±5% range.
+The emergence of the Casing While Drilling (CWD) for the simultaneous borehole drilling and installation of the casing pipe has brought into attention one of its inherent benefits which is the plastering effect. This effect involves the smearing of the mud cake and cuttings into the surrounding formation as the rotating casing pipe hits the surface of the borehole, thus creating an impermeable layer which prevents fluid loss. This warrants further investigation on parameters that affect the formation of the mud cake as it plays a crucial role on plastering effect. This study utilizes computational fluid dynamics (CFD) simulations that implements a Eulerian-Eulerian two-fluid model using ANSYS CFX-18.2 to observe the effects of the particle size distribution (45 µm to 5000 µm) of the cuttings produced during casing while drilling together with the rotation speed (0 rpm to 80 rpm) of the casing pipe. A total of 20 simulations was made having different combinations of particle sizes and rotation speeds. The formation of the mud cake which is the main material used during plastering effect is the response that was observed from the contributions of different particle sizes and rotation speeds together with their interactions. It was found that the particle size distribution is a significant factor in the formation of the mud cake with a p-value of 0.048, showing that increasing particle size tends to increase the response. Results have shown that the 2000 µm particle size produced the highest average mud cake thickness. On the other hand, rotation speed was not found to be a significant contributor to the formation of the mud cake with a p-value of 0.134. It was also found that the interaction between the particle size and rotation speed was not a significant factor in the formation of the mud cake with a p-value of 0.945. The average mud cake thickness obtained from the simulations and the regression equation showed a spread of values within a ±5% range.
 
 CHAPTER 1
 

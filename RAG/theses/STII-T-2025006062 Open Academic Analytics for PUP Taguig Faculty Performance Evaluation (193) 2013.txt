@@ -9,25 +9,7 @@ MASTER IN INFORMATION TECHNOLOGY
 April 2013
 
 Abstract
-
-The study aims to provide the institution with open academic analytics derived
-from faculty performance evaluation rating and served as a tool to enhance faculty
-performance. To accomplish this, the Online Faculty Evaluation System (OFES) was
-developed using open source technologies which include Php Yii framework, MySql and
-WampServer applying the Rapid Application Development approach. The system is
-divided into two main modules, data collection and performance analytics generation.
-Evaluation was done during mid and end of the semester period with 2,268 as target
-student evaluators for 72 faculty members. 100% of faculty were evaluated and almost
-95% of the target evaluators participated. Performance analytics were generated and
-immediately made available online to individual faculty and administrators upon
-completion of the evaluation. Strengths and areas for improvement have been identified
-and appropriate actions have been taken. Performance of faculty members have improved
-based on the results of the second evaluation. The result shows that there is a significant
-relationship between the preliminary and final result. Thus, the online faculty evaluation
-can be conducted once every semester. Regular implementation of the system can capture
-more academic analytics to support both operational and strategic decision making vital to further enhancement of quality education.
-
-Keywords :Online Faculty Evaluation System (OFES)
+The study aims to provide the institution with open academic analytics derived from faculty performance evaluation rating and served as a tool to enhance faculty performance. To accomplish this, the Online Faculty Evaluation System (OFES) was developed using open source technologies which include Php Yii framework, MySql and WampServer applying the Rapid Application Development approach. The system is divided into two main modules, data collection and performance analytics generation. Evaluation was done during mid and end of the semester period with 2,268 as target student evaluators for 72 faculty members. 100% of faculty were evaluated and almost 95% of the target evaluators participated. Performance analytics were generated and immediately made available online to individual faculty and administrators upon completion of the evaluation. Strengths and areas for improvement have been identified and appropriate actions have been taken. Performance of faculty members have improved based on the results of the second evaluation. The result shows that there is a significant relationship between the preliminary and final result. Thus, the online faculty evaluation can be conducted once every semester. Regular implementation of the system can capture more academic analytics to support both operational and strategic decision making vital to further enhancement of quality education. Keywords :Online Faculty Evaluation System (OFES)
 
 I. The Problem Domain
 

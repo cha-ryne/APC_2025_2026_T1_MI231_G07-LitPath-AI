@@ -9,23 +9,7 @@ Master of Science in Chemical Engineering
 July 2023
 
 Abstract
-
-Electroless plating wastewater effluents contain Cu-EDTA complex which
-has high solubility in water solutions making it difficult to recover copper using readily
-available abatement technologies. These complexes are destroyed first using Fenton
-Process producing treated solutions with small concentrations of iron that may interfere on
-copper recovery. The purpose of this study was to confirm the influence of trace amount
-of iron ions, resulting from a Fenton pre-treatment, on copper removal, crystallization, and
-recovery as copper salts using Fluidized Bed Homogeneous Crystallization (FBHC)
-process. Several process parameters were varied such as effluent’s pH, initial copper and
-iron concentrations, and metal and precipitant inlet flowrate and molar ratio (MR). The
-optimum conditions include effluent pH of 6.5-7.0, inlet flowrate of 15 mL min-1, and
-CO32-/Cu2+ MR of 1.5 with variable copper concentrations of 3.15 — 9.44 mM and iron
-concentrations of 0.36 — 1.08 mM. % Copper removal was not affected by addition of iron
-ions while increase in copper crystallization ratio was observed with increasing amount of
-iron. Superior copper removal and crystallization ranging from 93% — 99% and 80% —
-98%, respectively were recorded. Characterization through XRD, XPS, and SEM analyses
-of the high-density spheroidal crystals obtained allowed the major identification of the precipitates as copper carbonate and its polymorphs, namely malachite and azurite. The FBHC’s ability to obtain high purity spheroidal solid salts enables resource recovery and catalyzes strategies for circular economy practices.
+Electroless plating wastewater effluents contain Cu-EDTA complex which has high solubility in water solutions making it difficult to recover copper using readily available abatement technologies. These complexes are destroyed first using Fenton Process producing treated solutions with small concentrations of iron that may interfere on copper recovery. The purpose of this study was to confirm the influence of trace amount of iron ions, resulting from a Fenton pre-treatment, on copper removal, crystallization, and recovery as copper salts using Fluidized Bed Homogeneous Crystallization (FBHC) process. Several process parameters were varied such as effluent’s pH, initial copper and iron concentrations, and metal and precipitant inlet flowrate and molar ratio (MR). The optimum conditions include effluent pH of 6.5-7.0, inlet flowrate of 15 mL min-1, and CO32-/Cu2+ MR of 1.5 with variable copper concentrations of 3.15 — 9.44 mM and iron concentrations of 0.36 — 1.08 mM. % Copper removal was not affected by addition of iron ions while increase in copper crystallization ratio was observed with increasing amount of iron. Superior copper removal and crystallization ranging from 93% — 99% and 80% — 98%, respectively were recorded. Characterization through XRD, XPS, and SEM analyses of the high-density spheroidal crystals obtained allowed the major identification of the precipitates as copper carbonate and its polymorphs, namely malachite and azurite. The FBHC’s ability to obtain high purity spheroidal solid salts enables resource recovery and catalyzes strategies for circular economy practices.
 
 1. Introduction
 
@@ -3129,4 +3113,3 @@ Zidan, T. A., Abdelhamid, A. E., & Zaki, E. G. (2020). N-Aminorhodanine modified
 chitosan hydrogel for antibacterial and copper ions removal from aqueous
 solutions. International Journal of Biological Macromolecules, 158, 32-42.
 https://doi.org/10.1016/;.ijbiomac.2020.04.180
-

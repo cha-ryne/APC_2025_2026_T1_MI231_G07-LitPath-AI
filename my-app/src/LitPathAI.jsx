@@ -3,8 +3,8 @@ import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, Message
 import dostLogo from "./components/images/dost-logo.png";
 
 
-// Backend API URL 
-const API_BASE_URL = 'http://localhost:5000';
+// Backend API URL (Django)
+const API_BASE_URL = 'http://localhost:8000/api';
 
 
 const LitPathAI = () => {
