@@ -210,6 +210,16 @@ const LitPathAI = () => {
         setError(null);
     };
 
+  const renderStars = (ratingValue, onRate) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <Star
+        key={i}
+        size={20}
+        className={`cursor-pointer ${i < ratingValue ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+        onClick={() => onRate && onRate(i + 1)}
+      />
+    ));
+  };
 
 
 
@@ -267,6 +277,8 @@ const LitPathAI = () => {
                     </div>
                     <div className="absolute bottom-6 left-6 right-6 text-xs text-gray-500 space-y-2">
                         <p>AI-generated content. Quality may vary.<br />Check for accuracy.</p>
+                         <a href="#" className="text-blue-600 hover:underline block">About LitPath AI</a>
+                        <a href="#" className="text-blue-600 hover:underline block">Privacy and Disclaimer</a>
                     </div>
                 </div>
 
@@ -307,8 +319,93 @@ const LitPathAI = () => {
                                         <ArrowRight size={20} />
                                     </button>
                                 </div>
-                            </div>
 
+                                <div className="flex flex-wrap items-center space-x-4">
+                                    {/* Subject Filter */}
+                                    <div className="relative" ref={subjectDropdownRef}>
+                                        <button
+                                            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
+                                            onClick={() => setShowSubjectDropdown(!showSubjectDropdown)}
+                                        >
+                                            <span>{selectedSubject}</span>
+                                            <ChevronDown size={16} />
+                                        </button>
+
+
+
+
+                                        {showSubjectDropdown && (
+                                            <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px] max-h-60 overflow-y-auto">
+                                                {subjects.map((subject) => (
+                                                    <button
+                                                        key={subject}
+                                                        className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
+                                                        onClick={() => {
+                                                            setSelectedSubject(subject);
+                                                            setShowSubjectDropdown(false);
+                                                        }}
+                                                    >
+                                                        {subject}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+
+
+                                    {/* Date Filter */}
+                                    <div className="relative" ref={dateDropdownRef}>
+                                        <button
+                                            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
+                                            onClick={() => setShowDateDropdown(!showDateDropdown)}
+                                        >
+                                            <span>{selectedDate}</span>
+                                            <ChevronDown size={16} />
+                                        </button>
+
+
+                                        {showDateDropdown && (
+                                            <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px]">
+                                                {dateOptions.map((option) => (
+                                                    <button
+                                                        key={option}
+                                                        className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
+                                                        onClick={() => {
+                                                            setSelectedDate(option);
+                                                            setShowDateDropdown(false);
+                                                        }}
+                                                    >
+                                                        {option}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+
+
+                                    {/* Custom Date Range */}
+                                    {selectedDate === 'Custom date range' && (
+                                        <div className="flex items-center space-x-2 ml-auto">
+                                            <label className="text-sm text-gray-700">From:</label>
+                                            <input
+                                                type="number"
+                                                placeholder="YYYY"
+                                                className="px-3 py-2 w-24 border border-gray-300 rounded-lg text-sm"
+                                                value={fromYear}
+                                                onChange={(e) => setFromYear(e.target.value)}
+                                            />
+                                            <label className="text-sm text-gray-700">To:</label>
+                                            <input
+                                                type="number"
+                                                placeholder="YYYY"
+                                                className="px-3 py-2 w-24 border border-gray-300 rounded-lg text-sm"
+                                                value={toYear}
+                                                onChange={(e) => setToYear(e.target.value)}
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
 
                             {loading && (
                                 <div className="text-center text-[#1E74BC] text-lg mt-8">
@@ -498,6 +595,19 @@ const LitPathAI = () => {
                                 </div>
                             </div>
 
+                            {/* Rating and Actions */}
+                            <div className="flex items-center justify-between mb-8 mt-6">
+                                <div className="flex items-center space-x-5">
+                                    <div className="flex space-x-1">
+                                        {renderStars(rating, setRating)}
+                                    </div>
+                                    <button className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                                        <RefreshCw size={18} />
+                                        <span>Try again</span>
+                                    </button>
+                                </div>
+                            </div>
+
                             {/* Related Research Questions */}
                             {searchResults.relatedQuestions.length > 0 && (
                                 <div>
@@ -537,8 +647,10 @@ const LitPathAI = () => {
                                 </button>
                                 <div className="flex space-x-4">
                                     <button className="text-white hover:text-blue-200">
+                                        <BookOpen size={20} />
                                     </button>
                                     <button className="text-white hover:text-blue-200">
+                                        <MessageSquare size={20} />
                                     </button>
                                 </div>
                             </div>
