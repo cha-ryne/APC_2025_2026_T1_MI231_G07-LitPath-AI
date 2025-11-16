@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight } from 'lucide-react';
 import dostLogo from "./components/images/dost-logo.png";
+import { Quote } from "lucide-react";
+import { Bookmark } from "lucide-react";
 
 
 // Backend API URL (Django)
@@ -261,7 +263,7 @@ const LitPathAI = () => {
       />
     ));
   };
-  
+
 /* if may supabase na:
 
 const { error } = await supabase.from("feedback").insert({
@@ -637,7 +639,7 @@ const { error } = await supabase.from("feedback").insert({
                                 <h3 className="text-xl font-semibold mb-4 text-gray-800">Overview of Sources</h3>
                                 <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
                                     <div
-                                        className="text-gray-700 leading-relaxed whitespace-pre-line text-base"
+                                        className="text-gray-700 leading-relaxed whitespace-pre-line text-base text-justify"
                                         dangerouslySetInnerHTML={{
                                             __html: searchResults.overview
                                                 ? searchResults.overview.replace(/\[(\d+)\]/g, (_, num) => {
@@ -724,7 +726,7 @@ const { error } = await supabase.from("feedback").insert({
                                 </button>
                                 <div className="flex space-x-4">
                                     <button className="text-white hover:text-blue-200">
-                                        <BookOpen size={20} />
+                                        <Bookmark size={20} />
                                     </button>
                                     <button className="text-white hover:text-blue-200"
                                         onClick={() => {
@@ -732,7 +734,7 @@ const { error } = await supabase.from("feedback").insert({
                                             generateCitation(selectCitationStyle);
                                         }}
                                         >
-                                        <MessageSquare size={20} />
+                                        <Quote size={20}/>
                                     </button>
                                 </div>
                             </div>
@@ -792,7 +794,7 @@ const { error } = await supabase.from("feedback").insert({
 
                             <div>
                                 <h3 className="font-semibold text-lg mb-2 mt-6 text-gray-800">ABSTRACT</h3>
-                                <p className="text-base text-gray-700 leading-relaxed">{selectedSource.abstract}</p>
+                                <p className="text-base text-gray-700 leading-relaxed text-justify">{selectedSource.abstract}</p>
                             </div>
                         </div>
                     </div>
