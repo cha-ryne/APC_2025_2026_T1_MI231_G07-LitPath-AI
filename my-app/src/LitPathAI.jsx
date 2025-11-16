@@ -679,7 +679,9 @@ const { error } = await supabase.from("feedback").insert({
                                             </div>
 
                                             {/* Try Again Button */}
-                                            <button className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                                            <button 
+                                            onClick={() => handleSearch(searchQuery)}
+                                            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
                                                 <RefreshCw size={18} />
                                                 <span>Try again</span>
                                             </button>
