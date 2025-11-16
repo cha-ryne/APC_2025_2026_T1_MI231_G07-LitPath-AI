@@ -19,9 +19,17 @@ const LitPathAI = () => {
     const [selectedSource, setSelectedSource] = useState(null);
     const [showOverlay, setShowOverlay] = useState(false);
     const [rating, setRating] = useState(0);
+    const [showRatingOverlay, setShowRatingOverlay] = useState(false);
+    const [feedbackRelevant, setFeedbackRelevant] = useState(null);
+    const [feedbackComment, setFeedbackComment] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [backendStatus, setBackendStatus] = useState(null);
+    const [showCitationOverlay, setShowCitationOverlay] = useState(false);
+    const [selectedCitationStyle, setSelectedCitationStyle] = useState("APA");
+    const [generatedCitation, setGeneratedCitation] = useState("");
+    
+
 
 
     const subjects = [
@@ -195,6 +203,39 @@ const LitPathAI = () => {
         setShowOverlay(true);
     };
 
+    const generateCitation = (style) => {
+    if (!selectedSource) return;
+
+    const author = selectedSource.author || "Unknown Author";
+    const year = selectedSource.year || "n.d.";
+    const title = selectedSource.title || "Untitled";
+    const school = selectedSource.school || "Unknown Institution";
+
+    let citation = "";
+
+    switch (style) {
+        case "APA":
+            citation = `${author}. (${year}). ${title}. ${school}.`;
+            break;
+
+        case "MLA":
+            citation = `${author}. "${title}." ${school}, ${year}.`;
+            break;
+
+        case "Chicago":
+            citation = `${author}. ${year}. ${title}. ${school}.`;
+            break;
+
+        case "IEEE":
+            citation = `${author}, "${title}," ${school}, ${year}.`;
+            break;
+
+        default:
+            citation = "";
+    }
+
+    setGeneratedCitation(citation);
+};
 
     const handleNewChat = () => {
         setSearchQuery('');
@@ -220,6 +261,17 @@ const LitPathAI = () => {
       />
     ));
   };
+  
+/* if may supabase na:
+
+const { error } = await supabase.from("feedback").insert({
+    rating,
+    relevant: feedbackRelevant,
+    comment: feedbackComment,
+    created_at: new Date(),
+});
+*/
+
 
 
 
@@ -256,6 +308,8 @@ const LitPathAI = () => {
                     }
                 </div>
             )}
+
+
 
 
             <div className="flex-1 flex justify-center items-start py-10 px-4">
@@ -597,16 +651,39 @@ const LitPathAI = () => {
 
                             {/* Rating and Actions */}
                             <div className="flex items-center justify-between mb-8 mt-6">
-                                <div className="flex items-center space-x-5">
-                                    <div className="flex space-x-1">
-                                        {renderStars(rating, setRating)}
+                                        <div className="flex items-center space-x-5">
+
+                                            {/* Stars */}
+                                            <div className="flex space-x-1">
+                                                {[1, 2, 3, 4, 5].map((num) => (
+                                                    <button
+                                                        key={num}
+                                                        onClick={() => {
+                                                            setRating(num);
+                                                            setShowRatingOverlay(true);
+                                                        }}
+                                                        className="transition-transform hover:scale-110">
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill={num <= rating ? "#FACC15" : "none"}
+                                                            stroke="#FACC15"
+                                                            strokeWidth="2"
+                                                            viewBox="0 0 24 24"
+                                                            className="w-7 h-7 cursor-pointer">
+                                                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                        </svg>
+                                                    </button>
+                                                ))}
+                                            </div>
+
+                                            {/* Try Again Button */}
+                                            <button className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
+                                                <RefreshCw size={18} />
+                                                <span>Try again</span>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <button className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
-                                        <RefreshCw size={18} />
-                                        <span>Try again</span>
-                                    </button>
-                                </div>
-                            </div>
+
 
                             {/* Related Research Questions */}
                             {searchResults.relatedQuestions.length > 0 && (
@@ -649,7 +726,12 @@ const LitPathAI = () => {
                                     <button className="text-white hover:text-blue-200">
                                         <BookOpen size={20} />
                                     </button>
-                                    <button className="text-white hover:text-blue-200">
+                                    <button className="text-white hover:text-blue-200"
+                                        onClick={() => {
+                                            setShowCitationOverlay(true);
+                                            generateCitation(selectCitationStyle);
+                                        }}
+                                        >
                                         <MessageSquare size={20} />
                                     </button>
                                 </div>
@@ -716,6 +798,144 @@ const LitPathAI = () => {
                     </div>
                 </div>
             )}
+
+            {/* Citation Overlay */}
+            {showCitationOverlay && (
+                <div className="fixed inset-0 bg-black bg-opacity-60 z-[60] flex items-center justify-center">
+                    <div className="bg-white w-10/12 md:w-2/3 lg:w-1/2 xl:w-[40%] rounded-lg shadow-2xl flex">
+
+                        {/* Type of citation */}
+                        <div className="w-1/3 bg-gray-100 border-r p-6">
+                            <h3 className="font-semibold mb-4 text-gray-800">Citation Style</h3>
+
+                            {["APA", "MLA", "Chicago", "IEEE"].map((style) => (
+                                <button
+                                    key={style}
+                                    className={`block w-full text-left px-4 py-2 rounded mb-2
+                                        ${selectedCitationStyle === style ? "bg-[#1E74BC] text-white" : "hover:bg-[#d7e8f6]"}`}
+                                    onClick={() => {
+                                        setSelectedCitationStyle(style);
+                                        generateCitation(style);
+                                    }}
+                                >
+                                    {style === "APA" ? "APA (7th edition)" :
+                                       style === "MLA" ? "MLA (9th edition)" : style}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Generated citation */}
+                        <div className="w-2/3 p-6 relative">
+
+                            {/* Close button */}
+                            <button
+                                onClick={() => setShowCitationOverlay(false)}
+                                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
+                            >
+                                ×
+                            </button>
+
+                            <h3 className="font-semibold text-gray-800 mb-3">{selectedCitationStyle} Citation</h3>
+
+                            <textarea
+                                readOnly
+                                value={generatedCitation}
+                                className="w-full h-40 border p-3 rounded text-gray-700"
+                            />
+
+                            <button
+                                className="mt-4 bg-[#1E74BC] text-white px-4 py-2 rounded hover:bg-[#185f99]"
+                                onClick={() => navigator.clipboard.writeText(generatedCitation)}
+                            >
+                                Copy to Clipboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+        {/* Rating Feedback Overlay */}
+            {showRatingOverlay && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 z-[70] flex items-center justify-center">
+                    <div className="bg-white w-11/12 md:w-1/2 lg:w-1/3 rounded-lg shadow-xl p-6 relative">
+                    {/* Close button */}
+            <button
+                className="absolute top-3 right-3 text-gray-500 text-xl hover:text-gray-700"
+                onClick={() => setShowRatingOverlay(false)}>
+                ×
+            </button>
+
+            <h2 className="text-2xl font-semibold text-[#1E74BC] mb-4">
+                Thank you for your feedback
+            </h2>
+
+            <p className="text-gray-800 mb-3">Is this relevant to your question?</p>
+
+            {/* Yes / No checkboxes */}
+            <div className="space-y-2 ml-1 mb-4">
+                <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                        type="checkbox"
+                        checked={feedbackRelevant === true}
+                        onChange={() => setFeedbackRelevant(true)}
+                        className="w-4 h-4"
+                    />
+                    <span>Yes</span>
+                </label>
+
+                <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                        type="checkbox"
+                        checked={feedbackRelevant === false}
+                        onChange={() => setFeedbackRelevant(false)}
+                        className="w-4 h-4"
+                    />
+                    <span>No</span>
+                </label>
+            </div>
+
+            <p className="text-gray-800 mb-2">
+                Please explain your answer above. (Optional)
+            </p>
+
+            <textarea
+                value={feedbackComment}
+                onChange={(e) => setFeedbackComment(e.target.value)}
+                className="w-full border rounded p-3 text-sm h-28"
+                placeholder="You may input your suggestions/improvements here"
+            />
+
+            {/* Submit + Cancel */}
+            <div className="flex justify-end gap-3 mt-5">
+                <button
+                    className="bg-[#1E74BC] text-white px-5 py-2 rounded hover:bg-[#185f99]"
+                    onClick={() => {
+                        // TODO: send to database (Supabase) later
+                        console.log("Rating:", rating);
+                        console.log("Relevant:", feedbackRelevant);
+                        console.log("Comment:", feedbackComment);
+
+                        // Close overlay
+                        setShowRatingOverlay(false);
+
+                        // Reset fields
+                        setFeedbackComment("");
+                        setFeedbackRelevant(null);
+                    }}
+                >
+                    Submit
+                </button>
+
+                <button
+                    className="px-5 py-2 rounded bg-gray-300 hover:bg-gray-400"
+                    onClick={() => setShowRatingOverlay(false)}
+                >
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+)}    
         </div>
     );
 };
