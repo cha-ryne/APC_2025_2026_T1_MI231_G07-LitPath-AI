@@ -3,6 +3,8 @@ import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, Message
 import dostLogo from "./components/images/dost-logo.png";
 import { Quote } from "lucide-react";
 import { Bookmark } from "lucide-react";
+import { Copy } from 'lucide-react';
+
 
 
 // Backend API URL (Django)
@@ -652,40 +654,44 @@ const { error } = await supabase.from("feedback").insert({
                             </div>
 
                             {/* Rating and Actions */}
-                            <div className="flex items-center justify-between mb-8 mt-6">
-                                        <div className="flex items-center space-x-5">
-
-                                            {/* Stars */}
-                                            <div className="flex space-x-1">
-                                                {[1, 2, 3, 4, 5].map((num) => (
-                                                    <button
-                                                        key={num}
-                                                        onClick={() => {
-                                                            setRating(num);
-                                                            setShowRatingOverlay(true);
-                                                        }}
-                                                        className="transition-transform hover:scale-110">
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            fill={num <= rating ? "#FACC15" : "none"}
-                                                            stroke="#FACC15"
-                                                            strokeWidth="2"
-                                                            viewBox="0 0 24 24"
-                                                            className="w-7 h-7 cursor-pointer">
-                                                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                                        </svg>
-                                                    </button>
-                                                ))}
-                                            </div>
-
-                                            {/* Try Again Button */}
-                                            <button 
-                                            onClick={() => handleSearch(searchQuery)}
-                                            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-gray-700">
-                                                <RefreshCw size={18} />
-                                                <span>Try again</span>
-                                            </button>
+                                    <div className="flex justify-end items-center mb-8 mt-6 space-x-5">
+                                        {/* Stars */}
+                                        <div className="flex space-x-1">
+                                            {[1, 2, 3, 4, 5].map((num) => (
+                                                <button
+                                                    key={num}
+                                                    onClick={() => {
+                                                        setRating(num);
+                                                        setShowRatingOverlay(true);
+                                                    }}
+                                                    className="transition-transform hover:scale-110"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        fill={num <= rating ? "#FACC15" : "none"}
+                                                        stroke="#FACC15"
+                                                        strokeWidth="2"
+                                                        viewBox="0 0 24 24"
+                                                        className="w-7 h-7 cursor-pointer"
+                                                    >
+                                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                    </svg>
+                                                </button>
+                                            ))}
                                         </div>
+
+
+                                        {/* Try Again Button */}
+                                        <button
+                                            onClick={() => handleSearch(searchQuery)}
+                                            disabled={loading}
+                                            className={`flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg transition-colors ${
+                                                loading ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-50"
+                                            } text-gray-700`}
+                                        >
+                                            <RefreshCw size={18} />
+                                            <span>{loading ? "Loading..." : "Try again"}</span>
+                                        </button>
                                     </div>
 
 
