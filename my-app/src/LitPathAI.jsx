@@ -5,6 +5,7 @@ import dostLogo from "./components/images/dost-logo.png";
 import { Quote } from "lucide-react";
 import { Bookmark } from "lucide-react";
 import { Copy } from 'lucide-react';
+import { supabase, isSupabaseConfigured } from './supabaseClient';
 
 
 const API_BASE_URL = 'http://localhost:8000/api';
@@ -98,17 +99,215 @@ const LitPathAI = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
-    
+
+    // Initialize user ID - check parent account first, then use anonymous
     useEffect(() => {
-        let storedUserId = localStorage.getItem('litpath_user_id');
-
-        if (!storedUserId) {
-            storedUserId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-            localStorage.setItem('litpath_user_id', storedUserId);
+        // Check for parent website user ID (multiple methods)
+        // Method 1: Check sessionStorage (set by parent website)
+        let parentUserId = sessionStorage.getItem('parent_user_id');
+        
+        // Method 2: Check localStorage (set by parent website)
+        if (!parentUserId) {
+            parentUserId = localStorage.getItem('parent_user_id');
         }
-
-        setUserId(storedUserId);
+        
+        // Method 3: Check URL parameter (e.g., ?userId=123)
+        if (!parentUserId) {
+            const urlParams = new URLSearchParams(window.location.search);
+            parentUserId = urlParams.get('userId');
+        }
+        
+        // Method 4: Check cookie (if parent sets it)
+        if (!parentUserId && document.cookie) {
+            const cookieMatch = document.cookie.match(/parent_user_id=([^;]+)/);
+            if (cookieMatch) {
+                parentUserId = cookieMatch[1];
+            }
+        }
+        
+        let finalUserId;
+        
+        if (parentUserId) {
+            // Use parent account user ID
+            finalUserId = `parent_${parentUserId}`;
+            console.log('Using parent account user ID:', finalUserId);
+        } else {
+            // Fall back to anonymous user ID
+            finalUserId = localStorage.getItem('litpath_user_id');
+            
+            if (!finalUserId) {
+                finalUserId = `anon_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+                localStorage.setItem('litpath_user_id', finalUserId);
+            }
+            console.log('Using anonymous user ID:', finalUserId);
+        }
+        
+        setUserId(finalUserId);
+        loadBookmarkCount();
     }, []);
+
+    // Load bookmark count from localStorage
+    const loadBookmarkCount = () => {
+        try {
+            const bookmarks = JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
+            setBookmarkedCount(bookmarks.length);
+        } catch (error) {
+            console.error('Error loading bookmark count:', error);
+            setBookmarkedCount(0);
+        }
+    };
+
+    // Check if a document is bookmarked
+    const isBookmarked = (documentFile) => {
+        try {
+            const bookmarks = JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
+            return bookmarks.some(bookmark => bookmark.file === documentFile);
+        } catch (error) {
+            console.error('Error checking bookmark:', error);
+            return false;
+        }
+    };
+
+    // Toggle bookmark (save/remove)
+    const toggleBookmark = async (document) => {
+        if (!document) return;
+
+        try {
+            // Get current bookmarks from localStorage
+            let bookmarks = JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
+            
+            const bookmarkIndex = bookmarks.findIndex(b => b.file === document.file);
+            
+            if (bookmarkIndex >= 0) {
+                // Remove bookmark
+                bookmarks.splice(bookmarkIndex, 1);
+                localStorage.setItem('litpath_bookmarks', JSON.stringify(bookmarks));
+                
+                // Also remove from Supabase if user is logged in
+                await removeFromSupabase(document.file);
+                
+                alert('Bookmark removed!');
+            } else {
+                // Add bookmark
+                const newBookmark = {
+                    userId: userId,
+                    title: document.title,
+                    author: document.author,
+                    year: document.year,
+                    abstract: document.abstract,
+                    file: document.file || document.fullTextPath,
+                    degree: document.degree,
+                    subjects: document.subjects,
+                    school: document.school,
+                    bookmarkedAt: new Date().toISOString()
+                };
+                
+                bookmarks.push(newBookmark);
+                localStorage.setItem('litpath_bookmarks', JSON.stringify(bookmarks));
+                
+                // Also save to Supabase
+                await saveToSupabase(newBookmark);
+                
+                alert('Bookmark saved!');
+            }
+            
+            // Update count
+            setBookmarkedCount(bookmarks.length);
+            
+        } catch (error) {
+            console.error('Error toggling bookmark:', error);
+            alert('Failed to update bookmark. Please try again.');
+        }
+    };
+
+    // Save bookmark to Supabase
+    const saveToSupabase = async (bookmark) => {
+        if (!isSupabaseConfigured()) {
+            return; // Supabase not configured, skip
+        }
+        
+        try {
+            const { data, error} = await supabase
+                .from('bookmarks')
+                .insert([bookmark]);
+            
+            if (error) {
+                console.error('Supabase save error:', error);
+                // Don't throw - localStorage save still succeeded
+            }
+        } catch (error) {
+            console.error('Error saving to Supabase:', error);
+            // Don't throw - localStorage is the fallback
+        }
+    };
+
+    // Remove bookmark from Supabase
+    const removeFromSupabase = async (file) => {
+        if (!isSupabaseConfigured()) {
+            return; // Supabase not configured, skip
+        }
+        
+        try {
+            const { error } = await supabase
+                .from('bookmarks')
+                .delete()
+                .eq('userId', userId)
+                .eq('file', file);
+            
+            if (error) {
+                console.error('Supabase delete error:', error);
+            }
+        } catch (error) {
+            console.error('Error removing from Supabase:', error);
+        }
+    };
+
+    // Get all bookmarks
+    const getBookmarks = () => {
+        try {
+            return JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
+        } catch (error) {
+            console.error('Error loading bookmarks:', error);
+            return [];
+        }
+    };
+
+    // Sync bookmarks from Supabase (optional - for logged-in users)
+    const syncBookmarksFromSupabase = async () => {
+        if (!isSupabaseConfigured()) {
+            return; // Supabase not configured, skip
+        }
+        
+        try {
+            const { data, error } = await supabase
+                .from('bookmarks')
+                .select('*')
+                .eq('userId', userId);
+            
+            if (error) {
+                console.error('Supabase sync error:', error);
+                return;
+            }
+            
+            if (data && data.length > 0) {
+                // Merge with localStorage bookmarks
+                const localBookmarks = JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
+                const mergedBookmarks = [...localBookmarks];
+                
+                data.forEach(supabaseBookmark => {
+                    if (!mergedBookmarks.some(b => b.file === supabaseBookmark.file)) {
+                        mergedBookmarks.push(supabaseBookmark);
+                    }
+                });
+                
+                localStorage.setItem('litpath_bookmarks', JSON.stringify(mergedBookmarks));
+                setBookmarkedCount(mergedBookmarks.length);
+            }
+        } catch (error) {
+            console.error('Error syncing bookmarks:', error);
+        }
+    };
+
     const checkBackendHealth = async () => {
         try {
             const response = await fetch(`${API_BASE_URL}/health`);
@@ -355,10 +554,27 @@ const LitPathAI = () => {
                     </div>
                     <button
                         onClick={handleNewChat}
-                        className="w-full bg-[#1E74BC] text-white py-3 px-4 rounded-lg mb-8 hover:bg-[#155a8f] transition-colors font-semibold shadow-md"
+                        className="w-full bg-[#1E74BC] text-white py-3 px-4 rounded-lg mb-4 hover:bg-[#155a8f] transition-colors font-semibold shadow-md"
                     >
                         Start a new chat
                     </button>
+                    
+                    {/* Saved Bookmarks Button */}
+                    <button
+                        onClick={() => setShowSavedItems(!showSavedItems)}
+                        className="w-full bg-white border-2 border-[#1E74BC] text-[#1E74BC] py-3 px-4 rounded-lg mb-8 hover:bg-blue-50 transition-colors font-semibold shadow-md flex items-center justify-between"
+                    >
+                        <div className="flex items-center space-x-2">
+                            <Bookmark size={18} />
+                            <span>Saved Bookmarks</span>
+                        </div>
+                        {bookmarkedCount > 0 && (
+                            <span className="bg-[#1E74BC] text-white text-xs font-bold px-2 py-1 rounded-full">
+                                {bookmarkedCount}
+                            </span>
+                        )}
+                    </button>
+                    
                     <div className="mb-8">
                         <h3 className="font-semibold text-gray-800 mb-3 text-lg">Research history</h3>
                         <p className="text-sm text-gray-600 leading-relaxed">After you start a new chat, your research history will be displayed here.</p>
@@ -752,8 +968,15 @@ const LitPathAI = () => {
                                     <span>Back</span>
                                 </button>
                                 <div className="flex space-x-4">
-                                    <button className="text-white hover:text-blue-200">
-                                        <Bookmark size={20} />
+                                    <button 
+                                        className="text-white hover:text-blue-200 transition-colors"
+                                        onClick={() => toggleBookmark(selectedSource)}
+                                        title={isBookmarked(selectedSource?.file || selectedSource?.fullTextPath) ? "Remove bookmark" : "Add bookmark"}
+                                    >
+                                        <Bookmark 
+                                            size={20} 
+                                            fill={isBookmarked(selectedSource?.file || selectedSource?.fullTextPath) ? "white" : "none"}
+                                        />
                                     </button>
                                     <button className="text-white hover:text-blue-200"
                                         onClick={() => setShowCitationOverlay(true)}
@@ -916,7 +1139,6 @@ const LitPathAI = () => {
                             className="w-full border rounded p-3 text-sm h-28"
                             placeholder="You may input your suggestions/improvements here"
                         />
-
                         
                         {/* Submit + Cancel */}
                         <div className="flex justify-end gap-3 mt-5">
@@ -931,6 +1153,94 @@ const LitPathAI = () => {
                             >
                                 Cancel
                             </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Bookmarks Overlay */}
+            {showSavedItems && (
+                <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center">
+                    <div className="bg-white w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 h-[80vh] rounded-lg shadow-2xl flex flex-col">
+                        {/* Header */}
+                        <div className="bg-[#1E74BC] text-white p-6 rounded-t-lg flex items-center justify-between">
+                            <div className="flex items-center space-x-3">
+                                <Bookmark size={24} />
+                                <h2 className="text-2xl font-bold">Saved Bookmarks</h2>
+                                <span className="bg-white text-[#1E74BC] text-sm font-bold px-3 py-1 rounded-full">
+                                    {bookmarkedCount}
+                                </span>
+                            </div>
+                            <button
+                                onClick={() => setShowSavedItems(false)}
+                                className="text-white hover:text-gray-200 text-3xl"
+                            >
+                                ×
+                            </button>
+                        </div>
+
+                        {/* Bookmarks List */}
+                        <div className="flex-1 overflow-y-auto p-6">
+                            {bookmarkedCount === 0 ? (
+                                <div className="text-center py-12">
+                                    <Bookmark size={48} className="mx-auto text-gray-300 mb-4" />
+                                    <p className="text-gray-500 text-lg">No bookmarks saved yet.</p>
+                                    <p className="text-gray-400 text-sm mt-2">
+                                        Start exploring research and click the bookmark icon to save papers for later!
+                                    </p>
+                                </div>
+                            ) : (
+                                <div className="space-y-4">
+                                    {getBookmarks().map((bookmark, index) => (
+                                        <div
+                                            key={index}
+                                            className="bg-gray-50 border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow"
+                                        >
+                                            <div className="flex justify-between items-start mb-3">
+                                                <h3 className="font-semibold text-lg text-gray-800 flex-1 pr-4">
+                                                    {bookmark.title}
+                                                </h3>
+                                                <button
+                                                    onClick={() => toggleBookmark(bookmark)}
+                                                    className="text-red-500 hover:text-red-700 flex-shrink-0"
+                                                    title="Remove bookmark"
+                                                >
+                                                    <Bookmark size={20} fill="currentColor" />
+                                                </button>
+                                            </div>
+                                            <p className="text-gray-600 text-sm mb-2">
+                                                <User size={14} className="inline mr-1" />
+                                                {bookmark.author} • {bookmark.year}
+                                            </p>
+                                            <p className="text-gray-700 text-sm mb-3 line-clamp-2">
+                                                {bookmark.abstract}
+                                            </p>
+                                            <div className="flex items-center justify-between">
+                                                <span className="text-xs text-gray-500">
+                                                    {bookmark.degree} • {bookmark.school}
+                                                </span>
+                                                <button
+                                                    onClick={() => {
+                                                        setSelectedSource(bookmark);
+                                                        setShowSavedItems(false);
+                                                        setShowOverlay(true);
+                                                    }}
+                                                    className="text-[#1E74BC] hover:text-[#155a8f] text-sm font-medium"
+                                                >
+                                                    View Details →
+                                                </button>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Footer */}
+                        <div className="border-t p-4 bg-gray-50 rounded-b-lg">
+                            <p className="text-xs text-gray-500 text-center">
+                                Bookmarks are saved locally on this device. {userId && `User ID: ${userId.substring(0, 15)}...`}
+                            </p>
                         </div>
                     </div>
                 </div>
