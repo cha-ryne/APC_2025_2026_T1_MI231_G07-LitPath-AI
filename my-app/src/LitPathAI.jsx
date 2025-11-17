@@ -4,6 +4,7 @@ import dostLogo from "./components/images/dost-logo.png";
 import { Quote } from "lucide-react";
 import { Bookmark } from "lucide-react";
 import { Copy } from 'lucide-react';
+import { supabase } from './supabaseClient';
 
 
 
@@ -32,7 +33,9 @@ const LitPathAI = () => {
     const [showCitationOverlay, setShowCitationOverlay] = useState(false);
     const [selectedCitationStyle, setSelectedCitationStyle] = useState("APA");
     const [generatedCitation, setGeneratedCitation] = useState("");
-    
+    const [showSavedItems, setShowSavedItems] = useState(false);
+    const [bookmarkedCount, setBookmarkedCount] = useState(0);
+    const [userId, setUserId] = useState(null);
 
 
 
@@ -104,6 +107,16 @@ const LitPathAI = () => {
         };
     }, []);
 
+useEffect(() => {
+    let storedUserId = localStorage.getItem('litpath_user_id');
+    
+    if (!storedUserId) {
+        storedUserId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        localStorage.setItem('litpath_user_id', storedUserId);
+    }
+    
+    setUserId(storedUserId);
+}, []);
 
     const checkBackendHealth = async () => {
         try {
@@ -296,17 +309,33 @@ const LitPathAI = () => {
     ));
   };
 
-/* if may supabase na:
 
-const { error } = await supabase.from("feedback").insert({
-    rating,
-    relevant: feedbackRelevant,
-    comment: feedbackComment,
-    created_at: new Date(),
-});
-*/
+const handleFeedbackSubmit = async () => {
+    if (!userId) return;
 
+    try {
+        const { error } = await supabase
+            .from('feedback')
+            .insert({
+                user_id: userId,
+                query: searchQuery,
+                rating: rating,
+                relevant: feedbackRelevant,
+                comment: feedbackComment
+            });
 
+        if (error) throw error;
+
+        console.log('Feedback submitted successfully');
+        setShowRatingOverlay(false);
+        setFeedbackComment("");
+        setFeedbackRelevant(null);
+        alert('Thank you for your feedback!');
+    } catch (err) {
+        console.error('Error submitting feedback:', err);
+        alert('Failed to submit feedback. Please try again.');
+    }
+};
 
 
     return (
@@ -943,20 +972,7 @@ const { error } = await supabase.from("feedback").insert({
             <div className="flex justify-end gap-3 mt-5">
                 <button
                     className="bg-[#1E74BC] text-white px-5 py-2 rounded hover:bg-[#185f99]"
-                    onClick={() => {
-                        // TODO: send to database (Supabase) later
-                        console.log("Rating:", rating);
-                        console.log("Relevant:", feedbackRelevant);
-                        console.log("Comment:", feedbackComment);
-
-                        // Close overlay
-                        setShowRatingOverlay(false);
-
-                        // Reset fields
-                        setFeedbackComment("");
-                        setFeedbackRelevant(null);
-                    }}
-                >
+                    onClick={handleFeedbackSubmit}>
                     Submit
                 </button>
 
