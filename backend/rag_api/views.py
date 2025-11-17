@@ -4,6 +4,38 @@ from rest_framework import status
 from .rag_service import RAGService
 
 
+class FiltersView(APIView):
+    """
+    GET /api/filters/
+    Returns available filter options (subjects and years)
+    
+    Response:
+    {
+        "subjects": ["Agriculture", "Computer Science", ...],
+        "years": ["2023", "2022", "2021", ...]
+    }
+    """
+    
+    def get(self, request):
+        try:
+            if not RAGService._initialized:
+                return Response(
+                    {"subjects": [], "years": [], "message": "RAG system not initialized yet"},
+                    status=status.HTTP_200_OK
+                )
+            
+            rag = RAGService()
+            filters = rag.get_available_filters()
+            
+            return Response(filters, status=status.HTTP_200_OK)
+            
+        except Exception as e:
+            return Response(
+                {"error": str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+
 class HealthCheckView(APIView):
     """
     GET /api/health/
@@ -59,8 +91,16 @@ class SearchView(APIView):
     
     Request body:
     {
-        "question": "What is the impact of climate change on rice production?"
+        "question": "What is the impact of climate change on rice production?",
+        "filters": {
+            "subjects": ["Agriculture", "Environmental Science"],  // Optional: filter by subjects (OR logic)
+            "year": 2022,  // Optional: filter by specific year
+            "year_start": 2020,  // Optional: start of year range
+            "year_end": 2023  // Optional: end of year range
+        }
     }
+    
+    Note: Use either 'year' for a specific year, or 'year_start'/'year_end' for a range.
     
     Response:
     {
@@ -75,13 +115,15 @@ class SearchView(APIView):
                 ...
             }
         ],
-        "related_questions": []
+        "related_questions": [],
+        "filters_applied": {"subjects": [...], "year": ..., "year_range": [start, end]}
     }
     """
     
     def post(self, request):
         try:
             question = request.data.get("question", "").strip()
+            filters = request.data.get("filters", {})
             
             if not question:
                 return Response(
@@ -89,11 +131,30 @@ class SearchView(APIView):
                     status=status.HTTP_400_BAD_REQUEST
                 )
             
+            # Extract filter parameters
+            subjects = filters.get("subjects", [])
+            year = filters.get("year")
+            year_start = filters.get("year_start")
+            year_end = filters.get("year_end")
+            
+            # Validate filter parameters
+            if subjects and not isinstance(subjects, list):
+                return Response(
+                    {"error": "'subjects' must be a list"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
             # RAG system is already initialized on startup
             rag = RAGService()
             
-            # Search for relevant chunks
-            top_chunks, documents, distance_threshold = rag.search(question)
+            # Search for relevant chunks with filters
+            top_chunks, documents, distance_threshold = rag.search(
+                question,
+                subjects=subjects if subjects else None,
+                year=year,
+                year_start=year_start,
+                year_end=year_end
+            )
             
             # Generate AI overview
             overview = rag.generate_overview(top_chunks, question, distance_threshold)
@@ -104,10 +165,20 @@ class SearchView(APIView):
                 import re
                 overview = re.sub(r"\[\d+\]", "", overview)
             
+            # Build filters_applied summary
+            filters_applied = {}
+            if subjects:
+                filters_applied["subjects"] = subjects
+            if year:
+                filters_applied["year"] = year
+            if year_start or year_end:
+                filters_applied["year_range"] = [year_start, year_end]
+            
             response_data = {
                 "overview": overview,
                 "documents": documents,
-                "related_questions": []  # Placeholder for future feature
+                "related_questions": [],  # Placeholder for future feature
+                "filters_applied": filters_applied if filters_applied else None
             }
             
             return Response(response_data, status=status.HTTP_200_OK)

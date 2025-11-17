@@ -337,16 +337,30 @@ class RAGService:
         
         return recovered_chunks
     
-    def search(self, question, top_n=50, distance_threshold=1.5):
-        """Search for relevant thesis chunks"""
+    def search(self, question, top_n=200, distance_threshold=1.5, subjects=None, year=None, year_start=None, year_end=None):
+        """Search for relevant thesis chunks with optional metadata filters
+        
+        Args:
+            question: The search query
+            top_n: Number of results to retrieve (increased for post-filtering)
+            distance_threshold: Maximum distance for relevance
+            subjects: List of subjects to filter by (OR logic - matches any)
+            year: Specific year to filter by
+            year_start: Start year for range filter (inclusive)
+            year_end: End year for range filter (inclusive)
+            
+        Note: Due to ChromaDB limitations, filtering is done post-query in Python
+        """
         query_emb = self.embedder.encode([question], convert_to_numpy=True)[0].tolist()
         
+        # Query without filters (ChromaDB has limited metadata query support)
         results = self.collection.query(
             query_embeddings=[query_emb],
             n_results=top_n,
             include=["documents", "metadatas", "distances"]
         )
         
+        # Apply filters in Python
         top_chunks = []
         seen_files = set()
         documents = []
@@ -354,19 +368,62 @@ class RAGService:
         for i in range(len(results["documents"][0])):
             meta = results["metadatas"][0][i]
             file_name = meta.get("file", meta.get("pdf", ""))
+            
+            # Skip if we've already added this document
+            if file_name in seen_files:
+                continue
+            
+            # Apply subject filter (OR logic - match any)
+            if subjects and len(subjects) > 0:
+                subjects_str = meta.get("subjects", "")
+                # Split the subjects string into individual subjects
+                doc_subjects = [s.strip() for s in subjects_str.split(",")]
+                
+                # Check if any of the requested subjects match (case-insensitive, whole word)
+                match_found = False
+                for requested_subj in subjects:
+                    for doc_subj in doc_subjects:
+                        if requested_subj.lower() == doc_subj.lower():
+                            match_found = True
+                            break
+                    if match_found:
+                        break
+                
+                if not match_found:
+                    continue
+            
+            # Apply year filter
+            doc_year = meta.get("publication_year", "")
+            try:
+                doc_year_int = int(doc_year) if doc_year and doc_year != "[Unknown Year]" else None
+            except (ValueError, TypeError):
+                doc_year_int = None
+            
+            # Skip documents with no valid year when year filters are applied
+            if (year or year_start or year_end) and doc_year_int is None:
+                continue
+            
+            if year:
+                if doc_year_int != year:
+                    continue
+            
+            if year_start:
+                if doc_year_int < year_start:
+                    continue
+            
+            if year_end:
+                if doc_year_int > year_end:
+                    continue
+            
+            # If we got here, the document passed all filters
             score = float(results["distances"][0][i])
             
-            top_chunks.append({
-                "chunk": results["documents"][0][i],
-                "meta": meta,
-                "score": score
-            })
-            
-            if score < distance_threshold and file_name and file_name not in seen_files:
+            # Only add if relevance score is good enough
+            if score < distance_threshold and file_name:
                 doc = {
                     "title": meta.get("title", "[Unknown Title]"),
                     "author": meta.get("author", "[Unknown Author]"),
-                    "publication_year": meta.get("publication_year", "[Unknown Year]"),
+                    "publication_year": doc_year,
                     "abstract": meta.get("abstract", ""),
                     "file": file_name,
                     "degree": meta.get("degree", "Thesis"),
@@ -376,11 +433,51 @@ class RAGService:
                 }
                 documents.append(doc)
                 seen_files.add(file_name)
+                
+                # Also collect the chunk for overview generation
+                top_chunks.append({
+                    "chunk": results["documents"][0][i],
+                    "meta": meta,
+                    "score": score
+                })
             
             if len(documents) >= 10:
                 break
         
         return top_chunks, documents, distance_threshold
+    
+    def get_available_filters(self):
+        """Get available subjects and years from the database for filtering UI"""
+        try:
+            # Get all unique metadatas to extract subjects and years
+            all_results = self.collection.get(
+                include=["metadatas"]
+            )
+            
+            subjects_set = set()
+            years_set = set()
+            
+            for meta in all_results["metadatas"]:
+                # Extract subjects
+                subjects_str = meta.get("subjects", "")
+                if subjects_str:
+                    # Split by comma and clean up
+                    subject_list = [s.strip() for s in subjects_str.split(",")]
+                    subjects_set.update(subject_list)
+                
+                # Extract year
+                year = meta.get("publication_year", "")
+                if year and year != "[Unknown Year]":
+                    years_set.add(year)
+            
+            # Sort and return
+            return {
+                "subjects": sorted(list(subjects_set)),
+                "years": sorted(list(years_set), reverse=True)  # Most recent first
+            }
+        except Exception as e:
+            print(f"[RAG] Error getting filters: {e}")
+            return {"subjects": [], "years": []}
     
     def generate_overview(self, top_chunks, question, distance_threshold):
         """Generate AI overview using Gemini"""

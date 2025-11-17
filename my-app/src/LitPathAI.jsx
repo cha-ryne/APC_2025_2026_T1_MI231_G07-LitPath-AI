@@ -80,6 +80,12 @@ const LitPathAI = () => {
         checkBackendHealth();
     }, []);
 
+    // Auto-generate citation when overlay opens or style changes
+    useEffect(() => {
+        if (showCitationOverlay && selectedSource) {
+            generateCitation(selectedCitationStyle);
+        }
+    }, [showCitationOverlay, selectedCitationStyle, selectedSource]);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -136,6 +142,27 @@ const LitPathAI = () => {
 
 
         try {
+            // Build filters object for backend
+            const filters = {};
+            
+            // Add subject filter if not "All subjects"
+            if (selectedSubject !== 'All subjects') {
+                filters.subjects = [selectedSubject];
+            }
+            
+            // Add date filters based on selection
+            const currentYear = new Date().getFullYear();
+            
+            if (selectedDate === 'Last year') {
+                filters.year = currentYear - 1;
+            } else if (selectedDate === 'Last 3 years') {
+                filters.year_start = currentYear - 2;
+                filters.year_end = currentYear;
+            } else if (selectedDate === 'Custom date range') {
+                if (fromYear) filters.year_start = parseInt(fromYear);
+                if (toYear) filters.year_end = parseInt(toYear);
+            }
+            
             const response = await fetch(`${API_BASE_URL}/search`, {
                 method: 'POST',
                 headers: {
@@ -143,10 +170,7 @@ const LitPathAI = () => {
                 },
                 body: JSON.stringify({
                     question: query,
-                    subject: selectedSubject === 'All subjects' ? null : selectedSubject,
-                    dateFilter: selectedDate,
-                    fromYear: selectedDate === 'Custom date range' ? fromYear : null,
-                    toYear: selectedDate === 'Custom date range' ? toYear : null,
+                    filters: Object.keys(filters).length > 0 ? filters : undefined
                 }),
             });
 
@@ -214,24 +238,30 @@ const LitPathAI = () => {
     const year = selectedSource.year || "n.d.";
     const title = selectedSource.title || "Untitled";
     const school = selectedSource.school || "Unknown Institution";
+    const degree = selectedSource.degree || "Thesis";
 
     let citation = "";
 
     switch (style) {
         case "APA":
-            citation = `${author}. (${year}). ${title}. ${school}.`;
+            // APA 7th: Author, A. A. (Year). Title in sentence case [Doctoral dissertation, Institution].
+            // Note: Title should be in sentence case in real implementation
+            citation = `${author}. (${year}). ${title} [${degree}, ${school}].`;
             break;
 
         case "MLA":
-            citation = `${author}. "${title}." ${school}, ${year}.`;
+            // MLA 9th: Author. Title. Degree Type, Institution, Year.
+            citation = `${author}. ${title}. ${degree}, ${school}, ${year}.`;
             break;
 
         case "Chicago":
-            citation = `${author}. ${year}. ${title}. ${school}.`;
+            // Chicago: Author. Year. "Title." Degree Type, Institution.
+            citation = `${author}. ${year}. "${title}." ${degree}, ${school}.`;
             break;
 
         case "IEEE":
-            citation = `${author}, "${title}," ${school}, ${year}.`;
+            // IEEE: A. Author, "Title," Degree abbreviation, Institution, Year.
+            citation = `${author}, "${title}," ${degree}, ${school}, ${year}.`;
             break;
 
         default:
@@ -737,10 +767,7 @@ const { error } = await supabase.from("feedback").insert({
                                         <Bookmark size={20} />
                                     </button>
                                     <button className="text-white hover:text-blue-200"
-                                        onClick={() => {
-                                            setShowCitationOverlay(true);
-                                            generateCitation(selectCitationStyle);
-                                        }}
+                                        onClick={() => setShowCitationOverlay(true)}
                                         >
                                         <Quote size={20}/>
                                     </button>
@@ -823,10 +850,7 @@ const { error } = await supabase.from("feedback").insert({
                                     key={style}
                                     className={`block w-full text-left px-4 py-2 rounded mb-2
                                         ${selectedCitationStyle === style ? "bg-[#1E74BC] text-white" : "hover:bg-[#d7e8f6]"}`}
-                                    onClick={() => {
-                                        setSelectedCitationStyle(style);
-                                        generateCitation(style);
-                                    }}
+                                    onClick={() => setSelectedCitationStyle(style)}
                                 >
                                     {style === "APA" ? "APA (7th edition)" :
                                        style === "MLA" ? "MLA (9th edition)" : style}
