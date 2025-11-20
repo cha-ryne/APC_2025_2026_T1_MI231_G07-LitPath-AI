@@ -921,11 +921,11 @@ const LitPathAI = () => {
                                     <div className="mb-4">
                                         <h4 className="font-semibold text-lg mb-2 text-gray-800">Abstract:</h4>
                                         <p className="text-base text-gray-700 leading-relaxed">
-                                            {selectedSource.abstract
-                                                ?.split(/(?<= \. )\s+/) // split sentences by period + space
-                                                .slice(0, 3)          // shows only 3 lines of abstract
-                                                .join(" ") + (selectedSource.abstract.split(/(?<= \. )\s+/).length > 3 ? " ..." : "")
-                                            }
+                                            {(() => {
+                                                const sentences = selectedSource.abstract?.split(/(?<=[.!?])\s+/) || [];
+                                                const first3 = sentences.slice(0, 3).join(' ');
+                                                return first3 + (sentences.length > 3 ? '...' : '');
+                                            })()}
                                         </p>
                                     </div>
                                     <button
@@ -946,8 +946,8 @@ const LitPathAI = () => {
                                         className="text-gray-700 leading-relaxed whitespace-pre-line text-base text-justify"
                                         dangerouslySetInnerHTML={{
                                             __html: searchResults.overview
-                                                ? searchResults.overview.replace(/ \[(\d+)\]/g, (_, num) => {
-                                                    return `<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-sm font-semibold mx-1">${num}</span>`;
+                                                ? searchResults.overview.replace(/\[(\d+)\]/g, (_, num) => {
+                                                    return ` <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-xs font-semibold">${num}</span>`;
                                                 })
                                                 : "<i>No overview available.</i>",
                                         }}
