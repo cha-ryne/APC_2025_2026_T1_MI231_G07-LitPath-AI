@@ -34,6 +34,8 @@ const LitPathAI = () => {
     const [bookmarkedCount, setBookmarkedCount] = useState(0);
     const [userId, setUserId] = useState(null);
     const navigate = useNavigate();
+    const [conversationHistory, setConversationHistory] = useState([]);
+    const [isFollowUpSearch, setIsFollowUpSearch] = useState(false);
 
 
     const subjects = [
@@ -409,12 +411,16 @@ const LitPathAI = () => {
                 school: doc.university || '[Unknown University]',
             }));
             
-            setSearchResults({
+            const newResult = {
                 query: query,
                 overview: overview || 'No overview available.',
                 sources: formattedSources,
                 relatedQuestions: related_questions || [],
-            });
+            };
+
+            setConversationHistory(prev => [...prev, newResult]);
+            setSearchResults(newResult);
+            setIsFollowUpSearch(true);
 
 
         } catch (err) {
@@ -428,7 +434,7 @@ const LitPathAI = () => {
 
     const handleExampleQuestionClick = (question) => {
         setSearchQuery(question);
-        handleSearch(question);
+        handleSearch(question, conversationHistory.length > 0);
     };
 
     const handleSourceClick = (source) => {
@@ -478,6 +484,8 @@ const LitPathAI = () => {
         setFromYear('');
         setToYear('');
         setSearchResults(null);
+        setConversationHistory([]);
+        setIsFollowUpSearch(false);
         setSelectedSource(null);
         setShowOverlay(false);
         setRating(0);
@@ -642,31 +650,18 @@ const LitPathAI = () => {
                     
                     <div className="mb-8">
                         <h3 className="font-semibold text-gray-800 mb-3 text-lg">Research history</h3>
-                        <p className="text-sm text-gray-600 leading-relaxed">After you start a new chat, your research history will be displayed here.</p>
-                    </div>
-                    <div className="absolute bottom-6 left-6 right-6 text-xs text-gray-500 space-y-2">
-                        <p>AI-generated content. Quality may vary.<br />Check for accuracy.</p>
-                        <a href="#" className="text-blue-600 hover:underline block">About LitPath AI</a>
-                        <a href="#" className="text-blue-600 hover:underline block">Privacy and Disclaimer</a>
+                        <p className="text-sm text-gray-600 leading-relaxed">After you start a new chat, your research history will be displayed here.</p><br></br>
+                        <p className="text-[10px] text-gray-500 mt-4">AI-generated content. Quality may vary.<br />Check for accuracy.</p>
+                        <a href="#" className="text-blue-600 hover:underline block text-[10px]">About LitPath AI</a>
+                        <a href="#" className="text-blue-600 hover:underline block text-[10px]">Privacy and Disclaimer</a>
                     </div>
                 </div>
                 {/* Right Container (Main Content) */}
                 <div className="flex-1 max-w-5xl bg-white bg-opacity-95 rounded-xl shadow-2xl p-8 relative">
                     
-                    {!searchResults && (
-                        <div className="absolute top-6 right-6 z-10">
-                            <button
-                                onClick={handleProfileClick}
-                                className="p-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors shadow-md"
-                                title="Login/Profile"
-                            >
-                                <User size={24} />
-                            </button>
-                        </div>
-                    )}
-
                     {!searchResults ? (
                         <div className="max-w-4xl mx-auto">
+                            {/* Initial welcome screen - same as before */}
                             <div className="text-center mb-10">
                                 <div className="flex items-center justify-center space-x-3 mb-4">
                                     <BookOpen className="text-[#1E74BC]" size={40} />
@@ -700,7 +695,7 @@ const LitPathAI = () => {
                                 </div>
                                 
                                 <div className="flex flex-wrap items-center space-x-4">
-                                    {/* Subject Filter */}
+                                    {/* Subject Filter - keep existing */}
                                     <div className="relative" ref={subjectDropdownRef}>
                                         <button
                                             className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
@@ -728,8 +723,7 @@ const LitPathAI = () => {
                                         )}
                                     </div>
 
-
-                                    {/* Date Filter */}
+                                    {/* Date Filter - keep existing */}
                                     <div className="relative" ref={dateDropdownRef}>
                                         <button
                                             className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-sm"
@@ -756,8 +750,7 @@ const LitPathAI = () => {
                                         )}
                                     </div>
 
-
-                                    {/* Custom Date Range */}
+                                    {/* Custom Date Range - keep existing */}
                                     {selectedDate === 'Custom date range' && (
                                         <div className="flex items-center space-x-2 ml-auto">
                                             <label className="text-sm text-gray-700">From:</label>
@@ -780,12 +773,14 @@ const LitPathAI = () => {
                                     )}
                                 </div>
                             </div>
+                            
                             {loading && (
                                 <div className="text-center text-[#1E74BC] text-lg mt-8">
                                     <div className="animate-spin inline-block w-8 h-8 border-4 border-[#1E74BC] border-t-transparent rounded-full mr-2"></div>
                                     Searching for insights...
                                 </div>
                             )}
+                            
                             {error && (
                                 <div className="text-center text-red-600 text-lg mt-8 p-4 bg-red-50 rounded-lg border border-red-200">
                                     {error}
@@ -803,11 +798,7 @@ const LitPathAI = () => {
                                 <h3 className="text-xl font-semibold text-gray-800 mb-5">Example questions</h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                     <button
-                                        onClick={() =>
-                                            handleExampleQuestionClick(
-                                                "How does plastic pollution affect plant growth in farmland?"
-                                            )
-                                        }
+                                        onClick={() => handleExampleQuestionClick("How does plastic pollution affect plant growth in farmland?")}
                                         className="flex items-center justify-between text-left p-5 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-gray-800 hover:bg-blue-50"
                                     >
                                         <span className="flex-1 pr-4">
@@ -816,9 +807,7 @@ const LitPathAI = () => {
                                         <ArrowRight size={22} className="text-[#1E74BC] flex-shrink-0" />
                                     </button>
                                     <button
-                                        onClick={() =>
-                                            handleExampleQuestionClick("Find research about sleep quality among teenagers")
-                                        }
+                                        onClick={() => handleExampleQuestionClick("Find research about sleep quality among teenagers")}
                                         className="flex items-center justify-between text-left p-5 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-gray-800 hover:bg-blue-50"
                                     >
                                         <span className="flex-1 pr-4">
@@ -827,9 +816,7 @@ const LitPathAI = () => {
                                         <ArrowRight size={22} className="text-[#1E74BC] flex-shrink-0" />
                                     </button>
                                     <button
-                                        onClick={() =>
-                                            handleExampleQuestionClick("How does remote work impact employee productivity?")
-                                        }
+                                        onClick={() => handleExampleQuestionClick("How does remote work impact employee productivity?")}
                                         className="flex items-center justify-between text-left p-5 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-gray-800 hover:bg-blue-50"
                                     >
                                         <span className="flex-1 pr-4">
@@ -838,11 +825,7 @@ const LitPathAI = () => {
                                         <ArrowRight size={22} className="text-[#1E74BC] flex-shrink-0" />
                                     </button>
                                     <button
-                                        onClick={() =>
-                                            handleExampleQuestionClick(
-                                                "Find recent research about how vitamin D deficiency impact overall health"
-                                            )
-                                        }
+                                        onClick={() => handleExampleQuestionClick("Find recent research about how vitamin D deficiency impact overall health")}
                                         className="flex items-center justify-between text-left p-5 bg-gray-50 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-gray-800 hover:bg-blue-50"
                                     >
                                         <span className="flex-1 pr-4">
@@ -854,167 +837,269 @@ const LitPathAI = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className="max-w-6xl mx-auto">
-                            {/* Search Input (persistent after results) */}
-                            <div className="bg-white rounded-lg shadow-inner p-6 mb-8 border border-gray-200">
-                                {/* Search Bar */}
-                                <div className="flex items-center space-x-3 mb-4 border border-gray-300 rounded-lg p-2 focus-within:border-blue-500 transition-colors">
-                                    <Search className="text-gray-500" size={22} />
-                                    <input
-                                        type="text"
-                                        placeholder="What is your research question?"
-                                        className="flex-1 outline-none text-gray-800 text-lg py-1"
-                                        value={searchQuery}
-                                        onChange={(e) => setSearchQuery(e.target.value)}
-                                        onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                                    />
-                                    <button
-                                        onClick={() => handleSearch()}
-                                        className="bg-[#1E74BC] text-white p-3 rounded-lg hover:bg-[#155a8f] transition-colors"
-                                    >
-                                        <ArrowRight size={20} />
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* Search Results Header */}
-                            <div className="mb-6">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-2">{searchResults.query}</h2>
-                            </div>
-                            {/* Sources Carousel */}
-                            <div className="mb-6">
-                                <h3 className="text-xl font-semibold mb-4 flex items-center space-x-3 text-gray-800">
-                                    <BookOpen size={24} className="text-[#1E74BC]" />
-                                    <span>Sources</span>
-                                </h3>
-                                <div className="flex space-x-5 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
-                                    {searchResults.sources.map((source, index) => (
-                                        <div
-                                            key={source.id}
-                                            className={`flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-5 cursor-pointer border-2 ${selectedSource && selectedSource.id === source.id ? 'border-blue-500' : 'border-gray-100'} hover:shadow-xl transition-all duration-200 ease-in-out`}
-                                            onClick={() => handleSourceClick(source)}
-                                        >
-                                            <div className="flex items-center justify-center w-9 h-9 bg-[#1E74BC] text-white rounded-full mb-3 text-base font-bold">
-                                                {index + 1}
-                                            </div>
-                                            <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-3">{source.title}</h4>
-                                            <p className="text-sm text-gray-600">{source.author} • {source.year}</p>
+                        <div className="max-w-6xl mx-auto pb-32">
+                            {/* Conversation History */}
+                            <div className="space-y-8">
+                                {conversationHistory.map((result, historyIndex) => (
+                                    <div key={historyIndex} className="border-b border-gray-200 pb-8">
+                                        {/* Question */}
+                                        <div className="mb-6">
+                                            <h2 className="text-2xl font-bold text-gray-900 mb-2">{result.query}</h2>
                                         </div>
-                                    ))}
-                                </div>
+                                        
+                                        {/* Sources Carousel */}
+                                        <div className="mb-6">
+                                            <h3 className="text-xl font-semibold mb-4 flex items-center space-x-3 text-gray-800">
+                                                <BookOpen size={24} className="text-[#1E74BC]" />
+                                                <span>Sources</span>
+                                            </h3>
+                                            <div className="flex space-x-5 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
+                                                {result.sources.map((source, index) => (
+                                                    <div
+                                                        key={source.id}
+                                                        className={`flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-5 cursor-pointer border-2 ${selectedSource && selectedSource.id === source.id ? 'border-blue-500' : 'border-gray-100'} hover:shadow-xl transition-all duration-200 ease-in-out`}
+                                                        onClick={() => handleSourceClick(source)}
+                                                    >
+                                                        <div className="flex items-center justify-center w-9 h-9 bg-[#1E74BC] text-white rounded-full mb-3 text-base font-bold">
+                                                            {index + 1}
+                                                        </div>
+                                                        <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-3">{source.title}</h4>
+                                                        <p className="text-sm text-gray-600">{source.author} • {source.year}</p>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {/* Selected Source Details for this conversation */}
+                                        {selectedSource && conversationHistory[historyIndex].sources.some(s => s.id === selectedSource.id) && (
+                                            <div className="bg-[#E8F3FB] border-l-4 border-[#1E74BC] rounded-r-lg p-6 mb-6 shadow-md">
+                                                <div className="flex justify-between items-start mb-4">
+                                                    <h3 className="text-xl font-bold text-[#1E74BC]">{selectedSource.title}</h3>
+                                                    <button
+                                                        onClick={() => setSelectedSource(null)}
+                                                        className="text-gray-500 hover:text-gray-700 transition-colors text-xl"
+                                                    >
+                                                        ×
+                                                    </button>
+                                                </div>
+                                                <p className="text-md text-gray-700 mb-4">{selectedSource.author} • {selectedSource.year}</p>
+                                                <div className="mb-4">
+                                                    <h4 className="font-semibold text-lg mb-2 text-gray-800">Abstract:</h4>
+                                                    <p className="text-base text-gray-700 leading-relaxed">
+                                                        {(() => {
+                                                            const sentences = selectedSource.abstract?.split(/(?<=[.!?])\s+/) || [];
+                                                            const first3 = sentences.slice(0, 3).join(' ');
+                                                            return first3 + (sentences.length > 3 ? '...' : '');
+                                                        })()}
+                                                    </p>
+                                                </div>
+                                                <button
+                                                    onClick={handleMoreDetails}
+                                                    className="bg-gray-800 text-white px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors font-medium text-sm"
+                                                >
+                                                    More details and request options
+                                                </button>
+                                            </div>
+                                        )}
+
+                                        {/* Overview */}
+                                        <div className="mb-6">
+                                            <h3 className="text-xl font-semibold mb-4 text-gray-800">Overview of Sources</h3>
+                                            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+                                                <div
+                                                    className="text-gray-700 leading-relaxed whitespace-pre-line text-base text-justify"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: result.overview
+                                                            ? result.overview.replace(/\[(\d+)\]/g, (_, num) => {
+                                                                return ` <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-xs font-semibold">${num}</span>`;
+                                                            })
+                                                            : "<i>No overview available.</i>",
+                                                    }}
+                                                ></div>
+                                            </div>
+                                        </div>
+
+                                        {/* Rating and Actions - only show for the latest result */}
+                                        {historyIndex === conversationHistory.length - 1 && (
+                                            <div className="flex justify-end items-center mb-8 mt-6 space-x-5">
+                                                <div className="flex space-x-1">
+                                                    {[1, 2, 3, 4, 5].map((num) => (
+                                                        <button
+                                                            key={num}
+                                                            onClick={() => {
+                                                                setRating(num);
+                                                                setShowRatingOverlay(true);
+                                                            }}
+                                                            className="transition-transform hover:scale-110"
+                                                        >
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                fill={num <= rating ? "#FACC15" : "none"}
+                                                                stroke="#FACC15"
+                                                                strokeWidth="2"
+                                                                viewBox="0 0 24 24"
+                                                                className="w-7 h-7 cursor-pointer"
+                                                            >
+                                                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                            </svg>
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                                <button
+                                                    onClick={() => handleSearch(result.query, true)}
+                                                    disabled={loading}
+                                                    className={`flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg transition-colors ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-50"} text-gray-700`}
+                                                >
+                                                    <RefreshCw size={18} />
+                                                    <span>{loading ? "Loading..." : "Try again"}</span>
+                                                </button>
+                                            </div>
+                                        )}
+
+                                        {/* Related Questions - only show for the latest result */}
+                                        {historyIndex === conversationHistory.length - 1 && result.relatedQuestions.length > 0 && (
+                                            <div>
+                                                <h3 className="text-xl font-semibold text-gray-800 mb-5">Related research questions</h3>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                                    {result.relatedQuestions.map((question, index) => (
+                                                        <button
+                                                            key={index}
+                                                            onClick={() => handleExampleQuestionClick(question)}
+                                                            className="flex items-center justify-between text-left p-5 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-blue-600 hover:text-blue-800 hover:bg-blue-50"
+                                                        >
+                                                            <span>{question}</span>
+                                                            <ArrowRight size={20} className="text-[#1E74BC] flex-shrink-0" />
+                                                        </button>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
                             </div>
 
-
-                            {/* Selected Source Details */}
-                            {selectedSource && (
-                                <div className="bg-[#E8F3FB] border-l-4 border-[#1E74BC] rounded-r-lg p-6 mb-6 shadow-md">
-                                    <div className="flex justify-between items-start mb-4">
-                                        <h3 className="text-xl font-bold text-[#1E74BC]">{selectedSource.title}</h3>
-                                        <button
-                                            onClick={() => setSelectedSource(null)}
-                                            className="text-gray-500 hover:text-gray-700 transition-colors text-xl"
-                                        >
-                                            ×
-                                        </button>
-                                    </div>
-                                    <p className="text-md text-gray-700 mb-4">{selectedSource.author} • {selectedSource.year}</p>
-                                    <div className="mb-4">
-                                        <h4 className="font-semibold text-lg mb-2 text-gray-800">Abstract:</h4>
-                                        <p className="text-base text-gray-700 leading-relaxed">
-                                            {(() => {
-                                                const sentences = selectedSource.abstract?.split(/(?<=[.!?])\s+/) || [];
-                                                const first3 = sentences.slice(0, 3).join(' ');
-                                                return first3 + (sentences.length > 3 ? '...' : '');
-                                            })()}
-                                        </p>
-                                    </div>
-                                    <button
-                                        onClick={handleMoreDetails}
-                                        className="bg-gray-800 text-white px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors font-medium text-sm"
-                                    >
-                                        More details and request options
-                                    </button>
+                            {/* Loading indicator for follow-up questions */}
+                            {loading && (
+                                <div className="text-center text-[#1E74BC] text-lg mt-8">
+                                    <div className="animate-spin inline-block w-8 h-8 border-4 border-[#1E74BC] border-t-transparent rounded-full mr-2"></div>
+                                    Searching for insights...
+                                </div>
+                            )}
+                            
+                            {error && (
+                                <div className="text-center text-red-600 text-lg mt-8 p-4 bg-red-50 rounded-lg border border-red-200">
+                                    {error}
                                 </div>
                             )}
 
-
-                            {/* Overview of Sources */}
-                            <div className="mb-6">
-                                <h3 className="text-xl font-semibold mb-4 text-gray-800">Overview of Sources</h3>
-                                <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-                                    <div
-                                        className="text-gray-700 leading-relaxed whitespace-pre-line text-base text-justify"
-                                        dangerouslySetInnerHTML={{
-                                            __html: searchResults.overview
-                                                ? searchResults.overview.replace(/\[(\d+)\]/g, (_, num) => {
-                                                    return ` <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-xs font-semibold">${num}</span>`;
-                                                })
-                                                : "<i>No overview available.</i>",
-                                        }}
-                                    ></div>
-                                </div>
-                            </div>
-
-
-                            {/* Rating and Actions */}
-                            <div className="flex justify-end items-center mb-8 mt-6 space-x-5">
-                                {/* Stars */}
-                                <div className="flex space-x-1">
-                                    {[1, 2, 3, 4, 5].map((num) => (
-                                        <button
-                                            key={num}
-                                            onClick={() => {
-                                                setRating(num);
-                                                setShowRatingOverlay(true);
-                                            }}
-                                            className="transition-transform hover:scale-110"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                fill={num <= rating ? "#FACC15" : "none"}
-                                                stroke="#FACC15"
-                                                strokeWidth="2"
-                                                viewBox="0 0 24 24"
-                                                className="w-7 h-7 cursor-pointer"
-                                            >
-                                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                            </svg>
-                                        </button>
-                                    ))}
-                                </div>
-
-
-                                {/* Try Again Button */}
-                                <button
-                                    onClick={() => handleSearch(searchQuery)}
-                                    disabled={loading}
-                                    className={`flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg transition-colors ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-50"
-                                        } text-gray-700`}
-                                >
-                                    <RefreshCw size={18} />
-                                    <span>{loading ? "Loading..." : "Try again"}</span>
-                                </button>
-                            </div>
-
-
-                            {/* Related Research Questions */}
-                            {searchResults.relatedQuestions.length > 0 && (
-                                <div>
-                                    <h3 className="text-xl font-semibold text-gray-800 mb-5">Related research questions</h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                                        {searchResults.relatedQuestions.map((question, index) => (
+                            {/* Fixed Bottom Search Bar */}
+                            <div className="fixed bottom-0 left-[518px] right-0 p-4 z-40">
+                                <div className="max-w-5xl ml-8">
+                                    <div className="bg-white rounded-lg shadow-md p-3 border border-gray-300">
+                                        {/* Search Bar */}
+                                        <div className="flex items-center space-x-2 mb-2 border border-gray-300 rounded-lg px-3 py-2 focus-within:border-blue-500 transition-colors">
+                                            <Search className="text-gray-500" size={18} />
+                                            <input
+                                                type="text"
+                                                placeholder="Ask a follow-up question..."
+                                                className="flex-1 outline-none text-gray-800 text-base"
+                                                value={searchQuery}
+                                                onChange={(e) => setSearchQuery(e.target.value)}
+                                                onKeyPress={(e) => e.key === 'Enter' && handleSearch(searchQuery, true)}
+                                                disabled={loading}
+                                            />
                                             <button
-                                                key={index}
-                                                onClick={() => handleExampleQuestionClick(question)}
-                                                className="flex items-center justify-between text-left p-5 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-blue-600 hover:text-blue-800 hover:bg-blue-50"
+                                                onClick={() => handleSearch(searchQuery, true)}
+                                                className="bg-[#1E74BC] text-white p-2 rounded-lg hover:bg-[#155a8f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                                disabled={loading}
                                             >
-                                                <span>{question}</span>
-                                                <ArrowRight size={20} className="text-[#1E74BC] flex-shrink-0" />
+                                                <ArrowRight size={18} />
                                             </button>
-                                        ))}
+                                        </div>
+                                        
+                                        {/* Filters Row */}
+                                        <div className="flex flex-wrap items-center gap-2">
+                                            {/* Subject Filter */}
+                                            <div className="relative" ref={subjectDropdownRef}>
+                                                <button
+                                                    className="flex items-center space-x-1 px-3 py-1.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-xs"
+                                                    onClick={() => setShowSubjectDropdown(!showSubjectDropdown)}
+                                                >
+                                                    <span>{selectedSubject}</span>
+                                                    <ChevronDown size={14} />
+                                                </button>
+
+                                                {showSubjectDropdown && (
+                                                    <div className="absolute bottom-full left-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px] max-h-60 overflow-y-auto">
+                                                        {subjects.map((subject) => (
+                                                            <button
+                                                                key={subject}
+                                                                className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
+                                                                onClick={() => {
+                                                                    setSelectedSubject(subject);
+                                                                    setShowSubjectDropdown(false);
+                                                                }}
+                                                            >
+                                                                {subject}
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            {/* Date Filter */}
+                                            <div className="relative" ref={dateDropdownRef}>
+                                                <button
+                                                    className="flex items-center space-x-1 px-3 py-1.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-xs"
+                                                    onClick={() => setShowDateDropdown(!showDateDropdown)}
+                                                >
+                                                    <span>{selectedDate}</span>
+                                                    <ChevronDown size={14} />
+                                                </button>
+                                                {showDateDropdown && (
+                                                    <div className="absolute bottom-full left-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px]">
+                                                        {dateOptions.map((option) => (
+                                                            <button
+                                                                key={option}
+                                                                className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
+                                                                onClick={() => {
+                                                                    setSelectedDate(option);
+                                                                    setShowDateDropdown(false);
+                                                                }}
+                                                            >
+                                                                {option}
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                            {/* Custom Date Range */}
+                                            {selectedDate === 'Custom date range' && (
+                                                <div className="flex items-center space-x-2">
+                                                    <label className="text-xs text-gray-700">From:</label>
+                                                    <input
+                                                        type="number"
+                                                        placeholder="YYYY"
+                                                        className="px-2 py-1 w-20 border border-gray-300 rounded-lg text-xs"
+                                                        value={fromYear}
+                                                        onChange={(e) => setFromYear(e.target.value)}
+                                                    />
+                                                    <label className="text-xs text-gray-700">To:</label>
+                                                    <input
+                                                        type="number"
+                                                        placeholder="YYYY"
+                                                        className="px-2 py-1 w-20 border border-gray-300 rounded-lg text-xs"
+                                                        value={toYear}
+                                                        onChange={(e) => setToYear(e.target.value)}
+                                                    />
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
-                            )}
+                            </div>
+                            {/* end Fixed Bottom Search Bar */}
                         </div>
                     )}
                 </div>
