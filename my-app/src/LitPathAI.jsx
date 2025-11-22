@@ -340,12 +340,11 @@ const LitPathAI = () => {
             setBackendStatus({ status: 'error', message: 'Cannot connect to backend' });
         }
     };
-    const handleSearch = async (query = searchQuery) => {
+    const handleSearch = async (query = searchQuery, forceNew = false) => {
         if (!query.trim()) {
             setError("Please enter a research question.");
             return;
         }
-        
         
         // Check if backend is available
         if (!backendStatus || backendStatus.status === 'error') {
@@ -355,8 +354,11 @@ const LitPathAI = () => {
         
         setLoading(true);
         setError(null);
-        setSearchResults(null);
-        setSelectedSource(null);
+        // Don't clear searchResults or selectedSource when it's a follow-up
+        if (!isFollowUpSearch && !forceNew) {
+            setSearchResults(null);
+            setSelectedSource(null);
+        }
         
         try {
             // Build filters object for backend
@@ -380,16 +382,32 @@ const LitPathAI = () => {
                 if (toYear) filters.year_end = parseInt(toYear);
             }
 
+            // Add variation to query if forcing new results
+            const searchQueryText = forceNew ? `${query} [v${Date.now()}]` : query;
+
+            // Build request body
+            const requestBody = {
+                question: searchQueryText,
+                filters: Object.keys(filters).length > 0 ? filters : undefined
+            };
+            
+            // If forceNew is true, add parameters to force fresh results
+            if (forceNew) {
+                requestBody.regenerate = true;
+                requestBody.timestamp = Date.now();
+                requestBody.random_seed = Math.random();
+            }
+
+            console.log('Sending request:', requestBody); // Debug log
+
             const response = await fetch(`${API_BASE_URL}/search`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    question: query,
-                    filters: Object.keys(filters).length > 0 ? filters : undefined
-                }),
+                body: JSON.stringify(requestBody),
             });
+
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
@@ -400,19 +418,20 @@ const LitPathAI = () => {
             
             // Format documents for frontend, mapping backend fields exactly
             const formattedSources = documents.map((doc, index) => ({
-                id: index + 1,
+                id: Date.now() + index, // Use timestamp-based ID to ensure uniqueness
                 title: doc.title || '[Unknown Title]',
                 author: doc.author || '[Unknown Author]',
                 year: doc.publication_year || '[Unknown Year]',
                 abstract: doc.abstract || 'Abstract not available.',
                 fullTextPath: doc.file || '',
+                file: doc.file || '',
                 degree: doc.degree || 'Thesis',
                 subjects: doc.subjects || ['Research'],
                 school: doc.university || '[Unknown University]',
             }));
             
             const newResult = {
-                query: query,
+                query: query, // Use original query without the version suffix
                 overview: overview || 'No overview available.',
                 sources: formattedSources,
                 relatedQuestions: related_questions || [],
@@ -421,7 +440,6 @@ const LitPathAI = () => {
             setConversationHistory(prev => [...prev, newResult]);
             setSearchResults(newResult);
             setIsFollowUpSearch(true);
-
 
         } catch (err) {
             console.error("Search failed:", err);
@@ -588,7 +606,7 @@ const LitPathAI = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
             {/* Header */}
-            <div className="bg-[#1F1F1F] text-white p-4 shadow-md">
+            <div className="fixed top-0 left-0 right-0 bg-[#1F1F1F] text-white p-4 shadow-md z-50">
                 <div className="flex items-center justify-between max-w-7xl mx-auto">
                     <div className="flex items-center space-x-4">
                         <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-12 w-50" />
@@ -618,7 +636,7 @@ const LitPathAI = () => {
                 </div>
             )}
 
-            <div className="flex-1 flex justify-center items-start py-10 px-4">
+            <div className="flex-1 flex justify-center items-start px-4 pt-40 pb-10">
                 {/* Left Container (Sidebar) */}
                 <div className="w-80 bg-white bg-opacity-95 rounded-xl shadow-2xl p-6 mr-6 flex-shrink-0 h-auto">
                     <div className="flex items-center space-x-2 mb-6 text-gray-800">
@@ -837,11 +855,11 @@ const LitPathAI = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className="max-w-6xl mx-auto pb-32">
+                        <div className="max-w-6xl mx-auto pb-20">
                             {/* Conversation History */}
                             <div className="space-y-8">
                                 {conversationHistory.map((result, historyIndex) => (
-                                    <div key={historyIndex} className="border-b border-gray-200 pb-8">
+                                    <div key={historyIndex} className="border-b border-gray-200 pb-4 last:border-b-0">
                                         {/* Question */}
                                         <div className="mb-6">
                                             <h2 className="text-2xl font-bold text-gray-900 mb-2">{result.query}</h2>
@@ -903,7 +921,7 @@ const LitPathAI = () => {
                                         )}
 
                                         {/* Overview */}
-                                        <div className="mb-6">
+                                        <div className="mb-4">
                                             <h3 className="text-xl font-semibold mb-4 text-gray-800">Overview of Sources</h3>
                                             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
                                                 <div
@@ -920,8 +938,8 @@ const LitPathAI = () => {
                                         </div>
 
                                         {/* Rating and Actions - only show for the latest result */}
-                                        {historyIndex === conversationHistory.length - 1 && (
-                                            <div className="flex justify-end items-center mb-8 mt-6 space-x-5">
+                                        {historyIndex === conversationHistory.length - 1 && !loading && (
+                                            <div className="flex justify-end items-center mt-6 space-x-5">
                                                 <div className="flex space-x-1">
                                                     {[1, 2, 3, 4, 5].map((num) => (
                                                         <button
@@ -946,19 +964,37 @@ const LitPathAI = () => {
                                                     ))}
                                                 </div>
                                                 <button
-                                                    onClick={() => handleSearch(result.query, true)}
+                                                    onClick={() => {
+                                                        setSearchQuery(result.query);
+                                                        handleSearch(result.query, true);
+                                                    }}
                                                     disabled={loading}
-                                                    className={`flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg transition-colors ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-50"} text-gray-700`}
+                                                    className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg transition-colors hover:bg-gray-50 text-gray-700"
                                                 >
                                                     <RefreshCw size={18} />
-                                                    <span>{loading ? "Loading..." : "Try again"}</span>
+                                                    <span>Try again</span>
                                                 </button>
                                             </div>
                                         )}
 
-                                        {/* Related Questions - only show for the latest result */}
-                                        {historyIndex === conversationHistory.length - 1 && result.relatedQuestions.length > 0 && (
-                                            <div>
+                                        {/* Loading indicator - show after the latest result */}
+                                        {historyIndex === conversationHistory.length - 1 && loading && (
+                                            <div className="text-center text-[#1E74BC] text-lg mt-8">
+                                                <div className="animate-spin inline-block w-8 h-8 border-4 border-[#1E74BC] border-t-transparent rounded-full mr-2"></div>
+                                                Searching for insights...
+                                            </div>
+                                        )}
+                                        
+                                        {/* Error message - show after the latest result */}
+                                        {historyIndex === conversationHistory.length - 1 && error && (
+                                            <div className="text-center text-red-600 text-lg mt-8 p-4 bg-red-50 rounded-lg border border-red-200">
+                                                {error}
+                                            </div>
+                                        )}
+
+                                        {/* Related Questions - only show for the latest result and not while loading */}
+                                        {historyIndex === conversationHistory.length - 1 && !loading && result.relatedQuestions.length > 0 && (
+                                            <div className="mt-8">
                                                 <h3 className="text-xl font-semibold text-gray-800 mb-5">Related research questions</h3>
                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                                                     {result.relatedQuestions.map((question, index) => (
@@ -978,22 +1014,8 @@ const LitPathAI = () => {
                                 ))}
                             </div>
 
-                            {/* Loading indicator for follow-up questions */}
-                            {loading && (
-                                <div className="text-center text-[#1E74BC] text-lg mt-8">
-                                    <div className="animate-spin inline-block w-8 h-8 border-4 border-[#1E74BC] border-t-transparent rounded-full mr-2"></div>
-                                    Searching for insights...
-                                </div>
-                            )}
-                            
-                            {error && (
-                                <div className="text-center text-red-600 text-lg mt-8 p-4 bg-red-50 rounded-lg border border-red-200">
-                                    {error}
-                                </div>
-                            )}
-
                             {/* Fixed Bottom Search Bar */}
-                            <div className="fixed bottom-0 left-[518px] right-0 p-4 z-40">
+                            <div className="fixed bottom-0 left-[534.5px] right-0 z-40">
                                 <div className="max-w-5xl ml-8">
                                     <div className="bg-white rounded-lg shadow-md p-3 border border-gray-300">
                                         {/* Search Bar */}
