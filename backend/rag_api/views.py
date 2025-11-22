@@ -188,3 +188,171 @@ class SearchView(APIView):
                 {"error": str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+
+
+# ============= Bookmark Views =============
+from rest_framework.decorators import api_view
+from .models import Bookmark, ResearchHistory, Feedback
+from .serializers import BookmarkSerializer, ResearchHistorySerializer, FeedbackSerializer
+from django.utils import timezone
+from datetime import timedelta
+
+
+def cleanup_expired_data(model_class):
+    """Delete records older than 30 days"""
+    thirty_days_ago = timezone.now() - timedelta(days=30)
+    
+    # Use appropriate timestamp field based on model
+    if model_class == Bookmark:
+        deleted_count, _ = model_class.objects.filter(bookmarked_at__lt=thirty_days_ago).delete()
+    else:
+        deleted_count, _ = model_class.objects.filter(created_at__lt=thirty_days_ago).delete()
+    
+    return deleted_count
+
+
+@api_view(['GET', 'POST'])
+def bookmarks_view(request):
+    """
+    GET: List all bookmarks for a user
+    POST: Create a new bookmark
+    """
+    # Auto-cleanup expired bookmarks
+    cleanup_expired_data(Bookmark)
+    
+    user_id = request.query_params.get('user_id') or request.data.get('user_id')
+    
+    if not user_id:
+        return Response(
+            {"error": "user_id is required"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+    
+    if request.method == 'GET':
+        bookmarks = Bookmark.objects.filter(user_id=user_id)
+        serializer = BookmarkSerializer(bookmarks, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    elif request.method == 'POST':
+        serializer = BookmarkSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['DELETE'])
+def bookmark_delete_view(request, bookmark_id):
+    """Delete a specific bookmark"""
+    try:
+        bookmark = Bookmark.objects.get(id=bookmark_id)
+        bookmark.delete()
+        return Response(
+            {"message": "Bookmark deleted successfully"},
+            status=status.HTTP_200_OK
+        )
+    except Bookmark.DoesNotExist:
+        return Response(
+            {"error": "Bookmark not found"},
+            status=status.HTTP_404_NOT_FOUND
+        )
+
+
+@api_view(['DELETE'])
+def bookmark_delete_by_file_view(request):
+    """Delete bookmark by file path"""
+    user_id = request.query_params.get('user_id')
+    file = request.query_params.get('file')
+    
+    if not user_id or not file:
+        return Response(
+            {"error": "user_id and file are required"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+    
+    deleted_count, _ = Bookmark.objects.filter(user_id=user_id, file=file).delete()
+    
+    return Response(
+        {"message": f"{deleted_count} bookmark(s) deleted"},
+        status=status.HTTP_200_OK
+    )
+
+
+# ============= Research History Views =============
+
+@api_view(['GET', 'POST'])
+def research_history_view(request):
+    """
+    GET: List all research history for a user
+    POST: Create a new research history session
+    """
+    # Auto-cleanup expired history
+    cleanup_expired_data(ResearchHistory)
+    
+    user_id = request.query_params.get('user_id') or request.data.get('user_id')
+    
+    if not user_id:
+        return Response(
+            {"error": "user_id is required"},
+            status=status.HTTP_400_BAD_REQUEST
+        )
+    
+    if request.method == 'GET':
+        history = ResearchHistory.objects.filter(user_id=user_id)
+        serializer = ResearchHistorySerializer(history, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    elif request.method == 'POST':
+        serializer = ResearchHistorySerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['DELETE'])
+def research_history_delete_view(request, session_id):
+    """Delete a specific research history session"""
+    try:
+        history = ResearchHistory.objects.get(session_id=session_id)
+        history.delete()
+        return Response(
+            {"message": "Research history deleted successfully"},
+            status=status.HTTP_200_OK
+        )
+    except ResearchHistory.DoesNotExist:
+        return Response(
+            {"error": "Research history not found"},
+            status=status.HTTP_404_NOT_FOUND
+        )
+
+
+# ============= Feedback Views =============
+
+@api_view(['GET', 'POST'])
+def feedback_view(request):
+    """
+    GET: List all feedback (for analytics)
+    POST: Submit new feedback
+    """
+    # Auto-cleanup expired feedback
+    cleanup_expired_data(Feedback)
+    
+    if request.method == 'GET':
+        # Optional: filter by user_id for user-specific feedback
+        user_id = request.query_params.get('user_id')
+        if user_id:
+            feedback = Feedback.objects.filter(user_id=user_id)
+        else:
+            # For admin analytics - get all feedback
+            feedback = Feedback.objects.all()
+        
+        serializer = FeedbackSerializer(feedback, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    elif request.method == 'POST':
+        serializer = FeedbackSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
