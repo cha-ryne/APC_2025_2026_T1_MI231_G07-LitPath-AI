@@ -85,14 +85,22 @@ import dj_database_url
 DATABASE_URL = os.getenv('DATABASE_URL')
 
 if DATABASE_URL:
-    # Use Supabase connection string
+    # Use Supabase connection string with optimized settings
     DATABASES = {
         'default': dj_database_url.config(
             default=DATABASE_URL,
-            conn_max_age=600,
-            conn_health_checks=True,
+            conn_max_age=0,  # Close connections immediately after request
+            conn_health_checks=False,  # Disable health checks to reduce connection overhead
         )
     }
+    # Add connection settings to handle timeouts and pooling
+    DATABASES['default']['OPTIONS'] = {
+        'connect_timeout': 30,  # Increased timeout
+        'options': '-c statement_timeout=30000',  # 30 second query timeout
+    }
+    DATABASES['default']['CONN_MAX_AGE'] = 0  # Don't keep connections open
+    DATABASES['default']['ATOMIC_REQUESTS'] = False  # Don't wrap in transactions
+    DATABASES['default']['AUTOCOMMIT'] = True
 else:
     # Fallback to individual settings or SQLite for local development
     DATABASES = {

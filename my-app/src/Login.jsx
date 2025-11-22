@@ -1,16 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { useNavigate, Link } from 'react-router-dom';
 import dostLogo from "./components/images/dost-logo.png";
 
+const API_BASE_URL = 'http://localhost:8001/api';
+
 const Login = () => {
     const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        console.log("Admin login attempted. Redirecting to dashboard.");
+        setError('');
+        setIsLoading(true);
 
-        navigate('/admin/dashboard');
+        try {
+            const response = await fetch(`${API_BASE_URL}/admin/login/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Store admin info in localStorage
+                localStorage.setItem('admin_user', JSON.stringify(data.admin));
+                console.log('Login successful:', data.admin);
+                
+                // Redirect to dashboard
+                navigate('/admin/dashboard');
+            } else {
+                setError(data.message || 'Login failed');
+            }
+        } catch (err) {
+            console.error('Login error:', err);
+            setError('Connection error. Please ensure the backend server is running.');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -36,6 +67,13 @@ const Login = () => {
             <div className="flex justify-center items-center flex-1 py-10 px-4">
                 <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-xl text-center">
                     <h2 className="text-3xl font-bold text-gray-800 mb-8">Hello, Librarian!</h2>
+                    
+                    {error && (
+                        <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+                            {error}
+                        </div>
+                    )}
+                    
                     <form onSubmit={handleLogin} className="space-y-6">
                         <div>
                             <label htmlFor="email" className="sr-only">Email</label>
@@ -43,9 +81,12 @@ const Login = () => {
                                 type="email"
                                 id="email"
                                 name="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 placeholder="Enter your email address"
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-500"
                                 required
+                                disabled={isLoading}
                             />
                         </div>
                         <div>
@@ -54,16 +95,20 @@ const Login = () => {
                                 type="password"
                                 id="password"
                                 name="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Enter your password"
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-500"
                                 required
+                                disabled={isLoading}
                             />
                         </div>
                         <button
                             type="submit"
-                            className="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold text-lg shadow-md"
+                            disabled={isLoading}
+                            className="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed"
                         >
-                            Log In
+                            {isLoading ? 'Logging in...' : 'Log In'}
                         </button>
                     </form>
                     <div className="mt-6 text-sm">

@@ -2,8 +2,34 @@ from django.db import models
 from django.utils import timezone
 from datetime import timedelta
 import uuid
+from django.contrib.auth.hashers import make_password, check_password
 
 # Models for LitPath AI - Matches existing Supabase schema
+
+class AdminUser(models.Model):
+    """Admin users with credentials for login"""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    email = models.EmailField(unique=True, max_length=255)
+    password = models.CharField(max_length=255)  # Will store hashed password
+    full_name = models.CharField(max_length=255, blank=True, null=True)
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_login = models.DateTimeField(blank=True, null=True)
+    
+    class Meta:
+        db_table = 'admin_users'
+        ordering = ['-created_at']
+    
+    def set_password(self, raw_password):
+        """Hash and set password"""
+        self.password = make_password(raw_password)
+    
+    def check_password(self, raw_password):
+        """Verify password"""
+        return check_password(raw_password, self.password)
+    
+    def __str__(self):
+        return self.email
 
 class Bookmark(models.Model):
     """User bookmarks for research papers - Auto-delete after 30 days"""

@@ -5,6 +5,7 @@ from .views import (
     research_history_view, research_history_delete_view,
     feedback_view
 )
+from .admin_views import admin_login_view, admin_users_view, admin_user_delete_view
 
 urlpatterns = [
     # Support both with and without trailing slashes
@@ -29,4 +30,11 @@ urlpatterns = [
     # Feedback
     path('feedback/', feedback_view, name='feedback'),
     path('feedback', feedback_view, name='feedback-no-slash'),
+    
+    # Admin Authentication & Management
+    path('admin/login/', admin_login_view, name='admin-login'),
+    path('admin/login', admin_login_view, name='admin-login-no-slash'),
+    path('admin/users/', admin_users_view, name='admin-users'),
+    path('admin/users', admin_users_view, name='admin-users-no-slash'),
+    path('admin/users/<uuid:admin_id>/', admin_user_delete_view, name='admin-user-delete'),
 ]

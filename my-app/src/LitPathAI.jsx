@@ -699,44 +699,24 @@ const LitPathAI = () => {
         });
 
         try {
-            // Save to Django backend
-            try {
-                const response = await fetch(`${API_BASE_URL}/feedback/`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        user_id: userId,
-                        query: searchQuery,
-                        rating: rating,
-                        relevant: feedbackRelevant,
-                        comment: feedbackComment
-                    })
-                });
-                
-                if (!response.ok) {
-                    console.error('❌ Django feedback error:', await response.text());
-                    // Don't throw - fallback to localStorage
-                } else {
-                    console.log('✅ Feedback saved to Django backend successfully!');
-                }
-            } catch (error) {
-                console.error('Error saving feedback to Django:', error);
-            }
-
-            // Also save to localStorage as backup
-            const feedback = {
-                userId: userId,
-                query: searchQuery,
-                rating: rating,
-                relevant: feedbackRelevant,
-                comment: feedbackComment,
-                timestamp: new Date().toISOString()
-            };
+            // Save to Django backend only
+            const response = await fetch(`${API_BASE_URL}/feedback/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    user_id: userId,
+                    query: searchQuery,
+                    rating: rating,
+                    relevant: feedbackRelevant,
+                    comment: feedbackComment
+                })
+            });
             
-            const existingFeedback = JSON.parse(localStorage.getItem('litpath_feedback') || '[]');
-            existingFeedback.push(feedback);
-            localStorage.setItem('litpath_feedback', JSON.stringify(existingFeedback));
-            console.log('✅ Feedback saved to localStorage');
+            if (!response.ok) {
+                throw new Error(`Failed to save feedback: ${await response.text()}`);
+            }
+            
+            console.log('✅ Feedback saved to Django backend successfully!');
 
             // Reset and close
             setShowRatingOverlay(false);
