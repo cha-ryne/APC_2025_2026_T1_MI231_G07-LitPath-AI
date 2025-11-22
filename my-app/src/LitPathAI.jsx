@@ -435,17 +435,20 @@ const LitPathAI = () => {
                 overview: overview || 'No overview available.',
                 sources: formattedSources,
                 relatedQuestions: related_questions || [],
+                
             };
 
             setConversationHistory(prev => [...prev, newResult]);
             setSearchResults(newResult);
             setIsFollowUpSearch(true);
+            setSearchQuery(''); 
 
         } catch (err) {
             console.error("Search failed:", err);
             setError(`Search failed: ${err.message}`);
         } finally {
             setLoading(false);
+
         }
     };
 
