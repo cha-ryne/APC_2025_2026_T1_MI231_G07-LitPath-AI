@@ -7,7 +7,7 @@ import { Bookmark } from "lucide-react";
 import { Copy } from 'lucide-react';
 
 
-const API_BASE_URL = 'http://localhost:8001/api';
+const API_BASE_URL = 'http://localhost:8000/api';
 const LitPathAI = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedSubject, setSelectedSubject] = useState('All subjects');
@@ -272,7 +272,7 @@ const LitPathAI = () => {
     const removeFromDjango = async (file) => {
         try {
             const response = await fetch(
-                `${API_BASE_URL}/bookmarks/by-file/?user_id=${userId}&file=${encodeURIComponent(file)}`,
+                `${API_BASE_URL}/bookmarks/delete-by-file/?user_id=${userId}&file=${encodeURIComponent(file)}`,
                 { method: 'DELETE' }
             );
             

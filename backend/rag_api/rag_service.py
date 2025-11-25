@@ -7,7 +7,7 @@ import os
 import glob
 import json
 import numpy as np
-import requests
+from google import genai
 import re
 from PyPDF2 import PdfReader
 from sentence_transformers import SentenceTransformer
@@ -555,25 +555,19 @@ class RAGService:
             
             full_prompt = f"{context}Question: {prompt_text}\nAnswer: "
             
-            url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
-            headers = {
-                "Content-Type": "application/json",
-                "X-goog-api-key": self.api_key
-            }
-            data = {
-                "contents": [{
-                    "parts": [{"text": full_prompt}]
-                }],
-                "generationConfig": {
-                    "temperature": 0.3,
-                    "maxOutputTokens": 1600
-                }
-            }
+            # Use new Google GenAI SDK
+            client = genai.Client(api_key=self.api_key)
             
-            response = requests.post(url, headers=headers, json=data)
-            response.raise_for_status()
-            result = response.json()
-            raw_answer = result['candidates'][0]['content']['parts'][0]['text'].strip()
+            response = client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=full_prompt,
+                config={
+                    "temperature": 0.3,
+                    "max_output_tokens": 1600
+                }
+            )
+            
+            raw_answer = response.text.strip()
             
             # Post-process answer (reference rearrangement logic)
             answer = self._process_answer_references(raw_answer, seen_pdfs, top_chunks)
