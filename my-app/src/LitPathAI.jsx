@@ -809,9 +809,9 @@ const LitPathAI = () => {
                             <>
                                 <p className="text-xs text-gray-500 mb-2">Today</p>
                                 <div className="space-y-2">
-                                    {researchHistory.slice(0, 3).map((session) => (
+                                    {researchHistory.slice(0, 3).map((session, index) => (
                                         <div
-                                            key={session.id}
+                                            key={`${session.id}-${index}`}
                                             className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-3 hover:border-[#1E74BC] hover:shadow-sm transition-all cursor-pointer group"
                                             onClick={() => loadHistorySession(session)}
                                         >
