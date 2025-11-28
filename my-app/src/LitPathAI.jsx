@@ -39,6 +39,7 @@ const LitPathAI = () => {
     const [showResearchHistory, setShowResearchHistory] = useState(false);
     const [currentSessionId, setCurrentSessionId] = useState(null);
     const [hasSearchedInSession, setHasSearchedInSession] = useState(false);
+    const [isLoadedFromHistory, setIsLoadedFromHistory] = useState(false);
 
 
     const subjects = [
@@ -452,6 +453,7 @@ const LitPathAI = () => {
             setIsFollowUpSearch(true);
             setCurrentSessionId(session.id);
             setHasSearchedInSession(true);
+            setIsLoadedFromHistory(true); // Mark as loaded from history to prevent duplicate save
         } else {
             // Fallback for old sessions without full conversation history - re-run the search
             const queryToLoad = session.mainQuery || session.query;
@@ -459,6 +461,7 @@ const LitPathAI = () => {
             if (session.subjects) setSelectedSubject(session.subjects);
             if (session.dateFilter) setSelectedDate(session.dateFilter);
             handleSearch(queryToLoad);
+            setIsLoadedFromHistory(false); // This will create a new session
         }
         setShowResearchHistory(false);
     };
@@ -612,29 +615,145 @@ const LitPathAI = () => {
     const generateCitation = (style) => {
         if (!selectedSource) return;
         
-        const author = selectedSource.author || "Unknown Author";
+        let author = selectedSource.author || "Unknown Author";
         const year = selectedSource.year || "n.d.";
         const title = selectedSource.title || "Untitled";
-        const school = selectedSource.school || "Unknown Institution";
-        const degree = selectedSource.degree || "Thesis";
+        let school = selectedSource.school || "Unknown Institution";
+        let degree = selectedSource.degree || "Thesis";
+        
+        // Only convert school to title case if it's all caps (don't modify otherwise)
+        if (school === school.toUpperCase()) {
+            const lowercaseWords = ['of', 'the', 'and', 'in', 'at', 'to', 'for', 'a', 'an'];
+            school = school.split(' ').map((word, index) => {
+                // Always capitalize first word and words after hyphens
+                if (index === 0 || word.includes('-')) {
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                }
+                // Lowercase articles and prepositions
+                if (lowercaseWords.includes(word.toLowerCase())) {
+                    return word.toLowerCase();
+                }
+                return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+            }).join(' ');
+        }
+        
+        // Helper to convert to proper title case
+        const toTitleCase = (str) => {
+            return str.split(' ').map(word => 
+                word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+            ).join(' ');
+        };
+        
+        // Parse author name intelligently (handle compound last names like "De Leon")
+        const parseAuthorName = (name) => {
+            // Common Spanish/Filipino prefixes in last names
+            const lastNamePrefixes = ['de', 'del', 'dela', 'de la', 'san', 'santa', 'van', 'von', 'da'];
+            const parts = name.split(/\s+/);
+            
+            // Find where the last name starts (look for lowercase prefixes)
+            let lastNameStartIndex = parts.length - 1;
+            for (let i = parts.length - 2; i >= 0; i--) {
+                if (lastNamePrefixes.includes(parts[i].toLowerCase())) {
+                    lastNameStartIndex = i;
+                } else {
+                    break;
+                }
+            }
+            
+            const firstNames = parts.slice(0, lastNameStartIndex);
+            const lastName = parts.slice(lastNameStartIndex);
+            
+            return { firstNames, lastName };
+        };
+        
+        // Format author name based on citation style
+        const formatAuthorAPA = (name) => {
+            // "De Leon, D. C. A."
+            const { firstNames, lastName } = parseAuthorName(name);
+            const initials = firstNames.map(n => n.charAt(0).toUpperCase() + '.').join(' ');
+            const lastNameFormatted = lastName.map(toTitleCase).join(' ');
+            return `${lastNameFormatted}, ${initials}`;
+        };
+        
+        const formatAuthorMLA = (name) => {
+            // "De Leon, Deborah Christine A."
+            const { firstNames, lastName } = parseAuthorName(name);
+            const firstNamesFormatted = firstNames.map(toTitleCase).join(' ');
+            const lastNameFormatted = lastName.map(toTitleCase).join(' ');
+            // Remove double periods from initials
+            return `${lastNameFormatted}, ${firstNamesFormatted}`.replace(/\.\.+/g, '.');
+        };
+        
+        const formatAuthorIEEE = (name) => {
+            // "D. C. A. De Leon"
+            const { firstNames, lastName } = parseAuthorName(name);
+            const initials = firstNames.map(n => n.charAt(0).toUpperCase() + '.').join(' ');
+            const lastNameFormatted = lastName.map(toTitleCase).join(' ');
+            return `${initials} ${lastNameFormatted}`;
+        };
+        
+        // Convert title to sentence case (first word and proper nouns capitalized)
+        const toSentenceCase = (str) => {
+            // Preserve content in brackets and scientific names
+            const lowerStr = str.toLowerCase();
+            let result = lowerStr.charAt(0).toUpperCase() + lowerStr.slice(1);
+            
+            // Capitalize first letter after punctuation
+            result = result.replace(/([.!?]\s+)([a-z])/g, (match, p1, p2) => p1 + p2.toUpperCase());
+            
+            // Capitalize first word after colon
+            result = result.replace(/:\s+([a-z])/g, (match, p1) => ': ' + p1.toUpperCase());
+            
+            // Preserve proper nouns and geographic locations
+            result = result.replace(/\bphilippine\b/gi, 'Philippine');
+            result = result.replace(/\bphilippines\b/gi, 'Philippines');
+            result = result.replace(/\btacloban\b/gi, 'Tacloban');
+            result = result.replace(/\bleyte\b/gi, 'Leyte');
+            result = result.replace(/\bmanila\b/gi, 'Manila');
+            result = result.replace(/\bcebu\b/gi, 'Cebu');
+            result = result.replace(/\bdavao\b/gi, 'Davao');
+            result = result.replace(/\bcity\b/gi, 'City');
+            
+            // Preserve acronyms and scientific notation
+            result = result.replace(/\bipb\b/gi, 'IPB');
+            result = result.replace(/\bvar\b/gi, 'Var');
+            
+            // Preserve scientific names in brackets: [Genus species (Author) Author]
+            result = result.replace(/\[([a-z])/gi, (match, p1) => '[' + p1.toUpperCase());
+            result = result.replace(/\[([A-Z][a-z]+)\s+([a-z])/g, (match, p1, p2) => 
+                '[' + p1 + ' ' + p2.toLowerCase()
+            );
+            // Capitalize taxonomic authors (e.g., "L.", "Skeels")
+            result = result.replace(/\(([a-z])\.\)/gi, (match, p1) => '(' + p1.toUpperCase() + '.)');
+            result = result.replace(/\)\s+([a-z])/g, (match, p1) => ') ' + p1.charAt(0).toUpperCase() + p1.slice(1).toLowerCase());
+            
+            return result;
+        };
+        
         let citation = "";
         switch (style) {
             case "APA":
-                // APA 7th: Author, A. A. (Year). Title in sentence case [Doctoral dissertation, Institution].
-                // Note: Title should be in sentence case in real implementation
-                citation = `${author}. (${year}). ${title} [${degree}, ${school}].`;
+                // APA 7th: De Leon, D. C. A. (Year). Title in sentence case [Degree type, Institution].
+                const apaAuthor = formatAuthorAPA(author);
+                const apaTitle = toSentenceCase(title);
+                citation = `${apaAuthor} (${year}). ${apaTitle} [${degree}, ${school}].`;
                 break;
             case "MLA":
-                // MLA 9th: Author. Title. Degree Type, Institution, Year.
-                citation = `${author}. ${title}. ${degree}, ${school}, ${year}.`;
+                // MLA 9th: De Leon, Deborah Christine A. Title. Year. Institution, Degree type.
+                const mlaAuthor = formatAuthorMLA(author);
+                citation = `${mlaAuthor}. ${title}. ${year}. ${school}, ${degree}.`;
                 break;
             case "Chicago":
-                // Chicago: Author. Year. "Title." Degree Type, Institution.
-                citation = `${author}. ${year}. "${title}." ${degree}, ${school}.`;
+                // Chicago: De Leon, Deborah Christine A. Year. "Title." Degree type, Institution.
+                const chicagoAuthor = formatAuthorMLA(author);
+                citation = `${chicagoAuthor}. ${year}. "${title}." ${degree}, ${school}.`;
                 break;
             case "IEEE":
-                // IEEE: A. Author, "Title," Degree abbreviation, Institution, Year.
-                citation = `${author}, "${title}," ${degree}, ${school}, ${year}.`;
+                // IEEE: D. C. A. De Leon, "Title," Degree abbreviation, Institution, Location, Year.
+                const ieeeAuthor = formatAuthorIEEE(author);
+                const ieeeDegree = degree === "Master's thesis" ? "M.S. thesis" : 
+                                  degree === "Doctoral dissertation" ? "Ph.D. dissertation" : degree;
+                citation = `${ieeeAuthor}, "${title}," ${ieeeDegree}, ${school}, Philippines, ${year}.`;
                 break;
             default:
                 citation = "";
@@ -642,8 +761,8 @@ const LitPathAI = () => {
         setGeneratedCitation(citation);
     };
     const handleNewChat = async () => {
-        // Save current session to history if user has searched
-        if (hasSearchedInSession && searchResults) {
+        // Save current session to history ONLY if user has searched AND it's not loaded from history
+        if (hasSearchedInSession && searchResults && !isLoadedFromHistory) {
             await saveCurrentSessionToHistory();
         }
         
@@ -662,6 +781,7 @@ const LitPathAI = () => {
         setLoading(false);
         setError(null);
         setHasSearchedInSession(false);
+        setIsLoadedFromHistory(false);
         setCurrentSessionId(generateSessionId());
     };
     const renderStars = (ratingValue, onRate) => {
@@ -778,7 +898,12 @@ const LitPathAI = () => {
                     </div>
                     <button
                         onClick={handleNewChat}
-                        className="w-full bg-[#1E74BC] text-white py-3 px-4 rounded-lg mb-4 hover:bg-[#155a8f] transition-colors font-semibold shadow-md"
+                        disabled={!hasSearchedInSession}
+                        className={`w-full py-3 px-4 rounded-lg mb-4 transition-colors font-semibold shadow-md ${
+                            hasSearchedInSession 
+                                ? 'bg-[#1E74BC] text-white hover:bg-[#155a8f] cursor-pointer' 
+                                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                        }`}
                     >
                         Start a new chat
                     </button>

@@ -15,6 +15,55 @@ import chromadb
 from django.conf import settings
 import sys
 
+
+def format_metadata_capitalization(text, field_type='default'):
+    """Format metadata text with proper capitalization - only fixes ALL CAPS text
+    
+    Args:
+        text: The text to format
+        field_type: Type of field - 'author', 'title', 'university', 'degree', or 'default'
+    """
+    if not text or text in ['[Unknown]', '[Unknown Author]', '[Unknown Title]']:
+        return text
+    
+    # Helper to convert to title case with lowercase articles/prepositions
+    def smart_title_case(s):
+        lowercase_words = ['of', 'the', 'and', 'in', 'at', 'to', 'for', 'a', 'an', 'with', 'on', 'by']
+        # Compound name prefixes that should be capitalized
+        compound_prefixes = ['de', 'del', 'dela', 'de la', 'van', 'von', 'da', 'san', 'santa', 'mc', 'mac']
+        # Common credentials that should stay uppercase
+        credentials = ['rnd', 'phd', 'md', 'dvm', 'ms', 'ma', 'bs', 'ba', 'jr', 'sr', 'ii', 'iii', 'iv']
+        
+        words = s.split()
+        result = []
+        for i, word in enumerate(words):
+            word_lower = word.lower()
+            
+            # Check if it's a credential (preserve uppercase)
+            if word_lower in credentials:
+                result.append(word.upper())
+            # Handle hyphenated words (e.g., Campañano-Bernardo)
+            elif '-' in word:
+                parts = word.split('-')
+                capitalized_parts = [part.capitalize() for part in parts]
+                result.append('-'.join(capitalized_parts))
+            # Handle compound name prefixes (De, Del, Van, etc.)
+            elif i > 0 and word_lower in compound_prefixes:
+                result.append(word.capitalize())
+            # Always capitalize first word
+            elif i == 0 or word_lower not in lowercase_words:
+                result.append(word.capitalize())
+            else:
+                result.append(word.lower())
+        return ' '.join(result)
+    
+    # Only convert ALL CAPS text to proper case
+    if text.isupper():
+        return smart_title_case(text)
+    
+    # Otherwise return original text (already properly formatted)
+    return text.strip()
+
 # Add parent directory to path to import extract_metadata
 sys.path.append(os.path.join(settings.BASE_DIR.parent, 'RAG'))
 from extract_metadata import extract_thesis_metadata
@@ -420,16 +469,35 @@ class RAGService:
             
             # Only add if relevance score is good enough
             if score < distance_threshold and file_name:
+                # Format metadata with proper capitalization
+                author = format_metadata_capitalization(
+                    meta.get("author", "[Unknown Author]"), 
+                    field_type='author'
+                )
+                title = format_metadata_capitalization(
+                    meta.get("title", "[Unknown Title]"),
+                    field_type='title'
+                )
+                university = format_metadata_capitalization(
+                    meta.get("university", ""),
+                    field_type='university'
+                )
+                degree = format_metadata_capitalization(
+                    meta.get("degree", "Thesis"),
+                    field_type='degree'
+                )
+                
                 doc = {
-                    "title": meta.get("title", "[Unknown Title]"),
-                    "author": meta.get("author", "[Unknown Author]"),
+                    "title": title,
+                    "author": author,
                     "publication_year": doc_year,
                     "abstract": meta.get("abstract", ""),
                     "file": file_name,
-                    "degree": meta.get("degree", "Thesis"),
+                    "degree": degree,
                     "call_no": meta.get("call_no", ""),
                     "subjects": meta.get("subjects", ""),
-                    "university": meta.get("university", "")
+                    "university": university,
+                    "school": university  # Add 'school' alias for frontend compatibility
                 }
                 documents.append(doc)
                 seen_files.add(file_name)

@@ -86,9 +86,10 @@ def extract_thesis_metadata(text):
             meta["author"] = l.strip()
             break
 
-    # Degree: look for 'Master', 'Doctor', etc.
+    # Degree: look for specific degree patterns like "Master of Science in X", "Doctor of Philosophy in Y"
+    # Must contain "Master of", "Doctor of", or "Bachelor of" to be a valid degree line
     for l in lines:
-        if re.search(r'(Master|Doctor|Bachelor|Philosophy|Science|Arts|Engineering)', l, re.I):
+        if re.search(r'\b(Master|Doctor|Bachelor)\s+of\s+(Science|Philosophy|Arts|Engineering|Technology)', l, re.I):
             meta["degree"] = l.strip()
             break
 

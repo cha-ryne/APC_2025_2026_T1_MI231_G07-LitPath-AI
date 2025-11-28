@@ -2,6 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .rag_service import RAGService
+import time
 
 
 class FiltersView(APIView):
@@ -147,7 +148,11 @@ class SearchView(APIView):
             # RAG system is already initialized on startup
             rag = RAGService()
             
+            # Track timing
+            start_time = time.time()
+            
             # Search for relevant chunks with filters
+            search_start = time.time()
             top_chunks, documents, distance_threshold = rag.search(
                 question,
                 subjects=subjects if subjects else None,
@@ -155,9 +160,17 @@ class SearchView(APIView):
                 year_start=year_start,
                 year_end=year_end
             )
+            search_time = time.time() - search_start
+            print(f"[RAG] Search took {search_time:.2f}s")
             
             # Generate AI overview
+            generate_start = time.time()
             overview = rag.generate_overview(top_chunks, question, distance_threshold)
+            generate_time = time.time() - generate_start
+            print(f"[RAG] AI generation took {generate_time:.2f}s")
+            
+            total_time = time.time() - start_time
+            print(f"[RAG] Total time: {total_time:.2f}s")
             
             # If no relevant chunks, clean up
             if not any(c["score"] < distance_threshold for c in top_chunks):
