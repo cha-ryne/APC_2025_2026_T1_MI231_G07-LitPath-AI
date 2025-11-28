@@ -20,7 +20,7 @@ media/
 staticfiles/
 
 # Environment variables
-.env
+backend/user_data/.env
 .env.local
 *.env
 

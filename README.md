@@ -10,11 +10,26 @@
 
 ## 🚀 Quick Start
 
+### ⚠️ First Time Setup - IMPORTANT!
+
+**1. Setup Environment Variables:**
+```powershell
+# Copy the example file
+Copy-Item backend\.env.example backend\.env
+
+# Edit backend\.env with your own credentials:
+# - Get Gemini API key from: https://aistudio.google.com/app/apikey
+# - Get Supabase credentials from your Supabase dashboard
+```
+
+**🔒 SECURITY WARNING:** Never commit `.env` files to git! See `SECURITY_SETUP.md` for details.
+
 ### Backend (Django)
 ```powershell
 cd backend
 pip install -r requirements.txt
 python manage.py migrate
+python manage.py seed_admins  # Create default admin accounts
 python manage.py runserver
 ```
 Backend runs at: `http://localhost:8000`
