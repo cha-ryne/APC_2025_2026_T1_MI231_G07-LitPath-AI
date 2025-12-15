@@ -9,6 +9,7 @@ import json
 import numpy as np
 from google import genai
 import re
+import time
 from PyPDF2 import PdfReader
 from sentence_transformers import SentenceTransformer
 import chromadb
@@ -573,6 +574,7 @@ class RAGService:
         try:
             return self._prompt_chain(chunks_for_overview, [question])
         except Exception as e:
+            
             return f"[Gemini error: {e}]"
     
     def _prompt_chain(self, top_chunks, prompts):
@@ -623,17 +625,23 @@ class RAGService:
             
             full_prompt = f"{context}Question: {prompt_text}\nAnswer: "
             
-            # Use new Google GenAI SDK
+            # Use new Google GenAI SDK 
             client = genai.Client(api_key=self.api_key)
             
-            response = client.models.generate_content(
-                model="gemini-2.0-flash",
-                contents=full_prompt,
-                config={
-                    "temperature": 0.3,
-                    "max_output_tokens": 1600
-                }
-            )
+            print(f"DEBUG: Actually requesting model -> gemini-2.5-flash")
+            print(f"DEBUG: Context length: {len(full_prompt)} characters")
+            try:
+                response = client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=full_prompt,
+                    config={
+                        "temperature": 0.3,
+                        "max_output_tokens": 1600
+                    }
+                )
+            except Exception as e:
+                print(f"FAILED. Error details: {e}")
+                raise
             
             raw_answer = response.text.strip()
             
