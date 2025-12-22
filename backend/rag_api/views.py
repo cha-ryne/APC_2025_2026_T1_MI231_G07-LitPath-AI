@@ -207,32 +207,12 @@ class SearchView(APIView):
 from rest_framework.decorators import api_view
 from .models import Bookmark, ResearchHistory, Feedback
 from .serializers import BookmarkSerializer, ResearchHistorySerializer, FeedbackSerializer
-from django.utils import timezone
-from datetime import timedelta
-
-
-def cleanup_expired_data(model_class):
-    """Delete records older than 30 days"""
-    thirty_days_ago = timezone.now() - timedelta(days=30)
-    
-    # Use appropriate timestamp field based on model
-    if model_class == Bookmark:
-        deleted_count, _ = model_class.objects.filter(bookmarked_at__lt=thirty_days_ago).delete()
-    else:
-        deleted_count, _ = model_class.objects.filter(created_at__lt=thirty_days_ago).delete()
-    
-    return deleted_count
-
-
 @api_view(['GET', 'POST'])
 def bookmarks_view(request):
     """
     GET: List all bookmarks for a user
     POST: Create a new bookmark
     """
-    # Auto-cleanup expired bookmarks
-    cleanup_expired_data(Bookmark)
-    
     user_id = request.query_params.get('user_id') or request.data.get('user_id')
     
     if not user_id:
@@ -299,9 +279,6 @@ def research_history_view(request):
     GET: List all research history for a user
     POST: Create a new research history session
     """
-    # Auto-cleanup expired history
-    cleanup_expired_data(ResearchHistory)
-    
     user_id = request.query_params.get('user_id') or request.data.get('user_id')
     
     if not user_id:
@@ -348,9 +325,6 @@ def feedback_view(request):
     GET: List all feedback (for analytics)
     POST: Submit new feedback
     """
-    # Auto-cleanup expired feedback
-    cleanup_expired_data(Feedback)
-    
     if request.method == 'GET':
         # Optional: filter by user_id for user-specific feedback
         user_id = request.query_params.get('user_id')

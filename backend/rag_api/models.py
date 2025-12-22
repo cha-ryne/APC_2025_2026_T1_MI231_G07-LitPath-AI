@@ -180,17 +180,12 @@ class Bookmark(models.Model):
         ordering = ['-bookmarked_at']
         unique_together = [['user_id', 'file']]
     
-    def is_expired(self):
-        """Check if bookmark is older than 30 days"""
-        expiry_date = self.bookmarked_at + timedelta(days=30)
-        return timezone.now() > expiry_date
-    
     def __str__(self):
         return f"{self.user_id}: {self.title}"
 
 
 class ResearchHistory(models.Model):
-    """User research session history - Auto-delete after 30 days"""
+    """User research session history"""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     session_id = models.TextField(db_index=True)
     user_id = models.TextField(db_index=True)
@@ -207,17 +202,12 @@ class ResearchHistory(models.Model):
         db_table = 'research_history'
         ordering = ['-created_at']
     
-    def is_expired(self):
-        """Check if history is older than 30 days"""
-        expiry_date = self.created_at + timedelta(days=30)
-        return timezone.now() > expiry_date
-    
     def __str__(self):
         return f"{self.user_id}: {self.query[:50]}"
 
 
 class Feedback(models.Model):
-    """User feedback - Auto-delete after 30 days"""
+    """User feedback"""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user_id = models.TextField(db_index=True)
     query = models.TextField(blank=True, null=True)
@@ -229,11 +219,6 @@ class Feedback(models.Model):
     class Meta:
         db_table = 'feedback'
         ordering = ['-created_at']
-    
-    def is_expired(self):
-        """Check if feedback is older than 30 days"""
-        expiry_date = self.created_at + timedelta(days=30)
-        return timezone.now() > expiry_date
     
     def __str__(self):
         return f"{self.user_id}: Rating {self.rating}"
