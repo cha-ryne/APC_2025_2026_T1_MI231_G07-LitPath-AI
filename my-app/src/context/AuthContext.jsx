@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import { supabase, sessionHelpers } from '../lib/supabase';
 
 const API_BASE_URL = 'http://localhost:8000/api';
 
@@ -104,8 +103,7 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem('litpath_auth_user', JSON.stringify(userData));
                 localStorage.setItem('litpath_session', JSON.stringify(sessionData));
 
-                // Also sync to Supabase for real-time features if needed
-                await syncSessionToSupabase(sessionData, userData.id);
+                // No need to sync to Supabase - Django writes directly to Supabase PostgreSQL
 
                 setUser(userData);
                 setSession(sessionData);
@@ -148,11 +146,10 @@ export const AuthProvider = ({ children }) => {
                     guest_id: data.session.guest_id
                 };
 
-                // Store guest session in both localStorage (temporary) and Supabase
+                // Store guest session in localStorage (temporary)
                 localStorage.setItem('litpath_guest_session', JSON.stringify(sessionData));
                 
-                // Sync to Supabase for data persistence
-                await syncSessionToSupabase(sessionData, null);
+                // No need to sync - Django writes directly to Supabase PostgreSQL
 
                 setUser(guestUser);
                 setSession(sessionData);
@@ -199,42 +196,16 @@ export const AuthProvider = ({ children }) => {
         return { success: true, user: guestUser };
     };
 
-    // Sync session to Supabase
-    const syncSessionToSupabase = async (sessionData, userId) => {
-        try {
-            const { error } = await supabase
-                .from('sessions')
-                .upsert({
-                    session_id: sessionData.session_id,
-                    session_is_anonymous: sessionData.is_anonymous,
-                    session_created_at: sessionData.created_at,
-                    session_last_seen: new Date().toISOString(),
-                    user_accounts_user_id: userId
-                });
-
-            if (error) {
-                console.error('Error syncing session to Supabase:', error);
-            }
-        } catch (error) {
-            console.error('Supabase sync error:', error);
-        }
-    };
-
     // Logout
     const logout = async () => {
         try {
-            // End session on backend
+            // End session on backend (Django handles Supabase PostgreSQL directly)
             if (session?.session_id) {
                 await fetch(`${API_BASE_URL}/auth/logout/`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ session_id: session.session_id })
                 });
-            }
-
-            // Clear Supabase session
-            if (session?.session_id) {
-                await sessionHelpers.deleteGuestSession(session.session_id);
             }
         } catch (error) {
             console.error('Logout error:', error);
@@ -246,13 +217,8 @@ export const AuthProvider = ({ children }) => {
     // Start new chat (for guests - clears localStorage data)
     const startNewChat = useCallback(async () => {
         if (isGuest) {
-            // Delete guest data from Supabase
-            if (session?.session_id) {
-                await sessionHelpers.deleteGuestSession(session.session_id);
-            }
-            
             // Clear all guest localStorage data for privacy on public devices
-            sessionHelpers.clearGuestLocalStorage();
+            clearGuestLocalStorage();
             
             // Create a new guest session
             return await continueAsGuest();
@@ -262,22 +228,33 @@ export const AuthProvider = ({ children }) => {
         return { success: true, user };
     }, [isGuest, session, user]);
 
+    // Clear guest localStorage helper
+    const clearGuestLocalStorage = () => {
+        const keysToRemove = [
+            'litpath_user_id',
+            'litpath_bookmarks',
+            'litpath_research_history',
+            'litpath_guest_session',
+            'litpath_conversation'
+        ];
+        keysToRemove.forEach(key => localStorage.removeItem(key));
+    };
+
     // Clear all auth data
     const clearAuthData = () => {
         localStorage.removeItem('litpath_auth_user');
         localStorage.removeItem('litpath_session');
         localStorage.removeItem('litpath_guest_session');
-        sessionHelpers.clearGuestLocalStorage();
+        clearGuestLocalStorage();
         setUser(null);
         setSession(null);
         setIsGuest(false);
     };
 
-    // Update session activity (call periodically)
+    // Update session activity (call periodically) - handled by Django/Supabase
     const updateActivity = useCallback(async () => {
-        if (session?.session_id) {
-            await sessionHelpers.updateSessionActivity(session.session_id);
-        }
+        // Activity is tracked by Django which writes to Supabase PostgreSQL
+        // No additional client-side sync needed
     }, [session]);
 
     // Get user ID for API calls
@@ -303,6 +280,61 @@ export const AuthProvider = ({ children }) => {
         return user?.role === USER_ROLES.STAFF || user?.role === USER_ROLES.ADMIN;
     }, [user]);
 
+    // Change password
+    const changePassword = async (currentPassword, newPassword) => {
+        if (!user || isGuest) {
+            return { success: false, error: 'Must be logged in to change password' };
+        }
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/auth/change-password/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    user_id: user.id,
+                    current_password: currentPassword,
+                    new_password: newPassword
+                })
+            });
+
+            const data = await response.json();
+            return { success: data.success, error: data.message };
+        } catch (error) {
+            console.error('Change password error:', error);
+            return { success: false, error: 'Connection error. Please try again.' };
+        }
+    };
+
+    // Delete account
+    const deleteAccount = async (password) => {
+        if (!user || isGuest) {
+            return { success: false, error: 'Must be logged in to delete account' };
+        }
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/auth/delete-account/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    user_id: user.id,
+                    password: password
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Clear all local data after account deletion
+                clearAuthData();
+            }
+
+            return { success: data.success, error: data.message };
+        } catch (error) {
+            console.error('Delete account error:', error);
+            return { success: false, error: 'Connection error. Please try again.' };
+        }
+    };
+
     const value = {
         user,
         session,
@@ -317,6 +349,8 @@ export const AuthProvider = ({ children }) => {
         isAuthenticated,
         hasRole,
         isStaff,
+        changePassword,
+        deleteAccount,
         USER_ROLES
     };
 

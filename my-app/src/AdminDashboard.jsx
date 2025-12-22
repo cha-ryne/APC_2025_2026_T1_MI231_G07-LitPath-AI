@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom"; 
 import { Line } from 'react-chartjs-2';
+import { useAuth } from "./context/AuthContext";
 import { 
     Chart as ChartJS, 
     CategoryScale, 
@@ -25,6 +26,12 @@ import {
     Users, 
     ChevronDown, 
     Filter,
+    Settings,
+    Eye,
+    EyeOff,
+    Trash2,
+    Key,
+    RefreshCw,
 } from "lucide-react";
 import dostLogo from "./components/images/dost-logo.png"; 
 
@@ -45,9 +52,28 @@ const formatNumber = (num) => num.toLocaleString();
 
 const AdminDashboard = () => {
     const navigate = useNavigate();
+    const { logout, user, changePassword, deleteAccount } = useAuth();
     
     const [dateRange, setDateRange] = useState('7_days'); 
-    const [filterType, setFilterType] = useState('All'); 
+    const [filterType, setFilterType] = useState('All');
+    
+    // Account Settings state
+    const [showAccountSettings, setShowAccountSettings] = useState(false);
+    const [settingsTab, setSettingsTab] = useState('password');
+    const [currentPassword, setCurrentPassword] = useState('');
+    const [newPassword, setNewPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [deletePassword, setDeletePassword] = useState('');
+    const [showCurrentPassword, setShowCurrentPassword] = useState(false);
+    const [showNewPassword, setShowNewPassword] = useState(false);
+    const [showDeletePassword, setShowDeletePassword] = useState(false);
+    const [settingsLoading, setSettingsLoading] = useState(false);
+    const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
+
+    const showToast = (message, type = 'success') => {
+        setToast({ show: true, message, type });
+        setTimeout(() => setToast({ show: false, message: '', type: 'success' }), 3000);
+    }; 
 
     // Mock statistics
     const stats = {
@@ -151,8 +177,9 @@ const AdminDashboard = () => {
         { id: 3, message: "User suggestion: Add dark mode toggle", date: "1 week ago" },
     ];
 
-    const handleLogout = () => {
-        navigate("/login");
+    const handleLogout = async () => {
+        await logout();
+        navigate("/");
     };
 
     return (
@@ -331,8 +358,28 @@ const AdminDashboard = () => {
 
             </div>
 
-            {/* Logout Button */}
-            <div className="fixed bottom-8 right-8 z-50">
+            {/* Toast Notification */}
+            {toast.show && (
+                <div className={`fixed top-20 right-4 z-50 px-4 py-3 rounded-lg shadow-lg ${
+                    toast.type === 'success' ? 'bg-green-500' : 
+                    toast.type === 'error' ? 'bg-red-500' : 'bg-blue-500'
+                } text-white`}>
+                    {toast.message}
+                </div>
+            )}
+
+            {/* Bottom Action Buttons */}
+            <div className="fixed bottom-8 right-8 z-50 flex space-x-3">
+                <button
+                    onClick={() => {
+                        setShowAccountSettings(true);
+                        setSettingsTab('password');
+                    }}
+                    className="flex items-center space-x-2 bg-gray-700 text-white px-5 py-3 rounded-full hover:bg-gray-600 transition-all shadow-xl font-semibold"
+                >
+                    <Settings size={20} />
+                    <span>Account Settings</span>
+                </button>
                 <button
                     onClick={handleLogout}
                     className="flex items-center space-x-2 bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition-all shadow-xl font-semibold text-lg"
@@ -341,6 +388,238 @@ const AdminDashboard = () => {
                     <span>Log Out</span>
                 </button>
             </div>
+
+            {/* Account Settings Modal */}
+            {showAccountSettings && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div className="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden">
+                        {/* Header */}
+                        <div className="bg-gradient-to-r from-gray-700 to-gray-800 text-white p-4">
+                            <div className="flex justify-between items-center">
+                                <h2 className="text-xl font-bold flex items-center gap-2">
+                                    <Settings size={24} />
+                                    Account Settings
+                                </h2>
+                                <button
+                                    onClick={() => {
+                                        setShowAccountSettings(false);
+                                        setCurrentPassword('');
+                                        setNewPassword('');
+                                        setConfirmPassword('');
+                                        setDeletePassword('');
+                                    }}
+                                    className="text-white hover:text-gray-200 text-2xl"
+                                >
+                                    ×
+                                </button>
+                            </div>
+                            <p className="text-gray-300 text-sm mt-1">
+                                Logged in as: {user?.email}
+                            </p>
+                        </div>
+
+                        {/* Tabs */}
+                        <div className="flex border-b">
+                            <button
+                                onClick={() => setSettingsTab('password')}
+                                className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                                    settingsTab === 'password'
+                                        ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50'
+                                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                                }`}
+                            >
+                                <Key size={16} />
+                                Change Password
+                            </button>
+                            <button
+                                onClick={() => setSettingsTab('delete')}
+                                className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                                    settingsTab === 'delete'
+                                        ? 'text-red-600 border-b-2 border-red-600 bg-red-50'
+                                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                                }`}
+                            >
+                                <Trash2 size={16} />
+                                Delete Account
+                            </button>
+                        </div>
+
+                        {/* Content */}
+                        <div className="p-6">
+                            {settingsTab === 'password' && (
+                                <form onSubmit={async (e) => {
+                                    e.preventDefault();
+                                    if (newPassword !== confirmPassword) {
+                                        showToast('New passwords do not match', 'error');
+                                        return;
+                                    }
+                                    if (newPassword.length < 6) {
+                                        showToast('Password must be at least 6 characters', 'error');
+                                        return;
+                                    }
+                                    setSettingsLoading(true);
+                                    const result = await changePassword(currentPassword, newPassword);
+                                    setSettingsLoading(false);
+                                    if (result.success) {
+                                        showToast('Password changed successfully!', 'success');
+                                        setShowAccountSettings(false);
+                                        setCurrentPassword('');
+                                        setNewPassword('');
+                                        setConfirmPassword('');
+                                    } else {
+                                        showToast(result.error || 'Failed to change password', 'error');
+                                    }
+                                }}>
+                                    <div className="space-y-4">
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                                Current Password
+                                            </label>
+                                            <div className="relative">
+                                                <input
+                                                    type={showCurrentPassword ? 'text' : 'password'}
+                                                    value={currentPassword}
+                                                    onChange={(e) => setCurrentPassword(e.target.value)}
+                                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-10"
+                                                    required
+                                                />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setShowCurrentPassword(!showCurrentPassword)}
+                                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                >
+                                                    {showCurrentPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                                New Password
+                                            </label>
+                                            <div className="relative">
+                                                <input
+                                                    type={showNewPassword ? 'text' : 'password'}
+                                                    value={newPassword}
+                                                    onChange={(e) => setNewPassword(e.target.value)}
+                                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-10"
+                                                    required
+                                                    minLength={6}
+                                                />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setShowNewPassword(!showNewPassword)}
+                                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                >
+                                                    {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                                Confirm New Password
+                                            </label>
+                                            <input
+                                                type="password"
+                                                value={confirmPassword}
+                                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                required
+                                                minLength={6}
+                                            />
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            disabled={settingsLoading}
+                                            className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                        >
+                                            {settingsLoading ? (
+                                                <>
+                                                    <RefreshCw size={16} className="animate-spin" />
+                                                    Changing...
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <Key size={16} />
+                                                    Change Password
+                                                </>
+                                            )}
+                                        </button>
+                                    </div>
+                                </form>
+                            )}
+
+                            {settingsTab === 'delete' && (
+                                <div className="space-y-4">
+                                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                                        <h3 className="text-red-800 font-semibold mb-2">⚠️ Warning</h3>
+                                        <p className="text-red-700 text-sm">
+                                            This action is <strong>permanent and cannot be undone</strong>. 
+                                            All your data including bookmarks, research history, and feedback will be deleted.
+                                        </p>
+                                    </div>
+                                    <form onSubmit={async (e) => {
+                                        e.preventDefault();
+                                        if (!window.confirm('Are you absolutely sure you want to delete your account? This cannot be undone.')) {
+                                            return;
+                                        }
+                                        setSettingsLoading(true);
+                                        const result = await deleteAccount(deletePassword);
+                                        setSettingsLoading(false);
+                                        if (result.success) {
+                                            showToast('Account deleted successfully', 'success');
+                                            navigate('/');
+                                        } else {
+                                            showToast(result.error || 'Failed to delete account', 'error');
+                                        }
+                                    }}>
+                                        <div className="space-y-4">
+                                            <div>
+                                                <label className="block text-sm font-medium text-gray-700 mb-1">
+                                                    Enter your password to confirm
+                                                </label>
+                                                <div className="relative">
+                                                    <input
+                                                        type={showDeletePassword ? 'text' : 'password'}
+                                                        value={deletePassword}
+                                                        onChange={(e) => setDeletePassword(e.target.value)}
+                                                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent pr-10"
+                                                        required
+                                                        placeholder="Your password"
+                                                    />
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setShowDeletePassword(!showDeletePassword)}
+                                                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                                    >
+                                                        {showDeletePassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <button
+                                                type="submit"
+                                                disabled={settingsLoading || !deletePassword}
+                                                className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                            >
+                                                {settingsLoading ? (
+                                                    <>
+                                                        <RefreshCw size={16} className="animate-spin" />
+                                                        Deleting...
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <Trash2 size={16} />
+                                                        Delete My Account
+                                                    </>
+                                                )}
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
