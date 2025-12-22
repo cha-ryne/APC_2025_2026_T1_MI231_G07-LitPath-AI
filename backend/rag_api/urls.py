@@ -6,6 +6,11 @@ from .views import (
     feedback_view
 )
 from .admin_views import admin_login_view, admin_users_view, admin_user_delete_view
+from .auth_views import (
+    auth_login_view, auth_register_view, auth_guest_session_view,
+    auth_validate_session_view, auth_logout_view, auth_delete_guest_data_view,
+    auth_me_view
+)
 
 urlpatterns = [
     # Support both with and without trailing slashes
@@ -31,7 +36,23 @@ urlpatterns = [
     path('feedback/', feedback_view, name='feedback'),
     path('feedback', feedback_view, name='feedback-no-slash'),
     
-    # Admin Authentication & Management
+    # Authentication (New unified auth system)
+    path('auth/login/', auth_login_view, name='auth-login'),
+    path('auth/login', auth_login_view, name='auth-login-no-slash'),
+    path('auth/register/', auth_register_view, name='auth-register'),
+    path('auth/register', auth_register_view, name='auth-register-no-slash'),
+    path('auth/guest-session/', auth_guest_session_view, name='auth-guest-session'),
+    path('auth/guest-session', auth_guest_session_view, name='auth-guest-session-no-slash'),
+    path('auth/validate-session/', auth_validate_session_view, name='auth-validate-session'),
+    path('auth/validate-session', auth_validate_session_view, name='auth-validate-session-no-slash'),
+    path('auth/logout/', auth_logout_view, name='auth-logout'),
+    path('auth/logout', auth_logout_view, name='auth-logout-no-slash'),
+    path('auth/delete-guest-data/', auth_delete_guest_data_view, name='auth-delete-guest-data'),
+    path('auth/delete-guest-data', auth_delete_guest_data_view, name='auth-delete-guest-data-no-slash'),
+    path('auth/me/', auth_me_view, name='auth-me'),
+    path('auth/me', auth_me_view, name='auth-me-no-slash'),
+    
+    # Admin Authentication & Management (Legacy - kept for backward compatibility)
     path('admin/login/', admin_login_view, name='admin-login'),
     path('admin/login', admin_login_view, name='admin-login-no-slash'),
     path('admin/users/', admin_users_view, name='admin-users'),

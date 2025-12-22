@@ -635,15 +635,48 @@ class RAGService:
                     model="gemini-2.5-flash",
                     contents=full_prompt,
                     config={
-                        "temperature": 0.3,
-                        "max_output_tokens": 1600
+                        "temperature": 0.4,
+                        "max_output_tokens": 4096,  # Increased for complete 3-paragraph responses
+                        "top_p": 0.95,
                     }
                 )
             except Exception as e:
                 print(f"FAILED. Error details: {e}")
                 raise
             
-            raw_answer = response.text.strip()
+            # Check for issues with the response
+            if not response.candidates:
+                print("WARNING: No candidates in response")
+                return "Unable to generate overview. Please try again."
+            
+            candidate = response.candidates[0]
+            
+            # Check finish reason
+            finish_reason = getattr(candidate, 'finish_reason', None)
+            print(f"DEBUG: Finish reason: {finish_reason}")
+            
+            # Handle potential safety blocks or other issues
+            if finish_reason and str(finish_reason) not in ['STOP', 'FinishReason.STOP', '1', 'MAX_TOKENS', 'FinishReason.MAX_TOKENS']:
+                print(f"WARNING: Unusual finish reason: {finish_reason}")
+            
+            # Get the text content safely
+            try:
+                raw_answer = response.text.strip()
+            except Exception as text_error:
+                print(f"WARNING: Could not get response text: {text_error}")
+                # Try to extract text from parts
+                if candidate.content and candidate.content.parts:
+                    raw_answer = "".join(part.text for part in candidate.content.parts if hasattr(part, 'text')).strip()
+                else:
+                    return "Unable to generate overview. The model returned an incomplete response."
+            
+            print(f"DEBUG: Response length: {len(raw_answer)} characters")
+            
+            # Validate response quality - check if it seems complete
+            paragraphs_check = [p.strip() for p in raw_answer.split('\n\n') if p.strip() and len(p.strip()) > 50]
+            if len(paragraphs_check) < 2 and len(raw_answer) < 300:
+                print(f"WARNING: Response seems too short ({len(paragraphs_check)} paragraphs, {len(raw_answer)} chars)")
+                # The response is incomplete - this is logged for debugging
             
             # Post-process answer (reference rearrangement logic)
             answer = self._process_answer_references(raw_answer, seen_pdfs, top_chunks)

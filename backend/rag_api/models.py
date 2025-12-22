@@ -4,10 +4,139 @@ from datetime import timedelta
 import uuid
 from django.contrib.auth.hashers import make_password, check_password
 
-# Models for LitPath AI - Matches existing Supabase schema
+# Models for LitPath AI - Unified User Account System
 
+
+class UserRole(models.TextChoices):
+    """User role choices"""
+    GUEST = 'guest', 'Guest'
+    USER = 'user', 'User'
+    STAFF = 'staff', 'Staff'
+    ADMIN = 'admin', 'Admin'
+
+
+class UserAccount(models.Model):
+    """
+    Unified user accounts - combines regular users and staff/admin
+    Matches schema: User_Accounts table
+    """
+    id = models.AutoField(primary_key=True, db_column='user_ID')
+    email = models.EmailField(unique=True, max_length=50, db_column='user_email')
+    password_hash = models.CharField(max_length=200, db_column='user_password_hash')
+    full_name = models.CharField(max_length=100, blank=True, null=True, db_column='user_full_name')
+    username = models.CharField(max_length=50, unique=True, db_column='user_username')
+    created_at = models.DateTimeField(auto_now_add=True, db_column='user_created_at')
+    last_login = models.DateTimeField(blank=True, null=True, db_column='user_last_login')
+    role = models.CharField(
+        max_length=50, 
+        choices=UserRole.choices, 
+        default=UserRole.USER,
+        db_column='user_role'
+    )
+    
+    class Meta:
+        db_table = 'user_accounts'
+        ordering = ['-created_at']
+    
+    def set_password(self, raw_password):
+        """Hash and set password"""
+        self.password_hash = make_password(raw_password)
+    
+    def check_password(self, raw_password):
+        """Verify password"""
+        return check_password(raw_password, self.password_hash)
+    
+    def update_last_login(self):
+        """Update last login timestamp"""
+        self.last_login = timezone.now()
+        self.save(update_fields=['last_login'])
+    
+    def is_staff_or_admin(self):
+        """Check if user has staff or admin role"""
+        return self.role in [UserRole.STAFF, UserRole.ADMIN]
+    
+    def __str__(self):
+        return f"{self.username} ({self.role})"
+
+
+class Session(models.Model):
+    """
+    User sessions - tracks both authenticated and anonymous sessions
+    Matches schema: Sessions table
+    One-to-One relationship: Each user can only have ONE active session at a time
+    """
+    id = models.AutoField(primary_key=True, db_column='session_ID')
+    is_anonymous = models.BooleanField(default=False, db_column='session_is_anonymous')
+    created_at = models.DateTimeField(auto_now_add=True, db_column='session_created_at')
+    last_seen = models.DateTimeField(auto_now=True, db_column='session_last_seen')
+    user = models.OneToOneField(
+        UserAccount, 
+        on_delete=models.CASCADE, 
+        null=True, 
+        blank=True,
+        related_name='session',
+        db_column='USERS_ACCOUNTS_user_ID'
+    )
+    # Guest identifier for anonymous sessions
+    guest_id = models.CharField(max_length=100, blank=True, null=True, db_index=True)
+    # Session token for validation
+    session_token = models.CharField(max_length=255, unique=True, db_index=True)
+    
+    class Meta:
+        db_table = 'sessions'
+        ordering = ['-created_at']
+    
+    def is_expired(self, hours=24):
+        """Check if session is older than specified hours"""
+        expiry_time = self.last_seen + timedelta(hours=hours)
+        return timezone.now() > expiry_time
+    
+    def update_activity(self):
+        """Update last seen timestamp"""
+        self.last_seen = timezone.now()
+        self.save(update_fields=['last_seen'])
+    
+    @classmethod
+    def create_for_user(cls, user):
+        """Create a new session for an authenticated user (one-to-one)
+        Deletes any existing session for this user first
+        """
+        import secrets
+        # Delete existing session for this user (enforce one-to-one)
+        cls.objects.filter(user=user).delete()
+        
+        session = cls.objects.create(
+            user=user,
+            is_anonymous=False,
+            session_token=secrets.token_urlsafe(32)
+        )
+        return session
+    
+    @classmethod
+    def create_guest_session(cls):
+        """Create a new anonymous/guest session"""
+        import secrets
+        guest_id = f"guest_{int(timezone.now().timestamp())}_{secrets.token_hex(4)}"
+        session = cls.objects.create(
+            user=None,
+            is_anonymous=True,
+            guest_id=guest_id,
+            session_token=secrets.token_urlsafe(32)
+        )
+        return session
+    
+    def __str__(self):
+        if self.user:
+            return f"Session for {self.user.username}"
+        return f"Guest session {self.guest_id}"
+
+
+# Keep legacy AdminUser for backward compatibility during migration
 class AdminUser(models.Model):
-    """Admin users with credentials for login"""
+    """
+    DEPRECATED: Use UserAccount with role='admin' or role='staff' instead
+    Kept for backward compatibility during migration
+    """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(unique=True, max_length=255)
     password = models.CharField(max_length=255)  # Will store hashed password

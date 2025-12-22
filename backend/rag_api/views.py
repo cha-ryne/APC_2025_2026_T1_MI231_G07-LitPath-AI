@@ -311,7 +311,7 @@ def research_history_view(request):
         )
     
     if request.method == 'GET':
-        history = ResearchHistory.objects.filter(user_id=user_id)
+        history = ResearchHistory.objects.filter(user_id=user_id).order_by('-created_at')
         serializer = ResearchHistorySerializer(history, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     

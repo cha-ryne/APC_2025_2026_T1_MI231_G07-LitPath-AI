@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight } from 'lucide-react';
+import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut } from 'lucide-react';
+import { useAuth } from './context/AuthContext';
 import dostLogo from "./components/images/dost-logo.png";
 import { Quote } from "lucide-react";
 import { Bookmark } from "lucide-react";
@@ -9,6 +10,9 @@ import { Copy } from 'lucide-react';
 
 const API_BASE_URL = 'http://localhost:8000/api';
 const LitPathAI = () => {
+    // Auth context
+    const { user, isGuest, logout, startNewChat: authStartNewChat, getUserId, isStaff } = useAuth();
+    
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedSubject, setSelectedSubject] = useState('All subjects');
     const [selectedDate, setSelectedDate] = useState('All dates');
@@ -31,7 +35,8 @@ const LitPathAI = () => {
     const [generatedCitation, setGeneratedCitation] = useState("");
     const [showSavedItems, setShowSavedItems] = useState(false);
     const [bookmarkedCount, setBookmarkedCount] = useState(0);
-    const [userId, setUserId] = useState(null);
+    const [bookmarks, setBookmarks] = useState([]); // Store bookmarks in state (not localStorage for authenticated users)
+    const [showUserMenu, setShowUserMenu] = useState(false);
     const navigate = useNavigate();
     const [conversationHistory, setConversationHistory] = useState([]);
     const [isFollowUpSearch, setIsFollowUpSearch] = useState(false);
@@ -40,6 +45,16 @@ const LitPathAI = () => {
     const [currentSessionId, setCurrentSessionId] = useState(null);
     const [hasSearchedInSession, setHasSearchedInSession] = useState(false);
     const [isLoadedFromHistory, setIsLoadedFromHistory] = useState(false);
+    const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
+    
+    // Get userId from auth context
+    const userId = getUserId();
+
+    // Show toast notification
+    const showToast = (message, type = 'success') => {
+        setToast({ show: true, message, type });
+        setTimeout(() => setToast({ show: false, message: '', type: 'success' }), 3000);
+    };
 
 
     const subjects = [
@@ -106,84 +121,48 @@ const LitPathAI = () => {
         };
     }, []);
 
-    // Load research history on mount
-    useEffect(() => {
-        loadResearchHistory();
-    }, []);
-
-    // Initialize user ID - check parent account first, then use anonymous
-    useEffect(() => {
-        // Check for parent website user ID (multiple methods)
-        // Method 1: Check sessionStorage (set by parent website)
-        let parentUserId = sessionStorage.getItem('parent_user_id');
-        
-        // Method 2: Check localStorage (set by parent website)
-        if (!parentUserId) {
-            parentUserId = localStorage.getItem('parent_user_id');
-        }
-        
-        // Method 3: Check URL parameter (e.g., ?userId=123)
-        if (!parentUserId) {
-            const urlParams = new URLSearchParams(window.location.search);
-            parentUserId = urlParams.get('userId');
-        }
-        
-        // Method 4: Check cookie (if parent sets it)
-        if (!parentUserId && document.cookie) {
-            const cookieMatch = document.cookie.match(/parent_user_id=([^;]+)/);
-            if (cookieMatch) {
-                parentUserId = cookieMatch[1];
-            }
-        }
-        
-        let finalUserId;
-        
-        if (parentUserId) {
-            // Use parent account user ID
-            finalUserId = `parent_${parentUserId}`;
-            console.log('Using parent account user ID:', finalUserId);
-        } else {
-            // Fall back to anonymous user ID
-            finalUserId = localStorage.getItem('litpath_user_id');
-            
-            if (!finalUserId) {
-                finalUserId = `anon_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-                localStorage.setItem('litpath_user_id', finalUserId);
-            }
-            console.log('Using anonymous user ID:', finalUserId);
-        }
-        
-        setUserId(finalUserId);
-        loadBookmarkCount();
-    }, []);
-
-    // Load bookmarks from Django when userId is set
+    // Load research history on mount and when user changes
     useEffect(() => {
         if (userId) {
-            loadBookmarksFromDjango();
+            if (isGuest) {
+                // Guests: Load from localStorage only
+                loadResearchHistoryFromLocalStorage();
+            } else {
+                // Authenticated users: Load from Django backend
+                loadResearchHistoryFromDjango();
+            }
         }
-    }, [userId]);
+    }, [userId, isGuest]);
 
-    // Load bookmark count from localStorage
-    const loadBookmarkCount = () => {
+    // Load bookmarks when userId is available from auth context
+    useEffect(() => {
+        if (userId) {
+            if (isGuest) {
+                // Guests: Load from localStorage only
+                loadBookmarksFromLocalStorage();
+            } else {
+                // Authenticated users: Load from Django backend (no localStorage)
+                loadBookmarksFromDjango();
+            }
+        }
+    }, [userId, isGuest]);
+
+    // Load bookmarks from localStorage (for guests only)
+    const loadBookmarksFromLocalStorage = () => {
         try {
-            const bookmarks = JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
-            setBookmarkedCount(bookmarks.length);
+            const storedBookmarks = JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
+            setBookmarks(storedBookmarks);
+            setBookmarkedCount(storedBookmarks.length);
         } catch (error) {
-            console.error('Error loading bookmark count:', error);
+            console.error('Error loading bookmarks from localStorage:', error);
+            setBookmarks([]);
             setBookmarkedCount(0);
         }
     };
 
-    // Check if a document is bookmarked
+    // Check if a document is bookmarked (uses state, not localStorage)
     const isBookmarked = (documentFile) => {
-        try {
-            const bookmarks = JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
-            return bookmarks.some(bookmark => bookmark.file === documentFile);
-        } catch (error) {
-            console.error('Error checking bookmark:', error);
-            return false;
-        }
+        return bookmarks.some(bookmark => bookmark.file === documentFile);
     };
 
     // Toggle bookmark (save/remove)
@@ -191,50 +170,70 @@ const LitPathAI = () => {
         if (!document) return;
 
         try {
-            // Get current bookmarks from localStorage
-            let bookmarks = JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
+            const documentFile = document.file || document.fullTextPath;
             
-            const bookmarkIndex = bookmarks.findIndex(b => b.file === document.file);
-            
-            if (bookmarkIndex >= 0) {
-                // Remove bookmark
-                bookmarks.splice(bookmarkIndex, 1);
-                localStorage.setItem('litpath_bookmarks', JSON.stringify(bookmarks));
+            if (isGuest) {
+                // Guest: Use localStorage only
+                let currentBookmarks = [...bookmarks];
+                const bookmarkIndex = currentBookmarks.findIndex(b => b.file === documentFile);
                 
-                // Also remove from Django backend
-                await removeFromDjango(document.file);
+                if (bookmarkIndex >= 0) {
+                    currentBookmarks.splice(bookmarkIndex, 1);
+                    showToast('Bookmark removed!', 'info');
+                } else {
+                    currentBookmarks.push({
+                        userId: userId,
+                        title: document.title,
+                        author: document.author,
+                        year: document.year,
+                        abstract: document.abstract,
+                        file: documentFile,
+                        degree: document.degree,
+                        subjects: document.subjects,
+                        school: document.school,
+                        bookmarkedAt: new Date().toISOString()
+                    });
+                    showToast('Bookmark saved!', 'success');
+                }
                 
-                alert('Bookmark removed!');
+                // Update state and localStorage for guests
+                setBookmarks(currentBookmarks);
+                setBookmarkedCount(currentBookmarks.length);
+                localStorage.setItem('litpath_bookmarks', JSON.stringify(currentBookmarks));
             } else {
-                // Add bookmark
-                const newBookmark = {
-                    userId: userId,
-                    title: document.title,
-                    author: document.author,
-                    year: document.year,
-                    abstract: document.abstract,
-                    file: document.file || document.fullTextPath,
-                    degree: document.degree,
-                    subjects: document.subjects,
-                    school: document.school,
-                    bookmarkedAt: new Date().toISOString()
-                };
+                // Authenticated user: Use Django backend only (NO localStorage)
+                const bookmarkIndex = bookmarks.findIndex(b => b.file === documentFile);
                 
-                bookmarks.push(newBookmark);
-                localStorage.setItem('litpath_bookmarks', JSON.stringify(bookmarks));
+                if (bookmarkIndex >= 0) {
+                    // Remove bookmark
+                    await removeFromDjango(documentFile);
+                    showToast('Bookmark removed!', 'info');
+                } else {
+                    // Add bookmark
+                    const newBookmark = {
+                        userId: userId,
+                        title: document.title,
+                        author: document.author,
+                        year: document.year,
+                        abstract: document.abstract,
+                        file: documentFile,
+                        degree: document.degree,
+                        subjects: document.subjects,
+                        school: document.school,
+                        bookmarkedAt: new Date().toISOString()
+                    };
+                    
+                    await saveToDjango(newBookmark);
+                    showToast('Bookmark saved!', 'success');
+                }
                 
-                // Also save to Django backend
-                await saveToDjango(newBookmark);
-                
-                alert('Bookmark saved!');
+                // Refresh bookmarks from Django to update state
+                await loadBookmarksFromDjango();
             }
-            
-            // Update count
-            setBookmarkedCount(bookmarks.length);
             
         } catch (error) {
             console.error('Error toggling bookmark:', error);
-            alert('Failed to update bookmark. Please try again.');
+            showToast('Failed to update bookmark. Please try again.', 'error');
         }
     };
 
@@ -259,13 +258,13 @@ const LitPathAI = () => {
             
             if (!response.ok) {
                 console.error('Django save error:', await response.text());
-                // Don't throw - localStorage save still succeeded
+                throw new Error('Failed to save bookmark');
             } else {
                 console.log('✅ Bookmark saved to Django backend');
             }
         } catch (error) {
             console.error('Error saving to Django:', error);
-            // Don't throw - localStorage is the fallback
+            throw error;
         }
     };
 
@@ -287,19 +286,14 @@ const LitPathAI = () => {
         }
     };
 
-    // Get all bookmarks
+    // Get all bookmarks (from state - works for both guests and authenticated users)
     const getBookmarks = () => {
-        try {
-            return JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
-        } catch (error) {
-            console.error('Error loading bookmarks:', error);
-            return [];
-        }
+        return bookmarks;
     };
 
-    // Load bookmarks from Django backend
+    // Load bookmarks from Django backend (for authenticated users - NO localStorage)
     const loadBookmarksFromDjango = async () => {
-        if (!userId) return;
+        if (!userId || isGuest) return;
         
         try {
             const response = await fetch(`${API_BASE_URL}/bookmarks/?user_id=${userId}`);
@@ -311,25 +305,24 @@ const LitPathAI = () => {
             
             const data = await response.json();
             
-            if (data && data.length > 0) {
-                // Convert Django format to local format
-                const bookmarks = data.map(b => ({
-                    userId: b.user_id,
-                    title: b.title,
-                    author: b.author,
-                    year: b.year,
-                    abstract: b.abstract,
-                    file: b.file,
-                    degree: b.degree,
-                    subjects: b.subjects,
-                    school: b.school,
-                    bookmarkedAt: b.bookmarked_at
-                }));
-                
-                localStorage.setItem('litpath_bookmarks', JSON.stringify(bookmarks));
-                setBookmarkedCount(bookmarks.length);
-                console.log('✅ Loaded bookmarks from Django backend');
-            }
+            // Convert Django format to local format and store in state (NOT localStorage)
+            const loadedBookmarks = (data && data.length > 0) ? data.map(b => ({
+                userId: b.user_id,
+                title: b.title,
+                author: b.author,
+                year: b.year,
+                abstract: b.abstract,
+                file: b.file,
+                degree: b.degree,
+                subjects: b.subjects,
+                school: b.school,
+                bookmarkedAt: b.bookmarked_at
+            })) : [];
+            
+            // Update state only - no localStorage for authenticated users
+            setBookmarks(loadedBookmarks);
+            setBookmarkedCount(loadedBookmarks.length);
+            console.log('✅ Loaded bookmarks from Django backend');
         } catch (error) {
             console.error('Error loading bookmarks from Django:', error);
         }
@@ -340,8 +333,8 @@ const LitPathAI = () => {
         return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     };
 
-    // Load research history from localStorage
-    const loadResearchHistory = () => {
+    // Load research history from localStorage (for guests)
+    const loadResearchHistoryFromLocalStorage = () => {
         try {
             const history = JSON.parse(localStorage.getItem('litpath_research_history') || '[]');
             setResearchHistory(history);
@@ -351,7 +344,48 @@ const LitPathAI = () => {
         }
     };
 
-    // Save current session to history (localStorage + Supabase)
+    // Load research history from Django backend (for authenticated users)
+    const loadResearchHistoryFromDjango = async () => {
+        if (!userId || isGuest) return;
+        
+        try {
+            const response = await fetch(`${API_BASE_URL}/research-history/?user_id=${userId}`);
+            
+            if (!response.ok) {
+                console.error('Django research history load error:', await response.text());
+                return;
+            }
+            
+            const data = await response.json();
+            
+            if (data && data.length > 0) {
+                // Convert Django format to local format
+                const history = data.map(h => ({
+                    id: h.session_id,
+                    userId: h.user_id,
+                    queries: h.all_queries || [h.query],
+                    mainQuery: h.query,
+                    followUpQueries: (h.all_queries || []).slice(1),
+                    conversationHistory: h.conversation_data || [],
+                    timestamp: h.created_at,
+                    sourcesCount: h.sources_count,
+                    conversationLength: h.conversation_length,
+                    subjects: h.subjects,
+                    dateFilter: h.date_filter
+                }));
+                
+                setResearchHistory(history);
+                console.log('✅ Loaded research history from Django backend');
+            } else {
+                setResearchHistory([]);
+            }
+        } catch (error) {
+            console.error('Error loading research history from Django:', error);
+            setResearchHistory([]);
+        }
+    };
+
+    // Save current session to history (localStorage for guests, Django for authenticated users)
     const saveCurrentSessionToHistory = async () => {
         if (!searchResults || !hasSearchedInSession || conversationHistory.length === 0) return;
 
@@ -374,37 +408,39 @@ const LitPathAI = () => {
         };
 
         try {
-            // Save to localStorage
-            const existingHistory = JSON.parse(localStorage.getItem('litpath_research_history') || '[]');
-            const updatedHistory = [session, ...existingHistory].slice(0, 50); // Keep last 50 sessions
-            localStorage.setItem('litpath_research_history', JSON.stringify(updatedHistory));
-            setResearchHistory(updatedHistory);
+            // For guests: Save to localStorage only
+            if (isGuest) {
+                const existingHistory = JSON.parse(localStorage.getItem('litpath_research_history') || '[]');
+                const updatedHistory = [session, ...existingHistory].slice(0, 50);
+                localStorage.setItem('litpath_research_history', JSON.stringify(updatedHistory));
+                setResearchHistory(updatedHistory);
+                console.log('✅ Research history saved to localStorage (guest)');
+                return;
+            }
 
-            // Save to Django backend
-            try {
-                const response = await fetch(`${API_BASE_URL}/research-history/`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        session_id: session.id,
-                        user_id: session.userId,
-                        query: session.mainQuery,
-                        all_queries: session.queries,
-                        conversation_data: session.conversationHistory,
-                        sources_count: session.sourcesCount,
-                        conversation_length: session.conversationLength,
-                        subjects: session.subjects,
-                        date_filter: session.dateFilter
-                    })
-                });
+            // For authenticated users: Save to Django backend only (no localStorage)
+            const response = await fetch(`${API_BASE_URL}/research-history/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: session.id,
+                    user_id: session.userId,
+                    query: session.mainQuery,
+                    all_queries: session.queries,
+                    conversation_data: session.conversationHistory,
+                    sources_count: session.sourcesCount,
+                    conversation_length: session.conversationLength,
+                    subjects: session.subjects,
+                    date_filter: session.dateFilter
+                })
+            });
 
-                if (!response.ok) {
-                    console.error('Error saving to Django:', await response.text());
-                } else {
-                    console.log('✅ Research history saved to Django backend');
-                }
-            } catch (error) {
-                console.error('Error saving research history to Django:', error);
+            if (!response.ok) {
+                console.error('Error saving to Django:', await response.text());
+            } else {
+                console.log('✅ Research history saved to Django backend');
+                // Refresh history from Django to keep UI in sync
+                await loadResearchHistoryFromDjango();
             }
         } catch (error) {
             console.error('Error saving research history:', error);
@@ -414,13 +450,13 @@ const LitPathAI = () => {
     // Delete a session from history
     const deleteHistorySession = async (sessionId) => {
         try {
-            // Remove from localStorage
-            const updatedHistory = researchHistory.filter(s => s.id !== sessionId);
-            localStorage.setItem('litpath_research_history', JSON.stringify(updatedHistory));
-            setResearchHistory(updatedHistory);
-
-            // Remove from Django backend
-            try {
+            if (isGuest) {
+                // Guest: Remove from localStorage and state
+                const updatedHistory = researchHistory.filter(s => s.id !== sessionId);
+                localStorage.setItem('litpath_research_history', JSON.stringify(updatedHistory));
+                setResearchHistory(updatedHistory);
+            } else {
+                // Authenticated user: Remove from Django only (no localStorage)
                 const response = await fetch(`${API_BASE_URL}/research-history/${sessionId}/`, {
                     method: 'DELETE'
                 });
@@ -429,9 +465,9 @@ const LitPathAI = () => {
                     console.error('Error deleting from Django:', await response.text());
                 } else {
                     console.log('✅ History session deleted from Django backend');
+                    // Refresh history from Django to update state
+                    await loadResearchHistoryFromDjango();
                 }
-            } catch (error) {
-                console.error('Error deleting from Django:', error);
             }
         } catch (error) {
             console.error('Error deleting history session:', error);
@@ -766,6 +802,20 @@ const LitPathAI = () => {
             await saveCurrentSessionToHistory();
         }
         
+        // For guests, clear localStorage data for privacy on public devices
+        if (isGuest) {
+            // Clear guest-specific localStorage data
+            localStorage.removeItem('litpath_bookmarks');
+            localStorage.removeItem('litpath_research_history');
+            localStorage.removeItem('litpath_conversation');
+            setBookmarks([]);
+            setBookmarkedCount(0);
+            setResearchHistory([]);
+            
+            // Optionally start a completely new guest session
+            await authStartNewChat();
+        }
+        
         // Reset all states
         setSearchQuery('');
         setSelectedSubject('All subjects');
@@ -784,6 +834,13 @@ const LitPathAI = () => {
         setIsLoadedFromHistory(false);
         setCurrentSessionId(generateSessionId());
     };
+    
+    // Handle logout
+    const handleLogout = async () => {
+        await logout();
+        navigate('/');
+    };
+    
     const renderStars = (ratingValue, onRate) => {
         return Array.from({ length: 5 }, (_, i) => (
             <Star
@@ -798,13 +855,13 @@ const LitPathAI = () => {
     // Submit feedback
     const handleFeedbackSubmit = async () => {
         if (!userId) {
-            alert('User ID not found. Please refresh the page.');
+            showToast('User ID not found. Please refresh the page.', 'error');
             return;
         }
 
         // Validate feedback
         if (feedbackRelevant === null) {
-            alert('Please select Yes or No for relevance.');
+            showToast('Please select Yes or No for relevance.', 'error');
             return;
         }
 
@@ -844,20 +901,31 @@ const LitPathAI = () => {
             setFeedbackRelevant(null);
             setRating(0);
             
-            alert('Thank you for your feedback!');
+            showToast('Thank you for your feedback!', 'success');
         } catch (err) {
             console.error('❌ Error submitting feedback:', err);
-            alert('Failed to submit feedback. Please try again.');
+            showToast('Failed to submit feedback. Please try again.', 'error');
         }
-    };
-
-    
-    const handleProfileClick = () => {
-        navigate('/login');
     };
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+            {/* Toast Notification */}
+            {toast.show && (
+                <div className={`fixed top-20 right-4 z-[100] px-6 py-3 rounded-lg shadow-lg transition-all duration-300 ${
+                    toast.type === 'success' ? 'bg-green-500 text-white' :
+                    toast.type === 'error' ? 'bg-red-500 text-white' :
+                    'bg-blue-500 text-white'
+                }`}>
+                    <div className="flex items-center space-x-2">
+                        {toast.type === 'success' && <span>✓</span>}
+                        {toast.type === 'error' && <span>✕</span>}
+                        {toast.type === 'info' && <span>ℹ</span>}
+                        <span>{toast.message}</span>
+                    </div>
+                </div>
+            )}
+            
             {/* Header */}
             <div className="fixed top-0 left-0 right-0 bg-[#1F1F1F] text-white p-4 shadow-md z-50">
                 <div className="flex items-center justify-between max-w-7xl mx-auto">
@@ -866,11 +934,76 @@ const LitPathAI = () => {
                         <div className="text-xl font-bold">DOST UNION CATALOG</div>
                         <div className="text-sm border-l border-white pl-4 ml-4">LitPath AI: <br /> Smart PathFinder of Theses and Dissertation</div>
                     </div>
-                    <nav className="flex space-x-6">
+                    <nav className="flex items-center space-x-6">
                         <a href="http://scinet.dost.gov.ph/#/opac" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors"> Online Public Access Catalog</a>
-                        <Link to="/" className="font-bold text-blue-200">LitPath AI</Link>
-                        <a href="#" className="flex items-center hover:text-blue-200 transition-colors">
-                        </a>
+                        <Link to="/search" className="font-bold text-blue-200">LitPath AI</Link>
+                        
+                        {/* User Menu */}
+                        <div className="relative">
+                            <button
+                                onClick={() => setShowUserMenu(!showUserMenu)}
+                                className="flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded-lg transition-colors"
+                            >
+                                <User size={18} />
+                                <span className="text-sm">
+                                    {isGuest ? 'Guest' : (user?.username || user?.email?.split('@')[0])}
+                                </span>
+                                <ChevronDown size={14} />
+                            </button>
+                            
+                            {showUserMenu && (
+                                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50">
+                                    <div className="px-4 py-2 border-b border-gray-100">
+                                        <p className="text-sm font-medium text-gray-900">
+                                            {isGuest ? 'Guest User' : user?.full_name || user?.username}
+                                        </p>
+                                        <p className="text-xs text-gray-500">
+                                            {isGuest ? 'Temporary session' : user?.email}
+                                        </p>
+                                        {user?.role && user.role !== 'guest' && (
+                                            <span className={`inline-block mt-1 text-xs px-2 py-0.5 rounded ${
+                                                user.role === 'admin' ? 'bg-red-100 text-red-700' :
+                                                user.role === 'staff' ? 'bg-blue-100 text-blue-700' :
+                                                'bg-gray-100 text-gray-700'
+                                            }`}>
+                                                {user.role.charAt(0).toUpperCase() + user.role.slice(1)}
+                                            </span>
+                                        )}
+                                    </div>
+                                    
+                                    {isStaff() && (
+                                        <Link
+                                            to="/admin/dashboard"
+                                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                            onClick={() => setShowUserMenu(false)}
+                                        >
+                                            Admin Dashboard
+                                        </Link>
+                                    )}
+                                    
+                                    {isGuest && (
+                                        <Link
+                                            to="/"
+                                            className="block px-4 py-2 text-sm text-blue-600 hover:bg-gray-100"
+                                            onClick={() => setShowUserMenu(false)}
+                                        >
+                                            Login
+                                        </Link>
+                                    )}
+                                    
+                                    <button
+                                        onClick={() => {
+                                            setShowUserMenu(false);
+                                            handleLogout();
+                                        }}
+                                        className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100 flex items-center space-x-2"
+                                    >
+                                        <LogOut size={14} />
+                                        <span>{isGuest ? 'Exit Guest Session' : 'Sign Out'}</span>
+                                    </button>
+                                </div>
+                            )}
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -980,15 +1113,13 @@ const LitPathAI = () => {
                 {/* Right Container (Main Content) */}
                 <div className="flex-1 max-w-5xl bg-white bg-opacity-95 rounded-xl shadow-2xl p-8 relative">
                     
-                    {!searchResults && (
+                    {/* Guest Mode Banner */}
+                    {isGuest && !searchResults && (
                         <div className="absolute top-6 right-6 z-10">
-                            <button
-                                onClick={handleProfileClick}
-                                className="p-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors shadow-md"
-                                title="Login/Profile"
-                            >
-                                <User size={24} />
-                            </button>
+                            <div className="bg-amber-50 border border-amber-200 text-amber-800 px-3 py-2 rounded-lg text-sm">
+                                <span className="font-medium">Guest Mode</span>
+                                <span className="text-amber-600 ml-1">- Data will be cleared on new chat</span>
+                            </div>
                         </div>
                     )}
 
@@ -1728,7 +1859,10 @@ const LitPathAI = () => {
                         {/* Footer */}
                         <div className="border-t p-4 bg-gray-50 rounded-b-lg">
                             <p className="text-xs text-gray-500 text-center">
-                                Bookmarks are saved locally on this device. {userId && `User ID: ${userId.substring(0, 15)}...`}
+                                {isGuest 
+                                    ? 'Guest bookmarks are temporary and will be cleared on new chat.'
+                                    : `Bookmarks are saved to your account.`
+                                }
                             </p>
                         </div>
                     </div>
