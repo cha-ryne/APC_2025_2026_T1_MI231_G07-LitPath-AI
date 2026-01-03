@@ -125,6 +125,7 @@ class SearchView(APIView):
         try:
             question = request.data.get("question", "").strip()
             filters = request.data.get("filters", {})
+            conversation_history = request.data.get("conversation_history", [])
             
             if not question:
                 return Response(
@@ -163,9 +164,9 @@ class SearchView(APIView):
             search_time = time.time() - search_start
             print(f"[RAG] Search took {search_time:.2f}s")
             
-            # Generate AI overview
+            # Generate AI overview with conversation history for context
             generate_start = time.time()
-            overview = rag.generate_overview(top_chunks, question, distance_threshold)
+            overview = rag.generate_overview(top_chunks, question, distance_threshold, conversation_history)
             generate_time = time.time() - generate_start
             print(f"[RAG] AI generation took {generate_time:.2f}s")
             

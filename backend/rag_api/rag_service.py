@@ -10,11 +10,40 @@ import numpy as np
 from google import genai
 import re
 import time
+import hashlib
+from functools import lru_cache
 from PyPDF2 import PdfReader
 from sentence_transformers import SentenceTransformer
 import chromadb
 from django.conf import settings
 import sys
+
+
+# ============= RESPONSE CACHE =============
+# Simple in-memory cache for AI responses (avoids re-generating for repeated queries)
+_response_cache = {}
+_cache_max_size = 100  # Max cached responses
+
+
+def get_cache_key(question, doc_ids):
+    """Generate cache key from question and document IDs"""
+    content = f"{question.lower().strip()}|{'|'.join(sorted(doc_ids))}"
+    return hashlib.md5(content.encode()).hexdigest()
+
+
+def get_cached_response(cache_key):
+    """Get cached response if exists"""
+    return _response_cache.get(cache_key)
+
+
+def set_cached_response(cache_key, response):
+    """Cache a response, evicting oldest if full"""
+    global _response_cache
+    if len(_response_cache) >= _cache_max_size:
+        # Remove oldest entry (first key)
+        oldest_key = next(iter(_response_cache))
+        del _response_cache[oldest_key]
+    _response_cache[cache_key] = response
 
 
 # ============= FILIPINO TERM MAPPING =============
@@ -691,151 +720,169 @@ class RAGService:
             print(f"[RAG] Error getting filters: {e}")
             return {"subjects": [], "years": []}
     
-    def generate_overview(self, top_chunks, question, distance_threshold):
-        """Generate AI overview using Gemini"""
+    def generate_overview(self, top_chunks, question, distance_threshold, conversation_history=None):
+        """Generate AI overview using Gemini with conversation context"""
         relevant_chunks = [c for c in top_chunks if c["score"] < distance_threshold]
         
         if not relevant_chunks:
             return "No relevant information found for your query."
         
-        # Build context from up to 5 unique theses
+        # Build context from up to 5 unique theses, max 2 chunks each for speed
         unique_files = []
         chunks_for_overview = []
+        chunks_per_file = {}  # Track chunks per file
         
         for c in relevant_chunks:
             file_name = c["meta"].get("file", c["meta"].get("pdf", ""))
-            if file_name and file_name not in unique_files:
+            if not file_name:
+                continue
+            
+            # Track unique files
+            if file_name not in unique_files:
                 unique_files.append(file_name)
-            if file_name in unique_files[:5]:
+                chunks_per_file[file_name] = 0
+            
+            # Limit to 5 theses, max 2 chunks each (10 chunks total max)
+            if file_name in unique_files[:5] and chunks_per_file[file_name] < 2:
                 chunks_for_overview.append(c)
-            if len(unique_files) >= 5:
+                chunks_per_file[file_name] += 1
+            
+            if len(unique_files) >= 5 and all(chunks_per_file.get(f, 0) >= 2 for f in unique_files[:5]):
                 break
         
         if not self.api_key:
             return "No Gemini API key configured."
         
+        # Check cache first (include conversation history in cache key for context-aware caching)
+        doc_ids = [c["meta"].get("file", c["meta"].get("pdf", "")) for c in chunks_for_overview]
+        history_key = str([(h.get('query', '') for h in (conversation_history or []))])
+        cache_key = get_cache_key(question + history_key, doc_ids)
+        cached = get_cached_response(cache_key)
+        if cached:
+            print(f"[RAG] Cache HIT - returning cached response")
+            return cached
+        
         try:
-            return self._prompt_chain(chunks_for_overview, [question])
+            response = self._generate_with_context(chunks_for_overview, question, conversation_history)
+            # Cache the response
+            set_cached_response(cache_key, response)
+            return response
         except Exception as e:
             
             return f"[Gemini error: {e}]"
     
-    def _prompt_chain(self, top_chunks, prompts):
-        """Gemini prompt chain for multi-step reasoning"""
+    def _generate_with_context(self, top_chunks, question, conversation_history=None):
+        """Generate AI overview with conversation context for follow-up questions"""
         if not top_chunks:
             return 'No results found for your query.'
         
-        context = ""
-        answer = ""
+        # Build document metadata summary
+        doc_infos = []
+        seen_pdfs = []
+        pdf_to_number = {}
         
-        for idx, prompt_text in enumerate(prompts):
-            if idx == 0:
-                # Build metadata summary
-                doc_infos = []
-                seen_pdfs = []
-                pdf_to_number = {}
-                
-                for c in top_chunks:
-                    meta = c['meta']
-                    pdf_id = meta.get('pdf', meta.get('file', '[Unknown]'))
-                    if pdf_id not in seen_pdfs:
-                        seen_pdfs.append(pdf_id)
-                        pdf_to_number[pdf_id] = len(seen_pdfs)
-                        doc_infos.append(f"[{len(seen_pdfs)}] Title: {meta.get('title','') or '[Unknown]'}\n    Author: {meta.get('author','') or '[Unknown]'}\n    Year: {meta.get('publication_year','') or '[Unknown]'}\n    File: {pdf_id}")
-                    if len(doc_infos) >= 10:
-                        break
-                
-                doc_info_str = "Top 10 relevant documents found (numbered for reference):\n" + "\n".join(doc_infos) + "\n\n"
-                
-                chunk_context = "\n\n".join([
-                    f"[{pdf_to_number[c['meta'].get('pdf', c['meta'].get('file', '[Unknown]'))]}] From {c['meta'].get('pdf', c['meta'].get('file', '[Unknown]'))} (chunk {c['meta']['chunk_idx']}): {c['chunk']}"
-                    for c in top_chunks if c['meta'].get('pdf', c['meta'].get('file', '[Unknown]')) in pdf_to_number
-                ])
-                
-                context = f"{doc_info_str}Context: {chunk_context}\n\nWhen answering, please reference the relevant thesis by its number in square brackets, e.g., [1], [2], etc., to indicate the source of each point.\n\n"
-                context += (
-                    "You are an academic research assistant analyzing Philippine scientific theses. "
-                    "Synthesize the findings from the top 5 relevant theses in response to the following question.\n\n"
-                    
-                    "CRITICAL CITATION RULES:\n"
-                    "1. Every factual claim MUST be followed immediately by [Source X] citation\n"
-                    "2. Only cite information that is EXPLICITLY stated in the provided sources\n"
-                    "3. Do NOT synthesize, infer, or extrapolate beyond what the sources explicitly state\n"
-                    "4. If sources contain conflicting findings, mention both with their respective citations\n"
-                    "5. If asked about something not covered in sources, clearly state: 'The provided sources do not contain information about [topic]'\n\n"
-                    
-                    "FORMAT REQUIREMENTS:\n"
-                    "- Write EXACTLY 3 PARAGRAPHS using plain text only\n"
-                    "- NO bullet points, asterisks, or markdown formatting\n"
-                    "- Place citation numbers in square brackets [1], [2], etc. immediately after each claim\n"
-                    "- At the end of each paragraph, also include the source numbers that support that paragraph\n\n"
-                    
-                    "PARAGRAPH STRUCTURE:\n"
-                    "1) First paragraph: Main findings and key themes from the research [sources]\n"
-                    "2) Second paragraph: Specific methods, results, or implications [sources]\n"
-                    "3) Third paragraph: Synthesis of overall insights and conclusions [sources]\n\n"
-                    
-                    "After the third paragraph, list all referenced thesis numbers: [1][2][3][4][5]\n"
-                    "You MUST reference all top 5 theses at least once, distributed across paragraphs.\n"
+        for c in top_chunks:
+            meta = c['meta']
+            pdf_id = meta.get('pdf', meta.get('file', '[Unknown]'))
+            if pdf_id not in seen_pdfs:
+                seen_pdfs.append(pdf_id)
+                pdf_to_number[pdf_id] = len(seen_pdfs)
+                doc_infos.append(
+                    f"[{len(seen_pdfs)}] {meta.get('title','') or '[Unknown]'} "
+                    f"({meta.get('publication_year','') or 'N/A'}) "
+                    f"by {meta.get('author','') or '[Unknown]'}"
                 )
+            if len(doc_infos) >= 10:
+                break
+        
+        # Build chunk context with citations
+        chunk_context = "\n\n".join([
+            f"[{pdf_to_number[c['meta'].get('pdf', c['meta'].get('file', '[Unknown]'))]}] "
+            f"{c['chunk'][:1500]}"  # Limit chunk size for speed
+            for c in top_chunks if c['meta'].get('pdf', c['meta'].get('file', '[Unknown]')) in pdf_to_number
+        ])
+        
+        # Build conversation history context (if any)
+        history_context = ""
+        if conversation_history and len(conversation_history) > 0:
+            history_parts = []
+            for i, turn in enumerate(conversation_history[-3:], 1):  # Last 3 turns max
+                q = turn.get('query', '')
+                # Truncate previous answers to save tokens
+                a = turn.get('overview', '')[:500]
+                if a and len(turn.get('overview', '')) > 500:
+                    a += "..."
+                history_parts.append(f"User asked: {q}\nYou answered: {a}")
             
-            full_prompt = f"{context}Question: {prompt_text}\nAnswer: "
-            
-            # Use new Google GenAI SDK 
-            client = genai.Client(api_key=self.api_key)
-            
-            print(f"DEBUG: Actually requesting model -> gemini-2.5-flash")
-            print(f"DEBUG: Context length: {len(full_prompt)} characters")
-            try:
-                response = client.models.generate_content(
-                    model="gemini-2.5-flash",
-                    contents=full_prompt,
-                    config={
-                        "temperature": 0.4,
-                        "max_output_tokens": 4096,  # Increased for complete 3-paragraph responses
-                        "top_p": 0.95,
-                    }
-                )
-            except Exception as e:
-                print(f"FAILED. Error details: {e}")
-                raise
-            
-            # Check for issues with the response
-            if not response.candidates:
-                print("WARNING: No candidates in response")
-                return "Unable to generate overview. Please try again."
-            
-            candidate = response.candidates[0]
-            
-            # Check finish reason
-            finish_reason = getattr(candidate, 'finish_reason', None)
-            print(f"DEBUG: Finish reason: {finish_reason}")
-            
-            # Handle potential safety blocks or other issues
-            if finish_reason and str(finish_reason) not in ['STOP', 'FinishReason.STOP', '1', 'MAX_TOKENS', 'FinishReason.MAX_TOKENS']:
-                print(f"WARNING: Unusual finish reason: {finish_reason}")
-            
-            # Get the text content safely
-            try:
-                raw_answer = response.text.strip()
-            except Exception as text_error:
-                print(f"WARNING: Could not get response text: {text_error}")
-                # Try to extract text from parts
-                if candidate.content and candidate.content.parts:
-                    raw_answer = "".join(part.text for part in candidate.content.parts if hasattr(part, 'text')).strip()
-                else:
-                    return "Unable to generate overview. The model returned an incomplete response."
-            
-            print(f"DEBUG: Response length: {len(raw_answer)} characters")
-            
-            # Validate response quality - check if it seems complete
-            paragraphs_check = [p.strip() for p in raw_answer.split('\n\n') if p.strip() and len(p.strip()) > 50]
-            if len(paragraphs_check) < 2 and len(raw_answer) < 300:
-                print(f"WARNING: Response seems too short ({len(paragraphs_check)} paragraphs, {len(raw_answer)} chars)")
-                # The response is incomplete - this is logged for debugging
-            
-            # Post-process answer (reference rearrangement logic)
-            answer = self._process_answer_references(raw_answer, seen_pdfs, top_chunks)
+            history_context = (
+                "\n\nPREVIOUS CONVERSATION:\n"
+                + "\n---\n".join(history_parts)
+                + "\n\nThe user is now asking a follow-up question. Use the conversation context to understand references like 'it', 'this', 'that', 'compare', etc.\n"
+            )
+        
+        # Construct the full prompt
+        prompt = f"""You are an academic research assistant analyzing thesis documents.
+
+AVAILABLE SOURCES:
+{chr(10).join(doc_infos)}
+
+CONTEXT FROM SOURCES:
+{chunk_context}{history_context}
+USER QUESTION: {question}
+
+INSTRUCTIONS:
+- Synthesize findings from the provided sources to answer the question
+- Write 2-4 clear paragraphs (adjust length based on complexity)
+- Cite sources using [1], [2], etc. after each claim
+- Only state what the sources explicitly say - do not infer or extrapolate
+- If sources are insufficient, acknowledge the limitation
+
+Answer:"""
+        
+        # Call Gemini API
+        client = genai.Client(api_key=self.api_key)
+        
+        print(f"DEBUG: Generating with conversation context ({len(conversation_history or [])} previous turns)")
+        print(f"DEBUG: Prompt length: {len(prompt)} characters")
+        
+        try:
+            response = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt,
+                config={
+                    "temperature": 0.3,
+                    "max_output_tokens": 2048,
+                    "top_p": 0.9,
+                    "thinking_config": {"thinking_budget": 0},
+                }
+            )
+        except Exception as e:
+            print(f"FAILED. Error details: {e}")
+            raise
+        
+        # Check for issues with the response
+        if not response.candidates:
+            print("WARNING: No candidates in response")
+            return "Unable to generate overview. Please try again."
+        
+        candidate = response.candidates[0]
+        finish_reason = getattr(candidate, 'finish_reason', None)
+        print(f"DEBUG: Finish reason: {finish_reason}")
+        
+        # Get the text content safely
+        try:
+            raw_answer = response.text.strip()
+        except Exception as text_error:
+            print(f"WARNING: Could not get response text: {text_error}")
+            if candidate.content and candidate.content.parts:
+                raw_answer = "".join(part.text for part in candidate.content.parts if hasattr(part, 'text')).strip()
+            else:
+                return "Unable to generate overview. The model returned an incomplete response."
+        
+        print(f"DEBUG: Response length: {len(raw_answer)} characters")
+        
+        # Post-process answer (reference rearrangement logic)
+        answer = self._process_answer_references(raw_answer, seen_pdfs, top_chunks)
         
         return answer
     

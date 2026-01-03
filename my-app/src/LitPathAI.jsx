@@ -571,10 +571,15 @@ const LitPathAI = () => {
             // Add variation to query if forcing new results
             const searchQueryText = forceNew ? `${query} [v${Date.now()}]` : query;
 
-            // Build request body
+            // Build request body with conversation history for context
             const requestBody = {
                 question: searchQueryText,
-                filters: Object.keys(filters).length > 0 ? filters : undefined
+                filters: Object.keys(filters).length > 0 ? filters : undefined,
+                // Send last 3 conversation turns for context (to avoid token limits)
+                conversation_history: conversationHistory.slice(-3).map(item => ({
+                    query: item.query,
+                    overview: item.overview
+                }))
             };
             
             // If forceNew is true, add parameters to force fresh results
@@ -582,6 +587,7 @@ const LitPathAI = () => {
                 requestBody.regenerate = true;
                 requestBody.timestamp = Date.now();
                 requestBody.random_seed = Math.random();
+                requestBody.conversation_history = []; // Clear history for fresh start
             }
 
             console.log('Sending request:', requestBody); // Debug log

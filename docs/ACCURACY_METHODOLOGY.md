@@ -71,7 +71,8 @@ LitPath AI uses a RAG (Retrieval-Augmented Generation) architecture consisting o
 ┌─────────────────────────────────────────────────────────────────────┐
 │                    AI GENERATION (LLM)                               │
 │                  Gemini 2.5 Flash                                    │
-│        Temperature: 0.4 | Max Tokens: 4,096 | Top-P: 0.95           │
+│     Temperature: 0.3 | Max Tokens: 2,048 | Thinking: Disabled       │
+│              + Conversation History Context                          │
 └─────────────────────────────────────────────────────────────────────┘
                                 │
                                 ▼
@@ -378,9 +379,10 @@ Beyond measurement, LitPath AI implements several **built-in accuracy controls**
 - Prevents irrelevant content from reaching the AI
 
 ### 5.2 LLM Temperature Control
-- Temperature set to 0.4 (relatively low)
+- Temperature set to 0.3 (low for deterministic output)
 - Reduces creative/random outputs
 - Promotes factual, grounded responses
+- Thinking mode disabled for faster responses
 
 ### 5.3 Mandatory Citation Enforcement
 - AI is instructed to cite sources as [1], [2], etc.
@@ -389,15 +391,32 @@ Beyond measurement, LitPath AI implements several **built-in accuracy controls**
 
 ### 5.4 Context Limitation
 - Only top 5 unique theses included in AI context
+- Maximum 2 chunks per thesis (10 chunks total)
 - Prevents information overload
 - Maintains focused, relevant responses
 
-### 5.5 User Feedback Collection
+### 5.5 Conversation Chaining
+- AI receives last 3 conversation turns as context
+- Enables follow-up questions with pronouns ("it", "this", "that")
+- Previous answers truncated to 500 chars to save tokens
+- Cache includes history key for context-aware caching
+
+**Example:**
+```
+Turn 1: "What is the nutritional value of rice?"
+        → AI: "Rice contains iron, fiber, ~100 kcal..."
+
+Turn 2: "How does it compare to corn?"
+        → AI understands "it" refers to rice
+        → Searches for corn, compares to rice context
+```
+
+### 5.6 User Feedback Collection
 - Users can rate responses (thumbs up/down)
 - Provides qualitative accuracy signals
 - Enables continuous improvement tracking
 
-### 5.6 Query Expansion for Multilingual Support
+### 5.7 Query Expansion for Multilingual Support
 - Filipino terms automatically mapped to English equivalents
 - English technical terms expanded with synonyms
 - Enables Tagalog and Taglish queries on English corpus
@@ -518,7 +537,24 @@ Based on benchmark results:
 
 ## 8. Version History and Improvements
 
-### 8.1 v2.0 Changes (January 2026)
+### 8.1 v2.1 Changes (January 4, 2026 - Latest)
+
+| Improvement | Before | After | Impact |
+|-------------|--------|-------|--------|
+| **Conversation Chaining** | None | Last 3 turns in context | Follow-up question support |
+| **AI Generation Speed** | ~13s | ~4-5s | 68% faster |
+| **LLM Parameters** | Temperature 0.4, 4096 tokens | Temperature 0.3, 2048 tokens | More deterministic |
+| **Gemini Thinking Mode** | Enabled | Disabled (budget: 0) | Faster responses |
+| **Response Caching** | None | In-memory LRU (100 entries) | Instant repeat queries |
+
+**Conversation Chaining Feature:**
+```
+Turn 1: "What is the nutritional value of rice?"
+Turn 2: "How does it compare to corn?"
+        ↳ AI understands "it" = rice from conversation context
+```
+
+### 8.2 v2.0 Changes (January 2026)
 
 | Improvement | Before | After | Impact |
 |-------------|--------|-------|--------|
@@ -528,7 +564,7 @@ Based on benchmark results:
 | **Prompt Engineering** | Basic citations | Strict grounding rules | Improved citation quality |
 | **Ground Truth** | 1-2 docs per query | 4-10 docs per query | More accurate metrics |
 
-### 8.2 Key Technical Changes
+### 8.3 Key Technical Changes
 
 1. **Model Upgrade:** Switched from `all-MiniLM-L6-v2` to `all-mpnet-base-v2`
    - Higher semantic accuracy (0.86 vs 0.82 STS score)
@@ -545,6 +581,11 @@ Based on benchmark results:
    - Stricter citation requirements ("Every claim MUST have [Source X]")
    - Explicit grounding instruction ("Do NOT extrapolate beyond sources")
    - "Say so" clause for missing information
+
+4. **Conversation History (v2.1):** AI now receives:
+   - Last 3 conversation turns as context
+   - Previous questions and (truncated) answers
+   - Instruction to resolve pronouns and references from context
 
 ---
 
@@ -588,17 +629,19 @@ Based on benchmark results:
 
 ## 11. Conclusion
 
-LitPath AI v2.0 implements a comprehensive accuracy measurement framework that evaluates both search relevance and AI response quality across English, Tagalog, and Taglish queries. The benchmark results demonstrate:
+LitPath AI v2.1 implements a comprehensive accuracy measurement framework that evaluates both search relevance and AI response quality across English, Tagalog, and Taglish queries. The benchmark results demonstrate:
 
 - **Excellent English search performance** with 70% precision and 83% recall
 - **Strong Tagalog support** with 83% recall enabled by Filipino term mapping
 - **Good Taglish handling** with 67% recall through combined term expansion
 - **High factual accuracy** (96.3%) indicating well-grounded AI responses
 - **Good citation verification** (76.5%) confirming source attribution
+- **Fast response times** (~4-5s) with thinking mode disabled
+- **Conversation chaining** for natural follow-up questions
 
-The system includes built-in accuracy controls (query expansion, distance thresholds, temperature settings, mandatory citations) that work together with measurement metrics to ensure reliable, trustworthy research assistance for Filipino researchers.
+The system includes built-in accuracy controls (query expansion, distance thresholds, temperature settings, mandatory citations, conversation context) that work together with measurement metrics to ensure reliable, trustworthy research assistance for Filipino researchers.
 
 ---
 
 *Document generated by LitPath AI Development Team*
-*Last updated: January 4, 2026*
+*Last updated: January 4, 2026 (v2.1)*
