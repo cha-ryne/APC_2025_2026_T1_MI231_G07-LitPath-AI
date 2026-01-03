@@ -18,6 +18,9 @@ import chromadb
 from django.conf import settings
 import sys
 
+# Import conversation manager
+from .conversation_utils import conversation_manager
+
 
 # ============= RESPONSE CACHE =============
 # Simple in-memory cache for AI responses (avoids re-generating for repeated queries)

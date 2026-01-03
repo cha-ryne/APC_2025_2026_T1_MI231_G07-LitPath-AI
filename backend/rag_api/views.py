@@ -152,10 +152,15 @@ class SearchView(APIView):
             # Track timing
             start_time = time.time()
             
-            # Search for relevant chunks with filters
+            # Resolve pronouns in query using conversation history
+            # This enhances the search query with entities from previous turns
+            from .conversation_utils import conversation_manager
+            enhanced_question = conversation_manager.resolve_pronouns(question, conversation_history)
+            
+            # Search for relevant chunks with filters (using enhanced query)
             search_start = time.time()
             top_chunks, documents, distance_threshold = rag.search(
-                question,
+                enhanced_question,  # Use enhanced query for better search
                 subjects=subjects if subjects else None,
                 year=year,
                 year_start=year_start,
@@ -165,6 +170,7 @@ class SearchView(APIView):
             print(f"[RAG] Search took {search_time:.2f}s")
             
             # Generate AI overview with conversation history for context
+            # (Pass original question so AI sees what user actually asked)
             generate_start = time.time()
             overview = rag.generate_overview(top_chunks, question, distance_threshold, conversation_history)
             generate_time = time.time() - generate_start

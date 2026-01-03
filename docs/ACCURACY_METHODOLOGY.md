@@ -398,17 +398,28 @@ Beyond measurement, LitPath AI implements several **built-in accuracy controls**
 ### 5.5 Conversation Chaining
 - AI receives last 3 conversation turns as context
 - Enables follow-up questions with pronouns ("it", "this", "that")
+- **Entity extraction** from previous responses for search enhancement
+- **Pronoun resolution** appends entities to search query
 - Previous answers truncated to 500 chars to save tokens
 - Cache includes history key for context-aware caching
 
-**Example:**
-```
-Turn 1: "What is the nutritional value of rice?"
-        → AI: "Rice contains iron, fiber, ~100 kcal..."
+**Entity Extraction:**
+Extracts valuable search terms from conversation history:
+- Alphanumeric codes: `PSB Rc82`, `IR29`, `STII-T-2021`
+- Organizations: `PhilRice`, `IRRI`, `UPLB`
+- Measurements: `4.5 tons/ha`, `5.2 dS/m`
 
-Turn 2: "How does it compare to corn?"
-        → AI understands "it" refers to rice
-        → Searches for corn, compares to rice context
+**Example Flow:**
+```
+Turn 1: "What rice varieties tolerate salt stress?"
+        → AI: "PSB Rc82 and IR29 show tolerance... developed by PhilRice..."
+
+Turn 2: "What about their yield?"
+        → Pronoun "their" detected
+        → Entities extracted: [PSB Rc82, IR29, PhilRice]
+        → Enhanced search: "What about their yield? PSB Rc82 IR29 PhilRice"
+        → Search finds relevant documents about PSB Rc82/IR29 yield
+        → AI generates response with correct context
 ```
 
 ### 5.6 User Feedback Collection
