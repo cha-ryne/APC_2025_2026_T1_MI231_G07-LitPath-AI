@@ -172,6 +172,20 @@ class SearchView(APIView):
             total_time = time.time() - start_time
             print(f"[RAG] Total time: {total_time:.2f}s")
             
+            # Calculate accuracy metrics
+            search_metrics = rag.calculate_search_metrics(top_chunks, distance_threshold)
+            citation_metrics = rag.verify_citations(overview, top_chunks)
+            
+            # Hallucination detection (keyword-based for performance)
+            from .accuracy_metrics import accuracy_metrics
+            source_texts = [c["chunk"] for c in top_chunks[:5]]
+            hallucination_metrics = accuracy_metrics.detect_hallucinations_keyword(overview, source_texts)
+            
+            # Log metrics for monitoring
+            print(f"[RAG] Search Metrics: {search_metrics['documents_returned']} docs, avg_distance={search_metrics['avg_distance']}")
+            print(f"[RAG] Citation Verification: {citation_metrics['verified_citations']}/{citation_metrics['total_citations']} ({citation_metrics['verification_rate']}%)")
+            print(f"[RAG] Factual Accuracy: {hallucination_metrics['factual_accuracy']}%")
+            
             # If no relevant chunks, clean up
             if not any(c["score"] < distance_threshold for c in top_chunks):
                 documents = []
@@ -191,7 +205,17 @@ class SearchView(APIView):
                 "overview": overview,
                 "documents": documents,
                 "related_questions": [],  # Placeholder for future feature
-                "filters_applied": filters_applied if filters_applied else None
+                "filters_applied": filters_applied if filters_applied else None,
+                "accuracy_metrics": {
+                    "search": search_metrics,
+                    "citation_verification": citation_metrics,
+                    "hallucination_detection": {
+                        "method": hallucination_metrics.get("method"),
+                        "factual_accuracy": hallucination_metrics.get("factual_accuracy"),
+                        "hallucination_rate": hallucination_metrics.get("hallucination_rate"),
+                        "sentences_analyzed": hallucination_metrics.get("total_sentences")
+                    }
+                }
             }
             
             return Response(response_data, status=status.HTTP_200_OK)

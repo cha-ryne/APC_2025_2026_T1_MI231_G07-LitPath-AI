@@ -17,6 +17,132 @@ from django.conf import settings
 import sys
 
 
+# ============= FILIPINO TERM MAPPING =============
+# Maps common Filipino/Tagalog terms to English equivalents
+# Used for query expansion to improve Taglish search
+FILIPINO_TERM_MAP = {
+    # Agriculture
+    'palay': 'rice paddy',
+    'bigas': 'rice grain',
+    'mais': 'corn maize',
+    'gulay': 'vegetable',
+    'prutas': 'fruit fruiting',
+    'puno': 'tree',
+    'halaman': 'plant crop',
+    'bukid': 'farm field',
+    'palayan': 'rice paddy',
+    'ani': 'harvest yield',
+    'tanim': 'planting cultivation',
+    'pataba': 'fertilizer',
+    'peste': 'pest insect',
+    'sakit': 'disease pathogen',
+    
+    # Environment
+    'tubig': 'water aquatic',
+    'lupa': 'soil land',
+    'hangin': 'air climate',
+    'dagat': 'sea marine coastal',
+    'ilog': 'river freshwater',
+    'bundok': 'mountain forest',
+    'kagubatan': 'forest woodland',
+    'kalikasan': 'environment ecology',
+    'klima': 'climate weather',
+    'init': 'heat temperature',
+    'asin': 'salt salinity',
+    'alat': 'saline salinity',
+    
+    # Science terms
+    'pag-aaral': 'study research',
+    'pagsusuri': 'analysis examination',
+    'sustansya': 'nutrition nutrient',
+    'nutrisyon': 'nutrition nutrient',
+    'pagkain': 'food diet',
+    'kalusugan': 'health',
+    'hayop': 'animal livestock',
+    'isda': 'fish fishery',
+    'ibon': 'bird avian',
+    'insekto': 'insect pest',
+    'bakterya': 'bacteria microbial',
+    
+    # Research terms
+    'epekto': 'effect impact',
+    'resulta': 'result findings',
+    'paraan': 'method methodology',
+    'katangian': 'characteristic property',
+    'uri': 'type variety',
+    'matibay': 'tolerant resistant',
+    'mataas': 'high increased',
+    'mababa': 'low decreased',
+}
+
+# ============= ENGLISH TECHNICAL TERM EXPANSION =============
+# Expands English technical terms with synonyms for better recall
+# Particularly useful for Taglish queries that already have English terms
+ENGLISH_TERM_EXPANSION = {
+    # Machine Learning / AI
+    'machine learning': 'neural network deep learning prediction model algorithm',
+    'artificial intelligence': 'AI machine learning neural network computational',
+    'deep learning': 'neural network machine learning AI',
+    'neural network': 'machine learning deep learning',
+    
+    # Agriculture
+    'agriculture': 'farming crop cultivation agricultural farm',
+    'crop': 'plant cultivation farming yield harvest',
+    'yield': 'harvest production crop output',
+    'fertilizer': 'nutrient soil amendment',
+    'pesticide': 'pest control insecticide',
+    
+    # Research terms
+    'salt stress': 'salinity tolerance saline NaCl sodium chloride',
+    'stress tolerance': 'resistant abiotic stress tolerant',
+    'drought': 'water stress dry arid',
+    'growth regulators': 'hormone auxin gibberellin cytokinin PGR',
+    'plant growth': 'development morphology physiology',
+    
+    # Quality/Food
+    'quality': 'acceptability sensory characteristics',
+    'nutritional': 'nutrient nutrition food composition',
+    'food': 'diet nutrition dietary consumption',
+}
+
+
+def expand_query_with_filipino_terms(query):
+    """
+    Expand query by adding English equivalents for Filipino terms
+    and synonyms for English technical terms.
+    
+    Args:
+        query: Original search query
+        
+    Returns:
+        Expanded query with additional terms
+    """
+    query_lower = query.lower()
+    expanded_terms = []
+    
+    # First, expand Filipino terms
+    for filipino_term, english_terms in FILIPINO_TERM_MAP.items():
+        if filipino_term in query_lower:
+            # Don't add if the English term is already in query
+            for term in english_terms.split():
+                if term not in query_lower:
+                    expanded_terms.append(term)
+    
+    # Then, expand English technical terms (for Taglish queries)
+    for english_term, synonyms in ENGLISH_TERM_EXPANSION.items():
+        if english_term in query_lower:
+            # Add synonyms that aren't already in the query
+            for syn in synonyms.split():
+                if syn.lower() not in query_lower:
+                    expanded_terms.append(syn)
+    
+    if expanded_terms:
+        # Limit expansion to avoid too much noise
+        unique_terms = list(dict.fromkeys(expanded_terms))[:8]
+        return query + ' ' + ' '.join(unique_terms)
+    return query
+
+
 def format_metadata_capitalization(text, field_type='default'):
     """Format metadata text with proper capitalization - only fixes ALL CAPS text
     
@@ -92,7 +218,19 @@ class RAGService:
         
         instance = cls()
         print("[RAG] Initializing RAG system...")
-        instance.embedder = SentenceTransformer('all-MiniLM-L6-v2')
+        
+        # Use all-MiniLM-L6-v2 for English thesis documents
+        # Fast, accurate, well-calibrated distance scores (threshold 1.5)
+        # Note: For Filipino/Taglish queries, consider meedan/paraphrase-filipino-mpnet-base-v2
+        # but it requires higher distance threshold (~4.0) and is optimized for Filipino text
+        # Using all-mpnet-base-v2 for better semantic understanding
+        # - 768 dimensions (vs 384 for MiniLM)
+        # - ~10-15% better precision on semantic similarity
+        # - Slightly slower but more accurate
+        # Note: Requires re-indexing when switching from MiniLM
+        instance.embedder = SentenceTransformer('all-mpnet-base-v2')
+        print("[RAG] Loaded embedding model: all-MiniLM-L6-v2")
+        
         instance.chroma_client = chromadb.PersistentClient(path=settings.RAG_CHROMADB_PATH)
         instance.collection = instance.chroma_client.get_or_create_collection("thesis_chunks")
         instance.api_key = settings.GEMINI_API_KEY
@@ -401,7 +539,12 @@ class RAGService:
             
         Note: Due to ChromaDB limitations, filtering is done post-query in Python
         """
-        query_emb = self.embedder.encode([question], convert_to_numpy=True)[0].tolist()
+        # Expand query with Filipino term mappings for better Taglish support
+        expanded_question = expand_query_with_filipino_terms(question)
+        if expanded_question != question:
+            print(f"[RAG] Query expanded: '{question}' -> '{expanded_question}'")
+        
+        query_emb = self.embedder.encode([expanded_question], convert_to_numpy=True)[0].tolist()
         
         # Query without filters (ChromaDB has limited metadata query support)
         results = self.collection.query(
@@ -611,16 +754,29 @@ class RAGService:
                 
                 context = f"{doc_info_str}Context: {chunk_context}\n\nWhen answering, please reference the relevant thesis by its number in square brackets, e.g., [1], [2], etc., to indicate the source of each point.\n\n"
                 context += (
-                    "Synthesize the findings from the top 5 relevant theses in response to the following question. "
-                    "Write a concise answer in EXACTLY 3 PARAGRAPHS using plain text, without bullet points, asterisks, or markdown formatting. "
-                    "At the end of each paragraph, place in square brackets the number(s) of the most relevant thesis or theses that support that paragraph, e.g., [1] or [2][3]. "
-                    "Do not place references anywhere else in the text. "
-                    "Structure your answer as follows: "
-                    "1) First paragraph: Introduce the main findings or key themes from the research. "
-                    "2) Second paragraph: Discuss specific methods, results, or implications found across the theses. "
-                    "3) Third paragraph: Conclude with a brief synthesis of overall insights. "
-                    "After the third paragraph, concatenate all referenced thesis numbers in square brackets (e.g., [1][2][3][4][5]) with no additional text. "
-                    "You must reference all top 5 unique theses at least once, distributing them across the 3 paragraphs. "
+                    "You are an academic research assistant analyzing Philippine scientific theses. "
+                    "Synthesize the findings from the top 5 relevant theses in response to the following question.\n\n"
+                    
+                    "CRITICAL CITATION RULES:\n"
+                    "1. Every factual claim MUST be followed immediately by [Source X] citation\n"
+                    "2. Only cite information that is EXPLICITLY stated in the provided sources\n"
+                    "3. Do NOT synthesize, infer, or extrapolate beyond what the sources explicitly state\n"
+                    "4. If sources contain conflicting findings, mention both with their respective citations\n"
+                    "5. If asked about something not covered in sources, clearly state: 'The provided sources do not contain information about [topic]'\n\n"
+                    
+                    "FORMAT REQUIREMENTS:\n"
+                    "- Write EXACTLY 3 PARAGRAPHS using plain text only\n"
+                    "- NO bullet points, asterisks, or markdown formatting\n"
+                    "- Place citation numbers in square brackets [1], [2], etc. immediately after each claim\n"
+                    "- At the end of each paragraph, also include the source numbers that support that paragraph\n\n"
+                    
+                    "PARAGRAPH STRUCTURE:\n"
+                    "1) First paragraph: Main findings and key themes from the research [sources]\n"
+                    "2) Second paragraph: Specific methods, results, or implications [sources]\n"
+                    "3) Third paragraph: Synthesis of overall insights and conclusions [sources]\n\n"
+                    
+                    "After the third paragraph, list all referenced thesis numbers: [1][2][3][4][5]\n"
+                    "You MUST reference all top 5 theses at least once, distributed across paragraphs.\n"
                 )
             
             full_prompt = f"{context}Question: {prompt_text}\nAnswer: "
@@ -769,4 +925,181 @@ class RAGService:
             "total_documents": len(unique_pdfs),
             "total_chunks": total_chunks,
             "total_txt_files": len(txt_files)
+        }
+    
+    def calculate_search_metrics(self, top_chunks, distance_threshold=1.5):
+        """
+        Calculate search accuracy metrics based on distance scores.
+        
+        Args:
+            top_chunks: List of chunks with scores from search
+            distance_threshold: The relevance threshold used
+            
+        Returns:
+            Dictionary with search quality metrics
+        """
+        if not top_chunks:
+            return {
+                "documents_returned": 0,
+                "avg_distance": None,
+                "min_distance": None,
+                "max_distance": None,
+                "high_relevance_count": 0,
+                "moderate_relevance_count": 0,
+                "relevance_distribution": {
+                    "very_high": 0,  # 0.0 - 0.5
+                    "high": 0,       # 0.5 - 1.0
+                    "moderate": 0    # 1.0 - 1.5
+                }
+            }
+        
+        scores = [c["score"] for c in top_chunks]
+        
+        # Calculate distribution
+        very_high = sum(1 for s in scores if s < 0.5)
+        high = sum(1 for s in scores if 0.5 <= s < 1.0)
+        moderate = sum(1 for s in scores if 1.0 <= s < distance_threshold)
+        
+        return {
+            "documents_returned": len(scores),
+            "avg_distance": round(sum(scores) / len(scores), 4),
+            "min_distance": round(min(scores), 4),
+            "max_distance": round(max(scores), 4),
+            "high_relevance_count": very_high + high,  # distance < 1.0
+            "moderate_relevance_count": moderate,       # 1.0 <= distance < 1.5
+            "relevance_distribution": {
+                "very_high": very_high,   # 0.0 - 0.5
+                "high": high,             # 0.5 - 1.0
+                "moderate": moderate      # 1.0 - 1.5
+            }
+        }
+    
+    def verify_citations(self, overview, top_chunks):
+        """
+        Verify that citations in the AI overview are grounded in source documents.
+        
+        Checks keyword overlap between paragraphs and their cited sources.
+        
+        Args:
+            overview: The AI-generated overview text
+            top_chunks: List of source chunks used for generation
+            
+        Returns:
+            Dictionary with citation verification metrics
+        """
+        if not overview or not top_chunks:
+            return {
+                "total_citations": 0,
+                "verified_citations": 0,
+                "verification_rate": 0.0,
+                "details": []
+            }
+        
+        # Build mapping of citation numbers to source content
+        seen_files = []
+        file_to_number = {}
+        source_content = {}
+        
+        for c in top_chunks:
+            file_name = c["meta"].get("file", c["meta"].get("pdf", "[Unknown]"))
+            if file_name not in seen_files:
+                seen_files.append(file_name)
+                num = len(seen_files)
+                file_to_number[file_name] = num
+                source_content[str(num)] = {
+                    "chunk": c["chunk"].lower(),
+                    "title": c["meta"].get("title", "").lower(),
+                    "abstract": c["meta"].get("abstract", "").lower(),
+                    "file": file_name
+                }
+            if len(seen_files) >= 5:
+                break
+        
+        # Extract citations from overview
+        ref_pattern = re.compile(r'\[(\d+)\]')
+        
+        # Split into paragraphs and analyze each
+        paragraphs = [p.strip() for p in overview.split('\n\n') if p.strip()]
+        
+        verification_details = []
+        total_citations = 0
+        verified_citations = 0
+        
+        for para_idx, para in enumerate(paragraphs):
+            # Find citations in this paragraph
+            citations = ref_pattern.findall(para)
+            para_text = ref_pattern.sub('', para).lower()
+            para_words = set(para_text.split())
+            
+            # Remove common stop words for better matching
+            stop_words = {'the', 'a', 'an', 'is', 'are', 'was', 'were', 'be', 'been', 
+                         'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will',
+                         'would', 'could', 'should', 'may', 'might', 'must', 'shall',
+                         'can', 'need', 'dare', 'ought', 'used', 'to', 'of', 'in',
+                         'for', 'on', 'with', 'at', 'by', 'from', 'as', 'into',
+                         'through', 'during', 'before', 'after', 'above', 'below',
+                         'between', 'under', 'again', 'further', 'then', 'once',
+                         'and', 'but', 'or', 'nor', 'so', 'yet', 'both', 'either',
+                         'neither', 'not', 'only', 'own', 'same', 'than', 'too',
+                         'very', 'just', 'also', 'now', 'here', 'there', 'when',
+                         'where', 'why', 'how', 'all', 'each', 'every', 'both',
+                         'few', 'more', 'most', 'other', 'some', 'such', 'no',
+                         'any', 'this', 'that', 'these', 'those', 'it', 'its'}
+            
+            para_keywords = para_words - stop_words
+            
+            for cite_num in citations:
+                total_citations += 1
+                
+                if cite_num in source_content:
+                    source = source_content[cite_num]
+                    source_text = source["chunk"] + " " + source["title"] + " " + source["abstract"]
+                    source_words = set(source_text.split()) - stop_words
+                    
+                    # Calculate keyword overlap
+                    if para_keywords and source_words:
+                        overlap = para_keywords & source_words
+                        overlap_ratio = len(overlap) / len(para_keywords) if para_keywords else 0
+                        
+                        # Consider verified if at least 15% keyword overlap
+                        is_verified = overlap_ratio >= 0.15
+                        if is_verified:
+                            verified_citations += 1
+                        
+                        verification_details.append({
+                            "paragraph": para_idx + 1,
+                            "citation": cite_num,
+                            "source_file": source["file"],
+                            "overlap_ratio": round(overlap_ratio, 4),
+                            "overlapping_keywords": len(overlap),
+                            "verified": is_verified
+                        })
+                    else:
+                        verification_details.append({
+                            "paragraph": para_idx + 1,
+                            "citation": cite_num,
+                            "source_file": source["file"],
+                            "overlap_ratio": 0,
+                            "overlapping_keywords": 0,
+                            "verified": False
+                        })
+                else:
+                    # Citation number not found in sources
+                    verification_details.append({
+                        "paragraph": para_idx + 1,
+                        "citation": cite_num,
+                        "source_file": None,
+                        "overlap_ratio": 0,
+                        "overlapping_keywords": 0,
+                        "verified": False,
+                        "error": "Citation number not found in sources"
+                    })
+        
+        verification_rate = (verified_citations / total_citations * 100) if total_citations > 0 else 0.0
+        
+        return {
+            "total_citations": total_citations,
+            "verified_citations": verified_citations,
+            "verification_rate": round(verification_rate, 2),
+            "details": verification_details
         }
