@@ -1396,7 +1396,7 @@ const LitPathAI = () => {
                                             </div>
                                         )}
 
-                                        {/* Overview */}
+{/* Overview */}                        {/* Overview */}
                                         <div className="mb-4">
                                             <h3 className="text-xl font-semibold mb-4 text-gray-800">Overview of Sources</h3>
                                             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
@@ -1405,7 +1405,11 @@ const LitPathAI = () => {
                                                     dangerouslySetInnerHTML={{
                                                         __html: result.overview
                                                             ? result.overview.replace(/\[(\d+)\]/g, (_, num) => {
-                                                                return ` <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-xs font-semibold">${num}</span>`;
+                                                                return ` <span 
+                                                                    class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-xs font-semibold cursor-pointer hover:bg-[#155a8f] transition-colors" 
+                                                                    onclick="document.getElementById('source-${num - 1}-${historyIndex}').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'}); document.getElementById('source-${num - 1}-${historyIndex}').click();"
+                                                                    title="Jump to source ${num}"
+                                                                >${num}</span>`;
                                                             })
                                                             : "<i>No overview available.</i>",
                                                     }}
