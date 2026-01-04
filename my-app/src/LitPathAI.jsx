@@ -1404,13 +1404,19 @@ const LitPathAI = () => {
                                                     className="text-gray-700 leading-relaxed whitespace-pre-line text-base text-justify"
                                                     dangerouslySetInnerHTML={{
                                                         __html: result.overview
-                                                            ? result.overview.replace(/\[(\d+)\]/g, (_, num) => {
-                                                                return ` <span 
-                                                                    class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-xs font-semibold cursor-pointer hover:bg-[#155a8f] transition-colors" 
-                                                                    onclick="document.getElementById('source-${num - 1}-${historyIndex}').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'}); document.getElementById('source-${num - 1}-${historyIndex}').click();"
-                                                                    title="Jump to source ${num}"
-                                                                >${num}</span>`;
-                                                            })
+                                                            ? result.overview
+                                                                // First handle multiple citations like [3, 4] or [1, 2, 3]
+                                                                .replace(/\[([\d,\s]+)\]/g, (match, nums) => {
+                                                                    // Split by comma and create a badge for each number
+                                                                    const numbers = nums.split(',').map(n => n.trim()).filter(n => n);
+                                                                    return ' ' + numbers.map(num => 
+                                                                        `<span 
+                                                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-xs font-semibold cursor-pointer hover:bg-[#155a8f] transition-colors mx-0.5" 
+                                                                            onclick="document.getElementById('source-${parseInt(num) - 1}-${historyIndex}').scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'}); document.getElementById('source-${parseInt(num) - 1}-${historyIndex}').click();"
+                                                                            title="Jump to source ${num}"
+                                                                        >${num}</span>`
+                                                                    ).join('');
+                                                                })
                                                             : "<i>No overview available.</i>",
                                                     }}
                                                 ></div>

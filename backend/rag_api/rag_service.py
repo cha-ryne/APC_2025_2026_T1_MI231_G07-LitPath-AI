@@ -836,7 +836,8 @@ USER QUESTION: {question}
 INSTRUCTIONS:
 - Synthesize findings from the provided sources to answer the question
 - Write 2-4 clear paragraphs (adjust length based on complexity)
-- Cite sources using [1], [2], etc. after each claim
+- Cite sources at the END of each sentence using [1], [2], etc. - NEVER place citations in the middle of a sentence
+- When citing multiple sources for the same claim, list them separately like [1] [2], not [1, 2]
 - Only state what the sources explicitly say - do not infer or extrapolate
 - If sources are insufficient, acknowledge the limitation
 
@@ -956,7 +957,14 @@ Answer:"""
             
             return '\n\n'.join(processed)
         
-        return process_paragraphs(raw_answer_new)
+        processed_answer = process_paragraphs(raw_answer_new)
+        
+        # Fix spacing issues: remove spaces before punctuation
+        processed_answer = re.sub(r'\s+([,.])', r'\1', processed_answer)
+        # Fix multiple spaces
+        processed_answer = re.sub(r'  +', ' ', processed_answer)
+        
+        return processed_answer
     
     def get_health_status(self):
         """Get system health information"""
