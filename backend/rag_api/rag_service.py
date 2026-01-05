@@ -175,6 +175,122 @@ def expand_query_with_filipino_terms(query):
     return query
 
 
+# ============= RELEVANCE CHECK =============
+# Stop words to ignore when checking keyword relevance
+STOP_WORDS = {
+    'a', 'an', 'the', 'and', 'or', 'but', 'is', 'are', 'was', 'were', 'be', 'been',
+    'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
+    'should', 'may', 'might', 'can', 'of', 'in', 'to', 'for', 'with', 'on', 'at',
+    'by', 'from', 'as', 'into', 'through', 'during', 'before', 'after', 'above',
+    'below', 'between', 'under', 'again', 'further', 'then', 'once', 'here', 'there',
+    'when', 'where', 'why', 'how', 'all', 'each', 'few', 'more', 'most', 'other',
+    'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too',
+    'very', 'just', 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those',
+    'am', 'if', 'it', 'its', 'about', 'find', 'research', 'study', 'studies', 'thesis',
+    'theses', 'paper', 'papers', 'work', 'works', 'effect', 'effects', 'impact', 'impacts',
+    'affect', 'affects', 'use', 'using', 'used', 'based', 'related', 'show', 'shows'
+}
+
+
+def extract_query_keywords(query):
+    """
+    Extract meaningful keywords from a query, removing stop words.
+    
+    Args:
+        query: User's search query
+        
+    Returns:
+        Set of meaningful keywords (lowercase)
+    """
+    # Remove punctuation and split
+    import re
+    words = re.findall(r'\b[a-zA-Z]{3,}\b', query.lower())
+    
+    # Filter out stop words and very short words
+    keywords = {w for w in words if w not in STOP_WORDS and len(w) >= 3}
+    
+    return keywords
+
+
+def check_content_relevance(query, chunks, min_keyword_match_ratio=0.3):
+    """
+    Check if retrieved chunks actually contain relevant content for the query.
+    
+    Args:
+        query: User's search query
+        chunks: List of retrieved chunks (each with 'chunk' text and 'meta')
+        min_keyword_match_ratio: Minimum ratio of query keywords that should appear in chunks
+        
+    Returns:
+        dict with:
+            - is_relevant: bool indicating if content is relevant enough
+            - matched_keywords: set of keywords found in chunks
+            - missing_keywords: set of keywords not found in chunks
+            - match_ratio: ratio of matched keywords
+            - chunk_topics: list of topics found in the chunks (from metadata)
+    """
+    if not chunks:
+        return {
+            'is_relevant': False,
+            'matched_keywords': set(),
+            'missing_keywords': set(),
+            'match_ratio': 0.0,
+            'chunk_topics': []
+        }
+    
+    # Extract keywords from query
+    query_keywords = extract_query_keywords(query)
+    
+    if not query_keywords:
+        # If no meaningful keywords, assume relevant (let Gemini decide)
+        return {
+            'is_relevant': True,
+            'matched_keywords': set(),
+            'missing_keywords': set(),
+            'match_ratio': 1.0,
+            'chunk_topics': []
+        }
+    
+    # Combine all chunk text for keyword matching
+    all_chunk_text = ' '.join([c.get('chunk', '') for c in chunks]).lower()
+    
+    # Also check titles and subjects from metadata
+    all_metadata_text = ' '.join([
+        c.get('meta', {}).get('title', '') + ' ' + 
+        c.get('meta', {}).get('subjects', '') 
+        for c in chunks
+    ]).lower()
+    
+    combined_text = all_chunk_text + ' ' + all_metadata_text
+    
+    # Check which keywords appear in the chunks
+    matched_keywords = set()
+    for kw in query_keywords:
+        if kw in combined_text:
+            matched_keywords.add(kw)
+    
+    missing_keywords = query_keywords - matched_keywords
+    match_ratio = len(matched_keywords) / len(query_keywords) if query_keywords else 0
+    
+    # Extract topics from chunk metadata
+    chunk_topics = []
+    seen_topics = set()
+    for c in chunks:
+        meta = c.get('meta', {})
+        subjects = meta.get('subjects', '')
+        if subjects and subjects not in seen_topics:
+            seen_topics.add(subjects)
+            chunk_topics.append(subjects)
+    
+    return {
+        'is_relevant': match_ratio >= min_keyword_match_ratio,
+        'matched_keywords': matched_keywords,
+        'missing_keywords': missing_keywords,
+        'match_ratio': match_ratio,
+        'chunk_topics': chunk_topics[:5]  # Limit to 5 topics
+    }
+
+
 def format_metadata_capitalization(text, field_type='default'):
     """Format metadata text with proper capitalization - only fixes ALL CAPS text
     
@@ -261,7 +377,7 @@ class RAGService:
         # - Slightly slower but more accurate
         # Note: Requires re-indexing when switching from MiniLM
         instance.embedder = SentenceTransformer('all-mpnet-base-v2')
-        print("[RAG] Loaded embedding model: all-MiniLM-L6-v2")
+        print("[RAG] Loaded embedding model: all-mpnet-base-v2")
         
         instance.chroma_client = chromadb.PersistentClient(path=settings.RAG_CHROMADB_PATH)
         instance.collection = instance.chroma_client.get_or_create_collection("thesis_chunks")
@@ -730,6 +846,24 @@ class RAGService:
         if not relevant_chunks:
             return "No relevant information found for your query."
         
+        # Check content relevance before calling Gemini
+        relevance_check = check_content_relevance(question, relevant_chunks, min_keyword_match_ratio=0.25)
+        
+        print(f"[RAG] Relevance check: {relevance_check['match_ratio']:.0%} keyword match")
+        print(f"[RAG] Matched: {relevance_check['matched_keywords']}")
+        print(f"[RAG] Missing: {relevance_check['missing_keywords']}")
+        
+        # If very low relevance, skip Gemini and return a helpful message
+        if not relevance_check['is_relevant'] and relevance_check['match_ratio'] < 0.15:
+            missing = ', '.join(list(relevance_check['missing_keywords'])[:5])
+            
+            # Don't mention irrelevant topics - just tell the user we couldn't find anything
+            return (
+                f"No relevant information was found in the thesis database for your query. "
+                f"The search terms '{missing}' do not appear in any available documents. "
+                f"Try using different keywords, checking for spelling errors, or searching for related academic topics."
+            )
+        
         # Build context from up to 5 unique theses, max 2 chunks each for speed
         unique_files = []
         chunks_for_overview = []
@@ -766,7 +900,13 @@ class RAGService:
             return cached
         
         try:
-            response = self._generate_with_context(chunks_for_overview, question, conversation_history)
+            # Pass relevance info to Gemini for better context
+            response = self._generate_with_context(
+                chunks_for_overview, 
+                question, 
+                conversation_history,
+                relevance_info=relevance_check
+            )
             # Cache the response
             set_cached_response(cache_key, response)
             return response
@@ -774,7 +914,7 @@ class RAGService:
             
             return f"[Gemini error: {e}]"
     
-    def _generate_with_context(self, top_chunks, question, conversation_history=None):
+    def _generate_with_context(self, top_chunks, question, conversation_history=None, relevance_info=None):
         """Generate AI overview with conversation context for follow-up questions"""
         if not top_chunks:
             return 'No results found for your query.'
@@ -823,6 +963,18 @@ class RAGService:
                 + "\n\nThe user is now asking a follow-up question. Use the conversation context to understand references like 'it', 'this', 'that', 'compare', etc.\n"
             )
         
+        # Add relevance warning if content might not fully answer the question
+        relevance_warning = ""
+        if relevance_info and relevance_info.get('match_ratio', 1.0) < 0.5:
+            missing = ', '.join(list(relevance_info.get('missing_keywords', set()))[:5])
+            matched = ', '.join(list(relevance_info.get('matched_keywords', set()))[:5])
+            relevance_warning = f"""
+RELEVANCE NOTE: The sources may not fully address the user's question.
+- Keywords from query found in sources: {matched if matched else 'few/none'}
+- Keywords from query NOT found in sources: {missing if missing else 'none'}
+- If sources don't contain relevant information, clearly state this limitation.
+"""
+        
         # Construct the full prompt
         prompt = f"""You are an academic research assistant analyzing thesis documents.
 
@@ -830,16 +982,24 @@ AVAILABLE SOURCES:
 {chr(10).join(doc_infos)}
 
 CONTEXT FROM SOURCES:
-{chunk_context}{history_context}
+{chunk_context}{history_context}{relevance_warning}
 USER QUESTION: {question}
 
 INSTRUCTIONS:
-- Synthesize findings from the provided sources to answer the question
-- Write 2-4 clear paragraphs (adjust length based on complexity)
-- Cite sources at the END of each sentence using [1], [2], etc. - NEVER place citations in the middle of a sentence
-- When citing multiple sources for the same claim, list them separately like [1] [2], not [1, 2]
-- Only state what the sources explicitly say - do not infer or extrapolate
-- If sources are insufficient, acknowledge the limitation
+- First, assess if the provided source content directly addresses the user's question
+- If sources DO contain relevant information:
+  * Synthesize findings from the provided sources to answer the question
+  * Write 2-4 clear paragraphs (adjust length based on complexity)
+  * Cite sources at the END of each sentence using [1], [2], etc. - NEVER place citations in the middle of a sentence
+  * When citing multiple sources for the same claim, list them separately like [1] [2], not [1, 2]
+  * Only state what the sources explicitly say - do not infer or extrapolate
+
+- If sources DO NOT directly answer the question:
+  * Start with: "The available sources do not directly address your specific question about [topic]."
+  * Then explain what topics/themes the sources DO cover that might be related
+  * Suggest how the user might refine their search to find more relevant results
+  * Still cite the sources when mentioning what they contain
+  * Do NOT fabricate information that isn't in the sources
 
 Answer:"""
         

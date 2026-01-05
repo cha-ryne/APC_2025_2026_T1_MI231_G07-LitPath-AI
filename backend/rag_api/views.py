@@ -169,6 +169,16 @@ class SearchView(APIView):
             search_time = time.time() - search_start
             print(f"[RAG] Search took {search_time:.2f}s")
             
+            # Check content relevance before generating AI overview
+            from .rag_service import check_content_relevance
+            relevance_check = check_content_relevance(question, top_chunks, min_keyword_match_ratio=0.25)
+            print(f"[RAG] Relevance check: {relevance_check['match_ratio']:.0%} keyword match")
+            
+            # If relevance is extremely low, clear documents (they're not actually relevant)
+            if relevance_check['match_ratio'] < 0.15 and len(relevance_check.get('missing_keywords', set())) > 0:
+                print(f"[RAG] Very low relevance - clearing irrelevant documents")
+                documents = []
+            
             # Generate AI overview with conversation history for context
             # (Pass original question so AI sees what user actually asked)
             generate_start = time.time()
@@ -193,11 +203,34 @@ class SearchView(APIView):
             print(f"[RAG] Citation Verification: {citation_metrics['verified_citations']}/{citation_metrics['total_citations']} ({citation_metrics['verification_rate']}%)")
             print(f"[RAG] Factual Accuracy: {hallucination_metrics['factual_accuracy']}%")
             
-            # If no relevant chunks, clean up
-            if not any(c["score"] < distance_threshold for c in top_chunks):
+            # If no relevant chunks, clean up and generate suggestions
+            no_results = not any(c["score"] < distance_threshold for c in top_chunks)
+            suggestions = []
+            
+            # Also treat very low relevance as "no results"
+            low_relevance = relevance_check['match_ratio'] < 0.15 and len(relevance_check.get('missing_keywords', set())) > 0
+            
+            if no_results or low_relevance:
                 documents = []
                 import re
                 overview = re.sub(r"\[\d+\]", "", overview)
+                
+                # Generate suggestions based on current filters
+                if subjects:
+                    suggestions.append(f"Try removing the subject filter '{subjects[0]}' to broaden your search")
+                if year:
+                    suggestions.append(f"Try removing the year filter ({year}) to include more documents")
+                if year_start or year_end:
+                    suggestions.append("Try expanding or removing the date range filter")
+                if not subjects and not year and not year_start:
+                    # No filters applied, suggest query modifications
+                    suggestions.append("Try using different keywords or simpler terms")
+                    suggestions.append("Try breaking your question into smaller, specific queries")
+                
+                # Always suggest these
+                if len(question.split()) > 10:
+                    suggestions.append("Try shortening your query to key terms only")
+                suggestions.append("Try searching for broader topics related to your question")
             
             # Build filters_applied summary
             filters_applied = {}
@@ -213,6 +246,7 @@ class SearchView(APIView):
                 "documents": documents,
                 "related_questions": [],  # Placeholder for future feature
                 "filters_applied": filters_applied if filters_applied else None,
+                "suggestions": suggestions if suggestions else None,  # Search suggestions when no results
                 "accuracy_metrics": {
                     "search": search_metrics,
                     "citation_verification": citation_metrics,

@@ -606,7 +606,7 @@ const LitPathAI = () => {
             }
             
             const data = await response.json();
-            const { overview, documents, related_questions } = data;
+            const { overview, documents, related_questions, suggestions } = data;
             
             // Format documents for frontend, mapping backend fields exactly
             const formattedSources = documents.map((doc, index) => ({
@@ -627,7 +627,7 @@ const LitPathAI = () => {
                 overview: overview || 'No overview available.',
                 sources: formattedSources,
                 relatedQuestions: related_questions || [],
-                
+                suggestions: suggestions || [],  // Search suggestions when no results
             };
 
             setConversationHistory(prev => [...prev, newResult]);
@@ -1347,21 +1347,47 @@ const LitPathAI = () => {
                                                 <BookOpen size={24} className="text-[#1E74BC]" />
                                                 <span>Sources</span>
                                             </h3>
-                                            <div className="flex space-x-5 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
-                                                {result.sources.map((source, index) => (
-                                                    <div
-                                                        key={source.id}
-                                                        className={`flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-5 cursor-pointer border-2 ${selectedSource && selectedSource.id === source.id ? 'border-blue-500' : 'border-gray-100'} hover:shadow-xl transition-all duration-200 ease-in-out`}
-                                                        onClick={() => handleSourceClick(source)}
-                                                    >
-                                                        <div className="flex items-center justify-center w-9 h-9 bg-[#1E74BC] text-white rounded-full mb-3 text-base font-bold">
-                                                            {index + 1}
+                                            {result.sources.length > 0 ? (
+                                                <div className="flex space-x-5 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
+                                                    {result.sources.map((source, index) => (
+                                                        <div
+                                                            key={source.id}
+                                                            className={`flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-5 cursor-pointer border-2 ${selectedSource && selectedSource.id === source.id ? 'border-blue-500' : 'border-gray-100'} hover:shadow-xl transition-all duration-200 ease-in-out`}
+                                                            onClick={() => handleSourceClick(source)}
+                                                        >
+                                                            <div className="flex items-center justify-center w-9 h-9 bg-[#1E74BC] text-white rounded-full mb-3 text-base font-bold">
+                                                                {index + 1}
+                                                            </div>
+                                                            <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-3">{source.title}</h4>
+                                                            <p className="text-sm text-gray-600">{source.author} • {source.year}</p>
                                                         </div>
-                                                        <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-3">{source.title}</h4>
-                                                        <p className="text-sm text-gray-600">{source.author} • {source.year}</p>
+                                                    ))}
+                                                </div>
+                                            ) : (
+                                                <div className="bg-amber-50 border border-amber-200 rounded-lg p-5">
+                                                    <div className="flex items-start space-x-3">
+                                                        <div className="flex-shrink-0">
+                                                            <svg className="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                                            </svg>
+                                                        </div>
+                                                        <div className="flex-1">
+                                                            <h4 className="text-lg font-semibold text-amber-800 mb-2">No matching sources found</h4>
+                                                            <p className="text-amber-700 mb-3">We couldn't find any theses matching your search criteria.</p>
+                                                            {result.suggestions && result.suggestions.length > 0 && (
+                                                                <div>
+                                                                    <p className="text-amber-800 font-medium mb-2">Try these suggestions:</p>
+                                                                    <ul className="list-disc list-inside space-y-1 text-amber-700">
+                                                                        {result.suggestions.map((suggestion, idx) => (
+                                                                            <li key={idx}>{suggestion}</li>
+                                                                        ))}
+                                                                    </ul>
+                                                                </div>
+                                                            )}
+                                                        </div>
                                                     </div>
-                                                ))}
-                                            </div>
+                                                </div>
+                                            )}
                                         </div>
 
                                         {/* Selected Source Details for this conversation */}
