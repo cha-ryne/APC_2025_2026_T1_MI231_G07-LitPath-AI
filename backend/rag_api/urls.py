@@ -3,7 +3,7 @@ from .views import (
     HealthCheckView, SearchView, FiltersView,
     bookmarks_view, bookmark_delete_view, bookmark_delete_by_file_view,
     research_history_view, research_history_delete_view,
-    feedback_view
+    feedback_view, feedback_detail
 )
 from .admin_views import admin_login_view, admin_users_view, admin_user_delete_view
 from .auth_views import (
@@ -35,6 +35,7 @@ urlpatterns = [
     # Feedback
     path('feedback/', feedback_view, name='feedback'),
     path('feedback', feedback_view, name='feedback-no-slash'),
+    path('feedback/<uuid:pk>/', feedback_detail, name='feedback-detail'),
     
     # Authentication (New unified auth system)
     path('auth/login/', auth_login_view, name='auth-login'),

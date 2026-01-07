@@ -408,3 +408,37 @@ def feedback_view(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+@api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
+def feedback_detail(request, pk):
+    """
+    GET: Retrieve a single feedback item
+    PATCH: Update status (e.g., Pending -> Addressed)
+    DELETE: Remove feedback
+    """
+    try:
+        # We use 'pk' (primary key) to find the specific feedback
+        feedback = Feedback.objects.get(pk=pk)
+    except Feedback.DoesNotExist:
+        return Response({'error': 'Feedback not found'}, status=status.HTTP_404_NOT_FOUND)
+
+    # GET: View details
+    if request.method == 'GET':
+        serializer = FeedbackSerializer(feedback)
+        return Response(serializer.data)
+
+    # PATCH/PUT: Update (This is what your frontend needs)
+    elif request.method in ['PUT', 'PATCH']:
+        # partial=True allows you to update just the 'status' without sending the whole object
+        serializer = FeedbackSerializer(feedback, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    # DELETE: Remove it
+    elif request.method == 'DELETE':
+        feedback.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
