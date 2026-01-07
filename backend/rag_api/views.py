@@ -89,36 +89,6 @@ class SearchView(APIView):
     """
     POST /api/search/
     Search for relevant theses and generate AI overview
-    
-    Request body:
-    {
-        "question": "What is the impact of climate change on rice production?",
-        "filters": {
-            "subjects": ["Agriculture", "Environmental Science"],  // Optional: filter by subjects (OR logic)
-            "year": 2022,  // Optional: filter by specific year
-            "year_start": 2020,  // Optional: start of year range
-            "year_end": 2023  // Optional: end of year range
-        }
-    }
-    
-    Note: Use either 'year' for a specific year, or 'year_start'/'year_end' for a range.
-    
-    Response:
-    {
-        "overview": "AI-generated overview with references...",
-        "documents": [
-            {
-                "title": "...",
-                "author": "...",
-                "publication_year": "...",
-                "abstract": "...",
-                "file": "...",
-                ...
-            }
-        ],
-        "related_questions": [],
-        "filters_applied": {"subjects": [...], "year": ..., "year_range": [start, end]}
-    }
     """
     
     def post(self, request):
@@ -126,6 +96,9 @@ class SearchView(APIView):
             question = request.data.get("question", "").strip()
             filters = request.data.get("filters", {})
             conversation_history = request.data.get("conversation_history", [])
+            
+            # NEW: Check if this is a request for overview only
+            overview_only = request.data.get("overview_only", False)
             
             if not question:
                 return Response(
@@ -146,21 +119,17 @@ class SearchView(APIView):
                     status=status.HTTP_400_BAD_REQUEST
                 )
             
-            # RAG system is already initialized on startup
             rag = RAGService()
-            
-            # Track timing
             start_time = time.time()
             
             # Resolve pronouns in query using conversation history
-            # This enhances the search query with entities from previous turns
             from .conversation_utils import conversation_manager
             enhanced_question = conversation_manager.resolve_pronouns(question, conversation_history)
             
-            # Search for relevant chunks with filters (using enhanced query)
+            # Search for relevant chunks with filters
             search_start = time.time()
             top_chunks, documents, distance_threshold = rag.search(
-                enhanced_question,  # Use enhanced query for better search
+                enhanced_question,
                 subjects=subjects if subjects else None,
                 year=year,
                 year_start=year_start,
@@ -169,18 +138,60 @@ class SearchView(APIView):
             search_time = time.time() - search_start
             print(f"[RAG] Search took {search_time:.2f}s")
             
-            # Check content relevance before generating AI overview
+            # Check content relevance
             from .rag_service import check_content_relevance
             relevance_check = check_content_relevance(question, top_chunks, min_keyword_match_ratio=0.25)
             print(f"[RAG] Relevance check: {relevance_check['match_ratio']:.0%} keyword match")
             
-            # If relevance is extremely low, clear documents (they're not actually relevant)
+            # If relevance is extremely low, clear documents
             if relevance_check['match_ratio'] < 0.15 and len(relevance_check.get('missing_keywords', set())) > 0:
                 print(f"[RAG] Very low relevance - clearing irrelevant documents")
                 documents = []
             
-            # Generate AI overview with conversation history for context
-            # (Pass original question so AI sees what user actually asked)
+            # NEW: If this is NOT an overview_only request, return documents immediately
+            # without generating the overview
+            if not overview_only:
+                # Build filters_applied summary
+                filters_applied = {}
+                if subjects:
+                    filters_applied["subjects"] = subjects
+                if year:
+                    filters_applied["year"] = year
+                if year_start or year_end:
+                    filters_applied["year_range"] = [year_start, year_end]
+                
+                # Check if no results
+                no_results = not any(c["score"] < distance_threshold for c in top_chunks)
+                low_relevance = relevance_check['match_ratio'] < 0.15 and len(relevance_check.get('missing_keywords', set())) > 0
+                
+                suggestions = []
+                if no_results or low_relevance:
+                    documents = []
+                    if subjects:
+                        suggestions.append(f"Try removing the subject filter '{subjects[0]}' to broaden your search")
+                    if year:
+                        suggestions.append(f"Try removing the year filter ({year}) to include more documents")
+                    if year_start or year_end:
+                        suggestions.append("Try expanding or removing the date range filter")
+                    if not subjects and not year and not year_start:
+                        suggestions.append("Try using different keywords or simpler terms")
+                        suggestions.append("Try breaking your question into smaller, specific queries")
+                    if len(question.split()) > 10:
+                        suggestions.append("Try shortening your query to key terms only")
+                    suggestions.append("Try searching for broader topics related to your question")
+                
+                # Return documents immediately WITHOUT overview
+                return Response({
+                    "documents": documents,
+                    "related_questions": [],
+                    "filters_applied": filters_applied if filters_applied else None,
+                    "suggestions": suggestions if suggestions else None,
+                    "overview": None,  # Will be requested separately
+                    "overview_ready": False
+                }, status=status.HTTP_200_OK)
+            
+            # If overview_only=True, generate the overview
+            # (This will be called by a second request from frontend)
             generate_start = time.time()
             overview = rag.generate_overview(top_chunks, question, distance_threshold, conversation_history)
             generate_time = time.time() - generate_start
@@ -193,60 +204,26 @@ class SearchView(APIView):
             search_metrics = rag.calculate_search_metrics(top_chunks, distance_threshold)
             citation_metrics = rag.verify_citations(overview, top_chunks)
             
-            # Hallucination detection (keyword-based for performance)
             from .accuracy_metrics import accuracy_metrics
             source_texts = [c["chunk"] for c in top_chunks[:5]]
             hallucination_metrics = accuracy_metrics.detect_hallucinations_keyword(overview, source_texts)
             
-            # Log metrics for monitoring
             print(f"[RAG] Search Metrics: {search_metrics['documents_returned']} docs, avg_distance={search_metrics['avg_distance']}")
             print(f"[RAG] Citation Verification: {citation_metrics['verified_citations']}/{citation_metrics['total_citations']} ({citation_metrics['verification_rate']}%)")
             print(f"[RAG] Factual Accuracy: {hallucination_metrics['factual_accuracy']}%")
             
-            # If no relevant chunks, clean up and generate suggestions
+            # Check if no results and clean up overview
             no_results = not any(c["score"] < distance_threshold for c in top_chunks)
-            suggestions = []
-            
-            # Also treat very low relevance as "no results"
             low_relevance = relevance_check['match_ratio'] < 0.15 and len(relevance_check.get('missing_keywords', set())) > 0
             
             if no_results or low_relevance:
-                documents = []
                 import re
                 overview = re.sub(r"\[\d+\]", "", overview)
-                
-                # Generate suggestions based on current filters
-                if subjects:
-                    suggestions.append(f"Try removing the subject filter '{subjects[0]}' to broaden your search")
-                if year:
-                    suggestions.append(f"Try removing the year filter ({year}) to include more documents")
-                if year_start or year_end:
-                    suggestions.append("Try expanding or removing the date range filter")
-                if not subjects and not year and not year_start:
-                    # No filters applied, suggest query modifications
-                    suggestions.append("Try using different keywords or simpler terms")
-                    suggestions.append("Try breaking your question into smaller, specific queries")
-                
-                # Always suggest these
-                if len(question.split()) > 10:
-                    suggestions.append("Try shortening your query to key terms only")
-                suggestions.append("Try searching for broader topics related to your question")
             
-            # Build filters_applied summary
-            filters_applied = {}
-            if subjects:
-                filters_applied["subjects"] = subjects
-            if year:
-                filters_applied["year"] = year
-            if year_start or year_end:
-                filters_applied["year_range"] = [year_start, year_end]
-            
-            response_data = {
+            # Return overview with metrics
+            return Response({
                 "overview": overview,
-                "documents": documents,
-                "related_questions": [],  # Placeholder for future feature
-                "filters_applied": filters_applied if filters_applied else None,
-                "suggestions": suggestions if suggestions else None,  # Search suggestions when no results
+                "overview_ready": True,
                 "accuracy_metrics": {
                     "search": search_metrics,
                     "citation_verification": citation_metrics,
@@ -257,9 +234,7 @@ class SearchView(APIView):
                         "sentences_analyzed": hallucination_metrics.get("total_sentences")
                     }
                 }
-            }
-            
-            return Response(response_data, status=status.HTTP_200_OK)
+            }, status=status.HTTP_200_OK)
             
         except Exception as e:
             return Response(

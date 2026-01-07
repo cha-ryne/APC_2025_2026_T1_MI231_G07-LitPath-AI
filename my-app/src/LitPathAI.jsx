@@ -529,129 +529,150 @@ const LitPathAI = () => {
             setBackendStatus({ status: 'error', message: 'Cannot connect to backend' });
         }
     };
-    const handleSearch = async (query = searchQuery, forceNew = false) => {
-        if (!query.trim()) {
-            setError("Please enter a research question.");
-            return;
+const handleSearch = async (query = searchQuery, forceNew = false) => {
+    if (!query.trim()) {
+        setError("Please enter a research question.");
+        return;
+    }
+    
+    if (!backendStatus || backendStatus.status === 'error') {
+        setError("Backend service is not available. Please check if the server is running.");
+        return;
+    }
+    
+    setLoading(true);
+    setError(null);
+    
+    if (!isFollowUpSearch && !forceNew) {
+        setSearchResults(null);
+        setSelectedSource(null);
+    }
+    
+    try {
+        const filters = {};
+
+        if (selectedSubject !== 'All subjects') {
+            filters.subjects = [selectedSubject];
+        }
+
+        const currentYear = new Date().getFullYear();
+
+        if (selectedDate === 'Last year') {
+            filters.year = currentYear - 1;
+        } else if (selectedDate === 'Last 3 years') {
+            filters.year_start = currentYear - 2;
+            filters.year_end = currentYear;
+        } else if (selectedDate === 'Custom date range') {
+            if (fromYear) filters.year_start = parseInt(fromYear);
+            if (toYear) filters.year_end = parseInt(toYear);
+        }
+
+        const searchQueryText = forceNew ? `${query} [v${Date.now()}]` : query;
+
+        const requestBody = {
+            question: searchQueryText,
+            filters: Object.keys(filters).length > 0 ? filters : undefined,
+            conversation_history: conversationHistory.slice(-3).map(item => ({
+                query: item.query,
+                overview: item.overview
+            })),
+            overview_only: false  // First request: get documents only
+        };
+        
+        if (forceNew) {
+            requestBody.regenerate = true;
+            requestBody.timestamp = Date.now();
+            requestBody.random_seed = Math.random();
+            requestBody.conversation_history = [];
+        }
+
+        // STEP 1: Get documents immediately
+        const response = await fetch(`${API_BASE_URL}/search`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(requestBody),
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
         
-        // Check if backend is available
-        if (!backendStatus || backendStatus.status === 'error') {
-            setError("Backend service is not available. Please check if the server is running.");
-            return;
-        }
+        const data = await response.json();
+        const { documents, related_questions, suggestions } = data;
+
+        // Format documents
+        const formattedSources = documents.map((doc, index) => ({
+            id: Date.now() + index,
+            title: doc.title || '[Unknown Title]',
+            author: doc.author || '[Unknown Author]',
+            year: doc.publication_year || '[Unknown Year]',
+            abstract: doc.abstract || 'Abstract not available.',
+            fullTextPath: doc.file || '',
+            file: doc.file || '',
+            degree: doc.degree || 'Thesis',
+            subjects: doc.subjects || ['Research'],
+            school: doc.university || '[Unknown University]',
+        }));
+
+        // Show sources immediately with loading state for overview
+        const initialResult = {
+            query: query,
+            overview: 'Generating overview...',
+            sources: formattedSources,
+            relatedQuestions: related_questions || [],
+            isLoadingSummary: true,
+        };
+
+        setConversationHistory(prev => [...prev, initialResult]);
+        setSearchResults(initialResult);
+        setIsFollowUpSearch(true);
+        setSearchQuery('');
+        setHasSearchedInSession(true);
         
-        setLoading(true);
-        setError(null);
-        // Don't clear searchResults or selectedSource when it's a follow-up
-        if (!isFollowUpSearch && !forceNew) {
-            setSearchResults(null);
-            setSelectedSource(null);
+        if (!currentSessionId) {
+            setCurrentSessionId(generateSessionId());
         }
-        
-        try {
-            // Build filters object for backend
-            const filters = {};
 
-            // Add subject filter if not "All subjects"
-            if (selectedSubject !== 'All subjects') {
-                filters.subjects = [selectedSubject];
-            }
+        // Turn off main loading to show sources
+        setLoading(false);
 
-            // Add date filters based on selection
-            const currentYear = new Date().getFullYear();
+        // STEP 2: Request overview generation
+        const overviewResponse = await fetch(`${API_BASE_URL}/search`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                ...requestBody,
+                overview_only: true  // Second request: generate overview
+            }),
+        });
 
-            if (selectedDate === 'Last year') {
-                filters.year = currentYear - 1;
-            } else if (selectedDate === 'Last 3 years') {
-                filters.year_start = currentYear - 2;
-                filters.year_end = currentYear;
-            } else if (selectedDate === 'Custom date range') {
-                if (fromYear) filters.year_start = parseInt(fromYear);
-                if (toYear) filters.year_end = parseInt(toYear);
-            }
-
-            // Add variation to query if forcing new results
-            const searchQueryText = forceNew ? `${query} [v${Date.now()}]` : query;
-
-            // Build request body with conversation history for context
-            const requestBody = {
-                question: searchQueryText,
-                filters: Object.keys(filters).length > 0 ? filters : undefined,
-                // Send last 3 conversation turns for context (to avoid token limits)
-                conversation_history: conversationHistory.slice(-3).map(item => ({
-                    query: item.query,
-                    overview: item.overview
-                }))
-            };
+        if (overviewResponse.ok) {
+            const overviewData = await overviewResponse.json();
             
-            // If forceNew is true, add parameters to force fresh results
-            if (forceNew) {
-                requestBody.regenerate = true;
-                requestBody.timestamp = Date.now();
-                requestBody.random_seed = Math.random();
-                requestBody.conversation_history = []; // Clear history for fresh start
-            }
-
-            console.log('Sending request:', requestBody); // Debug log
-
-            const response = await fetch(`${API_BASE_URL}/search`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(requestBody),
-            });
-
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
-            }
-            
-            const data = await response.json();
-            const { overview, documents, related_questions } = data;
-            
-            // Format documents for frontend, mapping backend fields exactly
-            const formattedSources = documents.map((doc, index) => ({
-                id: Date.now() + index, // Use timestamp-based ID to ensure uniqueness
-                title: doc.title || '[Unknown Title]',
-                author: doc.author || '[Unknown Author]',
-                year: doc.publication_year || '[Unknown Year]',
-                abstract: doc.abstract || 'Abstract not available.',
-                fullTextPath: doc.file || '',
-                file: doc.file || '',
-                degree: doc.degree || 'Thesis',
-                subjects: doc.subjects || ['Research'],
-                school: doc.university || '[Unknown University]',
-            }));
-            
-            const newResult = {
-                query: query, // Use original query without the version suffix
-                overview: overview || 'No overview available.',
+            const finalResult = {
+                query: query,
+                overview: overviewData.overview || 'No overview available.',
                 sources: formattedSources,
                 relatedQuestions: related_questions || [],
-                
+                isLoadingSummary: false,
             };
 
-            setConversationHistory(prev => [...prev, newResult]);
-            setSearchResults(newResult);
-            setIsFollowUpSearch(true);
-            setSearchQuery('');
-            
-            // Mark that user has searched in this session
-            setHasSearchedInSession(true);
-            if (!currentSessionId) {
-                setCurrentSessionId(generateSessionId());
-            }
-
-        } catch (err) {
-            console.error("Search failed:", err);
-            setError(`Search failed: ${err.message}`);
-        } finally {
-            setLoading(false);
-
+            // Update the last item in conversation history
+            setConversationHistory(prev => {
+                const updated = [...prev];
+                updated[updated.length - 1] = finalResult;
+                return updated;
+            });
+            setSearchResults(finalResult);
         }
-    };
+
+    } catch (err) {
+        console.error("Search failed:", err);
+        setError(`Search failed: ${err.message}`);
+        setLoading(false);
+    }
+};
 
 
     const handleExampleQuestionClick = (question) => {
@@ -1417,6 +1438,7 @@ return (
                                                 {result.sources.map((source, index) => (
                                                     <div
                                                         key={source.id}
+                                                        data-source-id={source.id}
                                                         className={`flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-5 cursor-pointer border-2 ${selectedSource && selectedSource.id === source.id ? 'border-blue-500' : 'border-gray-100'} hover:shadow-xl transition-all duration-200 ease-in-out`}
                                                         onClick={() => handleSourceClick(source)}
                                                     >
@@ -1463,38 +1485,42 @@ return (
                                         )}
 
                         {/* Overview */}
-                                        <div className="mb-4">
-                                            <h3 className="text-xl font-semibold mb-4 text-gray-800">Overview of Sources</h3>
-                                            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-                                                <div
-                                                    className="text-gray-700 leading-relaxed whitespace-pre-line text-base text-justify"
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: result.overview
-                                                            ? result.overview
-                                                                // First handle multiple citations like [3, 4] or [1, 2, 3]
-                                                                .replace(/\[([\d,\s]+)\]/g, (match, nums) => {
-                                                                    // Split by comma and create a badge for each number
-                                                                    const numbers = nums.split(',').map(n => n.trim()).filter(n => n);
-                                                                    return ' ' + numbers.map(num =>
-                                                                        `<span 
-                                                                            class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-xs font-semibold cursor-pointer hover:bg-[#155a8f] transition-colors mx-0.5" 
-                                                                            data-source-idx="${num}"
-                                                                            title="Jump to source ${num}"
-                                                                        >${num}</span>`
-                                                                    ).join('');
-                                                                })
-                                                            : "<i>No overview available.</i>",
-                                                    }}
-                                                    onClick={e => {
-                                                    const el = e.target;
-                                                    if (el && el.dataset && el.dataset.sourceIdx) {
-                                                        handleOverviewSourceClick(Number(el.dataset.sourceIdx));
-                                                    }
-                                                    }}
-
-                                                ></div>
-                                            </div>
-                                        </div>
+                        <div className="mb-4">
+                            <h3 className="text-xl font-semibold mb-4 text-gray-800">Overview of Sources</h3>
+                            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+                                {result.isLoadingSummary ? (
+                                    <div className="flex items-center justify-center py-8">
+                                        <div className="animate-spin inline-block w-6 h-6 border-4 border-[#1E74BC] border-t-transparent rounded-full mr-3"></div>
+                                        <span className="text-gray-600">Generating overview...</span>
+                                    </div>
+                                ) : (
+                                    <div
+                                        className="text-gray-700 leading-relaxed whitespace-pre-line text-base text-justify"
+                                        dangerouslySetInnerHTML={{
+                                            __html: result.overview
+                                                ? result.overview
+                                                    .replace(/\[([\d,\s]+)\]/g, (match, nums) => {
+                                                        const numbers = nums.split(',').map(n => n.trim()).filter(n => n);
+                                                        return ' ' + numbers.map(num =>
+                                                            `<span 
+                                                                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#1E74BC] text-white text-xs font-semibold cursor-pointer hover:bg-[#155a8f] transition-colors mx-0.5" 
+                                                                data-source-idx="${num}"
+                                                                title="Jump to source ${num}"
+                                                            >${num}</span>`
+                                                        ).join('');
+                                                    })
+                                                : "<i>No overview available.</i>",
+                                        }}
+                                        onClick={e => {
+                                            const el = e.target;
+                                            if (el && el.dataset && el.dataset.sourceIdx) {
+                                                handleOverviewSourceClick(Number(el.dataset.sourceIdx));
+                                            }
+                                        }}
+                                    ></div>
+                                )}
+                            </div>
+                        </div>
 
 
 
