@@ -5,6 +5,7 @@ import LitPathAI from './LitPathAI';
 import Login from './Login';
 import AuthPage from './AuthPage';
 import AdminDashboard from './AdminDashboard';
+import FeedbackManager from './FeedbackManager';
 
 // Protected Route component - requires authentication (user, staff, or admin)
 const ProtectedRoute = ({ children, requireStaff = false }) => {
@@ -96,6 +97,15 @@ const AppContent = () => {
                 element={
                     <ProtectedRoute requireStaff={true}>
                         <AdminDashboard />
+                    </ProtectedRoute>
+                } 
+            />
+
+            <Route 
+                path="/admin/feedback" 
+                element={
+                    <ProtectedRoute requireStaff={true}>
+                        <FeedbackManager />
                     </ProtectedRoute>
                 } 
             />

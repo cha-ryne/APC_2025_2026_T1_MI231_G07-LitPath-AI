@@ -353,6 +353,17 @@ const AdminDashboard = () => {
                                 </li>
                             ))}
                         </ul>
+
+                        {/* --- THIS NEW PART HERE --- */}
+                        <div className="mt-4 pt-3 border-t border-gray-100 text-center">
+                            <Link 
+                                to="/admin/feedback" 
+                                className="text-blue-600 hover:text-blue-800 text-sm font-semibold flex items-center justify-center gap-1"
+                            >
+                                View All Feedback →
+                            </Link>
+                        </div>
+                        {/* --- END OF NEW PART --- */}
                     </div>
                 </div>
 
