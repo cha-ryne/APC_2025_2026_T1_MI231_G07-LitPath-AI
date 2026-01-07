@@ -56,6 +56,7 @@ const LitPathAI = () => {
     const [showNewPassword, setShowNewPassword] = useState(false);
     const [showDeletePassword, setShowDeletePassword] = useState(false);
     const [settingsLoading, setSettingsLoading] = useState(false);
+    const [feedbackError, setFeedbackError] = useState('');
     
     // Get userId from auth context
     const userId = getUserId();
@@ -730,7 +731,7 @@ const LitPathAI = () => {
         };
         
         const formatAuthorMLA = (name) => {
-            // "De Leon, Deborah Christine A."
+            // "De Leon, Deborah Christine A. Title. Year. Institution, Degree type."
             const { firstNames, lastName } = parseAuthorName(name);
             const firstNamesFormatted = firstNames.map(toTitleCase).join(' ');
             const lastNameFormatted = lastName.map(toTitleCase).join(' ');
@@ -910,78 +911,102 @@ const handleOverviewSourceClick = (sourceIdx) => {
 };
     
     // Submit feedback
-    const handleFeedbackSubmit = async () => {
-        if (!userId) {
-            showToast('User ID not found. Please refresh the page.', 'error');
+
+const handleFeedbackSubmit = async () => {
+    if (!userId) {
+        showToast('User ID not found. Please refresh the page.', 'error');
+        return;
+    }
+
+    // Validate feedback
+    if (feedbackRelevant === null) {
+        showToast('Please select Yes or No for relevance.', 'error');
+        return;
+    }
+
+    // Validate comment if provided
+    if (feedbackComment.trim()) {
+        // Check for emojis using regex
+        const emojiRegex = /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{1F004}\u{1F0CF}\u{1F170}-\u{1F251}\u{FE00}-\u{FE0F}\u{203C}\u{2049}\u{20E3}\u{2122}\u{2139}\u{2194}-\u{2199}\u{21A9}-\u{21AA}\u{231A}-\u{231B}\u{2328}\u{23CF}\u{23E9}-\u{23F3}\u{23F8}-\u{23FA}\u{24C2}\u{25AA}-\u{25AB}\u{25B6}\u{25C0}\u{25FB}-\u{25FE}\u{2934}-\u{2935}\u{2B05}-\u{2B07}\u{2B1B}-\u{2B1C}\u{2B50}\u{2B55}\u{3030}\u{303D}\u{3297}\u{3299}]/gu;
+        
+        if (emojiRegex.test(feedbackComment)) {
+            setFeedbackError('Emojis are not allowed in feedback.');
             return;
         }
 
-        // Validate feedback
-        if (feedbackRelevant === null) {
-            showToast('Please select Yes or No for relevance.', 'error');
+        // Check character length
+        const commentLength = feedbackComment.trim().length;
+        if (commentLength < 10) {
+            setFeedbackError('Feedback must be at least 10 characters long.');
             return;
         }
+        if (commentLength > 500) {
+            setFeedbackError('Feedback cannot exceed 500 characters.');
+            return;
+        }
+    }
 
-        console.log('=== Submitting Feedback ===');
-        console.log('User ID:', userId);
-        console.log('Feedback data:', {
-            user_id: userId,
-            query: searchQuery,
-            rating: rating,
-            relevant: feedbackRelevant,
-            comment: feedbackComment
+    console.log('=== Submitting Feedback ===');
+    console.log('User ID:', userId);
+    console.log('Feedback data:', {
+        user_id: userId,
+        query: searchQuery,
+        rating: rating,
+        relevant: feedbackRelevant,
+        comment: feedbackComment
+    });
+
+    try {
+        // Save to Django backend only
+        const response = await fetch(`${API_BASE_URL}/feedback/`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                user_id: userId,
+                query: searchQuery,
+                rating: rating,
+                relevant: feedbackRelevant,
+                comment: feedbackComment.trim()
+            })
         });
-
-        try {
-            // Save to Django backend only
-            const response = await fetch(`${API_BASE_URL}/feedback/`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    user_id: userId,
-                    query: searchQuery,
-                    rating: rating,
-                    relevant: feedbackRelevant,
-                    comment: feedbackComment
-                })
-            });
-            
-            if (!response.ok) {
-                throw new Error(`Failed to save feedback: ${await response.text()}`);
-            }
-            
-            console.log('✅ Feedback saved to Django backend successfully!');
-
-            // Reset and close
-            setShowRatingOverlay(false);
-            setFeedbackComment("");
-            setFeedbackRelevant(null);
-            setRating(0);
-            
-            showToast('Thank you for your feedback!', 'success');
-        } catch (err) {
-            console.error('❌ Error submitting feedback:', err);
-            showToast('Failed to submit feedback. Please try again.', 'error');
+        
+        if (!response.ok) {
+            throw new Error(`Failed to save feedback: ${await response.text()}`);
         }
-    };
+        
+        console.log('✅ Feedback saved to Django backend successfully!');
 
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-            {/* Toast Notification */}
-            {toast.show && (
-                <div className={`fixed top-20 right-4 z-[100] px-6 py-3 rounded-lg shadow-lg transition-all duration-300 ${
-                    toast.type === 'success' ? 'bg-green-500 text-white' :
-                    toast.type === 'error' ? 'bg-red-500 text-white' :
-                    'bg-blue-500 text-white'
-                }`}>
-                    <div className="flex items-center space-x-2">
-                        {toast.type === 'success' && <span>✓</span>}
-                        {toast.type === 'error' && <span>✕</span>}
-                        {toast.type === 'info' && <span>ℹ</span>}
-                        <span>{toast.message}</span>
-                    </div>
+        // Reset and close
+        setShowRatingOverlay(false);
+        setFeedbackComment("");
+        setFeedbackRelevant(null);
+        setRating(0);
+        setFeedbackError('');
+        
+        showToast('Thank you for your feedback!', 'success');
+    } catch (err) {
+        console.error('❌ Error submitting feedback:', err);
+        showToast('Failed to submit feedback. Please try again.', 'error');
+    }
+};
+
+return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        {/* Toast Notification */}
+        {toast.show && (
+            <div className={`fixed top-20 right-4 z-[100] px-6 py-3 rounded-lg shadow-lg transition-all duration-300 ${
+                toast.type === 'success' ? 'bg-green-500 text-white' :
+                toast.type === 'error' ? 'bg-red-500 text-white' :
+                'bg-blue-500 text-white'
+            }`}>
+                <div className="flex items-center space-x-2">
+                    {toast.type === 'success' && <span>✓</span>}
+                    {toast.type === 'error' && <span>✕</span>}
+                    {toast.type === 'info' && <span>ℹ</span>}
+                    <span>{toast.message}</span>
                 </div>
-            )}
+            </div>
+        )}
             
             {/* Header */}
             <div className="fixed top-0 left-0 right-0 bg-[#1F1F1F] text-white p-4 shadow-md z-50">
@@ -1845,10 +1870,30 @@ const handleOverviewSourceClick = (sourceIdx) => {
                         </p>
                         <textarea
                             value={feedbackComment}
-                            onChange={(e) => setFeedbackComment(e.target.value)}
-                            className="w-full border rounded p-3 text-sm h-28"
-                            placeholder="You may input your suggestions/improvements here"
+                            onChange={(e) => {
+                                setFeedbackComment(e.target.value);
+                                setFeedbackError(''); // Clear error on change
+                            }}
+                            className={`w-full border rounded p-3 text-sm h-28 ${
+                                feedbackError ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                            }`}
+                            placeholder="You may input your suggestions/improvements here (10-500 characters, no emojis)"
+                            maxLength={500}
                         />
+                        <div className="flex items-center justify-between mt-1">
+                            {feedbackError && (
+                                <p className="text-red-500 text-xs">{feedbackError}</p>
+                            )}
+                            <p className={`text-xs ml-auto ${
+                                feedbackComment.trim().length > 0 && feedbackComment.trim().length < 10
+                                    ? 'text-red-500'
+                                    : feedbackComment.trim().length > 500
+                                    ? 'text-red-500'
+                                    : 'text-gray-500'
+                            }`}>
+                                {feedbackComment.length}/500 characters
+                            </p>
+                        </div>
                         
                         {/* Submit + Cancel */}
                         <div className="flex justify-end gap-3 mt-5">
@@ -2302,7 +2347,8 @@ const handleOverviewSourceClick = (sourceIdx) => {
                     </div>
                 </div>
             )}
-        </div>
-    );
+            </div>
+        );
 };
+
 export default LitPathAI;
