@@ -1026,11 +1026,10 @@ return (
         )}
             
             {/* Header */}
-            <div className="fixed top-0 left-0 right-0 bg-[#1F1F1F] text-white p-4 shadow-md z-50">
+            <div className="fixed top-0 left-0 right-0 bg-[#2c2c2c] text-white p-4 shadow-md z-50">
                 <div className="flex items-center justify-between max-w-7xl mx-auto">
                     <div className="flex items-center space-x-4">
-                        <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-12 w-50" />
-                        <div className="text-xl font-bold">DOST UNION CATALOG</div>
+                        <img src={dostLogo} alt="Department of Science and Technology" className="h-16 w-auto" />
                         <div className="text-sm border-l border-white pl-4 ml-4">LitPath AI: <br /> Smart PathFinder of Theses and Dissertation</div>
                     </div>
                     <nav className="flex items-center space-x-6">
