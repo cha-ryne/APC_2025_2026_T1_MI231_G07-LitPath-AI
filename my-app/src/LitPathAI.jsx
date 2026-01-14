@@ -1841,9 +1841,13 @@ return (
                                 className="w-full h-40 border p-3 rounded text-gray-700"
                             />
                             <button
-                                className="mt-4 bg-[#1E74BC] text-white px-4 py-2 rounded hover:bg-[#185f99]"
-                                onClick={() => navigator.clipboard.writeText(generatedCitation)}
+                                className="mt-4 bg-[#1E74BC] text-white px-4 py-2 rounded hover:bg-[#185f99] flex items-center justify-center gap-2"
+                                onClick={() => {
+                                    navigator.clipboard.writeText(generatedCitation);
+                                    showToast('Citation copied to clipboard!', 'success');
+                                }}
                             >
+                                <Copy size={15} />
                                 Copy to Clipboard
                             </button>
                         </div>
