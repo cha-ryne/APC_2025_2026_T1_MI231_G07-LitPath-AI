@@ -957,10 +957,6 @@ const handleFeedbackSubmit = async () => {
 
         // Check character length
         const commentLength = feedbackComment.trim().length;
-        if (commentLength < 10) {
-            setFeedbackError('Feedback must be at least 10 characters long.');
-            return;
-        }
         if (commentLength > 500) {
             setFeedbackError('Feedback cannot exceed 500 characters.');
             return;
@@ -1741,6 +1737,7 @@ return (
                                     </button>
                                     <button className="text-white hover:text-blue-200"
                                         onClick={() => setShowCitationOverlay(true)}
+                                        title="Cite this source"
                                     >
                                         <Quote size={20} />
                                     </button>
@@ -1903,7 +1900,7 @@ return (
                             className={`w-full border rounded p-3 text-sm h-28 ${
                                 feedbackError ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
                             }`}
-                            placeholder="You may input your suggestions/improvements here (10-500 characters, no emojis)"
+                            placeholder="You may input your suggestions/improvements here (500 max characters, no emojis)"
                             maxLength={500}
                         />
                         <div className="flex items-center justify-between mt-1">
