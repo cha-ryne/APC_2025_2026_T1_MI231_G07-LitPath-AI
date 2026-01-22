@@ -57,6 +57,8 @@ const LitPathAI = () => {
     const [showDeletePassword, setShowDeletePassword] = useState(false);
     const [settingsLoading, setSettingsLoading] = useState(false);
     const [feedbackError, setFeedbackError] = useState('');
+    const [mostBrowsed, setMostBrowsed] = useState([]);
+    const [loadingMostBrowsed, setLoadingMostBrowsed] = useState(true);
     
     // Get userId from auth context
     const userId = getUserId();
@@ -105,6 +107,50 @@ const LitPathAI = () => {
     // Refs for dropdowns to close when clicking outside
     const subjectDropdownRef = useRef(null);
     const dateDropdownRef = useRef(null);
+
+    // Track material view
+    const trackMaterialView = async (material) => {
+        try {
+            await fetch(`${API_BASE_URL}/track-view/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    file: material.file || material.fullTextPath,
+                    user_id: userId,
+                    session_id: currentSessionId
+                })
+            });
+        } catch (error) {
+            console.error('Error tracking view:', error);
+        }
+    };
+
+    // Fetch most browsed materials
+    const fetchMostBrowsed = async () => {
+        try {
+            setLoadingMostBrowsed(true);
+            const response = await fetch(`${API_BASE_URL}/most-browsed/?limit=10`);
+            
+            if (!response.ok) {
+                throw new Error('Failed to fetch most browsed materials');
+            }
+            
+            const data = await response.json();
+            setMostBrowsed(data.materials || []);
+        } catch (error) {
+            console.error('Error fetching most browsed:', error);
+            setMostBrowsed([]);
+        } finally {
+            setLoadingMostBrowsed(false);
+        }
+    };
+
+    // Load most browsed materials on component mount
+    useEffect(() => {
+        fetchMostBrowsed();
+    }, []);
+
+
     
     // Check backend health on component mount
     useEffect(() => {
@@ -682,10 +728,14 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
 
     const handleSourceClick = (source) => {
         setSelectedSource(source);
+        trackMaterialView(source);
     };
 
     const handleMoreDetails = () => {
         setShowOverlay(true);
+        if (selectedSource) {
+            trackMaterialView(selectedSource);
+        }
     };
 
     const generateCitation = (style) => {
@@ -1411,7 +1461,93 @@ return (
                                     </button>
                                 </div>
                             </div>
-                        </div>
+
+                            {/* Most Browsed Materials - NEW SECTION */}
+                            <div className="mt-12">
+                                <h3 className="text-xl font-semibold text-gray-800 mb-5 flex items-center gap-2">
+                                    <BookOpen size={24} className="text-[#1E74BC]" />
+                                    Most Browsed Materials
+                                </h3>
+
+                                {loadingMostBrowsed ? (
+                                    <div className="text-center text-gray-500 py-8">
+                                        <RefreshCw size={24} className="animate-spin inline-block mb-2" />
+                                        <p>Loading most browsed materials...</p>
+                                    </div>
+                                ) : mostBrowsed.length === 0 ? (
+                                    <div className="text-center text-gray-500 py-8">
+                                        <p>No browsing data available yet</p>
+                                    </div>
+                                ) : (
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                        {mostBrowsed.map((material, index) => (
+                                            <div
+                                                key={material.file}
+                                                className="bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer overflow-hidden"
+                                                onClick={() => {
+                                                    const formattedMaterial = {
+                                                        id: Date.now() + index,
+                                                        title: material.title,
+                                                        author: material.author,
+                                                        year: material.year,
+                                                        abstract: material.abstract,
+                                                        file: material.file,
+                                                        fullTextPath: material.file,
+                                                        degree: material.degree,
+                                                        subjects: material.subjects,
+                                                        school: material.school,
+                                                    };
+                                                    setSelectedSource(formattedMaterial);
+                                                    trackMaterialView(formattedMaterial);
+                                                    setShowOverlay(true);
+                                                }}
+                                            >
+                                                {/* Ranking Badge */}
+                                                <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] text-white px-4 py-2 flex items-center justify-between">
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="bg-white text-[#1E74BC] rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                                                            {index + 1}
+                                                        </div>
+                                                        <span className="text-sm font-medium">
+                                                            {material.view_count} {material.view_count === 1 ? 'view' : 'views'}
+                                                        </span>
+                                                    </div>
+                                                    <div className="flex items-center gap-1">
+                                                        <Star 
+                                                            size={16} 
+                                                            className={parseFloat(material.avg_rating) > 0 ? 'fill-yellow-300 text-yellow-300' : 'text-white'} 
+                                                        />
+                                                        <span className="text-sm font-medium">
+                                                            {parseFloat(material.avg_rating).toFixed(1)}
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                {/* Material Info */}
+                                                <div className="p-5">
+                                                    <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-2 hover:text-[#1E74BC] transition-colors">
+                                                        {material.title}
+                                                    </h4>
+                                                    <p className="text-sm text-gray-600 mb-3">
+                                                        <User size={14} className="inline mr-1" />
+                                                        {material.author} • {material.year}
+                                                    </p>
+                                                    <p className="text-sm text-gray-700 line-clamp-3 mb-3">
+                                                        {material.abstract}
+                                                    </p>
+                                                    <div className="flex items-center justify-between text-xs text-gray-500">
+                                                        <span>{material.degree}</span>
+                                                        <span className="text-[#1E74BC] hover:underline font-medium">
+                                                            View Details →
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                            </div>
                     ) : (
                         <div className="max-w-6xl mx-auto pb-20">
                             {/* Conversation History */}

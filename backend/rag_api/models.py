@@ -3,6 +3,7 @@ from django.utils import timezone
 from datetime import timedelta
 import uuid
 from django.contrib.auth.hashers import make_password, check_password
+from django.contrib.postgres.fields import ArrayField
 
 # Models for LitPath AI - Unified User Account System
 
@@ -215,6 +216,8 @@ class Feedback(models.Model):
     relevant = models.BooleanField(blank=True, null=True)
     comment = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+
+    document_file = models.CharField(max_length=500, null=True, blank=True, db_index=True)
     
     class Meta:
         db_table = 'feedback'
@@ -222,4 +225,50 @@ class Feedback(models.Model):
     
     def __str__(self):
         return f"{self.user_id}: Rating {self.rating}"
+    
+
+class Material(models.Model):
+    """Store metadata about theses/dissertations"""
+    file = models.CharField(max_length=500, unique=True)
+    title = models.TextField()
+    author = models.TextField()
+    year = models.IntegerField(null=True, blank=True)
+    abstract = models.TextField(blank=True)
+    degree = models.CharField(max_length=100, blank=True)
+    subjects = ArrayField(
+        models.CharField(max_length=200),
+        blank=True,
+        default=list
+    )
+    school = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        db_table = 'materials'
+        indexes = [
+            models.Index(fields=['file']),
+            models.Index(fields=['-created_at']),
+        ]
+    
+    def __str__(self):
+        return f"{self.title} ({self.year})"
+
+
+class MaterialView(models.Model):
+    """Track material views"""
+    file = models.CharField(max_length=500, db_index=True)
+    user_id = models.CharField(max_length=100, null=True, blank=True)
+    session_id = models.CharField(max_length=100, null=True, blank=True)
+    viewed_at = models.DateTimeField(auto_now_add=True, db_index=True)
+    
+    class Meta:
+        db_table = 'material_views'
+        indexes = [
+            models.Index(fields=['file']),
+            models.Index(fields=['-viewed_at']),
+            models.Index(fields=['user_id']),
+        ]
+    
+    def __str__(self):
+        return f"View of {self.file} at {self.viewed_at}"
 

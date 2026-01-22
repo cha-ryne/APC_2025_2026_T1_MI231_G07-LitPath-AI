@@ -417,3 +417,117 @@ def feedback_detail(request, pk):
     elif request.method == 'DELETE':
         feedback.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+    # ============= Material Views (Most Browsed) =============
+
+@api_view(['POST'])
+def track_material_view(request):
+    """
+    POST /api/track-view/
+    Track when a user views a material
+    """
+    try:
+        user_id = request.data.get('user_id')
+        file = request.data.get('file')
+        session_id = request.data.get('session_id')
+        
+        if not file:
+            return Response(
+                {"error": "file is required"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Create a new MaterialView record
+        from .models import MaterialView, Material
+        from django.utils import timezone
+        
+        # First, ensure the material exists in the materials table
+        # (we'll create it if viewing for the first time)
+        material, created = Material.objects.get_or_create(
+            file=file,
+            defaults={
+                'title': request.data.get('title', 'Unknown'),
+                'author': request.data.get('author', 'Unknown'),
+                'year': request.data.get('year'),
+                'abstract': request.data.get('abstract', ''),
+                'degree': request.data.get('degree', 'Thesis'),
+                'subjects': request.data.get('subjects', []),
+                'school': request.data.get('school', 'Unknown')
+            }
+        )
+        
+        # Track the view
+        MaterialView.objects.create(
+            file=file,
+            user_id=user_id,
+            session_id=session_id,
+            viewed_at=timezone.now()
+        )
+        
+        return Response(
+            {"success": True, "message": "View tracked successfully"},
+            status=status.HTTP_201_CREATED
+        )
+        
+    except Exception as e:
+        return Response(
+            {"error": str(e)},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
+
+
+@api_view(['GET'])
+def get_most_browsed(request):
+    """
+    GET /api/most-browsed/
+    Get most browsed materials with view counts and ratings
+    """
+    try:
+        from django.db.models import Count, Avg, Q
+        from .models import Material, MaterialView, Feedback
+        
+        limit = int(request.GET.get('limit', 10))
+        
+        # Get materials with view counts and average ratings
+        most_browsed = Material.objects.annotate(
+            view_count=Count('materialview', distinct=True),
+            avg_rating=Avg(
+                'feedback__rating',
+                filter=Q(feedback__rating__isnull=False)
+            )
+        ).filter(
+            view_count__gt=0  # Only show materials that have been viewed
+        ).order_by(
+            '-view_count',  # Primary sort: most views first
+            '-avg_rating'   # Secondary sort: highest rating
+        )[:limit]
+        
+        # Format the response
+        materials_data = []
+        for material in most_browsed:
+            materials_data.append({
+                'file': material.file,
+                'title': material.title,
+                'author': material.author,
+                'year': material.year,
+                'abstract': material.abstract,
+                'degree': material.degree,
+                'subjects': material.subjects if isinstance(material.subjects, list) else [],
+                'school': material.school,
+                'view_count': material.view_count,
+                'avg_rating': float(material.avg_rating) if material.avg_rating else 0.0
+            })
+        
+        return Response(
+            {
+                'materials': materials_data,
+                'count': len(materials_data)
+            },
+            status=status.HTTP_200_OK
+        )
+        
+    except Exception as e:
+        return Response(
+            {"error": str(e)},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )

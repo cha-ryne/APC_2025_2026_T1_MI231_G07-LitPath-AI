@@ -1,4 +1,5 @@
 from django.urls import path
+
 from .views import (
     HealthCheckView, SearchView, FiltersView,
     bookmarks_view, bookmark_delete_view, bookmark_delete_by_file_view,
@@ -12,6 +13,7 @@ from .auth_views import (
     auth_me_view, auth_change_password_view, auth_delete_account_view
 )
 
+from . import views 
 urlpatterns = [
     # Support both with and without trailing slashes
     path('health/', HealthCheckView.as_view(), name='health'),
@@ -63,4 +65,8 @@ urlpatterns = [
     path('admin/users/', admin_users_view, name='admin-users'),
     path('admin/users', admin_users_view, name='admin-users-no-slash'),
     path('admin/users/<uuid:admin_id>/', admin_user_delete_view, name='admin-user-delete'),
+
+    # Material Views (Most Browsed)
+    path('track-view/', views.track_material_view, name='track_material_view'),
+    path('most-browsed/', views.get_most_browsed, name='get_most_browsed'),
 ]
