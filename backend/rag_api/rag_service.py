@@ -212,22 +212,12 @@ def extract_query_keywords(query):
     return keywords
 
 
+import difflib
+import re
+
 def check_content_relevance(query, chunks, min_keyword_match_ratio=0.3):
     """
-    Check if retrieved chunks actually contain relevant content for the query.
-    
-    Args:
-        query: User's search query
-        chunks: List of retrieved chunks (each with 'chunk' text and 'meta')
-        min_keyword_match_ratio: Minimum ratio of query keywords that should appear in chunks
-        
-    Returns:
-        dict with:
-            - is_relevant: bool indicating if content is relevant enough
-            - matched_keywords: set of keywords found in chunks
-            - missing_keywords: set of keywords not found in chunks
-            - match_ratio: ratio of matched keywords
-            - chunk_topics: list of topics found in the chunks (from metadata)
+    Check if retrieved chunks contain relevant content, allowing for slight misspellings.
     """
     if not chunks:
         return {
@@ -237,12 +227,11 @@ def check_content_relevance(query, chunks, min_keyword_match_ratio=0.3):
             'match_ratio': 0.0,
             'chunk_topics': []
         }
-    
+
     # Extract keywords from query
     query_keywords = extract_query_keywords(query)
-    
+
     if not query_keywords:
-        # If no meaningful keywords, assume relevant (let Gemini decide)
         return {
             'is_relevant': True,
             'matched_keywords': set(),
@@ -250,29 +239,36 @@ def check_content_relevance(query, chunks, min_keyword_match_ratio=0.3):
             'match_ratio': 1.0,
             'chunk_topics': []
         }
-    
-    # Combine all chunk text for keyword matching
+
+    # Combine all chunk text
     all_chunk_text = ' '.join([c.get('chunk', '') for c in chunks]).lower()
-    
-    # Also check titles and subjects from metadata
     all_metadata_text = ' '.join([
         c.get('meta', {}).get('title', '') + ' ' + 
         c.get('meta', {}).get('subjects', '') 
         for c in chunks
     ]).lower()
-    
+
     combined_text = all_chunk_text + ' ' + all_metadata_text
-    
-    # Check which keywords appear in the chunks
+
+    # Pre-tokenize the text for faster fuzzy matching
+    text_tokens = set(re.findall(r'\b\w{3,}\b', combined_text))
+
     matched_keywords = set()
+
     for kw in query_keywords:
+        # 1. Exact match (Fastest)
         if kw in combined_text:
             matched_keywords.add(kw)
-    
+            continue
+        # 2. Fuzzy match (Slower but handles typos)
+        matches = difflib.get_close_matches(kw, text_tokens, n=1, cutoff=0.80)
+        if matches:
+            matched_keywords.add(kw)
+
     missing_keywords = query_keywords - matched_keywords
     match_ratio = len(matched_keywords) / len(query_keywords) if query_keywords else 0
-    
-    # Extract topics from chunk metadata
+
+    # Extract topics (keep existing logic)
     chunk_topics = []
     seen_topics = set()
     for c in chunks:
@@ -281,13 +277,13 @@ def check_content_relevance(query, chunks, min_keyword_match_ratio=0.3):
         if subjects and subjects not in seen_topics:
             seen_topics.add(subjects)
             chunk_topics.append(subjects)
-    
+
     return {
         'is_relevant': match_ratio >= min_keyword_match_ratio,
         'matched_keywords': matched_keywords,
         'missing_keywords': missing_keywords,
         'match_ratio': match_ratio,
-        'chunk_topics': chunk_topics[:5]  # Limit to 5 topics
+        'chunk_topics': chunk_topics[:5]
     }
 
 
@@ -455,59 +451,59 @@ class RAGService:
         return chunks
     
     def index_txt_files_directly(self, txt_folder, chunk_size=500):
-        """Index TXT files directly without requiring PDF files"""
+        """Index TXT files directly without requiring PDF files (batch embedding)"""
         indexed_path = os.path.join(txt_folder, "indexed_files.json")
-        
+
         if os.path.exists(indexed_path):
             with open(indexed_path, "r", encoding="utf-8") as f:
                 indexed_files = json.load(f)
         else:
             indexed_files = {}
-        
+
         # Get all TXT files
         txt_files = glob.glob(os.path.join(txt_folder, '*.txt'))
-        
+
         # Index new/changed files
         to_index = []
         for txt_path in txt_files:
             mtime = os.path.getmtime(txt_path)
             if txt_path not in indexed_files or indexed_files[txt_path] != mtime:
                 to_index.append((txt_path, mtime))
-        
+
         print(f"[RAG] Found {len(txt_files)} TXT files, {len(to_index)} need indexing")
-        
+
         for txt_path, mtime in to_index:
             print(f"[RAG] Indexing: {os.path.basename(txt_path)}")
-            
             try:
                 with open(txt_path, "r", encoding="utf-8") as f:
                     text = f.read()
-                
+
                 meta = extract_thesis_metadata(text)
                 meta["file"] = os.path.basename(txt_path)
                 meta["university"] = meta.get("university", "")
-                
+
                 chunks = self.sentence_chunking(text, chunk_size=chunk_size)
                 if not chunks:
                     print(f"[RAG] Skipping empty file: {os.path.basename(txt_path)}")
                     continue
-                    
-                chunk_embeddings = self.embed_chunks(chunks)
-                
+
+                # Batch embed all chunks at once
+                chunk_embeddings = self.embedder.encode(chunks, batch_size=32, show_progress_bar=False, convert_to_numpy=True)
+
                 chunk_metadatas = []
                 for idx, chunk in enumerate(chunks):
                     meta_copy = dict(meta)
                     meta_copy["chunk_idx"] = idx
-                    
+
                     if "subjects" in meta_copy and isinstance(meta_copy["subjects"], list):
                         meta_copy["subjects"] = ", ".join(str(s) for s in meta_copy["subjects"])
-                    
+
                     for k, v in meta_copy.items():
                         if v is None:
                             meta_copy[k] = ""
-                    
+
                     chunk_metadatas.append(meta_copy)
-                
+
                 ids = [f"{os.path.basename(txt_path)}_chunk_{i}" for i in range(len(chunks))]
                 self.collection.add(
                     embeddings=[list(map(float, emb)) for emb in chunk_embeddings],
@@ -515,32 +511,32 @@ class RAGService:
                     metadatas=chunk_metadatas,
                     ids=ids
                 )
-                
+
                 indexed_files[txt_path] = mtime
-                
+
             except Exception as e:
                 print(f"[RAG] Failed to index {os.path.basename(txt_path)}: {e}")
                 continue
-        
+
         # Save indexed file registry
         with open(indexed_path, "w", encoding="utf-8") as f:
             json.dump(indexed_files, f)
-        
+
         print(f"[RAG] Indexing complete. Total chunks: {self.collection.count()}")
     
     def extract_and_chunk_pdfs(self, pdf_folder, chunk_size=500):
-        """Extract and index PDFs (only new/changed files)"""
+        """Extract and index PDFs (only new/changed files, batch embedding)"""
         indexed_path = os.path.join(pdf_folder, "indexed_files.json")
-        
+
         if os.path.exists(indexed_path):
             with open(indexed_path, "r", encoding="utf-8") as f:
                 indexed_files = json.load(f)
         else:
             indexed_files = {}
-        
+
         pdf_files = glob.glob(os.path.join(pdf_folder, '*.pdf'))
         txt_files = [os.path.splitext(p)[0] + ".txt" for p in pdf_files if os.path.exists(os.path.splitext(p)[0] + ".txt")]
-        
+
         # Extract text from new PDFs
         for pdf_path in pdf_files:
             txt_path = os.path.splitext(pdf_path)[0] + ".txt"
@@ -548,7 +544,7 @@ class RAGService:
                 try:
                     reader = PdfReader(pdf_path)
                     text = "\n".join(page.extract_text() or "" for page in reader.pages)
-                    
+
                     # Fallback to OCR if text is too short
                     if len(text.strip()) < 100:
                         try:
@@ -558,48 +554,52 @@ class RAGService:
                             text = "\n".join(pytesseract.image_to_string(img) for img in images)
                         except Exception as e:
                             print(f"[RAG] OCR failed for {os.path.basename(pdf_path)}: {e}")
-                    
+
                     with open(txt_path, "w", encoding="utf-8") as f:
                         f.write(text)
                     print(f"[RAG] Extracted text for {os.path.basename(pdf_path)}")
                 except Exception as e:
                     print(f"[RAG] Failed to extract {os.path.basename(pdf_path)}: {e}")
                     continue
-        
+
         # Index new/changed files
         to_index = []
         for txt_path in txt_files:
             mtime = os.path.getmtime(txt_path)
             if txt_path not in indexed_files or indexed_files[txt_path] != mtime:
                 to_index.append((txt_path, mtime))
-        
+
         for txt_path, mtime in to_index:
             print(f"[RAG] Indexing: {os.path.basename(txt_path)}")
-            
             with open(txt_path, "r", encoding="utf-8") as f:
                 text = f.read()
-            
+
             meta = extract_thesis_metadata(text)
             meta["file"] = os.path.basename(txt_path)
             meta["university"] = meta.get("university", "")
-            
+
             chunks = self.sentence_chunking(text, chunk_size=chunk_size)
-            chunk_embeddings = self.embed_chunks(chunks)
-            
+            if not chunks:
+                print(f"[RAG] Skipping empty file: {os.path.basename(txt_path)}")
+                continue
+
+            # Batch embed all chunks at once
+            chunk_embeddings = self.embedder.encode(chunks, batch_size=32, show_progress_bar=False, convert_to_numpy=True)
+
             chunk_metadatas = []
             for idx, chunk in enumerate(chunks):
                 meta_copy = dict(meta)
                 meta_copy["chunk_idx"] = idx
-                
+
                 if "subjects" in meta_copy and isinstance(meta_copy["subjects"], list):
                     meta_copy["subjects"] = ", ".join(str(s) for s in meta_copy["subjects"])
-                
+
                 for k, v in meta_copy.items():
                     if v is None:
                         meta_copy[k] = ""
-                
+
                 chunk_metadatas.append(meta_copy)
-            
+
             ids = [f"{os.path.basename(txt_path)}_chunk_{i}" for i in range(len(chunks))]
             self.collection.add(
                 embeddings=[list(map(float, emb)) for emb in chunk_embeddings],
@@ -607,13 +607,13 @@ class RAGService:
                 metadatas=chunk_metadatas,
                 ids=ids
             )
-            
+
             indexed_files[txt_path] = mtime
-        
+
         # Save updated index
         with open(indexed_path, "w", encoding="utf-8") as f:
             json.dump(indexed_files, f, indent=2)
-        
+
         return len(to_index)
     
     def recover_chromadb_from_index(self, pdf_folder, chunk_size=500):
@@ -673,138 +673,214 @@ class RAGService:
         
         return recovered_chunks
     
-    def search(self, question, top_n=200, distance_threshold=1.5, subjects=None, year=None, year_start=None, year_end=None):
-        """Search for relevant thesis chunks with optional metadata filters
-        
-        Args:
-            question: The search query
-            top_n: Number of results to retrieve (increased for post-filtering)
-            distance_threshold: Maximum distance for relevance
-            subjects: List of subjects to filter by (OR logic - matches any)
-            year: Specific year to filter by
-            year_start: Start year for range filter (inclusive)
-            year_end: End year for range filter (inclusive)
-            
-        Note: Due to ChromaDB limitations, filtering is done post-query in Python
-        """
-        # Expand query with Filipino term mappings for better Taglish support
-        expanded_question = expand_query_with_filipino_terms(question)
-        if expanded_question != question:
-            print(f"[RAG] Query expanded: '{question}' -> '{expanded_question}'")
-        
+    def search(self, question, top_n=200, distance_threshold=1.5, subjects=None, year=None, year_start=None, year_end=None, rerank_top_k=50):
+        """Search for relevant thesis chunks with optional metadata filters, LLM-based query rewriting, and local reranker."""
+        # Step 1: LLM-based query rewriting (Gemini)
+        rewritten_question = None
+        if self.api_key:
+            try:
+                client = genai.Client(api_key=self.api_key)
+                rewrite_prompt = (
+                    f"Rewrite the following academic search query to be more clear, specific, and in standard English. "
+                    f"If the query is in Tagalog or Taglish, translate and clarify it for a research database search. "
+                    f"Do not answer the question, just rewrite it.\n\nQuery: {question}\n\nRewritten query:"
+                )
+                response = client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=rewrite_prompt,
+                    config={
+                        "temperature": 0.2,
+                        "max_output_tokens": 128,
+                        "top_p": 0.8,
+                        "thinking_config": {"thinking_budget": 0},
+                    }
+                )
+                if hasattr(response, "text") and response.text.strip():
+                    rewritten_question = response.text.strip()
+                    print(f"[RAG] LLM query rewrite: '{question}' -> '{rewritten_question}'")
+            except Exception as e:
+                print(f"[RAG] Query rewriting failed: {e}")
+        if not rewritten_question:
+            rewritten_question = question
+
+        # Step 2: Expand query with Filipino/English term mappings
+        expanded_question = expand_query_with_filipino_terms(rewritten_question)
+        if expanded_question != rewritten_question:
+            print(f"[RAG] Query expanded: '{rewritten_question}' -> '{expanded_question}'")
+
         query_emb = self.embedder.encode([expanded_question], convert_to_numpy=True)[0].tolist()
-        
-        # Query without filters (ChromaDB has limited metadata query support)
+
+        # Build ChromaDB where clause for year filters
+        filters = []
+        if year:
+            filters.append({"publication_year": {"$eq": str(year)}})
+        if year_start:
+            filters.append({"publication_year": {"$gte": str(year_start)}})
+        if year_end:
+            filters.append({"publication_year": {"$lte": str(year_end)}})
+
+        where_clause = {"$and": filters} if len(filters) > 1 else (filters[0] if filters else None)
+
+        # Query with database-level year filtering
         results = self.collection.query(
             query_embeddings=[query_emb],
             n_results=top_n,
+            where=where_clause,
             include=["documents", "metadatas", "distances"]
         )
-        
-        # Apply filters in Python
-        top_chunks = []
-        seen_files = set()
-        documents = []
-        
+
+        # Collect candidate chunks (vector search)
+        candidate_chunks = []
         for i in range(len(results["documents"][0])):
             meta = results["metadatas"][0][i]
             file_name = meta.get("file", meta.get("pdf", ""))
-            
-            # Skip if we've already added this document
-            if file_name in seen_files:
-                continue
-            
-            # Apply subject filter (OR logic - match any)
-            if subjects and len(subjects) > 0:
-                subjects_str = meta.get("subjects", "")
-                # Split the subjects string into individual subjects
-                doc_subjects = [s.strip() for s in subjects_str.split(",")]
-                
-                # Check if any of the requested subjects match (case-insensitive, whole word)
-                match_found = False
-                for requested_subj in subjects:
-                    for doc_subj in doc_subjects:
-                        if requested_subj.lower() == doc_subj.lower():
-                            match_found = True
-                            break
-                    if match_found:
-                        break
-                
-                if not match_found:
-                    continue
-            
-            # Apply year filter
-            doc_year = meta.get("publication_year", "")
-            try:
-                doc_year_int = int(doc_year) if doc_year and doc_year != "[Unknown Year]" else None
-            except (ValueError, TypeError):
-                doc_year_int = None
-            
-            # Skip documents with no valid year when year filters are applied
-            if (year or year_start or year_end) and doc_year_int is None:
-                continue
-            
-            if year:
-                if doc_year_int != year:
-                    continue
-            
-            if year_start:
-                if doc_year_int < year_start:
-                    continue
-            
-            if year_end:
-                if doc_year_int > year_end:
-                    continue
-            
-            # If we got here, the document passed all filters
             score = float(results["distances"][0][i])
-            
-            # Only add if relevance score is good enough
             if score < distance_threshold and file_name:
-                # Format metadata with proper capitalization
-                author = format_metadata_capitalization(
-                    meta.get("author", "[Unknown Author]"), 
-                    field_type='author'
-                )
-                title = format_metadata_capitalization(
-                    meta.get("title", "[Unknown Title]"),
-                    field_type='title'
-                )
-                university = format_metadata_capitalization(
-                    meta.get("university", ""),
-                    field_type='university'
-                )
-                degree = format_metadata_capitalization(
-                    meta.get("degree", "Thesis"),
-                    field_type='degree'
-                )
-                
-                doc = {
-                    "title": title,
-                    "author": author,
-                    "publication_year": doc_year,
-                    "abstract": meta.get("abstract", ""),
-                    "file": file_name,
-                    "degree": degree,
-                    "call_no": meta.get("call_no", ""),
-                    "subjects": meta.get("subjects", ""),
-                    "university": university,
-                    "school": university  # Add 'school' alias for frontend compatibility
-                }
-                documents.append(doc)
-                seen_files.add(file_name)
-                
-                # Also collect the chunk for overview generation
-                top_chunks.append({
+                # Apply subject filter (OR logic - match any)
+                if subjects and len(subjects) > 0:
+                    subjects_str = meta.get("subjects", "")
+                    doc_subjects = [s.strip() for s in subjects_str.split(",")]
+                    match_found = False
+                    for requested_subj in subjects:
+                        for doc_subj in doc_subjects:
+                            if requested_subj.lower() == doc_subj.lower():
+                                match_found = True
+                                break
+                        if match_found:
+                            break
+                    if not match_found:
+                        continue
+                candidate_chunks.append({
                     "chunk": results["documents"][0][i],
                     "meta": meta,
                     "score": score
                 })
-            
-            if len(documents) >= 10:
+
+        # === Local reranker step ===
+        # Use a local cross-encoder (e.g., MiniLM) to rerank top rerank_top_k candidates
+        # You can swap this with any HuggingFace cross-encoder model
+        from transformers import AutoTokenizer, AutoModelForSequenceClassification
+        import torch
+        if not hasattr(self, "_reranker_model"):
+            self._reranker_tokenizer = AutoTokenizer.from_pretrained("cross-encoder/ms-marco-MiniLM-L-6-v2")
+            self._reranker_model = AutoModelForSequenceClassification.from_pretrained("cross-encoder/ms-marco-MiniLM-L-6-v2")
+            self._reranker_model.eval()
+
+        rerank_candidates = candidate_chunks[:rerank_top_k]
+        pairs = [(expanded_question, c["chunk"]) for c in rerank_candidates]
+        batch_size = 8
+        rerank_scores = []
+        with torch.no_grad():
+            for i in range(0, len(pairs), batch_size):
+                batch = pairs[i:i+batch_size]
+                inputs = self._reranker_tokenizer.batch_encode_plus(
+                    batch,
+                    padding=True,
+                    truncation=True,
+                    max_length=256,
+                    return_tensors="pt"
+                )
+                outputs = self._reranker_model(**inputs)
+                scores = outputs.logits.squeeze(-1).cpu().numpy()
+                rerank_scores.extend(scores.tolist())
+        # Attach rerank scores
+        for idx, c in enumerate(rerank_candidates):
+            c["rerank_score"] = rerank_scores[idx]
+
+        # Sort by rerank score (descending)
+        reranked = sorted(rerank_candidates, key=lambda x: x["rerank_score"], reverse=True)
+
+        # Fill up to 10: unique files first, then next best
+        file_best_chunk = {}
+        for c in reranked:
+            file_name = c["meta"].get("file", c["meta"].get("pdf", ""))
+            if file_name not in file_best_chunk or c["rerank_score"] > file_best_chunk[file_name]["rerank_score"]:
+                file_best_chunk[file_name] = c
+
+        unique_chunks = sorted(file_best_chunk.values(), key=lambda x: x["rerank_score"], reverse=True)
+
+        top_chunks = []
+        documents = []
+        seen_files = set()
+        for c in unique_chunks:
+            if len(top_chunks) >= 10:
                 break
-        
-        return top_chunks, documents, distance_threshold
+            meta = c["meta"]
+            file_name = meta.get("file", meta.get("pdf", ""))
+            author = format_metadata_capitalization(
+                meta.get("author", "[Unknown Author]"), 
+                field_type='author'
+            )
+            title = format_metadata_capitalization(
+                meta.get("title", "[Unknown Title]"),
+                field_type='title'
+            )
+            university = format_metadata_capitalization(
+                meta.get("university", ""),
+                field_type='university'
+            )
+            degree = format_metadata_capitalization(
+                meta.get("degree", "Thesis"),
+                field_type='degree'
+            )
+            doc = {
+                "title": title,
+                "author": author,
+                "publication_year": meta.get("publication_year", ""),
+                "abstract": meta.get("abstract", ""),
+                "file": file_name,
+                "degree": degree,
+                "call_no": meta.get("call_no", ""),
+                "subjects": meta.get("subjects", ""),
+                "university": university,
+                "school": university
+            }
+            documents.append(doc)
+            seen_files.add(file_name)
+            top_chunks.append(c)
+
+        # If less than 10, fill with next best chunks (even if from same file)
+        if len(top_chunks) < 10:
+            for c in reranked:
+                if len(top_chunks) >= 10:
+                    break
+                file_name = c["meta"].get("file", c["meta"].get("pdf", ""))
+                if c in top_chunks:
+                    continue
+                if file_name not in seen_files:
+                    author = format_metadata_capitalization(
+                        c["meta"].get("author", "[Unknown Author]"), 
+                        field_type='author'
+                    )
+                    title = format_metadata_capitalization(
+                        c["meta"].get("title", "[Unknown Title]"),
+                        field_type='title'
+                    )
+                    university = format_metadata_capitalization(
+                        c["meta"].get("university", ""),
+                        field_type='university'
+                    )
+                    degree = format_metadata_capitalization(
+                        c["meta"].get("degree", "Thesis"),
+                        field_type='degree'
+                    )
+                    doc = {
+                        "title": title,
+                        "author": author,
+                        "publication_year": c["meta"].get("publication_year", ""),
+                        "abstract": c["meta"].get("abstract", ""),
+                        "file": file_name,
+                        "degree": degree,
+                        "call_no": c["meta"].get("call_no", ""),
+                        "subjects": c["meta"].get("subjects", ""),
+                        "university": university,
+                        "school": university
+                    }
+                    documents.append(doc)
+                    seen_files.add(file_name)
+                top_chunks.append(c)
+
+        return top_chunks[:10], documents[:10], distance_threshold
     
     def get_available_filters(self):
         """Get available subjects and years from the database for filtering UI"""
@@ -1011,7 +1087,7 @@ Answer:"""
         
         try:
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3-flash-preview",
                 contents=prompt,
                 config={
                     "temperature": 0.3,
