@@ -7,6 +7,7 @@ import os
 import glob
 import json
 import numpy as np
+import requests
 from google import genai
 import re
 import time
@@ -356,38 +357,19 @@ class RAGService:
         """Initialize the RAG system (called on first search)"""
         if cls._initialized:
             return
-        
-        # Mark as initialized immediately to prevent duplicate calls
         cls._initialized = True
-        
         instance = cls()
         print("[RAG] Initializing RAG system...")
-        
-        # Use all-MiniLM-L6-v2 for English thesis documents
-        # Fast, accurate, well-calibrated distance scores (threshold 1.5)
-        # Note: For Filipino/Taglish queries, consider meedan/paraphrase-filipino-mpnet-base-v2
-        # but it requires higher distance threshold (~4.0) and is optimized for Filipino text
-        # Using all-mpnet-base-v2 for better semantic understanding
-        # - 768 dimensions (vs 384 for MiniLM)
-        # - ~10-15% better precision on semantic similarity
-        # - Slightly slower but more accurate
-        # Note: Requires re-indexing when switching from MiniLM
         instance.embedder = SentenceTransformer('all-mpnet-base-v2')
         print("[RAG] Loaded embedding model: all-mpnet-base-v2")
-        
         instance.chroma_client = chromadb.PersistentClient(path=settings.RAG_CHROMADB_PATH)
         instance.collection = instance.chroma_client.get_or_create_collection("thesis_chunks")
         instance.api_key = settings.GEMINI_API_KEY
-        
-        # Check if ChromaDB already has data
         existing_chunks = instance.collection.count()
         print(f"[RAG] Found {existing_chunks} existing chunks in database")
-        
-        # Only index if database is empty
         if existing_chunks == 0:
             pdf_files = glob.glob(os.path.join(settings.RAG_THESES_FOLDER, '*.pdf'))
             txt_files = glob.glob(os.path.join(settings.RAG_THESES_FOLDER, '*.txt'))
-            
             if len(pdf_files) > 0:
                 print(f"[RAG] Found {len(pdf_files)} PDF files, extracting and indexing...")
                 instance.extract_and_chunk_pdfs(settings.RAG_THESES_FOLDER)
@@ -396,59 +378,12 @@ class RAGService:
                 instance.index_txt_files_directly(settings.RAG_THESES_FOLDER)
             else:
                 print("[RAG] No PDF or TXT files found!")
-            
-            # Recovery if needed
             if instance.collection.count() == 0:
                 print("[RAG] ChromaDB is empty. Attempting recovery...")
                 instance.recover_chromadb_from_index(settings.RAG_THESES_FOLDER)
         else:
             print(f"[RAG] Skipping indexing - using existing {existing_chunks} chunks")
-        
         print(f"[RAG] Ready! Total chunks: {instance.collection.count()}")
-    
-    def embed_chunks(self, chunks):
-        """Convert text chunks to embeddings"""
-        return np.array(self.embedder.encode(chunks, show_progress_bar=False, convert_to_numpy=True))
-    
-    def sentence_chunking(self, text, chunk_size=500):
-        """Split text into overlapping chunks"""
-        sentences = text.split('. ')
-        sentences = [s.strip() + ('' if s.strip().endswith('.') else '.') for s in sentences if s.strip()]
-        chunks = []
-        overlap = int(chunk_size * 0.2)
-        i = 0
-        
-        while i < len(sentences):
-            window = []
-            window_len = 0
-            j = i
-            
-            while j < len(sentences) and window_len < chunk_size:
-                sent = sentences[j]
-                sent_len = len(sent.split())
-                if window_len + sent_len > chunk_size and window:
-                    break
-                window.append(sent)
-                window_len += sent_len
-                j += 1
-            
-            if window:
-                chunks.append(' '.join(window))
-            
-            if window_len == 0:
-                i += 1
-            else:
-                step = max(1, window_len - overlap)
-                words_seen = 0
-                for k in range(i, len(sentences)):
-                    words_seen += len(sentences[k].split())
-                    if words_seen >= step:
-                        i = k + 1
-                        break
-                else:
-                    break
-        
-        return chunks
     
     def index_txt_files_directly(self, txt_folder, chunk_size=500):
         """Index TXT files directly without requiring PDF files (batch embedding)"""
@@ -682,11 +617,13 @@ class RAGService:
                 client = genai.Client(api_key=self.api_key)
                 rewrite_prompt = (
                     f"Rewrite the following academic search query to be more clear, specific, and in standard English. "
-                    f"If the query is in Tagalog or Taglish, translate and clarify it for a research database search. "
+                    f"If the query is in Tagalog, Taglish, Cebuano, or any Philippine language or dialect, translate and clarify it for a research database search. "
+                    f"Correct minor typographical errors or spelling mistakes in the query, no matter the language. "
+                    f"If the query is already good and understandable in English, do not rewrite it and just return it as is. "
                     f"Do not answer the question, just rewrite it.\n\nQuery: {question}\n\nRewritten query:"
                 )
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-2.5-flash-lite",
                     contents=rewrite_prompt,
                     config={
                         "temperature": 0.2,
@@ -756,57 +693,113 @@ class RAGService:
                     "score": score
                 })
 
-        # === Local reranker step ===
-        # Use a local cross-encoder (e.g., MiniLM) to rerank top rerank_top_k candidates
-        # You can swap this with any HuggingFace cross-encoder model
-        from transformers import AutoTokenizer, AutoModelForSequenceClassification
-        import torch
-        if not hasattr(self, "_reranker_model"):
-            self._reranker_tokenizer = AutoTokenizer.from_pretrained("cross-encoder/ms-marco-MiniLM-L-6-v2")
-            self._reranker_model = AutoModelForSequenceClassification.from_pretrained("cross-encoder/ms-marco-MiniLM-L-6-v2")
-            self._reranker_model.eval()
+        # === Reranker step using local LLM API (Qwen or similar) for semantic selection ===
+        ai_base_url = os.environ.get("AI_BASE_URL", "http://localhost:1234/v1")
+        ai_api_key = os.environ.get("AI_API_KEY", "localhost")
+        ai_model = os.environ.get("AI_MODEL", "qwen/qwen3-4b-2507")
 
-        rerank_candidates = candidate_chunks[:rerank_top_k]
-        pairs = [(expanded_question, c["chunk"]) for c in rerank_candidates]
-        batch_size = 8
-        rerank_scores = []
-        with torch.no_grad():
-            for i in range(0, len(pairs), batch_size):
-                batch = pairs[i:i+batch_size]
-                inputs = self._reranker_tokenizer.batch_encode_plus(
-                    batch,
-                    padding=True,
-                    truncation=True,
-                    max_length=256,
-                    return_tensors="pt"
+        # Limit rerank candidates and chunk size to fit LLM context window
+        max_rerank_candidates = min(rerank_top_k, 30)  # hard cap for LLM context
+        max_chunk_chars = 350  # truncate each chunk for prompt
+        rerank_candidates = candidate_chunks[:max_rerank_candidates]
+        selected_indices = []
+        debug_prompt = None
+        if rerank_candidates:
+            try:
+                debug_prompt = (
+                    "You are a document selector for academic search. "
+                    "Given a user query and a list of document chunks, select the most relevant chunks (up to 10) that best answer the query. "
+                    "Return a JSON list of the indices (starting from 1) of the selected chunks, in order of relevance. "
+                    "Do not answer the query or summarize, just return the list."
                 )
-                outputs = self._reranker_model(**inputs)
-                scores = outputs.logits.squeeze(-1).cpu().numpy()
-                rerank_scores.extend(scores.tolist())
-        # Attach rerank scores
-        for idx, c in enumerate(rerank_candidates):
-            c["rerank_score"] = rerank_scores[idx]
+                user_content = (
+                    f"Query: {expanded_question}\n\n" +
+                    "Document Chunks:\n" +
+                    "\n".join([
+                        f"[{i+1}] {c['chunk'][:max_chunk_chars].replace('\n', ' ').replace('  ', ' ')}"
+                        for i, c in enumerate(rerank_candidates)
+                    ])
+                )
+                payload = {
+                    "model": ai_model,
+                    "messages": [
+                        {"role": "system", "content": debug_prompt},
+                        {"role": "user", "content": user_content}
+                    ]
+                }
+                headers = {"Authorization": f"Bearer {ai_api_key}", "Content-Type": "application/json"}
+                print("[RAG] Reranker prompt sent to LLM:\n", debug_prompt)
+                print("[RAG] Reranker user content:\n", user_content[:1000], "..." if len(user_content) > 1000 else "")
+                response = requests.post(f"{ai_base_url}/chat/completions", json=payload, headers=headers, timeout=5000)
+                response.raise_for_status()
+                result = response.json()
+                import ast
+                import re
+                content = result.get("choices", [{}])[0].get("message", {}).get("content", "")
+                print("[RAG] Reranker LLM raw response:", content)
+                # Robustly extract the first list of integers from the response
+                match = re.search(r'\[\s*\d+(?:\s*,\s*\d+)*\s*\]', content)
+                if match:
+                    try:
+                        selected_indices = ast.literal_eval(match.group(0))
+                        if not isinstance(selected_indices, list):
+                            selected_indices = []
+                        # Only keep valid integer indices
+                        selected_indices = [i for i in selected_indices if isinstance(i, int)]
+                    except Exception as parse_e:
+                        print(f"[RAG] Failed to parse LLM indices: {parse_e}")
+                        selected_indices = []
+                else:
+                    # Try to extract all numbers in brackets as fallback
+                    numbers = re.findall(r'\[(.*?)\]', content)
+                    if numbers:
+                        try:
+                            nums = numbers[0].split(',')
+                            selected_indices = [int(n.strip()) for n in nums if n.strip().isdigit()]
+                        except Exception as fallback_e:
+                            print(f"[RAG] Fallback parse failed: {fallback_e}")
+                            selected_indices = []
+                    else:
+                        selected_indices = []
+            except Exception as e:
+                print(f"[RAG] Local reranker failed: {e}")
+                selected_indices = []
+        else:
+            selected_indices = []
 
-        # Sort by rerank score (descending)
-        reranked = sorted(rerank_candidates, key=lambda x: x["rerank_score"], reverse=True)
+        # Select chunks based on LLM indices (1-based) with robust error handling
+        selected_chunks = []
+        try:
+            for idx in selected_indices:
+                if isinstance(idx, int) and 1 <= idx <= len(rerank_candidates):
+                    selected_chunks.append(rerank_candidates[idx-1])
+                else:
+                    print(f"[RAG] Ignoring out-of-range LLM index: {idx}")
+        except Exception as e:
+            import traceback
+            print(f"[RAG] Exception during LLM index selection: {e}\n{traceback.format_exc()}")
+            selected_chunks = []
 
-        # Fill up to 10: unique files first, then next best
-        file_best_chunk = {}
-        for c in reranked:
-            file_name = c["meta"].get("file", c["meta"].get("pdf", ""))
-            if file_name not in file_best_chunk or c["rerank_score"] > file_best_chunk[file_name]["rerank_score"]:
-                file_best_chunk[file_name] = c
+        # If LLM fails or returns nothing, fallback to top by distance
+        if not selected_chunks:
+            print("[RAG] Reranker fallback: using top by distance")
+            selected_chunks = rerank_candidates[:10]
 
-        unique_chunks = sorted(file_best_chunk.values(), key=lambda x: x["rerank_score"], reverse=True)
-
+        # Prepare documents and top_chunks for output
         top_chunks = []
         documents = []
-        seen_files = set()
-        for c in unique_chunks:
-            if len(top_chunks) >= 10:
-                break
+        seen_titles = set()
+        for c in selected_chunks:
             meta = c["meta"]
             file_name = meta.get("file", meta.get("pdf", ""))
+            # Fix degree: prefer meta['degree'], fallback to meta['degree_name'], fallback to 'Thesis'
+            degree = meta.get("degree") or meta.get("degree_name") or "Thesis"
+            degree = format_metadata_capitalization(degree, field_type='degree')
+            # Fix subjects: join list if needed, clean up
+            subjects = meta.get("subjects", "")
+            if isinstance(subjects, list):
+                subjects = ", ".join(str(s) for s in subjects)
+            subjects = str(subjects).strip()
             author = format_metadata_capitalization(
                 meta.get("author", "[Unknown Author]"), 
                 field_type='author'
@@ -819,10 +812,10 @@ class RAGService:
                 meta.get("university", ""),
                 field_type='university'
             )
-            degree = format_metadata_capitalization(
-                meta.get("degree", "Thesis"),
-                field_type='degree'
-            )
+            # Only add one chunk per unique title
+            if title in seen_titles:
+                continue
+            seen_titles.add(title)
             doc = {
                 "title": title,
                 "author": author,
@@ -831,56 +824,14 @@ class RAGService:
                 "file": file_name,
                 "degree": degree,
                 "call_no": meta.get("call_no", ""),
-                "subjects": meta.get("subjects", ""),
+                "subjects": subjects,
                 "university": university,
                 "school": university
             }
             documents.append(doc)
-            seen_files.add(file_name)
             top_chunks.append(c)
 
-        # If less than 10, fill with next best chunks (even if from same file)
-        if len(top_chunks) < 10:
-            for c in reranked:
-                if len(top_chunks) >= 10:
-                    break
-                file_name = c["meta"].get("file", c["meta"].get("pdf", ""))
-                if c in top_chunks:
-                    continue
-                if file_name not in seen_files:
-                    author = format_metadata_capitalization(
-                        c["meta"].get("author", "[Unknown Author]"), 
-                        field_type='author'
-                    )
-                    title = format_metadata_capitalization(
-                        c["meta"].get("title", "[Unknown Title]"),
-                        field_type='title'
-                    )
-                    university = format_metadata_capitalization(
-                        c["meta"].get("university", ""),
-                        field_type='university'
-                    )
-                    degree = format_metadata_capitalization(
-                        c["meta"].get("degree", "Thesis"),
-                        field_type='degree'
-                    )
-                    doc = {
-                        "title": title,
-                        "author": author,
-                        "publication_year": c["meta"].get("publication_year", ""),
-                        "abstract": c["meta"].get("abstract", ""),
-                        "file": file_name,
-                        "degree": degree,
-                        "call_no": c["meta"].get("call_no", ""),
-                        "subjects": c["meta"].get("subjects", ""),
-                        "university": university,
-                        "school": university
-                    }
-                    documents.append(doc)
-                    seen_files.add(file_name)
-                top_chunks.append(c)
-
-        return top_chunks[:10], documents[:10], distance_threshold
+        return top_chunks, documents, distance_threshold
     
     def get_available_filters(self):
         """Get available subjects and years from the database for filtering UI"""
@@ -915,80 +866,27 @@ class RAGService:
             print(f"[RAG] Error getting filters: {e}")
             return {"subjects": [], "years": []}
     
-    def generate_overview(self, top_chunks, question, distance_threshold, conversation_history=None):
-        """Generate AI overview using Gemini with conversation context"""
-        relevant_chunks = [c for c in top_chunks if c["score"] < distance_threshold]
-        
+    def generate_overview(self, top_chunks, question, distance_threshold, conversation_history=None, relevance_info=None):
+        """Always generate AI overview using context-aware method with conversation context and improved prompt."""
+        # Filter relevant chunks by distance threshold if available
+        relevant_chunks = [c for c in top_chunks if c.get("score", 0) < distance_threshold] if top_chunks and "score" in top_chunks[0] else top_chunks
         if not relevant_chunks:
             return "No relevant information found for your query."
-        
-        # Check content relevance before calling Gemini
+        # Optionally check content relevance (reuse previous logic if needed)
         relevance_check = check_content_relevance(question, relevant_chunks, min_keyword_match_ratio=0.25)
-        
         print(f"[RAG] Relevance check: {relevance_check['match_ratio']:.0%} keyword match")
         print(f"[RAG] Matched: {relevance_check['matched_keywords']}")
         print(f"[RAG] Missing: {relevance_check['missing_keywords']}")
-        
-        # If very low relevance, skip Gemini and return a helpful message
+        # If very low relevance, skip LLM and return a helpful message
         if not relevance_check['is_relevant'] and relevance_check['match_ratio'] < 0.15:
             missing = ', '.join(list(relevance_check['missing_keywords'])[:5])
-            
-            # Don't mention irrelevant topics - just tell the user we couldn't find anything
             return (
                 f"No relevant information was found in the thesis database for your query. "
                 f"The search terms '{missing}' do not appear in any available documents. "
                 f"Try using different keywords, checking for spelling errors, or searching for related academic topics."
             )
-        
-        # Build context from up to 5 unique theses, max 2 chunks each for speed
-        unique_files = []
-        chunks_for_overview = []
-        chunks_per_file = {}  # Track chunks per file
-        
-        for c in relevant_chunks:
-            file_name = c["meta"].get("file", c["meta"].get("pdf", ""))
-            if not file_name:
-                continue
-            
-            # Track unique files
-            if file_name not in unique_files:
-                unique_files.append(file_name)
-                chunks_per_file[file_name] = 0
-            
-            # Limit to 5 theses, max 2 chunks each (10 chunks total max)
-            if file_name in unique_files[:5] and chunks_per_file[file_name] < 2:
-                chunks_for_overview.append(c)
-                chunks_per_file[file_name] += 1
-            
-            if len(unique_files) >= 5 and all(chunks_per_file.get(f, 0) >= 2 for f in unique_files[:5]):
-                break
-        
-        if not self.api_key:
-            return "No Gemini API key configured."
-        
-        # Check cache first (include conversation history in cache key for context-aware caching)
-        doc_ids = [c["meta"].get("file", c["meta"].get("pdf", "")) for c in chunks_for_overview]
-        history_key = str([(h.get('query', '') for h in (conversation_history or []))])
-        cache_key = get_cache_key(question + history_key, doc_ids)
-        cached = get_cached_response(cache_key)
-        if cached:
-            print(f"[RAG] Cache HIT - returning cached response")
-            return cached
-        
-        try:
-            # Pass relevance info to Gemini for better context
-            response = self._generate_with_context(
-                chunks_for_overview, 
-                question, 
-                conversation_history,
-                relevance_info=relevance_check
-            )
-            # Cache the response
-            set_cached_response(cache_key, response)
-            return response
-        except Exception as e:
-            
-            return f"[Gemini error: {e}]"
+        # Use the context-aware overview method for all cases
+        return self._generate_with_context(relevant_chunks, question, conversation_history, relevance_info)
     
     def _generate_with_context(self, top_chunks, question, conversation_history=None, relevance_info=None):
         """Generate AI overview with conversation context for follow-up questions"""
@@ -1087,7 +985,7 @@ Answer:"""
         
         try:
             response = client.models.generate_content(
-                model="gemini-3-flash-preview",
+                model="gemini-2.5-flash-lite",
                 contents=prompt,
                 config={
                     "temperature": 0.3,
