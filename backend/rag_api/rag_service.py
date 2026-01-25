@@ -716,7 +716,7 @@ class RAGService:
                     f"Query: {expanded_question}\n\n" +
                     "Document Chunks:\n" +
                     "\n".join([
-                        f"[{i+1}] {c['chunk'][:max_chunk_chars].replace('\n', ' ').replace('  ', ' ')}"
+                        f"[{i+1}] " + c['chunk'][:max_chunk_chars].replace('\n', ' ').replace('  ', ' ')
                         for i, c in enumerate(rerank_candidates)
                     ])
                 )
