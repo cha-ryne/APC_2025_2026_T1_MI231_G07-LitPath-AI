@@ -1295,3 +1295,64 @@ Answer:"""
             "verification_rate": round(verification_rate, 2),
             "details": verification_details
         }
+
+
+
+    def get_document_metadata(self, file_path):
+        """
+        Get metadata for a specific document by its file path.
+        
+        Args:
+            file_path (str): The file path of the document
+            
+        Returns:
+            dict: Document metadata including title, author, year, etc., or None if not found
+        """
+        try:
+            # Query ChromaDB for chunks from this specific file
+            results = self.collection.get(
+                where={"file": file_path},
+                limit=1,  # We only need one chunk to get the metadata
+                include=["metadatas"]
+            )
+            
+            if results and results["metadatas"] and len(results["metadatas"]) > 0:
+                meta = results["metadatas"][0]
+                
+                # Format metadata with proper capitalization
+                author = format_metadata_capitalization(
+                    meta.get("author", "[Unknown Author]"), 
+                    field_type='author'
+                )
+                title = format_metadata_capitalization(
+                    meta.get("title", "[Unknown Title]"),
+                    field_type='title'
+                )
+                university = format_metadata_capitalization(
+                    meta.get("university", "Unknown University"),
+                    field_type='university'
+                )
+                degree = format_metadata_capitalization(
+                    meta.get("degree", "Thesis"),
+                    field_type='degree'
+                )
+                
+                return {
+                    "title": title,
+                    "author": author,
+                    "year": meta.get("publication_year", "N/A"),
+                    "abstract": meta.get("abstract", "No abstract available"),
+                    "file": file_path,
+                    "degree": degree,
+                    "subjects": meta.get("subjects", ""),
+                    "school": university,
+                    "university": university,
+                    "call_no": meta.get("call_no", "")
+                }
+            else:
+                print(f"No metadata found for {file_path}")
+                return None
+                
+        except Exception as e:
+            print(f"Error getting metadata for {file_path}: {str(e)}")
+            return None

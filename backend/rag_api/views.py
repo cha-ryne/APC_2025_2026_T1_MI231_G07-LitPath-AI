@@ -485,37 +485,80 @@ def get_most_browsed(request):
     try:
         from django.db.models import Count, Avg, Q
         from .models import Material, MaterialView, Feedback
+        from django.conf import settings
+        import os
         
         limit = int(request.GET.get('limit', 10))
         
-        # Get materials with view counts and average ratings
-        most_browsed = Material.objects.annotate(
-            view_count=Count('materialview', distinct=True),
-            avg_rating=Avg(
-                'feedback__rating',
-                filter=Q(feedback__rating__isnull=False)
-            )
-        ).filter(
-            view_count__gt=0  # Only show materials that have been viewed
-        ).order_by(
-            '-view_count',  # Primary sort: most views first
-            '-avg_rating'   # Secondary sort: highest rating
-        )[:limit]
+        # Get materials with view counts and ratings using raw SQL
+        from django.db import connection
         
-        # Format the response
+        with connection.cursor() as cursor:
+            cursor.execute("""
+                SELECT 
+                    m.id,
+                    m.file,
+                    m.title,
+                    m.author,
+                    m.year,
+                    m.abstract,
+                    m.degree,
+                    m.subjects,
+                    m.school,
+                    COUNT(DISTINCT mv.id) as view_count,
+                    COALESCE(AVG(f.rating), 0) as avg_rating
+                FROM materials m
+                LEFT JOIN material_views mv ON m.file = mv.file
+                LEFT JOIN feedback f ON m.file = f.document_file
+                GROUP BY m.id, m.file, m.title, m.author, m.year, m.abstract, m.degree, m.subjects, m.school
+                HAVING COUNT(DISTINCT mv.id) > 0
+                ORDER BY view_count DESC, avg_rating DESC
+                LIMIT %s
+            """, [limit])
+            
+            columns = [col[0] for col in cursor.description]
+            results = [dict(zip(columns, row)) for row in cursor.fetchall()]
+        
+        # Enrich with actual metadata from RAG if title/author are "Unknown"
+        from .rag_service import RAGService
+        
         materials_data = []
-        for material in most_browsed:
+        for row in results:
+            title = row['title']
+            author = row['author']
+            year = row['year']
+            abstract = row['abstract']
+            degree = row['degree']
+            school = row['school']
+            
+            # If metadata is missing, try to get it from the RAG system
+            if (not title or title == 'Unknown') or (not author or author == 'Unknown'):
+                try:
+                    if RAGService._initialized:
+                        rag = RAGService()
+                        # Search for the document in the RAG system by file name
+                        doc_metadata = rag.get_document_metadata(row['file'])
+                        if doc_metadata:
+                            title = doc_metadata.get('title', title)
+                            author = doc_metadata.get('author', author)
+                            year = doc_metadata.get('year', year)
+                            abstract = doc_metadata.get('abstract', abstract)
+                            degree = doc_metadata.get('degree', degree)
+                            school = doc_metadata.get('school', school)
+                except Exception as e:
+                    print(f"Error fetching metadata for {row['file']}: {e}")
+            
             materials_data.append({
-                'file': material.file,
-                'title': material.title,
-                'author': material.author,
-                'year': material.year,
-                'abstract': material.abstract,
-                'degree': material.degree,
-                'subjects': material.subjects if isinstance(material.subjects, list) else [],
-                'school': material.school,
-                'view_count': material.view_count,
-                'avg_rating': float(material.avg_rating) if material.avg_rating else 0.0
+                'file': row['file'],
+                'title': title or 'Unknown Title',
+                'author': author or 'Unknown Author',
+                'year': year,
+                'abstract': abstract or 'No abstract available.',
+                'degree': degree or 'Thesis',
+                'subjects': row['subjects'] if isinstance(row['subjects'], list) else [],
+                'school': school or 'Unknown Institution',
+                'view_count': int(row['view_count']),
+                'avg_rating': float(row['avg_rating']) if row['avg_rating'] else 0.0
             })
         
         return Response(
@@ -527,6 +570,7 @@ def get_most_browsed(request):
         )
         
     except Exception as e:
+        print(f"Error in get_most_browsed: {str(e)}")
         return Response(
             {"error": str(e)},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR
