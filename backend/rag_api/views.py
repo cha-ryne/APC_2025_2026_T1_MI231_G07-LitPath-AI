@@ -359,6 +359,7 @@ def research_history_delete_view(request, session_id):
 
 # ============= Feedback Views =============
 
+# Feedback for users
 @api_view(['GET', 'POST'])
 def feedback_view(request):
     """
@@ -385,12 +386,12 @@ def feedback_view(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-
+# Manage feedback for system admin
 @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
 def feedback_detail(request, pk):
     """
-    GET: Retrieve a single feedback item
-    PATCH: Update status (e.g., Pending -> Addressed)
+    GET: Retrieve single feedback
+    PATCH: Update status and triage info
     DELETE: Remove feedback
     """
     try:
@@ -406,11 +407,14 @@ def feedback_detail(request, pk):
 
     # PATCH/PUT: Update (This is what your frontend needs)
     elif request.method in ['PUT', 'PATCH']:
-        # partial=True allows you to update just the 'status' without sending the whole object
+        # Partial=True is critical for updating just the status
         serializer = FeedbackSerializer(feedback, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
+        
+        # Print errors to your terminal for easier debugging
+        print("Serializer Errors:", serializer.errors)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     # DELETE: Remove it

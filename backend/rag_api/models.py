@@ -208,6 +208,20 @@ class ResearchHistory(models.Model):
 
 
 class Feedback(models.Model):
+    """System Admin feedback"""
+    # --- UPDATED CHOICES ---
+    STATUS_CHOICES = [
+        ('Pending', 'Pending'),
+        ('Reviewed', 'Reviewed'),
+        ('Resolved', 'Resolved'), # Changed from Addressed
+    ]
+    
+    CATEGORY_CHOICES = [
+        ('Positive', 'Positive'),
+        ('Issue', 'Issue'),
+        ('For Improvement', 'For Improvement'),
+    ]
+
     """User feedback"""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user_id = models.TextField(db_index=True)
@@ -218,13 +232,23 @@ class Feedback(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
 
     document_file = models.CharField(max_length=500, null=True, blank=True, db_index=True)
+
+    # --- UPDATED TRIAGE FIELDS ---
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Pending')
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, null=True, blank=True)
+    
+    is_valid = models.BooleanField(null=True, blank=True)
+    validity_remarks = models.TextField(blank=True, null=True)  # <--- NEW
+    
+    is_doable = models.BooleanField(null=True, blank=True)
+    feasibility_remarks = models.TextField(blank=True, null=True) # <--- NEW
     
     class Meta:
         db_table = 'feedback'
         ordering = ['-created_at']
     
     def __str__(self):
-        return f"{self.user_id}: Rating {self.rating}"
+        return f"{self.user_id}: Rating {self.rating} ({self.status})"
     
 
 class Material(models.Model):

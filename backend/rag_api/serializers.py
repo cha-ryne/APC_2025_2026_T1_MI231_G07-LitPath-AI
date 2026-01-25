@@ -26,8 +26,9 @@ class ResearchHistorySerializer(serializers.ModelSerializer):
 class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
-        fields = [
-            'id', 'user_id', 'query', 'rating', 'relevant',
-            'comment', 'created_at'
-        ]
+        # fields = [
+        #    'id', 'user_id', 'query', 'rating', 'relevant',
+        #    'comment', 'created_at'
+        #]
+        fields = '__all__'
         read_only_fields = ['id', 'created_at']
