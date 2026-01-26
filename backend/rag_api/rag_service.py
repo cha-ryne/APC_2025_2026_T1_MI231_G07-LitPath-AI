@@ -19,8 +19,16 @@ import chromadb
 from django.conf import settings
 import sys
 
+def l2_normalize(vec):
+    norm = np.linalg.norm(vec)
+    if norm == 0:
+        return vec
+    return vec / norm
+
 # Import conversation manager
+
 from .conversation_utils import conversation_manager
+
 
 
 # ============= RESPONSE CACHE =============
@@ -50,242 +58,6 @@ def set_cached_response(cache_key, response):
     _response_cache[cache_key] = response
 
 
-# ============= FILIPINO TERM MAPPING =============
-# Maps common Filipino/Tagalog terms to English equivalents
-# Used for query expansion to improve Taglish search
-FILIPINO_TERM_MAP = {
-    # Agriculture
-    'palay': 'rice paddy',
-    'bigas': 'rice grain',
-    'mais': 'corn maize',
-    'gulay': 'vegetable',
-    'prutas': 'fruit fruiting',
-    'puno': 'tree',
-    'halaman': 'plant crop',
-    'bukid': 'farm field',
-    'palayan': 'rice paddy',
-    'ani': 'harvest yield',
-    'tanim': 'planting cultivation',
-    'pataba': 'fertilizer',
-    'peste': 'pest insect',
-    'sakit': 'disease pathogen',
-    
-    # Environment
-    'tubig': 'water aquatic',
-    'lupa': 'soil land',
-    'hangin': 'air climate',
-    'dagat': 'sea marine coastal',
-    'ilog': 'river freshwater',
-    'bundok': 'mountain forest',
-    'kagubatan': 'forest woodland',
-    'kalikasan': 'environment ecology',
-    'klima': 'climate weather',
-    'init': 'heat temperature',
-    'asin': 'salt salinity',
-    'alat': 'saline salinity',
-    
-    # Science terms
-    'pag-aaral': 'study research',
-    'pagsusuri': 'analysis examination',
-    'sustansya': 'nutrition nutrient',
-    'nutrisyon': 'nutrition nutrient',
-    'pagkain': 'food diet',
-    'kalusugan': 'health',
-    'hayop': 'animal livestock',
-    'isda': 'fish fishery',
-    'ibon': 'bird avian',
-    'insekto': 'insect pest',
-    'bakterya': 'bacteria microbial',
-    
-    # Research terms
-    'epekto': 'effect impact',
-    'resulta': 'result findings',
-    'paraan': 'method methodology',
-    'katangian': 'characteristic property',
-    'uri': 'type variety',
-    'matibay': 'tolerant resistant',
-    'mataas': 'high increased',
-    'mababa': 'low decreased',
-}
-
-# ============= ENGLISH TECHNICAL TERM EXPANSION =============
-# Expands English technical terms with synonyms for better recall
-# Particularly useful for Taglish queries that already have English terms
-ENGLISH_TERM_EXPANSION = {
-    # Machine Learning / AI
-    'machine learning': 'neural network deep learning prediction model algorithm',
-    'artificial intelligence': 'AI machine learning neural network computational',
-    'deep learning': 'neural network machine learning AI',
-    'neural network': 'machine learning deep learning',
-    
-    # Agriculture
-    'agriculture': 'farming crop cultivation agricultural farm',
-    'crop': 'plant cultivation farming yield harvest',
-    'yield': 'harvest production crop output',
-    'fertilizer': 'nutrient soil amendment',
-    'pesticide': 'pest control insecticide',
-    
-    # Research terms
-    'salt stress': 'salinity tolerance saline NaCl sodium chloride',
-    'stress tolerance': 'resistant abiotic stress tolerant',
-    'drought': 'water stress dry arid',
-    'growth regulators': 'hormone auxin gibberellin cytokinin PGR',
-    'plant growth': 'development morphology physiology',
-    
-    # Quality/Food
-    'quality': 'acceptability sensory characteristics',
-    'nutritional': 'nutrient nutrition food composition',
-    'food': 'diet nutrition dietary consumption',
-}
-
-
-def expand_query_with_filipino_terms(query):
-    """
-    Expand query by adding English equivalents for Filipino terms
-    and synonyms for English technical terms.
-    
-    Args:
-        query: Original search query
-        
-    Returns:
-        Expanded query with additional terms
-    """
-    query_lower = query.lower()
-    expanded_terms = []
-    
-    # First, expand Filipino terms
-    for filipino_term, english_terms in FILIPINO_TERM_MAP.items():
-        if filipino_term in query_lower:
-            # Don't add if the English term is already in query
-            for term in english_terms.split():
-                if term not in query_lower:
-                    expanded_terms.append(term)
-    
-    # Then, expand English technical terms (for Taglish queries)
-    for english_term, synonyms in ENGLISH_TERM_EXPANSION.items():
-        if english_term in query_lower:
-            # Add synonyms that aren't already in the query
-            for syn in synonyms.split():
-                if syn.lower() not in query_lower:
-                    expanded_terms.append(syn)
-    
-    if expanded_terms:
-        # Limit expansion to avoid too much noise
-        unique_terms = list(dict.fromkeys(expanded_terms))[:8]
-        return query + ' ' + ' '.join(unique_terms)
-    return query
-
-
-# ============= RELEVANCE CHECK =============
-# Stop words to ignore when checking keyword relevance
-STOP_WORDS = {
-    'a', 'an', 'the', 'and', 'or', 'but', 'is', 'are', 'was', 'were', 'be', 'been',
-    'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-    'should', 'may', 'might', 'can', 'of', 'in', 'to', 'for', 'with', 'on', 'at',
-    'by', 'from', 'as', 'into', 'through', 'during', 'before', 'after', 'above',
-    'below', 'between', 'under', 'again', 'further', 'then', 'once', 'here', 'there',
-    'when', 'where', 'why', 'how', 'all', 'each', 'few', 'more', 'most', 'other',
-    'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too',
-    'very', 'just', 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those',
-    'am', 'if', 'it', 'its', 'about', 'find', 'research', 'study', 'studies', 'thesis',
-    'theses', 'paper', 'papers', 'work', 'works', 'effect', 'effects', 'impact', 'impacts',
-    'affect', 'affects', 'use', 'using', 'used', 'based', 'related', 'show', 'shows'
-}
-
-
-def extract_query_keywords(query):
-    """
-    Extract meaningful keywords from a query, removing stop words.
-    
-    Args:
-        query: User's search query
-        
-    Returns:
-        Set of meaningful keywords (lowercase)
-    """
-    # Remove punctuation and split
-    import re
-    words = re.findall(r'\b[a-zA-Z]{3,}\b', query.lower())
-    
-    # Filter out stop words and very short words
-    keywords = {w for w in words if w not in STOP_WORDS and len(w) >= 3}
-    
-    return keywords
-
-
-import difflib
-import re
-
-def check_content_relevance(query, chunks, min_keyword_match_ratio=0.3):
-    """
-    Check if retrieved chunks contain relevant content, allowing for slight misspellings.
-    """
-    if not chunks:
-        return {
-            'is_relevant': False,
-            'matched_keywords': set(),
-            'missing_keywords': set(),
-            'match_ratio': 0.0,
-            'chunk_topics': []
-        }
-
-    # Extract keywords from query
-    query_keywords = extract_query_keywords(query)
-
-    if not query_keywords:
-        return {
-            'is_relevant': True,
-            'matched_keywords': set(),
-            'missing_keywords': set(),
-            'match_ratio': 1.0,
-            'chunk_topics': []
-        }
-
-    # Combine all chunk text
-    all_chunk_text = ' '.join([c.get('chunk', '') for c in chunks]).lower()
-    all_metadata_text = ' '.join([
-        c.get('meta', {}).get('title', '') + ' ' + 
-        c.get('meta', {}).get('subjects', '') 
-        for c in chunks
-    ]).lower()
-
-    combined_text = all_chunk_text + ' ' + all_metadata_text
-
-    # Pre-tokenize the text for faster fuzzy matching
-    text_tokens = set(re.findall(r'\b\w{3,}\b', combined_text))
-
-    matched_keywords = set()
-
-    for kw in query_keywords:
-        # 1. Exact match (Fastest)
-        if kw in combined_text:
-            matched_keywords.add(kw)
-            continue
-        # 2. Fuzzy match (Slower but handles typos)
-        matches = difflib.get_close_matches(kw, text_tokens, n=1, cutoff=0.80)
-        if matches:
-            matched_keywords.add(kw)
-
-    missing_keywords = query_keywords - matched_keywords
-    match_ratio = len(matched_keywords) / len(query_keywords) if query_keywords else 0
-
-    # Extract topics (keep existing logic)
-    chunk_topics = []
-    seen_topics = set()
-    for c in chunks:
-        meta = c.get('meta', {})
-        subjects = meta.get('subjects', '')
-        if subjects and subjects not in seen_topics:
-            seen_topics.add(subjects)
-            chunk_topics.append(subjects)
-
-    return {
-        'is_relevant': match_ratio >= min_keyword_match_ratio,
-        'matched_keywords': matched_keywords,
-        'missing_keywords': missing_keywords,
-        'match_ratio': match_ratio,
-        'chunk_topics': chunk_topics[:5]
-    }
 
 
 def format_metadata_capitalization(text, field_type='default'):
@@ -384,6 +156,53 @@ class RAGService:
         else:
             print(f"[RAG] Skipping indexing - using existing {existing_chunks} chunks")
         print(f"[RAG] Ready! Total chunks: {instance.collection.count()}")
+
+
+    def embed_chunks(self, chunks):
+        """Convert text chunks to L2-normalized embeddings"""
+        raw_embeds = np.array(self.embedder.encode(chunks, show_progress_bar=False, convert_to_numpy=True))
+        return np.array([l2_normalize(e) for e in raw_embeds])
+    
+    def sentence_chunking(self, text, chunk_size=500):
+        """Split text into overlapping chunks"""
+        sentences = text.split('. ')
+        sentences = [s.strip() + ('' if s.strip().endswith('.') else '.') for s in sentences if s.strip()]
+        chunks = []
+        overlap = int(chunk_size * 0.2)
+        i = 0
+        
+        while i < len(sentences):
+            window = []
+            window_len = 0
+            j = i
+            
+            while j < len(sentences) and window_len < chunk_size:
+                sent = sentences[j]
+                sent_len = len(sent.split())
+                if window_len + sent_len > chunk_size and window:
+                    break
+                window.append(sent)
+                window_len += sent_len
+                j += 1
+            
+            if window:
+                chunks.append(' '.join(window))
+            
+            if window_len == 0:
+                i += 1
+            else:
+                step = max(1, window_len - overlap)
+                words_seen = 0
+                for k in range(i, len(sentences)):
+                    words_seen += len(sentences[k].split())
+                    if words_seen >= step:
+                        i = k + 1
+                        break
+                else:
+                    break
+        
+        return chunks
+
     
     def index_txt_files_directly(self, txt_folder, chunk_size=500):
         """Index TXT files directly without requiring PDF files (batch embedding)"""
@@ -424,6 +243,7 @@ class RAGService:
 
                 # Batch embed all chunks at once
                 chunk_embeddings = self.embedder.encode(chunks, batch_size=32, show_progress_bar=False, convert_to_numpy=True)
+                chunk_embeddings = np.array([l2_normalize(e) for e in chunk_embeddings])
 
                 chunk_metadatas = []
                 for idx, chunk in enumerate(chunks):
@@ -520,6 +340,7 @@ class RAGService:
 
             # Batch embed all chunks at once
             chunk_embeddings = self.embedder.encode(chunks, batch_size=32, show_progress_bar=False, convert_to_numpy=True)
+            chunk_embeddings = np.array([l2_normalize(e) for e in chunk_embeddings])
 
             chunk_metadatas = []
             for idx, chunk in enumerate(chunks):
@@ -608,7 +429,11 @@ class RAGService:
         
         return recovered_chunks
     
-    def search(self, question, top_n=200, distance_threshold=1.5, subjects=None, year=None, year_start=None, year_end=None, rerank_top_k=50):
+    def search(self, question, top_n=200, distance_threshold=1.5, subjects=None, year=None, year_start=None, year_end=None, rerank_top_k=50, request_id=None):
+        if request_id is None:
+            import uuid
+            request_id = str(uuid.uuid4())
+        print(f"[RAG-DEBUG] RAGService.search called. Request ID: {request_id}")
         """Search for relevant thesis chunks with optional metadata filters, LLM-based query rewriting, and local reranker."""
         # Step 1: LLM-based query rewriting (Gemini)
         rewritten_question = None
@@ -622,6 +447,7 @@ class RAGService:
                     f"If the query is already good and understandable in English, do not rewrite it and just return it as is. "
                     f"Do not answer the question, just rewrite it.\n\nQuery: {question}\n\nRewritten query:"
                 )
+                print(f"[RAG-DEBUG] Request ID {request_id}: Sending query rewrite prompt to LLM.")
                 response = client.models.generate_content(
                     model="gemini-2.5-flash-lite",
                     contents=rewrite_prompt,
@@ -634,18 +460,16 @@ class RAGService:
                 )
                 if hasattr(response, "text") and response.text.strip():
                     rewritten_question = response.text.strip()
-                    print(f"[RAG] LLM query rewrite: '{question}' -> '{rewritten_question}'")
+                    print(f"[RAG] LLM query rewrite: '{question}' -> '{rewritten_question}' [Request ID: {request_id}]")
             except Exception as e:
-                print(f"[RAG] Query rewriting failed: {e}")
+                print(f"[RAG] Query rewriting failed: {e} [Request ID: {request_id}]")
         if not rewritten_question:
+            print(f"[RAG-DEBUG] Request ID {request_id}: Falling back to original query for rerank.")
             rewritten_question = question
 
-        # Step 2: Expand query with Filipino/English term mappings
-        expanded_question = expand_query_with_filipino_terms(rewritten_question)
-        if expanded_question != rewritten_question:
-            print(f"[RAG] Query expanded: '{rewritten_question}' -> '{expanded_question}'")
-
-        query_emb = self.embedder.encode([expanded_question], convert_to_numpy=True)[0].tolist()
+        # Step 2: Use rewritten query directly (no expansion)
+        print(f"[RAG-DEBUG] Request ID {request_id}: Embedding query.")
+        query_emb = l2_normalize(self.embedder.encode([rewritten_question], convert_to_numpy=True)[0]).tolist()
 
         # Build ChromaDB where clause for year filters
         filters = []
@@ -659,6 +483,7 @@ class RAGService:
         where_clause = {"$and": filters} if len(filters) > 1 else (filters[0] if filters else None)
 
         # Query with database-level year filtering
+        print(f"[RAG-DEBUG] Request ID {request_id}: Querying ChromaDB.")
         results = self.collection.query(
             query_embeddings=[query_emb],
             n_results=top_n,
@@ -668,6 +493,7 @@ class RAGService:
 
         # Collect candidate chunks (vector search)
         candidate_chunks = []
+        print(f"[RAG-DEBUG] Request ID {request_id}: Filtering candidate chunks.")
         for i in range(len(results["documents"][0])):
             meta = results["metadatas"][0][i]
             file_name = meta.get("file", meta.get("pdf", ""))
@@ -713,7 +539,7 @@ class RAGService:
                     "Do not answer the query or summarize, just return the list."
                 )
                 user_content = (
-                    f"Query: {expanded_question}\n\n" +
+                    f"Query: {rewritten_question}\n\n" +
                     "Document Chunks:\n" +
                     "\n".join([
                         f"[{i+1}] " + c['chunk'][:max_chunk_chars].replace('\n', ' ').replace('  ', ' ')
@@ -728,15 +554,15 @@ class RAGService:
                     ]
                 }
                 headers = {"Authorization": f"Bearer {ai_api_key}", "Content-Type": "application/json"}
-                print("[RAG] Reranker prompt sent to LLM:\n", debug_prompt)
-                print("[RAG] Reranker user content:\n", user_content[:1000], "..." if len(user_content) > 1000 else "")
+                print(f"[RAG-DEBUG] Request ID {request_id}: Reranker prompt sent to LLM.")
+                print(f"[RAG-DEBUG] Request ID {request_id}: Reranker user content preview: {user_content[:200]} ...")
                 response = requests.post(f"{ai_base_url}/chat/completions", json=payload, headers=headers, timeout=5000)
                 response.raise_for_status()
                 result = response.json()
                 import ast
                 import re
                 content = result.get("choices", [{}])[0].get("message", {}).get("content", "")
-                print("[RAG] Reranker LLM raw response:", content)
+                print(f"[RAG-DEBUG] Request ID {request_id}: Reranker LLM raw response: {content}")
                 # Robustly extract the first list of integers from the response
                 match = re.search(r'\[\s*\d+(?:\s*,\s*\d+)*\s*\]', content)
                 if match:
@@ -872,19 +698,6 @@ class RAGService:
         relevant_chunks = [c for c in top_chunks if c.get("score", 0) < distance_threshold] if top_chunks and "score" in top_chunks[0] else top_chunks
         if not relevant_chunks:
             return "No relevant information found for your query."
-        # Optionally check content relevance (reuse previous logic if needed)
-        relevance_check = check_content_relevance(question, relevant_chunks, min_keyword_match_ratio=0.25)
-        print(f"[RAG] Relevance check: {relevance_check['match_ratio']:.0%} keyword match")
-        print(f"[RAG] Matched: {relevance_check['matched_keywords']}")
-        print(f"[RAG] Missing: {relevance_check['missing_keywords']}")
-        # If very low relevance, skip LLM and return a helpful message
-        if not relevance_check['is_relevant'] and relevance_check['match_ratio'] < 0.15:
-            missing = ', '.join(list(relevance_check['missing_keywords'])[:5])
-            return (
-                f"No relevant information was found in the thesis database for your query. "
-                f"The search terms '{missing}' do not appear in any available documents. "
-                f"Try using different keywords, checking for spelling errors, or searching for related academic topics."
-            )
         # Use the context-aware overview method for all cases
         return self._generate_with_context(relevant_chunks, question, conversation_history, relevance_info)
     

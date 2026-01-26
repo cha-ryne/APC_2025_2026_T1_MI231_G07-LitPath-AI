@@ -92,6 +92,9 @@ class SearchView(APIView):
     """
     
     def post(self, request):
+        import uuid
+        request_id = str(uuid.uuid4())
+        print(f"[RAG-DEBUG] SearchView.post called. Request ID: {request_id}")
         try:
             question = request.data.get("question", "").strip()
             filters = request.data.get("filters", {})
@@ -133,20 +136,19 @@ class SearchView(APIView):
                 subjects=subjects if subjects else None,
                 year=year,
                 year_start=year_start,
-                year_end=year_end
+                year_end=year_end,
+                request_id=request_id
             )
             search_time = time.time() - search_start
             print(f"[RAG] Search took {search_time:.2f}s")
             
             # Check content relevance
-            from .rag_service import check_content_relevance
-            relevance_check = check_content_relevance(question, top_chunks, min_keyword_match_ratio=0.25)
-            print(f"[RAG] Relevance check: {relevance_check['match_ratio']:.0%} keyword match")
+            # Removed check_content_relevance import and usage as requested
+            # Removed relevance_check usage
             
-            # If relevance is extremely low, clear documents
-            if relevance_check['match_ratio'] < 0.15 and len(relevance_check.get('missing_keywords', set())) > 0:
-                print(f"[RAG] Very low relevance - clearing irrelevant documents")
-                documents = []
+
+            # If relevance is extremely low, clear documents (logic removed)
+            # (No action needed since relevance_check is gone)
             
             # NEW: If this is NOT an overview_only request, return documents immediately
             # without generating the overview
@@ -162,10 +164,10 @@ class SearchView(APIView):
                 
                 # Check if no results
                 no_results = not any(c["score"] < distance_threshold for c in top_chunks)
-                low_relevance = relevance_check['match_ratio'] < 0.15 and len(relevance_check.get('missing_keywords', set())) > 0
+                # Removed relevance_check usage
                 
                 suggestions = []
-                if no_results or low_relevance:
+                if no_results:
                     documents = []
                     if subjects:
                         suggestions.append(f"Try removing the subject filter '{subjects[0]}' to broaden your search")
@@ -214,9 +216,9 @@ class SearchView(APIView):
             
             # Check if no results and clean up overview
             no_results = not any(c["score"] < distance_threshold for c in top_chunks)
-            low_relevance = relevance_check['match_ratio'] < 0.15 and len(relevance_check.get('missing_keywords', set())) > 0
+            # Removed relevance_check usage
             
-            if no_results or low_relevance:
+            if no_results:
                 import re
                 overview = re.sub(r"\[\d+\]", "", overview)
             
