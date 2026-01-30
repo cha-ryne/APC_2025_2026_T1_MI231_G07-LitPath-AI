@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
 
 const API_BASE_URL = 'http://localhost:8000/api';
 
@@ -19,6 +19,11 @@ export const AuthProvider = ({ children }) => {
     const [session, setSession] = useState(null);
     const [loading, setLoading] = useState(true);
     const [isGuest, setIsGuest] = useState(false);
+    const [showInactivityWarning, setShowInactivityWarning] = useState(false);
+    const logoutTimerRef = useRef(null);
+    const warningTimerRef = useRef(null);
+    const INACTIVITY_LIMIT = 10 * 60 * 1000; // 10 min
+    const WARNING_TIME = 30 * 1000; // 30 sec
 
     // Initialize auth state on mount
     useEffect(() => {
@@ -93,17 +98,17 @@ export const AuthProvider = ({ children }) => {
                     role: data.user.role
                 };
 
+                // Ensure sessionData includes session_token for API auth
                 const sessionData = {
                     session_id: data.session.session_id,
                     created_at: data.session.created_at,
-                    is_anonymous: false
+                    is_anonymous: false,
+                    session_token: data.session.session_token || data.session.session_id // fallback if session_token not present
                 };
 
                 // Store in localStorage (not for guests)
                 localStorage.setItem('litpath_auth_user', JSON.stringify(userData));
                 localStorage.setItem('litpath_session', JSON.stringify(sessionData));
-
-                // No need to sync to Supabase - Django writes directly to Supabase PostgreSQL
 
                 setUser(userData);
                 setSession(sessionData);
@@ -354,9 +359,49 @@ export const AuthProvider = ({ children }) => {
         USER_ROLES
     };
 
+    // Inactivity tracking
+    useEffect(() => {
+        if (!user) return;
+        // Activity handler
+        const resetTimers = () => {
+            if (logoutTimerRef.current) clearTimeout(logoutTimerRef.current);
+            if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+            setShowInactivityWarning(false);
+            // Set warning timer for 9.5 min
+            warningTimerRef.current = setTimeout(() => {
+                setShowInactivityWarning(true);
+            }, INACTIVITY_LIMIT - WARNING_TIME);
+            // Set logout timer for 10 min
+            logoutTimerRef.current = setTimeout(() => {
+                setShowInactivityWarning(false);
+                logout();
+            }, INACTIVITY_LIMIT);
+        };
+        // Listen to user activity
+        const events = ['mousemove', 'keydown', 'mousedown', 'touchstart'];
+        events.forEach(e => window.addEventListener(e, resetTimers));
+        // Start timers
+        resetTimers();
+        // Cleanup
+        return () => {
+            events.forEach(e => window.removeEventListener(e, resetTimers));
+            if (logoutTimerRef.current) clearTimeout(logoutTimerRef.current);
+            if (warningTimerRef.current) clearTimeout(warningTimerRef.current);
+        };
+    }, [user]);
+
     return (
         <AuthContext.Provider value={value}>
             {children}
+            {showInactivityWarning && (
+                <div style={{position:'fixed',top:0,left:0,width:'100vw',height:'100vh',background:'rgba(0,0,0,0.3)',zIndex:10000,display:'flex',alignItems:'center',justifyContent:'center'}}>
+                    <div style={{background:'#fff',padding:32,borderRadius:12,boxShadow:'0 2px 16px #0002',textAlign:'center',maxWidth:320}}>
+                        <h2 style={{fontWeight:'bold',fontSize:22,marginBottom:12}}>Inactivity Warning</h2>
+                        <p style={{marginBottom:16}}>You will be logged out in 30 seconds due to inactivity.</p>
+                        <button onClick={()=>setShowInactivityWarning(false)} style={{background:'#2563eb',color:'#fff',padding:'8px 20px',border:'none',borderRadius:6,fontWeight:'bold',fontSize:16,cursor:'pointer'}}>Stay Logged In</button>
+                    </div>
+                </div>
+            )}
         </AuthContext.Provider>
     );
 };

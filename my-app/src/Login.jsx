@@ -6,11 +6,17 @@ import dostLogo from "./components/images/dost-logo.png";
 const API_BASE_URL = 'http://localhost:8000/api';
 
 const Login = () => {
+
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    // Forgot password state hooks (must be at top level)
+    const [showForgot, setShowForgot] = useState(false);
+    const [resetEmail, setResetEmail] = useState('');
+    const [resetMessage, setResetMessage] = useState('');
+    const [resetLoading, setResetLoading] = useState(false);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -44,6 +50,17 @@ const Login = () => {
         }
     };
 
+    const handleForgotSubmit = async (e) => {
+        e.preventDefault();
+        setResetMessage('');
+        setResetLoading(true);
+        // No backend call yet
+        setTimeout(() => {
+            setResetMessage('If this email exists, a reset link will be sent.');
+            setResetLoading(false);
+        }, 1200);
+    };
+
     return (
         <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
             {/* Header */}
@@ -74,48 +91,89 @@ const Login = () => {
                         </div>
                     )}
                     
-                    <form onSubmit={handleLogin} className="space-y-6">
-                        <div>
-                            <label htmlFor="email" className="sr-only">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Enter your email address"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-500"
-                                required
+                    {!showForgot ? (
+                        <>
+                        <form onSubmit={handleLogin} className="space-y-6">
+                            <div>
+                                <label htmlFor="email" className="sr-only">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Enter your email address"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-500"
+                                    required
+                                    disabled={isLoading}
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="password" className="sr-only">Password</label>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder="Enter your password"
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-500"
+                                    required
+                                    disabled={isLoading}
+                                />
+                            </div>
+                            <button
+                                type="submit"
                                 disabled={isLoading}
-                            />
+                                className="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed"
+                            >
+                                {isLoading ? 'Logging in...' : 'Log In'}
+                            </button>
+                        </form>
+                        <div className="mt-6 text-sm">
+                            <button
+                                type="button"
+                                className="text-blue-600 hover:underline"
+                                onClick={() => setShowForgot(true)}
+                            >
+                                Forgot password?
+                            </button>
                         </div>
-                        <div>
-                            <label htmlFor="password" className="sr-only">Password</label>
-                            <input
-                                type="password"
-                                id="password"
-                                name="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Enter your password"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-700 placeholder-gray-500"
-                                required
-                                disabled={isLoading}
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            disabled={isLoading}
-                            className="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed"
-                        >
-                            {isLoading ? 'Logging in...' : 'Log In'}
-                        </button>
-                    </form>
-                    <div className="mt-6 text-sm">
-                        <a href="#" className="text-blue-600 hover:underline">
-                            Forgot password?
-                        </a>
-                    </div>
+                        </>
+                    ) : (
+                        <form onSubmit={handleForgotSubmit} className="space-y-6">
+                            <div>
+                                <label htmlFor="resetEmail" className="block text-sm font-medium text-gray-700 mb-1">Enter your email to reset password</label>
+                                <input
+                                    type="email"
+                                    id="resetEmail"
+                                    name="resetEmail"
+                                    value={resetEmail}
+                                    onChange={e => setResetEmail(e.target.value)}
+                                    placeholder="Enter your email address"
+                                    required
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1E74BC] focus:border-transparent"
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                disabled={resetLoading}
+                                className="w-full bg-[#1E74BC] text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                            >
+                                {resetLoading ? 'Sending...' : 'Send Reset Link'}
+                            </button>
+                            <div className="text-right mt-2">
+                                <button
+                                    type="button"
+                                    className="text-sm text-gray-600 hover:underline focus:outline-none"
+                                    onClick={() => setShowForgot(false)}
+                                >
+                                    Back to Login
+                                </button>
+                            </div>
+                            {resetMessage && <div className="text-green-600 text-sm mt-2">{resetMessage}</div>}
+                        </form>
+                    )}
                 </div>
             </div>
         </div>

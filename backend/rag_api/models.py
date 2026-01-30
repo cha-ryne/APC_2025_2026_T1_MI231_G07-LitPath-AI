@@ -34,6 +34,7 @@ class UserAccount(models.Model):
         default=UserRole.USER,
         db_column='user_role'
     )
+    is_active = models.BooleanField(default=True, db_column='user_is_active')
     
     class Meta:
         db_table = 'user_accounts'

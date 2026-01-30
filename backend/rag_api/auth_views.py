@@ -1,3 +1,68 @@
+from django.core.mail import send_mail
+import secrets
+from django.conf import settings
+from rest_framework.decorators import api_view, permission_classes
+# --- Password Reset Request Endpoint ---
+@api_view(['POST'])
+def auth_password_reset_request_view(request):
+    """
+    Request a password reset link.
+    Expects: { email: string }
+    Returns: { success: bool, message: string }
+    """
+    email = request.data.get('email', '').strip().lower()
+    if not email:
+        return Response({'success': False, 'message': 'Email is required'}, status=status.HTTP_400_BAD_REQUEST)
+    user = UserAccount.objects.filter(email=email).first()
+    if user:
+        # Generate a reset token (in production, store this in DB and expire it)
+        reset_token = secrets.token_urlsafe(32)
+        # For now, just print the reset link (simulate email)
+        reset_link = f"http://localhost:5173/reset-password/{reset_token}"
+        print(f"[DEBUG] Password reset link for {email}: {reset_link}")
+        # In production, send email:
+        send_mail('Password Reset', f'Click to reset your password: {reset_link}', settings.DEFAULT_FROM_EMAIL, [email])
+        # Optionally, store the token in the user model or a separate table
+    # Always return success for security
+    return Response({'success': True, 'message': 'If this email exists, a reset link will be sent.'})
+
+from .serializers import UserAccountSerializer
+# --- Profile Update Endpoint ---
+from rest_framework.permissions import IsAuthenticated
+
+@api_view(['POST'])
+def auth_update_profile_view(request):
+    """
+    Update user profile (full_name, username)
+    Expects: { full_name?: string, username?: string }
+    Requires: Authorization: Bearer <session_token>
+    """
+    auth_header = request.headers.get('Authorization', '')
+    print('DEBUG: Authorization header:', auth_header)
+    if not auth_header.startswith('Bearer '):
+        print('DEBUG: No Bearer token in Authorization header')
+        return Response({'success': False, 'message': 'No session token provided'}, status=status.HTTP_401_UNAUTHORIZED)
+    session_token = auth_header[7:]
+    print('DEBUG: Extracted session_token:', session_token)
+    session = Session.objects.filter(session_token=session_token).first()
+    print('DEBUG: Session lookup result:', session)
+    if not session or not session.user:
+        print('DEBUG: Invalid or expired session')
+        return Response({'success': False, 'message': 'Invalid or expired session'}, status=status.HTTP_401_UNAUTHORIZED)
+    user = session.user
+    data = request.data
+    new_username = data.get('username', '').strip()
+    new_full_name = data.get('full_name', '').strip()
+    # Check if username is changing and unique
+    if new_username and new_username != user.username:
+        if UserAccount.objects.filter(username=new_username).exclude(id=user.id).exists():
+            return Response({'success': False, 'message': 'Username already taken'}, status=status.HTTP_400_BAD_REQUEST)
+        user.username = new_username
+    if new_full_name:
+        user.full_name = new_full_name
+    user.save()
+    serializer = UserAccountSerializer(user)
+    return Response({'success': True, 'user': serializer.data})
 """
 Authentication Views for LitPath AI
 Handles login, logout, guest sessions, and session validation
@@ -503,3 +568,36 @@ def auth_delete_account_view(request):
             'success': False,
             'message': 'An error occurred while deleting account'
         }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['POST'])
+def auth_reset_password_view(request):
+    """
+    Reset password using a token
+    Expects: { token: string, password: string }
+    Returns: { success: bool, message: string }
+    """
+    token = request.data.get('token', '')
+    password = request.data.get('password', '')
+    if not token or not password:
+        return Response({'success': False, 'message': 'Token and new password are required'}, status=status.HTTP_400_BAD_REQUEST)
+    # For demo: store tokens in memory (in production, use DB)
+    # We'll use a simple in-memory dict for this session
+    if not hasattr(auth_reset_password_view, 'token_map'):
+        auth_reset_password_view.token_map = {}
+    token_map = auth_reset_password_view.token_map
+    # Find user by token (simulate DB lookup)
+    user = None
+    for u in UserAccount.objects.all():
+        if hasattr(u, 'reset_token') and u.reset_token == token:
+            user = u
+            break
+    if not user:
+        return Response({'success': False, 'message': 'Invalid or expired token'}, status=status.HTTP_400_BAD_REQUEST)
+    if len(password) < 6:
+        return Response({'success': False, 'message': 'Password must be at least 6 characters'}, status=status.HTTP_400_BAD_REQUEST)
+    user.set_password(password)
+    user.save()
+    # Remove token after use
+    delattr(user, 'reset_token')
+    return Response({'success': True, 'message': 'Password reset successful'})

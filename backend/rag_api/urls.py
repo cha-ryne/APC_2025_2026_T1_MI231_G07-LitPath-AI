@@ -10,11 +10,18 @@ from .admin_views import admin_login_view, admin_users_view, admin_user_delete_v
 from .auth_views import (
     auth_login_view, auth_register_view, auth_guest_session_view,
     auth_validate_session_view, auth_logout_view, auth_delete_guest_data_view,
-    auth_me_view, auth_change_password_view, auth_delete_account_view
+    auth_me_view, auth_change_password_view, auth_delete_account_view,
+    auth_update_profile_view, auth_password_reset_request_view, auth_reset_password_view
 )
 
 from . import views 
 urlpatterns = [
+    path('auth/update-profile/', auth_update_profile_view, name='auth-update-profile'),
+    path('auth/update-profile', auth_update_profile_view, name='auth-update-profile-no-slash'),
+    path('auth/password-reset-request/', auth_password_reset_request_view, name='auth-password-reset-request'),
+    path('auth/password-reset-request', auth_password_reset_request_view, name='auth-password-reset-request-no-slash'),
+    path('auth/reset-password/', auth_reset_password_view, name='auth-reset-password'),
+    path('auth/reset-password', auth_reset_password_view, name='auth-reset-password-no-slash'),
     # Support both with and without trailing slashes
     path('health/', HealthCheckView.as_view(), name='health'),
     path('health', HealthCheckView.as_view(), name='health-no-slash'),

@@ -47,7 +47,15 @@ const LitPathAI = () => {
     const [isLoadedFromHistory, setIsLoadedFromHistory] = useState(false);
     const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
     const [showAccountSettings, setShowAccountSettings] = useState(false);
-    const [settingsTab, setSettingsTab] = useState('password'); // 'password' or 'delete'
+    const [settingsTab, setSettingsTab] = useState('profile');
+    const [editFullName, setEditFullName] = useState(user?.full_name || '');
+    const [editUsername, setEditUsername] = useState(user?.username || '');
+
+    // Keep edit fields in sync with user object
+    useEffect(() => {
+        setEditFullName(user?.full_name || '');
+        setEditUsername(user?.username || '');
+    }, [user]);
     const [currentPassword, setCurrentPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -194,12 +202,11 @@ const LitPathAI = () => {
     // Load bookmarks when userId is available from auth context
     useEffect(() => {
         if (userId) {
+            // Always load from backend for both guests and authenticated users
+            loadBookmarksFromDjango();
+            // Optionally, also load from localStorage for guests for UX
             if (isGuest) {
-                // Guests: Load from localStorage only
                 loadBookmarksFromLocalStorage();
-            } else {
-                // Authenticated users: Load from Django backend (no localStorage)
-                loadBookmarksFromDjango();
             }
         }
     }, [userId, isGuest]);
@@ -228,66 +235,46 @@ const LitPathAI = () => {
 
         try {
             const documentFile = document.file || document.fullTextPath;
-            
-            if (isGuest) {
-                // Guest: Use localStorage only
-                let currentBookmarks = [...bookmarks];
-                const bookmarkIndex = currentBookmarks.findIndex(b => b.file === documentFile);
-                
-                if (bookmarkIndex >= 0) {
+            let currentBookmarks = [...bookmarks];
+            const bookmarkIndex = currentBookmarks.findIndex(b => b.file === documentFile);
+            const newBookmark = {
+                userId: userId,
+                title: document.title,
+                author: document.author,
+                year: document.year,
+                abstract: document.abstract,
+                file: documentFile,
+                degree: document.degree,
+                subjects: document.subjects,
+                school: document.school,
+                bookmarkedAt: new Date().toISOString()
+            };
+
+            if (bookmarkIndex >= 0) {
+                // Remove bookmark (from backend)
+                await removeFromDjango(documentFile);
+                showToast('Bookmark removed!', 'info');
+                // Remove from localStorage for guests (optional, for UX)
+                if (isGuest) {
                     currentBookmarks.splice(bookmarkIndex, 1);
-                    showToast('Bookmark removed!', 'info');
-                } else {
-                    currentBookmarks.push({
-                        userId: userId,
-                        title: document.title,
-                        author: document.author,
-                        year: document.year,
-                        abstract: document.abstract,
-                        file: documentFile,
-                        degree: document.degree,
-                        subjects: document.subjects,
-                        school: document.school,
-                        bookmarkedAt: new Date().toISOString()
-                    });
-                    showToast('Bookmark saved!', 'success');
+                    setBookmarks(currentBookmarks);
+                    setBookmarkedCount(currentBookmarks.length);
+                    localStorage.setItem('litpath_bookmarks', JSON.stringify(currentBookmarks));
                 }
-                
-                // Update state and localStorage for guests
-                setBookmarks(currentBookmarks);
-                setBookmarkedCount(currentBookmarks.length);
-                localStorage.setItem('litpath_bookmarks', JSON.stringify(currentBookmarks));
             } else {
-                // Authenticated user: Use Django backend only (NO localStorage)
-                const bookmarkIndex = bookmarks.findIndex(b => b.file === documentFile);
-                
-                if (bookmarkIndex >= 0) {
-                    // Remove bookmark
-                    await removeFromDjango(documentFile);
-                    showToast('Bookmark removed!', 'info');
-                } else {
-                    // Add bookmark
-                    const newBookmark = {
-                        userId: userId,
-                        title: document.title,
-                        author: document.author,
-                        year: document.year,
-                        abstract: document.abstract,
-                        file: documentFile,
-                        degree: document.degree,
-                        subjects: document.subjects,
-                        school: document.school,
-                        bookmarkedAt: new Date().toISOString()
-                    };
-                    
-                    await saveToDjango(newBookmark);
-                    showToast('Bookmark saved!', 'success');
+                // Add bookmark (to backend)
+                await saveToDjango(newBookmark);
+                showToast('Bookmark saved!', 'success');
+                // Add to localStorage for guests (optional, for UX)
+                if (isGuest) {
+                    currentBookmarks.push(newBookmark);
+                    setBookmarks(currentBookmarks);
+                    setBookmarkedCount(currentBookmarks.length);
+                    localStorage.setItem('litpath_bookmarks', JSON.stringify(currentBookmarks));
                 }
-                
-                // Refresh bookmarks from Django to update state
-                await loadBookmarksFromDjango();
             }
-            
+            // Always refresh bookmarks from backend
+            await loadBookmarksFromDjango();
         } catch (error) {
             console.error('Error toggling bookmark:', error);
             showToast('Failed to update bookmark. Please try again.', 'error');
@@ -350,21 +337,15 @@ const LitPathAI = () => {
 
     // Load bookmarks from Django backend (for authenticated users - NO localStorage)
     const loadBookmarksFromDjango = async () => {
-        if (!userId || isGuest) return;
-        
+        if (!userId) return;
         try {
             const response = await fetch(`${API_BASE_URL}/bookmarks/?user_id=${userId}`);
-            
             if (!response.ok) {
                 console.error('Django load error:', await response.text());
                 return;
             }
-            
             const data = await response.json();
-            const { overview, documents, related_questions, suggestions } = data;
-
-            
-            // Convert Django format to local format and store in state (NOT localStorage)
+            // Convert Django format to local format and store in state
             const loadedBookmarks = (data && data.length > 0) ? data.map(b => ({
                 userId: b.user_id,
                 title: b.title,
@@ -377,8 +358,6 @@ const LitPathAI = () => {
                 school: b.school,
                 bookmarkedAt: b.bookmarked_at
             })) : [];
-            
-            // Update state only - no localStorage for authenticated users
             setBookmarks(loadedBookmarks);
             setBookmarkedCount(loadedBookmarks.length);
             console.log('✅ Loaded bookmarks from Django backend');
@@ -467,17 +446,7 @@ const LitPathAI = () => {
         };
 
         try {
-            // For guests: Save to localStorage only
-            if (isGuest) {
-                const existingHistory = JSON.parse(localStorage.getItem('litpath_research_history') || '[]');
-                const updatedHistory = [session, ...existingHistory].slice(0, 50);
-                localStorage.setItem('litpath_research_history', JSON.stringify(updatedHistory));
-                setResearchHistory(updatedHistory);
-                console.log('✅ Research history saved to localStorage (guest)');
-                return;
-            }
-
-            // For authenticated users: Save to Django backend only (no localStorage)
+            // Always save to Django backend for both guests and authenticated users
             const response = await fetch(`${API_BASE_URL}/research-history/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -500,6 +469,14 @@ const LitPathAI = () => {
                 console.log('✅ Research history saved to Django backend');
                 // Refresh history from Django to keep UI in sync
                 await loadResearchHistoryFromDjango();
+            }
+            // Optionally, also save to localStorage for guests for UX
+            if (isGuest) {
+                const existingHistory = JSON.parse(localStorage.getItem('litpath_research_history') || '[]');
+                const updatedHistory = [session, ...existingHistory].slice(0, 50);
+                localStorage.setItem('litpath_research_history', JSON.stringify(updatedHistory));
+                setResearchHistory(updatedHistory);
+                console.log('✅ Research history also saved to localStorage (guest)');
             }
         } catch (error) {
             console.error('Error saving research history:', error);
@@ -891,21 +868,20 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
         if (hasSearchedInSession && searchResults && !isLoadedFromHistory) {
             await saveCurrentSessionToHistory();
         }
-        
-        // For guests, clear localStorage data for privacy on public devices
+
+        // For guests, clear only localStorage and UI state for bookmarks and research history (not backend)
         if (isGuest) {
-            // Clear guest-specific localStorage data
             localStorage.removeItem('litpath_bookmarks');
             localStorage.removeItem('litpath_research_history');
-            localStorage.removeItem('litpath_conversation');
             setBookmarks([]);
             setBookmarkedCount(0);
             setResearchHistory([]);
-            
+            // Optionally clear conversation as well
+            localStorage.removeItem('litpath_conversation');
             // Optionally start a completely new guest session
             await authStartNewChat();
         }
-        
+
         // Reset all states
         setSearchQuery('');
         setSelectedSubject('All subjects');
@@ -2310,6 +2286,17 @@ return (
                         {/* Tabs */}
                         <div className="flex border-b">
                             <button
+                                onClick={() => setSettingsTab('profile')}
+                                className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                                    settingsTab === 'profile'
+                                        ? 'text-green-600 border-b-2 border-green-600 bg-green-50'
+                                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                                }`}
+                            >
+                                <User size={16} />
+                                Edit Profile
+                            </button>
+                            <button
                                 onClick={() => setSettingsTab('password')}
                                 className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
                                     settingsTab === 'password'
@@ -2335,6 +2322,82 @@ return (
 
                         {/* Content */}
                         <div className="p-6">
+                            {settingsTab === 'profile' && (
+                                <form onSubmit={async (e) => {
+                                    e.preventDefault();
+                                    setSettingsLoading(true);
+                                    try {
+                                        const token = localStorage.getItem('litpath_session') ? JSON.parse(localStorage.getItem('litpath_session')).session_token : null;
+                                        const res = await fetch('http://localhost:8000/api/auth/update-profile/', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json',
+                                                'Authorization': `Bearer ${token}`
+                                            },
+                                            body: JSON.stringify({
+                                                full_name: editFullName,
+                                                username: editUsername
+                                            })
+                                        });
+                                        const data = await res.json();
+                                        setSettingsLoading(false);
+                                        if (data.success) {
+                                            // Update user in AuthContext and localStorage
+                                            if (data.user) {
+                                                localStorage.setItem('litpath_auth_user', JSON.stringify(data.user));
+                                                if (typeof setUser === 'function') setUser(data.user);
+                                            }
+                                            showToast('Profile updated!', 'success');
+                                            setShowAccountSettings(false);
+                                        } else {
+                                            showToast(data.message || 'Failed to update profile', 'error');
+                                        }
+                                    } catch (err) {
+                                        setSettingsLoading(false);
+                                        showToast('Connection error', 'error');
+                                    }
+                                }}>
+                                    <div className="space-y-4">
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                            <input
+                                                type="text"
+                                                value={editFullName}
+                                                onChange={e => setEditFullName(e.target.value)}
+                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                                            <input
+                                                type="text"
+                                                value={editUsername}
+                                                onChange={e => setEditUsername(e.target.value)}
+                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                                required
+                                            />
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            disabled={settingsLoading}
+                                            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                        >
+                                            {settingsLoading ? (
+                                                <>
+                                                    <RefreshCw size={16} className="animate-spin" />
+                                                    Saving...
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <User size={16} />
+                                                    Save Changes
+                                                </>
+                                            )}
+                                        </button>
+                                    </div>
+                                </form>
+                            )}
                             {settingsTab === 'password' && (
                                 <form onSubmit={async (e) => {
                                     e.preventDefault();
@@ -2419,7 +2482,7 @@ return (
                                         <button
                                             type="submit"
                                             disabled={settingsLoading}
-                                            className="w-full bg-[#1E74BC] text-white py-2 px-4 rounded-lg hover:bg-[#155a8f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                            className="w-full bg-[#1E74BC] text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                                         >
                                             {settingsLoading ? (
                                                 <>

@@ -1,5 +1,13 @@
+
 from rest_framework import serializers
-from .models import Bookmark, ResearchHistory, Feedback
+from .models import UserAccount, Bookmark, ResearchHistory, Feedback
+
+# Serializer for user profile update
+class UserAccountSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserAccount
+        fields = ['id', 'email', 'username', 'full_name', 'role']
+        read_only_fields = ['id', 'email', 'role']
 
 
 class BookmarkSerializer(serializers.ModelSerializer):

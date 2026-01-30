@@ -8,7 +8,31 @@ const AuthPage = () => {
     const navigate = useNavigate();
     const { login, continueAsGuest, loading: authLoading } = useAuth();
     
-    const [mode, setMode] = useState('welcome'); // 'welcome' or 'login'
+    const [mode, setMode] = useState('welcome'); // 'welcome' or 'login' or 'forgot'
+        // Forgot password state
+        const [resetEmail, setResetEmail] = useState('');
+        const [resetMessage, setResetMessage] = useState('');
+        const [resetLoading, setResetLoading] = useState(false);
+
+        const handleForgotSubmit = async (e) => {
+            e.preventDefault();
+            setResetMessage('');
+            setResetLoading(true);
+            try {
+                // Call backend endpoint for password reset
+                const response = await fetch('http://localhost:8000/api/auth/password-reset-request/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: resetEmail })
+                });
+                const data = await response.json();
+                setResetMessage(data.message || 'If this email exists, a reset link will be sent.');
+            } catch (err) {
+                setResetMessage('Error sending reset request.');
+            } finally {
+                setResetLoading(false);
+            }
+        };
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -199,12 +223,63 @@ const AuthPage = () => {
                                 </button>
                             </form>
 
-                            <div className="text-center">
+                            <div className="flex flex-col items-center gap-2">
+                                <button
+                                    type="button"
+                                    className="text-blue-600 hover:underline text-sm"
+                                    onClick={() => { setMode('forgot'); setResetEmail(''); setResetMessage(''); }}
+                                >
+                                    Forgot password?
+                                </button>
                                 <button
                                     onClick={() => { setMode('welcome'); setError(''); }}
                                     className="text-gray-500 hover:underline text-sm"
                                 >
                                     ← Back to options
+                                </button>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Forgot Password Form */}
+                    {mode === 'forgot' && (
+                        <div className="space-y-6">
+                            <div className="text-center mb-6">
+                                <h2 className="text-2xl font-bold text-gray-800">Forgot Password</h2>
+                                <p className="text-gray-600 mt-1">Enter your email to receive a reset link</p>
+                            </div>
+                            <form onSubmit={handleForgotSubmit} className="space-y-4">
+                                <div>
+                                    <label htmlFor="resetEmail" className="block text-sm font-medium text-gray-700 mb-1">
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="resetEmail"
+                                        value={resetEmail}
+                                        onChange={e => setResetEmail(e.target.value)}
+                                        placeholder="Enter your email address"
+                                        required
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        disabled={resetLoading}
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={resetLoading}
+                                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400"
+                                >
+                                    {resetLoading ? 'Sending...' : 'Send Reset Link'}
+                                </button>
+                            </form>
+                            {resetMessage && <div className="text-green-600 text-sm text-center">{resetMessage}</div>}
+                            <div className="text-center">
+                                <button
+                                    type="button"
+                                    onClick={() => setMode('login')}
+                                    className="text-gray-500 hover:underline text-sm"
+                                >
+                                    ← Back to Login
                                 </button>
                             </div>
                         </div>

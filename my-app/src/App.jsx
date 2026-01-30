@@ -6,6 +6,7 @@ import Login from './Login';
 import AuthPage from './AuthPage';
 import AdminDashboard from './AdminDashboard';
 import FeedbackManager from './FeedbackManager';
+import ResetPassword from './ResetPassword';
 
 // Protected Route component - requires authentication (user, staff, or admin)
 const ProtectedRoute = ({ children, requireStaff = false }) => {
@@ -108,6 +109,12 @@ const AppContent = () => {
                         <FeedbackManager />
                     </ProtectedRoute>
                 } 
+            />
+
+            {/* Reset password page */}
+            <Route 
+                path="/reset-password/:token" 
+                element={<ResetPassword />} 
             />
 
             {/* Catch-all redirect */}
