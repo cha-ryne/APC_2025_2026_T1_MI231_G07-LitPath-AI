@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown } from 'lucide-react';
+import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useAuth } from './context/AuthContext';
 import dostLogo from "./components/images/dost-logo.png";
 import { Quote } from "lucide-react";
@@ -66,6 +66,7 @@ const LitPathAI = () => {
 
     const [mostBrowsed, setMostBrowsed] = useState([]);
     const [loadingMostBrowsed, setLoadingMostBrowsed] = useState(true);
+    const [browsedCurrentSlide, setBrowsedCurrentSlide] = useState(0);
     
     // Get userId from auth context
     const userId = getUserId();
@@ -1422,7 +1423,7 @@ return (
                                 </div>
                             </div>
 
-                            {/* Most Browsed Materials - NEW SECTION */}
+                            {/* Most Browsed Materials - CAROUSEL */}
                             <div className="mt-12">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-5 flex items-center gap-2">
                                     <BookOpen size={24} className="text-[#1E74BC]" />
@@ -1439,68 +1440,110 @@ return (
                                         <p>No browsing data available yet</p>
                                     </div>
                                 ) : (
-                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center md:place-items-start">
-                                        {mostBrowsed.map((material, index) => (
-                                            <div
-                                                key={material.file}
-                                                className="bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer overflow-hidden w-full"
-                                                onClick={() => {
-                                                    const formattedMaterial = {
-                                                        id: Date.now() + index,
-                                                        title: material.title,
-                                                        author: material.author,
-                                                        year: material.year,
-                                                        abstract: material.abstract,
-                                                        file: material.file,
-                                                        fullTextPath: material.file,
-                                                        degree: material.degree,
-                                                        subjects: material.subjects,
-                                                        school: material.school,
-                                                    };
-                                                    setSelectedSource(formattedMaterial);
-                                                    trackMaterialView(formattedMaterial);
-                                                    setShowOverlay(true);
-                                                }}
-                                            >
-                                                {/* Ranking Badge */}
-                                                <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] text-white px-4 py-2 flex items-center justify-between">
-                                                    <div className="flex items-center gap-2">
-                                                        <div className="bg-white text-[#1E74BC] rounded-full w-8 h-8 flex items-center justify-center font-bold">
-                                                            {index + 1}
-                                                        </div>
-                                                        <span className="text-sm font-medium">
-                                                            {material.view_count} {material.view_count === 1 ? 'view' : 'views'}
-                                                        </span>
-                                                    </div>
-                                                    <div className="flex items-center gap-1">
-                                                        <Star 
-                                                            size={16} 
-                                                            className={parseFloat(material.avg_rating) > 0 ? 'fill-yellow-300 text-yellow-300' : 'text-white'} 
-                                                        />
-                                                        <span className="text-sm font-medium">
-                                                            {parseFloat(material.avg_rating).toFixed(1)}
-                                                        </span>
-                                                    </div>
-                                                </div>
+                                    <div className="relative">
+                                        {/* Navigation Arrows */}
+                                        {mostBrowsed.length > 3 && (
+                                            <>
+                                                <button
+                                                    onClick={() => setBrowsedCurrentSlide(Math.max(0, browsedCurrentSlide - 1))}
+                                                    disabled={browsedCurrentSlide === 0}
+                                                    className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full shadow-lg p-2 hover:bg-gray-100 transition-colors ${browsedCurrentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                >
+                                                    <ChevronLeft size={28} className="text-[#1E74BC]" />
+                                                </button>
+                                                <button
+                                                    onClick={() => setBrowsedCurrentSlide(Math.min(mostBrowsed.length - 3, browsedCurrentSlide + 1))}
+                                                    disabled={browsedCurrentSlide >= mostBrowsed.length - 3}
+                                                    className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full shadow-lg p-2 hover:bg-gray-100 transition-colors ${browsedCurrentSlide >= mostBrowsed.length - 3 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                >
+                                                    <ChevronRight size={28} className="text-[#1E74BC]" />
+                                                </button>
+                                            </>
+                                        )}
 
-                                                {/* Material Info */}
-                                                <div className="p-5">
-                                                    <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-2 hover:text-[#1E74BC] transition-colors">
-                                                        {material.title}
-                                                    </h4>
-                                                    <p className="text-sm text-gray-600 mb-3">
-                                                        <User size={14} className="inline mr-1" />
-                                                        {material.author} • {material.year}
-                                                    </p>
-                                                    <div className="flex items-center justify-between text-xs text-gray-500">
-                                                        <span>{material.degree}</span>
-                                                        <span className="text-[#1E74BC] hover:underline font-medium">
-                                                            View Details →
-                                                        </span>
+                                        {/* Carousel Container */}
+                                        <div className="overflow-hidden">
+                                            <div 
+                                                className="flex gap-6 transition-transform duration-300 ease-in-out"
+                                                style={{ transform: `translateX(-${browsedCurrentSlide * (100/3 + 2)}%)` }}
+                                            >
+                                                {mostBrowsed.map((material, index) => (
+                                                    <div
+                                                        key={material.file}
+                                                        className="bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer overflow-hidden flex-shrink-0"
+                                                        style={{ width: 'calc(33.333% - 16px)' }}
+                                                        onClick={() => {
+                                                            const formattedMaterial = {
+                                                                id: Date.now() + index,
+                                                                title: material.title,
+                                                                author: material.author,
+                                                                year: material.year,
+                                                                abstract: material.abstract,
+                                                                file: material.file,
+                                                                fullTextPath: material.file,
+                                                                degree: material.degree,
+                                                                subjects: material.subjects,
+                                                                school: material.school,
+                                                            };
+                                                            setSelectedSource(formattedMaterial);
+                                                            trackMaterialView(formattedMaterial);
+                                                            setShowOverlay(true);
+                                                        }}
+                                                    >
+                                                        {/* Ranking Badge */}
+                                                        <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] text-white px-4 py-2 flex items-center justify-between">
+                                                            <div className="flex items-center gap-2">
+                                                                <div className="bg-white text-[#1E74BC] rounded-full w-8 h-8 flex items-center justify-center font-bold">
+                                                                    {index + 1}
+                                                                </div>
+                                                                <span className="text-sm font-medium">
+                                                                    {material.view_count} {material.view_count === 1 ? 'view' : 'views'}
+                                                                </span>
+                                                            </div>
+                                                            <div className="flex items-center gap-1">
+                                                                <Star 
+                                                                    size={16} 
+                                                                    className={parseFloat(material.avg_rating) > 0 ? 'fill-yellow-300 text-yellow-300' : 'text-white'} 
+                                                                />
+                                                                <span className="text-sm font-medium">
+                                                                    {parseFloat(material.avg_rating).toFixed(1)}
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* Material Info */}
+                                                        <div className="p-5">
+                                                            <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-2 hover:text-[#1E74BC] transition-colors">
+                                                                {material.title}
+                                                            </h4>
+                                                            <p className="text-sm text-gray-600 mb-3">
+                                                                <User size={14} className="inline mr-1" />
+                                                                {material.author} • {material.year}
+                                                            </p>
+                                                            <div className="flex items-center justify-between text-xs text-gray-500">
+                                                                <span>{material.degree}</span>
+                                                                <span className="text-[#1E74BC] hover:underline font-medium">
+                                                                    View Details →
+                                                                </span>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                ))}
                                             </div>
-                                        ))}
+                                        </div>
+
+                                        {/* Dots Indicator */}
+                                        {mostBrowsed.length > 3 && (
+                                            <div className="flex justify-center gap-2 mt-4">
+                                                {Array.from({ length: Math.ceil(mostBrowsed.length - 2) }).map((_, i) => (
+                                                    <button
+                                                        key={i}
+                                                        onClick={() => setBrowsedCurrentSlide(i)}
+                                                        className={`w-2 h-2 rounded-full transition-colors ${i === browsedCurrentSlide ? 'bg-[#1E74BC]' : 'bg-gray-300 hover:bg-gray-400'}`}
+                                                    />
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
                                 )}
                             </div>
