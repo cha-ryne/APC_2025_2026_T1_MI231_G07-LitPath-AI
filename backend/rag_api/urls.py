@@ -4,7 +4,7 @@ from .views import (
     HealthCheckView, SearchView, FiltersView,
     bookmarks_view, bookmark_delete_view, bookmark_delete_by_file_view,
     research_history_view, research_history_delete_view,
-    feedback_view, feedback_detail
+    feedback_view, feedback_detail, document_ratings_view
 )
 from .admin_views import admin_login_view, admin_users_view, admin_user_delete_view
 from .auth_views import (
@@ -76,4 +76,8 @@ urlpatterns = [
     # Material Views (Most Browsed)
     path('track-view/', views.track_material_view, name='track_material_view'),
     path('most-browsed/', views.get_most_browsed, name='get_most_browsed'),
+    
+    # Document Ratings
+    path('document-ratings/', document_ratings_view, name='document-ratings'),
+    path('document-ratings', document_ratings_view, name='document-ratings-no-slash'),
 ]

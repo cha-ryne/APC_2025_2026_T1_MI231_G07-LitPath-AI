@@ -182,6 +182,16 @@ class SearchView(APIView):
                         suggestions.append("Try shortening your query to key terms only")
                     suggestions.append("Try searching for broader topics related to your question")
                 
+                # Add average ratings to documents
+                document_files = [doc.get('file') for doc in documents if doc.get('file')]
+                ratings_map = get_document_ratings(document_files)
+                
+                for doc in documents:
+                    file_name = doc.get('file', '')
+                    rating_info = ratings_map.get(file_name, {})
+                    doc['avg_rating'] = rating_info.get('avg_rating')
+                    doc['rating_count'] = rating_info.get('count', 0)
+                
                 # Return documents immediately WITHOUT overview
                 return Response({
                     "documents": documents,
@@ -356,6 +366,98 @@ def research_history_delete_view(request, session_id):
         return Response(
             {"error": "Research history not found"},
             status=status.HTTP_404_NOT_FOUND
+        )
+
+
+# ============= Document Ratings Helper =============
+
+def get_document_ratings(document_files=None):
+    """
+    Get average rating for each document file.
+    
+    Args:
+        document_files: Optional list of specific document files to get ratings for.
+                       If None, returns all document ratings.
+    
+    Returns:
+        Dict mapping document file paths to their average rating (and count).
+        Format: {
+            'filename.txt': {'avg_rating': 4.5, 'count': 10},
+            ...
+        }
+    """
+    from django.db.models import Avg, Count
+    from .models import Feedback
+    
+    try:
+        # Filter for ratings only (where rating is not null)
+        rating_query = Feedback.objects.filter(rating__isnull=False)
+        
+        if document_files:
+            rating_query = rating_query.filter(document_file__in=document_files)
+        
+        # Group by document_file and calculate average
+        ratings = rating_query.values('document_file').annotate(
+            avg_rating=Avg('rating'),
+            count=Count('id')
+        )
+        
+        # Convert to dict for fast lookup
+        result = {}
+        for item in ratings:
+            file_path = item['document_file']
+            if file_path:
+                result[file_path] = {
+                    'avg_rating': round(item['avg_rating'], 1) if item['avg_rating'] else None,
+                    'count': item['count']
+                }
+        
+        return result
+    except Exception as e:
+        print(f"Error getting document ratings: {e}")
+        return {}
+
+
+# ============= Document Ratings Endpoint =============
+
+@api_view(['GET'])
+def document_ratings_view(request):
+    """
+    GET /api/document-ratings/
+    Get average rating for specific documents or all documents.
+    
+    Query Parameters:
+        - file: (optional) Comma-separated list of document files to get ratings for
+                If not provided, returns ratings for all documents with ratings
+    
+    Response:
+    {
+        "ratings": {
+            "filename1.txt": {"avg_rating": 4.5, "count": 10},
+            "filename2.txt": {"avg_rating": 3.8, "count": 5}
+        }
+    }
+    """
+    try:
+        # Get optional file parameter (comma-separated)
+        files_param = request.query_params.get('file')
+        
+        if files_param:
+            # Parse comma-separated file list
+            document_files = [f.strip() for f in files_param.split(',') if f.strip()]
+        else:
+            document_files = None
+        
+        ratings = get_document_ratings(document_files)
+        
+        return Response({
+            "ratings": ratings
+        }, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        return Response(
+            {"error": str(e)},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
         )
 
 
