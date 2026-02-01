@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key } from 'lucide-react';
+import { Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { useAuth } from './context/AuthContext';
 import dostLogo from "./components/images/dost-logo.png";
 import { Quote } from "lucide-react";
@@ -23,9 +23,8 @@ const LitPathAI = () => {
     const [searchResults, setSearchResults] = useState(null);
     const [selectedSource, setSelectedSource] = useState(null);
     const [showOverlay, setShowOverlay] = useState(false);
-    const [rating, setRating] = useState(0);
-    const [showRatingOverlay, setShowRatingOverlay] = useState(false);
-    const [feedbackRelevant, setFeedbackRelevant] = useState(null);
+    const [userFeedback, setUserFeedback] = useState(null); // null, 'thumbs_up', or 'thumbs_down'
+    const [showFeedbackOverlay, setShowFeedbackOverlay] = useState(false);
     const [feedbackComment, setFeedbackComment] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -64,7 +63,7 @@ const LitPathAI = () => {
     const [showNewPassword, setShowNewPassword] = useState(false);
     const [showDeletePassword, setShowDeletePassword] = useState(false);
     const [settingsLoading, setSettingsLoading] = useState(false);
-    const [feedbackError, setFeedbackError] = useState('');
+
     const [mostBrowsed, setMostBrowsed] = useState([]);
     const [loadingMostBrowsed, setLoadingMostBrowsed] = useState(true);
     
@@ -959,57 +958,42 @@ const handleOverviewSourceClick = (sourceIdx) => {
     
     // Submit feedback
 
-const handleFeedbackSubmit = async () => {
+const handleFeedbackSubmit = async (feedbackType) => {
     if (!userId) {
         showToast('User ID not found. Please refresh the page.', 'error');
         return;
     }
 
-    // Validate feedback
-    if (feedbackRelevant === null) {
-        showToast('Please select Yes or No for relevance.', 'error');
+    // Update feedback state
+    const newFeedback = userFeedback === feedbackType ? null : feedbackType;
+    setUserFeedback(newFeedback);
+    
+    // Show overlay for optional comment
+    if (newFeedback !== null) {
+        setShowFeedbackOverlay(true);
+    }
+};
+
+const handleFeedbackConfirm = async () => {
+    if (!userFeedback) {
+        showToast('Please select feedback first.', 'error');
         return;
     }
 
-    // Validate comment if provided
-    if (feedbackComment.trim()) {
-        // Check for emojis using regex
-        const emojiRegex = /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{1F004}\u{1F0CF}\u{1F170}-\u{1F251}\u{FE00}-\u{FE0F}\u{203C}\u{2049}\u{20E3}\u{2122}\u{2139}\u{2194}-\u{2199}\u{21A9}-\u{21AA}\u{231A}-\u{231B}\u{2328}\u{23CF}\u{23E9}-\u{23F3}\u{23F8}-\u{23FA}\u{24C2}\u{25AA}-\u{25AB}\u{25B6}\u{25C0}\u{25FB}-\u{25FE}\u{2934}-\u{2935}\u{2B05}-\u{2B07}\u{2B1B}-\u{2B1C}\u{2B50}\u{2B55}\u{3030}\u{303D}\u{3297}\u{3299}]/gu;
-        
-        if (emojiRegex.test(feedbackComment)) {
-            setFeedbackError('Emojis are not allowed in feedback.');
-            return;
-        }
-
-        // Check character length
-        const commentLength = feedbackComment.trim().length;
-        if (commentLength > 500) {
-            setFeedbackError('Feedback cannot exceed 500 characters.');
-            return;
-        }
-    }
-
-    console.log('=== Submitting Feedback ===');
-    console.log('User ID:', userId);
-    console.log('Feedback data:', {
-        user_id: userId,
-        query: searchQuery,
-        rating: rating,
-        relevant: feedbackRelevant,
-        comment: feedbackComment
-    });
-
     try {
-        // Save to Django backend only
+        // Map thumbs to relevant boolean
+        const isRelevant = userFeedback === 'thumbs_up';
+        
+        // Save to Django backend
         const response = await fetch(`${API_BASE_URL}/feedback/`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 user_id: userId,
                 query: searchQuery,
-                rating: rating,
-                relevant: feedbackRelevant,
-                comment: feedbackComment.trim()
+                rating: isRelevant ? 5 : 1, // 5 for thumbs up, 1 for thumbs down
+                relevant: isRelevant,
+                comment: feedbackComment.trim() || null
             })
         });
         
@@ -1018,15 +1002,12 @@ const handleFeedbackSubmit = async () => {
         }
         
         console.log('✅ Feedback saved to Django backend successfully!');
-
-        // Reset and close
-        setShowRatingOverlay(false);
-        setFeedbackComment("");
-        setFeedbackRelevant(null);
-        setRating(0);
-        setFeedbackError('');
-        
         showToast('Thank you for your feedback!', 'success');
+        
+        // Reset and close
+        setShowFeedbackOverlay(false);
+        setFeedbackComment("");
+        setUserFeedback(null);
     } catch (err) {
         console.error('❌ Error submitting feedback:', err);
         showToast('Failed to submit feedback. Please try again.', 'error');
@@ -1631,32 +1612,9 @@ return (
 
 
 
-                                        {/* Rating and Actions - only show for the latest result */}
+                                        {/* Try again button - only show for the latest result */}
                                         {historyIndex === conversationHistory.length - 1 && !loading && (
-                                            <div className="flex justify-end items-center mt-6 space-x-5">
-                                                <div className="flex space-x-1">
-                                                    {[1, 2, 3, 4, 5].map((num) => (
-                                                        <button
-                                                            key={num}
-                                                            onClick={() => {
-                                                                setRating(num);
-                                                                setShowRatingOverlay(true);
-                                                            }}
-                                                            className="transition-transform hover:scale-110"
-                                                        >
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                fill={num <= rating ? "#FACC15" : "none"}
-                                                                stroke="#FACC15"
-                                                                strokeWidth="2"
-                                                                viewBox="0 0 24 24"
-                                                                className="w-7 h-7 cursor-pointer"
-                                                            >
-                                                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                                            </svg>
-                                                        </button>
-                                                    ))}
-                                                </div>
+                                            <div className="flex justify-end items-center mt-6">
                                                 <button
                                                     onClick={() => {
                                                         setSearchQuery(result.query);
@@ -1835,7 +1793,23 @@ return (
                                     <ArrowRight size={18} className="transform rotate-180" />
                                     <span>Back</span>
                                 </button>
-                                <div className="flex space-x-4">
+                                <div className="flex space-x-4 items-center">
+                                    {/* Thumbs Up/Down Feedback */}
+                                    <button
+                                        className={`transition-colors ${userFeedback === 'thumbs_up' ? 'text-green-300' : 'text-white hover:text-blue-200'}`}
+                                        onClick={() => handleFeedbackSubmit('thumbs_up')}
+                                        title="Helpful (thumbs up)"
+                                    >
+                                        <ThumbsUp size={20} fill={userFeedback === 'thumbs_up' ? 'currentColor' : 'none'} />
+                                    </button>
+                                    <button
+                                        className={`transition-colors ${userFeedback === 'thumbs_down' ? 'text-red-300' : 'text-white hover:text-blue-200'}`}
+                                        onClick={() => handleFeedbackSubmit('thumbs_down')}
+                                        title="Not helpful (thumbs down)"
+                                    >
+                                        <ThumbsDown size={20} fill={userFeedback === 'thumbs_down' ? 'currentColor' : 'none'} />
+                                    </button>
+                                    <div className="w-px h-5 bg-white opacity-30"></div>
                                     <button 
                                         className="text-white hover:text-blue-200 transition-colors"
                                         onClick={() => toggleBookmark(selectedSource)}
@@ -1911,7 +1885,61 @@ return (
                     </div>
                 </div>
             )}
-
+            {/* Feedback Overlay */}
+            {showFeedbackOverlay && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 z-[70] flex items-center justify-center">
+                    <div className="bg-white w-11/12 md:w-1/2 lg:w-1/3 rounded-lg shadow-xl p-6 relative">
+                        {/* Close button */}
+                        <button
+                            className="absolute top-3 right-3 text-gray-500 text-xl hover:text-gray-700"
+                            onClick={() => {
+                                setShowFeedbackOverlay(false);
+                                setUserFeedback(null);
+                            }}>
+                            ×
+                        </button>
+                        <h2 className="text-2xl font-semibold text-[#1E74BC] mb-4">
+                            Thank you for your feedback
+                        </h2>
+                        <p className="text-gray-800 mb-4">
+                            {userFeedback === 'thumbs_up' ? 'We\'re glad this was helpful!' : 'Sorry to hear this wasn\'t helpful.'}
+                        </p>
+                        <p className="text-gray-800 mb-2">
+                            Would you like to add any comments? (Optional)
+                        </p>
+                        <textarea
+                            value={feedbackComment}
+                            onChange={(e) => setFeedbackComment(e.target.value)}
+                            className="w-full border border-gray-300 rounded p-3 text-sm h-28 focus:ring-blue-500 focus:border-transparent"
+                            placeholder="Share your feedback or suggestions here..."
+                            maxLength={500}
+                        />
+                        <div className="flex items-center justify-between mt-2">
+                            <p className="text-xs text-gray-500">
+                                {feedbackComment.length}/500 characters
+                            </p>
+                        </div>
+                        
+                        {/* Submit + Cancel */}
+                        <div className="flex justify-end gap-3 mt-5">
+                            <button
+                                className="bg-[#1E74BC] text-white px-5 py-2 rounded hover:bg-[#185f99]"
+                                onClick={handleFeedbackConfirm}>
+                                Submit
+                            </button>
+                            <button
+                                className="px-5 py-2 rounded bg-gray-300 hover:bg-gray-400"
+                                onClick={() => {
+                                    setShowFeedbackOverlay(false);
+                                    setUserFeedback(null);
+                                }}
+                            >
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Citation Overlay */}
             {showCitationOverlay && (
@@ -1966,90 +1994,6 @@ return (
                 </div>
             )}
 
-
-            {/* Rating Feedback Overlay */}
-            {showRatingOverlay && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 z-[70] flex items-center justify-center">
-                    <div className="bg-white w-11/12 md:w-1/2 lg:w-1/3 rounded-lg shadow-xl p-6 relative">
-                        {/* Close button */}
-                        <button
-                            className="absolute top-3 right-3 text-gray-500 text-xl hover:text-gray-700"
-                            onClick={() => setShowRatingOverlay(false)}>
-                            ×
-                        </button>
-                        <h2 className="text-2xl font-semibold text-[#1E74BC] mb-4">
-                            Thank you for your feedback
-                        </h2>
-                        <p className="text-gray-800 mb-3">Is this relevant to your question?</p>
-                        
-                        {/* Yes / No checkboxes */}
-                        <div className="space-y-2 ml-1 mb-4">
-                            <label className="flex items-center gap-2 cursor-pointer">
-                                <input
-                                    type="radio"
-                                    checked={feedbackRelevant === true}
-                                    onChange={() => setFeedbackRelevant(true)}
-                                    className="w-4 h-4"
-                                />
-                                <span>Yes</span>
-                            </label>
-                            <label className="flex items-center gap-2 cursor-pointer">
-                                <input
-                                    type="radio"
-                                    checked={feedbackRelevant === false}
-                                    onChange={() => setFeedbackRelevant(false)}
-                                    className="w-4 h-4"
-                                />
-                                <span>No</span>
-                            </label>
-                        </div>
-                        <p className="text-gray-800 mb-2">
-                            Please explain your answer above. (Optional)
-                        </p>
-                        <textarea
-                            value={feedbackComment}
-                            onChange={(e) => {
-                                setFeedbackComment(e.target.value);
-                                setFeedbackError(''); // Clear error on change
-                            }}
-                            className={`w-full border rounded p-3 text-sm h-28 ${
-                                feedbackError ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
-                            }`}
-                            placeholder="You may input your suggestions/improvements here"
-                            maxLength={500}
-                        />
-                        <div className="flex items-center justify-between mt-1">
-                            {feedbackError && (
-                                <p className="text-red-500 text-xs">{feedbackError}</p>
-                            )}
-                            <p className={`text-xs ml-auto ${
-                                feedbackComment.trim().length > 0 && feedbackComment.trim().length < 10
-                                    ? 'text-red-500'
-                                    : feedbackComment.trim().length > 500
-                                    ? 'text-red-500'
-                                    : 'text-gray-500'
-                            }`}>
-                                {feedbackComment.length}/500 characters
-                            </p>
-                        </div>
-                        
-                        {/* Submit + Cancel */}
-                        <div className="flex justify-end gap-3 mt-5">
-                            <button
-                                className="bg-[#1E74BC] text-white px-5 py-2 rounded hover:bg-[#185f99]"
-                                onClick={handleFeedbackSubmit}>
-                                Submit
-                            </button>
-                            <button
-                                className="px-5 py-2 rounded bg-gray-300 hover:bg-gray-400"
-                                onClick={() => setShowRatingOverlay(false)}
-                            >
-                                Cancel
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            )}
 
             {/* Bookmarks Overlay */}
             {showSavedItems && (
