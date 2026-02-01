@@ -1986,7 +1986,7 @@ return (
                         <div className="space-y-2 ml-1 mb-4">
                             <label className="flex items-center gap-2 cursor-pointer">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     checked={feedbackRelevant === true}
                                     onChange={() => setFeedbackRelevant(true)}
                                     className="w-4 h-4"
@@ -1995,7 +1995,7 @@ return (
                             </label>
                             <label className="flex items-center gap-2 cursor-pointer">
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     checked={feedbackRelevant === false}
                                     onChange={() => setFeedbackRelevant(false)}
                                     className="w-4 h-4"
@@ -2015,7 +2015,7 @@ return (
                             className={`w-full border rounded p-3 text-sm h-28 ${
                                 feedbackError ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
                             }`}
-                            placeholder="You may input your suggestions/improvements here (500 max characters, no emojis)"
+                            placeholder="You may input your suggestions/improvements here"
                             maxLength={500}
                         />
                         <div className="flex items-center justify-between mt-1">
