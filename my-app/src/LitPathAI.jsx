@@ -136,7 +136,7 @@ const LitPathAI = () => {
     const fetchMostBrowsed = async () => {
         try {
             setLoadingMostBrowsed(true);
-            const response = await fetch(`${API_BASE_URL}/most-browsed/?limit=10`);
+            const response = await fetch(`${API_BASE_URL}/most-browsed/?limit=5`);
             
             if (!response.ok) {
                 throw new Error('Failed to fetch most browsed materials');
@@ -283,25 +283,28 @@ const LitPathAI = () => {
     // Save bookmark to Django backend
     const saveToDjango = async (bookmark) => {
         try {
+            const payload = {
+                user_id: bookmark.userId,
+                title: bookmark.title || 'Untitled',
+                author: bookmark.author || '',
+                year: bookmark.year || null,
+                abstract: bookmark.abstract || '',
+                file: bookmark.file,
+                degree: bookmark.degree || '',
+                subjects: typeof bookmark.subjects === 'string' ? bookmark.subjects : (Array.isArray(bookmark.subjects) ? bookmark.subjects.join(', ') : ''),
+                school: bookmark.school || ''
+            };
+
             const response = await fetch(`${API_BASE_URL}/bookmarks/`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    user_id: bookmark.userId,
-                    title: bookmark.title,
-                    author: bookmark.author,
-                    year: bookmark.year,
-                    abstract: bookmark.abstract,
-                    file: bookmark.file,
-                    degree: bookmark.degree,
-                    subjects: bookmark.subjects,
-                    school: bookmark.school
-                })
+                body: JSON.stringify(payload)
             });
             
             if (!response.ok) {
-                console.error('Django save error:', await response.text());
-                throw new Error('Failed to save bookmark');
+                const errorText = await response.text();
+                console.error('Django save error:', errorText);
+                throw new Error(`Failed to save bookmark: ${errorText}`);
             } else {
                 console.log('✅ Bookmark saved to Django backend');
             }
@@ -1436,11 +1439,11 @@ return (
                                         <p>No browsing data available yet</p>
                                     </div>
                                 ) : (
-                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center md:place-items-start">
                                         {mostBrowsed.map((material, index) => (
                                             <div
                                                 key={material.file}
-                                                className="bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer overflow-hidden"
+                                                className="bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer overflow-hidden w-full"
                                                 onClick={() => {
                                                     const formattedMaterial = {
                                                         id: Date.now() + index,
@@ -1488,9 +1491,6 @@ return (
                                                     <p className="text-sm text-gray-600 mb-3">
                                                         <User size={14} className="inline mr-1" />
                                                         {material.author} • {material.year}
-                                                    </p>
-                                                    <p className="text-sm text-gray-700 line-clamp-3 mb-3">
-                                                        {material.abstract}
                                                     </p>
                                                     <div className="flex items-center justify-between text-xs text-gray-500">
                                                         <span>{material.degree}</span>
@@ -1817,7 +1817,8 @@ return (
                                     >
                                         <Bookmark 
                                             size={20} 
-                                            fill={isBookmarked(selectedSource?.file || selectedSource?.fullTextPath) ? "white" : "none"}
+                                            fill={isBookmarked(selectedSource?.file || selectedSource?.fullTextPath) ? "currentColor" : "none"}
+                                            className={isBookmarked(selectedSource?.file || selectedSource?.fullTextPath) ? "text-white" : "text-white"}
                                         />
                                     </button>
                                     <button className="text-white hover:text-blue-200"
