@@ -6,6 +6,7 @@ import Login from './Login';
 import AuthPage from './AuthPage';
 import AdminDashboard from './AdminDashboard';
 import FeedbackManager from './FeedbackManager';
+import FeedbackDetail from './FeedbackDetail';
 import ResetPassword from './ResetPassword';
 
 // Protected Route component - requires authentication (user, staff, or admin)
@@ -107,6 +108,16 @@ const AppContent = () => {
                 element={
                     <ProtectedRoute requireStaff={true}>
                         <FeedbackManager />
+                    </ProtectedRoute>
+                } 
+            />
+
+            {/* The Detail Page */}
+            <Route 
+                path="/admin/feedback/:id" 
+                element={
+                    <ProtectedRoute requireStaff={true}>
+                        <FeedbackDetail />
                     </ProtectedRoute>
                 } 
             />

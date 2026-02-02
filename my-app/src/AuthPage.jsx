@@ -88,21 +88,27 @@ const AuthPage = () => {
     return (
         <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
             {/* Header */}
-            <div className="bg-[#1F1F1F] text-white p-4 shadow-md">
-                <div className="flex items-center justify-between max-w-7xl mx-auto">
+            <div className="bg-[#1F1F1F] text-white shadow-md flex-none z-50">
+                <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
+                    
+                    {/* Left Side: Branding */}
                     <div className="flex items-center space-x-4">
-                        <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-12 w-50" />
-                        <div className="text-xl font-bold">DOST UNION CATALOG</div>
-                        <div className="text-sm border-l border-white pl-4 ml-4">
-                            LitPath AI: <br /> Smart PathFinder of Theses and Dissertation
+                        <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-12 w-auto" />
+                        <div>
+                            <div className="text-xl font-bold leading-tight">DOST UNION CATALOG</div>
+                        </div>
+                        <div className="hidden md:block text-sm border-l border-white pl-4 ml-4 leading-tight opacity-90">
+                            LitPath AI: <br /> Smart PathFinder for Theses and Dissertation
                         </div>
                     </div>
+
+                    {/* Right Side: OPAC Link */}
                     <nav className="flex space-x-6">
                         <a 
                             href="http://scinet.dost.gov.ph/#/opac" 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="hover:text-blue-200 transition-colors"
+                            className="hover:text-blue-200 transition-colors text-sm font-medium"
                         >
                             Online Public Access Catalog
                         </a>
@@ -289,7 +295,7 @@ const AuthPage = () => {
             </div>
 
             {/* Footer */}
-            <div className="bg-gray-100 py-4 text-center text-gray-500 text-sm">
+            <div className="bg-gray-200 py-4 text-center text-gray-500 text-[10px] flex-none">
                 <p>© 2025 DOST-STII Science and Technology Information Institute</p>
             </div>
         </div>

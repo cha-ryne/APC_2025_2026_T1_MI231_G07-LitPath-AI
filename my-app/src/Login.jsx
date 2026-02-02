@@ -69,7 +69,7 @@ const Login = () => {
                     <div className="flex items-center space-x-4">
                         <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-12 w-50" />
                         <div className="text-xl font-bold">DOST UNION CATALOG</div>
-                        <div className="text-sm border-l border-white pl-4 ml-4">LitPath AI: <br /> Smart PathFinder of Theses and Dissertation</div>
+                        <div className="text-sm border-l border-white pl-4 ml-4">LitPath AI: <br /> Smart PathFinder for Theses and Dissertation</div>
                     </div>
                     <nav className="flex space-x-6">
                         <a href="http://scinet.dost.gov.ph/#/opac" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors"> Online Public Access Catalog</a>

@@ -1108,7 +1108,7 @@ return (
                         <svg width="28" height="28" fill="none" stroke="white" strokeWidth="2"><rect x="4" y="7" width="20" height="2" rx="1" fill="white"/><rect x="4" y="13" width="20" height="2" rx="1" fill="white"/><rect x="4" y="19" width="20" height="2" rx="1" fill="white"/></svg>
                     </button>
                     <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-10 w-auto" />
-                    <span className="hidden lg:block text-xs border-l border-white pl-4 ml-4">LitPath AI: Smart PathFinder of Theses and Dissertation</span>
+                    <span className="hidden lg:block text-xs border-l border-white pl-4 ml-4">LitPath AI: Smart PathFinder for Theses and Dissertation</span>
                 </div>
                 <div className="flex items-center gap-4">
                     {/* Sidebar Toggle Button */}
