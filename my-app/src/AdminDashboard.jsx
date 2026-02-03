@@ -17,7 +17,9 @@ import {
     Key,
     RefreshCw,
     ChevronDown,
-    MessageSquare
+    MessageSquare,
+    ShieldCheck,
+    ChevronLeft
 } from "lucide-react";
 import dostLogo from "./components/images/dost-logo.png";
 
@@ -215,25 +217,27 @@ const AdminDashboard = () => {
         <div className="h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col overflow-hidden">
 
             {/* ── Header ──────────────────────── */}
-            <div className="bg-[#2c2c2c] text-white p-4 shadow-md flex-shrink-0">
-                <div className="flex items-center justify-between max-w-7xl mx-auto">
+            <div className="bg-[#1F1F1F] text-white shadow-md flex-none z-50">
+                <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     <div className="flex items-center space-x-4">
-                        <img src={dostLogo} alt="Department of Science and Technology" className="h-16 w-auto" />
-                        <div className="text-sm border-l border-white pl-4 ml-4">
-                            LitPath AI: <br /> Smart PathFinder of Theses and Dissertation
+                        <img src={dostLogo} alt="DOST Logo" className="h-12 w-auto" />
+                        
+                        <div className="hidden md:block text-sm border-l border-white pl-4 ml-4 leading-tight opacity-90">
+                            LitPath AI: <br /> Smart PathFinder for Theses and Dissertation
                         </div>
                     </div>
-                    <nav className="flex items-center space-x-6">
-                        <a 
-                            href="http://scinet.dost.gov.ph/#/opac" 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
-                            className="hover:text-blue-200 transition-colors"
+
+                    <div className="flex items-center gap-6">
+                        <div className="flex items-center gap-2 bg-gray-800 px-3 py-1.5 rounded-full border border-gray-700 shadow-sm">
+                            <ShieldCheck size={16} className="text-blue-400" />
+                            <span className="text-sm font-medium text-gray-200">Admin</span>
+                        </div>
+                        <button 
+                            onClick={() => navigate('/')}
+                            className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors"
                         >
-                            Online Public Access Catalog
-                        </a>
-                        <Link to="/search" className="font-bold text-blue-200">LitPath AI</Link>
-                    </nav>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -669,4 +673,5 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+
 

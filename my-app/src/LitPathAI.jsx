@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
-    Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight
+    Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight, ShieldCheck
 } from 'lucide-react';
 import { useAuth } from './context/AuthContext';
 import dostLogo from "./components/images/dost-logo.png";
@@ -1107,27 +1107,16 @@ return (
 
         {/* Header */}
         <header className="sticky top-0 left-0 right-0 z-40 bg-[#1F1F1F] text-white shadow-md">
-            <div className="flex items-center justify-between px-4 py-3 md:px-8 max-w-7xl mx-auto">
-                <div className="flex items-center gap-3">
-                    <button className="md:hidden mr-2" onClick={() => setSidebarOpen(true)}>
-                        <svg width="28" height="28" fill="none" stroke="white" strokeWidth="2"><rect x="4" y="7" width="20" height="2" rx="1" fill="white"/><rect x="4" y="13" width="20" height="2" rx="1" fill="white"/><rect x="4" y="19" width="20" height="2" rx="1" fill="white"/></svg>
-                    </button>
-                    <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-10 w-auto" />
-                    <span className="hidden lg:block text-xs border-l border-white pl-4 ml-4">LitPath AI: Smart PathFinder for Theses and Dissertation</span>
+            <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
+                <div className="flex items-center space-x-4">
+                    <img src={dostLogo} alt="DOST Logo" className="h-12 w-auto" />
+                    
+                    <div className="hidden md:block text-sm border-l border-white pl-4 ml-4 leading-tight opacity-90">
+                        LitPath AI: <br /> Smart PathFinder for Theses and Dissertation
+                    </div>
                 </div>
+
                 <div className="flex items-center gap-4">
-                    {/* Sidebar Toggle Button */}
-                    <button
-                        onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-                        className="hidden md:flex items-center justify-center w-8 h-8 rounded-lg hover:bg-gray-700 transition-colors"
-                        title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-                    >
-                        {sidebarCollapsed ? (
-                            <ChevronRight size={20} />
-                        ) : (
-                            <ChevronLeft size={20} />
-                        )}
-                    </button>
                     {/* User Menu */}
                     <div className="relative">
                         <button
