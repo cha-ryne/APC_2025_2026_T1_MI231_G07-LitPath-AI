@@ -3,6 +3,15 @@ from rest_framework.response import Response
 from rest_framework import status
 from .rag_service import RAGService
 import time
+from .models_password_reset import PasswordResetToken
+from django.utils import timezone
+import secrets
+from datetime import timedelta
+from django.contrib.auth import get_user_model
+from django.core.mail import send_mail
+from django.conf import settings
+
+User = get_user_model()
 
 class FiltersView(APIView):
     """
@@ -778,4 +787,81 @@ def analytics_compact(request):
             {"success": False, "error": str(e)},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR
         )
+
+# ============= Password Reset Views =============
+from rest_framework.decorators import api_view
+
+@api_view(['POST'])
+def request_password_reset(request):
+    """
+    POST: Request password reset link
+    Body: {"email": "..."}
+    """
+    from .models_password_reset import PasswordResetToken
+    from rag_api.models import UserAccount
+    email = request.data.get('email', '').strip().lower()
+    if not email:
+        return Response({"success": False, "message": "Email is required."}, status=status.HTTP_400_BAD_REQUEST)
+    user = UserAccount.objects.filter(email=email).first()
+    print(f"[DEBUG] User lookup for email '{email}': {user}")
+    if user:
+        reset_token = secrets.token_urlsafe(32)
+        expiry = timezone.now() + timezone.timedelta(hours=1)
+        print(f"[DEBUG] About to create PasswordResetToken for user: {user.email}, token: {reset_token}, expiry: {expiry}")
+        try:
+            prt = PasswordResetToken.objects.create(user=user, token=reset_token, expiry=expiry, used=False)
+            print(f"[DEBUG] Created PasswordResetToken: token={prt.token}, user={prt.user.email}, expiry={prt.expiry}, used={prt.used}")
+        except Exception as e:
+            print(f"[DEBUG] Error creating PasswordResetToken: {e}")
+        reset_link = f"http://localhost:5173/reset-password/{reset_token}"
+        print(f"[DEBUG] Password reset link for {email}: {reset_link}")
+        # Send email with reset link
+        try:
+            send_mail(
+                'Password Reset',
+                f'Click to reset your password: {reset_link}',
+                settings.DEFAULT_FROM_EMAIL,
+                [email],
+            )
+            print(f"[DEBUG] Password reset email sent to {email}")
+        except Exception as e:
+            print(f"[DEBUG] Error sending password reset email: {e}")
+    # Always return success for security
+    return Response({"success": True, "message": "If this email exists, a reset link will be sent."})
+
+@api_view(['POST'])
+def reset_password(request):
+    """
+    POST: Reset password using token
+    Body: {"token": "...", "new_password": "..."}
+    """
+    print("[DEBUG] Entered reset_password view")
+    from .models_password_reset import PasswordResetToken
+    token = request.data.get('token')
+    new_password = request.data.get('new_password')
+    print(f"[DEBUG] Received token: {token}")
+    # Print all tokens in the database for debugging
+    all_tokens = PasswordResetToken.objects.all()
+    print(f"[DEBUG] All tokens in DB:")
+    for t in all_tokens:
+        print(f"  token={t.token}, used={t.used}, expiry={t.expiry}, user={t.user.email}")
+    if not token or not new_password:
+        print("[DEBUG] Missing token or new_password")
+        return Response({"error": "Token and new password are required."}, status=status.HTTP_400_BAD_REQUEST)
+    try:
+        prt = PasswordResetToken.objects.get(token=token, used=False)
+        print(f"[DEBUG] Found token in DB: {prt.token}, expiry: {prt.expiry}, used: {prt.used}")
+        if prt.expiry < timezone.now():
+            print(f"[DEBUG] Token expired: {prt.expiry} < {timezone.now()}")
+            return Response({"error": "Token expired."}, status=status.HTTP_400_BAD_REQUEST)
+        user = prt.user
+        user.set_password(new_password)
+        user.save()
+        prt.used = True
+        prt.save()
+        print(f"[DEBUG] Password reset successful for user: {user.email}")
+        return Response({"success": True, "message": "Password reset successful."}, status=status.HTTP_200_OK)
+    except PasswordResetToken.DoesNotExist:
+        print(f"[DEBUG] Token not found or already used: {token}")
+        return Response({"error": "Invalid or used token."}, status=status.HTTP_400_BAD_REQUEST)
 

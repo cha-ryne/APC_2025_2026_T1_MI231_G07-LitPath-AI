@@ -13,7 +13,7 @@ import { Copy } from 'lucide-react';
 const API_BASE_URL = 'http://localhost:8000/api';
 const LitPathAI = () => {
     // Auth context
-    const { user, isGuest, logout, startNewChat: authStartNewChat, getUserId, isStaff, changePassword, deleteAccount } = useAuth();
+    const { user, isGuest, logout, startNewChat: authStartNewChat, getUserId, isStaff, changePassword, deleteAccount, setUser } = useAuth();
     
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedSubject, setSelectedSubject] = useState('All subjects');
@@ -38,6 +38,11 @@ const LitPathAI = () => {
     const [bookmarkedCount, setBookmarkedCount] = useState(0);
     const [bookmarks, setBookmarks] = useState([]); // Store bookmarks in state (not localStorage for authenticated users)
     const [showUserMenu, setShowUserMenu] = useState(false);
+    // Force re-render of user menu when user changes (for real-time update)
+    const [userMenuKey, setUserMenuKey] = useState(0);
+    useEffect(() => {
+        setUserMenuKey(k => k + 1);
+    }, [user?.full_name, user?.username]);
     const navigate = useNavigate();
     const [conversationHistory, setConversationHistory] = useState([]);
     const [isFollowUpSearch, setIsFollowUpSearch] = useState(false);
@@ -1131,15 +1136,15 @@ return (
                         >
                             <User size={20} />
                             <span className="hidden md:block text-sm">
-                                {isGuest ? 'Guest' : (user?.username || user?.email?.split('@')[0])}
+                                {isGuest ? 'Guest' : (user?.full_name ? user.full_name : (user?.username || user?.email?.split('@')[0]))}
                             </span>
                         </button>
                         
                         {showUserMenu && (
-                            <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50">
+                            <div key={userMenuKey} className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50">
                                 <div className="px-4 py-2 border-b border-gray-100">
                                     <p className="text-sm font-medium text-gray-900">
-                                        {isGuest ? 'Guest User' : user?.full_name || user?.username}
+                                        {isGuest ? 'Guest User' : (user?.full_name ? user.full_name : user?.username)}
                                     </p>
                                     <p className="text-xs text-gray-500">
                                         {isGuest ? 'Temporary session' : user?.email}
@@ -2267,6 +2272,18 @@ return (
 
                     {/* Tabs */}
                     <div className="flex border-b">
+                    
+                        <button
+                            onClick={() => setSettingsTab('profile')}
+                            className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                                settingsTab === 'profile'
+                                    ? 'text-green-600 border-b-2 border-green-600 bg-green-50'
+                                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                            }`}
+                        >
+                            <User size={16} />
+                            Edit Profile
+                        </button>
                         <button
                             onClick={() => setSettingsTab('password')}
                             className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
@@ -2293,6 +2310,95 @@ return (
 
                     {/* Content */}
                     <div className="p-6">
+
+                        {settingsTab === 'profile' && (
+                            <form onSubmit={async (e) => {
+                                e.preventDefault();
+                                setSettingsLoading(true);
+                                try {
+                                    const token = localStorage.getItem('litpath_session') ? JSON.parse(localStorage.getItem('litpath_session')).session_token : null;
+                                    const res = await fetch('http://localhost:8000/api/auth/update-profile/', {
+                                        method: 'POST',
+                                        headers: {
+                                            'Content-Type': 'application/json',
+                                            'Authorization': `Bearer ${token}`
+                                        },
+                                        body: JSON.stringify({
+                                            full_name: editFullName,
+                                            username: editUsername
+                                        })
+                                    });
+                                    let data;
+                                    if (res.ok) {
+                                        data = await res.json();
+                                        setSettingsLoading(false);
+                                        if (data.success) {
+                                            if (data.user) {
+                                                localStorage.setItem('litpath_auth_user', JSON.stringify(data.user));
+                                                setUser(data.user);
+                                            }
+                                            showToast('Profile updated!', 'success');
+                                            setShowAccountSettings(false);
+                                        } else {
+                                            showToast(data.message || 'Failed to update profile', 'error');
+                                        }
+                                    } else {
+                                        // Try to parse error message from backend
+                                        try {
+                                            data = await res.json();
+                                            showToast(data.message || data.error || 'Failed to update profile', 'error');
+                                        } catch (parseErr) {
+                                            const errorText = await res.text();
+                                            showToast(errorText || 'Failed to update profile', 'error');
+                                        }
+                                        setSettingsLoading(false);
+                                    }
+                                } catch (err) {
+                                    setSettingsLoading(false);
+                                    showToast('Connection error', 'error');
+                                }
+                             }}>
+                                <div className="space-y-4">
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                        <input
+                                            type="text"
+                                            value={editFullName}
+                                            onChange={e => setEditFullName(e.target.value)}
+                                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                            required
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                                        <input
+                                            type="text"
+                                            value={editUsername}
+                                            onChange={e => setEditUsername(e.target.value)}
+                                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                            required
+                                        />
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        disabled={settingsLoading}
+                                        className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                    >
+                                        {settingsLoading ? (
+                                            <>
+                                                <RefreshCw size={16} className="animate-spin" />
+                                                Saving...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <User size={16} />
+                                                Save Changes
+                                            </>
+                                        )}
+                                    </button>
+                                </div>
+                            </form>
+                        )}
                         {settingsTab === 'password' && (
                             <form onSubmit={async (e) => {
                                 e.preventDefault();
