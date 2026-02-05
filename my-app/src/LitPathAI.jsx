@@ -2517,28 +2517,30 @@ function SidebarContent({
     setShowResearchHistory
 }) {
     return (
-        <div className="flex flex-col flex-1 p-4 gap-4">
-            <button
-                onClick={handleNewChat}
-                disabled={!hasSearchedInSession}
-                className={`w-full py-3 rounded-lg font-semibold shadow-md transition-colors ${
-                    hasSearchedInSession
-                        ? 'bg-[#1E74BC] text-white hover:bg-[#155a8f]'
-                        : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                }`}
-            >
-                Start a new chat
-            </button>
-            <button
-                onClick={() => setShowSavedItems(true)}
-                className="w-full flex items-center justify-between border-2 border-[#1E74BC] text-[#1E74BC] py-3 px-4 rounded-lg hover:bg-blue-50 font-semibold shadow-md"
-            >
-                <span className="flex items-center gap-2"><Bookmark size={18} /> Saved Bookmarks</span>
-                {bookmarkedCount > 0 && (
-                    <span className="bg-[#1E74BC] text-white text-xs font-bold px-3 py-1 rounded-full">{bookmarkedCount}</span>
-                )}
-            </button>
-            <div className="flex-1 overflow-y-auto">
+        <div className="flex flex-col h-full">
+            
+            {/* TOP CONTENT */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                <button
+                    onClick={handleNewChat}
+                    disabled={!hasSearchedInSession}
+                    className={`w-full py-3 rounded-lg font-semibold shadow-md transition-colors ${
+                        hasSearchedInSession
+                            ? 'bg-[#1E74BC] text-white hover:bg-[#155a8f]'
+                            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }`}
+                >
+                    Start a new chat
+                </button>
+                <button
+                    onClick={() => setShowSavedItems(true)}
+                    className="w-full flex items-center justify-between border-2 border-[#1E74BC] text-[#1E74BC] py-3 px-4 rounded-lg hover:bg-blue-50 font-semibold shadow-md"
+                >
+                    <span className="flex items-center gap-2"><Bookmark size={18} /> Saved Bookmarks</span>
+                    {bookmarkedCount > 0 && (
+                        <span className="bg-[#1E74BC] text-white text-xs font-bold px-3 py-1 rounded-full">{bookmarkedCount}</span>
+                    )}
+                </button>
                 <h3 className="font-semibold text-gray-800 mb-2 text-lg">Research history</h3>
                 {researchHistory.length === 0 ? (
                     <p className="text-sm text-gray-600 leading-relaxed">After you start a new chat, your research history will be saved and displayed here.</p>
@@ -2577,10 +2579,17 @@ function SidebarContent({
                     </div>
                 )}
             </div>
-            <div className="text-[10px] text-gray-500 mt-auto">
-                AI-generated content. Quality may vary.<br />Check for accuracy.
-                <a href="#" className="text-blue-600 hover:underline block">About LitPath AI</a>
-                <a href="#" className="text-blue-600 hover:underline block">Privacy and Disclaimer</a>
+
+            {/* BOTTOM DISCLOSURE */}
+            <div className="text-[10px] text-gray-500 p-4 border-t">
+                AI-generated content. Quality may vary.<br />
+                Check for accuracy.
+                <a href="#" className="text-[#1E74BC] hover:underline block mt-2">
+                    About LitPath AI
+                </a>
+                <a href="#" className="text-[#1E74BC] hover:underline block">
+                    Privacy and Disclaimer
+                </a>
             </div>
         </div>
     );
