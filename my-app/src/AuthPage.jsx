@@ -86,17 +86,14 @@ const AuthPage = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="min-h-screen flex flex-col bg-gray-100">
             {/* Header */}
-            <div className="bg-[#1F1F1F] text-white shadow-md flex-none z-50">
+            <div className="sticky top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#404040] to-[#1F1F1F] text-white shadow-md">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     
                     {/* Left Side: Branding */}
                     <div className="flex items-center space-x-4">
                         <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-12 w-auto" />
-                        <div>
-                            <div className="text-xl font-bold leading-tight">DOST UNION CATALOG</div>
-                        </div>
                         <div className="hidden md:block text-sm border-l border-white pl-4 ml-4 leading-tight opacity-90">
                             LitPath AI: <br /> Smart PathFinder for Theses and Dissertation
                         </div>
@@ -124,7 +121,7 @@ const AuthPage = () => {
                     {mode === 'welcome' && (
                         <div className="space-y-6">
                             <div className="text-center mb-8">
-                                <BookOpen className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                                <BookOpen className="w-16 h-16 text-[#1E74BC] mx-auto mb-4" />
                                 <h2 className="text-3xl font-bold text-gray-800">Welcome to LitPath AI</h2>
                                 <p className="text-gray-600 mt-2">Smart PathFinder for Theses and Dissertations</p>
                             </div>
@@ -133,7 +130,7 @@ const AuthPage = () => {
                                 <button
                                     onClick={() => setMode('login')}
                                     disabled={isLoading}
-                                    className="w-full flex items-center justify-center gap-3 bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400"
+                                    className="w-full flex items-center justify-center gap-3 bg-[#1E74BC] text-white py-4 rounded-lg hover:bg-[#184d79] transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400"
                                 >
                                     <User className="w-5 h-5" />
                                     Login
@@ -223,7 +220,7 @@ const AuthPage = () => {
                                 <button
                                     type="submit"
                                     disabled={isLoading}
-                                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400"
+                                    className="w-full flex items-center justify-center gap-3 bg-[#1E74BC] text-white py-4 rounded-lg hover:bg-[#184d79] transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400"
                                 >
                                     {isLoading ? 'Logging in...' : 'Login'}
                                 </button>
@@ -232,7 +229,7 @@ const AuthPage = () => {
                             <div className="flex flex-col items-center gap-2">
                                 <button
                                     type="button"
-                                    className="text-blue-600 hover:underline text-sm"
+                                    className="text-[#1E74BC] hover:underline text-sm"
                                     onClick={() => { setMode('forgot'); setResetEmail(''); setResetMessage(''); }}
                                 >
                                     Forgot password?
@@ -273,7 +270,7 @@ const AuthPage = () => {
                                 <button
                                     type="submit"
                                     disabled={resetLoading}
-                                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400"
+                                    className="w-full flex items-center justify-center gap-3 bg-[#1E74BC] text-white py-4 rounded-lg hover:bg-[#184d79] transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400"
                                 >
                                     {resetLoading ? 'Sending...' : 'Send Reset Link'}
                                 </button>

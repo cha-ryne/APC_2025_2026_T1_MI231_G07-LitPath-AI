@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
-Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight, ShieldCheck
+    Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight, ShieldCheck, Menu
 } from 'lucide-react';
 import { useAuth } from './context/AuthContext';
 import dostLogo from "./components/images/dost-logo.png";
@@ -1088,7 +1088,7 @@ const handleFeedbackConfirm = async () => {
     };
 
 return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen flex flex-col bg-gray-100">
         {/* Toast Notification */}
         {toast.show && (
             <div className={`fixed bottom-4 right-4 z-50 px-6 py-3 rounded-lg shadow-lg text-sm ${
@@ -1106,15 +1106,24 @@ return (
         )}
 
         {/* Header */}
-        <header className="sticky top-0 left-0 right-0 z-40 bg-[#1F1F1F] text-white shadow-md">
+        <header className="sticky top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#404040] to-[#1F1F1F] text-white shadow-md">
             <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                 <div className="flex items-center space-x-4">
-                    <img src={dostLogo} alt="DOST Logo" className="h-12 w-auto" />
+                    
+                    <button
+                        onClick={() => setSidebarOpen(true)}
+                        className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
+                    >
+                        <Menu size={24} />
+                    </button>
+                    
+                    <img src={dostLogo} alt="DOST Logo" className="h-10 w-auto" />
                     
                     <div className="hidden md:block text-sm border-l border-white pl-4 ml-4 leading-tight opacity-90">
                         LitPath AI: <br /> Smart PathFinder for Theses and Dissertation
                     </div>
                 </div>
+
 
                 <div className="flex items-center gap-4">
                     {/* User Menu */}
@@ -1229,7 +1238,7 @@ return (
             {/* Sidebar (desktop) - Collapsible */}
             <aside 
                 className={`hidden md:flex flex-col bg-white border-r border-gray-200 h-[calc(100vh-64px)] sticky top-[64px] z-30 transition-all duration-300 ease-in-out ${
-                    sidebarCollapsed ? 'w-16' : 'w-80'
+                    sidebarCollapsed ? 'w-16' : 'w-64'
                 }`}
             >
                 {/* Sidebar Toggle Button (inside sidebar) */}
@@ -1238,12 +1247,9 @@ return (
                     className="hidden md:flex items-center justify-center w-full h-10 hover:bg-gray-100 transition-colors border-b border-gray-200"
                     title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
                 >
-                    {sidebarCollapsed ? (
-                        <ChevronRight size={20} className="text-gray-600" />
-                    ) : (
-                        <ChevronLeft size={20} className="text-gray-600" />
-                    )}
+                    <Menu size={20} className="text-gray-600" />
                 </button>
+
                 
                 {/* Sidebar Content */}
                 <div className={`flex-1 overflow-hidden transition-all duration-300 ${sidebarCollapsed ? 'opacity-0' : 'opacity-100'}`}>
@@ -2571,7 +2577,7 @@ function SidebarContent({
                     </div>
                 )}
             </div>
-            <div className="text-[10px] text-gray-500 mt-4">
+            <div className="text-[10px] text-gray-500 mt-auto">
                 AI-generated content. Quality may vary.<br />Check for accuracy.
                 <a href="#" className="text-blue-600 hover:underline block">About LitPath AI</a>
                 <a href="#" className="text-blue-600 hover:underline block">Privacy and Disclaimer</a>

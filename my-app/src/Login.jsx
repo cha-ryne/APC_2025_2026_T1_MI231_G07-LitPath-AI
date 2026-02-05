@@ -62,9 +62,9 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="min-h-screen flex flex-col bg-gray-100">
             {/* Header */}
-            <div className="bg-[#1F1F1F] text-white shadow-md flex-none z-50">
+            <div className="bg-gradient-to-b from-[#404040] to-[#1F1F1F] text-white shadow-md flex-none z-50">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     <div className="flex items-center space-x-4">
                         <img src={dostLogo} alt="DOST Logo" className="h-12 w-auto" />
@@ -121,7 +121,7 @@ const Login = () => {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className="w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed"
+                                className="w-full flex items-center justify-center gap-3 bg-[#1E74BC] text-white py-4 rounded-lg hover:bg-[#184d79] transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400 disabled:cursor-not-allowed"
                             >
                                 {isLoading ? 'Logging in...' : 'Log In'}
                             </button>
@@ -129,7 +129,7 @@ const Login = () => {
                         <div className="mt-6 text-sm">
                             <button
                                 type="button"
-                                className="text-blue-600 hover:underline"
+                                className="text-[#1E74BC] hover:underline"
                                 onClick={() => setShowForgot(true)}
                             >
                                 Forgot password?

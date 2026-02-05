@@ -189,7 +189,7 @@ const AdminDashboard = () => {
     // ─── Loading screen ─────────────────────────────────────────────────────
     if (loading) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+            <div className="min-h-screen bg-gray-100 flex items-center justify-center">
                 <div className="text-center">
                     <RefreshCw size={48} className="animate-spin text-[#1E74BC] mx-auto mb-4" />
                     <p className="text-gray-700 text-lg">Loading analytics…</p>
@@ -200,10 +200,10 @@ const AdminDashboard = () => {
 
     // ─── RENDER ─────────────────────────────────────────────────────────────
     return (
-        <div className="h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col overflow-hidden">
+        <div className="h-screen bg-gray-100 flex flex-col overflow-hidden">
 
             {/* ── Header ──────────────────────── */}
-            <div className="bg-[#1F1F1F] text-white shadow-md flex-none z-50">
+            <div className="bg-gradient-to-b from-[#404040] to-[#1F1F1F] text-white shadow-md flex-none z-50">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     <div className="flex items-center space-x-4">
                         <img src={dostLogo} alt="DOST Logo" className="h-12 w-auto" />

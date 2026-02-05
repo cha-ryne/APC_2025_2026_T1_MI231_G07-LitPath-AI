@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import dostLogo from "./components/images/dost-logo.png";
+
 
 const API_BASE_URL = 'http://localhost:8000/api';
 
@@ -42,7 +44,7 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100 justify-center items-center">
+    <div className="min-h-screen flex flex-col bg-gray-100">
       <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-xl mt-10">
         <h2 className="text-2xl font-bold text-center mb-6">Reset Password</h2>
         {message && <div className="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded text-center">{message}</div>}
@@ -75,7 +77,7 @@ const ResetPassword = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400"
+            className="w-full flex items-center justify-center gap-3 bg-[#1E74BC] text-white py-4 rounded-lg hover:bg-[#184d79] transition-colors font-semibold text-lg shadow-md disabled:bg-gray-400"
           >
             {loading ? 'Resetting...' : 'Reset Password'}
           </button>
