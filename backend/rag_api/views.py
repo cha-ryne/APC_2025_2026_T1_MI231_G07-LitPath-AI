@@ -115,11 +115,42 @@ class SearchView(APIView):
                     status=status.HTTP_400_BAD_REQUEST
                 )
             
-            # Extract filter parameters
+            # Extract filter parameters from explicit filters
             subjects = filters.get("subjects", [])
             year = filters.get("year")
             year_start = filters.get("year_start")
             year_end = filters.get("year_end")
+            
+            # NEW: Extract filters from natural language query if no explicit filters provided
+            from .query_parser import extract_filters_from_query
+            
+            # Get available subjects for better matching
+            rag = RAGService()
+            available_filters = rag.get_available_filters() if RAGService._initialized else {"subjects": [], "years": []}
+            
+            # Parse query for implicit filters
+            parsed = extract_filters_from_query(question, available_filters.get("subjects", []))
+            
+            # Apply extracted filters only if not explicitly provided
+            if not subjects and parsed.get("subjects"):
+                subjects = parsed["subjects"]
+                print(f"[RAG] Extracted subjects from query: {subjects}")
+            
+            if not year and not year_start and not year_end:
+                if parsed.get("year"):
+                    year = parsed["year"]
+                    print(f"[RAG] Extracted year from query: {year}")
+                elif parsed.get("year_start") or parsed.get("year_end"):
+                    year_start = parsed.get("year_start")
+                    year_end = parsed.get("year_end")
+                    print(f"[RAG] Extracted year range from query: {year_start} - {year_end}")
+            
+            # Log extracted filters info
+            if parsed.get("extracted_filters"):
+                if parsed["extracted_filters"].get("year_phrases"):
+                    print(f"[RAG] Year phrases detected: {parsed['extracted_filters']['year_phrases']}")
+                if parsed["extracted_filters"].get("subject_phrases"):
+                    print(f"[RAG] Subject phrases detected: {parsed['extracted_filters']['subject_phrases']}")
             
             # Validate filter parameters
             if subjects and not isinstance(subjects, list):
@@ -128,7 +159,6 @@ class SearchView(APIView):
                     status=status.HTTP_400_BAD_REQUEST
                 )
             
-            rag = RAGService()
             start_time = time.time()
             
             # Resolve pronouns in query using conversation history
@@ -159,14 +189,21 @@ class SearchView(APIView):
             # NEW: If this is NOT an overview_only request, return documents immediately
             # without generating the overview
             if not overview_only:
-                # Build filters_applied summary
+                # Build filters_applied summary (including auto-extracted ones)
                 filters_applied = {}
                 if subjects:
                     filters_applied["subjects"] = subjects
+                    # Mark if auto-extracted
+                    if parsed.get("subjects") and subjects == parsed["subjects"]:
+                        filters_applied["subjects_auto_extracted"] = True
                 if year:
                     filters_applied["year"] = year
+                    if parsed.get("year") and year == parsed["year"]:
+                        filters_applied["year_auto_extracted"] = True
                 if year_start or year_end:
                     filters_applied["year_range"] = [year_start, year_end]
+                    if parsed.get("year_start") or parsed.get("year_end"):
+                        filters_applied["year_range_auto_extracted"] = True
                 
                 # Check if no results
                 no_results = not any(c["score"] < distance_threshold for c in top_chunks)
@@ -220,6 +257,21 @@ class SearchView(APIView):
             print(f"[RAG] Citation Verification: {citation_metrics['verified_citations']}/{citation_metrics['total_citations']} ({citation_metrics['verification_rate']}%)")
             print(f"[RAG] Factual Accuracy: {hallucination_metrics['factual_accuracy']}%")
             
+            # NEW: LangSmith-style RAG evaluation (optional, for detailed quality assessment)
+            rag_evaluation = None
+            include_rag_eval = request.data.get("include_rag_evaluation", False)
+            if include_rag_eval:
+                try:
+                    from .rag_evaluator import quick_evaluate
+                    rag_evaluation = quick_evaluate(
+                        query=question,
+                        response=overview,
+                        retrieved_docs=source_texts
+                    )
+                    print(f"[RAG] LangSmith-style Evaluation: relevance={rag_evaluation.get('relevance', {}).get('score')}, groundedness={rag_evaluation.get('groundedness', {}).get('score') if rag_evaluation.get('groundedness') else 'N/A'}")
+                except Exception as eval_err:
+                    print(f"[RAG] RAG evaluation skipped: {eval_err}")
+            
             # Check if no results and clean up overview
             no_results = not any(c["score"] < distance_threshold for c in top_chunks)
             # Removed relevance_check usage
@@ -229,7 +281,7 @@ class SearchView(APIView):
                 overview = re.sub(r"\[\d+\]", "", overview)
             
             # Return overview with metrics
-            return Response({
+            response_data = {
                 "overview": overview,
                 "overview_ready": True,
                 "accuracy_metrics": {
@@ -242,7 +294,13 @@ class SearchView(APIView):
                         "sentences_analyzed": hallucination_metrics.get("total_sentences")
                     }
                 }
-            }, status=status.HTTP_200_OK)
+            }
+            
+            # Add LangSmith-style evaluation if requested
+            if rag_evaluation:
+                response_data["rag_evaluation"] = rag_evaluation
+            
+            return Response(response_data, status=status.HTTP_200_OK)
             
         except Exception as e:
             return Response(
@@ -864,4 +922,71 @@ def reset_password(request):
     except PasswordResetToken.DoesNotExist:
         print(f"[DEBUG] Token not found or already used: {token}")
         return Response({"error": "Invalid or used token."}, status=status.HTTP_400_BAD_REQUEST)
+
+
+# ============= RAG Evaluation API =============
+
+class RAGEvaluationView(APIView):
+    """
+    POST /api/evaluate/
+    Evaluate a RAG response using LangSmith-style methodology.
+    
+    This provides detailed evaluation of:
+    - Relevance: Does the response address the question?
+    - Groundedness: Is the response based on retrieved documents?
+    - Retrieval Relevance: Are the retrieved documents relevant?
+    - Correctness: Is the response factually correct? (requires reference answer)
+    
+    Reference: https://docs.langchain.com/langsmith/evaluate-rag-tutorial
+    """
+    
+    def post(self, request):
+        try:
+            query = request.data.get("query", "").strip()
+            response_text = request.data.get("response", "").strip()
+            retrieved_docs = request.data.get("retrieved_docs", [])
+            reference_answer = request.data.get("reference_answer")  # Optional
+            evaluation_type = request.data.get("type", "quick")  # "quick" or "full"
+            
+            if not query or not response_text:
+                return Response(
+                    {"error": "Missing 'query' or 'response' parameter"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            from .rag_evaluator import get_rag_evaluator, quick_evaluate
+            
+            if evaluation_type == "quick":
+                # Quick evaluation - just relevance and groundedness
+                result = quick_evaluate(
+                    query=query,
+                    response=response_text,
+                    retrieved_docs=retrieved_docs
+                )
+                return Response({
+                    "success": True,
+                    "evaluation_type": "quick",
+                    "results": result
+                }, status=status.HTTP_200_OK)
+            else:
+                # Full evaluation with all metrics
+                evaluator = get_rag_evaluator()
+                report = evaluator.evaluate(
+                    query=query,
+                    response=response_text,
+                    retrieved_docs=retrieved_docs,
+                    reference_answer=reference_answer,
+                    skip_correctness=(reference_answer is None)
+                )
+                return Response({
+                    "success": True,
+                    "evaluation_type": "full",
+                    "results": report.to_dict()
+                }, status=status.HTTP_200_OK)
+                
+        except Exception as e:
+            return Response(
+                {"error": str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
 

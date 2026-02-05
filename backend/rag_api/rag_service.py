@@ -12,6 +12,7 @@ from google import genai
 import re
 import time
 import hashlib
+from datetime import datetime
 from functools import lru_cache
 from PyPDF2 import PdfReader
 from sentence_transformers import SentenceTransformer
@@ -472,15 +473,31 @@ class RAGService:
         query_emb = l2_normalize(self.embedder.encode([rewritten_question], convert_to_numpy=True)[0]).tolist()
 
         # Build ChromaDB where clause for year filters
-        filters = []
+        # Note: publication_year is stored as string, so we use $in with explicit year list for ranges
+        where_clause = None
+        year_range_filter = None  # For post-query filtering if needed
+        
         if year:
-            filters.append({"publication_year": {"$eq": str(year)}})
-        if year_start:
-            filters.append({"publication_year": {"$gte": str(year_start)}})
-        if year_end:
-            filters.append({"publication_year": {"$lte": str(year_end)}})
-
-        where_clause = {"$and": filters} if len(filters) > 1 else (filters[0] if filters else None)
+            # For exact year match, use string comparison
+            where_clause = {"publication_year": {"$eq": str(year)}}
+        elif year_start or year_end:
+            # For year range, generate list of years and use $in operator
+            try:
+                start_yr = int(year_start) if year_start else 1990
+                end_yr = int(year_end) if year_end else datetime.now().year
+                
+                # Generate list of years as strings
+                year_list = [str(y) for y in range(start_yr, end_yr + 1)]
+                
+                if len(year_list) <= 50:  # Reasonable limit for $in operator
+                    where_clause = {"publication_year": {"$in": year_list}}
+                    print(f"[RAG-DEBUG] Using year range filter: {start_yr}-{end_yr} ({len(year_list)} years)")
+                else:
+                    # Too many years, filter post-query
+                    year_range_filter = (start_yr, end_yr)
+                    print(f"[RAG-DEBUG] Year range too large, will filter post-query: {start_yr}-{end_yr}")
+            except (ValueError, TypeError) as e:
+                print(f"[RAG] Warning: Invalid year range values: {year_start} - {year_end}, error: {e}")
 
         # Query with database-level year filtering
         print(f"[RAG-DEBUG] Request ID {request_id}: Querying ChromaDB.")
@@ -499,6 +516,15 @@ class RAGService:
             file_name = meta.get("file", meta.get("pdf", ""))
             score = float(results["distances"][0][i])
             if score < distance_threshold and file_name:
+                # Apply year range filter if needed (post-query filtering for large ranges)
+                if year_range_filter:
+                    try:
+                        doc_year = int(meta.get("publication_year", "0"))
+                        if not (year_range_filter[0] <= doc_year <= year_range_filter[1]):
+                            continue
+                    except (ValueError, TypeError):
+                        pass  # Include documents with invalid/unknown years
+                
                 # Apply subject filter (OR logic - match any)
                 if subjects and len(subjects) > 0:
                     subjects_str = meta.get("subjects", "")

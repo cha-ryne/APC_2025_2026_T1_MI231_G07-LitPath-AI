@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
-    Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight
+    Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight
 } from 'lucide-react';
 import { useAuth } from './context/AuthContext';
 import dostLogo from "./components/images/dost-logo.png";
@@ -13,7 +13,7 @@ import { Copy } from 'lucide-react';
 const API_BASE_URL = 'http://localhost:8000/api';
 const LitPathAI = () => {
     // Auth context
-    const { user, isGuest, logout, startNewChat: authStartNewChat, getUserId, isStaff, changePassword, deleteAccount, setUser } = useAuth();
+    const { user, isGuest, logout, startNewChat: authStartNewChat, getUserId, isStaff, changePassword, setUser } = useAuth();
     
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedSubject, setSelectedSubject] = useState('All subjects');
@@ -2277,7 +2277,7 @@ return (
                             onClick={() => setSettingsTab('profile')}
                             className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
                                 settingsTab === 'profile'
-                                    ? 'text-green-600 border-b-2 border-green-600 bg-green-50'
+                                    ? 'text-[#1E74BC] border-b-2 border-[#1E74BC] bg-blue-50'
                                     : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
                             }`}
                         >
@@ -2294,17 +2294,6 @@ return (
                         >
                             <Key size={16} />
                             Change Password
-                        </button>
-                        <button
-                            onClick={() => setSettingsTab('delete')}
-                            className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
-                                settingsTab === 'delete'
-                                    ? 'text-red-600 border-b-2 border-red-600 bg-red-50'
-                                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-                            }`}
-                        >
-                            <Trash2 size={16} />
-                            Delete Account
                         </button>
                     </div>
 
@@ -2499,75 +2488,6 @@ return (
                                     </button>
                                 </div>
                             </form>
-                        )}
-
-                        {settingsTab === 'delete' && (
-                            <div className="space-y-4">
-                                <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                                    <h3 className="text-red-800 font-semibold mb-2">⚠️ Warning</h3>
-                                    <p className="text-red-700 text-sm">
-                                        This action is <strong>permanent and cannot be undone</strong>. 
-                                        All your data including bookmarks, research history, and feedback will be deleted.
-                                    </p>
-                                </div>
-                                <form onSubmit={async (e) => {
-                                    e.preventDefault();
-                                    if (!window.confirm('Are you absolutely sure you want to delete your account? This cannot be undone.')) {
-                                        return;
-                                    }
-                                    setSettingsLoading(true);
-                                    const result = await deleteAccount(deletePassword);
-                                    setSettingsLoading(false);
-                                    if (result.success) {
-                                        showToast('Account deleted successfully', 'success');
-                                        navigate('/');
-                                    } else {
-                                        showToast(result.error || 'Failed to delete account', 'error');
-                                    }
-                                }}>
-                                    <div className="space-y-4">
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-1">
-                                                Enter your password to confirm
-                                            </label>
-                                            <div className="relative">
-                                                <input
-                                                    type={showDeletePassword ? 'text' : 'password'}
-                                                    value={deletePassword}
-                                                    onChange={(e) => setDeletePassword(e.target.value)}
-                                                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent pr-10"
-                                                    required
-                                                    placeholder="Your password"
-                                                />
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setShowDeletePassword(!showDeletePassword)}
-                                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                                                >
-                                                    {showDeletePassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <button
-                                            type="submit"
-                                            disabled={settingsLoading || !deletePassword}
-                                            className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                                        >
-                                            {settingsLoading ? (
-                                                <>
-                                                    <RefreshCw size={16} className="animate-spin" />
-                                                    Deleting...
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <Trash2 size={16} />
-                                                    Delete My Account
-                                                </>
-                                            )}
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
                         )}
                     </div>
                 </div>

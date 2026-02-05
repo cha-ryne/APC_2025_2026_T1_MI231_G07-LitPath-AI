@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import (
-    HealthCheckView, SearchView, FiltersView,
+    HealthCheckView, SearchView, FiltersView, RAGEvaluationView,
     bookmarks_view, bookmark_delete_view, bookmark_delete_by_file_view,
     research_history_view, research_history_delete_view,
     feedback_view, feedback_detail, analytics_compact
@@ -10,7 +10,7 @@ from .admin_views import admin_login_view, admin_users_view, admin_user_delete_v
 from .auth_views import (
     auth_login_view, auth_register_view, auth_guest_session_view,
     auth_validate_session_view, auth_logout_view, auth_delete_guest_data_view,
-    auth_me_view, auth_change_password_view, auth_delete_account_view,
+    auth_me_view, auth_change_password_view,
     auth_update_profile_view
 )
 from .views import request_password_reset, reset_password
@@ -65,8 +65,6 @@ urlpatterns = [
     path('auth/me', auth_me_view, name='auth-me-no-slash'),
     path('auth/change-password/', auth_change_password_view, name='auth-change-password'),
     path('auth/change-password', auth_change_password_view, name='auth-change-password-no-slash'),
-    path('auth/delete-account/', auth_delete_account_view, name='auth-delete-account'),
-    path('auth/delete-account', auth_delete_account_view, name='auth-delete-account-no-slash'),
     
     # Admin Authentication & Management (Legacy - kept for backward compatibility)
     path('admin/login/', admin_login_view, name='admin-login'),
@@ -82,6 +80,10 @@ urlpatterns = [
     # Analytics
     path('analytics/compact/', analytics_compact, name='analytics_compact'),
     path('analytics/compact', analytics_compact, name='analytics_compact_no_slash'),
+    
+    # RAG Evaluation (LangSmith-style)
+    path('evaluate/', RAGEvaluationView.as_view(), name='rag-evaluate'),
+    path('evaluate', RAGEvaluationView.as_view(), name='rag-evaluate-no-slash'),
 ]
 
 

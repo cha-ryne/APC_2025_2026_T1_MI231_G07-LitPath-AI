@@ -509,68 +509,6 @@ def auth_change_password_view(request):
 
 
 @api_view(['POST'])
-def auth_delete_account_view(request):
-    """
-    Delete user account and all associated data
-    Expects: { user_id: int, password: string }
-    Returns: { success: bool, message: string }
-    """
-    user_id = request.data.get('user_id')
-    password = request.data.get('password', '')
-    
-    if not user_id or not password:
-        return Response({
-            'success': False,
-            'message': 'User ID and password are required for account deletion'
-        }, status=status.HTTP_400_BAD_REQUEST)
-    
-    try:
-        # Find user
-        user = UserAccount.objects.filter(id=user_id).first()
-        
-        if not user:
-            return Response({
-                'success': False,
-                'message': 'User not found'
-            }, status=status.HTTP_404_NOT_FOUND)
-        
-        # Verify password
-        if not user.check_password(password):
-            return Response({
-                'success': False,
-                'message': 'Password is incorrect'
-            }, status=status.HTTP_401_UNAUTHORIZED)
-        
-        # Import here to avoid circular imports
-        from .models import Bookmark, ResearchHistory, Feedback
-        
-        user_id_str = str(user.id)
-        
-        # Delete all user data
-        Bookmark.objects.filter(user_id=user_id_str).delete()
-        ResearchHistory.objects.filter(user_id=user_id_str).delete()
-        Feedback.objects.filter(user_id=user_id_str).delete()
-        
-        # Delete session
-        Session.objects.filter(user=user).delete()
-        
-        # Delete user account
-        user.delete()
-        
-        return Response({
-            'success': True,
-            'message': 'Account and all associated data deleted successfully'
-        })
-        
-    except Exception as e:
-        print(f"Delete account error: {e}")
-        return Response({
-            'success': False,
-            'message': 'An error occurred while deleting account'
-        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
-@api_view(['POST'])
 def auth_reset_password_view(request):
     """
     Reset password using a token
