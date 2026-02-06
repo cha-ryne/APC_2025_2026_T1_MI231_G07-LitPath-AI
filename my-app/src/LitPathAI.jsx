@@ -1201,19 +1201,19 @@ return (
                             <p className="text-gray-700 text-lg mb-6">Discover easier and faster.</p>
 
                             {/* Most Browsed Materials - CAROUSEL */}
-                            <div className="mt-8 w-full max-w-4xl">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-5 flex items-center gap-2">
-                                    <BookOpen size={24} className="text-[#1E74BC]" />
+                            <div className="mt-4 w-full max-w-4xl">
+                                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                                    <BookOpen size={20} className="text-[#1E74BC]" />
                                     Most Browsed Materials
                                 </h3>
 
                                 {loadingMostBrowsed ? (
-                                    <div className="text-center text-gray-500 py-8">
-                                        <RefreshCw size={24} className="animate-spin inline-block mb-2" />
+                                    <div className="text-center text-gray-500 py-4">
+                                        <RefreshCw size={20} className="animate-spin inline-block mb-2" />
                                         <p>Loading most browsed materials...</p>
                                     </div>
                                 ) : mostBrowsed.length === 0 ? (
-                                    <div className="text-center text-gray-500 py-8">
+                                    <div className="text-center text-gray-500 py-4">
                                         <p>No browsing data available yet</p>
                                     </div>
                                 ) : (
@@ -1224,16 +1224,16 @@ return (
                                                 <button
                                                     onClick={() => setBrowsedCurrentSlide(Math.max(0, browsedCurrentSlide - 1))}
                                                     disabled={browsedCurrentSlide === 0}
-                                                    className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full shadow-lg p-2 hover:bg-gray-100 transition-colors ${browsedCurrentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                    className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 z-10 bg-white rounded-full shadow-lg p-1.5 hover:bg-gray-100 transition-colors ${browsedCurrentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
                                                 >
-                                                    <ChevronLeft size={28} className="text-[#1E74BC]" />
+                                                    <ChevronLeft size={24} className="text-[#1E74BC]" />
                                                 </button>
                                                 <button
                                                     onClick={() => setBrowsedCurrentSlide(Math.min(mostBrowsed.length - 3, browsedCurrentSlide + 1))}
                                                     disabled={browsedCurrentSlide >= mostBrowsed.length - 3}
-                                                    className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full shadow-lg p-2 hover:bg-gray-100 transition-colors ${browsedCurrentSlide >= mostBrowsed.length - 3 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                    className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 z-10 bg-white rounded-full shadow-lg p-1.5 hover:bg-gray-100 transition-colors ${browsedCurrentSlide >= mostBrowsed.length - 3 ? 'opacity-50 cursor-not-allowed' : ''}`}
                                                 >
-                                                    <ChevronRight size={28} className="text-[#1E74BC]" />
+                                                    <ChevronRight size={24} className="text-[#1E74BC]" />
                                                 </button>
                                             </>
                                         )}
@@ -1241,14 +1241,14 @@ return (
                                         {/* Carousel Container */}
                                         <div className="overflow-hidden">
                                             <div 
-                                                className="flex gap-6 transition-transform duration-300 ease-in-out"
+                                                className="flex gap-4 transition-transform duration-300 ease-in-out"
                                                 style={{ transform: `translateX(-${browsedCurrentSlide * (100/3 + 2)}%)` }}
                                             >
                                                 {mostBrowsed.map((material, index) => (
                                                     <div
                                                         key={material.file}
                                                         className="bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer overflow-hidden flex-shrink-0"
-                                                        style={{ width: 'calc(33.333% - 16px)' }}
+                                                        style={{ width: 'calc(33.333% - 8px)', height: '300px', display: 'flex', flexDirection: 'column' }}
                                                         onClick={() => {
                                                             const formattedMaterial = {
                                                                 id: Date.now() + index,
@@ -1267,39 +1267,43 @@ return (
                                                             setShowOverlay(true);
                                                         }}
                                                     >
-                                                        {/* Ranking Badge */}
-                                                        <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] text-white px-4 py-2 flex items-center justify-between">
-                                                            <div className="flex items-center gap-2">
-                                                                <div className="bg-white text-[#1E74BC] rounded-full w-8 h-8 flex items-center justify-center font-bold">
-                                                                    {index + 1}
-                                                                </div>
-                                                                <span className="text-sm font-medium">
-                                                                    {material.view_count} {material.view_count === 1 ? 'view' : 'views'}
-                                                                </span>
+                                                        {/* Top Section (60% - Blue Gradient) */}
+                                                        <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] relative flex-none" style={{ height: '60%' }}>
+                                                            {/* Ranking Badge - Top Left */}
+                                                            <div className="absolute top-1.5 left-1.5 bg-white text-[#1E74BC] rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs">
+                                                                {index + 1}
                                                             </div>
-                                                            <div className="flex items-center gap-1">
-                                                                <Star 
-                                                                    size={16} 
-                                                                    className={parseFloat(material.avg_rating) > 0 ? 'fill-yellow-300 text-yellow-300' : 'text-white'} 
-                                                                />
-                                                                <span className="text-sm font-medium">
-                                                                    {parseFloat(material.avg_rating).toFixed(1)}
-                                                                </span>
+                                                            {/* Title - Centered */}
+                                                            <div className="h-full flex items-center justify-center px-2">
+                                                                <h4 className="text-white text-center font-bold text-sm leading-snug line-clamp-3">
+                                                                    {material.title}
+                                                                </h4>
                                                             </div>
                                                         </div>
 
-                                                        {/* Material Info */}
-                                                        <div className="p-5">
-                                                            <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-2 hover:text-[#1E74BC] transition-colors">
-                                                                {material.title}
-                                                            </h4>
-                                                            <p className="text-sm text-gray-600 mb-3">
-                                                                <User size={14} className="inline mr-1" />
-                                                                {material.author} • {material.year}
-                                                            </p>
-                                                            <div className="flex items-center justify-between text-xs text-gray-500">
-                                                                <span>{material.degree}</span>
-                                                                <span className="text-[#1E74BC] hover:underline font-medium">
+                                                        {/* Bottom Section (40% - White) */}
+                                                        <div className="flex-1 p-2.5 flex flex-col justify-between" style={{ height: '40%' }}>
+                                                            {/* Author Info */}
+                                                            <div>
+                                                                <p className="text-xs text-gray-600 mb-0.5">
+                                                                    <User size={11} className="inline mr-0.5" />
+                                                                    {material.author} • {material.year}
+                                                                </p>
+                                                                <p className="text-[10px] text-gray-500">{material.degree}</p>
+                                                            </div>
+                                                            {/* Bottom Row: Rating + View Details */}
+                                                            <div className="flex items-center justify-between pt-1 border-t border-gray-100">
+                                                                <div className="flex items-center gap-1 text-[10px]">
+                                                                    <span className="text-gray-600 font-medium">{material.view_count} views</span>
+                                                                    <Star 
+                                                                        size={10} 
+                                                                        className={parseFloat(material.avg_rating) > 0 ? 'fill-yellow-300 text-yellow-300' : 'text-gray-300'} 
+                                                                    />
+                                                                    <span className="text-[10px] font-semibold text-gray-700">
+                                                                        {parseFloat(material.avg_rating).toFixed(1)}
+                                                                    </span>
+                                                                </div>
+                                                                <span className="text-[#1E74BC] hover:underline font-medium text-[10px]">
                                                                     View Details →
                                                                 </span>
                                                             </div>
@@ -2300,7 +2304,7 @@ function SidebarContent({
                 <button
                     onClick={handleNewChat}
                     disabled={!hasSearchedInSession}
-                    className={`w-full py-3 rounded-lg font-semibold shadow-md transition-colors ${
+                    className={`w-full py-3 text-sm rounded-lg font-semibold shadow-md transition-colors ${
                         hasSearchedInSession
                             ? 'bg-[#1E74BC] text-white hover:bg-[#155a8f]'
                             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
@@ -2312,7 +2316,7 @@ function SidebarContent({
                     onClick={() => setShowSavedItems(true)}
                     className="w-full flex items-center justify-between border-2 border-[#1E74BC] text-[#1E74BC] py-3 px-4 rounded-lg hover:bg-blue-50 font-semibold shadow-md"
                 >
-                    <span className="flex items-center gap-2"><Bookmark size={18} /> Saved Bookmarks</span>
+                    <span className="flex items-center gap-2 text-sm"><Bookmark size={18} /> Saved Bookmarks</span>
                     {bookmarkedCount > 0 && (
                         <span className="bg-[#1E74BC] text-white text-xs font-bold px-3 py-1 rounded-full">{bookmarkedCount}</span>
                     )}
@@ -2328,7 +2332,7 @@ function SidebarContent({
                                 className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-3 hover:border-[#1E74BC] hover:shadow-sm transition-all cursor-pointer group"
                                 onClick={() => loadHistorySession(session)}
                             >
-                                <p className="text-sm text-gray-700 flex-1 pr-2 truncate group-hover:text-[#1E74BC]">
+                                <p className="text-xs text-gray-700 flex-1 pr-2 truncate group-hover:text-[#1E74BC]">
                                     {session.mainQuery || session.query}
                                 </p>
                                 <button
