@@ -1398,72 +1398,72 @@ return (
                             <div key={historyIndex} className="mb-14">
                                 {/* Question */}
                                 <div className="flex justify-end mb-2">
-                                    <div className="max-w-[85%] bg-[#1E74BC] text-white rounded-2xl px-4 py-3 shadow-md text-base break-words">
+                                    <div className="max-w-[85%] bg-[#1E74BC] text-white rounded-xl px-4 py-3 shadow-md text-base break-words">
                                         {result.query}
                                     </div>
                                 </div>
                                 
                                 {/* Sources Section (before AI response) */}
                                 {result.sources && result.sources.length > 0 && (
-                                    <div className="mt-4 mb-6">
-                                        <h3 className="text-xl font-semibold mb-4 flex items-center space-x-3 text-gray-800">
-                                            <BookOpen size={24} className="text-[#1E74BC]" />
+                                    <div className="mt-3 mb-4">
+                                        <h3 className="text-sm font-semibold mb-2 flex items-center space-x-2 text-gray-800">
+                                            <BookOpen size={16} className="text-[#1E74BC]" />
                                             <span>Sources</span>
                                         </h3>
-                                        <div className="flex space-x-5 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
+                                        <div className="flex space-x-3 overflow-x-auto pb-3 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
                                             {result.sources.map((source, sidx) => (
                                                 <div
                                                     key={source.id}
                                                     data-source-id={source.id}
                                                     ref={el => { if (!handleSourceRef.current) handleSourceRef.current = {}; handleSourceRef.current[sidx + 1] = el; }}
-                                                    className={`flex-shrink-0 w-72 bg-white rounded-xl shadow-lg p-5 cursor-pointer border-2 ${
+                                                    className={`flex-shrink-0 w-60 bg-white rounded-lg p-3 cursor-pointer border-2 ${
                                                         selectedSource && selectedSource.id === source.id
                                                             ? 'border-blue-500'
                                                             : 'border-gray-100'
-                                                    } hover:shadow-xl transition-all duration-200 ease-in-out`}
+                                                    } hover:shadow-md transition-all duration-200 ease-in-out`}
                                                     onClick={() => handleSourceClick(source)}
                                                 >
-                                                    <div className="flex items-center justify-between mb-2">
-                                                        <div className="flex items-center justify-center w-9 h-9 bg-[#1E74BC] text-white rounded-full text-base font-bold">
+                                                    <div className="flex items-center justify-between mb-1.5">
+                                                        <div className="flex items-center justify-center w-6 h-6 bg-[#1E74BC] text-white rounded-full text-xs font-bold">
                                                             {sidx + 1}
                                                         </div>
-                                                        <div className="flex items-center gap-2">
+                                                        <div className="flex items-center gap-1.5">
                                                             <div className="flex items-center gap-1">
                                                                 <Star 
-                                                                    size={12} 
+                                                                    size={10} 
                                                                     className={parseFloat(source.avg_rating || 0) > 0 ? 'fill-yellow-300 text-yellow-300' : 'text-gray-300'} 
                                                                 />
-                                                                <span className="text-xs text-gray-500">
+                                                                <span className="text-[10px] text-gray-500">
                                                                     {(source.avg_rating !== undefined ? parseFloat(source.avg_rating).toFixed(1) : '0.0')}
                                                                 </span>
                                                             </div>
-                                                            <span className="text-xs text-gray-500 flex items-center gap-1">
-                                                                <Eye size={12} />
+                                                            <span className="text-[10px] text-gray-500 flex items-center gap-0.5">
+                                                                <Eye size={10} />
                                                                 {source.view_count || 0}
                                                             </span>
                                                         </div>
                                                     </div>
-                                                    <h4 className="font-semibold text-lg text-gray-800 mb-2 line-clamp-3">{source.title}</h4>
-                                                    <p className="text-sm text-gray-600">{source.author} • {source.year}</p>
+                                                    <h4 className="font-semibold text-xs text-gray-800 mb-1 line-clamp-2">{source.title}</h4>
+                                                    <p className="text-[10px] text-gray-600">{source.author} • {source.year}</p>
                                                 </div>
                                             ))}
                                         </div>
                                         {/* Selected Source Details for this conversation */}
                                         {selectedSource && result.sources.some(s => s.id === selectedSource.id) && (
-                                            <div className="bg-[#E8F3FB] border-l-4 border-[#1E74BC] rounded-r-lg p-6 mb-6 shadow-md mt-6">
-                                                <div className="flex justify-between items-start mb-4">
-                                                    <h3 className="text-xl font-bold text-[#1E74BC]">{selectedSource.title}</h3>
+                                            <div className="bg-[#E8F3FB] border-l-4 border-[#1E74BC] rounded-r-lg p-3 mb-4 shadow-sm mt-3">
+                                                <div className="flex justify-between items-start mb-2">
+                                                    <h3 className="text-sm font-bold text-[#1E74BC]">{selectedSource.title}</h3>
                                                     <button
                                                         onClick={() => setSelectedSource(null)}
-                                                        className="text-gray-500 hover:text-gray-700 transition-colors text-xl"
+                                                        className="text-gray-500 hover:text-gray-700 transition-colors text-lg"
                                                     >
                                                         ×
                                                     </button>
                                                 </div>
-                                                <p className="text-md text-gray-700 mb-4">{selectedSource.author} • {selectedSource.year}</p>
-                                                <div className="mb-4">
-                                                    <h4 className="font-semibold text-lg mb-2 text-gray-800">Abstract:</h4>
-                                                    <p className="text-base text-gray-700 leading-relaxed">
+                                                <p className="text-xs text-gray-700 mb-2">{selectedSource.author} • {selectedSource.year}</p>
+                                                <div className="mb-2">
+                                                    <h4 className="font-semibold text-xs mb-1 text-gray-800">Abstract:</h4>
+                                                    <p className="text-xs text-gray-700 leading-relaxed">
                                                         {(() => {
                                                             const sentences = selectedSource.abstract?.split(/(?<=[.!?])\s+/) || [];
                                                             const first3 = sentences.slice(0, 3).join(' ');
@@ -1473,7 +1473,7 @@ return (
                                                 </div>
                                                 <button
                                                     onClick={handleMoreDetails}
-                                                    className="bg-gray-800 text-white px-5 py-2.5 rounded-lg hover:bg-gray-700 transition-colors font-medium text-sm"
+                                                    className="bg-gray-800 text-white px-3 py-1.5 rounded-lg hover:bg-gray-700 transition-colors font-medium text-xs"
                                                 >
                                                     More details and request options
                                                 </button>
@@ -1484,12 +1484,16 @@ return (
                                 
                                 {/* Overview */}
                                 <div className="flex justify-start">
-                                    <div className="max-w-[85%] bg-white border border-gray-200 rounded-2xl px-4 py-3 shadow text-gray-900 text-base break-words">
+                                    <div className="max-w-[85%] bg-white border border-gray-200 rounded-xl px-4 py-3 shadow text-gray-900 text-sm break-words">
+                                        <h3 className="text-sm font-semibold mb-2 flex items-center space-x-2 text-gray-800">
+                                            <BookOpen size={16} className="text-[#1E74BC]" />
+                                            <span>Overview of sources</span>
+                                        </h3>
                                         <div
-                                            className="text-gray-700 leading-relaxed whitespace-pre-line text-base text-justify"
+                                            className="text-gray-700 leading-relaxed whitespace-pre-line text-sm text-justify"
                                             dangerouslySetInnerHTML={{
                                                 __html: (result.overview || 'No overview available.').replace(/\[(\d+)\]/g, (match, num) => {
-                                                    return ` <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#1E74BC] text-white text-xs font-semibold cursor-pointer" data-source-idx="${num}">${num}</span>`;
+                                                    return ` <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#1E74BC] text-white text-[10px] font-semibold cursor-pointer" data-source-idx="${num}">${num}</span>`;
                                                 })
                                             }}
                                             onClick={e => {
