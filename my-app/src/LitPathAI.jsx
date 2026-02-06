@@ -16,12 +16,6 @@ const LitPathAI = () => {
     const { user, isGuest, logout, startNewChat: authStartNewChat, getUserId, isStaff, changePassword, setUser } = useAuth();
     
     const [searchQuery, setSearchQuery] = useState('');
-    const [selectedSubject, setSelectedSubject] = useState('All subjects');
-    const [selectedDate, setSelectedDate] = useState('All dates');
-    const [showSubjectDropdown, setShowSubjectDropdown] = useState(false);
-    const [showDateDropdown, setShowDateDropdown] = useState(false);
-    const [fromYear, setFromYear] = useState('');
-    const [toYear, setToYear] = useState('');
     const [searchResults, setSearchResults] = useState(null);
     const [selectedSource, setSelectedSource] = useState(null);
     const [showOverlay, setShowOverlay] = useState(false);
@@ -88,43 +82,7 @@ const LitPathAI = () => {
     };
 
 
-    const subjects = [
-        "All subjects",
-        "Agriculture",
-        "Anthropology",
-        "Applied Sciences",
-        "Architecture",
-        "Arts and Humanities",
-        "Biological Sciences",
-        "Business",
-        "Chemistry",
-        "Communication and Media",
-        "Computer Science",
-        "Cultural Studies",
-        "Economics",
-        "Education",
-        "Engineering",
-        "Environmental Science",
-        "Geography",
-        "History",
-        "Law",
-        "Library and Information Science",
-        "Linguistics",
-        "Literature",
-        "Mathematics",
-        "Medicine and Health Sciences",
-        "Philosophy",
-        "Physics",
-        "Political Science",
-        "Psychology",
-        "Social Sciences",
-        "Sociology",
-    ];
-    const dateOptions = ['All dates', 'Last year', 'Last 3 years', 'Custom date range'];
-    
-    // Refs for dropdowns to close when clicking outside
-    const subjectDropdownRef = useRef(null);
-    const dateDropdownRef = useRef(null);
+
 
     // Track material view
     const trackMaterialView = async (material) => {
@@ -189,20 +147,7 @@ const LitPathAI = () => {
             generateCitation(selectedCitationStyle);
         }
     }, [showCitationOverlay, selectedCitationStyle, selectedSource]);
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (subjectDropdownRef.current && !subjectDropdownRef.current.contains(event.target)) {
-                setShowSubjectDropdown(false);
-            }
-            if (dateDropdownRef.current && !dateDropdownRef.current.contains(event.target)) {
-                setShowDateDropdown(false);
-            }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
+
 
     // Load research history on mount and when user changes
     useEffect(() => {
@@ -428,9 +373,7 @@ const LitPathAI = () => {
                     conversationHistory: h.conversation_data || [],
                     timestamp: h.created_at,
                     sourcesCount: h.sources_count,
-                    conversationLength: h.conversation_length,
-                    subjects: h.subjects,
-                    dateFilter: h.date_filter
+                    conversationLength: h.conversation_length
                 }));
                 
                 setResearchHistory(history);
@@ -462,8 +405,7 @@ const LitPathAI = () => {
             timestamp: new Date().toISOString(),
             sourcesCount: totalSources,
             conversationLength: conversationHistory.length,
-            subjects: selectedSubject !== 'All subjects' ? selectedSubject : null,
-            dateFilter: selectedDate !== 'All dates' ? selectedDate : null,
+
         };
 
         try {
@@ -478,9 +420,7 @@ const LitPathAI = () => {
                     all_queries: session.queries,
                     conversation_data: session.conversationHistory,
                     sources_count: session.sourcesCount,
-                    conversation_length: session.conversationLength,
-                    subjects: session.subjects,
-                    date_filter: session.dateFilter
+                    conversation_length: session.conversationLength
                 })
             });
 
@@ -539,9 +479,6 @@ const LitPathAI = () => {
             setConversationHistory(session.conversationHistory);
             // Set the last result as current search results
             setSearchResults(session.conversationHistory[session.conversationHistory.length - 1]);
-            // Restore filters
-            if (session.subjects) setSelectedSubject(session.subjects);
-            if (session.dateFilter) setSelectedDate(session.dateFilter);
             // Mark as follow-up search since we have history
             setIsFollowUpSearch(true);
             setCurrentSessionId(session.id);
@@ -551,8 +488,6 @@ const LitPathAI = () => {
             // Fallback for old sessions without full conversation history - re-run the search
             const queryToLoad = session.mainQuery || session.query;
             setSearchQuery(queryToLoad);
-            if (session.subjects) setSelectedSubject(session.subjects);
-            if (session.dateFilter) setSelectedDate(session.dateFilter);
             handleSearch(queryToLoad);
             setIsLoadedFromHistory(false); // This will create a new session
         }
@@ -594,22 +529,6 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
     
     try {
         const filters = {};
-
-        if (selectedSubject !== 'All subjects') {
-            filters.subjects = [selectedSubject];
-        }
-
-        const currentYear = new Date().getFullYear();
-
-        if (selectedDate === 'Last year') {
-            filters.year = currentYear - 1;
-        } else if (selectedDate === 'Last 3 years') {
-            filters.year_start = currentYear - 2;
-            filters.year_end = currentYear;
-        } else if (selectedDate === 'Custom date range') {
-            if (fromYear) filters.year_start = parseInt(fromYear);
-            if (toYear) filters.year_end = parseInt(toYear);
-        }
 
         const searchQueryText = forceNew ? `${query} [v${Date.now()}]` : query;
 
@@ -909,10 +828,6 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
 
         // Reset all states
         setSearchQuery('');
-        setSelectedSubject('All subjects');
-        setSelectedDate('All dates');
-        setFromYear('');
-        setToYear('');
         setSearchResults(null);
         setConversationHistory([]);
         setIsFollowUpSearch(false);
@@ -1412,7 +1327,7 @@ return (
 
                             {/* Search Input Bar */}
                             <div className="mt-28 w-full max-w-4xl">
-                                <div className="flex items-center space-x-2 border border-gray-300 rounded-lg px-3 py-3 focus-within:border-blue-500 transition-colors bg-white shadow-sm">
+                                <div className="flex items-center space-x-2 border border-gray-300 rounded-lg px-3 py-3 focus-within:border-blue-500 transition-colors bg-white shadow-xl">
                                     <Search className="text-gray-500" size={18} />
                                     <input
                                         type="text"
@@ -1432,85 +1347,11 @@ return (
                                     </button>
                                 </div>
                                 
-                                {/* Filters Row */}
-                                <div className="flex flex-wrap items-center gap-2 mt-3">
-                                    {/* Subject Filter */}
-                                    <div className="relative" ref={subjectDropdownRef}>
-                                        <button
-                                            className="flex items-center space-x-1 px-3 py-1.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-xs"
-                                            onClick={() => setShowSubjectDropdown(!showSubjectDropdown)}
-                                        >
-                                            <span>{selectedSubject}</span>
-                                            <ChevronDown size={14} />
-                                        </button>
-
-                                        {showSubjectDropdown && (
-                                            <div className="absolute bottom-full left-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px] max-h-60 overflow-y-auto">
-                                                {subjects.map((subject) => (
-                                                    <button
-                                                        key={subject}
-                                                        className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                                                        onClick={() => {
-                                                            setSelectedSubject(subject);
-                                                            setShowSubjectDropdown(false);
-                                                        }}
-                                                    >
-                                                        {subject}
-                                                    </button>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-
-                                    {/* Date Filter */}
-                                    <div className="relative" ref={dateDropdownRef}>
-                                        <button
-                                            className="flex items-center space-x-1 px-3 py-1.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-xs"
-                                            onClick={() => setShowDateDropdown(!showDateDropdown)}
-                                        >
-                                            <span>{selectedDate}</span>
-                                            <ChevronDown size={14} />
-                                        </button>
-                                        {showDateDropdown && (
-                                            <div className="absolute bottom-full left-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px]">
-                                                {dateOptions.map((option) => (
-                                                    <button
-                                                        key={option}
-                                                        className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                                                        onClick={() => {
-                                                            setSelectedDate(option);
-                                                            setShowDateDropdown(false);
-                                                        }}
-                                                    >
-                                                        {option}
-                                                    </button>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-
-                                    {/* Custom Date Range */}
-                                    {selectedDate === 'Custom date range' && (
-                                        <div className="flex items-center space-x-2">
-                                            <label className="text-xs text-gray-700">From:</label>
-                                            <input
-                                                type="number"
-                                                placeholder="YYYY"
-                                                className="px-2 py-1 w-20 border border-gray-300 rounded-lg text-xs"
-                                                value={fromYear}
-                                                onChange={(e) => setFromYear(e.target.value)}
-                                            />
-                                            <label className="text-xs text-gray-700">To:</label>
-                                            <input
-                                                type="number"
-                                                placeholder="YYYY"
-                                                className="px-2 py-1 w-20 border border-gray-300 rounded-lg text-xs"
-                                                value={toYear}
-                                                onChange={(e) => setToYear(e.target.value)}
-                                            />
-                                        </div>
-                                    )}
+                                {/* AI Disclaimer */}
+                                <div className="bg-transparent text-gray-500 text-xs text-center mt-2">
+                                    LitPath AI can make mistakes, so double-check it.
                                 </div>
+                                
                             </div>
 
                             {/* Loading Indicator - below search bar */}
@@ -1710,114 +1551,55 @@ return (
                             </div>
                         );
                     })}
+
+
                 </div>
 
                 {/* Input bar (for follow-up questions when conversation exists) */}
                 {conversationHistory.length > 0 && (
-                    <div className="w-full bg-white border-t border-gray-200 py-3 px-2 sm:px-8 sticky bottom-0 z-30">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="flex items-center space-x-2 border border-gray-300 rounded-lg px-3 py-3 focus-within:border-blue-500 transition-colors bg-white shadow-sm">
-                                <Search className="text-gray-500" size={18} />
-                                <input
-                                    type="text"
-                                    placeholder="What is your research question?"
-                                    className="flex-1 outline-none text-gray-800 text-base"
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    onKeyPress={(e) => e.key === 'Enter' && handleSearch(searchQuery, conversationHistory.length > 0)}
-                                    disabled={loading}
-                                />
-                                <button
-                                    onClick={() => handleSearch(searchQuery, conversationHistory.length > 0)}
-                                    className="bg-[#1E74BC] text-white px-4 py-2 rounded-lg hover:bg-[#155a8f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium"
-                                    disabled={loading}
-                                >
-                                    Search
-                                </button>
-                            </div>
+                    <div className="sticky bottom-4 z-30 flex flex-col items-center px-2 sm:px-8">
+                        
+                        {/* Search bar */}
+                        <div className="flex items-center space-x-2 rounded-lg px-3 py-3 
+                            bg-white shadow-[0_12px_32px_-10px_rgba(0,0,0,0.28)]
+                            focus-within:ring-2 focus-within:ring-blue-500
+                            w-full max-w-4xl">
                             
-                            {/* Filters Row */}
-                            <div className="flex flex-wrap items-center gap-2 mt-3">
-                                {/* Subject Filter */}
-                                <div className="relative" ref={subjectDropdownRef}>
-                                    <button
-                                        className="flex items-center space-x-1 px-3 py-1.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-xs"
-                                        onClick={() => setShowSubjectDropdown(!showSubjectDropdown)}
-                                    >
-                                        <span>{selectedSubject}</span>
-                                        <ChevronDown size={14} />
-                                    </button>
+                            <Search className="text-gray-500" size={18} />
 
-                                    {showSubjectDropdown && (
-                                        <div className="absolute bottom-full left-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px] max-h-60 overflow-y-auto">
-                                            {subjects.map((subject) => (
-                                                <button
-                                                    key={subject}
-                                                    className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                                                    onClick={() => {
-                                                        setSelectedSubject(subject);
-                                                        setShowSubjectDropdown(false);
-                                                    }}
-                                                >
-                                                    {subject}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
+                            <input
+                                type="text"
+                                placeholder="What is your research question?"
+                                className="flex-1 outline-none text-gray-800 text-base bg-transparent"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                onKeyPress={(e) =>
+                                    e.key === 'Enter' && handleSearch(searchQuery, true)
+                                }
+                                disabled={loading}
+                            />
 
-                                {/* Date Filter */}
-                                <div className="relative" ref={dateDropdownRef}>
-                                    <button
-                                        className="flex items-center space-x-1 px-3 py-1.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors text-xs"
-                                        onClick={() => setShowDateDropdown(!showDateDropdown)}
-                                    >
-                                        <span>{selectedDate}</span>
-                                        <ChevronDown size={14} />
-                                    </button>
-                                    {showDateDropdown && (
-                                        <div className="absolute bottom-full left-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px]">
-                                            {dateOptions.map((option) => (
-                                                <button
-                                                    key={option}
-                                                    className="block w-full text-left px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
-                                                    onClick={() => {
-                                                        setSelectedDate(option);
-                                                        setShowDateDropdown(false);
-                                                    }}
-                                                >
-                                                    {option}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-
-                                {/* Custom Date Range */}
-                                {selectedDate === 'Custom date range' && (
-                                    <div className="flex items-center space-x-2">
-                                        <label className="text-xs text-gray-700">From:</label>
-                                        <input
-                                            type="number"
-                                            placeholder="YYYY"
-                                            className="px-2 py-1 w-20 border border-gray-300 rounded-lg text-xs"
-                                            value={fromYear}
-                                            onChange={(e) => setFromYear(e.target.value)}
-                                        />
-                                        <label className="text-xs text-gray-700">To:</label>
-                                        <input
-                                            type="number"
-                                            placeholder="YYYY"
-                                            className="px-2 py-1 w-20 border border-gray-300 rounded-lg text-xs"
-                                            value={toYear}
-                                            onChange={(e) => setToYear(e.target.value)}
-                                        />
-                                    </div>
-                                )}
-                            </div>
+                            <button
+                                onClick={() => handleSearch(searchQuery, true)}
+                                className="bg-[#1E74BC] text-white px-4 py-2 rounded-lg hover:bg-[#155a8f]
+                                    transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+                                disabled={loading}
+                            >
+                                Search
+                            </button>
                         </div>
+
+                        {/* AI Disclaimer */}
+                        <div className="w-full bg-gray-100 rounded-b-lg -mt-px">
+                            <p className="text-[10px] text-gray-500 text-center max-w-4xl mx-auto py-1 px-2">
+                                LitPath AI can make mistakes, so double-check it.
+                            </p>
+                        </div>
+
                     </div>
                 )}
+
+
             </main>
         </div>
 
@@ -2191,12 +1973,6 @@ return (
                                                         <>
                                                             <span>•</span>
                                                             <span className="text-green-600">{session.conversationLength} {session.conversationLength === 1 ? 'query' : 'queries'}</span>
-                                                        </>
-                                                    )}
-                                                    {session.subjects && (
-                                                        <>
-                                                            <span>•</span>
-                                                            <span className="text-[#1E74BC]">{session.subjects}</span>
                                                         </>
                                                     )}
                                                 </div>
