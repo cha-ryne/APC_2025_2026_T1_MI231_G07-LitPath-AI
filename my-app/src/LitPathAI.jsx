@@ -1606,7 +1606,7 @@ return (
 
         {/* Overlay for More Details */}
         {showOverlay && selectedSource && (
-            <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center">
+            <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-start justify-center pt-[4.5rem]">
                 <div className="w-full sm:w-1/2 lg:w-50 xl:w-50 bg-white h-full overflow-y-auto shadow-2xl max-h-[90vh]">
                     <div className="text-white p-6 shadow-md" style={{ backgroundColor: '#1E74BC' }}>
                         <div className="flex items-center justify-between mb-4">
