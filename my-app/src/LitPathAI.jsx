@@ -70,6 +70,15 @@ const LitPathAI = () => {
     const [mostBrowsed, setMostBrowsed] = useState([]);
     const [loadingMostBrowsed, setLoadingMostBrowsed] = useState(true);
     const [browsedCurrentSlide, setBrowsedCurrentSlide] = useState(0);
+    const [searchBarFocused, setSearchBarFocused] = useState(false);
+    
+    // Example questions for auto-complete
+    const exampleQuestions = [
+        "How does plastic pollution affect plant growth in farmland?",
+        "Find research about sleep quality among teenagers",
+        "How does remote work impact employee productivity?",
+        "Find recent research about how vitamin D deficiency impact overall health"
+    ];
     
     // Get userId from auth context
     const userId = getUserId();
@@ -1239,7 +1248,11 @@ return (
                 {/* Chat/Content area */}
                 <div
                     ref={chatContainerRef}
-                    className="flex-1 w-full max-w-4xl mx-auto px-2 sm:px-8 py-4 overflow-y-auto"
+                    className={`flex-1 w-full max-w-4xl mx-auto px-2 sm:px-8 py-4 ${
+                        conversationHistory.length === 0 && !searchResults 
+                            ? 'overflow-hidden' 
+                            : 'overflow-y-auto'
+                    }`}
                     style={{ minHeight: 'calc(100vh - 64px - 64px)' }}
                 >
                     {/* Welcome screen */}
@@ -1381,8 +1394,40 @@ return (
                                 )}
                             </div>
 
+                            {/* Loading Indicator */}
+                            {loading && (
+                                <div className="text-center text-[#1E74BC] text-lg mb-6">
+                                    <div className="animate-spin inline-block w-8 h-8 border-4 border-[#1E74BC] border-t-transparent rounded-full mr-2"></div>
+                                    Searching for insights...
+                                </div>
+                            )}
+
                             {/* Search Input Bar */}
-                            <div className="mt-28 w-full max-w-4xl">
+                            <div className="mt-10 w-full max-w-4xl relative">
+                                {/* Example Questions Dropdown - Opens Upwards */}
+                                {searchBarFocused && (
+                                    <div className="absolute bottom-full left-0 right-0 mb-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50">
+                                        <div className="px-4 py-2 bg-gray-50 border-b border-gray-100">
+                                            <p className="text-xs text-gray-500 font-medium">Example questions</p>
+                                        </div>
+                                        <div className="flex flex-col py-2">
+                                            {exampleQuestions.map((question, index) => (
+                                                <button
+                                                    key={index}
+                                                    onClick={() => {
+                                                        setSearchQuery(question);
+                                                        setSearchBarFocused(false);
+                                                        handleSearch(question);
+                                                    }}
+                                                    className="w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#1E74BC] transition-colors border-b border-gray-50 last:border-b-0"
+                                                >
+                                                    {question}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                                
                                 <div className="flex items-center space-x-2 border border-gray-300 rounded-lg px-3 py-3 focus-within:border-blue-500 transition-colors bg-white shadow-xl">
                                     <Search className="text-gray-500" size={18} />
                                     <input
@@ -1392,6 +1437,8 @@ return (
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         onKeyPress={(e) => e.key === 'Enter' && handleSearch(searchQuery)}
+                                        onFocus={() => setSearchBarFocused(true)}
+                                        onBlur={() => setTimeout(() => setSearchBarFocused(false), 200)}
                                         disabled={loading}
                                     />
                                     <button
@@ -1409,26 +1456,6 @@ return (
                                 </div>
                                 
                             </div>
-
-                            {/* Loading Indicator - below search bar */}
-                            {loading && (
-                                <div className="text-center text-[#1E74BC] text-lg mt-6">
-                                    <div className="animate-spin inline-block w-8 h-8 border-4 border-[#1E74BC] border-t-transparent rounded-full mr-2"></div>
-                                    Searching for insights...
-                                </div>
-                            )}
-
-                            {/* Example Questions */}
-                            <div className="mt-12 w-full max-w-4xl">
-                                <h3 className="text-base font-semibold text-gray-800 mb-3">Example questions</h3>
-                                <div className="flex flex-col gap-3">
-                                    <ExampleQuestionButton onClick={handleExampleQuestionClick} text="How does plastic pollution affect plant growth in farmland?" />
-                                    <ExampleQuestionButton onClick={handleExampleQuestionClick} text="Find research about sleep quality among teenagers" />
-                                    <ExampleQuestionButton onClick={handleExampleQuestionClick} text="How does remote work impact employee productivity?" />
-                                    <ExampleQuestionButton onClick={handleExampleQuestionClick} text="Find recent research about how vitamin D deficiency impact overall health" />
-                                </div>
-                            </div>
-
 
                             {error && (
                                 <div className="text-center text-red-600 text-lg mt-8 p-4 bg-red-50 rounded-lg border border-red-200">
