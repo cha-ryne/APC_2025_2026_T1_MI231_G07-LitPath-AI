@@ -568,7 +568,8 @@ def get_most_browsed(request):
                     m.subjects,
                     m.school,
                     COUNT(DISTINCT mv.id) as view_count,
-                    COALESCE(AVG(f.rating), 0) as avg_rating
+                    COALESCE(AVG(f.rating), 0) as avg_rating,
+                    COUNT(DISTINCT f.id) as rating_count
                 FROM materials m
                 LEFT JOIN material_views mv ON m.file = mv.file
                 LEFT JOIN feedback f ON m.file = f.document_file
@@ -620,7 +621,8 @@ def get_most_browsed(request):
                 'subjects': row['subjects'] if isinstance(row['subjects'], list) else [],
                 'school': school or 'Unknown Institution',
                 'view_count': int(row['view_count']),
-                'avg_rating': float(row['avg_rating']) if row['avg_rating'] else 0.0
+                'avg_rating': round(float(row['avg_rating']), 2) if row['avg_rating'] else 0.0,
+                'rating_count': int(row['rating_count'])
             })
         
         return Response(
@@ -629,7 +631,7 @@ def get_most_browsed(request):
                 'count': len(materials_data)
             },
             status=status.HTTP_200_OK
-        )
+            )
         
     except Exception as e:
         print(f"Error in get_most_browsed: {str(e)}")
@@ -637,6 +639,265 @@ def get_most_browsed(request):
             {"error": str(e)},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR
         )
+
+
+@api_view(['GET'])
+def get_source_ratings(request):
+    """
+    GET /api/sources/ratings/
+    Get average ratings by source (document/file) with statistics
+    
+    Query Parameters:
+    - limit: Maximum number of sources to return (default: 20)
+    - min_ratings: Minimum number of ratings required (default: 1)
+    - order_by: 'avg_rating', 'rating_count', 'file' (default: 'avg_rating')
+    """
+    try:
+        from django.db import connection
+        from django.db.models import Avg, Count
+        
+        limit = int(request.GET.get('limit', 20))
+        min_ratings = int(request.GET.get('min_ratings', 1))
+        order_by = request.GET.get('order_by', 'avg_rating')
+        
+        # Map order_by to SQL column
+        order_map = {
+            'avg_rating': 'avg_rating DESC',
+            'rating_count': 'rating_count DESC',
+            'file': 'm.file ASC'
+        }
+        order_sql = order_map.get(order_by, 'avg_rating DESC')
+        
+        with connection.cursor() as cursor:
+            cursor.execute(f"""
+                SELECT 
+                    m.file,
+                    m.title,
+                    m.author,
+                    m.year,
+                    COUNT(DISTINCT f.id) as rating_count,
+                    COALESCE(AVG(f.rating), 0) as avg_rating,
+                    COALESCE(MIN(f.rating), 0) as min_rating,
+                    COALESCE(MAX(f.rating), 0) as max_rating,
+                    COALESCE(STDDEV(f.rating), 0) as stddev_rating
+                FROM materials m
+                LEFT JOIN feedback f ON m.file = f.document_file
+                GROUP BY m.file, m.title, m.author, m.year
+                HAVING COUNT(DISTINCT f.id) >= %s
+                ORDER BY {order_sql}
+                LIMIT %s
+            """, [min_ratings, limit])
+            
+            columns = [col[0] for col in cursor.description]
+            results = [dict(zip(columns, row)) for row in cursor.fetchall()]
+        
+        # Enrich with metadata and format response
+        from .rag_service import RAGService
+        
+        sources_data = []
+        for row in results:
+            title = row['title']
+            author = row['author']
+            
+            # Try to get metadata from RAG if missing
+            if not title or not author:
+                try:
+                    if RAGService._initialized:
+                        rag = RAGService()
+                        doc_metadata = rag.get_document_metadata(row['file'])
+                        if doc_metadata:
+                            title = doc_metadata.get('title', title)
+                            author = doc_metadata.get('author', author)
+                except Exception as e:
+                    print(f"Error fetching metadata for {row['file']}: {e}")
+            
+            sources_data.append({
+                'file': row['file'],
+                'title': title or 'Unknown Title',
+                'author': author or 'Unknown Author',
+                'year': row['year'],
+                'rating_count': int(row['rating_count']),
+                'avg_rating': round(float(row['avg_rating']), 2) if row['avg_rating'] else 0.0,
+                'min_rating': int(row['min_rating']) if row['min_rating'] else 0,
+                'max_rating': int(row['max_rating']) if row['max_rating'] else 0,
+                'stddev_rating': round(float(row['stddev_rating']), 2) if row['stddev_rating'] else 0.0
+            })
+        
+        # Calculate overall statistics
+        overall_stats = {}
+        if results:
+            overall_stats = {
+                'total_sources': len(results),
+                'total_ratings': sum(int(r['rating_count']) for r in results),
+                'overall_avg_rating': round(sum(float(r['avg_rating']) for r in results) / len(results), 2),
+                'highest_rated': max(sources_data, key=lambda x: x['avg_rating'])['title'] if sources_data else None,
+                'most_rated': max(sources_data, key=lambda x: x['rating_count'])['title'] if sources_data else None
+            }
+        
+        return Response(
+            {
+                'sources': sources_data,
+                'statistics': overall_stats,
+                'count': len(sources_data)
+            },
+            status=status.HTTP_200_OK
+        )
+        
+    except Exception as e:
+        print(f"Error in get_source_ratings: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return Response(
+            {"error": str(e)},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
+
+
+@api_view(['GET'])
+def get_material_rating_detail(request):
+    """
+    GET /api/materials/<file>/rating/
+    Get detailed rating information for a specific material
+    """
+    try:
+        from django.db import connection
+        from django.utils import timezone
+        from datetime import timedelta
+        
+        file_path = request.GET.get('file')
+        if not file_path:
+            return Response(
+                {"error": "file parameter is required"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Get rating breakdown by rating value
+        with connection.cursor() as cursor:
+            cursor.execute("""
+                SELECT 
+                    rating,
+                    COUNT(*) as count
+                FROM feedback 
+                WHERE document_file = %s AND rating IS NOT NULL
+                GROUP BY rating
+                ORDER BY rating DESC
+            """, [file_path])
+            
+            rating_breakdown = [
+                {'rating': row[0], 'count': row[1]}
+                for row in cursor.fetchall()
+            ]
+        
+        # Get recent feedback for this material
+        recent_feedback = Feedback.objects.filter(
+            document_file=file_path,
+            rating__isnull=False
+        ).order_by('-created_at')[:5].values(
+            'rating', 'comment', 'created_at', 'user_id'
+        )
+        
+        # Calculate summary
+        summary = Feedback.objects.filter(
+            document_file=file_path,
+            rating__isnull=False
+        ).aggregate(
+            avg_rating=Avg('rating'),
+            count=Count('id')
+        )
+        
+        return Response({
+            'file': file_path,
+            'average_rating': round(float(summary['avg_rating'] or 0), 2),
+            'rating_count': summary['count'],
+            'rating_breakdown': rating_breakdown,
+            'recent_feedback': list(recent_feedback)
+        }, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        print(f"Error in get_material_rating_detail: {str(e)}")
+        return Response(
+            {"error": str(e)},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
+
+
+@api_view(['GET'])
+def get_sources_stats(request):
+    """
+    GET /api/sources/stats/
+    Get view counts and average ratings for a list of source files.
+    
+    Query Parameters:
+    - files: JSON array of file names
+    """
+    try:
+        import json
+        from django.db import connection
+        
+        files_param = request.GET.get('files')
+        if not files_param:
+            return Response(
+                {"error": "files parameter is required"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        try:
+            files = json.loads(files_param)
+            if not isinstance(files, list):
+                files = [files]
+        except json.JSONDecodeError:
+            return Response(
+                {"error": "Invalid files parameter. Must be a JSON array"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        if not files:
+            return Response({"stats": {}}, status=status.HTTP_200_OK)
+        
+        # Default stats for all files
+        stats = {f: {'view_count': 0, 'avg_rating': 0.0} for f in files}
+        
+        with connection.cursor() as cursor:
+            # Get view counts
+            placeholders = ','.join(['%s'] * len(files))
+            cursor.execute(f"""
+                SELECT 
+                    mv.file,
+                    COUNT(DISTINCT mv.id) as view_count
+                FROM material_views mv
+                WHERE mv.file IN ({placeholders})
+                GROUP BY mv.file
+            """, files)
+            
+            for row in cursor.fetchall():
+                if row[0] in stats:
+                    stats[row[0]]['view_count'] = int(row[1])
+            
+            # Get average ratings
+            cursor.execute(f"""
+                SELECT 
+                    f.document_file,
+                    COALESCE(AVG(f.rating), 0) as avg_rating
+                FROM feedback f
+                WHERE f.document_file IN ({placeholders}) AND f.rating IS NOT NULL
+                GROUP BY f.document_file
+            """, files)
+            
+            for row in cursor.fetchall():
+                if row[0] in stats:
+                    stats[row[0]]['avg_rating'] = round(float(row[1]), 2) if row[1] else 0.0
+        
+        return Response({"stats": stats}, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        print(f"Error in get_sources_stats: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return Response(
+            {"error": str(e)},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
+
 
 # ============= Analytics Views =============
 

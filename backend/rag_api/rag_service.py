@@ -641,9 +641,20 @@ class RAGService:
         top_chunks = []
         documents = []
         seen_titles = set()
+        
+        # Collect all unique file names for stats query
+        all_files = list(set(c["meta"].get("file", c["meta"].get("pdf", "")) for c in selected_chunks if c["meta"].get("file") or c["meta"].get("pdf")))
+        
+        # Get view counts and ratings for all documents
+        doc_stats = self.get_document_stats(all_files)
+        
         for c in selected_chunks:
             meta = c["meta"]
             file_name = meta.get("file", meta.get("pdf", ""))
+            
+            # Get stats for this document
+            file_stats = doc_stats.get(file_name, {'view_count': 0, 'avg_rating': 0.0})
+            
             # Fix degree: prefer meta['degree'], fallback to meta['degree_name'], fallback to 'Thesis'
             degree = meta.get("degree") or meta.get("degree_name") or "Thesis"
             degree = format_metadata_capitalization(degree, field_type='degree')
@@ -678,12 +689,70 @@ class RAGService:
                 "call_no": meta.get("call_no", ""),
                 "subjects": subjects,
                 "university": university,
-                "school": university
+                "school": university,
+                "view_count": file_stats['view_count'],
+                "avg_rating": file_stats['avg_rating']
             }
             documents.append(doc)
             top_chunks.append(c)
 
         return top_chunks, documents, distance_threshold
+    
+    def get_document_stats(self, file_names):
+        """
+        Get view counts and average ratings for a list of documents.
+        
+        Args:
+            file_names: List of file names to get stats for
+            
+        Returns:
+            Dictionary mapping file names to {view_count, avg_rating}
+        """
+        if not file_names:
+            return {}
+            
+        from django.db import connection
+        from collections import defaultdict
+        
+        # Default stats for all files
+        stats = {f: {'view_count': 0, 'avg_rating': 0.0} for f in file_names}
+        
+        try:
+            # Use Django's database connection
+            with connection.cursor() as cursor:
+                # Get view counts
+                placeholders = ','.join(['%s'] * len(file_names))
+                cursor.execute(f"""
+                    SELECT 
+                        mv.file,
+                        COUNT(DISTINCT mv.id) as view_count
+                    FROM material_views mv
+                    WHERE mv.file IN ({placeholders})
+                    GROUP BY mv.file
+                """, file_names)
+                
+                for row in cursor.fetchall():
+                    if row[0] in stats:
+                        stats[row[0]]['view_count'] = int(row[1])
+                
+                # Get average ratings
+                cursor.execute(f"""
+                    SELECT 
+                        f.document_file,
+                        COALESCE(AVG(f.rating), 0) as avg_rating
+                    FROM feedback f
+                    WHERE f.document_file IN ({placeholders}) AND f.rating IS NOT NULL
+                    GROUP BY f.document_file
+                """, file_names)
+                
+                for row in cursor.fetchall():
+                    if row[0] in stats:
+                        stats[row[0]]['avg_rating'] = round(float(row[1]), 2) if row[1] else 0.0
+                        
+        except Exception as e:
+            print(f"[RAG] Error fetching document stats: {e}")
+        
+        return stats
     
     def get_available_filters(self):
         """Get available subjects and years from the database for filtering UI"""

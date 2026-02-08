@@ -4,7 +4,9 @@ from .views import (
     HealthCheckView, SearchView, FiltersView, RAGEvaluationView,
     bookmarks_view, bookmark_delete_view, bookmark_delete_by_file_view,
     research_history_view, research_history_delete_view,
-    feedback_view, feedback_detail, analytics_compact
+    feedback_view, feedback_detail, analytics_compact,
+    get_most_browsed, get_source_ratings, get_material_rating_detail,
+    get_sources_stats
 )
 from .admin_views import admin_login_view, admin_users_view, admin_user_delete_view
 from .auth_views import (
@@ -76,6 +78,11 @@ urlpatterns = [
     # Material Views (Most Browsed)
     path('track-view/', views.track_material_view, name='track_material_view'),
     path('most-browsed/', views.get_most_browsed, name='get_most_browsed'),
+    
+    # Source Ratings
+    path('sources/ratings/', views.get_source_ratings, name='get_source_ratings'),
+    path('sources/stats/', views.get_sources_stats, name='get_sources_stats'),
+    path('materials/rating/', views.get_material_rating_detail, name='get_material_rating_detail'),
     
     # Analytics
     path('analytics/compact/', analytics_compact, name='analytics_compact'),

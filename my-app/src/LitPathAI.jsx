@@ -472,13 +472,65 @@ const LitPathAI = () => {
     };
 
     // Load a previous session
-    const loadHistorySession = (session) => {
+    const loadHistorySession = async (session) => {
         // Restore the entire conversation if available
         if (session.conversationHistory && session.conversationHistory.length > 0) {
             // Restore conversation history
             setConversationHistory(session.conversationHistory);
-            // Set the last result as current search results
-            setSearchResults(session.conversationHistory[session.conversationHistory.length - 1]);
+            
+            // Fetch fresh stats for all sources in the conversation
+            const lastResult = session.conversationHistory[session.conversationHistory.length - 1];
+            if (lastResult && lastResult.sources) {
+                try {
+                    // Get unique file names from all sources in conversation
+                    const allFiles = new Set();
+                    session.conversationHistory.forEach(item => {
+                        if (item.sources) {
+                            item.sources.forEach(source => {
+                                if (source.file) {
+                                    allFiles.add(source.file);
+                                }
+                            });
+                        }
+                    });
+                    
+                    if (allFiles.size > 0) {
+                        // Fetch stats for all files at once from the backend
+                        const filesArray = Array.from(allFiles);
+                        const response = await fetch(`${API_BASE_URL}/sources/stats/?files=${encodeURIComponent(JSON.stringify(filesArray))}`);
+                        if (response.ok) {
+                            const statsData = await response.json();
+                            const statsMap = statsData.stats || {};
+                            
+                            // Update sources with fresh stats
+                            const updatedConversation = session.conversationHistory.map(item => {
+                                if (item.sources) {
+                                    return {
+                                        ...item,
+                                        sources: item.sources.map(source => ({
+                                            ...source,
+                                            view_count: statsMap[source.file]?.view_count || source.view_count || 0,
+                                            avg_rating: statsMap[source.file]?.avg_rating || source.avg_rating || 0
+                                        }))
+                                    };
+                                }
+                                return item;
+                            });
+                            
+                            setConversationHistory(updatedConversation);
+                            setSearchResults(updatedConversation[updatedConversation.length - 1]);
+                        }
+                    } else {
+                        setSearchResults(lastResult);
+                    }
+                } catch (error) {
+                    console.error('Error fetching fresh stats:', error);
+                    setSearchResults(lastResult);
+                }
+            } else {
+                setSearchResults(lastResult);
+            }
+            
             // Mark as follow-up search since we have history
             setIsFollowUpSearch(true);
             setCurrentSessionId(session.id);
