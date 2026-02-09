@@ -83,7 +83,7 @@ const FeedbackDetail = () => {
         <div className="h-screen flex flex-col bg-gray-100 overflow-hidden font-sans">
             
             {/* --- HEADER --- */}
-            <div className="bg-[#1F1F1F] text-white shadow-md flex-none z-50">
+            <div className="sticky top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#404040] to-[#1F1F1F] text-white shadow-md">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     
                     {/* Left: Logo + DOST Title + LitPath Subtitle */}
