@@ -1629,7 +1629,7 @@ return (
 
                 {/* Input bar (for follow-up questions when conversation exists) */}
                 {conversationHistory.length > 0 && (
-                    <div className="sticky bottom-4 z-30 flex flex-col items-center px-2 sm:px-8">
+                    <div className="sticky bottom-0 z-30 flex flex-col items-center px-2 sm:px-8">
                         
                         {/* Search bar */}
                         <div className="flex items-center space-x-2 rounded-lg px-3 py-3 
