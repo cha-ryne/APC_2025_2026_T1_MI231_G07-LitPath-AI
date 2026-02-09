@@ -1585,22 +1585,7 @@ return (
                                     </div>
                                 </div>
 
-                                {/* Try again button - only show for the latest result */}
-                                {isLast && !loading && (
-                                    <div className="flex justify-end items-center mt-6">
-                                        <button
-                                            onClick={() => {
-                                                setSearchQuery(result.query);
-                                                handleSearch(result.query, true);
-                                            }}
-                                            disabled={loading}
-                                            className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg transition-colors hover:bg-gray-50 text-gray-700"
-                                        >
-                                            <RefreshCw size={18} />
-                                            <span>Try again</span>
-                                        </button>
-                                    </div>
-                                )}
+
 
                                 {/* Loading indicator - show after the latest result */}
                                 {isLast && loading && (
