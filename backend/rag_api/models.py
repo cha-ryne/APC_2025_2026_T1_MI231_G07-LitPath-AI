@@ -297,3 +297,113 @@ class MaterialView(models.Model):
     def __str__(self):
         return f"View of {self.file} at {self.viewed_at}"
 
+
+class CSMFeedback(models.Model):
+    """Client Satisfaction Measurement (CSM) Feedback - Separate from material ratings"""
+    
+    # Client Type choices
+    CLIENT_TYPE_CHOICES = [
+        ('Citizen', 'Citizen'),
+        ('Business', 'Business'),
+        ('Government', 'Government (Employee/Agency)'),
+    ]
+    
+    # Sex choices
+    SEX_CHOICES = [
+        ('Female', 'Female'),
+        ('Male', 'Male'),
+        ('Prefer not to say', 'Prefer not to say'),
+    ]
+    
+    # Age choices
+    AGE_CHOICES = [
+        ('10 and below', '10 years old and below'),
+        ('11-15', '11 - 15 years old'),
+        ('16-20', '16 - 20 years old'),
+        ('21-25', '21 - 25 years old'),
+        ('26-30', '26 - 30 years old'),
+        ('31-35', '31 - 35 years old'),
+        ('36-40', '36 - 40 years old'),
+        ('41-45', '41 - 45 years old'),
+        ('46-50', '46 - 50 years old'),
+        ('51-55', '51 - 55 years old'),
+        ('56-60', '56 - 60 years old'),
+        ('61 and above', '61 years old and above'),
+    ]
+    
+    # Region choices
+    REGION_CHOICES = [
+        ('NCR', '[NCR] National Capital Region'),
+        ('CAR', '[CAR] Cordillera Administrative Region'),
+        ('R01', '[R01] Region 1 (Ilocos Region)'),
+        ('R02', '[R02] Region 2 (Cagayan Valley Region)'),
+        ('R03', '[R03] Region 3 (Central Luzon Region)'),
+        ('R4A', '[R4A] Region 4A (CALABARZON Region)'),
+        ('R4B', '[R4B] Region 4B (MIMAROPA Region)'),
+        ('R05', '[R05] Region 5 (Bicol Region)'),
+        ('R06', '[R06] Western Visayas Region'),
+        ('R07', '[R07] Central Visayas Region'),
+        ('R08', '[R08] Eastern Visayas Region'),
+        ('R09', '[R09] Zamboanga Peninsula Region'),
+        ('R10', '[R10] Northern Mindanao Region'),
+        ('R11', '[R11] Davao Region'),
+        ('R12', '[R12] SOCCSKSARGEN Region'),
+        ('R13', '[R13] Caraga Administrative Region'),
+        ('BARMM', '[BARMM] Bangsamoro Autonomous Region in Muslim Mindanao'),
+        ('N/A', '[N/A] Not Applicable (Overseas)'),
+    ]
+    
+    # Category choices
+    CATEGORY_CHOICES = [
+        ('Student', 'Student'),
+        ('DOST Employee', 'DOST Employee'),
+        ('Other Government Employee', 'Other Government Employee'),
+        ('Librarian/Library Staff', 'Librarian/Library Staff'),
+        ('Teaching Personnel', 'Teaching Personnel'),
+        ('Administrative Personnel', 'Administrative Personnel'),
+        ('Researcher', 'Researcher'),
+    ]
+    
+    # Rating choices (1-Poor to 5-Excellent)
+    RATING_CHOICES = [
+        (1, '1 - Poor'),
+        (2, '2 - Fair'),
+        (3, '3 - Good'),
+        (4, '4 - Very Good'),
+        (5, '5 - Excellent'),
+    ]
+    
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user_id = models.TextField(db_index=True)
+    session_id = models.TextField(db_index=True, blank=True, null=True)
+    
+    # I. Data Privacy & Consent
+    consent_given = models.BooleanField(default=False, db_index=True)
+    
+    # II. Client Profile (Required fields)
+    client_type = models.CharField(max_length=50, choices=CLIENT_TYPE_CHOICES)
+    date = models.DateField()
+    sex = models.CharField(max_length=50, choices=SEX_CHOICES)
+    age = models.CharField(max_length=50, choices=AGE_CHOICES)
+    region = models.CharField(max_length=50, choices=REGION_CHOICES)
+    category = models.CharField(max_length=100, choices=CATEGORY_CHOICES)
+    
+    # III. Feedback & Evaluation
+    # Required: LitPath AI Rating
+    litpath_rating = models.IntegerField(choices=RATING_CHOICES, blank=True, null=True)
+    
+    # Optional fields (not required)
+    research_interests = models.TextField(blank=True, null=True)
+    missing_content = models.TextField(blank=True, null=True)
+    message_comment = models.TextField(blank=True, null=True)
+    
+    # Metadata
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+    
+    class Meta:
+        db_table = 'csm_feedback'
+        ordering = ['-created_at']
+    
+    def __str__(self):
+        return f"CSM Feedback - {self.user_id} ({self.created_at})"
+

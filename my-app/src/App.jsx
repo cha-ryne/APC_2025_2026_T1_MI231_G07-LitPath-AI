@@ -7,6 +7,7 @@ import AuthPage from './AuthPage';
 import AdminDashboard from './AdminDashboard';
 import FeedbackManager from './FeedbackManager';
 import FeedbackDetail from './FeedbackDetail';
+import FeedbackForm from './FeedbackForm';
 import ResetPassword from './ResetPassword';
 
 // Protected Route component - requires authentication (user, staff, or admin)
@@ -126,6 +127,16 @@ const AppContent = () => {
             <Route 
                 path="/reset-password/:token" 
                 element={<ResetPassword />} 
+            />
+
+            {/* CSM Feedback Form page - requires authentication */}
+            <Route 
+                path="/feedback-form" 
+                element={
+                    <ProtectedRoute>
+                        <FeedbackForm />
+                    </ProtectedRoute>
+                } 
             />
 
             {/* Catch-all redirect */}

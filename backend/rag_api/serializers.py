@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from .models import UserAccount, Bookmark, ResearchHistory, Feedback
+from .models import UserAccount, Bookmark, ResearchHistory, Feedback, CSMFeedback
 
 # Serializer for user profile update
 class UserAccountSerializer(serializers.ModelSerializer):
@@ -39,4 +39,17 @@ class FeedbackSerializer(serializers.ModelSerializer):
         #    'comment', 'created_at'
         #]
         fields = '__all__'
+        read_only_fields = ['id', 'created_at']
+
+
+class CSMFeedbackSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CSMFeedback
+        fields = [
+            'id', 'user_id', 'session_id',
+            'consent_given',
+            'client_type', 'date', 'sex', 'age', 'region', 'category',
+            'litpath_rating', 'research_interests', 'missing_content', 'message_comment',
+            'created_at'
+        ]
         read_only_fields = ['id', 'created_at']

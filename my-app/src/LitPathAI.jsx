@@ -72,6 +72,37 @@ const LitPathAI = () => {
     const [browsedCurrentSlide, setBrowsedCurrentSlide] = useState(0);
     const [searchBarFocused, setSearchBarFocused] = useState(false);
     
+    // CSM Feedback Popup State
+    const [showCSMPopup, setShowCSMPopup] = useState(false);
+    const [lastQueryTime, setLastQueryTime] = useState(null);
+    
+    // Check if CSM feedback should be shown after query
+    const shouldShowCSMPopup = () => {
+        // Check if user has already submitted feedback recently (within 24 hours)
+        const submittedAt = localStorage.getItem('csm_feedback_submitted_at');
+        if (submittedAt) {
+            const submittedDate = new Date(submittedAt);
+            const now = new Date();
+            const hoursSince = (now - submittedDate) / (1000 * 60 * 60);
+            if (hoursSince < 24) {
+                return false;
+            }
+        }
+        
+        // Check if user skipped feedback recently (within 24 hours)
+        const skippedAt = localStorage.getItem('csm_feedback_skipped_at');
+        if (skippedAt) {
+            const skippedDate = new Date(skippedAt);
+            const now = new Date();
+            const hoursSince = (now - skippedDate) / (1000 * 60 * 60);
+            if (hoursSince < 24) {
+                return false;
+            }
+        }
+        
+        return true;
+    };
+    
     // Example questions for auto-complete
     const exampleQuestions = [
         "How does plastic pollution affect plant growth in farmland?",
@@ -690,6 +721,20 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
             });
             setSearchResults(finalResult);
         }
+        
+        // Check if should show CSM feedback popup (after successful search)
+        // Store session ID for the feedback form
+        if (currentSessionId || sessionStorage.getItem('session_id')) {
+            sessionStorage.setItem('session_id', currentSessionId || generateSessionId());
+        }
+        
+        // Show CSM popup after a delay (2 seconds) if conditions are met
+        setTimeout(() => {
+            if (shouldShowCSMPopup()) {
+                setShowCSMPopup(true);
+                setLastQueryTime(Date.now());
+            }
+        }, 2000);
 
     } catch (err) {
         console.error("Search failed:", err);
@@ -1203,6 +1248,7 @@ return (
                         loadHistorySession={loadHistorySession}
                         deleteHistorySession={deleteHistorySession}
                         setShowResearchHistory={setShowResearchHistory}
+                        navigate={navigate}
                     />
                 </div>
                 <div className="flex-1 bg-black bg-opacity-40" onClick={() => setSidebarOpen(false)} />
@@ -1239,6 +1285,7 @@ return (
                         loadHistorySession={loadHistorySession}
                         deleteHistorySession={deleteHistorySession}
                         setShowResearchHistory={setShowResearchHistory}
+                        navigate={navigate}
                     />
                 </div>
             </aside>
@@ -2336,6 +2383,45 @@ return (
                 </div>
             </div>
         )}
+        
+        {/* CSM Feedback Popup */}
+        {showCSMPopup && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                <div className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 overflow-hidden">
+                    <div className="bg-blue-600 px-6 py-4">
+                        <h3 className="text-white text-lg font-semibold">
+                            We Value Your Feedback!
+                        </h3>
+                    </div>
+                    <div className="p-6">
+                        <p className="text-gray-600 mb-6">
+                            Thank you for using LitPath AI. Please take a moment to complete our Client Satisfaction Measurement (CSM) form to help us improve our services.
+                        </p>
+                        <div className="flex flex-col gap-3">
+                            <button
+                                onClick={() => {
+                                    setShowCSMPopup(false);
+                                    navigate('/feedback-form');
+                                }}
+                                className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium transition-colors"
+                            >
+                                Fill up form
+                            </button>
+                            <button
+                                onClick={() => {
+                                    localStorage.setItem('csm_feedback_skipped', 'true');
+                                    localStorage.setItem('csm_feedback_skipped_at', new Date().toISOString());
+                                    setShowCSMPopup(false);
+                                }}
+                                className="w-full py-2 px-4 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 font-medium transition-colors"
+                            >
+                                Skip for now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )}
     </div>
 );
 };
@@ -2362,7 +2448,8 @@ function SidebarContent({
     researchHistory,
     loadHistorySession,
     deleteHistorySession,
-    setShowResearchHistory
+    setShowResearchHistory,
+    navigate
 }) {
     return (
         <div className="flex flex-col h-full">
@@ -2438,6 +2525,13 @@ function SidebarContent({
                 <a href="#" className="text-[#1E74BC] hover:underline block">
                     Privacy and Disclaimer
                 </a>
+                <button
+                    onClick={() => navigate('/feedback-form')}
+                    className="text-[#1E74BC] hover:underline block mt-2 flex items-center gap-1"
+                >
+                    <MessageSquare size={12} />
+                    Leave a feedback
+                </button>
             </div>
         </div>
     );

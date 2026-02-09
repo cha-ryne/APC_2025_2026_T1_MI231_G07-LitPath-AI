@@ -1,7 +1,10 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.decorators import api_view
 from .rag_service import RAGService
+from .models import CSMFeedback
+from .serializers import CSMFeedbackSerializer
 import time
 from .models_password_reset import PasswordResetToken
 from django.utils import timezone
@@ -10,8 +13,94 @@ from datetime import timedelta
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 from django.conf import settings
+import psycopg2
+from psycopg2.extras import RealDictCursor
 
 User = get_user_model()
+
+# Supabase configuration
+SUPABASE_URL = settings.DATABASES['default']['HOST'] if hasattr(settings.DATABASES['default'], 'HOST') else None
+SUPABASE_DB = settings.DATABASES['default']['NAME'] if hasattr(settings.DATABASES['default'], 'NAME') else None
+SUPABASE_USER = settings.DATABASES['default']['USER'] if hasattr(settings.DATABASES['default'], 'USER') else None
+SUPABASE_PASSWORD = settings.DATABASES['default']['PASSWORD'] if hasattr(settings.DATABASES['default'], 'PASSWORD') else None
+SUPABASE_PORT = settings.DATABASES['default']['PORT'] if hasattr(settings.DATABASES['default'], 'PORT') else 5432
+
+
+def insert_to_supabase_general_feedback(data):
+    """
+    Insert feedback data into Supabase general_feedback table.
+    Returns True on success, False on failure.
+    """
+    try:
+        # Get Supabase connection settings from Django settings
+        # Check if SUPABASE_URL env var is set for external Supabase
+        import os
+        supabase_url = os.environ.get('SUPABASE_URL')
+        supabase_db = os.environ.get('SUPABASE_DB')
+        supabase_user = os.environ.get('SUPABASE_USER')
+        supabase_password = os.environ.get('SUPABASE_PASSWORD')
+        supabase_port = os.environ.get('SUPABASE_PORT', '5432')
+        
+        # If not set via env, use local DB settings
+        if not supabase_url:
+            if hasattr(settings.DATABASES['default'], 'HOST'):
+                supabase_url = settings.DATABASES['default']['HOST']
+            else:
+                return False
+        if not supabase_db:
+            supabase_db = settings.DATABASES['default']['NAME'] if hasattr(settings.DATABASES['default'], 'NAME') else None
+        if not supabase_user:
+            supabase_user = settings.DATABASES['default']['USER'] if hasattr(settings.DATABASES['default'], 'USER') else None
+        if not supabase_password:
+            supabase_password = settings.DATABASES['default']['PASSWORD'] if hasattr(settings.DATABASES['default'], 'PASSWORD') else None
+        if not supabase_port:
+            supabase_port = str(settings.DATABASES['default']['PORT']) if hasattr(settings.DATABASES['default'], 'PORT') else '5432'
+        
+        if not all([supabase_url, supabase_db, supabase_user, supabase_password]):
+            print("Supabase configuration incomplete")
+            return False
+        
+        conn = psycopg2.connect(
+            host=supabase_url,
+            database=supabase_db,
+            user=supabase_user,
+            password=supabase_password,
+            port=supabase_port
+        )
+        
+        cursor = conn.cursor()
+        cursor.execute("""
+            INSERT INTO general_feedback (
+                user_id, session_id, consent_given, client_type, 
+                date, sex, age, region, category, litpath_rating,
+                research_interests, missing_content, message_comment
+            ) VALUES (
+                %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
+            )
+        """, (
+            data.get('user_id'),
+            data.get('session_id'),
+            data.get('consent_given'),
+            data.get('client_type'),
+            data.get('date'),
+            data.get('sex'),
+            data.get('age'),
+            data.get('region'),
+            data.get('category'),
+            data.get('litpath_rating'),
+            data.get('research_interests'),
+            data.get('missing_content'),
+            data.get('message_comment')
+        ))
+        
+        conn.commit()
+        cursor.close()
+        conn.close()
+        return True
+        
+    except Exception as e:
+        print(f"Error inserting to Supabase general_feedback: {e}")
+        return False
 
 class FiltersView(APIView):
     """
@@ -479,6 +568,58 @@ def feedback_detail(request, pk):
     # DELETE: Remove it
     elif request.method == 'DELETE':
         feedback.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    
+    # ============= CSM Feedback Views =============
+
+@api_view(['GET', 'POST'])
+def csm_feedback_view(request):
+    """
+    GET: List all CSM feedback (for admin analytics)
+    POST: Submit new CSM feedback
+    """
+    if request.method == 'GET':
+        # Optional: filter by user_id for user-specific feedback
+        user_id = request.query_params.get('user_id')
+        if user_id:
+            csm_feedback = CSMFeedback.objects.filter(user_id=user_id)
+        else:
+            # For admin analytics - get all CSM feedback
+            csm_feedback = CSMFeedback.objects.all()
+        
+        serializer = CSMFeedbackSerializer(csm_feedback, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    elif request.method == 'POST':
+        serializer = CSMFeedbackSerializer(data=request.data)
+        if serializer.is_valid():
+            # Save to Django database first
+            serializer.save()
+            
+            # Also insert into Supabase general_feedback table
+            insert_to_supabase_general_feedback(request.data)
+            
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET', 'DELETE'])
+def csm_feedback_detail(request, pk):
+    """
+    GET: Retrieve single CSM feedback
+    DELETE: Remove CSM feedback
+    """
+    try:
+        csm_feedback = CSMFeedback.objects.get(pk=pk)
+    except CSMFeedback.DoesNotExist:
+        return Response({'error': 'CSM Feedback not found'}, status=status.HTTP_404_NOT_FOUND)
+    
+    if request.method == 'GET':
+        serializer = CSMFeedbackSerializer(csm_feedback)
+        return Response(serializer.data)
+    
+    elif request.method == 'DELETE':
+        csm_feedback.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
     # ============= Material Views (Most Browsed) =============

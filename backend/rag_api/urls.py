@@ -6,7 +6,7 @@ from .views import (
     research_history_view, research_history_delete_view,
     feedback_view, feedback_detail, analytics_compact,
     get_most_browsed, get_source_ratings, get_material_rating_detail,
-    get_sources_stats
+    get_sources_stats, csm_feedback_view, csm_feedback_detail
 )
 from .admin_views import admin_login_view, admin_users_view, admin_user_delete_view
 from .auth_views import (
@@ -49,6 +49,11 @@ urlpatterns = [
     path('feedback/', feedback_view, name='feedback'),
     path('feedback', feedback_view, name='feedback-no-slash'),
     path('feedback/<uuid:pk>/', feedback_detail, name='feedback-detail'),
+    
+    # CSM Feedback
+    path('csm-feedback/', csm_feedback_view, name='csm-feedback'),
+    path('csm-feedback', csm_feedback_view, name='csm-feedback-no-slash'),
+    path('csm-feedback/<uuid:pk>/', csm_feedback_detail, name='csm-feedback-detail'),
     
     # Authentication (New unified auth system)
     path('auth/login/', auth_login_view, name='auth-login'),
