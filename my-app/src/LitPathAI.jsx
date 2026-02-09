@@ -1064,7 +1064,7 @@ const handleFeedbackConfirm = async () => {
     };
 
 return (
-    <div className="min-h-screen flex flex-col bg-gray-100">
+    <div className={`${!conversationHistory.length && !searchResults ? 'h-screen overflow-hidden' : 'min-h-screen'} flex flex-col bg-gray-100`}>
         {/* Toast Notification */}
         {toast.show && (
             <div className={`fixed bottom-4 right-4 z-50 px-6 py-3 rounded-lg shadow-lg text-sm ${
