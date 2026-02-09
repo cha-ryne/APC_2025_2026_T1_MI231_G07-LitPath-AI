@@ -193,14 +193,11 @@ const FeedbackForm = () => {
                 {/* Header */}
                 <div className="bg-white rounded-lg shadow-md p-6 mb-6">
                     <div className="text-center">
-                        <h1 className="text-2xl font-bold text-blue-900 mb-2">
+                        <h1 className="text-2xl font-bold text-[#1E74BC] mb-2">
                             Client Satisfaction Measurement (CSM) Form
                         </h1>
                         <p className="text-sm text-gray-600 mb-4">
-                            <strong>Project:</strong> LitPath AI: Smart Pathfinder for Thesis and Dissertation
-                        </p>
-                        <p className="text-sm text-gray-600">
-                            <strong>Agency:</strong> Science and Technology Information Institute (DOST-STII)
+                            <strong>LitPath AI: Smart Pathfinder for Thesis and Dissertation</strong>
                         </p>
                     </div>
                 </div>
@@ -208,7 +205,7 @@ const FeedbackForm = () => {
                 <form onSubmit={handleSubmit}>
                     {/* Section I: Data Privacy & Consent */}
                     <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-                        <h2 className="text-lg font-bold text-blue-800 mb-4 border-b pb-2">
+                        <h2 className="text-lg font-bold text-[#1E74BC] mb-4 border-b pb-2">
                             I. Data Privacy & Consent
                         </h2>
                         
@@ -246,7 +243,7 @@ const FeedbackForm = () => {
 
                     {/* Section II: Client Profile */}
                     <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-                        <h2 className="text-lg font-bold text-blue-800 mb-4 border-b pb-2">
+                        <h2 className="text-lg font-bold text-[#1E74BC] mb-4 border-b pb-2">
                             II. Client Profile
                         </h2>
 
@@ -387,7 +384,7 @@ const FeedbackForm = () => {
 
                     {/* Section III: Feedback & Evaluation */}
                     <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-                        <h2 className="text-lg font-bold text-blue-800 mb-4 border-b pb-2">
+                        <h2 className="text-lg font-bold text-[#1E74BC] mb-4 border-b pb-2">
                             III. Feedback & Evaluation
                         </h2>
 
@@ -493,7 +490,7 @@ const FeedbackForm = () => {
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className={`px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 ${
+                            className={`px-6 py-2 bg-[#1E74BC] text-white rounded-md hover:bg-blue-700 ${
                                 isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
                             }`}
                         >
