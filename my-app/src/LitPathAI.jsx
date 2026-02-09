@@ -1408,7 +1408,7 @@ return (
                                 {searchBarFocused && (
                                     <div className="absolute bottom-full left-0 right-0 mb-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50">
                                         <div className="px-4 py-2 bg-gray-50 border-b border-gray-100">
-                                            <p className="text-xs text-gray-500 font-medium">Example questions</p>
+                                            <p className="text-xs text-gray-500 font-medium">Sample questions</p>
                                         </div>
                                         <div className="flex flex-col py-2">
                                             {exampleQuestions.map((question, index) => (
@@ -1566,7 +1566,7 @@ return (
                                     <div className="max-w-[85%] bg-white border border-gray-200 rounded-xl px-4 py-3 shadow text-gray-900 text-sm break-words">
                                         <h3 className="text-sm font-semibold mb-2 flex items-center space-x-2 text-gray-800">
                                             <BookOpen size={16} className="text-[#1E74BC]" />
-                                            <span>Overview of sources</span>
+                                            <span>Overview of Sources</span>
                                         </h3>
                                         <div
                                             className="text-gray-700 leading-relaxed whitespace-pre-line text-sm text-justify"
