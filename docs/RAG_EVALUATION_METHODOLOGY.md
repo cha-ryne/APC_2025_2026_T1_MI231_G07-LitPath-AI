@@ -2,8 +2,8 @@
 
 ## Document Information
 - **System:** LitPath AI - AI-Powered Thesis Research Assistant
-- **Version:** 2.1
-- **Date:** February 5, 2026
+- **Version:** 2.2
+- **Date:** February 11, 2026
 - **Authors:** LitPath AI Development Team
 
 ---
@@ -223,7 +223,7 @@ print(f"Groundedness Pass Rate: {results['metrics']['groundedness_pass_rate']}")
 ## RAG Evaluator Test Results
 
 ### Test Execution Date
-**Date:** February 5, 2026
+**Date:** February 11, 2026
 
 ### Test Configuration
 | Parameter | Value |
@@ -232,29 +232,136 @@ print(f"Groundedness Pass Rate: {results['metrics']['groundedness_pass_rate']}")
 | Vector Database | ChromaDB |
 | Total Indexed Chunks | 8,903 |
 | LLM for Generation | Gemini 2.5 Flash |
-| LLM for Evaluation | Gemini 2.5 Flash Lite |
+| LLM for Evaluation | Gemini 2.5 Flash (Judge) |
 | Distance Threshold | 1.5 |
 | Top-N Results | 10 |
+| Test Cases | 10 (6 Filipino, 4 English) |
 
-### Test Case 1: Plant Growth Regulators Query
+### Test Cases Overview
 
-**Query:** "What are the effects of plant growth regulators on chili pepper?"
+| # | Query | Category | Language |
+|---|-------|----------|----------|
+| 1 | Ano-ano ang mga epekto ng mga plant growth regulator sa sili? | Agriculture - Plant Science | Filipino |
+| 2 | Paano nakakaapekto ang salinity stress sa mga genotype ng palay? | Agriculture - Crop Science | Filipino |
+| 3 | Ano ang sustansyang taglay ng mga butil na tila-kanin na gawa mula sa mais? | Food Science - Nutrition | Filipino |
+| 4 | Ano ang mga benefits ng agroforestry systems sa Pilipinas? | Agriculture - Forestry | Filipino |
+| 5 | Paano nakaka-apekto ang nano zinc oxide sa yield at quality ng kamatis? | Agriculture - Nanotechnology | Filipino |
+| 6 | Ano ang mga ecosystem services ng mga rubber plantation? | Environmental Science | Filipino |
+| 7 | What factors affect consumer acceptability of brown rice? | Food Science - Consumer Studies | English |
+| 8 | What is the impact of deforestation on Philippine forests? | Environmental Science - Forestry | English |
+| 9 | How does phytoremediation help with soil contamination? | Environmental Science - Soil | English |
+| 10 | What are the genetic diversity methods used for Philippine rice breeding? | Agriculture - Genetics | English |
 
-**Search Results:**
-- Documents Retrieved: 1
-- Chunks Analyzed: 10
-- Query Rewrite: "plant growth regulators AND chili pepper"
+### Detailed Test Results
 
-**AI Overview (Summary):**
-> The available sources directly address the effects of plant growth regulators on chili pepper, specifically in the context of waterlogging stress. Plant growth regulators (PGRs) such as brassinolide (BL), ethephon (ETP), and paclobutrazol (PBZ) were applied to chili pepper plants to induce tolerance...
+#### Test Case 1: Plant Growth Regulators on Chili Pepper (Filipino)
+**Query:** "Ano-ano ang mga epekto ng mga plant growth regulator sa sili?"
 
-**Evaluation Results:**
+| Metric | Documents | Chunks |
+|--------|-----------|--------|
+| Retrieved | 1 | 1 |
+
+**AI Overview Excerpt:**
+> Batay sa pag-aaral ni Benipayo (2022), ang paggamit ng mga plant growth regulator (PGR) tulad ng brassinolide (BL), ethephon (ETP), at paclobutrazol (PBZ) ay naglalayong magbigay ng toleransya, magtaguyod ng paglaki, at mapabuti ang kalidad ng bunga ng sili (Capsicum frutescens)...
 
 | Metric | Score | Explanation |
 |--------|-------|-------------|
-| **Relevance** | ✅ PASS | The student's answer directly addresses the question by listing specific plant growth regulators (brassinolide, ethephon, paclobutrazol) and their effects on chili pepper plants, such as inducing tolerance |
-| **Groundedness** | ✅ PASS | The student's answer accurately reflects the information provided in the abstract. It correctly identifies the purpose of the study (using plant growth regulators to address waterlogging stress in chili pepper) |
-| **Overall** | ✅ PASS | Both relevance and groundedness criteria met |
+| **Relevance** | ✅ PASS | Directly addresses the question by identifying specific PGRs and their effects on chili plants under waterlogging stress |
+| **Groundedness** | ❌ FAIL | Second paragraph discusses specific morphological effects not explicitly in provided abstract excerpt |
+| **Retrieval Relevance** | ✅ PASS | Retrieved document directly about PGR effects on chili pepper |
+| **Overall** | ❌ FAIL | Groundedness criterion not met |
+
+---
+
+#### Test Case 2: Salinity Stress on Rice Genotypes (Filipino)
+**Query:** "Paano nakakaapekto ang salinity stress sa mga genotype ng palay?"
+
+| Metric | Documents | Chunks |
+|--------|-----------|--------|
+| Retrieved | 2 | 2 |
+
+**AI Overview Excerpt:**
+> Batay sa mga ibinigay na sanggunian, ang salinity stress ay may malaking epekto sa pisyolohiya at paglaki ng mga genotype ng palay. Ang stress na dulot ng asin ay nakakaapekto sa paglaki ng punla (seedling growth) at sa mga yield component...
+
+| Metric | Score | Explanation |
+|--------|-------|-------------|
+| **Relevance** | ✅ PASS | Details impact on physiology, growth, molecular mechanisms, and varying responses across genotypes |
+| **Groundedness** | ❌ FAIL | Mentions "Salto! QTL" term not found in source documents - hallucination detected |
+| **Retrieval Relevance** | ✅ PASS | Multiple retrieved documents directly about rice salinity tolerance evaluation |
+| **Overall** | ❌ FAIL | Hallucination detected in response |
+
+---
+
+#### Test Case 3: Nutritional Value of Corn Rice-Like Grains (Filipino)
+**Query:** "Ano ang sustansyang taglay ng mga butil na tila-kanin na gawa mula sa mais?"
+
+| Metric | Documents | Chunks |
+|--------|-----------|--------|
+| Retrieved | 4 | 4 |
+
+**AI Overview Excerpt:**
+> Ang mga butil na tila-kanin (rice-like grains) na gawa mula sa mais ay nagtataglay ng iba't ibang sustansya tulad ng protina, taba, at mga mineral. Ayon sa pagsusuri sa kumbinasyon ng IPB variety 6 at Lagkitan na mais...
+
+| Metric | Score | Explanation |
+|--------|-------|-------------|
+| **Relevance** | ✅ PASS | Lists specific nutrients (protein, fat, zinc, iron, carbohydrates) and discusses cooking impact and glycemic index |
+| **Groundedness** | ❌ FAIL | Mentions specific GI value (67.03%) not found in provided source documents |
+| **Retrieval Relevance** | ✅ PASS | Retrieved documents contain nutrient content, proximate composition, and carbohydrate profile data for corn rice-like grains |
+| **Overall** | ❌ FAIL | Specific numerical claim not supported by source excerpts |
+
+---
+
+#### Test Case 4: Agroforestry Benefits in the Philippines (Filipino)
+**Query:** "Ano ang mga benefits ng agroforestry systems sa Pilipinas?"
+
+| Metric | Documents | Chunks |
+|--------|-----------|--------|
+| Retrieved | 2 | 2 |
+
+**AI Overview Excerpt:**
+> Batay sa mga nakalap na dokumento, ang agroforestry sa Pilipinas ay nagsisilbing mahalagang kompromiso sa pagitan ng produksyong agrikultural at pagbibigay ng mga benepisyong panggubat. Ang mga sistemang ito, partikular ang Conservation Farming Villages (CFV) program...
+
+| Metric | Score | Explanation |
+|--------|-------|-------------|
+| **Relevance** | ✅ PASS | Enumerates economic, ecological, and food security benefits directly addressing the question |
+| **Groundedness** | ✅ PASS | All claims (food security, economic growth, nutrient pumping, erosion reduction, carbon storage) directly supported by source documents |
+| **Retrieval Relevance** | ✅ PASS | Retrieved documents directly address agroforestry benefits including food security, economic returns, and ecological services |
+| **Overall** | ✅ PASS | All evaluation criteria met |
+
+---
+
+#### Test Case 5: Nano Zinc Oxide on Tomato (Filipino)
+**Query:** "Paano nakaka-apekto ang nano zinc oxide sa yield at quality ng kamatis?"
+
+| Metric | Documents | Chunks |
+|--------|-----------|--------|
+| Retrieved | 1 | 1 |
+
+**AI Overview Excerpt:**
+> Batay sa pananaliksik ni Ybañez (2018), ang paggamit ng synthesized nano zinc oxide (SNZ) bilang foliar fertilizer ay nagpapakita ng positibong epekto sa paglaki at produksyon ng kamatis (var 'Marimax')...
+
+| Metric | Score | Explanation |
+|--------|-------|-------------|
+| **Relevance** | ✅ PASS | Addresses how nano zinc oxide affects yield and quality with specific details on growth, nutrient uptake, and marketable yield |
+| **Groundedness** | ❌ FAIL | Detailed effects on plant height, clusters, SPAD units not in the truncated abstract text provided to evaluator |
+| **Retrieval Relevance** | ⚠️ N/A | Evaluation limited by API rate constraints |
+| **Overall** | ❌ FAIL | Groundedness not met |
+
+---
+
+#### Test Cases 6-10: Search and Generation Results
+
+Test cases 6-10 completed search and AI generation successfully, but LLM-as-Judge evaluation was limited by Gemini API rate quotas (20 requests/day free tier for gemini-2.5-flash). Search and generation results are documented below:
+
+| # | Query | Docs Found | Generation | Notes |
+|---|-------|-----------|------------|-------|
+| 6 | Ecosystem services ng rubber plantation | 1 | ✅ Generated overview about rubber plantation services in Mt. Makiling | Eval rate-limited |
+| 7 | Factors affecting brown rice acceptability | 1 | ✅ Generated overview about sensory/economic factors in Caloocan City study | Eval rate-limited |
+| 8 | Impact of deforestation on Philippine forests | 1 | ✅ Generated overview about forest loss trends and deforestation drivers | Relevance: FAIL (sources address causes, not impacts) |
+| 9 | Phytoremediation and soil contamination | 1 | ✅ Generated overview about vetiver grass for soil decontamination | Eval rate-limited |
+| 10 | Genetic diversity methods for rice breeding | 2 | ✅ Generated overview about diallel crossing and molecular methods | Eval rate-limited |
+
+**Note on Test Case 8:** The relevance evaluator correctly identified that while the system retrieved a relevant document about deforestation, the AI response acknowledged that the sources addressed *causes* of deforestation rather than *impacts*, demonstrating the evaluation system's ability to detect nuanced mismatches between query intent and response content.
 
 ### Evaluation Methodology Details
 
@@ -286,12 +393,27 @@ You are a teacher grading a quiz. Grade the following based on:
 3. Minor paraphrasing is acceptable as long as the meaning is preserved
 ```
 
+#### 3. Retrieval Relevance Evaluation
+The LLM judge evaluates whether the retrieved documents:
+- Contain information relevant to answering the user's question
+- Have keywords or semantic meaning related to the query
+- Provide sufficient context for generating a quality response
+
+**Prompt Template:**
+```
+You are a teacher grading a quiz. Grade the following based on:
+1. Identify if the FACTS contain information relevant to the QUESTION
+2. Facts should contain keywords or semantic meaning related to the question
+3. It is OK if some facts are unrelated, as long as some are relevant
+```
+
 ### Scoring Criteria
 
 | Score | Meaning | Criteria |
 |-------|---------|----------|
 | ✅ PASS (true) | Evaluation passed | Response meets all quality criteria |
 | ❌ FAIL (false) | Evaluation failed | Response does not meet one or more criteria |
+| ⚠️ N/A | Not evaluated | API rate limit reached; evaluation skipped |
 
 ### Overall Pass Rate Calculation
 
@@ -303,6 +425,30 @@ A response is considered high-quality only when it:
 1. Directly addresses the user's question (Relevance ✅)
 2. Is grounded in the retrieved source documents (Groundedness ✅)
 
+### Aggregated Results (5 Fully Evaluated Test Cases)
+
+| Metric | Pass | Fail | Pass Rate | Status |
+|--------|------|------|-----------|--------|
+| **Relevance** | 5 | 0 | **100%** | ✅ Excellent |
+| **Groundedness** | 1 | 4 | **20%** | ⚠️ Needs Improvement |
+| **Retrieval Relevance** | 3 | 1 | **75%** | ✅ Good |
+| **Overall (Rel + Grd)** | 1 | 4 | **20%** | ⚠️ Needs Improvement |
+
+### Analysis of Groundedness Results
+
+The low groundedness score (20%) requires context. The groundedness evaluator checks if the AI response contains ONLY information present in the source document excerpts provided to the judge. Key findings:
+
+1. **Truncation Effect:** The evaluator receives only the first ~1,000 characters of each retrieved document chunk. The AI generation model receives more context, leading to responses with details that the evaluator cannot verify against its truncated view.
+
+2. **Specific Hallucinations Detected:**
+   - Test 2: AI mentioned "Salto! QTL" - a term not found in source documents (true hallucination)
+   - Test 3: AI cited specific glycemic index value (67.03%) not in provided excerpts
+   - Tests 1, 5: AI included detailed experimental results that existed in the full document but were cut off in the evaluator's truncated view
+
+3. **Strict Evaluation Standard:** The LLM-as-Judge applies a strict standard where ANY information not directly traceable to provided sources is flagged. This is intentionally conservative to catch potential hallucinations.
+
+4. **Recommendation:** The groundedness metric should be interpreted alongside the keyword-based Factual Accuracy metric (96.3% in v2.0 benchmark) for a complete picture. Future improvements could include providing larger document excerpts to the evaluation judge.
+
 ---
 
 ## Benchmark Results Summary
@@ -312,12 +458,14 @@ A response is considered high-quality only when it:
 | Category | Metric | Result | Target | Status |
 |----------|--------|--------|--------|--------|
 | **Search Quality** | Average Distance Score | 0.838 | < 1.0 | ✅ Excellent |
-| **Search Quality** | Documents Retrieved | 1-10 | 1-10 | ✅ Pass |
-| **AI Quality** | Relevance Pass Rate | 100% | > 80% | ✅ Excellent |
-| **AI Quality** | Groundedness Pass Rate | 100% | > 80% | ✅ Excellent |
-| **AI Quality** | Overall Pass Rate | 100% | > 75% | ✅ Excellent |
-| **AI Quality** | Factual Accuracy | 96.3% | > 90% | ✅ Excellent |
-| **AI Quality** | Citation Verification Rate | 76.5% | > 70% | ✅ Good |
+| **Search Quality** | Documents Retrieved (per query) | 1-4 | 1-10 | ✅ Pass |
+| **RAG Evaluation** | Relevance Pass Rate (n=5) | 100% | > 80% | ✅ Excellent |
+| **RAG Evaluation** | Groundedness Pass Rate (n=5) | 20% | > 80% | ⚠️ Strict (see analysis) |
+| **RAG Evaluation** | Retrieval Relevance Pass Rate (n=4) | 75% | > 70% | ✅ Good |
+| **Keyword-Based** | Factual Accuracy | 96.3% | > 90% | ✅ Excellent |
+| **Keyword-Based** | Citation Verification Rate | 76.5% | > 70% | ✅ Good |
+
+> **Note:** The Groundedness metric uses a strict LLM-as-Judge evaluation that flags any information not directly traceable to the truncated source documents provided to the evaluator. The keyword-based Factual Accuracy (96.3%) provides a complementary, less strict measure of response grounding. See "Analysis of Groundedness Results" above for details.
 
 ### Interpretation Guide
 

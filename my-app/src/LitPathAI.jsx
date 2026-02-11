@@ -214,6 +214,28 @@ const LitPathAI = () => {
         }
     }, [userId, isGuest]);
 
+    // Auto-save conversation to history after search completes (overview done)
+    useEffect(() => {
+        // Only auto-save when:
+        // - User has searched in this session
+        // - There are conversation results
+        // - Not loaded from history (original data already saved)
+        // - The last conversation item has finished loading its overview
+        const lastItem = conversationHistory[conversationHistory.length - 1];
+        if (
+            hasSearchedInSession &&
+            conversationHistory.length > 0 &&
+            !isLoadedFromHistory &&
+            lastItem &&
+            lastItem.isLoadingSummary === false
+        ) {
+            const timer = setTimeout(() => {
+                saveCurrentSessionToHistory();
+            }, 1500);
+            return () => clearTimeout(timer);
+        }
+    }, [conversationHistory, hasSearchedInSession, isLoadedFromHistory]);
+
     // Load bookmarks from localStorage (for guests only)
     const loadBookmarksFromLocalStorage = () => {
         try {
@@ -685,6 +707,12 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
         setSearchQuery('');
         setHasSearchedInSession(true);
         
+        // If user does a follow-up in a loaded history session, mark it as modified
+        // Keep the SAME session ID so auto-save updates the existing entry (upsert)
+        if (isLoadedFromHistory) {
+            setIsLoadedFromHistory(false);
+        }
+        
         if (!currentSessionId) {
             setCurrentSessionId(generateSessionId());
         }
@@ -910,8 +938,8 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
         setGeneratedCitation(citation);
     };
     const handleNewChat = async () => {
-        // Save current session to history ONLY if user has searched AND it's not loaded from history
-        if (hasSearchedInSession && searchResults && !isLoadedFromHistory) {
+        // Save current session to history (upsert - safe to call even if already auto-saved)
+        if (hasSearchedInSession && searchResults) {
             await saveCurrentSessionToHistory();
             // Refresh research history from Django for authenticated users
             if (!isGuest) {
@@ -1204,13 +1232,16 @@ return (
                                 )}
                                 
                                 {isGuest && (
-                                    <Link
-                                        to="/"
-                                        className="block px-4 py-2 text-sm text-blue-600 hover:bg-gray-100"
-                                        onClick={() => setShowUserMenu(false)}
+                                    <button
+                                        onClick={async () => {
+                                            setShowUserMenu(false);
+                                            await logout();
+                                            navigate('/');
+                                        }}
+                                        className="w-full text-left block px-4 py-2 text-sm text-blue-600 hover:bg-gray-100"
                                     >
                                         Login
-                                    </Link>
+                                    </button>
                                 )}
                                 
                                 <button

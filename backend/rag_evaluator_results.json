@@ -1,0 +1,291 @@
+{
+  "test_date": "2026-02-11T18:20:15.052855",
+  "test_cases": 10,
+  "summary": {
+    "total": 10,
+    "evaluated": 10,
+    "relevance_pass": 5,
+    "groundedness_pass": 2,
+    "retrieval_relevance_pass": 4,
+    "overall_pass": 1,
+    "errors": 0
+  },
+  "pass_rates": {
+    "relevance": 50.0,
+    "groundedness": 20.0,
+    "retrieval_relevance": 40.0,
+    "overall": 10.0
+  },
+  "results": [
+    {
+      "test_id": 1,
+      "query": "Ano-ano ang mga epekto ng mga plant growth regulator sa sili?",
+      "category": "Agriculture - Plant Science",
+      "language": "Filipino",
+      "status": "evaluated",
+      "documents_found": 1,
+      "chunks_analyzed": 1,
+      "search_time_s": 331.25,
+      "generation_time_s": 4.11,
+      "evaluation_time_s": 5.57,
+      "overview_excerpt": "Batay sa pag-aaral ni Benipayo (2022), ang paggamit ng mga plant growth regulator (PGR) tulad ng brassinolide (BL), ethephon (ETP), at paclobutrazol (PBZ) ay naglalayong magbigay ng toleransya, magtaguyod ng paglaki, at mapabuti ang kalidad ng bunga ng sili (Capsicum frutescens) sa ilalim ng kondisy...",
+      "relevance": {
+        "score": true,
+        "explanation": "The student answer directly addresses the question by identifying specific plant growth regulators (brassinolide, ethephon, paclobutrazol) and explaining their effects on chili plants, particularly in the context of waterlogging stress. It details how these regulators aim to provide tolerance, promote growth, and improve fruit quality, and mentions observed morphological changes like plant height, leaf weight, root weight, and fruit yield. The answer is concise and relevant to the question."
+      },
+      "groundedness": {
+        "score": false,
+        "explanation": "The student answer accurately states that Benipayo (2022) studied the use of plant growth regulators (brassinolide, ethephon, and paclobutrazol) to induce tolerance, promote growth, and enhance fruiting quality of chili pepper in waterlogged conditions, which is directly from the abstract. It also correctly identifies that these interventions were used to help the plant cope with environmental limitations due to intense rain and excess water. However, the second paragraph of the student answer, which discusses the effects of PGR application on morphological characteristics, defense mechanisms, and specific plant parameters (plant height, leaf weight, root weight, and fruit) in the Pinatubo variety, is not explicitly stated in the provided abstract. The abstract only mentions that 'The preliminary screening showed that the hybrid Pinatubo variety posed some level of tolerance to prolonged periods of waterlogging as compared to the Taiwan variety,' but it does not detail the specific morphological effects, defense mechanisms, or the impact of PGRs on those parameters for the Pinatubo variety. Therefore, this part of the answer contains information not directly supported by the given FACTS."
+      },
+      "retrieval_relevance": {
+        "score": true,
+        "explanation": "The question asks about the effects of plant growth regulators on chili peppers ('sili' in Filipino). The retrieved document's title explicitly mentions 'Use of Plant Growth Regulators to Induce Tolerance, Promote Growth, and Enhance Fruiting Quality of Chili Pepper'. The abstract further details the use of specific plant growth regulators (brassinolide, ethephon, and paclobutrazol) in an experiment related to chili pepper. This directly aligns with the question's topic."
+      },
+      "overall_pass": false,
+      "overall_score": 0.6666666666666666
+    },
+    {
+      "test_id": 2,
+      "query": "Paano nakakaapekto ang salinity stress sa mga genotype ng palay?",
+      "category": "Agriculture - Crop Science",
+      "language": "Filipino",
+      "status": "evaluated",
+      "documents_found": 2,
+      "chunks_analyzed": 2,
+      "search_time_s": 388.54,
+      "generation_time_s": 7.48,
+      "evaluation_time_s": 5.7,
+      "overview_excerpt": "Batay sa mga ibinigay na sanggunian, ang salinity stress ay may malaking epekto sa pisyolohiya at paglaki ng mga genotype ng palay. Ang stress na dulot ng asin ay nakakaapekto sa paglaki ng punla (seedling growth) at sa mga yield component o ang mga bahagi ng palay na nagtatakda ng dami ng ani. Ang ...",
+      "relevance": {
+        "score": true,
+        "explanation": "The student's answer directly addresses how salinity stress affects rice genotypes by detailing its impact on physiology, growth (seedling growth, yield components), molecular and hormonal mechanisms (ABA, Salto! QTL), and the varying responses across different genotypes, especially during the reproductive stage. It also explains the importance of understanding these effects for improving rice varieties."
+      },
+      "groundedness": {
+        "score": false,
+        "explanation": "The student answer accurately states that salinity stress significantly affects the physiology and growth of rice genotypes, impacting seedling growth and yield components, which are evaluated using various agronomic parameters. This is supported by SINGH and FLOWERS (2010), ZENG, SHANNON, and GRIEVE (2002), and SUDHARANI, REDDY, and JAYALAKSHMI (2012). The answer also correctly mentions the role of abscisic acid (ABA) in integrating plant responses to salt and drought stresses, as per ZHANG, JIA, YANG, and ISMAIL (2006). However, the student answer mentions 'Salto! quantitative trait locus (QTL)' as a genetic component important for salt tolerance. While SUDHARANI, REDDY, and JAYALAKSHMI (2012) discuss 'Genetic Components Of Salinity Tolerance In Rice (Oryza Sativa L.)', the specific term 'Salto! QTL' is not present in the provided source documents. This constitutes hallucinated information. The final paragraph discusses varying responses of rice genotypes to stress, especially in the reproductive stage, and the importance of understanding physiological and molecular aspects to improve rice varieties for abiotic stress tolerance. While the general idea of improving varieties for abiotic stress is implied by the research, the specific mention of 'reproductive stage' in the context of varying responses to salinity stress is not explicitly detailed in the provided snippets. However, the primary issue is the 'Salto! QTL'."
+      },
+      "retrieval_relevance": {
+        "score": true,
+        "explanation": "The question asks about the effects of salinity stress on rice genotypes. Several facts directly mention 'salinity', 'rice', and 'genotypes'. For example, 'The physiology and molecular biology of the effects of salinity on rice' and 'Evaluation of salt tolerance in rice genotypes by multiple agronomic parameters' are highly relevant. Even though some facts discuss other topics like flooding, the presence of multiple relevant facts makes the overall set relevant."
+      },
+      "overall_pass": false,
+      "overall_score": 0.6666666666666666
+    },
+    {
+      "test_id": 3,
+      "query": "Ano ang sustansyang taglay ng mga butil na tila-kanin na gawa mula sa mais?",
+      "category": "Food Science - Nutrition",
+      "language": "Filipino",
+      "status": "evaluated",
+      "documents_found": 4,
+      "chunks_analyzed": 4,
+      "search_time_s": 316.31,
+      "generation_time_s": 18.84,
+      "evaluation_time_s": 5.04,
+      "overview_excerpt": "Ang mga butil na tila-kanin (rice-like grains) na gawa mula sa mais ay nagtataglay ng iba't ibang sustansya tulad ng protina, taba, at mga mineral. Ayon sa pagsusuri sa kumbinasyon ng IPB variety 6 at Lagkitan na mais, ang mga butil na ito ay naglalaman ng crude protein, crude fat, zinc, at iron. Ga...",
+      "relevance": {
+        "score": true,
+        "explanation": "The student answer directly addresses the question by listing the nutrients present in corn-based rice-like grains. It provides specific examples like protein, fat, zinc, iron, and carbohydrates. It also discusses the impact of cooking on these nutrients and compares the glycemic index to regular rice, which, while detailed, still relates to the nutritional profile."
+      },
+      "groundedness": {
+        "score": false,
+        "explanation": "The student answer states that 'ang mga butil na tila-kanin mula sa mais ay mayroong intermediate glycemic index (GI) na nasa 67.03%, na mas mababa kumpara sa karaniwang kanin na may GI na higit sa 70%.' The provided facts mention 'measure the glycemic index of rice flakes' but do not provide any specific GI values for corn-based rice-like grains or a comparison to regular rice. This information is not present in the source documents."
+      },
+      "retrieval_relevance": {
+        "score": true,
+        "explanation": "The question asks about the nutrients present in rice-like grains made from corn. The retrieved documents contain several direct mentions of 'nutrient content', 'proximate composition' (which lists specific nutrients like protein, fat, fiber, ash), 'mineral content' (iron, zinc, calcium), 'beta-carotene contents', and 'carbohydrate profile' of 'rice-like grains from corn'. Specifically, the first document's title and abstract directly mention 'Nutrient and Phytochemical Contents, Carbohydrate Profile' of 'Rice-Like Grains from Corn'. The second document lists specific nutrients measured in 'raw rice grain and its rice flakes'. The third document discusses 'nutritional content' and 'mineral content' of 'sago:corn combination rice-like grains'. The fourth document mentions 'Carbohydrate (Nitrogen Free Extract)' and 'ash' content in relation to corn. These directly address the 'sustansya' (nutrients) and 'butil na tila-kanin na gawa mula sa mais' (rice-like grains made from corn) aspects of the question."
+      },
+      "overall_pass": false,
+      "overall_score": 0.6666666666666666
+    },
+    {
+      "test_id": 4,
+      "query": "Ano ang mga benefits ng agroforestry systems sa Pilipinas?",
+      "category": "Agriculture - Forestry",
+      "language": "Filipino",
+      "status": "evaluated",
+      "documents_found": 2,
+      "chunks_analyzed": 2,
+      "search_time_s": 274.72,
+      "generation_time_s": 17.65,
+      "evaluation_time_s": 5.22,
+      "overview_excerpt": "Batay sa mga nakalap na dokumento, ang agroforestry sa Pilipinas ay nagsisilbing mahalagang kompromiso sa pagitan ng produksyong agrikultural at pagbibigay ng mga benepisyong panggubat. Ang mga sistemang ito, partikular ang Conservation Farming Villages (CFV) program, ay nakatutulong sa pagkamit ng ...",
+      "relevance": {
+        "score": true,
+        "explanation": "The student answer directly addresses the question by enumerating the benefits of agroforestry systems in the Philippines. It covers economic, ecological, and food security benefits, which are all relevant to the question asked. The answer is also concise and well-structured."
+      },
+      "groundedness": {
+        "score": true,
+        "explanation": "The student answer accurately reflects the information provided in the source documents. It correctly identifies agroforestry as a compromise in the Philippines, its role in food security and economic growth, and its use in sustainable forest management and rehabilitation. The economic benefits of trees and intercrops, as well as the reduction in labor and amelioration costs, are also correctly stated. Finally, the ecological benefits such as nutrient pumping, reduction of weeds and erosion, and enhanced carbon storage are all directly supported by the facts. The student answer does not contain any information outside the scope of the provided facts."
+      },
+      "retrieval_relevance": {
+        "score": true,
+        "explanation": "The question asks about the benefits of agroforestry systems in the Philippines. The retrieved documents directly address this by mentioning that agroforestry can 'help end hunger, achieve food security, improve nutrition, and promote sustainable agriculture and inclusive economic growth' in the Philippines. It also states that agroforestry is 'an acceptable compromise between agricultural production and the provision of forest-related benefits'. Furthermore, it details benefits like 'nutrient pumping', 'reducing weeds and erosion', 'reducing labor and amelioration costs', 'enhancing carbon storage', and providing 'long term economic benefits' from rubber and fruit-bearing trees, as well as early economic returns from intercropped agricultural crops. These points directly answer the question about the benefits."
+      },
+      "overall_pass": true,
+      "overall_score": 1.0
+    },
+    {
+      "test_id": 5,
+      "query": "Paano nakaka-apekto ang nano zinc oxide sa yield at quality ng kamatis?",
+      "category": "Agriculture - Nanotechnology",
+      "language": "Filipino",
+      "status": "evaluated",
+      "documents_found": 1,
+      "chunks_analyzed": 1,
+      "search_time_s": 344.22,
+      "generation_time_s": 14.59,
+      "evaluation_time_s": 4.21,
+      "overview_excerpt": "Batay sa pananaliksik ni Ybañez (2018), ang paggamit ng synthesized nano zinc oxide (SNZ) bilang foliar fertilizer ay nagpapakita ng positibong epekto sa paglaki at produksyon ng kamatis (var ‘Marimax’). Ang pag-aaral ay nagpapatunay na ang paglalagay ng SNZ na may kasamang Boric acid (SNZ+B) ay nag...",
+      "relevance": {
+        "score": true,
+        "explanation": "The student answer directly addresses how nano zinc oxide affects the yield and quality of tomatoes. It provides specific details on how it increases plant height, cluster count, SPAD units, leaf, flower, and fruit count, fruit set percentage, dry matter yield, and marketable yield. It also explains its impact on nutrient uptake (Zn and B) and overall postharvest quality, attributing these improvements to the properties of nano ZnO. The answer is concise and directly answers the question."
+      },
+      "groundedness": {
+        "score": false,
+        "explanation": "The student answer contains information that is not present in the provided FACTS. Specifically, the details about 'positibong epekto sa paglaki at produksyon ng kamatis', 'paglalagay ng SNZ na may kasamang Boric acid (SNZ+B)', 'pagtaas ng taas ng halaman, bilang ng mga kumpol (clusters) bawat halaman, SPAD units, at bilang ng mga dahon, bulaklak, at prutas bawat halaman', 'pagpapataas din sa porsyento ng fruit set, dry matter yield, at marketable yield ng kamatis', 'nakakaapekto rin sa nutrient uptake at pangkalahatang kalidad ng ani', and 'mas mataas na Zn at B uptake sa mga halaman' are not found in the given abstract. The abstract only states that 'The performance of SNZ as foliar fertilizer was tested on pot-grown tomato (var ‘Marimax’), and compared with bulk-size ZnO (BZ), commercial nano ZnO (CNZ), and granu' but does not elaborate on the specific effects or comparisons mentioned by the student."
+      },
+      "retrieval_relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "overall_pass": false,
+      "overall_score": 0.3333333333333333
+    },
+    {
+      "test_id": 6,
+      "query": "Ano ang mga ecosystem services ng mga rubber plantation?",
+      "category": "Environmental Science",
+      "language": "Filipino",
+      "status": "evaluated",
+      "documents_found": 1,
+      "chunks_analyzed": 1,
+      "search_time_s": 276.67,
+      "generation_time_s": 4.63,
+      "evaluation_time_s": 1.62,
+      "overview_excerpt": "Batay sa ibinigay na dokumento, ang mga rubber plantation sa Mount Makiling Forest Reserve ay nagpapakita ng mga potensyal na ecosystem services na maaaring mapalakas kapag ang mga denuded upland areas ay nataniman ng mga puno ng rubber. Ang pag-aaral na ito ay nagbibigay ng mga halimbawa kung paano...",
+      "relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "groundedness": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "retrieval_relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "overall_pass": false,
+      "overall_score": 0.0
+    },
+    {
+      "test_id": 7,
+      "query": "What factors affect consumer acceptability of brown rice?",
+      "category": "Food Science - Consumer Studies",
+      "language": "English",
+      "status": "evaluated",
+      "documents_found": 1,
+      "chunks_analyzed": 1,
+      "search_time_s": 272.17,
+      "generation_time_s": 5.12,
+      "evaluation_time_s": 1.53,
+      "overview_excerpt": "Based on the study conducted in Caloocan City, the acceptability of brown rice is significantly influenced by sensory attributes and economic considerations. Specifically, the odds of acceptability are 11 times higher if a consumer likes the color and appearance of the rice and 20 times higher if th...",
+      "relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "groundedness": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "retrieval_relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "overall_pass": false,
+      "overall_score": 0.0
+    },
+    {
+      "test_id": 8,
+      "query": "What is the impact of deforestation on Philippine forests?",
+      "category": "Environmental Science - Forestry",
+      "language": "English",
+      "status": "evaluated",
+      "documents_found": 1,
+      "chunks_analyzed": 1,
+      "search_time_s": 308.72,
+      "generation_time_s": 20.03,
+      "evaluation_time_s": 2.93,
+      "overview_excerpt": "The available sources do not directly address your specific question about the environmental or socio-economic impacts of deforestation on Philippine forests. Instead, the provided text focuses on the historical trends of forest cover loss and the categorization of the drivers that cause deforestati...",
+      "relevance": {
+        "score": false,
+        "explanation": "The student answer explicitly states that the provided sources do not directly address the specific question about the *impact* of deforestation. While it discusses the *causes* and *historical trends* of deforestation in the Philippines, it clearly indicates that the *impacts* are not covered. Therefore, it does not answer the question asked."
+      },
+      "groundedness": {
+        "score": true,
+        "explanation": "The student correctly identifies that the provided facts do not directly address the environmental or socio-economic impacts of deforestation. They accurately summarize the historical trends of forest cover loss and the categorization of deforestation drivers (proximate and underlying causes) as presented in the source documents. The student also correctly lists examples of proximate causes (infrastructure extension, agricultural expansion, wood extraction, biophysical factors like typhoons) and underlying causes (demographic, economic, cultural, policy-institutional factors, corruption, distribution of power). The concluding paragraph correctly suggests refining the query for specific impacts, which is a reasonable deduction given the scope of the provided facts."
+      },
+      "retrieval_relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "overall_pass": false,
+      "overall_score": 0.3333333333333333
+    },
+    {
+      "test_id": 9,
+      "query": "How does phytoremediation help with soil contamination?",
+      "category": "Environmental Science - Soil",
+      "language": "English",
+      "status": "evaluated",
+      "documents_found": 1,
+      "chunks_analyzed": 1,
+      "search_time_s": 330.35,
+      "generation_time_s": 4.1,
+      "evaluation_time_s": 1.13,
+      "overview_excerpt": "Phytoremediation, specifically through the use of vetiver grass, assists in managing soil contamination by acting as a biological filter and stabilizer. Vetiver plays a significant role in the retention and decontamination of soil pollutants, which prevents these substances from accumulating in the ...",
+      "relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "groundedness": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "retrieval_relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "overall_pass": false,
+      "overall_score": 0.0
+    },
+    {
+      "test_id": 10,
+      "query": "What are the genetic diversity methods used for Philippine rice breeding?",
+      "category": "Agriculture - Genetics",
+      "language": "English",
+      "status": "evaluated",
+      "documents_found": 2,
+      "chunks_analyzed": 2,
+      "search_time_s": 381.5,
+      "generation_time_s": 17.37,
+      "evaluation_time_s": 1.55,
+      "overview_excerpt": "Genetic diversity in Philippine rice breeding is assessed through both agronomic and molecular methods to identify heterotic groups and evaluate germplasm. One primary method involves the use of half-diallel crossing among elite inbred lines to determine genetic distance values and establish heterot...",
+      "relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "groundedness": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "retrieval_relevance": {
+        "score": false,
+        "explanation": "Unable to evaluate"
+      },
+      "overall_pass": false,
+      "overall_score": 0.0
+    }
+  ]
+}

@@ -442,11 +442,18 @@ class RAGService:
             try:
                 client = genai.Client(api_key=self.api_key)
                 rewrite_prompt = (
-                    f"Rewrite the following academic search query to be more clear, specific, and in standard English. "
-                    f"If the query is in Tagalog, Taglish, Cebuano, or any Philippine language or dialect, translate and clarify it for a research database search. "
-                    f"Correct minor typographical errors or spelling mistakes in the query, no matter the language. "
-                    f"If the query is already good and understandable in English, do not rewrite it and just return it as is. "
-                    f"Do not answer the question, just rewrite it.\n\nQuery: {question}\n\nRewritten query:"
+                    "You are an academic search query rewriter.\n\n"
+                    "Task:\n"
+                    "- Rewrite the user's query to make it clear, specific, and suitable for an academic research database.\n"
+                    "- Preserve the original meaning and intent exactly.\n"
+                    "- Do NOT add new information or assumptions.\n"
+                    "- Correct typographical or spelling errors in any language.\n"
+                    "- If the query is in Tagalog, Taglish, Cebuano, or any Philippine language or dialect, translate it into clear standard English.\n"
+                    "- If the query is already clear, return it unchanged.\n"
+                    "- Do NOT answer the question.\n"
+                    "- Output only the final rewritten query with no additional explanation.\n\n"
+                    f"User Query: {question}\n\n"
+                    "Rewritten Query:"
                 )
                 print(f"[RAG-DEBUG] Request ID {request_id}: Sending query rewrite prompt to LLM.")
                 response = client.models.generate_content(
@@ -525,20 +532,7 @@ class RAGService:
                     except (ValueError, TypeError):
                         pass  # Include documents with invalid/unknown years
                 
-                # Apply subject filter (OR logic - match any)
-                if subjects and len(subjects) > 0:
-                    subjects_str = meta.get("subjects", "")
-                    doc_subjects = [s.strip() for s in subjects_str.split(",")]
-                    match_found = False
-                    for requested_subj in subjects:
-                        for doc_subj in doc_subjects:
-                            if requested_subj.lower() == doc_subj.lower():
-                                match_found = True
-                                break
-                        if match_found:
-                            break
-                    if not match_found:
-                        continue
+                # Subject filter removed - causes false negatives with auto-extraction
                 candidate_chunks.append({
                     "chunk": results["documents"][0][i],
                     "meta": meta,
@@ -559,10 +553,16 @@ class RAGService:
         if rerank_candidates:
             try:
                 debug_prompt = (
-                    "You are a document selector for academic search. "
-                    "Given a user query and a list of document chunks, select the most relevant chunks (up to 10) that best answer the query. "
-                    "Return a JSON list of the indices (starting from 1) of the selected chunks, in order of relevance. "
-                    "Do not answer the query or summarize, just return the list."
+                    "You are a document chunk selector for an academic retrieval system.\n\n"
+                    "Task:\n"
+                    "- Given a user query and numbered document chunks, select up to 10 chunks that are directly and explicitly relevant to answering the query.\n"
+                    "- Only select chunks that contain clear information related to the query.\n"
+                    "- Do NOT select loosely related or partially matching chunks.\n"
+                    "- Base your decision strictly on the provided chunks.\n"
+                    "- Do NOT use outside knowledge.\n"
+                    "- If no chunks are relevant, return [].\n"
+                    "- Return ONLY a JSON array of indices (starting from 1), in order of relevance.\n"
+                    "- Do NOT include any explanation or additional text."
                 )
                 user_content = (
                     f"Query: {rewritten_question}\n\n" +
@@ -851,39 +851,53 @@ class RAGService:
             missing = ', '.join(list(relevance_info.get('missing_keywords', set()))[:5])
             matched = ', '.join(list(relevance_info.get('matched_keywords', set()))[:5])
             relevance_warning = f"""
-RELEVANCE NOTE: The sources may not fully address the user's question.
-- Keywords from query found in sources: {matched if matched else 'few/none'}
-- Keywords from query NOT found in sources: {missing if missing else 'none'}
-- If sources don't contain relevant information, clearly state this limitation.
-"""
+            RELEVANCE NOTE: The sources may not fully address the user's question.
+            - Keywords from query found in sources: {matched if matched else 'few/none'}
+            - Keywords from query NOT found in sources: {missing if missing else 'none'}
+            - If sources don't contain relevant information, clearly state this limitation.
+            """
         
         # Construct the full prompt
         prompt = f"""You are an academic research assistant analyzing thesis documents.
 
-AVAILABLE SOURCES:
-{chr(10).join(doc_infos)}
+        AVAILABLE SOURCES:
+        {chr(10).join(doc_infos)}
 
-CONTEXT FROM SOURCES:
-{chunk_context}{history_context}{relevance_warning}
-USER QUESTION: {question}
+        CONTEXT FROM SOURCES:
+        {chunk_context}{history_context}{relevance_warning}
+        USER QUESTION: {question}
 
-INSTRUCTIONS:
-- First, assess if the provided source content directly addresses the user's question
-- If sources DO contain relevant information:
-  * Synthesize findings from the provided sources to answer the question
-  * Write 2-4 clear paragraphs (adjust length based on complexity)
-  * Cite sources at the END of each sentence using [1], [2], etc. - NEVER place citations in the middle of a sentence
-  * When citing multiple sources for the same claim, list them separately like [1] [2], not [1, 2]
-  * Only state what the sources explicitly say - do not infer or extrapolate
+        INSTRUCTIONS:
 
-- If sources DO NOT directly answer the question:
-  * Start with: "The available sources do not directly address your specific question about [topic]."
-  * Then explain what topics/themes the sources DO cover that might be related
-  * Suggest how the user might refine their search to find more relevant results
-  * Still cite the sources when mentioning what they contain
-  * Do NOT fabricate information that isn't in the sources
+        1. Carefully evaluate whether the provided source content contains explicit information that answers the user's question.
 
-Answer:"""
+        2. If the sources contain directly relevant information:
+        - Answer strictly using only the provided source content.
+        - Do NOT add outside knowledge.
+        - Do NOT make assumptions or logical leaps beyond what is written.
+        - Combine information across sources only when the connection is explicitly supported.
+        - Write 2–4 clear academic paragraphs (adjust length based on complexity).
+        - End every factual sentence with its citation in this format: [1] or [1] [2].
+        - NEVER place citations in the middle of a sentence.
+        - NEVER use combined citation format like [1, 2].
+
+        3. If the sources do NOT contain sufficient information:
+        - Begin with: "The available sources do not directly address your specific question about [topic]."
+        - Clearly explain what the sources DO discuss.
+        - Suggest how the user might refine their query.
+        - Cite sources when describing their contents.
+        - Do NOT generate information not present in the sources.
+
+        4. If the answer is partially supported:
+        - Clearly distinguish between supported and unsupported parts.
+        - Explicitly state which aspects are not covered in the sources.
+
+        5. Maintain an objective academic tone.
+
+        If you are uncertain whether a claim is supported by the sources, do not include it.
+
+
+        Answer:"""
         
         # Call Gemini API
         client = genai.Client(api_key=self.api_key)
@@ -893,7 +907,7 @@ Answer:"""
         
         try:
             response = client.models.generate_content(
-                model="gemini-2.5-flash-lite",
+                model="gemini-3-flash-preview",
                 contents=prompt,
                 config={
                     "temperature": 0.3,

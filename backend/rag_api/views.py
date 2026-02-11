@@ -258,7 +258,7 @@ class SearchView(APIView):
             search_start = time.time()
             top_chunks, documents, distance_threshold = rag.search(
                 enhanced_question,
-                subjects=subjects if subjects else None,
+                subjects=None,  # Subject filter disabled - causes false-negative 0-doc results
                 year=year,
                 year_start=year_start,
                 year_end=year_end,
@@ -484,11 +484,29 @@ def research_history_view(request):
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     elif request.method == 'POST':
-        serializer = ResearchHistorySerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        session_id = request.data.get('session_id')
+        # Upsert: update existing session or create new one
+        if session_id:
+            obj, created = ResearchHistory.objects.update_or_create(
+                session_id=session_id,
+                defaults={
+                    'user_id': request.data.get('user_id', ''),
+                    'query': request.data.get('query', ''),
+                    'all_queries': request.data.get('all_queries'),
+                    'conversation_data': request.data.get('conversation_data'),
+                    'sources_count': request.data.get('sources_count'),
+                    'conversation_length': request.data.get('conversation_length'),
+                }
+            )
+            serializer = ResearchHistorySerializer(obj)
+            status_code = status.HTTP_200_OK if not created else status.HTTP_201_CREATED
+            return Response(serializer.data, status=status_code)
+        else:
+            serializer = ResearchHistorySerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['DELETE'])
 def research_history_delete_view(request, session_id):

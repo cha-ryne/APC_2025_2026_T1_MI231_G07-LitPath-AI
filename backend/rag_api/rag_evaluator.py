@@ -15,6 +15,7 @@ Date: February 2026
 
 import os
 import json
+import time
 import hashlib
 from typing import Dict, List, Optional, Any, Tuple
 from dataclasses import dataclass, asdict
@@ -68,7 +69,7 @@ class LLMJudge:
     Uses Gemini API to evaluate response quality.
     """
     
-    def __init__(self, api_key: str = None, model: str = "gemini-2.5-flash-lite"):
+    def __init__(self, api_key: str = None, model: str = "gemini-2.5-flash"):
         self.api_key = api_key or os.environ.get("GEMINI_API_KEY")
         self.model = model
         self.client = None
@@ -77,25 +78,35 @@ class LLMJudge:
             self.client = genai.Client(api_key=self.api_key)
     
     def _call_llm(self, prompt: str, max_tokens: int = 512) -> str:
-        """Call the LLM with a prompt"""
+        """Call the LLM with a prompt, with retry logic for rate limits"""
         if not self.client:
             raise ValueError("No API key configured for LLM judge")
         
-        try:
-            response = self.client.models.generate_content(
-                model=self.model,
-                contents=prompt,
-                config={
-                    "temperature": 0.1,  # Low temperature for consistent evaluation
-                    "max_output_tokens": max_tokens,
-                    "top_p": 0.9,
-                    "thinking_config": {"thinking_budget": 0},
-                }
-            )
-            return response.text.strip()
-        except Exception as e:
-            print(f"[RAG-Eval] LLM call failed: {e}")
-            return ""
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model,
+                    contents=prompt,
+                    config={
+                        "temperature": 0.1,  # Low temperature for consistent evaluation
+                        "max_output_tokens": max_tokens,
+                        "top_p": 0.9,
+                        "thinking_config": {"thinking_budget": 0},
+                    }
+                )
+                return response.text.strip()
+            except Exception as e:
+                error_str = str(e).lower()
+                if 'rate' in error_str or '429' in error_str or 'quota' in error_str or 'resource' in error_str:
+                    wait_time = 30 * (attempt + 1)  # 30s, 60s, 90s backoff
+                    print(f"[RAG-Eval] Rate limited (attempt {attempt + 1}/{max_retries}), waiting {wait_time}s...")
+                    time.sleep(wait_time)
+                    continue
+                print(f"[RAG-Eval] LLM call failed: {e}")
+                return ""
+        print(f"[RAG-Eval] LLM call failed after {max_retries} retries")
+        return ""
     
     def _parse_json_response(self, response: str) -> Dict:
         """Parse JSON from LLM response"""
@@ -197,10 +208,10 @@ Respond with a JSON object:
         
         This checks for hallucinations - claims not supported by source documents.
         """
-        # Combine and truncate documents
-        docs_text = "\n\n---\n\n".join(doc[:1000] for doc in retrieved_docs[:5])
-        if len(docs_text) > 4000:
-            docs_text = docs_text[:4000] + "..."
+        # Combine retrieved document chunks (use full chunks for accurate grounding)
+        docs_text = "\n\n---\n\n".join(doc[:3000] for doc in retrieved_docs[:8])
+        if len(docs_text) > 12000:
+            docs_text = docs_text[:12000] + "..."
         
         prompt = f"""You are a teacher grading a quiz. You will be given FACTS (source documents) and a STUDENT ANSWER.
 
@@ -240,10 +251,10 @@ Respond with a JSON object:
         
         This evaluates the quality of the retrieval step.
         """
-        # Combine and truncate documents
-        docs_text = "\n\n---\n\n".join(doc[:800] for doc in retrieved_docs[:5])
-        if len(docs_text) > 3500:
-            docs_text = docs_text[:3500] + "..."
+        # Combine retrieved document chunks for relevance check
+        docs_text = "\n\n---\n\n".join(doc[:2000] for doc in retrieved_docs[:8])
+        if len(docs_text) > 10000:
+            docs_text = docs_text[:10000] + "..."
         
         prompt = f"""You are a teacher grading a quiz. You will be given a QUESTION and a set of FACTS (retrieved documents).
 
