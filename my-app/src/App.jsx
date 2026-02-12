@@ -1,18 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import LitPathAI from './LitPathAI';
-import Login from './Login';
 import AuthPage from './AuthPage';
 import AdminDashboard from './AdminDashboard';
-import FeedbackManager from './FeedbackManager';
-import FeedbackDetail from './FeedbackDetail';
 import FeedbackForm from './FeedbackForm';
+import FeedbackDetail from './FeedbackDetail';   // ✅ keep this – detail page still exists
 import ResetPassword from './ResetPassword';
 
-// Protected Route component - requires authentication (user, staff, or admin)
+// ------------------------------------------------------------
+//  Protected Route
+// ------------------------------------------------------------
 const ProtectedRoute = ({ children, requireStaff = false }) => {
-    const { user, loading, isGuest, isStaff } = useAuth();
+    const { user, loading, isStaff } = useAuth();
 
     if (loading) {
         return (
@@ -25,12 +25,10 @@ const ProtectedRoute = ({ children, requireStaff = false }) => {
         );
     }
 
-    // If no user at all, redirect to auth page
     if (!user) {
         return <Navigate to="/" replace />;
     }
 
-    // If staff access is required, check role
     if (requireStaff && !isStaff()) {
         return <Navigate to="/search" replace />;
     }
@@ -38,7 +36,9 @@ const ProtectedRoute = ({ children, requireStaff = false }) => {
     return children;
 };
 
-// Auth Route - redirect if already authenticated
+// ------------------------------------------------------------
+//  Auth Route – redirect if already logged in
+// ------------------------------------------------------------
 const AuthRoute = ({ children }) => {
     const { user, loading } = useAuth();
 
@@ -53,7 +53,6 @@ const AuthRoute = ({ children }) => {
         );
     }
 
-    // If already logged in, redirect to appropriate page
     if (user) {
         if (user.role === 'admin' || user.role === 'staff') {
             return <Navigate to="/admin/dashboard" replace />;
@@ -64,87 +63,52 @@ const AuthRoute = ({ children }) => {
     return children;
 };
 
-// Main App Content with Routes
+// ------------------------------------------------------------
+//  Redirect from old /admin/feedback (list) to dashboard with state
+// ------------------------------------------------------------
+const RedirectToFeedbackTab = () => {
+    return <Navigate to="/admin/dashboard" replace state={{ activeTab: 'feedback' }} />;
+};
+
+// ------------------------------------------------------------
+//  Main Routes
+// ------------------------------------------------------------
 const AppContent = () => {
     return (
         <Routes>
-            {/* Auth page - landing page with login/register/guest options */}
-            <Route 
-                path="/" 
-                element={
-                    <AuthRoute>
-                        <AuthPage />
-                    </AuthRoute>
-                } 
-            />
-            
-            {/* Legacy login page - redirects to new auth page */}
-            <Route 
-                path="/login" 
-                element={<Navigate to="/" replace />} 
-            />
+            {/* Auth page */}
+            <Route path="/" element={<AuthRoute><AuthPage /></AuthRoute>} />
 
-            {/* Search page - requires authentication (including guest) */}
-            <Route 
-                path="/search" 
-                element={
-                    <ProtectedRoute>
-                        <LitPathAI />
-                    </ProtectedRoute>
-                } 
-            />
+            {/* Legacy login redirect */}
+            <Route path="/login" element={<Navigate to="/" replace />} />
 
-            {/* Admin dashboard - requires staff or admin role */}
-            <Route 
-                path="/admin/dashboard" 
-                element={
-                    <ProtectedRoute requireStaff={true}>
-                        <AdminDashboard />
-                    </ProtectedRoute>
-                } 
-            />
+            {/* Search page – requires auth (including guest) */}
+            <Route path="/search" element={<ProtectedRoute><LitPathAI /></ProtectedRoute>} />
 
-            <Route 
-                path="/admin/feedback" 
-                element={
-                    <ProtectedRoute requireStaff={true}>
-                        <FeedbackManager />
-                    </ProtectedRoute>
-                } 
-            />
+            {/* Admin dashboard – main staff/admin hub */}
+            <Route path="/admin/dashboard" element={<ProtectedRoute requireStaff={true}><AdminDashboard /></ProtectedRoute>} />
 
-            {/* The Detail Page */}
-            <Route 
-                path="/admin/feedback/:id" 
-                element={
-                    <ProtectedRoute requireStaff={true}>
-                        <FeedbackDetail />
-                    </ProtectedRoute>
-                } 
-            />
+            {/* Redirect old /admin/feedback (list) to dashboard with feedback tab active */}
+            <Route path="/admin/feedback" element={<ProtectedRoute requireStaff={true}><RedirectToFeedbackTab /></ProtectedRoute>} />
 
-            {/* Reset password page */}
-            <Route 
-                path="/reset-password/:token" 
-                element={<ResetPassword />} 
-            />
+            {/* ✅ DETAIL PAGE – still exists, back button returns to dashboard */}
+            <Route path="/admin/feedback/:id" element={<ProtectedRoute requireStaff={true}><FeedbackDetail /></ProtectedRoute>} />
 
-            {/* CSM Feedback Form page - requires authentication */}
-            <Route 
-                path="/feedback-form" 
-                element={
-                    <ProtectedRoute>
-                        <FeedbackForm />
-                    </ProtectedRoute>
-                } 
-            />
+            {/* CSM Feedback Form */}
+            <Route path="/feedback-form" element={<ProtectedRoute><FeedbackForm /></ProtectedRoute>} />
 
-            {/* Catch-all redirect */}
+            {/* Reset password */}
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
+
+            {/* Catch-all */}
             <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
     );
 };
 
+// ------------------------------------------------------------
+//  App
+// ------------------------------------------------------------
 function App() {
     return (
         <Router>

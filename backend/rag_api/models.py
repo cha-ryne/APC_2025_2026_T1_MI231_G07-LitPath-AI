@@ -297,10 +297,13 @@ class MaterialView(models.Model):
     def __str__(self):
         return f"View of {self.file} at {self.viewed_at}"
 
-
+# =========================================================================
 class CSMFeedback(models.Model):
-    """Client Satisfaction Measurement (CSM) Feedback - Separate from material ratings"""
-    
+    """
+    Client Satisfaction Measurement (CSM) Feedback
+    This stores the detailed survey form and Admin Triage data.
+    """
+
     # Client Type choices
     CLIENT_TYPE_CHOICES = [
         ('Citizen', 'Citizen'),
@@ -372,7 +375,7 @@ class CSMFeedback(models.Model):
         (4, '4 - Very Good'),
         (5, '5 - Excellent'),
     ]
-    
+
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user_id = models.TextField(db_index=True)
     session_id = models.TextField(db_index=True, blank=True, null=True)
@@ -380,7 +383,7 @@ class CSMFeedback(models.Model):
     # I. Data Privacy & Consent
     consent_given = models.BooleanField(default=False, db_index=True)
     
-    # II. Client Profile (Required fields)
+    # II. Client Profile
     client_type = models.CharField(max_length=50, choices=CLIENT_TYPE_CHOICES)
     date = models.DateField()
     sex = models.CharField(max_length=50, choices=SEX_CHOICES)
@@ -389,21 +392,67 @@ class CSMFeedback(models.Model):
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES)
     
     # III. Feedback & Evaluation
-    # Required: LitPath AI Rating
     litpath_rating = models.IntegerField(choices=RATING_CHOICES, blank=True, null=True)
-    
-    # Optional fields (not required)
     research_interests = models.TextField(blank=True, null=True)
     missing_content = models.TextField(blank=True, null=True)
     message_comment = models.TextField(blank=True, null=True)
     
-    # Metadata
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+
+    
+    # NEW FIELDS: Admin Triage & Management
+    STATUS_CHOICES = [
+        ('Pending', 'Pending'),
+        ('Reviewed', 'Reviewed'),
+        ('Resolved', 'Resolved'),
+    ]
+    
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Pending')
+    
+    # Admin Classification
+    admin_category = models.CharField(max_length=100, blank=True, null=True, 
+        help_text="e.g. Bug, Feature Request, Content Request, Compliment")
+    
+    # Validity Check
+    is_valid = models.BooleanField(null=True, blank=True)
+    validity_remarks = models.TextField(blank=True, null=True)
+    
+    # Feasibility Check
+    is_doable = models.BooleanField(null=True, blank=True)
+    feasibility_remarks = models.TextField(blank=True, null=True)
     
     class Meta:
         db_table = 'csm_feedback'
         ordering = ['-created_at']
-    
-    def __str__(self):
-        return f"CSM Feedback - {self.user_id} ({self.created_at})"
 
+    def __str__(self):
+        return f"{self.user_id} - {self.status}"
+
+# =========================================================================
+class MaterialRating(models.Model):
+    """
+    Dedicated rating for a specific PDF/Material.
+    This feeds the 'Star Rating' shown on search results.
+    """
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user_id = models.CharField(max_length=255, db_index=True) # Link to user
+    file = models.CharField(max_length=500, db_index=True) # Link to the specific PDF/Material
+    
+    # 1 to 5 Star Rating
+    rating = models.IntegerField(choices=[(i, i) for i in range(1, 6)]) 
+    
+    # Is this relevant to their query? (Helpful for tuning the AI)
+    is_relevant = models.BooleanField(default=True)
+    
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'material_ratings'
+        unique_together = ['user_id', 'file'] # One rating per user per file
+        indexes = [
+            models.Index(fields=['file']),
+            models.Index(fields=['rating']),
+        ]
+
+    def __str__(self):
+        return f"{self.file} - {self.rating} Stars"

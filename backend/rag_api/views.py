@@ -9,6 +9,9 @@ import time
 from .models_password_reset import PasswordResetToken
 from django.utils import timezone
 import secrets
+from django.db.models import Count, Avg, Q, Sum
+from django.db.models.functions import TruncMonth
+import dateutil.parser
 from datetime import timedelta
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
@@ -588,6 +591,7 @@ def feedback_detail(request, pk):
         feedback.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
+
     # ============= CSM Feedback Views =============
 
 @api_view(['GET', 'POST'])
@@ -621,10 +625,11 @@ def csm_feedback_view(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'DELETE'])
+@api_view(['GET', 'DELETE', 'PATCH']) # Added PATCH here
 def csm_feedback_detail(request, pk):
     """
     GET: Retrieve single CSM feedback
+    PATCH: Update Admin Triage fields (Status, Remarks, etc.)
     DELETE: Remove CSM feedback
     """
     try:
@@ -636,9 +641,18 @@ def csm_feedback_detail(request, pk):
         serializer = CSMFeedbackSerializer(csm_feedback)
         return Response(serializer.data)
     
+    elif request.method == 'PATCH':
+        # This allows AdminDashboard to update status/remarks
+        serializer = CSMFeedbackSerializer(csm_feedback, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     elif request.method == 'DELETE':
         csm_feedback.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
     
     # ============= Material Views (Most Browsed) =============
 
@@ -1410,3 +1424,142 @@ class RAGEvaluationView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
+# ============= Additional for Analytics =============
+@api_view(['GET'])
+def get_analytics_summary(request):
+    """
+    GET /api/analytics/compact/
+    Returns real data for the Admin Dashboard Overview.
+    """
+    try:
+        # 1. Parse Date Range
+        date_from_str = request.GET.get('from')
+        date_to_str = request.GET.get('to')
+        
+        if not date_from_str or not date_to_str:
+            now = timezone.now()
+            # Default to current year start if no date provided
+            date_from = now.replace(month=1, day=1, hour=0, minute=0, second=0)
+            date_to = now
+        else:
+            date_from = dateutil.parser.parse(date_from_str)
+            date_to = dateutil.parser.parse(date_to_str)
+
+        # 2. Main Metrics (Single Number Stats)
+        
+        # Total Searches in range
+        total_searches = ResearchHistory.objects.filter(
+            created_at__range=[date_from, date_to]
+        ).count()
+
+        # Total Bookmarks in range
+        total_bookmarks = Bookmark.objects.filter(
+            bookmarked_at__range=[date_from, date_to]
+        ).count()
+
+        # Bookmarks Per Week
+        days_diff = (date_to - date_from).days
+        weeks_count = max(1, days_diff / 7)
+        bookmarks_per_week = round(total_bookmarks / weeks_count, 1)
+
+        # Avg Loading Time (Placeholder until tracked)
+        avg_loading_time = 0.0 
+
+        # Total Citations (Placeholder until tracked)
+        total_citations = 0 
+
+        # 3. Chart Data: System Activity (Jan - Dec)
+        target_year = date_from.year
+        
+        searches_by_month = ResearchHistory.objects.filter(
+            created_at__year=target_year
+        ).annotate(month=TruncMonth('created_at')).values('month').annotate(count=Count('id')).order_by('month')
+
+        bookmarks_by_month = Bookmark.objects.filter(
+            bookmarked_at__year=target_year
+        ).annotate(month=TruncMonth('bookmarked_at')).values('month').annotate(count=Count('id')).order_by('month')
+
+        # Format for Frontend
+        months_data = []
+        month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        
+        search_map = {entry['month'].strftime('%b'): entry['count'] for entry in searches_by_month}
+        bookmark_map = {entry['month'].strftime('%b'): entry['count'] for entry in bookmarks_by_month}
+
+        for m_name in month_names:
+            months_data.append({
+                "month": m_name,
+                "searches": search_map.get(m_name, 0),
+                "bookmarks": bookmark_map.get(m_name, 0)
+            })
+
+        # 4. Top Lists
+        
+        # Top 5 Search Queries
+        top_queries_qs = ResearchHistory.objects.filter(
+            created_at__range=[date_from, date_to]
+        ).values('query').annotate(count=Count('query')).order_by('-count')[:5]
+        
+        top_queries = [{"query": item['query'], "count": item['count']} for item in top_queries_qs]
+
+        # Top 5 Most Viewed Materials
+        most_viewed_qs = MaterialView.objects.filter(
+            viewed_at__range=[date_from, date_to]
+        ).values('title', 'author', 'year').annotate(views=Count('id')).order_by('-views')[:5]
+        
+        most_viewed = [
+            {
+                "title": item['title'] or "Unknown", 
+                "author": item['author'] or "Unknown", 
+                "year": item['year'] or "N/A", 
+                "views": item['views']
+            } 
+            for item in most_viewed_qs
+        ]
+
+        # 5. Unanswered Questions (Critical) - UPDATED TO USE ResearchHistory
+        # Logic: Queries where the system found 0 sources (sources_count=0)
+        failed_queries_qs = ResearchHistory.objects.filter(
+            created_at__range=[date_from, date_to],
+            sources_count=0  # <--- This uses your actual model field!
+        ).order_by('-created_at')[:8]
+
+        failed_queries = [
+            {
+                "query": q.query, 
+                "date": q.created_at.strftime("%Y-%m-%d"), 
+                "reason": "0 results found by AI" 
+            }
+            for q in failed_queries_qs
+        ]
+
+        # Also get Critical Feedback for the "Feedback Manager" list preview if needed
+        critical_feedback_qs = CSMFeedback.objects.filter(
+            created_at__range=[date_from, date_to],
+            litpath_rating__lte=2 # Rating of 1 or 2
+        ).order_by('-created_at')[:5]
+
+        critical_feedback = [
+            {"query": f.category, "date": f.created_at.strftime("%Y-%m-%d"), "reason": f.message_comment or "Low Rating"}
+            for f in critical_feedback_qs
+        ]
+
+        return Response({
+            "success": True,
+            "data": {
+                "topSearchQueries": top_queries,
+                "avgResponseTime": avg_loading_time,
+                "failedQueries": failed_queries,  # Now populates "Unanswered Questions"
+                "totalBookmarks": total_bookmarks,
+                "bookmarksPerWeek": bookmarks_per_week,
+                "totalCitations": total_citations,
+                "mostViewedMaterials": most_viewed,
+                "monthlyActivity": months_data,
+                "totalSearches": total_searches,
+                "criticalFeedback": critical_feedback
+            }
+        })
+
+    except Exception as e:
+        print("Analytics Error:", str(e))
+        return Response({"success": False, "error": str(e)}, status=500)

@@ -8,6 +8,7 @@ import dostLogo from "./components/images/dost-logo.png";
 import { Quote } from "lucide-react";
 import { Bookmark } from "lucide-react";
 import { Copy } from 'lucide-react';
+import CSMModal from './components/CSMModal';
 
 
 const API_BASE_URL = 'http://localhost:8000/api';
@@ -73,11 +74,11 @@ const LitPathAI = () => {
     const [searchBarFocused, setSearchBarFocused] = useState(false);
     
     // CSM Feedback Popup State
-    const [showCSMPopup, setShowCSMPopup] = useState(false);
+    const [showCSMModal, setShowCSMModal] = useState(false);
     const [lastQueryTime, setLastQueryTime] = useState(null);
     
     // Check if CSM feedback should be shown after query
-    const shouldShowCSMPopup = () => {
+    const shouldShowCSMModal = () => {
         // Check if user has already submitted feedback recently (within 24 hours)
         const submittedAt = localStorage.getItem('csm_feedback_submitted_at');
         if (submittedAt) {
@@ -622,154 +623,167 @@ const LitPathAI = () => {
             setBackendStatus({ status: 'error', message: 'Cannot connect to backend' });
         }
     };
+
 const handleSearch = async (query = searchQuery, forceNew = false) => {
-    if (!query.trim()) {
-        setError("Please enter a research question.");
-        return;
-    }
-    
-    if (!backendStatus || backendStatus.status === 'error') {
-        setError("Backend service is not available. Please check if the server is running.");
-        return;
-    }
-    
-    setLoading(true);
-    setError(null);
-    
-    if (!isFollowUpSearch && !forceNew) {
-        setSearchResults(null);
-        setSelectedSource(null);
-    }
-    
-    try {
-        const filters = {};
-
-        const searchQueryText = forceNew ? `${query} [v${Date.now()}]` : query;
-
-        const requestBody = {
-            question: searchQueryText,
-            filters: Object.keys(filters).length > 0 ? filters : undefined,
-            conversation_history: conversationHistory.slice(-3).map(item => ({
-                query: item.query,
-                overview: item.overview
-            })),
-            overview_only: false  // First request: get documents only
-        };
-        
-        if (forceNew) {
-            requestBody.regenerate = true;
-            requestBody.timestamp = Date.now();
-            requestBody.random_seed = Math.random();
-            requestBody.conversation_history = [];
+        // 1. INPUT VALIDATION
+        if (!query.trim()) {
+            setError("Please enter a research question.");
+            return;
         }
-
-        // STEP 1: Get documents immediately
-        const response = await fetch(`${API_BASE_URL}/search`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(requestBody),
-        });
-
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+        if (!backendStatus || backendStatus.status === 'error') {
+            setError("Backend service is not available. Please check if the server is running.");
+            return;
         }
         
-        const data = await response.json();
-        const { documents, related_questions, suggestions } = data;
-
-        // Format documents
-        const formattedSources = documents.map((doc, index) => ({
-            id: Date.now() + index,
-            title: doc.title || '[Unknown Title]',
-            author: doc.author || '[Unknown Author]',
-            year: doc.publication_year || '[Unknown Year]',
-            abstract: doc.abstract || 'Abstract not available.',
-            fullTextPath: doc.file || '',
-            file: doc.file || '',
-            degree: doc.degree || 'Thesis',
-            subjects: doc.subjects || ['Research'],
-            school: doc.university || '[Unknown University]',
-        }));
-
-        // Show sources immediately with loading state for overview
-        const initialResult = {
-            query: query,
-            overview: 'Generating overview...',
-            sources: formattedSources,
-            relatedQuestions: related_questions || [],
-            isLoadingSummary: true,
-        };
-
-        setConversationHistory(prev => [...prev, initialResult]);
-        setSearchResults(initialResult);
-        setIsFollowUpSearch(true);
-        setSearchQuery('');
-        setHasSearchedInSession(true);
+        // 2. SETUP STATE
+        setLoading(true);
+        setError(null);
         
-        // If user does a follow-up in a loaded history session, mark it as modified
-        // Keep the SAME session ID so auto-save updates the existing entry (upsert)
-        if (isLoadedFromHistory) {
-            setIsLoadedFromHistory(false);
+        // Clear previous results if starting a new search
+        if (!isFollowUpSearch && !forceNew) {
+            setSearchResults(null);
+            setSelectedSource(null);
         }
         
-        if (!currentSessionId) {
-            setCurrentSessionId(generateSessionId());
-        }
+        try {
+            // Prepare unique query string and session ID
+            const searchQueryText = forceNew ? `${query} [v${Date.now()}]` : query;
+            const activeSessionId = currentSessionId || generateSessionId();
+            if (!currentSessionId) setCurrentSessionId(activeSessionId);
 
-        // Turn off main loading to show sources
-        setLoading(false);
-
-        // STEP 2: Request overview generation
-        const overviewResponse = await fetch(`${API_BASE_URL}/search`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                ...requestBody,
-                overview_only: true  // Second request: generate overview
-            }),
-        });
-
-        if (overviewResponse.ok) {
-            const overviewData = await overviewResponse.json();
-            
-            const finalResult = {
-                query: query,
-                overview: overviewData.overview || 'No overview available.',
-                sources: formattedSources,
-                relatedQuestions: related_questions || [],
-                isLoadingSummary: false,
+            // Prepare Request Body
+            const requestBody = {
+                question: searchQueryText,
+                filters: {}, 
+                // Send previous context unless forcing new
+                conversation_history: forceNew ? [] : conversationHistory.slice(-3).map(item => ({
+                    query: item.query,
+                    overview: item.overview
+                })),
+                overview_only: false 
             };
 
-            // Update the last item in conversation history
-            setConversationHistory(prev => {
-                const updated = [...prev];
-                updated[updated.length - 1] = finalResult;
-                return updated;
+            // ---------------------------------------------------------
+            // STEP 3: FETCH DOCUMENTS (The Search)
+            // ---------------------------------------------------------
+            const response = await fetch(`${API_BASE_URL}/search`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(requestBody),
             });
-            setSearchResults(finalResult);
-        }
-        
-        // Check if should show CSM feedback popup (after successful search)
-        // Store session ID for the feedback form
-        if (currentSessionId || sessionStorage.getItem('session_id')) {
-            sessionStorage.setItem('session_id', currentSessionId || generateSessionId());
-        }
-        
-        // Show CSM popup after a delay (2 seconds) if conditions are met
-        setTimeout(() => {
-            if (shouldShowCSMPopup()) {
-                setShowCSMPopup(true);
-                setLastQueryTime(Date.now());
-            }
-        }, 2000);
 
-    } catch (err) {
-        console.error("Search failed:", err);
-        setError(`Search failed: ${err.message}`);
-        setLoading(false);
-    }
-};
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            const { documents, related_questions, suggestions } = data;
+            
+            // Format the sources safely
+            const formattedSources = formatSources(documents);
+            const sourceCount = formattedSources.length;
+
+            // ---------------------------------------------------------
+            // STEP 4: UPDATE UI (Immediate Feedback)
+            // ---------------------------------------------------------
+            const initialResult = {
+                query: query,
+                overview: 'Generating overview...',
+                sources: formattedSources,
+                relatedQuestions: related_questions || [],
+                isLoadingSummary: true,
+            };
+
+            setConversationHistory(prev => [...prev, initialResult]);
+            setSearchResults(initialResult);
+            setIsFollowUpSearch(true);
+            setSearchQuery('');
+            setHasSearchedInSession(true);
+            setLoading(false); // Stop main spinner, show "Generating overview..." in chat
+
+            // ---------------------------------------------------------
+            // STEP 5: SAVE HISTORY TO BACKEND (CRITICAL FOR DASHBOARD)
+            // ---------------------------------------------------------
+            // We save immediately so "Unanswered Questions" (0 sources) appear in Admin Dashboard instantly.
+            // We do NOT rely on 'conversationHistory' state here because it might be stale.
+            try {
+                await fetch(`${API_BASE_URL}/research-history/`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_id: activeSessionId,
+                        user_id: userId,
+                        query: query,
+                        // We send the current state manually to ensure accuracy
+                        all_queries: [...conversationHistory.map(c => c.query), query], 
+                        sources_count: sourceCount, // This powers the "Unanswered Questions" panel
+                        conversation_length: conversationHistory.length + 1
+                    })
+                });
+                // Reload history list in background to keep sidebar in sync
+                if (!isGuest) loadResearchHistoryFromDjango();
+            } catch (histErr) {
+                console.error("Failed to save history log:", histErr);
+            }
+
+            // ---------------------------------------------------------
+            // STEP 6: FETCH OVERVIEW (AI Generation)
+            // ---------------------------------------------------------
+            const overviewResponse = await fetch(`${API_BASE_URL}/search`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ...requestBody, overview_only: true }),
+            });
+
+            if (overviewResponse.ok) {
+                const overviewData = await overviewResponse.json();
+                
+                // Update the specific item in conversation history with the real AI text
+                setConversationHistory(prev => {
+                    const updated = [...prev];
+                    const lastIndex = updated.length - 1;
+                    if (lastIndex >= 0) {
+                        updated[lastIndex] = {
+                            ...updated[lastIndex],
+                            overview: overviewData.overview || 'No overview available.',
+                            isLoadingSummary: false
+                        };
+                    }
+                    return updated;
+                });
+                
+                // Update the current view
+                setSearchResults(prev => ({
+                    ...prev,
+                    overview: overviewData.overview || 'No overview available.',
+                    isLoadingSummary: false
+                }));
+            }
+
+            // ---------------------------------------------------------
+            // STEP 7: TRIGGER CSM FEEDBACK (Delay)
+            // ---------------------------------------------------------
+            if (activeSessionId) sessionStorage.setItem('session_id', activeSessionId);
+            
+            setTimeout(() => {
+                if (shouldShowCSMModal()) {
+                    setShowCSMModal(true);
+                    setLastQueryTime(Date.now());
+                }
+            }, 2000);
+
+        } catch (err) {
+            console.error("Search failed:", err);
+            setError(`Search failed: ${err.message}`);
+            setLoading(false);
+            
+            // Rollback: Remove the failed entry from UI if it was added but failed immediately
+            if (loading) {
+                 setConversationHistory(prev => prev.slice(0, -1));
+            }
+        }
+    };
 
 
     const handleExampleQuestionClick = (question) => {
@@ -2414,45 +2428,19 @@ return (
                 </div>
             </div>
         )}
-        
-        {/* CSM Feedback Popup */}
-        {showCSMPopup && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                <div className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 overflow-hidden">
-                    <div className="bg-blue-600 px-6 py-4">
-                        <h3 className="text-white text-lg font-semibold">
-                            We Value Your Feedback!
-                        </h3>
-                    </div>
-                    <div className="p-6">
-                        <p className="text-gray-600 mb-6">
-                            Thank you for using LitPath AI. Please take a moment to complete our Client Satisfaction Measurement (CSM) form to help us improve our services.
-                        </p>
-                        <div className="flex flex-col gap-3">
-                            <button
-                                onClick={() => {
-                                    setShowCSMPopup(false);
-                                    navigate('/feedback-form');
-                                }}
-                                className="w-full py-2 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium transition-colors"
-                            >
-                                Fill up form
-                            </button>
-                            <button
-                                onClick={() => {
-                                    localStorage.setItem('csm_feedback_skipped', 'true');
-                                    localStorage.setItem('csm_feedback_skipped_at', new Date().toISOString());
-                                    setShowCSMPopup(false);
-                                }}
-                                className="w-full py-2 px-4 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 font-medium transition-colors"
-                            >
-                                Skip for now
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )}
+
+        {/* CSM Feedback Modal */}
+        <CSMModal 
+            isOpen={showCSMModal} 
+            onClose={() => {
+                setShowCSMModal(false);
+                // If user closes without submitting, mark as skipped
+                if (!localStorage.getItem('csm_feedback_submitted')) {
+                    localStorage.setItem('csm_feedback_skipped', 'true');
+                    localStorage.setItem('csm_feedback_skipped_at', new Date().toISOString());
+                }
+            }} 
+        />
     </div>
 );
 };
@@ -2567,5 +2555,26 @@ function SidebarContent({
         </div>
     );
 }
+
+// Helper: Safely formats API documents into UI-friendly source objects
+const formatSources = (documents) => {
+    if (!documents || !Array.isArray(documents)) return [];
+    
+    return documents.map((doc, index) => ({
+        id: Date.now() + index,
+        title: doc.title || '[Unknown Title]',
+        author: doc.author || '[Unknown Author]',
+        year: doc.publication_year || '[Unknown Year]',
+        abstract: doc.abstract || 'Abstract not available.',
+        fullTextPath: doc.file || '',
+        file: doc.file || '',
+        degree: doc.degree || 'Thesis',
+        subjects: doc.subjects || ['Research'],
+        school: doc.university || '[Unknown University]',
+        // Preserve analytics data if available
+        view_count: doc.view_count || 0,
+        avg_rating: doc.avg_rating || 0
+    }));
+};
 
 export default LitPathAI;

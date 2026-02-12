@@ -5,7 +5,7 @@ import { Star } from 'lucide-react';
 
 const API_BASE_URL = 'http://localhost:8000/api';
 
-const FeedbackForm = () => {
+const FeedbackForm = ({ embedded = false, onClose }) => {
     const { user, getUserId } = useAuth();
     const navigate = useNavigate();
     const userId = getUserId();
@@ -164,9 +164,11 @@ const FeedbackForm = () => {
                 localStorage.setItem('csm_feedback_submitted', 'true');
                 localStorage.setItem('csm_feedback_submitted_at', new Date().toISOString());
                 
-                setTimeout(() => {
-                    navigate('/search');
-                }, 2000);
+                if (embedded && onClose) {
+                    setTimeout(() => onClose(), 2000);
+                } else {
+                    setTimeout(() => navigate('/search'), 2000);
+                }
             } else {
                 const errorData = await response.json();
                 console.error('CSM Feedback submission error:', errorData);
@@ -184,23 +186,30 @@ const FeedbackForm = () => {
         // Store that user skipped feedback
         localStorage.setItem('csm_feedback_skipped', 'true');
         localStorage.setItem('csm_feedback_skipped_at', new Date().toISOString());
-        navigate('/search');
+        
+        if (embedded && onClose) {
+            onClose();
+        } else {
+            navigate('/search');
+        }
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 py-8 px-4">
+        <div className={`${embedded ? '' : 'min-h-screen bg-gray-50 py-8 px-4'}`}>
             <div className="max-w-4xl mx-auto">
-                {/* Header */}
-                <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-                    <div className="text-center">
-                        <h1 className="text-2xl font-bold text-[#1E74BC] mb-2">
-                            Client Satisfaction Measurement (CSM) Form
-                        </h1>
-                        <p className="text-sm text-gray-600 mb-4">
-                            <strong>LitPath AI: Smart Pathfinder for Thesis and Dissertation</strong>
-                        </p>
+                {/* Header – only show when NOT embedded */}
+                {!embedded && (
+                    <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <div className="text-center">
+                            <h1 className="text-2xl font-bold text-[#1E74BC] mb-2">
+                                Client Satisfaction Measurement (CSM) Form
+                            </h1>
+                            <p className="text-sm text-gray-600 mb-4">
+                                <strong>LitPath AI: Smart Pathfinder for Thesis and Dissertation</strong>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                )}
 
                 <form onSubmit={handleSubmit}>
                     {/* Section I: Data Privacy & Consent */}
@@ -478,30 +487,55 @@ const FeedbackForm = () => {
                         </div>
                     </div>
 
-                    {/* Submit Buttons */}
-                    <div className="flex justify-between items-center">
-                        <button
-                            type="button"
-                            onClick={handleSkip}
-                            className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100"
-                        >
-                            Skip / Cancel
-                        </button>
-                        <button
-                            type="submit"
-                            disabled={isSubmitting}
-                            className={`px-6 py-2 bg-[#1E74BC] text-white rounded-md hover:bg-blue-700 ${
-                                isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-                            }`}
-                        >
-                            {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
-                        </button>
+                    {/* Submit Buttons – Different layout when embedded */}
+                    <div className={`flex ${embedded ? 'justify-end gap-3' : 'justify-between items-center'}`}>
+                        {!embedded ? (
+                            <>
+                                <button
+                                    type="button"
+                                    onClick={handleSkip}
+                                    className="px-6 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100"
+                                >
+                                    Skip / Cancel
+                                </button>
+                                <button
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className={`px-6 py-2 bg-[#1E74BC] text-white rounded-md hover:bg-blue-700 ${
+                                        isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                                    }`}
+                                >
+                                    {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
+                                </button>
+                            </>
+                        ) : (
+                            // Embedded mode buttons
+                            <>
+                                <button
+                                    type="button"
+                                    onClick={handleSkip}
+                                    className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100 text-sm"
+                                >
+                                    Skip for now
+                                </button>
+                                <button
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className={`px-4 py-2 bg-[#1E74BC] text-white rounded-md hover:bg-blue-700 text-sm ${
+                                        isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                                    }`}
+                                >
+                                    {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
+                                </button>
+                            </>
+                        )}
                     </div>
 
                     {/* Success/Error Messages */}
                     {submitStatus === 'success' && (
                         <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
-                            Thank you for your feedback! Redirecting to search page...
+                            Thank you for your feedback! {!embedded && 'Redirecting to search page...'}
+                            {embedded && <span> Closing form...</span>}
                         </div>
                     )}
                     {submitStatus === 'error' && (

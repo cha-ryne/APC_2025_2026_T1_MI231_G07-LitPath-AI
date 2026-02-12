@@ -24,9 +24,15 @@ class ResearchHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = ResearchHistory
         fields = [
-            'id', 'session_id', 'user_id', 'query', 'all_queries',
-            'conversation_data', 'sources_count', 'conversation_length',
-            'subjects', 'date_filter', 'created_at'
+            'id', 
+            'session_id', 
+            'user_id', 
+            'query', 
+            'all_queries',          # <--- Added this (stores follow-up query list)
+            'conversation_data',    # <--- Added this (stores the actual Q&A)
+            'conversation_length',  # <--- Added this (stores chat depth)
+            'created_at', 
+            'sources_count'         # <--- Critical for "Unanswered Questions" analytics
         ]
         read_only_fields = ['id', 'created_at']
 
@@ -34,10 +40,6 @@ class ResearchHistorySerializer(serializers.ModelSerializer):
 class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
         model = Feedback
-        # fields = [
-        #    'id', 'user_id', 'query', 'rating', 'relevant',
-        #    'comment', 'created_at'
-        #]
         fields = '__all__'
         read_only_fields = ['id', 'created_at']
 
@@ -47,9 +49,12 @@ class CSMFeedbackSerializer(serializers.ModelSerializer):
         model = CSMFeedback
         fields = [
             'id', 'user_id', 'session_id',
-            'consent_given',
-            'client_type', 'date', 'sex', 'age', 'region', 'category',
+            'consent_given', 'client_type', 'date', 'sex', 'age', 'region', 'category',
             'litpath_rating', 'research_interests', 'missing_content', 'message_comment',
-            'created_at'
+            'created_at',
+            # NEW Admin Fields
+            'status', 'admin_category',
+            'is_valid', 'validity_remarks',
+            'is_doable', 'feasibility_remarks'
         ]
         read_only_fields = ['id', 'created_at']
