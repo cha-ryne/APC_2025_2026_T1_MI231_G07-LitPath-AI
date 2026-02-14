@@ -4,9 +4,9 @@ from . views import (
     HealthCheckView, SearchView, FiltersView, RAGEvaluationView,
     bookmarks_view, bookmark_delete_view, bookmark_delete_by_file_view,
     research_history_view, research_history_delete_view,
-    feedback_view, feedback_detail, analytics_compact,
+    feedback_view, feedback_detail,
     get_most_browsed, get_source_ratings, get_material_rating_detail,
-    get_sources_stats, csm_feedback_view, csm_feedback_detail
+    get_sources_stats, csm_feedback_view, csm_feedback_detail, dashboard_kpi, dashboard_top_keywords, dashboard_usage_by_category, dashboard_monthly_trends, dashboard_zero_view_materials, dashboard_failed_queries
 )
 from . admin_views import admin_login_view, admin_users_view, admin_user_delete_view
 from . auth_views import (
@@ -17,7 +17,6 @@ from . auth_views import (
 )
 from . views import request_password_reset, reset_password
 from . views import reset_password
-from . import views_health   # <-- added new import
 
 from . import views 
 urlpatterns = [
@@ -27,6 +26,7 @@ urlpatterns = [
     path('auth/password-reset-request', request_password_reset, name='auth-password-reset-request-no-slash'),
     path('auth/reset-password/', reset_password, name='auth-reset-password'),
     path('auth/reset-password', reset_password, name='auth-reset-password-no-slash'),
+
     # Support both with and without trailing slashes
     path('health/', HealthCheckView.as_view(), name='health'),
     path('health', HealthCheckView.as_view(), name='health-no-slash'),
@@ -91,16 +91,29 @@ urlpatterns = [
     path('materials/rating/', views.get_material_rating_detail, name='get_material_rating_detail'),
     
     # Analytics
-    path('analytics/compact/', analytics_compact, name='analytics_compact'),
-    path('analytics/compact', analytics_compact, name='analytics_compact_no_slash'),
-    path('analytics/compact/', views.get_analytics_summary, name='analytics-summary'),
+    #path('analytics/compact/', analytics_compact, name='analytics_compact'),
+    #path('analytics/compact', analytics_compact, name='analytics_compact_no_slash'),
+    #path('analytics/compact/', views.get_analytics_summary, name='analytics-summary'),
     
     # RAG Evaluation (LangSmith-style)
     path('evaluate/', RAGEvaluationView.as_view(), name='rag-evaluate'),
     path('evaluate', RAGEvaluationView.as_view(), name='rag-evaluate-no-slash'),
 
-    # Health Check
-    path('api/health/', views_health.health_check, name='health_check'),
+    # Dashboard API (for librarian dashboard)
+    path('dashboard/kpi/', dashboard_kpi, name='dashboard-kpi'),
+    path('dashboard/kpi', dashboard_kpi, name='dashboard-kpi-no-slash'),
+    path('dashboard/top-keywords/', dashboard_top_keywords, name='dashboard-top-keywords'),
+    path('dashboard/top-keywords', dashboard_top_keywords, name='dashboard-top-keywords-no-slash'),
+    path('dashboard/top-theses/', get_most_browsed, name='dashboard-top-theses'),  # reuse existing
+    path('dashboard/top-theses', get_most_browsed, name='dashboard-top-theses-no-slash'),
+    path('dashboard/usage-by-category/', dashboard_usage_by_category, name='dashboard-usage-category'),
+    path('dashboard/usage-by-category', dashboard_usage_by_category, name='dashboard-usage-category-no-slash'),
+    path('dashboard/monthly-trends/', dashboard_monthly_trends, name='dashboard-monthly-trends'),
+    path('dashboard/monthly-trends', dashboard_monthly_trends, name='dashboard-monthly-trends-no-slash'),
+    path('dashboard/zero-view/', dashboard_zero_view_materials, name='dashboard-zero-view'),
+    path('dashboard/zero-view', dashboard_zero_view_materials, name='dashboard-zero-view-no-slash'),
+    path('dashboard/failed-queries/', dashboard_failed_queries, name='dashboard-failed-queries'),
+    path('dashboard/failed-queries', dashboard_failed_queries, name='dashboard-failed-queries-no-slash'),
 ]
 
 

@@ -2,29 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
 import {
-    LayoutDashboard,
-    MessageSquare,
-    Star,
-    Activity,
-    LogOut,
-    Settings,
-    ShieldCheck,
-    ChevronDown,
-    Eye,
-    Search,
-    ThumbsUp,
-    ThumbsDown,
-    Clock,
-    Bookmark,
-    AlertCircle,
-    TrendingUp,
-    BookOpen,
-    CheckCircle,
-    X,
-    EyeOff,
-    Menu,
-    Calendar,
-    ChevronLeft
+    LayoutDashboard, MessageSquare, Star, LogOut, Settings,
+    ShieldCheck, ChevronDown, Eye, Search, ThumbsUp, ThumbsDown,
+    Clock, Bookmark, AlertCircle, TrendingUp, BookOpen, CheckCircle,
+    X, EyeOff, Menu, Calendar, Users, ChevronLeft, ChevronRight  
 } from "lucide-react";
 import dostLogo from "./components/images/dost-logo.png";
 
@@ -51,45 +32,53 @@ const AdminDashboard = () => {
     const userMenuRef = useRef(null);
 
     // ---------- Date filter state ----------
-    const dateOptions = ['All dates', 'Last week', 'Last month', 'Custom range'];
-    const [selectedDate, setSelectedDate] = useState('All dates');
-    const [showDateDropdown, setShowDateDropdown] = useState(false);
+    const dateFilterOptions = ['Annual', 'Last week', 'Last month', 'Custom range'];
+    const [dateFilterType, setDateFilterType] = useState('Annual');
+    const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
     const [customFrom, setCustomFrom] = useState('');
     const [customTo, setCustomTo] = useState('');
+    const [showDateDropdown, setShowDateDropdown] = useState(false);
     const dateDropdownRef = useRef(null);
+
+    const currentYear = new Date().getFullYear();
+    const yearOptions = [];
+    for (let y = 2020; y <= currentYear + 1; y++) {
+        yearOptions.push(y);
+    }
 
     const getDateRange = () => {
         const today = new Date();
         const fmt = (d) => d.toISOString().split('T')[0];
-        if (selectedDate === 'All dates') {
-            const past = new Date();
-            past.setFullYear(past.getFullYear() - 1);
-            return { from: fmt(past), to: fmt(today) };
+
+        if (dateFilterType === 'Annual') {
+            return { from: `${selectedYear}-01-01`, to: `${selectedYear}-12-31` };
         }
-        if (selectedDate === 'Last week') {
-            const d = new Date();
-            d.setDate(d.getDate() - 7);
+        if (dateFilterType === 'Last week') {
+            const d = new Date(); d.setDate(d.getDate() - 7);
             return { from: fmt(d), to: fmt(today) };
         }
-        if (selectedDate === 'Last month') {
-            const d = new Date();
-            d.setDate(d.getDate() - 30);
+        if (dateFilterType === 'Last month') {
+            const d = new Date(); d.setDate(d.getDate() - 30);
             return { from: fmt(d), to: fmt(today) };
         }
-        if (!customFrom || !customTo) return { from: '', to: '' };
-        return { from: customFrom, to: customTo };
+        if (dateFilterType === 'Custom range') {
+            if (!customFrom || !customTo) return { from: '', to: '' };
+            return { from: customFrom, to: customTo };
+        }
+        return { from: '', to: '' };
     };
 
     // ---------- Data States ----------
-    const [loading, setLoading] = useState(false);
-    const [analyticsData, setAnalyticsData] = useState({
-        avgResponseTime: 0,
-        totalBookmarks: 0,
-        totalSearches: 0,
-        failedQueries: [],
-        topSearchQueries: [],
-        mostViewedMaterials: []
+    const [dashboardData, setDashboardData] = useState({
+        kpi: { totalDocuments: 0, uniqueVisitors: 0, totalSearches: 0, accessedDocuments: 0, utilizationPercent: 0 },
+        topKeywords: [],
+        topTheses: [],
+        usageByCategory: [],
+        monthlyTrends: [],
+        zeroViewMaterials: [],
+        failedQueries: []
     });
+    const [loading, setLoading] = useState(false);
 
     // ---------- Feedback States ----------
     const [feedbacks, setFeedbacks] = useState([]);
@@ -99,10 +88,6 @@ const AdminDashboard = () => {
     // ---------- Material Ratings ----------
     const [materialRatings, setMaterialRatings] = useState([]);
     const [ratingsTrend, setRatingsTrend] = useState(0);
-
-    // ---------- System Health ----------
-    const [health, setHealth] = useState(null);
-    const [healthLoading, setHealthLoading] = useState(false);
 
     // ---------- Account Settings ----------
     const [showAccountSettings, setShowAccountSettings] = useState(false);
@@ -117,40 +102,120 @@ const AdminDashboard = () => {
     const [settingsLoading, setSettingsLoading] = useState(false);
     const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
 
-    // ---------- Tab Change Handler (syncs URL) ----------
+    // ---------- DASHBOARD FETCH FUNCTIONS ----------
+    const fetchDashboardKPI = async () => {
+        const { from, to } = getDateRange();
+        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        try {
+            const res = await fetch(`${API_BASE_URL}/dashboard/kpi/?from=${from}&to=${to}`);
+            if (res.ok) {
+                const data = await res.json();
+                setDashboardData(prev => ({ ...prev, kpi: data }));
+            }
+        } catch (error) { console.error("KPI fetch error:", error); }
+    };
+
+    const fetchTopKeywords = async () => {
+        const { from, to } = getDateRange();
+        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        try {
+            const res = await fetch(`${API_BASE_URL}/dashboard/top-keywords/?from=${from}&to=${to}`);
+            if (res.ok) {
+                const data = await res.json();
+                setDashboardData(prev => ({ ...prev, topKeywords: data }));
+            }
+        } catch (error) { console.error(error); }
+    };
+
+    const fetchTopTheses = async () => {
+        const { from, to } = getDateRange();
+        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        try {
+            const res = await fetch(`${API_BASE_URL}/dashboard/top-theses/?from=${from}&to=${to}&limit=10`);
+            if (res.ok) {
+                const data = await res.json();
+                setDashboardData(prev => ({ ...prev, topTheses: data.materials || [] }));
+            }
+        } catch (error) { console.error(error); }
+    };
+
+    const fetchUsageByCategory = async () => {
+        const { from, to } = getDateRange();
+        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        try {
+            const res = await fetch(`${API_BASE_URL}/dashboard/usage-by-category/?from=${from}&to=${to}`);
+            if (res.ok) {
+                const data = await res.json();
+                setDashboardData(prev => ({ ...prev, usageByCategory: data }));
+            }
+        } catch (error) { console.error(error); }
+    };
+
+    const fetchMonthlyTrends = async () => {
+        const { from, to } = getDateRange();
+        if (!from || !to) return;
+        try {
+            const res = await fetch(`${API_BASE_URL}/dashboard/monthly-trends/?from=${from}&to=${to}`);
+            if (res.ok) {
+                const data = await res.json();
+                setDashboardData(prev => ({ ...prev, monthlyTrends: data }));
+            }
+        } catch (error) { console.error(error); }
+    };
+
+    const fetchZeroViewMaterials = async () => {
+        try {
+            const res = await fetch(`${API_BASE_URL}/dashboard/zero-view/`);
+            if (res.ok) {
+                const data = await res.json();
+                setDashboardData(prev => ({ ...prev, zeroViewMaterials: data }));
+            }
+        } catch (error) { console.error(error); }
+    };
+
+    const fetchFailedQueries = async () => {
+        const { from, to } = getDateRange();
+        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        try {
+            const res = await fetch(`${API_BASE_URL}/dashboard/failed-queries/?from=${from}&to=${to}`);
+            if (res.ok) {
+                const data = await res.json();
+                setDashboardData(prev => ({ ...prev, failedQueries: data }));
+            }
+        } catch (error) { console.error(error); }
+    };
+
+    const fetchAllDashboardData = () => {
+        setLoading(true);
+        Promise.all([
+            fetchDashboardKPI(),
+            fetchTopKeywords(),
+            fetchTopTheses(),
+            fetchUsageByCategory(),
+            fetchMonthlyTrends(),
+            fetchZeroViewMaterials(),
+            fetchFailedQueries()
+        ]).finally(() => setLoading(false));
+    };
+
+    // ---------- Tab sync & data fetching ----------
     const handleTabChange = (tab) => {
         setActiveTab(tab);
         setSearchParams({ tab });
     };
 
-    // ---------- Sync tab when URL changes (back/forward) ----------
     useEffect(() => {
         const urlTab = searchParams.get('tab');
-        if (urlTab && ['overview', 'feedback', 'ratings', 'health'].includes(urlTab)) {
+        if (urlTab && ['overview', 'feedback', 'ratings'].includes(urlTab)) {
             setActiveTab(urlTab);
         }
     }, [searchParams]);
 
-    // ---------- Fetch data when tab changes ----------
     useEffect(() => {
-        if (activeTab === 'overview') fetchAnalytics();
+        if (activeTab === 'overview') fetchAllDashboardData();
         if (activeTab === 'feedback') fetchFeedback();
         if (activeTab === 'ratings') fetchMaterialRatings();
-        if (activeTab === 'health') fetchHealth();
-    }, [activeTab]);
-
-    // ---------- Handle navigation state (toast from detail page) ----------
-    useEffect(() => {
-        if (location.state?.activeTab === 'feedback') {
-            setActiveTab('feedback');
-            setSearchParams({ tab: 'feedback' });
-            window.history.replaceState({}, document.title);
-        }
-        if (location.state?.toast) {
-            showToast(location.state.toast.message, location.state.toast.type);
-            window.history.replaceState({}, document.title);
-        }
-    }, [location.state]);
+    }, [activeTab, dateFilterType, selectedYear, customFrom, customTo]);
 
     // ---------- Click outside handlers ----------
     useEffect(() => {
@@ -167,7 +232,6 @@ const AdminDashboard = () => {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    // ---------- Update profile fields when user changes ----------
     useEffect(() => {
         if (user) {
             setEditFullName(user.full_name || '');
@@ -175,37 +239,7 @@ const AdminDashboard = () => {
         }
     }, [user]);
 
-    // ---------- API: Analytics ----------
-    const fetchAnalytics = async () => {
-        setLoading(true);
-        const { from, to } = getDateRange();
-        if (selectedDate === 'Custom range' && (!from || !to)) {
-            setLoading(false);
-            return;
-        }
-        try {
-            const res = await fetch(`${API_BASE_URL}/analytics/compact/?from=${from}&to=${to}`);
-            if (res.ok) {
-                const result = await res.json();
-                const data = result.data || result;
-                setAnalyticsData({
-                    avgResponseTime: data.avg_response_time ?? data.avgResponseTime ?? 0,
-                    totalBookmarks: data.total_bookmarks ?? data.totalBookmarks ?? 0,
-                    totalSearches: data.total_searches ?? data.totalSearches ?? 0,
-                    failedQueries: data.failed_queries ?? data.failedQueries ?? [],
-                    topSearchQueries: data.top_queries ?? data.topSearchQueries ?? [],
-                    mostViewedMaterials: data.top_materials ?? data.mostViewedMaterials ?? []
-                });
-            }
-        } catch (error) {
-            console.error("Failed to load analytics", error);
-            showToast("Failed to load analytics", "error");
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    // ---------- API: CSM Feedback List ----------
+    // ---------- Feedback & Ratings ----------
     const fetchFeedback = async () => {
         try {
             const res = await fetch(`${API_BASE_URL}/csm-feedback/`);
@@ -213,12 +247,9 @@ const AdminDashboard = () => {
                 const data = await res.json();
                 setFeedbacks(data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
             }
-        } catch (error) {
-            console.error("Failed to load feedback", error);
-        }
+        } catch (error) { console.error("Failed to load feedback", error); }
     };
 
-    // ---------- API: Material Ratings ----------
     const fetchMaterialRatings = async () => {
         try {
             const res = await fetch(`${API_BASE_URL}/feedback/`);
@@ -227,7 +258,6 @@ const AdminDashboard = () => {
                 const ratings = data.filter(item => item.relevant !== null);
                 setMaterialRatings(ratings.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
 
-                // Calculate weekly trend
                 const now = new Date();
                 const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
                 const twoWeeksAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
@@ -238,25 +268,7 @@ const AdminDashboard = () => {
                 }).length;
                 setRatingsTrend(lastWeek - prevWeek);
             }
-        } catch (error) {
-            console.error("Failed to load ratings", error);
-        }
-    };
-
-    // ---------- API: System Health ----------
-    const fetchHealth = async () => {
-        setHealthLoading(true);
-        try {
-            const res = await fetch(`${API_BASE_URL}/health/`);
-            if (res.ok) {
-                const data = await res.json();
-                setHealth(data);
-            }
-        } catch (error) {
-            console.error("Health check failed:", error);
-        } finally {
-            setHealthLoading(false);
-        }
+        } catch (error) { console.error("Failed to load ratings", error); }
     };
 
     // ---------- Toast ----------
@@ -270,10 +282,7 @@ const AdminDashboard = () => {
         e.preventDefault();
         setSettingsLoading(true);
         try {
-            const result = await updateProfile({
-                full_name: editFullName,
-                username: editUsername
-            });
+            const result = await updateProfile({ full_name: editFullName, username: editUsername });
             if (result?.success) {
                 showToast('Profile updated successfully!', 'success');
                 setTimeout(() => setShowAccountSettings(false), 1500);
@@ -321,45 +330,10 @@ const AdminDashboard = () => {
         navigate("/");
     };
 
-    // ---------- KPI Card Component ----------
-    const KPICard = ({ title, value, icon: Icon, color }) => (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex items-center justify-between">
-            <div>
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{title}</p>
-                <h3 className={`text-2xl font-bold mt-1 ${color}`}>{value}</h3>
-            </div>
-            <div className={`p-3 rounded-full bg-opacity-10 ${color.replace('text-', 'bg-')}`}>
-                <Icon size={24} className={color} />
-            </div>
-        </div>
-    );
-
-    // ---------- Helper Components for Health ----------
-    const HealthItem = ({ label, status }) => (
-        <div className="flex items-center justify-between">
-            <span className="text-sm text-gray-600">{label}</span>
-            <span className={`text-xs font-semibold px-2 py-1 rounded-full ${
-                status === 'ok' ? 'bg-green-100 text-green-700' : 
-                status === 'failed' ? 'bg-red-100 text-red-700' : 
-                'bg-gray-100 text-gray-600'
-            }`}>
-                {status === 'ok' ? 'Healthy' : status === 'failed' ? 'Failed' : 'Unknown'}
-            </span>
-        </div>
-    );
-
-    const formatBytes = (bytes) => {
-        if (bytes === 0) return '0 Bytes';
-        const k = 1024;
-        const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-        const i = Math.floor(Math.log(bytes) / Math.log(k));
-        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-    };
-
     // ---------- Render ----------
     return (
         <div className="h-screen w-screen bg-gray-100 flex flex-col overflow-hidden font-sans">
-            {/* ---------- Toast (top‑center) ---------- */}
+            {/* Toast */}
             {toast.show && (
                 <div className={`fixed top-20 left-1/2 transform -translate-x-1/2 z-[100] px-6 py-3 rounded-lg shadow-xl text-sm font-bold text-white animate-slideDown ${
                     toast.type === 'success' ? 'bg-green-600' : 'bg-red-600'
@@ -368,7 +342,7 @@ const AdminDashboard = () => {
                 </div>
             )}
 
-            {/* ---------- HEADER ---------- */}
+            {/* Header */}
             <div className="bg-gradient-to-b from-[#404040] to-[#1F1F1F] text-white shadow-md flex-none z-50">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     <div className="flex items-center space-x-4">
@@ -395,10 +369,7 @@ const AdminDashboard = () => {
                                         <p className="text-sm font-bold">{user?.full_name || 'Admin User'}</p>
                                         <p className="text-xs text-gray-500 truncate">{user?.email || 'admin@litpath.ai'}</p>
                                     </div>
-                                    <button 
-                                        onClick={() => { setShowAccountSettings(true); setSettingsTab('profile'); setShowUserMenu(false); }}
-                                        className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50 flex items-center gap-2"
-                                    >
+                                    <button onClick={() => { setShowAccountSettings(true); setSettingsTab('profile'); setShowUserMenu(false); }} className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50 flex items-center gap-2">
                                         <Settings size={16} /> Account Settings
                                     </button>
                                     <button onClick={() => navigate('/')} className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50 flex items-center gap-2">
@@ -415,11 +386,13 @@ const AdminDashboard = () => {
                 </div>
             </div>
 
-            {/* ---------- BODY ---------- */}
+            {/* Body */}
             <div className="flex-1 flex overflow-hidden">
-                {/* ---------- SIDEBAR ---------- */}
+                {/* Sidebar */}
                 <aside className={`bg-white border-r border-gray-200 transition-all duration-300 flex flex-col z-20 ${isSidebarOpen ? 'w-64' : 'w-16'}`}>
-                    <div className={`h-16 flex items-center justify-center border-b border-gray-100 ${isSidebarOpen ? 'px-4' : 'p-0'}`}>
+                    <div className={`h-16 flex items-center border-b border-gray-100 ${
+                        isSidebarOpen ? 'justify-end px-4' : 'justify-center p-0'
+                    }`}>
                         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 rounded hover:bg-gray-100 transition-colors text-gray-600">
                             <Menu size={24} />
                         </button>
@@ -437,132 +410,409 @@ const AdminDashboard = () => {
                             <Star size={20} className="flex-shrink-0" />
                             <span className={`ml-3 text-sm whitespace-nowrap transition-all duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0 w-0 overflow-hidden'}`}>Material Ratings</span>
                         </button>
-                        <button onClick={() => handleTabChange('health')} className={`w-full flex items-center p-3 rounded-lg transition-colors ${activeTab === 'health' ? 'bg-blue-50 text-blue-600 font-semibold' : 'text-gray-600 hover:bg-gray-50'}`}>
-                            <Activity size={20} className="flex-shrink-0" />
-                            <span className={`ml-3 text-sm whitespace-nowrap transition-all duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0 w-0 overflow-hidden'}`}>System Health</span>
-                        </button>
                     </nav>
                     <div className={`p-4 border-t border-gray-100 text-xs text-gray-400 text-center whitespace-nowrap overflow-hidden transition-all duration-300 ${isSidebarOpen ? 'opacity-100' : 'opacity-0 h-0 p-0'}`}>
                         © 2025 LitPath AI
                     </div>
                 </aside>
 
-                {/* ---------- MAIN CONTENT ---------- */}
-                <main className="flex-1 bg-gray-50 p-6 overflow-hidden flex flex-col relative">
-                    {/* ----- OVERVIEW TAB ----- */}
+                {/* Main Content */}
+                <main className="flex-1 bg-gray-50 p-4 overflow-hidden flex flex-col relative">
+                    {/* ===== OVERVIEW TAB ===== */}
                     {activeTab === 'overview' && (
-                        <div className="h-full flex flex-col gap-5 max-w-[1600px] mx-auto w-full">
-                            {/* Date Filter Header */}
-                            <div className="flex items-center justify-between flex-shrink-0 mb-2">
-                                <h2 className="text-xl font-bold text-gray-800">System Insights</h2>
-                                <div className="relative" ref={dateDropdownRef}>
-                                    <button onClick={() => setShowDateDropdown(!showDateDropdown)} className="flex items-center space-x-2 px-3 py-1.5 border border-gray-300 rounded-md bg-white text-gray-600 hover:bg-gray-50 text-xs font-medium">
-                                        <Calendar size={14} /><span>{selectedDate}</span><ChevronDown size={14} />
-                                    </button>
-                                    {showDateDropdown && (
-                                        <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-30 min-w-[220px] p-2">
-                                            {dateOptions.map(opt => (
-                                                <button key={opt} onClick={() => { setSelectedDate(opt); if(opt === 'Custom range') { setShowDateDropdown(true); } else { setShowDateDropdown(false); setCustomFrom(''); setCustomTo(''); fetchAnalytics(); } }} className={`block w-full text-left px-3 py-2 text-xs rounded-md ${selectedDate === opt ? 'bg-blue-50 text-blue-600 font-bold' : 'hover:bg-gray-50'}`}>{opt}</button>
-                                            ))}
-                                            {selectedDate === 'Custom range' && (
-                                                <div className="mt-2 pt-2 border-t border-gray-100 flex flex-col gap-2">
-                                                    <div className="flex flex-col"><span className="text-[10px] text-gray-500 mb-1">From</span><input type="date" value={customFrom} onChange={e => setCustomFrom(e.target.value)} className="text-xs border p-1 rounded" /></div>
-                                                    <div className="flex flex-col"><span className="text-[10px] text-gray-500 mb-1">To</span><input type="date" value={customTo} onChange={e => setCustomTo(e.target.value)} className="text-xs border p-1 rounded" /></div>
-                                                    <div className="flex flex-col gap-2 mt-2">
-                                                        <button onClick={() => { if(customFrom && customTo) { fetchAnalytics(); setShowDateDropdown(false); } else { showToast('Select both dates', 'error'); } }} className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium">Apply Range</button>
-                                                        <button onClick={() => window.location.reload()} disabled={!customFrom && !customTo} className={`w-full text-xs py-1.5 rounded border transition-colors ${!customFrom && !customTo ? 'bg-gray-100 text-gray-300 border-gray-200 cursor-not-allowed' : 'bg-white text-gray-500 border-gray-200 hover:bg-gray-50 hover:text-red-600'}`}>Clear Filter</button>
+                        <div className="h-full overflow-y-auto px-4 py-6">
+                            <div className="max-w-[1600px] mx-auto w-full flex flex-col gap-6">
+
+                                {/* ===== HEADER WITH DATE FILTER ===== */}
+                                <div className="flex items-center justify-between">
+                                    <h2 className="text-2xl font-bold text-gray-800">Thesis & Dissertation Usage</h2>
+                                    {/* Date Filter Dropdown */}
+                                    <div className="relative" ref={dateDropdownRef}>
+                                        <button
+                                            onClick={() => setShowDateDropdown(!showDateDropdown)}
+                                            className="flex items-center space-x-2 px-3 py-1.5 border border-gray-300 rounded-md bg-white text-gray-600 hover:bg-gray-50 text-xs font-medium"
+                                        >
+                                            <Calendar size={14} />
+                                            <span>
+                                                {dateFilterType === 'Annual' && `Annual ${selectedYear}`}
+                                                {dateFilterType === 'Last week' && 'Last week'}
+                                                {dateFilterType === 'Last month' && 'Last month'}
+                                                {dateFilterType === 'Custom range' && 'Custom range'}
+                                            </span>
+                                            <ChevronDown size={14} />
+                                        </button>
+
+                                        {showDateDropdown && (
+                                            <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-30 min-w-[260px] p-3">
+                                                {/* Filter type options */}
+                                                {dateFilterOptions.map(opt => (
+                                                    <button
+                                                        key={opt}
+                                                        onClick={() => {
+                                                            setDateFilterType(opt);
+                                                            if (opt === 'Last week' || opt === 'Last month') {
+                                                                fetchAllDashboardData();
+                                                                setShowDateDropdown(false);
+                                                            }
+                                                            if (opt !== 'Custom range') {
+                                                                setCustomFrom('');
+                                                                setCustomTo('');
+                                                            }
+                                                        }}
+                                                        className={`block w-full text-left px-3 py-2 text-xs rounded-md ${
+                                                            dateFilterType === opt
+                                                                ? 'bg-blue-50 text-blue-600 font-bold'
+                                                                : 'hover:bg-gray-50'
+                                                        }`}
+                                                    >
+                                                        {opt}
+                                                    </button>
+                                                ))}
+
+                                                {/* Annual year picker */}
+                                                {dateFilterType === 'Annual' && (
+                                                    <div className="mt-2 pt-2 border-t border-gray-100">
+                                                        <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                            Select year
+                                                        </label>
+                                                        <select
+                                                            value={selectedYear}
+                                                            onChange={(e) => setSelectedYear(parseInt(e.target.value))}
+                                                            className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                        >
+                                                            {yearOptions.map(year => (
+                                                                <option key={year} value={year}>{year}</option>
+                                                            ))}
+                                                        </select>
+                                                        <button
+                                                            onClick={() => {
+                                                                fetchAllDashboardData();
+                                                                setShowDateDropdown(false);
+                                                            }}
+                                                            className="w-full mt-3 bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                        >
+                                                            Apply
+                                                        </button>
+                                                    </div>
+                                                )}
+
+                                                {/* Custom range picker */}
+                                                {dateFilterType === 'Custom range' && (
+                                                    <div className="mt-2 pt-2 border-t border-gray-100">
+                                                        <div className="flex flex-col gap-2">
+                                                            <div>
+                                                                <span className="text-[10px] text-gray-500 mb-1 block">From</span>
+                                                                <input
+                                                                    type="date"
+                                                                    value={customFrom}
+                                                                    onChange={(e) => setCustomFrom(e.target.value)}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <span className="text-[10px] text-gray-500 mb-1 block">To</span>
+                                                                <input
+                                                                    type="date"
+                                                                    value={customTo}
+                                                                    onChange={(e) => setCustomTo(e.target.value)}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                                />
+                                                            </div>
+                                                            <button
+                                                                onClick={() => {
+                                                                    if (customFrom && customTo) {
+                                                                        fetchAllDashboardData();
+                                                                        setShowDateDropdown(false);
+                                                                    } else {
+                                                                        showToast('Select both dates', 'error');
+                                                                    }
+                                                                }}
+                                                                className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                            >
+                                                                Apply Range
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                                {/* Global Clear Filter button */}
+                                                <div className="mt-3 pt-2 border-t border-gray-100">
+                                                    <button
+                                                        onClick={() => {
+                                                            setDateFilterType('Annual');
+                                                            setSelectedYear(new Date().getFullYear());
+                                                            setCustomFrom('');
+                                                            setCustomTo('');
+                                                            fetchAllDashboardData();
+                                                            setShowDateDropdown(false);
+                                                        }}
+                                                        disabled={
+                                                            dateFilterType === 'Annual' &&
+                                                            selectedYear === new Date().getFullYear() &&
+                                                            customFrom === '' &&
+                                                            customTo === ''
+                                                        }
+                                                        className={`w-full text-xs py-1.5 rounded border transition-colors ${
+                                                            dateFilterType === 'Annual' &&
+                                                            selectedYear === new Date().getFullYear() &&
+                                                            customFrom === '' &&
+                                                            customTo === ''
+                                                                ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                                                                : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50 hover:text-red-600'
+                                                        }`}
+                                                    >
+                                                        Clear Filter
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+
+                                {/* ===== KPI CARDS – LARGER, MORE SPACIOUS ===== */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">📚 Total Theses</p>
+                                        <p className="text-3xl font-bold text-gray-900 mt-2">{formatNumber(dashboardData.kpi.totalDocuments)}</p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">👥 Unique Visitors</p>
+                                        <p className="text-3xl font-bold text-gray-900 mt-2">{formatNumber(dashboardData.kpi.uniqueVisitors)}</p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">🔍 Total Searches</p>
+                                        <p className="text-3xl font-bold text-gray-900 mt-2">{formatNumber(dashboardData.kpi.totalSearches)}</p>
+                                    </div>
+                                    <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">📊 Collection Utilisation</p>
+                                        <div className="flex items-end gap-2 mt-2">
+                                            <p className="text-3xl font-bold text-gray-900">{dashboardData.kpi.utilizationPercent}%</p>
+                                            <p className="text-sm text-gray-500 mb-1">
+                                                ({dashboardData.kpi.accessedDocuments}/{dashboardData.kpi.totalDocuments})
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* ===== ROW 1: TOP 5 RESEARCH TOPICS (HORIZONTAL BAR CHART) + USERS BY CATEGORY ===== */}
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                    
+                                    {/* 🔥 TOP 5 RESEARCH TOPICS – HORIZONTAL BAR CHART */}
+                                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                                        <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-base">
+                                            <TrendingUp size={20} className="text-blue-600" />
+                                            Top 5 Research Topics
+                                        </h3>
+                                        <div className="space-y-4">
+                                            {dashboardData.topKeywords.length > 0 ? (
+                                                dashboardData.topKeywords.map((item, i) => {
+                                                    const maxViews = Math.max(...dashboardData.topKeywords.map(k => k.views), 1);
+                                                    const widthPercent = (item.views / maxViews) * 100;
+                                                    return (
+                                                        <div key={i} className="flex flex-col gap-1">
+                                                            <div className="flex justify-between items-center text-sm">
+                                                                <span className="font-medium text-gray-700 truncate max-w-[70%]">
+                                                                    {i+1}. {item.keyword}
+                                                                </span>
+                                                                <span className="font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full text-xs">
+                                                                    {item.views} views
+                                                                </span>
+                                                            </div>
+                                                            <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
+                                                                <div 
+                                                                    className="h-full bg-blue-600 rounded-full transition-all duration-500"
+                                                                    style={{ width: `${widthPercent}%` }}
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })
+                                            ) : (
+                                                <p className="text-sm text-gray-400 italic">No keyword data available.</p>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    {/* 👥 USERS BY CATEGORY – EXPANDED */}
+                                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                                        <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-base">
+                                            <Users size={20} className="text-indigo-600" />
+                                            Users by Category
+                                        </h3>
+                                        <div className="space-y-4">
+                                            {dashboardData.usageByCategory.length > 0 ? (
+                                                dashboardData.usageByCategory.map((cat, i) => {
+                                                    const max = Math.max(...dashboardData.usageByCategory.map(c => c.views), 1);
+                                                    return (
+                                                        <div key={i} className="flex flex-col gap-1">
+                                                            <div className="flex justify-between items-center text-sm">
+                                                                <span className="font-medium text-gray-600">{cat.category}</span>
+                                                                <span className="font-semibold text-gray-900">
+                                                                    {cat.views} ({cat.percentage}%)
+                                                                </span>
+                                                            </div>
+                                                            <div className="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                                                                <div 
+                                                                    className="h-full bg-indigo-500 rounded-full"
+                                                                    style={{ width: `${(cat.views / max) * 100}%` }}
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })
+                                            ) : (
+                                                <p className="text-sm text-gray-400 italic">No feedback data yet.</p>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* ===== ROW 2: MOST VIEWED THESES (TOP 10) – FULL WIDTH, NO SCROLL ===== */}
+                                <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                                    <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-base">
+                                        <BookOpen size={20} className="text-purple-600" />
+                                        Most Viewed Theses (Top 10)
+                                    </h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {dashboardData.topTheses.slice(0, 10).map((item, i) => (
+                                            <div key={i} className="flex items-start justify-between border-b border-gray-100 pb-3 last:border-0">
+                                                <div className="flex-1 min-w-0 pr-3">
+                                                    <p className="font-medium text-gray-900 text-sm leading-tight">
+                                                        {i+1}. {item.title}
+                                                    </p>
+                                                    <p className="text-xs text-gray-500 mt-1 truncate">{item.author || 'Unknown Author'}</p>
+                                                </div>
+                                                <div className="flex items-center gap-1 bg-gray-100 px-2.5 py-1 rounded-full">
+                                                    <Eye size={14} className="text-gray-600" />
+                                                    <span className="font-bold text-gray-800 text-xs">{formatNumber(item.view_count)}</span>
+                                                </div>
+                                            </div>
+                                        ))}
+                                        {dashboardData.topTheses.length === 0 && (
+                                            <p className="text-sm text-gray-400 italic col-span-2">No thesis views recorded.</p>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* ===== ROW 3: UNANSWERED QUERIES + MONTHLY VIEW TREND ===== */}
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                    
+                                    {/* ❌ UNANSWERED QUERIES */}
+                                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                                        <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-base">
+                                            <AlertCircle size={20} className="text-red-500" />
+                                            Unanswered Queries (Zero Results)
+                                        </h3>
+                                        <div className="space-y-3">
+                                            {dashboardData.failedQueries.length > 0 ? (
+                                                dashboardData.failedQueries.map((item, i) => (
+                                                    <div key={i} className="flex items-center justify-between border-b border-gray-50 pb-2 last:border-0">
+                                                        <div className="flex-1 min-w-0 pr-3">
+                                                            <p className="font-medium text-gray-800 text-sm truncate" title={item.query}>
+                                                                {i+1}. {item.query}
+                                                            </p>
+                                                            <p className="text-xs text-gray-400 mt-0.5">
+                                                                Last: {item.last_occurrence}
+                                                            </p>
+                                                        </div>
+                                                        <span className="bg-red-50 text-red-700 px-2.5 py-1 rounded-full text-xs font-semibold">
+                                                            {item.count}x
+                                                        </span>
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className="text-sm text-gray-400 italic">No failed queries in this period.</p>
+                                            )}
+                                        </div>
+                                        <div className="mt-4 pt-3 border-t border-gray-100 text-right">
+                                            <button 
+                                                onClick={() => handleTabChange('feedback')} 
+                                                className="text-sm text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1"
+                                            >
+                                                View all feedback
+                                                <ChevronRight size={16} />
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    {/* 📅 MONTHLY VIEW TREND – COMPACT BUT READABLE */}
+                                    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                                        <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2 text-base">
+                                            <Calendar size={20} className="text-gray-600" />
+                                            Monthly View Trend
+                                        </h3>
+                                        <div className="h-32 flex items-end gap-1">
+                                            {dashboardData.monthlyTrends.length > 0 ? (
+                                                dashboardData.monthlyTrends.map((month, i) => {
+                                                    const max = Math.max(...dashboardData.monthlyTrends.map(m => m.views), 1);
+                                                    const height = Math.max((month.views / max) * 100, 6);
+                                                    return (
+                                                        <div key={i} className="flex-1 flex flex-col items-center group">
+                                                            <div className="relative w-full flex justify-center">
+                                                                <div 
+                                                                    className="w-full bg-blue-500 rounded-t transition-all group-hover:bg-blue-600"
+                                                                    style={{ height: `${height}%`, minHeight: '6px' }}
+                                                                />
+                                                            </div>
+                                                            <span className="text-[10px] text-gray-500 mt-1.5 font-medium">
+                                                                {month.month}
+                                                            </span>
+                                                            <span className="text-[9px] font-bold text-gray-700">
+                                                                {month.views}
+                                                            </span>
+                                                        </div>
+                                                    );
+                                                })
+                                            ) : (
+                                                <p className="text-sm text-gray-400 italic">No monthly data.</p>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* ===== ROW 4: THESES WITH NO VIEWS – FULL WIDTH, ACTIONABLE ===== */}
+                                <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <h3 className="font-bold text-gray-800 flex items-center gap-2 text-base">
+                                            <AlertCircle size={20} className="text-amber-600" />
+                                            Theses with No Views
+                                        </h3>
+                                        <button 
+                                            onClick={() => {/* navigate to a full report page */}}
+                                            className="text-sm text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-1"
+                                        >
+                                            View all
+                                            <ChevronRight size={16} />
+                                        </button>
+                                    </div>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                                        {dashboardData.zeroViewMaterials.length > 0 ? (
+                                            dashboardData.zeroViewMaterials.slice(0, 6).map((doc, i) => (
+                                                <div key={i} className="flex items-start gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                                                    <div className="flex-1 min-w-0">
+                                                        <p className="text-sm font-medium text-gray-800 truncate" title={doc.title}>
+                                                            {doc.title}
+                                                        </p>
+                                                        <p className="text-xs text-gray-500 mt-0.5">
+                                                            {doc.author || 'Unknown'} • {doc.year || 'N/A'}
+                                                        </p>
                                                     </div>
                                                 </div>
-                                            )}
+                                            ))
+                                        ) : (
+                                            <p className="text-sm text-gray-400 italic col-span-3">All theses have been viewed at least once!</p>
+                                        )}
+                                    </div>
+                                    {dashboardData.zeroViewMaterials.length > 6 && (
+                                        <div className="mt-3 text-center">
+                                            <span className="text-xs text-gray-500">
+                                                +{dashboardData.zeroViewMaterials.length - 6} more theses without views
+                                            </span>
                                         </div>
                                     )}
                                 </div>
-                            </div>
-                            {/* KPI Cards */}
-                            <div className="grid grid-cols-4 gap-5 flex-none">
-                                <KPICard title="Avg Loading Time" value={`${analyticsData.avgResponseTime || 0}ms`} icon={Clock} color="text-green-600" />
-                                <KPICard title="Total Bookmarks" value={formatNumber(analyticsData.totalBookmarks || 0)} icon={Bookmark} color="text-purple-600" />
-                                <KPICard title="Total Searches" value={formatNumber(analyticsData.totalSearches || 0)} icon={LayoutDashboard} color="text-blue-600" />
-                                <KPICard title="Failed Queries" value={analyticsData.failedQueries?.length || 0} icon={AlertCircle} color="text-red-500" />
-                            </div>
-                            {/* Charts & Tables */}
-                            <div className="flex-1 grid grid-cols-12 grid-rows-2 gap-5 min-h-0">
-                                {/* System Activity Placeholder */}
-                                <div className="col-span-8 row-span-1 bg-white rounded-xl shadow-sm border border-gray-100 p-5 flex flex-col">
-                                    <div className="flex justify-between items-center mb-4">
-                                        <h3 className="font-bold text-gray-800">System Activity</h3>
-                                    </div>
-                                    <div className="flex-1 border border-dashed border-gray-200 rounded-lg flex items-center justify-center bg-gray-50">
-                                        <span className="text-gray-400 text-sm italic">[Chart Component Placeholder]</span>
-                                    </div>
-                                </div>
-                                {/* Unanswered Questions */}
-                                <div className="col-span-4 row-span-1 bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
-                                    <div className="p-4 border-b border-gray-100 bg-red-50 flex justify-between items-center">
-                                        <h3 className="font-bold text-red-800 text-sm flex items-center gap-2"><AlertCircle size={16} /> Unanswered Questions</h3>
-                                        <span className="text-xs bg-white text-red-600 px-2 py-0.5 rounded border border-red-100 font-bold">{analyticsData.failedQueries?.length || 0}</span>
-                                    </div>
-                                    <div className="flex-1 overflow-y-auto p-0">
-                                        <ul className="divide-y divide-gray-100">
-                                            {analyticsData.failedQueries?.length > 0 ? (
-                                                analyticsData.failedQueries.map((q, i) => (
-                                                    <li key={i} className="p-3 hover:bg-red-50/30 transition-colors">
-                                                        <p className="text-sm text-gray-700 truncate">{q.query}</p>
-                                                        <p className="text-xs text-gray-400 mt-1">{q.date || 'Unknown Date'}</p>
-                                                    </li>
-                                                ))
-                                            ) : (
-                                                <li className="p-8 text-center text-gray-400 text-sm">No failed queries detected.</li>
-                                            )}
-                                        </ul>
-                                    </div>
-                                </div>
-                                {/* Top 5 Most Viewed Materials */}
-                                <div className="col-span-6 row-span-1 bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
-                                    <div className="p-4 border-b border-gray-100 flex justify-between items-center">
-                                        <h3 className="font-bold text-gray-800 text-sm">Top 5 Most Viewed Materials</h3>
-                                        <BookOpen size={16} className="text-gray-400"/>
-                                    </div>
-                                    <div className="flex-1 overflow-y-auto">
-                                        <div className="divide-y divide-gray-100">
-                                            {analyticsData.mostViewedMaterials?.map((m, i) => (
-                                                <div key={i} className="p-3 hover:bg-blue-50 transition-colors flex items-center gap-3">
-                                                    <div className="h-8 w-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">#{i + 1}</div>
-                                                    <div className="flex-1 min-w-0">
-                                                        <p className="text-sm font-medium text-gray-800 truncate">{m.title || 'Unknown'}</p>
-                                                        <p className="text-[10px] text-gray-500">{m.author || 'Unknown'}</p>
-                                                    </div>
-                                                    <div className="text-xs font-bold text-gray-600 bg-gray-100 px-2 py-1 rounded">{formatNumber(m.views)} views</div>
-                                                </div>
-                                            ))}
-                                            {(!analyticsData.mostViewedMaterials || analyticsData.mostViewedMaterials.length === 0) && (
-                                                <div className="p-8 text-center text-gray-400 text-sm">No views recorded yet.</div>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* Top 5 Search Queries */}
-                                <div className="col-span-6 row-span-1 bg-white rounded-xl shadow-sm border border-gray-100 flex flex-col overflow-hidden">
-                                    <div className="p-4 border-b border-gray-100 flex justify-between items-center">
-                                        <h3 className="font-bold text-gray-800 text-sm">Top 5 Search Queries</h3>
-                                        <TrendingUp size={16} className="text-gray-400"/>
-                                    </div>
-                                    <div className="flex-1 overflow-y-auto">
-                                        <table className="w-full text-sm text-left">
-                                            <tbody className="divide-y divide-gray-100">
-                                                {analyticsData.topSearchQueries?.map((item, i) => (
-                                                    <tr key={i} className="hover:bg-gray-50">
-                                                        <td className="px-4 py-3 text-blue-600 font-medium truncate max-w-[250px]">{item.query}</td>
-                                                        <td className="px-4 py-3 text-right font-bold text-gray-600">{formatNumber(item.count)}</td>
-                                                    </tr>
-                                                ))}
-                                                {(!analyticsData.topSearchQueries || analyticsData.topSearchQueries.length === 0) && (
-                                                    <tr><td colSpan="2" className="p-8 text-center text-gray-400 text-sm">No search data available.</td></tr>
-                                                )}
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     )}
@@ -680,6 +930,7 @@ const AdminDashboard = () => {
                         </div>
                     )}
 
+
                     {/* ----- MATERIAL RATINGS TAB ----- */}
                     {activeTab === 'ratings' && (
                         <div className="h-full flex flex-col gap-4 max-w-[1600px] mx-auto w-full overflow-y-auto">
@@ -791,84 +1042,10 @@ const AdminDashboard = () => {
                             </div>
                         </div>
                     )}
-
-                    {/* ----- SYSTEM HEALTH TAB ----- */}
-                    {activeTab === 'health' && (
-                        <div className="h-full flex flex-col gap-6 max-w-[1600px] mx-auto w-full overflow-y-auto">
-                            <h2 className="text-xl font-bold text-gray-800">System Health</h2>
-                            
-                            {healthLoading ? (
-                                <div className="flex-1 flex items-center justify-center">
-                                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600" />
-                                </div>
-                            ) : health ? (
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                    {/* Services Card */}
-                                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                                        <h3 className="text-sm font-bold text-gray-700 mb-4">Services</h3>
-                                        <div className="space-y-4">
-                                            <HealthItem label="Django Backend" status={health.services?.django} />
-                                            <HealthItem label="Database" status={health.services?.database} />
-                                        </div>
-                                        <div className="mt-6 pt-4 border-t border-gray-100">
-                                            <div className="flex items-center gap-2">
-                                                <div className={`w-2 h-2 rounded-full ${health.status === 'ok' ? 'bg-green-500' : 'bg-yellow-500'}`} />
-                                                <span className="text-xs font-medium text-gray-600">
-                                                    Overall Status: {health.status === 'ok' ? 'Healthy' : 'Degraded'}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    {/* Disk Usage Card */}
-                                    {health.disk && (
-                                        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                                            <h3 className="text-sm font-bold text-gray-700 mb-4">Disk Usage</h3>
-                                            <div className="space-y-3">
-                                                <div className="flex justify-between text-sm">
-                                                    <span className="text-gray-600">Used</span>
-                                                    <span className="font-semibold">{formatBytes(health.disk.used)}</span>
-                                                </div>
-                                                <div className="flex justify-between text-sm">
-                                                    <span className="text-gray-600">Free</span>
-                                                    <span className="font-semibold">{formatBytes(health.disk.free)}</span>
-                                                </div>
-                                                <div className="flex justify-between text-sm">
-                                                    <span className="text-gray-600">Total</span>
-                                                    <span className="font-semibold">{formatBytes(health.disk.total)}</span>
-                                                </div>
-                                                <div className="pt-3">
-                                                    <div className="flex justify-between text-xs mb-1">
-                                                        <span>Usage</span>
-                                                        <span className={health.disk.percent > 90 ? 'text-red-600 font-bold' : 'text-gray-600'}>
-                                                            {health.disk.percent}%
-                                                        </span>
-                                                    </div>
-                                                    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                                                        <div 
-                                                            className={`h-full rounded-full ${
-                                                                health.disk.percent > 90 ? 'bg-red-500' : 
-                                                                health.disk.percent > 75 ? 'bg-yellow-500' : 'bg-green-500'
-                                                            }`}
-                                                            style={{ width: `${health.disk.percent}%` }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            ) : (
-                                <div className="flex-1 flex items-center justify-center text-gray-400">
-                                    Unable to fetch health status. Please ensure the backend health endpoint is configured.
-                                </div>
-                            )}
-                        </div>
-                    )}
                 </main>
             </div>
 
-            {/* ---------- ACCOUNT SETTINGS MODAL ---------- */}
+            {/* Account Settings Modal */}
             {showAccountSettings && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-[60] p-4">
                     <div className="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden animate-fadeIn">

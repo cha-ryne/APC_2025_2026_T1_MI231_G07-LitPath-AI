@@ -3,16 +3,18 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
 from .rag_service import RAGService
-from .models import CSMFeedback
 from .serializers import CSMFeedbackSerializer
-import time
+from .models import CSMFeedback, Material, MaterialView, ResearchHistory
 from .models_password_reset import PasswordResetToken
-from django.utils import timezone
 import secrets
 from django.db.models import Count, Avg, Q, Sum
+from django.db.models import Max
 from django.db.models.functions import TruncMonth
+from django.db import connection
 import dateutil.parser
-from datetime import timedelta
+import time
+from django.utils import timezone
+from datetime import datetime, timedelta
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 from django.conf import settings
@@ -27,6 +29,25 @@ SUPABASE_DB = settings.DATABASES['default']['NAME'] if hasattr(settings.DATABASE
 SUPABASE_USER = settings.DATABASES['default']['USER'] if hasattr(settings.DATABASES['default'], 'USER') else None
 SUPABASE_PASSWORD = settings.DATABASES['default']['PASSWORD'] if hasattr(settings.DATABASES['default'], 'PASSWORD') else None
 SUPABASE_PORT = settings.DATABASES['default']['PORT'] if hasattr(settings.DATABASES['default'], 'PORT') else 5432
+
+
+# Parses date strings from the frontend
+def parse_date_range(from_date, to_date):
+    """Convert 'YYYY-MM-DD' strings to timezone-aware datetimes, default to last 30 days."""
+    if not from_date or not to_date:
+        to_date_obj = timezone.now().date()
+        from_date_obj = to_date_obj - timedelta(days=30)
+    else:
+        try:
+            from_date_obj = datetime.strptime(from_date, '%Y-%m-%d').date()
+            to_date_obj = datetime.strptime(to_date, '%Y-%m-%d').date()
+        except ValueError:
+            # Fallback
+            to_date_obj = timezone.now().date()
+            from_date_obj = to_date_obj - timedelta(days=30)
+    from_datetime = timezone.make_aware(datetime.combine(from_date_obj, datetime.min.time()))
+    to_datetime = timezone.make_aware(datetime.combine(to_date_obj, datetime.max.time()))
+    return from_datetime, to_datetime
 
 
 def insert_to_supabase_general_feedback(data):
@@ -466,7 +487,6 @@ def bookmark_delete_by_file_view(request):
     )
 
 # ============= Research History Views =============
-
 @api_view(['GET', 'POST'])
 def research_history_view(request):
     """
@@ -592,8 +612,7 @@ def feedback_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
     
 
-    # ============= CSM Feedback Views =============
-
+# ============= CSM Feedback Views =============
 @api_view(['GET', 'POST'])
 def csm_feedback_view(request):
     """
@@ -654,8 +673,7 @@ def csm_feedback_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
     
     
-    # ============= Material Views (Most Browsed) =============
-
+# ============= Material Views (Most Browsed) =============
 @api_view(['POST'])
 def track_material_view(request):
     """
@@ -713,21 +731,10 @@ def track_material_view(request):
 
 @api_view(['GET'])
 def get_most_browsed(request):
-    """
-    GET /api/most-browsed/
-    Get most browsed materials with view counts and ratings
-    """
     try:
-        from django.db.models import Count, Avg, Q
-        from .models import Material, MaterialView, Feedback
-        from django.conf import settings
-        import os
-        
         limit = int(request.GET.get('limit', 10))
-        
-        # Get materials with view counts and ratings using raw SQL
-        from django.db import connection
-        
+        from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
         with connection.cursor() as cursor:
             cursor.execute("""
                 SELECT 
@@ -744,13 +751,13 @@ def get_most_browsed(request):
                     COALESCE(AVG(f.rating), 0) as avg_rating,
                     COUNT(DISTINCT f.id) as rating_count
                 FROM materials m
-                LEFT JOIN material_views mv ON m.file = mv.file
+                LEFT JOIN material_views mv ON m.file = mv.file AND mv.viewed_at BETWEEN %s AND %s
                 LEFT JOIN feedback f ON m.file = f.document_file
                 GROUP BY m.id, m.file, m.title, m.author, m.year, m.abstract, m.degree, m.subjects, m.school
                 HAVING COUNT(DISTINCT mv.id) > 0
                 ORDER BY view_count DESC, avg_rating DESC
                 LIMIT %s
-            """, [limit])
+            """, [from_date, to_date, limit])
             
             columns = [col[0] for col in cursor.description]
             results = [dict(zip(columns, row)) for row in cursor.fetchall()]
@@ -1071,215 +1078,6 @@ def get_sources_stats(request):
             status=status.HTTP_500_INTERNAL_SERVER_ERROR
         )
 
-
-# ============= Analytics Views =============
-
-@api_view(['GET'])
-def analytics_compact(request):
-    """
-    GET /api/analytics/compact/
-    Get compact analytics dashboard data
-    
-    Query Parameters:
-    - from: Start date (YYYY-MM-DD)
-    - to: End date (YYYY-MM-DD)
-    """
-    try:
-        from django.utils import timezone
-        from datetime import datetime, timedelta
-        from django.db import connection
-        from django.db.models import Count, Avg, Q
-        
-        # Parse date parameters
-        from_date = request.GET.get('from')
-        to_date = request.GET.get('to')
-        
-        # Default to last 30 days if not specified
-        if not from_date or not to_date:
-            to_date_obj = timezone.now().date()
-            from_date_obj = to_date_obj - timedelta(days=30)
-        else:
-            try:
-                from_date_obj = datetime.strptime(from_date, '%Y-%m-%d').date()
-                to_date_obj = datetime.strptime(to_date, '%Y-%m-%d').date()
-            except ValueError:
-                return Response(
-                    {"success": False, "error": "Invalid date format. Use YYYY-MM-DD"},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-        
-        # Convert to datetime for filtering
-        from_datetime = timezone.make_aware(datetime.combine(from_date_obj, datetime.min.time()))
-        to_datetime = timezone.make_aware(datetime.combine(to_date_obj, datetime.max.time()))
-        
-        # 1. TOP SEARCH QUERIES
-        top_search_queries = []
-        try:
-            with connection.cursor() as cursor:
-                cursor.execute("""
-                    SELECT 
-                        query,
-                        COUNT(*) as count
-                    FROM research_history
-                    WHERE created_at >= %s AND created_at <= %s AND query IS NOT NULL AND query != ''
-                    GROUP BY query
-                    ORDER BY count DESC
-                    LIMIT 5
-                """, [from_datetime, to_datetime])
-                
-                columns = [col[0] for col in cursor.description]
-                top_search_queries = [dict(zip(columns, row)) for row in cursor.fetchall()]
-        except Exception as e:
-            print(f"Error fetching top search queries: {e}")
-        
-        # 2. AVERAGE RESPONSE TIME (in seconds) - estimate based on system
-        avg_response_time = 45  # Default
-        try:
-            all_searches = ResearchHistory.objects.filter(
-                created_at__gte=from_datetime,
-                created_at__lte=to_datetime
-            ).count()
-            
-            if all_searches > 0:
-                avg_rating = Feedback.objects.filter(
-                    created_at__gte=from_datetime,
-                    created_at__lte=to_datetime
-                ).aggregate(avg=Avg('rating'))['avg'] or 3
-                
-                avg_response_time = max(15, int(120 - (avg_rating * 15)))
-        except Exception as e:
-            print(f"Error calculating response time: {e}")
-        
-        # 3. FAILED QUERIES
-        failed_queries = []
-        try:
-            fq_list = Feedback.objects.filter(
-                created_at__gte=from_datetime,
-                created_at__lte=to_datetime,
-                category='Issue',
-                query__isnull=False
-            ).values('query', 'created_at', 'comment').order_by('-created_at')[:5]
-            
-            for fq in fq_list:
-                failed_queries.append({
-                    'query': fq['query'],
-                    'date': fq['created_at'].strftime('%Y-%m-%d'),
-                    'reason': fq['comment'] or 'System error'
-                })
-        except Exception as e:
-            print(f"Error fetching failed queries: {e}")
-        
-        # 4. TOTAL BOOKMARKS
-        total_bookmarks = 0
-        try:
-            total_bookmarks = Bookmark.objects.filter(
-                bookmarked_at__gte=from_datetime,
-                bookmarked_at__lte=to_datetime
-            ).count()
-        except Exception as e:
-            print(f"Error fetching total bookmarks: {e}")
-        
-        # 5. BOOKMARK FREQUENCY
-        bookmark_frequency = []
-        try:
-            with connection.cursor() as cursor:
-                cursor.execute("""
-                    SELECT 
-                        DATE(bookmarked_at) as date,
-                        COUNT(*) as count
-                    FROM bookmarks
-                    WHERE bookmarked_at >= %s AND bookmarked_at <= %s
-                    GROUP BY DATE(bookmarked_at)
-                    ORDER BY date DESC
-                    LIMIT 7
-                """, [from_datetime, to_datetime])
-                
-                columns = [col[0] for col in cursor.description]
-                results = [dict(zip(columns, row)) for row in cursor.fetchall()]
-                
-                for item in results:
-                    if isinstance(item['date'], str):
-                        bookmark_frequency.append(item)
-                    else:
-                        bookmark_frequency.append({
-                            'date': item['date'].strftime('%Y-%m-%d'),
-                            'count': item['count']
-                        })
-        except Exception as e:
-            print(f"Error fetching bookmark frequency: {e}")
-        
-        # 6. MOST VIEWED MATERIALS
-        most_viewed_materials = []
-        try:
-            with connection.cursor() as cursor:
-                cursor.execute("""
-                    SELECT 
-                        m.file,
-                        m.title,
-                        m.author,
-                        m.year,
-                        COUNT(DISTINCT mv.id) as views
-                    FROM materials m
-                    LEFT JOIN material_views mv ON m.file = mv.file
-                    WHERE mv.viewed_at >= %s AND mv.viewed_at <= %s
-                    GROUP BY m.file, m.title, m.author, m.year
-                    ORDER BY views DESC
-                    LIMIT 5
-                """, [from_datetime, to_datetime])
-                
-                columns = [col[0] for col in cursor.description]
-                results = [dict(zip(columns, row)) for row in cursor.fetchall()]
-                
-                for item in results:
-                    most_viewed_materials.append({
-                        'title': item['title'] or 'Unknown Title',
-                        'author': item['author'] or 'Unknown Author',
-                        'year': item['year'],
-                        'views': int(item['views'])
-                    })
-        except Exception as e:
-            print(f"Error fetching most viewed materials: {e}")
-        
-        # 7. CRITICAL FEEDBACK
-        critical_feedback = []
-        try:
-            cf_list = Feedback.objects.filter(
-                created_at__gte=from_datetime,
-                created_at__lte=to_datetime,
-                category__in=['Issue', 'For Improvement']
-            ).values('query', 'comment', 'created_at').order_by('-created_at')[:3]
-            
-            for cf in cf_list:
-                critical_feedback.append({
-                    'query': cf['query'],
-                    'comment': cf['comment'],
-                    'date': cf['created_at'].strftime('%Y-%m-%d')
-                })
-        except Exception as e:
-            print(f"Error fetching critical feedback: {e}")
-        
-        return Response({
-            'success': True,
-            'data': {
-                'topSearchQueries': top_search_queries,
-                'avgResponseTime': avg_response_time,
-                'failedQueries': failed_queries,
-                'totalBookmarks': total_bookmarks,
-                'bookmarkFrequency': bookmark_frequency,
-                'mostViewedMaterials': most_viewed_materials,
-                'criticalFeedback': critical_feedback
-            }
-        }, status=status.HTTP_200_OK)
-        
-    except Exception as e:
-        print(f"Error in analytics_compact: {str(e)}")
-        import traceback
-        traceback.print_exc()
-        return Response(
-            {"success": False, "error": str(e)},
-            status=status.HTTP_500_INTERNAL_SERVER_ERROR
-        )
-
 # ============= Password Reset Views =============
 from rest_framework.decorators import api_view
 
@@ -1424,142 +1222,165 @@ class RAGEvaluationView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
-# ============= Additional for Analytics =============
+# ============= Endpoint 1 – KPI (Total Docs, Unique Visitors, Searches, Utilisation) =============
 @api_view(['GET'])
-def get_analytics_summary(request):
-    """
-    GET /api/analytics/compact/
-    Returns real data for the Admin Dashboard Overview.
-    """
-    try:
-        # 1. Parse Date Range
-        date_from_str = request.GET.get('from')
-        date_to_str = request.GET.get('to')
-        
-        if not date_from_str or not date_to_str:
-            now = timezone.now()
-            # Default to current year start if no date provided
-            date_from = now.replace(month=1, day=1, hour=0, minute=0, second=0)
-            date_to = now
-        else:
-            date_from = dateutil.parser.parse(date_from_str)
-            date_to = dateutil.parser.parse(date_to_str)
+def dashboard_kpi(request):
+    """GET /api/dashboard/kpi/ – four top cards."""
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
 
-        # 2. Main Metrics (Single Number Stats)
-        
-        # Total Searches in range
-        total_searches = ResearchHistory.objects.filter(
-            created_at__range=[date_from, date_to]
-        ).count()
+    # Total documents in collection
+    total_docs = Material.objects.count()
 
-        # Total Bookmarks in range
-        total_bookmarks = Bookmark.objects.filter(
-            bookmarked_at__range=[date_from, date_to]
-        ).count()
+    # Unique visitors (by user_id or session_id) who viewed a material in date range
+    unique_visitors = (
+        MaterialView.objects
+        .filter(viewed_at__range=[from_date, to_date])
+        .values('user_id', 'session_id')
+        .distinct()
+        .count()
+    )
 
-        # Bookmarks Per Week
-        days_diff = (date_to - date_from).days
-        weeks_count = max(1, days_diff / 7)
-        bookmarks_per_week = round(total_bookmarks / weeks_count, 1)
+    # Total searches in date range
+    total_searches = ResearchHistory.objects.filter(
+        created_at__range=[from_date, to_date]
+    ).count()
 
-        # Avg Loading Time (Placeholder until tracked)
-        avg_loading_time = 0.0 
+    # Accessed documents (with at least one view in range)
+    accessed_docs = (
+        MaterialView.objects
+        .filter(viewed_at__range=[from_date, to_date])
+        .values('file')
+        .distinct()
+        .count()
+    )
+    utilization = (accessed_docs / total_docs * 100) if total_docs else 0
 
-        # Total Citations (Placeholder until tracked)
-        total_citations = 0 
+    return Response({
+        'totalDocuments': total_docs,
+        'uniqueVisitors': unique_visitors,
+        'totalSearches': total_searches,
+        'accessedDocuments': accessed_docs,
+        'utilizationPercent': round(utilization, 1)
+    })
 
-        # 3. Chart Data: System Activity (Jan - Dec)
-        target_year = date_from.year
-        
-        searches_by_month = ResearchHistory.objects.filter(
-            created_at__year=target_year
-        ).annotate(month=TruncMonth('created_at')).values('month').annotate(count=Count('id')).order_by('month')
 
-        bookmarks_by_month = Bookmark.objects.filter(
-            bookmarked_at__year=target_year
-        ).annotate(month=TruncMonth('bookmarked_at')).values('month').annotate(count=Count('id')).order_by('month')
+# ============= Endpoint 2 – Top 5 Keywords/Topics =============
+@api_view(['GET'])
+def dashboard_top_keywords(request):
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
 
-        # Format for Frontend
-        months_data = []
-        month_names = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        
-        search_map = {entry['month'].strftime('%b'): entry['count'] for entry in searches_by_month}
-        bookmark_map = {entry['month'].strftime('%b'): entry['count'] for entry in bookmarks_by_month}
+    with connection.cursor() as cursor:
+        cursor.execute("""
+            SELECT 
+                unnest(m.subjects) as keyword,
+                COUNT(DISTINCT mv.id) as views
+            FROM materials m
+            JOIN material_views mv ON m.file = mv.file
+            WHERE mv.viewed_at BETWEEN %s AND %s
+              AND m.subjects IS NOT NULL
+              AND array_length(m.subjects, 1) > 0
+            GROUP BY keyword
+            ORDER BY views DESC
+            LIMIT 5
+        """, [from_date, to_date])
+        rows = cursor.fetchall()
 
-        for m_name in month_names:
-            months_data.append({
-                "month": m_name,
-                "searches": search_map.get(m_name, 0),
-                "bookmarks": bookmark_map.get(m_name, 0)
-            })
+    return Response([{'keyword': r[0], 'views': r[1]} for r in rows])
 
-        # 4. Top Lists
-        
-        # Top 5 Search Queries
-        top_queries_qs = ResearchHistory.objects.filter(
-            created_at__range=[date_from, date_to]
-        ).values('query').annotate(count=Count('query')).order_by('-count')[:5]
-        
-        top_queries = [{"query": item['query'], "count": item['count']} for item in top_queries_qs]
+# ============= Endpoint 3 – Top 10 Most Viewed Theses =============
+# ============= Endpoint 4 – Usage by User Category (from CSMFeedback) =============
+@api_view(['GET'])
+def dashboard_usage_by_category(request):
+    """GET /api/dashboard/usage-by-category/ – breakdown from CSMFeedback."""
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
 
-        # Top 5 Most Viewed Materials
-        most_viewed_qs = MaterialView.objects.filter(
-            viewed_at__range=[date_from, date_to]
-        ).values('title', 'author', 'year').annotate(views=Count('id')).order_by('-views')[:5]
-        
-        most_viewed = [
-            {
-                "title": item['title'] or "Unknown", 
-                "author": item['author'] or "Unknown", 
-                "year": item['year'] or "N/A", 
-                "views": item['views']
-            } 
-            for item in most_viewed_qs
-        ]
-
-        # 5. Unanswered Questions (Critical) - UPDATED TO USE ResearchHistory
-        # Logic: Queries where the system found 0 sources (sources_count=0)
-        failed_queries_qs = ResearchHistory.objects.filter(
-            created_at__range=[date_from, date_to],
-            sources_count=0  # <--- This uses your actual model field!
-        ).order_by('-created_at')[:8]
-
-        failed_queries = [
-            {
-                "query": q.query, 
-                "date": q.created_at.strftime("%Y-%m-%d"), 
-                "reason": "0 results found by AI" 
-            }
-            for q in failed_queries_qs
-        ]
-
-        # Also get Critical Feedback for the "Feedback Manager" list preview if needed
-        critical_feedback_qs = CSMFeedback.objects.filter(
-            created_at__range=[date_from, date_to],
-            litpath_rating__lte=2 # Rating of 1 or 2
-        ).order_by('-created_at')[:5]
-
-        critical_feedback = [
-            {"query": f.category, "date": f.created_at.strftime("%Y-%m-%d"), "reason": f.message_comment or "Low Rating"}
-            for f in critical_feedback_qs
-        ]
-
-        return Response({
-            "success": True,
-            "data": {
-                "topSearchQueries": top_queries,
-                "avgResponseTime": avg_loading_time,
-                "failedQueries": failed_queries,  # Now populates "Unanswered Questions"
-                "totalBookmarks": total_bookmarks,
-                "bookmarksPerWeek": bookmarks_per_week,
-                "totalCitations": total_citations,
-                "mostViewedMaterials": most_viewed,
-                "monthlyActivity": months_data,
-                "totalSearches": total_searches,
-                "criticalFeedback": critical_feedback
-            }
+    categories = (
+        CSMFeedback.objects
+        .filter(created_at__range=[from_date, to_date], category__isnull=False)
+        .exclude(category='')
+        .values('category')
+        .annotate(count=Count('id'))
+        .order_by('-count')
+    )
+    total = sum(c['count'] for c in categories) or 1
+    data = []
+    for cat in categories:
+        data.append({
+            'category': cat['category'],
+            'views': cat['count'],
+            'percentage': round((cat['count'] / total * 100), 1)
         })
+    return Response(data)
 
-    except Exception as e:
-        print("Analytics Error:", str(e))
-        return Response({"success": False, "error": str(e)}, status=500)
+# ============= Endpoint 5 – Monthly Trends (Views per Month) =============
+@api_view(['GET'])
+def dashboard_monthly_trends(request):
+    """
+    GET /api/dashboard/monthly-trends/
+    Returns view counts grouped by month within the given date range.
+    Query params: ?from=YYYY-MM-DD&to=YYYY-MM-DD
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    with connection.cursor() as cursor:
+        cursor.execute("""
+            SELECT 
+                to_char(date_trunc('month', viewed_at), 'Mon') as month,
+                EXTRACT(YEAR FROM viewed_at) as year,
+                COUNT(DISTINCT id) as views
+            FROM material_views
+            WHERE viewed_at BETWEEN %s AND %s
+            GROUP BY date_trunc('month', viewed_at), EXTRACT(YEAR FROM viewed_at)
+            ORDER BY MIN(viewed_at)
+        """, [from_date, to_date])
+        rows = cursor.fetchall()
+
+    # Format: [{"month": "Jan", "views": 42}, ...]
+    return Response([
+        {"month": row[0], "views": row[2]} for row in rows
+    ])
+
+# ============= Endpoint 6 – Zero‑View Materials =============
+@api_view(['GET'])
+def dashboard_zero_view_materials(request):
+    """GET /api/dashboard/zero-view/ – theses never viewed."""
+    from django.db.models import OuterRef, Exists
+
+    viewed_subquery = MaterialView.objects.filter(file=OuterRef('file'))
+    zero_view = (
+        Material.objects
+        .annotate(has_view=Exists(viewed_subquery))
+        .filter(has_view=False)
+        .values('id', 'title', 'author', 'year')[:10]   # ✅ 'year' instead of 'submitted_date'
+    )
+    return Response(list(zero_view))
+
+# ============= Endpoint 7 – Failed Queries (Zero Results) =============
+@api_view(['GET'])
+def dashboard_failed_queries(request):
+    """GET /api/dashboard/failed-queries/ – queries with zero results."""
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    failed = (
+        ResearchHistory.objects
+        .filter(
+            created_at__range=[from_date, to_date],
+            sources_count=0,
+            query__isnull=False
+        )
+        .exclude(query='')
+        .values('query')
+        .annotate(
+            count=Count('id'),
+            last_occurrence=Max('created_at')
+        )
+        .order_by('-count')[:10]
+    )
+    result = []
+    for item in failed:
+        result.append({
+            'query': item['query'],
+            'count': item['count'],
+            'last_occurrence': item['last_occurrence'].strftime('%Y-%m-%d %H:%M')
+        })
+    return Response(result)
