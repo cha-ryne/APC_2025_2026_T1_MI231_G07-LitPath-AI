@@ -204,7 +204,7 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                             <h1 className="text-2xl font-bold text-[#1E74BC] mb-2">
                                 Client Satisfaction Measurement (CSM) Form
                             </h1>
-                            <p className="text-sm text-gray-600 mb-4">
+                            <p className="text-lg text-gray-600 mb-4">
                                 <strong>LitPath AI: Smart Pathfinder for Thesis and Dissertation</strong>
                             </p>
                         </div>
@@ -262,19 +262,26 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
                                     Client Type <span className="text-red-500">*</span>
                                 </label>
-                                <select
-                                    name="client_type"
-                                    value={formData.client_type}
-                                    onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
-                                >
-                                    <option value="">Select Client Type</option>
-                                    {clientTypeChoices.map(choice => (
-                                        <option key={choice.value} value={choice.value}>
-                                            {choice.label}
-                                        </option>
-                                    ))}
-                                </select>
+                                <div className="relative">
+                                    <select
+                                        name="client_type"
+                                        value={formData.client_type}
+                                        onChange={handleChange}
+                                        className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
+                                    >
+                                        <option value="">Select Client Type</option>
+                                        {clientTypeChoices.map(choice => (
+                                            <option key={choice.value} value={choice.value}>
+                                                {choice.label}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
                                 {errors.client_type && (
                                     <p className="text-red-500 text-sm">{errors.client_type}</p>
                                 )}
@@ -290,7 +297,7 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                     name="date"
                                     value={formData.date}
                                     onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
+                                    className="w-full appearance-none border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
                                 />
                                 {errors.date && (
                                     <p className="text-red-500 text-sm">{errors.date}</p>
@@ -302,19 +309,26 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
                                     Sex <span className="text-red-500">*</span>
                                 </label>
-                                <select
-                                    name="sex"
-                                    value={formData.sex}
-                                    onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
-                                >
-                                    <option value="">Select Sex</option>
-                                    {sexChoices.map(choice => (
-                                        <option key={choice.value} value={choice.value}>
-                                            {choice.label}
-                                        </option>
-                                    ))}
-                                </select>
+                                <div className="relative">
+                                    <select
+                                        name="sex"
+                                        value={formData.sex}
+                                        onChange={handleChange}
+                                        className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
+                                    >
+                                        <option value="">Select Sex</option>
+                                        {sexChoices.map(choice => (
+                                            <option key={choice.value} value={choice.value}>
+                                                {choice.label}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
                                 {errors.sex && (
                                     <p className="text-red-500 text-sm">{errors.sex}</p>
                                 )}
@@ -325,19 +339,26 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
                                     1. Age <span className="text-red-500">*</span>
                                 </label>
-                                <select
-                                    name="age"
-                                    value={formData.age}
-                                    onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
-                                >
-                                    <option value="">Select Age Range</option>
-                                    {ageChoices.map(choice => (
-                                        <option key={choice.value} value={choice.value}>
-                                            {choice.label}
-                                        </option>
-                                    ))}
-                                </select>
+                                <div className="relative">
+                                    <select
+                                        name="age"
+                                        value={formData.age}
+                                        onChange={handleChange}
+                                        className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
+                                    >
+                                        <option value="">Select Age Range</option>
+                                        {ageChoices.map(choice => (
+                                            <option key={choice.value} value={choice.value}>
+                                                {choice.label}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
                                 {errors.age && (
                                     <p className="text-red-500 text-sm">{errors.age}</p>
                                 )}
@@ -348,19 +369,26 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
                                     2. Region <span className="text-red-500">*</span>
                                 </label>
-                                <select
-                                    name="region"
-                                    value={formData.region}
-                                    onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
-                                >
-                                    <option value="">Select Region</option>
-                                    {regionChoices.map(choice => (
-                                        <option key={choice.value} value={choice.value}>
-                                            {choice.label}
-                                        </option>
-                                    ))}
-                                </select>
+                                <div className="relative">
+                                    <select
+                                        name="region"
+                                        value={formData.region}
+                                        onChange={handleChange}
+                                        className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
+                                    >
+                                        <option value="">Select Region</option>
+                                        {regionChoices.map(choice => (
+                                            <option key={choice.value} value={choice.value}>
+                                                {choice.label}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
                                 {errors.region && (
                                     <p className="text-red-500 text-sm">{errors.region}</p>
                                 )}
@@ -371,19 +399,26 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
                                     3. Category / Kategorya <span className="text-red-500">*</span>
                                 </label>
-                                <select
-                                    name="category"
-                                    value={formData.category}
-                                    onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
-                                >
-                                    <option value="">Select Category</option>
-                                    {categoryChoices.map(choice => (
-                                        <option key={choice.value} value={choice.value}>
-                                            {choice.label}
-                                        </option>
-                                    ))}
-                                </select>
+                                <div className="relative">
+                                    <select
+                                        name="category"
+                                        value={formData.category}
+                                        onChange={handleChange}
+                                        className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
+                                    >
+                                        <option value="">Select Category</option>
+                                        {categoryChoices.map(choice => (
+                                            <option key={choice.value} value={choice.value}>
+                                                {choice.label}
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
+                                </div>
                                 {errors.category && (
                                     <p className="text-red-500 text-sm">{errors.category}</p>
                                 )}
@@ -424,9 +459,10 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                     </button>
                                 ))}
                             </div>
-                            <div className="flex justify-between text-xs text-gray-500 mt-1 px-1">
-                                <span>Poor</span>
-                                <span>Excellent</span>
+                            <div className="flex gap-2 mt-1">
+                                {['Poor', '', '', '', 'Excellent'].map((label, i) => (
+                                    <span key={i} className="text-xs text-gray-500 w-10 text-center">{label}</span>
+                                ))}
                             </div>
                             {errors.litpath_rating && (
                                 <p className="text-red-500 text-sm">{errors.litpath_rating}</p>
