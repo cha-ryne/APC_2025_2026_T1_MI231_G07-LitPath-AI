@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from .rag_service import RAGService
 from .serializers import CSMFeedbackSerializer
-from .models import CSMFeedback, Material, MaterialView, ResearchHistory
+from .models import CSMFeedback, CitationCopy, Material, MaterialView, ResearchHistory
 from .models_password_reset import PasswordResetToken
 import secrets
 from django.db.models import Count, Avg, Q, Sum
@@ -15,6 +15,7 @@ import dateutil.parser
 import time
 from django.utils import timezone
 from datetime import datetime, timedelta
+from calendar import month_name
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 from django.conf import settings
@@ -126,6 +127,7 @@ def insert_to_supabase_general_feedback(data):
         print(f"Error inserting to Supabase general_feedback: {e}")
         return False
 
+# ============= Filters View =============
 class FiltersView(APIView):
     """
     GET /api/filters/
@@ -157,6 +159,7 @@ class FiltersView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
+# ============= Health Check View =============
 class HealthCheckView(APIView):
     """
     GET /api/health/
@@ -204,6 +207,7 @@ class HealthCheckView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
+# ============= Search View =============
 class SearchView(APIView):
     """
     POST /api/search/
@@ -218,8 +222,6 @@ class SearchView(APIView):
             question = request.data.get("question", "").strip()
             filters = request.data.get("filters", {})
             conversation_history = request.data.get("conversation_history", [])
-            
-            # NEW: Check if this is a request for overview only
             overview_only = request.data.get("overview_only", False)
             
             if not question:
@@ -228,23 +230,23 @@ class SearchView(APIView):
                     status=status.HTTP_400_BAD_REQUEST
                 )
             
+            # Start timing the whole request
+            start_time = time.time()
+            
             # Extract filter parameters from explicit filters
             subjects = filters.get("subjects", [])
             year = filters.get("year")
             year_start = filters.get("year_start")
             year_end = filters.get("year_end")
             
-            # NEW: Extract filters from natural language query if no explicit filters provided
+            # Extract filters from natural language query if no explicit filters provided
             from .query_parser import extract_filters_from_query
             
-            # Get available subjects for better matching
             rag = RAGService()
             available_filters = rag.get_available_filters() if RAGService._initialized else {"subjects": [], "years": []}
             
-            # Parse query for implicit filters
             parsed = extract_filters_from_query(question, available_filters.get("subjects", []))
             
-            # Apply extracted filters only if not explicitly provided
             if not subjects and parsed.get("subjects"):
                 subjects = parsed["subjects"]
                 print(f"[RAG] Extracted subjects from query: {subjects}")
@@ -258,21 +260,17 @@ class SearchView(APIView):
                     year_end = parsed.get("year_end")
                     print(f"[RAG] Extracted year range from query: {year_start} - {year_end}")
             
-            # Log extracted filters info
             if parsed.get("extracted_filters"):
                 if parsed["extracted_filters"].get("year_phrases"):
                     print(f"[RAG] Year phrases detected: {parsed['extracted_filters']['year_phrases']}")
                 if parsed["extracted_filters"].get("subject_phrases"):
                     print(f"[RAG] Subject phrases detected: {parsed['extracted_filters']['subject_phrases']}")
             
-            # Validate filter parameters
             if subjects and not isinstance(subjects, list):
                 return Response(
                     {"error": "'subjects' must be a list"},
                     status=status.HTTP_400_BAD_REQUEST
                 )
-            
-            start_time = time.time()
             
             # Resolve pronouns in query using conversation history
             from .conversation_utils import conversation_manager
@@ -291,22 +289,11 @@ class SearchView(APIView):
             search_time = time.time() - search_start
             print(f"[RAG] Search took {search_time:.2f}s")
             
-            # Check content relevance
-            # Removed check_content_relevance import and usage as requested
-            # Removed relevance_check usage
-            
-
-            # If relevance is extremely low, clear documents (logic removed)
-            # (No action needed since relevance_check is gone)
-            
-            # NEW: If this is NOT an overview_only request, return documents immediately
-            # without generating the overview
+            # Early return if overview not requested
             if not overview_only:
-                # Build filters_applied summary (including auto-extracted ones)
                 filters_applied = {}
                 if subjects:
                     filters_applied["subjects"] = subjects
-                    # Mark if auto-extracted
                     if parsed.get("subjects") and subjects == parsed["subjects"]:
                         filters_applied["subjects_auto_extracted"] = True
                 if year:
@@ -318,10 +305,7 @@ class SearchView(APIView):
                     if parsed.get("year_start") or parsed.get("year_end"):
                         filters_applied["year_range_auto_extracted"] = True
                 
-                # Check if no results
                 no_results = not any(c["score"] < distance_threshold for c in top_chunks)
-                # Removed relevance_check usage
-                
                 suggestions = []
                 if no_results:
                     documents = []
@@ -338,18 +322,36 @@ class SearchView(APIView):
                         suggestions.append("Try shortening your query to key terms only")
                     suggestions.append("Try searching for broader topics related to your question")
                 
-                # Return documents immediately WITHOUT overview
+                # === Record response time ===
+                response_time_ms = int((time.time() - start_time) * 1000)
+                session_id = request.data.get('session_id')
+                if session_id:
+                    try:
+                        rh = ResearchHistory.objects.filter(session_id=session_id).order_by('-created_at').first()
+                        if rh:
+                            rh.response_time_ms = response_time_ms
+                            rh.sources_count = len(documents) if documents else 0
+                            rh.save(update_fields=['response_time_ms', 'sources_count'])
+                        else:
+                            ResearchHistory.objects.create(
+                                session_id=session_id,
+                                query=question,
+                                response_time_ms=response_time_ms,
+                                sources_count=len(documents) if documents else 0,
+                            )
+                    except Exception as e:
+                        print(f"Error recording search time: {e}")
+                
                 return Response({
                     "documents": documents,
                     "related_questions": [],
                     "filters_applied": filters_applied if filters_applied else None,
                     "suggestions": suggestions if suggestions else None,
-                    "overview": None,  # Will be requested separately
+                    "overview": None,
                     "overview_ready": False
                 }, status=status.HTTP_200_OK)
             
-            # If overview_only=True, generate the overview
-            # (This will be called by a second request from frontend)
+            # Generate overview (overview_only=True)
             generate_start = time.time()
             overview = rag.generate_overview(top_chunks, question, distance_threshold, conversation_history)
             generate_time = time.time() - generate_start
@@ -358,7 +360,7 @@ class SearchView(APIView):
             total_time = time.time() - start_time
             print(f"[RAG] Total time: {total_time:.2f}s")
             
-            # Calculate accuracy metrics
+            # Accuracy metrics
             search_metrics = rag.calculate_search_metrics(top_chunks, distance_threshold)
             citation_metrics = rag.verify_citations(overview, top_chunks)
             
@@ -370,7 +372,6 @@ class SearchView(APIView):
             print(f"[RAG] Citation Verification: {citation_metrics['verified_citations']}/{citation_metrics['total_citations']} ({citation_metrics['verification_rate']}%)")
             print(f"[RAG] Factual Accuracy: {hallucination_metrics['factual_accuracy']}%")
             
-            # NEW: LangSmith-style RAG evaluation (optional, for detailed quality assessment)
             rag_evaluation = None
             include_rag_eval = request.data.get("include_rag_evaluation", False)
             if include_rag_eval:
@@ -385,15 +386,31 @@ class SearchView(APIView):
                 except Exception as eval_err:
                     print(f"[RAG] RAG evaluation skipped: {eval_err}")
             
-            # Check if no results and clean up overview
             no_results = not any(c["score"] < distance_threshold for c in top_chunks)
-            # Removed relevance_check usage
-            
             if no_results:
                 import re
                 overview = re.sub(r"\[\d+\]", "", overview)
             
-            # Return overview with metrics
+            # === Record response time ===
+            response_time_ms = int(total_time * 1000)
+            session_id = request.data.get('session_id')
+            if session_id:
+                try:
+                    rh = ResearchHistory.objects.filter(session_id=session_id).order_by('-created_at').first()
+                    if rh:
+                        rh.response_time_ms = response_time_ms
+                        rh.sources_count = len(documents) if documents else 0
+                        rh.save(update_fields=['response_time_ms', 'sources_count'])
+                    else:
+                        ResearchHistory.objects.create(
+                            session_id=session_id,
+                            query=question,
+                            response_time_ms=response_time_ms,
+                            sources_count=len(documents) if documents else 0,
+                        )
+                except Exception as e:
+                    print(f"Error recording search time: {e}")
+
             response_data = {
                 "overview": overview,
                 "overview_ready": True,
@@ -409,7 +426,6 @@ class SearchView(APIView):
                 }
             }
             
-            # Add LangSmith-style evaluation if requested
             if rag_evaluation:
                 response_data["rag_evaluation"] = rag_evaluation
             
@@ -1225,50 +1241,273 @@ class RAGEvaluationView(APIView):
 # ============= Endpoint 1 – KPI (Total Docs, Unique Visitors, Searches, Utilisation) =============
 @api_view(['GET'])
 def dashboard_kpi(request):
-    """GET /api/dashboard/kpi/ – four top cards."""
     from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
 
-    # Total documents in collection
     total_docs = Material.objects.count()
-
-    # Unique visitors (by user_id or session_id) who viewed a material in date range
-    unique_visitors = (
-        MaterialView.objects
-        .filter(viewed_at__range=[from_date, to_date])
-        .values('user_id', 'session_id')
-        .distinct()
-        .count()
-    )
-
-    # Total searches in date range
-    total_searches = ResearchHistory.objects.filter(
-        created_at__range=[from_date, to_date]
-    ).count()
-
-    # Accessed documents (with at least one view in range)
-    accessed_docs = (
-        MaterialView.objects
-        .filter(viewed_at__range=[from_date, to_date])
-        .values('file')
-        .distinct()
-        .count()
-    )
+    unique_visitors = MaterialView.objects.filter(viewed_at__range=[from_date, to_date]).values('user_id', 'session_id').distinct().count()
+    total_searches = ResearchHistory.objects.filter(created_at__range=[from_date, to_date]).count()
+    accessed_docs = MaterialView.objects.filter(viewed_at__range=[from_date, to_date]).values('file').distinct().count()
     utilization = (accessed_docs / total_docs * 100) if total_docs else 0
+
+    # Average response time (new)
+    avg_response_time = ResearchHistory.objects.filter(
+        created_at__range=[from_date, to_date],
+        response_time_ms__isnull=False
+    ).aggregate(avg=Avg('response_time_ms'))['avg'] or 0
 
     return Response({
         'totalDocuments': total_docs,
         'uniqueVisitors': unique_visitors,
         'totalSearches': total_searches,
         'accessedDocuments': accessed_docs,
-        'utilizationPercent': round(utilization, 1)
+        'utilizationPercent': round(utilization, 1),
+        'avgResponseTime': round(avg_response_time, 0)   # 👈 new
     })
 
-
-# ============= Endpoint 2 – Top 5 Keywords/Topics =============
+# ============= Endpoint 2 – Top 7 Search Queries =============
 @api_view(['GET'])
-def dashboard_top_keywords(request):
+def dashboard_top_search_queries(request):
+    """
+    GET /api/dashboard/top-search-queries/
+    Returns the most frequent search queries within the date range (top 7).
+    """
     from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
 
+    top_queries = (
+        ResearchHistory.objects
+        .filter(
+            created_at__range=[from_date, to_date],
+            query__isnull=False
+        )
+        .exclude(query='')
+        .values('query')
+        .annotate(count=Count('id'))
+        .order_by('-count')[:7]   # 👈 changed to 7
+    )
+
+    return Response([
+        {'query': item['query'], 'count': item['count']}
+        for item in top_queries
+    ])
+
+# ============= Endpoint 3 – Top 10 Most Viewed Theses =============
+# ============= Endpoint 4 – Usage by User Category (from CSMFeedback) =============
+ALL_CATEGORIES = [
+    'Student',
+    'DOST Employee',
+    'Librarian/Library Staff',
+    'Other Government Employee',
+    'Teaching Personnel',
+    'Administrative Personnel',
+    'Researcher'
+]
+
+@api_view(['GET'])
+def dashboard_usage_by_category(request):
+    """GET /api/dashboard/usage-by-category/ – breakdown from CSMFeedback (all categories)."""
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    actual = (
+        CSMFeedback.objects
+        .filter(created_at__range=[from_date, to_date], category__isnull=False)
+        .exclude(category='')
+        .values('category')
+        .annotate(count=Count('id'))
+    )
+    count_dict = {item['category']: item['count'] for item in actual}
+
+    total = sum(count_dict.values()) or 1
+
+    data = []
+    for cat in ALL_CATEGORIES:
+        count = count_dict.get(cat, 0)
+        data.append({
+            'category': cat,
+            'views': count,
+            'percentage': round((count / total * 100), 1) if total else 0
+        })
+    return Response(data)
+
+# ============= Endpoint 5 – Monthly Trends (Views per Month) =============
+@api_view(['GET'])
+def dashboard_monthly_trends(request):
+    """
+    GET /api/dashboard/monthly-trends/
+    Returns view counts grouped by month within the given date range.
+    Ensures all months in the range are represented, with 0 for missing months.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    with connection.cursor() as cursor:
+        cursor.execute("""
+            SELECT 
+                EXTRACT(YEAR FROM viewed_at) as year,
+                EXTRACT(MONTH FROM viewed_at) as month,
+                COUNT(DISTINCT id) as views
+            FROM material_views
+            WHERE viewed_at BETWEEN %s AND %s
+            GROUP BY EXTRACT(YEAR FROM viewed_at), EXTRACT(MONTH FROM viewed_at)
+            ORDER BY year, month
+        """, [from_date, to_date])
+        rows = cursor.fetchall()
+
+    # Build a dict of (year, month) -> views
+    views_dict = {}
+    for row in rows:
+        year = int(row[0])
+        month = int(row[1])
+        views_dict[(year, month)] = row[2]
+
+    # Generate all months from from_date to to_date
+    start_month = from_date.replace(day=1)
+    end_month = to_date.replace(day=1)
+    current = start_month
+    months = []
+    while current <= end_month:
+        year = current.year
+        month = current.month
+        views = views_dict.get((year, month), 0)
+        month_full = month_name[month]   # 👈 full month name
+        months.append({
+            'month': month_full,
+            'year': year,
+            'views': views
+        })
+        # Move to next month
+        if month == 12:
+            current = current.replace(year=year+1, month=1)
+        else:
+            current = current.replace(month=month+1)
+
+    return Response(months)
+
+# ============= Endpoint 6 – track_citation_copy =============
+@api_view(['POST'])
+def track_citation_copy(request):
+    try:
+        file = request.data.get('file')
+        citation_style = request.data.get('citation_style')
+        user_id = request.data.get('user_id')
+        session_id = request.data.get('session_id')
+
+        if not file or not citation_style:
+            return Response({"error": "file and citation_style required"}, status=400)
+
+        material = Material.objects.filter(file=file).first()
+        if not material:
+            return Response({"error": "Material not found"}, status=404)
+
+        CitationCopy.objects.create(
+            document=material,
+            user_id=user_id,
+            session_id=session_id,
+            citation_style=citation_style
+        )
+        return Response({"success": True}, status=201)
+    except Exception as e:
+        return Response({"error": str(e)}, status=500)
+
+# ============= Endpoint 7 – dashboard_citation_stats =============
+@api_view(['GET'])
+def dashboard_citation_stats(request):
+    """
+    GET /api/dashboard/citation-stats/
+    Returns total citation copies and top cited theses within date range.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    total_copies = CitationCopy.objects.filter(
+        copied_at__range=[from_date, to_date]
+    ).count()
+
+    # Top 5 cited theses
+    top_cited = (
+        CitationCopy.objects
+        .filter(copied_at__range=[from_date, to_date])
+        .values('document__file', 'document__title', 'document__author', 'document__year')
+        .annotate(copies=Count('id'))
+        .order_by('-copies')[:5]
+    )
+
+    return Response({
+        'total_copies': total_copies,
+        'top_cited': list(top_cited)
+    })
+
+# ============= Endpoint 8 – dashboard_citation_monthly =============
+@api_view(['GET'])
+def dashboard_citation_monthly(request):
+    """
+    GET /api/dashboard/citation-monthly/
+    Returns monthly citation copy counts within the date range.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    # Aggregate by month
+    monthly = (
+        CitationCopy.objects
+        .filter(copied_at__range=[from_date, to_date])
+        .annotate(month=TruncMonth('copied_at'))
+        .values('month')
+        .annotate(copies=Count('id'))
+        .order_by('month')
+    )
+
+    # Build dict of month -> copies
+    copies_dict = {}
+    for item in monthly:
+        month_key = item['month'].strftime('%Y-%m')
+        copies_dict[month_key] = item['copies']
+
+    # Generate all months in range
+    current = from_date.replace(day=1)
+    result = []
+    while current <= to_date:
+        month_key = current.strftime('%Y-%m')
+        copies = copies_dict.get(month_key, 0)
+        result.append({
+            'month': current.strftime('%B'),  # full month name
+            'year': current.year,
+            'copies': copies
+        })
+        # Move to next month
+        if current.month == 12:
+            current = current.replace(year=current.year+1, month=1)
+        else:
+            current = current.replace(month=current.month+1)
+
+    return Response(result)
+
+# ============= Endpoint 9 – dashboard_failed_queries_count =============
+@api_view(['GET'])
+def dashboard_failed_queries_count(request):
+    """
+    GET /api/dashboard/failed-queries-count/
+    Returns total number of failed queries (zero results) in the date range.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    total_failed = ResearchHistory.objects.filter(
+        created_at__range=[from_date, to_date],
+        sources_count=0
+    ).count()
+
+    return Response({'total': total_failed})
+
+
+# ============= Endpoint 10 – Trending Topics =============
+@api_view(['GET'])
+def dashboard_trending_topics(request):
+    """
+    GET /api/dashboard/trending-topics/
+    Returns subjects with highest growth in views between two periods.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+    period_length = (to_date - from_date).days
+    prev_from = from_date - timedelta(days=period_length)
+    prev_to = from_date - timedelta(days=1)
+
+    # Current period views per subject
     with connection.cursor() as cursor:
         cursor.execute("""
             SELECT 
@@ -1280,107 +1519,123 @@ def dashboard_top_keywords(request):
               AND m.subjects IS NOT NULL
               AND array_length(m.subjects, 1) > 0
             GROUP BY keyword
-            ORDER BY views DESC
-            LIMIT 5
         """, [from_date, to_date])
-        rows = cursor.fetchall()
+        current_rows = cursor.fetchall()
+        current_dict = {row[0]: row[1] for row in current_rows}
 
-    return Response([{'keyword': r[0], 'views': r[1]} for r in rows])
-
-# ============= Endpoint 3 – Top 10 Most Viewed Theses =============
-# ============= Endpoint 4 – Usage by User Category (from CSMFeedback) =============
-@api_view(['GET'])
-def dashboard_usage_by_category(request):
-    """GET /api/dashboard/usage-by-category/ – breakdown from CSMFeedback."""
-    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
-
-    categories = (
-        CSMFeedback.objects
-        .filter(created_at__range=[from_date, to_date], category__isnull=False)
-        .exclude(category='')
-        .values('category')
-        .annotate(count=Count('id'))
-        .order_by('-count')
-    )
-    total = sum(c['count'] for c in categories) or 1
-    data = []
-    for cat in categories:
-        data.append({
-            'category': cat['category'],
-            'views': cat['count'],
-            'percentage': round((cat['count'] / total * 100), 1)
-        })
-    return Response(data)
-
-# ============= Endpoint 5 – Monthly Trends (Views per Month) =============
-@api_view(['GET'])
-def dashboard_monthly_trends(request):
-    """
-    GET /api/dashboard/monthly-trends/
-    Returns view counts grouped by month within the given date range.
-    Query params: ?from=YYYY-MM-DD&to=YYYY-MM-DD
-    """
-    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
-
-    with connection.cursor() as cursor:
+        # Previous period views per subject
         cursor.execute("""
             SELECT 
-                to_char(date_trunc('month', viewed_at), 'Mon') as month,
-                EXTRACT(YEAR FROM viewed_at) as year,
-                COUNT(DISTINCT id) as views
-            FROM material_views
-            WHERE viewed_at BETWEEN %s AND %s
-            GROUP BY date_trunc('month', viewed_at), EXTRACT(YEAR FROM viewed_at)
-            ORDER BY MIN(viewed_at)
-        """, [from_date, to_date])
-        rows = cursor.fetchall()
+                unnest(m.subjects) as keyword,
+                COUNT(DISTINCT mv.id) as views
+            FROM materials m
+            JOIN material_views mv ON m.file = mv.file
+            WHERE mv.viewed_at BETWEEN %s AND %s
+              AND m.subjects IS NOT NULL
+              AND array_length(m.subjects, 1) > 0
+            GROUP BY keyword
+        """, [prev_from, prev_to])
+        prev_rows = cursor.fetchall()
+        prev_dict = {row[0]: row[1] for row in prev_rows}
 
-    # Format: [{"month": "Jan", "views": 42}, ...]
-    return Response([
-        {"month": row[0], "views": row[2]} for row in rows
-    ])
+    # Compute growth, filter subjects with at least 3 views in current period
+    trending = []
+    for subject, current_views in current_dict.items():
+        if current_views < 3:
+            continue
+        prev_views = prev_dict.get(subject, 0)
+        if prev_views == 0:
+            growth = 100.0  # treat as 100% growth
+        else:
+            growth = ((current_views - prev_views) / prev_views) * 100
+        trending.append({
+            'subject': subject,
+            'current_views': current_views,
+            'prev_views': prev_views,
+            'growth': round(growth, 1)
+        })
 
-# ============= Endpoint 6 – Zero‑View Materials =============
+    # Sort by growth descending, take top 7
+    trending.sort(key=lambda x: x['growth'], reverse=True)
+    return Response(trending[:7])
+
+
+# ============= Endpoint 11 – Age Distribution =============
+# All age groups from the CSMFeedback form
+import re
+
+# Mapping from normalized short age strings to full display strings
+AGE_DISPLAY_MAP = {
+    '10 and below': '10 years old and below',
+    '11-15': '11 - 15 years old',
+    '16-20': '16 - 20 years old',
+    '21-25': '21 - 25 years old',
+    '26-30': '26 - 30 years old',
+    '31-35': '31 - 35 years old',
+    '36-40': '36 - 40 years old',
+    '41-45': '41 - 45 years old',
+    '46-50': '46 - 50 years old',
+    '51-55': '51 - 55 years old',
+    '56-60': '56 - 60 years old',
+    '61 and above': '61 years old and above'
+}
+
+# All possible display strings in order (for zero filling)
+ALL_AGE_DISPLAYS = list(AGE_DISPLAY_MAP.values())
+
+def normalize_age(age_str):
+    """Convert various age formats to a standard short form (e.g., '21-25')."""
+    if not age_str:
+        return ''
+    # Replace en dash with hyphen
+    age_str = age_str.replace('–', '-')
+    # Extract numbers and range
+    match = re.search(r'(\d+)\s*[-–]\s*(\d+)', age_str)
+    if match:
+        return f"{match.group(1)}-{match.group(2)}"
+    match = re.search(r'(\d+)\s+and\s+above', age_str, re.IGNORECASE)
+    if match:
+        return "61 and above"  # assuming only this special case
+    match = re.search(r'(\d+)\s+and\s+below', age_str, re.IGNORECASE)
+    if match:
+        return "10 and below"
+    return age_str
+
 @api_view(['GET'])
-def dashboard_zero_view_materials(request):
-    """GET /api/dashboard/zero-view/ – theses never viewed."""
-    from django.db.models import OuterRef, Exists
-
-    viewed_subquery = MaterialView.objects.filter(file=OuterRef('file'))
-    zero_view = (
-        Material.objects
-        .annotate(has_view=Exists(viewed_subquery))
-        .filter(has_view=False)
-        .values('id', 'title', 'author', 'year')[:10]   # ✅ 'year' instead of 'submitted_date'
-    )
-    return Response(list(zero_view))
-
-# ============= Endpoint 7 – Failed Queries (Zero Results) =============
-@api_view(['GET'])
-def dashboard_failed_queries(request):
-    """GET /api/dashboard/failed-queries/ – queries with zero results."""
+def dashboard_age_distribution(request):
+    """
+    GET /api/dashboard/age-distribution/
+    Returns age groups and counts (including zero) from CSMFeedback within the date range.
+    """
     from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
 
-    failed = (
-        ResearchHistory.objects
-        .filter(
-            created_at__range=[from_date, to_date],
-            sources_count=0,
-            query__isnull=False
-        )
-        .exclude(query='')
-        .values('query')
-        .annotate(
-            count=Count('id'),
-            last_occurrence=Max('created_at')
-        )
-        .order_by('-count')[:10]
+    # Get actual counts from database
+    actual_counts = (
+        CSMFeedback.objects
+        .filter(created_at__range=[from_date, to_date], age__isnull=False)
+        .exclude(age='')
+        .values('age')
+        .annotate(count=Count('id'))
     )
-    result = []
-    for item in failed:
-        result.append({
-            'query': item['query'],
-            'count': item['count'],
-            'last_occurrence': item['last_occurrence'].strftime('%Y-%m-%d %H:%M')
+
+    # Build a dict of normalized short age -> count
+    count_dict = {}
+    for item in actual_counts:
+        raw_age = item['age']
+        norm = normalize_age(raw_age)
+        # Map to display string if possible
+        display = AGE_DISPLAY_MAP.get(norm, norm)  # fallback to raw if not found
+        count_dict[display] = count_dict.get(display, 0) + item['count']
+
+    total = sum(count_dict.values()) or 1
+
+    # Build result for all age groups
+    data = []
+    for display in ALL_AGE_DISPLAYS:
+        count = count_dict.get(display, 0)
+        data.append({
+            'age': display,
+            'count': count,
+            'percentage': round((count / total * 100), 1) if total else 0
         })
-    return Response(result)
+    return Response(data)

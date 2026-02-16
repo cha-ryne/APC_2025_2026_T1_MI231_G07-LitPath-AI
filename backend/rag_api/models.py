@@ -162,6 +162,7 @@ class AdminUser(models.Model):
     def __str__(self):
         return self.email
 
+
 class Bookmark(models.Model):
     """User bookmarks for research papers - Auto-delete after 30 days"""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -199,6 +200,7 @@ class ResearchHistory(models.Model):
     subjects = models.TextField(blank=True, null=True)
     date_filter = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+    response_time_ms = models.FloatField(null=True, blank=True)  # milliseconds
     
     class Meta:
         db_table = 'research_history'
@@ -456,3 +458,14 @@ class MaterialRating(models.Model):
 
     def __str__(self):
         return f"{self.file} - {self.rating} Stars"
+
+
+class CitationCopy(models.Model):
+    document = models.ForeignKey(Material, on_delete=models.CASCADE, related_name='citation_copies')
+    user_id = models.CharField(max_length=100, blank=True, null=True)
+    session_id = models.CharField(max_length=100, blank=True, null=True)
+    citation_style = models.CharField(max_length=50)
+    copied_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-copied_at']

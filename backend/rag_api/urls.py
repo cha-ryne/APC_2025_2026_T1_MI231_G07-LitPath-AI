@@ -3,10 +3,9 @@ from django.urls import path
 from . views import (
     HealthCheckView, SearchView, FiltersView, RAGEvaluationView,
     bookmarks_view, bookmark_delete_view, bookmark_delete_by_file_view,
-    research_history_view, research_history_delete_view,
-    feedback_view, feedback_detail,
+    research_history_view, research_history_delete_view, feedback_view, feedback_detail,
     get_most_browsed, get_source_ratings, get_material_rating_detail,
-    get_sources_stats, csm_feedback_view, csm_feedback_detail, dashboard_kpi, dashboard_top_keywords, dashboard_usage_by_category, dashboard_monthly_trends, dashboard_zero_view_materials, dashboard_failed_queries
+    get_sources_stats, csm_feedback_view, csm_feedback_detail, dashboard_kpi, dashboard_trending_topics,dashboard_usage_by_category, dashboard_monthly_trends, dashboard_age_distribution, dashboard_failed_queries_count, track_citation_copy, dashboard_citation_monthly, dashboard_citation_stats
 )
 from . admin_views import admin_login_view, admin_users_view, admin_user_delete_view
 from . auth_views import (
@@ -40,6 +39,10 @@ urlpatterns = [
     path('bookmarks', bookmarks_view, name='bookmarks-no-slash'),
     path('bookmarks/<int:bookmark_id>/', bookmark_delete_view, name='bookmark-delete'),
     path('bookmarks/delete-by-file/', bookmark_delete_by_file_view, name='bookmark-delete-by-file'),
+
+    # Citation
+    path('track-citation/', track_citation_copy, name='track-citation'),
+    path('track-citation', track_citation_copy, name='track-citation-no-slash'),
     
     # Research History
     path('research-history/', research_history_view, name='research-history'),
@@ -102,18 +105,22 @@ urlpatterns = [
     # Dashboard API (for librarian dashboard)
     path('dashboard/kpi/', dashboard_kpi, name='dashboard-kpi'),
     path('dashboard/kpi', dashboard_kpi, name='dashboard-kpi-no-slash'),
-    path('dashboard/top-keywords/', dashboard_top_keywords, name='dashboard-top-keywords'),
-    path('dashboard/top-keywords', dashboard_top_keywords, name='dashboard-top-keywords-no-slash'),
     path('dashboard/top-theses/', get_most_browsed, name='dashboard-top-theses'),  # reuse existing
     path('dashboard/top-theses', get_most_browsed, name='dashboard-top-theses-no-slash'),
     path('dashboard/usage-by-category/', dashboard_usage_by_category, name='dashboard-usage-category'),
     path('dashboard/usage-by-category', dashboard_usage_by_category, name='dashboard-usage-category-no-slash'),
     path('dashboard/monthly-trends/', dashboard_monthly_trends, name='dashboard-monthly-trends'),
     path('dashboard/monthly-trends', dashboard_monthly_trends, name='dashboard-monthly-trends-no-slash'),
-    path('dashboard/zero-view/', dashboard_zero_view_materials, name='dashboard-zero-view'),
-    path('dashboard/zero-view', dashboard_zero_view_materials, name='dashboard-zero-view-no-slash'),
-    path('dashboard/failed-queries/', dashboard_failed_queries, name='dashboard-failed-queries'),
-    path('dashboard/failed-queries', dashboard_failed_queries, name='dashboard-failed-queries-no-slash'),
+    path('dashboard/trending-topics/', dashboard_trending_topics, name='dashboard-trending-topics'),
+    path('dashboard/trending-topics', dashboard_trending_topics, name='dashboard-trending-topics-no-slash'),
+    path('dashboard/age-distribution/', dashboard_age_distribution, name='dashboard-age-distribution'),
+    path('dashboard/age-distribution', dashboard_age_distribution, name='dashboard-age-distribution-no-slash'),
+    path('dashboard/failed-queries-count/', dashboard_failed_queries_count, name='dashboard-failed-queries-count'),
+    path('dashboard/failed-queries-count', dashboard_failed_queries_count, name='dashboard-failed-queries-count-no-slash'),
+    path('dashboard/citation-stats/', dashboard_citation_stats, name='dashboard-citation-stats'),
+    path('dashboard/citation-stats', dashboard_citation_stats, name='dashboard-citation-stats-no-slash'),
+    path('dashboard/citation-monthly/', dashboard_citation_monthly, name='dashboard-citation-monthly'),
+    path('dashboard/citation-monthly', dashboard_citation_monthly, name='dashboard-citation-monthly-no-slash'),
 ]
 
 
