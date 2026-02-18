@@ -280,7 +280,7 @@ const LitPathAI = () => {
             if (bookmarkIndex >= 0) {
                 // Remove bookmark (from backend)
                 await removeFromDjango(documentFile);
-                showToast('Bookmark removed!', 'info');
+                showToast('Bookmark removed!', 'error');
                 // Remove from localStorage for guests (optional, for UX)
                 if (isGuest) {
                     currentBookmarks.splice(bookmarkIndex, 1);
@@ -1155,7 +1155,7 @@ return (
     <div className={`${!conversationHistory.length && !searchResults ? 'h-screen overflow-hidden' : 'min-h-screen'} flex flex-col bg-gray-100`}>
         {/* Toast Notification */}
         {toast.show && (
-            <div className={`fixed bottom-4 right-4 z-50 px-6 py-3 rounded-lg shadow-lg text-sm ${
+            <div className={`fixed bottom-4 right-4 z-[80] px-6 py-3 rounded-lg shadow-lg text-sm ${
                 toast.type === 'success' ? 'bg-green-100 text-green-800' :
                 toast.type === 'error' ? 'bg-red-100 text-red-800' :
                 'bg-blue-100 text-blue-800'
