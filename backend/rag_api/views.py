@@ -1559,7 +1559,6 @@ def dashboard_trending_topics(request):
     trending.sort(key=lambda x: x['growth'], reverse=True)
     return Response(trending[:7])
 
-
 # ============= Endpoint 11 – Age Distribution =============
 # All age groups from the CSMFeedback form
 import re

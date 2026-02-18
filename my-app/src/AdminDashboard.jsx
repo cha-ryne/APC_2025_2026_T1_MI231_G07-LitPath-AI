@@ -6,7 +6,7 @@ import {
     ShieldCheck, ChevronDown, Eye, Search, ThumbsUp, ThumbsDown,
     Clock, Bookmark, AlertCircle, TrendingUp, BookOpen, CheckCircle,
     X, EyeOff, Menu, Calendar, Users, ChevronLeft, ChevronRight,
-    Trophy, Medal, Briefcase, GraduationCap, BarChart3, Copy
+    Trophy, Medal, Briefcase, GraduationCap, BarChart3, Copy, Info
 } from "lucide-react";
 import dostLogo from "./components/images/dost-logo.png";
 
@@ -626,25 +626,58 @@ const AdminDashboard = () => {
                                     
                                     {/* Total Theses */}
                                     <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
-                                            <BookOpen size={18} className="text-blue-600" /> Total Theses
-                                        </p>
+                                        <div className="flex items-center gap-1">
+                                            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+                                                <BookOpen size={18} className="text-blue-600" /> Total Theses
+                                            </p>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Total number of thesis/dissertation documents in the database.
+                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <p className="text-2xl font-bold text-gray-900 mt-2">{formatNumber(dashboardData.kpi.totalDocuments)}</p>
                                     </div>
 
-                                    {/* Total Searches */}
+                                    {/* Total Searches – same pattern, just change tooltip text */}
                                     <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
-                                            <Search size={18} className="text-green-600" /> Total Searches
-                                        </p>
+                                        <div className="flex items-center gap-1">
+                                            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+                                                <Search size={18} className="text-green-600" /> Total Searches
+                                            </p>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Number of search queries performed in the selected period.
+                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <p className="text-2xl font-bold text-gray-900 mt-2">{formatNumber(dashboardData.kpi.totalSearches)}</p>
                                     </div>
 
                                     {/* Collection Utilisation */}
                                     <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
-                                            <BarChart3 size={18} className="text-amber-600" /> Collection Utilisation
-                                        </p>
+                                        <div className="flex items-center gap-1">
+                                            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+                                                <BarChart3 size={18} className="text-amber-600" /> Collection Utilisation
+                                            </p>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Percentage of documents accessed at least once vs. total documents.
+                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div className="flex items-end gap-2 mt-2">
                                             <p className="text-2xl font-bold text-gray-900">{dashboardData.kpi.utilizationPercent}%</p>
                                             <p className="text-sm text-gray-500 mb-1">
@@ -655,17 +688,39 @@ const AdminDashboard = () => {
 
                                     {/* Avg Response Time */}
                                     <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
-                                            <Clock size={18} className="text-purple-600" /> Avg Response Time
-                                        </p>
+                                        <div className="flex items-center gap-1">
+                                            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+                                                <Clock size={18} className="text-purple-600" /> Avg Response Time
+                                            </p>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Average time (in milliseconds) to process a search query.
+                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <p className="text-2xl font-bold text-gray-900 mt-2">{formatNumber(dashboardData.kpi.avgResponseTime)} ms</p>
                                     </div>
 
                                     {/* Failed Queries */}
                                     <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
-                                            <AlertCircle size={18} className="text-red-600" /> Failed Queries
-                                        </p>
+                                        <div className="flex items-center gap-1">
+                                            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+                                                <AlertCircle size={18} className="text-red-600" /> Failed Queries
+                                            </p>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Number of searches that returned zero results.
+                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <p className="text-2xl font-bold text-gray-900 mt-2">{formatNumber(dashboardData.failedQueriesCount)}</p>
                                     </div>
 
@@ -676,9 +731,20 @@ const AdminDashboard = () => {
 
                                     {/* COL 1: TRENDING TOPICS (25%) */}
                                     <div className="col-span-12 lg:col-span-3 bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex flex-col">
-                                        <h3 className="font-bold text-gray-700 mb-4 text-xs flex items-center gap-2 uppercase tracking-wide">
-                                            <TrendingUp size={16} className="text-blue-600" /> TRENDING TOPICS
-                                        </h3>
+                                        <div className="flex items-center gap-1 mb-4">
+                                            <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                <TrendingUp size={16} className="text-blue-600" /> TRENDING TOPICS
+                                            </h3>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Subjects with the highest growth in views. Growth percentages may exceed 100% for new topics.
+                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div className="space-y-4 flex-1">
                                             {dashboardData.trendingTopics.length > 0 ? (
                                                 dashboardData.trendingTopics.map((item, i) => {
@@ -717,9 +783,20 @@ const AdminDashboard = () => {
 
                                     {/* COL 2: TOP 5 THESES - LEADERBOARD STYLE (50%) */}
                                     <div className="col-span-12 lg:col-span-6 bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex flex-col">
-                                        <h3 className="font-bold text-gray-700 mb-4 text-xs flex items-center gap-2 uppercase tracking-wide">
-                                            <BookOpen size={16} className="text-purple-600" /> Top 5 Most Viewed Theses
-                                        </h3>
+                                        <div className="flex items-center gap-1 mb-4">
+                                            <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                <BookOpen size={16} className="text-purple-600" /> Top 5 Most Viewed Theses
+                                            </h3>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Ranked by number of views within the selected date range.
+                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div className="flex-1 flex flex-col gap-3">
                                             {dashboardData.topTheses.slice(0, 5).map((item, i) => (
                                                 <div
@@ -761,14 +838,25 @@ const AdminDashboard = () => {
                                         </div>
                                     </div>
 
-                                    {/* COL 3: USERS & TRENDS (25%) */}
+                                    {/* COL 3: USERS & AGE DISTRIBUTION (25%) */}
                                     <div className="col-span-12 lg:col-span-3 flex flex-col gap-2">
 
                                         {/* Users by Category */}
                                         <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex-1">
-                                            <h3 className="font-bold text-gray-700 mb-4 text-xs flex items-center gap-2 uppercase tracking-wide">
-                                                <Users size={16} className="text-indigo-600" /> Users by Category
-                                            </h3>
+                                            <div className="flex items-center gap-1 mb-4">
+                                                <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                    <Users size={16} className="text-indigo-600" /> Users by Category
+                                                </h3>
+                                                <div className="relative group">
+                                                    <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                        <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                            Distribution of users by their self‑identified category from CSM feedback.
+                                                        </div>
+                                                        <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div className="space-y-3">
                                                 {dashboardData.usageByCategory.length > 0 ? (
                                                     dashboardData.usageByCategory.map((cat, i) => {
@@ -800,135 +888,158 @@ const AdminDashboard = () => {
                                             </div>
                                         </div>
 
-                                        {/* Monthly Trend - Chart */}
-                                        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex-1 flex flex-col justify-end min-h-[180px]">
-                                            <h3 className="font-bold text-gray-700 mb-6 text-xs flex items-center gap-2 uppercase tracking-wide">
-                                                <Calendar size={16} className="text-green-600" /> Activity Trends
-                                            </h3>
-                                            
-                                            <div className="flex-1 flex items-end gap-2 w-full">
-                                                {dashboardData.monthlyTrends.length > 0 ? (
-                                                    dashboardData.monthlyTrends.map((month, i) => {
-                                                        const max = Math.max(...dashboardData.monthlyTrends.map(m => m.views), 1);
-                                                        const heightPercent = month.views === 0 ? 2 : (month.views / max) * 100;
-
-                                                        return (
-                                                            <div key={i} className="flex-1 flex flex-col items-center gap-2 h-full justify-end group cursor-default">
-                                                                
-                                                                {/* Bar Container */}
-                                                                <div className="relative w-full flex justify-center items-end h-full">
-                                                                    {/* The Bar */}
-                                                                    <div 
-                                                                        className="w-full max-w-[20px] bg-gradient-to-t from-green-600 to-green-400 rounded-t-sm transition-all duration-500 relative hover:from-green-500 hover:to-green-300"
-                                                                        style={{ height: `${heightPercent}%` }}
-                                                                    >
-                                                                        {/* Tooltip – always centered, with wrapping text */}
-                                                                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none">
-                                                                            <div className="bg-gray-800 text-white text-[10px] px-2 py-1 rounded shadow-lg max-w-[200px] text-center whitespace-normal font-medium">
-                                                                                {month.month} {month.year}: {month.views} views
-                                                                            </div>
-                                                                            {/* Tooltip Arrow – always centered under tooltip */}
-                                                                            <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                {/* X-Axis Label (Month abbreviation – keep short) */}
-                                                                <span className="text-[9px] text-gray-500 font-bold uppercase truncate w-full text-center">
-                                                                    {month.month.substring(0, 3)}
-                                                                </span>
-                                                            </div>
-                                                        );
-                                                    })
-                                                ) : (
-                                                    <div className="w-full h-full flex flex-col items-center justify-center text-gray-400 gap-2 opacity-50">
-                                                        <TrendingUp size={32} />
-                                                        <span className="text-xs">No activity recorded yet</span>
+                                        {/* Age Distribution */}
+                                        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex-1">
+                                            <div className="flex items-center gap-1 mb-3">
+                                                <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                    <Users size={16} className="text-purple-600" /> Age Distribution
+                                                </h3>
+                                                <div className="relative group">
+                                                    <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                        <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                            Age breakdown of users who provided feedback.
+                                                        </div>
+                                                        <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
                                                     </div>
-                                                )}
+                                                </div>
                                             </div>
+                                            {(() => {
+                                                // Filter to only ages with data, sort by count descending, take top 8
+                                                const agesWithData = dashboardData.ageDistribution
+                                                    .filter(a => a.count > 0)
+                                                    .sort((a, b) => b.count - a.count)
+                                                    .slice(0, 8);
+                                                const total = dashboardData.ageDistribution.reduce((sum, a) => sum + a.count, 0);
+
+                                                const colorPalette = [
+                                                    '#3b82f6', '#ef4444', '#f97316', '#eab308', '#22c55e', '#14b8a6', '#a855f7', '#ec4899', '#6366f1', '#8b5cf6'
+                                                ];
+
+                                                if (agesWithData.length === 0) {
+                                                    return <p className="text-xs text-gray-400 italic">No age data.</p>;
+                                                }
+
+                                                let cumulativePercent = 0;
+                                                const gradientStops = agesWithData.map((item, i) => {
+                                                    const percentage = (item.count / total) * 100;
+                                                    const start = cumulativePercent;
+                                                    cumulativePercent += percentage;
+                                                    const color = colorPalette[i % colorPalette.length];
+                                                    return `${color} ${start}% ${cumulativePercent}%`;
+                                                }).join(', ');
+
+                                                return (
+                                                    <div className="flex flex-col md:flex-row items-center gap-4">
+                                                        {/* Donut chart */}
+                                                        <div className="relative w-32 h-32 flex-shrink-0">
+                                                            <div
+                                                                className="w-full h-full rounded-full"
+                                                                style={{
+                                                                    background: `conic-gradient(${gradientStops})`,
+                                                                    mask: 'radial-gradient(circle at 50% 50%, transparent 50%, black 51%)',
+                                                                    WebkitMask: 'radial-gradient(circle at 50% 50%, transparent 50%, black 51%)'
+                                                                }}
+                                                            />
+                                                            <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-gray-700">
+                                                                {total} total
+                                                            </div>
+                                                        </div>
+                                                        {/* Legend */}
+                                                        <div className="flex-1 space-y-1 max-h-40 overflow-y-auto pr-1">
+                                                            {agesWithData.map((item, i) => {
+                                                                const color = colorPalette[i % colorPalette.length];
+                                                                return (
+                                                                    <div key={i} className="flex items-center gap-2 text-[10px]">
+                                                                        <span className="w-3 h-3 rounded-full" style={{ backgroundColor: color }} />
+                                                                        <span className="flex-1 truncate" title={item.age}>
+                                                                            {item.age}
+                                                                        </span>
+                                                                        <span className="font-semibold text-gray-700">
+                                                                            {item.count} ({item.percentage}%)
+                                                                        </span>
+                                                                    </div>
+                                                                );
+                                                            })}
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })()}
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* ===== BOTTOM SECTION: AGE DISTRIBUTION + CITATIONS ===== */}
+                                {/* ===== BOTTOM SECTION: ACTIVITY TRENDS + CITATIONS ===== */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                                    
-                                    {/* Age Distribution */}
-                                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                                        <h3 className="font-bold text-gray-700 mb-3 text-xs flex items-center gap-2 uppercase tracking-wide">
-                                            <Users size={16} className="text-purple-600" /> Age Distribution
-                                        </h3>
-                                        {(() => {
-                                            // Filter to only ages with data, sort by count descending, take top 8
-                                            const agesWithData = dashboardData.ageDistribution
-                                                .filter(a => a.count > 0)
-                                                .sort((a, b) => b.count - a.count)
-                                                .slice(0, 8);
-                                            const total = dashboardData.ageDistribution.reduce((sum, a) => sum + a.count, 0);
 
-                                            // Categorical color palette
-                                            const colorPalette = [
-                                                '#3b82f6', '#ef4444', '#f97316', '#eab308', '#22c55e', '#14b8a6', '#a855f7', '#ec4899', '#6366f1', '#8b5cf6'
-                                            ];
-
-                                            if (agesWithData.length === 0) {
-                                                return <p className="text-xs text-gray-400 italic">No age data.</p>;
-                                            }
-
-                                            // Build conic-gradient string
-                                            let cumulativePercent = 0;
-                                            const gradientStops = agesWithData.map((item, i) => {
-                                                const percentage = (item.count / total) * 100;
-                                                const start = cumulativePercent;
-                                                cumulativePercent += percentage;
-                                                const color = colorPalette[i % colorPalette.length];
-                                                return `${color} ${start}% ${cumulativePercent}%`;
-                                            }).join(', ');
-
-                                            return (
-                                                <div className="flex flex-col md:flex-row items-center gap-4">
-                                                    {/* Donut chart */}
-                                                    <div className="relative w-32 h-32 flex-shrink-0">
-                                                        <div
-                                                            className="w-full h-full rounded-full"
-                                                            style={{
-                                                                background: `conic-gradient(${gradientStops})`,
-                                                                mask: 'radial-gradient(circle at 50% 50%, transparent 50%, black 51%)',
-                                                                WebkitMask: 'radial-gradient(circle at 50% 50%, transparent 50%, black 51%)'
-                                                            }}
-                                                        />
-                                                        <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-gray-700">
-                                                            {total} total
-                                                        </div>
+                                    {/* Activity Trends */}
+                                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 min-h-[200px]">
+                                        <div className="flex items-center gap-1 mb-3">
+                                            <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                <Calendar size={16} className="text-green-600" /> Activity Trends
+                                            </h3>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Monthly view counts for the selected period.
                                                     </div>
-                                                    {/* Legend */}
-                                                    <div className="flex-1 space-y-1 max-h-40 overflow-y-auto pr-1">
-                                                        {agesWithData.map((item, i) => {
-                                                            const color = colorPalette[i % colorPalette.length];
-                                                            return (
-                                                                <div key={i} className="flex items-center gap-2 text-[10px]">
-                                                                    <span className="w-3 h-3 rounded-full" style={{ backgroundColor: color }} />
-                                                                    <span className="flex-1 truncate" title={item.age}>
-                                                                        {item.age}
-                                                                    </span>
-                                                                    <span className="font-semibold text-gray-700">
-                                                                        {item.count} ({item.percentage}%)
-                                                                    </span>
-                                                                </div>
-                                                            );
-                                                        })}
-                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
                                                 </div>
-                                            );
-                                        })()}
+                                            </div>
+                                        </div>
+                                        <div className="flex-1 flex items-end gap-2 w-full h-full">
+                                            {dashboardData.monthlyTrends.length > 0 ? (
+                                                dashboardData.monthlyTrends.map((month, i) => {
+                                                    const max = Math.max(...dashboardData.monthlyTrends.map(m => m.views), 1);
+                                                    const heightPercent = month.views === 0 ? 2 : (month.views / max) * 100;
+
+                                                    return (
+                                                        <div key={i} className="flex-1 flex flex-col items-center gap-2 h-full justify-end group cursor-default">
+                                                            <div className="relative w-full flex justify-center items-end h-full">
+                                                                <div 
+                                                                    className="w-full max-w-[20px] bg-gradient-to-t from-green-600 to-green-400 rounded-t-sm transition-all duration-500 relative hover:from-green-500 hover:to-green-300"
+                                                                    style={{ height: `${heightPercent}%` }}
+                                                                >
+                                                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none">
+                                                                        <div className="bg-gray-800 text-white text-[10px] px-2 py-1 rounded shadow-lg max-w-[200px] text-center whitespace-normal font-medium">
+                                                                            {month.month} {month.year}: {month.views} views
+                                                                        </div>
+                                                                        <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <span className="text-[9px] text-gray-500 font-bold uppercase truncate w-full text-center">
+                                                                {month.month.substring(0, 3)}
+                                                            </span>
+                                                        </div>
+                                                    );
+                                                })
+                                            ) : (
+                                                <div className="w-full h-full flex flex-col items-center justify-center text-gray-400 gap-2 opacity-50">
+                                                    <TrendingUp size={32} />
+                                                    <span className="text-xs">No activity recorded yet</span>
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
 
                                     {/* Citation Activity */}
                                     <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                                        <h3 className="font-bold text-gray-700 mb-3 text-xs flex items-center gap-2 uppercase tracking-wide">
-                                            <Copy size={16} className="text-amber-600" /> Citation Activity
-                                        </h3>
+                                        <div className="flex items-center gap-1 mb-3">
+                                            <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                <Copy size={16} className="text-amber-600" /> Citation Activity
+                                            </h3>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Number of times citations were copied, with monthly breakdown.
+                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         
                                         {dashboardData.citationStats.total_copies > 0 ? (
                                             <>
@@ -940,7 +1051,6 @@ const AdminDashboard = () => {
                                                     {dashboardData.citationMonthly.length > 0 ? (
                                                         dashboardData.citationMonthly.map((month, i) => {
                                                             const max = Math.max(...dashboardData.citationMonthly.map(m => m.copies), 1);
-                                                            // Even zero months get a visible bar (8px)
                                                             const barHeight = month.copies === 0 ? 8 : Math.max(8, (month.copies / max) * 100);
                                                             return (
                                                                 <div key={i} className="flex-1 flex flex-col items-center group cursor-default">
@@ -975,10 +1085,10 @@ const AdminDashboard = () => {
                                         )}
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
+                        </div> 
                     )}
+                    
 
                     {/* ----- FEEDBACK MANAGER TAB ----- */}
                     {activeTab === 'feedback' && (
