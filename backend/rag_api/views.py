@@ -1238,7 +1238,7 @@ class RAGEvaluationView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
-# ============= Endpoint 1 – KPI (Total Docs, Unique Visitors, Searches, Utilisation) =============
+# ============= Endpoint 1 – KPI (Total Theses, Total Searches, Utilisation, Avg Response Time, Failed Queries) =============
 @api_view(['GET'])
 def dashboard_kpi(request):
     from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
@@ -1264,221 +1264,7 @@ def dashboard_kpi(request):
         'avgResponseTime': round(avg_response_time, 0)   # 👈 new
     })
 
-# ============= Endpoint 2 – Top 7 Search Queries =============
-@api_view(['GET'])
-def dashboard_top_search_queries(request):
-    """
-    GET /api/dashboard/top-search-queries/
-    Returns the most frequent search queries within the date range (top 7).
-    """
-    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
-
-    top_queries = (
-        ResearchHistory.objects
-        .filter(
-            created_at__range=[from_date, to_date],
-            query__isnull=False
-        )
-        .exclude(query='')
-        .values('query')
-        .annotate(count=Count('id'))
-        .order_by('-count')[:7]   # 👈 changed to 7
-    )
-
-    return Response([
-        {'query': item['query'], 'count': item['count']}
-        for item in top_queries
-    ])
-
-# ============= Endpoint 3 – Top 10 Most Viewed Theses =============
-# ============= Endpoint 4 – Usage by User Category (from CSMFeedback) =============
-ALL_CATEGORIES = [
-    'Student',
-    'DOST Employee',
-    'Librarian/Library Staff',
-    'Other Government Employee',
-    'Teaching Personnel',
-    'Administrative Personnel',
-    'Researcher'
-]
-
-@api_view(['GET'])
-def dashboard_usage_by_category(request):
-    """GET /api/dashboard/usage-by-category/ – breakdown from CSMFeedback (all categories)."""
-    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
-
-    actual = (
-        CSMFeedback.objects
-        .filter(created_at__range=[from_date, to_date], category__isnull=False)
-        .exclude(category='')
-        .values('category')
-        .annotate(count=Count('id'))
-    )
-    count_dict = {item['category']: item['count'] for item in actual}
-
-    total = sum(count_dict.values()) or 1
-
-    data = []
-    for cat in ALL_CATEGORIES:
-        count = count_dict.get(cat, 0)
-        data.append({
-            'category': cat,
-            'views': count,
-            'percentage': round((count / total * 100), 1) if total else 0
-        })
-    return Response(data)
-
-# ============= Endpoint 5 – Monthly Trends (Views per Month) =============
-@api_view(['GET'])
-def dashboard_monthly_trends(request):
-    """
-    GET /api/dashboard/monthly-trends/
-    Returns view counts grouped by month within the given date range.
-    Ensures all months in the range are represented, with 0 for missing months.
-    """
-    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
-
-    with connection.cursor() as cursor:
-        cursor.execute("""
-            SELECT 
-                EXTRACT(YEAR FROM viewed_at) as year,
-                EXTRACT(MONTH FROM viewed_at) as month,
-                COUNT(DISTINCT id) as views
-            FROM material_views
-            WHERE viewed_at BETWEEN %s AND %s
-            GROUP BY EXTRACT(YEAR FROM viewed_at), EXTRACT(MONTH FROM viewed_at)
-            ORDER BY year, month
-        """, [from_date, to_date])
-        rows = cursor.fetchall()
-
-    # Build a dict of (year, month) -> views
-    views_dict = {}
-    for row in rows:
-        year = int(row[0])
-        month = int(row[1])
-        views_dict[(year, month)] = row[2]
-
-    # Generate all months from from_date to to_date
-    start_month = from_date.replace(day=1)
-    end_month = to_date.replace(day=1)
-    current = start_month
-    months = []
-    while current <= end_month:
-        year = current.year
-        month = current.month
-        views = views_dict.get((year, month), 0)
-        month_full = month_name[month]   # 👈 full month name
-        months.append({
-            'month': month_full,
-            'year': year,
-            'views': views
-        })
-        # Move to next month
-        if month == 12:
-            current = current.replace(year=year+1, month=1)
-        else:
-            current = current.replace(month=month+1)
-
-    return Response(months)
-
-# ============= Endpoint 6 – track_citation_copy =============
-@api_view(['POST'])
-def track_citation_copy(request):
-    try:
-        file = request.data.get('file')
-        citation_style = request.data.get('citation_style')
-        user_id = request.data.get('user_id')
-        session_id = request.data.get('session_id')
-
-        if not file or not citation_style:
-            return Response({"error": "file and citation_style required"}, status=400)
-
-        material = Material.objects.filter(file=file).first()
-        if not material:
-            return Response({"error": "Material not found"}, status=404)
-
-        CitationCopy.objects.create(
-            document=material,
-            user_id=user_id,
-            session_id=session_id,
-            citation_style=citation_style
-        )
-        return Response({"success": True}, status=201)
-    except Exception as e:
-        return Response({"error": str(e)}, status=500)
-
-# ============= Endpoint 7 – dashboard_citation_stats =============
-@api_view(['GET'])
-def dashboard_citation_stats(request):
-    """
-    GET /api/dashboard/citation-stats/
-    Returns total citation copies and top cited theses within date range.
-    """
-    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
-
-    total_copies = CitationCopy.objects.filter(
-        copied_at__range=[from_date, to_date]
-    ).count()
-
-    # Top 5 cited theses
-    top_cited = (
-        CitationCopy.objects
-        .filter(copied_at__range=[from_date, to_date])
-        .values('document__file', 'document__title', 'document__author', 'document__year')
-        .annotate(copies=Count('id'))
-        .order_by('-copies')[:5]
-    )
-
-    return Response({
-        'total_copies': total_copies,
-        'top_cited': list(top_cited)
-    })
-
-# ============= Endpoint 8 – dashboard_citation_monthly =============
-@api_view(['GET'])
-def dashboard_citation_monthly(request):
-    """
-    GET /api/dashboard/citation-monthly/
-    Returns monthly citation copy counts within the date range.
-    """
-    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
-
-    # Aggregate by month
-    monthly = (
-        CitationCopy.objects
-        .filter(copied_at__range=[from_date, to_date])
-        .annotate(month=TruncMonth('copied_at'))
-        .values('month')
-        .annotate(copies=Count('id'))
-        .order_by('month')
-    )
-
-    # Build dict of month -> copies
-    copies_dict = {}
-    for item in monthly:
-        month_key = item['month'].strftime('%Y-%m')
-        copies_dict[month_key] = item['copies']
-
-    # Generate all months in range
-    current = from_date.replace(day=1)
-    result = []
-    while current <= to_date:
-        month_key = current.strftime('%Y-%m')
-        copies = copies_dict.get(month_key, 0)
-        result.append({
-            'month': current.strftime('%B'),  # full month name
-            'year': current.year,
-            'copies': copies
-        })
-        # Move to next month
-        if current.month == 12:
-            current = current.replace(year=current.year+1, month=1)
-        else:
-            current = current.replace(month=current.month+1)
-
-    return Response(result)
-
-# ============= Endpoint 9 – dashboard_failed_queries_count =============
+# Failed Queries Count
 @api_view(['GET'])
 def dashboard_failed_queries_count(request):
     """
@@ -1494,8 +1280,7 @@ def dashboard_failed_queries_count(request):
 
     return Response({'total': total_failed})
 
-
-# ============= Endpoint 10 – Trending Topics =============
+# ============= Endpoint 2 – Trending Topics =============
 @api_view(['GET'])
 def dashboard_trending_topics(request):
     """
@@ -1559,7 +1344,47 @@ def dashboard_trending_topics(request):
     trending.sort(key=lambda x: x['growth'], reverse=True)
     return Response(trending[:7])
 
-# ============= Endpoint 11 – Age Distribution =============
+# ============= Endpoint 3 – Top 7 Most Viewed Theses =============
+
+# ============= Endpoint 4 – Usage by User Category (from CSMFeedback) =============
+ALL_CATEGORIES = [
+    'Student',
+    'DOST Employee',
+    'Librarian/Library Staff',
+    'Other Government Employee',
+    'Teaching Personnel',
+    'Administrative Personnel',
+    'Researcher'
+]
+
+@api_view(['GET'])
+def dashboard_usage_by_category(request):
+    """GET /api/dashboard/usage-by-category/ – breakdown from CSMFeedback (all categories)."""
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    actual = (
+        CSMFeedback.objects
+        .filter(created_at__range=[from_date, to_date], category__isnull=False)
+        .exclude(category='')
+        .values('category')
+        .annotate(count=Count('id'))
+    )
+    count_dict = {item['category']: item['count'] for item in actual}
+
+    total = sum(count_dict.values()) or 1
+
+    data = []
+    for cat in ALL_CATEGORIES:
+        count = count_dict.get(cat, 0)
+        data.append({
+            'category': cat,
+            'views': count,
+            'percentage': round((count / total * 100), 1) if total else 0
+        })
+    return Response(data)
+
+# ============= Endpoint 5 – Age Distribution =============
+
 # All age groups from the CSMFeedback form
 import re
 
@@ -1638,3 +1463,264 @@ def dashboard_age_distribution(request):
             'percentage': round((count / total * 100), 1) if total else 0
         })
     return Response(data)
+
+# ============= Endpoint 6 – Activity Trends =============
+
+# Monthly Trends (Views per Month)
+@api_view(['GET'])
+def dashboard_monthly_trends(request):
+    """
+    GET /api/dashboard/monthly-trends/
+    Returns view counts grouped by month within the given date range.
+    Ensures all months in the range are represented, with 0 for missing months.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    with connection.cursor() as cursor:
+        cursor.execute("""
+            SELECT 
+                EXTRACT(YEAR FROM viewed_at) as year,
+                EXTRACT(MONTH FROM viewed_at) as month,
+                COUNT(DISTINCT id) as views
+            FROM material_views
+            WHERE viewed_at BETWEEN %s AND %s
+            GROUP BY EXTRACT(YEAR FROM viewed_at), EXTRACT(MONTH FROM viewed_at)
+            ORDER BY year, month
+        """, [from_date, to_date])
+        rows = cursor.fetchall()
+
+    # Build a dict of (year, month) -> views
+    views_dict = {}
+    for row in rows:
+        year = int(row[0])
+        month = int(row[1])
+        views_dict[(year, month)] = row[2]
+
+    # Generate all months from from_date to to_date
+    start_month = from_date.replace(day=1)
+    end_month = to_date.replace(day=1)
+    current = start_month
+    months = []
+    while current <= end_month:
+        year = current.year
+        month = current.month
+        views = views_dict.get((year, month), 0)
+        month_full = month_name[month]   # 👈 full month name
+        months.append({
+            'month': month_full,
+            'year': year,
+            'views': views
+        })
+        # Move to next month
+        if month == 12:
+            current = current.replace(year=year+1, month=1)
+        else:
+            current = current.replace(month=month+1)
+
+    return Response(months)
+
+# Weekly Trends (Views per Week)
+@api_view(['GET'])
+def dashboard_weekly_trends(request):
+    """
+    GET /api/dashboard/weekly-trends/?from=YYYY-MM-DD&to=YYYY-MM-DD
+    Returns view counts grouped by week (Sunday to Saturday).
+    All weeks in the range are included, with 0 for missing weeks.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    # Get actual weekly counts (using Sunday as week start)
+    with connection.cursor() as cursor:
+        cursor.execute("""
+            SELECT 
+                date_trunc('week', viewed_at)::date as week_start,
+                COUNT(DISTINCT id) as views
+            FROM material_views
+            WHERE viewed_at BETWEEN %s AND %s
+            GROUP BY week_start
+            ORDER BY week_start
+        """, [from_date, to_date])
+        rows = cursor.fetchall()
+
+    counts = {row[0]: row[1] for row in rows}
+
+    # Generate all weeks in the range
+    current = from_date
+    if current.weekday() != 6:  # Not Sunday? Adjust to previous Sunday
+        current = current - timedelta(days=(current.weekday() + 1) % 7)
+    results = []
+    while current <= to_date:
+        week_end = current + timedelta(days=6)
+        week_str = f"{current.strftime('%b %d')} - {week_end.strftime('%b %d')}"
+        views = counts.get(current.date(), 0)
+        results.append({
+            'week_start': current.isoformat(),
+            'week_end': week_end.isoformat(),
+            'label': week_str,
+            'views': views
+        })
+        current += timedelta(days=7)
+    return Response(results)
+
+# Daily Trends (Views per Day)
+@api_view(['GET'])
+def dashboard_daily_trends(request):
+    """
+    GET /api/dashboard/daily-trends/?from=YYYY-MM-DD&to=YYYY-MM-DD
+    Returns view counts per day, including all days in the range.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    with connection.cursor() as cursor:
+        cursor.execute("""
+            SELECT 
+                viewed_at::date as day,
+                COUNT(DISTINCT id) as views
+            FROM material_views
+            WHERE viewed_at BETWEEN %s AND %s
+            GROUP BY day
+            ORDER BY day
+        """, [from_date, to_date])
+        rows = cursor.fetchall()
+
+    counts = {row[0]: row[1] for row in rows}
+
+    # Generate all days
+    current = from_date.date()
+    results = []
+    while current <= to_date.date():
+        views = counts.get(current, 0)
+        results.append({
+            'day': current.isoformat(),
+            'label': current.strftime('%b %d, %Y'),
+            'views': views
+        })
+        current += timedelta(days=1)
+    return Response(results)
+
+# ============= Endpoint 7 – Citation Activity =============
+
+# track citation copy
+@api_view(['POST'])
+def track_citation_copy(request):
+    try:
+        file = request.data.get('file')
+        citation_style = request.data.get('citation_style')
+        user_id = request.data.get('user_id')
+        session_id = request.data.get('session_id')
+
+        if not file or not citation_style:
+            return Response({"error": "file and citation_style required"}, status=400)
+
+        material = Material.objects.filter(file=file).first()
+        if not material:
+            return Response({"error": "Material not found"}, status=404)
+
+        CitationCopy.objects.create(
+            document=material,
+            user_id=user_id,
+            session_id=session_id,
+            citation_style=citation_style
+        )
+        return Response({"success": True}, status=201)
+    except Exception as e:
+        return Response({"error": str(e)}, status=500)
+
+
+# dashboard citation stats
+@api_view(['GET'])
+def dashboard_citation_stats(request):
+    """
+    GET /api/dashboard/citation-stats/
+    Returns total citation copies and top cited theses within date range.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    total_copies = CitationCopy.objects.filter(
+        copied_at__range=[from_date, to_date]
+    ).count()
+
+    # Top 5 cited theses
+    top_cited = (
+        CitationCopy.objects
+        .filter(copied_at__range=[from_date, to_date])
+        .values('document__file', 'document__title', 'document__author', 'document__year')
+        .annotate(copies=Count('id'))
+        .order_by('-copies')[:5]
+    )
+
+    return Response({
+        'total_copies': total_copies,
+        'top_cited': list(top_cited)
+    })
+
+
+# dashboard citation monthly
+@api_view(['GET'])
+def dashboard_citation_monthly(request):
+    """
+    GET /api/dashboard/citation-monthly/
+    Returns monthly citation copy counts within the date range.
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    # Aggregate by month
+    monthly = (
+        CitationCopy.objects
+        .filter(copied_at__range=[from_date, to_date])
+        .annotate(month=TruncMonth('copied_at'))
+        .values('month')
+        .annotate(copies=Count('id'))
+        .order_by('month')
+    )
+
+    # Build dict of month -> copies
+    copies_dict = {}
+    for item in monthly:
+        month_key = item['month'].strftime('%Y-%m')
+        copies_dict[month_key] = item['copies']
+
+    # Generate all months in range
+    current = from_date.replace(day=1)
+    result = []
+    while current <= to_date:
+        month_key = current.strftime('%Y-%m')
+        copies = copies_dict.get(month_key, 0)
+        result.append({
+            'month': current.strftime('%B'),  # full month name
+            'year': current.year,
+            'copies': copies
+        })
+        # Move to next month
+        if current.month == 12:
+            current = current.replace(year=current.year+1, month=1)
+        else:
+            current = current.replace(month=current.month+1)
+
+    return Response(result)
+
+# ============= Endpoint – Top 7 Search Queries =============
+@api_view(['GET'])
+def dashboard_top_search_queries(request):
+    """
+    GET /api/dashboard/top-search-queries/
+    Returns the most frequent search queries within the date range (top 7).
+    """
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+    top_queries = (
+        ResearchHistory.objects
+        .filter(
+            created_at__range=[from_date, to_date],
+            query__isnull=False
+        )
+        .exclude(query='')
+        .values('query')
+        .annotate(count=Count('id'))
+        .order_by('-count')[:7]
+    )
+
+    return Response([
+        {'query': item['query'], 'count': item['count']}
+        for item in top_queries
+    ])

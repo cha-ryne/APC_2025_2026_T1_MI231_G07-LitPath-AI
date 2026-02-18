@@ -32,42 +32,16 @@ const AdminDashboard = () => {
     const [showUserMenu, setShowUserMenu] = useState(false);
     const userMenuRef = useRef(null);
 
-    // ---------- Overview Date Filter State ----------
-    const dateFilterOptions = ['Annual', 'Last week', 'Last month', 'Custom range'];
-    const [dateFilterType, setDateFilterType] = useState('Annual');
-    const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
-    const [customFrom, setCustomFrom] = useState('');
-    const [customTo, setCustomTo] = useState('');
-    const [showDateDropdown, setShowDateDropdown] = useState(false);
-    const dateDropdownRef = useRef(null);
-
-    const currentYear = new Date().getFullYear();
-    const yearOptions = [];
-    for (let y = 2020; y <= currentYear + 1; y++) {
-        yearOptions.push(y);
-    }
-
-    const getDateRange = () => {
-        const today = new Date();
-        const fmt = (d) => d.toISOString().split('T')[0];
-
-        if (dateFilterType === 'Annual') {
-            return { from: `${selectedYear}-01-01`, to: `${selectedYear}-12-31` };
-        }
-        if (dateFilterType === 'Last week') {
-            const d = new Date(); d.setDate(d.getDate() - 7);
-            return { from: fmt(d), to: fmt(today) };
-        }
-        if (dateFilterType === 'Last month') {
-            const d = new Date(); d.setDate(d.getDate() - 30);
-            return { from: fmt(d), to: fmt(today) };
-        }
-        if (dateFilterType === 'Custom range') {
-            if (!customFrom || !customTo) return { from: '', to: '' };
-            return { from: customFrom, to: customTo };
-        }
-        return { from: '', to: '' };
-    };
+    // ---------- Overview Date Filter (unified for all dashboard data) ----------
+    const overviewDateFilterOptions = ['Year', 'Month', 'Last 7 days', 'Custom range'];
+    const [overviewDateFilterType, setOverviewDateFilterType] = useState('Year');
+    const [overviewSelectedYear, setOverviewSelectedYear] = useState(new Date().getFullYear());
+    const [overviewSelectedMonth, setOverviewSelectedMonth] = useState(new Date().getMonth() + 1);
+    const [overviewSelectedMonthYear, setOverviewSelectedMonthYear] = useState(new Date().getFullYear());
+    const [overviewCustomFrom, setOverviewCustomFrom] = useState('');
+    const [overviewCustomTo, setOverviewCustomTo] = useState('');
+    const [showOverviewDateDropdown, setShowOverviewDateDropdown] = useState(false);
+    const overviewDateDropdownRef = useRef(null);
 
     // ---------- Data States ----------
     const [dashboardData, setDashboardData] = useState({
@@ -75,10 +49,10 @@ const AdminDashboard = () => {
         trendingTopics: [],
         topTheses: [],
         usageByCategory: [],
-        monthlyTrends: [],
         ageDistribution: [],
         citationMonthly: [],
-        citationStats: { total_copies: 0, top_cited: [] } 
+        citationStats: { total_copies: 0, top_cited: [] },
+        trends: [] // for activity trends (monthly/weekly/daily)
     });
     const [loading, setLoading] = useState(false);
 
@@ -86,18 +60,18 @@ const AdminDashboard = () => {
     const [feedbacks, setFeedbacks] = useState([]);
     const [feedbackFilter, setFeedbackFilter] = useState('All');
 
-    // ---------- Feedback Manager Date Filter State ----------
+    // ---------- Feedback Manager Date Filter ----------
     const feedbackDateFilterOptions = ['All', 'Year', 'Month', 'Last 7 days', 'Custom range'];
     const [feedbackDateFilterType, setFeedbackDateFilterType] = useState('All');
     const [feedbackSelectedYear, setFeedbackSelectedYear] = useState(new Date().getFullYear());
-    const [feedbackSelectedMonth, setFeedbackSelectedMonth] = useState(new Date().getMonth() + 1); // 1 = January
+    const [feedbackSelectedMonth, setFeedbackSelectedMonth] = useState(new Date().getMonth() + 1);
     const [feedbackSelectedMonthYear, setFeedbackSelectedMonthYear] = useState(new Date().getFullYear());
     const [feedbackCustomFrom, setFeedbackCustomFrom] = useState('');
     const [feedbackCustomTo, setFeedbackCustomTo] = useState('');
     const [showFeedbackDateDropdown, setShowFeedbackDateDropdown] = useState(false);
     const feedbackDateDropdownRef = useRef(null);
 
-    // ---------- Feedback Manager Rating Filter State ----------
+    // ---------- Feedback Manager Rating Filter ----------
     const [showRatingDropdown, setShowRatingDropdown] = useState(false);
     const ratingDropdownRef = useRef(null);
 
@@ -118,10 +92,76 @@ const AdminDashboard = () => {
     const [settingsLoading, setSettingsLoading] = useState(false);
     const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
 
-    // ---------- DASHBOARD FETCH FUNCTIONS ----------
+    // ---------- Year options for dropdowns ----------
+    const currentYear = new Date().getFullYear();
+    const yearOptions = [];
+    for (let y = 2020; y <= currentYear + 1; y++) {
+        yearOptions.push(y);
+    }
+
+    // ---------- Date Range Helper for Overview (used by all fetch functions) ----------
+    const getDateRange = () => {
+        const today = new Date();
+        if (overviewDateFilterType === 'Year') {
+            return { from: `${overviewSelectedYear}-01-01`, to: `${overviewSelectedYear}-12-31` };
+        }
+        if (overviewDateFilterType === 'Month') {
+            const firstDay = new Date(overviewSelectedMonthYear, overviewSelectedMonth - 1, 1);
+            const lastDay = new Date(overviewSelectedMonthYear, overviewSelectedMonth, 0);
+            return {
+                from: firstDay.toISOString().split('T')[0],
+                to: lastDay.toISOString().split('T')[0]
+            };
+        }
+        if (overviewDateFilterType === 'Last 7 days') {
+            const from = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+            return {
+                from: from.toISOString().split('T')[0],
+                to: today.toISOString().split('T')[0]
+            };
+        }
+        if (overviewDateFilterType === 'Custom range') {
+            return { from: overviewCustomFrom, to: overviewCustomTo };
+        }
+        return { from: '', to: '' };
+    };
+
+    // ---------- Date Range Helper for Feedback ----------
+    const isFeedbackInDateRange = (feedbackDate) => {
+        if (feedbackDateFilterType === 'All') return true;
+        
+        const date = new Date(feedbackDate);
+        const today = new Date();
+        
+        if (feedbackDateFilterType === 'Year') {
+            return date.getFullYear() === feedbackSelectedYear;
+        }
+        
+        if (feedbackDateFilterType === 'Last 7 days') {
+            const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+            return date >= weekAgo;
+        }
+        
+        if (feedbackDateFilterType === 'Month') {
+            return date.getMonth() + 1 === feedbackSelectedMonth && 
+                date.getFullYear() === feedbackSelectedMonthYear;
+        }
+        
+        if (feedbackDateFilterType === 'Custom range') {
+            if (!feedbackCustomFrom || !feedbackCustomTo) return true;
+            const from = new Date(feedbackCustomFrom);
+            const to = new Date(feedbackCustomTo);
+            to.setHours(23, 59, 59, 999);
+            return date >= from && date <= to;
+        }
+        
+        return true;
+    };
+
+    // ---------- DASHBOARD FETCH FUNCTIONS (all use getDateRange()) ----------
     const fetchDashboardKPI = async () => {
         const { from, to } = getDateRange();
-        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        if (overviewDateFilterType === 'Custom range' && (!from || !to)) return;
         try {
             const res = await fetch(`${API_BASE_URL}/dashboard/kpi/?from=${from}&to=${to}`);
             if (res.ok) {
@@ -133,7 +173,7 @@ const AdminDashboard = () => {
 
     const fetchTrendingTopics = async () => {
         const { from, to } = getDateRange();
-        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        if (overviewDateFilterType === 'Custom range' && (!from || !to)) return;
         try {
             const res = await fetch(`${API_BASE_URL}/dashboard/trending-topics/?from=${from}&to=${to}`);
             if (res.ok) {
@@ -145,7 +185,7 @@ const AdminDashboard = () => {
 
     const fetchTopTheses = async () => {
         const { from, to } = getDateRange();
-        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        if (overviewDateFilterType === 'Custom range' && (!from || !to)) return;
         try {
             const res = await fetch(`${API_BASE_URL}/dashboard/top-theses/?from=${from}&to=${to}&limit=5`);
             if (res.ok) {
@@ -157,7 +197,7 @@ const AdminDashboard = () => {
 
     const fetchUsageByCategory = async () => {
         const { from, to } = getDateRange();
-        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        if (overviewDateFilterType === 'Custom range' && (!from || !to)) return;
         try {
             const res = await fetch(`${API_BASE_URL}/dashboard/usage-by-category/?from=${from}&to=${to}`);
             if (res.ok) {
@@ -167,21 +207,9 @@ const AdminDashboard = () => {
         } catch (error) { console.error(error); }
     };
 
-    const fetchMonthlyTrends = async () => {
-        const { from, to } = getDateRange();
-        if (!from || !to) return;
-        try {
-            const res = await fetch(`${API_BASE_URL}/dashboard/monthly-trends/?from=${from}&to=${to}`);
-            if (res.ok) {
-                const data = await res.json();
-                setDashboardData(prev => ({ ...prev, monthlyTrends: data }));
-            }
-        } catch (error) { console.error(error); }
-    };
-
     const fetchAgeDistribution = async () => {
         const { from, to } = getDateRange();
-        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        if (overviewDateFilterType === 'Custom range' && (!from || !to)) return;
         try {
             const res = await fetch(`${API_BASE_URL}/dashboard/age-distribution/?from=${from}&to=${to}`);
             if (res.ok) {
@@ -193,7 +221,7 @@ const AdminDashboard = () => {
 
     const fetchFailedQueriesCount = async () => {
         const { from, to } = getDateRange();
-        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        if (overviewDateFilterType === 'Custom range' && (!from || !to)) return;
         try {
             const res = await fetch(`${API_BASE_URL}/dashboard/failed-queries-count/?from=${from}&to=${to}`);
             if (res.ok) {
@@ -205,7 +233,7 @@ const AdminDashboard = () => {
 
     const fetchCitationStats = async () => {
         const { from, to } = getDateRange();
-        if (dateFilterType === 'Custom range' && (!from || !to)) return;
+        if (overviewDateFilterType === 'Custom range' && (!from || !to)) return;
         try {
             const res = await fetch(`${API_BASE_URL}/dashboard/citation-stats/?from=${from}&to=${to}`);
             if (res.ok) {
@@ -227,18 +255,68 @@ const AdminDashboard = () => {
         } catch (error) { console.error(error); }
     };
 
+    const fetchTrends = async () => {
+        const { from, to } = getDateRange();
+        if (!from || !to) return;
+
+        let endpoint = '';
+        if (overviewDateFilterType === 'Year') {
+            endpoint = '/dashboard/monthly-trends/';
+        } else if (overviewDateFilterType === 'Month') {
+            endpoint = '/dashboard/weekly-trends/';
+        } else if (overviewDateFilterType === 'Last 7 days') {
+            endpoint = '/dashboard/daily-trends/';
+        } else if (overviewDateFilterType === 'Custom range') {
+            endpoint = '/dashboard/daily-trends/';
+        }
+
+        try {
+            const res = await fetch(`${API_BASE_URL}${endpoint}?from=${from}&to=${to}`);
+            if (res.ok) {
+                let data = await res.json();
+
+                // Transform labels based on filter type
+                if (overviewDateFilterType === 'Month') {
+                    // data is weekly, each item has label like "Mar 01 - Mar 07"
+                    data = data.map((item, index) => ({
+                        ...item,
+                        label: `Week ${index + 1}`,
+                    }));
+                } else if (overviewDateFilterType === 'Last 7 days') {
+                    // data is daily, each item has day and label like "Mar 01, 2025"
+                    data = data.map(item => {
+                        const date = new Date(item.day);
+                        const dayName = date.toLocaleDateString('en-US', { weekday: 'short' }); // "Sun", "Mon"
+                        return {
+                            ...item,
+                            label: dayName,
+                        };
+                    });
+                } else if (overviewDateFilterType === 'Custom range') {
+                    // For custom range, keep the default label (e.g., "Mar 01, 2025")
+                    // We'll handle downsampling of displayed labels later in the chart rendering.
+                    // No transformation needed here.
+                }
+                // For 'Year', data already has month names (e.g., { month: "January", year: 2025, views: 0 })
+                // No change needed.
+
+                setDashboardData(prev => ({ ...prev, trends: data }));
+            }
+        } catch (error) { console.error(error); }
+    };
+
     const fetchAllDashboardData = () => {
         setLoading(true);
         Promise.all([
             fetchDashboardKPI(),
-            fetchTrendingTopics(), 
+            fetchFailedQueriesCount(),
+            fetchTrendingTopics(),
             fetchTopTheses(),
             fetchUsageByCategory(),
-            fetchMonthlyTrends(),
-            fetchAgeDistribution(),          
-            fetchCitationStats(), 
-            fetchCitationMonthly(),           
-            fetchFailedQueriesCount(),       
+            fetchAgeDistribution(),
+            fetchCitationStats(),
+            fetchCitationMonthly(),
+            fetchTrends() // fetch trends with the new granularity & date filter
         ]).finally(() => setLoading(false));
     };
 
@@ -256,10 +334,21 @@ const AdminDashboard = () => {
     }, [searchParams]);
 
     useEffect(() => {
-        if (activeTab === 'overview') fetchAllDashboardData();
+        if (activeTab === 'overview') {
+            fetchAllDashboardData();
+            fetchTrends();
+        }
         if (activeTab === 'feedback') fetchFeedback();
         if (activeTab === 'ratings') fetchMaterialRatings();
-    }, [activeTab, dateFilterType, selectedYear, customFrom, customTo]);
+    }, [
+        activeTab,
+        overviewDateFilterType,
+        overviewSelectedYear,
+        overviewSelectedMonth,
+        overviewSelectedMonthYear,
+        overviewCustomFrom,
+        overviewCustomTo
+    ]);
 
     // ---------- Click outside handlers ----------
     useEffect(() => {
@@ -267,20 +356,19 @@ const AdminDashboard = () => {
             if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
                 setShowUserMenu(false);
             }
-            if (dateDropdownRef.current && !dateDropdownRef.current.contains(event.target)) {
-                const isInput = event.target.tagName === 'INPUT';
-                if (!isInput) setShowDateDropdown(false);
-            }
-
-            // New: feedback date dropdown
             if (feedbackDateDropdownRef.current && !feedbackDateDropdownRef.current.contains(event.target)) {
                 const isInput = event.target.tagName === 'INPUT';
                 if (!isInput) setShowFeedbackDateDropdown(false);
             }
-
-            // New: rating dropdown
             if (ratingDropdownRef.current && !ratingDropdownRef.current.contains(event.target)) {
                 setShowRatingDropdown(false);
+            }
+            if (overviewDateDropdownRef.current && !overviewDateDropdownRef.current.contains(event.target)) {
+                const isInput = event.target.tagName === 'INPUT';
+                if (!isInput) setShowOverviewDateDropdown(false);
+            }
+            if (granularityDropdownRef.current && !granularityDropdownRef.current.contains(event.target)) {
+                setShowGranularityDropdown(false);
             }
         };
         document.addEventListener("mousedown", handleClickOutside);
@@ -409,38 +497,6 @@ const AdminDashboard = () => {
         );
     };
 
-    // Date Range Helper for Feedback Manager
-    const isFeedbackInDateRange = (feedbackDate) => {
-        if (feedbackDateFilterType === 'All') return true;
-        
-        const date = new Date(feedbackDate);
-        const today = new Date();
-        
-        if (feedbackDateFilterType === 'Year') {
-            return date.getFullYear() === feedbackSelectedYear;
-        }
-        
-        if (feedbackDateFilterType === 'Last 7 days') {
-            const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
-            return date >= weekAgo;
-        }
-        
-        if (feedbackDateFilterType === 'Month') {
-            return date.getMonth() + 1 === feedbackSelectedMonth && 
-                date.getFullYear() === feedbackSelectedMonthYear;
-        }
-        
-        if (feedbackDateFilterType === 'Custom range') {
-            if (!feedbackCustomFrom || !feedbackCustomTo) return true;
-            const from = new Date(feedbackCustomFrom);
-            const to = new Date(feedbackCustomTo);
-            to.setHours(23, 59, 59, 999);
-            return date >= from && date <= to;
-        }
-        
-        return true;
-    };
-
     // ---------- Render ----------
     return (
         <div className="h-screen w-screen bg-gray-100 flex flex-col overflow-hidden font-sans">
@@ -498,10 +554,9 @@ const AdminDashboard = () => {
 
             {/* Body */}
             <div className="flex-1 flex overflow-hidden">
-                {/* Sidebar - EXACT ORIGINAL STYLE */}
+                {/* Sidebar */}
                 <aside className={`bg-white border-r border-gray-200 transition-all duration-300 flex flex-col z-20 ${isSidebarOpen ? 'w-64' : 'w-16'}`}>
-                    <div className={`h-16 flex items-center border-b border-gray-100 ${isSidebarOpen ? 'justify-end px-4' : 'justify-center p-0'
-                        }`}>
+                    <div className={`h-16 flex items-center border-b border-gray-100 ${isSidebarOpen ? 'justify-end px-4' : 'justify-center p-0'}`}>
                         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 rounded hover:bg-gray-100 transition-colors text-gray-600">
                             <Menu size={24} />
                         </button>
@@ -533,148 +588,191 @@ const AdminDashboard = () => {
                             <div className="max-w-[1600px] mx-auto w-full flex flex-col gap-2">
 
                                 {/* ===== HEADER + DATE FILTER ===== */}
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-center justify-between flex-wrap gap-2">
                                     <h2 className="text-xl font-bold text-gray-800">Thesis & Dissertation Usage</h2>
-                                    {/* Date Filter Dropdown */}
-                                    <div className="relative" ref={dateDropdownRef}>
-                                        <button
-                                            onClick={() => setShowDateDropdown(!showDateDropdown)}
-                                            className="flex items-center space-x-2 px-3 py-1.5 border border-gray-300 rounded-md bg-white text-gray-600 hover:bg-gray-50 text-xs font-medium"
-                                        >
-                                            <Calendar size={14} />
-                                            <span>
-                                                {dateFilterType === 'Annual' && `Annual ${selectedYear}`}
-                                                {dateFilterType === 'Last week' && 'Last week'}
-                                                {dateFilterType === 'Last month' && 'Last month'}
-                                                {dateFilterType === 'Custom range' && 'Custom range'}
-                                            </span>
-                                            <ChevronDown size={14} />
-                                        </button>
+                                    <div className="flex gap-2">
+                                        {/* Date Filter Dropdown */}
+                                        <div className="relative" ref={overviewDateDropdownRef}>
+                                            <button
+                                                onClick={() => setShowOverviewDateDropdown(!showOverviewDateDropdown)}
+                                                className="flex items-center space-x-2 px-3 py-1.5 border border-gray-300 rounded-md bg-white text-gray-600 hover:bg-gray-50 text-xs font-medium"
+                                            >
+                                                <Calendar size={14} />
+                                                <span>
+                                                    {overviewDateFilterType === 'Year' && `Year ${overviewSelectedYear}`}
+                                                    {overviewDateFilterType === 'Month' && `${new Date(0, overviewSelectedMonth-1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear}`}
+                                                    {overviewDateFilterType === 'Last 7 days' && 'Last 7 days'}
+                                                    {overviewDateFilterType === 'Custom range' && 'Custom range'}
+                                                </span>
+                                                <ChevronDown size={14} />
+                                            </button>
 
-                                        {showDateDropdown && (
-                                            <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-30 min-w-[260px] p-3">
-                                                {/* Filter type options */}
-                                                {dateFilterOptions.map(opt => (
-                                                    <button
-                                                        key={opt}
-                                                        onClick={() => {
-                                                            setDateFilterType(opt);
-                                                            if (opt === 'Last week' || opt === 'Last month') {
-                                                                fetchAllDashboardData();
-                                                                setShowDateDropdown(false);
-                                                            }
-                                                            if (opt !== 'Custom range') {
-                                                                setCustomFrom('');
-                                                                setCustomTo('');
-                                                            }
-                                                        }}
-                                                        className={`block w-full text-left px-3 py-2 text-xs rounded-md ${
-                                                            dateFilterType === opt
-                                                                ? 'bg-blue-50 text-blue-600 font-bold'
-                                                                : 'hover:bg-gray-50'
-                                                        }`}
-                                                    >
-                                                        {opt}
-                                                    </button>
-                                                ))}
-
-                                                {/* Annual year picker */}
-                                                {dateFilterType === 'Annual' && (
-                                                    <div className="mt-2 pt-2 border-t border-gray-100">
-                                                        <label className="block text-[10px] font-medium text-gray-500 mb-1">
-                                                            Select year
-                                                        </label>
-                                                        <select
-                                                            value={selectedYear}
-                                                            onChange={(e) => setSelectedYear(parseInt(e.target.value))}
-                                                            className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
-                                                        >
-                                                            {yearOptions.map(year => (
-                                                                <option key={year} value={year}>{year}</option>
-                                                            ))}
-                                                        </select>
+                                            {showOverviewDateDropdown && (
+                                                <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-30 min-w-[260px] p-3">
+                                                    {/* Filter type options */}
+                                                    {overviewDateFilterOptions.map(opt => (
                                                         <button
+                                                            key={opt}
                                                             onClick={() => {
-                                                                fetchAllDashboardData();
-                                                                setShowDateDropdown(false);
+                                                                setOverviewDateFilterType(opt);
+                                                                if (opt === 'Last 7 days') {
+                                                                    setShowOverviewDateDropdown(false);
+                                                                    fetchTrends();
+                                                                }
+                                                                if (opt !== 'Custom range') {
+                                                                    setOverviewCustomFrom('');
+                                                                    setOverviewCustomTo('');
+                                                                }
                                                             }}
-                                                            className="w-full mt-3 bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                            className={`block w-full text-left px-3 py-2 text-xs rounded-md ${
+                                                                overviewDateFilterType === opt
+                                                                    ? 'bg-blue-50 text-blue-600 font-bold'
+                                                                    : 'hover:bg-gray-50'
+                                                            }`}
                                                         >
-                                                            Apply
+                                                            {opt}
                                                         </button>
-                                                    </div>
-                                                )}
+                                                    ))}
 
-                                                {/* Custom range picker */}
-                                                {dateFilterType === 'Custom range' && (
-                                                    <div className="mt-2 pt-2 border-t border-gray-100">
-                                                        <div className="flex flex-col gap-2">
-                                                            <div>
-                                                                <span className="text-[10px] text-gray-500 mb-1 block">From</span>
-                                                                <input
-                                                                    type="date"
-                                                                    value={customFrom}
-                                                                    onChange={(e) => setCustomFrom(e.target.value)}
-                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5"
-                                                                />
-                                                            </div>
-                                                            <div>
-                                                                <span className="text-[10px] text-gray-500 mb-1 block">To</span>
-                                                                <input
-                                                                    type="date"
-                                                                    value={customTo}
-                                                                    onChange={(e) => setCustomTo(e.target.value)}
-                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5"
-                                                                />
-                                                            </div>
+                                                    {/* Year picker */}
+                                                    {overviewDateFilterType === 'Year' && (
+                                                        <div className="mt-2 pt-2 border-t border-gray-100">
+                                                            <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                                Select year
+                                                            </label>
+                                                            <select
+                                                                value={overviewSelectedYear}
+                                                                onChange={(e) => setOverviewSelectedYear(parseInt(e.target.value))}
+                                                                className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                            >
+                                                                {yearOptions.map(year => (
+                                                                    <option key={year} value={year}>{year}</option>
+                                                                ))}
+                                                            </select>
                                                             <button
                                                                 onClick={() => {
-                                                                    if (customFrom && customTo) {
-                                                                        fetchAllDashboardData();
-                                                                        setShowDateDropdown(false);
-                                                                    } else {
-                                                                        showToast('Select both dates', 'error');
-                                                                    }
+                                                                    setShowOverviewDateDropdown(false);
+                                                                    fetchTrends();
                                                                 }}
-                                                                className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                                className="w-full mt-3 bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
                                                             >
-                                                                Apply Range
+                                                                Apply
                                                             </button>
                                                         </div>
-                                                    </div>
-                                                )}
+                                                    )}
 
-                                                {/* Global Clear Filter button */}
-                                                <div className="mt-3 pt-2 border-t border-gray-100">
-                                                    <button
-                                                        onClick={() => {
-                                                            setDateFilterType('Annual');
-                                                            setSelectedYear(new Date().getFullYear());
-                                                            setCustomFrom('');
-                                                            setCustomTo('');
-                                                            fetchAllDashboardData();
-                                                            setShowDateDropdown(false);
-                                                        }}
-                                                        disabled={
-                                                            dateFilterType === 'Annual' &&
-                                                            selectedYear === new Date().getFullYear() &&
-                                                            customFrom === '' &&
-                                                            customTo === ''
-                                                        }
-                                                        className={`w-full text-xs py-1.5 rounded border transition-colors ${
-                                                            dateFilterType === 'Annual' &&
-                                                            selectedYear === new Date().getFullYear() &&
-                                                            customFrom === '' &&
-                                                            customTo === ''
-                                                                ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
-                                                                : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50 hover:text-red-600'
-                                                        }`}
-                                                    >
-                                                        Clear Filter
-                                                    </button>
+                                                    {/* Month picker */}
+                                                    {overviewDateFilterType === 'Month' && (
+                                                        <div className="mt-2 pt-2 border-t border-gray-100">
+                                                            <div className="flex flex-col gap-2">
+                                                                <div>
+                                                                    <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                                        Month
+                                                                    </label>
+                                                                    <select
+                                                                        value={overviewSelectedMonth}
+                                                                        onChange={(e) => setOverviewSelectedMonth(parseInt(e.target.value))}
+                                                                        className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                                    >
+                                                                        {Array.from({ length: 12 }, (_, i) => i + 1).map(month => (
+                                                                            <option key={month} value={month}>
+                                                                                {new Date(0, month-1).toLocaleString('default', { month: 'long' })}
+                                                                            </option>
+                                                                        ))}
+                                                                    </select>
+                                                                </div>
+                                                                <div>
+                                                                    <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                                        Year
+                                                                    </label>
+                                                                    <select
+                                                                        value={overviewSelectedMonthYear}
+                                                                        onChange={(e) => setOverviewSelectedMonthYear(parseInt(e.target.value))}
+                                                                        className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                                    >
+                                                                        {yearOptions.map(year => (
+                                                                            <option key={year} value={year}>{year}</option>
+                                                                        ))}
+                                                                    </select>
+                                                                </div>
+                                                                <button
+                                                                    onClick={() => {
+                                                                        setShowOverviewDateDropdown(false);
+                                                                        fetchTrends();
+                                                                    }}
+                                                                    className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                                >
+                                                                    Apply
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    )}
+
+                                                    {/* Custom range picker */}
+                                                    {overviewDateFilterType === 'Custom range' && (
+                                                        <div className="mt-2 pt-2 border-t border-gray-100">
+                                                            <div className="flex flex-col gap-2">
+                                                                <div>
+                                                                    <span className="text-[10px] text-gray-500 mb-1 block">From</span>
+                                                                    <input
+                                                                        type="date"
+                                                                        value={overviewCustomFrom}
+                                                                        onChange={(e) => setOverviewCustomFrom(e.target.value)}
+                                                                        className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                                    />
+                                                                </div>
+                                                                <div>
+                                                                    <span className="text-[10px] text-gray-500 mb-1 block">To</span>
+                                                                    <input
+                                                                        type="date"
+                                                                        value={overviewCustomTo}
+                                                                        onChange={(e) => setOverviewCustomTo(e.target.value)}
+                                                                        className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                                    />
+                                                                </div>
+                                                                <button
+                                                                    onClick={() => {
+                                                                        if (overviewCustomFrom && overviewCustomTo) {
+                                                                            setShowOverviewDateDropdown(false);
+                                                                            fetchTrends();
+                                                                        } else {
+                                                                            showToast('Select both dates', 'error');
+                                                                        }
+                                                                    }}
+                                                                    className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                                >
+                                                                    Apply Range
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    )}
+
+                                                    {/* Clear Filter button – resets to current year */}
+                                                    <div className="mt-3 pt-2 border-t border-gray-100">
+                                                        <button
+                                                            onClick={() => {
+                                                                setOverviewDateFilterType('Year');
+                                                                setOverviewSelectedYear(new Date().getFullYear());
+                                                                setOverviewSelectedMonth(new Date().getMonth() + 1);
+                                                                setOverviewSelectedMonthYear(new Date().getFullYear());
+                                                                setOverviewCustomFrom('');
+                                                                setOverviewCustomTo('');
+                                                                setShowOverviewDateDropdown(false);
+                                                                fetchTrends();
+                                                            }}
+                                                            disabled={overviewDateFilterType === 'Year' && overviewSelectedYear === new Date().getFullYear()}
+                                                            className={`w-full text-xs py-1.5 rounded border transition-colors ${
+                                                                overviewDateFilterType === 'Year' && overviewSelectedYear === new Date().getFullYear()
+                                                                    ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                                                                    : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50 hover:text-red-600'
+                                                            }`}
+                                                        >
+                                                            Reset to Current Year
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        )}
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
 
@@ -833,7 +931,7 @@ const AdminDashboard = () => {
                                                     );
                                                 })
                                             ) : (
-                                                <p className="text-xs text-gray-400 italic">Not enough data yet.</p>
+                                                <p className="text-xs text-gray-400 italic">Not enough data yet</p>
                                             )}
                                         </div>
                                     </div>
@@ -891,7 +989,7 @@ const AdminDashboard = () => {
                                                     </div>
                                                 </div>
                                             ))}
-                                            {dashboardData.topTheses.length === 0 && <p className="text-xs text-gray-400 italic">No views recorded.</p>}
+                                            {dashboardData.topTheses.length === 0 && <p className="text-xs text-gray-400 italic">No views recorded</p>}
                                         </div>
                                     </div>
 
@@ -974,7 +1072,7 @@ const AdminDashboard = () => {
                                                 ];
 
                                                 if (agesWithData.length === 0) {
-                                                    return <p className="text-xs text-gray-400 italic">No age data.</p>;
+                                                    return <p className="text-xs text-gray-400 italic">No records yet</p>;
                                                 }
 
                                                 let cumulativePercent = 0;
@@ -1031,25 +1129,74 @@ const AdminDashboard = () => {
 
                                     {/* Activity Trends */}
                                     <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 min-h-[200px]">
-                                        <div className="flex items-center gap-1 mb-3">
-                                            <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
-                                                <Calendar size={16} className="text-green-600" /> Activity Trends
-                                            </h3>
-                                            <div className="relative group">
-                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
-                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
-                                                        Monthly view counts for the selected period.
-                                                    </div>
-                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
-                                                </div>
+                                        <div className="flex items-center justify-between mb-3">
+                                            <div className="flex items-center gap-1 flex-wrap">
+                                                <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                    <Calendar size={16} className="text-green-600" /> Activity Trends
+                                                </h3>
+                                                {/* Dynamic subtitle */}
+                                                <span className="text-[10px] text-gray-500 italic ml-2">
+                                                    {overviewDateFilterType === 'Year' && `(Monthly report for year ${overviewSelectedYear})`}
+                                                    {overviewDateFilterType === 'Month' && `(Weekly report for ${new Date(0, overviewSelectedMonth-1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
+                                                    {overviewDateFilterType === 'Last 7 days' && '(Report from the last 7 days)'}
+                                                    {overviewDateFilterType === 'Custom range' && overviewCustomFrom && overviewCustomTo && 
+                                                        `(Report from ${new Date(overviewCustomFrom).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} to ${new Date(overviewCustomTo).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })})`
+                                                    }
+                                                </span>
                                             </div>
                                         </div>
                                         <div className="flex-1 flex items-end gap-2 w-full h-full">
-                                            {dashboardData.monthlyTrends.length > 0 ? (
-                                                dashboardData.monthlyTrends.map((month, i) => {
-                                                    const max = Math.max(...dashboardData.monthlyTrends.map(m => m.views), 1);
-                                                    const heightPercent = month.views === 0 ? 2 : (month.views / max) * 100;
+                                            {dashboardData.trends && dashboardData.trends.length > 0 ? (
+                                                dashboardData.trends.map((item, i) => {
+                                                    const max = Math.max(...dashboardData.trends.map(t => t.views), 1);
+                                                    const heightPercent = item.views === 0 ? 2 : (item.views / max) * 100;
+
+                                                    // ----- Determine the label to show under the bar -----
+                                                    let displayLabel = '';
+                                                    if (overviewDateFilterType === 'Year') {
+                                                        // item has month and year, e.g. { month: "January", year: 2025, views: 0 }
+                                                        displayLabel = item.month ? item.month.substring(0, 3) : '';
+                                                    } else if (overviewDateFilterType === 'Month') {
+                                                        // item.label is "Week X" (set in fetchTrends)
+                                                        displayLabel = item.label;
+                                                    } else if (overviewDateFilterType === 'Last 7 days') {
+                                                        // item.label is day name (set in fetchTrends)
+                                                        displayLabel = item.label;
+                                                    } else if (overviewDateFilterType === 'Custom range') {
+                                                        // item has day and label like "Mar 01, 2025". We want "Mar 01"
+                                                        if (item.label) {
+                                                            displayLabel = item.label.split(',')[0]; // "Mar 01"
+                                                        } else if (item.day) {
+                                                            const d = new Date(item.day);
+                                                            displayLabel = d.toLocaleDateString('en-US', { month: 'short', day: '2-digit' });
+                                                        }
+                                                    }
+
+                                                    // ----- Downsample labels for custom range to avoid crowding -----
+                                                    if (overviewDateFilterType === 'Custom range') {
+                                                        const totalItems = dashboardData.trends.length;
+                                                        let step = 1;
+                                                        if (totalItems > 30) step = 5;
+                                                        else if (totalItems > 15) step = 3;
+                                                        // Hide label unless it's a step index or the last one
+                                                        if (i % step !== 0 && i !== totalItems - 1) {
+                                                            displayLabel = '';
+                                                        }
+                                                    }
+
+                                                    // ----- Tooltip content -----
+                                                    let tooltipText = '';
+                                                    if (overviewDateFilterType === 'Year') {
+                                                        tooltipText = `${item.month} ${item.year}: ${item.views} view${item.views !== 1 ? 's' : ''}`;
+                                                    } else if (overviewDateFilterType === 'Month') {
+                                                        tooltipText = `${item.label}: ${item.views} view${item.views !== 1 ? 's' : ''}`;
+                                                    } else if (overviewDateFilterType === 'Last 7 days') {
+                                                        tooltipText = `${item.label}: ${item.views} view${item.views !== 1 ? 's' : ''}`;
+                                                    } else if (overviewDateFilterType === 'Custom range') {
+                                                        // Use the full label (e.g., "Mar 01, 2025") or construct from day
+                                                        const fullLabel = item.label || (item.day ? new Date(item.day).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }) : '');
+                                                        tooltipText = `${fullLabel}: ${item.views} view${item.views !== 1 ? 's' : ''}`;
+                                                    }
 
                                                     return (
                                                         <div key={i} className="flex-1 flex flex-col items-center gap-2 h-full justify-end group cursor-default">
@@ -1058,17 +1205,21 @@ const AdminDashboard = () => {
                                                                     className="w-full max-w-[20px] bg-gradient-to-t from-green-600 to-green-400 rounded-t-sm transition-all duration-500 relative hover:from-green-500 hover:to-green-300"
                                                                     style={{ height: `${heightPercent}%` }}
                                                                 >
-                                                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none">
-                                                                        <div className="bg-gray-800 text-white text-[10px] px-2 py-1 rounded shadow-lg max-w-[200px] text-center whitespace-normal font-medium">
-                                                                            {month.month} {month.year}: {month.views} views
+                                                                    {/* Tooltip - positioned higher to avoid covering title */}
+                                                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 hidden group-hover:flex flex-col items-center z-20 pointer-events-none">
+                                                                        <div className="bg-gray-800 text-white text-[10px] px-2 py-1 rounded shadow-lg whitespace-nowrap font-medium">
+                                                                            {tooltipText}
                                                                         </div>
                                                                         <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <span className="text-[9px] text-gray-500 font-bold uppercase truncate w-full text-center">
-                                                                {month.month.substring(0, 3)}
-                                                            </span>
+                                                            {/* X-axis label - only if we have something to show */}
+                                                            {displayLabel && (
+                                                                <span className="text-[9px] text-gray-500 font-bold uppercase truncate w-full text-center">
+                                                                    {displayLabel}
+                                                                </span>
+                                                            )}
                                                         </div>
                                                     );
                                                 })
