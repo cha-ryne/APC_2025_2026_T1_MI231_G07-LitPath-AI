@@ -212,6 +212,16 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                 )}
 
                 <form onSubmit={handleSubmit}>
+                    {/* CSM Introduction */}
+                    <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h2 className="text-xl font-bold text-[#1E74BC] mb-4 text-center">
+                            HELP US SERVE YOU BETTER!
+                        </h2>
+                        <p className="text-sm text-gray-700 mb-4">
+                            This Client Satisfaction Measurement (CSM) tracks the customer experience of government offices. Your feedback on your recently concluded transaction will help this office provide a better service. Personal information shared will be kept confidential and you always have the option not to answer this form.
+                        </p>
+                    </div>
+
                     {/* Section I: Data Privacy & Consent */}
                     <div className="bg-white rounded-lg shadow-md p-6 mb-6">
                         <h2 className="text-lg font-bold text-[#1E74BC] mb-4 border-b pb-2">
@@ -222,6 +232,9 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                             <p className="text-sm text-gray-700 mb-4">
                                 <strong>English:</strong><br/>
                                 Filling up this form authorizes the Science and Technology Information Institute (DOST-STII) to collect, store, and access any personal data you may disclose herein. Such information encompasses, but is not limited to, your name, contact number, email address, and sex. This data shall be kept private and confidential, and may be processed and used only for the fulfillment of DOST-STII's mandates subject to the Data Privacy Act and other relevant laws.
+                            </p>
+                             <p className="text-sm text-gray-600 italic mb-4">
+                                For data privacy concerns and/or feedback regarding this notice, you can email us at feedback@stii.dost.gov.ph
                             </p>
                             <p className="text-sm text-gray-700 mb-4">
                                 <strong>Filipino:</strong><br/>
@@ -241,7 +254,7 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                 onChange={handleChange}
                                 className="mt-1 mr-2"
                             />
-                            <label htmlFor="consent_given" className="text-sm text-gray-700">
+                            <label htmlFor="consent_given" className="text-sm text-red-700">
                                 * I hereby acknowledge that I am fully informed of the foregoing and that I consent to the collection and processing of my Personal Data by DOST-STII.
                             </label>
                         </div>
@@ -269,7 +282,7 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                         onChange={handleChange}
                                         className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
                                     >
-                                        <option value="">Select Client Type</option>
+                                        <option value="" disabled>Select Client Type</option>
                                         {clientTypeChoices.map(choice => (
                                             <option key={choice.value} value={choice.value}>
                                                 {choice.label}
@@ -316,7 +329,7 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                         onChange={handleChange}
                                         className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
                                     >
-                                        <option value="">Select Sex</option>
+                                        <option value="" disabled>Select Sex</option>
                                         {sexChoices.map(choice => (
                                             <option key={choice.value} value={choice.value}>
                                                 {choice.label}
@@ -346,7 +359,7 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                         onChange={handleChange}
                                         className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
                                     >
-                                        <option value="">Select Age Range</option>
+                                        <option value="" disabled>Select Age Range</option>
                                         {ageChoices.map(choice => (
                                             <option key={choice.value} value={choice.value}>
                                                 {choice.label}
@@ -376,7 +389,7 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                         onChange={handleChange}
                                         className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
                                     >
-                                        <option value="">Select Region</option>
+                                        <option value="" disabled>Select Region</option>
                                         {regionChoices.map(choice => (
                                             <option key={choice.value} value={choice.value}>
                                                 {choice.label}
@@ -406,7 +419,7 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                         onChange={handleChange}
                                         className="w-full appearance-none border border-gray-300 rounded-md p-2 pr-10 focus:ring-blue-500 focus:border-blue-500"
                                     >
-                                        <option value="">Select Category</option>
+                                        <option value="" disabled>Select Category</option>
                                         {categoryChoices.map(choice => (
                                             <option key={choice.value} value={choice.value}>
                                                 {choice.label}
@@ -472,10 +485,9 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                         {/* Research Interests/Topics - Optional */}
                         <div className="mb-4">
                             <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Research Interests/Topics
-                                <span className="font-normal text-gray-500 ml-2">Mga Interes sa Pananaliksik</span>
-                                <span className="text-gray-400 ml-2">(Optional)</span>
+                                Research Interests/Topics (Optional)
                             </label>
+                            <p className="text-xs text-gray-500 mb-2">Mga Interes sa Pananaliksik</p>
                             <textarea
                                 name="research_interests"
                                 value={formData.research_interests}
@@ -489,12 +501,9 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                         {/* Missing Content - Optional */}
                         <div className="mb-4">
                             <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Missing Content
-                                <span className="font-normal text-gray-500 ml-2">
-                                    Topic / Title you would like to obtain but not found in LitPath AI
-                                </span>
-                                <span className="text-gray-400 ml-2">(Optional)</span>
+                                Topic / Title you would like to obtain but not found in LitPath AI (Optional)
                             </label>
+                            <p className="text-xs text-gray-500 mb-2"> Paksa/Pamagat na gusto mong makuha ngunit hindi natagpuan sa LitPath AI</p>
                             <textarea
                                 name="missing_content"
                                 value={formData.missing_content}
@@ -508,10 +517,9 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                         {/* Message / Comment / Suggestion - Optional */}
                         <div className="mb-4">
                             <label className="block text-sm font-medium text-gray-700 mb-1">
-                                Message / Comment / Suggestion
-                                <span className="font-normal text-gray-500 ml-2">Mensahe / Komento / Suhestiyon</span>
-                                <span className="text-gray-400 ml-2">(Optional)</span>
+                                Message / Comment / Suggestion (Optional)
                             </label>
+                            <p className="text-xs text-gray-500 mb-2">Mensahe / Komento / Suhestiyon</p>
                             <textarea
                                 name="message_comment"
                                 value={formData.message_comment}
@@ -520,6 +528,7 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Enter your message, comments, or suggestions..."
                             />
+                            <span className="text-gray-400 text-sm">(Optional)</span>
                         </div>
                     </div>
 
