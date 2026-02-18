@@ -1328,15 +1328,18 @@ return (
                 }`}
             >
                 {/* Sidebar Toggle Button (inside sidebar) */}
-                <button
-                    onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-                    className="hidden md:flex items-center justify-center w-full h-10 hover:bg-gray-100 transition-colors border-b border-gray-200"
-                    title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-                >
-                    <Menu size={20} className="text-gray-600" />
-                </button>
+                <div className={`h-16 flex items-center border-b border-gray-100 ${
+                    sidebarCollapsed ? 'justify-center p-0' : 'justify-end px-4'
+                }`}>
+                    <button 
+                        onClick={() => setSidebarCollapsed(!sidebarCollapsed)} 
+                        className="p-2 rounded hover:bg-gray-100 transition-colors text-gray-600"
+                        title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+                    >
+                        <Menu size={24} />
+                    </button>
+                </div>
 
-                
                 {/* Sidebar Content */}
                 <div className={`flex-1 overflow-hidden transition-all duration-300 ${sidebarCollapsed ? 'opacity-0' : 'opacity-100'}`}>
                     <SidebarContent
