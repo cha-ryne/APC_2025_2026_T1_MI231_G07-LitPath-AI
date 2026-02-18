@@ -136,7 +136,7 @@ const FeedbackDetail = () => {
             )}
 
             {/* ---------- HEADER ---------- */}
-            <div className="sticky top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#404040] to-[#1F1F1F] text-white shadow-md">
+            <div className="sticky top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#555555] to-[#212121] text-white shadow-md">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     <div className="flex items-center space-x-4">
                         <img src={dostLogo} alt="DOST SciNet-Phil Logo" className="h-12 w-auto" />

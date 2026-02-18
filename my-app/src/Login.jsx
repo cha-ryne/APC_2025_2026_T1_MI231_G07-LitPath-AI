@@ -64,12 +64,12 @@ const Login = () => {
     return (
         <div className="min-h-screen flex flex-col bg-gray-100">
             {/* Header */}
-            <div className="bg-gradient-to-b from-[#404040] to-[#1F1F1F] text-white shadow-md flex-none z-50">
+            <div className="bg-gradient-to-b from-[#555555] to-[#212121] text-white shadow-md flex-none z-50">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     <div className="flex items-center space-x-4">
                         <img src={dostLogo} alt="DOST Logo" className="h-12 w-auto" />
                         
-                        <div className="hidden md:block text-sm border-l border-white pl-4 ml-4 leading-tight opacity-90">
+                        <div className="hidden md:block text-sm border-l border-white pl-4 ml-4 leading-tight opacity-100">
                             LitPath AI: <br /> Smart PathFinder for Theses and Dissertation
                         </div>
                     </div>
