@@ -33,12 +33,30 @@ const LitPathAI = () => {
     const [bookmarkedCount, setBookmarkedCount] = useState(0);
     const [bookmarks, setBookmarks] = useState([]); // Store bookmarks in state (not localStorage for authenticated users)
     const [showUserMenu, setShowUserMenu] = useState(false);
+    const userMenuRef = useRef(null);
     const [cameFromBookmarks, setCameFromBookmarks] = useState(false); // Track if we came from bookmarks overlay
     // Force re-render of user menu when user changes (for real-time update)
     const [userMenuKey, setUserMenuKey] = useState(0);
     useEffect(() => {
         setUserMenuKey(k => k + 1);
     }, [user?.full_name, user?.username]);
+    
+    // Handle click outside to close user menu
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
+                setShowUserMenu(false);
+            }
+        };
+        
+        if (showUserMenu) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showUserMenu]);
     const navigate = useNavigate();
     const [conversationHistory, setConversationHistory] = useState([]);
     const [isFollowUpSearch, setIsFollowUpSearch] = useState(false);
@@ -1191,15 +1209,15 @@ return (
 
                 <div className="flex items-center gap-4">
                     {/* User Menu */}
-                    <div className="relative">
+                    <div className="relative" ref={userMenuRef}>
                         <button
                             onClick={() => setShowUserMenu(!showUserMenu)}
-                            className="flex items-center space-x-2 hover:text-blue-200 transition-colors"
+                            className="flex items-center gap-2 hover:bg-white/10 p-1.5 rounded transition-colors"
                         >
-                            <User size={20} />
-                            <span className="hidden md:block text-sm">
-                                {isGuest ? 'Guest' : (user?.full_name ? user.full_name : (user?.username || user?.email?.split('@')[0]))}
-                            </span>
+                            <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md border border-white/20">
+                                {isGuest ? 'G' : (user?.username?.[0]?.toUpperCase() || user?.full_name?.[0]?.toUpperCase() || 'U')}
+                            </div>
+                            <ChevronDown size={14} className="text-gray-400" />
                         </button>
                         
                         {showUserMenu && (
