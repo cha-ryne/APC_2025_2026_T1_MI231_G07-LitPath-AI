@@ -1740,16 +1740,11 @@ return (
 
                 {/* Input bar (for follow-up questions when conversation exists) */}
                 {conversationHistory.length > 0 && (
-                    <div className="sticky bottom-0 z-30 flex flex-col items-center px-2 sm:px-8">
+                    <div className="sticky bottom-0 z-30 flex flex-col items-center px-2 sm:px-8 bg-gray-100">
                         
-                        {/* Search bar */}
-                        <div className="flex items-center space-x-2 rounded-lg px-3 py-3 
-                            bg-white shadow-[0_12px_32px_-10px_rgba(0,0,0,0.28)]
-                            focus-within:ring-2 focus-within:ring-blue-500
-                            w-full max-w-4xl">
-                            
+                        {/* Search bar - has its own full border */}
+                        <div className="flex items-center space-x-2 w-full max-w-4xl border border-gray-300 rounded-lg px-3 py-3 bg-white shadow-[0_12px_32px_-10px_rgba(0,0,0,0.28)] focus-within:ring-2 focus-within:ring-[#1E74BC]">
                             <Search className="text-gray-500" size={18} />
-
                             <input
                                 type="text"
                                 placeholder="What is your research question?"
@@ -1761,7 +1756,6 @@ return (
                                 }
                                 disabled={loading}
                             />
-
                             <button
                                 onClick={() => handleSearch(searchQuery, true)}
                                 className="bg-[#1E74BC] text-white px-4 py-2 rounded-lg hover:bg-[#155a8f]
@@ -1772,12 +1766,10 @@ return (
                             </button>
                         </div>
 
-                        {/* AI Disclaimer */}
-                        <div className="w-full bg-gray-100 rounded-b-lg -mt-px">
-                            <p className="text-[10px] text-gray-500 text-center max-w-4xl mx-auto py-1 px-2">
-                                LitPath AI can make mistakes, so double-check it.
-                            </p>
-                        </div>
+                        {/* AI Disclaimer - outside the border, blends with page bg */}
+                        <p className="text-[10px] text-gray-500 text-center w-full max-w-4xl py-1 px-2">
+                            LitPath AI can make mistakes, so double-check it.
+                        </p>
 
                     </div>
                 )}
