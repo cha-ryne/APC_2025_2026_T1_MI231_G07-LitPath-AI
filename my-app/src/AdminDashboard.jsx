@@ -281,7 +281,7 @@ const AdminDashboard = () => {
         } else if (overviewDateFilterType === 'Last 7 days') {
             endpoint = '/dashboard/daily-trends/';
         } else if (overviewDateFilterType === 'Custom range') {
-            endpoint = '/dashboard/daily-trends/';
+            endpoint = '/dashboard/daily-trends/'; // we'll group the daily data
         }
 
         try {
@@ -289,30 +289,61 @@ const AdminDashboard = () => {
             if (res.ok) {
                 let data = await res.json();
 
-                // Transform labels based on filter type
+                // Transform based on filter type
                 if (overviewDateFilterType === 'Month') {
-                    // data is weekly, each item has label like "Mar 01 - Mar 07"
+                    // Weekly data: each item has week_start, week_end, label, views
+                    // We'll keep the label as "Week N" and store full range for tooltip
                     data = data.map((item, index) => ({
                         ...item,
                         label: `Week ${index + 1}`,
+                        tooltipRange: item.label, // e.g., "Mar 01 - Mar 07"
                     }));
                 } else if (overviewDateFilterType === 'Last 7 days') {
-                    // data is daily, each item has day and label like "Mar 01, 2025"
+                    // Daily data: each item has day, label, views
                     data = data.map(item => {
                         const date = new Date(item.day);
-                        const dayName = date.toLocaleDateString('en-US', { weekday: 'short' }); // "Sun", "Mon"
+                        const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+                        const fullDate = date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
                         return {
                             ...item,
                             label: dayName,
+                            fullDate: fullDate,
+                            weekday: date.toLocaleDateString('en-US', { weekday: 'long' }),
                         };
                     });
                 } else if (overviewDateFilterType === 'Custom range') {
-                    // For custom range, keep the default label (e.g., "Mar 01, 2025")
-                    // We'll handle downsampling of displayed labels later in the chart rendering.
-                    // No transformation needed here.
+                    // Group daily data into intervals
+                    if (data.length === 0) {
+                        setDashboardData(prev => ({ ...prev, trends: [] }));
+                        return;
+                    }
+
+                    const totalDays = data.length;
+                    let intervalSize = 1;
+                    if (totalDays > 30) intervalSize = 5;
+                    else if (totalDays > 15) intervalSize = 3;
+                    else intervalSize = 2; // for shorter ranges, keep daily but we'll still group? Let's use 2 for >7 days.
+
+                    const grouped = [];
+                    for (let i = 0; i < data.length; i += intervalSize) {
+                        const groupItems = data.slice(i, i + intervalSize);
+                        const startDate = new Date(groupItems[0].day);
+                        const endDate = new Date(groupItems[groupItems.length - 1].day);
+                        const totalViews = groupItems.reduce((sum, d) => sum + d.views, 0);
+
+                        const startLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                        const endLabel = endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                        const rangeLabel = startLabel === endLabel ? startLabel : `${startLabel} - ${endLabel}`;
+
+                        grouped.push({
+                            label: startLabel, // show only start date under bar
+                            tooltipRange: rangeLabel,
+                            views: totalViews,
+                        });
+                    }
+                    data = grouped;
                 }
-                // For 'Year', data already has month names (e.g., { month: "January", year: 2025, views: 0 })
-                // No change needed.
+                // For Year, data already has month names and year; no transformation needed.
 
                 setDashboardData(prev => ({ ...prev, trends: data }));
             }
@@ -1149,8 +1180,9 @@ const AdminDashboard = () => {
                                     <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 min-h-[200px]">
                                         <div className="flex items-center justify-between mb-3">
                                             <div className="flex items-center gap-1 flex-wrap">
+                                                {/* CHANGED: text-green-600 to text-blue-600 */}
                                                 <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
-                                                    <Calendar size={16} className="text-green-600" /> Activity Trends
+                                                    <Calendar size={16} className="text-blue-600" /> Activity Trends
                                                 </h3>
                                                 {/* Dynamic subtitle */}
                                                 <span className="text-[10px] text-gray-500 italic ml-2">
@@ -1163,78 +1195,91 @@ const AdminDashboard = () => {
                                                 </span>
                                             </div>
                                         </div>
-                                        <div className="flex-1 flex items-end gap-2 w-full h-full">
+                                        <div className="flex-1 flex items-end gap-2 w-full h-full pt-6">
                                             {dashboardData.trends && dashboardData.trends.length > 0 ? (
                                                 dashboardData.trends.map((item, i) => {
                                                     const max = Math.max(...dashboardData.trends.map(t => t.views), 1);
                                                     const heightPercent = item.views === 0 ? 2 : (item.views / max) * 100;
 
-                                                    // ----- Determine the label to show under the bar -----
+                                                    // Determine the label to show under the bar
                                                     let displayLabel = '';
                                                     if (overviewDateFilterType === 'Year') {
-                                                        // item has month and year, e.g. { month: "January", year: 2025, views: 0 }
                                                         displayLabel = item.month ? item.month.substring(0, 3) : '';
                                                     } else if (overviewDateFilterType === 'Month') {
-                                                        // item.label is "Week X" (set in fetchTrends)
-                                                        displayLabel = item.label;
+                                                        displayLabel = item.label; 
                                                     } else if (overviewDateFilterType === 'Last 7 days') {
-                                                        // item.label is day name (set in fetchTrends)
-                                                        displayLabel = item.label;
+                                                        displayLabel = item.label; 
                                                     } else if (overviewDateFilterType === 'Custom range') {
-                                                        // item has day and label like "Mar 01, 2025". We want "Mar 01"
-                                                        if (item.label) {
-                                                            displayLabel = item.label.split(',')[0]; // "Mar 01"
-                                                        } else if (item.day) {
-                                                            const d = new Date(item.day);
-                                                            displayLabel = d.toLocaleDateString('en-US', { month: 'short', day: '2-digit' });
-                                                        }
+                                                        displayLabel = item.label; 
                                                     }
 
-                                                    // ----- Downsample labels for custom range to avoid crowding -----
-                                                    if (overviewDateFilterType === 'Custom range') {
-                                                        const totalItems = dashboardData.trends.length;
-                                                        let step = 1;
-                                                        if (totalItems > 30) step = 5;
-                                                        else if (totalItems > 15) step = 3;
-                                                        // Hide label unless it's a step index or the last one
-                                                        if (i % step !== 0 && i !== totalItems - 1) {
-                                                            displayLabel = '';
-                                                        }
-                                                    }
-
-                                                    // ----- Tooltip content -----
-                                                    let tooltipText = '';
+                                                    // --- NEW TOOLTIP LOGIC ---
+                                                    let tooltipContent;
+                                                    // We use whitespace-nowrap to prevent the text from squishing into a tall tower
                                                     if (overviewDateFilterType === 'Year') {
-                                                        tooltipText = `${item.month} ${item.year}: ${item.views} view${item.views !== 1 ? 's' : ''}`;
-                                                    } else if (overviewDateFilterType === 'Month') {
-                                                        tooltipText = `${item.label}: ${item.views} view${item.views !== 1 ? 's' : ''}`;
+                                                        tooltipContent = (
+                                                            <div className="text-center whitespace-nowrap">
+                                                                <div className="font-semibold">{item.month} {item.year}:</div>
+                                                                <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
+                                                            </div>
+                                                        );
+                                                    } else if (overviewDateFilterType === 'Month' || overviewDateFilterType === 'Custom range') {
+                                                        tooltipContent = (
+                                                            <div className="text-center whitespace-nowrap">
+                                                                {/* Added the colon and font-semibold for the header */}
+                                                                <div className="font-semibold">{item.tooltipRange}:</div>
+                                                                <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
+                                                            </div>
+                                                        );
                                                     } else if (overviewDateFilterType === 'Last 7 days') {
-                                                        tooltipText = `${item.label}: ${item.views} view${item.views !== 1 ? 's' : ''}`;
-                                                    } else if (overviewDateFilterType === 'Custom range') {
-                                                        // Use the full label (e.g., "Mar 01, 2025") or construct from day
-                                                        const fullLabel = item.label || (item.day ? new Date(item.day).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }) : '');
-                                                        tooltipText = `${fullLabel}: ${item.views} view${item.views !== 1 ? 's' : ''}`;
+                                                        tooltipContent = (
+                                                            <div className="text-center whitespace-nowrap">
+                                                                <div className="font-semibold">{item.fullDate}, {item.weekday}:</div>
+                                                                <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
+                                                            </div>
+                                                        );
+                                                    }
+
+                                                    // --- EDGE DETECTION LOGIC ---
+                                                    // If it's the first item, align tooltip left. If last, align right. Otherwise center.
+                                                    const isFirst = i === 0;
+                                                    const isLast = i === dashboardData.trends.length - 1;
+                                                    
+                                                    let tooltipPositionClass = "left-1/2 -translate-x-1/2"; // Default center
+                                                    let arrowPositionClass = "left-1/2 -translate-x-1/2";   // Default arrow center
+
+                                                    if (isFirst) {
+                                                        tooltipPositionClass = "left-0 translate-x-0";      // Align to left edge
+                                                        arrowPositionClass = "left-4 -translate-x-1/2";     // Keep arrow pointing to bar (approx center of bar)
+                                                    } else if (isLast) {
+                                                        tooltipPositionClass = "right-0 translate-x-0";     // Align to right edge
+                                                        arrowPositionClass = "right-4 translate-x-1/2";     // Keep arrow pointing to bar
                                                     }
 
                                                     return (
                                                         <div key={i} className="flex-1 flex flex-col items-center gap-2 h-full justify-end group cursor-default">
                                                             <div className="relative w-full flex justify-center items-end h-full">
                                                                 <div 
-                                                                    className="w-full max-w-[20px] bg-gradient-to-t from-green-600 to-green-400 rounded-t-sm transition-all duration-500 relative hover:from-green-500 hover:to-green-300"
+                                                                    // CHANGED: from-green-600 to-green-400 -> from-blue-600 to-blue-400
+                                                                    // CHANGED: hover:from-green-500 -> hover:from-blue-500 etc.
+                                                                    className="w-full max-w-[20px] bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-sm transition-all duration-500 relative hover:from-blue-500 hover:to-blue-300"
                                                                     style={{ height: `${heightPercent}%` }}
                                                                 >
-                                                                    {/* Tooltip - positioned higher to avoid covering title */}
-                                                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 hidden group-hover:flex flex-col items-center z-20 pointer-events-none">
-                                                                        <div className="bg-gray-800 text-white text-[10px] px-2 py-1 rounded shadow-lg whitespace-nowrap font-medium">
-                                                                            {tooltipText}
+                                                                    {/* Tooltip Wrapper */}
+                                                                    <div className={`absolute bottom-full mb-2 hidden group-hover:flex flex-col z-20 pointer-events-none ${tooltipPositionClass}`}>
+                                                                        
+                                                                        {/* Tooltip Box */}
+                                                                        <div className="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded shadow-lg w-max text-center leading-tight">
+                                                                            {tooltipContent}
                                                                         </div>
-                                                                        <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+
+                                                                        {/* Tooltip Arrow - Positioned independently to always point to bar */}
+                                                                        <div className={`absolute -bottom-[4px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800 ${arrowPositionClass}`}></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            {/* X-axis label - only if we have something to show */}
                                                             {displayLabel && (
-                                                                <span className="text-[9px] text-gray-500 font-bold uppercase truncate w-full text-center">
+                                                                <span className="text-[10px] text-gray-500 font-bold uppercase truncate w-full text-center">
                                                                     {displayLabel}
                                                                 </span>
                                                             )}
