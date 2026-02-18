@@ -1948,15 +1948,6 @@ return (
         {showFeedbackOverlay && (
             <div className="fixed inset-0 bg-black bg-opacity-50 z-[70] flex items-center justify-center">
                 <div className="bg-white w-11/12 md:w-1/2 lg:w-1/3 rounded-lg shadow-xl p-6 relative">
-                    {/* Close button */}
-                    <button
-                        className="absolute top-3 right-3 text-gray-500 text-xl hover:text-gray-700"
-                        onClick={() => {
-                            setShowFeedbackOverlay(false);
-                            setUserFeedback(null);
-                        }}>
-                        ×
-                    </button>
                     <h2 className="text-2xl font-semibold text-[#1E74BC] mb-4">
                         {userFeedback === 'thumbs_up' ? 'Thank you for your feedback!' : 'Sorry to hear this wasn\'t helpful.'}
                     </h2>
@@ -1970,7 +1961,7 @@ return (
                         placeholder="Share your feedback or suggestions here..."
                         maxLength={500}
                     />
-                    <div className="flex items-center justify-between mt-2">
+                    <div className="flex items-center justify-end mt-2">
                         <p className="text-xs text-gray-500">
                             {feedbackComment.length}/500 characters
                         </p>
