@@ -823,45 +823,101 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
         }
     };
 
-    const generateCitation = (style) => {
+   const generateCitation = (style) => {
         if (!selectedSource) return;
         
-        let author = selectedSource.author || "Unknown Author";
+        // Normalize missing data
+        const author = selectedSource.author || "Unknown Author";
         const year = selectedSource.year || "n.d.";
         const title = selectedSource.title || "Untitled";
-        let school = selectedSource.school || "Unknown Institution";
-        let degree = selectedSource.degree || "Thesis";
+        const school = selectedSource.school || "Unknown Institution";
+        const degree = selectedSource.degree || "Thesis";
         
-        // Only convert school to title case if it's all caps (don't modify otherwise)
-        if (school === school.toUpperCase()) {
-            const lowercaseWords = ['of', 'the', 'and', 'in', 'at', 'to', 'for', 'a', 'an'];
-            school = school.split(' ').map((word, index) => {
-                // Always capitalize first word and words after hyphens
-                if (index === 0 || word.includes('-')) {
+        // Normalize author name - convert ALL-CAPS to proper case
+        const normalizeAuthorName = (name) => {
+            if (name === name.toUpperCase()) {
+                return name.split(' ').map(word => 
+                    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                ).join(' ');
+            }
+            return name;
+        };
+        
+        const normalizedAuthor = normalizeAuthorName(author);
+        
+        // Normalize school/institution - proper case handling
+        const normalizeSchool = (inst) => {
+            if (inst === inst.toUpperCase()) {
+                const lowercaseWords = ['of', 'the', 'and', 'in', 'at', 'to', 'for', 'a', 'an'];
+                return inst.split(' ').map((word, index) => {
+                    if (index === 0 || word.includes('-')) {
+                        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                    }
+                    if (lowercaseWords.includes(word.toLowerCase())) {
+                        return word.toLowerCase();
+                    }
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                }).join(' ');
+            }
+            return inst;
+        };
+        
+        const normalizedSchool = normalizeSchool(school);
+        
+        // Extended proper nouns list for sentence case
+        const properNouns = [
+            'philippine', 'philippines', 'manila', 'cebu', 'davao', 'quezon', 
+            'los', 'banos', 'tacloban', 'leyte', 'batangas', 'luzon', 'mindanao', 
+            'visayas', 'makiling', 'IPB', 'UPLB', 'UP', 'DOST', 'STII', 'var', 'spp',
+            'pinggang', 'pinoy', 'metro', 'manila', 'laguna'
+        ];
+        
+        // Convert to sentence case with proper noun preservation
+        const toSentenceCase = (str) => {
+            if (!str) return str;
+            let result = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+            result = result.replace(/([.!?]\s+)([a-z])/g, (match, p1, p2) => p1 + p2.toUpperCase());
+            result = result.replace(/:\s+([a-z])/g, (match, p1) => ': ' + p1.toUpperCase());
+            properNouns.forEach(noun => {
+                const regex = new RegExp(`\\b${noun}\\b`, 'gi');
+                result = result.replace(regex, noun.charAt(0).toUpperCase() + noun.slice(1).toLowerCase());
+            });
+            // Preserve specific phrases like Pinggang Pinoy and Metro Manila
+            result = result.replace(/Pinggang pinoy/gi, 'Pinggang Pinoy');
+            result = result.replace(/Metro manila/gi, 'Metro Manila');
+            result = result.replace(/\b[A-Z]{2,}\b/g, (match) => match);
+            result = result.replace(/\[([a-z])/gi, (match, p1) => '[' + p1.toUpperCase());
+            result = result.replace(/\[([A-Z][a-z]+)\s+([a-z])/g, (match, p1, p2) => '[' + p1 + ' ' + p2);
+            return result;
+        };
+        
+        // Convert to title case (proper noun aware)
+        const toTitleCase = (str) => {
+            if (!str) return str;
+            const minorWords = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'from', 'by', 'of', 'in', 'with', 'vs', 'via'];
+            const majorWords = ['philippine', 'philippines', 'manila', 'cebu', 'davao', 'quezon', 'los', 'banos', 'tacloban', 'leyte', 'batangas', 'metro', 'manila', 'laguna', 'luzon', 'mindanao', 'visayas', 'makiling'];
+            
+            return str.split(' ').map((word, index) => {
+                const lowerWord = word.toLowerCase();
+                if (index === 0 || index === str.split(' ').length - 1) {
                     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
                 }
-                // Lowercase articles and prepositions
-                if (lowercaseWords.includes(word.toLowerCase())) {
-                    return word.toLowerCase();
+                if (majorWords.includes(lowerWord)) {
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                }
+                if (minorWords.includes(lowerWord)) {
+                    return lowerWord;
                 }
                 return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
             }).join(' ');
-        }
-        
-        // Helper to convert to proper title case
-        const toTitleCase = (str) => {
-            return str.split(' ').map(word => 
-                word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-            ).join(' ');
         };
+
         
-        // Parse author name intelligently (handle compound last names like "De Leon")
+        // Parse author name intelligently (handle compound last names)
         const parseAuthorName = (name) => {
-            // Common Spanish/Filipino prefixes in last names
-            const lastNamePrefixes = ['de', 'del', 'dela', 'de la', 'san', 'santa', 'van', 'von', 'da'];
+            const lastNamePrefixes = ['de', 'del', 'dela', 'de la', 'san', 'santa', 'van', 'von', 'da', 'la'];
             const parts = name.split(/\s+/);
             
-            // Find where the last name starts (look for lowercase prefixes)
             let lastNameStartIndex = parts.length - 1;
             for (let i = parts.length - 2; i >= 0; i--) {
                 if (lastNamePrefixes.includes(parts[i].toLowerCase())) {
@@ -877,100 +933,104 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
             return { firstNames, lastName };
         };
         
-        // Format author name based on citation style
+        // Format author for APA: Last, F. M.
         const formatAuthorAPA = (name) => {
-            // "De Leon, D. C. A."
             const { firstNames, lastName } = parseAuthorName(name);
             const initials = firstNames.map(n => n.charAt(0).toUpperCase() + '.').join(' ');
-            const lastNameFormatted = lastName.map(toTitleCase).join(' ');
+            const lastNameFormatted = lastName.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
             return `${lastNameFormatted}, ${initials}`;
         };
         
+        // Format author for MLA/Chicago: Last, First Middle
         const formatAuthorMLA = (name) => {
-            // "De Leon, Deborah Christine A. Title. Year. Institution, Degree type."
             const { firstNames, lastName } = parseAuthorName(name);
-            const firstNamesFormatted = firstNames.map(toTitleCase).join(' ');
-            const lastNameFormatted = lastName.map(toTitleCase).join(' ');
-            // Remove double periods from initials
-            return `${lastNameFormatted}, ${firstNamesFormatted}`.replace(/\.\.+/g, '.');
+            const firstNamesFormatted = firstNames.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+            const lastNameFormatted = lastName.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+            return `${lastNameFormatted}, ${firstNamesFormatted}`.replace(/\.\.+/g, '.').replace(/\.\s*$/, '');
         };
         
+        // Format author for IEEE: F. M. Last
         const formatAuthorIEEE = (name) => {
-            // "D. C. A. De Leon"
             const { firstNames, lastName } = parseAuthorName(name);
             const initials = firstNames.map(n => n.charAt(0).toUpperCase() + '.').join(' ');
-            const lastNameFormatted = lastName.map(toTitleCase).join(' ');
+            const lastNameFormatted = lastName.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
             return `${initials} ${lastNameFormatted}`;
         };
         
-        // Convert title to sentence case (first word and proper nouns capitalized)
-        const toSentenceCase = (str) => {
-            // Preserve content in brackets and scientific names
-            const lowerStr = str.toLowerCase();
-            let result = lowerStr.charAt(0).toUpperCase() + lowerStr.slice(1);
+        
+        // Format degree consistently based on style
+        const formatDegree = (deg, citationStyle) => {
+            // Normalize degree strings
+            const lowerDeg = deg.toLowerCase();
             
-            // Capitalize first letter after punctuation
-            result = result.replace(/([.!?]\s+)([a-z])/g, (match, p1, p2) => p1 + p2.toUpperCase());
+            if (citationStyle === 'IEEE') {
+                // IEEE uses abbreviations
+                if (lowerDeg.includes("master")) return "M.S. thesis";
+                if (lowerDeg.includes("doctoral") || lowerDeg.includes("phd") || lowerDeg.includes("doctorate")) return "Ph.D. dissertation";
+                if (lowerDeg.includes("bachelor")) return "B.S. thesis";
+                return deg;
+            }
             
-            // Capitalize first word after colon
-            result = result.replace(/:\s+([a-z])/g, (match, p1) => ': ' + p1.toUpperCase());
+            if (citationStyle === 'APA') {
+                // APA uses sentence case (lowercase)
+                if (lowerDeg.includes("master")) return "master's thesis";
+                if (lowerDeg.includes("doctoral") || lowerDeg.includes("phd") || lowerDeg.includes("doctorate")) return "doctoral dissertation";
+                if (lowerDeg.includes("bachelor")) return "bachelor's thesis";
+                return deg;
+            }
             
-            // Preserve proper nouns and geographic locations
-            result = result.replace(/\bphilippine\b/gi, 'Philippine');
-            result = result.replace(/\bphilippines\b/gi, 'Philippines');
-            result = result.replace(/\btacloban\b/gi, 'Tacloban');
-            result = result.replace(/\bleyte\b/gi, 'Leyte');
-            result = result.replace(/\bmanila\b/gi, 'Manila');
-            result = result.replace(/\bcebu\b/gi, 'Cebu');
-            result = result.replace(/\bdavao\b/gi, 'Davao');
-            result = result.replace(/\bcity\b/gi, 'City');
+            // MLA and Chicago use title case
+            if (lowerDeg.includes("master")) return "Master's thesis";
+            if (lowerDeg.includes("doctoral") || lowerDeg.includes("phd") || lowerDeg.includes("doctorate")) return "Doctoral dissertation";
+            if (lowerDeg.includes("bachelor")) return "Bachelor's thesis";
             
-            // Preserve acronyms and scientific notation
-            result = result.replace(/\bipb\b/gi, 'IPB');
-            result = result.replace(/\bvar\b/gi, 'Var');
-            
-            // Preserve scientific names in brackets: [Genus species (Author) Author]
-            result = result.replace(/\[([a-z])/gi, (match, p1) => '[' + p1.toUpperCase());
-            result = result.replace(/\[([A-Z][a-z]+)\s+([a-z])/g, (match, p1, p2) => 
-                '[' + p1 + ' ' + p2.toLowerCase()
-            );
-            // Capitalize taxonomic authors (e.g., "L.", "Skeels")
-            result = result.replace(/\(([a-z])\.\)/gi, (match, p1) => '(' + p1.toUpperCase() + '.)');
-            result = result.replace(/\)\s+([a-z])/g, (match, p1) => ') ' + p1.charAt(0).toUpperCase() + p1.slice(1).toLowerCase());
-            
-            return result;
+            return deg;
         };
         
         let citation = "";
         switch (style) {
-            case "APA":
-                // APA 7th: De Leon, D. C. A. (Year). Title in sentence case [Degree type, Institution].
-                const apaAuthor = formatAuthorAPA(author);
+            case "APA": {
+                // APA 7th: Author, A. A. (Year). Title in sentence case (Master's thesis, Institution).
+                const apaAuthor = formatAuthorAPA(normalizedAuthor);
                 const apaTitle = toSentenceCase(title);
-                citation = `${apaAuthor} (${year}). ${apaTitle} [${degree}, ${school}].`;
+                const apaDegree = formatDegree(degree, 'APA');
+                citation = `${apaAuthor} (${year}). ${apaTitle} (${apaDegree}, ${normalizedSchool}).`;
                 break;
-            case "MLA":
-                // MLA 9th: De Leon, Deborah Christine A. Title. Year. Institution, Degree type.
-                const mlaAuthor = formatAuthorMLA(author);
-                citation = `${mlaAuthor}. ${title}. ${year}. ${school}, ${degree}.`;
+            }
+            case "MLA": {
+                // MLA 9th: Author Last Name, First Name. Title. Degree, Institution, Year.
+                const mlaAuthor = formatAuthorMLA(normalizedAuthor);
+                const mlaTitle = toTitleCase(title);
+                const mlaDegree = formatDegree(degree, 'MLA');
+                citation = `${mlaAuthor}. ${mlaTitle}. ${mlaDegree}, ${normalizedSchool}, ${year}.`;
                 break;
-            case "Chicago":
-                // Chicago: De Leon, Deborah Christine A. Year. "Title." Degree type, Institution.
-                const chicagoAuthor = formatAuthorMLA(author);
-                citation = `${chicagoAuthor}. ${year}. "${title}." ${degree}, ${school}.`;
+            }
+            case "Chicago": {
+                // Chicago (Notes & Bibliography): Author Last, First. "Title." Degree, Institution, Year.
+                const chicagoAuthor = formatAuthorMLA(normalizedAuthor);
+                const chicagoTitle = toTitleCase(title);
+                const chicagoDegree = formatDegree(degree, 'Chicago');
+                citation = `${chicagoAuthor}. "${chicagoTitle}." ${chicagoDegree}, ${normalizedSchool}, ${year}.`;
                 break;
-            case "IEEE":
-                // IEEE: D. C. A. De Leon, "Title," Degree abbreviation, Institution, Location, Year.
-                const ieeeAuthor = formatAuthorIEEE(author);
-                const ieeeDegree = degree === "Master's thesis" ? "M.S. thesis" : 
-                                  degree === "Doctoral dissertation" ? "Ph.D. dissertation" : degree;
-                citation = `${ieeeAuthor}, "${title}," ${ieeeDegree}, ${school}, Philippines, ${year}.`;
+            }
+            case "IEEE": {
+                // IEEE: F. M. Author, "Title," Degree type, Institution, Location, Year.
+                const ieeeAuthor = formatAuthorIEEE(normalizedAuthor);
+                const ieeeDegreeFormatted = formatDegree(degree, 'IEEE');
+                const ieeeTitle = toSentenceCase(title);
+                citation = `${ieeeAuthor}, "${ieeeTitle}," ${ieeeDegreeFormatted}, ${normalizedSchool}, Philippines, ${year}.`;
                 break;
+            }
             default:
                 citation = "";
         }
+        
+        // Clean up any double periods, trailing commas, or spacing errors
+        citation = citation.replace(/\.\.+/g, '.').replace(/,\./g, '.').replace(/,\s*\./g, '.').replace(/\s+/g, ' ').trim();
+        
         setGeneratedCitation(citation);
     };
+    
     const handleNewChat = async () => {
         // Save current session to history (upsert - safe to call even if already auto-saved)
         if (hasSearchedInSession && searchResults) {
