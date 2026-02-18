@@ -530,7 +530,6 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                 className="w-full border border-gray-300 rounded-md p-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Enter your message, comments, or suggestions..."
                             />
-                            <span className="text-gray-400 text-sm">(Optional)</span>
                         </div>
                     </div>
 
