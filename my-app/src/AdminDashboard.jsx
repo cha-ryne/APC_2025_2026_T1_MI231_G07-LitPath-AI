@@ -24,7 +24,7 @@ const AdminDashboard = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const { logout, user, changePassword, updateProfile } = useAuth();
 
-    // ---------- Tab state from URL ----------
+    // ---------- Tab State from URL ----------
     const [activeTab, setActiveTab] = useState(searchParams.get('tab') || 'overview');
 
     // ---------- UI State ----------
@@ -32,7 +32,7 @@ const AdminDashboard = () => {
     const [showUserMenu, setShowUserMenu] = useState(false);
     const userMenuRef = useRef(null);
 
-    // ---------- Date filter state ----------
+    // ---------- Overview Date Filter State ----------
     const dateFilterOptions = ['Annual', 'Last week', 'Last month', 'Custom range'];
     const [dateFilterType, setDateFilterType] = useState('Annual');
     const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
@@ -85,7 +85,21 @@ const AdminDashboard = () => {
     // ---------- Feedback States ----------
     const [feedbacks, setFeedbacks] = useState([]);
     const [feedbackFilter, setFeedbackFilter] = useState('All');
-    const [feedbackSearch, setFeedbackSearch] = useState('');
+
+    // ---------- Feedback Manager Date Filter State ----------
+    const feedbackDateFilterOptions = ['All', 'Year', 'Month', 'Last 7 days', 'Custom range'];
+    const [feedbackDateFilterType, setFeedbackDateFilterType] = useState('All');
+    const [feedbackSelectedYear, setFeedbackSelectedYear] = useState(new Date().getFullYear());
+    const [feedbackSelectedMonth, setFeedbackSelectedMonth] = useState(new Date().getMonth() + 1); // 1 = January
+    const [feedbackSelectedMonthYear, setFeedbackSelectedMonthYear] = useState(new Date().getFullYear());
+    const [feedbackCustomFrom, setFeedbackCustomFrom] = useState('');
+    const [feedbackCustomTo, setFeedbackCustomTo] = useState('');
+    const [showFeedbackDateDropdown, setShowFeedbackDateDropdown] = useState(false);
+    const feedbackDateDropdownRef = useRef(null);
+
+    // ---------- Feedback Manager Rating Filter State ----------
+    const [showRatingDropdown, setShowRatingDropdown] = useState(false);
+    const ratingDropdownRef = useRef(null);
 
     // ---------- Material Ratings ----------
     const [materialRatings, setMaterialRatings] = useState([]);
@@ -257,6 +271,17 @@ const AdminDashboard = () => {
                 const isInput = event.target.tagName === 'INPUT';
                 if (!isInput) setShowDateDropdown(false);
             }
+
+            // New: feedback date dropdown
+            if (feedbackDateDropdownRef.current && !feedbackDateDropdownRef.current.contains(event.target)) {
+                const isInput = event.target.tagName === 'INPUT';
+                if (!isInput) setShowFeedbackDateDropdown(false);
+            }
+
+            // New: rating dropdown
+            if (ratingDropdownRef.current && !ratingDropdownRef.current.contains(event.target)) {
+                setShowRatingDropdown(false);
+            }
         };
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -382,6 +407,38 @@ const AdminDashboard = () => {
                 #{index + 1}
             </div>
         );
+    };
+
+    // Date Range Helper for Feedback Manager
+    const isFeedbackInDateRange = (feedbackDate) => {
+        if (feedbackDateFilterType === 'All') return true;
+        
+        const date = new Date(feedbackDate);
+        const today = new Date();
+        
+        if (feedbackDateFilterType === 'Year') {
+            return date.getFullYear() === feedbackSelectedYear;
+        }
+        
+        if (feedbackDateFilterType === 'Last 7 days') {
+            const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+            return date >= weekAgo;
+        }
+        
+        if (feedbackDateFilterType === 'Month') {
+            return date.getMonth() + 1 === feedbackSelectedMonth && 
+                date.getFullYear() === feedbackSelectedMonthYear;
+        }
+        
+        if (feedbackDateFilterType === 'Custom range') {
+            if (!feedbackCustomFrom || !feedbackCustomTo) return true;
+            const from = new Date(feedbackCustomFrom);
+            const to = new Date(feedbackCustomTo);
+            to.setHours(23, 59, 59, 999);
+            return date >= from && date <= to;
+        }
+        
+        return true;
     };
 
     // ---------- Render ----------
@@ -1099,28 +1156,221 @@ const AdminDashboard = () => {
                                     <p className="text-xs text-gray-500">Manage client satisfaction responses</p>
                                 </div>
                                 <div className="flex gap-3">
-                                    <div className="relative">
-                                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
-                                        <input
-                                            type="text"
-                                            placeholder="Search comments..."
-                                            className="pl-9 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-                                            value={feedbackSearch}
-                                            onChange={(e) => setFeedbackSearch(e.target.value)}
-                                        />
+                                    {/* Date Filter Dropdown */}
+                                    <div className="relative" ref={feedbackDateDropdownRef}>
+                                        <button
+                                            onClick={() => setShowFeedbackDateDropdown(!showFeedbackDateDropdown)}
+                                            className="flex items-center space-x-2 px-3 py-2 border border-gray-300 rounded-md bg-white text-gray-600 hover:bg-gray-50 text-xs font-medium"
+                                        >
+                                            <Calendar size={14} />
+                                            <span>
+                                                {feedbackDateFilterType === 'All' && 'All dates'}
+                                                {feedbackDateFilterType === 'Year' && `Year ${feedbackSelectedYear}`}
+                                                {feedbackDateFilterType === 'Last 7 days' && 'Last 7 days'}
+                                                {feedbackDateFilterType === 'Month' && `${new Date(0, feedbackSelectedMonth-1).toLocaleString('default', { month: 'long' })} ${feedbackSelectedMonthYear}`}
+                                                {feedbackDateFilterType === 'Custom range' && 'Custom range'}
+                                            </span>
+                                            <ChevronDown size={14} />
+                                        </button>
+
+                                        {showFeedbackDateDropdown && (
+                                            <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-30 min-w-[260px] p-3">
+                                                {/* Filter type options */}
+                                                {feedbackDateFilterOptions.map(opt => (
+                                                    <button
+                                                        key={opt}
+                                                        onClick={() => {
+                                                            setFeedbackDateFilterType(opt);
+                                                            if (opt === 'Last 7 days') {
+                                                                setShowFeedbackDateDropdown(false);
+                                                            }
+                                                            if (opt !== 'Custom range') {
+                                                                setFeedbackCustomFrom('');
+                                                                setFeedbackCustomTo('');
+                                                            }
+                                                        }}
+                                                        className={`block w-full text-left px-3 py-2 text-xs rounded-md ${
+                                                            feedbackDateFilterType === opt
+                                                                ? 'bg-blue-50 text-blue-600 font-bold'
+                                                                : 'hover:bg-gray-50'
+                                                        }`}
+                                                    >
+                                                        {opt}
+                                                    </button>
+                                                ))}
+
+                                                {/* Year picker */}
+                                                {feedbackDateFilterType === 'Year' && (
+                                                    <div className="mt-2 pt-2 border-t border-gray-100">
+                                                        <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                            Select year
+                                                        </label>
+                                                        <select
+                                                            value={feedbackSelectedYear}
+                                                            onChange={(e) => setFeedbackSelectedYear(parseInt(e.target.value))}
+                                                            className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                        >
+                                                            {yearOptions.map(year => (
+                                                                <option key={year} value={year}>{year}</option>
+                                                            ))}
+                                                        </select>
+                                                        <button
+                                                            onClick={() => setShowFeedbackDateDropdown(false)}
+                                                            className="w-full mt-3 bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                        >
+                                                            Apply
+                                                        </button>
+                                                    </div>
+                                                )}
+
+                                                {/* Month picker */}
+                                                {feedbackDateFilterType === 'Month' && (
+                                                    <div className="mt-2 pt-2 border-t border-gray-100">
+                                                        <div className="flex flex-col gap-2">
+                                                            <div>
+                                                                <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                                    Month
+                                                                </label>
+                                                                <select
+                                                                    value={feedbackSelectedMonth}
+                                                                    onChange={(e) => setFeedbackSelectedMonth(parseInt(e.target.value))}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                                >
+                                                                    {Array.from({ length: 12 }, (_, i) => i + 1).map(month => (
+                                                                        <option key={month} value={month}>
+                                                                            {new Date(0, month-1).toLocaleString('default', { month: 'long' })}
+                                                                        </option>
+                                                                    ))}
+                                                                </select>
+                                                            </div>
+                                                            <div>
+                                                                <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                                    Year
+                                                                </label>
+                                                                <select
+                                                                    value={feedbackSelectedMonthYear}
+                                                                    onChange={(e) => setFeedbackSelectedMonthYear(parseInt(e.target.value))}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                                >
+                                                                    {yearOptions.map(year => (
+                                                                        <option key={year} value={year}>{year}</option>
+                                                                    ))}
+                                                                </select>
+                                                            </div>
+                                                            <button
+                                                                onClick={() => setShowFeedbackDateDropdown(false)}
+                                                                className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                            >
+                                                                Apply
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                                {/* Custom range picker */}
+                                                {feedbackDateFilterType === 'Custom range' && (
+                                                    <div className="mt-2 pt-2 border-t border-gray-100">
+                                                        <div className="flex flex-col gap-2">
+                                                            <div>
+                                                                <span className="text-[10px] text-gray-500 mb-1 block">From</span>
+                                                                <input
+                                                                    type="date"
+                                                                    value={feedbackCustomFrom}
+                                                                    onChange={(e) => setFeedbackCustomFrom(e.target.value)}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <span className="text-[10px] text-gray-500 mb-1 block">To</span>
+                                                                <input
+                                                                    type="date"
+                                                                    value={feedbackCustomTo}
+                                                                    onChange={(e) => setFeedbackCustomTo(e.target.value)}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                                />
+                                                            </div>
+                                                            <button
+                                                                onClick={() => {
+                                                                    if (feedbackCustomFrom && feedbackCustomTo) {
+                                                                        setShowFeedbackDateDropdown(false);
+                                                                    } else {
+                                                                        showToast('Select both dates', 'error');
+                                                                    }
+                                                                }}
+                                                                className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                            >
+                                                                Apply Range
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                                {/* Clear Filter button (disabled when filter type is 'All') */}
+                                                <div className="mt-3 pt-2 border-t border-gray-100">
+                                                    <button
+                                                        onClick={() => {
+                                                            setFeedbackDateFilterType('All');
+                                                            setFeedbackSelectedYear(new Date().getFullYear());
+                                                            setFeedbackSelectedMonth(new Date().getMonth() + 1);
+                                                            setFeedbackSelectedMonthYear(new Date().getFullYear());
+                                                            setFeedbackCustomFrom('');
+                                                            setFeedbackCustomTo('');
+                                                            setShowFeedbackDateDropdown(false);
+                                                        }}
+                                                        disabled={feedbackDateFilterType === 'All'}
+                                                        className={`w-full text-xs py-1.5 rounded border transition-colors ${
+                                                            feedbackDateFilterType === 'All'
+                                                                ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                                                                : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50 hover:text-red-600'
+                                                        }`}
+                                                    >
+                                                        Clear Filter
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
-                                    <select
-                                        className="bg-white border border-gray-300 text-gray-700 py-2 px-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-medium"
-                                        value={feedbackFilter}
-                                        onChange={(e) => setFeedbackFilter(e.target.value)}
-                                    >
-                                        <option value="All">All Ratings</option>
-                                        <option value="5">5 Stars</option>
-                                        <option value="4">4 Stars</option>
-                                        <option value="3">3 Stars</option>
-                                        <option value="2">2 Stars</option>
-                                        <option value="1">1 Star</option>
-                                    </select>
+
+                                    {/* Rating filter dropdown (custom, matching date filter) */}
+                                    <div className="relative" ref={ratingDropdownRef}>
+                                        <button
+                                            onClick={() => setShowRatingDropdown(!showRatingDropdown)}
+                                            className="flex items-center space-x-2 px-3 py-2 border border-gray-300 rounded-md bg-white text-gray-600 hover:bg-gray-50 text-xs font-medium"
+                                        >
+                                            <span>
+                                                {feedbackFilter === 'All' ? 'All ratings' : `${feedbackFilter} Stars`}
+                                            </span>
+                                            <ChevronDown size={14} className={`transition-transform ${showRatingDropdown ? 'rotate-180' : ''}`} />
+                                        </button>
+
+                                        {showRatingDropdown && (
+                                            <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-30 min-w-[140px] p-1">
+                                                {[
+                                                    { value: 'All', label: 'All ratings' },
+                                                    { value: '5', label: '5 Stars' },
+                                                    { value: '4', label: '4 Stars' },
+                                                    { value: '3', label: '3 Stars' },
+                                                    { value: '2', label: '2 Stars' },
+                                                    { value: '1', label: '1 Star' }
+                                                ].map(option => (
+                                                    <button
+                                                        key={option.value}
+                                                        onClick={() => {
+                                                            setFeedbackFilter(option.value);
+                                                            setShowRatingDropdown(false);
+                                                        }}
+                                                        className={`block w-full text-left px-3 py-2 text-xs rounded-md ${
+                                                            feedbackFilter === option.value
+                                                                ? 'bg-blue-50 text-blue-600 font-bold'
+                                                                : 'hover:bg-gray-50'
+                                                        }`}
+                                                    >
+                                                        {option.label}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                             <div className="flex-1 overflow-auto">
@@ -1143,10 +1393,22 @@ const AdminDashboard = () => {
                                         {feedbacks.length === 0 ? (
                                             <tr><td colSpan="10" className="px-6 py-10 text-center text-gray-500 text-sm">No feedback records found.</td></tr>
                                         ) : (
-                                            feedbacks
-                                                .filter(fb => feedbackFilter === 'All' || fb.litpath_rating?.toString() === feedbackFilter)
-                                                .filter(fb => !feedbackSearch || (fb.message_comment && fb.message_comment.toLowerCase().includes(feedbackSearch.toLowerCase())))
-                                                .map((fb) => (
+                                            (() => {
+                                                const filtered = feedbacks
+                                                    .filter(fb => feedbackFilter === 'All' || fb.litpath_rating?.toString() === feedbackFilter)
+                                                    .filter(fb => isFeedbackInDateRange(fb.created_at));
+                                                
+                                                if (filtered.length === 0) {
+                                                    return (
+                                                        <tr>
+                                                            <td colSpan="10" className="px-6 py-10 text-center text-gray-500 text-sm">
+                                                                No records match your filter.
+                                                            </td>
+                                                        </tr>
+                                                    );
+                                                }
+                                                
+                                                return filtered.map((fb) => (
                                                     <tr key={fb.id} className="hover:bg-gray-50 transition-colors">
                                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 font-medium">
                                                             {new Date(fb.created_at).toLocaleDateString()}
@@ -1195,7 +1457,8 @@ const AdminDashboard = () => {
                                                             </button>
                                                         </td>
                                                     </tr>
-                                                ))
+                                                ));
+                                            })()
                                         )}
                                     </tbody>
                                 </table>

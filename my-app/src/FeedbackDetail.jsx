@@ -106,9 +106,8 @@ const FeedbackDetail = () => {
 
             if (!response.ok) throw new Error('Failed to update');
 
-            navigate('/admin/dashboard', {
+            navigate('/admin/dashboard?tab=feedback', {
                 state: {
-                    activeTab: 'feedback',
                     toast: {
                         message: 'Feedback updated successfully!',
                         type: 'success'
@@ -150,11 +149,11 @@ const FeedbackDetail = () => {
                             <span className="text-sm font-medium text-gray-200">Admin</span>
                         </div>
                         <button
-                            onClick={() => navigate('/admin/dashboard', { state: { activeTab: 'feedback' } })}
+                            onClick={() => navigate('/admin/dashboard?tab=feedback')}
                             className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors"
                         >
                             <ChevronLeft size={18} />
-                            <span>Back to Dashboard</span>
+                            <span>Back to Feedback Manager</span>
                         </button>
                     </div>
                 </div>
@@ -252,7 +251,7 @@ const FeedbackDetail = () => {
                                     <div>
                                         <span className="text-gray-600 text-sm">Research Interests:</span>
                                         <p className="mt-1 text-sm bg-white p-3 rounded border border-gray-200">
-                                            {feedback.research_interests || '—'}
+                                            {feedback.research_interests || 'N/A'}
                                         </p>
                                     </div>
 
@@ -260,15 +259,15 @@ const FeedbackDetail = () => {
                                     <div>
                                         <span className="text-gray-600 text-sm">Missing Content:</span>
                                         <p className="mt-1 text-sm bg-white p-3 rounded border border-gray-200">
-                                            {feedback.missing_content || '—'}
+                                            {feedback.missing_content || 'N/A'}
                                         </p>
                                     </div>
 
                                     {/* Message / Comment */}
                                     <div>
                                         <span className="text-gray-600 text-sm">Message / Comment:</span>
-                                        <p className="mt-1 text-sm bg-white p-3 rounded border border-gray-200 italic">
-                                            {feedback.message_comment || '—'}
+                                        <p className="mt-1 text-sm bg-white p-3 rounded border border-gray-200">
+                                            {feedback.message_comment || 'N/A'}
                                         </p>
                                     </div>
                                 </div>
@@ -331,7 +330,7 @@ const FeedbackDetail = () => {
                                     <textarea
                                         className="w-full border-gray-300 border rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
                                         placeholder="Remarks (required) – explain why valid or invalid..."
-                                        rows="2"
+                                        rows="5"
                                         value={editForm.validity_remarks}
                                         onChange={(e) => setEditForm({ ...editForm, validity_remarks: e.target.value })}
                                     />
@@ -342,13 +341,14 @@ const FeedbackDetail = () => {
                                     <label className="block text-sm font-bold text-gray-700 mb-2">
                                         Is it doable? <span className="text-red-500">*</span>
                                     </label>
+                                    {/* Is it doable? – Yes (green), No (red) */}
                                     <div className="flex gap-3 mb-3">
                                         <button
                                             type="button"
                                             onClick={() => setEditForm({ ...editForm, is_doable: true })}
                                             className={`flex-1 py-2 text-sm font-semibold border rounded-lg transition-all ${
                                                 editForm.is_doable === true
-                                                    ? 'bg-blue-600 text-white border-blue-600 shadow-md transform scale-[1.02]'
+                                                    ? 'bg-green-600 text-white border-green-600 shadow-md transform scale-[1.02]'
                                                     : 'bg-white text-gray-600 hover:bg-gray-50'
                                             }`}
                                         >
@@ -359,7 +359,7 @@ const FeedbackDetail = () => {
                                             onClick={() => setEditForm({ ...editForm, is_doable: false })}
                                             className={`flex-1 py-2 text-sm font-semibold border rounded-lg transition-all ${
                                                 editForm.is_doable === false
-                                                    ? 'bg-gray-600 text-white border-gray-600 shadow-md transform scale-[1.02]'
+                                                    ? 'bg-red-600 text-white border-red-600 shadow-md transform scale-[1.02]'
                                                     : 'bg-white text-gray-600 hover:bg-gray-50'
                                             }`}
                                         >
@@ -369,7 +369,7 @@ const FeedbackDetail = () => {
                                     <textarea
                                         className="w-full border-gray-300 border rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
                                         placeholder="Justification (required) – explain feasibility..."
-                                        rows="2"
+                                        rows="5"
                                         value={editForm.feasibility_remarks}
                                         onChange={(e) => setEditForm({ ...editForm, feasibility_remarks: e.target.value })}
                                     />
@@ -396,8 +396,8 @@ const FeedbackDetail = () => {
                             {/* ---------- Action Buttons ---------- */}
                             <div className="p-4 border-t border-gray-100 bg-gray-50 flex gap-3 justify-end">
                                 <button
-                                    onClick={() => navigate('/admin/dashboard', { state: { activeTab: 'feedback' } })}
-                                    className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm text-gray-700 font-bold hover:bg-gray-50 transition-colors"
+                                    onClick={() => navigate('/admin/dashboard?tab=feedback')}
+                                    className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm text-gray-700 font-bold hover:bg-gray-200 transition-colors"
                                 >
                                     Cancel
                                 </button>
