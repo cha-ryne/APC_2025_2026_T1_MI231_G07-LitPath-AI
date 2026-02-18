@@ -6,7 +6,8 @@ import {
     ShieldCheck, ChevronDown, Eye, Search, ThumbsUp, ThumbsDown,
     Clock, Bookmark, AlertCircle, TrendingUp, BookOpen, CheckCircle,
     X, EyeOff, Menu, Calendar, Users, ChevronLeft, ChevronRight,
-    Trophy, Medal, Briefcase, GraduationCap, BarChart3, Copy, Info
+    Trophy, Medal, Briefcase, GraduationCap, BarChart3, Copy, Info,
+    User, Key, RefreshCw
 } from "lucide-react";
 import dostLogo from "./components/images/dost-logo.png";
 
@@ -17,6 +18,18 @@ const formatNumber = (num) => {
     if (num >= 1000) return (num / 1000).toFixed(1) + 'k';
     return num.toLocaleString();
 };
+
+const hideDefaultPasswordEyeStyles = `
+  input[type="password"]::-webkit-credentials-auto-fill-button,
+  input[type="password"]::-webkit-outer-spin-button,
+  input[type="password"]::-webkit-inner-spin-button {
+    display: none !important;
+  }
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-ms-clear {
+    display: none !important;
+  }
+`;
 
 const AdminDashboard = () => {
     const navigate = useNavigate();
@@ -89,6 +102,7 @@ const AdminDashboard = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showCurrentPassword, setShowCurrentPassword] = useState(false);
     const [showNewPassword, setShowNewPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [settingsLoading, setSettingsLoading] = useState(false);
     const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
 
@@ -499,6 +513,10 @@ const AdminDashboard = () => {
 
     // ---------- Render ----------
     return (
+        <>
+        {/* Inject CSS to hide browser's default password eye icons */}
+        <style>{hideDefaultPasswordEyeStyles}</style>
+
         <div className="h-screen w-screen bg-gray-100 flex flex-col overflow-hidden font-sans">
             {/* Toast */}
             {toast.show && (
@@ -1736,53 +1754,199 @@ const AdminDashboard = () => {
             {showAccountSettings && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-[60] p-4">
                     <div className="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden animate-fadeIn">
-                        <div className="bg-white border-b border-gray-200 p-4 flex justify-between items-center">
-                            <h2 className="text-lg font-bold text-gray-800">Account Settings</h2>
-                            <button onClick={() => setShowAccountSettings(false)} className="text-gray-400 hover:text-gray-600"><X size={20} /></button>
-                        </div>
-                        <div className="flex border-b border-gray-100">
-                            <button onClick={() => setSettingsTab('profile')} className={`flex-1 py-3 text-sm font-medium ${settingsTab === 'profile' ? 'text-[#1E74BC] border-b-2 border-[#1E74BC]' : 'text-gray-500'}`}>Profile</button>
-                            <button onClick={() => setSettingsTab('password')} className={`flex-1 py-3 text-sm font-medium ${settingsTab === 'password' ? 'text-[#1E74BC] border-b-2 border-[#1E74BC]' : 'text-gray-500'}`}>Password</button>
-                        </div>
-                        <div className="p-6">
-                            {settingsTab === 'profile' && (
-                                <form onSubmit={handleProfileSubmit} className="space-y-4">
-                                    <div><label className="block text-xs font-bold text-gray-500 uppercase">Full Name</label><input type="text" value={editFullName} onChange={e => setEditFullName(e.target.value)} className="w-full mt-1 p-2 border rounded-lg text-sm" /></div>
-                                    <div><label className="block text-xs font-bold text-gray-500 uppercase">Username</label><input type="text" value={editUsername} onChange={e => setEditUsername(e.target.value)} className="w-full mt-1 p-2 border rounded-lg text-sm" /></div>
-                                    <button type="submit" className="w-full bg-[#1E74BC] text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700">Save Changes</button>
-                                </form>
-                            )}
-                            {settingsTab === 'password' && (
-                                <form onSubmit={handlePasswordSubmit} className="space-y-4">
-                                    <div>
-                                        <label className="block text-xs font-bold text-gray-500 uppercase">Current Password</label>
-                                        <div className="relative">
-                                            <input type={showCurrentPassword ? "text" : "password"} value={currentPassword} onChange={e => setCurrentPassword(e.target.value)} className="w-full mt-1 p-2 border rounded-lg text-sm" />
-                                            <button type="button" onClick={() => setShowCurrentPassword(!showCurrentPassword)} className="absolute right-3 top-1/2 mt-0.5 text-gray-400 hover:text-gray-600">{showCurrentPassword ? <EyeOff size={16} /> : <Eye size={16} />}</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-bold text-gray-500 uppercase">New Password</label>
-                                        <div className="relative">
-                                            <input type={showNewPassword ? "text" : "password"} value={newPassword} onChange={e => setNewPassword(e.target.value)} className="w-full mt-1 p-2 border rounded-lg text-sm" />
-                                            <button type="button" onClick={() => setShowNewPassword(!showNewPassword)} className="absolute right-3 top-1/2 mt-0.5 text-gray-400 hover:text-gray-600">{showNewPassword ? <EyeOff size={16} /> : <Eye size={16} />}</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label className="block text-xs font-bold text-gray-500 uppercase">Confirm Password</label>
-                                        <input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} className="w-full mt-1 p-2 border rounded-lg text-sm" />
-                                    </div>
-                                    <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
-                                        <p className="text-xs text-yellow-800">Password must be at least 8 characters long</p>
-                                    </div>
-                                    <button type="submit" disabled={settingsLoading} className="w-full bg-[#1E74BC] text-white py-2 rounded-lg text-sm font-bold hover:bg-blue-700">{settingsLoading ? 'Updating...' : 'Update Password'}</button>
-                                </form>
-                            )}
+                    {/* Header */}
+                    <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] text-white p-4">
+                        <div className="flex justify-between items-center">
+                        <h2 className="text-xl font-bold flex items-center gap-2">
+                            <Settings size={24} />
+                            Account Settings
+                        </h2>
+                        <button
+                            onClick={() => setShowAccountSettings(false)}
+                            className="text-white hover:text-gray-200 transition-colors"
+                        >
+                            <X size={24} />
+                        </button>
                         </div>
                     </div>
+
+                    {/* Tabs */}
+                    <div className="flex border-b border-gray-200">
+                        <button
+                        onClick={() => setSettingsTab('profile')}
+                        className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                            settingsTab === 'profile'
+                            ? 'text-[#1E74BC] border-b-2 border-[#1E74BC] bg-blue-50'
+                            : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                        }`}
+                        >
+                        <User size={16} />
+                        Edit Profile
+                        </button>
+                        <button
+                        onClick={() => setSettingsTab('password')}
+                        className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                            settingsTab === 'password'
+                            ? 'text-[#1E74BC] border-b-2 border-[#1E74BC] bg-blue-50'
+                            : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                        }`}
+                        >
+                        <Key size={16} />
+                        Change Password
+                        </button>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6">
+                        {settingsTab === 'profile' && (
+                        <form onSubmit={handleProfileSubmit} className="space-y-4">
+                            <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                value={editFullName}
+                                onChange={(e) => setEditFullName(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:border-black focus:outline-none"
+                                required
+                            />
+                            </div>
+                            <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Username
+                            </label>
+                            <input
+                                type="text"
+                                value={editUsername}
+                                onChange={(e) => setEditUsername(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:border-black focus:outline-none"
+                                required
+                            />
+                            </div>
+                            <button
+                            type="submit"
+                            disabled={settingsLoading}
+                            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                            >
+                            {settingsLoading ? (
+                                <>
+                                <RefreshCw size={16} className="animate-spin" />
+                                Saving...
+                                </>
+                            ) : (
+                                <>
+                                <User size={16} />
+                                Save Changes
+                                </>
+                            )}
+                            </button>
+                        </form>
+                        )}
+
+                        {settingsTab === 'password' && (
+                        <form onSubmit={handlePasswordSubmit} className="space-y-4">
+                            {/* Current Password */}
+                            <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Current Password
+                            </label>
+                            <div className="relative">
+                                <input
+                                type={showCurrentPassword ? 'text' : 'password'}
+                                value={currentPassword}
+                                onChange={(e) => setCurrentPassword(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:border-black focus:outline-none pr-10"
+                                required
+                                />
+                                <button
+                                type="button"
+                                onClick={() => setShowCurrentPassword(!showCurrentPassword)}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                >
+                                {showCurrentPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                                </button>
+                            </div>
+                            </div>
+
+                            {/* New Password */}
+                            <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                New Password
+                            </label>
+                            <div className="relative">
+                                <input
+                                type={showNewPassword ? 'text' : 'password'}
+                                value={newPassword}
+                                onChange={(e) => setNewPassword(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:border-black focus:outline-none pr-10"
+                                required
+                                minLength={8}
+                                />
+                                <button
+                                type="button"
+                                onClick={() => setShowNewPassword(!showNewPassword)}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                >
+                                {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                                </button>
+                            </div>
+                            </div>
+
+                            {/* Confirm New Password */}
+                            <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Confirm New Password
+                            </label>
+                            <div className="relative">
+                                <input
+                                type={showConfirmPassword ? 'text' : 'password'}
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:border-black focus:outline-none pr-10"
+                                required
+                                minLength={8}
+                                />
+                                <button
+                                type="button"
+                                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                >
+                                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                                </button>
+                            </div>
+                            </div>
+
+                            {/* Password hint */}
+                            <p className="text-xs text-gray-500 mt-1">
+                            Password must be at least 8 characters long
+                            </p>
+
+                            <button
+                            type="submit"
+                            disabled={settingsLoading}
+                            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                            >
+                            {settingsLoading ? (
+                                <>
+                                <RefreshCw size={16} className="animate-spin" />
+                                Updating...
+                                </>
+                            ) : (
+                                <>
+                                <Key size={16} />
+                                Change Password
+                                </>
+                            )}
+                            </button>
+                        </form>
+                        )}
+                    </div>
+                    </div>
                 </div>
-            )}
-        </div>
+                )}
+            </div>
+        </>
     );
 };
 

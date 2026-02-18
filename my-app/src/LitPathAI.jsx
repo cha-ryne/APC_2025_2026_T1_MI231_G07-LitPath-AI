@@ -82,6 +82,7 @@ const LitPathAI = () => {
     const [deletePassword, setDeletePassword] = useState('');
     const [showCurrentPassword, setShowCurrentPassword] = useState(false);
     const [showNewPassword, setShowNewPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [showDeletePassword, setShowDeletePassword] = useState(false);
     const [settingsLoading, setSettingsLoading] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -1746,7 +1747,7 @@ return (
                     <div className="sticky bottom-0 z-30 flex flex-col items-center px-2 sm:px-8 bg-gray-100">
                         
                         {/* Search bar - has its own full border */}
-                        <div className="flex items-center space-x-2 w-full max-w-4xl border border-gray-300 rounded-lg px-3 py-3 bg-white shadow-[0_12px_32px_-10px_rgba(0,0,0,0.28)] focus-within:ring-2 focus-within:ring-[#1E74BC]">
+                        <div className="flex items-center space-x-2 w-full max-w-4xl border border-gray-300 rounded-lg px-3 py-3 bg-white shadow-[0_12px_32px_-10px_rgba(0,0,0,0.28)] focus-within:ring-1 focus-within:ring-[#1E74BC]">
                             <Search className="text-gray-500" size={18} />
                             <input
                                 type="text"
@@ -2211,250 +2212,269 @@ return (
 
         {/* Account Settings Modal */}
         {showAccountSettings && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
                 <div className="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden">
-                    {/* Header */}
-                    <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] text-white p-4">
-                        <div className="flex justify-between items-center">
-                            <h2 className="text-xl font-bold flex items-center gap-2">
-                                <Settings size={24} />
-                                Account Settings
-                            </h2>
-                            <button
-                                onClick={() => {
-                                    setShowAccountSettings(false);
-                                    setCurrentPassword('');
-                                    setNewPassword('');
-                                    setConfirmPassword('');
-                                    setDeletePassword('');
-                                }}
-                                className="text-white hover:text-gray-200 text-2xl"
-                            >
-                                ×
-                            </button>
+                {/* Header */}
+                <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] text-white p-4">
+                    <div className="flex justify-between items-center">
+                    <h2 className="text-xl font-bold flex items-center gap-2">
+                        <Settings size={24} />
+                        Account Settings
+                    </h2>
+                    <button
+                        onClick={() => {
+                        setShowAccountSettings(false);
+                        setCurrentPassword('');
+                        setNewPassword('');
+                        setConfirmPassword('');
+                        setDeletePassword('');
+                        }}
+                        className="text-white hover:text-gray-200 text-2xl"
+                    >
+                        ×
+                    </button>
+                    </div>
+                </div>
+
+                {/* Tabs */}
+                <div className="flex border-b">
+                    <button
+                    onClick={() => setSettingsTab('profile')}
+                    className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                        settingsTab === 'profile'
+                        ? 'text-[#1E74BC] border-b-2 border-[#1E74BC] bg-blue-50'
+                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                    }`}
+                    >
+                    <User size={16} />
+                    Edit Profile
+                    </button>
+                    <button
+                    onClick={() => setSettingsTab('password')}
+                    className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                        settingsTab === 'password'
+                        ? 'text-[#1E74BC] border-b-2 border-[#1E74BC] bg-blue-50'
+                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                    }`}
+                    >
+                    <Key size={16} />
+                    Change Password
+                    </button>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                    {settingsTab === 'profile' && (
+                    <form onSubmit={async (e) => {
+                        e.preventDefault();
+                        setSettingsLoading(true);
+                        try {
+                        const token = localStorage.getItem('litpath_session') ? JSON.parse(localStorage.getItem('litpath_session')).session_token : null;
+                        const res = await fetch('http://localhost:8000/api/auth/update-profile/', {
+                            method: 'POST',
+                            headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                            },
+                            body: JSON.stringify({
+                            full_name: editFullName,
+                            username: editUsername
+                            })
+                        });
+                        let data;
+                        if (res.ok) {
+                            data = await res.json();
+                            setSettingsLoading(false);
+                            if (data.success) {
+                            if (data.user) {
+                                localStorage.setItem('litpath_auth_user', JSON.stringify(data.user));
+                                setUser(data.user);
+                            }
+                            showToast('Profile updated!', 'success');
+                            setShowAccountSettings(false);
+                            } else {
+                            showToast(data.message || 'Failed to update profile', 'error');
+                            }
+                        } else {
+                            // Try to parse error message from backend
+                            try {
+                            data = await res.json();
+                            showToast(data.message || data.error || 'Failed to update profile', 'error');
+                            } catch (parseErr) {
+                            const errorText = await res.text();
+                            showToast(errorText || 'Failed to update profile', 'error');
+                            }
+                            setSettingsLoading(false);
+                        }
+                        } catch (err) {
+                        setSettingsLoading(false);
+                        showToast('Connection error', 'error');
+                        }
+                    }}>
+                        <div className="space-y-4">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input
+                            type="text"
+                            value={editFullName}
+                            onChange={e => setEditFullName(e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                            required
+                            />
                         </div>
-                    </div>
-
-                    {/* Tabs */}
-                    <div className="flex border-b">
-                    
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                            <input
+                            type="text"
+                            value={editUsername}
+                            onChange={e => setEditUsername(e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                            required
+                            />
+                        </div>
                         <button
-                            onClick={() => setSettingsTab('profile')}
-                            className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
-                                settingsTab === 'profile'
-                                    ? 'text-[#1E74BC] border-b-2 border-[#1E74BC] bg-blue-50'
-                                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-                            }`}
+                            type="submit"
+                            disabled={settingsLoading}
+                            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                         >
-                            <User size={16} />
-                            Edit Profile
+                            {settingsLoading ? (
+                            <>
+                                <RefreshCw size={16} className="animate-spin" />
+                                Saving...
+                            </>
+                            ) : (
+                            <>
+                                <User size={16} />
+                                Save Changes
+                            </>
+                            )}
                         </button>
+                        </div>
+                    </form>
+                    )}
+
+                    {settingsTab === 'password' && (
+                    <form onSubmit={async (e) => {
+                        e.preventDefault();
+                        if (newPassword !== confirmPassword) {
+                        showToast('New passwords do not match', 'error');
+                        return;
+                        }
+                        if (newPassword.length < 8) {  // Updated to 8
+                        showToast('Password must be at least 8 characters', 'error');
+                        return;
+                        }
+                        setSettingsLoading(true);
+                        const result = await changePassword(currentPassword, newPassword);
+                        setSettingsLoading(false);
+                        if (result.success) {
+                        showToast('Password changed successfully!', 'success');
+                        setShowAccountSettings(false);
+                        setCurrentPassword('');
+                        setNewPassword('');
+                        setConfirmPassword('');
+                        } else {
+                        showToast(result.error || 'Failed to change password', 'error');
+                        }
+                    }}>
+                        <div className="space-y-4">
+                        {/* Current Password */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Current Password
+                            </label>
+                            <div className="relative">
+                            <input
+                                type={showCurrentPassword ? 'text' : 'password'}
+                                value={currentPassword}
+                                onChange={(e) => setCurrentPassword(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent pr-10"
+                                required
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowCurrentPassword(!showCurrentPassword)}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                            >
+                                {showCurrentPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
+                            </div>
+                        </div>
+
+                        {/* New Password */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                            New Password
+                            </label>
+                            <div className="relative">
+                            <input
+                                type={showNewPassword ? 'text' : 'password'}
+                                value={newPassword}
+                                onChange={(e) => setNewPassword(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent pr-10"
+                                required
+                                minLength={8}  // Updated to 8
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowNewPassword(!showNewPassword)}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                            >
+                                {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
+                            </div>
+                        </div>
+
+                        {/* Confirm New Password (with eye icon) */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Confirm New Password
+                            </label>
+                            <div className="relative">
+                            <input
+                                type={showConfirmPassword ? 'text' : 'password'}
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent pr-10"
+                                required
+                                minLength={8}  // Updated to 8
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                            >
+                                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
+                            </div>
+                        </div>
+
+                        {/* Password hint */}
+                        <p className="text-xs text-gray-500 mt-1">
+                            Password must be at least 8 characters long
+                        </p>
+
                         <button
-                            onClick={() => setSettingsTab('password')}
-                            className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
-                                settingsTab === 'password'
-                                    ? 'text-[#1E74BC] border-b-2 border-[#1E74BC] bg-blue-50'
-                                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-                            }`}
+                            type="submit"
+                            disabled={settingsLoading}
+                            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                         >
-                            <Key size={16} />
-                            Change Password
+                            {settingsLoading ? (
+                            <>
+                                <RefreshCw size={16} className="animate-spin" />
+                                Changing...
+                            </>
+                            ) : (
+                            <>
+                                <Key size={16} />
+                                Change Password
+                            </>
+                            )}
                         </button>
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-
-                        {settingsTab === 'profile' && (
-                            <form onSubmit={async (e) => {
-                                e.preventDefault();
-                                setSettingsLoading(true);
-                                try {
-                                    const token = localStorage.getItem('litpath_session') ? JSON.parse(localStorage.getItem('litpath_session')).session_token : null;
-                                    const res = await fetch('http://localhost:8000/api/auth/update-profile/', {
-                                        method: 'POST',
-                                        headers: {
-                                            'Content-Type': 'application/json',
-                                            'Authorization': `Bearer ${token}`
-                                        },
-                                        body: JSON.stringify({
-                                            full_name: editFullName,
-                                            username: editUsername
-                                        })
-                                    });
-                                    let data;
-                                    if (res.ok) {
-                                        data = await res.json();
-                                        setSettingsLoading(false);
-                                        if (data.success) {
-                                            if (data.user) {
-                                                localStorage.setItem('litpath_auth_user', JSON.stringify(data.user));
-                                                setUser(data.user);
-                                            }
-                                            showToast('Profile updated!', 'success');
-                                            setShowAccountSettings(false);
-                                        } else {
-                                            showToast(data.message || 'Failed to update profile', 'error');
-                                        }
-                                    } else {
-                                        // Try to parse error message from backend
-                                        try {
-                                            data = await res.json();
-                                            showToast(data.message || data.error || 'Failed to update profile', 'error');
-                                        } catch (parseErr) {
-                                            const errorText = await res.text();
-                                            showToast(errorText || 'Failed to update profile', 'error');
-                                        }
-                                        setSettingsLoading(false);
-                                    }
-                                } catch (err) {
-                                    setSettingsLoading(false);
-                                    showToast('Connection error', 'error');
-                                }
-                             }}>
-                                <div className="space-y-4">
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                                        <input
-                                            type="text"
-                                            value={editFullName}
-                                            onChange={e => setEditFullName(e.target.value)}
-                                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                                            required
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
-                                        <input
-                                            type="text"
-                                            value={editUsername}
-                                            onChange={e => setEditUsername(e.target.value)}
-                                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                                            required
-                                        />
-                                    </div>
-                                    <button
-                                        type="submit"
-                                        disabled={settingsLoading}
-                                        className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                                    >
-                                        {settingsLoading ? (
-                                            <>
-                                                <RefreshCw size={16} className="animate-spin" />
-                                                Saving...
-                                            </>
-                                        ) : (
-                                            <>
-                                                <User size={16} />
-                                                Save Changes
-                                            </>
-                                        )}
-                                    </button>
-                                </div>
-                            </form>
-                        )}
-                        {settingsTab === 'password' && (
-                            <form onSubmit={async (e) => {
-                                e.preventDefault();
-                                if (newPassword !== confirmPassword) {
-                                    showToast('New passwords do not match', 'error');
-                                    return;
-                                }
-                                if (newPassword.length < 6) {
-                                    showToast('Password must be at least 6 characters', 'error');
-                                    return;
-                                }
-                                setSettingsLoading(true);
-                                const result = await changePassword(currentPassword, newPassword);
-                                setSettingsLoading(false);
-                                if (result.success) {
-                                    showToast('Password changed successfully!', 'success');
-                                    setShowAccountSettings(false);
-                                    setCurrentPassword('');
-                                    setNewPassword('');
-                                    setConfirmPassword('');
-                                } else {
-                                    showToast(result.error || 'Failed to change password', 'error');
-                                }
-                            }}>
-                                <div className="space-y-4">
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                                            Current Password
-                                        </label>
-                                        <div className="relative">
-                                            <input
-                                                type={showCurrentPassword ? 'text' : 'password'}
-                                                value={currentPassword}
-                                                onChange={(e) => setCurrentPassword(e.target.value)}
-                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1E74BC] focus:border-transparent pr-10"
-                                                required
-                                            />
-                                            <button
-                                                type="button"
-                                                onClick={() => setShowCurrentPassword(!showCurrentPassword)}
-                                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                                            >
-                                                {showCurrentPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                                            New Password
-                                        </label>
-                                        <div className="relative">
-                                            <input
-                                                type={showNewPassword ? 'text' : 'password'}
-                                                value={newPassword}
-                                                onChange={(e) => setNewPassword(e.target.value)}
-                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1E74BC] focus:border-transparent pr-10"
-                                                required
-                                                minLength={6}
-                                            />
-                                            <button
-                                                type="button"
-                                                onClick={() => setShowNewPassword(!showNewPassword)}
-                                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                                            >
-                                                {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">
-                                            Confirm New Password
-                                        </label>
-                                        <input
-                                            type="password"
-                                            value={confirmPassword}
-                                            onChange={(e) => setConfirmPassword(e.target.value)}
-                                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1E74BC] focus:border-transparent"
-                                            required
-                                            minLength={6}
-                                        />
-                                    </div>
-                                    <button
-                                        type="submit"
-                                        disabled={settingsLoading}
-                                        className="w-full bg-[#1E74BC] text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                                    >
-                                        {settingsLoading ? (
-                                            <>
-                                                <RefreshCw size={16} className="animate-spin" />
-                                                Changing...
-                                            </>
-                                        ) : (
-                                            <>
-                                                <Key size={16} />
-                                                Change Password
-                                            </>
-                                        )}
-                                    </button>
-                                </div>
-                            </form>
-                        )}
-                    </div>
+                        </div>
+                    </form>
+                    )}
+                </div>
                 </div>
             </div>
         )}
