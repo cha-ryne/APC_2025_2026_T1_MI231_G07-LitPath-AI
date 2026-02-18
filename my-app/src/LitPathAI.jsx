@@ -33,6 +33,7 @@ const LitPathAI = () => {
     const [bookmarkedCount, setBookmarkedCount] = useState(0);
     const [bookmarks, setBookmarks] = useState([]); // Store bookmarks in state (not localStorage for authenticated users)
     const [showUserMenu, setShowUserMenu] = useState(false);
+    const [cameFromBookmarks, setCameFromBookmarks] = useState(false); // Track if we came from bookmarks overlay
     // Force re-render of user menu when user changes (for real-time update)
     const [userMenuKey, setUserMenuKey] = useState(0);
     useEffect(() => {
@@ -1775,7 +1776,13 @@ return (
                     <div className="text-white p-6 shadow-md" style={{ backgroundColor: '#1E74BC' }}>
                         <div className="flex items-center justify-between mb-4">
                             <button
-                                onClick={() => setShowOverlay(false)}
+                                onClick={() => {
+                                    setShowOverlay(false);
+                                    if (cameFromBookmarks) {
+                                        setShowSavedItems(true);
+                                        setCameFromBookmarks(false);
+                                    }
+                                }}
                                 className="text-white hover:text-blue-200 text-sm flex items-center space-x-1"
                             >
                                 <ArrowRight size={18} className="transform rotate-180" />
@@ -2052,6 +2059,7 @@ return (
                                             <button
                                                 onClick={() => {
                                                     setSelectedSource(bookmark);
+                                                    setCameFromBookmarks(true);
                                                     setShowSavedItems(false);
                                                     setShowOverlay(true);
                                                 }}
