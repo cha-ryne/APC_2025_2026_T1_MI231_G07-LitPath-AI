@@ -453,29 +453,31 @@ const FeedbackForm = ({ embedded = false, onClose }) => {
                                     How would you rate your experience? (1-Poor to 5-Excellent)
                                 </span>
                             </label>
-                            <div className="flex gap-2">
-                                {[1, 2, 3, 4, 5].map((rating) => (
-                                    <button
-                                        key={rating}
-                                        type="button"
-                                        onClick={() => handleRating(rating)}
-                                        className={`p-2 rounded-full transition-colors ${
-                                            formData.litpath_rating >= rating
-                                                ? 'bg-yellow-400 text-yellow-900'
-                                                : 'bg-gray-200 text-gray-600'
-                                        } hover:bg-yellow-300`}
-                                    >
-                                        <Star
-                                            size={24}
-                                            className={formData.litpath_rating >= rating ? 'fill-current' : ''}
-                                        />
-                                    </button>
-                                ))}
-                            </div>
-                            <div className="flex gap-2 mt-1">
-                                {['Poor', '', '', '', 'Excellent'].map((label, i) => (
-                                    <span key={i} className="text-xs text-gray-500 w-10 text-center">{label}</span>
-                                ))}
+                            <div className="flex flex-col items-center">
+                                <div className="flex gap-2">
+                                    {[1, 2, 3, 4, 5].map((rating) => (
+                                        <button
+                                            key={rating}
+                                            type="button"
+                                            onClick={() => handleRating(rating)}
+                                            className={`p-2 rounded-full transition-colors ${
+                                                formData.litpath_rating >= rating
+                                                    ? 'bg-yellow-400 text-yellow-900'
+                                                    : 'bg-gray-200 text-gray-600'
+                                            } hover:bg-yellow-300`}
+                                        >
+                                            <Star
+                                                size={24}
+                                                className={formData.litpath_rating >= rating ? 'fill-current' : ''}
+                                            />
+                                        </button>
+                                    ))}
+                                </div>
+                                {/* Labels aligned to first and last star */}
+                                <div className="flex justify-between w-full mt-1" style={{ maxWidth: `${5 * 40 + 4 * 8}px` }}>
+                                    <span className="text-xs text-gray-500">Poor</span>
+                                    <span className="text-xs text-gray-500">Excellent</span>
+                                </div>
                             </div>
                             {errors.litpath_rating && (
                                 <p className="text-red-500 text-sm">{errors.litpath_rating}</p>
