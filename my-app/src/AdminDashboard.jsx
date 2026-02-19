@@ -1250,7 +1250,7 @@ const AdminDashboard = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 
                                     {/* Activity Trends */}
-                                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 min-h-[200px]">
+                                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 min-h-[200px] flex flex-col">
                                         <div className="flex items-center justify-between mb-3">
                                             <div className="flex items-center gap-1 flex-wrap">
                                                 {/* Title and Info Icon Wrapper */}
@@ -1272,112 +1272,119 @@ const AdminDashboard = () => {
                                                 {/* Dynamic subtitle */}
                                                 <span className="text-[10px] text-gray-500 italic ml-2">
                                                     {overviewDateFilterType === 'Year' && `(Monthly report for year ${overviewSelectedYear})`}
-                                                    {overviewDateFilterType === 'Month' && `(Weekly report for ${new Date(0, overviewSelectedMonth-1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
+                                                    {overviewDateFilterType === 'Month' && `(Weekly report for ${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
                                                     {overviewDateFilterType === 'Last 7 days' && '(Report from the last 7 days)'}
-                                                    {overviewDateFilterType === 'Custom range' && overviewCustomFrom && overviewCustomTo && 
+                                                    {overviewDateFilterType === 'Custom range' && overviewCustomFrom && overviewCustomTo &&
                                                         `(Report from ${new Date(overviewCustomFrom).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} to ${new Date(overviewCustomTo).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })})`
                                                     }
                                                 </span>
                                             </div>
                                         </div>
-                                        <div className="flex-1 flex items-end gap-2 w-full h-full pt-6">
-                                            {dashboardData.trends && dashboardData.trends.length > 0 ? (
-                                                dashboardData.trends.map((item, i) => {
-                                                    const max = Math.max(...dashboardData.trends.map(t => t.views), 1);
-                                                    const heightPercent = item.views === 0 ? 2 : (item.views / max) * 100;
 
-                                                    // Determine the label to show under the bar
-                                                    let displayLabel = '';
-                                                    if (overviewDateFilterType === 'Year') {
-                                                        displayLabel = item.month ? item.month.substring(0, 3) : '';
-                                                    } else if (overviewDateFilterType === 'Month') {
-                                                        displayLabel = item.label; 
-                                                    } else if (overviewDateFilterType === 'Last 7 days') {
-                                                        displayLabel = item.label; 
-                                                    } else if (overviewDateFilterType === 'Custom range') {
-                                                        displayLabel = item.label; 
-                                                    }
+                                        {/* Dynamic Total and Chart Rendering */}
+                                        {(() => {
+                                            // Calculate the sum of all views in the current filtered data
+                                            const totalActivityViews = dashboardData.trends ? dashboardData.trends.reduce((sum, t) => sum + t.views, 0) : 0;
 
-                                                    // --- NEW TOOLTIP LOGIC ---
-                                                    let tooltipContent;
-                                                    // We use whitespace-nowrap to prevent the text from squishing into a tall tower
-                                                    if (overviewDateFilterType === 'Year') {
-                                                        tooltipContent = (
-                                                            <div className="text-center whitespace-nowrap">
-                                                                <div className="font-semibold">{item.month} {item.year}:</div>
-                                                                <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
-                                                            </div>
-                                                        );
-                                                    } else if (overviewDateFilterType === 'Month' || overviewDateFilterType === 'Custom range') {
-                                                        tooltipContent = (
-                                                            <div className="text-center whitespace-nowrap">
-                                                                {/* Added the colon and font-semibold for the header */}
-                                                                <div className="font-semibold">{item.tooltipRange}:</div>
-                                                                <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
-                                                            </div>
-                                                        );
-                                                    } else if (overviewDateFilterType === 'Last 7 days') {
-                                                        tooltipContent = (
-                                                            <div className="text-center whitespace-nowrap">
-                                                                <div className="font-semibold">{item.fullDate}, {item.weekday}:</div>
-                                                                <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
-                                                            </div>
-                                                        );
-                                                    }
+                                            return dashboardData.trends && dashboardData.trends.length > 0 ? (
+                                                <>
+                                                    <p className="text-2xl font-bold text-gray-900">{formatNumber(totalActivityViews)}</p>
+                                                    <p className="text-xs text-gray-500 mb-4">total material views in this period</p>
 
-                                                    // --- EDGE DETECTION LOGIC ---
-                                                    // If it's the first item, align tooltip left. If last, align right. Otherwise center.
-                                                    const isFirst = i === 0;
-                                                    const isLast = i === dashboardData.trends.length - 1;
-                                                    
-                                                    let tooltipPositionClass = "left-1/2 -translate-x-1/2"; // Default center
-                                                    let arrowPositionClass = "left-1/2 -translate-x-1/2";   // Default arrow center
+                                                    <div className="flex-1 flex items-end gap-2 w-full min-h-[100px] pt-2">
+                                                        {dashboardData.trends.map((item, i) => {
+                                                            const max = Math.max(...dashboardData.trends.map(t => t.views), 1);
+                                                            const heightPercent = item.views === 0 ? 2 : (item.views / max) * 100;
 
-                                                    if (isFirst) {
-                                                        tooltipPositionClass = "left-0 translate-x-0";      // Align to left edge
-                                                        arrowPositionClass = "left-4 -translate-x-1/2";     // Keep arrow pointing to bar (approx center of bar)
-                                                    } else if (isLast) {
-                                                        tooltipPositionClass = "right-0 translate-x-0";     // Align to right edge
-                                                        arrowPositionClass = "right-4 translate-x-1/2";     // Keep arrow pointing to bar
-                                                    }
+                                                            // Determine the label to show under the bar
+                                                            let displayLabel = '';
+                                                            if (overviewDateFilterType === 'Year') {
+                                                                displayLabel = item.month ? item.month.substring(0, 3) : '';
+                                                            } else if (overviewDateFilterType === 'Month') {
+                                                                displayLabel = item.label;
+                                                            } else if (overviewDateFilterType === 'Last 7 days') {
+                                                                displayLabel = item.label;
+                                                            } else if (overviewDateFilterType === 'Custom range') {
+                                                                displayLabel = item.label;
+                                                            }
 
-                                                    return (
-                                                        <div key={i} className="flex-1 flex flex-col items-center gap-2 h-full justify-end group cursor-default">
-                                                            <div className="relative w-full flex justify-center items-end h-full">
-                                                                <div 
-                                                                    // CHANGED: from-green-600 to-green-400 -> from-blue-600 to-blue-400
-                                                                    // CHANGED: hover:from-green-500 -> hover:from-blue-500 etc.
-                                                                    className="w-full max-w-[20px] bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-sm transition-all duration-500 relative hover:from-blue-500 hover:to-blue-300"
-                                                                    style={{ height: `${heightPercent}%` }}
-                                                                >
-                                                                    {/* Tooltip Wrapper */}
-                                                                    <div className={`absolute bottom-full mb-2 hidden group-hover:flex flex-col z-20 pointer-events-none ${tooltipPositionClass}`}>
-                                                                        
-                                                                        {/* Tooltip Box */}
-                                                                        <div className="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded shadow-lg w-max text-center leading-tight">
-                                                                            {tooltipContent}
-                                                                        </div>
-
-                                                                        {/* Tooltip Arrow - Positioned independently to always point to bar */}
-                                                                        <div className={`absolute -bottom-[4px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800 ${arrowPositionClass}`}></div>
+                                                            // --- TOOLTIP CONTENT FORMATTING ---
+                                                            let tooltipContent;
+                                                            if (overviewDateFilterType === 'Year') {
+                                                                tooltipContent = (
+                                                                    <div className="text-center whitespace-nowrap">
+                                                                        <div className="font-semibold text-gray-200">{item.month} {item.year}:</div>
+                                                                        <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
                                                                     </div>
+                                                                );
+                                                            } else if (overviewDateFilterType === 'Month' || overviewDateFilterType === 'Custom range') {
+                                                                tooltipContent = (
+                                                                    <div className="text-center whitespace-nowrap">
+                                                                        <div className="font-semibold text-gray-200">{item.tooltipRange}:</div>
+                                                                        <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
+                                                                    </div>
+                                                                );
+                                                            } else if (overviewDateFilterType === 'Last 7 days') {
+                                                                tooltipContent = (
+                                                                    <div className="text-center whitespace-nowrap">
+                                                                        <div className="font-semibold text-gray-200">{item.fullDate}, {item.weekday}:</div>
+                                                                        <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
+                                                                    </div>
+                                                                );
+                                                            }
+
+                                                            // --- EDGE DETECTION LOGIC ---
+                                                            const isFirst = i === 0;
+                                                            const isLast = i === dashboardData.trends.length - 1;
+
+                                                            let tooltipPositionClass = "left-1/2 -translate-x-1/2"; 
+                                                            let arrowPositionClass = "left-1/2 -translate-x-1/2";   
+
+                                                            if (isFirst) {
+                                                                tooltipPositionClass = "left-0 translate-x-0";      
+                                                                arrowPositionClass = "left-2.5";     
+                                                            } else if (isLast) {
+                                                                tooltipPositionClass = "right-0 translate-x-0";     
+                                                                arrowPositionClass = "right-2.5";     
+                                                            }
+
+                                                            return (
+                                                                <div key={i} className="flex-1 flex flex-col items-center gap-2 h-full justify-end group cursor-default">
+                                                                    <div className="relative w-full flex justify-center items-end h-full">
+                                                                        <div
+                                                                            className="w-full max-w-[20px] bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-sm transition-all duration-500 relative hover:from-blue-500 hover:to-blue-300"
+                                                                            style={{ height: `${heightPercent}%` }}
+                                                                        >
+                                                                            {/* Tooltip Wrapper */}
+                                                                            <div className={`absolute bottom-full mb-2 hidden group-hover:flex flex-col z-20 pointer-events-none ${tooltipPositionClass}`}>
+                                                                                
+                                                                                {/* Tooltip Box */}
+                                                                                <div className="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded shadow-lg w-max text-center leading-tight border border-gray-700">
+                                                                                    {tooltipContent}
+                                                                                </div>
+
+                                                                                {/* Tooltip Arrow */}
+                                                                                <div className={`absolute -bottom-[4px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800 ${arrowPositionClass}`}></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    {displayLabel && (
+                                                                        <span className="text-[10px] text-gray-500 font-bold uppercase truncate w-full text-center">
+                                                                            {displayLabel}
+                                                                        </span>
+                                                                    )}
                                                                 </div>
-                                                            </div>
-                                                            {displayLabel && (
-                                                                <span className="text-[10px] text-gray-500 font-bold uppercase truncate w-full text-center">
-                                                                    {displayLabel}
-                                                                </span>
-                                                            )}
-                                                        </div>
-                                                    );
-                                                })
+                                                            );
+                                                        })}
+                                                    </div>
+                                                </>
                                             ) : (
-                                                <div className="w-full h-full flex flex-col items-center justify-center text-gray-400 gap-2 opacity-50">
+                                                <div className="w-full flex-1 flex flex-col items-center justify-center text-gray-400 gap-2 opacity-50 min-h-[120px]">
                                                     <TrendingUp size={32} />
                                                     <span className="text-xs">No activity recorded yet</span>
                                                 </div>
-                                            )}
-                                        </div>
+                                            );
+                                        })()}
                                     </div>
 
                                     {/* Citation Activity */}
@@ -1413,7 +1420,7 @@ const AdminDashboard = () => {
                                         {dashboardData.citationStats.total_copies > 0 ? (
                                             <>
                                                 <p className="text-2xl font-bold text-gray-900">{dashboardData.citationStats.total_copies}</p>
-                                                <p className="text-xs text-gray-500 mb-4">total copies in this period</p>
+                                                <p className="text-xs text-gray-500 mb-4">total citation copies in this period</p>
 
                                                 <div className="h-16 w-full relative mb-1">
                                                     {dashboardData.citationTrends.length > 0 ? (
@@ -1487,7 +1494,7 @@ const AdminDashboard = () => {
                                                                                     </div>
 
                                                                                     {/* Bottom Label */}
-                                                                                    <div className="absolute -bottom-5 text-[9px] text-gray-500 font-bold uppercase whitespace-nowrap">
+                                                                                    <div className="absolute -bottom-5 text-[10px] text-gray-500 font-bold uppercase whitespace-nowrap">
                                                                                         {p.displayLabel}
                                                                                     </div>
                                                                                 </div>
