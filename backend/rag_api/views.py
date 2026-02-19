@@ -323,7 +323,8 @@ class SearchView(APIView):
                     suggestions.append("Try searching for broader topics related to your question")
                 
                 # === Record response time ===
-                response_time_ms = int((time.time() - start_time) * 1000)
+                # CHANGED: Use the pure vector search retrieval time!
+                response_time_ms = int(search_time * 1000)
                 session_id = request.data.get('session_id')
                 if session_id:
                     try:
@@ -390,26 +391,6 @@ class SearchView(APIView):
             if no_results:
                 import re
                 overview = re.sub(r"\[\d+\]", "", overview)
-            
-            # === Record response time ===
-            response_time_ms = int(total_time * 1000)
-            session_id = request.data.get('session_id')
-            if session_id:
-                try:
-                    rh = ResearchHistory.objects.filter(session_id=session_id).order_by('-created_at').first()
-                    if rh:
-                        rh.response_time_ms = response_time_ms
-                        rh.sources_count = len(documents) if documents else 0
-                        rh.save(update_fields=['response_time_ms', 'sources_count'])
-                    else:
-                        ResearchHistory.objects.create(
-                            session_id=session_id,
-                            query=question,
-                            response_time_ms=response_time_ms,
-                            sources_count=len(documents) if documents else 0,
-                        )
-                except Exception as e:
-                    print(f"Error recording search time: {e}")
 
             response_data = {
                 "overview": overview,
