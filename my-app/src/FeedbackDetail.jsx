@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ChevronLeft, ChevronDown, ShieldCheck, Settings, Eye, LogOut, Star, Home } from 'lucide-react';
+import { ChevronLeft, ChevronDown, ShieldCheck, Settings, LogOut, Star, Home } from 'lucide-react';
 import dostLogo from "./components/images/dost-logo.png";
 
 const API_BASE_URL = 'http://localhost:8000/api';
@@ -21,17 +21,15 @@ const FeedbackDetail = () => {
         feasibility_remarks: ''
     });
 
-    // ---------- User menu state (matches AdminDashboard) ----------
+    // ---------- User menu state ----------
     const [showUserMenu, setShowUserMenu] = useState(false);
     const userMenuRef = useRef(null);
-    // Replace with your actual user data (from context / localStorage)
     const user = {
         username: 'admin',
-        full_name: 'Admin User',
+        full_name: 'System Administrator',
         email: 'admin@litpath.com'
     };
 
-    // ---------- Close user menu on outside click ----------
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
@@ -42,19 +40,16 @@ const FeedbackDetail = () => {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    // ---------- Logout handler ----------
     const handleLogout = () => {
         // Clear tokens, etc.
         navigate('/');
     };
 
-    // ---------- Local toast helper ----------
     const showLocalToast = (message, type = 'error') => {
         setToast({ show: true, message, type });
         setTimeout(() => setToast({ show: false, message: '', type: 'error' }), 4000);
     };
 
-    // ---------- Fetch feedback details ----------
     useEffect(() => {
         const fetchDetail = async () => {
             try {
@@ -80,7 +75,6 @@ const FeedbackDetail = () => {
         fetchDetail();
     }, [id, navigate]);
 
-    // ---------- Save with full validation ----------
     const handleSave = async () => {
         if (!editForm.admin_category || editForm.admin_category.trim() === '') {
             showLocalToast("⚠️ Please select a Category.");
@@ -142,7 +136,7 @@ const FeedbackDetail = () => {
 
     return (
         <div className="h-screen flex flex-col bg-gray-100 overflow-hidden font-sans relative">
-            {/* Local Toast */}
+            {/* Toast notification */}
             {toast.show && (
                 <div className={`fixed top-20 left-1/2 transform -translate-x-1/2 z-[100] px-6 py-3 rounded-lg shadow-xl text-sm font-bold text-white animate-slideDown ${
                     toast.type === 'success' ? 'bg-green-600' : 'bg-red-600'
@@ -151,7 +145,7 @@ const FeedbackDetail = () => {
                 </div>
             )}
 
-            {/* ---------- HEADER (exact match with AdminDashboard) ---------- */}
+            {/* Header */}
             <div className="bg-gradient-to-b from-[#555555] to-[#212121] text-white shadow-md flex-none z-50">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     <div className="flex items-center space-x-4">
@@ -181,6 +175,7 @@ const FeedbackDetail = () => {
                                         <p className="text-sm font-bold">{user?.full_name || 'Admin User'}</p>
                                         <p className="text-xs text-gray-500 truncate">{user?.email || 'admin@litpath.ai'}</p>
                                     </div>
+                                    {/* Home button */}
                                     <button
                                         onClick={() => {
                                             navigate('/admin/dashboard');
@@ -217,7 +212,7 @@ const FeedbackDetail = () => {
             <div className="flex-1 overflow-hidden p-4 md:p-6 flex justify-center w-full">
                 <div className="w-full max-w-[100rem] h-full flex flex-col">
 
-                    {/* Back button (now inside page) */}
+                    {/* Back button */}
                     <div className="mb-4 flex-none">
                         <button
                             onClick={() => navigate('/admin/dashboard?tab=feedback')}
@@ -244,7 +239,6 @@ const FeedbackDetail = () => {
                         
                         {/* Left Column */}
                         <div className="bg-white rounded-xl shadow-md border border-gray-200 flex flex-col overflow-hidden">
-                            {/* Added title for left column */}
                             <div className="p-4 border-b border-gray-100 bg-gray-50">
                                 <h3 className="text-l font-bold text-gray-800">Client Feedback</h3>
                             </div>
@@ -339,7 +333,7 @@ const FeedbackDetail = () => {
                                 <h3 className="text-l font-bold text-gray-800">Analysis & Action</h3>
                             </div>
 
-                            <div className="p-6 flex-1 overflow-y-auto space-y-6">
+                            <div className="p-4 flex-1 overflow-y-auto space-y-6">
                                 {/* Admin Category */}
                                 <div>
                                     <label className="block text-sm font-bold text-gray-700 mb-2">

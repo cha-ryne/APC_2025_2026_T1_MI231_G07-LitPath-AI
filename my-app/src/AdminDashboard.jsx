@@ -7,7 +7,7 @@ import {
     Clock, Bookmark, AlertCircle, TrendingUp, BookOpen, CheckCircle,
     X, EyeOff, Menu, Calendar, Users, ChevronLeft, ChevronRight,
     Trophy, Medal, Briefcase, GraduationCap, BarChart3, Copy, Info,
-    User, Key, RefreshCw, Download
+    User, Key, RefreshCw, Download, Home
 } from "lucide-react";
 import dostLogo from "./components/images/dost-logo.png";
 
@@ -749,14 +749,31 @@ const AdminDashboard = () => {
                                         <p className="text-sm font-bold">{user?.full_name || 'Admin User'}</p>
                                         <p className="text-xs text-gray-500 truncate">{user?.email || 'admin@litpath.ai'}</p>
                                     </div>
-                                    <button onClick={() => { setShowAccountSettings(true); setSettingsTab('profile'); setShowUserMenu(false); }} className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50 flex items-center gap-2">
+                                    {/* New Home button */}
+                                    <button
+                                        onClick={() => {
+                                            navigate('/admin/dashboard');
+                                            setShowUserMenu(false);
+                                        }}
+                                        className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50 flex items-center gap-2"
+                                    >
+                                        <Home size={16} /> Home
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            setShowAccountSettings(true);
+                                            setSettingsTab('profile');
+                                            setShowUserMenu(false);
+                                        }}
+                                        className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50 flex items-center gap-2"
+                                    >
                                         <Settings size={16} /> Account Settings
                                     </button>
-                                    <button onClick={() => navigate('/')} className="w-full text-left px-4 py-2 text-sm hover:bg-gray-50 flex items-center gap-2">
-                                        <Eye size={16} /> View Client Site
-                                    </button>
                                     <div className="border-t border-gray-100 my-1"></div>
-                                    <button onClick={handleLogout} className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 flex items-center gap-2">
+                                    <button
+                                        onClick={handleLogout}
+                                        className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 flex items-center gap-2"
+                                    >
                                         <LogOut size={16} /> Sign Out
                                     </button>
                                 </div>
