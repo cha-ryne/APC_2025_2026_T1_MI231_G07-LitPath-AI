@@ -10,7 +10,7 @@ from . views import (
     dashboard_kpi, dashboard_trending_topics, dashboard_failed_queries_count, 
     dashboard_usage_by_category, dashboard_age_distribution, 
     dashboard_monthly_trends, dashboard_weekly_trends, dashboard_daily_trends, 
-    track_citation_copy, dashboard_citation_monthly, dashboard_citation_stats
+    track_citation_copy, dashboard_citation_stats, dashboard_citation_monthly, dashboard_citation_weekly, dashboard_citation_daily
 )
 from . admin_views import admin_login_view, admin_users_view, admin_user_delete_view
 from . auth_views import (
@@ -130,6 +130,11 @@ urlpatterns = [
     path('dashboard/citation-stats', dashboard_citation_stats, name='dashboard-citation-stats-no-slash'),
     path('dashboard/citation-monthly/', dashboard_citation_monthly, name='dashboard-citation-monthly'),
     path('dashboard/citation-monthly', dashboard_citation_monthly, name='dashboard-citation-monthly-no-slash'),
+    path('dashboard/citation-weekly/', dashboard_citation_weekly, name='dashboard-citation-weekly'),
+    path('dashboard/citation-weekly', dashboard_citation_weekly, name='dashboard-citation-weekly-no-slash'),
+    path('dashboard/citation-daily/', dashboard_citation_daily, name='dashboard-citation-daily'),
+    path('dashboard/citation-daily', dashboard_citation_daily, name='dashboard-citation-daily-no-slash'),
+    
 ]
 
 

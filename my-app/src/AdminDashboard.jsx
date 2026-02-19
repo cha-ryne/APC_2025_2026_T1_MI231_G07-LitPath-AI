@@ -63,7 +63,7 @@ const AdminDashboard = () => {
         topTheses: [],
         usageByCategory: [],
         ageDistribution: [],
-        citationMonthly: [],
+        citationTrends: [],
         citationStats: { total_copies: 0, top_cited: [] },
         trends: [] // for activity trends (monthly/weekly/daily)
     });
@@ -266,14 +266,79 @@ const AdminDashboard = () => {
         } catch (error) { console.error(error); }
     };
 
-    const fetchCitationMonthly = async () => {
+    const fetchCitationTrends = async () => {
         const { from, to } = getDateRange();
         if (!from || !to) return;
+
+        let endpoint = '';
+        if (overviewDateFilterType === 'Year') {
+            endpoint = '/dashboard/citation-monthly/';
+        } else if (overviewDateFilterType === 'Month') {
+            endpoint = '/dashboard/citation-weekly/';
+        } else if (overviewDateFilterType === 'Last 7 days' || overviewDateFilterType === 'Custom range') {
+            endpoint = '/dashboard/citation-daily/';
+        }
+
         try {
-            const res = await fetch(`${API_BASE_URL}/dashboard/citation-monthly/?from=${from}&to=${to}`);
+            const res = await fetch(`${API_BASE_URL}${endpoint}?from=${from}&to=${to}`);
             if (res.ok) {
-                const data = await res.json();
-                setDashboardData(prev => ({ ...prev, citationMonthly: data }));
+                let data = await res.json();
+
+                // Format data identical to Activity Trends
+                if (overviewDateFilterType === 'Month') {
+                    data = data.map((item, index) => ({
+                        ...item,
+                        displayLabel: `W${index + 1}`,
+                        tooltipRange: item.label
+                    }));
+                } else if (overviewDateFilterType === 'Last 7 days') {
+                    data = data.map(item => {
+                        const date = new Date(item.day);
+                        return {
+                            ...item,
+                            displayLabel: date.toLocaleDateString('en-US', { weekday: 'short' }),
+                            tooltipRange: date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+                        };
+                    });
+                } else if (overviewDateFilterType === 'Custom range') {
+                    if (data.length === 0) {
+                        setDashboardData(prev => ({ ...prev, citationTrends: [] }));
+                        return;
+                    }
+                    const totalDays = data.length;
+                    let intervalSize = 1;
+                    if (totalDays > 30) intervalSize = 5;
+                    else if (totalDays > 15) intervalSize = 3;
+                    else intervalSize = 2;
+
+                    const grouped = [];
+                    for (let i = 0; i < data.length; i += intervalSize) {
+                        const groupItems = data.slice(i, i + intervalSize);
+                        const startDate = new Date(groupItems[0].day);
+                        const endDate = new Date(groupItems[groupItems.length - 1].day);
+                        const totalCopies = groupItems.reduce((sum, d) => sum + d.copies, 0);
+
+                        const startLabel = startDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                        const endLabel = endDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                        const rangeLabel = startLabel === endLabel ? startLabel : `${startLabel} - ${endLabel}`;
+
+                        grouped.push({
+                            displayLabel: startLabel,
+                            tooltipRange: rangeLabel,
+                            copies: totalCopies,
+                        });
+                    }
+                    data = grouped;
+                } else {
+                    // Year filter
+                    data = data.map(item => ({
+                        ...item,
+                        displayLabel: item.month.substring(0, 3),
+                        tooltipRange: `${item.month} ${item.year}`
+                    }));
+                }
+
+                setDashboardData(prev => ({ ...prev, citationTrends: data }));
             }
         } catch (error) { console.error(error); }
     };
@@ -369,7 +434,7 @@ const AdminDashboard = () => {
             fetchUsageByCategory(),
             fetchAgeDistribution(),
             fetchCitationStats(),
-            fetchCitationMonthly(),
+            fetchCitationTrends(),
             fetchTrends() // fetch trends with the new granularity & date filter
         ]).finally(() => setLoading(false));
     };
@@ -420,9 +485,6 @@ const AdminDashboard = () => {
             if (overviewDateDropdownRef.current && !overviewDateDropdownRef.current.contains(event.target)) {
                 const isInput = event.target.tagName === 'INPUT';
                 if (!isInput) setShowOverviewDateDropdown(false);
-            }
-            if (granularityDropdownRef.current && !granularityDropdownRef.current.contains(event.target)) {
-                setShowGranularityDropdown(false);
             }
         };
         document.addEventListener("mousedown", handleClickOutside);
@@ -948,11 +1010,12 @@ const AdminDashboard = () => {
                                             <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
                                                 <TrendingUp size={16} className="text-blue-600" /> TRENDING TOPICS
                                             </h3>
+                                            {/* Info icon for view count explanation */}
                                             <div className="relative group">
                                                 <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
                                                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
                                                     <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
-                                                        Subjects with the highest growth in views. Growth percentages may exceed 100% for new topics.
+                                                        Number of views in the selected period. Growth percentage compared to previous period; may exceed 100% for new topics.
                                                     </div>
                                                     <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
                                                 </div>
@@ -961,9 +1024,10 @@ const AdminDashboard = () => {
                                         <div className="space-y-4 flex-1">
                                             {dashboardData.trendingTopics.length > 0 ? (
                                                 dashboardData.trendingTopics.map((item, i) => {
-                                                    const barColor = item.growth > 0 ? 'bg-green-500' : item.growth < 0 ? 'bg-red-400' : 'bg-gray-400';
+                                                    // Updated colors: positive growth now emerald (vibrant green)
+                                                    const barColor = item.growth > 0 ? 'bg-emerald-500' : item.growth < 0 ? 'bg-red-400' : 'bg-gray-400';
                                                     const arrow = item.growth > 0 ? '↑' : item.growth < 0 ? '↓' : '–';
-                                                    const textColor = item.growth > 0 ? 'text-green-700' : item.growth < 0 ? 'text-red-700' : 'text-gray-500';
+                                                    const textColor = item.growth > 0 ? 'text-emerald-700' : item.growth < 0 ? 'text-red-700' : 'text-gray-500';
                                                     const maxViews = Math.max(...dashboardData.trendingTopics.map(t => t.current_views), 1);
                                                     const barWidth = (item.current_views / maxViews) * 100;
                                                     return (
@@ -1318,61 +1382,131 @@ const AdminDashboard = () => {
 
                                     {/* Citation Activity */}
                                     <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                                        <div className="flex items-center gap-1 mb-3">
-                                            <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
-                                                <Copy size={16} className="text-amber-600" /> Citation Activity
-                                            </h3>
-                                            <div className="relative group">
-                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
-                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center font-normal normal-case tracking-normal">
-                                                        Number of times citations were copied within the selected date range.
+                                        <div className="flex items-center gap-1 mb-3 flex-wrap">
+                                            {/* Title and Info Icon Wrapper */}
+                                            <div className="flex items-center gap-1">
+                                                <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                    <Copy size={16} className="text-red-600" /> Citation Activity
+                                                </h3>
+                                                <div className="relative group">
+                                                    <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                        <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center font-normal normal-case tracking-normal">
+                                                            Number of times citations were copied within the selected date range.
+                                                        </div>
+                                                        <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
                                                     </div>
-                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
                                                 </div>
                                             </div>
+
+                                            {/* Dynamic subtitle added here */}
+                                            <span className="text-[10px] text-gray-500 italic ml-2">
+                                                {overviewDateFilterType === 'Year' && `(Monthly report for year ${overviewSelectedYear})`}
+                                                {overviewDateFilterType === 'Month' && `(Weekly report for ${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
+                                                {overviewDateFilterType === 'Last 7 days' && '(Report from the last 7 days)'}
+                                                {overviewDateFilterType === 'Custom range' && overviewCustomFrom && overviewCustomTo &&
+                                                    `(Report from ${new Date(overviewCustomFrom).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} to ${new Date(overviewCustomTo).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })})`
+                                                }
+                                            </span>
                                         </div>
                                         
                                         {dashboardData.citationStats.total_copies > 0 ? (
                                             <>
                                                 <p className="text-2xl font-bold text-gray-900">{dashboardData.citationStats.total_copies}</p>
-                                                <p className="text-xs text-gray-500 mb-3">total copies in this period</p>
+                                                <p className="text-xs text-gray-500 mb-4">total copies in this period</p>
 
-                                                {/* Monthly bar chart */}
-                                                <div className="h-16 flex items-end gap-0.5 mb-3">
-                                                    {dashboardData.citationMonthly.length > 0 ? (
-                                                        dashboardData.citationMonthly.map((month, i) => {
-                                                            const max = Math.max(...dashboardData.citationMonthly.map(m => m.copies), 1);
-                                                            const barHeight = month.copies === 0 ? 8 : Math.max(8, (month.copies / max) * 100);
+                                                <div className="h-16 w-full relative mb-1">
+                                                    {dashboardData.citationTrends.length > 0 ? (
+                                                        (() => {
+                                                            const max = Math.max(...dashboardData.citationTrends.map(m => m.copies), 1);
+                                                            const dataLen = dashboardData.citationTrends.length;
+                                                            
+                                                            const points = dashboardData.citationTrends.map((item, i) => {
+                                                                const x = ((i + 0.5) / dataLen) * 100;
+                                                                const y = 38 - ((item.copies / max) * 34); 
+                                                                return { x, y, ...item };
+                                                            });
+
+                                                            const linePath = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');
+                                                            const areaPath = `${linePath} L ${points[points.length - 1].x} 40 L ${points[0].x} 40 Z`;
+
                                                             return (
-                                                                <div key={i} className="flex-1 flex flex-col items-center group cursor-default">
-                                                                    <div className="relative w-full flex justify-center items-end h-full">
-                                                                        <div 
-                                                                            className="w-full max-w-[20px] bg-amber-500 rounded-t transition-all duration-300 hover:bg-amber-600"
-                                                                            style={{ height: `${barHeight}%`, minHeight: '8px' }}
-                                                                        >
-                                                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none">
-                                                                                <div className="bg-gray-800 text-white text-[10px] px-2 py-1 rounded shadow-lg whitespace-nowrap font-medium">
-                                                                                    {month.month}: {month.copies} copies
+                                                                <div className="w-full h-full relative">
+                                                                    {/* SVG for the Line and Gradient Area */}
+                                                                    <svg viewBox="0 0 100 40" preserveAspectRatio="none" className="absolute inset-0 w-full h-full overflow-visible">
+                                                                        <defs>
+                                                                            <linearGradient id="citationGradient" x1="0" x2="0" y1="0" y2="1">
+                                                                                <stop offset="0%" stopColor="#ef4444" stopOpacity="0.4" />
+                                                                                <stop offset="100%" stopColor="#ef4444" stopOpacity="0.0" />
+                                                                            </linearGradient>
+                                                                        </defs>
+                                                                        <path d={areaPath} fill="url(#citationGradient)" />
+                                                                        <path d={linePath} fill="none" stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                                    </svg>
+
+                                                                    <div className="absolute inset-0 flex">
+                                                                        {points.map((p, i) => {
+                                                                            // Calculate Y coordinate once to bind the dot and tooltip together
+                                                                            const topPercent = (p.y / 40) * 100;
+
+                                                                            const isFirst = i === 0;
+                                                                            const isLast = i === dataLen - 1;
+                                                                            let tooltipClass = "left-1/2 -translate-x-1/2";
+                                                                            let arrowClass = "left-1/2 -translate-x-1/2";
+                                                                            
+                                                                            if (isFirst) {
+                                                                                tooltipClass = "left-1/2 -translate-x-3";
+                                                                                arrowClass = "left-3";
+                                                                            } else if (isLast) {
+                                                                                tooltipClass = "right-1/2 translate-x-3";
+                                                                                arrowClass = "right-3";
+                                                                            }
+
+                                                                            return (
+                                                                                <div key={`hover-${i}`} className="flex-1 relative group cursor-default h-full flex justify-center">
+                                                                                    
+                                                                                    {/* Hover Highlight column */}
+                                                                                    <div className="absolute inset-y-0 w-[80%] max-w-[24px] z-0 hover:bg-red-500/10 transition-colors rounded-sm"></div>
+                                                                                    
+                                                                                    {/* FIXED: Wrapper container ties the Tooltip directly to the Dot's Y-coordinate */}
+                                                                                    <div 
+                                                                                        className="absolute z-20 flex justify-center items-center"
+                                                                                        style={{ top: `${topPercent}%`, transform: 'translateY(-50%)' }}
+                                                                                    >
+                                                                                        {/* The Dot */}
+                                                                                        <div className="w-2 h-2 bg-white border-[1.5px] border-red-600 rounded-full transition-transform group-hover:scale-125" />
+                                                                                        
+                                                                                        {/* Tooltip Popup */}
+                                                                                        <div className={`absolute bottom-full mb-2 hidden group-hover:flex flex-col z-30 pointer-events-none w-max ${tooltipClass}`}>
+                                                                                            <div className="bg-gray-800 text-white text-[10px] px-2 py-1.5 rounded shadow-lg text-center leading-tight border border-gray-700">
+                                                                                                <div className="font-semibold text-gray-200">{p.tooltipRange}:</div>
+                                                                                                <div>{p.copies} copies</div>
+                                                                                            </div>
+                                                                                            <div className={`absolute -bottom-[4px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800 ${arrowClass}`}></div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    {/* Bottom Label */}
+                                                                                    <div className="absolute -bottom-5 text-[9px] text-gray-500 font-bold uppercase whitespace-nowrap">
+                                                                                        {p.displayLabel}
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
-                                                                            </div>
-                                                                        </div>
+                                                                            );
+                                                                        })}
                                                                     </div>
-                                                                    <span className="text-[8px] text-gray-500 mt-1">
-                                                                        {month.month.substring(0,3)}
-                                                                    </span>
                                                                 </div>
                                                             );
-                                                        })
+                                                        })()
                                                     ) : (
-                                                        <div className="w-full text-center text-gray-400 text-xs">No monthly data</div>
+                                                        <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
+                                                            No activity recorded yet
+                                                        </div>
                                                     )}
                                                 </div>
                                             </>
                                         ) : (
-                                            <div className="flex items-center justify-center h-24 bg-amber-50 rounded-lg border border-dashed border-amber-200">
-                                                <p className="text-sm text-gray-500 italic">No citation copies yet</p>
+                                            <div className="flex items-center justify-center h-24 bg-red-50 rounded-lg border border-dashed border-red-200 mt-2">
+                                                <p className="text-sm text-red-500 italic">No citation copies recorded yet</p>
                                             </div>
                                         )}
                                     </div>

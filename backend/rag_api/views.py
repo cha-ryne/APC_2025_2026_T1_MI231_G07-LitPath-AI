@@ -9,7 +9,7 @@ from .models_password_reset import PasswordResetToken
 import secrets
 from django.db.models import Count, Avg, Q, Sum
 from django.db.models import Max
-from django.db.models.functions import TruncMonth
+from django.db.models.functions import TruncMonth, TruncDate
 from django.db import connection
 import dateutil.parser
 import time
@@ -1611,7 +1611,7 @@ def dashboard_daily_trends(request):
 
 # ============= Endpoint 7 – Citation Activity =============
 
-# track citation copy
+# Track Citation Copy
 @api_view(['POST'])
 def track_citation_copy(request):
     try:
@@ -1638,7 +1638,7 @@ def track_citation_copy(request):
         return Response({"error": str(e)}, status=500)
 
 
-# dashboard citation stats
+# Dashboard Citation Stats
 @api_view(['GET'])
 def dashboard_citation_stats(request):
     """
@@ -1666,7 +1666,7 @@ def dashboard_citation_stats(request):
     })
 
 
-# dashboard citation monthly
+# Dashboard Citation Monthly
 @api_view(['GET'])
 def dashboard_citation_monthly(request):
     """
@@ -1709,6 +1709,68 @@ def dashboard_citation_monthly(request):
             current = current.replace(month=current.month+1)
 
     return Response(result)
+
+# Dashboard Citation Weekly
+@api_view(['GET'])
+def dashboard_citation_weekly(request):
+    """Returns citation counts grouped by week (Sunday to Saturday)."""
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+    
+    # Get daily aggregates using Django ORM
+    daily_aggs = CitationCopy.objects.filter(copied_at__range=[from_date, to_date])\
+        .annotate(day=TruncDate('copied_at'))\
+        .values('day')\
+        .annotate(copies=Count('id'))
+        
+    daily_counts = {item['day']: item['copies'] for item in daily_aggs if item['day']}
+
+    # Generate all weeks (Sunday to Saturday)
+    current = from_date.date()
+    if current.weekday() != 6:  # Adjust to previous Sunday
+        current = current - timedelta(days=(current.weekday() + 1) % 7)
+        
+    end_date = to_date.date()
+    results = []
+    
+    while current <= end_date:
+        week_end = current + timedelta(days=6)
+        week_str = f"{current.strftime('%b %d')} - {week_end.strftime('%b %d')}"
+        week_copies = sum(daily_counts.get(current + timedelta(days=i), 0) for i in range(7))
+        
+        results.append({
+            'week_start': current.isoformat(),
+            'week_end': week_end.isoformat(),
+            'label': week_str,
+            'copies': week_copies
+        })
+        current += timedelta(days=7)
+        
+    return Response(results)
+
+# Dashboard Citation Daily
+@api_view(['GET'])
+def dashboard_citation_daily(request):
+    """Returns citation counts grouped by individual days."""
+    from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+    
+    daily_aggs = CitationCopy.objects.filter(copied_at__range=[from_date, to_date])\
+        .annotate(day=TruncDate('copied_at'))\
+        .values('day')\
+        .annotate(copies=Count('id'))
+        
+    counts = {item['day']: item['copies'] for item in daily_aggs if item['day']}
+
+    current = from_date.date()
+    results = []
+    while current <= to_date.date():
+        results.append({
+            'day': current.isoformat(),
+            'label': current.strftime('%b %d, %Y'),
+            'copies': counts.get(current, 0)
+        })
+        current += timedelta(days=1)
+        
+    return Response(results)
 
 # ============= Endpoint – Top 7 Search Queries =============
 @api_view(['GET'])
