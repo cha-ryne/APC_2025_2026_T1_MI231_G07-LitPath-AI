@@ -634,13 +634,15 @@ class RAGService:
             print(f"[RAG] Exception during LLM index selection: {e}\n{traceback.format_exc()}")
             selected_chunks = []
 
-        # If LLM selected nothing or failed, use top by distance as fallback
+        # Only fallback to top-by-distance if there was an error (not when LLM returns [])
         if not selected_chunks:
             if selected_indices == []:
-                print("[RAG] Reranker: LLM returned [] (no chunks deemed relevant) — using top by distance instead")
+                # LLM returned [] (no chunks deemed relevant) — show no results, no fallback
+                pass  # selected_chunks remains empty
             else:
+                # LLM error or parse failure — fallback to top by distance
                 print("[RAG] Reranker fallback: LLM error or parse failure — using top by distance")
-            selected_chunks = rerank_candidates[:10]
+                selected_chunks = rerank_candidates[:10]
 
         # Prepare documents and top_chunks for output
         top_chunks = []
