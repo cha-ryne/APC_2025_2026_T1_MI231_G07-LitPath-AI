@@ -1249,10 +1249,11 @@ def dashboard_kpi(request):
     accessed_docs = MaterialView.objects.filter(viewed_at__range=[from_date, to_date]).values('file').distinct().count()
     utilization = (accessed_docs / total_docs * 100) if total_docs else 0
 
-    # Average response time (new)
+    # Average response time (FIXED: Exclude 0s from old unrecorded data)
     avg_response_time = ResearchHistory.objects.filter(
         created_at__range=[from_date, to_date],
-        response_time_ms__isnull=False
+        response_time_ms__isnull=False,
+        response_time_ms__gt=0  # <--- ADD THIS LINE TO IGNORE ZEROES
     ).aggregate(avg=Avg('response_time_ms'))['avg'] or 0
 
     return Response({
@@ -1261,7 +1262,7 @@ def dashboard_kpi(request):
         'totalSearches': total_searches,
         'accessedDocuments': accessed_docs,
         'utilizationPercent': round(utilization, 1),
-        'avgResponseTime': round(avg_response_time, 0)   # 👈 new
+        'avgResponseTime': round(avg_response_time, 0)
     })
 
 # Failed Queries Count

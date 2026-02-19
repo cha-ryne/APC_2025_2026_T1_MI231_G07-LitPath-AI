@@ -680,7 +680,8 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
                     query: item.query,
                     overview: item.overview
                 })),
-                overview_only: false 
+                overview_only: false,
+                session_id: activeSessionId // new line to send session ID with the search request
             };
 
             // ---------------------------------------------------------
