@@ -455,7 +455,6 @@ const AdminDashboard = () => {
     useEffect(() => {
         if (activeTab === 'overview') {
             fetchAllDashboardData();
-            fetchTrends();
         }
         if (activeTab === 'feedback') fetchFeedback();
         if (activeTab === 'ratings') fetchMaterialRatings();
@@ -500,6 +499,7 @@ const AdminDashboard = () => {
 
     // ---------- Feedback & Ratings ----------
     const fetchFeedback = async () => {
+        setLoading(true);
         try {
             const res = await fetch(`${API_BASE_URL}/csm-feedback/`);
             if (res.ok) {
@@ -507,9 +507,11 @@ const AdminDashboard = () => {
                 setFeedbacks(data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
             }
         } catch (error) { console.error("Failed to load feedback", error); }
+        finally { setLoading(false); }
     };
 
     const fetchMaterialRatings = async () => {
+        setLoading(true);
         try {
             const res = await fetch(`${API_BASE_URL}/feedback/`);
             if (res.ok) {
@@ -528,6 +530,7 @@ const AdminDashboard = () => {
                 setRatingsTrend(lastWeek - prevWeek);
             }
         } catch (error) { console.error("Failed to load ratings", error); }
+        finally { setLoading(false); }
     };
 
     // ---------- Toast ----------
@@ -710,6 +713,7 @@ const AdminDashboard = () => {
         <style>{hideDefaultPasswordEyeStyles}</style>
 
         <div className="h-screen w-screen bg-gray-100 flex flex-col overflow-hidden font-sans">
+
             {/* Toast */}
             {toast.show && (
                 <div className={`fixed top-20 left-1/2 transform -translate-x-1/2 z-[100] px-6 py-3 rounded-lg shadow-xl text-sm font-bold text-white animate-slideDown ${toast.type === 'success' ? 'bg-green-600' : 'bg-red-600'
@@ -764,6 +768,7 @@ const AdminDashboard = () => {
 
             {/* Body */}
             <div className="flex-1 flex overflow-hidden">
+
                 {/* Sidebar */}
                 <aside className={`bg-white border-r border-gray-200 transition-all duration-300 flex flex-col z-20 ${isSidebarOpen ? 'w-64' : 'w-16'}`}>
                     <div className={`h-16 flex items-center border-b border-gray-100 ${isSidebarOpen ? 'justify-start px-4' : 'justify-center p-0'}`}>
@@ -793,6 +798,14 @@ const AdminDashboard = () => {
                 {/* Main Content */}
                 <main className="flex-1 bg-gray-50 p-4 overflow-hidden flex flex-col relative">
 
+                    {/* ===== LOADING OVERLAY ===== */}
+                    {loading && (
+                        <div className="absolute inset-0 bg-gray-50/80 backdrop-blur-sm z-50 flex flex-col items-center justify-center transition-opacity duration-300">
+                            <RefreshCw size={40} className="animate-spin text-[#1E74BC] mb-4 shadow-sm rounded-full" />
+                            <p className="text-gray-600 font-semibold animate-pulse tracking-wide">Gathering dashboard insights...</p>
+                        </div>
+                    )}
+
                     {/* ===== OVERVIEW TAB ===== */}
                     {activeTab === 'overview' && (
                         <div className="h-full overflow-y-auto pr-1">
@@ -810,7 +823,7 @@ const AdminDashboard = () => {
                                             title="Export current data to CSV"
                                         >
                                             <Download size={14} />
-                                            <span>Export Report</span>
+                                            <span>Export Data</span>
                                         </button>
 
                                         {/* Date Filter Dropdown */}
@@ -1371,11 +1384,11 @@ const AdminDashboard = () => {
                                                 </div>
                                                 
                                                 <span className="text-[10px] text-gray-500 italic ml-2">
-                                                    {overviewDateFilterType === 'Year' && `(Monthly report for year ${overviewSelectedYear})`}
-                                                    {overviewDateFilterType === 'Month' && `(Weekly report for ${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
-                                                    {overviewDateFilterType === 'Last 7 days' && '(Report from the last 7 days)'}
+                                                    {overviewDateFilterType === 'Year' && `(Monthly material views for ${overviewSelectedYear})`}
+                                                    {overviewDateFilterType === 'Month' && `(Weekly material views for ${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
+                                                    {overviewDateFilterType === 'Last 7 days' && '(Daily material views from the last 7 days)'}
                                                     {overviewDateFilterType === 'Custom range' && overviewCustomFrom && overviewCustomTo &&
-                                                        `(Report from ${new Date(overviewCustomFrom).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} to ${new Date(overviewCustomTo).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })})`
+                                                        `(Material views summary from ${new Date(overviewCustomFrom).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} to ${new Date(overviewCustomTo).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })})`
                                                     }
                                                 </span>
                                             </div>
@@ -1535,11 +1548,11 @@ const AdminDashboard = () => {
                                             </div>
 
                                             <span className="text-[10px] text-gray-500 italic ml-2">
-                                                {overviewDateFilterType === 'Year' && `(Monthly report for year ${overviewSelectedYear})`}
-                                                {overviewDateFilterType === 'Month' && `(Weekly report for ${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
-                                                {overviewDateFilterType === 'Last 7 days' && '(Report from the last 7 days)'}
+                                                {overviewDateFilterType === 'Year' && `(Monthly  citation copies for ${overviewSelectedYear})`}
+                                                {overviewDateFilterType === 'Month' && `(Weekly  citation copies for ${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
+                                                {overviewDateFilterType === 'Last 7 days' && '(Daily citation copies from the last 7 days)'}
                                                 {overviewDateFilterType === 'Custom range' && overviewCustomFrom && overviewCustomTo &&
-                                                    `(Report from ${new Date(overviewCustomFrom).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} to ${new Date(overviewCustomTo).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })})`
+                                                    `(Citation copies summary from ${new Date(overviewCustomFrom).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} to ${new Date(overviewCustomTo).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })})`
                                                 }
                                             </span>
                                         </div>
