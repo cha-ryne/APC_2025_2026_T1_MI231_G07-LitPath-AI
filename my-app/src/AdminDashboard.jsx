@@ -113,9 +113,18 @@ const AdminDashboard = () => {
         yearOptions.push(y);
     }
 
-    // ---------- Date Range Helper for Overview (used by all fetch functions) ----------
+    // ---------- Date Range Helper for Overview (Fixed Timezone Issue) ----------
     const getDateRange = () => {
         const today = new Date();
+        
+        // Helper to format date as YYYY-MM-DD in LOCAL time, not UTC
+        const formatDateLocal = (date) => {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        };
+
         if (overviewDateFilterType === 'Year') {
             return { from: `${overviewSelectedYear}-01-01`, to: `${overviewSelectedYear}-12-31` };
         }
@@ -123,15 +132,15 @@ const AdminDashboard = () => {
             const firstDay = new Date(overviewSelectedMonthYear, overviewSelectedMonth - 1, 1);
             const lastDay = new Date(overviewSelectedMonthYear, overviewSelectedMonth, 0);
             return {
-                from: firstDay.toISOString().split('T')[0],
-                to: lastDay.toISOString().split('T')[0]
+                from: formatDateLocal(firstDay),
+                to: formatDateLocal(lastDay)
             };
         }
         if (overviewDateFilterType === 'Last 7 days') {
             const from = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
             return {
-                from: from.toISOString().split('T')[0],
-                to: today.toISOString().split('T')[0]
+                from: formatDateLocal(from),
+                to: formatDateLocal(today)
             };
         }
         if (overviewDateFilterType === 'Custom range') {
@@ -1180,10 +1189,22 @@ const AdminDashboard = () => {
                                     <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 min-h-[200px]">
                                         <div className="flex items-center justify-between mb-3">
                                             <div className="flex items-center gap-1 flex-wrap">
-                                                {/* CHANGED: text-green-600 to text-blue-600 */}
-                                                <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
-                                                    <Calendar size={16} className="text-blue-600" /> Activity Trends
-                                                </h3>
+                                                {/* Title and Info Icon Wrapper */}
+                                                <div className="flex items-center gap-1">
+                                                    <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                        <Calendar size={16} className="text-blue-600" /> Activity Trends
+                                                    </h3>
+                                                    <div className="relative group">
+                                                        <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                            <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center font-normal normal-case tracking-normal">
+                                                                Number of material views within the selected date range.
+                                                            </div>
+                                                            <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
                                                 {/* Dynamic subtitle */}
                                                 <span className="text-[10px] text-gray-500 italic ml-2">
                                                     {overviewDateFilterType === 'Year' && `(Monthly report for year ${overviewSelectedYear})`}
@@ -1304,8 +1325,8 @@ const AdminDashboard = () => {
                                             <div className="relative group">
                                                 <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
                                                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
-                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
-                                                        Number of times citations were copied, with monthly breakdown.
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center font-normal normal-case tracking-normal">
+                                                        Number of times citations were copied within the selected date range.
                                                     </div>
                                                     <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
                                                 </div>

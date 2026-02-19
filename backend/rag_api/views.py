@@ -1529,37 +1529,48 @@ def dashboard_weekly_trends(request):
     """
     from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
 
-    # Get actual weekly counts (using Sunday as week start)
+    # FIX: Fetch daily counts instead of using PostgreSQL's date_trunc('week') 
+    # to avoid the Monday-start vs Sunday-start mismatch.
     with connection.cursor() as cursor:
         cursor.execute("""
             SELECT 
-                date_trunc('week', viewed_at)::date as week_start,
+                viewed_at::date as day,
                 COUNT(DISTINCT id) as views
             FROM material_views
             WHERE viewed_at BETWEEN %s AND %s
-            GROUP BY week_start
-            ORDER BY week_start
+            GROUP BY day
         """, [from_date, to_date])
         rows = cursor.fetchall()
 
-    counts = {row[0]: row[1] for row in rows}
+    # Dictionary of {datetime.date: views}
+    daily_counts = {row[0]: row[1] for row in rows}
 
-    # Generate all weeks in the range
-    current = from_date
-    if current.weekday() != 6:  # Not Sunday? Adjust to previous Sunday
+    # Generate all weeks in the range (Sunday to Saturday)
+    current = from_date.date()
+    if current.weekday() != 6:  # Not Sunday? Adjust back to the previous Sunday
         current = current - timedelta(days=(current.weekday() + 1) % 7)
+        
+    end_date = to_date.date()
     results = []
-    while current <= to_date:
+    
+    while current <= end_date:
         week_end = current + timedelta(days=6)
         week_str = f"{current.strftime('%b %d')} - {week_end.strftime('%b %d')}"
-        views = counts.get(current.date(), 0)
+        
+        # Sum the views for the 7 days of THIS specific week
+        week_views = 0
+        for i in range(7):
+            day_to_check = current + timedelta(days=i)
+            week_views += daily_counts.get(day_to_check, 0)
+            
         results.append({
             'week_start': current.isoformat(),
             'week_end': week_end.isoformat(),
             'label': week_str,
-            'views': views
+            'views': week_views
         })
         current += timedelta(days=7)
+        
     return Response(results)
 
 # Daily Trends (Views per Day)
