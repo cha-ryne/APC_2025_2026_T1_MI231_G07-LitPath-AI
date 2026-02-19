@@ -539,14 +539,14 @@ class RAGService:
                     "score": score
                 })
 
-        # === Reranker step using local LLM API (Qwen or similar) for semantic selection ===
-        ai_base_url = os.environ.get("AI_BASE_URL", "http://localhost:1234/v1")
-        ai_api_key = os.environ.get("AI_API_KEY", "localhost")
-        ai_model = os.environ.get("AI_MODEL", "qwen/qwen3-4b-2507")
+        # === Reranker step using DeepSeek V3.1 via NVIDIA API for semantic selection ===
+        ai_base_url = os.environ.get("AI_BASE_URL")
+        ai_api_key = os.environ.get("AI_API_KEY")
+        ai_model = os.environ.get("AI_MODEL")
 
         # Limit rerank candidates and chunk size to fit LLM context window
-        max_rerank_candidates = min(rerank_top_k, 30)  # hard cap for LLM context
-        max_chunk_chars = 350  # truncate each chunk for prompt
+        max_rerank_candidates = min(rerank_top_k, 15)  # hard cap for LLM context
+        max_chunk_chars = 250  # truncate each chunk for prompt
         rerank_candidates = candidate_chunks[:max_rerank_candidates]
         selected_indices = []
         debug_prompt = None
@@ -588,6 +588,8 @@ class RAGService:
                 import ast
                 import re
                 content = result.get("choices", [{}])[0].get("message", {}).get("content", "")
+                # Strip <think>...</think> blocks from reasoning models (e.g. DeepSeek)
+                content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL).strip()
                 print(f"[RAG-DEBUG] Request ID {request_id}: Reranker LLM raw response: {content}")
                 # Robustly extract the first list of integers from the response
                 match = re.search(r'\[\s*\d+(?:\s*,\s*\d+)*\s*\]', content)
@@ -632,9 +634,12 @@ class RAGService:
             print(f"[RAG] Exception during LLM index selection: {e}\n{traceback.format_exc()}")
             selected_chunks = []
 
-        # If LLM fails or returns nothing, fallback to top by distance
+        # If LLM selected nothing or failed, use top by distance as fallback
         if not selected_chunks:
-            print("[RAG] Reranker fallback: using top by distance")
+            if selected_indices == []:
+                print("[RAG] Reranker: LLM returned [] (no chunks deemed relevant) — using top by distance instead")
+            else:
+                print("[RAG] Reranker fallback: LLM error or parse failure — using top by distance")
             selected_chunks = rerank_candidates[:10]
 
         # Prepare documents and top_chunks for output
@@ -918,12 +923,21 @@ class RAGService:
             )
         except Exception as e:
             print(f"FAILED. Error details: {e}")
-            raise
+            error_str = str(e).lower()
+            if 'rate' in error_str or '429' in error_str or 'quota' in error_str or 'resource' in error_str:
+                raise Exception("We're experiencing high demand right now. Please try again in a moment, "
+                                "or contact us at library@stii.dost.gov.ph if the issue persists.")
+            elif 'timeout' in error_str or 'timed out' in error_str:
+                raise Exception("The request took longer than expected. Please try again, "
+                                "or contact us at library@stii.dost.gov.ph if the issue persists.")
+            else:
+                raise Exception("We encountered an issue generating the overview. Please refresh the page and try again. "
+                                "If the problem continues, contact us at library@stii.dost.gov.ph.")
         
         # Check for issues with the response
         if not response.candidates:
             print("WARNING: No candidates in response")
-            return "Unable to generate overview. Please try again."
+            return "We encountered an issue generating the overview. Please refresh the page and try again. If the problem continues, contact us at library@stii.dost.gov.ph."
         
         candidate = response.candidates[0]
         finish_reason = getattr(candidate, 'finish_reason', None)
@@ -937,7 +951,7 @@ class RAGService:
             if candidate.content and candidate.content.parts:
                 raw_answer = "".join(part.text for part in candidate.content.parts if hasattr(part, 'text')).strip()
             else:
-                return "Unable to generate overview. The model returned an incomplete response."
+                return "We encountered an issue generating the overview. Please refresh the page and try again. If the problem continues, contact us at library@stii.dost.gov.ph."
         
         print(f"DEBUG: Response length: {len(raw_answer)} characters")
         
@@ -946,6 +960,152 @@ class RAGService:
         
         return answer
     
+    def generate_overview_stream(self, top_chunks, question, distance_threshold, conversation_history=None, relevance_info=None):
+        """Stream AI overview token-by-token using Gemini streaming API. Yields (event, data) tuples."""
+        # Filter relevant chunks
+        relevant_chunks = [c for c in top_chunks if c.get("score", 0) < distance_threshold] if top_chunks and "score" in top_chunks[0] else top_chunks
+        if not relevant_chunks:
+            yield ("done", "No relevant information found for your query.")
+            return
+
+        # Build the same prompt as _generate_with_context
+        doc_infos = []
+        seen_pdfs = []
+        pdf_to_number = {}
+        for c in relevant_chunks:
+            meta = c['meta']
+            pdf_id = meta.get('pdf', meta.get('file', '[Unknown]'))
+            if pdf_id not in seen_pdfs:
+                seen_pdfs.append(pdf_id)
+                pdf_to_number[pdf_id] = len(seen_pdfs)
+                doc_infos.append(
+                    f"[{len(seen_pdfs)}] {meta.get('title','') or '[Unknown]'} "
+                    f"({meta.get('publication_year','') or 'N/A'}) "
+                    f"by {meta.get('author','') or '[Unknown]'}"
+                )
+            if len(doc_infos) >= 10:
+                break
+
+        chunk_context = "\n\n".join([
+            f"[{pdf_to_number[c['meta'].get('pdf', c['meta'].get('file', '[Unknown]'))]}] "
+            f"{c['chunk'][:1500]}"
+            for c in relevant_chunks if c['meta'].get('pdf', c['meta'].get('file', '[Unknown]')) in pdf_to_number
+        ])
+
+        history_context = ""
+        if conversation_history and len(conversation_history) > 0:
+            history_parts = []
+            for i, turn in enumerate(conversation_history[-3:], 1):
+                q = turn.get('query', '')
+                a = turn.get('overview', '')[:500]
+                if a and len(turn.get('overview', '')) > 500:
+                    a += "..."
+                history_parts.append(f"User asked: {q}\nYou answered: {a}")
+            history_context = (
+                "\n\nPREVIOUS CONVERSATION:\n"
+                + "\n---\n".join(history_parts)
+                + "\n\nThe user is now asking a follow-up question. Use the conversation context to understand references like 'it', 'this', 'that', 'compare', etc.\n"
+            )
+
+        relevance_warning = ""
+        if relevance_info and relevance_info.get('match_ratio', 1.0) < 0.5:
+            missing = ', '.join(list(relevance_info.get('missing_keywords', set()))[:5])
+            matched = ', '.join(list(relevance_info.get('matched_keywords', set()))[:5])
+            relevance_warning = f"""
+            RELEVANCE NOTE: The sources may not fully address the user's question.
+            - Keywords from query found in sources: {matched if matched else 'few/none'}
+            - Keywords from query NOT found in sources: {missing if missing else 'none'}
+            - If sources don't contain relevant information, clearly state this limitation.
+            """
+
+        prompt = f"""You are an academic research assistant analyzing thesis documents.
+
+        AVAILABLE SOURCES:
+        {chr(10).join(doc_infos)}
+
+        CONTEXT FROM SOURCES:
+        {chunk_context}{history_context}{relevance_warning}
+        USER QUESTION: {question}
+
+        INSTRUCTIONS:
+
+        1. Carefully evaluate whether the provided source content contains explicit information that answers the user's question.
+
+        2. If the sources contain directly relevant information:
+        - Answer strictly using only the provided source content.
+        - Do NOT add outside knowledge.
+        - Do NOT make assumptions or logical leaps beyond what is written.
+        - Combine information across sources only when the connection is explicitly supported.
+        - Write 2–4 clear academic paragraphs (adjust length based on complexity).
+        - End every factual sentence with its citation in this format: [1] or [1] [2].
+        - NEVER place citations in the middle of a sentence.
+        - NEVER use combined citation format like [1, 2].
+
+        3. If the sources do NOT contain sufficient information:
+        - Begin with: "The available sources do not directly address your specific question about [topic]."
+        - Clearly explain what the sources DO discuss.
+        - Suggest how the user might refine their query.
+        - Cite sources when describing their contents.
+        - Do NOT generate information not present in the sources.
+
+        4. If the answer is partially supported:
+        - Clearly distinguish between supported and unsupported parts.
+        - Explicitly state which aspects are not covered in the sources.
+
+        5. Maintain an objective academic tone.
+
+        If you are uncertain whether a claim is supported by the sources, do not include it.
+
+
+        Answer:"""
+
+        client = genai.Client(api_key=self.api_key)
+        print(f"DEBUG: Streaming generation with {len(conversation_history or [])} previous turns, prompt length: {len(prompt)}")
+
+        try:
+            raw_answer = ""
+            response_stream = client.models.generate_content_stream(
+                model="gemini-3-flash-preview",
+                contents=prompt,
+                config={
+                    "temperature": 0.3,
+                    "max_output_tokens": 2048,
+                    "top_p": 0.9,
+                    "thinking_config": {"thinking_budget": 0},
+                }
+            )
+            for chunk in response_stream:
+                text = ""
+                try:
+                    text = chunk.text or ""
+                except Exception:
+                    if hasattr(chunk, 'candidates') and chunk.candidates:
+                        for part in chunk.candidates[0].content.parts:
+                            if hasattr(part, 'text'):
+                                text += part.text
+                if text:
+                    raw_answer += text
+                    yield ("chunk", text)
+
+            # Post-process the full answer for reference rearrangement
+            final_answer = self._process_answer_references(raw_answer.strip(), seen_pdfs, relevant_chunks)
+            yield ("done", final_answer)
+
+        except Exception as e:
+            print(f"STREAMING FAILED: {e}")
+            # Never expose raw error details to users
+            error_str = str(e).lower()
+            if 'rate' in error_str or '429' in error_str or 'quota' in error_str or 'resource' in error_str:
+                user_msg = ("We're experiencing high demand right now. Please try again in a moment, "
+                            "or contact us at library@stii.dost.gov.ph if the issue persists.")
+            elif 'timeout' in error_str or 'timed out' in error_str:
+                user_msg = ("The request took longer than expected. Please try again, "
+                            "or contact us at library@stii.dost.gov.ph if the issue persists.")
+            else:
+                user_msg = ("We encountered an issue generating the overview. Please refresh the page and try again. "
+                            "If the problem continues, contact us at library@stii.dost.gov.ph.")
+            yield ("error", user_msg)
+
     def _process_answer_references(self, raw_answer, seen_pdfs, top_chunks):
         """Process and rearrange references in the answer"""
         ref_pattern = re.compile(r'\[(\d+)\]')

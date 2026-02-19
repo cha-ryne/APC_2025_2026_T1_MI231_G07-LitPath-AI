@@ -699,7 +699,7 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
             }
             
             const data = await response.json();
-            const { documents, related_questions, suggestions } = data;
+            const { documents, related_questions, suggestions, _search_context } = data;
             
             // Format the sources safely
             const formattedSources = formatSources(documents);
@@ -749,37 +749,222 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
             }
 
             // ---------------------------------------------------------
-            // STEP 6: FETCH OVERVIEW (AI Generation)
+            // STEP 6: FETCH OVERVIEW (AI Generation via Streaming SSE)
             // ---------------------------------------------------------
-            const overviewResponse = await fetch(`${API_BASE_URL}/search`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...requestBody, overview_only: true }),
-            });
+            try {
+                const streamResponse = await fetch(`${API_BASE_URL}/search/stream/`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        ...requestBody,
+                        _search_context: _search_context || null,
+                    }),
+                });
 
-            if (overviewResponse.ok) {
-                const overviewData = await overviewResponse.json();
-                
-                // Update the specific item in conversation history with the real AI text
-                setConversationHistory(prev => {
-                    const updated = [...prev];
-                    const lastIndex = updated.length - 1;
-                    if (lastIndex >= 0) {
-                        updated[lastIndex] = {
-                            ...updated[lastIndex],
+                if (streamResponse.ok && streamResponse.body) {
+                    const reader = streamResponse.body.getReader();
+                    const decoder = new TextDecoder();
+                    let streamedText = '';
+                    let buffer = '';
+
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        if (done) break;
+
+                        buffer += decoder.decode(value, { stream: true });
+                        const lines = buffer.split('\n');
+                        buffer = lines.pop(); // Keep incomplete line in buffer
+
+                        for (const line of lines) {
+                            if (!line.startsWith('data: ')) continue;
+                            try {
+                                const payload = JSON.parse(line.slice(6));
+                                if (payload.type === 'chunk') {
+                                    streamedText += payload.content;
+                                    // Update UI with each new chunk
+                                    const currentText = streamedText;
+                                    setConversationHistory(prev => {
+                                        const updated = [...prev];
+                                        const lastIndex = updated.length - 1;
+                                        if (lastIndex >= 0) {
+                                            updated[lastIndex] = {
+                                                ...updated[lastIndex],
+                                                overview: currentText,
+                                                isLoadingSummary: true // Still loading
+                                            };
+                                        }
+                                        return updated;
+                                    });
+                                    setSearchResults(prev => ({
+                                        ...prev,
+                                        overview: currentText,
+                                        isLoadingSummary: true
+                                    }));
+                                } else if (payload.type === 'done') {
+                                    // Final post-processed answer
+                                    const finalText = payload.content || streamedText || 'No overview available.';
+                                    setConversationHistory(prev => {
+                                        const updated = [...prev];
+                                        const lastIndex = updated.length - 1;
+                                        if (lastIndex >= 0) {
+                                            updated[lastIndex] = {
+                                                ...updated[lastIndex],
+                                                overview: finalText,
+                                                isLoadingSummary: false
+                                            };
+                                        }
+                                        return updated;
+                                    });
+                                    setSearchResults(prev => ({
+                                        ...prev,
+                                        overview: finalText,
+                                        isLoadingSummary: false
+                                    }));
+                                } else if (payload.type === 'error') {
+                                    console.error('Stream error:', payload.content);
+                                    // Use the server's user-friendly message, or a generic one
+                                    const errorMsg = streamedText || payload.content || 'We encountered an issue generating the overview. Please refresh the page and try again. If the problem continues, contact us at library@stii.dost.gov.ph.';
+                                    setConversationHistory(prev => {
+                                        const updated = [...prev];
+                                        const lastIndex = updated.length - 1;
+                                        if (lastIndex >= 0) {
+                                            updated[lastIndex] = {
+                                                ...updated[lastIndex],
+                                                overview: errorMsg,
+                                                isLoadingSummary: false
+                                            };
+                                        }
+                                        return updated;
+                                    });
+                                    setSearchResults(prev => ({
+                                        ...prev,
+                                        overview: errorMsg,
+                                        isLoadingSummary: false
+                                    }));
+                                }
+                            } catch (parseErr) {
+                                // Skip malformed SSE lines
+                            }
+                        }
+                    }
+
+                    // If stream ended without a 'done' event, finalize
+                    if (streamedText) {
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            const lastIndex = updated.length - 1;
+                            if (lastIndex >= 0 && updated[lastIndex].isLoadingSummary) {
+                                updated[lastIndex] = {
+                                    ...updated[lastIndex],
+                                    overview: streamedText,
+                                    isLoadingSummary: false
+                                };
+                            }
+                            return updated;
+                        });
+                        setSearchResults(prev => prev.isLoadingSummary ? ({
+                            ...prev,
+                            overview: streamedText,
+                            isLoadingSummary: false
+                        }) : prev);
+                    }
+                } else {
+                    // Fallback: non-streaming overview fetch
+                    const overviewResponse = await fetch(`${API_BASE_URL}/search`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ ...requestBody, overview_only: true }),
+                    });
+                    if (overviewResponse.ok) {
+                        const overviewData = await overviewResponse.json();
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            const lastIndex = updated.length - 1;
+                            if (lastIndex >= 0) {
+                                updated[lastIndex] = {
+                                    ...updated[lastIndex],
+                                    overview: overviewData.overview || 'No overview available.',
+                                    isLoadingSummary: false
+                                };
+                            }
+                            return updated;
+                        });
+                        setSearchResults(prev => ({
+                            ...prev,
                             overview: overviewData.overview || 'No overview available.',
                             isLoadingSummary: false
-                        };
+                        }));
                     }
-                    return updated;
-                });
-                
-                // Update the current view
-                setSearchResults(prev => ({
-                    ...prev,
-                    overview: overviewData.overview || 'No overview available.',
-                    isLoadingSummary: false
-                }));
+                }
+            } catch (streamErr) {
+                console.error('Streaming failed, using fallback:', streamErr);
+                // Fallback to non-streaming
+                const fallbackErrorMsg = 'We encountered an issue generating the overview. Please refresh the page and try again. If the problem continues, contact us at library@stii.dost.gov.ph.';
+                try {
+                    const overviewResponse = await fetch(`${API_BASE_URL}/search`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ ...requestBody, overview_only: true }),
+                    });
+                    if (overviewResponse.ok) {
+                        const overviewData = await overviewResponse.json();
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            const lastIndex = updated.length - 1;
+                            if (lastIndex >= 0) {
+                                updated[lastIndex] = {
+                                    ...updated[lastIndex],
+                                    overview: overviewData.overview || fallbackErrorMsg,
+                                    isLoadingSummary: false
+                                };
+                            }
+                            return updated;
+                        });
+                        setSearchResults(prev => ({
+                            ...prev,
+                            overview: overviewData.overview || fallbackErrorMsg,
+                            isLoadingSummary: false
+                        }));
+                    } else {
+                        // Even the fallback HTTP request failed
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            const lastIndex = updated.length - 1;
+                            if (lastIndex >= 0) {
+                                updated[lastIndex] = {
+                                    ...updated[lastIndex],
+                                    overview: fallbackErrorMsg,
+                                    isLoadingSummary: false
+                                };
+                            }
+                            return updated;
+                        });
+                        setSearchResults(prev => ({
+                            ...prev,
+                            overview: fallbackErrorMsg,
+                            isLoadingSummary: false
+                        }));
+                    }
+                } catch (fallbackErr) {
+                    console.error('Fallback also failed:', fallbackErr);
+                    setConversationHistory(prev => {
+                        const updated = [...prev];
+                        const lastIndex = updated.length - 1;
+                        if (lastIndex >= 0) {
+                            updated[lastIndex] = {
+                                ...updated[lastIndex],
+                                overview: fallbackErrorMsg,
+                                isLoadingSummary: false
+                            };
+                        }
+                        return updated;
+                    });
+                    setSearchResults(prev => ({
+                        ...prev,
+                        overview: fallbackErrorMsg,
+                        isLoadingSummary: false
+                    }));
+                }
             }
 
             // ---------------------------------------------------------
@@ -796,7 +981,7 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
 
         } catch (err) {
             console.error("Search failed:", err);
-            setError(`Search failed: ${err.message}`);
+            setError('Something went wrong with your search. Please try again, or contact us at library@stii.dost.gov.ph if the issue persists.');
             setLoading(false);
             
             // Rollback: Remove the failed entry from UI if it was added but failed immediately

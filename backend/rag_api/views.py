@@ -2,6 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
+from django.http import StreamingHttpResponse
 from .rag_service import RAGService
 from .serializers import CSMFeedbackSerializer
 from .models import CSMFeedback, CitationCopy, Material, MaterialView, ResearchHistory
@@ -343,13 +344,23 @@ class SearchView(APIView):
                     except Exception as e:
                         print(f"Error recording search time: {e}")
                 
+                # Serialize search context so streaming endpoint can reuse it (avoids duplicate search)
+                _search_context = {
+                    "top_chunks": [
+                        {"chunk": c["chunk"][:2000], "meta": c.get("meta", {}), "score": c["score"]}
+                        for c in top_chunks
+                    ],
+                    "distance_threshold": distance_threshold,
+                }
+                
                 return Response({
                     "documents": documents,
                     "related_questions": [],
                     "filters_applied": filters_applied if filters_applied else None,
                     "suggestions": suggestions if suggestions else None,
                     "overview": None,
-                    "overview_ready": False
+                    "overview_ready": False,
+                    "_search_context": _search_context,
                 }, status=status.HTTP_200_OK)
             
             # Generate overview (overview_only=True)
@@ -411,6 +422,100 @@ class SearchView(APIView):
                 response_data["rag_evaluation"] = rag_evaluation
             
             return Response(response_data, status=status.HTTP_200_OK)
+            
+        except Exception as e:
+            return Response(
+                {"error": str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+
+# ============= Streaming Search View (SSE) =============
+class StreamingSearchView(APIView):
+    """
+    POST /api/search/stream/
+    Stream AI overview generation via Server-Sent Events.
+    Accepts optional _search_context from the initial SearchView response
+    to avoid re-running the full search pipeline.
+    """
+    
+    def post(self, request):
+        import uuid
+        import json as json_mod
+        request_id = str(uuid.uuid4())
+        print(f"[RAG-DEBUG] StreamingSearchView.post called. Request ID: {request_id}")
+        
+        try:
+            question = request.data.get("question", "").strip()
+            conversation_history = request.data.get("conversation_history", [])
+            search_context = request.data.get("_search_context")
+            
+            if not question:
+                return Response(
+                    {"error": "Missing question parameter"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            rag = RAGService()
+            
+            # If search context was passed from the initial search, reuse it (no duplicate search)
+            if search_context and isinstance(search_context, dict):
+                top_chunks = search_context.get("top_chunks", [])
+                distance_threshold = search_context.get("distance_threshold", 1.2)
+                print(f"[RAG-DEBUG] Request ID {request_id}: Reusing search context ({len(top_chunks)} chunks, threshold={distance_threshold})")
+            else:
+                # Fallback: do full search if no context provided (e.g. direct API call)
+                print(f"[RAG-DEBUG] Request ID {request_id}: No search context provided, running full search")
+                filters = request.data.get("filters", {})
+                subjects = filters.get("subjects", [])
+                year = filters.get("year")
+                year_start = filters.get("year_start")
+                year_end = filters.get("year_end")
+                
+                from .query_parser import extract_filters_from_query
+                available_filters = rag.get_available_filters() if RAGService._initialized else {"subjects": [], "years": []}
+                parsed = extract_filters_from_query(question, available_filters.get("subjects", []))
+                
+                if not subjects and parsed.get("subjects"):
+                    subjects = parsed["subjects"]
+                if not year and not year_start and not year_end:
+                    if parsed.get("year"):
+                        year = parsed["year"]
+                    elif parsed.get("year_start") or parsed.get("year_end"):
+                        year_start = parsed.get("year_start")
+                        year_end = parsed.get("year_end")
+                
+                from .conversation_utils import conversation_manager
+                enhanced_question = conversation_manager.resolve_pronouns(question, conversation_history)
+                
+                top_chunks, documents, distance_threshold = rag.search(
+                    enhanced_question,
+                    subjects=None,
+                    year=year,
+                    year_start=year_start,
+                    year_end=year_end,
+                    request_id=request_id
+                )
+            
+            def event_stream():
+                """Generator that yields SSE events from Gemini streaming."""
+                try:
+                    for event_type, data in rag.generate_overview_stream(
+                        top_chunks, question, distance_threshold, conversation_history
+                    ):
+                        payload = json_mod.dumps({"type": event_type, "content": data})
+                        yield f"data: {payload}\n\n"
+                except Exception as e:
+                    error_payload = json_mod.dumps({"type": "error", "content": str(e)})
+                    yield f"data: {error_payload}\n\n"
+            
+            response = StreamingHttpResponse(
+                event_stream(),
+                content_type='text/event-stream'
+            )
+            response['Cache-Control'] = 'no-cache'
+            response['X-Accel-Buffering'] = 'no'
+            return response
             
         except Exception as e:
             return Response(

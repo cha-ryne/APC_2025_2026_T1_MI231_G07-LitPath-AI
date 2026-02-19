@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . views import (
-    HealthCheckView, SearchView, FiltersView, RAGEvaluationView,
+    HealthCheckView, SearchView, StreamingSearchView, FiltersView, RAGEvaluationView,
     bookmarks_view, bookmark_delete_view, bookmark_delete_by_file_view,
     research_history_view, research_history_delete_view, 
     feedback_view, feedback_detail,
@@ -36,6 +36,8 @@ urlpatterns = [
     path('health', HealthCheckView.as_view(), name='health-no-slash'),
     path('search/', SearchView.as_view(), name='search'),
     path('search', SearchView.as_view(), name='search-no-slash'),
+    path('search/stream/', StreamingSearchView.as_view(), name='search-stream'),
+    path('search/stream', StreamingSearchView.as_view(), name='search-stream-no-slash'),
     path('filters/', FiltersView.as_view(), name='filters'),
     path('filters', FiltersView.as_view(), name='filters-no-slash'),
     
@@ -134,6 +136,7 @@ urlpatterns = [
     path('dashboard/citation-weekly', dashboard_citation_weekly, name='dashboard-citation-weekly-no-slash'),
     path('dashboard/citation-daily/', dashboard_citation_daily, name='dashboard-citation-daily'),
     path('dashboard/citation-daily', dashboard_citation_daily, name='dashboard-citation-daily-no-slash'),
+
     
 ]
 
