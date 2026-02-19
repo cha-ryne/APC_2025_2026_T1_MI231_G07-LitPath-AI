@@ -2834,17 +2834,11 @@ function SidebarContent({
             <div className="text-[10px] text-gray-500 p-4 border-t">
                 AI-generated content. Quality may vary.<br />
                 Check for accuracy.
-                <a href="#" className="text-[#1E74BC] hover:underline block mt-2">
-                    About LitPath AI
-                </a>
-                <a href="#" className="text-[#1E74BC] hover:underline block">
-                    Privacy and Disclaimer
-                </a>
                 <button
                     onClick={() => navigate('/feedback-form')}
-                    className="text-[#1E74BC] hover:underline block mt-2 flex items-center gap-1"
+                    className="text-base text-[#1E74BC] hover:underline block mt-2 flex items-center gap-1"
                 >
-                    <MessageSquare size={12} />
+                    <MessageSquare size={15} />
                     Leave a feedback
                 </button>
             </div>
