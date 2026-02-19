@@ -1390,7 +1390,7 @@ return (
             >
                 {/* Sidebar Toggle Button (inside sidebar) */}
                 <div className={`h-16 flex items-center border-b border-gray-100 ${
-                    sidebarCollapsed ? 'justify-center p-0' : 'justify-end px-4'
+                    sidebarCollapsed ? 'justify-center p-0' : 'justify-start px-4'
                 }`}>
                     <button 
                         onClick={() => setSidebarCollapsed(!sidebarCollapsed)} 
