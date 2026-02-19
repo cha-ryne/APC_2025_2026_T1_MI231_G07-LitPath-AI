@@ -7,7 +7,7 @@ import {
     Clock, Bookmark, AlertCircle, TrendingUp, BookOpen, CheckCircle,
     X, EyeOff, Menu, Calendar, Users, ChevronLeft, ChevronRight,
     Trophy, Medal, Briefcase, GraduationCap, BarChart3, Copy, Info,
-    User, Key, RefreshCw
+    User, Key, RefreshCw, Download
 } from "lucide-react";
 import dostLogo from "./components/images/dost-logo.png";
 
@@ -613,6 +613,96 @@ const AdminDashboard = () => {
         );
     };
 
+    // ---------- Export Data to CSV ----------
+    const handleExportCSV = () => {
+        // 1. Generate a descriptive subtitle for the export
+        let filterText = '';
+        if (overviewDateFilterType === 'Year') filterText = `Year ${overviewSelectedYear}`;
+        else if (overviewDateFilterType === 'Month') filterText = `${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear}`;
+        else if (overviewDateFilterType === 'Last 7 days') filterText = 'Last 7 days';
+        else filterText = `${overviewCustomFrom} to ${overviewCustomTo}`;
+
+        // 2. Helper to add rows safely
+        let csvContent = "";
+        const addRow = (rowArray) => {
+            const formattedRow = rowArray.map(col => {
+                const cell = col === null || col === undefined ? "" : String(col);
+                return `"${cell.replace(/"/g, '""')}"`; // Escape quotes
+            }).join(",");
+            csvContent += formattedRow + "\r\n";
+        };
+
+        // 3. Build CSV Content
+        addRow(["LITPATH AI - DASHBOARD REPORT"]);
+        addRow([`Date Filter Applied: ${filterText}`]);
+        addRow([`Exported On: ${new Date().toLocaleString()}`]);
+        addRow([]);
+
+        // --- KPIs ---
+        addRow(["KEY PERFORMANCE INDICATORS"]);
+        addRow(["Metric", "Value"]);
+        addRow(["Total Theses", dashboardData.kpi.totalDocuments]);
+        addRow(["Total Searches", dashboardData.kpi.totalSearches]);
+        addRow(["Collection Utilisation (%)", dashboardData.kpi.utilizationPercent]);
+        addRow(["Avg Response Time (ms)", dashboardData.kpi.avgResponseTime]);
+        addRow(["Failed Queries", dashboardData.failedQueriesCount]);
+        addRow([]);
+
+        // --- TOP THESES ---
+        addRow(["TOP THESES BROWSED"]);
+        addRow(["Rank", "Title", "Author", "Year", "Degree", "Views", "Avg Rating"]);
+        dashboardData.topTheses.forEach((t, i) => {
+            addRow([i + 1, t.title, t.author, t.year, t.degree, t.view_count, t.avg_rating]);
+        });
+        addRow([]);
+
+        // --- USAGE BY CATEGORY ---
+        addRow(["USAGE BY CATEGORY"]);
+        addRow(["Category", "User Count", "Percentage (%)"]);
+        dashboardData.usageByCategory.forEach(c => {
+            addRow([c.category, c.views, c.percentage]);
+        });
+        addRow([]);
+
+        // --- AGE DISTRIBUTION ---
+        addRow(["AGE DISTRIBUTION"]);
+        addRow(["Age Group", "User Count", "Percentage (%)"]);
+        dashboardData.ageDistribution.forEach(a => {
+            addRow([a.age, a.count, a.percentage]);
+        });
+        addRow([]);
+
+        // --- ACTIVITY TRENDS ---
+        addRow(["ACTIVITY TRENDS (Views)"]);
+        addRow(["Date Range", "Total Views"]);
+        dashboardData.trends.forEach(t => {
+            addRow([t.tooltipRange || t.label || t.month, t.views]);
+        });
+        addRow([]);
+
+        // --- CITATION ACTIVITY ---
+        addRow(["CITATION ACTIVITY"]);
+        addRow(["Total Citations Copied", dashboardData.citationStats.total_copies]);
+        addRow(["Date Range", "Copies"]);
+        if (dashboardData.citationTrends && dashboardData.citationTrends.length > 0) {
+            dashboardData.citationTrends.forEach(c => {
+                addRow([c.tooltipRange || c.label || c.month, c.copies]);
+            });
+        }
+
+        // 4. Trigger Download
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.setAttribute("href", url);
+        link.setAttribute("download", `LitPath_Report_${filterText.replace(/\s+/g, '_')}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        showToast('Report exported successfully!', 'success');
+    };
+
     // ---------- Render ----------
     return (
         <>
@@ -702,20 +792,32 @@ const AdminDashboard = () => {
 
                 {/* Main Content */}
                 <main className="flex-1 bg-gray-50 p-4 overflow-hidden flex flex-col relative">
+
                     {/* ===== OVERVIEW TAB ===== */}
                     {activeTab === 'overview' && (
                         <div className="h-full overflow-y-auto pr-1">
                             <div className="max-w-[1600px] mx-auto w-full flex flex-col gap-2">
 
                                 {/* ===== HEADER + DATE FILTER ===== */}
-                                <div className="flex items-center justify-between flex-wrap gap-2">
+                                <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
                                     <h2 className="text-xl font-bold text-gray-800">Thesis & Dissertation Usage</h2>
                                     <div className="flex gap-2">
+
+                                        {/* EXPORT BUTTON */}
+                                        <button
+                                            onClick={handleExportCSV}
+                                            className="flex items-center space-x-2 px-3 py-1.5 border border-[#1E74BC] rounded-md bg-white text-[#1E74BC] hover:bg-blue-50 text-xs font-bold transition-colors shadow-sm"
+                                            title="Export current data to CSV"
+                                        >
+                                            <Download size={14} />
+                                            <span>Export Report</span>
+                                        </button>
+
                                         {/* Date Filter Dropdown */}
                                         <div className="relative" ref={overviewDateDropdownRef}>
                                             <button
                                                 onClick={() => setShowOverviewDateDropdown(!showOverviewDateDropdown)}
-                                                className="flex items-center space-x-2 px-3 py-1.5 border border-gray-300 rounded-md bg-white text-gray-600 hover:bg-gray-50 text-xs font-medium"
+                                                className="flex items-center space-x-2 px-3 py-1.5 border border-gray-400 rounded-md bg-white text-gray-650 hover:bg-gray-100 text-xs font-medium"
                                             >
                                                 <Calendar size={14} />
                                                 <span>
@@ -1299,7 +1401,7 @@ const AdminDashboard = () => {
                                                         return (
                                                             <>
                                                                 {/* mt-10 provides safe airspace for tooltips so they never clip the top container */}
-                                                                <div className="flex w-full mt-10 h-[180px] relative">
+                                                                <div className="flex w-full mt-10 h-[150px] relative">
                                                                     
                                                                     {/* Y-Axis Labels - Absolutely positioned for perfect line alignment */}
                                                                     <div className="relative w-10 shrink-0">
@@ -1468,7 +1570,7 @@ const AdminDashboard = () => {
 
                                                     return (
                                                         <>
-                                                            <div className="flex w-full mt-10 h-[180px] relative">
+                                                            <div className="flex w-full mt-10 h-[150px] relative">
                                                                 
                                                                 {/* Y-Axis Labels */}
                                                                 <div className="relative w-10 shrink-0">
