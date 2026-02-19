@@ -676,7 +676,7 @@ const AdminDashboard = () => {
             <div className="flex-1 flex overflow-hidden">
                 {/* Sidebar */}
                 <aside className={`bg-white border-r border-gray-200 transition-all duration-300 flex flex-col z-20 ${isSidebarOpen ? 'w-64' : 'w-16'}`}>
-                    <div className={`h-16 flex items-center border-b border-gray-100 ${isSidebarOpen ? 'justify-end px-4' : 'justify-center p-0'}`}>
+                    <div className={`h-16 flex items-center border-b border-gray-100 ${isSidebarOpen ? 'justify-start px-4' : 'justify-center p-0'}`}>
                         <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 rounded hover:bg-gray-100 transition-colors text-gray-600">
                             <Menu size={24} />
                         </button>
@@ -1253,7 +1253,6 @@ const AdminDashboard = () => {
                                     <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 min-h-[200px] flex flex-col">
                                         <div className="flex items-center justify-between mb-3">
                                             <div className="flex items-center gap-1 flex-wrap">
-                                                {/* Title and Info Icon Wrapper */}
                                                 <div className="flex items-center gap-1">
                                                     <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
                                                         <Calendar size={16} className="text-blue-600" /> Activity Trends
@@ -1269,7 +1268,6 @@ const AdminDashboard = () => {
                                                     </div>
                                                 </div>
                                                 
-                                                {/* Dynamic subtitle */}
                                                 <span className="text-[10px] text-gray-500 italic ml-2">
                                                     {overviewDateFilterType === 'Year' && `(Monthly report for year ${overviewSelectedYear})`}
                                                     {overviewDateFilterType === 'Month' && `(Weekly report for ${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
@@ -1283,100 +1281,129 @@ const AdminDashboard = () => {
 
                                         {/* Dynamic Total and Chart Rendering */}
                                         {(() => {
-                                            // Calculate the sum of all views in the current filtered data
                                             const totalActivityViews = dashboardData.trends ? dashboardData.trends.reduce((sum, t) => sum + t.views, 0) : 0;
 
                                             return dashboardData.trends && dashboardData.trends.length > 0 ? (
                                                 <>
                                                     <p className="text-2xl font-bold text-gray-900">{formatNumber(totalActivityViews)}</p>
-                                                    <p className="text-xs text-gray-500 mb-4">total material views in this period</p>
+                                                    <p className="text-xs text-gray-500 mb-2">total material views in this period</p>
 
-                                                    <div className="flex-1 flex items-end gap-2 w-full min-h-[100px] pt-2">
-                                                        {dashboardData.trends.map((item, i) => {
-                                                            const max = Math.max(...dashboardData.trends.map(t => t.views), 1);
-                                                            const heightPercent = item.views === 0 ? 2 : (item.views / max) * 100;
+                                                    {(() => {
+                                                        const max = Math.max(...dashboardData.trends.map(t => t.views), 1);
+                                                        // Helper to format Y-axis accurately
+                                                        const tick = (mult) => {
+                                                            const val = max * mult;
+                                                            return max < 4 ? val.toFixed(1) : formatNumber(Math.round(val));
+                                                        };
 
-                                                            // Determine the label to show under the bar
-                                                            let displayLabel = '';
-                                                            if (overviewDateFilterType === 'Year') {
-                                                                displayLabel = item.month ? item.month.substring(0, 3) : '';
-                                                            } else if (overviewDateFilterType === 'Month') {
-                                                                displayLabel = item.label;
-                                                            } else if (overviewDateFilterType === 'Last 7 days') {
-                                                                displayLabel = item.label;
-                                                            } else if (overviewDateFilterType === 'Custom range') {
-                                                                displayLabel = item.label;
-                                                            }
-
-                                                            // --- TOOLTIP CONTENT FORMATTING ---
-                                                            let tooltipContent;
-                                                            if (overviewDateFilterType === 'Year') {
-                                                                tooltipContent = (
-                                                                    <div className="text-center whitespace-nowrap">
-                                                                        <div className="font-semibold text-gray-200">{item.month} {item.year}:</div>
-                                                                        <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
+                                                        return (
+                                                            <>
+                                                                {/* mt-10 provides safe airspace for tooltips so they never clip the top container */}
+                                                                <div className="flex w-full mt-10 h-[180px] relative">
+                                                                    
+                                                                    {/* Y-Axis Labels - Absolutely positioned for perfect line alignment */}
+                                                                    <div className="relative w-10 shrink-0">
+                                                                        <span className="absolute right-2 top-0 -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(1)}</span>
+                                                                        <span className="absolute right-2 top-[25%] -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(0.75)}</span>
+                                                                        <span className="absolute right-2 top-[50%] -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(0.5)}</span>
+                                                                        <span className="absolute right-2 top-[75%] -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(0.25)}</span>
+                                                                        <span className="absolute right-2 bottom-0 translate-y-1/2 text-[10px] text-gray-400 font-medium">0</span>
                                                                     </div>
-                                                                );
-                                                            } else if (overviewDateFilterType === 'Month' || overviewDateFilterType === 'Custom range') {
-                                                                tooltipContent = (
-                                                                    <div className="text-center whitespace-nowrap">
-                                                                        <div className="font-semibold text-gray-200">{item.tooltipRange}:</div>
-                                                                        <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
-                                                                    </div>
-                                                                );
-                                                            } else if (overviewDateFilterType === 'Last 7 days') {
-                                                                tooltipContent = (
-                                                                    <div className="text-center whitespace-nowrap">
-                                                                        <div className="font-semibold text-gray-200">{item.fullDate}, {item.weekday}:</div>
-                                                                        <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
-                                                                    </div>
-                                                                );
-                                                            }
 
-                                                            // --- EDGE DETECTION LOGIC ---
-                                                            const isFirst = i === 0;
-                                                            const isLast = i === dashboardData.trends.length - 1;
+                                                                    {/* Chart Area */}
+                                                                    <div className="flex-1 relative border-b-2 border-l-2 border-gray-200">
+                                                                        
+                                                                        {/* Horizontal Grid Lines - fixed z-index so they show up! */}
+                                                                        <div className="absolute inset-x-0 top-0 border-t border-dashed border-gray-200 z-0"></div>
+                                                                        <div className="absolute inset-x-0 top-[25%] border-t border-dashed border-gray-200 z-0"></div>
+                                                                        <div className="absolute inset-x-0 top-[50%] border-t border-dashed border-gray-200 z-0"></div>
+                                                                        <div className="absolute inset-x-0 top-[75%] border-t border-dashed border-gray-200 z-0"></div>
 
-                                                            let tooltipPositionClass = "left-1/2 -translate-x-1/2"; 
-                                                            let arrowPositionClass = "left-1/2 -translate-x-1/2";   
-
-                                                            if (isFirst) {
-                                                                tooltipPositionClass = "left-0 translate-x-0";      
-                                                                arrowPositionClass = "left-2.5";     
-                                                            } else if (isLast) {
-                                                                tooltipPositionClass = "right-0 translate-x-0";     
-                                                                arrowPositionClass = "right-2.5";     
-                                                            }
-
-                                                            return (
-                                                                <div key={i} className="flex-1 flex flex-col items-center gap-2 h-full justify-end group cursor-default">
-                                                                    <div className="relative w-full flex justify-center items-end h-full">
-                                                                        <div
-                                                                            className="w-full max-w-[20px] bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-sm transition-all duration-500 relative hover:from-blue-500 hover:to-blue-300"
-                                                                            style={{ height: `${heightPercent}%` }}
-                                                                        >
-                                                                            {/* Tooltip Wrapper */}
-                                                                            <div className={`absolute bottom-full mb-2 hidden group-hover:flex flex-col z-20 pointer-events-none ${tooltipPositionClass}`}>
+                                                                        {/* Bars Container */}
+                                                                        <div className="absolute inset-0 flex items-end justify-around gap-1">
+                                                                            {dashboardData.trends.map((item, i) => {
+                                                                                const heightPercent = item.views === 0 ? 0 : Math.max((item.views / max) * 100, 1);
                                                                                 
-                                                                                {/* Tooltip Box */}
-                                                                                <div className="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded shadow-lg w-max text-center leading-tight border border-gray-700">
-                                                                                    {tooltipContent}
-                                                                                </div>
+                                                                                let displayLabel = '';
+                                                                                if (overviewDateFilterType === 'Year') {
+                                                                                    displayLabel = item.month ? item.month.substring(0, 3) : '';
+                                                                                } else if (overviewDateFilterType === 'Month' || overviewDateFilterType === 'Last 7 days' || overviewDateFilterType === 'Custom range') {
+                                                                                    displayLabel = item.label;
+                                                                                }
 
-                                                                                {/* Tooltip Arrow */}
-                                                                                <div className={`absolute -bottom-[4px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800 ${arrowPositionClass}`}></div>
-                                                                            </div>
+                                                                                let tooltipContent;
+                                                                                if (overviewDateFilterType === 'Year') {
+                                                                                    tooltipContent = (
+                                                                                        <div className="text-center">
+                                                                                            <div className="font-semibold text-gray-200">{item.month} {item.year}:</div>
+                                                                                            <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
+                                                                                        </div>
+                                                                                    );
+                                                                                } else if (overviewDateFilterType === 'Month' || overviewDateFilterType === 'Custom range') {
+                                                                                    tooltipContent = (
+                                                                                        <div className="text-center">
+                                                                                            <div className="font-semibold text-gray-200">{item.tooltipRange}:</div>
+                                                                                            <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
+                                                                                        </div>
+                                                                                    );
+                                                                                } else if (overviewDateFilterType === 'Last 7 days') {
+                                                                                    tooltipContent = (
+                                                                                        <div className="text-center">
+                                                                                            <div className="font-semibold text-gray-200">{item.fullDate}, {item.weekday}:</div>
+                                                                                            <div>{item.views} view{item.views !== 1 ? 's' : ''}</div>
+                                                                                        </div>
+                                                                                    );
+                                                                                }
+
+                                                                                const isFirst = i === 0;
+                                                                                const isLast = i === dashboardData.trends.length - 1;
+                                                                                let tooltipPositionClass = "left-1/2 -translate-x-1/2"; 
+                                                                                let arrowPositionClass = "left-1/2 -translate-x-1/2";   
+
+                                                                                if (isFirst) {
+                                                                                    tooltipPositionClass = "left-0 translate-x-0";      
+                                                                                    arrowPositionClass = "left-4 -translate-x-1/2";     
+                                                                                } else if (isLast) {
+                                                                                    tooltipPositionClass = "right-0 translate-x-0";     
+                                                                                    arrowPositionClass = "right-4 translate-x-1/2";     
+                                                                                }
+
+                                                                                return (
+                                                                                    /* hover:z-50 makes sure the active tooltip is ALWAYS on top of neighboring bars */
+                                                                                    <div key={i} className="flex-1 flex flex-col items-center justify-end h-full group cursor-default relative hover:z-50">
+                                                                                        
+                                                                                        {/* Ghost Background Track */}
+                                                                                        <div className="absolute inset-y-0 bottom-0 w-full max-w-[32px] bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors rounded-t-sm z-0"></div>
+
+                                                                                        {/* Actual Data Bar */}
+                                                                                        <div
+                                                                                            className={`w-full max-w-[32px] absolute bottom-0 z-10 rounded-t-sm transition-all duration-500 ${item.views > 0 ? 'bg-gradient-to-t from-blue-600 to-blue-400 group-hover:from-blue-500 group-hover:to-blue-300 shadow-sm' : 'bg-transparent'}`}
+                                                                                            style={{ height: `${heightPercent}%` }}
+                                                                                        >
+                                                                                            {/* Tooltip Wrapper - Added whitespace-nowrap here so text doesn't squish */}
+                                                                                            <div className={`absolute bottom-full mb-2 hidden group-hover:flex flex-col z-50 pointer-events-none ${tooltipPositionClass}`}>
+                                                                                                <div className="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded shadow-lg whitespace-nowrap w-max text-center leading-tight border border-gray-700">
+                                                                                                    {tooltipContent}
+                                                                                                </div>
+                                                                                                <div className={`absolute -bottom-[4px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800 ${arrowPositionClass}`}></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        
+                                                                                        {/* X-Axis Label */}
+                                                                                        <div className="absolute -bottom-7 text-[9px] text-gray-500 font-bold uppercase whitespace-nowrap text-center">
+                                                                                            {displayLabel}
+                                                                                        </div>
+                                                                                    </div>
+                                                                                );
+                                                                            })}
                                                                         </div>
                                                                     </div>
-                                                                    {displayLabel && (
-                                                                        <span className="text-[10px] text-gray-500 font-bold uppercase truncate w-full text-center">
-                                                                            {displayLabel}
-                                                                        </span>
-                                                                    )}
                                                                 </div>
-                                                            );
-                                                        })}
-                                                    </div>
+                                                                {/* Spacer to protect X-Axis labels from bottom margin */}
+                                                                <div className="h-8 w-full"></div>
+                                                            </>
+                                                        );
+                                                    })()}
                                                 </>
                                             ) : (
                                                 <div className="w-full flex-1 flex flex-col items-center justify-center text-gray-400 gap-2 opacity-50 min-h-[120px]">
@@ -1388,9 +1415,8 @@ const AdminDashboard = () => {
                                     </div>
 
                                     {/* Citation Activity */}
-                                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
+                                    <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4 flex flex-col">
                                         <div className="flex items-center gap-1 mb-3 flex-wrap">
-                                            {/* Title and Info Icon Wrapper */}
                                             <div className="flex items-center gap-1">
                                                 <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
                                                     <Copy size={16} className="text-red-600" /> Citation Activity
@@ -1406,7 +1432,6 @@ const AdminDashboard = () => {
                                                 </div>
                                             </div>
 
-                                            {/* Dynamic subtitle added here */}
                                             <span className="text-[10px] text-gray-500 italic ml-2">
                                                 {overviewDateFilterType === 'Year' && `(Monthly report for year ${overviewSelectedYear})`}
                                                 {overviewDateFilterType === 'Month' && `(Weekly report for ${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear})`}
@@ -1419,43 +1444,67 @@ const AdminDashboard = () => {
                                         
                                         {dashboardData.citationStats.total_copies > 0 ? (
                                             <>
-                                                <p className="text-2xl font-bold text-gray-900">{dashboardData.citationStats.total_copies}</p>
-                                                <p className="text-xs text-gray-500 mb-4">total citation copies in this period</p>
+                                                <p className="text-2xl font-bold text-gray-900">{formatNumber(dashboardData.citationStats.total_copies)}</p>
+                                                <p className="text-xs text-gray-500 mb-2">total citation copies in this period</p>
 
-                                                <div className="h-16 w-full relative mb-1">
-                                                    {dashboardData.citationTrends.length > 0 ? (
-                                                        (() => {
-                                                            const max = Math.max(...dashboardData.citationTrends.map(m => m.copies), 1);
-                                                            const dataLen = dashboardData.citationTrends.length;
-                                                            
-                                                            const points = dashboardData.citationTrends.map((item, i) => {
-                                                                const x = ((i + 0.5) / dataLen) * 100;
-                                                                const y = 38 - ((item.copies / max) * 34); 
-                                                                return { x, y, ...item };
-                                                            });
+                                                {(() => {
+                                                    const max = Math.max(...dashboardData.citationTrends.map(m => m.copies), 1);
+                                                    const dataLen = dashboardData.citationTrends.length;
 
-                                                            const linePath = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');
-                                                            const areaPath = `${linePath} L ${points[points.length - 1].x} 40 L ${points[0].x} 40 Z`;
+                                                    // Helper to format Y-axis accurately
+                                                    const tick = (mult) => {
+                                                        const val = max * mult;
+                                                        return max < 4 ? val.toFixed(1) : formatNumber(Math.round(val));
+                                                    };
+                                                    
+                                                    const points = dashboardData.citationTrends.map((item, i) => {
+                                                        const x = ((i + 0.5) / dataLen) * 100;
+                                                        const y = 100 - ((item.copies / max) * 100); 
+                                                        return { x, y, ...item };
+                                                    });
 
-                                                            return (
-                                                                <div className="w-full h-full relative">
-                                                                    {/* SVG for the Line and Gradient Area */}
-                                                                    <svg viewBox="0 0 100 40" preserveAspectRatio="none" className="absolute inset-0 w-full h-full overflow-visible">
-                                                                        <defs>
-                                                                            <linearGradient id="citationGradient" x1="0" x2="0" y1="0" y2="1">
-                                                                                <stop offset="0%" stopColor="#ef4444" stopOpacity="0.4" />
-                                                                                <stop offset="100%" stopColor="#ef4444" stopOpacity="0.0" />
-                                                                            </linearGradient>
-                                                                        </defs>
-                                                                        <path d={areaPath} fill="url(#citationGradient)" />
-                                                                        <path d={linePath} fill="none" stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                                                    </svg>
+                                                    const linePath = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');
+                                                    const areaPath = `${linePath} L ${points[points.length - 1].x} 100 L ${points[0].x} 100 Z`;
 
-                                                                    <div className="absolute inset-0 flex">
+                                                    return (
+                                                        <>
+                                                            <div className="flex w-full mt-10 h-[180px] relative">
+                                                                
+                                                                {/* Y-Axis Labels */}
+                                                                <div className="relative w-10 shrink-0">
+                                                                    <span className="absolute right-2 top-0 -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(1)}</span>
+                                                                    <span className="absolute right-2 top-[25%] -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(0.75)}</span>
+                                                                    <span className="absolute right-2 top-[50%] -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(0.5)}</span>
+                                                                    <span className="absolute right-2 top-[75%] -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(0.25)}</span>
+                                                                    <span className="absolute right-2 bottom-0 translate-y-1/2 text-[10px] text-gray-400 font-medium">0</span>
+                                                                </div>
+                                                                
+                                                                {/* Chart Area */}
+                                                                <div className="flex-1 relative border-b-2 border-l-2 border-gray-200">
+                                                                    
+                                                                    {/* Horizontal Grid Lines */}
+                                                                    <div className="absolute inset-x-0 top-0 border-t border-dashed border-gray-200 z-0"></div>
+                                                                    <div className="absolute inset-x-0 top-[25%] border-t border-dashed border-gray-200 z-0"></div>
+                                                                    <div className="absolute inset-x-0 top-[50%] border-t border-dashed border-gray-200 z-0"></div>
+                                                                    <div className="absolute inset-x-0 top-[75%] border-t border-dashed border-gray-200 z-0"></div>
+                                                                    
+                                                                    {/* SVG Area Fill */}
+                                                                    <div className="absolute inset-0 w-full h-full overflow-visible z-10">
+                                                                        <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full overflow-visible">
+                                                                            <defs>
+                                                                                <linearGradient id="citationGradient" x1="0" x2="0" y1="0" y2="1">
+                                                                                    <stop offset="0%" stopColor="#ef4444" stopOpacity="0.4" />
+                                                                                    <stop offset="100%" stopColor="#ef4444" stopOpacity="0.0" />
+                                                                                </linearGradient>
+                                                                            </defs>
+                                                                            <path d={areaPath} fill="url(#citationGradient)" />
+                                                                            <path d={linePath} fill="none" stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                                        </svg>
+                                                                    </div>
+
+                                                                    {/* Overlay Grid for Tooltips, Dots, and X-labels */}
+                                                                    <div className="absolute inset-0 flex z-20">
                                                                         {points.map((p, i) => {
-                                                                            // Calculate Y coordinate once to bind the dot and tooltip together
-                                                                            const topPercent = (p.y / 40) * 100;
-
                                                                             const isFirst = i === 0;
                                                                             const isLast = i === dataLen - 1;
                                                                             let tooltipClass = "left-1/2 -translate-x-1/2";
@@ -1470,22 +1519,23 @@ const AdminDashboard = () => {
                                                                             }
 
                                                                             return (
-                                                                                <div key={`hover-${i}`} className="flex-1 relative group cursor-default h-full flex justify-center">
+                                                                                /* hover:z-50 brings the hovered point to the very front */
+                                                                                <div key={`hover-${i}`} className="flex-1 relative group cursor-default h-full flex justify-center hover:z-50">
                                                                                     
-                                                                                    {/* Hover Highlight column */}
-                                                                                    <div className="absolute inset-y-0 w-[80%] max-w-[24px] z-0 hover:bg-red-500/10 transition-colors rounded-sm"></div>
+                                                                                    {/* Ghost Hover Highlight Area */}
+                                                                                    <div className="absolute inset-y-0 w-[80%] max-w-[32px] z-0 bg-red-500/0 group-hover:bg-red-500/10 transition-colors rounded-sm"></div>
                                                                                     
-                                                                                    {/* FIXED: Wrapper container ties the Tooltip directly to the Dot's Y-coordinate */}
+                                                                                    {/* Dot and Tooltip Anchor */}
                                                                                     <div 
                                                                                         className="absolute z-20 flex justify-center items-center"
-                                                                                        style={{ top: `${topPercent}%`, transform: 'translateY(-50%)' }}
+                                                                                        style={{ top: `${p.y}%`, transform: 'translateY(-50%)' }}
                                                                                     >
-                                                                                        {/* The Dot */}
-                                                                                        <div className="w-2 h-2 bg-white border-[1.5px] border-red-600 rounded-full transition-transform group-hover:scale-125" />
+                                                                                        {/* Data Dot */}
+                                                                                        <div className={`w-2.5 h-2.5 bg-white border-[2px] border-red-600 rounded-full transition-transform group-hover:scale-[1.4] shadow-sm ${p.copies === 0 ? 'opacity-30 group-hover:opacity-100' : 'opacity-100'}`} />
                                                                                         
                                                                                         {/* Tooltip Popup */}
-                                                                                        <div className={`absolute bottom-full mb-2 hidden group-hover:flex flex-col z-30 pointer-events-none w-max ${tooltipClass}`}>
-                                                                                            <div className="bg-gray-800 text-white text-[10px] px-2 py-1.5 rounded shadow-lg text-center leading-tight border border-gray-700">
+                                                                                        <div className={`absolute bottom-full mb-2 hidden group-hover:flex flex-col z-50 pointer-events-none w-max ${tooltipClass}`}>
+                                                                                            <div className="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded shadow-lg whitespace-nowrap text-center leading-tight border border-gray-700">
                                                                                                 <div className="font-semibold text-gray-200">{p.tooltipRange}:</div>
                                                                                                 <div>{p.copies} copies</div>
                                                                                             </div>
@@ -1493,8 +1543,8 @@ const AdminDashboard = () => {
                                                                                         </div>
                                                                                     </div>
 
-                                                                                    {/* Bottom Label */}
-                                                                                    <div className="absolute -bottom-5 text-[10px] text-gray-500 font-bold uppercase whitespace-nowrap">
+                                                                                    {/* X-Axis Label */}
+                                                                                    <div className="absolute -bottom-7 text-[9px] text-gray-500 font-bold uppercase whitespace-nowrap text-center">
                                                                                         {p.displayLabel}
                                                                                     </div>
                                                                                 </div>
@@ -1502,17 +1552,14 @@ const AdminDashboard = () => {
                                                                         })}
                                                                     </div>
                                                                 </div>
-                                                            );
-                                                        })()
-                                                    ) : (
-                                                        <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
-                                                            No activity recorded yet
-                                                        </div>
-                                                    )}
-                                                </div>
+                                                            </div>
+                                                            <div className="h-8 w-full"></div>
+                                                        </>
+                                                    );
+                                                })()}
                                             </>
                                         ) : (
-                                            <div className="flex items-center justify-center h-24 bg-red-50 rounded-lg border border-dashed border-red-200 mt-2">
+                                            <div className="flex flex-1 items-center justify-center min-h-[120px] bg-red-50 rounded-lg border border-dashed border-red-200 mt-2">
                                                 <p className="text-sm text-red-500 italic">No citation copies recorded yet</p>
                                             </div>
                                         )}
