@@ -136,8 +136,6 @@ urlpatterns = [
     path('dashboard/citation-weekly', dashboard_citation_weekly, name='dashboard-citation-weekly-no-slash'),
     path('dashboard/citation-daily/', dashboard_citation_daily, name='dashboard-citation-daily'),
     path('dashboard/citation-daily', dashboard_citation_daily, name='dashboard-citation-daily-no-slash'),
-
-    
 ]
 
 
