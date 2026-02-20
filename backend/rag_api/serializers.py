@@ -38,10 +38,15 @@ class ResearchHistorySerializer(serializers.ModelSerializer):
 
 
 class FeedbackSerializer(serializers.ModelSerializer):
+    material_title = serializers.SerializerMethodField()
+
     class Meta:
         model = Feedback
         fields = '__all__'
-        read_only_fields = ['id', 'created_at']
+
+    def get_material_title(self, obj):
+        title_lookup = self.context.get('material_titles', {})
+        return title_lookup.get(obj.document_file, None)
 
 
 class CSMFeedbackSerializer(serializers.ModelSerializer):

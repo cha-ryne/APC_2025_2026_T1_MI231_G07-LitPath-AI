@@ -651,11 +651,10 @@ def research_history_delete_view(request, session_id):
 
 # ============= Feedback Views =============
 
-# Feedback for users
 @api_view(['GET', 'POST'])
 def feedback_view(request):
     """
-    GET: List all feedback (for analytics)
+    GET: List all feedback with material titles (for analytics)
     POST: Submit new feedback
     """
     if request.method == 'GET':
@@ -666,10 +665,19 @@ def feedback_view(request):
         else:
             # For admin analytics - get all feedback
             feedback = Feedback.objects.all()
-        
-        serializer = FeedbackSerializer(feedback, many=True)
+
+        # Collect unique document files from the feedback queryset
+        files = feedback.values_list('document_file', flat=True).distinct()
+        # Fetch corresponding materials and build lookup dict (file -> title)
+        materials = Material.objects.filter(file__in=files).values('file', 'title')
+        title_lookup = {m['file']: m['title'] for m in materials}
+
+        # Pass lookup dict to serializer context
+        serializer = FeedbackSerializer(
+            feedback, many=True, context={'material_titles': title_lookup}
+        )
         return Response(serializer.data, status=status.HTTP_200_OK)
-    
+
     elif request.method == 'POST':
         serializer = FeedbackSerializer(data=request.data)
         if serializer.is_valid():
@@ -1884,3 +1892,61 @@ def dashboard_top_search_queries(request):
         {'query': item['query'], 'count': item['count']}
         for item in top_queries
     ])
+
+
+# ============= Material Ratings – Least Browsed Theses =============
+@api_view(['GET'])
+def dashboard_least_browsed(request):
+    """
+    GET /api/dashboard/least-browsed/
+    Returns materials with the lowest view counts within the date range.
+    Useful for identifying candidates for archiving.
+    """
+    try:
+        limit = int(request.GET.get('limit', 7))
+        from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
+
+        with connection.cursor() as cursor:
+            # We use a LEFT JOIN to ensure we catch materials with 0 views.
+            # UPDATED QUERY: Added m.year to SELECT and GROUP BY
+            cursor.execute("""
+                SELECT 
+                    m.id,
+                    m.file,
+                    m.title,
+                    m.year,  -- <--- ADDED THIS
+                    MAX(mv.viewed_at) as last_accessed,
+                    COUNT(mv.id) as view_count
+                FROM materials m
+                LEFT JOIN material_views mv 
+                    ON m.file = mv.file 
+                    AND mv.viewed_at BETWEEN %s AND %s
+                GROUP BY m.id, m.file, m.title, m.year -- <--- ADDED m.year HERE
+                ORDER BY view_count ASC, last_accessed ASC
+                LIMIT %s
+            """, [from_date, to_date, limit])
+            
+            columns = [col[0] for col in cursor.description]
+            results = [dict(zip(columns, row)) for row in cursor.fetchall()]
+
+        return Response(results, status=status.HTTP_200_OK)
+
+    except Exception as e:
+        print(f"Error in dashboard_least_browsed: {str(e)}")
+        return Response(
+            {"error": str(e)}, 
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
+        )
+
+# ============= Material Ratings – Dormant Count =============
+@api_view(['GET'])
+def dashboard_dormant_count(request):
+    with connection.cursor() as cursor:
+        cursor.execute("""
+            SELECT COUNT(DISTINCT m.id)
+            FROM materials m
+            LEFT JOIN material_views mv ON m.file = mv.file
+            WHERE mv.id IS NULL
+        """)
+        count = cursor.fetchone()[0]
+    return Response({'count': count})

@@ -9,8 +9,9 @@ from . views import (
     csm_feedback_view, csm_feedback_detail, 
     dashboard_kpi, dashboard_trending_topics, dashboard_failed_queries_count, 
     dashboard_usage_by_category, dashboard_age_distribution, 
-    dashboard_monthly_trends, dashboard_weekly_trends, dashboard_daily_trends, 
-    track_citation_copy, dashboard_citation_stats, dashboard_citation_monthly, dashboard_citation_weekly, dashboard_citation_daily
+    dashboard_monthly_trends, dashboard_weekly_trends, dashboard_daily_trends,
+    track_citation_copy, dashboard_citation_stats, dashboard_citation_monthly, dashboard_citation_weekly, dashboard_citation_daily,
+    dashboard_least_browsed, dashboard_dormant_count
 )
 from . admin_views import admin_login_view, admin_users_view, admin_user_delete_view
 from . auth_views import (
@@ -136,6 +137,10 @@ urlpatterns = [
     path('dashboard/citation-weekly', dashboard_citation_weekly, name='dashboard-citation-weekly-no-slash'),
     path('dashboard/citation-daily/', dashboard_citation_daily, name='dashboard-citation-daily'),
     path('dashboard/citation-daily', dashboard_citation_daily, name='dashboard-citation-daily-no-slash'),
+    path('dashboard/least-browsed/', dashboard_least_browsed, name='dashboard-least-browsed'),
+    path('dashboard/least-browsed', dashboard_least_browsed, name='dashboard-least-browsed-no-slash'),
+    path('dashboard/dormant-count/', dashboard_dormant_count, name='dashboard-dormant-count'),
+    path('dashboard/dormant-count', dashboard_dormant_count, name='dashboard-dormant-count-no-slash'),
 ]
 
 

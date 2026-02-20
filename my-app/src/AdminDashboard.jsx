@@ -92,6 +92,27 @@ const AdminDashboard = () => {
     const [materialRatings, setMaterialRatings] = useState([]);
     const [ratingsTrend, setRatingsTrend] = useState(0);
 
+    // ---------- Material Ratings: interactive filter ----------
+    const [selectedMaterialFilter, setSelectedMaterialFilter] = useState(null);
+    const feedbackLogRef = useRef(null);
+
+    // ---------- Dormant Materials Count ----------
+    const [dormantCount, setDormantCount] = useState(0);
+
+    // ---------- Material Ratings Date Filter ----------
+    const ratingsDateFilterOptions = ['All', 'Year', 'Month', 'Last 7 days', 'Custom range'];
+    const [ratingsDateFilterType, setRatingsDateFilterType] = useState('All');
+    const [ratingsSelectedYear, setRatingsSelectedYear] = useState(new Date().getFullYear());
+    const [ratingsSelectedMonth, setRatingsSelectedMonth] = useState(new Date().getMonth() + 1);
+    const [ratingsSelectedMonthYear, setRatingsSelectedMonthYear] = useState(new Date().getFullYear());
+    const [ratingsCustomFrom, setRatingsCustomFrom] = useState('');
+    const [ratingsCustomTo, setRatingsCustomTo] = useState('');
+    const [showRatingsDateDropdown, setShowRatingsDateDropdown] = useState(false);
+    const ratingsDateDropdownRef = useRef(null);
+
+    // ---------- Least Accessed Materials ----------
+    const [leastAccessedMaterials, setLeastAccessedMaterials] = useState([]);
+
     // ---------- Account Settings ----------
     const [showAccountSettings, setShowAccountSettings] = useState(false);
     const [settingsTab, setSettingsTab] = useState('profile');
@@ -174,6 +195,38 @@ const AdminDashboard = () => {
             if (!feedbackCustomFrom || !feedbackCustomTo) return true;
             const from = new Date(feedbackCustomFrom);
             const to = new Date(feedbackCustomTo);
+            to.setHours(23, 59, 59, 999);
+            return date >= from && date <= to;
+        }
+        
+        return true;
+    };
+
+    // ---------- Date Range Helper for Material Ratings ----------
+    const isRatingInDateRange = (ratingDate) => {
+        if (ratingsDateFilterType === 'All') return true;
+        
+        const date = new Date(ratingDate);
+        const today = new Date();
+        
+        if (ratingsDateFilterType === 'Year') {
+            return date.getFullYear() === ratingsSelectedYear;
+        }
+        
+        if (ratingsDateFilterType === 'Last 7 days') {
+            const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+            return date >= weekAgo;
+        }
+        
+        if (ratingsDateFilterType === 'Month') {
+            return date.getMonth() + 1 === ratingsSelectedMonth && 
+                date.getFullYear() === ratingsSelectedMonthYear;
+        }
+        
+        if (ratingsDateFilterType === 'Custom range') {
+            if (!ratingsCustomFrom || !ratingsCustomTo) return true;
+            const from = new Date(ratingsCustomFrom);
+            const to = new Date(ratingsCustomTo);
             to.setHours(23, 59, 59, 999);
             return date >= from && date <= to;
         }
@@ -435,7 +488,7 @@ const AdminDashboard = () => {
             fetchAgeDistribution(),
             fetchCitationStats(),
             fetchCitationTrends(),
-            fetchTrends() // fetch trends with the new granularity & date filter
+            fetchTrends()
         ]).finally(() => setLoading(false));
     };
 
@@ -457,7 +510,6 @@ const AdminDashboard = () => {
             fetchAllDashboardData();
         }
         if (activeTab === 'feedback') fetchFeedback();
-        if (activeTab === 'ratings') fetchMaterialRatings();
     }, [
         activeTab,
         overviewDateFilterType,
@@ -468,24 +520,43 @@ const AdminDashboard = () => {
         overviewCustomTo
     ]);
 
+    // ---------- Fetch ratings & least accessed when filters change ----------
+    useEffect(() => {
+        if (activeTab === 'ratings') {
+            fetchMaterialRatings();
+            fetchLeastAccessedMaterials();
+            fetchDormantCount();
+        }
+    }, [activeTab]);
+
     // ---------- Click outside handlers ----------
     useEffect(() => {
         const handleClickOutside = (event) => {
+            // User Menu
             if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
                 setShowUserMenu(false);
             }
+            // Feedback Date Dropdown
             if (feedbackDateDropdownRef.current && !feedbackDateDropdownRef.current.contains(event.target)) {
                 const isInput = event.target.tagName === 'INPUT';
                 if (!isInput) setShowFeedbackDateDropdown(false);
             }
+            // Feedback Rating Filter
             if (ratingDropdownRef.current && !ratingDropdownRef.current.contains(event.target)) {
                 setShowRatingDropdown(false);
             }
+            // Overview Date Dropdown
             if (overviewDateDropdownRef.current && !overviewDateDropdownRef.current.contains(event.target)) {
                 const isInput = event.target.tagName === 'INPUT';
                 if (!isInput) setShowOverviewDateDropdown(false);
             }
+            // Ratings Date Dropdown
+            if (ratingsDateDropdownRef.current && !ratingsDateDropdownRef.current.contains(event.target)) {
+                const isInput = event.target.tagName === 'INPUT'; 
+                if (!isInput) setShowRatingsDateDropdown(false);
+            }
         };
+
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
@@ -519,6 +590,7 @@ const AdminDashboard = () => {
                 const ratings = data.filter(item => item.relevant !== null);
                 setMaterialRatings(ratings.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
 
+                // ---------- Trend Calculation (global, based on all data) ----------
                 const now = new Date();
                 const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
                 const twoWeeksAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
@@ -529,8 +601,30 @@ const AdminDashboard = () => {
                 }).length;
                 setRatingsTrend(lastWeek - prevWeek);
             }
-        } catch (error) { console.error("Failed to load ratings", error); }
+        } catch (error) { console.error(error); }
         finally { setLoading(false); }
+    };
+
+    const fetchLeastAccessedMaterials = async () => {
+        try {
+            const res = await fetch(`${API_BASE_URL}/dashboard/least-browsed/`);
+            if (res.ok) {
+                const data = await res.json();
+                setLeastAccessedMaterials(data);
+            }
+        } catch (error) { console.error("Failed to load least accessed materials", error); }
+    };
+
+    const fetchDormantCount = async () => {
+        try {
+            const res = await fetch(`${API_BASE_URL}/dashboard/dormant-count/`);
+            if (res.ok) {
+                const data = await res.json();
+                setDormantCount(data.count);
+            }
+        } catch (error) {
+            console.error("Failed to fetch dormant count", error);
+        }
     };
 
     // ---------- Toast ----------
@@ -616,7 +710,45 @@ const AdminDashboard = () => {
         );
     };
 
-    // ---------- Export Data to CSV ----------
+    // --- HELPER LOGIC FOR RATINGS TAB VISUALS ---
+    const filteredRatings = materialRatings.filter(r => isRatingInDateRange(r.created_at));
+
+    // Now functions that depend on filteredRatings
+    const getRelevanceScore = () => {
+        if (!filteredRatings.length) return 0;
+        const positive = filteredRatings.filter(r => r.relevant === true).length;
+        return ((positive / filteredRatings.length) * 100).toFixed(0);
+    };
+
+    const getRecentNegatives = () => {
+        return materialRatings
+            .filter(r => r.relevant === false)
+            .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+            .slice(0, 3);
+    };
+
+    const getTopMaterials = (ratingsArray) => {
+        const counts = {};
+        ratingsArray.forEach(r => {
+            if (r.relevant === true) {
+                const title = r.material_title || r.document_file || 'Unknown';
+                counts[title] = (counts[title] || 0) + 1;
+            }
+        });
+        return Object.entries(counts)
+            .sort(([, a], [, b]) => b - a)
+            .slice(0, 5)
+            .map(([title, count]) => ({ title, count }));
+    };
+
+    // Then counts that depend on filteredRatings
+    const helpfulCount = filteredRatings.filter(r => r.relevant === true).length;
+    const notRelevantCount = filteredRatings.filter(r => r.relevant === false).length;
+    const totalVotes = helpfulCount + notRelevantCount;
+    const helpfulPercent = totalVotes ? (helpfulCount / totalVotes) * 100 : 0;
+
+    
+    // ---------- Overview Export Data to CSV ----------
     const handleExportCSV = () => {
         // 1. Generate a descriptive subtitle for the export
         let filterText = '';
@@ -705,6 +837,7 @@ const AdminDashboard = () => {
         
         showToast('Report exported successfully!', 'success');
     };
+
 
     // ---------- Render ----------
     return (
@@ -1711,6 +1844,7 @@ const AdminDashboard = () => {
                                     <p className="text-xs text-gray-500">Manage client satisfaction responses</p>
                                 </div>
                                 <div className="flex gap-3">
+
                                     {/* Date Filter Dropdown */}
                                     <div className="relative" ref={feedbackDateDropdownRef}>
                                         <button
@@ -2024,111 +2158,442 @@ const AdminDashboard = () => {
 
                     {/* ----- MATERIAL RATINGS TAB ----- */}
                     {activeTab === 'ratings' && (
-                        <div className="h-full flex flex-col gap-4 max-w-[1600px] mx-auto w-full overflow-y-auto">
-                            {/* Summary Cards */}
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-3 flex-none">
-                                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200">
-                                    <h3 className="text-xs font-bold text-gray-500 uppercase mb-1">Total Ratings</h3>
-                                    <p className="text-2xl font-bold text-gray-800">{materialRatings.length}</p>
-                                    <p className="text-xs text-gray-500 mt-0.5">All time</p>
+                        <div className="h-full flex flex-col gap-2 max-w-[1600px] mx-auto w-full overflow-y-auto pb-8 pr-2">
+
+                            {/* 1. Header & Filter Section */}
+                            <div className="flex flex-col sm:flex-row justify-between items-end sm:items-center gap-4">
+                                <div>
+                                    <h2 className="text-xl font-bold text-gray-800">Content Relevance & Quality</h2>
+                                    <p className="text-sm text-gray-500">Monitor user satisfaction and identify materials for archiving.</p>
                                 </div>
-                                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200">
-                                    <h3 className="text-xs font-bold text-gray-500 uppercase mb-1">Average Rating</h3>
-                                    <div className="flex items-end gap-1">
-                                        <p className="text-2xl font-bold text-gray-800">
-                                            {materialRatings.length > 0
-                                                ? (materialRatings.reduce((acc, r) => acc + (r.rating || 0), 0) / materialRatings.length).toFixed(1)
-                                                : '0.0'}
+                                
+                                {/* Date Filter Dropdown */}
+                                <div className="relative" ref={ratingsDateDropdownRef}>
+                                    <button
+                                        onClick={() => setShowRatingsDateDropdown(!showRatingsDateDropdown)}
+                                        className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-700 hover:bg-gray-50 text-sm font-medium shadow-sm transition-all"
+                                    >
+                                        <Calendar size={16} className="text-gray-500" />
+                                        <span>
+                                            {ratingsDateFilterType === 'All' && 'All Time'}
+                                            {ratingsDateFilterType === 'Year' && `Year ${ratingsSelectedYear}`}
+                                            {ratingsDateFilterType === 'Last 7 days' && 'Last 7 Days'}
+                                            {ratingsDateFilterType === 'Month' && `${new Date(0, ratingsSelectedMonth - 1).toLocaleString('default', { month: 'short' })} ${ratingsSelectedMonthYear}`}
+                                            {ratingsDateFilterType === 'Custom range' && 'Custom Range'}
+                                        </span>
+                                        <ChevronDown size={14} />
+                                    </button>
+
+                                    {showRatingsDateDropdown && (
+                                        <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-30 min-w-[260px] p-3 animate-fadeIn">
+                                            {/* Filter type options */}
+                                            {ratingsDateFilterOptions.map(opt => (
+                                                <button
+                                                    key={opt}
+                                                    onClick={() => {
+                                                        setRatingsDateFilterType(opt);
+                                                        if (opt === 'Last 7 days') setShowRatingsDateDropdown(false);
+                                                        if (opt !== 'Custom range') {
+                                                            setRatingsCustomFrom('');
+                                                            setRatingsCustomTo('');
+                                                        }
+                                                    }}
+                                                    className={`block w-full text-left px-3 py-2 text-sm rounded-lg mb-1 ${
+                                                        ratingsDateFilterType === opt
+                                                            ? 'bg-blue-50 text-blue-600 font-bold'
+                                                            : 'hover:bg-gray-50 text-gray-600'
+                                                    }`}
+                                                >
+                                                    {opt}
+                                                </button>
+                                            ))}
+
+                                            {/* Year picker */}
+                                            {ratingsDateFilterType === 'Year' && (
+                                                <div className="mt-2 pt-2 border-t border-gray-100">
+                                                    <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                        Select year
+                                                    </label>
+                                                    <select
+                                                        value={ratingsSelectedYear}
+                                                        onChange={(e) => setRatingsSelectedYear(parseInt(e.target.value))}
+                                                        className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                    >
+                                                        {yearOptions.map(year => (
+                                                            <option key={year} value={year}>{year}</option>
+                                                        ))}
+                                                    </select>
+                                                    <button
+                                                        onClick={() => setShowRatingsDateDropdown(false)}
+                                                        className="w-full mt-3 bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                    >
+                                                        Apply
+                                                    </button>
+                                                </div>
+                                            )}
+
+                                            {/* Month picker */}
+                                            {ratingsDateFilterType === 'Month' && (
+                                                <div className="mt-2 pt-2 border-t border-gray-100">
+                                                    <div className="flex flex-col gap-2">
+                                                        <div>
+                                                            <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                                Month
+                                                            </label>
+                                                            <select
+                                                                value={ratingsSelectedMonth}
+                                                                onChange={(e) => setRatingsSelectedMonth(parseInt(e.target.value))}
+                                                                className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                            >
+                                                                {Array.from({ length: 12 }, (_, i) => i + 1).map(month => (
+                                                                    <option key={month} value={month}>
+                                                                        {new Date(0, month - 1).toLocaleString('default', { month: 'long' })}
+                                                                    </option>
+                                                                ))}
+                                                            </select>
+                                                        </div>
+                                                        <div>
+                                                            <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                                Year
+                                                            </label>
+                                                            <select
+                                                                value={ratingsSelectedMonthYear}
+                                                                onChange={(e) => setRatingsSelectedMonthYear(parseInt(e.target.value))}
+                                                                className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                            >
+                                                                {yearOptions.map(year => (
+                                                                    <option key={year} value={year}>{year}</option>
+                                                                ))}
+                                                            </select>
+                                                        </div>
+                                                        <button
+                                                            onClick={() => setShowRatingsDateDropdown(false)}
+                                                            className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                        >
+                                                            Apply
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            )}
+
+                                            {/* Custom range picker */}
+                                            {ratingsDateFilterType === 'Custom range' && (
+                                                <div className="mt-2 pt-2 border-t border-gray-100">
+                                                    <div className="flex flex-col gap-2">
+                                                        <div>
+                                                            <span className="text-[10px] text-gray-500 mb-1 block">From</span>
+                                                            <input
+                                                                type="date"
+                                                                value={ratingsCustomFrom}
+                                                                onChange={(e) => setRatingsCustomFrom(e.target.value)}
+                                                                className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                            />
+                                                        </div>
+                                                        <div>
+                                                            <span className="text-[10px] text-gray-500 mb-1 block">To</span>
+                                                            <input
+                                                                type="date"
+                                                                value={ratingsCustomTo}
+                                                                onChange={(e) => setRatingsCustomTo(e.target.value)}
+                                                                className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                            />
+                                                        </div>
+                                                        <button
+                                                            onClick={() => {
+                                                                if (ratingsCustomFrom && ratingsCustomTo) {
+                                                                    setShowRatingsDateDropdown(false);
+                                                                } else {
+                                                                    showToast('Select both dates', 'error');
+                                                                }
+                                                            }}
+                                                            className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                        >
+                                                            Apply Range
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            )}
+
+                                            {/* Clear Filter button (resets to All) */}
+                                            <div className="mt-3 pt-2 border-t border-gray-100">
+                                                <button
+                                                    onClick={() => {
+                                                        setRatingsDateFilterType('All');
+                                                        setRatingsSelectedYear(new Date().getFullYear());
+                                                        setRatingsSelectedMonth(new Date().getMonth() + 1);
+                                                        setRatingsSelectedMonthYear(new Date().getFullYear());
+                                                        setRatingsCustomFrom('');
+                                                        setRatingsCustomTo('');
+                                                        setShowRatingsDateDropdown(false);
+                                                    }}
+                                                    disabled={ratingsDateFilterType === 'All'}
+                                                    className={`w-full text-xs py-1.5 rounded border transition-colors ${
+                                                        ratingsDateFilterType === 'All'
+                                                            ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                                                            : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50 hover:text-red-600'
+                                                    }`}
+                                                >
+                                                    Clear Filter
+                                                </button>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+
+                            {/* KPI Cards */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-5">
+                                
+                                {/* Total Votes */}
+                                <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                    <div className="flex items-center gap-1">
+                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+                                            <MessageSquare size={18} className="text-blue-600" /> Total Votes
                                         </p>
-                                        <span className="text-yellow-500 mb-0.5">★</span>
+                                        <div className="relative group">
+                                            <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                    Number of relevance votes (helpful / not relevant) in the selected period.
+                                                </div>
+                                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p className="text-2xl font-bold text-gray-900 mt-2">{formatNumber(filteredRatings.length)}</p>
+                                    <div className="flex items-center text-xs text-gray-500 mt-1">
+                                        <span className={`font-bold mr-1 ${ratingsTrend >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                            {ratingsTrend > 0 ? '+' : ''}{ratingsTrend}
+                                        </span>
+                                        from last week
                                     </div>
                                 </div>
-                                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200">
-                                    <h3 className="text-xs font-bold text-gray-500 uppercase mb-1">Relevance</h3>
-                                    <p className="text-2xl font-bold text-green-600">
-                                        {materialRatings.length > 0
-                                            ? ((materialRatings.filter(r => r.relevant === true).length / materialRatings.length) * 100).toFixed(1)
-                                            : '0'}%
-                                    </p>
-                                    <p className="text-xs text-gray-500 mt-0.5">positive</p>
-                                </div>
-                                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200">
-                                    <h3 className="text-xs font-bold text-gray-500 uppercase mb-1">Weekly Trend</h3>
-                                    <p className={`text-2xl font-bold ${ratingsTrend >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                                        {ratingsTrend > 0 ? '+' : ''}{ratingsTrend}
-                                    </p>
-                                    <p className="text-xs text-gray-500 mt-0.5">vs last week</p>
-                                </div>
-                            </div>
 
-                            {/* Rating Distribution */}
-                            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-                                <h3 className="font-bold text-gray-800 mb-3 text-sm">Rating Distribution</h3>
-                                <div className="space-y-2">
-                                    {[5, 4, 3, 2, 1].map(star => {
-                                        const count = materialRatings.filter(r => r.rating === star).length;
-                                        const percent = materialRatings.length > 0 ? (count / materialRatings.length * 100).toFixed(1) : 0;
-                                        return (
-                                            <div key={star} className="flex items-center gap-2 text-xs">
-                                                <span className="w-10 font-medium">{star} ★</span>
-                                                <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                                                    <div
-                                                        className="h-full bg-yellow-400 rounded-full"
-                                                        style={{ width: `${percent}%` }}
-                                                    />
+                                {/* Relevance Score */}
+                                <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                    <div className="flex items-center gap-1">
+                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+                                            <Star size={18} className="text-yellow-500" /> Relevance Score
+                                        </p>
+                                        <div className="relative group">
+                                            <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                    Percentage of votes marked as helpful.
                                                 </div>
-                                                <span className="w-16 text-gray-600">{count} ({percent}%)</span>
+                                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
                                             </div>
-                                        );
-                                    })}
+                                        </div>
+                                    </div>
+                                    <div className="flex items-baseline gap-2 mt-2">
+                                        <p className="text-2xl font-bold text-gray-900">{getRelevanceScore()}%</p>
+                                        <span className="text-xs text-gray-400">satisfaction</span>
+                                    </div>
+                                    <div className="w-full bg-gray-100 rounded-full h-1.5 mt-2">
+                                        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 h-1.5 rounded-full" style={{ width: `${getRelevanceScore()}%` }}></div>
+                                    </div>
+                                </div>
+
+                                {/* Helpful */}
+                                <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                    <div className="flex items-center gap-1">
+                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+                                            <ThumbsUp size={18} className="text-green-600" /> Helpful
+                                        </p>
+                                        <div className="relative group">
+                                            <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                    Number of materials rated as relevant.
+                                                </div>
+                                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p className="text-2xl font-bold text-green-600 mt-2">
+                                        {filteredRatings.filter(r => r.relevant === true).length}
+                                    </p>
+                                    <p className="text-xs text-gray-400 mt-1">Rated as relevant</p>
+                                </div>
+
+                                {/* Dormant Materials */}
+                                <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                                    <div className="flex items-center gap-1">
+                                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider flex items-center gap-1">
+                                            <LogOut size={18} className="text-purple-600" /> Dormant Materials
+                                        </p>
+                                        <div className="relative group">
+                                            <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                    Number of materials that have never been accessed.
+                                                </div>
+                                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p className="text-2xl font-bold text-gray-900 mt-2">{formatNumber(dormantCount)}</p>
+                                    <p className="text-xs text-gray-400 mt-1">Never accessed</p>
                                 </div>
                             </div>
 
-                            {/* Recent Ratings Table */}
-                            <div className="flex-1 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-                                <div className="p-4 border-b border-gray-100 bg-gray-50">
-                                    <h3 className="font-bold text-gray-800">Content Relevance Ratings</h3>
-                                    <p className="text-xs text-gray-500 mt-0.5">Based on specific material thumbs up/down actions</p>
+                            {/* Top Rated & Least Accessed Grid */}
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 mt-2">
+
+                                {/* 1. Top Rated Materials */}
+                                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex flex-col h-full">
+                                    <div className="flex items-center justify-between mb-2 border-b border-gray-100 pb-3">
+                                        <h3 className="font-bold text-gray-800 text-sm flex items-center gap-2">
+                                            <ThumbsUp size={16} className="text-blue-600" /> 
+                                            Top Rated Materials
+                                        </h3>
+                                        <span className="text-[10px] text-gray-400 uppercase tracking-wider">Most Relevant</span>
+                                    </div>
+
+                                    <div className="flex-1 overflow-y-auto max-h-[300px] pr-1">
+                                        {getTopMaterials(filteredRatings).length > 0 ? (
+                                            getTopMaterials(filteredRatings).map((item, index) => {
+                                                const maxCount = getTopMaterials(filteredRatings)[0].count;
+                                                return (
+                                                    <div
+                                                        key={index}
+                                                        className={`flex items-start gap-2 p-1.5 hover:bg-gray-100 rounded-lg transition-colors border border-transparent hover:border-gray-100 cursor-pointer ${
+                                                            selectedMaterialFilter === item.title ? 'bg-green-100 border-green-300' : ''
+                                                        }`}
+                                                    >
+                                                        <div className={`flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold ${
+                                                            index === 0 ? 'bg-yellow-100 text-yellow-700' : 
+                                                            index === 1 ? 'bg-gray-100 text-gray-600' : 
+                                                            index === 2 ? 'bg-orange-100 text-orange-700' : 'bg-white border border-gray-200 text-gray-500'
+                                                        }`}>
+                                                            {index + 1}
+                                                        </div>
+
+                                                        <div className="flex-1 min-w-0">
+                                                            <p className="text-xs font-medium text-gray-800 truncate" title={item.title}>
+                                                                {item.title}
+                                                            </p>
+                                                            <div className="flex items-center gap-2 mt-1">
+                                                                <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
+                                                                    <div 
+                                                                        className="h-full bg-blue-500 rounded-full" 
+                                                                        style={{ width: `${(item.count / maxCount) * 100}%` }}
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex-shrink-0 text-right">
+                                                            <span className="text-xs font-bold" style={{ color: '#22c55e' }}>{item.count}</span>
+                                                            <span className="text-[10px] text-gray-400 block">likes</span>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })
+                                        ) : (
+                                            <div className="h-full flex flex-col items-center justify-center text-gray-400 min-h-[150px]">
+                                                <Star size={24} className="mb-2 opacity-20" />
+                                                <p className="text-xs">No positive ratings yet</p>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
-                                <div className="flex-1 overflow-auto">
-                                    <table className="min-w-full divide-y divide-gray-200">
-                                        <thead className="bg-gray-50 sticky top-0">
-                                            <tr>
-                                                <th className="px-4 py-2 text-left text-xs font-bold text-gray-500 uppercase">Search Query</th>
-                                                <th className="px-4 py-2 text-left text-xs font-bold text-gray-500 uppercase">Relevance</th>
-                                                <th className="px-4 py-2 text-left text-xs font-bold text-gray-500 uppercase">Comment</th>
-                                                <th className="px-4 py-2 text-left text-xs font-bold text-gray-500 uppercase">Date</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="divide-y divide-gray-100">
-                                            {materialRatings.length > 0 ? materialRatings.map((rating) => (
-                                                <tr key={rating.id} className="hover:bg-gray-50">
-                                                    <td className="px-4 py-2 text-sm text-gray-900 max-w-xs truncate" title={rating.query || 'N/A'}>
-                                                        {rating.query || <span className="text-gray-400 italic">N/A</span>}
-                                                    </td>
-                                                    <td className="px-4 py-2">
-                                                        {rating.relevant ? (
-                                                            <span className="inline-flex items-center gap-1 text-green-700 bg-green-50 px-2 py-0.5 rounded text-xs font-bold border border-green-100">
-                                                                <CheckCircle size={12} /> Relevant
+
+                                {/* 2. Least Accessed Materials */}
+                                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex flex-col h-full">
+                                    <div className="flex items-center justify-between mb-2 border-b border-gray-100 pb-3">
+                                        <h3 className="font-bold text-gray-800 text-sm flex items-center gap-2">
+                                            <LogOut size={16} className="text-red-500" /> 
+                                            Top 7 Least Accessed Materials
+                                        </h3>
+                                        <span className="text-[10px] text-gray-400 uppercase tracking-wider">Low Engagement</span>
+                                    </div>
+
+                                    <div className="flex-1 overflow-y-auto max-h-[400px] pr-1">
+                                        {leastAccessedMaterials.length > 0 ? (
+                                            <div className="space-y-2">
+                                                {leastAccessedMaterials.slice(0, 7).map((item, index) => (
+                                                    <div key={index} className="flex items-center justify-between p-1.5 hover:bg-red-50 rounded-lg transition-colors border border-transparent hover:border-red-100 group">
+                                                        <div className="flex items-center gap-2 overflow-hidden">
+                                                            <div className="flex-shrink-0 bg-red-100 text-red-600 p-1.5 rounded-md">
+                                                                <BookOpen size={14} className="text-red-600" />
+                                                            </div>
+                                                            <div className="min-w-0">
+                                                                <p className="text-xs font-medium text-gray-700 truncate group-hover:text-gray-900" title={item.title}>
+                                                                    {item.title}
+                                                                </p>
+                                                                <p className="text-[10px] text-gray-400 flex items-center gap-1">
+                                                                    <Clock size={10} />
+                                                                    Last accessed: {item.last_accessed ? new Date(item.last_accessed).toLocaleDateString() : 'Never'}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="flex-shrink-0 text-right pl-2">
+                                                            <span className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-[10px] font-bold border border-gray-200">
+                                                                {item.view_count || 0} views
                                                             </span>
-                                                        ) : (
-                                                            <span className="inline-flex items-center gap-1 text-red-700 bg-red-50 px-2 py-0.5 rounded text-xs font-bold border border-red-100">
-                                                                <X size={12} /> Not Relevant
-                                                            </span>
-                                                        )}
-                                                    </td>
-                                                    <td className="px-4 py-2 text-sm text-gray-500 italic max-w-xs truncate">
-                                                        "{rating.comment || <span className="text-gray-400">No comment provided</span>}"
-                                                    </td>
-                                                    <td className="px-4 py-2 text-sm text-gray-500">
-                                                        {new Date(rating.created_at).toLocaleDateString()}
-                                                    </td>
-                                                </tr>
-                                            )) : (
-                                                <tr><td colSpan="4" className="p-8 text-center text-gray-400 text-sm">No material ratings recorded.</td></tr>
-                                            )}
-                                        </tbody>
-                                    </table>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            <div className="h-full flex flex-col items-center justify-center text-gray-400 min-h-[150px]">
+                                                <BookOpen size={24} className="mb-2 opacity-20" />
+                                                <p className="text-xs">No low-traffic materials found</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {/* Column 3: Rating Distribution (top) + placeholder (bottom) */}
+                                <div className="flex flex-col gap-2 h-full min-h-[300px]">
+
+                                    {/* Top half: Rating Distribution */}
+                                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex-1">
+                                        <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide mb-3 flex items-center gap-2">
+                                            <BarChart3 size={16} className="text-blue-600" /> Rating Distribution
+                                        </h3>
+                                        {filteredRatings.length > 0 ? (
+                                            <div className="flex flex-col md:flex-row items-center gap-4">
+                                                {/* Donut with centered total */}
+                                                <div className="relative w-32 h-32 flex-shrink-0">
+                                                    <div
+                                                        className="w-full h-full rounded-full"
+                                                        style={{
+                                                            background: `conic-gradient(#22c55e 0% ${helpfulPercent}%, #ef4444 ${helpfulPercent}% 100%)`,
+                                                            mask: 'radial-gradient(circle at 50% 50%, transparent 50%, black 51%)',
+                                                            WebkitMask: 'radial-gradient(circle at 50% 50%, transparent 50%, black 51%)'
+                                                        }}
+                                                    />
+                                                    <div className="absolute inset-0 flex items-center justify-center text-xs font-bold text-gray-700">
+                                                        {filteredRatings.length} total
+                                                    </div>
+                                                </div>
+                                                {/* Legend */}
+                                                <div className="flex-1 space-y-1 px-6">
+                                                    <div className="flex items-center gap-2 text-[10px]">
+                                                        <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#22c55e' }}></span>
+                                                        <span className="flex-1">Helpful</span>
+                                                        <span className="font-semibold text-gray-700">{helpfulCount} ({helpfulPercent.toFixed(1)}%)</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-2 text-[10px]">
+                                                        <span className="w-3 h-3 rounded-full" style={{ backgroundColor: '#ef4444' }}></span>
+                                                        <span className="flex-1">Not relevant</span>
+                                                        <span className="font-semibold text-gray-700">{notRelevantCount} {(100 - helpfulPercent).toFixed(1)}%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <div className="h-full flex items-center justify-center text-gray-400 text-sm">
+                                                No ratings yet
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Bottom half: placeholder for future widget */}
+                                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex-1">
+                                        <p className="text-gray-400 text-sm italic">Additional insights coming soon...</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

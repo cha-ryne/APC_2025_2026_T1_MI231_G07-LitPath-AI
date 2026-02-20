@@ -1348,7 +1348,8 @@ const handleFeedbackConfirm = async () => {
                 query: searchQuery,
                 rating: isRelevant ? 5 : 1, // 5 for thumbs up, 1 for thumbs down
                 relevant: isRelevant,
-                comment: feedbackComment.trim() || null
+                comment: feedbackComment.trim() || null,
+                document_file: selectedSource?.file || selectedSource?.fullTextPath
             })
         });
         
@@ -1394,7 +1395,8 @@ const handleFeedbackConfirm = async () => {
                     query: searchQuery,
                     rating: rating,
                     relevant: feedbackRelevant,
-                    comment: feedbackComment.trim() || null
+                    comment: feedbackComment.trim() || null,
+                    document_file: selectedSource?.file || selectedSource?.fullTextPath
                 })
             });
             
