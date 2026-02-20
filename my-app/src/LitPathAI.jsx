@@ -63,6 +63,7 @@ const LitPathAI = () => {
     const [researchHistory, setResearchHistory] = useState([]);
     const [showResearchHistory, setShowResearchHistory] = useState(false);
     const [currentSessionId, setCurrentSessionId] = useState(null);
+    const [pendingDeleteSession, setPendingDeleteSession] = useState(null);
     const [hasSearchedInSession, setHasSearchedInSession] = useState(false);
     const [isLoadedFromHistory, setIsLoadedFromHistory] = useState(false);
     const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
@@ -1562,6 +1563,7 @@ return (
                         deleteHistorySession={deleteHistorySession}
                         setShowResearchHistory={setShowResearchHistory}
                         navigate={navigate}
+                        setPendingDeleteSession={setPendingDeleteSession}
                     />
                 </div>
                 <div className="flex-1 bg-black bg-opacity-40" onClick={() => setSidebarOpen(false)} />
@@ -1602,6 +1604,7 @@ return (
                         deleteHistorySession={deleteHistorySession}
                         setShowResearchHistory={setShowResearchHistory}
                         navigate={navigate}
+                        setPendingDeleteSession={setPendingDeleteSession}
                     />
                 </div>
             </aside>
@@ -2423,7 +2426,7 @@ return (
                                             <button
                                                 onClick={(e) => {
                                                     e.stopPropagation();
-                                                    deleteHistorySession(session.id);
+                                                    setPendingDeleteSession(session.id);
                                                 }}
                                                 className="text-red-500 hover:text-red-700 flex-shrink-0 p-2"
                                                 title="Delete session"
@@ -2727,6 +2730,65 @@ return (
             </div>
         )}
 
+        {/* Delete Session Confirmation Modal */}
+        {pendingDeleteSession && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+                <div className="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden">
+                    {/* Header */}
+                    <div className="bg-red-50 border-b border-red-100 p-6">
+                        <div className="flex items-center gap-3">
+                            <div className="bg-red-100 p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900">Delete Session?</h3>
+                                <p className="text-sm text-gray-500 mt-1">This action cannot be undone</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6">
+                        <p className="text-gray-600 mb-6">
+                            Are you sure you want to delete this research session? This will permanently remove it from your history and all associated data will be lost.
+                        </p>
+                        <div className="flex gap-3 justify-end">
+                            <button
+                                onClick={() => setPendingDeleteSession(null)}
+                                className="px-5 py-2.5 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors flex items-center gap-2"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                                Cancel
+                            </button>
+                            <button
+                                onClick={() => {
+                                    deleteHistorySession(pendingDeleteSession);
+                                    setPendingDeleteSession(null);
+                                }}
+                                className="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors flex items-center gap-2"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                </svg>
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )}
+
         {/* CSM Feedback Modal */}
         <CSMModal 
             isOpen={showCSMModal} 
@@ -2766,7 +2828,8 @@ function SidebarContent({
     loadHistorySession,
     deleteHistorySession,
     setShowResearchHistory,
-    navigate
+    navigate,
+    setPendingDeleteSession
 }) {
     return (
         <div className="flex flex-col h-full">
@@ -2808,7 +2871,7 @@ function SidebarContent({
                                     {session.mainQuery || session.query}
                                 </p>
                                 <button
-                                    onClick={e => { e.stopPropagation(); deleteHistorySession(session.id); }}
+                                    onClick={e => { e.stopPropagation(); setPendingDeleteSession(session.id); }}
                                     className="text-gray-400 hover:text-red-500 flex-shrink-0 p-1"
                                     title="Delete"
                                 >
