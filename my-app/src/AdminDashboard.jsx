@@ -719,29 +719,55 @@ const AdminDashboard = () => {
             return;
         }
 
-        let csvContent = "";
-        const addRow = (rowArray) => {
-            const formattedRow = rowArray.map(col => {
-                const cell = col === null || col === undefined ? "" : String(col);
-                return `"${cell.replace(/"/g, '""')}"`; // Escape quotes
-            }).join(",");
-            csvContent += formattedRow + "\r\n";
+        // Determine filter description based on current feedback filter
+        let filterDescription = '';
+        if (feedbackDateFilterType === 'Year') {
+            filterDescription = `Year ${feedbackSelectedYear}`;
+        } else if (feedbackDateFilterType === 'Month') {
+            const monthName = new Date(feedbackSelectedMonthYear, feedbackSelectedMonth - 1)
+                .toLocaleString('default', { month: 'long' });
+            filterDescription = `${monthName} ${feedbackSelectedMonthYear}`;
+        } else if (feedbackDateFilterType === 'Last 7 days') {
+            const to = new Date();
+            const from = new Date();
+            from.setDate(to.getDate() - 7);
+            filterDescription = `Last 7 days (${from.toLocaleDateString()} to ${to.toLocaleDateString()})`;
+        } else if (feedbackDateFilterType === 'Custom range' && feedbackCustomFrom && feedbackCustomTo) {
+            filterDescription = `${feedbackCustomFrom} to ${feedbackCustomTo}`;
+        } else {
+            filterDescription = 'All time';
+        }
+
+        const rows = [];
+        const exportDate = new Date().toLocaleDateString();
+
+        // Helper to escape CSV fields
+        const escape = (text) => {
+            if (text === null || text === undefined) return '';
+            const str = String(text);
+            return `"${str.replace(/"/g, '""')}"`;
         };
 
-        // CSV Header (match table columns, excluding the "Action" button)
-        addRow([
-            "Date",
-            "Client Type",
-            "Rating",
-            "User Category",
-            "Region",
-            "Comment",
-            "Status",
-            "Valid?",
-            "Doable?"
-        ]);
+        // Helper to get local date in YYYY-MM-DD for filename
+        const getLocalDateString = () => {
+            const d = new Date();
+            const year = d.getFullYear();
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        };
 
-        // Data rows
+        // --- SECTION 1: REPORT HEADER ---
+        rows.push(["LITPATH AI - FEEDBACK REPORT"]);
+        rows.push(["Export Date", exportDate]);
+        rows.push(["Filter Period", filterDescription]);
+        rows.push(["Total Feedback Entries", filteredFeedbacks.length]);
+        rows.push([]); // empty line
+
+        // --- SECTION 2: COLUMN HEADERS ---
+        rows.push(["Date", "Client Type", "Rating", "User Category", "Region", "Comment", "Status", "Valid?", "Doable?"]);
+
+        // --- SECTION 3: DATA ROWS ---
         filteredFeedbacks.forEach(fb => {
             // Rating as words (e.g., "5 stars", "1 star")
             let ratingText = '';
@@ -755,28 +781,32 @@ const AdminDashboard = () => {
                 ? fb.message_comment 
                 : 'N/A';
 
-            addRow([
-                new Date(fb.created_at).toLocaleDateString(),
-                fb.client_type || '',
-                ratingText,
-                fb.category || '',
-                fb.region || '',
-                comment,
-                fb.status || '',
+            rows.push([
+                escape(new Date(fb.created_at).toLocaleDateString()),
+                escape(fb.client_type || ''),
+                escape(ratingText),
+                escape(fb.category || ''),
+                escape(fb.region || ''),
+                escape(comment),
+                escape(fb.status || ''),
                 fb.is_valid === true ? 'Yes' : fb.is_valid === false ? 'No' : '',
                 fb.is_doable === true ? 'Yes' : fb.is_doable === false ? 'No' : ''
             ]);
         });
 
-        // Trigger download
-        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        // Convert rows to CSV string
+        const csvContent = rows.map(row => row.join(',')).join('\r\n');
+
+        // Add BOM for UTF-8 (ensures special characters display correctly in Excel)
+        const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
-        link.setAttribute("href", url);
-        link.setAttribute("download", `LitPathAI_FeedbackReport_${new Date().toISOString().slice(0, 10)}.csv`);
+        link.href = url;
+        link.download = `LitPathAI_FeedbackReport_${getLocalDateString()}.csv`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        URL.revokeObjectURL(url);
 
         showToast('Feedback exported successfully!', 'success');
     };
@@ -1110,6 +1140,15 @@ const AdminDashboard = () => {
         else if (overviewDateFilterType === 'Last 7 days') filterText = 'Last 7 days';
         else filterText = `${overviewCustomFrom} to ${overviewCustomTo}`;
 
+        // Helper to get local date in YYYY-MM-DD for filename
+        const getLocalDateString = () => {
+            const d = new Date();
+            const year = d.getFullYear();
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        };
+
         // 2. Helper to add rows safely
         let csvContent = "";
         const addRow = (rowArray) => {
@@ -1178,19 +1217,172 @@ const AdminDashboard = () => {
             });
         }
 
-        // 4. Trigger Download
-        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        // 4. Add BOM for UTF-8 and trigger download
+        const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
-        link.setAttribute("href", url);
-        link.setAttribute("download", `LitPath_Report_${filterText.replace(/\s+/g, '_')}.csv`);
+        link.href = url;
+        link.download = `LitPathAI_Report_${getLocalDateString()}.csv`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        
+        URL.revokeObjectURL(url);
+
         showToast('Report exported successfully!', 'success');
     };
 
+
+    // ---------- Material Ratings Export Data to CSV ----------
+    const handleRatingsExportCSV = async () => {
+        // 1. Basic check
+        if (!filteredRatings || filteredRatings.length === 0) {
+            showToast('No ratings data to export', 'error');
+            return;
+        }
+
+        showToast('Generating report...', 'info');
+
+        // 2. Determine the date range based on the current filter
+        let fromDateStr = '', toDateStr = '', filterDescription = '';
+        if (ratingsDateFilterType === 'Year') {
+            fromDateStr = `${ratingsSelectedYear}-01-01`;
+            toDateStr = `${ratingsSelectedYear}-12-31`;
+            filterDescription = `Year ${ratingsSelectedYear}`;
+        } else if (ratingsDateFilterType === 'Month') {
+            const year = ratingsSelectedMonthYear;
+            const month = String(ratingsSelectedMonth).padStart(2, '0');
+            const daysInMonth = new Date(year, ratingsSelectedMonth, 0).getDate();
+            fromDateStr = `${year}-${month}-01`;
+            toDateStr = `${year}-${month}-${daysInMonth}`;
+            const monthName = new Date(year, ratingsSelectedMonth-1).toLocaleString('default', { month: 'long' });
+            filterDescription = `${monthName} ${year}`;
+        } else if (ratingsDateFilterType === 'Last 7 days') {
+            const to = new Date();
+            const from = new Date();
+            from.setDate(to.getDate() - 7);
+            fromDateStr = from.toISOString().slice(0, 10);
+            toDateStr = to.toISOString().slice(0, 10);
+            filterDescription = `Last 7 days (${from.toLocaleDateString()} to ${to.toLocaleDateString()})`;
+        } else if (ratingsDateFilterType === 'Custom range' && ratingsCustomFrom && ratingsCustomTo) {
+            fromDateStr = ratingsCustomFrom;
+            toDateStr = ratingsCustomTo;
+            filterDescription = `${fromDateStr} to ${toDateStr}`;
+        } else {
+            // 'All' – no specific range
+            filterDescription = 'All time';
+        }
+
+        // 3. FETCH LEAST ACCESSED MATERIALS (dormant list)
+        let allLeastAccessed = [];
+        try {
+            const token = localStorage.getItem('token') || localStorage.getItem('access_token');
+            const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
+
+            const response = await fetch(`${API_BASE_URL}/dashboard/least-browsed/?limit=1000`, {
+                headers: headers
+            });
+            if (response.ok) {
+                allLeastAccessed = await response.json();
+            } else {
+                console.warn('Failed to fetch least accessed materials, status:', response.status);
+            }
+        } catch (error) {
+            console.error('Error fetching least accessed materials:', error);
+            alert(`Warning: Could not download the Dormant Materials list.\nReason: ${error.message}`);
+        }
+
+        // Helper to escape CSV fields
+        const escape = (text) => {
+            if (text === null || text === undefined) return '';
+            const str = String(text);
+            return `"${str.replace(/"/g, '""')}"`;
+        };
+
+        // Helper to get local date in YYYY-MM-DD for filename
+        const getLocalDateString = () => {
+            const d = new Date();
+            const year = d.getFullYear();
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        };
+
+        const rows = [];
+        const exportDate = new Date().toLocaleDateString();
+
+        // --- SECTION 1: REPORT HEADER ---
+        rows.push(["LITPATH AI - CONTENT QUALITY REPORT"]);
+        rows.push(["Export Date", exportDate]);
+        rows.push(["Filter Period", filterDescription]);
+        rows.push(["Total Ratings (filtered)", filteredRatings.length]);
+
+        const dormantCount = allLeastAccessed.filter(m => m.view_count === 0).length;
+        rows.push(["Dormant Materials (0 Views)", dormantCount]);
+        rows.push([]); // empty line
+
+        // --- SECTION 2: RATINGS LOG ---
+        rows.push(["RATINGS LOG"]);
+        rows.push(["Date", "Material Title", "Rating", "Score", "Comment"]);
+
+        filteredRatings.forEach(r => {
+            const date = new Date(r.created_at);
+            const dateStr = !isNaN(date) ? date.toLocaleDateString() : '-';
+            const title = r.material_title || r.document_file || 'Unknown';
+            const rating = r.relevant === true ? 'Helpful' : 'Not Relevant';
+            const score = r.relevant === true ? 1 : 0;
+            const comment = r.message_comment && r.message_comment.trim() !== '' ? r.message_comment : '-';
+
+            rows.push([
+                escape(dateStr),
+                escape(title),
+                escape(rating),
+                score,
+                escape(comment)
+            ]);
+        });
+
+        rows.push([]);
+        rows.push([]);
+
+        // --- SECTION 3: LEAST ACCESSED MATERIALS (ARCHIVE CANDIDATES) ---
+        rows.push(["--- PART 2: LEAST ACCESSED MATERIALS (ARCHIVE CANDIDATES) ---"]);
+
+        if (allLeastAccessed && allLeastAccessed.length > 0) {
+            rows.push(["Material Title", "Year", "Last Accessed", "Total Views", "Status"]);
+
+            allLeastAccessed.forEach(m => {
+                const lastAccess = m.last_accessed ? new Date(m.last_accessed).toLocaleDateString() : 'Never';
+                const views = m.view_count || 0;
+                const status = views === 0 ? "DORMANT (0 Views)" : "Low Engagement";
+
+                rows.push([
+                    escape(m.title || m.file || 'Unknown'),
+                    escape(m.year || '-'),
+                    escape(lastAccess),
+                    views,
+                    escape(status)
+                ]);
+            });
+        } else {
+            rows.push(["Note: No least accessed data found. (Check API connection)"]);
+        }
+
+        // Convert rows to CSV string
+        const csvContent = rows.map(row => row.join(',')).join('\r\n');
+
+        // Add BOM for UTF-8
+        const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `LitPathAI_MaterialReport_${getLocalDateString()}.csv`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+
+        showToast('Report exported successfully!', 'success');
+    };
 
     // ---------- RENDER ----------
     return (
@@ -2528,178 +2720,190 @@ const AdminDashboard = () => {
                                     <h2 className="text-xl font-bold text-gray-800">Content Relevance & Quality</h2>
                                     <p className="text-sm text-gray-500">Monitor user satisfaction and identify materials for archiving.</p>
                                 </div>
-                                
-                                {/* Date Filter Dropdown */}
-                                <div className="relative" ref={ratingsDateDropdownRef}>
+
+                                <div className="flex gap-2">
+                                    {/* Export Button */}
                                     <button
-                                        onClick={() => setShowRatingsDateDropdown(!showRatingsDateDropdown)}
-                                        className="flex items-center space-x-2 px-3 py-1.5 border border-gray-400 rounded-md bg-white text-gray-650 hover:bg-gray-100 text-xs font-medium"
+                                        onClick={handleRatingsExportCSV}
+                                        className="flex items-center space-x-2 px-3 py-1.5 border border-[#1E74BC] rounded-md bg-white text-[#1E74BC] hover:bg-blue-50 text-xs font-bold transition-colors shadow-sm"
+                                        title="Export filtered ratings to CSV"
                                     >
-                                        <Calendar size={14} />
-                                        <span>
-                                            {ratingsDateFilterType === 'All' && 'All Time'}
-                                            {ratingsDateFilterType === 'Year' && `Year ${ratingsSelectedYear}`}
-                                            {ratingsDateFilterType === 'Last 7 days' && 'Last 7 Days'}
-                                            {ratingsDateFilterType === 'Month' && `${new Date(0, ratingsSelectedMonth - 1).toLocaleString('default', { month: 'short' })} ${ratingsSelectedMonthYear}`}
-                                            {ratingsDateFilterType === 'Custom range' && 'Custom Range'}
-                                        </span>
-                                        <ChevronDown size={14} />
+                                        <Download size={14} />
+                                        <span>Export Data</span>
                                     </button>
+                                
+                                    {/* Date Filter Dropdown */}
+                                    <div className="relative" ref={ratingsDateDropdownRef}>
+                                        <button
+                                            onClick={() => setShowRatingsDateDropdown(!showRatingsDateDropdown)}
+                                            className="flex items-center space-x-2 px-3 py-1.5 border border-gray-400 rounded-md bg-white text-gray-650 hover:bg-gray-100 text-xs font-medium"
+                                        >
+                                            <Calendar size={14} />
+                                            <span>
+                                                {ratingsDateFilterType === 'All' && 'All Time'}
+                                                {ratingsDateFilterType === 'Year' && `Year ${ratingsSelectedYear}`}
+                                                {ratingsDateFilterType === 'Last 7 days' && 'Last 7 Days'}
+                                                {ratingsDateFilterType === 'Month' && `${new Date(0, ratingsSelectedMonth - 1).toLocaleString('default', { month: 'short' })} ${ratingsSelectedMonthYear}`}
+                                                {ratingsDateFilterType === 'Custom range' && 'Custom Range'}
+                                            </span>
+                                            <ChevronDown size={14} />
+                                        </button>
 
-                                    {showRatingsDateDropdown && (
-                                        <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-30 min-w-[260px] p-3 animate-fadeIn">
-                                            {/* Filter type options */}
-                                            {ratingsDateFilterOptions.map(opt => (
-                                                <button
-                                                    key={opt}
-                                                    onClick={() => {
-                                                        setRatingsDateFilterType(opt);
-                                                        if (opt === 'Last 7 days') setShowRatingsDateDropdown(false);
-                                                        if (opt !== 'Custom range') {
-                                                            setRatingsCustomFrom('');
-                                                            setRatingsCustomTo('');
-                                                        }
-                                                    }}
-                                                    className={`block w-full text-left px-3 py-2 text-sm rounded-lg mb-1 ${
-                                                        ratingsDateFilterType === opt
-                                                            ? 'bg-blue-50 text-blue-600 font-bold'
-                                                            : 'hover:bg-gray-50 text-gray-600'
-                                                    }`}
-                                                >
-                                                    {opt}
-                                                </button>
-                                            ))}
-
-                                            {/* Year picker */}
-                                            {ratingsDateFilterType === 'Year' && (
-                                                <div className="mt-2 pt-2 border-t border-gray-100">
-                                                    <label className="block text-[10px] font-medium text-gray-500 mb-1">
-                                                        Select year
-                                                    </label>
-                                                    <select
-                                                        value={ratingsSelectedYear}
-                                                        onChange={(e) => setRatingsSelectedYear(parseInt(e.target.value))}
-                                                        className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
-                                                    >
-                                                        {yearOptions.map(year => (
-                                                            <option key={year} value={year}>{year}</option>
-                                                        ))}
-                                                    </select>
+                                        {showRatingsDateDropdown && (
+                                            <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-30 min-w-[260px] p-3 animate-fadeIn">
+                                                {/* Filter type options */}
+                                                {ratingsDateFilterOptions.map(opt => (
                                                     <button
-                                                        onClick={() => setShowRatingsDateDropdown(false)}
-                                                        className="w-full mt-3 bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                        key={opt}
+                                                        onClick={() => {
+                                                            setRatingsDateFilterType(opt);
+                                                            if (opt === 'Last 7 days') setShowRatingsDateDropdown(false);
+                                                            if (opt !== 'Custom range') {
+                                                                setRatingsCustomFrom('');
+                                                                setRatingsCustomTo('');
+                                                            }
+                                                        }}
+                                                        className={`block w-full text-left px-3 py-2 text-sm rounded-lg mb-1 ${
+                                                            ratingsDateFilterType === opt
+                                                                ? 'bg-blue-50 text-blue-600 font-bold'
+                                                                : 'hover:bg-gray-50 text-gray-600'
+                                                        }`}
                                                     >
-                                                        Apply
+                                                        {opt}
                                                     </button>
-                                                </div>
-                                            )}
+                                                ))}
 
-                                            {/* Month picker */}
-                                            {ratingsDateFilterType === 'Month' && (
-                                                <div className="mt-2 pt-2 border-t border-gray-100">
-                                                    <div className="flex flex-col gap-2">
-                                                        <div>
-                                                            <label className="block text-[10px] font-medium text-gray-500 mb-1">
-                                                                Month
-                                                            </label>
-                                                            <select
-                                                                value={ratingsSelectedMonth}
-                                                                onChange={(e) => setRatingsSelectedMonth(parseInt(e.target.value))}
-                                                                className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
-                                                            >
-                                                                {Array.from({ length: 12 }, (_, i) => i + 1).map(month => (
-                                                                    <option key={month} value={month}>
-                                                                        {new Date(0, month - 1).toLocaleString('default', { month: 'long' })}
-                                                                    </option>
-                                                                ))}
-                                                            </select>
-                                                        </div>
-                                                        <div>
-                                                            <label className="block text-[10px] font-medium text-gray-500 mb-1">
-                                                                Year
-                                                            </label>
-                                                            <select
-                                                                value={ratingsSelectedMonthYear}
-                                                                onChange={(e) => setRatingsSelectedMonthYear(parseInt(e.target.value))}
-                                                                className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
-                                                            >
-                                                                {yearOptions.map(year => (
-                                                                    <option key={year} value={year}>{year}</option>
-                                                                ))}
-                                                            </select>
-                                                        </div>
+                                                {/* Year picker */}
+                                                {ratingsDateFilterType === 'Year' && (
+                                                    <div className="mt-2 pt-2 border-t border-gray-100">
+                                                        <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                            Select year
+                                                        </label>
+                                                        <select
+                                                            value={ratingsSelectedYear}
+                                                            onChange={(e) => setRatingsSelectedYear(parseInt(e.target.value))}
+                                                            className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                        >
+                                                            {yearOptions.map(year => (
+                                                                <option key={year} value={year}>{year}</option>
+                                                            ))}
+                                                        </select>
                                                         <button
                                                             onClick={() => setShowRatingsDateDropdown(false)}
-                                                            className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                            className="w-full mt-3 bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
                                                         >
                                                             Apply
                                                         </button>
                                                     </div>
-                                                </div>
-                                            )}
+                                                )}
 
-                                            {/* Custom range picker */}
-                                            {ratingsDateFilterType === 'Custom range' && (
-                                                <div className="mt-2 pt-2 border-t border-gray-100">
-                                                    <div className="flex flex-col gap-2">
-                                                        <div>
-                                                            <span className="text-[10px] text-gray-500 mb-1 block">From</span>
-                                                            <input
-                                                                type="date"
-                                                                value={ratingsCustomFrom}
-                                                                onChange={(e) => setRatingsCustomFrom(e.target.value)}
-                                                                className="w-full text-xs border border-gray-300 rounded-md p-1.5"
-                                                            />
+                                                {/* Month picker */}
+                                                {ratingsDateFilterType === 'Month' && (
+                                                    <div className="mt-2 pt-2 border-t border-gray-100">
+                                                        <div className="flex flex-col gap-2">
+                                                            <div>
+                                                                <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                                    Month
+                                                                </label>
+                                                                <select
+                                                                    value={ratingsSelectedMonth}
+                                                                    onChange={(e) => setRatingsSelectedMonth(parseInt(e.target.value))}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                                >
+                                                                    {Array.from({ length: 12 }, (_, i) => i + 1).map(month => (
+                                                                        <option key={month} value={month}>
+                                                                            {new Date(0, month - 1).toLocaleString('default', { month: 'long' })}
+                                                                        </option>
+                                                                    ))}
+                                                                </select>
+                                                            </div>
+                                                            <div>
+                                                                <label className="block text-[10px] font-medium text-gray-500 mb-1">
+                                                                    Year
+                                                                </label>
+                                                                <select
+                                                                    value={ratingsSelectedMonthYear}
+                                                                    onChange={(e) => setRatingsSelectedMonthYear(parseInt(e.target.value))}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5 focus:ring-blue-500 focus:border-blue-500"
+                                                                >
+                                                                    {yearOptions.map(year => (
+                                                                        <option key={year} value={year}>{year}</option>
+                                                                    ))}
+                                                                </select>
+                                                            </div>
+                                                            <button
+                                                                onClick={() => setShowRatingsDateDropdown(false)}
+                                                                className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                            >
+                                                                Apply
+                                                            </button>
                                                         </div>
-                                                        <div>
-                                                            <span className="text-[10px] text-gray-500 mb-1 block">To</span>
-                                                            <input
-                                                                type="date"
-                                                                value={ratingsCustomTo}
-                                                                onChange={(e) => setRatingsCustomTo(e.target.value)}
-                                                                className="w-full text-xs border border-gray-300 rounded-md p-1.5"
-                                                            />
-                                                        </div>
-                                                        <button
-                                                            onClick={() => {
-                                                                if (ratingsCustomFrom && ratingsCustomTo) {
-                                                                    setShowRatingsDateDropdown(false);
-                                                                } else {
-                                                                    showToast('Select both dates', 'error');
-                                                                }
-                                                            }}
-                                                            className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
-                                                        >
-                                                            Apply Range
-                                                        </button>
                                                     </div>
-                                                </div>
-                                            )}
+                                                )}
 
-                                            {/* Clear Filter button (resets to All) */}
-                                            <div className="mt-3 pt-2 border-t border-gray-100">
-                                                <button
-                                                    onClick={() => {
-                                                        setRatingsDateFilterType('All');
-                                                        setRatingsSelectedYear(new Date().getFullYear());
-                                                        setRatingsSelectedMonth(new Date().getMonth() + 1);
-                                                        setRatingsSelectedMonthYear(new Date().getFullYear());
-                                                        setRatingsCustomFrom('');
-                                                        setRatingsCustomTo('');
-                                                        setShowRatingsDateDropdown(false);
-                                                    }}
-                                                    disabled={ratingsDateFilterType === 'All'}
-                                                    className={`w-full text-xs py-1.5 rounded border transition-colors ${
-                                                        ratingsDateFilterType === 'All'
-                                                            ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
-                                                            : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50 hover:text-red-600'
-                                                    }`}
-                                                >
-                                                    Clear Filter
-                                                </button>
+                                                {/* Custom range picker */}
+                                                {ratingsDateFilterType === 'Custom range' && (
+                                                    <div className="mt-2 pt-2 border-t border-gray-100">
+                                                        <div className="flex flex-col gap-2">
+                                                            <div>
+                                                                <span className="text-[10px] text-gray-500 mb-1 block">From</span>
+                                                                <input
+                                                                    type="date"
+                                                                    value={ratingsCustomFrom}
+                                                                    onChange={(e) => setRatingsCustomFrom(e.target.value)}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                                />
+                                                            </div>
+                                                            <div>
+                                                                <span className="text-[10px] text-gray-500 mb-1 block">To</span>
+                                                                <input
+                                                                    type="date"
+                                                                    value={ratingsCustomTo}
+                                                                    onChange={(e) => setRatingsCustomTo(e.target.value)}
+                                                                    className="w-full text-xs border border-gray-300 rounded-md p-1.5"
+                                                                />
+                                                            </div>
+                                                            <button
+                                                                onClick={() => {
+                                                                    if (ratingsCustomFrom && ratingsCustomTo) {
+                                                                        setShowRatingsDateDropdown(false);
+                                                                    } else {
+                                                                        showToast('Select both dates', 'error');
+                                                                    }
+                                                                }}
+                                                                className="w-full bg-blue-600 text-white text-xs py-1.5 rounded hover:bg-blue-700 transition-colors font-medium"
+                                                            >
+                                                                Apply Range
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                                {/* Clear Filter button (resets to All) */}
+                                                <div className="mt-3 pt-2 border-t border-gray-100">
+                                                    <button
+                                                        onClick={() => {
+                                                            setRatingsDateFilterType('All');
+                                                            setRatingsSelectedYear(new Date().getFullYear());
+                                                            setRatingsSelectedMonth(new Date().getMonth() + 1);
+                                                            setRatingsSelectedMonthYear(new Date().getFullYear());
+                                                            setRatingsCustomFrom('');
+                                                            setRatingsCustomTo('');
+                                                            setShowRatingsDateDropdown(false);
+                                                        }}
+                                                        disabled={ratingsDateFilterType === 'All'}
+                                                        className={`w-full text-xs py-1.5 rounded border transition-colors ${
+                                                            ratingsDateFilterType === 'All'
+                                                                ? 'bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed'
+                                                                : 'bg-white text-gray-600 border-gray-300 hover:bg-gray-50 hover:text-red-600'
+                                                        }`}
+                                                    >
+                                                        Clear Filter
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </div>
-                                    )}
+                                        )}
+                                    </div>
                                 </div>
                             </div>
 
