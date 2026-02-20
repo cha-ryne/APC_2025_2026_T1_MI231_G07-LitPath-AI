@@ -710,7 +710,86 @@ const AdminDashboard = () => {
         );
     };
 
-    // --- HELPER LOGIC FOR RATINGS TAB VISUALS ---
+    // Helper to get filtered feedbacks based on current rating and date filters
+    const getFilteredFeedbacks = () => {
+        return feedbacks
+            .filter(fb => feedbackFilter === 'All' || fb.litpath_rating?.toString() === feedbackFilter)
+            .filter(fb => isFeedbackInDateRange(fb.created_at));
+    };
+
+    
+    // ---------- Feedback Manager Export Data to CSV ----------
+    const handleFeedbackExportCSV = () => {
+        const filteredFeedbacks = getFilteredFeedbacks();
+        if (filteredFeedbacks.length === 0) {
+            showToast('No data to export', 'error');
+            return;
+        }
+
+        let csvContent = "";
+        const addRow = (rowArray) => {
+            const formattedRow = rowArray.map(col => {
+                const cell = col === null || col === undefined ? "" : String(col);
+                return `"${cell.replace(/"/g, '""')}"`; // Escape quotes
+            }).join(",");
+            csvContent += formattedRow + "\r\n";
+        };
+
+        // CSV Header (match table columns, excluding the "Action" button)
+        addRow([
+            "Date",
+            "Client Type",
+            "Rating",
+            "User Category",
+            "Region",
+            "Comment",
+            "Status",
+            "Valid?",
+            "Doable?"
+        ]);
+
+        // Data rows
+        filteredFeedbacks.forEach(fb => {
+            // Rating as words (e.g., "5 stars", "1 star")
+            let ratingText = '';
+            if (fb.litpath_rating) {
+                const num = fb.litpath_rating;
+                ratingText = `${num} star${num > 1 ? 's' : ''}`;
+            }
+
+            // Comment: use "N/A" if empty
+            const comment = fb.message_comment && fb.message_comment.trim() !== '' 
+                ? fb.message_comment 
+                : 'N/A';
+
+            addRow([
+                new Date(fb.created_at).toLocaleDateString(),
+                fb.client_type || '',
+                ratingText,
+                fb.category || '',
+                fb.region || '',
+                comment,
+                fb.status || '',
+                fb.is_valid === true ? 'Yes' : fb.is_valid === false ? 'No' : '',
+                fb.is_doable === true ? 'Yes' : fb.is_doable === false ? 'No' : ''
+            ]);
+        });
+
+        // Trigger download
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.setAttribute("href", url);
+        link.setAttribute("download", `LitPathAI_FeedbackReport_${new Date().toISOString().slice(0, 10)}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        showToast('Feedback exported successfully!', 'success');
+    };
+
+
+    // --- HELPER LOGIC FOR MATERIAL RATINGS TAB VISUALS ---
     const filteredRatings = materialRatings.filter(r => isRatingInDateRange(r.created_at));
 
     // Now functions that depend on filteredRatings
@@ -1844,12 +1923,21 @@ const AdminDashboard = () => {
                                     <p className="text-xs text-gray-500">Manage client satisfaction responses</p>
                                 </div>
                                 <div className="flex gap-3">
+                                    {/* Export Button */}
+                                    <button
+                                        onClick={handleFeedbackExportCSV}
+                                        className="flex items-center space-x-2 px-3 py-1.5 border border-[#1E74BC] rounded-md bg-white text-[#1E74BC] hover:bg-blue-50 text-xs font-bold transition-colors shadow-sm"
+                                        title="Export filtered feedback to CSV"
+                                    >
+                                        <Download size={14} />
+                                        <span>Export Data</span>
+                                    </button>
 
                                     {/* Date Filter Dropdown */}
                                     <div className="relative" ref={feedbackDateDropdownRef}>
                                         <button
                                             onClick={() => setShowFeedbackDateDropdown(!showFeedbackDateDropdown)}
-                                            className="flex items-center space-x-2 px-3 py-2 border border-gray-300 rounded-md bg-white text-gray-600 hover:bg-gray-50 text-xs font-medium"
+                                            className="flex items-center space-x-2 px-3 py-1.5 border border-gray-400 rounded-md bg-white text-gray-650 hover:bg-gray-100 text-xs font-medium"
                                         >
                                             <Calendar size={14} />
                                             <span>
@@ -2024,7 +2112,7 @@ const AdminDashboard = () => {
                                     <div className="relative" ref={ratingDropdownRef}>
                                         <button
                                             onClick={() => setShowRatingDropdown(!showRatingDropdown)}
-                                            className="flex items-center space-x-2 px-3 py-2 border border-gray-300 rounded-md bg-white text-gray-600 hover:bg-gray-50 text-xs font-medium"
+                                            className="flex items-center space-x-2 px-3 py-1.5 border border-gray-400 rounded-md bg-white text-gray-650 hover:bg-gray-100 text-xs font-medium"
                                         >
                                             <span>
                                                 {feedbackFilter === 'All' ? 'All ratings' : `${feedbackFilter} Stars`}
