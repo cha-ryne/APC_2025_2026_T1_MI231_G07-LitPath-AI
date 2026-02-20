@@ -324,7 +324,7 @@ const LitPathAI = () => {
             await loadBookmarksFromDjango();
         } catch (error) {
             console.error('Error toggling bookmark:', error);
-            showToast('Failed to update bookmark. Please try again.', 'error');
+            showToast('Bookmark could not be saved', 'error');
         }
     };
 
@@ -2190,25 +2190,30 @@ return (
                         <button
                             className="mt-4 bg-[#1E74BC] text-white px-4 py-2 rounded hover:bg-[#185f99]"
                             onClick={async () => {
-                                // Copy to clipboard
-                                await navigator.clipboard.writeText(generatedCitation);
-                                showToast('Citation copied to clipboard!', 'success');
-
-                                // Track the copy event
                                 try {
-                                    await fetch(`${API_BASE_URL}/track-citation/`, {
-                                        method: 'POST',
-                                        headers: { 'Content-Type': 'application/json' },
-                                        body: JSON.stringify({
-                                            file: selectedSource?.file || selectedSource?.fullTextPath,
-                                            citation_style: selectedCitationStyle,
-                                            user_id: userId,
-                                            session_id: currentSessionId
-                                        })
-                                    });
+                                    // Copy to clipboard
+                                    await navigator.clipboard.writeText(generatedCitation);
+                                    showToast('Citation copied to clipboard!', 'success');
+
+                                    // Track the copy event
+                                    try {
+                                        await fetch(`${API_BASE_URL}/track-citation/`, {
+                                            method: 'POST',
+                                            headers: { 'Content-Type': 'application/json' },
+                                            body: JSON.stringify({
+                                                file: selectedSource?.file || selectedSource?.fullTextPath,
+                                                citation_style: selectedCitationStyle,
+                                                user_id: userId,
+                                                session_id: currentSessionId
+                                            })
+                                        });
+                                    } catch (error) {
+                                        console.error('Failed to track citation copy:', error);
+                                        // Don't show error to user – it's non‑critical
+                                    }
                                 } catch (error) {
-                                    console.error('Failed to track citation copy:', error);
-                                    // Don't show error to user – it's non‑critical
+                                    console.error('Error copying citation:', error);
+                                    showToast('Citation could not be generated!', 'error');
                                 }
                             }}
                         >
