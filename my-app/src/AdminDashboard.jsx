@@ -2806,12 +2806,20 @@ const AdminDashboard = () => {
 
                                 {/* 1. Top Rated Materials */}
                                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex flex-col h-full">
-                                    <div className="flex items-center justify-between mb-2 border-b border-gray-100 pb-3">
+                                    <div className="flex items-center gap-1.5 mb-2 border-b border-gray-100 pb-3">
                                         <h3 className="font-bold text-gray-800 text-sm flex items-center gap-2">
-                                            <ThumbsUp size={16} className="text-blue-600" /> 
+                                            <ThumbsUp size={16} className="text-blue-600" />
                                             Top Rated Materials
                                         </h3>
-                                        <span className="text-[10px] text-gray-500 italic tracking-wider">Most Relevant</span>
+                                        <div className="relative group">
+                                            <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-64">
+                                                <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                    Materials ranked by a weighted score that balances positive votes and total votes to avoid "one‑hit wonders". Higher confidence materials appear first.
+                                                </div>
+                                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div className="flex-1 overflow-y-auto max-h-[300px] pr-1">
@@ -2865,12 +2873,20 @@ const AdminDashboard = () => {
 
                                 {/* 2. Least Accessed Materials */}
                                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex flex-col h-full">
-                                    <div className="flex items-center justify-between mb-2 border-b border-gray-100 pb-3">
+                                    <div className="flex items-center gap-1.5 mb-2 border-b border-gray-100 pb-3">
                                         <h3 className="font-bold text-gray-800 text-sm flex items-center gap-2">
-                                            <LogOut size={16} className="text-red-500" /> 
+                                            <LogOut size={16} className="text-red-500" />
                                             Top 8 Least Accessed Materials
                                         </h3>
-                                        <span className="text-[10px] text-gray-500 italic tracking-wider">Low Engagement</span>
+                                        <div className="relative group">
+                                            <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-64">
+                                                <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                    Materials with the lowest number of views. Consider reviewing these for potential archiving or promotion to increase engagement.
+                                                </div>
+                                                <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div className="flex-1 overflow-y-auto max-h-[450px] pr-1">
@@ -2914,9 +2930,21 @@ const AdminDashboard = () => {
 
                                     {/* Top half: Rating Distribution */}
                                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex-1">
-                                        <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide mb-3 flex items-center gap-2">
-                                            <BarChart3 size={16} className="text-blue-600" /> Rating Distribution
-                                        </h3>
+                                        <div className="flex items-center gap-1.5 mb-3">
+                                            <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                <BarChart3 size={16} className="text-blue-600" />
+                                                Rating Distribution
+                                            </h3>
+                                            <div className="relative group">
+                                                <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-64">
+                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center">
+                                                        Breakdown of all relevance votes (helpful vs. not relevant) within the selected date range.
+                                                    </div>
+                                                    <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         {filteredRatings.length > 0 ? (
                                             <div className="flex flex-col md:flex-row items-center gap-4">
                                                 {/* Donut with centered total */}
@@ -2957,7 +2985,7 @@ const AdminDashboard = () => {
                                     {/* Rating Trend Chart */}
                                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex-1">
                                         <div className="flex items-center justify-between mb-3 flex-wrap">
-                                            <div className="flex items-center gap-1">
+                                            <div className="flex items-center gap-1.5">
                                                 <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
                                                     <TrendingUp size={16} className="text-blue-600" /> Rating Trend
                                                 </h3>
