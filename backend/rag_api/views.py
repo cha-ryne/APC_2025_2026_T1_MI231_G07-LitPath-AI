@@ -1903,7 +1903,7 @@ def dashboard_least_browsed(request):
     Useful for identifying candidates for archiving.
     """
     try:
-        limit = int(request.GET.get('limit', 7))
+        limit = int(request.GET.get('limit', 8))
         from_date, to_date = parse_date_range(request.GET.get('from'), request.GET.get('to'))
 
         with connection.cursor() as cursor:

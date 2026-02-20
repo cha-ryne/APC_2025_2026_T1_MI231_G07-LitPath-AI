@@ -90,7 +90,6 @@ const AdminDashboard = () => {
 
     // ---------- Material Ratings ----------
     const [materialRatings, setMaterialRatings] = useState([]);
-    const [ratingsTrend, setRatingsTrend] = useState(0);
 
     // ---------- Material Ratings: interactive filter ----------
     const [selectedMaterialFilter, setSelectedMaterialFilter] = useState(null);
@@ -234,7 +233,7 @@ const AdminDashboard = () => {
         return true;
     };
 
-    // ---------- DASHBOARD FETCH FUNCTIONS (all use getDateRange()) ----------
+    // ---------- OVERVIEW DASHBOARD FETCH FUNCTIONS (all use getDateRange()) ----------
     const fetchDashboardKPI = async () => {
         const { from, to } = getDateRange();
         if (overviewDateFilterType === 'Custom range' && (!from || !to)) return;
@@ -529,6 +528,7 @@ const AdminDashboard = () => {
         }
     }, [activeTab]);
 
+
     // ---------- Click outside handlers ----------
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -568,6 +568,7 @@ const AdminDashboard = () => {
         }
     }, [user]);
 
+
     // ---------- Feedback & Ratings ----------
     const fetchFeedback = async () => {
         setLoading(true);
@@ -589,20 +590,12 @@ const AdminDashboard = () => {
                 const data = await res.json();
                 const ratings = data.filter(item => item.relevant !== null);
                 setMaterialRatings(ratings.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)));
-
-                // ---------- Trend Calculation (global, based on all data) ----------
-                const now = new Date();
-                const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-                const twoWeeksAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
-                const lastWeek = ratings.filter(r => new Date(r.created_at) >= oneWeekAgo).length;
-                const prevWeek = ratings.filter(r => {
-                    const d = new Date(r.created_at);
-                    return d >= twoWeeksAgo && d < oneWeekAgo;
-                }).length;
-                setRatingsTrend(lastWeek - prevWeek);
             }
-        } catch (error) { console.error(error); }
-        finally { setLoading(false); }
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoading(false);
+        }
     };
 
     const fetchLeastAccessedMaterials = async () => {
@@ -826,6 +819,287 @@ const AdminDashboard = () => {
     const totalVotes = helpfulCount + notRelevantCount;
     const helpfulPercent = totalVotes ? (helpfulCount / totalVotes) * 100 : 0;
 
+
+    // Returns { start, end } as Date objects for the current filter
+    const getCurrentDateRange = () => {
+        const filterType = ratingsDateFilterType;
+
+        if (filterType === 'Year') {
+            const year = ratingsSelectedYear;
+            return {
+                start: new Date(year, 0, 1, 0, 0, 0, 0),
+                end: new Date(year, 11, 31, 23, 59, 59, 999)
+            };
+        } else if (filterType === 'Month') {
+            const year = ratingsSelectedMonthYear;
+            const month = ratingsSelectedMonth - 1; // 0-based
+            return {
+                start: new Date(year, month, 1, 0, 0, 0, 0),
+                end: new Date(year, month + 1, 0, 23, 59, 59, 999)
+            };
+        } else if (filterType === 'Last 7 days') {
+            const end = new Date();
+            const start = new Date();
+            start.setDate(end.getDate() - 7);
+            start.setHours(0, 0, 0, 0);
+            end.setHours(23, 59, 59, 999);
+            return { start, end };
+        } else if (filterType === 'Custom range' && ratingsCustomFrom && ratingsCustomTo) {
+            const fromParts = ratingsCustomFrom.split('-').map(Number);
+            const toParts = ratingsCustomTo.split('-').map(Number);
+            return {
+                start: new Date(fromParts[0], fromParts[1] - 1, fromParts[2], 0, 0, 0, 0),
+                end: new Date(toParts[0], toParts[1] - 1, toParts[2], 23, 59, 59, 999)
+            };
+        } else {
+            // 'All' – no specific range, return null to indicate whole dataset
+            return null;
+        }
+    };
+
+    // Helper function to get vote count for the previous period
+    const getPreviousPeriodVotes = () => {
+        const currentRange = getCurrentDateRange();
+        if (!currentRange) return null; // 'All' filter – no previous period defined
+
+        const { start, end } = currentRange;
+        const duration = end - start; // milliseconds
+
+        let prevStart, prevEnd;
+
+        if (ratingsDateFilterType === 'Last 7 days') {
+            // Previous 7 days: shift back by 7 days
+            prevStart = new Date(start.getTime() - duration - 1);
+            prevEnd = new Date(start.getTime() - 1);
+        } else if (ratingsDateFilterType === 'Month') {
+            // Previous month: shift back by one month
+            const year = ratingsSelectedMonthYear;
+            const month = ratingsSelectedMonth - 1;
+            if (month === 0) {
+                // January -> previous December of previous year
+                prevStart = new Date(year - 1, 11, 1);
+                prevEnd = new Date(year - 1, 11, 31, 23, 59, 59, 999);
+            } else {
+                prevStart = new Date(year, month - 1, 1);
+                prevEnd = new Date(year, month, 0, 23, 59, 59, 999);
+            }
+        } else if (ratingsDateFilterType === 'Year') {
+            // Previous year
+            const year = ratingsSelectedYear - 1;
+            prevStart = new Date(year, 0, 1);
+            prevEnd = new Date(year, 11, 31, 23, 59, 59, 999);
+        } else if (ratingsDateFilterType === 'Custom range') {
+            // Shift the whole range back by its own duration
+            prevStart = new Date(start.getTime() - duration - 1);
+            prevEnd = new Date(start.getTime() - 1);
+        } else {
+            return null;
+        }
+
+        // Count votes in materialRatings that fall within the previous period
+        return materialRatings.filter(r => {
+            const d = new Date(r.created_at);
+            return d >= prevStart && d <= prevEnd;
+        }).length;
+    };
+
+    // Generate trend data for the Rating Trend chart (same with Citation Activity style)
+    const getRatingTrendData = () => {
+        if (!filteredRatings.length) return [];
+
+        const filterType = ratingsDateFilterType;
+        const today = new Date();
+        let buckets = []; // will hold { start, end, label, tooltip, helpful, total }
+
+        // Helper to create a bucket with proper day boundaries
+        const createBucket = (startDate, endDate, label, tooltip) => ({
+            start: new Date(startDate.setHours(0,0,0,0)),
+            end: new Date(endDate.setHours(23,59,59,999)),
+            label,
+            tooltip,
+            helpful: 0,
+            total: 0
+        });
+
+        if (filterType === 'Year') {
+            const year = ratingsSelectedYear;
+            for (let m = 0; m < 12; m++) {
+                const monthStart = new Date(year, m, 1);
+                const monthEnd = new Date(year, m + 1, 0);
+                const monthName = monthStart.toLocaleString('default', { month: 'short' }).toUpperCase();
+                const tooltip = monthStart.toLocaleString('default', { month: 'long', year: 'numeric' });
+                buckets.push(createBucket(monthStart, monthEnd, monthName, tooltip));
+            }
+        } else if (filterType === 'Month') {
+            const year = ratingsSelectedMonthYear;
+            const month = ratingsSelectedMonth - 1; // 0‑based
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const daysInMonth = lastDay.getDate();
+            let week = 1;
+            for (let d = 1; d <= daysInMonth; d += 7) {
+                const weekStart = new Date(year, month, d);
+                const weekEnd = new Date(year, month, Math.min(d + 6, daysInMonth));
+                const label = `W${week}`;
+                const startStr = weekStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                const endStr = weekEnd.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                const tooltip = startStr === endStr ? startStr : `${startStr} - ${endStr}`;
+                buckets.push(createBucket(weekStart, weekEnd, label, tooltip));
+                week++;
+            }
+        } else if (filterType === 'Last 7 days') {
+            // last 7 days including today
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date(today);
+                date.setDate(today.getDate() - i);
+                const dayStart = new Date(date.setHours(0,0,0,0));
+                const dayEnd = new Date(date.setHours(23,59,59,999));
+                const label = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase();
+                const tooltip = date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                buckets.push(createBucket(dayStart, dayEnd, label, tooltip));
+            }
+        } else if (filterType === 'Custom range' && ratingsCustomFrom && ratingsCustomTo) {
+            // Parse the custom range
+            const fromParts = ratingsCustomFrom.split('-').map(Number);
+            const toParts = ratingsCustomTo.split('-').map(Number);
+            const fromDate = new Date(fromParts[0], fromParts[1]-1, fromParts[2]);
+            const toDate = new Date(toParts[0], toParts[1]-1, toParts[2]);
+            
+            // Create daily buckets for every day in the range (inclusive)
+            const diffTime = toDate - fromDate;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // inclusive
+            for (let i = 0; i < diffDays; i++) {
+                const current = new Date(fromDate);
+                current.setDate(fromDate.getDate() + i);
+                const dayStart = new Date(current.setHours(0,0,0,0));
+                const dayEnd = new Date(current.setHours(23,59,59,999));
+                const label = current.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase();
+                const tooltip = current.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                buckets.push(createBucket(dayStart, dayEnd, label, tooltip));
+            }
+
+            // If the range is long, group days into intervals (like Citation Activity)
+            if (diffDays > 15) {
+                let intervalSize;
+                if (diffDays > 30) intervalSize = 5;
+                else if (diffDays > 15) intervalSize = 3;
+                else intervalSize = 2;
+
+                const grouped = [];
+                for (let i = 0; i < buckets.length; i += intervalSize) {
+                    const groupItems = buckets.slice(i, i + intervalSize);
+                    const startBucket = groupItems[0];
+                    const endBucket = groupItems[groupItems.length - 1];
+                    const totalHelpful = groupItems.reduce((sum, b) => sum + b.helpful, 0);
+                    const totalVotes = groupItems.reduce((sum, b) => sum + b.total, 0);
+                    const startLabel = startBucket.label;
+                    const endLabel = endBucket.label;
+                    const rangeLabel = startLabel === endLabel ? startLabel : `${startLabel} - ${endLabel}`;
+                    grouped.push({
+                        start: startBucket.start,
+                        end: endBucket.end,
+                        label: startLabel,        // display first date in group
+                        tooltip: rangeLabel,
+                        helpful: totalHelpful,
+                        total: totalVotes
+                    });
+                }
+                buckets = grouped;
+            }
+        } else {
+            // 'All' filter – group by month first, then maybe group months into larger intervals
+            if (filteredRatings.length === 0) return [];
+            const dates = filteredRatings.map(r => new Date(r.created_at));
+            const minDate = new Date(Math.min(...dates));
+            const maxDate = new Date(Math.max(...dates));
+            
+            // Create monthly buckets from the first to the last month (inclusive)
+            let current = new Date(minDate.getFullYear(), minDate.getMonth(), 1);
+            const endDate = new Date(maxDate.getFullYear(), maxDate.getMonth() + 1, 0);
+            while (current <= endDate) {
+                const year = current.getFullYear();
+                const month = current.getMonth();
+                const monthStart = new Date(year, month, 1);
+                const monthEnd = new Date(year, month + 1, 0);
+                const monthName = monthStart.toLocaleString('default', { month: 'short' }).toUpperCase();
+                const tooltip = monthStart.toLocaleString('default', { month: 'long', year: 'numeric' });
+                buckets.push(createBucket(monthStart, monthEnd, monthName, tooltip));
+                current.setMonth(current.getMonth() + 1);
+            }
+
+            // If there are many months, group them into intervals to avoid overcrowding
+            const totalMonths = buckets.length;
+            const MAX_VISIBLE_POINTS = 18; // max number of x-axis labels we want
+            if (totalMonths > MAX_VISIBLE_POINTS) {
+                // Determine interval size: group months so that the number of groups ≤ MAX_VISIBLE_POINTS
+                let intervalSize = Math.ceil(totalMonths / MAX_VISIBLE_POINTS);
+                // But we also want intervals that make sense (e.g., 3 months = quarter, 6 months = half-year, 12 months = year)
+                // Round intervalSize to nearest sensible value: 3, 6, or 12? Or just keep the calculated size.
+                // For simplicity, we'll use the calculated size, but ensure it's at least 2.
+                intervalSize = Math.max(2, intervalSize);
+                
+                const grouped = [];
+                for (let i = 0; i < buckets.length; i += intervalSize) {
+                    const groupItems = buckets.slice(i, i + intervalSize);
+                    const startBucket = groupItems[0];
+                    const endBucket = groupItems[groupItems.length - 1];
+                    const totalHelpful = groupItems.reduce((sum, b) => sum + b.helpful, 0);
+                    const totalVotes = groupItems.reduce((sum, b) => sum + b.total, 0);
+                    
+                    // Determine a label for the group: if interval spans multiple months, show range
+                    const startMonth = startBucket.start.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+                    const endMonth = endBucket.end.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+                    const rangeLabel = startMonth === endMonth ? startMonth : `${startMonth} - ${endMonth}`;
+                    
+                    // For display label, we might want a shorter version (e.g., "Q1 2023" or just the first month)
+                    // Let's use the first month's abbreviated name + year if needed, but keep it compact.
+                    // Alternatively, we could use quarter labels if intervalSize is 3.
+                    // But to keep it simple, we'll use the first month's short label (e.g., "Jan 2023") and the full range in tooltip.
+                    const firstMonthShort = startBucket.start.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+                    
+                    grouped.push({
+                        start: startBucket.start,
+                        end: endBucket.end,
+                        label: firstMonthShort,   // displayed under the bar
+                        tooltip: rangeLabel,      // full range in tooltip
+                        helpful: totalHelpful,
+                        total: totalVotes
+                    });
+                }
+                buckets = grouped;
+            }
+        }
+
+        // Fill buckets with actual ratings
+        filteredRatings.forEach(r => {
+            const ratingDate = new Date(r.created_at);
+            const bucket = buckets.find(b => ratingDate >= b.start && ratingDate <= b.end);
+            if (bucket) {
+                if (r.relevant === true) bucket.helpful += 1;
+                if (r.relevant !== null) bucket.total += 1;
+            }
+        });
+
+        // Return the data in the format expected by the chart
+        return buckets.map(b => ({
+            displayLabel: b.label,
+            tooltipRange: b.tooltip,
+            avgScore: b.total > 0 ? (b.helpful / b.total) * 100 : 0,
+            count: b.total,
+            helpful: b.helpful
+        }));
+    };
+
+    // Dynamic trend for Total Votes
+    const currentVotes = filteredRatings.length;
+    const previousVotes = getPreviousPeriodVotes();
+    const voteTrend = previousVotes !== null ? currentVotes - previousVotes : null;
+    const trendLabel = 
+        ratingsDateFilterType === 'Last 7 days' ? 'last week' :
+        ratingsDateFilterType === 'Month' ? 'previous month' :
+        ratingsDateFilterType === 'Year' ? 'previous year' :
+        ratingsDateFilterType === 'Custom range' ? 'previous period' : '';
+
     
     // ---------- Overview Export Data to CSV ----------
     const handleExportCSV = () => {
@@ -918,7 +1192,7 @@ const AdminDashboard = () => {
     };
 
 
-    // ---------- Render ----------
+    // ---------- RENDER ----------
     return (
         <>
         {/* Inject CSS to hide browser's default password eye icons */}
@@ -2249,7 +2523,7 @@ const AdminDashboard = () => {
                         <div className="h-full flex flex-col gap-2 max-w-[1600px] mx-auto w-full overflow-y-auto pb-8 pr-2">
 
                             {/* 1. Header & Filter Section */}
-                            <div className="flex flex-col sm:flex-row justify-between items-end sm:items-center gap-4">
+                            <div className="flex flex-col sm:flex-row justify-between items-end sm:items-center">
                                 <div>
                                     <h2 className="text-xl font-bold text-gray-800">Content Relevance & Quality</h2>
                                     <p className="text-sm text-gray-500">Monitor user satisfaction and identify materials for archiving.</p>
@@ -2259,9 +2533,9 @@ const AdminDashboard = () => {
                                 <div className="relative" ref={ratingsDateDropdownRef}>
                                     <button
                                         onClick={() => setShowRatingsDateDropdown(!showRatingsDateDropdown)}
-                                        className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-700 hover:bg-gray-50 text-sm font-medium shadow-sm transition-all"
+                                        className="flex items-center space-x-2 px-3 py-1.5 border border-gray-400 rounded-md bg-white text-gray-650 hover:bg-gray-100 text-xs font-medium"
                                     >
-                                        <Calendar size={16} className="text-gray-500" />
+                                        <Calendar size={14} />
                                         <span>
                                             {ratingsDateFilterType === 'All' && 'All Time'}
                                             {ratingsDateFilterType === 'Year' && `Year ${ratingsSelectedYear}`}
@@ -2430,7 +2704,7 @@ const AdminDashboard = () => {
                             </div>
 
                             {/* KPI Cards */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-5">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-3">
                                 
                                 {/* Total Votes */}
                                 <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
@@ -2448,13 +2722,15 @@ const AdminDashboard = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <p className="text-2xl font-bold text-gray-900 mt-2">{formatNumber(filteredRatings.length)}</p>
-                                    <div className="flex items-center text-xs text-gray-500 mt-1">
-                                        <span className={`font-bold mr-1 ${ratingsTrend >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                                            {ratingsTrend > 0 ? '+' : ''}{ratingsTrend}
-                                        </span>
-                                        from last week
-                                    </div>
+                                    <p className="text-2xl font-bold text-gray-900 mt-2">{formatNumber(currentVotes)}</p>
+                                    {voteTrend !== null && (
+                                        <div className="flex items-center text-xs text-gray-500 mt-1">
+                                            <span className={`font-bold mr-1 ${voteTrend >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                                                {voteTrend > 0 ? '+' : ''}{voteTrend}
+                                            </span>
+                                            from {trendLabel}
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Relevance Score */}
@@ -2526,7 +2802,7 @@ const AdminDashboard = () => {
                             </div>
 
                             {/* Top Rated & Least Accessed Grid */}
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 mt-2">
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
 
                                 {/* 1. Top Rated Materials */}
                                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex flex-col h-full">
@@ -2535,7 +2811,7 @@ const AdminDashboard = () => {
                                             <ThumbsUp size={16} className="text-blue-600" /> 
                                             Top Rated Materials
                                         </h3>
-                                        <span className="text-[10px] text-gray-400 uppercase tracking-wider">Most Relevant</span>
+                                        <span className="text-[10px] text-gray-500 italic tracking-wider">Most Relevant</span>
                                     </div>
 
                                     <div className="flex-1 overflow-y-auto max-h-[300px] pr-1">
@@ -2572,7 +2848,7 @@ const AdminDashboard = () => {
                                                         </div>
 
                                                         <div className="flex-shrink-0 text-right">
-                                                            <span className="text-xs font-bold" style={{ color: '#22c55e' }}>{item.count}</span>
+                                                            <span className="text-xs font-bold mr-1" >{item.count}</span>
                                                             <span className="text-[10px] text-gray-400 block">likes</span>
                                                         </div>
                                                     </div>
@@ -2592,15 +2868,15 @@ const AdminDashboard = () => {
                                     <div className="flex items-center justify-between mb-2 border-b border-gray-100 pb-3">
                                         <h3 className="font-bold text-gray-800 text-sm flex items-center gap-2">
                                             <LogOut size={16} className="text-red-500" /> 
-                                            Top 7 Least Accessed Materials
+                                            Top 8 Least Accessed Materials
                                         </h3>
-                                        <span className="text-[10px] text-gray-400 uppercase tracking-wider">Low Engagement</span>
+                                        <span className="text-[10px] text-gray-500 italic tracking-wider">Low Engagement</span>
                                     </div>
 
-                                    <div className="flex-1 overflow-y-auto max-h-[400px] pr-1">
+                                    <div className="flex-1 overflow-y-auto max-h-[450px] pr-1">
                                         {leastAccessedMaterials.length > 0 ? (
                                             <div className="space-y-2">
-                                                {leastAccessedMaterials.slice(0, 7).map((item, index) => (
+                                                {leastAccessedMaterials.slice(0, 8).map((item, index) => (
                                                     <div key={index} className="flex items-center justify-between p-1.5 hover:bg-red-50 rounded-lg transition-colors border border-transparent hover:border-red-100 group">
                                                         <div className="flex items-center gap-2 overflow-hidden">
                                                             <div className="flex-shrink-0 bg-red-100 text-red-600 p-1.5 rounded-md">
@@ -2678,9 +2954,154 @@ const AdminDashboard = () => {
                                         )}
                                     </div>
 
-                                    {/* Bottom half: placeholder for future widget */}
+                                    {/* Rating Trend Chart */}
                                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 flex-1">
-                                        <p className="text-gray-400 text-sm italic">Additional insights coming soon...</p>
+                                        <div className="flex items-center justify-between mb-3 flex-wrap">
+                                            <div className="flex items-center gap-1">
+                                                <h3 className="font-bold text-gray-700 text-xs uppercase tracking-wide flex items-center gap-2">
+                                                    <TrendingUp size={16} className="text-blue-600" /> Rating Trend
+                                                </h3>
+                                                <div className="relative group">
+                                                    <Info size={14} className="text-gray-400 cursor-help hover:text-gray-600" />
+                                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex flex-col items-center z-20 pointer-events-none w-48">
+                                                        <div className="bg-gray-800 text-white text-[10px] px-3 py-2 rounded shadow-lg text-center font-normal normal-case tracking-normal">
+                                                            Average relevance score over time, based on your current date filter.
+                                                        </div>
+                                                        <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span className="text-[10px] text-gray-500 italic">
+                                                {ratingsDateFilterType === 'Year' && `(Monthly averages for ${ratingsSelectedYear})`}
+                                                {ratingsDateFilterType === 'Month' && `(Weekly averages for ${new Date(0, ratingsSelectedMonth-1).toLocaleString('default', { month: 'long' })} ${ratingsSelectedMonthYear})`}
+                                                {ratingsDateFilterType === 'Last 7 days' && '(Daily averages for the last 7 days)'}
+                                                {ratingsDateFilterType === 'Custom range' && ratingsCustomFrom && ratingsCustomTo &&
+                                                    `(Daily averages from ${new Date(ratingsCustomFrom).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} to ${new Date(ratingsCustomTo).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })})`
+                                                }
+                                                {ratingsDateFilterType === 'All' && '(Monthly averages over all time)'}
+                                            </span>
+                                        </div>
+
+                                        {(() => {
+                                            const trendData = getRatingTrendData();
+                                            const totalHelpful = filteredRatings.filter(r => r.relevant === true).length;
+                                            const totalVotes = filteredRatings.length;
+                                            const overallAvg = totalVotes > 0 ? (totalHelpful / totalVotes) * 100 : 0;
+
+                                            if (trendData.length === 0) {
+                                                return (
+                                                    <div className="flex flex-1 items-center justify-center min-h-[120px] bg-blue-50 rounded-lg border border-dashed border-blue-200 mt-2">
+                                                        <p className="text-sm text-blue-500 italic">No rating data available</p>
+                                                    </div>
+                                                );
+                                            }
+
+                                            const maxAvg = 100; // percentage scale
+                                            const dataLen = trendData.length;
+
+                                            // Helper to format Y-axis ticks (0–100%)
+                                            const tick = (mult) => `${Math.round(maxAvg * mult)}%`;
+
+                                            // Build points for the line chart (SVG coordinates)
+                                            const points = trendData.map((item, i) => {
+                                                const x = ((i + 0.5) / dataLen) * 100;
+                                                const y = 100 - item.avgScore; // invert for SVG (0 at top, 100 at bottom)
+                                                return { x, y, ...item };
+                                            });
+
+                                            const linePath = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');
+                                            const areaPath = `${linePath} L ${points[points.length - 1].x} 100 L ${points[0].x} 100 Z`;
+
+                                            return (
+                                                <>
+                                                    {/* Overall average score displayed prominently */}
+                                                    <p className="text-2xl font-bold text-gray-900">{overallAvg.toFixed(1)}%</p>
+                                                    <p className="text-xs text-gray-500 mb-2">average relevance in this period ({totalVotes} votes)</p>
+
+                                                    <div className="flex w-full mt-6 h-[150px] relative">
+                                                        {/* Y-Axis Labels */}
+                                                        <div className="relative w-10 shrink-0">
+                                                            <span className="absolute right-2 top-0 -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(1)}</span>
+                                                            <span className="absolute right-2 top-[25%] -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(0.75)}</span>
+                                                            <span className="absolute right-2 top-[50%] -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(0.5)}</span>
+                                                            <span className="absolute right-2 top-[75%] -translate-y-1/2 text-[10px] text-gray-400 font-medium">{tick(0.25)}</span>
+                                                            <span className="absolute right-2 bottom-0 translate-y-1/2 text-[10px] text-gray-400 font-medium">0%</span>
+                                                        </div>
+
+                                                        {/* Chart Area */}
+                                                        <div className="flex-1 relative border-b-2 border-l-2 border-gray-200">
+                                                            {/* Horizontal Grid Lines */}
+                                                            <div className="absolute inset-x-0 top-0 border-t border-dashed border-gray-200 z-0"></div>
+                                                            <div className="absolute inset-x-0 top-[25%] border-t border-dashed border-gray-200 z-0"></div>
+                                                            <div className="absolute inset-x-0 top-[50%] border-t border-dashed border-gray-200 z-0"></div>
+                                                            <div className="absolute inset-x-0 top-[75%] border-t border-dashed border-gray-200 z-0"></div>
+
+                                                            {/* SVG for area and line */}
+                                                            <div className="absolute inset-0 w-full h-full overflow-visible z-10">
+                                                                <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full overflow-visible">
+                                                                    <defs>
+                                                                        <linearGradient id="ratingGradient" x1="0" x2="0" y1="0" y2="1">
+                                                                            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.4" />
+                                                                            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.0" />
+                                                                        </linearGradient>
+                                                                    </defs>
+                                                                    <path d={areaPath} fill="url(#ratingGradient)" />
+                                                                    <path d={linePath} fill="none" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                                </svg>
+                                                            </div>
+
+                                                            {/* Overlay for tooltips, dots, and x‑axis labels */}
+                                                            <div className="absolute inset-0 flex z-20">
+                                                                {points.map((p, i) => {
+                                                                    const isFirst = i === 0;
+                                                                    const isLast = i === dataLen - 1;
+                                                                    let tooltipClass = "left-1/2 -translate-x-1/2";
+                                                                    let arrowClass = "left-1/2 -translate-x-1/2";
+
+                                                                    if (isFirst) {
+                                                                        tooltipClass = "left-1/2 -translate-x-3";
+                                                                        arrowClass = "left-3";
+                                                                    } else if (isLast) {
+                                                                        tooltipClass = "right-1/2 translate-x-3";
+                                                                        arrowClass = "right-3";
+                                                                    }
+
+                                                                    return (
+                                                                        <div key={`hover-${i}`} className="flex-1 relative group cursor-default h-full flex justify-center hover:z-50">
+                                                                            {/* Ghost hover highlight */}
+                                                                            <div className="absolute inset-y-0 w-[80%] max-w-[32px] z-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors rounded-sm"></div>
+
+                                                                            {/* Dot and tooltip anchor */}
+                                                                            <div
+                                                                                className="absolute z-20 flex justify-center items-center"
+                                                                                style={{ top: `${p.y}%`, transform: 'translateY(-50%)' }}
+                                                                            >
+                                                                                <div className={`w-2.5 h-2.5 bg-white border-[2px] border-blue-600 rounded-full transition-transform group-hover:scale-[1.4] shadow-sm ${p.avgScore === 0 ? 'opacity-30 group-hover:opacity-100' : 'opacity-100'}`} />
+
+                                                                                {/* Tooltip */}
+                                                                                <div className={`absolute bottom-full mb-2 hidden group-hover:flex flex-col z-50 pointer-events-none w-max ${tooltipClass}`}>
+                                                                                    <div className="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded shadow-lg whitespace-nowrap text-center leading-tight border border-gray-700">
+                                                                                        <div className="font-semibold text-gray-200">{p.tooltipRange}</div>
+                                                                                        <div>{p.avgScore.toFixed(1)}% helpful ({p.helpful}/{p.count} votes)</div>
+                                                                                    </div>
+                                                                                    <div className={`absolute -bottom-[4px] w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-gray-800 ${arrowClass}`}></div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            {/* X-Axis Label */}
+                                                                            <div className="absolute -bottom-7 text-[9px] text-gray-500 font-bold uppercase whitespace-nowrap text-center">
+                                                                                {p.displayLabel}
+                                                                            </div>
+                                                                        </div>
+                                                                    );
+                                                                })}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="h-8 w-full"></div> {/* spacer for x‑axis labels */}
+                                                </>
+                                            );
+                                        })()}
                                     </div>
                                 </div>
                             </div>
