@@ -2085,6 +2085,7 @@ return (
                                 </button>
                                 <button className="text-white hover:text-blue-200"
                                     onClick={() => setShowCitationOverlay(true)}
+                                    title="Cite this source"
                                 >
                                     <Quote size={20} />
                                 </button>
