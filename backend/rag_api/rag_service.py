@@ -539,26 +539,24 @@ class RAGService:
                     "score": score
                 })
 
-        # === Reranker step using DeepSeek V3.1 via NVIDIA API for semantic selection ===
-        ai_base_url = os.environ.get("AI_BASE_URL")
-        ai_api_key = os.environ.get("AI_API_KEY")
-        ai_model = os.environ.get("AI_MODEL")
-
+        # === Reranker step using Gemini 2.5 Flash for fast semantic selection ===
         # Limit rerank candidates and chunk size to fit LLM context window
         max_rerank_candidates = min(rerank_top_k, 15)  # hard cap for LLM context
-        max_chunk_chars = 250  # truncate each chunk for prompt
+        max_chunk_chars = 500  # give reranker enough context per chunk
         rerank_candidates = candidate_chunks[:max_rerank_candidates]
         selected_indices = []
         debug_prompt = None
-        if rerank_candidates:
+        if rerank_candidates and self.api_key:
             try:
                 debug_prompt = (
                     "You are a document chunk selector for an academic retrieval system.\n\n"
                     "Task:\n"
-                    "- Given a user query and numbered document chunks, select up to 10 chunks that are directly and explicitly relevant to answering the query.\n"
-                    "- Only select chunks that contain clear information related to the query.\n"
-                    "- Do NOT select loosely related or partially matching chunks.\n"
-                    "- Base your decision strictly on the provided chunks.\n"
+                    "- Given a user query and numbered document chunks (with metadata: title, author, year, subjects), select up to 10 chunks that are relevant to answering the query.\n"
+                    "- Consider both the chunk text AND the metadata (title, author, year, subjects) when judging relevance.\n"
+                    "- For broad or exploratory queries (e.g. 'find theses about agriculture', 'thesis from 2020-2025'), select chunks from distinct theses that match the criteria.\n"
+                    "- For subject/topic queries (e.g. 'biology thesis', 'computer science research'), match against the Subjects metadata field.\n"
+                    "- For specific queries, only select chunks with clear, direct information related to the query.\n"
+                    "- Base your decision strictly on the provided chunks and metadata.\n"
                     "- Do NOT use outside knowledge.\n"
                     "- If no chunks are relevant, return [].\n"
                     "- Return ONLY a JSON array of indices (starting from 1), in order of relevance.\n"
@@ -568,29 +566,28 @@ class RAGService:
                     f"Query: {rewritten_question}\n\n" +
                     "Document Chunks:\n" +
                     "\n".join([
-                        f"[{i+1}] " + c['chunk'][:max_chunk_chars].replace('\n', ' ').replace('  ', ' ')
+                        f"[{i+1}] Title: {c['meta'].get('title', 'Unknown')[:120]} | Author: {c['meta'].get('author', 'Unknown')[:60]} | Year: {c['meta'].get('publication_year', 'N/A')} | Subjects: {c['meta'].get('subjects', 'N/A')[:100]} | Chunk: " + c['chunk'][:max_chunk_chars].replace('\n', ' ').replace('  ', ' ')
                         for i, c in enumerate(rerank_candidates)
                     ])
                 )
-                payload = {
-                    "model": ai_model,
-                    "messages": [
-                        {"role": "system", "content": debug_prompt},
-                        {"role": "user", "content": user_content}
-                    ]
-                }
-                headers = {"Authorization": f"Bearer {ai_api_key}", "Content-Type": "application/json"}
-                print(f"[RAG-DEBUG] Request ID {request_id}: Reranker prompt sent to LLM.")
+                rerank_start = time.time()
+                print(f"[RAG-DEBUG] Request ID {request_id}: Reranker prompt sent to Gemini 2.5 Flash.")
                 print(f"[RAG-DEBUG] Request ID {request_id}: Reranker user content preview: {user_content[:200]} ...")
-                response = requests.post(f"{ai_base_url}/chat/completions", json=payload, headers=headers, timeout=5000)
-                response.raise_for_status()
-                result = response.json()
+                client = genai.Client(api_key=self.api_key)
+                gemini_response = client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=f"{debug_prompt}\n\n{user_content}",
+                    config={
+                        "temperature": 0.0,
+                        "max_output_tokens": 128,
+                        "top_p": 0.8,
+                        "thinking_config": {"thinking_budget": 0},
+                    }
+                )
+                rerank_elapsed = time.time() - rerank_start
                 import ast
-                import re
-                content = result.get("choices", [{}])[0].get("message", {}).get("content", "")
-                # Strip <think>...</think> blocks from reasoning models (e.g. DeepSeek)
-                content = re.sub(r'<think>.*?</think>', '', content, flags=re.DOTALL).strip()
-                print(f"[RAG-DEBUG] Request ID {request_id}: Reranker LLM raw response: {content}")
+                content = gemini_response.text.strip() if hasattr(gemini_response, "text") and gemini_response.text else ""
+                print(f"[RAG-DEBUG] Request ID {request_id}: Reranker Gemini raw response ({rerank_elapsed:.2f}s): {content}")
                 # Robustly extract the first list of integers from the response
                 match = re.search(r'\[\s*\d+(?:\s*,\s*\d+)*\s*\]', content)
                 if match:
@@ -601,7 +598,7 @@ class RAGService:
                         # Only keep valid integer indices
                         selected_indices = [i for i in selected_indices if isinstance(i, int)]
                     except Exception as parse_e:
-                        print(f"[RAG] Failed to parse LLM indices: {parse_e}")
+                        print(f"[RAG] Failed to parse Gemini reranker indices: {parse_e}")
                         selected_indices = []
                 else:
                     # Try to extract all numbers in brackets as fallback
@@ -616,7 +613,7 @@ class RAGService:
                     else:
                         selected_indices = []
             except Exception as e:
-                print(f"[RAG] Local reranker failed: {e}")
+                print(f"[RAG] Gemini reranker failed: {e}")
                 selected_indices = []
         else:
             selected_indices = []

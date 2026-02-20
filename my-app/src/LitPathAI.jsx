@@ -60,6 +60,7 @@ const LitPathAI = () => {
     const navigate = useNavigate();
     const [conversationHistory, setConversationHistory] = useState([]);
     const [isFollowUpSearch, setIsFollowUpSearch] = useState(false);
+    const [lastSearchContext, setLastSearchContext] = useState(null);
     const [researchHistory, setResearchHistory] = useState([]);
     const [showResearchHistory, setShowResearchHistory] = useState(false);
     const [currentSessionId, setCurrentSessionId] = useState(null);
@@ -656,6 +657,9 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
             return;
         }
         
+        // Detect if this is a follow-up that should reuse previous search context
+        const isFollowUp = !forceNew && isFollowUpSearch && lastSearchContext && conversationHistory.length > 0;
+        
         // 2. SETUP STATE
         setLoading(true);
         setError(null);
@@ -685,6 +689,123 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
                 session_id: activeSessionId // new line to send session ID with the search request
             };
 
+            // =============================================================
+            // FOLLOW-UP PATH: Reuse previous sources, skip new search
+            // =============================================================
+            if (isFollowUp) {
+                // Get the last result's sources to display alongside the new overview
+                const lastResult = conversationHistory[conversationHistory.length - 1];
+                const previousSources = lastResult?.sources || [];
+
+                const initialResult = {
+                    query: query,
+                    overview: 'Generating overview...',
+                    sources: previousSources,
+                    relatedQuestions: [],
+                    isLoadingSummary: true,
+                };
+
+                setConversationHistory(prev => [...prev, initialResult]);
+                setSearchResults(initialResult);
+                setSearchQuery('');
+                setLoading(false);
+
+                // Save follow-up to history
+                try {
+                    await fetch(`${API_BASE_URL}/research-history/`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            session_id: activeSessionId,
+                            user_id: userId,
+                            query: query,
+                            all_queries: [...conversationHistory.map(c => c.query), query],
+                            sources_count: previousSources.length,
+                            conversation_length: conversationHistory.length + 1
+                        })
+                    });
+                    if (!isGuest) loadResearchHistoryFromDjango();
+                } catch (histErr) {
+                    console.error("Failed to save history log:", histErr);
+                }
+
+                // Stream overview using previous search context
+                try {
+                    const streamResponse = await fetch(`${API_BASE_URL}/search/stream/`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            ...requestBody,
+                            _search_context: lastSearchContext,
+                        }),
+                    });
+
+                    if (streamResponse.ok && streamResponse.body) {
+                        const reader = streamResponse.body.getReader();
+                        const decoder = new TextDecoder();
+                        let streamedText = '';
+                        let buffer = '';
+
+                        while (true) {
+                            const { done, value } = await reader.read();
+                            if (done) break;
+
+                            buffer += decoder.decode(value, { stream: true });
+                            const lines = buffer.split('\n');
+                            buffer = lines.pop();
+
+                            for (const line of lines) {
+                                if (!line.startsWith('data: ')) continue;
+                                try {
+                                    const parsed = JSON.parse(line.slice(6));
+                                    if (parsed.type === 'chunk') {
+                                        streamedText += parsed.content;
+                                        const currentText = streamedText;
+                                        setConversationHistory(prev => {
+                                            const updated = [...prev];
+                                            updated[updated.length - 1] = {
+                                                ...updated[updated.length - 1],
+                                                overview: currentText,
+                                                isLoadingSummary: true,
+                                            };
+                                            return updated;
+                                        });
+                                        setSearchResults(prev => prev ? { ...prev, overview: currentText, isLoadingSummary: true } : prev);
+                                    } else if (parsed.type === 'done') {
+                                        streamedText = parsed.content || streamedText;
+                                    } else if (parsed.type === 'error') {
+                                        streamedText = parsed.content || 'An error occurred generating the overview.';
+                                    }
+                                } catch (e) { /* skip malformed SSE */ }
+                            }
+                        }
+                        // Finalize
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            updated[updated.length - 1] = {
+                                ...updated[updated.length - 1],
+                                overview: streamedText || 'No overview could be generated.',
+                                isLoadingSummary: false,
+                            };
+                            return updated;
+                        });
+                        setSearchResults(prev => prev ? { ...prev, overview: streamedText || 'No overview could be generated.', isLoadingSummary: false } : prev);
+                    }
+                } catch (streamErr) {
+                    console.error("Follow-up stream error:", streamErr);
+                    setConversationHistory(prev => {
+                        const updated = [...prev];
+                        updated[updated.length - 1] = {
+                            ...updated[updated.length - 1],
+                            overview: 'Failed to generate overview. Please try again.',
+                            isLoadingSummary: false,
+                        };
+                        return updated;
+                    });
+                }
+                return; // Done — skip the normal search path below
+            }
+
             // ---------------------------------------------------------
             // STEP 3: FETCH DOCUMENTS (The Search)
             // ---------------------------------------------------------
@@ -701,6 +822,11 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
             
             const data = await response.json();
             const { documents, related_questions, suggestions, _search_context } = data;
+            
+            // Store search context for potential follow-ups
+            if (_search_context) {
+                setLastSearchContext(_search_context);
+            }
             
             // Format the sources safely
             const formattedSources = formatSources(documents);
@@ -1246,6 +1372,7 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
         setSearchResults(null);
         setConversationHistory([]);
         setIsFollowUpSearch(false);
+        setLastSearchContext(null);
         setSelectedSource(null);
         setShowOverlay(false);
         setRating(0);
@@ -2009,12 +2136,12 @@ return (
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 onKeyPress={(e) =>
-                                    e.key === 'Enter' && handleSearch(searchQuery, true)
+                                    e.key === 'Enter' && handleSearch(searchQuery, false)
                                 }
                                 disabled={loading}
                             />
                             <button
-                                onClick={() => handleSearch(searchQuery, true)}
+                                onClick={() => handleSearch(searchQuery, false)}
                                 className="bg-[#1E74BC] text-white px-4 py-2 rounded-lg hover:bg-[#155a8f]
                                     transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium"
                                 disabled={loading}
