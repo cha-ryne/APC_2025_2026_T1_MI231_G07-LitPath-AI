@@ -1564,6 +1564,7 @@ return (
                         setShowResearchHistory={setShowResearchHistory}
                         navigate={navigate}
                         setPendingDeleteSession={setPendingDeleteSession}
+                        isGuest={isGuest}
                     />
                 </div>
                 <div className="flex-1 bg-black bg-opacity-40" onClick={() => setSidebarOpen(false)} />
@@ -1605,6 +1606,7 @@ return (
                         setShowResearchHistory={setShowResearchHistory}
                         navigate={navigate}
                         setPendingDeleteSession={setPendingDeleteSession}
+                        isGuest={isGuest}
                     />
                 </div>
             </aside>
@@ -2829,7 +2831,8 @@ function SidebarContent({
     deleteHistorySession,
     setShowResearchHistory,
     navigate,
-    setPendingDeleteSession
+    setPendingDeleteSession,
+    isGuest
 }) {
     return (
         <div className="flex flex-col h-full">
@@ -2858,7 +2861,12 @@ function SidebarContent({
                 </button>
                 <h3 className="font-semibold text-gray-800 mb-2 text-lg">Research history</h3>
                 {researchHistory.length === 0 ? (
-                    <p className="text-sm text-gray-600 leading-relaxed">After you start a new chat, your research history will be saved and displayed here.</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                        {isGuest 
+                            ? <span>After you start a new chat, your research history and saved bookmarks will <span className="text-red-600 font-semibold">NOT</span> be saved</span>
+                            : "After you start a new chat, your research history will be saved and displayed here."
+                        }
+                    </p>
                 ) : (
                     <div className="space-y-2">
                         {researchHistory.slice(0, 3).map((session, index) => (
