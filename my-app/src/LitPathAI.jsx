@@ -2754,13 +2754,15 @@ return (
                         const result = await changePassword(currentPassword, newPassword);
                         setSettingsLoading(false);
                         if (result.success) {
-                        showToast('Password changed successfully!', 'success');
-                        setShowAccountSettings(false);
-                        setCurrentPassword('');
-                        setNewPassword('');
-                        setConfirmPassword('');
+                            showToast('Password changed successfully! Please log in again.', 'success');
+                            setShowAccountSettings(false);
+                            setCurrentPassword('');
+                            setNewPassword('');
+                            setConfirmPassword('');
+                            await logout();
+                            navigate('/');
                         } else {
-                        showToast(result.error || 'Failed to change password', 'error');
+                            showToast(result.error || 'Failed to change password', 'error');
                         }
                     }}>
                         <div className="space-y-4">
