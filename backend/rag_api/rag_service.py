@@ -430,7 +430,7 @@ class RAGService:
         
         return recovered_chunks
     
-    def search(self, question, top_n=200, distance_threshold=1.5, subjects=None, year=None, year_start=None, year_end=None, rerank_top_k=50, request_id=None):
+    def search(self, question, top_n=30, distance_threshold=1.5, subjects=None, year=None, year_start=None, year_end=None, rerank_top_k=50, request_id=None):
         if request_id is None:
             import uuid
             request_id = str(uuid.uuid4())
