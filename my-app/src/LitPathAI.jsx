@@ -426,7 +426,16 @@ const LitPathAI = () => {
     const loadResearchHistoryFromLocalStorage = () => {
         try {
             const history = JSON.parse(localStorage.getItem('litpath_research_history') || '[]');
-            setResearchHistory(history);
+            // Group by session id, only show unique main queries
+            const grouped = [];
+            const seen = new Set();
+            for (const session of history) {
+                if (!seen.has(session.mainQuery)) {
+                    grouped.push(session);
+                    seen.add(session.mainQuery);
+                }
+            }
+            setResearchHistory(grouped);
         } catch (error) {
             console.error('Error loading research history:', error);
             setResearchHistory([]);
@@ -519,10 +528,20 @@ const LitPathAI = () => {
             // Optionally, also save to localStorage for guests for UX
             if (isGuest) {
                 const existingHistory = JSON.parse(localStorage.getItem('litpath_research_history') || '[]');
-                const updatedHistory = [session, ...existingHistory].slice(0, 50);
-                localStorage.setItem('litpath_research_history', JSON.stringify(updatedHistory));
-                setResearchHistory(updatedHistory);
-                console.log('✅ Research history also saved to localStorage (guest)');
+                // Replace session with same mainQuery if exists, else prepend
+                let found = false;
+                const newHistory = existingHistory.map(s => {
+                    if (s.mainQuery === session.mainQuery) {
+                        found = true;
+                        return session; // update with latest follow-ups
+                    }
+                    return s;
+                });
+                const updatedHistory = found ? newHistory : [session, ...existingHistory];
+                const trimmedHistory = updatedHistory.slice(0, 50);
+                localStorage.setItem('litpath_research_history', JSON.stringify(trimmedHistory));
+                setResearchHistory(trimmedHistory);
+                console.log('✅ Research history also saved to localStorage (guest, deduped)');
             }
         } catch (error) {
             console.error('Error saving research history:', error);
@@ -1645,8 +1664,8 @@ return (
                                     <button
                                         onClick={async () => {
                                             setShowUserMenu(false);
-                                            await logout();
-                                            navigate('/');
+                                            await logout(); // End guest session
+                                            window.location.replace('/?mode=login'); // Force reload at login form
                                         }}
                                         className="w-full text-left block px-4 py-2 text-sm text-blue-600 hover:bg-gray-100"
                                     >

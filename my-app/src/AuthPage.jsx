@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import { BookOpen, User, ArrowRight, Eye, EyeOff } from 'lucide-react';
 import dostLogo from "./components/images/dost-logo.png";
 
 const AuthPage = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const { login, continueAsGuest, loading: authLoading } = useAuth();
-    
-    const [mode, setMode] = useState('welcome'); // 'welcome' or 'login' or 'forgot'
+
+    // Check for ?mode=login in URL
+    const getModeFromUrl = (search) => {
+        const urlParams = new URLSearchParams(search);
+        return urlParams.get('mode') === 'login' ? 'login' : 'welcome';
+    };
+    const [mode, setMode] = useState(getModeFromUrl(location.search)); // 'welcome' or 'login' or 'forgot'
+
+    // Keep mode in sync with URL (for guest login button after logout)
+    useEffect(() => {
+        setMode(getModeFromUrl(location.search));
+    }, [location.search]);
         // Forgot password state
         const [resetEmail, setResetEmail] = useState('');
         const [resetMessage, setResetMessage] = useState('');

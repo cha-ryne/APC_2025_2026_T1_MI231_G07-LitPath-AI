@@ -310,6 +310,36 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    // Delete account
+    const deleteAccount = async (password) => {
+        if (!user || isGuest) {
+            return { success: false, error: 'Must be logged in to delete account' };
+        }
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/auth/delete-account/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    user_id: user.id,
+                    password: password
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Clear all local data after account deletion
+                clearAuthData();
+            }
+
+            return { success: data.success, error: data.message };
+        } catch (error) {
+            console.error('Delete account error:', error);
+            return { success: false, error: 'Connection error. Please try again.' };
+        }
+    };
+
     const value = {
         user,
         setUser,
@@ -326,6 +356,7 @@ export const AuthProvider = ({ children }) => {
         hasRole,
         isStaff,
         changePassword,
+        deleteAccount,
         USER_ROLES
     };
 

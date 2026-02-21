@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useParams, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import LitPathAI from './LitPathAI';
 import AuthPage from './AuthPage';
@@ -40,7 +40,12 @@ const ProtectedRoute = ({ children, requireStaff = false }) => {
 //  Auth Route – redirect if already logged in
 // ------------------------------------------------------------
 const AuthRoute = ({ children }) => {
+
     const { user, loading } = useAuth();
+    const location = useLocation();
+    // Check for ?mode=login in URL using useLocation
+    const urlParams = new URLSearchParams(location.search);
+    const isLoginMode = urlParams.get('mode') === 'login';
 
     if (loading) {
         return (
@@ -54,6 +59,10 @@ const AuthRoute = ({ children }) => {
     }
 
     if (user) {
+        // Allow guest to see login form if ?mode=login
+        if (user.role === 'guest' && isLoginMode) {
+            return children;
+        }
         if (user.role === 'admin' || user.role === 'staff') {
             return <Navigate to="/admin/dashboard" replace />;
         }
