@@ -44,6 +44,7 @@ const AdminDashboard = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const [showUserMenu, setShowUserMenu] = useState(false);
     const userMenuRef = useRef(null);
+    const [error, setError] = useState(null); // Error state for dashboard data fetching
 
     // ---------- Overview Date Filter (unified for all dashboard data) ----------
     const overviewDateFilterOptions = ['Year', 'Month', 'Last 7 days', 'Custom range'];
@@ -488,6 +489,8 @@ const AdminDashboard = () => {
 
     const fetchAllDashboardData = () => {
         setLoading(true);
+        setError(null); // Reset error before fetching
+
         Promise.all([
             fetchDashboardKPI(),
             fetchFailedQueriesCount(),
@@ -498,7 +501,15 @@ const AdminDashboard = () => {
             fetchCitationStats(),
             fetchCitationTrends(),
             fetchTrends()
-        ]).finally(() => setLoading(false));
+        ])
+        .then(() => {
+            // Optional: Check if critical data is still zero/empty to infer a logic error
+        })
+        .catch((err) => {
+            console.error("Dashboard load failed", err);
+            setError("Usage analytics data could not be loaded at this time."); // <--- SET THE MESSAGE HERE
+        })
+        .finally(() => setLoading(false));
     };
 
     // ---------- Tab sync & data fetching ----------
@@ -1509,6 +1520,14 @@ const AdminDashboard = () => {
                         <div className="absolute inset-0 bg-gray-50/80 backdrop-blur-sm z-50 flex flex-col items-center justify-center transition-opacity duration-300">
                             <RefreshCw size={40} className="animate-spin text-[#1E74BC] mb-4 shadow-sm rounded-full" />
                             <p className="text-gray-600 font-semibold animate-pulse tracking-wide">Gathering dashboard insights...</p>
+                        </div>
+                    )}
+
+                    {/* ===== ERROR STATE ===== */}
+                    {error && (
+                        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded relative mb-4 text-center">
+                            <strong className="font-bold">Error: </strong>
+                            <span className="block sm:inline">{error}</span>
                         </div>
                     )}
 
