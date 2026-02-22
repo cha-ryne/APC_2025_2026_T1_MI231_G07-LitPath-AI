@@ -1725,6 +1725,7 @@ return (
                         navigate={navigate}
                         setPendingDeleteSession={setPendingDeleteSession}
                         isGuest={isGuest}
+                        setShowCSMModal={setShowCSMModal}
                     />
                 </div>
                 <div className="flex-1 bg-black bg-opacity-40" onClick={() => setSidebarOpen(false)} />
@@ -1767,6 +1768,7 @@ return (
                         navigate={navigate}
                         setPendingDeleteSession={setPendingDeleteSession}
                         isGuest={isGuest}
+                        setShowCSMModal={setShowCSMModal}
                     />
                 </div>
             </aside>
@@ -3008,7 +3010,8 @@ function SidebarContent({
     setShowResearchHistory,
     navigate,
     setPendingDeleteSession,
-    isGuest
+    isGuest,
+    setShowCSMModal
 }) {
     return (
         <div className="flex flex-col h-full">
@@ -3084,7 +3087,7 @@ function SidebarContent({
                 AI-generated content. Quality may vary.<br />
                 Check for accuracy.
                 <button
-                    onClick={() => navigate('/feedback-form')}
+                    onClick={() => setShowCSMModal(true)}
                     className="text-base text-[#1E74BC] hover:underline block mt-2 flex items-center gap-1"
                 >
                     <MessageSquare size={15} />
