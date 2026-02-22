@@ -765,7 +765,7 @@ const AdminDashboard = () => {
         rows.push([]); // empty line
 
         // --- SECTION 2: COLUMN HEADERS ---
-        rows.push(["Date", "Client Type", "Rating", "User Category", "Region", "Comment", "Status", "Valid?", "Doable?"]);
+        rows.push(["Date", "Client Type", "Rating", "User Category", "Region", "Category", "Comment", "Status", "Valid?", "Doable?"]);
 
         // --- SECTION 3: DATA ROWS ---
         filteredFeedbacks.forEach(fb => {
@@ -787,6 +787,7 @@ const AdminDashboard = () => {
                 escape(ratingText),
                 escape(fb.category || ''),
                 escape(fb.region || ''),
+                fb.admin_category && fb.admin_category.trim() !== '' ? escape(fb.admin_category) : 'N/A',
                 escape(comment),
                 escape(fb.status || ''),
                 fb.is_valid === true ? 'Yes' : fb.is_valid === false ? 'No' : '',
@@ -2625,6 +2626,7 @@ const AdminDashboard = () => {
                                             <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Rating</th>
                                             <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">User Category</th>
                                             <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Region</th>
+                                            <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Category</th>
                                             <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Comment</th>
                                             <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Status</th>
                                             <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Valid?</th>
@@ -2672,6 +2674,9 @@ const AdminDashboard = () => {
                                                         </td>
                                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
                                                             {fb.region || '—'}
+                                                        </td>
+                                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">   {/* NEW */}
+                                                            {fb.admin_category || '—'}
                                                         </td>
                                                         <td className="px-6 py-4 text-sm text-gray-600 max-w-xs truncate">
                                                             {fb.message_comment || <span className="text-gray-400 italic">No comment</span>}

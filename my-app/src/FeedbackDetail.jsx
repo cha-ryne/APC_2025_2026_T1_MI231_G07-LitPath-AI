@@ -345,6 +345,7 @@ const FeedbackDetail = () => {
                                         onChange={(e) => setEditForm({ ...editForm, admin_category: e.target.value })}
                                     >
                                         <option value="" disabled>Select Category</option>
+                                        <option value="General">General</option>
                                         <option value="Positive">Positive</option>
                                         <option value="Issue">Issue / Bug</option>
                                         <option value="For Improvement">For Improvement</option>
