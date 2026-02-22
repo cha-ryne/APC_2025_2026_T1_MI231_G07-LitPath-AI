@@ -98,9 +98,20 @@ const AuthPage = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col" style={{ backgroundImage: `url(${dostBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+        <div className="min-h-screen flex flex-col relative">
+            {/* Background Image with Blur */}
+            <div 
+                className="absolute inset-0 z-0"
+                style={{ 
+                    backgroundImage: `url(${dostBg})`, 
+                    backgroundSize: 'cover', 
+                    backgroundPosition: 'center', 
+                    backgroundRepeat: 'no-repeat',
+                    filter: 'blur(4px)'
+                }}
+            />
             {/* Header */}
-            <div className="sticky top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#555555] to-[#212121] text-white shadow-md">
+            <div className="sticky top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#555555] to-[#212121] text-white shadow-md relative">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
                     
                     {/* Left Side: Branding */}
@@ -126,7 +137,7 @@ const AuthPage = () => {
             </div>
 
             {/* Main Content */}
-            <div className="flex justify-center items-center flex-1 py-10 px-4">
+            <div className="flex justify-center items-center flex-1 py-10 px-4 relative z-10">
                 <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-xl">
                     
                     {/* Welcome Screen */}
