@@ -133,6 +133,16 @@ const AdminDashboard = () => {
         yearOptions.push(y);
     }
 
+    // Real‑time clock state
+    const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+    useEffect(() => {
+    const timer = setInterval(() => {
+        setCurrentDateTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+    }, []);
+
     // ---------- Date Range Helper for Overview (Fixed Timezone Issue) ----------
     const getDateRange = () => {
         const today = new Date();
@@ -1510,6 +1520,22 @@ const AdminDashboard = () => {
                                 {/* ===== HEADER + DATE FILTER ===== */}
                                 <div className="flex items-center justify-between flex-wrap gap-2 mb-4">
                                     <h2 className="text-xl font-bold text-gray-800">Thesis & Dissertation Usage</h2>
+                                    <div className="flex flex-col items-end gap-3 mr-2">
+                                        <div className="text-right">
+                                            <div className="text-xs text-gray-500">Philippine Standard Time</div>
+                                            <div className="text-sm font-medium text-gray-700">
+                                                {currentDateTime.toLocaleString('en-US', {
+                                                weekday: 'long',
+                                                year: 'numeric',
+                                                month: 'long',
+                                                day: 'numeric',
+                                                hour: '2-digit',
+                                                minute: '2-digit',
+                                                second: '2-digit',
+                                                hour12: true
+                                                })}
+                                            </div>
+                                        </div>
                                     <div className="flex gap-2">
 
                                         {/* EXPORT BUTTON */}
@@ -1703,6 +1729,7 @@ const AdminDashboard = () => {
                                                     </div>
                                                 </div>
                                             )}
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
