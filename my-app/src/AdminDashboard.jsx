@@ -734,103 +734,110 @@ const AdminDashboard = () => {
     
     // ---------- Feedback Manager Export Data to CSV ----------
     const handleFeedbackExportCSV = () => {
-        const filteredFeedbacks = getFilteredFeedbacks();
-        if (filteredFeedbacks.length === 0) {
-            showToast('No data to export', 'error');
-            return;
-        }
-
-        // Determine filter description based on current feedback filter
-        let filterDescription = '';
-        if (feedbackDateFilterType === 'Year') {
-            filterDescription = `Year ${feedbackSelectedYear}`;
-        } else if (feedbackDateFilterType === 'Month') {
-            const monthName = new Date(feedbackSelectedMonthYear, feedbackSelectedMonth - 1)
-                .toLocaleString('default', { month: 'long' });
-            filterDescription = `${monthName} ${feedbackSelectedMonthYear}`;
-        } else if (feedbackDateFilterType === 'Last 7 days') {
-            const to = new Date();
-            const from = new Date();
-            from.setDate(to.getDate() - 7);
-            filterDescription = `Last 7 days (${from.toLocaleDateString()} to ${to.toLocaleDateString()})`;
-        } else if (feedbackDateFilterType === 'Custom range' && feedbackCustomFrom && feedbackCustomTo) {
-            filterDescription = `${feedbackCustomFrom} to ${feedbackCustomTo}`;
-        } else {
-            filterDescription = 'All time';
-        }
-
-        const rows = [];
-        const exportDate = new Date().toLocaleDateString();
-
-        // Helper to escape CSV fields
-        const escape = (text) => {
-            if (text === null || text === undefined) return '';
-            const str = String(text);
-            return `"${str.replace(/"/g, '""')}"`;
-        };
-
-        // Helper to get local date in YYYY-MM-DD for filename
-        const getLocalDateString = () => {
-            const d = new Date();
-            const year = d.getFullYear();
-            const month = String(d.getMonth() + 1).padStart(2, '0');
-            const day = String(d.getDate()).padStart(2, '0');
-            return `${year}-${month}-${day}`;
-        };
-
-        // --- SECTION 1: REPORT HEADER ---
-        rows.push(["LITPATH AI - FEEDBACK REPORT"]);
-        rows.push(["Export Date", exportDate]);
-        rows.push(["Filter Period", filterDescription]);
-        rows.push(["Total Feedback Entries", filteredFeedbacks.length]);
-        rows.push([]); // empty line
-
-        // --- SECTION 2: COLUMN HEADERS ---
-        rows.push(["Date", "Client Type", "Rating", "User Category", "Region", "Category", "Comment", "Status", "Valid?", "Doable?"]);
-
-        // --- SECTION 3: DATA ROWS ---
-        filteredFeedbacks.forEach(fb => {
-            // Rating as words (e.g., "5 stars", "1 star")
-            let ratingText = '';
-            if (fb.litpath_rating) {
-                const num = fb.litpath_rating;
-                ratingText = `${num} star${num > 1 ? 's' : ''}`;
+        try {
+            const filteredFeedbacks = getFilteredFeedbacks();
+            if (filteredFeedbacks.length === 0) {
+                showToast('No data to export', 'error');
+                return;
             }
 
-            // Comment: use "N/A" if empty
-            const comment = fb.message_comment && fb.message_comment.trim() !== '' 
-                ? fb.message_comment 
-                : 'N/A';
+            // Determine filter description based on current feedback filter
+            let filterDescription = '';
+            if (feedbackDateFilterType === 'Year') {
+                filterDescription = `Year ${feedbackSelectedYear}`;
+            } else if (feedbackDateFilterType === 'Month') {
+                const monthName = new Date(feedbackSelectedMonthYear, feedbackSelectedMonth - 1)
+                    .toLocaleString('default', { month: 'long' });
+                filterDescription = `${monthName} ${feedbackSelectedMonthYear}`;
+            } else if (feedbackDateFilterType === 'Last 7 days') {
+                const to = new Date();
+                const from = new Date();
+                from.setDate(to.getDate() - 7);
+                filterDescription = `Last 7 days (${from.toLocaleDateString()} to ${to.toLocaleDateString()})`;
+            } else if (feedbackDateFilterType === 'Custom range' && feedbackCustomFrom && feedbackCustomTo) {
+                filterDescription = `${feedbackCustomFrom} to ${feedbackCustomTo}`;
+            } else {
+                filterDescription = 'All time';
+            }
 
-            rows.push([
-                escape(new Date(fb.created_at).toLocaleDateString()),
-                escape(fb.client_type || ''),
-                escape(ratingText),
-                escape(fb.category || ''),
-                escape(fb.region || ''),
-                fb.admin_category && fb.admin_category.trim() !== '' ? escape(fb.admin_category) : 'N/A',
-                escape(comment),
-                escape(fb.status || ''),
-                fb.is_valid === true ? 'Yes' : fb.is_valid === false ? 'No' : '',
-                fb.is_doable === true ? 'Yes' : fb.is_doable === false ? 'No' : ''
-            ]);
-        });
+            const rows = [];
+            const exportDate = new Date().toLocaleDateString();
 
-        // Convert rows to CSV string
-        const csvContent = rows.map(row => row.join(',')).join('\r\n');
+            // Helper to escape CSV fields
+            const escape = (text) => {
+                if (text === null || text === undefined) return '';
+                const str = String(text);
+                return `"${str.replace(/"/g, '""')}"`;
+            };
 
-        // Add BOM for UTF-8 (ensures special characters display correctly in Excel)
-        const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = `LitPathAI_FeedbackReport_${getLocalDateString()}.csv`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
+            // Helper to get local date in YYYY-MM-DD for filename
+            const getLocalDateString = () => {
+                const d = new Date();
+                const year = d.getFullYear();
+                const month = String(d.getMonth() + 1).padStart(2, '0');
+                const day = String(d.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
+            };
 
-        showToast('Feedback exported successfully!', 'success');
+            // --- SECTION 1: REPORT HEADER ---
+            rows.push(["LITPATH AI - FEEDBACK REPORT"]);
+            rows.push(["Export Date", exportDate]);
+            rows.push(["Filter Period", filterDescription]);
+            rows.push(["Total Feedback Entries", filteredFeedbacks.length]);
+            rows.push([]); // empty line
+
+            // --- SECTION 2: COLUMN HEADERS ---
+            rows.push(["Date", "Client Type", "Rating", "User Category", "Region", "Category", "Comment", "Status", "Valid?", "Doable?"]);
+
+            // --- SECTION 3: DATA ROWS ---
+            filteredFeedbacks.forEach(fb => {
+                // Rating as words (e.g., "5 stars", "1 star")
+                let ratingText = '';
+                if (fb.litpath_rating) {
+                    const num = fb.litpath_rating;
+                    ratingText = `${num} star${num > 1 ? 's' : ''}`;
+                }
+
+                // Comment: use "N/A" if empty
+                const comment = fb.message_comment && fb.message_comment.trim() !== ''
+                    ? fb.message_comment
+                    : 'N/A';
+
+                rows.push([
+                    escape(new Date(fb.created_at).toLocaleDateString()),
+                    escape(fb.client_type || ''),
+                    escape(ratingText),
+                    escape(fb.category || ''),
+                    escape(fb.region || ''),
+                    fb.admin_category && fb.admin_category.trim() !== '' ? escape(fb.admin_category) : 'N/A',
+                    escape(comment),
+                    escape(fb.status || ''),
+                    fb.is_valid === true ? 'Yes' : fb.is_valid === false ? 'No' : '',
+                    fb.is_doable === true ? 'Yes' : fb.is_doable === false ? 'No' : ''
+                ]);
+            });
+
+            // Convert rows to CSV string
+            const csvContent = rows.map(row => row.join(',')).join('\r\n');
+
+            // Add BOM for UTF-8 (ensures special characters display correctly in Excel)
+            const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = `LitPathAI_FeedbackReport_${getLocalDateString()}.csv`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            showToast('Feedback exported successfully!', 'success');
+
+        } catch (error) {
+            // --- EXCEPTION HANDLING E2: Export Generation Failure ---
+            console.error("Feedback export failed:", error);
+            showToast('Failed to generate export file. Please try again.', 'error');
+        }
     };
 
 
@@ -1155,255 +1162,279 @@ const AdminDashboard = () => {
     
     // ---------- Overview Export Data to CSV ----------
     const handleExportCSV = () => {
-        // 1. Generate a descriptive subtitle for the export
-        let filterText = '';
-        if (overviewDateFilterType === 'Year') filterText = `Year ${overviewSelectedYear}`;
-        else if (overviewDateFilterType === 'Month') filterText = `${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear}`;
-        else if (overviewDateFilterType === 'Last 7 days') filterText = 'Last 7 days';
-        else filterText = `${overviewCustomFrom} to ${overviewCustomTo}`;
+        try {
+            // 1. Generate a descriptive subtitle for the export
+            let filterText = '';
+            if (overviewDateFilterType === 'Year') filterText = `Year ${overviewSelectedYear}`;
+            else if (overviewDateFilterType === 'Month') filterText = `${new Date(0, overviewSelectedMonth - 1).toLocaleString('default', { month: 'long' })} ${overviewSelectedMonthYear}`;
+            else if (overviewDateFilterType === 'Last 7 days') filterText = 'Last 7 days';
+            else filterText = `${overviewCustomFrom} to ${overviewCustomTo}`;
 
-        // Helper to get local date in YYYY-MM-DD for filename
-        const getLocalDateString = () => {
-            const d = new Date();
-            const year = d.getFullYear();
-            const month = String(d.getMonth() + 1).padStart(2, '0');
-            const day = String(d.getDate()).padStart(2, '0');
-            return `${year}-${month}-${day}`;
-        };
+            // Helper to get local date in YYYY-MM-DD for filename
+            const getLocalDateString = () => {
+                const d = new Date();
+                const year = d.getFullYear();
+                const month = String(d.getMonth() + 1).padStart(2, '0');
+                const day = String(d.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
+            };
 
-        // 2. Helper to add rows safely
-        let csvContent = "";
-        const addRow = (rowArray) => {
-            const formattedRow = rowArray.map(col => {
-                const cell = col === null || col === undefined ? "" : String(col);
-                return `"${cell.replace(/"/g, '""')}"`; // Escape quotes
-            }).join(",");
-            csvContent += formattedRow + "\r\n";
-        };
+            // 2. Helper to add rows safely
+            let csvContent = "";
+            const addRow = (rowArray) => {
+                const formattedRow = rowArray.map(col => {
+                    const cell = col === null || col === undefined ? "" : String(col);
+                    return `"${cell.replace(/"/g, '""')}"`; // Escape quotes
+                }).join(",");
+                csvContent += formattedRow + "\r\n";
+            };
 
-        // 3. Build CSV Content
-        addRow(["LITPATH AI - DASHBOARD REPORT"]);
-        addRow([`Date Filter Applied: ${filterText}`]);
-        addRow([`Exported On: ${new Date().toLocaleString()}`]);
-        addRow([]);
+            // 3. Build CSV Content
+            addRow(["LITPATH AI - DASHBOARD REPORT"]);
+            addRow([`Date Filter Applied: ${filterText}`]);
+            addRow([`Exported On: ${new Date().toLocaleString()}`]);
+            addRow([]);
 
-        // --- KPIs ---
-        addRow(["KEY PERFORMANCE INDICATORS"]);
-        addRow(["Metric", "Value"]);
-        addRow(["Total Theses", dashboardData.kpi.totalDocuments]);
-        addRow(["Total Searches", dashboardData.kpi.totalSearches]);
-        addRow(["Collection Utilisation (%)", dashboardData.kpi.utilizationPercent]);
-        addRow(["Avg Response Time (ms)", dashboardData.kpi.avgResponseTime]);
-        addRow(["Failed Queries", dashboardData.failedQueriesCount]);
-        addRow([]);
+            // --- KPIs ---
+            addRow(["KEY PERFORMANCE INDICATORS"]);
+            addRow(["Metric", "Value"]);
+            addRow(["Total Theses", dashboardData.kpi.totalDocuments]);
+            addRow(["Total Searches", dashboardData.kpi.totalSearches]);
+            addRow(["Collection Utilisation (%)", dashboardData.kpi.utilizationPercent]);
+            addRow(["Avg Response Time (ms)", dashboardData.kpi.avgResponseTime]);
+            addRow(["Failed Queries", dashboardData.failedQueriesCount]);
+            addRow([]);
 
-        // --- TOP THESES ---
-        addRow(["TOP THESES BROWSED"]);
-        addRow(["Rank", "Title", "Author", "Year", "Degree", "Views", "Avg Rating"]);
-        dashboardData.topTheses.forEach((t, i) => {
-            addRow([i + 1, t.title, t.author, t.year, t.degree, t.view_count, t.avg_rating]);
-        });
-        addRow([]);
-
-        // --- USAGE BY CATEGORY ---
-        addRow(["USAGE BY CATEGORY"]);
-        addRow(["Category", "User Count", "Percentage (%)"]);
-        dashboardData.usageByCategory.forEach(c => {
-            addRow([c.category, c.views, c.percentage]);
-        });
-        addRow([]);
-
-        // --- AGE DISTRIBUTION ---
-        addRow(["AGE DISTRIBUTION"]);
-        addRow(["Age Group", "User Count", "Percentage (%)"]);
-        dashboardData.ageDistribution.forEach(a => {
-            addRow([a.age, a.count, a.percentage]);
-        });
-        addRow([]);
-
-        // --- ACTIVITY TRENDS ---
-        addRow(["ACTIVITY TRENDS (Views)"]);
-        addRow(["Date Range", "Total Views"]);
-        dashboardData.trends.forEach(t => {
-            addRow([t.tooltipRange || t.label || t.month, t.views]);
-        });
-        addRow([]);
-
-        // --- CITATION ACTIVITY ---
-        addRow(["CITATION ACTIVITY"]);
-        addRow(["Total Citations Copied", dashboardData.citationStats.total_copies]);
-        addRow(["Date Range", "Copies"]);
-        if (dashboardData.citationTrends && dashboardData.citationTrends.length > 0) {
-            dashboardData.citationTrends.forEach(c => {
-                addRow([c.tooltipRange || c.label || c.month, c.copies]);
+            // --- TOP THESES ---
+            addRow(["TOP THESES BROWSED"]);
+            addRow(["Rank", "Title", "Author", "Year", "Degree", "Views", "Avg Rating"]);
+            dashboardData.topTheses.forEach((t, i) => {
+                addRow([i + 1, t.title, t.author, t.year, t.degree, t.view_count, t.avg_rating]);
             });
+            addRow([]);
+
+            // --- USAGE BY CATEGORY ---
+            addRow(["USAGE BY CATEGORY"]);
+            addRow(["Category", "User Count", "Percentage (%)"]);
+            dashboardData.usageByCategory.forEach(c => {
+                addRow([c.category, c.views, c.percentage]);
+            });
+            addRow([]);
+
+            // --- AGE DISTRIBUTION ---
+            addRow(["AGE DISTRIBUTION"]);
+            addRow(["Age Group", "User Count", "Percentage (%)"]);
+            dashboardData.ageDistribution.forEach(a => {
+                addRow([a.age, a.count, a.percentage]);
+            });
+            addRow([]);
+
+            // --- ACTIVITY TRENDS ---
+            addRow(["ACTIVITY TRENDS (Views)"]);
+            addRow(["Date Range", "Total Views"]);
+            dashboardData.trends.forEach(t => {
+                addRow([t.tooltipRange || t.label || t.month, t.views]);
+            });
+            addRow([]);
+
+            // --- CITATION ACTIVITY ---
+            addRow(["CITATION ACTIVITY"]);
+            addRow(["Total Citations Copied", dashboardData.citationStats.total_copies]);
+            addRow(["Date Range", "Copies"]);
+            if (dashboardData.citationTrends && dashboardData.citationTrends.length > 0) {
+                dashboardData.citationTrends.forEach(c => {
+                    addRow([c.tooltipRange || c.label || c.month, c.copies]);
+                });
+            }
+
+            // 4. Add BOM for UTF-8 and trigger download
+            const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = `LitPathAI_Report_${getLocalDateString()}.csv`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            showToast('Report exported successfully!', 'success');
+
+        } catch (error) {
+            // --- EXCEPTION HANDLING E2: Export Generation Failure ---
+            console.error("Overview export failed:", error);
+            showToast('Failed to generate export file. Please try again.', 'error');
         }
-
-        // 4. Add BOM for UTF-8 and trigger download
-        const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = `LitPathAI_Report_${getLocalDateString()}.csv`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-
-        showToast('Report exported successfully!', 'success');
     };
 
 
     // ---------- Material Ratings Export Data to CSV ----------
     const handleRatingsExportCSV = async () => {
-        // 1. Basic check
-        if (!filteredRatings || filteredRatings.length === 0) {
-            showToast('No ratings data to export', 'error');
-            return;
-        }
-
-        showToast('Generating report...', 'info');
-
-        // 2. Determine the date range based on the current filter
-        let fromDateStr = '', toDateStr = '', filterDescription = '';
-        if (ratingsDateFilterType === 'Year') {
-            fromDateStr = `${ratingsSelectedYear}-01-01`;
-            toDateStr = `${ratingsSelectedYear}-12-31`;
-            filterDescription = `Year ${ratingsSelectedYear}`;
-        } else if (ratingsDateFilterType === 'Month') {
-            const year = ratingsSelectedMonthYear;
-            const month = String(ratingsSelectedMonth).padStart(2, '0');
-            const daysInMonth = new Date(year, ratingsSelectedMonth, 0).getDate();
-            fromDateStr = `${year}-${month}-01`;
-            toDateStr = `${year}-${month}-${daysInMonth}`;
-            const monthName = new Date(year, ratingsSelectedMonth-1).toLocaleString('default', { month: 'long' });
-            filterDescription = `${monthName} ${year}`;
-        } else if (ratingsDateFilterType === 'Last 7 days') {
-            const to = new Date();
-            const from = new Date();
-            from.setDate(to.getDate() - 7);
-            fromDateStr = from.toISOString().slice(0, 10);
-            toDateStr = to.toISOString().slice(0, 10);
-            filterDescription = `Last 7 days (${from.toLocaleDateString()} to ${to.toLocaleDateString()})`;
-        } else if (ratingsDateFilterType === 'Custom range' && ratingsCustomFrom && ratingsCustomTo) {
-            fromDateStr = ratingsCustomFrom;
-            toDateStr = ratingsCustomTo;
-            filterDescription = `${fromDateStr} to ${toDateStr}`;
-        } else {
-            // 'All' – no specific range
-            filterDescription = 'All time';
-        }
-
-        // 3. FETCH LEAST ACCESSED MATERIALS (dormant list)
-        let allLeastAccessed = [];
         try {
-            const token = localStorage.getItem('token') || localStorage.getItem('access_token');
-            const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
-
-            const response = await fetch(`${API_BASE_URL}/dashboard/least-browsed/?limit=1000`, {
-                headers: headers
-            });
-            if (response.ok) {
-                allLeastAccessed = await response.json();
-            } else {
-                console.warn('Failed to fetch least accessed materials, status:', response.status);
+            // 1. Basic check
+            if (!filteredRatings || filteredRatings.length === 0) {
+                showToast('No ratings data to export', 'error');
+                return;
             }
-        } catch (error) {
-            console.error('Error fetching least accessed materials:', error);
-            alert(`Warning: Could not download the Dormant Materials list.\nReason: ${error.message}`);
-        }
 
-        // Helper to escape CSV fields
-        const escape = (text) => {
-            if (text === null || text === undefined) return '';
-            const str = String(text);
-            return `"${str.replace(/"/g, '""')}"`;
-        };
+            showToast('Generating report...', 'info');
 
-        // Helper to get local date in YYYY-MM-DD for filename
-        const getLocalDateString = () => {
-            const d = new Date();
-            const year = d.getFullYear();
-            const month = String(d.getMonth() + 1).padStart(2, '0');
-            const day = String(d.getDate()).padStart(2, '0');
-            return `${year}-${month}-${day}`;
-        };
+            // 2. Determine the date range based on the current filter
+            let fromDateStr = '', toDateStr = '', filterDescription = '';
+            if (ratingsDateFilterType === 'Year') {
+                fromDateStr = `${ratingsSelectedYear}-01-01`;
+                toDateStr = `${ratingsSelectedYear}-12-31`;
+                filterDescription = `Year ${ratingsSelectedYear}`;
+            } else if (ratingsDateFilterType === 'Month') {
+                const year = ratingsSelectedMonthYear;
+                const month = String(ratingsSelectedMonth).padStart(2, '0');
+                const daysInMonth = new Date(year, ratingsSelectedMonth, 0).getDate();
+                fromDateStr = `${year}-${month}-01`;
+                toDateStr = `${year}-${month}-${daysInMonth}`;
+                const monthName = new Date(year, ratingsSelectedMonth - 1).toLocaleString('default', { month: 'long' });
+                filterDescription = `${monthName} ${year}`;
+            } else if (ratingsDateFilterType === 'Last 7 days') {
+                const to = new Date();
+                const from = new Date();
+                from.setDate(to.getDate() - 7);
+                fromDateStr = from.toISOString().slice(0, 10);
+                toDateStr = to.toISOString().slice(0, 10);
+                filterDescription = `Last 7 days (${from.toLocaleDateString()} to ${to.toLocaleDateString()})`;
+            } else if (ratingsDateFilterType === 'Custom range' && ratingsCustomFrom && ratingsCustomTo) {
+                fromDateStr = ratingsCustomFrom;
+                toDateStr = ratingsCustomTo;
+                filterDescription = `${fromDateStr} to ${toDateStr}`;
+            } else {
+                // 'All' – no specific range
+                filterDescription = 'All time';
+            }
 
-        const rows = [];
-        const exportDate = new Date().toLocaleDateString();
+            // 3. FETCH LEAST ACCESSED MATERIALS (dormant list)
+            let allLeastAccessed = [];
+            try {
+                const token = localStorage.getItem('token') || localStorage.getItem('access_token');
+                const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
 
-        // --- SECTION 1: REPORT HEADER ---
-        rows.push(["LITPATH AI - CONTENT QUALITY REPORT"]);
-        rows.push(["Export Date", exportDate]);
-        rows.push(["Filter Period", filterDescription]);
-        rows.push(["Total Ratings (filtered)", filteredRatings.length]);
+                const response = await fetch(`${API_BASE_URL}/dashboard/least-browsed/?limit=1000`, {
+                    headers: headers
+                });
+                if (response.ok) {
+                    allLeastAccessed = await response.json();
+                } else {
+                    console.warn('Failed to fetch least accessed materials, status:', response.status);
+                }
+            } catch (error) {
+                console.error('Error fetching least accessed materials:', error);
+                alert(`Warning: Could not download the Dormant Materials list.\nReason: ${error.message}`);
+            }
 
-        const dormantCount = allLeastAccessed.filter(m => m.view_count === 0).length;
-        rows.push(["Dormant Materials (0 Views)", dormantCount]);
-        rows.push([]); // empty line
+            // Helper to escape CSV fields
+            const escape = (text) => {
+                if (text === null || text === undefined) return '';
+                const str = String(text);
+                return `"${str.replace(/"/g, '""')}"`;
+            };
 
-        // --- SECTION 2: RATINGS LOG ---
-        rows.push(["RATINGS LOG"]);
-        rows.push(["Date", "Material Title", "Rating", "Score", "Comment"]);
+            // Helper to get local date in YYYY-MM-DD for filename
+            const getLocalDateString = () => {
+                const d = new Date();
+                const year = d.getFullYear();
+                const month = String(d.getMonth() + 1).padStart(2, '0');
+                const day = String(d.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
+            };
 
-        filteredRatings.forEach(r => {
-            const date = new Date(r.created_at);
-            const dateStr = !isNaN(date) ? date.toLocaleDateString() : '-';
-            const title = r.material_title || r.document_file || 'Unknown';
-            const rating = r.relevant === true ? 'Helpful' : 'Not Relevant';
-            const score = r.relevant === true ? 1 : 0;
-            const comment = r.message_comment && r.message_comment.trim() !== '' ? r.message_comment : '-';
+            const rows = [];
+            const exportDate = new Date().toLocaleDateString();
 
-            rows.push([
-                escape(dateStr),
-                escape(title),
-                escape(rating),
-                score,
-                escape(comment)
-            ]);
-        });
+            // --- SECTION 1: REPORT HEADER ---
+            rows.push(["LITPATH AI - CONTENT QUALITY REPORT"]);
+            rows.push(["Export Date", exportDate]);
+            rows.push(["Filter Period", filterDescription]);
+            rows.push(["Total Ratings (filtered)", filteredRatings.length]);
 
-        rows.push([]);
-        rows.push([]);
+            const dormantCount = allLeastAccessed.filter(m => m.view_count === 0).length;
+            rows.push(["Dormant Materials (0 Views)", dormantCount]);
+            rows.push([]); // empty line
 
-        // --- SECTION 3: LEAST ACCESSED MATERIALS (ARCHIVE CANDIDATES) ---
-        rows.push(["--- PART 2: LEAST ACCESSED MATERIALS (ARCHIVE CANDIDATES) ---"]);
+            // --- SECTION 2: RATINGS LOG ---
+            rows.push(["RATINGS LOG"]);
+            rows.push(["Date", "Material Title", "Rating", "Score", "Comment"]);
 
-        if (allLeastAccessed && allLeastAccessed.length > 0) {
-            rows.push(["Material Title", "Year", "Last Accessed", "Total Views", "Status"]);
-
-            allLeastAccessed.forEach(m => {
-                const lastAccess = m.last_accessed ? new Date(m.last_accessed).toLocaleDateString() : 'Never';
-                const views = m.view_count || 0;
-                const status = views === 0 ? "DORMANT (0 Views)" : "Low Engagement";
+            filteredRatings.forEach(r => {
+                const date = new Date(r.created_at);
+                const dateStr = !isNaN(date) ? date.toLocaleDateString() : '-';
+                const title = r.material_title || r.document_file || 'Unknown';
+                const rating = r.relevant === true ? 'Helpful' : 'Not Relevant';
+                const score = r.relevant === true ? 1 : 0;
+                const comment = r.message_comment && r.message_comment.trim() !== '' ? r.message_comment : '-';
 
                 rows.push([
-                    escape(m.title || m.file || 'Unknown'),
-                    escape(m.year || '-'),
-                    escape(lastAccess),
-                    views,
-                    escape(status)
+                    escape(dateStr),
+                    escape(title),
+                    escape(rating),
+                    score,
+                    escape(comment)
                 ]);
             });
-        } else {
-            rows.push(["Note: No least accessed data found. (Check API connection)"]);
+
+            rows.push([]);
+            rows.push([]);
+
+            // --- SECTION 3: LEAST ACCESSED MATERIALS (ARCHIVE CANDIDATES) ---
+            rows.push(["--- PART 2: LEAST ACCESSED MATERIALS (ARCHIVE CANDIDATES) ---"]);
+
+            if (allLeastAccessed && allLeastAccessed.length > 0) {
+                rows.push(["Material Title", "Year", "Last Accessed", "Total Views", "Status"]);
+
+                allLeastAccessed.forEach(m => {
+                    const lastAccess = m.last_accessed ? new Date(m.last_accessed).toLocaleDateString() : 'Never';
+                    const views = m.view_count || 0;
+                    // New Logic (Smart Labeling)
+                    let status = "Active"; // Default for high views
+                    if (views === 0) {
+                        status = "DORMANT (0 Views)";
+                    } else if (views < 20) { // Set your own threshold for "Low"
+                        status = "Low Engagement";
+                    } else if (views < 100) { // Set your own threshold for "Moderate"
+                        status = "Moderate Engagement";
+                    } else {
+                        status = "High Engagement";
+                    }
+
+                    rows.push([
+                        escape(m.title || m.file || 'Unknown'),
+                        escape(m.year || '-'),
+                        escape(lastAccess),
+                        views,
+                        escape(status)
+                    ]);
+                });
+            } else {
+                rows.push(["Note: No least accessed data found. (Check API connection)"]);
+            }
+
+            // Convert rows to CSV string
+            const csvContent = rows.map(row => row.join(',')).join('\r\n');
+
+            // Add BOM for UTF-8
+            const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `LitPathAI_MaterialReport_${getLocalDateString()}.csv`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            showToast('Report exported successfully!', 'success');
+
+        } catch (error) {
+            // --- EXCEPTION HANDLING FOR E2: Export Generation Failure ---
+            console.error("Export generation failed:", error);
+            showToast('Failed to generate export file. Please try again.', 'error');
         }
-
-        // Convert rows to CSV string
-        const csvContent = rows.map(row => row.join(',')).join('\r\n');
-
-        // Add BOM for UTF-8
-        const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `LitPathAI_MaterialReport_${getLocalDateString()}.csv`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-
-        showToast('Report exported successfully!', 'success');
     };
 
     // ---------- RENDER ----------
