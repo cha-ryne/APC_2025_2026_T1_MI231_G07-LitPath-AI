@@ -21,6 +21,7 @@ const LitPathAI = () => {
     const [selectedSource, setSelectedSource] = useState(null);
     const [showOverlay, setShowOverlay] = useState(false);
     const [userFeedback, setUserFeedback] = useState(null); // null, 'thumbs_up', or 'thumbs_down'
+    const [submittedFeedback, setSubmittedFeedback] = useState(null); // Track submitted feedback for color display
     const [showFeedbackOverlay, setShowFeedbackOverlay] = useState(false);
     const [feedbackComment, setFeedbackComment] = useState("");
     const [loading, setLoading] = useState(false);
@@ -1507,6 +1508,9 @@ const handleFeedbackConfirm = async () => {
         console.log('✅ Feedback saved to Django backend successfully!');
         showToast('Thank you for your feedback!', 'success');
         
+        // Set submitted feedback for color display (only after successful submission)
+        setSubmittedFeedback(userFeedback);
+        
         // Reset and close
         setShowFeedbackOverlay(false);
         setFeedbackComment("");
@@ -2204,18 +2208,18 @@ return (
                             <div className="flex space-x-4 items-center">
                                 {/* Thumbs Up/Down Feedback */}
                                 <button
-                                    className={`transition-colors ${userFeedback === 'thumbs_up' ? 'text-green-300' : 'text-white hover:text-blue-200'}`}
+                                    className={`transition-colors ${submittedFeedback === 'thumbs_up' ? 'text-green-300' : 'text-white hover:text-blue-200'}`}
                                     onClick={() => handleFeedbackSubmit('thumbs_up')}
                                     title="Helpful"
                                 >
-                                    <ThumbsUp size={20} fill={userFeedback === 'thumbs_up' ? 'currentColor' : 'none'} />
+                                    <ThumbsUp size={20} fill={submittedFeedback === 'thumbs_up' ? 'currentColor' : 'none'} />
                                 </button>
                                 <button
-                                    className={`transition-colors ${userFeedback === 'thumbs_down' ? 'text-red-300' : 'text-white hover:text-blue-200'}`}
+                                    className={`transition-colors ${submittedFeedback === 'thumbs_down' ? 'text-red-300' : 'text-white hover:text-blue-200'}`}
                                     onClick={() => handleFeedbackSubmit('thumbs_down')}
                                     title="Not helpful"
                                 >
-                                    <ThumbsDown size={20} fill={userFeedback === 'thumbs_down' ? 'currentColor' : 'none'} />
+                                    <ThumbsDown size={20} fill={submittedFeedback === 'thumbs_down' ? 'currentColor' : 'none'} />
                                 </button>
                                 <div className="w-px h-5 bg-white opacity-30"></div>
                                 <button 
