@@ -1722,10 +1722,10 @@ return (
         )}
 
         {/* Main layout */}
-        <div className="flex flex-1 min-h-0">
+        <div className={`flex flex-1 min-h-0 transition-all duration-300 ${sidebarCollapsed ? 'pl-16' : 'pl-64'}`}>
             {/* Sidebar (desktop) - Collapsible */}
             <aside 
-                className={`hidden md:flex flex-col bg-white border-r border-gray-200 h-[calc(100vh-64px)] sticky top-[64px] z-30 transition-all duration-300 ease-in-out ${
+                className={`hidden md:flex flex-col bg-white border-r border-gray-200 h-[calc(100vh-64px)] fixed top-16 left-0 z-30 transition-all duration-300 ease-in-out ${
                     sidebarCollapsed ? 'w-16' : 'w-64'
                 }`}
             >
@@ -2996,7 +2996,7 @@ function SidebarContent({
         <div className="flex flex-col h-full">
             
             {/* TOP CONTENT */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 overflow-hidden p-4 space-y-4">
                 <button
                     onClick={handleNewChat}
                     disabled={!hasSearchedInSession}
