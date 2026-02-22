@@ -1,5 +1,4 @@
 import React from 'react';
-import { X } from 'lucide-react';
 import FeedbackForm from '../FeedbackForm';
 
 const CSMModal = ({ isOpen, onClose }) => {
@@ -15,14 +14,6 @@ const CSMModal = ({ isOpen, onClose }) => {
             
             {/* Modal container - not scrollable, fixed size */}
             <div className="relative bg-white rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden">
-                
-                {/* Close button - absolute positioned */}
-                <button
-                    onClick={onClose}
-                    className="absolute top-4 right-4 z-10 text-gray-400 hover:text-gray-600 transition-colors bg-white rounded-full p-1 shadow-md"
-                >
-                    <X size={24} />
-                </button>
 
                 {/* Scrollable content area */}
                 <div className="flex-1 overflow-y-auto p-6">
