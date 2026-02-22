@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import { BookOpen, User, ArrowRight, Eye, EyeOff } from 'lucide-react';
 import dostLogo from "./components/images/dost-logo.png";
+import dostBg from "./components/images/dost.png";
 
 const AuthPage = () => {
     const navigate = useNavigate();
@@ -97,7 +98,7 @@ const AuthPage = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-100">
+        <div className="min-h-screen flex flex-col" style={{ backgroundImage: `url(${dostBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
             {/* Header */}
             <div className="sticky top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#555555] to-[#212121] text-white shadow-md">
                 <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
