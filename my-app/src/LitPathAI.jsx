@@ -124,6 +124,12 @@ const LitPathAI = () => {
             }
         }
         
+        // Only show CSM modal after 3 queries
+        const currentCount = parseInt(localStorage.getItem('csm_query_count') || '0', 10);
+        if (currentCount < 3) {
+            return false;
+        }
+        
         return true;
     };
     
@@ -1118,6 +1124,10 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
             // STEP 7: TRIGGER CSM FEEDBACK (Delay)
             // ---------------------------------------------------------
             if (activeSessionId) sessionStorage.setItem('session_id', activeSessionId);
+            
+            // Increment query count for CSM feedback tracking
+            const newCount = (parseInt(localStorage.getItem('csm_query_count') || '0', 10)) + 1;
+            localStorage.setItem('csm_query_count', newCount.toString());
             
             setTimeout(() => {
                 if (shouldShowCSMModal()) {
@@ -2965,6 +2975,8 @@ return (
                     localStorage.setItem('csm_feedback_skipped', 'true');
                     localStorage.setItem('csm_feedback_skipped_at', new Date().toISOString());
                 }
+                // Reset query count after feedback is submitted or skipped
+                localStorage.setItem('csm_query_count', '0');
             }} 
         />
     </div>
