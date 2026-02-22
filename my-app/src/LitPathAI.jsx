@@ -30,6 +30,7 @@ const LitPathAI = () => {
     const [showCitationOverlay, setShowCitationOverlay] = useState(false);
     const [selectedCitationStyle, setSelectedCitationStyle] = useState("APA");
     const [generatedCitation, setGeneratedCitation] = useState("");
+    const [formattedCitation, setFormattedCitation] = useState("");
     const [showSavedItems, setShowSavedItems] = useState(false);
     const [bookmarkedCount, setBookmarkedCount] = useState(0);
     const [bookmarks, setBookmarks] = useState([]); // Store bookmarks in state (not localStorage for authenticated users)
@@ -1302,66 +1303,91 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
         
         
         // Format degree consistently based on style
+        // Always replace full degree names with standard labels
         const formatDegree = (deg, citationStyle) => {
             // Normalize degree strings
             const lowerDeg = deg.toLowerCase();
             
+            // Check for doctoral degrees (any "Doctor of" degree should be treated as doctoral)
+            const isDoctoral = lowerDeg.includes("doctor of") || lowerDeg.includes("doctoral") || 
+                              lowerDeg.includes("phd") || lowerDeg.includes("ph.d.") || 
+                              lowerDeg.includes("doctorate") || lowerDeg.includes("d.phil");
+            
+            // Check for master degrees
+            const isMaster = lowerDeg.includes("master") || lowerDeg.includes("m.s.") || 
+                            lowerDeg.includes("m.sc") || lowerDeg.includes("ma");
+            
+            // Check for bachelor degrees
+            const isBachelor = lowerDeg.includes("bachelor") || lowerDeg.includes("b.s.") || 
+                              lowerDeg.includes("b.sc");
+            
+            // IEEE uses abbreviations
             if (citationStyle === 'IEEE') {
-                // IEEE uses abbreviations
-                if (lowerDeg.includes("master")) return "M.S. thesis";
-                if (lowerDeg.includes("doctoral") || lowerDeg.includes("phd") || lowerDeg.includes("doctorate")) return "Ph.D. dissertation";
-                if (lowerDeg.includes("bachelor")) return "B.S. thesis";
-                return deg;
+                if (isDoctoral) return "Ph.D. dissertation";
+                if (isMaster) return "M.S. thesis";
+                if (isBachelor) return "B.S. thesis";
+                // Default - override any full degree name
+                return "Ph.D. dissertation";
             }
             
             if (citationStyle === 'APA') {
-                // APA uses sentence case (lowercase)
-                if (lowerDeg.includes("master")) return "master's thesis";
-                if (lowerDeg.includes("doctoral") || lowerDeg.includes("phd") || lowerDeg.includes("doctorate")) return "doctoral dissertation";
-                if (lowerDeg.includes("bachelor")) return "bachelor's thesis";
-                return deg;
+                // APA uses title case for degree labels (capitalize first letter)
+                if (isDoctoral) return "Doctoral dissertation";
+                if (isMaster) return "Master's thesis";
+                if (isBachelor) return "Bachelor's thesis";
+                // Default - override any full degree name with doctoral dissertation
+                return "Doctoral dissertation";
             }
             
             // MLA and Chicago use title case
-            if (lowerDeg.includes("master")) return "Master's thesis";
-            if (lowerDeg.includes("doctoral") || lowerDeg.includes("phd") || lowerDeg.includes("doctorate")) return "Doctoral dissertation";
-            if (lowerDeg.includes("bachelor")) return "Bachelor's thesis";
+            if (isDoctoral) return "Doctoral dissertation";
+            if (isMaster) return "Master's thesis";
+            if (isBachelor) return "Bachelor's thesis";
             
-            return deg;
+            // Default - override any full degree name with doctoral dissertation
+            return "Doctoral dissertation";
         };
         
         let citation = "";
         switch (style) {
             case "APA": {
-                // APA 7th: Author, A. A. (Year). Title in sentence case (Master's thesis, Institution).
+                // APA 7th: Author. (Year). Title (Doctoral dissertation, University Name).
+                // Use sentence case for title, italicize it
                 const apaAuthor = formatAuthorAPA(normalizedAuthor);
                 const apaTitle = toSentenceCase(title);
                 const apaDegree = formatDegree(degree, 'APA');
-                citation = `${apaAuthor} (${year}). ${apaTitle} (${apaDegree}, ${normalizedSchool}).`;
+                // APA: italicize the title, use sentence case for degree type
+                citation = `${apaAuthor} (${year}). <i>${apaTitle}</i> (${apaDegree}, ${normalizedSchool}).`;
                 break;
             }
             case "MLA": {
-                // MLA 9th: Author Last Name, First Name. Title. Degree, Institution, Year.
+                // MLA 9th: Author. Title. University Name, Year. Degree label.
+                // Use title case, italicize title
                 const mlaAuthor = formatAuthorMLA(normalizedAuthor);
                 const mlaTitle = toTitleCase(title);
                 const mlaDegree = formatDegree(degree, 'MLA');
-                citation = `${mlaAuthor}. ${mlaTitle}. ${mlaDegree}, ${normalizedSchool}, ${year}.`;
+                // MLA: italicize title, degree at end
+                citation = `${mlaAuthor}. <i>${mlaTitle}</i>. ${normalizedSchool}, ${year}. ${mlaDegree}.`;
                 break;
             }
             case "Chicago": {
-                // Chicago (Notes & Bibliography): Author Last, First. "Title." Degree, Institution, Year.
+                // Chicago (Notes & Bibliography): Author. Title. Doctoral dissertation, University Name, Year.
+                // Use title case, italicize title
                 const chicagoAuthor = formatAuthorMLA(normalizedAuthor);
                 const chicagoTitle = toTitleCase(title);
                 const chicagoDegree = formatDegree(degree, 'Chicago');
-                citation = `${chicagoAuthor}. "${chicagoTitle}." ${chicagoDegree}, ${normalizedSchool}, ${year}.`;
+                // Chicago: italicize title, year at end
+                citation = `${chicagoAuthor}. <i>${chicagoTitle}</i>. ${chicagoDegree}, ${normalizedSchool}, ${year}.`;
                 break;
             }
             case "IEEE": {
-                // IEEE: F. M. Author, "Title," Degree type, Institution, Location, Year.
+                // IEEE: Initials. Last name, Title, Ph.D. dissertation, University Name, City, Country, Year.
+                // Use title case, italicize title, NO quotation marks, include city and country
                 const ieeeAuthor = formatAuthorIEEE(normalizedAuthor);
                 const ieeeDegreeFormatted = formatDegree(degree, 'IEEE');
-                const ieeeTitle = toSentenceCase(title);
-                citation = `${ieeeAuthor}, "${ieeeTitle}," ${ieeeDegreeFormatted}, ${normalizedSchool}, Philippines, ${year}.`;
+                const ieeeTitle = toTitleCase(title);
+                // IEEE: italicize title (no quotes), include city and country
+                citation = `${ieeeAuthor}, <i>${ieeeTitle}</i>, ${ieeeDegreeFormatted}, ${normalizedSchool}, Philippines, ${year}.`;
                 break;
             }
             default:
@@ -1371,7 +1397,11 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
         // Clean up any double periods, trailing commas, or spacing errors
         citation = citation.replace(/\.\.+/g, '.').replace(/,\./g, '.').replace(/,\s*\./g, '.').replace(/\s+/g, ' ').trim();
         
-        setGeneratedCitation(citation);
+        // Create plain text version for clipboard (strip HTML tags)
+        const plainTextCitation = citation.replace(/<[^>]*>/g, '');
+        
+        setGeneratedCitation(plainTextCitation);
+        setFormattedCitation(citation);
     };
     
     const handleNewChat = async () => {
@@ -2350,10 +2380,15 @@ return (
                             ×
                         </button>
                         <h3 className="font-semibold text-gray-800 mb-3">{selectedCitationStyle} Citation</h3>
+                        <div 
+                            className="w-full h-40 border p-3 rounded text-gray-700 overflow-auto bg-gray-50"
+                            dangerouslySetInnerHTML={{ __html: formattedCitation }}
+                        />
                         <textarea
                             readOnly
                             value={generatedCitation}
-                            className="w-full h-40 border p-3 rounded text-gray-700"
+                            className="w-full h-40 border p-3 rounded text-gray-700 mt-2"
+                            style={{ display: 'none' }}
                         />
                         <button
                             className="mt-4 bg-[#1E74BC] text-white px-4 py-2 rounded hover:bg-[#185f99]"
