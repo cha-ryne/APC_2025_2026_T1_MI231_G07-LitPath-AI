@@ -885,7 +885,7 @@ def get_most_browsed(request):
             school = row['school']
             
             # If metadata is missing, try to get it from the RAG system
-            if (not title or title == 'Unknown') or (not author or author == 'Unknown'):
+            if (not title or title == 'Unknown') or (not author or author == 'Unknown') or (not year or year == 'Unknown') or (not school or school == 'Unknown Institution' or school == 'Unknown'):
                 try:
                     if RAGService._initialized:
                         rag = RAGService()

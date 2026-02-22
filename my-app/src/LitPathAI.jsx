@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
-    Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight, ShieldCheck, Menu
+    Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar, MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2, Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight, ShieldCheck, Menu, GraduationCap
 } from 'lucide-react';
 import { useAuth } from './context/AuthContext';
 import dostLogo from "./components/images/dost-logo.png";
@@ -1872,6 +1872,12 @@ return (
                                                                     <User size={11} className="inline mr-0.5" />
                                                                     {material.author} • {material.year}
                                                                 </p>
+                                                                {material.school && material.school !== 'Unknown Institution' && (
+                                                                    <p className="text-[10px] text-gray-500 mb-0.5">
+                                                                        <GraduationCap size={10} className="inline mr-0.5" />
+                                                                        {material.school}
+                                                                    </p>
+                                                                )}
                                                                 <p className="text-[10px] text-gray-500">{material.degree}</p>
                                                             </div>
                                                             {/* Bottom Row: Rating + View Details */}
