@@ -7,12 +7,12 @@ import {
     Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight, ShieldCheck,
     Menu, GraduationCap, Quote, Bookmark, Copy
 } from 'lucide-react';
-import { useAuth } from '../context/AuthContext';
-import dostLogo from '../components/images/dost-logo.png';
-import CSMModal from '../components/CSMModal';
-
-
-const API_BASE_URL = 'http://localhost:8000/api';
+import { useAuth } from '../../context/AuthContext';
+import dostLogo from '../../assets/images/dost-logo.png';
+import CSMModal from '../../components/CSMModal';
+import CitationModal from './CitationModal';
+import { API_BASE_URL } from '../../services/api';
+import { formatSources } from '../../lib/formatSources';
 const LitPathAI = () => {
     // Auth context
     const { user, isGuest, logout, startNewChat: authStartNewChat, getUserId, isStaff, changePassword, setUser } = useAuth();
@@ -29,9 +29,6 @@ const LitPathAI = () => {
     const [error, setError] = useState(null);
     const [backendStatus, setBackendStatus] = useState(null);
     const [showCitationOverlay, setShowCitationOverlay] = useState(false);
-    const [selectedCitationStyle, setSelectedCitationStyle] = useState("APA");
-    const [generatedCitation, setGeneratedCitation] = useState("");
-    const [formattedCitation, setFormattedCitation] = useState("");
     const [showSavedItems, setShowSavedItems] = useState(false);
     const [bookmarkedCount, setBookmarkedCount] = useState(0);
     const [bookmarks, setBookmarks] = useState([]); // Store bookmarks in state (not localStorage for authenticated users)
@@ -213,12 +210,7 @@ const LitPathAI = () => {
         checkBackendHealth();
     }, []);
     
-    // Auto-generate citation when overlay opens or style changes
-    useEffect(() => {
-        if (showCitationOverlay && selectedSource) {
-            generateCitation(selectedCitationStyle);
-        }
-    }, [showCitationOverlay, selectedCitationStyle, selectedSource]);
+
 
 
     // Load research history on mount and when user changes
@@ -1168,243 +1160,9 @@ const handleSearch = async (query = searchQuery, forceNew = false) => {
         }
     };
 
-   const generateCitation = (style) => {
-        if (!selectedSource) return;
-        
-        // Normalize missing data
-        const author = selectedSource.author || "Unknown Author";
-        const year = selectedSource.year || "n.d.";
-        const title = selectedSource.title || "Untitled";
-        const school = selectedSource.school || "Unknown Institution";
-        const degree = selectedSource.degree || "Thesis";
-        
-        // Normalize author name - convert ALL-CAPS to proper case
-        const normalizeAuthorName = (name) => {
-            if (name === name.toUpperCase()) {
-                return name.split(' ').map(word => 
-                    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-                ).join(' ');
-            }
-            return name;
-        };
-        
-        const normalizedAuthor = normalizeAuthorName(author);
-        
-        // Normalize school/institution - proper case handling
-        const normalizeSchool = (inst) => {
-            if (inst === inst.toUpperCase()) {
-                const lowercaseWords = ['of', 'the', 'and', 'in', 'at', 'to', 'for', 'a', 'an'];
-                return inst.split(' ').map((word, index) => {
-                    if (index === 0 || word.includes('-')) {
-                        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-                    }
-                    if (lowercaseWords.includes(word.toLowerCase())) {
-                        return word.toLowerCase();
-                    }
-                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-                }).join(' ');
-            }
-            return inst;
-        };
-        
-        const normalizedSchool = normalizeSchool(school);
-        
-        // Extended proper nouns list for sentence case
-        const properNouns = [
-            'philippine', 'philippines', 'manila', 'cebu', 'davao', 'quezon', 
-            'los', 'banos', 'tacloban', 'leyte', 'batangas', 'luzon', 'mindanao', 
-            'visayas', 'makiling', 'IPB', 'UPLB', 'UP', 'DOST', 'STII', 'var', 'spp',
-            'pinggang', 'pinoy', 'metro', 'manila', 'laguna'
-        ];
-        
-        // Convert to sentence case with proper noun preservation
-        const toSentenceCase = (str) => {
-            if (!str) return str;
-            let result = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-            result = result.replace(/([.!?]\s+)([a-z])/g, (match, p1, p2) => p1 + p2.toUpperCase());
-            result = result.replace(/:\s+([a-z])/g, (match, p1) => ': ' + p1.toUpperCase());
-            properNouns.forEach(noun => {
-                const regex = new RegExp(`\\b${noun}\\b`, 'gi');
-                result = result.replace(regex, noun.charAt(0).toUpperCase() + noun.slice(1).toLowerCase());
-            });
-            // Preserve specific phrases like Pinggang Pinoy and Metro Manila
-            result = result.replace(/Pinggang pinoy/gi, 'Pinggang Pinoy');
-            result = result.replace(/Metro manila/gi, 'Metro Manila');
-            result = result.replace(/\b[A-Z]{2,}\b/g, (match) => match);
-            result = result.replace(/\[([a-z])/gi, (match, p1) => '[' + p1.toUpperCase());
-            result = result.replace(/\[([A-Z][a-z]+)\s+([a-z])/g, (match, p1, p2) => '[' + p1 + ' ' + p2);
-            return result;
-        };
-        
-        // Convert to title case (proper noun aware)
-        const toTitleCase = (str) => {
-            if (!str) return str;
-            const minorWords = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'from', 'by', 'of', 'in', 'with', 'vs', 'via'];
-            const majorWords = ['philippine', 'philippines', 'manila', 'cebu', 'davao', 'quezon', 'los', 'banos', 'tacloban', 'leyte', 'batangas', 'metro', 'manila', 'laguna', 'luzon', 'mindanao', 'visayas', 'makiling'];
-            
-            return str.split(' ').map((word, index) => {
-                const lowerWord = word.toLowerCase();
-                if (index === 0 || index === str.split(' ').length - 1) {
-                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-                }
-                if (majorWords.includes(lowerWord)) {
-                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-                }
-                if (minorWords.includes(lowerWord)) {
-                    return lowerWord;
-                }
-                return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-            }).join(' ');
-        };
+    // Citation logic moved to CitationModal component
+    // (see search/CitationModal.tsx)
 
-        
-        // Parse author name intelligently (handle compound last names)
-        const parseAuthorName = (name) => {
-            const lastNamePrefixes = ['de', 'del', 'dela', 'de la', 'san', 'santa', 'van', 'von', 'da', 'la'];
-            const parts = name.split(/\s+/);
-            
-            let lastNameStartIndex = parts.length - 1;
-            for (let i = parts.length - 2; i >= 0; i--) {
-                if (lastNamePrefixes.includes(parts[i].toLowerCase())) {
-                    lastNameStartIndex = i;
-                } else {
-                    break;
-                }
-            }
-            
-            const firstNames = parts.slice(0, lastNameStartIndex);
-            const lastName = parts.slice(lastNameStartIndex);
-            
-            return { firstNames, lastName };
-        };
-        
-        // Format author for APA: Last, F. M.
-        const formatAuthorAPA = (name) => {
-            const { firstNames, lastName } = parseAuthorName(name);
-            const initials = firstNames.map(n => n.charAt(0).toUpperCase() + '.').join(' ');
-            const lastNameFormatted = lastName.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
-            return `${lastNameFormatted}, ${initials}`;
-        };
-        
-        // Format author for MLA/Chicago: Last, First Middle
-        const formatAuthorMLA = (name) => {
-            const { firstNames, lastName } = parseAuthorName(name);
-            const firstNamesFormatted = firstNames.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
-            const lastNameFormatted = lastName.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
-            return `${lastNameFormatted}, ${firstNamesFormatted}`.replace(/\.\.+/g, '.').replace(/\.\s*$/, '');
-        };
-        
-        // Format author for IEEE: F. M. Last
-        const formatAuthorIEEE = (name) => {
-            const { firstNames, lastName } = parseAuthorName(name);
-            const initials = firstNames.map(n => n.charAt(0).toUpperCase() + '.').join(' ');
-            const lastNameFormatted = lastName.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
-            return `${initials} ${lastNameFormatted}`;
-        };
-        
-        
-        // Format degree consistently based on style
-        // Always replace full degree names with standard labels
-        const formatDegree = (deg, citationStyle) => {
-            // Normalize degree strings
-            const lowerDeg = deg.toLowerCase();
-            
-            // Check for doctoral degrees (any "Doctor of" degree should be treated as doctoral)
-            const isDoctoral = lowerDeg.includes("doctor of") || lowerDeg.includes("doctoral") || 
-                              lowerDeg.includes("phd") || lowerDeg.includes("ph.d.") || 
-                              lowerDeg.includes("doctorate") || lowerDeg.includes("d.phil");
-            
-            // Check for master degrees
-            const isMaster = lowerDeg.includes("master") || lowerDeg.includes("m.s.") || 
-                            lowerDeg.includes("m.sc") || lowerDeg.includes("ma");
-            
-            // Check for bachelor degrees
-            const isBachelor = lowerDeg.includes("bachelor") || lowerDeg.includes("b.s.") || 
-                              lowerDeg.includes("b.sc");
-            
-            // IEEE uses abbreviations
-            if (citationStyle === 'IEEE') {
-                if (isDoctoral) return "Ph.D. dissertation";
-                if (isMaster) return "M.S. thesis";
-                if (isBachelor) return "B.S. thesis";
-                // Default - override any full degree name
-                return "Ph.D. dissertation";
-            }
-            
-            if (citationStyle === 'APA') {
-                // APA uses title case for degree labels (capitalize first letter)
-                if (isDoctoral) return "Doctoral dissertation";
-                if (isMaster) return "Master's thesis";
-                if (isBachelor) return "Bachelor's thesis";
-                // Default - override any full degree name with doctoral dissertation
-                return "Doctoral dissertation";
-            }
-            
-            // MLA and Chicago use title case
-            if (isDoctoral) return "Doctoral dissertation";
-            if (isMaster) return "Master's thesis";
-            if (isBachelor) return "Bachelor's thesis";
-            
-            // Default - override any full degree name with doctoral dissertation
-            return "Doctoral dissertation";
-        };
-        
-        let citation = "";
-        switch (style) {
-            case "APA": {
-                // APA 7th: Author. (Year). Title (Doctoral dissertation, University Name).
-                // Use sentence case for title, italicize it
-                const apaAuthor = formatAuthorAPA(normalizedAuthor);
-                const apaTitle = toSentenceCase(title);
-                const apaDegree = formatDegree(degree, 'APA');
-                // APA: italicize the title, use sentence case for degree type
-                citation = `${apaAuthor} (${year}). <i>${apaTitle}</i> (${apaDegree}, ${normalizedSchool}).`;
-                break;
-            }
-            case "MLA": {
-                // MLA 9th: Author. Title. University Name, Year. Degree label.
-                // Use title case, italicize title
-                const mlaAuthor = formatAuthorMLA(normalizedAuthor);
-                const mlaTitle = toTitleCase(title);
-                const mlaDegree = formatDegree(degree, 'MLA');
-                // MLA: italicize title, degree at end
-                citation = `${mlaAuthor}. <i>${mlaTitle}</i>. ${normalizedSchool}, ${year}. ${mlaDegree}.`;
-                break;
-            }
-            case "Chicago": {
-                // Chicago (Notes & Bibliography): Author. Title. Doctoral dissertation, University Name, Year.
-                // Use title case, italicize title
-                const chicagoAuthor = formatAuthorMLA(normalizedAuthor);
-                const chicagoTitle = toTitleCase(title);
-                const chicagoDegree = formatDegree(degree, 'Chicago');
-                // Chicago: italicize title, year at end
-                citation = `${chicagoAuthor}. <i>${chicagoTitle}</i>. ${chicagoDegree}, ${normalizedSchool}, ${year}.`;
-                break;
-            }
-            case "IEEE": {
-                // IEEE: Initials. Last name, Title, Ph.D. dissertation, University Name, City, Country, Year.
-                // Use title case, italicize title, NO quotation marks, include city and country
-                const ieeeAuthor = formatAuthorIEEE(normalizedAuthor);
-                const ieeeDegreeFormatted = formatDegree(degree, 'IEEE');
-                const ieeeTitle = toTitleCase(title);
-                // IEEE: italicize title (no quotes), include city and country
-                citation = `${ieeeAuthor}, <i>${ieeeTitle}</i>, ${ieeeDegreeFormatted}, ${normalizedSchool}, Philippines, ${year}.`;
-                break;
-            }
-            default:
-                citation = "";
-        }
-        
-        // Clean up any double periods, trailing commas, or spacing errors
-        citation = citation.replace(/\.\.+/g, '.').replace(/,\./g, '.').replace(/,\s*\./g, '.').replace(/\s+/g, ' ').trim();
-        
-        // Create plain text version for clipboard (strip HTML tags)
-        const plainTextCitation = citation.replace(/<[^>]*>/g, '');
-        
-        setGeneratedCitation(plainTextCitation);
-        setFormattedCitation(citation);
-    };
-    
     const handleNewChat = async () => {
         // Save current session to history (upsert - safe to call even if already auto-saved)
         if (hasSearchedInSession && searchResults) {
@@ -2349,84 +2107,14 @@ return (
         )}
 
         {/* Citation Overlay */}
-        {showCitationOverlay && (
-            <div className="fixed inset-0 bg-black bg-opacity-60 z-[60] flex items-center justify-center">
-                <div className="bg-white w-10/12 md:w-2/3 lg:w-1/2 xl:w-[40%] rounded-lg shadow-2xl flex">
-                    
-                    {/* Type of citation */}
-                    <div className="w-1/3 bg-gray-100 border-r p-6">
-                        <h3 className="font-semibold mb-4 text-gray-800">Citation Style</h3>
-                        {["APA", "MLA", "Chicago", "IEEE"].map((style) => (
-                            <button
-                                key={style}
-                                className={`block w-full text-left px-4 py-2 rounded mb-2
-                                    ${selectedCitationStyle === style ? "bg-[#1E74BC] text-white" : "hover:bg-[#d7e8f6]"}`}
-                                onClick={() => setSelectedCitationStyle(style)}
-                            >
-                                {style === "APA" ? "APA (7th edition)" :
-                                    style === "MLA" ? "MLA (9th edition)" : style}
-                            </button>
-                        ))}
-                    </div>
-
-
-                    {/* Generated citation */}
-                    <div className="w-2/3 p-6 relative">
-                        
-                        {/* Close button */}
-                        <button
-                            onClick={() => setShowCitationOverlay(false)}
-                            className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
-                        >
-                            ×
-                        </button>
-                        <h3 className="font-semibold text-gray-800 mb-3">{selectedCitationStyle} Citation</h3>
-                        <div 
-                            className="w-full h-40 border p-3 rounded text-gray-700 overflow-auto bg-gray-50"
-                            dangerouslySetInnerHTML={{ __html: formattedCitation }}
-                        />
-                        <textarea
-                            readOnly
-                            value={generatedCitation}
-                            className="w-full h-40 border p-3 rounded text-gray-700 mt-2"
-                            style={{ display: 'none' }}
-                        />
-                        <button
-                            className="mt-4 bg-[#1E74BC] text-white px-4 py-2 rounded hover:bg-[#185f99]"
-                            onClick={async () => {
-                                try {
-                                    // Copy to clipboard
-                                    await navigator.clipboard.writeText(generatedCitation);
-                                    showToast('Citation copied to clipboard!', 'success');
-
-                                    // Track the copy event
-                                    try {
-                                        await fetch(`${API_BASE_URL}/track-citation/`, {
-                                            method: 'POST',
-                                            headers: { 'Content-Type': 'application/json' },
-                                            body: JSON.stringify({
-                                                file: selectedSource?.file || selectedSource?.fullTextPath,
-                                                citation_style: selectedCitationStyle,
-                                                user_id: userId,
-                                                session_id: currentSessionId
-                                            })
-                                        });
-                                    } catch (error) {
-                                        console.error('Failed to track citation copy:', error);
-                                        // Don't show error to user – it's non‑critical
-                                    }
-                                } catch (error) {
-                                    console.error('Error copying citation:', error);
-                                    showToast('Citation could not be generated!', 'error');
-                                }
-                            }}
-                        >
-                            Copy to Clipboard
-                        </button>
-                    </div>
-                </div>
-            </div>
-        )}
+        <CitationModal
+            isOpen={showCitationOverlay}
+            onClose={() => setShowCitationOverlay(false)}
+            selectedSource={selectedSource}
+            userId={userId}
+            currentSessionId={currentSessionId}
+            showToast={showToast}
+        />
 
         {/* Feedback Overlay */}
         {showFeedbackOverlay && (
@@ -2733,7 +2421,7 @@ return (
                         setSettingsLoading(true);
                         try {
                         const token = localStorage.getItem('litpath_session') ? JSON.parse(localStorage.getItem('litpath_session')).session_token : null;
-                        const res = await fetch('http://localhost:8000/api/auth/update-profile/', {
+                        const res = await fetch(`${API_BASE_URL}/auth/update-profile/`, {
                             method: 'POST',
                             headers: {
                             'Content-Type': 'application/json',
@@ -3133,26 +2821,5 @@ function SidebarContent({
         </div>
     );
 }
-
-// Helper: Safely formats API documents into UI-friendly source objects
-const formatSources = (documents) => {
-    if (!documents || !Array.isArray(documents)) return [];
-    
-    return documents.map((doc, index) => ({
-        id: Date.now() + index,
-        title: doc.title || '[Unknown Title]',
-        author: doc.author || '[Unknown Author]',
-        year: doc.publication_year || '[Unknown Year]',
-        abstract: doc.abstract || 'Abstract not available.',
-        fullTextPath: doc.file || '',
-        file: doc.file || '',
-        degree: doc.degree || 'Thesis',
-        subjects: doc.subjects || ['Research'],
-        school: doc.university || '[Unknown University]',
-        // Preserve analytics data if available
-        view_count: doc.view_count || 0,
-        avg_rating: doc.avg_rating || 0
-    }));
-};
 
 export default LitPathAI;

@@ -109,8 +109,8 @@ def format_metadata_capitalization(text, field_type='default'):
     # Otherwise return original text (already properly formatted)
     return text.strip()
 
-# Add parent directory to path to import extract_metadata
-sys.path.append(os.path.join(settings.BASE_DIR.parent, 'RAG'))
+# Add RAG/scripts directory to path to import extract_metadata
+sys.path.append(os.path.join(settings.BASE_DIR.parent, 'RAG', 'scripts'))
 from extract_metadata import extract_thesis_metadata
 
 

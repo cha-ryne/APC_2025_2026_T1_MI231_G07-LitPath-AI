@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 import {
     LayoutDashboard, MessageSquare, Star, LogOut, Settings,
     ShieldCheck, ChevronDown, Eye, Search, ThumbsUp, ThumbsDown,
@@ -10,15 +10,9 @@ import {
     Trophy, Medal, Briefcase, GraduationCap, BarChart3, Copy, Info,
     User, Key, RefreshCw, Download, Home
 } from "lucide-react";
-import dostLogo from "../components/images/dost-logo.png";
-
-const API_BASE_URL = 'http://localhost:8000/api';
-
-const formatNumber = (num) => {
-    if (num === null || num === undefined) return '0';
-    if (num >= 1000) return (num / 1000).toFixed(1) + 'k';
-    return num.toLocaleString();
-};
+import dostLogo from "../../assets/images/dost-logo.png";
+import { API_BASE_URL } from '../../services/api';
+import { formatNumber } from '../../lib/formatNumber';
 
 const hideDefaultPasswordEyeStyles = `
   input[type="password"]::-webkit-credentials-auto-fill-button,

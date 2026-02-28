@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
-
-const API_BASE_URL = 'http://localhost:8000/api';
+import { API_BASE_URL } from '../services/api';
 
 // ── Types ──────────────────────────────────────────────
 export interface UserData {

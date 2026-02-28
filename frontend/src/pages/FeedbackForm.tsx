@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Star } from 'lucide-react';
-
-const API_BASE_URL = 'http://localhost:8000/api';
+import { API_BASE_URL } from '../services/api';
 
 interface FeedbackFormProps {
     embedded?: boolean;

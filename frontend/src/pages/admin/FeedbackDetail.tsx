@@ -2,9 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ChevronLeft, ChevronDown, ShieldCheck, Settings, LogOut, Star, Home } from 'lucide-react';
-import dostLogo from "../components/images/dost-logo.png";
-
-const API_BASE_URL = 'http://localhost:8000/api';
+import dostLogo from "../../assets/images/dost-logo.png";
+import { API_BASE_URL } from '../../services/api';
 
 const FeedbackDetail = () => {
     const { id } = useParams();

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import dostLogo from "../components/images/dost-logo.png";
-
-
-const API_BASE_URL = 'http://localhost:8000/api';
+import dostLogo from "../assets/images/dost-logo.png";
+import { API_BASE_URL } from '../services/api';
 
 const ResetPassword = () => {
   const { token } = useParams();

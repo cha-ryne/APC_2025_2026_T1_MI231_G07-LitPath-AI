@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { BookOpen, User, ArrowRight, Eye, EyeOff } from 'lucide-react';
-import dostLogo from "../components/images/dost-logo.png";
-import dostBg from "../components/images/dost.png";
+import dostLogo from "../assets/images/dost-logo.png";
+import dostBg from "../assets/images/dost.png";
+import { API_BASE_URL } from '../services/api';
 
 const AuthPage = () => {
     const navigate = useNavigate();
@@ -32,7 +33,7 @@ const AuthPage = () => {
             setResetLoading(true);
             try {
                 // Call backend endpoint for password reset
-                const response = await fetch('http://localhost:8000/api/auth/password-reset-request/', {
+                const response = await fetch(`${API_BASE_URL}/auth/password-reset-request/`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email: resetEmail })

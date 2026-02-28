@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
-import LitPathAI from './pages/LitPathAI';
+import LitPathAI from './pages/search/LitPathAI';
 import AuthPage from './pages/AuthPage';
-import AdminDashboard from './pages/AdminDashboard';
+import AdminDashboard from './pages/admin/AdminDashboard';
 import FeedbackForm from './pages/FeedbackForm';
-import FeedbackDetail from './pages/FeedbackDetail';
+import FeedbackDetail from './pages/admin/FeedbackDetail';
 import ResetPassword from './pages/ResetPassword';
 
 // ------------------------------------------------------------
