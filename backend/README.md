@@ -106,7 +106,7 @@ backend/
 
 ## Frontend Integration
 
-Update your React frontend (`my-app/src/LitPathAI.jsx`) to use the new Django backend:
+Update your React frontend (`frontend/src/pages/LitPathAI.tsx`) to use the new Django backend:
 
 ```javascript
 // Change from:

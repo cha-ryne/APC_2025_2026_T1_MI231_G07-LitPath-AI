@@ -34,9 +34,9 @@ python manage.py runserver
 ```
 Backend runs at: `http://localhost:8000`
 
-### Frontend (React + Vite)
+### Frontend (React + Vite + TypeScript)
 ```powershell
-cd my-app
+cd frontend
 npm install
 npm run dev
 ```
@@ -53,7 +53,7 @@ Frontend runs at: `http://localhost:5173`
 
 ```
 LitPath-AI/
-├── backend/                    # Django backend (NEW!)
+├── backend/                   # Django REST API
 │   ├── manage.py
 │   ├── requirements.txt
 │   ├── litpath_backend/       # Django project settings
@@ -61,18 +61,18 @@ LitPath-AI/
 │       ├── views.py           # API endpoints
 │       ├── rag_service.py     # RAG core logic
 │       └── urls.py
-├── my-app/                    # React frontend
+├── frontend/                  # React + TypeScript + Vite
 │   ├── src/
-│   │   ├── LitPathAI.jsx     # Main component
-│   │   └── components/
+│   │   ├── App.tsx            # Router & layout
+│   │   ├── pages/             # Page components
+│   │   ├── components/        # Reusable UI components
+│   │   └── context/           # React contexts
 │   └── package.json
-├── RAG/                       # RAG system files
-│   ├── theses/               # PDF thesis files
-│   ├── chromadb_data/        # Vector database
-│   ├── extract_metadata.py   # Metadata extraction
-│   └── multi_thesis_rag.py   # Legacy (replaced by Django)
-└── docs/                      # Documentation
-
+├── RAG/                       # Data processing & indexing
+│   ├── requirements.txt       # ML/NLP dependencies
+│   ├── theses/                # Thesis text files + metadata
+│   └── chromadb_data/         # Vector database (gitignored)
+└── docs/                      # All documentation & diagrams
 ```
 
 ---
@@ -135,9 +135,9 @@ See your ERD implementation in `backend/rag_api/models.py` (ready to add):
 ## 🛠️ Tech Stack
 
 **Frontend:**
-- React 18
-- Vite
-- Tailwind CSS
+- React 19 + TypeScript
+- Vite 7
+- Tailwind CSS 3
 
 **Backend:**
 - Django 5.0
@@ -156,9 +156,10 @@ See your ERD implementation in `backend/rag_api/models.py` (ready to add):
 ## 📚 Documentation
 
 - `backend/README.md` - Django backend setup
-- `DJANGO_MIGRATION_SUMMARY.md` - Migration overview
-- `MIGRATION_GUIDE.md` - Detailed migration guide
-- `docs/` - Project documentation
+- `docs/SDS_LitPathAI.md` - Software Design Specification
+- `docs/ACCURACY_METHODOLOGY.md` - Search accuracy methodology
+- `docs/RAG_EVALUATION_METHODOLOGY.md` - RAG evaluation methodology
+- `docs/CITATION_GENERATOR.md` - Citation generation documentation
 
 ---
 
