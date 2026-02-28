@@ -9,7 +9,7 @@
     "build:check": "tsc --noEmit && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "serve -s dist -l tcp://0.0.0.0:$PORT"
+    "start": "serve -s dist -p ${PORT:-3000}"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",
