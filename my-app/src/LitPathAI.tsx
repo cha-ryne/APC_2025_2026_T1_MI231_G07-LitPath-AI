@@ -1,0 +1,3158 @@
+// @ts-nocheck
+import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import {
+    Search, ChevronDown, Star, RefreshCw, BookOpen, User, Calendar,
+    MessageSquare, ArrowRight, LogOut, Settings, Eye, EyeOff, Trash2,
+    Key, ThumbsUp, ThumbsDown, ChevronLeft, ChevronRight, ShieldCheck,
+    Menu, GraduationCap, Quote, Bookmark, Copy
+} from 'lucide-react';
+import { useAuth } from './context/AuthContext';
+import dostLogo from './components/images/dost-logo.png';
+import CSMModal from './components/CSMModal';
+
+
+const API_BASE_URL = 'http://localhost:8000/api';
+const LitPathAI = () => {
+    // Auth context
+    const { user, isGuest, logout, startNewChat: authStartNewChat, getUserId, isStaff, changePassword, setUser } = useAuth();
+    
+    const [searchQuery, setSearchQuery] = useState('');
+    const [searchResults, setSearchResults] = useState(null);
+    const [selectedSource, setSelectedSource] = useState(null);
+    const [showOverlay, setShowOverlay] = useState(false);
+    const [userFeedback, setUserFeedback] = useState(null); // null, 'thumbs_up', or 'thumbs_down'
+    const [submittedFeedback, setSubmittedFeedback] = useState(null); // Track submitted feedback for color display
+    const [showFeedbackOverlay, setShowFeedbackOverlay] = useState(false);
+    const [feedbackComment, setFeedbackComment] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const [backendStatus, setBackendStatus] = useState(null);
+    const [showCitationOverlay, setShowCitationOverlay] = useState(false);
+    const [selectedCitationStyle, setSelectedCitationStyle] = useState("APA");
+    const [generatedCitation, setGeneratedCitation] = useState("");
+    const [formattedCitation, setFormattedCitation] = useState("");
+    const [showSavedItems, setShowSavedItems] = useState(false);
+    const [bookmarkedCount, setBookmarkedCount] = useState(0);
+    const [bookmarks, setBookmarks] = useState([]); // Store bookmarks in state (not localStorage for authenticated users)
+    const [showUserMenu, setShowUserMenu] = useState(false);
+    const userMenuRef = useRef(null);
+    const [cameFromBookmarks, setCameFromBookmarks] = useState(false); // Track if we came from bookmarks overlay
+    // Force re-render of user menu when user changes (for real-time update)
+    const [userMenuKey, setUserMenuKey] = useState(0);
+    useEffect(() => {
+        setUserMenuKey(k => k + 1);
+    }, [user?.full_name, user?.username]);
+    
+    // Handle click outside to close user menu
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
+                setShowUserMenu(false);
+            }
+        };
+        
+        if (showUserMenu) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showUserMenu]);
+    const navigate = useNavigate();
+    const [conversationHistory, setConversationHistory] = useState([]);
+    const [isFollowUpSearch, setIsFollowUpSearch] = useState(false);
+    const [lastSearchContext, setLastSearchContext] = useState(null);
+    const [researchHistory, setResearchHistory] = useState([]);
+    const [showResearchHistory, setShowResearchHistory] = useState(false);
+    const [currentSessionId, setCurrentSessionId] = useState(null);
+    const [pendingDeleteSession, setPendingDeleteSession] = useState(null);
+    const [hasSearchedInSession, setHasSearchedInSession] = useState(false);
+    const [isLoadedFromHistory, setIsLoadedFromHistory] = useState(false);
+    const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
+    const [showAccountSettings, setShowAccountSettings] = useState(false);
+    const [settingsTab, setSettingsTab] = useState('profile');
+    const [editFullName, setEditFullName] = useState(user?.full_name || '');
+    const [editUsername, setEditUsername] = useState(user?.username || '');
+
+    // Keep edit fields in sync with user object
+    useEffect(() => {
+        setEditFullName(user?.full_name || '');
+        setEditUsername(user?.username || '');
+    }, [user]);
+    const [currentPassword, setCurrentPassword] = useState('');
+    const [newPassword, setNewPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [deletePassword, setDeletePassword] = useState('');
+    const [showCurrentPassword, setShowCurrentPassword] = useState(false);
+    const [showNewPassword, setShowNewPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [showDeletePassword, setShowDeletePassword] = useState(false);
+    const [settingsLoading, setSettingsLoading] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
+    const [mostBrowsed, setMostBrowsed] = useState([]);
+    const [loadingMostBrowsed, setLoadingMostBrowsed] = useState(true);
+    const [browsedCurrentSlide, setBrowsedCurrentSlide] = useState(0);
+    const [searchBarFocused, setSearchBarFocused] = useState(false);
+    
+    // CSM Feedback Popup State
+    const [showCSMModal, setShowCSMModal] = useState(false);
+    const [lastQueryTime, setLastQueryTime] = useState(null);
+    
+    // Check if CSM feedback should be shown after query
+    const shouldShowCSMModal = () => {
+        // Check if user has already submitted feedback recently (within 24 hours)
+        const submittedAt = localStorage.getItem('csm_feedback_submitted_at');
+        if (submittedAt) {
+            const submittedDate = new Date(submittedAt);
+            const now = new Date();
+            const hoursSince = (now - submittedDate) / (1000 * 60 * 60);
+            if (hoursSince < 24) {
+                return false;
+            }
+        }
+        
+        // Check if user skipped feedback recently (within 24 hours)
+        const skippedAt = localStorage.getItem('csm_feedback_skipped_at');
+        if (skippedAt) {
+            const skippedDate = new Date(skippedAt);
+            const now = new Date();
+            const hoursSince = (now - skippedDate) / (1000 * 60 * 60);
+            if (hoursSince < 24) {
+                return false;
+            }
+        }
+        
+        // Only show CSM modal after 3 queries
+        const currentCount = parseInt(localStorage.getItem('csm_query_count') || '0', 10);
+        if (currentCount < 3) {
+            return false;
+        }
+        
+        return true;
+    };
+    
+    // Example questions for auto-complete
+    const exampleQuestions = [
+        "How does plastic pollution affect plant growth in farmland?",
+        "Find research about sleep quality among teenagers",
+        "How does remote work impact employee productivity?",
+        "Find recent research about how vitamin D deficiency impact overall health"
+    ];
+    
+    // Get userId from auth context
+    const userId = getUserId();
+    const chatContainerRef = useRef(null);
+
+    // Show toast notification
+    const showToast = (message, type = 'success') => {
+        setToast({ show: true, message, type });
+        setTimeout(() => setToast({ show: false, message: '', type: 'success' }), 3000);
+    };
+
+
+
+
+    // Track material view
+    const trackMaterialView = async (material) => {
+        try {
+            await fetch(`${API_BASE_URL}/track-view/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    file: material.file || material.fullTextPath,
+                    user_id: userId,
+                    session_id: currentSessionId
+                })
+            });
+        } catch (error) {
+            console.error('Error tracking view:', error);
+        }
+    };
+
+    // Fetch most browsed materials
+    const fetchMostBrowsed = async () => {
+        try {
+            setLoadingMostBrowsed(true);
+            const response = await fetch(`${API_BASE_URL}/most-browsed/?limit=5`);
+            
+            if (!response.ok) {
+                throw new Error('Failed to fetch most browsed materials');
+            }
+            
+            const data = await response.json();
+            setMostBrowsed(data.materials || []);
+        } catch (error) {
+            console.error('Error fetching most browsed:', error);
+            setMostBrowsed([]);
+        } finally {
+            setLoadingMostBrowsed(false);
+        }
+    };
+
+    // Load most browsed materials on component mount
+    useEffect(() => {
+        fetchMostBrowsed();
+    }, []);
+
+    // Scroll to bottom on new message
+    useEffect(() => {
+        if (chatContainerRef.current) {
+            chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+        }
+    }, [conversationHistory, searchResults, loading]);
+
+    // Add this ref for source highlighting in overview
+    const handleSourceRef = useRef({});
+
+    // Check backend health on component mount
+    useEffect(() => {
+        checkBackendHealth();
+    }, []);
+    
+    // Auto-generate citation when overlay opens or style changes
+    useEffect(() => {
+        if (showCitationOverlay && selectedSource) {
+            generateCitation(selectedCitationStyle);
+        }
+    }, [showCitationOverlay, selectedCitationStyle, selectedSource]);
+
+
+    // Load research history on mount and when user changes
+    useEffect(() => {
+        if (userId) {
+            if (isGuest) {
+                // Guests: Load from localStorage only
+                loadResearchHistoryFromLocalStorage();
+            } else {
+                // Authenticated users: Load from Django backend
+                loadResearchHistoryFromDjango();
+            }
+        }
+    }, [userId, isGuest]);
+
+    // Load bookmarks when userId is available from auth context
+    useEffect(() => {
+        if (userId) {
+            // Always load from backend for both guests and authenticated users
+            loadBookmarksFromDjango();
+            // Optionally, also load from localStorage for guests for UX
+            if (isGuest) {
+                loadBookmarksFromLocalStorage();
+            }
+        }
+    }, [userId, isGuest]);
+
+    // Auto-save conversation to history after search completes (overview done)
+    useEffect(() => {
+        // Only auto-save when:
+        // - User has searched in this session
+        // - There are conversation results
+        // - Not loaded from history (original data already saved)
+        // - The last conversation item has finished loading its overview
+        const lastItem = conversationHistory[conversationHistory.length - 1];
+        if (
+            hasSearchedInSession &&
+            conversationHistory.length > 0 &&
+            !isLoadedFromHistory &&
+            lastItem &&
+            lastItem.isLoadingSummary === false
+        ) {
+            const timer = setTimeout(() => {
+                saveCurrentSessionToHistory();
+            }, 1500);
+            return () => clearTimeout(timer);
+        }
+    }, [conversationHistory, hasSearchedInSession, isLoadedFromHistory]);
+
+    // Load bookmarks from localStorage (for guests only)
+    const loadBookmarksFromLocalStorage = () => {
+        try {
+            const storedBookmarks = JSON.parse(localStorage.getItem('litpath_bookmarks') || '[]');
+            setBookmarks(storedBookmarks);
+            setBookmarkedCount(storedBookmarks.length);
+        } catch (error) {
+            console.error('Error loading bookmarks from localStorage:', error);
+            setBookmarks([]);
+            setBookmarkedCount(0);
+        }
+    };
+
+    // Check if a document is bookmarked (uses state, not localStorage)
+    const isBookmarked = (documentFile) => {
+        return bookmarks.some(bookmark => bookmark.file === documentFile);
+    };
+
+    // Toggle bookmark (save/remove)
+    const toggleBookmark = async (document) => {
+        if (!document) return;
+
+        try {
+            const documentFile = document.file || document.fullTextPath;
+            let currentBookmarks = [...bookmarks];
+            const bookmarkIndex = currentBookmarks.findIndex(b => b.file === documentFile);
+            const newBookmark = {
+                userId: userId,
+                title: document.title,
+                author: document.author,
+                year: document.year,
+                abstract: document.abstract,
+                file: documentFile,
+                degree: document.degree,
+                subjects: document.subjects,
+                school: document.school,
+                bookmarkedAt: new Date().toISOString()
+            };
+
+            if (bookmarkIndex >= 0) {
+                // Remove bookmark (from backend)
+                await removeFromDjango(documentFile);
+                showToast('Bookmark removed!', 'error');
+                // Remove from localStorage for guests (optional, for UX)
+                if (isGuest) {
+                    currentBookmarks.splice(bookmarkIndex, 1);
+                    setBookmarks(currentBookmarks);
+                    setBookmarkedCount(currentBookmarks.length);
+                    localStorage.setItem('litpath_bookmarks', JSON.stringify(currentBookmarks));
+                }
+            } else {
+                // Add bookmark (to backend)
+                await saveToDjango(newBookmark);
+                showToast('Bookmark saved!', 'success');
+                // Add to localStorage for guests (optional, for UX)
+                if (isGuest) {
+                    currentBookmarks.push(newBookmark);
+                    setBookmarks(currentBookmarks);
+                    setBookmarkedCount(currentBookmarks.length);
+                    localStorage.setItem('litpath_bookmarks', JSON.stringify(currentBookmarks));
+                }
+            }
+            // Always refresh bookmarks from backend
+            await loadBookmarksFromDjango();
+        } catch (error) {
+            console.error('Error toggling bookmark:', error);
+            showToast('Bookmark could not be saved', 'error');
+        }
+    };
+
+    // Save bookmark to Django backend
+    const saveToDjango = async (bookmark) => {
+        try {
+            const payload = {
+                user_id: bookmark.userId,
+                title: bookmark.title || 'Untitled',
+                author: bookmark.author || '',
+                year: bookmark.year || null,
+                abstract: bookmark.abstract || '',
+                file: bookmark.file,
+                degree: bookmark.degree || '',
+                subjects: typeof bookmark.subjects === 'string' ? bookmark.subjects : (Array.isArray(bookmark.subjects) ? bookmark.subjects.join(', ') : ''),
+                school: bookmark.school || ''
+            };
+
+            const response = await fetch(`${API_BASE_URL}/bookmarks/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            
+            if (!response.ok) {
+                const errorText = await response.text();
+                console.error('Django save error:', errorText);
+                throw new Error(`Failed to save bookmark: ${errorText}`);
+            } else {
+                console.log('✅ Bookmark saved to Django backend');
+            }
+        } catch (error) {
+            console.error('Error saving to Django:', error);
+            throw error;
+        }
+    };
+
+    // Remove bookmark from Django backend
+    const removeFromDjango = async (file) => {
+        try {
+            const response = await fetch(
+                `${API_BASE_URL}/bookmarks/delete-by-file/?user_id=${userId}&file=${encodeURIComponent(file)}`,
+                { method: 'DELETE' }
+            );
+            
+            if (!response.ok) {
+                console.error('Django delete error:', await response.text());
+            } else {
+                console.log('✅ Bookmark removed from Django backend');
+            }
+        } catch (error) {
+            console.error('Error removing from Django:', error);
+        }
+    };
+
+    // Get all bookmarks (from state - works for both guests and authenticated users)
+    const getBookmarks = () => {
+        return bookmarks;
+    };
+
+    // Load bookmarks from Django backend (for authenticated users - NO localStorage)
+    const loadBookmarksFromDjango = async () => {
+        if (!userId) return;
+        try {
+            const response = await fetch(`${API_BASE_URL}/bookmarks/?user_id=${userId}`);
+            if (!response.ok) {
+                console.error('Django load error:', await response.text());
+                return;
+            }
+            const data = await response.json();
+            // Convert Django format to local format and store in state
+            const loadedBookmarks = (data && data.length > 0) ? data.map(b => ({
+                userId: b.user_id,
+                title: b.title,
+                author: b.author,
+                year: b.year,
+                abstract: b.abstract,
+                file: b.file,
+                degree: b.degree,
+                subjects: b.subjects,
+                school: b.school,
+                bookmarkedAt: b.bookmarked_at
+            })) : [];
+            setBookmarks(loadedBookmarks);
+            setBookmarkedCount(loadedBookmarks.length);
+            console.log('✅ Loaded bookmarks from Django backend');
+        } catch (error) {
+            console.error('Error loading bookmarks from Django:', error);
+        }
+    };
+
+    // Generate unique session ID
+    const generateSessionId = () => {
+        return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    };
+
+    // Load research history from localStorage (for guests)
+    const loadResearchHistoryFromLocalStorage = () => {
+        try {
+            const history = JSON.parse(localStorage.getItem('litpath_research_history') || '[]');
+            // Group by session id, only show unique main queries
+            const grouped = [];
+            const seen = new Set();
+            for (const session of history) {
+                if (!seen.has(session.mainQuery)) {
+                    grouped.push(session);
+                    seen.add(session.mainQuery);
+                }
+            }
+            setResearchHistory(grouped);
+        } catch (error) {
+            console.error('Error loading research history:', error);
+            setResearchHistory([]);
+        }
+    };
+
+    // Load research history from Django backend (for authenticated users)
+    const loadResearchHistoryFromDjango = async () => {
+        if (!userId || isGuest) return;
+        
+        try {
+            const response = await fetch(`${API_BASE_URL}/research-history/?user_id=${userId}`);
+            
+            if (!response.ok) {
+                console.error('Django research history load error:', await response.text());
+                return;
+            }
+            
+            const data = await response.json();
+            
+            if (data && data.length > 0) {
+                // Convert Django format to local format
+                const history = data.map(h => ({
+                    id: h.session_id,
+                    userId: h.user_id,
+                    queries: h.all_queries || [h.query],
+                    mainQuery: h.query,
+                    followUpQueries: (h.all_queries || []).slice(1),
+                    conversationHistory: h.conversation_data || [],
+                    timestamp: h.created_at,
+                    sourcesCount: h.sources_count,
+                    conversationLength: h.conversation_length
+                }));
+                
+                setResearchHistory(history);
+                console.log('✅ Loaded research history from Django backend');
+            } else {
+                setResearchHistory([]);
+            }
+        } catch (error) {
+            console.error('Error loading research history from Django:', error);
+            setResearchHistory([]);
+        }
+    };
+
+    // Save current session to history (localStorage for guests, Django for authenticated users)
+    const saveCurrentSessionToHistory = async () => {
+        if (!searchResults || !hasSearchedInSession || conversationHistory.length === 0) return;
+
+        // Get all queries from conversation history
+        const allQueries = conversationHistory.map(item => item.query);
+        const totalSources = conversationHistory.reduce((sum, item) => sum + (item.sources?.length || 0), 0);
+
+        const session = {
+            id: currentSessionId || generateSessionId(),
+            userId: userId,
+            queries: allQueries, // Save all queries, not just the first one
+            mainQuery: allQueries[0], // First query as main query for display
+            followUpQueries: allQueries.slice(1), // Additional queries
+            conversationHistory: conversationHistory, // Save the entire conversation with results
+            timestamp: new Date().toISOString(),
+            sourcesCount: totalSources,
+            conversationLength: conversationHistory.length,
+
+        };
+
+        try {
+            // Always save to Django backend for both guests and authenticated users
+            const response = await fetch(`${API_BASE_URL}/research-history/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: session.id,
+                    user_id: session.userId,
+                    query: session.mainQuery,
+                    all_queries: session.queries,
+                    conversation_data: session.conversationHistory,
+                    sources_count: session.sourcesCount,
+                    conversation_length: session.conversationLength
+                })
+            });
+
+            if (!response.ok) {
+                console.error('Error saving to Django:', await response.text());
+            } else {
+                console.log('✅ Research history saved to Django backend');
+                // Refresh history from Django to keep UI in sync
+                await loadResearchHistoryFromDjango();
+            }
+            // Optionally, also save to localStorage for guests for UX
+            if (isGuest) {
+                const existingHistory = JSON.parse(localStorage.getItem('litpath_research_history') || '[]');
+                // Replace session with same mainQuery if exists, else prepend
+                let found = false;
+                const newHistory = existingHistory.map(s => {
+                    if (s.mainQuery === session.mainQuery) {
+                        found = true;
+                        return session; // update with latest follow-ups
+                    }
+                    return s;
+                });
+                const updatedHistory = found ? newHistory : [session, ...existingHistory];
+                const trimmedHistory = updatedHistory.slice(0, 50);
+                localStorage.setItem('litpath_research_history', JSON.stringify(trimmedHistory));
+                setResearchHistory(trimmedHistory);
+                console.log('✅ Research history also saved to localStorage (guest, deduped)');
+            }
+        } catch (error) {
+            console.error('Error saving research history:', error);
+        }
+    };
+
+    // Delete a session from history
+    const deleteHistorySession = async (sessionId) => {
+        try {
+            if (isGuest) {
+                // Guest: Remove from localStorage and state
+                const updatedHistory = researchHistory.filter(s => s.id !== sessionId);
+                localStorage.setItem('litpath_research_history', JSON.stringify(updatedHistory));
+                setResearchHistory(updatedHistory);
+            } else {
+                // Authenticated user: Remove from Django only (no localStorage)
+                const response = await fetch(`${API_BASE_URL}/research-history/${sessionId}/`, {
+                    method: 'DELETE'
+                });
+                
+                if (!response.ok) {
+                    console.error('Error deleting from Django:', await response.text());
+                } else {
+                    console.log('✅ History session deleted from Django backend');
+                    // Refresh history from Django to update state
+                    await loadResearchHistoryFromDjango();
+                }
+            }
+        } catch (error) {
+            console.error('Error deleting history session:', error);
+        }
+    };
+
+    // Load a previous session
+    const loadHistorySession = async (session) => {
+        // Restore the entire conversation if available
+        if (session.conversationHistory && session.conversationHistory.length > 0) {
+            // Restore conversation history
+            setConversationHistory(session.conversationHistory);
+            
+            // Fetch fresh stats for all sources in the conversation
+            const lastResult = session.conversationHistory[session.conversationHistory.length - 1];
+            if (lastResult && lastResult.sources) {
+                try {
+                    // Get unique file names from all sources in conversation
+                    const allFiles = new Set();
+                    session.conversationHistory.forEach(item => {
+                        if (item.sources) {
+                            item.sources.forEach(source => {
+                                if (source.file) {
+                                    allFiles.add(source.file);
+                                }
+                            });
+                        }
+                    });
+                    
+                    if (allFiles.size > 0) {
+                        // Fetch stats for all files at once from the backend
+                        const filesArray = Array.from(allFiles);
+                        const response = await fetch(`${API_BASE_URL}/sources/stats/?files=${encodeURIComponent(JSON.stringify(filesArray))}`);
+                        if (response.ok) {
+                            const statsData = await response.json();
+                            const statsMap = statsData.stats || {};
+                            
+                            // Update sources with fresh stats
+                            const updatedConversation = session.conversationHistory.map(item => {
+                                if (item.sources) {
+                                    return {
+                                        ...item,
+                                        sources: item.sources.map(source => ({
+                                            ...source,
+                                            view_count: statsMap[source.file]?.view_count || source.view_count || 0,
+                                            avg_rating: statsMap[source.file]?.avg_rating || source.avg_rating || 0
+                                        }))
+                                    };
+                                }
+                                return item;
+                            });
+                            
+                            setConversationHistory(updatedConversation);
+                            setSearchResults(updatedConversation[updatedConversation.length - 1]);
+                        }
+                    } else {
+                        setSearchResults(lastResult);
+                    }
+                } catch (error) {
+                    console.error('Error fetching fresh stats:', error);
+                    setSearchResults(lastResult);
+                }
+            } else {
+                setSearchResults(lastResult);
+            }
+            
+            // Mark as follow-up search since we have history
+            setIsFollowUpSearch(true);
+            setCurrentSessionId(session.id);
+            setHasSearchedInSession(true);
+            setIsLoadedFromHistory(true); // Mark as loaded from history to prevent duplicate save
+        } else {
+            // Fallback for old sessions without full conversation history - re-run the search
+            const queryToLoad = session.mainQuery || session.query;
+            setSearchQuery(queryToLoad);
+            handleSearch(queryToLoad);
+            setIsLoadedFromHistory(false); // This will create a new session
+        }
+        setShowResearchHistory(false);
+    };
+
+    const checkBackendHealth = async () => {
+        try {
+            const response = await fetch(`${API_BASE_URL}/health`);
+            if (response.ok) {
+                const data = await response.json();
+                setBackendStatus(data);
+            } else {
+                setBackendStatus({ status: 'error', message: 'Backend not responding' });
+            }
+        } catch (err) {
+            console.error("Backend health check failed:", err);
+            setBackendStatus({ status: 'error', message: 'Cannot connect to backend' });
+        }
+    };
+
+const handleSearch = async (query = searchQuery, forceNew = false) => {
+        // 1. INPUT VALIDATION
+        if (!query.trim()) {
+            setError("Please enter a research question.");
+            return;
+        }
+        if (!backendStatus || backendStatus.status === 'error') {
+            setError("Backend service is not available. Please check if the server is running.");
+            return;
+        }
+        
+        // Detect if this is a follow-up that should reuse previous search context
+        const isFollowUp = !forceNew && isFollowUpSearch && lastSearchContext && conversationHistory.length > 0;
+        
+        // 2. SETUP STATE
+        setLoading(true);
+        setError(null);
+        
+        // Clear previous results if starting a new search
+        if (!isFollowUpSearch && !forceNew) {
+            setSearchResults(null);
+            setSelectedSource(null);
+        }
+        
+        try {
+            // Prepare unique query string and session ID
+            const searchQueryText = forceNew ? `${query} [v${Date.now()}]` : query;
+            const activeSessionId = currentSessionId || generateSessionId();
+            if (!currentSessionId) setCurrentSessionId(activeSessionId);
+
+            // Prepare Request Body
+            const requestBody = {
+                question: searchQueryText,
+                filters: {}, 
+                // Send previous context unless forcing new
+                conversation_history: forceNew ? [] : conversationHistory.slice(-3).map(item => ({
+                    query: item.query,
+                    overview: item.overview
+                })),
+                overview_only: false,
+                session_id: activeSessionId // new line to send session ID with the search request
+            };
+
+            // =============================================================
+            // FOLLOW-UP PATH: Reuse previous sources, skip new search
+            // =============================================================
+            if (isFollowUp) {
+                // Get the last result's sources to display alongside the new overview
+                const lastResult = conversationHistory[conversationHistory.length - 1];
+                const previousSources = lastResult?.sources || [];
+
+                const initialResult = {
+                    query: query,
+                    overview: 'Generating overview...',
+                    sources: previousSources,
+                    relatedQuestions: [],
+                    isLoadingSummary: true,
+                };
+
+                setConversationHistory(prev => [...prev, initialResult]);
+                setSearchResults(initialResult);
+                setSearchQuery('');
+                setLoading(false);
+
+                // Save follow-up to history
+                try {
+                    await fetch(`${API_BASE_URL}/research-history/`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            session_id: activeSessionId,
+                            user_id: userId,
+                            query: query,
+                            all_queries: [...conversationHistory.map(c => c.query), query],
+                            sources_count: previousSources.length,
+                            conversation_length: conversationHistory.length + 1
+                        })
+                    });
+                    if (!isGuest) loadResearchHistoryFromDjango();
+                } catch (histErr) {
+                    console.error("Failed to save history log:", histErr);
+                }
+
+                // Stream overview using previous search context
+                try {
+                    const streamResponse = await fetch(`${API_BASE_URL}/search/stream/`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            ...requestBody,
+                            _search_context: lastSearchContext,
+                        }),
+                    });
+
+                    if (streamResponse.ok && streamResponse.body) {
+                        const reader = streamResponse.body.getReader();
+                        const decoder = new TextDecoder();
+                        let streamedText = '';
+                        let buffer = '';
+
+                        while (true) {
+                            const { done, value } = await reader.read();
+                            if (done) break;
+
+                            buffer += decoder.decode(value, { stream: true });
+                            const lines = buffer.split('\n');
+                            buffer = lines.pop();
+
+                            for (const line of lines) {
+                                if (!line.startsWith('data: ')) continue;
+                                try {
+                                    const parsed = JSON.parse(line.slice(6));
+                                    if (parsed.type === 'chunk') {
+                                        streamedText += parsed.content;
+                                        const currentText = streamedText;
+                                        setConversationHistory(prev => {
+                                            const updated = [...prev];
+                                            updated[updated.length - 1] = {
+                                                ...updated[updated.length - 1],
+                                                overview: currentText,
+                                                isLoadingSummary: true,
+                                            };
+                                            return updated;
+                                        });
+                                        setSearchResults(prev => prev ? { ...prev, overview: currentText, isLoadingSummary: true } : prev);
+                                    } else if (parsed.type === 'done') {
+                                        streamedText = parsed.content || streamedText;
+                                    } else if (parsed.type === 'error') {
+                                        streamedText = parsed.content || 'An error occurred generating the overview.';
+                                    }
+                                } catch (e) { /* skip malformed SSE */ }
+                            }
+                        }
+                        // Finalize
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            updated[updated.length - 1] = {
+                                ...updated[updated.length - 1],
+                                overview: streamedText || 'No overview could be generated.',
+                                isLoadingSummary: false,
+                            };
+                            return updated;
+                        });
+                        setSearchResults(prev => prev ? { ...prev, overview: streamedText || 'No overview could be generated.', isLoadingSummary: false } : prev);
+                    }
+                } catch (streamErr) {
+                    console.error("Follow-up stream error:", streamErr);
+                    setConversationHistory(prev => {
+                        const updated = [...prev];
+                        updated[updated.length - 1] = {
+                            ...updated[updated.length - 1],
+                            overview: 'Failed to generate overview. Please try again.',
+                            isLoadingSummary: false,
+                        };
+                        return updated;
+                    });
+                }
+                return; // Done — skip the normal search path below
+            }
+
+            // ---------------------------------------------------------
+            // STEP 3: FETCH DOCUMENTS (The Search)
+            // ---------------------------------------------------------
+            const response = await fetch(`${API_BASE_URL}/search`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(requestBody),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            const { documents, related_questions, suggestions, _search_context } = data;
+            
+            // Store search context for potential follow-ups
+            if (_search_context) {
+                setLastSearchContext(_search_context);
+            }
+            
+            // Format the sources safely
+            const formattedSources = formatSources(documents);
+            const sourceCount = formattedSources.length;
+
+            // ---------------------------------------------------------
+            // STEP 4: UPDATE UI (Immediate Feedback)
+            // ---------------------------------------------------------
+            const initialResult = {
+                query: query,
+                overview: 'Generating overview...',
+                sources: formattedSources,
+                relatedQuestions: related_questions || [],
+                isLoadingSummary: true,
+            };
+
+            setConversationHistory(prev => [...prev, initialResult]);
+            setSearchResults(initialResult);
+            setIsFollowUpSearch(true);
+            setSearchQuery('');
+            setHasSearchedInSession(true);
+            setLoading(false); // Stop main spinner, show "Generating overview..." in chat
+
+            // ---------------------------------------------------------
+            // STEP 5: SAVE HISTORY TO BACKEND (CRITICAL FOR DASHBOARD)
+            // ---------------------------------------------------------
+            // We save immediately so "Unanswered Questions" (0 sources) appear in Admin Dashboard instantly.
+            // We do NOT rely on 'conversationHistory' state here because it might be stale.
+            try {
+                await fetch(`${API_BASE_URL}/research-history/`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_id: activeSessionId,
+                        user_id: userId,
+                        query: query,
+                        // We send the current state manually to ensure accuracy
+                        all_queries: [...conversationHistory.map(c => c.query), query], 
+                        sources_count: sourceCount, // This powers the "Unanswered Questions" panel
+                        conversation_length: conversationHistory.length + 1
+                    })
+                });
+                // Reload history list in background to keep sidebar in sync
+                if (!isGuest) loadResearchHistoryFromDjango();
+            } catch (histErr) {
+                console.error("Failed to save history log:", histErr);
+            }
+
+            // ---------------------------------------------------------
+            // STEP 6: FETCH OVERVIEW (AI Generation via Streaming SSE)
+            // ---------------------------------------------------------
+            try {
+                const streamResponse = await fetch(`${API_BASE_URL}/search/stream/`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        ...requestBody,
+                        _search_context: _search_context || null,
+                    }),
+                });
+
+                if (streamResponse.ok && streamResponse.body) {
+                    const reader = streamResponse.body.getReader();
+                    const decoder = new TextDecoder();
+                    let streamedText = '';
+                    let buffer = '';
+
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        if (done) break;
+
+                        buffer += decoder.decode(value, { stream: true });
+                        const lines = buffer.split('\n');
+                        buffer = lines.pop(); // Keep incomplete line in buffer
+
+                        for (const line of lines) {
+                            if (!line.startsWith('data: ')) continue;
+                            try {
+                                const payload = JSON.parse(line.slice(6));
+                                if (payload.type === 'chunk') {
+                                    streamedText += payload.content;
+                                    // Update UI with each new chunk
+                                    const currentText = streamedText;
+                                    setConversationHistory(prev => {
+                                        const updated = [...prev];
+                                        const lastIndex = updated.length - 1;
+                                        if (lastIndex >= 0) {
+                                            updated[lastIndex] = {
+                                                ...updated[lastIndex],
+                                                overview: currentText,
+                                                isLoadingSummary: true // Still loading
+                                            };
+                                        }
+                                        return updated;
+                                    });
+                                    setSearchResults(prev => ({
+                                        ...prev,
+                                        overview: currentText,
+                                        isLoadingSummary: true
+                                    }));
+                                } else if (payload.type === 'done') {
+                                    // Final post-processed answer
+                                    const finalText = payload.content || streamedText || 'No overview available.';
+                                    setConversationHistory(prev => {
+                                        const updated = [...prev];
+                                        const lastIndex = updated.length - 1;
+                                        if (lastIndex >= 0) {
+                                            updated[lastIndex] = {
+                                                ...updated[lastIndex],
+                                                overview: finalText,
+                                                isLoadingSummary: false
+                                            };
+                                        }
+                                        return updated;
+                                    });
+                                    setSearchResults(prev => ({
+                                        ...prev,
+                                        overview: finalText,
+                                        isLoadingSummary: false
+                                    }));
+                                } else if (payload.type === 'error') {
+                                    console.error('Stream error:', payload.content);
+                                    // Use the server's user-friendly message, or a generic one
+                                    const errorMsg = streamedText || payload.content || 'We encountered an issue generating the overview. Please refresh the page and try again. If the problem continues, contact us at library@stii.dost.gov.ph.';
+                                    setConversationHistory(prev => {
+                                        const updated = [...prev];
+                                        const lastIndex = updated.length - 1;
+                                        if (lastIndex >= 0) {
+                                            updated[lastIndex] = {
+                                                ...updated[lastIndex],
+                                                overview: errorMsg,
+                                                isLoadingSummary: false
+                                            };
+                                        }
+                                        return updated;
+                                    });
+                                    setSearchResults(prev => ({
+                                        ...prev,
+                                        overview: errorMsg,
+                                        isLoadingSummary: false
+                                    }));
+                                }
+                            } catch (parseErr) {
+                                // Skip malformed SSE lines
+                            }
+                        }
+                    }
+
+                    // If stream ended without a 'done' event, finalize
+                    if (streamedText) {
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            const lastIndex = updated.length - 1;
+                            if (lastIndex >= 0 && updated[lastIndex].isLoadingSummary) {
+                                updated[lastIndex] = {
+                                    ...updated[lastIndex],
+                                    overview: streamedText,
+                                    isLoadingSummary: false
+                                };
+                            }
+                            return updated;
+                        });
+                        setSearchResults(prev => prev.isLoadingSummary ? ({
+                            ...prev,
+                            overview: streamedText,
+                            isLoadingSummary: false
+                        }) : prev);
+                    }
+                } else {
+                    // Fallback: non-streaming overview fetch
+                    const overviewResponse = await fetch(`${API_BASE_URL}/search`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ ...requestBody, overview_only: true }),
+                    });
+                    if (overviewResponse.ok) {
+                        const overviewData = await overviewResponse.json();
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            const lastIndex = updated.length - 1;
+                            if (lastIndex >= 0) {
+                                updated[lastIndex] = {
+                                    ...updated[lastIndex],
+                                    overview: overviewData.overview || 'No overview available.',
+                                    isLoadingSummary: false
+                                };
+                            }
+                            return updated;
+                        });
+                        setSearchResults(prev => ({
+                            ...prev,
+                            overview: overviewData.overview || 'No overview available.',
+                            isLoadingSummary: false
+                        }));
+                    }
+                }
+            } catch (streamErr) {
+                console.error('Streaming failed, using fallback:', streamErr);
+                // Fallback to non-streaming
+                const fallbackErrorMsg = 'We encountered an issue generating the overview. Please refresh the page and try again. If the problem continues, contact us at library@stii.dost.gov.ph.';
+                try {
+                    const overviewResponse = await fetch(`${API_BASE_URL}/search`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ ...requestBody, overview_only: true }),
+                    });
+                    if (overviewResponse.ok) {
+                        const overviewData = await overviewResponse.json();
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            const lastIndex = updated.length - 1;
+                            if (lastIndex >= 0) {
+                                updated[lastIndex] = {
+                                    ...updated[lastIndex],
+                                    overview: overviewData.overview || fallbackErrorMsg,
+                                    isLoadingSummary: false
+                                };
+                            }
+                            return updated;
+                        });
+                        setSearchResults(prev => ({
+                            ...prev,
+                            overview: overviewData.overview || fallbackErrorMsg,
+                            isLoadingSummary: false
+                        }));
+                    } else {
+                        // Even the fallback HTTP request failed
+                        setConversationHistory(prev => {
+                            const updated = [...prev];
+                            const lastIndex = updated.length - 1;
+                            if (lastIndex >= 0) {
+                                updated[lastIndex] = {
+                                    ...updated[lastIndex],
+                                    overview: fallbackErrorMsg,
+                                    isLoadingSummary: false
+                                };
+                            }
+                            return updated;
+                        });
+                        setSearchResults(prev => ({
+                            ...prev,
+                            overview: fallbackErrorMsg,
+                            isLoadingSummary: false
+                        }));
+                    }
+                } catch (fallbackErr) {
+                    console.error('Fallback also failed:', fallbackErr);
+                    setConversationHistory(prev => {
+                        const updated = [...prev];
+                        const lastIndex = updated.length - 1;
+                        if (lastIndex >= 0) {
+                            updated[lastIndex] = {
+                                ...updated[lastIndex],
+                                overview: fallbackErrorMsg,
+                                isLoadingSummary: false
+                            };
+                        }
+                        return updated;
+                    });
+                    setSearchResults(prev => ({
+                        ...prev,
+                        overview: fallbackErrorMsg,
+                        isLoadingSummary: false
+                    }));
+                }
+            }
+
+            // ---------------------------------------------------------
+            // STEP 7: TRIGGER CSM FEEDBACK (Delay)
+            // ---------------------------------------------------------
+            if (activeSessionId) sessionStorage.setItem('session_id', activeSessionId);
+            
+            // Increment query count for CSM feedback tracking
+            const newCount = (parseInt(localStorage.getItem('csm_query_count') || '0', 10)) + 1;
+            localStorage.setItem('csm_query_count', newCount.toString());
+            
+            setTimeout(() => {
+                if (shouldShowCSMModal()) {
+                    setShowCSMModal(true);
+                    setLastQueryTime(Date.now());
+                }
+            }, 2000);
+
+        } catch (err) {
+            console.error("Search failed:", err);
+            setError('Something went wrong with your search. Please try again, or contact us at library@stii.dost.gov.ph if the issue persists.');
+            setLoading(false);
+            
+            // Rollback: Remove the failed entry from UI if it was added but failed immediately
+            if (loading) {
+                 setConversationHistory(prev => prev.slice(0, -1));
+            }
+        }
+    };
+
+
+    const handleExampleQuestionClick = (question) => {
+        setSearchQuery(question);
+        handleSearch(question, conversationHistory.length > 0);
+    };
+
+    const handleSourceClick = (source) => {
+        setSelectedSource(source);
+        trackMaterialView(source);
+    };
+
+    const handleMoreDetails = () => {
+        setShowOverlay(true);
+        if (selectedSource) {
+            trackMaterialView(selectedSource);
+        }
+    };
+
+   const generateCitation = (style) => {
+        if (!selectedSource) return;
+        
+        // Normalize missing data
+        const author = selectedSource.author || "Unknown Author";
+        const year = selectedSource.year || "n.d.";
+        const title = selectedSource.title || "Untitled";
+        const school = selectedSource.school || "Unknown Institution";
+        const degree = selectedSource.degree || "Thesis";
+        
+        // Normalize author name - convert ALL-CAPS to proper case
+        const normalizeAuthorName = (name) => {
+            if (name === name.toUpperCase()) {
+                return name.split(' ').map(word => 
+                    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+                ).join(' ');
+            }
+            return name;
+        };
+        
+        const normalizedAuthor = normalizeAuthorName(author);
+        
+        // Normalize school/institution - proper case handling
+        const normalizeSchool = (inst) => {
+            if (inst === inst.toUpperCase()) {
+                const lowercaseWords = ['of', 'the', 'and', 'in', 'at', 'to', 'for', 'a', 'an'];
+                return inst.split(' ').map((word, index) => {
+                    if (index === 0 || word.includes('-')) {
+                        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                    }
+                    if (lowercaseWords.includes(word.toLowerCase())) {
+                        return word.toLowerCase();
+                    }
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                }).join(' ');
+            }
+            return inst;
+        };
+        
+        const normalizedSchool = normalizeSchool(school);
+        
+        // Extended proper nouns list for sentence case
+        const properNouns = [
+            'philippine', 'philippines', 'manila', 'cebu', 'davao', 'quezon', 
+            'los', 'banos', 'tacloban', 'leyte', 'batangas', 'luzon', 'mindanao', 
+            'visayas', 'makiling', 'IPB', 'UPLB', 'UP', 'DOST', 'STII', 'var', 'spp',
+            'pinggang', 'pinoy', 'metro', 'manila', 'laguna'
+        ];
+        
+        // Convert to sentence case with proper noun preservation
+        const toSentenceCase = (str) => {
+            if (!str) return str;
+            let result = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+            result = result.replace(/([.!?]\s+)([a-z])/g, (match, p1, p2) => p1 + p2.toUpperCase());
+            result = result.replace(/:\s+([a-z])/g, (match, p1) => ': ' + p1.toUpperCase());
+            properNouns.forEach(noun => {
+                const regex = new RegExp(`\\b${noun}\\b`, 'gi');
+                result = result.replace(regex, noun.charAt(0).toUpperCase() + noun.slice(1).toLowerCase());
+            });
+            // Preserve specific phrases like Pinggang Pinoy and Metro Manila
+            result = result.replace(/Pinggang pinoy/gi, 'Pinggang Pinoy');
+            result = result.replace(/Metro manila/gi, 'Metro Manila');
+            result = result.replace(/\b[A-Z]{2,}\b/g, (match) => match);
+            result = result.replace(/\[([a-z])/gi, (match, p1) => '[' + p1.toUpperCase());
+            result = result.replace(/\[([A-Z][a-z]+)\s+([a-z])/g, (match, p1, p2) => '[' + p1 + ' ' + p2);
+            return result;
+        };
+        
+        // Convert to title case (proper noun aware)
+        const toTitleCase = (str) => {
+            if (!str) return str;
+            const minorWords = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'from', 'by', 'of', 'in', 'with', 'vs', 'via'];
+            const majorWords = ['philippine', 'philippines', 'manila', 'cebu', 'davao', 'quezon', 'los', 'banos', 'tacloban', 'leyte', 'batangas', 'metro', 'manila', 'laguna', 'luzon', 'mindanao', 'visayas', 'makiling'];
+            
+            return str.split(' ').map((word, index) => {
+                const lowerWord = word.toLowerCase();
+                if (index === 0 || index === str.split(' ').length - 1) {
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                }
+                if (majorWords.includes(lowerWord)) {
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                }
+                if (minorWords.includes(lowerWord)) {
+                    return lowerWord;
+                }
+                return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+            }).join(' ');
+        };
+
+        
+        // Parse author name intelligently (handle compound last names)
+        const parseAuthorName = (name) => {
+            const lastNamePrefixes = ['de', 'del', 'dela', 'de la', 'san', 'santa', 'van', 'von', 'da', 'la'];
+            const parts = name.split(/\s+/);
+            
+            let lastNameStartIndex = parts.length - 1;
+            for (let i = parts.length - 2; i >= 0; i--) {
+                if (lastNamePrefixes.includes(parts[i].toLowerCase())) {
+                    lastNameStartIndex = i;
+                } else {
+                    break;
+                }
+            }
+            
+            const firstNames = parts.slice(0, lastNameStartIndex);
+            const lastName = parts.slice(lastNameStartIndex);
+            
+            return { firstNames, lastName };
+        };
+        
+        // Format author for APA: Last, F. M.
+        const formatAuthorAPA = (name) => {
+            const { firstNames, lastName } = parseAuthorName(name);
+            const initials = firstNames.map(n => n.charAt(0).toUpperCase() + '.').join(' ');
+            const lastNameFormatted = lastName.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+            return `${lastNameFormatted}, ${initials}`;
+        };
+        
+        // Format author for MLA/Chicago: Last, First Middle
+        const formatAuthorMLA = (name) => {
+            const { firstNames, lastName } = parseAuthorName(name);
+            const firstNamesFormatted = firstNames.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+            const lastNameFormatted = lastName.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+            return `${lastNameFormatted}, ${firstNamesFormatted}`.replace(/\.\.+/g, '.').replace(/\.\s*$/, '');
+        };
+        
+        // Format author for IEEE: F. M. Last
+        const formatAuthorIEEE = (name) => {
+            const { firstNames, lastName } = parseAuthorName(name);
+            const initials = firstNames.map(n => n.charAt(0).toUpperCase() + '.').join(' ');
+            const lastNameFormatted = lastName.map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+            return `${initials} ${lastNameFormatted}`;
+        };
+        
+        
+        // Format degree consistently based on style
+        // Always replace full degree names with standard labels
+        const formatDegree = (deg, citationStyle) => {
+            // Normalize degree strings
+            const lowerDeg = deg.toLowerCase();
+            
+            // Check for doctoral degrees (any "Doctor of" degree should be treated as doctoral)
+            const isDoctoral = lowerDeg.includes("doctor of") || lowerDeg.includes("doctoral") || 
+                              lowerDeg.includes("phd") || lowerDeg.includes("ph.d.") || 
+                              lowerDeg.includes("doctorate") || lowerDeg.includes("d.phil");
+            
+            // Check for master degrees
+            const isMaster = lowerDeg.includes("master") || lowerDeg.includes("m.s.") || 
+                            lowerDeg.includes("m.sc") || lowerDeg.includes("ma");
+            
+            // Check for bachelor degrees
+            const isBachelor = lowerDeg.includes("bachelor") || lowerDeg.includes("b.s.") || 
+                              lowerDeg.includes("b.sc");
+            
+            // IEEE uses abbreviations
+            if (citationStyle === 'IEEE') {
+                if (isDoctoral) return "Ph.D. dissertation";
+                if (isMaster) return "M.S. thesis";
+                if (isBachelor) return "B.S. thesis";
+                // Default - override any full degree name
+                return "Ph.D. dissertation";
+            }
+            
+            if (citationStyle === 'APA') {
+                // APA uses title case for degree labels (capitalize first letter)
+                if (isDoctoral) return "Doctoral dissertation";
+                if (isMaster) return "Master's thesis";
+                if (isBachelor) return "Bachelor's thesis";
+                // Default - override any full degree name with doctoral dissertation
+                return "Doctoral dissertation";
+            }
+            
+            // MLA and Chicago use title case
+            if (isDoctoral) return "Doctoral dissertation";
+            if (isMaster) return "Master's thesis";
+            if (isBachelor) return "Bachelor's thesis";
+            
+            // Default - override any full degree name with doctoral dissertation
+            return "Doctoral dissertation";
+        };
+        
+        let citation = "";
+        switch (style) {
+            case "APA": {
+                // APA 7th: Author. (Year). Title (Doctoral dissertation, University Name).
+                // Use sentence case for title, italicize it
+                const apaAuthor = formatAuthorAPA(normalizedAuthor);
+                const apaTitle = toSentenceCase(title);
+                const apaDegree = formatDegree(degree, 'APA');
+                // APA: italicize the title, use sentence case for degree type
+                citation = `${apaAuthor} (${year}). <i>${apaTitle}</i> (${apaDegree}, ${normalizedSchool}).`;
+                break;
+            }
+            case "MLA": {
+                // MLA 9th: Author. Title. University Name, Year. Degree label.
+                // Use title case, italicize title
+                const mlaAuthor = formatAuthorMLA(normalizedAuthor);
+                const mlaTitle = toTitleCase(title);
+                const mlaDegree = formatDegree(degree, 'MLA');
+                // MLA: italicize title, degree at end
+                citation = `${mlaAuthor}. <i>${mlaTitle}</i>. ${normalizedSchool}, ${year}. ${mlaDegree}.`;
+                break;
+            }
+            case "Chicago": {
+                // Chicago (Notes & Bibliography): Author. Title. Doctoral dissertation, University Name, Year.
+                // Use title case, italicize title
+                const chicagoAuthor = formatAuthorMLA(normalizedAuthor);
+                const chicagoTitle = toTitleCase(title);
+                const chicagoDegree = formatDegree(degree, 'Chicago');
+                // Chicago: italicize title, year at end
+                citation = `${chicagoAuthor}. <i>${chicagoTitle}</i>. ${chicagoDegree}, ${normalizedSchool}, ${year}.`;
+                break;
+            }
+            case "IEEE": {
+                // IEEE: Initials. Last name, Title, Ph.D. dissertation, University Name, City, Country, Year.
+                // Use title case, italicize title, NO quotation marks, include city and country
+                const ieeeAuthor = formatAuthorIEEE(normalizedAuthor);
+                const ieeeDegreeFormatted = formatDegree(degree, 'IEEE');
+                const ieeeTitle = toTitleCase(title);
+                // IEEE: italicize title (no quotes), include city and country
+                citation = `${ieeeAuthor}, <i>${ieeeTitle}</i>, ${ieeeDegreeFormatted}, ${normalizedSchool}, Philippines, ${year}.`;
+                break;
+            }
+            default:
+                citation = "";
+        }
+        
+        // Clean up any double periods, trailing commas, or spacing errors
+        citation = citation.replace(/\.\.+/g, '.').replace(/,\./g, '.').replace(/,\s*\./g, '.').replace(/\s+/g, ' ').trim();
+        
+        // Create plain text version for clipboard (strip HTML tags)
+        const plainTextCitation = citation.replace(/<[^>]*>/g, '');
+        
+        setGeneratedCitation(plainTextCitation);
+        setFormattedCitation(citation);
+    };
+    
+    const handleNewChat = async () => {
+        // Save current session to history (upsert - safe to call even if already auto-saved)
+        if (hasSearchedInSession && searchResults) {
+            await saveCurrentSessionToHistory();
+            // Refresh research history from Django for authenticated users
+            if (!isGuest) {
+                await loadResearchHistoryFromDjango();
+            }
+        }
+
+        // For guests, clear only localStorage and UI state for bookmarks and research history (not backend)
+        if (isGuest) {
+            localStorage.removeItem('litpath_bookmarks');
+            localStorage.removeItem('litpath_research_history');
+            setBookmarks([]);
+            setBookmarkedCount(0);
+            setResearchHistory([]);
+            // Optionally clear conversation as well
+            localStorage.removeItem('litpath_conversation');
+            // Optionally start a completely new guest session
+            await authStartNewChat();
+        }
+
+        // Reset all states
+        setSearchQuery('');
+        setSearchResults(null);
+        setConversationHistory([]);
+        setIsFollowUpSearch(false);
+        setLastSearchContext(null);
+        setSelectedSource(null);
+        setShowOverlay(false);
+        setRating(0);
+        setLoading(false);
+        setError(null);
+        setHasSearchedInSession(false);
+        setIsLoadedFromHistory(false);
+        setCurrentSessionId(generateSessionId());
+    };
+    
+    // Handle logout
+    const handleLogout = async () => {
+        await logout();
+        navigate('/');
+    };
+    
+    const renderStars = (ratingValue, onRate) => {
+        return Array.from({ length: 5 }, (_, i) => (
+            <Star
+                key={i}
+                size={20}
+                className={`cursor-pointer ${i < ratingValue ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+                onClick={() => onRate && onRate(i + 1)}
+            />
+        ));
+    };
+
+    // Handle clicking on citation numbers in overview
+const handleOverviewSourceClick = (sourceIdx) => {
+    // Get the current result being viewed (last one in conversation)
+    const currentResult = conversationHistory[conversationHistory.length - 1];
+    
+    if (!currentResult || !currentResult.sources) return;
+    
+    // Convert 1-based index to 0-based
+    const sourceIndex = sourceIdx - 1;
+    
+    if (sourceIndex >= 0 && sourceIndex < currentResult.sources.length) {
+        const source = currentResult.sources[sourceIndex];
+        
+        // Find the source card element in the horizontal scroll
+        const sourceElements = document.querySelectorAll('[data-source-id]');
+        const targetElement = Array.from(sourceElements).find(
+            el => el.dataset.sourceId === source.id.toString()
+        );
+        
+        if (targetElement) {
+            // Scroll the source card into view
+            targetElement.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'nearest',
+                inline: 'center' 
+            });
+            
+            // Highlight the source card temporarily
+            targetElement.classList.add('ring-2', 'ring-blue-500', 'ring-offset-2');
+            setTimeout(() => {
+                targetElement.classList.remove('ring-2', 'ring-blue-500', 'ring-offset-2');
+            }, 2000);
+        }
+        
+        // Set as selected source
+        setSelectedSource(source);
+    }
+};
+    
+    // Submit feedback
+
+const handleFeedbackSubmit = async (feedbackType) => {
+    if (!userId) {
+        showToast('User ID not found. Please refresh the page.', 'error');
+        return;
+    }
+
+    // Update feedback state
+    const newFeedback = userFeedback === feedbackType ? null : feedbackType;
+    setUserFeedback(newFeedback);
+    
+    // Show overlay for optional comment
+    if (newFeedback !== null) {
+        setShowFeedbackOverlay(true);
+    }
+};
+
+const handleFeedbackConfirm = async () => {
+    if (!userFeedback) {
+        showToast('Please select feedback first.', 'error');
+        return;
+    }
+
+    try {
+        // Map thumbs to relevant boolean
+        const isRelevant = userFeedback === 'thumbs_up';
+        
+        // Save to Django backend
+        const response = await fetch(`${API_BASE_URL}/feedback/`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                user_id: userId,
+                query: searchQuery,
+                rating: isRelevant ? 5 : 1, // 5 for thumbs up, 1 for thumbs down
+                relevant: isRelevant,
+                comment: feedbackComment.trim() || null,
+                document_file: selectedSource?.file || selectedSource?.fullTextPath
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`Failed to save feedback: ${await response.text()}`);
+        }
+        
+        console.log('✅ Feedback saved to Django backend successfully!');
+        showToast('Thank you for your feedback!', 'success');
+        
+        // Set submitted feedback for color display (only after successful submission)
+        setSubmittedFeedback(userFeedback);
+        
+        // Reset and close
+        setShowFeedbackOverlay(false);
+        setFeedbackComment("");
+        setUserFeedback(null);
+    } catch (err) {
+        console.error('❌ Error submitting feedback:', err);
+        showToast('Failed to submit feedback. Please try again.', 'error');
+    }
+};
+
+    // Rating state (for feedback overlay)
+    const [rating, setRating] = useState(0);
+    const [feedbackRelevant, setFeedbackRelevant] = useState(null);
+
+    // Submit feedback to Django backend
+    const submitRatingFeedback = async () => {
+        if (!userId) {
+            showToast('User ID not found. Please refresh the page.', 'error');
+            return;
+        }
+
+        if (feedbackRelevant === null) {
+            showToast('Please select Yes or No for relevance.', 'error');
+            return;
+        }
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/feedback/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    user_id: userId,
+                    query: searchQuery,
+                    rating: rating,
+                    relevant: feedbackRelevant,
+                    comment: feedbackComment.trim() || null,
+                    document_file: selectedSource?.file || selectedSource?.fullTextPath
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`Failed to save feedback: ${await response.text()}`);
+            }
+            
+            console.log('✅ Feedback saved to Django backend successfully!');
+            showToast('Thank you for your feedback!', 'success');
+            
+            // Reset and close
+            setShowFeedbackOverlay(false);
+            setFeedbackComment("");
+            setFeedbackRelevant(null);
+            setRating(0);
+        } catch (err) {
+            console.error('❌ Error submitting feedback:', err);
+            showToast('Failed to submit feedback. Please try again.', 'error');
+        }
+    };
+
+return (
+    <div className={`${!conversationHistory.length && !searchResults ? 'h-screen overflow-hidden' : 'min-h-screen'} flex flex-col bg-gray-100`}>
+        {/* Toast Notification */}
+        {toast.show && (
+            <div className={`fixed bottom-4 right-4 z-[80] px-6 py-3 rounded-lg shadow-lg text-sm ${
+                toast.type === 'success' ? 'bg-green-100 text-green-800' :
+                toast.type === 'error' ? 'bg-red-100 text-red-800' :
+                'bg-blue-100 text-blue-800'
+            }`}>
+                <div className="flex items-center space-x-2">
+                    {toast.type === 'success' && <span>✓</span>}
+                    {toast.type === 'error' && <span>✕</span>}
+                    {toast.type === 'info' && <span>ℹ</span>}
+                    <span>{toast.message}</span>
+                </div>
+            </div>
+        )}
+
+        {/* Header */}
+        <header className="sticky top-0 left-0 right-0 z-40 bg-gradient-to-b from-[#555555] to-[#212121] text-white shadow-md">
+            <div className="flex items-center justify-between max-w-[100rem] mx-auto px-3 py-3 w-full">
+                <div className="flex items-center space-x-4">
+                    
+                    <button
+                        onClick={() => setSidebarOpen(true)}
+                        className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
+                    >
+                        <Menu size={24} />
+                    </button>
+                    
+                    <img src={dostLogo} alt="DOST Logo" className="h-10 w-auto" />
+                    
+                    <div className="hidden md:block text-sm border-l border-white pl-4 ml-4 leading-tight opacity-100">
+                        LitPath AI: <br /> Smart PathFinder for Theses and Dissertation
+                    </div>
+                </div>
+
+
+                <div className="flex items-center gap-4">
+                    {/* User Menu */}
+                    <div className="relative" ref={userMenuRef}>
+                        <button
+                            onClick={() => setShowUserMenu(!showUserMenu)}
+                            className="flex items-center gap-2 hover:bg-white/10 p-1.5 rounded transition-colors"
+                        >
+                            <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md border border-white/20">
+                                {isGuest ? 'G' : (user?.username?.[0]?.toUpperCase() || user?.full_name?.[0]?.toUpperCase() || 'U')}
+                            </div>
+                            <ChevronDown size={14} className="text-gray-400" />
+                        </button>
+                        
+                        {showUserMenu && (
+                            <div key={userMenuKey} className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50">
+                                <div className="px-4 py-2 border-b border-gray-100">
+                                    <p className="text-sm font-medium text-gray-900">
+                                        {isGuest ? 'Guest User' : (user?.full_name ? user.full_name : user?.username)}
+                                    </p>
+                                    <p className="text-xs text-gray-500">
+                                        {isGuest ? 'Temporary session' : user?.email}
+                                    </p>
+                                    {user?.role && user.role !== 'guest' && (
+                                        <span className={`inline-block mt-1 text-xs px-2 py-0.5 rounded ${
+                                            user.role === 'admin' ? 'bg-red-100 text-red-700' :
+                                            user.role === 'staff' ? 'bg-blue-100 text-blue-700' :
+                                            'bg-gray-100 text-gray-700'
+                                        }`}>
+                                            {user.role.charAt(0).toUpperCase() + user.role.slice(1)}
+                                        </span>
+                                    )}
+                                </div>
+                                
+                                {isStaff() && (
+                                    <Link
+                                        to="/admin/dashboard"
+                                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                        onClick={() => setShowUserMenu(false)}
+                                    >
+                                        Admin Dashboard
+                                    </Link>
+                                )}
+                                
+                                {!isGuest && (
+                                    <button
+                                        onClick={() => {
+                                            setShowUserMenu(false);
+                                            setShowAccountSettings(true);
+                                            setSettingsTab('password');
+                                        }}
+                                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2"
+                                    >
+                                        <Settings size={14} />
+                                        <span>Account Settings</span>
+                                    </button>
+                                )}
+                                
+                                {isGuest && (
+                                    <button
+                                        onClick={async () => {
+                                            setShowUserMenu(false);
+                                            await logout(); // End guest session
+                                            window.location.replace('/?mode=login'); // Force reload at login form
+                                        }}
+                                        className="w-full text-left block px-4 py-2 text-sm text-blue-600 hover:bg-gray-100"
+                                    >
+                                        Login
+                                    </button>
+                                )}
+                                
+                                <button
+                                    onClick={() => {
+                                        setShowUserMenu(false);
+                                        handleLogout();
+                                    }}
+                                    className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100 flex items-center space-x-2"
+                                >
+                                    <LogOut size={14} />
+                                    <span>{isGuest ? 'Exit Guest Session' : 'Sign Out'}</span>
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        {/* Sidebar (mobile overlay) */}
+        {sidebarOpen && (
+            <div className="fixed inset-0 z-50 flex">
+                <div className="w-72 bg-white h-full shadow-2xl flex flex-col">
+                    <div className="flex items-center justify-between p-4 border-b">
+                        <span className="font-bold text-lg">LitPath AI</span>
+                        <button onClick={() => setSidebarOpen(false)} className="text-2xl">&times;</button>
+                    </div>
+                    <SidebarContent
+                        handleNewChat={handleNewChat}
+                        hasSearchedInSession={hasSearchedInSession}
+                        setShowSavedItems={setShowSavedItems}
+                        showSavedItems={showSavedItems}
+                        bookmarkedCount={bookmarkedCount}
+                        researchHistory={researchHistory}
+                        loadHistorySession={loadHistorySession}
+                        deleteHistorySession={deleteHistorySession}
+                        setShowResearchHistory={setShowResearchHistory}
+                        navigate={navigate}
+                        setPendingDeleteSession={setPendingDeleteSession}
+                        isGuest={isGuest}
+                        setShowCSMModal={setShowCSMModal}
+                    />
+                </div>
+                <div className="flex-1 bg-black bg-opacity-40" onClick={() => setSidebarOpen(false)} />
+            </div>
+        )}
+
+        {/* Main layout */}
+        <div className={`flex flex-1 min-h-0 transition-all duration-300 ${sidebarCollapsed ? 'pl-16' : 'pl-64'}`}>
+            {/* Sidebar (desktop) - Collapsible */}
+            <aside 
+                className={`hidden md:flex flex-col bg-white border-r border-gray-200 h-[calc(100vh-64px)] fixed top-16 left-0 z-30 transition-all duration-300 ease-in-out ${
+                    sidebarCollapsed ? 'w-16' : 'w-64'
+                }`}
+            >
+                {/* Sidebar Toggle Button (inside sidebar) */}
+                <div className={`h-16 flex items-center border-b border-gray-100 ${
+                    sidebarCollapsed ? 'justify-center p-0' : 'justify-start px-4'
+                }`}>
+                    <button 
+                        onClick={() => setSidebarCollapsed(!sidebarCollapsed)} 
+                        className="p-2 rounded hover:bg-gray-100 transition-colors text-gray-600"
+                        title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+                    >
+                        <Menu size={24} />
+                    </button>
+                </div>
+
+                {/* Sidebar Content */}
+                <div className={`flex-1 overflow-hidden transition-all duration-300 ${sidebarCollapsed ? 'opacity-0' : 'opacity-100'}`}>
+                    <SidebarContent
+                        handleNewChat={handleNewChat}
+                        hasSearchedInSession={hasSearchedInSession}
+                        setShowSavedItems={setShowSavedItems}
+                        showSavedItems={showSavedItems}
+                        bookmarkedCount={bookmarkedCount}
+                        researchHistory={researchHistory}
+                        loadHistorySession={loadHistorySession}
+                        deleteHistorySession={deleteHistorySession}
+                        setShowResearchHistory={setShowResearchHistory}
+                        navigate={navigate}
+                        setPendingDeleteSession={setPendingDeleteSession}
+                        isGuest={isGuest}
+                        setShowCSMModal={setShowCSMModal}
+                    />
+                </div>
+            </aside>
+
+            {/* Main content area - expands when sidebar is collapsed */}
+            <main className="flex-1 flex flex-col justify-between min-h-0">
+                {/* Chat/Content area */}
+                <div
+                    ref={chatContainerRef}
+                    className={`flex-1 w-full max-w-4xl mx-auto px-2 sm:px-8 py-4 ${
+                        conversationHistory.length === 0 && !searchResults 
+                            ? 'overflow-hidden' 
+                            : 'overflow-y-auto'
+                    }`}
+                    style={{ minHeight: 'calc(100vh - 64px - 64px)' }}
+                >
+                    {/* Welcome screen */}
+                    {!conversationHistory.length && !searchResults && (
+                        <div className="flex flex-col items-center justify-center h-full pt-10">
+                            <BookOpen className="text-[#1E74BC]" size={48} />
+                            <h1 className="text-3xl font-extrabold mt-2 mb-2">
+                                <span className="text-[#1E74BC]">LitPath</span>{" "}
+                                <span className="text-[#b83a3a]">AI</span>
+                            </h1>
+                            <p className="text-gray-700 text-lg mb-6">Discover easier and faster.</p>
+
+                            {/* Most Browsed Materials - CAROUSEL */}
+                            <div className="mt-4 w-full max-w-4xl">
+                                <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                                    <BookOpen size={20} className="text-[#1E74BC]" />
+                                    Most Browsed Materials
+                                </h3>
+
+                                {loadingMostBrowsed ? (
+                                    <div className="text-center text-gray-500 py-4">
+                                        <RefreshCw size={20} className="animate-spin inline-block mb-2" />
+                                        <p>Loading most browsed materials...</p>
+                                    </div>
+                                ) : mostBrowsed.length === 0 ? (
+                                    <div className="text-center text-gray-500 py-4">
+                                        <p>No browsing data available yet</p>
+                                    </div>
+                                ) : (
+                                    <div className="relative">
+                                        {/* Navigation Arrows */}
+                                        {mostBrowsed.length > 3 && (
+                                            <>
+                                                <button
+                                                    onClick={() => setBrowsedCurrentSlide(Math.max(0, browsedCurrentSlide - 1))}
+                                                    disabled={browsedCurrentSlide === 0}
+                                                    className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 z-10 bg-white rounded-full shadow-lg p-1.5 hover:bg-gray-100 transition-colors ${browsedCurrentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                >
+                                                    <ChevronLeft size={24} className="text-[#1E74BC]" />
+                                                </button>
+                                                <button
+                                                    onClick={() => setBrowsedCurrentSlide(Math.min(mostBrowsed.length - 3, browsedCurrentSlide + 1))}
+                                                    disabled={browsedCurrentSlide >= mostBrowsed.length - 3}
+                                                    className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 z-10 bg-white rounded-full shadow-lg p-1.5 hover:bg-gray-100 transition-colors ${browsedCurrentSlide >= mostBrowsed.length - 3 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                >
+                                                    <ChevronRight size={24} className="text-[#1E74BC]" />
+                                                </button>
+                                            </>
+                                        )}
+
+                                        {/* Carousel Container */}
+                                        <div className="overflow-hidden">
+                                            <div 
+                                                className="flex gap-4 transition-transform duration-300 ease-in-out"
+                                                style={{ transform: `translateX(-${browsedCurrentSlide * (100/3 + 2)}%)` }}
+                                            >
+                                                {mostBrowsed.map((material, index) => (
+                                                    <div
+                                                        key={material.file}
+                                                        className="bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition-all duration-200 cursor-pointer overflow-hidden flex-shrink-0"
+                                                        style={{ width: 'calc(33.333% - 8px)', height: '300px', display: 'flex', flexDirection: 'column' }}
+                                                        onClick={() => {
+                                                            const formattedMaterial = {
+                                                                id: Date.now() + index,
+                                                                title: material.title,
+                                                                author: material.author,
+                                                                year: material.year,
+                                                                abstract: material.abstract,
+                                                                file: material.file,
+                                                                fullTextPath: material.file,
+                                                                degree: material.degree,
+                                                                subjects: material.subjects,
+                                                                school: material.school,
+                                                            };
+                                                            setSelectedSource(formattedMaterial);
+                                                            trackMaterialView(formattedMaterial);
+                                                            setShowOverlay(true);
+                                                        }}
+                                                    >
+                                                        {/* Top Section (60% - Blue Gradient) */}
+                                                        <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] relative flex-none" style={{ height: '60%' }}>
+                                                            {/* Ranking Badge - Top Left */}
+                                                            <div className="absolute top-1.5 left-1.5 bg-white text-[#1E74BC] rounded-full w-5 h-5 flex items-center justify-center font-bold text-xs">
+                                                                {index + 1}
+                                                            </div>
+                                                            {/* Title - Centered */}
+                                                            <div className="h-full flex items-center justify-center px-2">
+                                                                <h4 className="text-white text-center font-bold text-sm leading-snug line-clamp-3">
+                                                                    {material.title}
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+
+                                                        {/* Bottom Section (40% - White) */}
+                                                        <div className="flex-1 p-2.5 flex flex-col justify-between" style={{ height: '40%' }}>
+                                                            {/* Author Info */}
+                                                            <div>
+                                                                <p className="text-xs text-gray-600 mb-0.5">
+                                                                    <User size={11} className="inline mr-0.5" />
+                                                                    {material.author} • {material.year}
+                                                                </p>
+                                                                {material.school && material.school !== 'Unknown Institution' && (
+                                                                    <p className="text-[10px] text-gray-500 mb-0.5">
+                                                                        <GraduationCap size={10} className="inline mr-0.5" />
+                                                                        {material.school}
+                                                                    </p>
+                                                                )}
+                                                                <p className="text-[10px] text-gray-500">{material.degree}</p>
+                                                            </div>
+                                                            {/* Bottom Row: Rating + View Details */}
+                                                            <div className="flex items-center justify-between pt-1 border-t border-gray-100">
+                                                                <div className="flex items-center gap-1 text-[10px]">
+                                                                    <span className="text-gray-600 font-medium">{material.view_count} views</span>
+                                                                    <Star 
+                                                                        size={10} 
+                                                                        className={parseFloat(material.avg_rating) > 0 ? 'fill-yellow-300 text-yellow-300' : 'text-gray-300'} 
+                                                                    />
+                                                                    <span className="text-[10px] font-semibold text-gray-700">
+                                                                        {parseFloat(material.avg_rating).toFixed(1)}
+                                                                    </span>
+                                                                </div>
+                                                                <span className="text-[#1E74BC] hover:underline font-medium text-[10px]">
+                                                                    View Details →
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {/* Dots Indicator */}
+                                        {mostBrowsed.length > 3 && (
+                                            <div className="flex justify-center gap-2 mt-4">
+                                                {Array.from({ length: Math.ceil(mostBrowsed.length - 2) }).map((_, i) => (
+                                                    <button
+                                                        key={i}
+                                                        onClick={() => setBrowsedCurrentSlide(i)}
+                                                        className={`w-2 h-2 rounded-full transition-colors ${i === browsedCurrentSlide ? 'bg-[#1E74BC]' : 'bg-gray-300 hover:bg-gray-400'}`}
+                                                    />
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Loading Indicator */}
+                            {loading && (
+                                <div className="text-center text-[#1E74BC] text-lg mb-6">
+                                    <div className="animate-spin inline-block w-8 h-8 border-4 border-[#1E74BC] border-t-transparent rounded-full mr-2"></div>
+                                    Searching for insights...
+                                </div>
+                            )}
+
+                            {/* Search Input Bar */}
+                            <div className="mt-10 w-full max-w-4xl relative">
+                                {/* Example Questions Dropdown - Opens Upwards */}
+                                {searchBarFocused && (
+                                    <div className="absolute bottom-full left-0 right-0 mb-2 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50">
+                                        <div className="px-4 py-2 bg-gray-50 border-b border-gray-100">
+                                            <p className="text-xs text-gray-500 font-medium">Sample questions</p>
+                                        </div>
+                                        <div className="flex flex-col py-2">
+                                            {exampleQuestions.map((question, index) => (
+                                                <button
+                                                    key={index}
+                                                    onClick={() => {
+                                                        setSearchQuery(question);
+                                                        setSearchBarFocused(false);
+                                                        handleSearch(question);
+                                                    }}
+                                                    className="w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#1E74BC] transition-colors border-b border-gray-50 last:border-b-0"
+                                                >
+                                                    {question}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                                
+                                <div className="flex items-center space-x-2 border border-gray-300 rounded-lg px-3 py-3 focus-within:border-blue-500 transition-colors bg-white shadow-xl">
+                                    <Search className="text-gray-500" size={18} />
+                                    <input
+                                        type="text"
+                                        placeholder="What is your research question?"
+                                        className="flex-1 outline-none text-gray-800 text-base"
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                        onKeyPress={(e) => e.key === 'Enter' && handleSearch(searchQuery)}
+                                        onFocus={() => setSearchBarFocused(true)}
+                                        onBlur={() => setTimeout(() => setSearchBarFocused(false), 200)}
+                                        disabled={loading}
+                                    />
+                                    <button
+                                        onClick={() => handleSearch(searchQuery)}
+                                        className="bg-[#1E74BC] text-white px-4 py-2 rounded-lg hover:bg-[#155a8f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+                                        disabled={loading}
+                                    >
+                                        Search
+                                    </button>
+                                </div>
+                                
+                                {/* AI Disclaimer */}
+                                <div className="bg-transparent text-gray-500 text-xs text-center mt-2">
+                                    LitPath AI can make mistakes, so double-check it.
+                                </div>
+                                
+                            </div>
+
+                            {error && (
+                                <div className="text-center text-red-600 text-lg mt-8 p-4 bg-red-50 rounded-lg border border-red-200">
+                                    {error}
+                                    {backendStatus?.status === 'error' && (
+                                        <div className="mt-2 text-sm">
+                                            Make sure your backend is running on {API_BASE_URL}
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+                    )}
+
+                    {/* Conversation History */}
+                    {conversationHistory.map((result, historyIndex) => {
+                        const isLast = historyIndex === conversationHistory.length - 1;
+                        return (
+                            <div key={historyIndex} className="mb-14">
+                                {/* Question */}
+                                <div className="flex justify-end mb-2">
+                                    <div className="max-w-[85%] bg-[#1E74BC] text-white rounded-xl px-4 py-3 shadow-md text-base break-words">
+                                        {result.query}
+                                    </div>
+                                </div>
+                                
+                                {/* Sources Section (before AI response) */}
+                                {result.sources && result.sources.length > 0 && (
+                                    <div className="mt-3 mb-4">
+                                        <h3 className="text-sm font-semibold mb-2 flex items-center space-x-2 text-gray-800">
+                                            <BookOpen size={16} className="text-[#1E74BC]" />
+                                            <span>Sources</span>
+                                        </h3>
+                                        <div className="flex space-x-3 overflow-x-auto pb-3 scrollbar-thin scrollbar-thumb-blue-400 scrollbar-track-blue-100">
+                                            {result.sources.map((source, sidx) => (
+                                                <div
+                                                    key={source.id}
+                                                    data-source-id={source.id}
+                                                    ref={el => { if (!handleSourceRef.current) handleSourceRef.current = {}; handleSourceRef.current[sidx + 1] = el; }}
+                                                    className={`flex-shrink-0 w-60 bg-white rounded-lg p-3 cursor-pointer border-2 ${
+                                                        selectedSource && selectedSource.id === source.id
+                                                            ? 'border-blue-500'
+                                                            : 'border-gray-100'
+                                                    } hover:shadow-md transition-all duration-200 ease-in-out`}
+                                                    onClick={() => handleSourceClick(source)}
+                                                >
+                                                    <div className="flex items-center justify-between mb-1.5">
+                                                        <div className="flex items-center justify-center w-6 h-6 bg-[#1E74BC] text-white rounded-full text-xs font-bold">
+                                                            {sidx + 1}
+                                                        </div>
+                                                        <div className="flex items-center gap-1.5">
+                                                            <div className="flex items-center gap-1">
+                                                                <Star 
+                                                                    size={10} 
+                                                                    className={parseFloat(source.avg_rating || 0) > 0 ? 'fill-yellow-300 text-yellow-300' : 'text-gray-300'} 
+                                                                />
+                                                                <span className="text-[10px] text-gray-500">
+                                                                    {(source.avg_rating !== undefined ? parseFloat(source.avg_rating).toFixed(1) : '0.0')}
+                                                                </span>
+                                                            </div>
+                                                            <span className="text-[10px] text-gray-500 flex items-center gap-0.5">
+                                                                <Eye size={10} />
+                                                                {source.view_count || 0}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <h4 className="font-semibold text-xs text-gray-800 mb-1 line-clamp-2">{source.title}</h4>
+                                                    <p className="text-[10px] text-gray-600">{source.author} • {source.year}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        {/* Selected Source Details for this conversation */}
+                                        {selectedSource && result.sources.some(s => s.id === selectedSource.id) && (
+                                            <div className="bg-[#E8F3FB] border-l-4 border-[#1E74BC] rounded-r-lg p-3 mb-4 shadow-sm mt-3">
+                                                <div className="flex justify-between items-start mb-2">
+                                                    <h3 className="text-sm font-bold text-[#1E74BC]">{selectedSource.title}</h3>
+                                                    <button
+                                                        onClick={() => setSelectedSource(null)}
+                                                        className="text-gray-500 hover:text-gray-700 transition-colors text-lg"
+                                                    >
+                                                        ×
+                                                    </button>
+                                                </div>
+                                                <p className="text-xs text-gray-700 mb-2">{selectedSource.author} • {selectedSource.year}</p>
+                                                <div className="mb-2">
+                                                    <h4 className="font-semibold text-xs mb-1 text-gray-800">Abstract:</h4>
+                                                    <p className="text-xs text-gray-700 leading-relaxed">
+                                                        {(() => {
+                                                            const sentences = selectedSource.abstract?.split(/(?<=[.!?])\s+/) || [];
+                                                            const first3 = sentences.slice(0, 3).join(' ');
+                                                            return first3 + (sentences.length > 3 ? '...' : '');
+                                                        })()}
+                                                    </p>
+                                                </div>
+                                                <button
+                                                    onClick={handleMoreDetails}
+                                                    className="bg-gray-800 text-white px-3 py-1.5 rounded-lg hover:bg-gray-700 transition-colors font-medium text-xs"
+                                                >
+                                                    More details and request options
+                                                </button>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                                
+                                {/* Overview */}
+                                <div className="flex justify-start">
+                                    <div className="max-w-[85%] bg-white border border-gray-200 rounded-xl px-4 py-3 shadow text-gray-900 text-sm break-words">
+                                        <h3 className="text-sm font-semibold mb-2 flex items-center space-x-2 text-gray-800">
+                                            <BookOpen size={16} className="text-[#1E74BC]" />
+                                            <span>Overview of Sources</span>
+                                        </h3>
+                                        <div
+                                            className="text-gray-700 leading-relaxed whitespace-pre-line text-sm text-justify"
+                                            dangerouslySetInnerHTML={{
+                                                __html: (result.overview || 'No overview available.').replace(/\[(\d+)\]/g, (match, num) => {
+                                                    return ` <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-[#1E74BC] text-white text-[10px] font-semibold cursor-pointer" data-source-idx="${num}">${num}</span>`;
+                                                })
+                                            }}
+                                            onClick={e => {
+                                                const el = e.target;
+                                                if (el && el.dataset && el.dataset.sourceIdx) {
+                                                    handleOverviewSourceClick(Number(el.dataset.sourceIdx));
+                                                }
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+
+
+
+                                {/* Loading indicator - show after the latest result */}
+                                {isLast && loading && (
+                                    <div className="text-center text-[#1E74BC] text-lg mt-8">
+                                        <div className="animate-spin inline-block w-8 h-8 border-4 border-[#1E74BC] border-t-transparent rounded-full mr-2"></div>
+                                        Searching for insights...
+                                    </div>
+                                )}
+                                
+                                {/* Error message - show after the latest result */}
+                                {isLast && error && (
+                                    <div className="text-center text-red-600 text-lg mt-8 p-4 bg-red-50 rounded-lg border border-red-200">
+                                        {error}
+                                    </div>
+                                )}
+
+                                {/* Related Questions - only show for the latest result and not while loading */}
+                                {isLast && !loading && result.relatedQuestions && result.relatedQuestions.length > 0 && (
+                                    <div className="mt-8">
+                                        <h3 className="text-xl font-semibold text-gray-800 mb-5">Related research questions</h3>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                            {result.relatedQuestions.map((question, index) => (
+                                                <button
+                                                    key={index}
+                                                    onClick={() => handleExampleQuestionClick(question)}
+                                                    className="flex items-center justify-between text-left p-5 bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 text-blue-600 hover:text-blue-800 hover:bg-blue-50"
+                                                >
+                                                    <span>{question}</span>
+                                                    <ArrowRight size={20} className="text-[#1E74BC] flex-shrink-0" />
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+
+
+                </div>
+
+                {/* Input bar (for follow-up questions when conversation exists) */}
+                {conversationHistory.length > 0 && (
+                    <div className="sticky bottom-0 z-30 flex flex-col items-center px-2 sm:px-8 bg-gray-100">
+                        
+                        {/* Search bar - has its own full border */}
+                        <div className="flex items-center space-x-2 w-full max-w-4xl border border-gray-300 rounded-lg px-3 py-3 bg-white shadow-[0_12px_32px_-10px_rgba(0,0,0,0.28)] focus-within:ring-1 focus-within:ring-[#1E74BC]">
+                            <Search className="text-gray-500" size={18} />
+                            <input
+                                type="text"
+                                placeholder="What is your research question?"
+                                className="flex-1 outline-none text-gray-800 text-base bg-transparent"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                onKeyPress={(e) =>
+                                    e.key === 'Enter' && handleSearch(searchQuery, false)
+                                }
+                                disabled={loading}
+                            />
+                            <button
+                                onClick={() => handleSearch(searchQuery, false)}
+                                className="bg-[#1E74BC] text-white px-4 py-2 rounded-lg hover:bg-[#155a8f]
+                                    transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+                                disabled={loading}
+                            >
+                                Search
+                            </button>
+                        </div>
+
+                        {/* AI Disclaimer - outside the border, blends with page bg */}
+                        <p className="text-[10px] text-gray-500 text-center w-full max-w-4xl py-1 px-2">
+                            LitPath AI can make mistakes, so double-check it.
+                        </p>
+
+                    </div>
+                )}
+
+
+            </main>
+        </div>
+
+
+        {/* Overlay for More Details */}
+        {showOverlay && selectedSource && (
+            <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-start justify-center pt-[4.5rem]">
+                <div className="w-full sm:w-1/2 lg:w-50 xl:w-50 bg-white h-full overflow-y-auto shadow-2xl max-h-[90vh]">
+                    <div className="text-white p-6 shadow-md" style={{ backgroundColor: '#1E74BC' }}>
+                        <div className="flex items-center justify-between mb-4">
+                            <button
+                                onClick={() => {
+                                    setShowOverlay(false);
+                                    if (cameFromBookmarks) {
+                                        setShowSavedItems(true);
+                                        setCameFromBookmarks(false);
+                                    }
+                                }}
+                                className="text-white hover:text-blue-200 text-sm flex items-center space-x-1"
+                            >
+                                <ArrowRight size={18} className="transform rotate-180" />
+                                <span>Back</span>
+                            </button>
+                            <div className="flex space-x-4 items-center">
+                                {/* Thumbs Up/Down Feedback */}
+                                <button
+                                    className={`transition-colors ${submittedFeedback === 'thumbs_up' ? 'text-green-300' : 'text-white hover:text-blue-200'}`}
+                                    onClick={() => handleFeedbackSubmit('thumbs_up')}
+                                    title="Helpful"
+                                >
+                                    <ThumbsUp size={20} fill={submittedFeedback === 'thumbs_up' ? 'currentColor' : 'none'} />
+                                </button>
+                                <button
+                                    className={`transition-colors ${submittedFeedback === 'thumbs_down' ? 'text-red-300' : 'text-white hover:text-blue-200'}`}
+                                    onClick={() => handleFeedbackSubmit('thumbs_down')}
+                                    title="Not helpful"
+                                >
+                                    <ThumbsDown size={20} fill={submittedFeedback === 'thumbs_down' ? 'currentColor' : 'none'} />
+                                </button>
+                                <div className="w-px h-5 bg-white opacity-30"></div>
+                                <button 
+                                    className="text-white hover:text-blue-200 transition-colors"
+                                    onClick={() => toggleBookmark(selectedSource)}
+                                    title={isBookmarked(selectedSource?.file || selectedSource?.fullTextPath) ? "Remove bookmark" : "Add bookmark"}
+                                >
+                                    <Bookmark 
+                                        size={20} 
+                                        fill={isBookmarked(selectedSource?.file || selectedSource?.fullTextPath) ? "currentColor" : "none"}
+                                        className={isBookmarked(selectedSource?.file || selectedSource?.fullTextPath) ? "text-white" : "text-white"}
+                                    />
+                                </button>
+                                <button className="text-white hover:text-blue-200"
+                                    onClick={() => setShowCitationOverlay(true)}
+                                    title="Cite this source"
+                                >
+                                    <Quote size={20} />
+                                </button>
+                            </div>
+                        </div>
+                        <h2 className="text-2xl font-bold leading-tight">{selectedSource.title}</h2>
+                    </div>
+                    <div className="p-6">
+                        <div className="space-y-4 mb-8 text-gray-700">
+                            <div className="flex items-center space-x-2">
+                                <span className="font-semibold text-gray-800">Degree:</span>
+                                <span>{selectedSource.degree}</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <User size={16} className="text-gray-500" />
+                                <span className="font-semibold text-gray-800">Author:</span>
+                                <span>{selectedSource.author}</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <Calendar size={16} className="text-gray-500" />
+                                <span className="font-semibold text-gray-800">Publication Year:</span>
+                                <span>{selectedSource.year}</span>
+                            </div>
+                            <div>
+                                <span className="font-semibold text-gray-800">Subject/s:</span>
+                                <div className="ml-5 mt-1 text-gray-600">
+                                    {(() => {
+                                        let subjects = [];
+                                        if (Array.isArray(selectedSource.subjects)) {
+                                            subjects = selectedSource.subjects;
+                                        } else if (typeof selectedSource.subjects === 'string' && selectedSource.subjects.trim() !== '') {
+                                            subjects = selectedSource.subjects.split(',').map(s => s.trim()).filter(Boolean);
+                                        }
+                                        return subjects.length > 0 ? (
+                                            subjects.map((d, i) => <div key={i}>• {d}</div>)
+                                        ) : (
+                                            <div>N/A</div>
+                                        );
+                                    })()}
+                                </div>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <span className="font-semibold text-gray-800">University/College:</span>
+                                <span>{selectedSource.school}</span>
+                            </div>
+                        </div>
+                        <div className="bg-[#1E74BC] text-white p-6 rounded-md shadow-md">
+                            <div className="text-base leading-relaxed">
+                                <div className="font-semibold">STII Bldg., Gen. Santos Ave., Upper Bicutan,</div>
+                                <div>Taguig City, Metro Manila, 1631, Philippines</div>
+                                <div className="mt-3 font-medium">library@stii.dost.gov.ph</div>
+                                <div className="mt-2 font-medium">Full text available at DOST-STII Library from 8am - 5pm</div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-lg mb-2 mt-6 text-gray-800">ABSTRACT</h3>
+                            <p className="text-base text-gray-700 leading-relaxed text-justify">{selectedSource.abstract}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )}
+
+        {/* Citation Overlay */}
+        {showCitationOverlay && (
+            <div className="fixed inset-0 bg-black bg-opacity-60 z-[60] flex items-center justify-center">
+                <div className="bg-white w-10/12 md:w-2/3 lg:w-1/2 xl:w-[40%] rounded-lg shadow-2xl flex">
+                    
+                    {/* Type of citation */}
+                    <div className="w-1/3 bg-gray-100 border-r p-6">
+                        <h3 className="font-semibold mb-4 text-gray-800">Citation Style</h3>
+                        {["APA", "MLA", "Chicago", "IEEE"].map((style) => (
+                            <button
+                                key={style}
+                                className={`block w-full text-left px-4 py-2 rounded mb-2
+                                    ${selectedCitationStyle === style ? "bg-[#1E74BC] text-white" : "hover:bg-[#d7e8f6]"}`}
+                                onClick={() => setSelectedCitationStyle(style)}
+                            >
+                                {style === "APA" ? "APA (7th edition)" :
+                                    style === "MLA" ? "MLA (9th edition)" : style}
+                            </button>
+                        ))}
+                    </div>
+
+
+                    {/* Generated citation */}
+                    <div className="w-2/3 p-6 relative">
+                        
+                        {/* Close button */}
+                        <button
+                            onClick={() => setShowCitationOverlay(false)}
+                            className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-xl"
+                        >
+                            ×
+                        </button>
+                        <h3 className="font-semibold text-gray-800 mb-3">{selectedCitationStyle} Citation</h3>
+                        <div 
+                            className="w-full h-40 border p-3 rounded text-gray-700 overflow-auto bg-gray-50"
+                            dangerouslySetInnerHTML={{ __html: formattedCitation }}
+                        />
+                        <textarea
+                            readOnly
+                            value={generatedCitation}
+                            className="w-full h-40 border p-3 rounded text-gray-700 mt-2"
+                            style={{ display: 'none' }}
+                        />
+                        <button
+                            className="mt-4 bg-[#1E74BC] text-white px-4 py-2 rounded hover:bg-[#185f99]"
+                            onClick={async () => {
+                                try {
+                                    // Copy to clipboard
+                                    await navigator.clipboard.writeText(generatedCitation);
+                                    showToast('Citation copied to clipboard!', 'success');
+
+                                    // Track the copy event
+                                    try {
+                                        await fetch(`${API_BASE_URL}/track-citation/`, {
+                                            method: 'POST',
+                                            headers: { 'Content-Type': 'application/json' },
+                                            body: JSON.stringify({
+                                                file: selectedSource?.file || selectedSource?.fullTextPath,
+                                                citation_style: selectedCitationStyle,
+                                                user_id: userId,
+                                                session_id: currentSessionId
+                                            })
+                                        });
+                                    } catch (error) {
+                                        console.error('Failed to track citation copy:', error);
+                                        // Don't show error to user – it's non‑critical
+                                    }
+                                } catch (error) {
+                                    console.error('Error copying citation:', error);
+                                    showToast('Citation could not be generated!', 'error');
+                                }
+                            }}
+                        >
+                            Copy to Clipboard
+                        </button>
+                    </div>
+                </div>
+            </div>
+        )}
+
+        {/* Feedback Overlay */}
+        {showFeedbackOverlay && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-[70] flex items-center justify-center">
+                <div className="bg-white w-11/12 md:w-1/2 lg:w-1/3 rounded-lg shadow-xl p-6 relative">
+                    <h2 className="text-2xl font-semibold text-[#1E74BC] mb-4">
+                        {userFeedback === 'thumbs_up' ? 'Thank you for your feedback!' : 'Sorry to hear this wasn\'t helpful.'}
+                    </h2>
+                    <p className="text-gray-800 mb-2">
+                        Would you like to add any comments? (Optional)
+                    </p>
+                    <textarea
+                        value={feedbackComment}
+                        onChange={(e) => setFeedbackComment(e.target.value)}
+                        className="w-full border border-gray-300 rounded p-3 text-sm h-28 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Share your feedback or suggestions here..."
+                        maxLength={500}
+                    />
+                    <div className="flex items-center justify-end mt-2">
+                        <p className="text-xs text-gray-500">
+                            {feedbackComment.length}/500 characters
+                        </p>
+                    </div>
+                    
+                    {/* Submit + Cancel */}
+                    <div className="flex justify-end gap-3 mt-5">
+                        <button
+                            className="bg-[#1E74BC] text-white px-5 py-2 rounded hover:bg-[#185f99]"
+                            onClick={handleFeedbackConfirm}>
+                            Submit
+                        </button>
+                        <button
+                            className="px-5 py-2 rounded bg-gray-300 hover:bg-gray-400"
+                            onClick={() => {
+                                setShowFeedbackOverlay(false);
+                                setFeedbackComment("");
+                            }}
+                        >
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        )}
+
+        {/* Bookmarks Overlay */}
+        {showSavedItems && (
+            <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center">
+                <div className="bg-white w-11/12 md:w-3/4 lg:w-2/3 xl:w-1/2 h-[80vh] rounded-lg shadow-2xl flex flex-col">
+                    {/* Header */}
+                    <div className="bg-[#1E74BC] text-white p-6 rounded-t-lg flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                            <Bookmark size={24} />
+                            <h2 className="text-2xl font-bold">Saved Bookmarks</h2>
+                            <span className="bg-white text-[#1E74BC] text-sm font-bold px-3 py-1 rounded-full">
+                                {bookmarkedCount}
+                            </span>
+                        </div>
+                        <button
+                            onClick={() => setShowSavedItems(false)}
+                            className="text-white hover:text-gray-200 text-3xl"
+                        >
+                            ×
+                        </button>
+                    </div>
+
+                    {/* Bookmarks List */}
+                    <div className="flex-1 overflow-y-auto p-6">
+                        {bookmarkedCount === 0 ? (
+                            <div className="text-center py-12">
+                                <Bookmark size={48} className="mx-auto text-gray-300 mb-4" />
+                                <p className="text-gray-500 text-lg">No bookmarks saved yet.</p>
+                                <p className="text-gray-400 text-sm mt-2">
+                                    Start exploring research and click the bookmark icon to save papers for later!
+                                </p>
+                            </div>
+                        ) : (
+                            <div className="space-y-4">
+                                {getBookmarks().map((bookmark, index) => (
+                                    <div
+                                        key={index}
+                                        className="bg-gray-50 border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow"
+                                    >
+                                        <div className="flex justify-between items-start mb-3">
+                                            <h3 className="font-semibold text-lg text-gray-800 flex-1 pr-4">
+                                                {bookmark.title}
+                                            </h3>
+                                            <button
+                                                onClick={() => toggleBookmark(bookmark)}
+                                                className="text-red-500 hover:text-red-700 flex-shrink-0"
+                                                title="Remove bookmark"
+                                            >
+                                                <Bookmark size={20} fill="currentColor" />
+                                            </button>
+                                        </div>
+                                        <p className="text-gray-600 text-sm mb-2">
+                                            <User size={14} className="inline mr-1" />
+                                            {bookmark.author} • {bookmark.year}
+                                        </p>
+                                        <p className="text-gray-700 text-sm mb-3 line-clamp-2">
+                                            {bookmark.abstract}
+                                        </p>
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-xs text-gray-500">
+                                                {bookmark.degree} • {bookmark.school}
+                                            </span>
+                                            <button
+                                                onClick={() => {
+                                                    setSelectedSource(bookmark);
+                                                    setCameFromBookmarks(true);
+                                                    setShowSavedItems(false);
+                                                    setShowOverlay(true);
+                                                }}
+                                                className="text-[#1E74BC] hover:text-[#155a8f] text-sm font-medium"
+                                            >
+                                                View Details →
+                                            </button>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Footer */}
+                    <div className="border-t p-4 bg-gray-50 rounded-b-lg">
+                        <p className="text-xs text-gray-500 text-center">
+                            {isGuest 
+                                ? 'Guest bookmarks are temporary and will be cleared on new chat.'
+                                : `Bookmarks are saved to your account.`
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )}
+
+        {/* Research History Overlay */}
+        {showResearchHistory && (
+            <div className="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
+                <div className="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col">
+                    {/* Header */}
+                    <div className="flex items-center justify-between p-6 border-b">
+                        <div className="flex items-center space-x-3">
+                            <MessageSquare className="text-[#1E74BC]" size={28} />
+                            <h2 className="text-2xl font-bold text-gray-800">Research History</h2>
+                        </div>
+                        <button
+                            onClick={() => setShowResearchHistory(false)}
+                            className="text-gray-500 hover:text-gray-700 text-2xl"
+                        >
+                            ×
+                        </button>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 overflow-y-auto p-6">
+                        {researchHistory.length === 0 ? (
+                            <div className="text-center py-12">
+                                <MessageSquare size={64} className="mx-auto text-gray-300 mb-4" />
+                                <p className="text-gray-500 text-lg">No research history yet</p>
+                                <p className="text-gray-400 text-sm mt-2">
+                                    Your search sessions will appear here after you start a new chat
+                                </p>
+                            </div>
+                        ) : (
+                            <div className="space-y-4">
+                                {researchHistory.map((session) => (
+                                    <div
+                                        key={session.id}
+                                        className="bg-gray-50 rounded-lg p-5 border border-gray-200 hover:border-[#1E74BC] hover:shadow-md transition-all cursor-pointer"
+                                    >
+                                        <div className="flex items-start justify-between mb-3">
+                                            <div className="flex-1 pr-4">
+                                                <h3 
+                                                    className="font-semibold text-gray-800 text-lg mb-2 hover:text-[#1E74BC]"
+                                                    onClick={() => loadHistorySession(session)}
+                                                >
+                                                    {session.mainQuery || session.query}
+                                                </h3>
+                                                
+                                                {/* Display follow-up queries if they exist */}
+                                                {session.followUpQueries && session.followUpQueries.length > 0 && (
+                                                    <div className="mb-3 pl-4 border-l-2 border-gray-300">
+                                                        <p className="text-xs text-gray-500 mb-1">Follow-up questions:</p>
+                                                        {session.followUpQueries.map((query, idx) => (
+                                                            <p key={idx} className="text-sm text-gray-600 mb-1">
+                                                                {idx + 1}. {query}
+                                                            </p>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                                
+                                                <div className="flex flex-wrap gap-2 text-sm text-gray-600">
+                                                    <span className="flex items-center">
+                                                        <Calendar size={14} className="mr-1" />
+                                                        {new Date(session.timestamp).toLocaleDateString()} at {new Date(session.timestamp).toLocaleTimeString()}
+                                                    </span>
+                                                    <span>•</span>
+                                                    <span>{session.sourcesCount} sources</span>
+                                                    {session.conversationLength && (
+                                                        <>
+                                                            <span>•</span>
+                                                            <span className="text-green-600">{session.conversationLength} {session.conversationLength === 1 ? 'query' : 'queries'}</span>
+                                                        </>
+                                                    )}
+                                                </div>
+                                            </div>
+                                            <button
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setPendingDeleteSession(session.id);
+                                                }}
+                                                className="text-red-500 hover:text-red-700 flex-shrink-0 p-2"
+                                                title="Delete session"
+                                            >
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <button
+                                            onClick={() => loadHistorySession(session)}
+                                            className="text-[#1E74BC] hover:text-[#155a8f] text-sm font-medium flex items-center"
+                                        >
+                                            Load this session
+                                            <ArrowRight size={16} className="ml-1" />
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Footer */}
+                    <div className="border-t p-4 bg-gray-50 rounded-b-xl">
+                        <p className="text-xs text-gray-500 text-center">
+                            Research history is saved locally and in cloud storage. {researchHistory.length} {researchHistory.length === 1 ? 'session' : 'sessions'} saved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        )}
+
+        {/* Account Settings Modal */}
+        {showAccountSettings && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+                <div className="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden">
+                {/* Header */}
+                <div className="bg-gradient-to-r from-[#1E74BC] to-[#155a8f] text-white p-4">
+                    <div className="flex justify-between items-center">
+                    <h2 className="text-xl font-bold flex items-center gap-2">
+                        <Settings size={24} />
+                        Account Settings
+                    </h2>
+                    <button
+                        onClick={() => {
+                        setShowAccountSettings(false);
+                        setCurrentPassword('');
+                        setNewPassword('');
+                        setConfirmPassword('');
+                        setDeletePassword('');
+                        }}
+                        className="text-white hover:text-gray-200 text-2xl"
+                    >
+                        ×
+                    </button>
+                    </div>
+                </div>
+
+                {/* Tabs */}
+                <div className="flex border-b">
+                    <button
+                    onClick={() => setSettingsTab('profile')}
+                    className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                        settingsTab === 'profile'
+                        ? 'text-[#1E74BC] border-b-2 border-[#1E74BC] bg-blue-50'
+                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                    }`}
+                    >
+                    <User size={16} />
+                    Edit Profile
+                    </button>
+                    <button
+                    onClick={() => setSettingsTab('password')}
+                    className={`flex-1 px-4 py-3 text-sm font-medium flex items-center justify-center gap-2 ${
+                        settingsTab === 'password'
+                        ? 'text-[#1E74BC] border-b-2 border-[#1E74BC] bg-blue-50'
+                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                    }`}
+                    >
+                    <Key size={16} />
+                    Change Password
+                    </button>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                    {settingsTab === 'profile' && (
+                    <form onSubmit={async (e) => {
+                        e.preventDefault();
+                        setSettingsLoading(true);
+                        try {
+                        const token = localStorage.getItem('litpath_session') ? JSON.parse(localStorage.getItem('litpath_session')).session_token : null;
+                        const res = await fetch('http://localhost:8000/api/auth/update-profile/', {
+                            method: 'POST',
+                            headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                            },
+                            body: JSON.stringify({
+                            full_name: editFullName,
+                            username: editUsername
+                            })
+                        });
+                        let data;
+                        if (res.ok) {
+                            data = await res.json();
+                            setSettingsLoading(false);
+                            if (data.success) {
+                            if (data.user) {
+                                localStorage.setItem('litpath_auth_user', JSON.stringify(data.user));
+                                setUser(data.user);
+                            }
+                            showToast('Profile updated!', 'success');
+                            setShowAccountSettings(false);
+                            } else {
+                            showToast(data.message || 'Failed to update profile', 'error');
+                            }
+                        } else {
+                            // Try to parse error message from backend
+                            try {
+                            data = await res.json();
+                            showToast(data.message || data.error || 'Failed to update profile', 'error');
+                            } catch (parseErr) {
+                            const errorText = await res.text();
+                            showToast(errorText || 'Failed to update profile', 'error');
+                            }
+                            setSettingsLoading(false);
+                        }
+                        } catch (err) {
+                        setSettingsLoading(false);
+                        showToast('Connection error', 'error');
+                        }
+                    }}>
+                        <div className="space-y-4">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input
+                            type="text"
+                            value={editFullName}
+                            onChange={e => setEditFullName(e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                            required
+                            />
+                        </div>
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                            <input
+                            type="text"
+                            value={editUsername}
+                            onChange={e => setEditUsername(e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                            required
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            disabled={settingsLoading}
+                            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                        >
+                            {settingsLoading ? (
+                            <>
+                                <RefreshCw size={16} className="animate-spin" />
+                                Saving...
+                            </>
+                            ) : (
+                            <>
+                                <User size={16} />
+                                Save Changes
+                            </>
+                            )}
+                        </button>
+                        </div>
+                    </form>
+                    )}
+
+                    {settingsTab === 'password' && (
+                    <form onSubmit={async (e) => {
+                        e.preventDefault();
+                        if (newPassword !== confirmPassword) {
+                        showToast('New passwords do not match', 'error');
+                        return;
+                        }
+                        if (newPassword.length < 8) {  // Updated to 8
+                        showToast('Password must be at least 8 characters', 'error');
+                        return;
+                        }
+                        setSettingsLoading(true);
+                        const result = await changePassword(currentPassword, newPassword);
+                        setSettingsLoading(false);
+                        if (result.success) {
+                            showToast('Password changed successfully! Please log in again.', 'success');
+                            setShowAccountSettings(false);
+                            setCurrentPassword('');
+                            setNewPassword('');
+                            setConfirmPassword('');
+                            await logout();
+                            navigate('/');
+                        } else {
+                            showToast(result.error || 'Failed to change password', 'error');
+                        }
+                    }}>
+                        <div className="space-y-4">
+                        {/* Current Password */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Current Password
+                            </label>
+                            <div className="relative">
+                            <input
+                                type={showCurrentPassword ? 'text' : 'password'}
+                                value={currentPassword}
+                                onChange={(e) => setCurrentPassword(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent pr-10"
+                                required
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowCurrentPassword(!showCurrentPassword)}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                            >
+                                {showCurrentPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
+                            </div>
+                        </div>
+
+                        {/* New Password */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                            New Password
+                            </label>
+                            <div className="relative">
+                            <input
+                                type={showNewPassword ? 'text' : 'password'}
+                                value={newPassword}
+                                onChange={(e) => setNewPassword(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent pr-10"
+                                required
+                                minLength={8}  // Updated to 8
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowNewPassword(!showNewPassword)}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                            >
+                                {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
+                            </div>
+                        </div>
+
+                        {/* Confirm New Password (with eye icon) */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Confirm New Password
+                            </label>
+                            <div className="relative">
+                            <input
+                                type={showConfirmPassword ? 'text' : 'password'}
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent pr-10"
+                                required
+                                minLength={8}  // Updated to 8
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                            >
+                                {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                            </button>
+                            </div>
+                        </div>
+
+                        {/* Password hint */}
+                        <p className="text-xs text-gray-500 mt-1">
+                            Password must be at least 8 characters long
+                        </p>
+
+                        <button
+                            type="submit"
+                            disabled={settingsLoading}
+                            className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                        >
+                            {settingsLoading ? (
+                            <>
+                                <RefreshCw size={16} className="animate-spin" />
+                                Changing...
+                            </>
+                            ) : (
+                            <>
+                                <Key size={16} />
+                                Change Password
+                            </>
+                            )}
+                        </button>
+                        </div>
+                    </form>
+                    )}
+                </div>
+                </div>
+            </div>
+        )}
+
+        {/* Delete Session Confirmation Modal */}
+        {pendingDeleteSession && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+                <div className="bg-white rounded-xl shadow-2xl w-full max-w-md overflow-hidden">
+                    {/* Header */}
+                    <div className="bg-red-50 border-b border-red-100 p-6">
+                        <div className="flex items-center gap-3">
+                            <div className="bg-red-100 p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900">Delete Session?</h3>
+                                <p className="text-sm text-gray-500 mt-1">This action cannot be undone</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6">
+                        <p className="text-gray-600 mb-6">
+                            Are you sure you want to delete this research session? This will permanently remove it from your history and all associated data will be lost.
+                        </p>
+                        <div className="flex gap-3 justify-end">
+                            <button
+                                onClick={() => setPendingDeleteSession(null)}
+                                className="px-5 py-2.5 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors flex items-center gap-2"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                                Cancel
+                            </button>
+                            <button
+                                onClick={() => {
+                                    deleteHistorySession(pendingDeleteSession);
+                                    setPendingDeleteSession(null);
+                                }}
+                                className="px-5 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors flex items-center gap-2"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                </svg>
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )}
+
+        {/* CSM Feedback Modal */}
+        <CSMModal 
+            isOpen={showCSMModal} 
+            onClose={() => {
+                setShowCSMModal(false);
+                // If user closes without submitting, mark as skipped
+                if (!localStorage.getItem('csm_feedback_submitted')) {
+                    localStorage.setItem('csm_feedback_skipped', 'true');
+                    localStorage.setItem('csm_feedback_skipped_at', new Date().toISOString());
+                }
+                // Reset query count after feedback is submitted or skipped
+                localStorage.setItem('csm_query_count', '0');
+            }} 
+        />
+    </div>
+);
+};
+
+// ExampleQuestionButton component
+const ExampleQuestionButton = ({ onClick, text }) => {
+    return (
+        <button
+            onClick={() => onClick(text)}
+            className="w-full text-left bg-white border border-gray-200 rounded-lg px-4 py-3 hover:border-[#1E74BC] hover:shadow-md transition-all text-gray-700 text-sm"
+        >
+            {text}
+        </button>
+    );
+};
+
+// SidebarContent component
+function SidebarContent({
+    handleNewChat,
+    hasSearchedInSession,
+    setShowSavedItems,
+    showSavedItems,
+    bookmarkedCount,
+    researchHistory,
+    loadHistorySession,
+    deleteHistorySession,
+    setShowResearchHistory,
+    navigate,
+    setPendingDeleteSession,
+    isGuest,
+    setShowCSMModal
+}) {
+    return (
+        <div className="flex flex-col h-full">
+            
+            {/* TOP CONTENT */}
+            <div className="flex-1 overflow-hidden p-4 space-y-4">
+                <button
+                    onClick={handleNewChat}
+                    disabled={!hasSearchedInSession}
+                    className={`w-full py-3 text-sm rounded-lg font-semibold shadow-md transition-colors ${
+                        hasSearchedInSession
+                            ? 'bg-[#1E74BC] text-white hover:bg-[#155a8f]'
+                            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }`}
+                >
+                    Start a new chat
+                </button>
+                <button
+                    onClick={() => setShowSavedItems(true)}
+                    className="w-full flex items-center justify-between border-2 border-[#1E74BC] text-[#1E74BC] py-3 px-4 rounded-lg hover:bg-blue-50 font-semibold shadow-md"
+                >
+                    <span className="flex items-center gap-2 text-sm"><Bookmark size={18} /> Saved Bookmarks</span>
+                    {bookmarkedCount > 0 && (
+                        <span className="bg-[#1E74BC] text-white text-xs font-bold px-3 py-1 rounded-full">{bookmarkedCount}</span>
+                    )}
+                </button>
+                <h3 className="font-semibold text-gray-800 mb-2 text-lg">Research history</h3>
+                {researchHistory.length === 0 ? (
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                        {isGuest 
+                            ? <span>After you start a new chat, your research history and saved bookmarks will <span className="text-red-600 font-semibold">NOT</span> be saved</span>
+                            : "After you start a new chat, your research history will be saved and displayed here."
+                        }
+                    </p>
+                ) : (
+                    <div className="space-y-2">
+                        {researchHistory.slice(0, 3).map((session, index) => (
+                            <div
+                                key={`${session.id}-${index}`}
+                                className="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-3 hover:border-[#1E74BC] hover:shadow-sm transition-all cursor-pointer group"
+                                onClick={() => loadHistorySession(session)}
+                            >
+                                <p className="text-xs text-gray-700 flex-1 pr-2 truncate group-hover:text-[#1E74BC]">
+                                    {session.mainQuery || session.query}
+                                </p>
+                                <button
+                                    onClick={e => { e.stopPropagation(); setPendingDeleteSession(session.id); }}
+                                    className="text-gray-400 hover:text-red-500 flex-shrink-0 p-1"
+                                    title="Delete"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M3 6h18"></path>
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        ))}
+                        {researchHistory.length > 3 && (
+                            <button
+                                onClick={() => setShowResearchHistory(true)}
+                                className="text-sm text-[#1E74BC] hover:underline mt-2"
+                            >
+                                View all {researchHistory.length} sessions
+                            </button>
+                        )}
+                    </div>
+                )}
+            </div>
+
+            {/* BOTTOM DISCLOSURE */}
+            <div className="text-[10px] text-gray-500 p-4 border-t">
+                AI-generated content. Quality may vary.<br />
+                Check for accuracy.
+                <button
+                    onClick={() => setShowCSMModal(true)}
+                    className="text-base text-[#1E74BC] hover:underline block mt-2 flex items-center gap-1"
+                >
+                    <MessageSquare size={15} />
+                    Leave a feedback
+                </button>
+            </div>
+        </div>
+    );
+}
+
+// Helper: Safely formats API documents into UI-friendly source objects
+const formatSources = (documents) => {
+    if (!documents || !Array.isArray(documents)) return [];
+    
+    return documents.map((doc, index) => ({
+        id: Date.now() + index,
+        title: doc.title || '[Unknown Title]',
+        author: doc.author || '[Unknown Author]',
+        year: doc.publication_year || '[Unknown Year]',
+        abstract: doc.abstract || 'Abstract not available.',
+        fullTextPath: doc.file || '',
+        file: doc.file || '',
+        degree: doc.degree || 'Thesis',
+        subjects: doc.subjects || ['Research'],
+        school: doc.university || '[Unknown University]',
+        // Preserve analytics data if available
+        view_count: doc.view_count || 0,
+        avg_rating: doc.avg_rating || 0
+    }));
+};
+
+export default LitPathAI;
