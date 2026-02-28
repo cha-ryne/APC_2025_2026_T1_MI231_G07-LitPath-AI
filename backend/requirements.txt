@@ -1,3 +1,4 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
 Django>=5.0,<5.1
 djangorestframework>=3.14.0
 django-cors-headers>=4.3.0
@@ -15,3 +16,5 @@ Pillow>=10.0.0
 google-genai>=1.0.0
 rouge-score>=0.1.2
 transformers>=4.30.0
+gunicorn>=21.2.0
+whitenoise>=6.5.0
