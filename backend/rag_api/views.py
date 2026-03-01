@@ -875,6 +875,13 @@ def get_most_browsed(request):
         # Enrich with actual metadata from RAG if title/author are "Unknown"
         from .rag_service import RAGService
         
+        # Ensure RAG is initialized for metadata enrichment
+        if not RAGService._initialized:
+            try:
+                RAGService.initialize()
+            except Exception as e:
+                print(f"[RAG] Could not initialize RAG for metadata enrichment: {e}")
+        
         materials_data = []
         for row in results:
             title = row['title']

@@ -450,6 +450,10 @@ class RAGService:
             request_id = str(uuid.uuid4())
         print(f"[RAG-DEBUG] RAGService.search called. Request ID: {request_id}")
         """Search for relevant thesis chunks with optional metadata filters, LLM-based query rewriting, and local reranker."""
+        # Safety net: ensure RAG is initialized (handles edge cases like gunicorn without --preload)
+        if not RAGService._initialized:
+            print(f"[RAG] Lazy initialization triggered by search request {request_id}")
+            RAGService.initialize()
         # Step 1: LLM-based query rewriting (Gemini)
         rewritten_question = None
         if self.api_key:
