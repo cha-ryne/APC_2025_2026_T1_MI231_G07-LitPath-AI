@@ -110,8 +110,22 @@ def format_metadata_capitalization(text, field_type='default'):
     return text.strip()
 
 # Add RAG/scripts directory to path to import extract_metadata
-sys.path.append(os.path.join(settings.BASE_DIR.parent, 'RAG', 'scripts'))
-from extract_metadata import extract_thesis_metadata
+# Try multiple possible locations (local dev vs Railway deployment)
+_rag_scripts_paths = [
+    os.path.join(settings.BASE_DIR.parent, 'RAG', 'scripts'),  # local dev (repo root)
+    os.path.join(settings.BASE_DIR, '..', 'RAG', 'scripts'),   # alternative
+    os.path.join('/app', 'RAG', 'scripts'),                     # Railway with repo root
+]
+for _path in _rag_scripts_paths:
+    if os.path.isdir(_path):
+        sys.path.append(_path)
+        break
+
+try:
+    from extract_metadata import extract_thesis_metadata
+except ImportError:
+    # extract_metadata not available (e.g., Railway without RAG volume)
+    extract_thesis_metadata = None
 
 
 class RAGService:
