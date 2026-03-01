@@ -1,8 +1,0 @@
-# Nixpacks config for LitPath backend (Railway)
-# Set Root Directory to "backend" in Railway service settings
-
-[phases.setup]
-nixPkgs = ["...", "tesseract", "poppler_utils"]
-
-[start]
-cmd = "python manage.py collectstatic --noinput && python -m gunicorn litpath_backend.wsgi:application --bind 0.0.0.0:${PORT:-8000}"
