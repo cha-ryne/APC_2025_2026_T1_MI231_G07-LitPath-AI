@@ -1,1 +1,20 @@
--r backend/requirements.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+Django>=5.0,<5.1
+djangorestframework>=3.14.0
+django-cors-headers>=4.3.0
+python-dotenv>=1.0.0
+psycopg2-binary>=2.9.9
+dj-database-url>=2.1.0
+torch>=2.0.0
+sentence-transformers>=2.2.2
+chromadb>=0.4.0
+PyPDF2>=3.0.0
+numpy>=1.24.0
+pytesseract>=0.3.10
+pdf2image>=1.16.3
+Pillow>=10.0.0
+google-genai>=1.0.0
+rouge-score>=0.1.2
+transformers>=4.30.0
+gunicorn>=21.2.0
+whitenoise>=6.5.0
