@@ -6,6 +6,7 @@ This service handles all RAG operations including indexing, searching, and AI ge
 import os
 import glob
 import json
+import gc
 import numpy as np
 import requests
 from google import genai
@@ -275,8 +276,8 @@ class RAGService:
                     print(f"[RAG] Skipping empty file: {os.path.basename(txt_path)}")
                     continue
 
-                # Batch embed all chunks at once
-                chunk_embeddings = self.embedder.encode(chunks, batch_size=32, show_progress_bar=False, convert_to_numpy=True)
+                # Batch embed all chunks at once (small batch to limit memory)
+                chunk_embeddings = self.embedder.encode(chunks, batch_size=8, show_progress_bar=False, convert_to_numpy=True)
                 chunk_embeddings = np.array([l2_normalize(e) for e in chunk_embeddings])
 
                 chunk_metadatas = []
@@ -302,9 +303,13 @@ class RAGService:
                 )
 
                 indexed_files[txt_path] = mtime
+                # Free memory between files to avoid OOM
+                del chunks, chunk_embeddings, chunk_metadatas
+                gc.collect()
 
             except Exception as e:
                 print(f"[RAG] Failed to index {os.path.basename(txt_path)}: {e}")
+                gc.collect()
                 continue
 
         # Save indexed file registry
@@ -372,8 +377,8 @@ class RAGService:
                 print(f"[RAG] Skipping empty file: {os.path.basename(txt_path)}")
                 continue
 
-            # Batch embed all chunks at once
-            chunk_embeddings = self.embedder.encode(chunks, batch_size=32, show_progress_bar=False, convert_to_numpy=True)
+            # Batch embed all chunks at once (small batch to limit memory)
+            chunk_embeddings = self.embedder.encode(chunks, batch_size=8, show_progress_bar=False, convert_to_numpy=True)
             chunk_embeddings = np.array([l2_normalize(e) for e in chunk_embeddings])
 
             chunk_metadatas = []
