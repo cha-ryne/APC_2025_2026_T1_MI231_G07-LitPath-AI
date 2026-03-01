@@ -149,8 +149,27 @@ class RAGService:
         print("[RAG] Initializing RAG system...")
         instance.embedder = SentenceTransformer('all-mpnet-base-v2')
         print("[RAG] Loaded embedding model: all-mpnet-base-v2")
-        instance.chroma_client = chromadb.PersistentClient(path=settings.RAG_CHROMADB_PATH)
-        instance.collection = instance.chroma_client.get_or_create_collection("thesis_chunks")
+
+        # Try to open ChromaDB; if the file is corrupt (e.g. Git LFS pointer),
+        # wipe the directory and start fresh.
+        import shutil
+        chroma_path = settings.RAG_CHROMADB_PATH
+        try:
+            instance.chroma_client = chromadb.PersistentClient(path=chroma_path)
+            instance.collection = instance.chroma_client.get_or_create_collection("thesis_chunks")
+        except Exception as e:
+            print(f"[RAG] ChromaDB open failed ({e}), wiping corrupt data and recreating...")
+            # Close any partial handles
+            instance.chroma_client = None
+            instance.collection = None
+            # Remove the corrupt directory and recreate
+            if os.path.exists(chroma_path):
+                shutil.rmtree(chroma_path, ignore_errors=True)
+            os.makedirs(chroma_path, exist_ok=True)
+            instance.chroma_client = chromadb.PersistentClient(path=chroma_path)
+            instance.collection = instance.chroma_client.get_or_create_collection("thesis_chunks")
+            print("[RAG] ChromaDB recreated successfully.")
+
         instance.api_key = settings.GEMINI_API_KEY
         existing_chunks = instance.collection.count()
         print(f"[RAG] Found {existing_chunks} existing chunks in database")
