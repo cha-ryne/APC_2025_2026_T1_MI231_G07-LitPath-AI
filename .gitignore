@@ -25,11 +25,11 @@ backend/.env
 *.env
 
 # ChromaDB and RAG data
-RAG/chromadb_data/
-chromadb_data/
-*.chroma
-*.parquet
-RAG/theses/indexed_files.json
+# RAG/chromadb_data/
+# chromadb_data/
+# *.chroma
+# *.parquet
+# RAG/theses/indexed_files.json
 
 # Node modules
 node_modules/
