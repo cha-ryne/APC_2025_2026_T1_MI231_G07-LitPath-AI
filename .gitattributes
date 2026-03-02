@@ -1,2 +1,0 @@
-RAG/chromadb_data/*.sqlite3 filter=lfs diff=lfs merge=lfs -text
-RAG/chromadb_data/**/*.bin filter=lfs diff=lfs merge=lfs -text

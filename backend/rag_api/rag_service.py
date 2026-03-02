@@ -16,7 +16,6 @@ import hashlib
 from datetime import datetime
 from functools import lru_cache
 from PyPDF2 import PdfReader
-from sentence_transformers import SentenceTransformer
 import chromadb
 from django.conf import settings
 import sys
@@ -26,6 +25,57 @@ def l2_normalize(vec):
     if norm == 0:
         return vec
     return vec / norm
+
+
+class HFInferenceEmbedder:
+    """Lightweight embedder using Hugging Face Inference API.
+    Drop-in replacement for SentenceTransformer — no torch/model in memory.
+    """
+    API_URL = "https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-mpnet-base-v2"
+    MAX_RETRIES = 3
+    BATCH_LIMIT = 64  # HF API max texts per request
+
+    def __init__(self, token=None):
+        self.token = token or os.environ.get("HF_TOKEN", "")
+        self.headers = {}
+        if self.token:
+            self.headers["Authorization"] = f"Bearer {self.token}"
+
+    def _call_api(self, texts):
+        """Call HF Inference API with retry logic."""
+        payload = {"inputs": texts, "options": {"wait_for_model": True}}
+        for attempt in range(self.MAX_RETRIES):
+            try:
+                resp = requests.post(self.API_URL, headers=self.headers, json=payload, timeout=120)
+                if resp.status_code == 503:
+                    # Model loading, wait and retry
+                    wait = min(30, 5 * (attempt + 1))
+                    print(f"[HF-API] Model loading, retrying in {wait}s...")
+                    time.sleep(wait)
+                    continue
+                resp.raise_for_status()
+                return resp.json()
+            except Exception as e:
+                if attempt < self.MAX_RETRIES - 1:
+                    wait = 5 * (attempt + 1)
+                    print(f"[HF-API] Error: {e}, retrying in {wait}s...")
+                    time.sleep(wait)
+                else:
+                    raise RuntimeError(f"HF Inference API failed after {self.MAX_RETRIES} retries: {e}")
+
+    def encode(self, texts, batch_size=8, show_progress_bar=False, convert_to_numpy=True):
+        """Encode texts via HF Inference API. Compatible with SentenceTransformer.encode() signature."""
+        all_embeddings = []
+        for i in range(0, len(texts), batch_size):
+            batch = texts[i:i + batch_size]
+            result = self._call_api(batch)
+            # HF API returns list of list of floats
+            all_embeddings.extend(result)
+            if show_progress_bar:
+                print(f"[HF-API] Embedded {min(i + batch_size, len(texts))}/{len(texts)}")
+        if convert_to_numpy:
+            return np.array(all_embeddings, dtype=np.float32)
+        return all_embeddings
 
 # Import conversation manager
 
@@ -148,8 +198,9 @@ class RAGService:
         cls._initialized = True
         instance = cls()
         print("[RAG] Initializing RAG system...")
-        instance.embedder = SentenceTransformer('all-mpnet-base-v2')
-        print("[RAG] Loaded embedding model: all-mpnet-base-v2")
+        hf_token = getattr(settings, 'HF_TOKEN', '') or os.environ.get('HF_TOKEN', '')
+        instance.embedder = HFInferenceEmbedder(token=hf_token)
+        print("[RAG] Using HF Inference API for embeddings (all-mpnet-base-v2)")
 
         # Try to open ChromaDB; if the file is corrupt (e.g. Git LFS pointer),
         # wipe the directory and start fresh.

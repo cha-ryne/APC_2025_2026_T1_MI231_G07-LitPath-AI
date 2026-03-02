@@ -213,3 +213,4 @@ REST_FRAMEWORK = {
 RAG_THESES_FOLDER = os.environ.get('RAG_THESES_FOLDER', os.path.join(BASE_DIR.parent, 'RAG', 'theses'))
 RAG_CHROMADB_PATH = os.environ.get('RAG_CHROMADB_PATH', os.path.join(BASE_DIR.parent, 'RAG', 'chromadb_data'))
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', '')
+HF_TOKEN = os.environ.get('HF_TOKEN', '')  # Hugging Face token for Inference API

@@ -24,10 +24,9 @@ backend/.env
 .env.local
 *.env
 
-# ChromaDB and RAG data
-# RAG/chromadb_data/
-# chromadb_data/
-# *.chroma
+# ChromaDB and RAG data (re-indexed from txt files on deploy)
+RAG/chromadb_data/
+chromadb_data/
 # *.parquet
 # RAG/theses/indexed_files.json
 
