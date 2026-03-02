@@ -143,13 +143,7 @@ class FiltersView(APIView):
     
     def get(self, request):
         try:
-            if not RAGService._initialized:
-                return Response(
-                    {"subjects": [], "years": [], "message": "RAG system not initialized yet"},
-                    status=status.HTTP_200_OK
-                )
-            
-            rag = RAGService()
+            rag = RAGService.ensure_initialized()
             filters = rag.get_available_filters()
             
             return Response(filters, status=status.HTTP_200_OK)
@@ -178,6 +172,7 @@ class HealthCheckView(APIView):
             pdf_files = glob.glob(os.path.join(theses_folder, '*.pdf'))
             
             # Get detailed stats if RAG is initialized
+            # Note: health check does NOT trigger lazy init (must respond fast)
             if RAGService._initialized:
                 rag = RAGService()
                 detailed_status = rag.get_health_status()
@@ -193,7 +188,7 @@ class HealthCheckView(APIView):
             else:
                 health_data = {
                     "status": "healthy",
-                    "message": "Backend is running",
+                    "message": "Backend is running, RAG will initialize on first search",
                     "total_documents": 0,
                     "total_chunks": 0,
                     "txt_files": len(txt_files),
@@ -243,8 +238,8 @@ class SearchView(APIView):
             # Extract filters from natural language query if no explicit filters provided
             from .query_parser import extract_filters_from_query
             
-            rag = RAGService()
-            available_filters = rag.get_available_filters() if RAGService._initialized else {"subjects": [], "years": []}
+            rag = RAGService.ensure_initialized()
+            available_filters = rag.get_available_filters()
             
             parsed = extract_filters_from_query(question, available_filters.get("subjects", []))
             
@@ -456,7 +451,7 @@ class StreamingSearchView(APIView):
                     status=status.HTTP_400_BAD_REQUEST
                 )
             
-            rag = RAGService()
+            rag = RAGService.ensure_initialized()
             
             # If search context was passed from the initial search, reuse it (no duplicate search)
             if search_context and isinstance(search_context, dict):
@@ -473,7 +468,7 @@ class StreamingSearchView(APIView):
                 year_end = filters.get("year_end")
                 
                 from .query_parser import extract_filters_from_query
-                available_filters = rag.get_available_filters() if RAGService._initialized else {"subjects": [], "years": []}
+                available_filters = rag.get_available_filters()
                 parsed = extract_filters_from_query(question, available_filters.get("subjects", []))
                 
                 if not subjects and parsed.get("subjects"):
@@ -876,11 +871,10 @@ def get_most_browsed(request):
         from .rag_service import RAGService
         
         # Ensure RAG is initialized for metadata enrichment
-        if not RAGService._initialized:
-            try:
-                RAGService.initialize()
-            except Exception as e:
-                print(f"[RAG] Could not initialize RAG for metadata enrichment: {e}")
+        try:
+            RAGService.ensure_initialized()
+        except Exception as e:
+            print(f"[RAG] Could not initialize RAG for metadata enrichment: {e}")
         
         materials_data = []
         for row in results:

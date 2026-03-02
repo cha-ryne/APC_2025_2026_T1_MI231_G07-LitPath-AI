@@ -198,6 +198,13 @@ class RAGService:
         return cls._instance
     
     @classmethod
+    def ensure_initialized(cls):
+        """Lazy initialization — called before any RAG operation."""
+        if not cls._initialized:
+            cls.initialize()
+        return cls()
+
+    @classmethod
     def initialize(cls):
         """Initialize the RAG system (called on first search)"""
         if cls._initialized:

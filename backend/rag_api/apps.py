@@ -8,13 +8,13 @@ class RagApiConfig(AppConfig):
     name = 'rag_api'
     
     def ready(self):
-        """Initialize RAG system when Django starts"""
-        # Django dev server (manage.py runserver) spawns two processes.
-        # Only initialize in the reloader child (RUN_MAIN=true) to avoid double init.
-        # In production (gunicorn), RUN_MAIN is never set, so always initialize.
-        if 'runserver' in sys.argv and os.environ.get('RUN_MAIN') != 'true':
-            return
+        """RAG system uses lazy initialization now.
         
-        # Initialize RAG system on startup
-        from .rag_service import RAGService
-        RAGService.initialize()
+        Previously we initialized here on startup, but that caused OOM on
+        Railway because --preload duplicated ChromaDB memory across master
+        and worker.  Now RAG initializes on the first search request.
+        """
+        # For local dev convenience, still auto-init when using runserver
+        if 'runserver' in sys.argv and os.environ.get('RUN_MAIN') == 'true':
+            from .rag_service import RAGService
+            RAGService.initialize()
