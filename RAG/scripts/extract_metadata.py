@@ -68,8 +68,6 @@ DEGREE_TO_MAIN_SUBJECT = {
 
 def extract_thesis_metadata(text):
     import re
-    from sentence_transformers import SentenceTransformer
-    from sklearn.metrics.pairwise import cosine_similarity
 
     meta = {}
     lines = text.splitlines()
