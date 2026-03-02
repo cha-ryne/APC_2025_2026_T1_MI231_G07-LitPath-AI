@@ -17,6 +17,7 @@ from datetime import datetime
 from functools import lru_cache
 from PyPDF2 import PdfReader
 import chromadb
+from huggingface_hub import InferenceClient
 from django.conf import settings
 import sys
 
@@ -28,72 +29,57 @@ def l2_normalize(vec):
 
 
 class HFInferenceEmbedder:
-    """Lightweight embedder using Hugging Face Inference API.
+    """Lightweight embedder using huggingface_hub InferenceClient.
     Drop-in replacement for SentenceTransformer — no torch/model in memory.
-    Uses the new /models/ endpoint (the old /pipeline/ one returned 410 Gone).
+    Uses feature_extraction endpoint via the official HF SDK.
     """
-    API_URL = "https://api-inference.huggingface.co/models/sentence-transformers/all-mpnet-base-v2"
+    MODEL_ID = "sentence-transformers/all-mpnet-base-v2"
     MAX_RETRIES = 5
-    BATCH_LIMIT = 64  # HF API max texts per request
 
     def __init__(self, token=None):
         self.token = token or os.environ.get("HF_TOKEN", "")
-        self.headers = {"Content-Type": "application/json"}
-        if self.token:
-            self.headers["Authorization"] = f"Bearer {self.token}"
+        self.client = InferenceClient(token=self.token if self.token else None)
 
-    def _call_api(self, texts):
-        """Call HF Inference API with retry logic."""
-        payload = {"inputs": texts, "options": {"wait_for_model": True}}
+    def _embed_single(self, text):
+        """Embed a single text with retry logic."""
         last_error = None
         for attempt in range(self.MAX_RETRIES):
             try:
-                resp = requests.post(self.API_URL, headers=self.headers, json=payload, timeout=120)
-                if resp.status_code == 503:
-                    # Model loading / cold start — wait and retry
-                    wait = min(60, 10 * (attempt + 1))
-                    print(f"[HF-API] Model loading (503), retrying in {wait}s...")
-                    time.sleep(wait)
-                    continue
-                if resp.status_code == 429:
-                    # Rate limited — back off
-                    wait = min(60, 15 * (attempt + 1))
-                    print(f"[HF-API] Rate limited (429), retrying in {wait}s...")
-                    time.sleep(wait)
-                    continue
-                resp.raise_for_status()
-                data = resp.json()
-                # Normalise response shape:
-                # - sentence-transformers models may return [[vec], [vec]] or [vec, vec]
-                #   depending on how the model is configured.
-                # - If the inner element is still a nested list (token-level), mean-pool it.
-                if data and isinstance(data[0], list) and data[0] and isinstance(data[0][0], list):
-                    # Token-level output: mean-pool across tokens
-                    pooled = []
-                    for token_vecs in data:
-                        arr = np.array(token_vecs, dtype=np.float32)
-                        pooled.append(arr.mean(axis=0).tolist())
-                    return pooled
-                return data
+                result = self.client.feature_extraction(
+                    text, model=self.MODEL_ID
+                )
+                return np.array(result, dtype=np.float32).flatten()
             except Exception as e:
                 last_error = e
-                if attempt < self.MAX_RETRIES - 1:
+                err_str = str(e)
+                if "503" in err_str or "loading" in err_str.lower():
+                    wait = min(60, 10 * (attempt + 1))
+                    print(f"[HF-API] Model loading, retrying in {wait}s...")
+                    time.sleep(wait)
+                elif "429" in err_str or "rate" in err_str.lower():
+                    wait = min(60, 15 * (attempt + 1))
+                    print(f"[HF-API] Rate limited, retrying in {wait}s...")
+                    time.sleep(wait)
+                elif attempt < self.MAX_RETRIES - 1:
                     wait = 5 * (attempt + 1)
                     print(f"[HF-API] Error: {e}, retrying in {wait}s...")
                     time.sleep(wait)
                 else:
-                    raise RuntimeError(f"HF Inference API failed after {self.MAX_RETRIES} retries: {last_error}")
+                    raise RuntimeError(
+                        f"HF Inference API failed after {self.MAX_RETRIES} retries: {last_error}"
+                    )
+        raise RuntimeError(
+            f"HF Inference API failed after {self.MAX_RETRIES} retries: {last_error}"
+        )
 
     def encode(self, texts, batch_size=8, show_progress_bar=False, convert_to_numpy=True):
         """Encode texts via HF Inference API. Compatible with SentenceTransformer.encode() signature."""
         all_embeddings = []
-        for i in range(0, len(texts), batch_size):
-            batch = texts[i:i + batch_size]
-            result = self._call_api(batch)
-            # HF API returns list of list of floats
-            all_embeddings.extend(result)
-            if show_progress_bar:
-                print(f"[HF-API] Embedded {min(i + batch_size, len(texts))}/{len(texts)}")
+        for i, text in enumerate(texts):
+            emb = self._embed_single(text)
+            all_embeddings.append(emb)
+            if show_progress_bar and (i + 1) % batch_size == 0:
+                print(f"[HF-API] Embedded {i + 1}/{len(texts)}")
         if convert_to_numpy:
             return np.array(all_embeddings, dtype=np.float32)
         return all_embeddings
